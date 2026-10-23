@@ -1,0 +1,1 @@
+PREFIX mex: <https://example.org/mex-ontologi/vocab/> PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#> SELECT ?mapa ?et WHERE { ?mapa mex:estadoCorrespondenciaTerritorial "categoria_no_municipal"; mex:entradaTerritorialOrigen ?e . ?e rdfs:label ?et } ORDER BY ?et

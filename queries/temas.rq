@@ -1,0 +1,9 @@
+PREFIX dcat: <http://www.w3.org/ns/dcat#>
+PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+SELECT ?tema (COUNT(DISTINCT ?conjunto) AS ?conjuntos)
+WHERE {
+  ?conjunto a dcat:Dataset ; dcat:theme ?concepto .
+  ?concepto skos:prefLabel ?tema .
+}
+GROUP BY ?tema
+ORDER BY DESC(?conjuntos) ?tema

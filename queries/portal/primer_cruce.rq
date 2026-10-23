@@ -1,0 +1,7 @@
+PREFIX mex: <{{BASE_IRI}}vocab/>
+SELECT ?codigo ?anio ?matrimonios ?divorcios ?ambas WHERE {
+  ?resumen a mex:ResumenMunicipalLocal ; mex:codigoMunicipioFuente ?codigo ;
+    mex:anioRegistro ?anio ; mex:presenteEnAmbas ?ambas .
+  OPTIONAL { ?resumen mex:conteoMatrimonios ?matrimonios }
+  OPTIONAL { ?resumen mex:conteoDivorcios ?divorcios }
+} ORDER BY ?codigo

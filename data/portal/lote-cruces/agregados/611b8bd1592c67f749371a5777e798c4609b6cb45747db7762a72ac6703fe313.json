@@ -1,0 +1,120 @@
+{
+  "recurso_id": "7c2ff3d4-f06c-4fd4-ac1b-07155d9eb520",
+  "conjunto_id": "c6140d53-1f16-4dd8-8ab3-d2b47f03a921",
+  "nombre": "Divorcios 2015",
+  "consultado_en_utc": "2026-10-23T06:59:58.952959+00:00",
+  "estrategia": {
+    "anio": 2015,
+    "campo_anio": "año_registro",
+    "campos": [
+      "_id",
+      "año_registro",
+      "municipio"
+    ],
+    "medida": "conteo_filas_divorcios",
+    "grano_origen": "fila_registro_publicado"
+  },
+  "ok": true,
+  "total_filas": 68,
+  "valor_total": 68,
+  "consultas": [
+    "https://datos.sonora.gob.mx/api/3/action/datastore_search?resource_id=7c2ff3d4-f06c-4fd4-ac1b-07155d9eb520&fields=_id%2Ca%C3%B1o_registro%2Cmunicipio&sort=_id+asc&limit=5000&offset=0"
+  ],
+  "sha256_campos_leidos": "5ba8ad081cd8a579ad77720a4bd1f2681108537310a122748039cf15a63fce2d",
+  "cobertura_meses": {},
+  "agregados": [
+    {
+      "municipio_local": 2,
+      "anio_registro": 2015,
+      "valor": 1
+    },
+    {
+      "municipio_local": 12,
+      "anio_registro": 2015,
+      "valor": 1
+    },
+    {
+      "municipio_local": 18,
+      "anio_registro": 2015,
+      "valor": 5
+    },
+    {
+      "municipio_local": 20,
+      "anio_registro": 2015,
+      "valor": 1
+    },
+    {
+      "municipio_local": 21,
+      "anio_registro": 2015,
+      "valor": 1
+    },
+    {
+      "municipio_local": 23,
+      "anio_registro": 2015,
+      "valor": 1
+    },
+    {
+      "municipio_local": 26,
+      "anio_registro": 2015,
+      "valor": 1
+    },
+    {
+      "municipio_local": 29,
+      "anio_registro": 2015,
+      "valor": 5
+    },
+    {
+      "municipio_local": 30,
+      "anio_registro": 2015,
+      "valor": 35
+    },
+    {
+      "municipio_local": 33,
+      "anio_registro": 2015,
+      "valor": 1
+    },
+    {
+      "municipio_local": 36,
+      "anio_registro": 2015,
+      "valor": 1
+    },
+    {
+      "municipio_local": 41,
+      "anio_registro": 2015,
+      "valor": 1
+    },
+    {
+      "municipio_local": 42,
+      "anio_registro": 2015,
+      "valor": 3
+    },
+    {
+      "municipio_local": 43,
+      "anio_registro": 2015,
+      "valor": 4
+    },
+    {
+      "municipio_local": 47,
+      "anio_registro": 2015,
+      "valor": 1
+    },
+    {
+      "municipio_local": 55,
+      "anio_registro": 2015,
+      "valor": 2
+    },
+    {
+      "municipio_local": 66,
+      "anio_registro": 2015,
+      "valor": 4
+    }
+  ],
+  "comprobaciones": [
+    "IDs únicos",
+    "total estable",
+    "año real verificado",
+    "dominio de clave",
+    "agregación previa al join"
+  ],
+  "limite": "API sin instantánea transaccional; conteo de registros publicados sin deduplicación de eventos"
+}

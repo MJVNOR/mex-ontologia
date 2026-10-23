@@ -1,0 +1,103 @@
+{
+  "verificado": true,
+  "resultados": {
+    "estados_catalogo": {
+      "results": [
+        {
+          "estado": "\"recurso_catalogo_identificado\"",
+          "total": "\"8\"^^<http://www.w3.org/2001/XMLSchema#integer>"
+        },
+        {
+          "estado": "\"solo_referencia_declarada_sin_resolver\"",
+          "total": "\"9\"^^<http://www.w3.org/2001/XMLSchema#integer>"
+        }
+      ],
+      "variables": [
+        "estado",
+        "total"
+      ]
+    },
+    "estados_correspondencia": {
+      "results": [
+        {
+          "estado": "\"categoria_no_municipal\"",
+          "total": "\"2\"^^<http://www.w3.org/2001/XMLSchema#integer>"
+        },
+        {
+          "estado": "\"codigo_y_alias_revisado\"",
+          "total": "\"1\"^^<http://www.w3.org/2001/XMLSchema#integer>"
+        },
+        {
+          "estado": "\"codigo_y_nombre_con_reparacion_codificacion\"",
+          "total": "\"154\"^^<http://www.w3.org/2001/XMLSchema#integer>"
+        },
+        {
+          "estado": "\"codigo_y_nombre_exacto\"",
+          "total": "\"146\"^^<http://www.w3.org/2001/XMLSchema#integer>"
+        },
+        {
+          "estado": "\"codigo_y_nombre_normalizado\"",
+          "total": "\"203\"^^<http://www.w3.org/2001/XMLSchema#integer>"
+        }
+      ],
+      "variables": [
+        "estado",
+        "total"
+      ]
+    },
+    "categorias_sin_destino": {
+      "results": [
+        {
+          "total": "\"2\"^^<http://www.w3.org/2001/XMLSchema#integer>"
+        }
+      ],
+      "variables": [
+        "total"
+      ]
+    },
+    "columnas_catalogo": {
+      "results": [
+        {
+          "total": "\"23\"^^<http://www.w3.org/2001/XMLSchema#integer>"
+        }
+      ],
+      "variables": [
+        "total"
+      ]
+    },
+    "sin_homologar_otros_sistemas": {
+      "results": [
+        {
+          "total": "\"1\"^^<http://www.w3.org/2001/XMLSchema#integer>"
+        }
+      ],
+      "variables": [
+        "total"
+      ]
+    },
+    "aliases_revisados": {
+      "results": [
+        {
+          "codigoDestino": "\"26036\"",
+          "codigoOrigen": "\"36\"",
+          "correspondencia": "<https://example.org/mex-ontologi/territorial-mapping/612b2b11192b97ae7328f80c8a5d1c545e117da46dd436a9b077aaf824b1525f%2FMunicipios%2F36>",
+          "criterio": "\"Equivalencia de nombres confirmada explícitamente por el usuario para el mismo municipio de Sonora; revisión limitada a estas dos entradas.\"@es",
+          "evidencia": "\"magdalena de kino es lo mismo que magdalena, es el mismo municipio del estsado de sonora\"@es",
+          "nombreDestino": "\"26036 — Magdalena\"@es",
+          "nombreOrigen": "\"Magdalena de Kino\"",
+          "revision": "<https://example.org/mex-ontologi/territorial-review/magdalena-sonora>"
+        }
+      ],
+      "variables": [
+        "correspondencia",
+        "codigoOrigen",
+        "nombreOrigen",
+        "codigoDestino",
+        "nombreDestino",
+        "revision",
+        "evidencia",
+        "criterio"
+      ]
+    }
+  }
+}

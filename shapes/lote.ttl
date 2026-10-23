@@ -1,0 +1,38 @@
+@prefix sh: <http://www.w3.org/ns/shacl#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+@prefix mex: <{{BASE_IRI}}vocab/> .
+@prefix shape: <{{BASE_IRI}}shapes/> .
+
+shape:ValidacionLote a sh:NodeShape ; sh:targetClass mex:ValidacionLote ;
+    sh:property [ sh:path mex:decisionLote ; sh:minCount 1 ; sh:maxCount 1 ;
+        sh:in ("requiere_revision" "requiere_transformacion_o_catalogo" "ejecucion_parcial_exploratoria" "fallo_validacion_integral") ] ;
+    sh:property [ sh:path mex:motivoLote ; sh:minCount 1 ; sh:datatype xsd:string ] ;
+    sh:property [ sh:path mex:ejecucionLote ; sh:class mex:EjecucionCruceLote ] ;
+    sh:property [ sh:path prov:wasDerivedFrom ; sh:minCount 1 ; sh:nodeKind sh:IRI ] .
+
+shape:EjecucionLote a sh:NodeShape ; sh:targetClass mex:EjecucionCruceLote ;
+    sh:property [ sh:path mex:alcanceLote ; sh:minCount 1 ; sh:maxCount 1 ; sh:datatype xsd:string ] ;
+    sh:property [ sh:path mex:medidaALote ; sh:minCount 1 ; sh:maxCount 1 ; sh:datatype xsd:string ] ;
+    sh:property [ sh:path mex:medidaBLote ; sh:minCount 1 ; sh:maxCount 1 ; sh:datatype xsd:string ] ;
+    sh:property [ sh:path mex:resultadoLote ; sh:minCount 1 ; sh:nodeKind sh:IRI ] ;
+    sh:property [ sh:path prov:wasDerivedFrom ; sh:minCount 3 ; sh:nodeKind sh:IRI ] .
+
+shape:ResultadoEducativoLote a sh:NodeShape ; sh:targetClass mex:ResultadoEducativoLote ;
+    sh:property [ sh:path mex:programaLocalLote ; sh:minCount 1 ; sh:maxCount 1 ; sh:datatype xsd:string ] ;
+    sh:property [ sh:path mex:sedeDeclaradaLote ; sh:minCount 1 ; sh:maxCount 1 ; sh:datatype xsd:string ] ;
+    sh:property [ sh:path mex:periodoDeclaradoLote ; sh:minCount 1 ; sh:maxCount 1 ; sh:datatype xsd:string ] ;
+    sh:property [ sh:path mex:valorALote ; sh:maxCount 1 ; sh:datatype xsd:integer ; sh:minInclusive 0 ] ;
+    sh:property [ sh:path mex:valorBLote ; sh:maxCount 1 ; sh:datatype xsd:integer ; sh:minInclusive 0 ] ;
+    sh:property [ sh:path mex:ambasLote ; sh:minCount 1 ; sh:maxCount 1 ; sh:datatype xsd:boolean ] .
+
+shape:ResultadoMunicipalLote a sh:NodeShape ; sh:targetClass mex:ResultadoCruceLote ;
+    sh:property [ sh:path mex:codigoLocalLote ; sh:minCount 1 ; sh:maxCount 1 ; sh:datatype xsd:integer ; sh:minInclusive 1 ; sh:maxInclusive 72 ] ;
+    sh:property [ sh:path mex:anioLote ; sh:minCount 1 ; sh:maxCount 1 ; sh:datatype xsd:integer ] ;
+    sh:property [ sh:path mex:valorALote ; sh:maxCount 1 ; sh:datatype xsd:integer ; sh:minInclusive 0 ] ;
+    sh:property [ sh:path mex:valorBLote ; sh:maxCount 1 ; sh:datatype xsd:integer ; sh:minInclusive 0 ] .
+
+shape:ReferenciaMunicipal a sh:NodeShape ; sh:targetClass mex:ReferenciaMunicipalPortal ;
+    sh:property [ sh:path mex:cvegeoReferencia ; sh:minCount 1 ; sh:maxCount 1 ; sh:datatype xsd:string ; sh:pattern "^26[0-9]{3}$" ] ;
+    sh:property [ sh:path mex:nombreMunicipioReferencia ; sh:minCount 1 ; sh:maxCount 1 ; sh:datatype xsd:string ] ;
+    sh:property [ sh:path prov:wasDerivedFrom ; sh:minCount 1 ; sh:nodeKind sh:IRI ] .

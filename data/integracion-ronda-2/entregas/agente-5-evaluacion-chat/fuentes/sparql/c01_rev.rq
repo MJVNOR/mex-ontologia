@@ -1,0 +1,1 @@
+PREFIX mex: <https://example.org/mex-ontologi/vocab/> SELECT ?est (COUNT(?m) AS ?n) WHERE { ?m mex:variableDestino ?v; mex:estadoCorrespondencia ?est . ?v mex:nombreVariableLocal "a\u00f1o_matrimonio" } GROUP BY ?est

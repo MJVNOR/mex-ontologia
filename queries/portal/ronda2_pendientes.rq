@@ -1,0 +1,5 @@
+PREFIX mex: <{{BASE_IRI}}vocab/>
+SELECT ?dictamen ?objeto ?estado ?pregunta WHERE {
+  ?dictamen a mex:DictamenPendienteSemantico ; mex:objetoRevisado ?objeto ; mex:estadoDictamen ?estado .
+  OPTIONAL { ?dictamen mex:preguntaPublicador ?pregunta }
+} ORDER BY ?estado ?dictamen

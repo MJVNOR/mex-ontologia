@@ -1,0 +1,460 @@
+{
+  "fuente_iml": {
+    "ruta_evidencia_central": "data\\integracion\\fuentes\\771cc22d44fcba3d70c8762d6c90aebfbe1dd738e5f94cf3119d80d3fc01773e.xlsx",
+    "sha256": "771cc22d44fcba3d70c8762d6c90aebfbe1dd738e5f94cf3119d80d3fc01773e",
+    "hoja": "IML_2020",
+    "filas_datos": 1850,
+    "encabezado": [
+      "CVE_LOC",
+      "ENT",
+      "NOM_ENT",
+      "MUN",
+      "NOM_MUN",
+      "LOC",
+      "NOM_LOC",
+      "POB_TOT",
+      "ANALF",
+      "SBASC",
+      "OVSDE",
+      "OVSEE",
+      "OVSAE",
+      "OVPT",
+      "OVSREF",
+      "OVHAC",
+      "IM_2020",
+      "GM_2020",
+      "IMN_2020",
+      ""
+    ]
+  },
+  "fuente_iter": {
+    "archivo_zip": "iter_26_cpv2020_csv.zip",
+    "sha256": "4ad9380527c248bb236bd90eefed760b0f8796eaeab7c469f95ead033e96dee2",
+    "dataset": "iter_26_cpv2020/conjunto_de_datos/conjunto_de_datos_iter_26CSV20.csv",
+    "filas_totales_csv": 7500,
+    "agregados_MUN000_o_LOC0000": 75,
+    "especiales_confidenciales_LOC9998_9999": 125,
+    "localidades_censales_publicadas": 7300,
+    "claves_duplicadas_iter": []
+  },
+  "formato_csv_iter": {
+    "codificacion": "utf-8 con BOM (respaldo cp1252)",
+    "separador": "coma",
+    "quotechar_usado": "comillas dobles (estandar)",
+    "lineas_totales": 7501,
+    "columnas": 286,
+    "encabezado_crudo": "ENTIDAD,NOM_ENT,MUN,NOM_MUN,LOC,NOM_LOC,LONGITUD,LATITUD,ALTITUD,POBTOT,POBFEM,POBMAS,P_0A2,P_0A2_F,P_0A2_M,P_3YMAS,P_3YMAS_F,P_3YMAS_M,P_5YMAS,P_5YMAS_F,P_5YMAS_M,P_12YMAS,P_12YMAS_F,P_12YMAS_M,P_15Y",
+    "filas_leidas": 7500,
+    "filas_malformadas": [],
+    "nota_comillas_simples": "El archivo no usa comillas simples como delimitador ni como envoltura de valores; parsear con quotechar=\"'\" produce 2 filas malformadas (lineas 1197 y 7495: NOM_LOC con comillas dobles literales, Caborca LOC 1111 y San Ignacio Rio Muerto LOC 0337). No se retira ninguna envoltura: los valores comparados son los literales del CSV."
+  },
+  "iml": {
+    "filas": 1850,
+    "cve_unicos": 1850,
+    "sin_clave_utilizable": 0,
+    "claves_duplicadas": [],
+    "especiales_LOC0000_9998_9999": 0,
+    "municipios": 72
+  },
+  "contraste_localidades": {
+    "interseccion": 1850,
+    "solo_IML": 0,
+    "solo_ITER": 5450,
+    "mismo_CVE_distinto_nombre_literal": 0,
+    "mismo_CVE_distinto_nombre_normalizado": 0
+  },
+  "solo_IML_CVE": [],
+  "mismo_CVE_distinto_nombre": [],
+  "poblacion_interseccion": {
+    "igual_POBTOT": 1850,
+    "distinta_POBTOT": 0,
+    "cves_distintos": [],
+    "iml_no_numerico": 0,
+    "iter_no_numerico": 0
+  },
+  "distribucion_POBTOT_ITER_interseccion": {
+    "[10,50)": 741,
+    "[100,500)": 440,
+    "[1000,2500)": 78,
+    "[2,5)": 40,
+    "[2500,1000000000)": 62,
+    "[5,10)": 189,
+    "[50,100)": 178,
+    "[500,1000)": 122
+  },
+  "distribucion_POBTOT_ITER_solo_ITER": {
+    "[1,2)": 1615,
+    "[10,50)": 135,
+    "[100,500)": 10,
+    "[1000,2500)": 2,
+    "[2,5)": 2616,
+    "[5,10)": 1064,
+    "[50,100)": 7,
+    "[500,1000)": 1
+  },
+  "cobertura_por_municipio_ENT_MUN": [
+    {
+      "CVE_ENT_MUN": "26001",
+      "IML": 4,
+      "ITER_loc": 8
+    },
+    {
+      "CVE_ENT_MUN": "26002",
+      "IML": 12,
+      "ITER_loc": 98
+    },
+    {
+      "CVE_ENT_MUN": "26003",
+      "IML": 144,
+      "ITER_loc": 275
+    },
+    {
+      "CVE_ENT_MUN": "26004",
+      "IML": 9,
+      "ITER_loc": 98
+    },
+    {
+      "CVE_ENT_MUN": "26005",
+      "IML": 5,
+      "ITER_loc": 6
+    },
+    {
+      "CVE_ENT_MUN": "26006",
+      "IML": 14,
+      "ITER_loc": 62
+    },
+    {
+      "CVE_ENT_MUN": "26007",
+      "IML": 1,
+      "ITER_loc": 8
+    },
+    {
+      "CVE_ENT_MUN": "26008",
+      "IML": 1,
+      "ITER_loc": 1
+    },
+    {
+      "CVE_ENT_MUN": "26009",
+      "IML": 6,
+      "ITER_loc": 16
+    },
+    {
+      "CVE_ENT_MUN": "26010",
+      "IML": 5,
+      "ITER_loc": 13
+    },
+    {
+      "CVE_ENT_MUN": "26011",
+      "IML": 7,
+      "ITER_loc": 39
+    },
+    {
+      "CVE_ENT_MUN": "26012",
+      "IML": 27,
+      "ITER_loc": 180
+    },
+    {
+      "CVE_ENT_MUN": "26013",
+      "IML": 5,
+      "ITER_loc": 15
+    },
+    {
+      "CVE_ENT_MUN": "26014",
+      "IML": 12,
+      "ITER_loc": 25
+    },
+    {
+      "CVE_ENT_MUN": "26015",
+      "IML": 4,
+      "ITER_loc": 6
+    },
+    {
+      "CVE_ENT_MUN": "26016",
+      "IML": 4,
+      "ITER_loc": 31
+    },
+    {
+      "CVE_ENT_MUN": "26017",
+      "IML": 125,
+      "ITER_loc": 339
+    },
+    {
+      "CVE_ENT_MUN": "26018",
+      "IML": 125,
+      "ITER_loc": 1005
+    },
+    {
+      "CVE_ENT_MUN": "26019",
+      "IML": 14,
+      "ITER_loc": 62
+    },
+    {
+      "CVE_ENT_MUN": "26020",
+      "IML": 9,
+      "ITER_loc": 81
+    },
+    {
+      "CVE_ENT_MUN": "26021",
+      "IML": 9,
+      "ITER_loc": 92
+    },
+    {
+      "CVE_ENT_MUN": "26022",
+      "IML": 11,
+      "ITER_loc": 80
+    },
+    {
+      "CVE_ENT_MUN": "26023",
+      "IML": 13,
+      "ITER_loc": 25
+    },
+    {
+      "CVE_ENT_MUN": "26024",
+      "IML": 1,
+      "ITER_loc": 1
+    },
+    {
+      "CVE_ENT_MUN": "26025",
+      "IML": 21,
+      "ITER_loc": 53
+    },
+    {
+      "CVE_ENT_MUN": "26026",
+      "IML": 99,
+      "ITER_loc": 229
+    },
+    {
+      "CVE_ENT_MUN": "26027",
+      "IML": 10,
+      "ITER_loc": 71
+    },
+    {
+      "CVE_ENT_MUN": "26028",
+      "IML": 1,
+      "ITER_loc": 1
+    },
+    {
+      "CVE_ENT_MUN": "26029",
+      "IML": 102,
+      "ITER_loc": 351
+    },
+    {
+      "CVE_ENT_MUN": "26030",
+      "IML": 319,
+      "ITER_loc": 1022
+    },
+    {
+      "CVE_ENT_MUN": "26031",
+      "IML": 3,
+      "ITER_loc": 7
+    },
+    {
+      "CVE_ENT_MUN": "26032",
+      "IML": 2,
+      "ITER_loc": 3
+    },
+    {
+      "CVE_ENT_MUN": "26033",
+      "IML": 132,
+      "ITER_loc": 222
+    },
+    {
+      "CVE_ENT_MUN": "26034",
+      "IML": 4,
+      "ITER_loc": 7
+    },
+    {
+      "CVE_ENT_MUN": "26035",
+      "IML": 28,
+      "ITER_loc": 84
+    },
+    {
+      "CVE_ENT_MUN": "26036",
+      "IML": 17,
+      "ITER_loc": 145
+    },
+    {
+      "CVE_ENT_MUN": "26037",
+      "IML": 3,
+      "ITER_loc": 17
+    },
+    {
+      "CVE_ENT_MUN": "26038",
+      "IML": 5,
+      "ITER_loc": 9
+    },
+    {
+      "CVE_ENT_MUN": "26039",
+      "IML": 4,
+      "ITER_loc": 16
+    },
+    {
+      "CVE_ENT_MUN": "26040",
+      "IML": 5,
+      "ITER_loc": 12
+    },
+    {
+      "CVE_ENT_MUN": "26041",
+      "IML": 11,
+      "ITER_loc": 52
+    },
+    {
+      "CVE_ENT_MUN": "26042",
+      "IML": 119,
+      "ITER_loc": 305
+    },
+    {
+      "CVE_ENT_MUN": "26043",
+      "IML": 31,
+      "ITER_loc": 167
+    },
+    {
+      "CVE_ENT_MUN": "26044",
+      "IML": 1,
+      "ITER_loc": 9
+    },
+    {
+      "CVE_ENT_MUN": "26045",
+      "IML": 11,
+      "ITER_loc": 104
+    },
+    {
+      "CVE_ENT_MUN": "26046",
+      "IML": 1,
+      "ITER_loc": 11
+    },
+    {
+      "CVE_ENT_MUN": "26047",
+      "IML": 10,
+      "ITER_loc": 181
+    },
+    {
+      "CVE_ENT_MUN": "26048",
+      "IML": 10,
+      "ITER_loc": 41
+    },
+    {
+      "CVE_ENT_MUN": "26049",
+      "IML": 16,
+      "ITER_loc": 120
+    },
+    {
+      "CVE_ENT_MUN": "26050",
+      "IML": 5,
+      "ITER_loc": 16
+    },
+    {
+      "CVE_ENT_MUN": "26051",
+      "IML": 22,
+      "ITER_loc": 79
+    },
+    {
+      "CVE_ENT_MUN": "26052",
+      "IML": 19,
+      "ITER_loc": 44
+    },
+    {
+      "CVE_ENT_MUN": "26053",
+      "IML": 1,
+      "ITER_loc": 2
+    },
+    {
+      "CVE_ENT_MUN": "26054",
+      "IML": 1,
+      "ITER_loc": 8
+    },
+    {
+      "CVE_ENT_MUN": "26055",
+      "IML": 77,
+      "ITER_loc": 392
+    },
+    {
+      "CVE_ENT_MUN": "26056",
+      "IML": 14,
+      "ITER_loc": 64
+    },
+    {
+      "CVE_ENT_MUN": "26057",
+      "IML": 10,
+      "ITER_loc": 34
+    },
+    {
+      "CVE_ENT_MUN": "26058",
+      "IML": 20,
+      "ITER_loc": 99
+    },
+    {
+      "CVE_ENT_MUN": "26059",
+      "IML": 5,
+      "ITER_loc": 33
+    },
+    {
+      "CVE_ENT_MUN": "26060",
+      "IML": 6,
+      "ITER_loc": 51
+    },
+    {
+      "CVE_ENT_MUN": "26061",
+      "IML": 12,
+      "ITER_loc": 40
+    },
+    {
+      "CVE_ENT_MUN": "26062",
+      "IML": 1,
+      "ITER_loc": 18
+    },
+    {
+      "CVE_ENT_MUN": "26063",
+      "IML": 2,
+      "ITER_loc": 2
+    },
+    {
+      "CVE_ENT_MUN": "26064",
+      "IML": 7,
+      "ITER_loc": 43
+    },
+    {
+      "CVE_ENT_MUN": "26065",
+      "IML": 15,
+      "ITER_loc": 47
+    },
+    {
+      "CVE_ENT_MUN": "26066",
+      "IML": 16,
+      "ITER_loc": 139
+    },
+    {
+      "CVE_ENT_MUN": "26067",
+      "IML": 2,
+      "ITER_loc": 3
+    },
+    {
+      "CVE_ENT_MUN": "26068",
+      "IML": 3,
+      "ITER_loc": 36
+    },
+    {
+      "CVE_ENT_MUN": "26069",
+      "IML": 27,
+      "ITER_loc": 70
+    },
+    {
+      "CVE_ENT_MUN": "26070",
+      "IML": 16,
+      "ITER_loc": 72
+    },
+    {
+      "CVE_ENT_MUN": "26071",
+      "IML": 13,
+      "ITER_loc": 66
+    },
+    {
+      "CVE_ENT_MUN": "26072",
+      "IML": 24,
+      "ITER_loc": 137
+    }
+  ],
+  "transformaciones_registradas": [],
+  "nota_transformaciones": "zfill(2/3/4/9) solo si el original textual cumple ^[0-9]+$ ASCII ([0-9] no incluye digitos Unicode) y mide menos que el ancho; floats y decimales se rechazan sin truncar; originales intactos.",
+  "errores_validacion": []
+}

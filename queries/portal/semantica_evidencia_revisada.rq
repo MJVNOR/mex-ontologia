@@ -1,0 +1,10 @@
+PREFIX mex: <{{BASE_IRI}}vocab/>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+SELECT ?correspondencia ?columna ?etiqueta ?variable ?definicion ?evidencia ?criterio ?huellaEsquema ?huellaDiccionario WHERE {
+  ?correspondencia mex:estadoCorrespondencia "documental_revisada" ;
+    mex:columnaOrigen ?columna ; mex:variableDestino ?variable ;
+    mex:evidenciaTextual ?evidencia ; mex:criterioRevision ?criterio ;
+    mex:huellaEsquemaRevisado ?huellaEsquema ; mex:huellaFilaDiccionario ?huellaDiccionario .
+  ?variable mex:definicionOriginal ?definicion .
+  ?columna rdfs:label ?etiqueta .
+} ORDER BY ?columna

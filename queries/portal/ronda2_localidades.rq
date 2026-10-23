@@ -1,0 +1,5 @@
+PREFIX mex: <{{BASE_IRI}}vocab/>
+SELECT ?contraste ?estado (COUNT(?comprobacion) AS ?coincidencias) WHERE {
+  ?contraste a mex:ContrasteLocalidadesCensales ; mex:estadoContraste ?estado .
+  ?comprobacion a mex:ComprobacionLocalidadCensal ; mex:contrasteLocalidades ?contraste .
+} GROUP BY ?contraste ?estado

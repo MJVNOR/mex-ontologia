@@ -1,0 +1,7 @@
+PREFIX mex: <{{BASE_IRI}}vocab/>
+PREFIX dct: <http://purl.org/dc/terms/>
+SELECT ?conjuntoA ?conjuntoB ?familia ?pendiente WHERE {
+  ?evaluacion a mex:EvaluacionCruce ; mex:prioridadRevision "revisar_primero" ;
+    mex:conjuntoA/dct:title ?conjuntoA ; mex:conjuntoB/dct:title ?conjuntoB ; mex:familiaClave ?familia .
+  OPTIONAL { ?evaluacion mex:pendienteCruce ?pendiente }
+} ORDER BY ?conjuntoA ?conjuntoB ?familia LIMIT 100

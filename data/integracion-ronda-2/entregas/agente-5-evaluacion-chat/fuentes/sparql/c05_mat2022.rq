@@ -1,0 +1,1 @@
+PREFIX mex: <https://example.org/mex-ontologi/vocab/> PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#> SELECT ?map ?col ?et ?est WHERE { ?map mex:variableDestino ?vv; mex:estadoCorrespondencia ?est; mex:columnaOrigen ?cc . ?cc rdfs:label ?et . BIND(STR(?cc) AS ?col) FILTER(CONTAINS(STR(?et), "Matrimonios 2022")) } ORDER BY ?et

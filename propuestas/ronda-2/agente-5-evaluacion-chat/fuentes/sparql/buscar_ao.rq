@@ -1,0 +1,1 @@
+SELECT ?s ?p ?o WHERE { ?s ?p ?o . FILTER(CONTAINS(STR(?o), "2024")) } LIMIT 5

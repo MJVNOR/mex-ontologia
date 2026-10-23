@@ -1,0 +1,6 @@
+PREFIX mex: <{{BASE_IRI}}vocab/>
+SELECT ?evaluacion ?canal ?ui ?intentos ?respuestas ?aciertos ?fallos ?errores WHERE {
+  ?evaluacion a mex:EvaluacionPipelineConsulta ; mex:canalEvaluado ?canal ; mex:estadoEvaluacionUI ?ui ;
+    mex:casosIntentados ?intentos ; mex:respuestasModelo ?respuestas ; mex:aciertosEvaluacion ?aciertos ;
+    mex:fallosRecuperacion ?fallos ; mex:intentosSinRespuesta ?errores .
+}

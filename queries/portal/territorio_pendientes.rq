@@ -1,0 +1,6 @@
+PREFIX mex: <{{BASE_IRI}}vocab/>
+SELECT ?correspondencia ?estado ?entrada ?codigo ?nombre WHERE {
+  ?correspondencia a mex:CorrespondenciaTerritorial ; mex:estadoCorrespondenciaTerritorial ?estado ; mex:entradaTerritorialOrigen ?entrada .
+  ?entrada mex:codigoOriginal ?codigo ; mex:nombreOriginal ?nombre .
+  FILTER(?estado IN ("pendiente_nombre_distinto", "categoria_no_municipal", "sin_codigo_destino"))
+} ORDER BY ?estado ?codigo

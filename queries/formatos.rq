@@ -1,0 +1,6 @@
+PREFIX dct: <http://purl.org/dc/terms/>
+PREFIX mex: <{{BASE_IRI}}vocab/>
+SELECT ?formato (COUNT(DISTINCT ?recurso) AS ?recursos)
+WHERE { ?recurso a mex:RecursoCatalogado ; dct:format ?formato . }
+GROUP BY ?formato
+ORDER BY DESC(?recursos)

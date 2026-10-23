@@ -1,0 +1,8 @@
+PREFIX mex: <https://example.org/mex-ontologi/vocab/>
+SELECT ?comprobacion ?recurso ?campo ?periodo ?estado ?cobertura ?filas ?limite WHERE {
+  ?comprobacion a mex:ComprobacionAplicacionTerritorial ;
+    mex:recursoComprobado ?recurso ; mex:campoComprobado ?campo ;
+    mex:periodoComprobado ?periodo ; mex:estadoComprobacion ?estado ;
+    mex:coberturaComprobacion ?cobertura ; mex:limiteSemantico ?limite .
+  OPTIONAL { ?comprobacion mex:filasComprobadas ?filas }
+} ORDER BY ?recurso ?campo

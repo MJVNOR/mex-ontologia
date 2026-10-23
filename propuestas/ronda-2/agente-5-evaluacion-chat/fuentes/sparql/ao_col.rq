@@ -1,0 +1,1 @@
+PREFIX mex: <https://example.org/mex-ontologi/vocab/> SELECT ?c ?lim WHERE { ?c mex:nombreCampo "a\u2013o" . OPTIONAL { ?c mex:limiteSemantico ?lim } BIND(STR(?c) AS ?c) }

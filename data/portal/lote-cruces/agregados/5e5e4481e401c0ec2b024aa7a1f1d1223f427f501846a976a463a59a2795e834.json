@@ -1,0 +1,23 @@
+{
+  "recurso_id": "272f93b1-dc94-4234-8d46-4f86e4538685",
+  "conjunto_id": "df2d60f5-2243-4bb0-885a-941aa8a657f5",
+  "nombre": "Nacimientos 2015",
+  "consultado_en_utc": "2026-10-23T07:04:03.106646+00:00",
+  "estrategia": {
+    "anio": 2015,
+    "campo_anio": "año",
+    "campos": [
+      "_id",
+      "año",
+      "hombres",
+      "mes",
+      "mujeres",
+      "municipio",
+      "total"
+    ],
+    "medida": "suma_total_nacimientos",
+    "grano_origen": "municipio_mes"
+  },
+  "ok": false,
+  "error": "ValueError: Total no coincide con hombres + mujeres: _id=187, municipio=19, mes=3, hombres=33, mujeres=27, total=61. Revisar fuente o definición antes de sumar."
+}

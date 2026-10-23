@@ -1,0 +1,23 @@
+{
+  "recurso_id": "d768834f-6095-424a-9c4d-6facd9103460",
+  "conjunto_id": "df2d60f5-2243-4bb0-885a-941aa8a657f5",
+  "nombre": "Nacimientos 2020",
+  "consultado_en_utc": "2026-10-23T07:04:03.882167+00:00",
+  "estrategia": {
+    "anio": 2020,
+    "campo_anio": "año",
+    "campos": [
+      "_id",
+      "año",
+      "hombres",
+      "mes",
+      "mujeres",
+      "municipio",
+      "total"
+    ],
+    "medida": "suma_total_nacimientos",
+    "grano_origen": "municipio_mes"
+  },
+  "ok": false,
+  "error": "ValueError: Total no coincide con hombres + mujeres: _id=325, municipio=33, mes=3, hombres=41, mujeres=51, total=93. Revisar fuente o definición antes de sumar."
+}

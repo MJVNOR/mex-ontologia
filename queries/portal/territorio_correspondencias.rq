@@ -1,0 +1,4 @@
+PREFIX mex: <{{BASE_IRI}}vocab/>
+SELECT ?estado (COUNT(DISTINCT ?correspondencia) AS ?total) WHERE {
+  ?correspondencia a mex:CorrespondenciaTerritorial ; mex:estadoCorrespondenciaTerritorial ?estado .
+} GROUP BY ?estado ORDER BY ?estado

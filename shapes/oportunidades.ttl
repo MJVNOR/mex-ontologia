@@ -1,0 +1,20 @@
+@prefix sh: <http://www.w3.org/ns/shacl#> .
+@prefix dcat: <http://www.w3.org/ns/dcat#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+@prefix mex: <{{BASE_IRI}}vocab/> .
+@prefix shape: <{{BASE_IRI}}shapes/> .
+
+shape:Oportunidad a sh:NodeShape ; sh:targetClass mex:EvaluacionCruce ;
+    sh:property [ sh:path mex:conjuntoA ; sh:minCount 1 ; sh:maxCount 1 ; sh:class dcat:Dataset ] ;
+    sh:property [ sh:path mex:conjuntoB ; sh:minCount 1 ; sh:maxCount 1 ; sh:class dcat:Dataset ] ;
+    sh:property [ sh:path mex:estadoOportunidad ; sh:minCount 1 ; sh:maxCount 1 ;
+        sh:in ("candidata_por_validar" "exploratorio_ejecutado" "sin_clave_detectada" "solo_dimensiones_amplias_o_tiempo") ] ;
+    sh:property [ sh:path mex:prioridadRevision ; sh:minCount 1 ; sh:maxCount 1 ;
+        sh:in ("cruce_existente" "revisar_primero" "revisar" "evidencia_insuficiente") ] ;
+    sh:property [ sh:path mex:alcanceEjecucion ; sh:minCount 1 ; sh:maxCount 1 ; sh:datatype xsd:string ] ;
+    sh:property [ sh:path prov:wasDerivedFrom ; sh:minCount 1 ; sh:nodeKind sh:IRI ] .
+
+shape:PerfilClaves a sh:NodeShape ; sh:targetClass mex:PerfilClaves ;
+    sh:property [ sh:path mex:columnaClave ; sh:class mex:ColumnaObservada ] ;
+    sh:property [ sh:path prov:wasDerivedFrom ; sh:minCount 1 ; sh:nodeKind sh:IRI ] .

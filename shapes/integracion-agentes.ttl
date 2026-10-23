@@ -1,0 +1,52 @@
+@prefix sh: <http://www.w3.org/ns/shacl#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+@prefix mex: <{{BASE_IRI}}vocab/> .
+@prefix shape: <{{BASE_IRI}}shapes/> .
+
+shape:CatalogoPublicado a sh:NodeShape ; sh:targetClass mex:CatalogoPublicado ;
+    sh:property [ sh:path mex:archivoSha256 ; sh:minCount 1 ; sh:maxCount 1 ; sh:pattern "^[0-9a-f]{64}$" ] ;
+    sh:property [ sh:path mex:hojaOriginal ; sh:minCount 1 ; sh:maxCount 1 ] ;
+    sh:property [ sh:path mex:estadoVigencia ; sh:hasValue "no_documentada" ; sh:maxCount 1 ] ;
+    sh:property [ sh:path prov:wasDerivedFrom ; sh:minCount 1 ; sh:nodeKind sh:IRI ] .
+
+shape:EntradaCatalogoPublicado a sh:NodeShape ; sh:targetClass mex:EntradaCatalogoPublicado ;
+    sh:property [ sh:path skos:inScheme ; sh:minCount 1 ; sh:maxCount 1 ; sh:class mex:CatalogoPublicado ] ;
+    sh:property [ sh:path skos:notation ; sh:minCount 1 ; sh:maxCount 1 ; sh:datatype xsd:string ] ;
+    sh:property [ sh:path mex:filaOriginal ; sh:minCount 1 ; sh:maxCount 1 ; sh:datatype xsd:integer ; sh:minInclusive 2 ] ;
+    sh:property [ sh:path mex:filaOriginalJson ; sh:minCount 1 ; sh:maxCount 1 ; sh:datatype xsd:string ] .
+
+shape:VinculoCatalogoPublicado a sh:NodeShape ; sh:targetClass mex:VinculoCatalogoPublicado ;
+    sh:property [ sh:path mex:referenciaDeclarada ; sh:minCount 1 ; sh:maxCount 1 ; sh:class mex:ReferenciaCatalogoDeclarada ] ;
+    sh:property [ sh:path mex:catalogoRecuperado ; sh:minCount 1 ; sh:maxCount 1 ; sh:class mex:CatalogoPublicado ] ;
+    sh:property [ sh:path mex:variableDestino ; sh:minCount 1 ; sh:class mex:VariableDocumentada ] ;
+    sh:property [ sh:path mex:criterioRevision ; sh:minCount 1 ] ;
+    sh:property [ sh:path prov:wasDerivedFrom ; sh:minCount 2 ; sh:nodeKind sh:IRI ] .
+
+shape:ReferenciaLocalidadesObservada a sh:NodeShape ; sh:targetClass mex:ReferenciaLocalidadesObservada ;
+    sh:property [ sh:path mex:archivoSha256 ; sh:minCount 1 ; sh:maxCount 1 ; sh:pattern "^[0-9a-f]{64}$" ] ;
+    sh:property [ sh:path mex:estadoReferenciaObservada ; sh:hasValue "derivada_observada_sin_completitud_oficial" ; sh:maxCount 1 ] ;
+    sh:property [ sh:path mex:limiteSemantico ; sh:minCount 1 ] ;
+    sh:property [ sh:path prov:wasDerivedFrom ; sh:minCount 1 ; sh:nodeKind sh:IRI ] .
+
+shape:LocalidadObservada a sh:NodeShape ; sh:targetClass mex:LocalidadObservada ;
+    sh:property [ sh:path skos:inScheme ; sh:minCount 1 ; sh:maxCount 1 ; sh:class mex:ReferenciaLocalidadesObservada ] ;
+    sh:property [ sh:path skos:notation ; sh:minCount 1 ; sh:maxCount 1 ; sh:pattern "^26[0-9]{7}$" ; sh:datatype xsd:string ] ;
+    sh:property [ sh:path mex:componenteEntidad ; sh:hasValue "26" ; sh:maxCount 1 ] ;
+    sh:property [ sh:path mex:componenteMunicipio ; sh:minCount 1 ; sh:maxCount 1 ; sh:pattern "^[0-9]{3}$" ] ;
+    sh:property [ sh:path mex:componenteLocalidad ; sh:minCount 1 ; sh:maxCount 1 ; sh:pattern "^[0-9]{4}$" ] ;
+    sh:property [ sh:path mex:nombreOriginal ; sh:minCount 1 ; sh:maxCount 1 ; sh:datatype xsd:string ] ;
+    sh:property [ sh:path mex:filaOriginal ; sh:minCount 1 ; sh:maxCount 1 ; sh:datatype xsd:integer ] ;
+    sh:property [ sh:path prov:wasDerivedFrom ; sh:minCount 1 ; sh:nodeKind sh:IRI ] .
+
+shape:ComprobacionAplicacionTerritorial a sh:NodeShape ; sh:targetClass mex:ComprobacionAplicacionTerritorial ;
+    sh:property [ sh:path mex:recursoComprobado ; sh:minCount 1 ; sh:maxCount 1 ; sh:class mex:RecursoCatalogado ] ;
+    sh:property [ sh:path mex:referenciaComprobada ; sh:minCount 1 ; sh:maxCount 1 ; sh:class mex:ReferenciaTerritorial ] ;
+    sh:property [ sh:path mex:columnaComprobada ; sh:maxCount 1 ; sh:class mex:ColumnaObservada ] ;
+    sh:property [ sh:path mex:estadoComprobacion ; sh:minCount 1 ; sh:maxCount 1 ; sh:in ("compatible" "compatible_con_excepciones" "sin_columna_fisica") ] ;
+    sh:property [ sh:path mex:coberturaComprobacion ; sh:minCount 1 ; sh:maxCount 1 ; sh:in ("completa" "encabezado_completo") ] ;
+    sh:property [ sh:path mex:archivoSha256 ; sh:minCount 1 ; sh:maxCount 1 ; sh:pattern "^[0-9a-f]{64}$" ] ;
+    sh:property [ sh:path mex:evidenciaComprobacionJson ; sh:minCount 1 ; sh:maxCount 1 ; sh:datatype xsd:string ] ;
+    sh:property [ sh:path mex:limiteSemantico ; sh:minCount 1 ] ;
+    sh:property [ sh:path prov:wasDerivedFrom ; sh:minCount 2 ; sh:nodeKind sh:IRI ] .

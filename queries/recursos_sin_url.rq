@@ -1,0 +1,9 @@
+PREFIX dct: <http://purl.org/dc/terms/>
+PREFIX mex: <{{BASE_IRI}}vocab/>
+SELECT ?conjunto ?titulo ?recurso ?nombre
+WHERE {
+  ?conjunto mex:recurso ?recurso ; dct:title ?titulo .
+  ?recurso dct:title ?nombre .
+  FILTER NOT EXISTS { ?recurso mex:urlDeclarada ?url }
+}
+ORDER BY ?titulo ?nombre

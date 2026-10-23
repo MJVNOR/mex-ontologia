@@ -1,0 +1,1 @@
+PREFIX mex: <https://example.org/mex-ontologi/vocab/> SELECT ?e (COUNT(?r) AS ?n) WHERE { ?r a mex:ReferenciaCatalogoDeclarada; mex:estadoReferenciaCatalogo ?e } GROUP BY ?e

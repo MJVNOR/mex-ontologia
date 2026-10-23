@@ -1,0 +1,4 @@
+PREFIX mex: <{{BASE_IRI}}vocab/>
+SELECT ?catalogo ?estado WHERE {
+  ?referencia a mex:ReferenciaCatalogoDeclarada ; mex:nombreCatalogoDeclarado ?catalogo ; mex:estadoReferenciaCatalogo ?estado .
+} ORDER BY ?catalogo

@@ -1,0 +1,1 @@
+PREFIX mex: <https://example.org/mex-ontologi/vocab/> PREFIX dct: <http://purl.org/dc/terms/> SELECT ?var ?def WHERE { ?v mex:nombreVariableLocal "a\u00f1o_matrimonio"; mex:definicionOriginal ?d . ?d dct:description ?def . BIND(STR(?v) AS ?var) }

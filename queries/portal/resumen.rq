@@ -1,0 +1,10 @@
+PREFIX mex: <{{BASE_IRI}}vocab/>
+PREFIX dcat: <http://www.w3.org/ns/dcat#>
+PREFIX foaf: <http://xmlns.com/foaf/0.1/>
+PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+SELECT ?tipo (COUNT(DISTINCT ?entidad) AS ?cantidad)
+WHERE {
+  VALUES ?tipo { dcat:Dataset mex:RecursoCatalogado foaf:Organization skos:Concept mex:PaginaPortal mex:VisualizacionDeclarada mex:EsquemaObservado mex:ColumnaObservada dcat:DataService mex:DefinicionVariable mex:InspeccionContenido mex:CruceAgregado mex:ResumenMunicipalLocal }
+  ?entidad a ?tipo .
+}
+GROUP BY ?tipo ORDER BY ?tipo

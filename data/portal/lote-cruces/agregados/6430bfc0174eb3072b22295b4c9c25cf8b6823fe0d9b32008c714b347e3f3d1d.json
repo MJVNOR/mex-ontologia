@@ -1,0 +1,23 @@
+{
+  "recurso_id": "a5c03a0f-0d8c-4038-981b-f6c381e24fe9",
+  "conjunto_id": "df2d60f5-2243-4bb0-885a-941aa8a657f5",
+  "nombre": "Nacimientos 2016",
+  "consultado_en_utc": "2026-10-23T07:04:03.600750+00:00",
+  "estrategia": {
+    "anio": 2016,
+    "campo_anio": "año",
+    "campos": [
+      "_id",
+      "año",
+      "hombres",
+      "mes",
+      "mujeres",
+      "municipio",
+      "total"
+    ],
+    "medida": "suma_total_nacimientos",
+    "grano_origen": "municipio_mes"
+  },
+  "ok": false,
+  "error": "ValueError: Faltan meses por municipio; ausencia no equivale a cero. Ejemplos: {\"5\": [1, 10], \"7\": [1, 2, 6, 8], \"8\": [2, 4, 6, 7, 12], \"9\": [3, 5, 7, 9, 10, 11], \"10\": [3, 4, 5, 6, 7, 9, 10, 11, 12]}"
+}

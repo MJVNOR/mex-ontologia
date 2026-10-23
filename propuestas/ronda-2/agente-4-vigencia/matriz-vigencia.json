@@ -1,0 +1,729 @@
+{
+ "alcance": "Vigencia por periodo de las 16 referencias a catalogos identificadas (8 no territoriales + 8 territoriales). Separa F1 publicacion CKAN, F2 periodo declarado de los datos, F3 edicion del catalogo, F4 aplicabilidad acreditada. Titulo-ano y fecha CKAN no acreditan vigencia. Periodos por nombre de recurso = declarados por titulo, no cobertura observada. Muestras antiguas no usadas como prueba.",
+ "clasificaciones_validas": [
+  "documentada",
+  "parcial",
+  "no_acreditada"
+ ],
+ "evidencia_ckan": {
+  "archivo": "evidencia/ckan/ckan_manifiesto.json",
+  "base": "https://datos.sonora.gob.mx",
+  "fecha_utc": "2026-10-23T09:46:08.727202+00:00",
+  "metodo": "GET /api/3/action/package_show?id=<dataset> (11 paquetes)",
+  "nota": "Cada package_<id>.json en evidencia/ckan/ es el cuerpo exacto; sha256 y bytes en ckan_manifiesto.json"
+ },
+ "fuera_de_matriz": [
+  {
+   "estado": "sin_resolver",
+   "id": "a2902c1feb2fa4b8349946c2ae418a11bf0f465032c5c62adaf33fb053373cf2",
+   "motivo": "Sin recurso publicado que corresponda (P09 agente-1). La vigencia no aplica a lo no identificado.",
+   "nombre": "des_mpo_res"
+  }
+ ],
+ "referencias": [
+  {
+   "conjunto": "403912fd-5853-4e18-8256-f77206f855bd",
+   "f1_ckan": {
+    "paquete_created": "2025-03-21T20:13:31.869259",
+    "paquete_modified": "2026-08-05T17:38:53.138982",
+    "catalogo_created": "2025-03-21T20:13:34.538336",
+    "catalogo_last_modified": "2025-03-21T20:13:34.516027",
+    "catalogo_metadata_modified": "2025-03-21T20:15:15.215585",
+    "catalogo_recurso": "6d561451-ff08-45d6-b1af-285ff5f417b1",
+    "catalogo_sha256": "53bd5e971a033998ed8a72317b6ad1e69314d82463220d8cfd156dfad9034259",
+    "catalogo_url": "https://datos.sonora.gob.mx/dataset/403912fd-5853-4e18-8256-f77206f855bd/resource/6d561451-ff08-45d6-b1af-285ff5f417b1/download/catalogo.xlsx",
+    "paquete_url": "https://datos.sonora.gob.mx/api/3/action/package_show?id=403912fd-5853-4e18-8256-f77206f855bd"
+   },
+   "f2_periodos_declarados": {
+    "fuente": "Titulos de recursos CKAN + nota del conjunto; NO cobertura observada",
+    "nota_conjunto": "Resumen cuatrimestral por programa educativo (sin rango explicito)",
+    "periodos": [
+     "2022 cuatrimestres 1-3",
+     "2023 cuatrimestres 1-3",
+     "2024 cuatrimestres 1-3",
+     "2025 cuatrimestres 1-3",
+     "2026 cuatrimestre 1"
+    ]
+   },
+   "f3_edicion": {
+    "declaracion_interna": "Ninguna en Hoja1 (10 entradas 01-10, sin fecha ni version) ni en notas/extras CKAN",
+    "edicion": "CMPE 2016 (Clasificacion mexicana de planes de estudio por campos de formacion academica 2016, educacion superior y media superior)",
+    "edicion_acreditada_externa": true,
+    "evidencia_primaria": {
+     "archivo": "evidencia/externa/cmpe2016_inegi.pdf",
+     "sha256": "66ba2fd24aa01d82684df52677b792e17fe55d38273d6325ff4f6f66a3ef714b",
+     "localizadores": [
+      "p.2: catalogacion (titulo, INEGI c2016, vii+206 p., ISBN 978-607-739-984-1)",
+      "p.8: segunda edicion, estructura de 8 a 10 campos"
+     ]
+    },
+    "nota": "La evidencia primaria acredita la edicion (F3). No acredita aplicabilidad a los periodos de estos conjuntos (F4), ni adopcion u obligatoriedad para UTH: sin evidencia directa."
+   },
+   "f4_aplicabilidad": "Recurso de catalogo registrado en CKAN el 2025-03-21T20:13:34.538336; modificado 2025-03-21T20:13:34.516027. Fecha de edicion y aplicacion historica no documentadas. Ninguna fuente (diccionario, nota CKAN, recurso) vincula CMPE 2016 con los periodos de este conjunto.",
+   "hoja_campo": "Hoja1 / Campo de Formación Académica",
+   "id": "V01",
+   "justificacion": "Edicion documentada con evidencia primaria (F3) pero sin vinculo temporal aplicable (F4 ausente).",
+   "limitaciones": [
+    "Vigencia historica no comprobada (coherente con P01)."
+   ],
+   "nombre_catalogo": "Clasificación mexicana de planes de estudio por campos de formación académica 2016 [...]",
+   "referencia_iri": "https://example.org/mex-ontologi/declared-code-reference/1eb8b1a583f52b32f256fb5643ffa7402dfb5ecf27d2df1d7114e71403a262a9",
+   "titulo_conjunto": "Promedio Académico",
+   "vigencia": "no_acreditada"
+  },
+  {
+   "conjunto": "e5aad52d-5760-481c-ba65-db0ba4a5315e",
+   "f1_ckan": {
+    "paquete_created": "2025-03-20T21:10:15.128413",
+    "paquete_modified": "2026-08-05T17:53:53.718761",
+    "catalogo_created": "2025-03-20T21:24:52.720914",
+    "catalogo_last_modified": "2025-03-20T21:24:52.695536",
+    "catalogo_metadata_modified": "2025-03-20T21:28:03.092199",
+    "catalogo_recurso": "aaf0c6c1-76a7-40ac-b542-1319d1bb2a5a",
+    "catalogo_sha256": "53bd5e971a033998ed8a72317b6ad1e69314d82463220d8cfd156dfad9034259",
+    "catalogo_url": "https://datos.sonora.gob.mx/dataset/e5aad52d-5760-481c-ba65-db0ba4a5315e/resource/aaf0c6c1-76a7-40ac-b542-1319d1bb2a5a/download/catalogo.xlsx",
+    "paquete_url": "https://datos.sonora.gob.mx/api/3/action/package_show?id=e5aad52d-5760-481c-ba65-db0ba4a5315e"
+   },
+   "f2_periodos_declarados": {
+    "fuente": "Titulos de recursos CKAN + nota; NO cobertura observada",
+    "nota_conjunto": "Matricula inscrita del cuatrimestre a consultar (sin rango explicito)",
+    "periodos": [
+     "2022 cuatrimestres 1-3",
+     "2023 cuatrimestres 1-3",
+     "2024 cuatrimestres 1-3",
+     "2025 cuatrimestres 1-3",
+     "2026 cuatrimestres 1-2"
+    ]
+   },
+   "f3_edicion": {
+    "declaracion_interna": "Ninguna en Hoja1 (10 entradas 01-10, sin fecha ni version) ni en notas/extras CKAN",
+    "edicion": "CMPE 2016 (Clasificacion mexicana de planes de estudio por campos de formacion academica 2016, educacion superior y media superior)",
+    "edicion_acreditada_externa": true,
+    "evidencia_primaria": {
+     "archivo": "evidencia/externa/cmpe2016_inegi.pdf",
+     "sha256": "66ba2fd24aa01d82684df52677b792e17fe55d38273d6325ff4f6f66a3ef714b",
+     "localizadores": [
+      "p.2: catalogacion (titulo, INEGI c2016, vii+206 p., ISBN 978-607-739-984-1)",
+      "p.8: segunda edicion, estructura de 8 a 10 campos"
+     ]
+    },
+    "nota": "La evidencia primaria acredita la edicion (F3). No acredita aplicabilidad a los periodos de estos conjuntos (F4), ni adopcion u obligatoriedad para UTH: sin evidencia directa."
+   },
+   "f4_aplicabilidad": "Recurso de catalogo registrado en CKAN el 2025-03-20T21:24:52.720914; modificado 2025-03-20T21:24:52.695536. Fecha de edicion y aplicacion historica no documentadas. Ninguna fuente (diccionario, nota CKAN, recurso) vincula CMPE 2016 con los periodos de este conjunto.",
+   "hoja_campo": "Hoja1 / Campo de Formación Académica",
+   "id": "V02",
+   "justificacion": "Edicion documentada con evidencia primaria (F3) pero sin vinculo temporal aplicable (F4 ausente).",
+   "limitaciones": [
+    "Vigencia no comprobada (coherente con P02)."
+   ],
+   "nombre_catalogo": "Clasificación mexicana de planes de estudio [...] 2016 [...] (con dos puntos finales)",
+   "referencia_iri": "https://example.org/mex-ontologi/declared-code-reference/4c28a0a21e5753bd01eb1cb39615ff939b13c949af50741af5c405bf575619f0",
+   "titulo_conjunto": "Matriculas",
+   "vigencia": "no_acreditada"
+  },
+  {
+   "conjunto": "e7a3d62f-4ace-479c-aa52-1c9e384dc429",
+   "f1_ckan": {
+    "paquete_created": "2025-03-20T20:37:47.319830",
+    "paquete_modified": "2026-03-27T18:52:15.024837",
+    "catalogo_created": "2025-03-20T20:37:48.235817",
+    "catalogo_last_modified": "2025-03-20T20:37:48.218394",
+    "catalogo_metadata_modified": "2025-03-20T20:38:35.987650",
+    "catalogo_recurso": "0e69d911-6ed3-4268-841b-0c4989e7cb45",
+    "catalogo_sha256": "53bd5e971a033998ed8a72317b6ad1e69314d82463220d8cfd156dfad9034259",
+    "catalogo_url": "https://datos.sonora.gob.mx/dataset/e7a3d62f-4ace-479c-aa52-1c9e384dc429/resource/0e69d911-6ed3-4268-841b-0c4989e7cb45/download/catalogo.xlsx",
+    "paquete_url": "https://datos.sonora.gob.mx/api/3/action/package_show?id=e7a3d62f-4ace-479c-aa52-1c9e384dc429"
+   },
+   "f2_periodos_declarados": {
+    "fuente": "Titulos de recursos CKAN + nota; NO cobertura observada",
+    "nota_conjunto": "Resumen anual del periodo a reportar (sin rango explicito)",
+    "periodos": [
+     "2022 anual",
+     "2023 anual",
+     "2024 anual",
+     "2025 anual"
+    ]
+   },
+   "f3_edicion": {
+    "declaracion_interna": "Ninguna en Hoja1 (10 entradas 01-10, sin fecha ni version) ni en notas/extras CKAN",
+    "edicion": "CMPE 2016 (Clasificacion mexicana de planes de estudio por campos de formacion academica 2016, educacion superior y media superior)",
+    "edicion_acreditada_externa": true,
+    "evidencia_primaria": {
+     "archivo": "evidencia/externa/cmpe2016_inegi.pdf",
+     "sha256": "66ba2fd24aa01d82684df52677b792e17fe55d38273d6325ff4f6f66a3ef714b",
+     "localizadores": [
+      "p.2: catalogacion (titulo, INEGI c2016, vii+206 p., ISBN 978-607-739-984-1)",
+      "p.8: segunda edicion, estructura de 8 a 10 campos"
+     ]
+    },
+    "nota": "La evidencia primaria acredita la edicion (F3). No acredita aplicabilidad a los periodos de estos conjuntos (F4), ni adopcion u obligatoriedad para UTH: sin evidencia directa."
+   },
+   "f4_aplicabilidad": "Recurso de catalogo registrado en CKAN el 2025-03-20T20:37:48.235817; modificado 2025-03-20T20:37:48.218394. Fecha de edicion y aplicacion historica no documentadas. Ninguna fuente (diccionario, nota CKAN, recurso) vincula CMPE 2016 con los periodos de este conjunto.",
+   "hoja_campo": "Hoja1 / Campo de Formación Académica",
+   "id": "V03",
+   "justificacion": "Edicion documentada con evidencia primaria (F3) pero sin vinculo temporal aplicable (F4 ausente).",
+   "limitaciones": [
+    "Vigencia no comprobada (coherente con P03)."
+   ],
+   "nombre_catalogo": "Clasificación mexicana de planes de estudio [...] 2016 [...]",
+   "referencia_iri": "https://example.org/mex-ontologi/declared-code-reference/4c67f244bf4078ad48133d122b3d7df031a00b7a266145d111ff78622ebecfc4",
+   "titulo_conjunto": "Estudiantes Titulados",
+   "vigencia": "no_acreditada"
+  },
+  {
+   "conjunto": "85ee0e2b-ba05-4d9a-8177-cdbf0cb42f8f",
+   "f1_ckan": {
+    "paquete_created": "2025-03-18T18:53:03.207469",
+    "paquete_modified": "2026-03-27T18:50:19.277933",
+    "catalogo_created": "2025-03-18T19:22:51.290078",
+    "catalogo_last_modified": "2025-03-20T19:38:47.888722",
+    "catalogo_metadata_modified": "2025-03-20T19:38:47.900443",
+    "catalogo_recurso": "af7a9aba-5a0e-4cf0-9b7d-5a3550e7907e",
+    "catalogo_sha256": "53bd5e971a033998ed8a72317b6ad1e69314d82463220d8cfd156dfad9034259",
+    "catalogo_url": "https://datos.sonora.gob.mx/dataset/85ee0e2b-ba05-4d9a-8177-cdbf0cb42f8f/resource/af7a9aba-5a0e-4cf0-9b7d-5a3550e7907e/download/catalogo.xlsx",
+    "paquete_url": "https://datos.sonora.gob.mx/api/3/action/package_show?id=85ee0e2b-ba05-4d9a-8177-cdbf0cb42f8f"
+   },
+   "f2_periodos_declarados": {
+    "fuente": "Titulos de recursos CKAN + nota; NO cobertura observada",
+    "nota_conjunto": "Resumen anual del periodo a reportar (sin rango explicito)",
+    "periodos": [
+     "2022 anual",
+     "2023 anual",
+     "2024 anual",
+     "2025 anual"
+    ]
+   },
+   "f3_edicion": {
+    "declaracion_interna": "Ninguna en Hoja1 (10 entradas 01-10, sin fecha ni version) ni en notas/extras CKAN",
+    "edicion": "CMPE 2016 (Clasificacion mexicana de planes de estudio por campos de formacion academica 2016, educacion superior y media superior)",
+    "edicion_acreditada_externa": true,
+    "evidencia_primaria": {
+     "archivo": "evidencia/externa/cmpe2016_inegi.pdf",
+     "sha256": "66ba2fd24aa01d82684df52677b792e17fe55d38273d6325ff4f6f66a3ef714b",
+     "localizadores": [
+      "p.2: catalogacion (titulo, INEGI c2016, vii+206 p., ISBN 978-607-739-984-1)",
+      "p.8: segunda edicion, estructura de 8 a 10 campos"
+     ]
+    },
+    "nota": "La evidencia primaria acredita la edicion (F3). No acredita aplicabilidad a los periodos de estos conjuntos (F4), ni adopcion u obligatoriedad para UTH: sin evidencia directa."
+   },
+   "f4_aplicabilidad": "Recurso de catalogo registrado en CKAN el 2025-03-18T19:22:51.290078; modificado 2025-03-20T19:38:47.888722. Fecha de edicion y aplicacion historica no documentadas. Ninguna fuente (diccionario, nota CKAN, recurso) vincula CMPE 2016 con los periodos de este conjunto.",
+   "hoja_campo": "Hoja1 / Campo de Formación Académica",
+   "id": "V04",
+   "justificacion": "Edicion documentada con evidencia primaria (F3) pero sin vinculo temporal aplicable (F4 ausente).",
+   "limitaciones": [
+    "Vigencia no comprobada (coherente con P04)."
+   ],
+   "nombre_catalogo": "Clasificación mexicana de planes de estudio [...] 2016 [...]",
+   "referencia_iri": "https://example.org/mex-ontologi/declared-code-reference/7c2e51a0134a25e1c5636921b27ba896e4eb8978108c1b79d238b10548a021bb",
+   "titulo_conjunto": "Estudiantes egresados",
+   "vigencia": "no_acreditada"
+  },
+  {
+   "conjunto": "ee8f639f-5e89-46ae-93b9-934b05fc6233",
+   "f1_ckan": {
+    "paquete_created": "2024-02-26T21:02:01.553384",
+    "paquete_modified": "2026-03-24T19:26:01.689912",
+    "catalogo_created": "2024-02-26T21:02:01.765146",
+    "catalogo_last_modified": "2024-02-26T21:02:01.745062",
+    "catalogo_metadata_modified": "2024-02-26T21:05:56.116807",
+    "catalogo_recurso": "f5060479-ee16-49b5-99d4-09aabef8042e",
+    "catalogo_sha256": "612b2b11192b97ae7328f80c8a5d1c545e117da46dd436a9b077aaf824b1525f",
+    "catalogo_url": "https://datos.sonora.gob.mx/dataset/ee8f639f-5e89-46ae-93b9-934b05fc6233/resource/f5060479-ee16-49b5-99d4-09aabef8042e/download/catalogo.xlsx",
+    "paquete_url": "https://datos.sonora.gob.mx/api/3/action/package_show?id=ee8f639f-5e89-46ae-93b9-934b05fc6233"
+   },
+   "f2_periodos_declarados": {
+    "fuente": "Titulos de recursos CKAN + nota; NO cobertura observada; recurso 1960-1969 SIN url descargable",
+    "nota_conjunto": "Datos de almacenamiento de presas en Sonora de 1941 a la actualidad",
+    "periodos": [
+     "1941-1949",
+     "1950-1959",
+     "1960-1969 (sin URL)",
+     "1970-1979",
+     "1980-1989",
+     "1990-1999",
+     "2000-2009",
+     "2010-2019",
+     "2020-2024"
+    ]
+   },
+   "f3_edicion": {
+    "declaracion_interna": "Ninguna (hoja Catalogo_estatal: 10 presas, sin fecha ni version; hojas Municipios/Regiones no referenciadas)",
+    "edicion": "No determinada; archivo publicado en el conjunto, sin declaracion de edicion/version/fecha localizada en el alcance descrito (notas y extras CKAN + interior del xlsx)",
+    "edicion_acreditada_externa": false
+   },
+   "f4_aplicabilidad": "Recurso de catalogo registrado en CKAN el 2024-02-26T21:02:01.765146; modificado 2024-02-26T21:02:01.745062. Fecha de edicion y aplicacion historica no documentadas. Incluye 1 presa de Chihuahua (AGZCH): no es catalogo exclusivo de Sonora. Recurso 1960-1969 con URL vacia en CKAN: ese periodo declarado carece de evidencia descargable.",
+   "hoja_campo": "Catálogo_estatal / Clave",
+   "id": "V05",
+   "justificacion": "Sin edicion determinada (F3) ni vinculo a periodos (F4).",
+   "limitaciones": [
+    "Vigencia historica no comprobada (coherente con P05).",
+    "No usar muestra 1980-1989 como prueba de cobertura."
+   ],
+   "nombre_catalogo": "Catálogo_estatal",
+   "referencia_iri": "https://example.org/mex-ontologi/declared-code-reference/3b45c474da5b2dc83e061ed7c26d470eaff0cd4935c626ac4cfa11e64a0e16e8",
+   "titulo_conjunto": "Recursos Hídricos",
+   "vigencia": "no_acreditada"
+  },
+  {
+   "conjunto": "5494daa1-09ca-4750-aeac-2558553700e1",
+   "f1_ckan": {
+    "paquete_created": "2026-04-13T17:25:22.034540",
+    "paquete_modified": "2026-05-11T21:37:29.009099",
+    "catalogo_created": "2026-04-28T20:40:42.874814",
+    "catalogo_last_modified": "2026-04-29T17:52:34.079541",
+    "catalogo_metadata_modified": "2026-04-29T17:52:34.092608",
+    "catalogo_recurso": "08d3b1a7-dbc0-4f43-b1d2-3266cebb88f8",
+    "catalogo_sha256": "3b8546acad7482825755e46a1a619a4838721f8480b94baaef3c755ba293db9c",
+    "catalogo_url": "https://datos.sonora.gob.mx/dataset/5494daa1-09ca-4750-aeac-2558553700e1/resource/08d3b1a7-dbc0-4f43-b1d2-3266cebb88f8/download/catalogo.xlsx",
+    "paquete_url": "https://datos.sonora.gob.mx/api/3/action/package_show?id=5494daa1-09ca-4750-aeac-2558553700e1"
+   },
+   "f2_periodos_declarados": {
+    "fuente": "Titulos de recursos CKAN + nota; NO cobertura observada",
+    "nota_conjunto": "Registro anual de Rickettsiosis en el Estado de Sonora",
+    "periodos": [
+     "2022 anual",
+     "2023 anual",
+     "2024 anual"
+    ]
+   },
+   "f3_edicion": {
+    "declaracion_interna": "Ninguna localizada en el alcance descrito",
+    "edicion": "No determinada; archivo publicado en el conjunto, sin declaracion de edicion/version/fecha localizada en el alcance descrito (notas y extras CKAN + interior del xlsx)",
+    "edicion_acreditada_externa": false
+   },
+   "f4_aplicabilidad": "Recurso de catalogo registrado en CKAN el 2026-04-28T20:40:42.874814; modificado 2026-04-29T17:52:34.079541. Fecha de edicion y aplicacion historica no documentadas.",
+   "hoja_campo": "Catalogo Servicios / servic_atencion",
+   "id": "V06",
+   "justificacion": "Sin edicion determinada (F3) ni vinculo a periodos (F4).",
+   "limitaciones": [
+    "Vigencia no comprobada (coherente con P06)."
+   ],
+   "nombre_catalogo": "Catálogo servicios",
+   "referencia_iri": "https://example.org/mex-ontologi/declared-code-reference/9ff643fe3f91869a5a3aff089018f3913d8510551a6d50a7566123a44969b05f",
+   "titulo_conjunto": "Fiebre manchada (Rickettsia)",
+   "vigencia": "no_acreditada"
+  },
+  {
+   "conjunto": "5494daa1-09ca-4750-aeac-2558553700e1",
+   "f1_ckan": {
+    "paquete_created": "2026-04-13T17:25:22.034540",
+    "paquete_modified": "2026-05-11T21:37:29.009099",
+    "catalogo_created": "2026-04-28T20:40:42.874814",
+    "catalogo_last_modified": "2026-04-29T17:52:34.079541",
+    "catalogo_metadata_modified": "2026-04-29T17:52:34.092608",
+    "catalogo_recurso": "08d3b1a7-dbc0-4f43-b1d2-3266cebb88f8",
+    "catalogo_sha256": "3b8546acad7482825755e46a1a619a4838721f8480b94baaef3c755ba293db9c",
+    "catalogo_url": "https://datos.sonora.gob.mx/dataset/5494daa1-09ca-4750-aeac-2558553700e1/resource/08d3b1a7-dbc0-4f43-b1d2-3266cebb88f8/download/catalogo.xlsx",
+    "paquete_url": "https://datos.sonora.gob.mx/api/3/action/package_show?id=5494daa1-09ca-4750-aeac-2558553700e1"
+   },
+   "f2_periodos_declarados": {
+    "fuente": "Titulos de recursos CKAN + nota; NO cobertura observada",
+    "nota_conjunto": "Registro anual de Rickettsiosis en el Estado de Sonora",
+    "periodos": [
+     "2022 anual",
+     "2023 anual",
+     "2024 anual"
+    ]
+   },
+   "f3_edicion": {
+    "declaracion_interna": "Ninguna localizada en el alcance descrito",
+    "edicion": "No determinada; archivo publicado en el conjunto, sin declaracion de edicion/version/fecha localizada en el alcance descrito (notas y extras CKAN + interior del xlsx)",
+    "edicion_acreditada_externa": false
+   },
+   "f4_aplicabilidad": "Recurso de catalogo registrado en CKAN el 2026-04-28T20:40:42.874814; modificado 2026-04-29T17:52:34.079541. Fecha de edicion y aplicacion historica no documentadas.",
+   "hoja_campo": "Catalogo rechazo / motiv_rech_ricket_sangre",
+   "id": "V07",
+   "justificacion": "Sin edicion determinada (F3) ni vinculo a periodos (F4).",
+   "limitaciones": [
+    "Vigencia no comprobada (coherente con P07)."
+   ],
+   "nombre_catalogo": "Motivos de rechazo",
+   "referencia_iri": "https://example.org/mex-ontologi/declared-code-reference/5b1ccbaafec13e5b4e83d513d5817f79d39b709d3a03efc206f2b265dc66fc75",
+   "titulo_conjunto": "Fiebre manchada (Rickettsia)",
+   "vigencia": "no_acreditada"
+  },
+  {
+   "conjunto": "5494daa1-09ca-4750-aeac-2558553700e1",
+   "f1_ckan": {
+    "paquete_created": "2026-04-13T17:25:22.034540",
+    "paquete_modified": "2026-05-11T21:37:29.009099",
+    "catalogo_created": "2026-04-28T20:40:42.874814",
+    "catalogo_last_modified": "2026-04-29T17:52:34.079541",
+    "catalogo_metadata_modified": "2026-04-29T17:52:34.092608",
+    "catalogo_recurso": "08d3b1a7-dbc0-4f43-b1d2-3266cebb88f8",
+    "catalogo_sha256": "3b8546acad7482825755e46a1a619a4838721f8480b94baaef3c755ba293db9c",
+    "catalogo_url": "https://datos.sonora.gob.mx/dataset/5494daa1-09ca-4750-aeac-2558553700e1/resource/08d3b1a7-dbc0-4f43-b1d2-3266cebb88f8/download/catalogo.xlsx",
+    "paquete_url": "https://datos.sonora.gob.mx/api/3/action/package_show?id=5494daa1-09ca-4750-aeac-2558553700e1"
+   },
+   "f2_periodos_declarados": {
+    "fuente": "Titulos de recursos CKAN + nota; NO cobertura observada",
+    "nota_conjunto": "Registro anual de Rickettsiosis en el Estado de Sonora",
+    "periodos": [
+     "2022 anual",
+     "2023 anual",
+     "2024 anual"
+    ]
+   },
+   "f3_edicion": {
+    "declaracion_interna": "Ninguna localizada en el alcance descrito",
+    "edicion": "No determinada; archivo publicado en el conjunto, sin declaracion de edicion/version/fecha localizada en el alcance descrito (notas y extras CKAN + interior del xlsx)",
+    "edicion_acreditada_externa": false
+   },
+   "f4_aplicabilidad": "Recurso de catalogo registrado en CKAN el 2026-04-28T20:40:42.874814; modificado 2026-04-29T17:52:34.079541. Fecha de edicion y aplicacion historica no documentadas.",
+   "hoja_campo": "Catalogo especie / ricket_especie (variable ricket_especie_rtpcr)",
+   "id": "V08",
+   "justificacion": "Sin edicion determinada (F3) ni vinculo a periodos (F4).",
+   "limitaciones": [
+    "Vigencia no comprobada (coherente con P08)."
+   ],
+   "nombre_catalogo": "Especie rickettsiosis",
+   "referencia_iri": "https://example.org/mex-ontologi/declared-code-reference/c8e9eb88050d4c254c2f8e08bee2bac5095eea83f8e07aab0d2e9ce79aca9131",
+   "titulo_conjunto": "Fiebre manchada (Rickettsia)",
+   "vigencia": "no_acreditada"
+  },
+  {
+   "conjunto": "0b5f5e16-2de3-4be1-811f-4b0976ed82d3",
+   "diccionario": "03a33e71-d447-47b1-aa0d-b341996e023c",
+   "f1_ckan": {
+    "paquete_created": "2024-09-05T18:54:48.332305",
+    "paquete_modified": "2024-09-19T19:57:26.938626",
+    "catalogo_created": "2024-09-05T18:54:48.642546",
+    "catalogo_last_modified": "2024-09-05T18:54:48.619563",
+    "catalogo_metadata_modified": "2024-09-05T18:57:33.021960",
+    "catalogo_recurso": "de5c06c7-03d7-4ed4-a9fc-ec7d10b024f0",
+    "catalogo_sha256": "ea54aad30b7342ce678d1d66157325a5cbaa492380ee4d807b20918198c5b0f5",
+    "catalogo_url": "https://datos.sonora.gob.mx/dataset/0b5f5e16-2de3-4be1-811f-4b0976ed82d3/resource/de5c06c7-03d7-4ed4-a9fc-ec7d10b024f0/download/catalogo.xlsx",
+    "paquete_url": "https://datos.sonora.gob.mx/api/3/action/package_show?id=0b5f5e16-2de3-4be1-811f-4b0976ed82d3"
+   },
+   "f2_periodos_declarados": {
+    "fuente": "Nota CKAN + titulo del recurso; NO cobertura observada",
+    "nota_conjunto": "Reconstruccion 1990-2019 y proyecciones 2020-2040 (Sonora)",
+    "periodos": [
+     "1990-2019 reconstruccion",
+     "2020-2040 proyecciones"
+    ]
+   },
+   "f3_edicion": {
+    "declaracion_interna": "Ninguna localizada en el alcance descrito",
+    "edicion": "No determinada; archivo publicado en el conjunto, sin declaracion de edicion/version/fecha localizada en el alcance descrito (notas y extras CKAN + interior del xlsx)",
+    "edicion_acreditada_externa": false
+   },
+   "f4_aplicabilidad": "Recurso de catalogo registrado en CKAN el 2024-09-05T18:54:48.642546; modificado 2024-09-05T18:54:48.619563. Fecha de edicion y aplicacion historica no documentadas.",
+   "hoja_campo": "Catalogo_Municipios / CLAVE",
+   "id": "V09",
+   "justificacion": "Sin edicion determinada (F3) ni vinculo a periodos (F4).",
+   "limitaciones": [
+    "Sin vigencia historica acreditada."
+   ],
+   "referencia_iri": "https://example.org/mex-ontologi/declared-code-reference/a5ef433dd9439bbb04d230f9282143f4a0dd2991ad05371fb6f2f6cd430e9d08",
+   "titulo_conjunto": "Proyecciones de población - Grupos quinquenales de edad",
+   "variable": "CLAVE",
+   "vigencia": "no_acreditada"
+  },
+  {
+   "conjunto": "0b5f5e16-2de3-4be1-811f-4b0976ed82d3",
+   "diccionario": "03a33e71-d447-47b1-aa0d-b341996e023c",
+   "f1_ckan": {
+    "paquete_created": "2024-09-05T18:54:48.332305",
+    "paquete_modified": "2024-09-19T19:57:26.938626",
+    "catalogo_created": "2024-09-05T18:54:48.642546",
+    "catalogo_last_modified": "2024-09-05T18:54:48.619563",
+    "catalogo_metadata_modified": "2024-09-05T18:57:33.021960",
+    "catalogo_recurso": "de5c06c7-03d7-4ed4-a9fc-ec7d10b024f0",
+    "catalogo_sha256": "ea54aad30b7342ce678d1d66157325a5cbaa492380ee4d807b20918198c5b0f5",
+    "catalogo_url": "https://datos.sonora.gob.mx/dataset/0b5f5e16-2de3-4be1-811f-4b0976ed82d3/resource/de5c06c7-03d7-4ed4-a9fc-ec7d10b024f0/download/catalogo.xlsx",
+    "paquete_url": "https://datos.sonora.gob.mx/api/3/action/package_show?id=0b5f5e16-2de3-4be1-811f-4b0976ed82d3"
+   },
+   "f2_periodos_declarados": {
+    "fuente": "Nota CKAN + titulo del recurso; NO cobertura observada",
+    "nota_conjunto": "Reconstruccion 1990-2019 y proyecciones 2020-2040 (Sonora)",
+    "periodos": [
+     "1990-2019 reconstruccion",
+     "2020-2040 proyecciones"
+    ]
+   },
+   "f3_edicion": {
+    "declaracion_interna": "Ninguna localizada en el alcance descrito",
+    "edicion": "No determinada; archivo publicado en el conjunto, sin declaracion de edicion/version/fecha localizada en el alcance descrito (notas y extras CKAN + interior del xlsx)",
+    "edicion_acreditada_externa": false
+   },
+   "f4_aplicabilidad": "Recurso de catalogo registrado en CKAN el 2024-09-05T18:54:48.642546; modificado 2024-09-05T18:54:48.619563. Fecha de edicion y aplicacion historica no documentadas.",
+   "hoja_campo": "Catalogo_Estado / CLAVE_ENT",
+   "id": "V10",
+   "justificacion": "Sin edicion determinada (F3) ni vinculo a periodos (F4).",
+   "limitaciones": [
+    "Sin vigencia historica acreditada."
+   ],
+   "referencia_iri": "https://example.org/mex-ontologi/declared-code-reference/6626e7c684aa6ea50eaa529bdefe9f74f2c784f5991e08a73b4de188ec31e56c",
+   "titulo_conjunto": "Proyecciones de población - Grupos quinquenales de edad",
+   "variable": "CLAVE_ENT",
+   "vigencia": "no_acreditada"
+  },
+  {
+   "conjunto": "943d0723-afbb-470a-8fe8-d62e8671de84",
+   "diccionario": "1b6d0817-66a9-4b25-9468-efca73e3ce20",
+   "f1_ckan": {
+    "paquete_created": "2024-09-05T18:46:06.505240",
+    "paquete_modified": "2024-09-19T19:59:16.018924",
+    "catalogo_created": "2024-09-05T18:46:09.779456",
+    "catalogo_last_modified": "2024-09-05T18:46:09.750879",
+    "catalogo_metadata_modified": "2024-09-05T18:49:10.808648",
+    "catalogo_recurso": "d7c4b8b2-568f-4349-a1ed-23fa93189e83",
+    "catalogo_sha256": "ea54aad30b7342ce678d1d66157325a5cbaa492380ee4d807b20918198c5b0f5",
+    "catalogo_url": "https://datos.sonora.gob.mx/dataset/943d0723-afbb-470a-8fe8-d62e8671de84/resource/d7c4b8b2-568f-4349-a1ed-23fa93189e83/download/catalogo.xlsx",
+    "paquete_url": "https://datos.sonora.gob.mx/api/3/action/package_show?id=943d0723-afbb-470a-8fe8-d62e8671de84"
+   },
+   "f2_periodos_declarados": {
+    "fuente": "Nota CKAN + titulo del recurso; NO cobertura observada",
+    "nota_conjunto": "Reconstruccion por grandes grupos 1990-2019 y proyecciones 2020-2040 (Sonora)",
+    "periodos": [
+     "1990-2019 reconstruccion",
+     "2020-2040 proyecciones"
+    ]
+   },
+   "f3_edicion": {
+    "declaracion_interna": "Ninguna localizada en el alcance descrito",
+    "edicion": "No determinada; archivo publicado en el conjunto, sin declaracion de edicion/version/fecha localizada en el alcance descrito (notas y extras CKAN + interior del xlsx)",
+    "edicion_acreditada_externa": false
+   },
+   "f4_aplicabilidad": "Recurso de catalogo registrado en CKAN el 2024-09-05T18:46:09.779456; modificado 2024-09-05T18:46:09.750879. Fecha de edicion y aplicacion historica no documentadas.",
+   "hoja_campo": "Catalogo_Municipios / CLAVE",
+   "id": "V11",
+   "justificacion": "Sin edicion determinada (F3) ni vinculo a periodos (F4).",
+   "limitaciones": [
+    "Sin vigencia historica acreditada."
+   ],
+   "referencia_iri": "https://example.org/mex-ontologi/declared-code-reference/6b313f08b4fb06fa474536bb04ddea0b113d0ea610840aaf2a36bc9fd9bb5acf",
+   "titulo_conjunto": "Proyecciones de población - Grandes grupos de edad",
+   "variable": "CLAVE",
+   "vigencia": "no_acreditada"
+  },
+  {
+   "conjunto": "943d0723-afbb-470a-8fe8-d62e8671de84",
+   "diccionario": "1b6d0817-66a9-4b25-9468-efca73e3ce20",
+   "f1_ckan": {
+    "paquete_created": "2024-09-05T18:46:06.505240",
+    "paquete_modified": "2024-09-19T19:59:16.018924",
+    "catalogo_created": "2024-09-05T18:46:09.779456",
+    "catalogo_last_modified": "2024-09-05T18:46:09.750879",
+    "catalogo_metadata_modified": "2024-09-05T18:49:10.808648",
+    "catalogo_recurso": "d7c4b8b2-568f-4349-a1ed-23fa93189e83",
+    "catalogo_sha256": "ea54aad30b7342ce678d1d66157325a5cbaa492380ee4d807b20918198c5b0f5",
+    "catalogo_url": "https://datos.sonora.gob.mx/dataset/943d0723-afbb-470a-8fe8-d62e8671de84/resource/d7c4b8b2-568f-4349-a1ed-23fa93189e83/download/catalogo.xlsx",
+    "paquete_url": "https://datos.sonora.gob.mx/api/3/action/package_show?id=943d0723-afbb-470a-8fe8-d62e8671de84"
+   },
+   "f2_periodos_declarados": {
+    "fuente": "Nota CKAN + titulo del recurso; NO cobertura observada",
+    "nota_conjunto": "Reconstruccion por grandes grupos 1990-2019 y proyecciones 2020-2040 (Sonora)",
+    "periodos": [
+     "1990-2019 reconstruccion",
+     "2020-2040 proyecciones"
+    ]
+   },
+   "f3_edicion": {
+    "declaracion_interna": "Ninguna localizada en el alcance descrito",
+    "edicion": "No determinada; archivo publicado en el conjunto, sin declaracion de edicion/version/fecha localizada en el alcance descrito (notas y extras CKAN + interior del xlsx)",
+    "edicion_acreditada_externa": false
+   },
+   "f4_aplicabilidad": "Recurso de catalogo registrado en CKAN el 2024-09-05T18:46:09.779456; modificado 2024-09-05T18:46:09.750879. Fecha de edicion y aplicacion historica no documentadas.",
+   "hoja_campo": "Catalogo_Estado / CLAVE_ENT",
+   "id": "V12",
+   "justificacion": "Sin edicion determinada (F3) ni vinculo a periodos (F4).",
+   "limitaciones": [
+    "Sin vigencia historica acreditada."
+   ],
+   "referencia_iri": "https://example.org/mex-ontologi/declared-code-reference/9bd0b46a6382ebb7dc701f0d101880649222ce8bff9ac541aa7d347ee2f0681b",
+   "titulo_conjunto": "Proyecciones de población - Grandes grupos de edad",
+   "variable": "CLAVE_ENT",
+   "vigencia": "no_acreditada"
+  },
+  {
+   "conjunto": "93ca5e1c-702e-4e62-bc61-638907be184a",
+   "diccionario": "5f46e4b8-858d-47dc-a180-125f3cc8727a",
+   "f1_ckan": {
+    "paquete_created": "2026-01-22T21:54:37.036101",
+    "paquete_modified": "2026-05-15T19:48:54.410138",
+    "catalogo_created": "2026-01-22T21:54:37.774750",
+    "catalogo_last_modified": "2026-01-22T21:54:37.749318",
+    "catalogo_metadata_modified": "2026-01-22T21:56:21.020172",
+    "catalogo_recurso": "36d3ac85-4327-41f5-9259-538a7723a0ae",
+    "catalogo_sha256": "84bb6fcda02f3de3b295189d59cf0dde201bc4e048888681b6cd8ea624bb0716",
+    "catalogo_url": "https://datos.sonora.gob.mx/dataset/93ca5e1c-702e-4e62-bc61-638907be184a/resource/36d3ac85-4327-41f5-9259-538a7723a0ae/download/catalogo.xlsx",
+    "paquete_url": "https://datos.sonora.gob.mx/api/3/action/package_show?id=93ca5e1c-702e-4e62-bc61-638907be184a"
+   },
+   "f2_periodos_declarados": {
+    "fuente": "Titulos de recursos CKAN (2015..2025) + nota; NO cobertura observada",
+    "nota_conjunto": "Delitos por municipio; fuente SESNSP procesada a Sonora",
+    "periodos": [
+     "2015",
+     "2016",
+     "2017",
+     "2018",
+     "2019",
+     "2020",
+     "2021",
+     "2022",
+     "2023",
+     "2024",
+     "2025"
+    ]
+   },
+   "f3_edicion": {
+    "declaracion_interna": "Ninguna localizada en el alcance descrito",
+    "edicion": "No determinada; archivo publicado en el conjunto, sin declaracion de edicion/version/fecha localizada en el alcance descrito (notas y extras CKAN + interior del xlsx)",
+    "edicion_acreditada_externa": false
+   },
+   "f4_aplicabilidad": "Recurso de catalogo registrado en CKAN el 2026-01-22T21:54:37.774750; modificado 2026-01-22T21:54:37.749318. Fecha de edicion y aplicacion historica no documentadas.",
+   "hoja_campo": "cat_municipio / Cve. Municipio",
+   "id": "V13",
+   "justificacion": "Sin edicion determinada (F3) ni vinculo a periodos (F4).",
+   "limitaciones": [
+    "Sin vigencia historica acreditada; comprobaciones de valores no repetidas aqui."
+   ],
+   "referencia_iri": "https://example.org/mex-ontologi/declared-code-reference/957df4c830f4558d6431d774fad97a1bbf05da13990c3b27fe2e78005151c0be",
+   "titulo_conjunto": "Incidencia delictiva municipal",
+   "variable": "Cve. Municipio",
+   "vigencia": "no_acreditada"
+  },
+  {
+   "conjunto": "caf587a5-23ac-496b-85d4-6ceb1d615d78",
+   "diccionario": "a8a09044-87db-49a2-82c3-29594ec6ffd5",
+   "f1_ckan": {
+    "paquete_created": "2026-01-23T17:05:17.910910",
+    "paquete_modified": "2026-05-15T19:46:48.436965",
+    "catalogo_created": "2026-01-23T17:05:18.818414",
+    "catalogo_last_modified": "2026-01-23T17:05:18.793525",
+    "catalogo_metadata_modified": "2026-01-23T17:05:58.622920",
+    "catalogo_recurso": "7f3aca28-4251-48b8-a759-69c992580744",
+    "catalogo_sha256": "96776ca8976ebb6e7510f65abaa287888be693f400a1e4adb5777e091d3b5a87",
+    "catalogo_url": "https://datos.sonora.gob.mx/dataset/caf587a5-23ac-496b-85d4-6ceb1d615d78/resource/7f3aca28-4251-48b8-a759-69c992580744/download/catalogo.xlsx",
+    "paquete_url": "https://datos.sonora.gob.mx/api/3/action/package_show?id=caf587a5-23ac-496b-85d4-6ceb1d615d78"
+   },
+   "f2_periodos_declarados": {
+    "fuente": "Titulos de recursos CKAN (2015..2025) + nota; NO cobertura observada",
+    "nota_conjunto": "Victimas por entidad; fuente SESNSP procesada a Sonora",
+    "periodos": [
+     "2015",
+     "2016",
+     "2017",
+     "2018",
+     "2019",
+     "2020",
+     "2021",
+     "2022",
+     "2023",
+     "2024",
+     "2025"
+    ]
+   },
+   "f3_edicion": {
+    "declaracion_interna": "Ninguna localizada en el alcance descrito",
+    "edicion": "No determinada; archivo publicado en el conjunto, sin declaracion de edicion/version/fecha localizada en el alcance descrito (notas y extras CKAN + interior del xlsx)",
+    "edicion_acreditada_externa": false
+   },
+   "f4_aplicabilidad": "Recurso de catalogo registrado en CKAN el 2026-01-23T17:05:18.818414; modificado 2026-01-23T17:05:18.793525. Fecha de edicion y aplicacion historica no documentadas.",
+   "hoja_campo": "cat_entidad / Clave_Ent",
+   "id": "V14",
+   "justificacion": "Sin edicion determinada (F3) ni vinculo a periodos (F4).",
+   "limitaciones": [
+    "Sin vigencia historica acreditada; comprobaciones de valores no repetidas aqui."
+   ],
+   "referencia_iri": "https://example.org/mex-ontologi/declared-code-reference/526497ffbaeb442341f4ab5c77b53a49235ba807eeb1433f8331d9db720b00f5",
+   "titulo_conjunto": "Víctimas del fuero común en el estado",
+   "variable": "Clave_Ent",
+   "vigencia": "no_acreditada"
+  },
+  {
+   "conjunto": "960ef0a9-73ed-4191-ae0b-b868d7e48292",
+   "diccionario": "f1bbd13b-3364-441c-81b4-7b7c548be39f",
+   "f1_ckan": {
+    "paquete_created": "2024-09-05T19:02:27.568112",
+    "paquete_modified": "2024-09-20T18:51:41.887270",
+    "catalogo_created": "2024-09-05T19:02:28.161775",
+    "catalogo_last_modified": "2024-09-05T19:02:28.137320",
+    "catalogo_metadata_modified": "2024-09-05T19:03:55.554738",
+    "catalogo_recurso": "e0d2acc2-9841-4f6d-baea-88ba86710a7d",
+    "catalogo_sha256": "ea54aad30b7342ce678d1d66157325a5cbaa492380ee4d807b20918198c5b0f5",
+    "catalogo_url": "https://datos.sonora.gob.mx/dataset/960ef0a9-73ed-4191-ae0b-b868d7e48292/resource/e0d2acc2-9841-4f6d-baea-88ba86710a7d/download/catalogo.xlsx",
+    "paquete_url": "https://datos.sonora.gob.mx/api/3/action/package_show?id=960ef0a9-73ed-4191-ae0b-b868d7e48292"
+   },
+   "f2_periodos_declarados": {
+    "fuente": "Nota CKAN + titulo del recurso; NO cobertura observada",
+    "nota_conjunto": "Indicadores demograficos 1990-2040, reconstruccion y proyecciones",
+    "periodos": [
+     "1990-2040"
+    ]
+   },
+   "f3_edicion": {
+    "declaracion_interna": "Ninguna localizada en el alcance descrito",
+    "edicion": "No determinada; archivo publicado en el conjunto, sin declaracion de edicion/version/fecha localizada en el alcance descrito (notas y extras CKAN + interior del xlsx)",
+    "edicion_acreditada_externa": false
+   },
+   "f4_aplicabilidad": "Recurso de catalogo registrado en CKAN el 2024-09-05T19:02:28.161775; modificado 2024-09-05T19:02:28.137320. Fecha de edicion y aplicacion historica no documentadas.",
+   "hoja_campo": "Catalogo_Municipios / CLAVE",
+   "id": "V15",
+   "justificacion": "Sin edicion determinada (F3) ni vinculo a periodos (F4).",
+   "limitaciones": [
+    "Sin vigencia historica acreditada."
+   ],
+   "referencia_iri": "https://example.org/mex-ontologi/declared-code-reference/bae61ad38ac1e3df9f75026f39187d0a0b6edcd29ef51769e4c3be5714acc37d",
+   "titulo_conjunto": "Proyecciones de población - Indicadores demográficos",
+   "variable": "CLAVE",
+   "vigencia": "no_acreditada"
+  },
+  {
+   "conjunto": "960ef0a9-73ed-4191-ae0b-b868d7e48292",
+   "diccionario": "f1bbd13b-3364-441c-81b4-7b7c548be39f",
+   "f1_ckan": {
+    "paquete_created": "2024-09-05T19:02:27.568112",
+    "paquete_modified": "2024-09-20T18:51:41.887270",
+    "catalogo_created": "2024-09-05T19:02:28.161775",
+    "catalogo_last_modified": "2024-09-05T19:02:28.137320",
+    "catalogo_metadata_modified": "2024-09-05T19:03:55.554738",
+    "catalogo_recurso": "e0d2acc2-9841-4f6d-baea-88ba86710a7d",
+    "catalogo_sha256": "ea54aad30b7342ce678d1d66157325a5cbaa492380ee4d807b20918198c5b0f5",
+    "catalogo_url": "https://datos.sonora.gob.mx/dataset/960ef0a9-73ed-4191-ae0b-b868d7e48292/resource/e0d2acc2-9841-4f6d-baea-88ba86710a7d/download/catalogo.xlsx",
+    "paquete_url": "https://datos.sonora.gob.mx/api/3/action/package_show?id=960ef0a9-73ed-4191-ae0b-b868d7e48292"
+   },
+   "f2_periodos_declarados": {
+    "fuente": "Nota CKAN + titulo del recurso; NO cobertura observada",
+    "nota_conjunto": "Indicadores demograficos 1990-2040, reconstruccion y proyecciones",
+    "periodos": [
+     "1990-2040"
+    ]
+   },
+   "f3_edicion": {
+    "declaracion_interna": "Ninguna localizada en el alcance descrito",
+    "edicion": "No determinada; archivo publicado en el conjunto, sin declaracion de edicion/version/fecha localizada en el alcance descrito (notas y extras CKAN + interior del xlsx)",
+    "edicion_acreditada_externa": false
+   },
+   "f4_aplicabilidad": "Recurso de catalogo registrado en CKAN el 2024-09-05T19:02:28.161775; modificado 2024-09-05T19:02:28.137320. Fecha de edicion y aplicacion historica no documentadas.",
+   "hoja_campo": "Catalogo_Estado / CLAVE_ENT",
+   "id": "V16",
+   "justificacion": "Sin edicion determinada (F3) ni vinculo a periodos (F4).",
+   "limitaciones": [
+    "Sin vigencia historica acreditada."
+   ],
+   "referencia_iri": "https://example.org/mex-ontologi/declared-code-reference/c2094a26d8939996516ffb7c725ea36c6da339a3a61466cb926ff24d92f000b5",
+   "titulo_conjunto": "Proyecciones de población - Indicadores demográficos",
+   "variable": "CLAVE_ENT",
+   "vigencia": "no_acreditada"
+  }
+ ],
+ "total": 16,
+ "fecha_consulta_ckan_utc": "2026-10-23T09:46:08.727202+00:00",
+ "fecha_generacion_utc": "2026-10-23T09:56:36.911601+00:00",
+ "evidencia_externa_cmpe2016": {
+  "archivo": "evidencia/externa/cmpe2016_inegi.pdf",
+  "urls": [
+   "https://www.inegi.org.mx/contenidos/productos/prod_serv/contenidos/espanol/bvinegi/productos/nueva_estruc/702825086664.pdf",
+   "https://snieg.mx/SNIEG_Canal/Material2021/docs/clasificador_cmpe.pdf (mismo sha256)"
+  ],
+  "bytes": 2127276,
+  "sha256": "66ba2fd24aa01d82684df52677b792e17fe55d38273d6325ff4f6f66a3ef714b",
+  "fecha_descarga_utc": "2026-10-23T09:55:04.085665+00:00",
+  "paginas": 202,
+  "citas": "evidencia/extractos/cmpe2016_citas.json"
+ }
+}

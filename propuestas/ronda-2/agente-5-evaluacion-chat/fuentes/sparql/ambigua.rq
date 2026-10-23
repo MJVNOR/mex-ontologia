@@ -1,0 +1,1 @@
+PREFIX mex: <https://example.org/mex-ontologi/vocab/> PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#> SELECT ?m ?col ?et ?var WHERE { ?m mex:estadoCorrespondencia "ambigua_por_nombre"; mex:columnaOrigen ?c; mex:variableDestino ?v . ?c rdfs:label ?et . BIND(STR(?c) AS ?col) } ORDER BY ?col

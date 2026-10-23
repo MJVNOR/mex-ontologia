@@ -1,0 +1,9 @@
+PREFIX mex: <{{BASE_IRI}}vocab/>
+PREFIX foaf: <http://xmlns.com/foaf/0.1/>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+SELECT ?pagina ?tipo ?url (COUNT(DISTINCT ?vista) AS ?destinos)
+WHERE {
+  ?p a mex:PaginaPortal ; rdfs:label ?pagina ; mex:tipoPagina ?tipo ; foaf:page ?url .
+  OPTIONAL { ?p mex:visualizacionDeclarada ?vista }
+}
+GROUP BY ?pagina ?tipo ?url ORDER BY ?tipo ?pagina

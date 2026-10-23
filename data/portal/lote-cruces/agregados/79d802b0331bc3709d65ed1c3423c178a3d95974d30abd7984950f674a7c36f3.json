@@ -1,0 +1,160 @@
+{
+  "recurso_id": "21d4a2ff-bec9-4498-a37a-2b48cfdd929e",
+  "conjunto_id": "c6140d53-1f16-4dd8-8ab3-d2b47f03a921",
+  "nombre": "Divorcios 2017",
+  "consultado_en_utc": "2026-10-23T06:59:56.276769+00:00",
+  "estrategia": {
+    "anio": 2017,
+    "campo_anio": "año_registro",
+    "campos": [
+      "_id",
+      "año_registro",
+      "municipio"
+    ],
+    "medida": "conteo_filas_divorcios",
+    "grano_origen": "fila_registro_publicado"
+  },
+  "ok": true,
+  "total_filas": 79,
+  "valor_total": 79,
+  "consultas": [
+    "https://datos.sonora.gob.mx/api/3/action/datastore_search?resource_id=21d4a2ff-bec9-4498-a37a-2b48cfdd929e&fields=_id%2Ca%C3%B1o_registro%2Cmunicipio&sort=_id+asc&limit=5000&offset=0"
+  ],
+  "sha256_campos_leidos": "dc896a1e02e7a28cb921c902122fb46823999a922deced6084dff8db6caa5574",
+  "cobertura_meses": {},
+  "agregados": [
+    {
+      "municipio_local": 2,
+      "anio_registro": 2017,
+      "valor": 2
+    },
+    {
+      "municipio_local": 3,
+      "anio_registro": 2017,
+      "valor": 1
+    },
+    {
+      "municipio_local": 17,
+      "anio_registro": 2017,
+      "valor": 3
+    },
+    {
+      "municipio_local": 18,
+      "anio_registro": 2017,
+      "valor": 7
+    },
+    {
+      "municipio_local": 19,
+      "anio_registro": 2017,
+      "valor": 1
+    },
+    {
+      "municipio_local": 23,
+      "anio_registro": 2017,
+      "valor": 1
+    },
+    {
+      "municipio_local": 25,
+      "anio_registro": 2017,
+      "valor": 2
+    },
+    {
+      "municipio_local": 26,
+      "anio_registro": 2017,
+      "valor": 2
+    },
+    {
+      "municipio_local": 27,
+      "anio_registro": 2017,
+      "valor": 2
+    },
+    {
+      "municipio_local": 28,
+      "anio_registro": 2017,
+      "valor": 1
+    },
+    {
+      "municipio_local": 29,
+      "anio_registro": 2017,
+      "valor": 7
+    },
+    {
+      "municipio_local": 30,
+      "anio_registro": 2017,
+      "valor": 23
+    },
+    {
+      "municipio_local": 31,
+      "anio_registro": 2017,
+      "valor": 1
+    },
+    {
+      "municipio_local": 38,
+      "anio_registro": 2017,
+      "valor": 1
+    },
+    {
+      "municipio_local": 41,
+      "anio_registro": 2017,
+      "valor": 2
+    },
+    {
+      "municipio_local": 42,
+      "anio_registro": 2017,
+      "valor": 5
+    },
+    {
+      "municipio_local": 43,
+      "anio_registro": 2017,
+      "valor": 1
+    },
+    {
+      "municipio_local": 48,
+      "anio_registro": 2017,
+      "valor": 2
+    },
+    {
+      "municipio_local": 55,
+      "anio_registro": 2017,
+      "valor": 7
+    },
+    {
+      "municipio_local": 56,
+      "anio_registro": 2017,
+      "valor": 2
+    },
+    {
+      "municipio_local": 57,
+      "anio_registro": 2017,
+      "valor": 2
+    },
+    {
+      "municipio_local": 64,
+      "anio_registro": 2017,
+      "valor": 1
+    },
+    {
+      "municipio_local": 66,
+      "anio_registro": 2017,
+      "valor": 1
+    },
+    {
+      "municipio_local": 67,
+      "anio_registro": 2017,
+      "valor": 1
+    },
+    {
+      "municipio_local": 71,
+      "anio_registro": 2017,
+      "valor": 1
+    }
+  ],
+  "comprobaciones": [
+    "IDs únicos",
+    "total estable",
+    "año real verificado",
+    "dominio de clave",
+    "agregación previa al join"
+  ],
+  "limite": "API sin instantánea transaccional; conteo de registros publicados sin deduplicación de eventos"
+}

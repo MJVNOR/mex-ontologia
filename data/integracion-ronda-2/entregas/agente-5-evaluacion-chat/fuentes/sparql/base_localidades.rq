@@ -1,0 +1,6 @@
+PREFIX mex: <https://example.org/mex-ontologi/vocab/>
+PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+SELECT ?referencia ?estado (COUNT(?localidad) AS ?localidades) WHERE {
+  ?referencia a mex:ReferenciaLocalidadesObservada ; mex:estadoReferenciaObservada ?estado .
+  ?localidad a mex:LocalidadObservada ; skos:inScheme ?referencia .
+} GROUP BY ?referencia ?estado

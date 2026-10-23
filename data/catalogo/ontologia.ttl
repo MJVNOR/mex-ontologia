@@ -1,0 +1,69 @@
+@prefix dcat: <http://www.w3.org/ns/dcat#> .
+@prefix mex: <https://example.org/mex-ontologi/vocab/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<https://example.org/mex-ontologi/ontology> a owl:Ontology ;
+    rdfs:label "mex-ontologi: catálogo de Sonora"@es ;
+    rdfs:comment "Modelo local provisional. No es un vocabulario oficial del Gobierno de Sonora."@es .
+
+mex:datastoreActivo a owl:DatatypeProperty ;
+    rdfs:label "DataStore declarado activo por CKAN"@es ;
+    rdfs:domain mex:RecursoCatalogado ;
+    rdfs:range xsd:boolean .
+
+mex:finDeclarado a owl:DatatypeProperty ;
+    rdfs:label "Fin declarado sin interpretar cobertura"@es ;
+    rdfs:domain mex:RecursoCatalogado ;
+    rdfs:range xsd:string .
+
+mex:frecuenciaDeclarada a owl:DatatypeProperty ;
+    rdfs:label "Frecuencia declarada"@es ;
+    rdfs:domain dcat:Dataset ;
+    rdfs:range xsd:string .
+
+mex:fuentesExtrasDeclaradas a owl:DatatypeProperty ;
+    rdfs:label "Fuentes extras declaradas"@es ;
+    rdfs:domain dcat:Dataset ;
+    rdfs:range xsd:string .
+
+mex:granularidadDeclarada a owl:DatatypeProperty ;
+    rdfs:label "Granularidad declarada"@es ;
+    rdfs:domain dcat:Dataset ;
+    rdfs:range xsd:string .
+
+mex:inicioDeclarado a owl:DatatypeProperty ;
+    rdfs:label "Inicio declarado sin interpretar cobertura"@es ;
+    rdfs:domain mex:RecursoCatalogado ;
+    rdfs:range xsd:string .
+
+mex:jurisdiccionDeclarada a owl:DatatypeProperty ;
+    rdfs:label "Jurisdicción declarada"@es ;
+    rdfs:domain dcat:Dataset ;
+    rdfs:range xsd:string .
+
+mex:origenDeclarado a owl:DatatypeProperty ;
+    rdfs:label "Categoría de origen declarada"@es ;
+    rdfs:domain dcat:Dataset ;
+    rdfs:range xsd:string .
+
+mex:recurso a owl:ObjectProperty ;
+    rdfs:label "Recurso del conjunto"@es ;
+    rdfs:domain dcat:Dataset ;
+    rdfs:range mex:RecursoCatalogado .
+
+mex:regionDeclarada a owl:DatatypeProperty ;
+    rdfs:label "Región declarada"@es ;
+    rdfs:domain mex:RecursoCatalogado ;
+    rdfs:range xsd:string .
+
+mex:urlDeclarada a owl:ObjectProperty ;
+    rdfs:label "URL declarada sin comprobar descarga"@es ;
+    rdfs:domain mex:RecursoCatalogado ;
+    rdfs:range rdfs:Resource .
+
+mex:RecursoCatalogado a owl:Class ;
+    rdfs:label "Recurso registrado en CKAN"@es ;
+    rdfs:subClassOf rdfs:Resource .
+

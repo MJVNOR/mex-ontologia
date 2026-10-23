@@ -1,0 +1,4 @@
+PREFIX mex: <{{BASE_IRI}}vocab/>
+SELECT ?decision (COUNT(?validacion) AS ?pares) WHERE {
+  ?validacion a mex:ValidacionLote ; mex:decisionLote ?decision .
+} GROUP BY ?decision ORDER BY ?decision

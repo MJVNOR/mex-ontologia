@@ -1,0 +1,5 @@
+PREFIX mex: <{{BASE_IRI}}vocab/>
+SELECT ?revision ?referencia ?estado ?fecha WHERE {
+  ?revision a mex:RevisionVigenciaCatalogo ; mex:referenciaDeclarada ?referencia ;
+    mex:estadoVigenciaRevisada ?estado ; mex:fechaConsultaCkan ?fecha .
+} ORDER BY ?referencia

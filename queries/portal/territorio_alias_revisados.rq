@@ -1,0 +1,11 @@
+PREFIX mex: <{{BASE_IRI}}vocab/>
+PREFIX prov: <http://www.w3.org/ns/prov#>
+PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+SELECT ?correspondencia ?codigoOrigen ?nombreOrigen ?codigoDestino ?nombreDestino ?revision ?evidencia ?criterio WHERE {
+  ?correspondencia mex:estadoCorrespondenciaTerritorial "codigo_y_alias_revisado" ;
+    mex:entradaTerritorialOrigen ?origen ; mex:entradaTerritorialDestino ?destino ; prov:wasDerivedFrom ?revision .
+  ?origen mex:codigoOriginal ?codigoOrigen ; mex:nombreOriginal ?nombreOrigen .
+  ?destino skos:notation ?codigoDestino ; rdfs:label ?nombreDestino .
+  ?revision mex:evidenciaTextual ?evidencia ; mex:criterioRevision ?criterio .
+} ORDER BY ?correspondencia

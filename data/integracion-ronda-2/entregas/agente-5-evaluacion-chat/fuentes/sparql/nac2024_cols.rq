@@ -1,0 +1,1 @@
+PREFIX mex: <https://example.org/mex-ontologi/vocab/> PREFIX dct: <http://purl.org/dc/terms/> SELECT ?campo WHERE { ?ds dct:title "Nacimientos"@es . ?ds mex:recurso ?r . ?r dct:title "Nacimientos 2024" . ?r mex:esquema ?e . ?e mex:columna ?c . ?c mex:nombreCampo ?campo } ORDER BY ?campo

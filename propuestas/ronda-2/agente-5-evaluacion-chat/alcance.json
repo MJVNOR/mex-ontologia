@@ -1,0 +1,31 @@
+{
+  "canal_evaluado": "prueba del pipeline fuente GraphRAG+QA+Gemini con grafo vivo (NO es la UI de Studio)",
+  "evaluacion_ui": "no_ejecutada",
+  "limite_ui": "Sin automatizacion GUI en este entorno; no se altera instalacion, configuracion, credenciales, grafo ni conversaciones.",
+  "imports_pipeline_fuente": {
+    "graphrag_ts": {
+      "ruta": "C:\\Users\\marti\\Documents\\open-ontologies\\studio\\src-tauri\\sidecars\\agent\\graphrag.ts",
+      "sha256": "ae43065f04a7ea16aa8409bef3475da0f7ca24b4a39a607e03de658130d772e0",
+      "bytes": 23598
+    },
+    "providers_openai_ts": {
+      "ruta": "C:\\Users\\marti\\Documents\\open-ontologies\\studio\\src-tauri\\sidecars\\agent\\providers\\openai.ts",
+      "sha256": "147061ae60e3e4519ce7ce6c76e95c5e6359a727ede34d696be6e15cb30175a5",
+      "bytes": 4860
+    }
+  },
+  "artefacto_instalado": {
+    "ruta": "C:\\Users\\marti\\AppData\\Local\\Packages\\OpenAI.Codex_2p2nqsd0c76g0\\LocalCache\\Local\\open-ontologies-studio\\sidecars\\agent\\dist\\index.js",
+    "sha256": "50a560cc647a8d8385150296aa86b0c702ad4b30ab58a274ad0fabd7d9f5871e",
+    "bytes": 528313
+  },
+  "identidad_backend": "NO demostrada: fuente TS del repositorio vs bundle JS instalado; no se reconstruyo ni se comparo build; no se afirma 'mismo backend de Studio'.",
+  "configuracion_efectiva_ui": "NO comprobada",
+  "configuracion_usada_pipeline": {
+    "proveedor": "openai-compatible",
+    "base_url": "https://generativelanguage.googleapis.com/v1beta/openai",
+    "modelo": "gemini-3.5-flash",
+    "nota": "Valores no secretos de .env del proyecto; la clave API nunca se registra ni se imprime. agent-env-path.txt junto al ejecutable apunta al .env del proyecto, pero eso no prueba la configuracion efectiva del proceso UI en ejecucion."
+  },
+  "grafo": "http://127.0.0.1:8137/api/query (solo lectura; verdades del grafo, no verdad externa)"
+}

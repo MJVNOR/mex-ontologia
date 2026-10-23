@@ -1,0 +1,8 @@
+PREFIX mex: <{{BASE_IRI}}vocab/>
+SELECT ?ejecucion ?periodo ?programa ?sede ?valorA ?valorB ?ambas WHERE {
+  ?ejecucion a mex:EjecucionCruceLote ; mex:resultadoLote ?resultado .
+  ?resultado a mex:ResultadoEducativoLote ; mex:programaLocalLote ?programa ; mex:sedeDeclaradaLote ?sede ;
+    mex:periodoDeclaradoLote ?periodo ; mex:ambasLote ?ambas .
+  OPTIONAL { ?resultado mex:valorALote ?valorA }
+  OPTIONAL { ?resultado mex:valorBLote ?valorB }
+} ORDER BY ?ejecucion ?sede ?programa

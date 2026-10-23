@@ -1,0 +1,2004 @@
+@prefix dct: <http://purl.org/dc/terms/> .
+@prefix mex: <https://example.org/mex-ontologi/vocab/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+
+<https://example.org/mex-ontologi/concept/anio-censo> a skos:Concept,
+        mex:ConceptoCompartido ;
+    rdfs:label "Año de referencia del censo"@es ;
+    skos:broader <https://example.org/mex-ontologi/concept/anio> ;
+    skos:definition "Año de referencia del censo según la fuente; no equivale automáticamente al año de captura."@es ;
+    skos:inScheme <https://example.org/mex-ontologi/concept-scheme/nucleo-compartido> ;
+    skos:prefLabel "Año de referencia del censo"@es ;
+    prov:wasDerivedFrom <file:///C:/Users/marti/Documents/MEX-Ontologi/ontologia/semantica.json> ;
+    mex:requiereCondicion <https://example.org/mex-ontologi/connection-condition/catalogo>,
+        <https://example.org/mex-ontologi/connection-condition/contexto>,
+        <https://example.org/mex-ontologi/connection-condition/grano>,
+        <https://example.org/mex-ontologi/connection-condition/periodo>,
+        <https://example.org/mex-ontologi/connection-condition/rol>,
+        <https://example.org/mex-ontologi/connection-condition/unidad> .
+
+<https://example.org/mex-ontologi/concept/anio-reporte> a skos:Concept,
+        mex:ConceptoCompartido ;
+    rdfs:label "Año del que se informa"@es ;
+    skos:broader <https://example.org/mex-ontologi/concept/anio> ;
+    skos:definition "Año al que corresponde la información reportada; el evento no está especificado."@es ;
+    skos:inScheme <https://example.org/mex-ontologi/concept-scheme/nucleo-compartido> ;
+    skos:prefLabel "Año del que se informa"@es ;
+    prov:wasDerivedFrom <file:///C:/Users/marti/Documents/MEX-Ontologi/ontologia/semantica.json> ;
+    mex:requiereCondicion <https://example.org/mex-ontologi/connection-condition/catalogo>,
+        <https://example.org/mex-ontologi/connection-condition/contexto>,
+        <https://example.org/mex-ontologi/connection-condition/grano>,
+        <https://example.org/mex-ontologi/connection-condition/periodo>,
+        <https://example.org/mex-ontologi/connection-condition/rol>,
+        <https://example.org/mex-ontologi/connection-condition/unidad> .
+
+<https://example.org/mex-ontologi/concept/anio-subasta> a skos:Concept,
+        mex:ConceptoCompartido ;
+    rdfs:label "Año de realización de la subasta"@es ;
+    skos:broader <https://example.org/mex-ontologi/concept/anio> ;
+    skos:definition "Año en que se realizó la subasta según su definición."@es ;
+    skos:inScheme <https://example.org/mex-ontologi/concept-scheme/nucleo-compartido> ;
+    skos:prefLabel "Año de realización de la subasta"@es ;
+    prov:wasDerivedFrom <file:///C:/Users/marti/Documents/MEX-Ontologi/ontologia/semantica.json> ;
+    mex:requiereCondicion <https://example.org/mex-ontologi/connection-condition/catalogo>,
+        <https://example.org/mex-ontologi/connection-condition/contexto>,
+        <https://example.org/mex-ontologi/connection-condition/grano>,
+        <https://example.org/mex-ontologi/connection-condition/periodo>,
+        <https://example.org/mex-ontologi/connection-condition/rol>,
+        <https://example.org/mex-ontologi/connection-condition/unidad> .
+
+<https://example.org/mex-ontologi/concept/ciclo-agricola> a skos:Concept,
+        mex:ConceptoCompartido ;
+    rdfs:label "Ciclo agrícola"@es ;
+    skos:broader <https://example.org/mex-ontologi/concept/tiempo> ;
+    skos:definition "Ciclo de producción o siembra declarado por la fuente; no implica equivalencia de calendarios."@es ;
+    skos:inScheme <https://example.org/mex-ontologi/concept-scheme/nucleo-compartido> ;
+    skos:prefLabel "Ciclo agrícola"@es ;
+    prov:wasDerivedFrom <file:///C:/Users/marti/Documents/MEX-Ontologi/ontologia/semantica.json> ;
+    mex:requiereCondicion <https://example.org/mex-ontologi/connection-condition/catalogo>,
+        <https://example.org/mex-ontologi/connection-condition/contexto>,
+        <https://example.org/mex-ontologi/connection-condition/grano>,
+        <https://example.org/mex-ontologi/connection-condition/periodo>,
+        <https://example.org/mex-ontologi/connection-condition/rol>,
+        <https://example.org/mex-ontologi/connection-condition/unidad> .
+
+<https://example.org/mex-ontologi/concept/cuenca-municipio> a skos:Concept,
+        mex:ConceptoCompartido ;
+    rdfs:label "Cuenca hidrológica del municipio"@es ;
+    skos:broader <https://example.org/mex-ontologi/concept/territorio> ;
+    skos:definition "Cuenca donde se localiza el municipio según la fuente; no prueba correspondencia geoespacial ni exclusividad."@es ;
+    skos:inScheme <https://example.org/mex-ontologi/concept-scheme/nucleo-compartido> ;
+    skos:prefLabel "Cuenca hidrológica del municipio"@es ;
+    prov:wasDerivedFrom <file:///C:/Users/marti/Documents/MEX-Ontologi/ontologia/semantica.json> ;
+    mex:requiereCondicion <https://example.org/mex-ontologi/connection-condition/catalogo>,
+        <https://example.org/mex-ontologi/connection-condition/contexto>,
+        <https://example.org/mex-ontologi/connection-condition/grano>,
+        <https://example.org/mex-ontologi/connection-condition/periodo>,
+        <https://example.org/mex-ontologi/connection-condition/rol>,
+        <https://example.org/mex-ontologi/connection-condition/unidad> .
+
+<https://example.org/mex-ontologi/concept/ddr-municipio> a skos:Concept,
+        mex:ConceptoCompartido ;
+    rdfs:label "Distrito de Desarrollo Rural del municipio"@es ;
+    skos:broader <https://example.org/mex-ontologi/concept/territorio> ;
+    skos:definition "Distrito de Desarrollo Rural al que pertenece el municipio según la fuente; no se resuelve un catálogo oficial."@es ;
+    skos:inScheme <https://example.org/mex-ontologi/concept-scheme/nucleo-compartido> ;
+    skos:prefLabel "Distrito de Desarrollo Rural del municipio"@es ;
+    prov:wasDerivedFrom <file:///C:/Users/marti/Documents/MEX-Ontologi/ontologia/semantica.json> ;
+    mex:requiereCondicion <https://example.org/mex-ontologi/connection-condition/catalogo>,
+        <https://example.org/mex-ontologi/connection-condition/contexto>,
+        <https://example.org/mex-ontologi/connection-condition/grano>,
+        <https://example.org/mex-ontologi/connection-condition/periodo>,
+        <https://example.org/mex-ontologi/connection-condition/rol>,
+        <https://example.org/mex-ontologi/connection-condition/unidad> .
+
+<https://example.org/mex-ontologi/concept/dia-defuncion> a skos:Concept,
+        mex:ConceptoCompartido ;
+    rdfs:label "Día del fallecimiento"@es ;
+    skos:broader <https://example.org/mex-ontologi/concept/tiempo> ;
+    skos:definition "Día del mes en que ocurrió el fallecimiento; requiere mes y año."@es ;
+    skos:inScheme <https://example.org/mex-ontologi/concept-scheme/nucleo-compartido> ;
+    skos:prefLabel "Día del fallecimiento"@es ;
+    prov:wasDerivedFrom <file:///C:/Users/marti/Documents/MEX-Ontologi/ontologia/semantica.json> ;
+    mex:requiereCondicion <https://example.org/mex-ontologi/connection-condition/catalogo>,
+        <https://example.org/mex-ontologi/connection-condition/contexto>,
+        <https://example.org/mex-ontologi/connection-condition/grano>,
+        <https://example.org/mex-ontologi/connection-condition/periodo>,
+        <https://example.org/mex-ontologi/connection-condition/rol>,
+        <https://example.org/mex-ontologi/connection-condition/unidad> .
+
+<https://example.org/mex-ontologi/concept/dia-registro> a skos:Concept,
+        mex:ConceptoCompartido ;
+    rdfs:label "Día de registro"@es ;
+    skos:broader <https://example.org/mex-ontologi/concept/tiempo> ;
+    skos:definition "Día del mes en que se registra el hecho; requiere mes y año."@es ;
+    skos:inScheme <https://example.org/mex-ontologi/concept-scheme/nucleo-compartido> ;
+    skos:prefLabel "Día de registro"@es ;
+    prov:wasDerivedFrom <file:///C:/Users/marti/Documents/MEX-Ontologi/ontologia/semantica.json> ;
+    mex:requiereCondicion <https://example.org/mex-ontologi/connection-condition/catalogo>,
+        <https://example.org/mex-ontologi/connection-condition/contexto>,
+        <https://example.org/mex-ontologi/connection-condition/grano>,
+        <https://example.org/mex-ontologi/connection-condition/periodo>,
+        <https://example.org/mex-ontologi/connection-condition/rol>,
+        <https://example.org/mex-ontologi/connection-condition/unidad> .
+
+<https://example.org/mex-ontologi/concept/entidad-registro> a skos:Concept,
+        mex:ConceptoCompartido ;
+    rdfs:label "Entidad federativa de registro"@es ;
+    skos:broader <https://example.org/mex-ontologi/concept/entidad> ;
+    skos:definition "Entidad en la que se registra o captura el hecho según la definición; no identifica el lugar de ocurrencia."@es ;
+    skos:inScheme <https://example.org/mex-ontologi/concept-scheme/nucleo-compartido> ;
+    skos:prefLabel "Entidad federativa de registro"@es ;
+    prov:wasDerivedFrom <file:///C:/Users/marti/Documents/MEX-Ontologi/ontologia/semantica.json> ;
+    mex:requiereCondicion <https://example.org/mex-ontologi/connection-condition/catalogo>,
+        <https://example.org/mex-ontologi/connection-condition/contexto>,
+        <https://example.org/mex-ontologi/connection-condition/grano>,
+        <https://example.org/mex-ontologi/connection-condition/periodo>,
+        <https://example.org/mex-ontologi/connection-condition/rol>,
+        <https://example.org/mex-ontologi/connection-condition/unidad> .
+
+<https://example.org/mex-ontologi/concept/entidad-residencia-alumno> a skos:Concept,
+        mex:ConceptoCompartido ;
+    rdfs:label "Entidad de residencia del alumno"@es ;
+    skos:broader <https://example.org/mex-ontologi/concept/entidad> ;
+    skos:definition "Entidad donde reside el alumno según el diccionario."@es ;
+    skos:inScheme <https://example.org/mex-ontologi/concept-scheme/nucleo-compartido> ;
+    skos:prefLabel "Entidad de residencia del alumno"@es ;
+    prov:wasDerivedFrom <file:///C:/Users/marti/Documents/MEX-Ontologi/ontologia/semantica.json> ;
+    mex:requiereCondicion <https://example.org/mex-ontologi/connection-condition/catalogo>,
+        <https://example.org/mex-ontologi/connection-condition/contexto>,
+        <https://example.org/mex-ontologi/connection-condition/grano>,
+        <https://example.org/mex-ontologi/connection-condition/periodo>,
+        <https://example.org/mex-ontologi/connection-condition/rol>,
+        <https://example.org/mex-ontologi/connection-condition/unidad> .
+
+<https://example.org/mex-ontologi/concept/entidad-ubicacion> a skos:Concept,
+        mex:ConceptoCompartido ;
+    rdfs:label "Entidad federativa de ubicación"@es ;
+    skos:broader <https://example.org/mex-ontologi/concept/entidad> ;
+    skos:definition "Entidad donde se ubica el objeto descrito por la fuente."@es ;
+    skos:inScheme <https://example.org/mex-ontologi/concept-scheme/nucleo-compartido> ;
+    skos:prefLabel "Entidad federativa de ubicación"@es ;
+    prov:wasDerivedFrom <file:///C:/Users/marti/Documents/MEX-Ontologi/ontologia/semantica.json> ;
+    mex:requiereCondicion <https://example.org/mex-ontologi/connection-condition/catalogo>,
+        <https://example.org/mex-ontologi/connection-condition/contexto>,
+        <https://example.org/mex-ontologi/connection-condition/grano>,
+        <https://example.org/mex-ontologi/connection-condition/periodo>,
+        <https://example.org/mex-ontologi/connection-condition/rol>,
+        <https://example.org/mex-ontologi/connection-condition/unidad> .
+
+<https://example.org/mex-ontologi/concept/escuela> a skos:Concept,
+        mex:ConceptoCompartido ;
+    rdfs:label "Escuela de inscripción"@es ;
+    skos:broader <https://example.org/mex-ontologi/concept/organizacion> ;
+    skos:definition "Escuela en la que está inscrito el estudiante beneficiario según su definición."@es ;
+    skos:inScheme <https://example.org/mex-ontologi/concept-scheme/nucleo-compartido> ;
+    skos:prefLabel "Escuela de inscripción"@es ;
+    prov:wasDerivedFrom <file:///C:/Users/marti/Documents/MEX-Ontologi/ontologia/semantica.json> ;
+    mex:requiereCondicion <https://example.org/mex-ontologi/connection-condition/catalogo>,
+        <https://example.org/mex-ontologi/connection-condition/contexto>,
+        <https://example.org/mex-ontologi/connection-condition/grano>,
+        <https://example.org/mex-ontologi/connection-condition/periodo>,
+        <https://example.org/mex-ontologi/connection-condition/rol>,
+        <https://example.org/mex-ontologi/connection-condition/unidad> .
+
+<https://example.org/mex-ontologi/concept/fecha-apoyo> a skos:Concept,
+        mex:ConceptoCompartido ;
+    rdfs:label "Fecha de otorgamiento del apoyo"@es ;
+    skos:broader <https://example.org/mex-ontologi/concept/tiempo> ;
+    skos:definition "Fecha en que se otorgó el apoyo según la fuente."@es ;
+    skos:inScheme <https://example.org/mex-ontologi/concept-scheme/nucleo-compartido> ;
+    skos:prefLabel "Fecha de otorgamiento del apoyo"@es ;
+    prov:wasDerivedFrom <file:///C:/Users/marti/Documents/MEX-Ontologi/ontologia/semantica.json> ;
+    mex:requiereCondicion <https://example.org/mex-ontologi/connection-condition/catalogo>,
+        <https://example.org/mex-ontologi/connection-condition/contexto>,
+        <https://example.org/mex-ontologi/connection-condition/grano>,
+        <https://example.org/mex-ontologi/connection-condition/periodo>,
+        <https://example.org/mex-ontologi/connection-condition/rol>,
+        <https://example.org/mex-ontologi/connection-condition/unidad> .
+
+<https://example.org/mex-ontologi/concept/fecha-baja-alumno> a skos:Concept,
+        mex:ConceptoCompartido ;
+    rdfs:label "Fecha de baja del alumno"@es ;
+    skos:broader <https://example.org/mex-ontologi/concept/tiempo> ;
+    skos:definition "Fecha de baja del alumno; conserva población y evento baja. Distinta de inscripción y reinscripción."@es ;
+    skos:inScheme <https://example.org/mex-ontologi/concept-scheme/nucleo-compartido> ;
+    skos:prefLabel "Fecha de baja del alumno"@es ;
+    prov:wasDerivedFrom <file:///C:/Users/marti/Documents/MEX-Ontologi/ontologia/semantica.json> ;
+    mex:requiereCondicion <https://example.org/mex-ontologi/connection-condition/catalogo>,
+        <https://example.org/mex-ontologi/connection-condition/contexto>,
+        <https://example.org/mex-ontologi/connection-condition/grano>,
+        <https://example.org/mex-ontologi/connection-condition/periodo>,
+        <https://example.org/mex-ontologi/connection-condition/rol>,
+        <https://example.org/mex-ontologi/connection-condition/unidad> .
+
+<https://example.org/mex-ontologi/concept/fecha-captura-hidrica> a skos:Concept,
+        mex:ConceptoCompartido ;
+    rdfs:label "Fecha de captura de recursos hídricos"@es ;
+    skos:broader <https://example.org/mex-ontologi/concept/tiempo> ;
+    skos:definition "Fecha de captura de la información de recursos hídricos."@es ;
+    skos:inScheme <https://example.org/mex-ontologi/concept-scheme/nucleo-compartido> ;
+    skos:prefLabel "Fecha de captura de recursos hídricos"@es ;
+    prov:wasDerivedFrom <file:///C:/Users/marti/Documents/MEX-Ontologi/ontologia/semantica.json> ;
+    mex:requiereCondicion <https://example.org/mex-ontologi/connection-condition/catalogo>,
+        <https://example.org/mex-ontologi/connection-condition/contexto>,
+        <https://example.org/mex-ontologi/connection-condition/grano>,
+        <https://example.org/mex-ontologi/connection-condition/periodo>,
+        <https://example.org/mex-ontologi/connection-condition/rol>,
+        <https://example.org/mex-ontologi/connection-condition/unidad> .
+
+<https://example.org/mex-ontologi/concept/fecha-comite> a skos:Concept,
+        mex:ConceptoCompartido ;
+    rdfs:label "Fecha de integración del comité"@es ;
+    skos:broader <https://example.org/mex-ontologi/concept/tiempo> ;
+    skos:definition "Fecha de integración del comité según la fuente."@es ;
+    skos:inScheme <https://example.org/mex-ontologi/concept-scheme/nucleo-compartido> ;
+    skos:prefLabel "Fecha de integración del comité"@es ;
+    prov:wasDerivedFrom <file:///C:/Users/marti/Documents/MEX-Ontologi/ontologia/semantica.json> ;
+    mex:requiereCondicion <https://example.org/mex-ontologi/connection-condition/catalogo>,
+        <https://example.org/mex-ontologi/connection-condition/contexto>,
+        <https://example.org/mex-ontologi/connection-condition/grano>,
+        <https://example.org/mex-ontologi/connection-condition/periodo>,
+        <https://example.org/mex-ontologi/connection-condition/rol>,
+        <https://example.org/mex-ontologi/connection-condition/unidad> .
+
+<https://example.org/mex-ontologi/concept/fecha-denuncia> a skos:Concept,
+        mex:ConceptoCompartido ;
+    rdfs:label "Fecha de la denuncia"@es ;
+    skos:broader <https://example.org/mex-ontologi/concept/tiempo> ;
+    skos:definition "Fecha de la denuncia según Denuncias Ambientales; conserva evento denuncia. El nombre de la variable menciona recepción pero la descripción no la confirma; no se asume recepción ni fecha de ocurrencia de los hechos."@es ;
+    skos:inScheme <https://example.org/mex-ontologi/concept-scheme/nucleo-compartido> ;
+    skos:prefLabel "Fecha de la denuncia"@es ;
+    prov:wasDerivedFrom <file:///C:/Users/marti/Documents/MEX-Ontologi/ontologia/semantica.json> ;
+    mex:requiereCondicion <https://example.org/mex-ontologi/connection-condition/catalogo>,
+        <https://example.org/mex-ontologi/connection-condition/contexto>,
+        <https://example.org/mex-ontologi/connection-condition/grano>,
+        <https://example.org/mex-ontologi/connection-condition/periodo>,
+        <https://example.org/mex-ontologi/connection-condition/rol>,
+        <https://example.org/mex-ontologi/connection-condition/unidad> .
+
+<https://example.org/mex-ontologi/concept/fecha-donacion> a skos:Concept,
+        mex:ConceptoCompartido ;
+    rdfs:label "Fecha de donación"@es ;
+    skos:broader <https://example.org/mex-ontologi/concept/tiempo> ;
+    skos:definition "Fecha en que se realizó la donación según la fuente."@es ;
+    skos:inScheme <https://example.org/mex-ontologi/concept-scheme/nucleo-compartido> ;
+    skos:prefLabel "Fecha de donación"@es ;
+    prov:wasDerivedFrom <file:///C:/Users/marti/Documents/MEX-Ontologi/ontologia/semantica.json> ;
+    mex:requiereCondicion <https://example.org/mex-ontologi/connection-condition/catalogo>,
+        <https://example.org/mex-ontologi/connection-condition/contexto>,
+        <https://example.org/mex-ontologi/connection-condition/grano>,
+        <https://example.org/mex-ontologi/connection-condition/periodo>,
+        <https://example.org/mex-ontologi/connection-condition/rol>,
+        <https://example.org/mex-ontologi/connection-condition/unidad> .
+
+<https://example.org/mex-ontologi/concept/fecha-egreso-institucion-titulado> a skos:Concept,
+        mex:ConceptoCompartido ;
+    rdfs:label "Fecha de egreso del titulado"@es ;
+    skos:broader <https://example.org/mex-ontologi/concept/tiempo> ;
+    skos:definition "Fecha de egreso del titulado de la institución; conserva población y evento egreso. Institución no identificada en la definición."@es ;
+    skos:inScheme <https://example.org/mex-ontologi/concept-scheme/nucleo-compartido> ;
+    skos:prefLabel "Fecha de egreso del titulado"@es ;
+    prov:wasDerivedFrom <file:///C:/Users/marti/Documents/MEX-Ontologi/ontologia/semantica.json> ;
+    mex:requiereCondicion <https://example.org/mex-ontologi/connection-condition/catalogo>,
+        <https://example.org/mex-ontologi/connection-condition/contexto>,
+        <https://example.org/mex-ontologi/connection-condition/grano>,
+        <https://example.org/mex-ontologi/connection-condition/periodo>,
+        <https://example.org/mex-ontologi/connection-condition/rol>,
+        <https://example.org/mex-ontologi/connection-condition/unidad> .
+
+<https://example.org/mex-ontologi/concept/fecha-fin-tratamiento-rickettsia> a skos:Concept,
+        mex:ConceptoCompartido ;
+    rdfs:label "Fecha de término de tratamiento"@es ;
+    skos:broader <https://example.org/mex-ontologi/concept/tiempo> ;
+    skos:definition "Fecha de término de tratamiento para rickettsiosis; conserva evento término y enfermedad. Población paciente solo contextual."@es ;
+    skos:inScheme <https://example.org/mex-ontologi/concept-scheme/nucleo-compartido> ;
+    skos:prefLabel "Fecha de término de tratamiento"@es ;
+    prov:wasDerivedFrom <file:///C:/Users/marti/Documents/MEX-Ontologi/ontologia/semantica.json> ;
+    mex:requiereCondicion <https://example.org/mex-ontologi/connection-condition/catalogo>,
+        <https://example.org/mex-ontologi/connection-condition/contexto>,
+        <https://example.org/mex-ontologi/connection-condition/grano>,
+        <https://example.org/mex-ontologi/connection-condition/periodo>,
+        <https://example.org/mex-ontologi/connection-condition/rol>,
+        <https://example.org/mex-ontologi/connection-condition/unidad> .
+
+<https://example.org/mex-ontologi/concept/fecha-ingreso-institucion-titulado> a skos:Concept,
+        mex:ConceptoCompartido ;
+    rdfs:label "Fecha de ingreso del titulado"@es ;
+    skos:broader <https://example.org/mex-ontologi/concept/tiempo> ;
+    skos:definition "Fecha de ingreso del titulado a la institución; conserva población y evento ingreso. La definición no identifica institución concreta."@es ;
+    skos:inScheme <https://example.org/mex-ontologi/concept-scheme/nucleo-compartido> ;
+    skos:prefLabel "Fecha de ingreso del titulado"@es ;
+    prov:wasDerivedFrom <file:///C:/Users/marti/Documents/MEX-Ontologi/ontologia/semantica.json> ;
+    mex:requiereCondicion <https://example.org/mex-ontologi/connection-condition/catalogo>,
+        <https://example.org/mex-ontologi/connection-condition/contexto>,
+        <https://example.org/mex-ontologi/connection-condition/grano>,
+        <https://example.org/mex-ontologi/connection-condition/periodo>,
+        <https://example.org/mex-ontologi/connection-condition/rol>,
+        <https://example.org/mex-ontologi/connection-condition/unidad> .
+
+<https://example.org/mex-ontologi/concept/fecha-ingreso-llamada> a skos:Concept,
+        mex:ConceptoCompartido ;
+    rdfs:label "Fecha de ingreso de la llamada"@es ;
+    skos:broader <https://example.org/mex-ontologi/concept/tiempo> ;
+    skos:definition "Fecha de ingreso de la llamada según el diccionario."@es ;
+    skos:inScheme <https://example.org/mex-ontologi/concept-scheme/nucleo-compartido> ;
+    skos:prefLabel "Fecha de ingreso de la llamada"@es ;
+    prov:wasDerivedFrom <file:///C:/Users/marti/Documents/MEX-Ontologi/ontologia/semantica.json> ;
+    mex:requiereCondicion <https://example.org/mex-ontologi/connection-condition/catalogo>,
+        <https://example.org/mex-ontologi/connection-condition/contexto>,
+        <https://example.org/mex-ontologi/connection-condition/grano>,
+        <https://example.org/mex-ontologi/connection-condition/periodo>,
+        <https://example.org/mex-ontologi/connection-condition/rol>,
+        <https://example.org/mex-ontologi/connection-condition/unidad> .
+
+<https://example.org/mex-ontologi/concept/fecha-ingreso-paciente> a skos:Concept,
+        mex:ConceptoCompartido ;
+    rdfs:label "Fecha de ingreso del paciente"@es ;
+    skos:broader <https://example.org/mex-ontologi/concept/tiempo> ;
+    skos:definition "Fecha de ingreso del paciente según su diccionario; no especifica servicio ni institución de ingreso."@es ;
+    skos:inScheme <https://example.org/mex-ontologi/concept-scheme/nucleo-compartido> ;
+    skos:prefLabel "Fecha de ingreso del paciente"@es ;
+    prov:wasDerivedFrom <file:///C:/Users/marti/Documents/MEX-Ontologi/ontologia/semantica.json> ;
+    mex:requiereCondicion <https://example.org/mex-ontologi/connection-condition/catalogo>,
+        <https://example.org/mex-ontologi/connection-condition/contexto>,
+        <https://example.org/mex-ontologi/connection-condition/grano>,
+        <https://example.org/mex-ontologi/connection-condition/periodo>,
+        <https://example.org/mex-ontologi/connection-condition/rol>,
+        <https://example.org/mex-ontologi/connection-condition/unidad> .
+
+<https://example.org/mex-ontologi/concept/fecha-inicio-tratamiento-rickettsia> a skos:Concept,
+        mex:ConceptoCompartido ;
+    rdfs:label "Fecha de inicio de tratamiento"@es ;
+    skos:broader <https://example.org/mex-ontologi/concept/tiempo> ;
+    skos:definition "Fecha de inicio de tratamiento para rickettsiosis; conserva evento inicio y enfermedad. Población paciente implícita por contexto, no declarada en la definición."@es ;
+    skos:inScheme <https://example.org/mex-ontologi/concept-scheme/nucleo-compartido> ;
+    skos:prefLabel "Fecha de inicio de tratamiento"@es ;
+    prov:wasDerivedFrom <file:///C:/Users/marti/Documents/MEX-Ontologi/ontologia/semantica.json> ;
+    mex:requiereCondicion <https://example.org/mex-ontologi/connection-condition/catalogo>,
+        <https://example.org/mex-ontologi/connection-condition/contexto>,
+        <https://example.org/mex-ontologi/connection-condition/grano>,
+        <https://example.org/mex-ontologi/connection-condition/periodo>,
+        <https://example.org/mex-ontologi/connection-condition/rol>,
+        <https://example.org/mex-ontologi/connection-condition/unidad> .
+
+<https://example.org/mex-ontologi/concept/fecha-inscripcion-alumno> a skos:Concept,
+        mex:ConceptoCompartido ;
+    rdfs:label "Fecha de inscripción del alumno"@es ;
+    skos:broader <https://example.org/mex-ontologi/concept/tiempo> ;
+    skos:definition "Fecha de inscripción del alumno al ciclo escolar actual; conserva población alumno y evento inscripción. Ciclo referenciado sin resolver periodo."@es ;
+    skos:inScheme <https://example.org/mex-ontologi/concept-scheme/nucleo-compartido> ;
+    skos:prefLabel "Fecha de inscripción del alumno"@es ;
+    prov:wasDerivedFrom <file:///C:/Users/marti/Documents/MEX-Ontologi/ontologia/semantica.json> ;
+    mex:requiereCondicion <https://example.org/mex-ontologi/connection-condition/catalogo>,
+        <https://example.org/mex-ontologi/connection-condition/contexto>,
+        <https://example.org/mex-ontologi/connection-condition/grano>,
+        <https://example.org/mex-ontologi/connection-condition/periodo>,
+        <https://example.org/mex-ontologi/connection-condition/rol>,
+        <https://example.org/mex-ontologi/connection-condition/unidad> .
+
+<https://example.org/mex-ontologi/concept/fecha-inspeccion> a skos:Concept,
+        mex:ConceptoCompartido ;
+    rdfs:label "Fecha de inspección"@es ;
+    skos:broader <https://example.org/mex-ontologi/concept/tiempo> ;
+    skos:definition "Fecha en que se realizó la inspección, distinta de la captura del registro."@es ;
+    skos:inScheme <https://example.org/mex-ontologi/concept-scheme/nucleo-compartido> ;
+    skos:prefLabel "Fecha de inspección"@es ;
+    prov:wasDerivedFrom <file:///C:/Users/marti/Documents/MEX-Ontologi/ontologia/semantica.json> ;
+    mex:requiereCondicion <https://example.org/mex-ontologi/connection-condition/catalogo>,
+        <https://example.org/mex-ontologi/connection-condition/contexto>,
+        <https://example.org/mex-ontologi/connection-condition/grano>,
+        <https://example.org/mex-ontologi/connection-condition/periodo>,
+        <https://example.org/mex-ontologi/connection-condition/rol>,
+        <https://example.org/mex-ontologi/connection-condition/unidad> .
+
+<https://example.org/mex-ontologi/concept/fecha-matrimonio-previo> a skos:Concept,
+        mex:ConceptoCompartido ;
+    rdfs:label "Fecha del matrimonio de los divorciados"@es ;
+    skos:broader <https://example.org/mex-ontologi/concept/tiempo> ;
+    skos:definition "Fecha en que las personas divorciadas contrajeron matrimonio; no es la fecha del divorcio."@es ;
+    skos:inScheme <https://example.org/mex-ontologi/concept-scheme/nucleo-compartido> ;
+    skos:prefLabel "Fecha del matrimonio de los divorciados"@es ;
+    prov:wasDerivedFrom <file:///C:/Users/marti/Documents/MEX-Ontologi/ontologia/semantica.json> ;
+    mex:requiereCondicion <https://example.org/mex-ontologi/connection-condition/catalogo>,
+        <https://example.org/mex-ontologi/connection-condition/contexto>,
+        <https://example.org/mex-ontologi/connection-condition/grano>,
+        <https://example.org/mex-ontologi/connection-condition/periodo>,
+        <https://example.org/mex-ontologi/connection-condition/rol>,
+        <https://example.org/mex-ontologi/connection-condition/unidad> .
+
+<https://example.org/mex-ontologi/concept/fecha-nacimiento-titulado> a skos:Concept,
+        mex:ConceptoCompartido ;
+    rdfs:label "Fecha de nacimiento del titulado"@es ;
+    skos:broader <https://example.org/mex-ontologi/concept/tiempo> ;
+    skos:definition "Fecha de nacimiento del titulado; conserva población titulado y evento nacimiento. No precisa lugar."@es ;
+    skos:inScheme <https://example.org/mex-ontologi/concept-scheme/nucleo-compartido> ;
+    skos:prefLabel "Fecha de nacimiento del titulado"@es ;
+    prov:wasDerivedFrom <file:///C:/Users/marti/Documents/MEX-Ontologi/ontologia/semantica.json> ;
+    mex:requiereCondicion <https://example.org/mex-ontologi/connection-condition/catalogo>,
+        <https://example.org/mex-ontologi/connection-condition/contexto>,
+        <https://example.org/mex-ontologi/connection-condition/grano>,
+        <https://example.org/mex-ontologi/connection-condition/periodo>,
+        <https://example.org/mex-ontologi/connection-condition/rol>,
+        <https://example.org/mex-ontologi/connection-condition/unidad> .
+
+<https://example.org/mex-ontologi/concept/fecha-nacimiento-victima> a skos:Concept,
+        mex:ConceptoCompartido ;
+    rdfs:label "Fecha de nacimiento de la víctima"@es ;
+    skos:broader <https://example.org/mex-ontologi/concept/tiempo> ;
+    skos:definition "Fecha de nacimiento de la víctima; conserva población víctima y evento nacimiento. Distinta de nacimiento de titulado o alumno."@es ;
+    skos:inScheme <https://example.org/mex-ontologi/concept-scheme/nucleo-compartido> ;
+    skos:prefLabel "Fecha de nacimiento de la víctima"@es ;
+    prov:wasDerivedFrom <file:///C:/Users/marti/Documents/MEX-Ontologi/ontologia/semantica.json> ;
+    mex:requiereCondicion <https://example.org/mex-ontologi/connection-condition/catalogo>,
+        <https://example.org/mex-ontologi/connection-condition/contexto>,
+        <https://example.org/mex-ontologi/connection-condition/grano>,
+        <https://example.org/mex-ontologi/connection-condition/periodo>,
+        <https://example.org/mex-ontologi/connection-condition/rol>,
+        <https://example.org/mex-ontologi/connection-condition/unidad> .
+
+<https://example.org/mex-ontologi/concept/fecha-parte-detencion> a skos:Concept,
+        mex:ConceptoCompartido ;
+    rdfs:label "Fecha del parte de detención"@es ;
+    skos:broader <https://example.org/mex-ontologi/concept/tiempo> ;
+    skos:definition "Fecha del parte de la detención, sin equipararla a la fecha del hecho."@es ;
+    skos:inScheme <https://example.org/mex-ontologi/concept-scheme/nucleo-compartido> ;
+    skos:prefLabel "Fecha del parte de detención"@es ;
+    prov:wasDerivedFrom <file:///C:/Users/marti/Documents/MEX-Ontologi/ontologia/semantica.json> ;
+    mex:requiereCondicion <https://example.org/mex-ontologi/connection-condition/catalogo>,
+        <https://example.org/mex-ontologi/connection-condition/contexto>,
+        <https://example.org/mex-ontologi/connection-condition/grano>,
+        <https://example.org/mex-ontologi/connection-condition/periodo>,
+        <https://example.org/mex-ontologi/connection-condition/rol>,
+        <https://example.org/mex-ontologi/connection-condition/unidad> .
+
+<https://example.org/mex-ontologi/concept/fecha-precipitacion> a skos:Concept,
+        mex:ConceptoCompartido ;
+    rdfs:label "Fecha del registro de precipitación"@es ;
+    skos:broader <https://example.org/mex-ontologi/concept/tiempo> ;
+    skos:definition "Fecha del registro diario de precipitación según su diccionario."@es ;
+    skos:inScheme <https://example.org/mex-ontologi/concept-scheme/nucleo-compartido> ;
+    skos:prefLabel "Fecha del registro de precipitación"@es ;
+    prov:wasDerivedFrom <file:///C:/Users/marti/Documents/MEX-Ontologi/ontologia/semantica.json> ;
+    mex:requiereCondicion <https://example.org/mex-ontologi/connection-condition/catalogo>,
+        <https://example.org/mex-ontologi/connection-condition/contexto>,
+        <https://example.org/mex-ontologi/connection-condition/grano>,
+        <https://example.org/mex-ontologi/connection-condition/periodo>,
+        <https://example.org/mex-ontologi/connection-condition/rol>,
+        <https://example.org/mex-ontologi/connection-condition/unidad> .
+
+<https://example.org/mex-ontologi/concept/fecha-recepcion-sangre-rickettsia> a skos:Concept,
+        mex:ConceptoCompartido ;
+    rdfs:label "Fecha de recepción de sangre"@es ;
+    skos:broader <https://example.org/mex-ontologi/concept/tiempo> ;
+    skos:definition "Fecha de recepción de la primera muestra de sangre para rickettsiosis; conserva muestra sangre y secuencia primera. No equivale a toma ni a resultado."@es ;
+    skos:inScheme <https://example.org/mex-ontologi/concept-scheme/nucleo-compartido> ;
+    skos:prefLabel "Fecha de recepción de sangre"@es ;
+    prov:wasDerivedFrom <file:///C:/Users/marti/Documents/MEX-Ontologi/ontologia/semantica.json> ;
+    mex:requiereCondicion <https://example.org/mex-ontologi/connection-condition/catalogo>,
+        <https://example.org/mex-ontologi/connection-condition/contexto>,
+        <https://example.org/mex-ontologi/connection-condition/grano>,
+        <https://example.org/mex-ontologi/connection-condition/periodo>,
+        <https://example.org/mex-ontologi/connection-condition/rol>,
+        <https://example.org/mex-ontologi/connection-condition/unidad> .
+
+<https://example.org/mex-ontologi/concept/fecha-recepcion-suero-rickettsia-ser1> a skos:Concept,
+        mex:ConceptoCompartido ;
+    rdfs:label "Fecha de recepción de primera muestra de suero"@es ;
+    skos:broader <https://example.org/mex-ontologi/concept/tiempo> ;
+    skos:definition "Fecha de recepción de la primera muestra de suero para rickettsiosis según su definición; conserva «primera muestra de suero». «ser1» es identificador de la variable, no prueba tipificada. No equivale a toma ni a resultado."@es ;
+    skos:inScheme <https://example.org/mex-ontologi/concept-scheme/nucleo-compartido> ;
+    skos:prefLabel "Fecha de recepción de primera muestra de suero"@es ;
+    prov:wasDerivedFrom <file:///C:/Users/marti/Documents/MEX-Ontologi/ontologia/semantica.json> ;
+    mex:requiereCondicion <https://example.org/mex-ontologi/connection-condition/catalogo>,
+        <https://example.org/mex-ontologi/connection-condition/contexto>,
+        <https://example.org/mex-ontologi/connection-condition/grano>,
+        <https://example.org/mex-ontologi/connection-condition/periodo>,
+        <https://example.org/mex-ontologi/connection-condition/rol>,
+        <https://example.org/mex-ontologi/connection-condition/unidad> .
+
+<https://example.org/mex-ontologi/concept/fecha-registro> a skos:Concept,
+        mex:ConceptoCompartido ;
+    rdfs:label "Fecha de registro"@es ;
+    skos:broader <https://example.org/mex-ontologi/concept/tiempo> ;
+    skos:definition "Fecha de inscripción del hecho descrito por la fuente."@es ;
+    skos:inScheme <https://example.org/mex-ontologi/concept-scheme/nucleo-compartido> ;
+    skos:prefLabel "Fecha de registro"@es ;
+    prov:wasDerivedFrom <file:///C:/Users/marti/Documents/MEX-Ontologi/ontologia/semantica.json> ;
+    mex:requiereCondicion <https://example.org/mex-ontologi/connection-condition/catalogo>,
+        <https://example.org/mex-ontologi/connection-condition/contexto>,
+        <https://example.org/mex-ontologi/connection-condition/grano>,
+        <https://example.org/mex-ontologi/connection-condition/periodo>,
+        <https://example.org/mex-ontologi/connection-condition/rol>,
+        <https://example.org/mex-ontologi/connection-condition/unidad> .
+
+<https://example.org/mex-ontologi/concept/fecha-reinscripcion-alumno> a skos:Concept,
+        mex:ConceptoCompartido ;
+    rdfs:label "Fecha de reinscripción del alumno"@es ;
+    skos:broader <https://example.org/mex-ontologi/concept/tiempo> ;
+    skos:definition "Fecha de reinscripción del alumno; conserva población y evento reinscripción. Distinta de inscripción inicial y de baja."@es ;
+    skos:inScheme <https://example.org/mex-ontologi/concept-scheme/nucleo-compartido> ;
+    skos:prefLabel "Fecha de reinscripción del alumno"@es ;
+    prov:wasDerivedFrom <file:///C:/Users/marti/Documents/MEX-Ontologi/ontologia/semantica.json> ;
+    mex:requiereCondicion <https://example.org/mex-ontologi/connection-condition/catalogo>,
+        <https://example.org/mex-ontologi/connection-condition/contexto>,
+        <https://example.org/mex-ontologi/connection-condition/grano>,
+        <https://example.org/mex-ontologi/connection-condition/periodo>,
+        <https://example.org/mex-ontologi/connection-condition/rol>,
+        <https://example.org/mex-ontologi/connection-condition/unidad> .
+
+<https://example.org/mex-ontologi/concept/fecha-resultado-pcr-tiempo-real-rickettsia> a skos:Concept,
+        mex:ConceptoCompartido ;
+    rdfs:label "Fecha de resultado PCR tiempo real"@es ;
+    skos:broader <https://example.org/mex-ontologi/concept/tiempo> ;
+    skos:definition "Fecha de resultado «PCR tiempo real» para rickettsiosis según su definición; conserva la expresión documentada sin tipificar ensayo. No equivale a toma, recepción ni a resultado de suero."@es ;
+    skos:inScheme <https://example.org/mex-ontologi/concept-scheme/nucleo-compartido> ;
+    skos:prefLabel "Fecha de resultado PCR tiempo real"@es ;
+    prov:wasDerivedFrom <file:///C:/Users/marti/Documents/MEX-Ontologi/ontologia/semantica.json> ;
+    mex:requiereCondicion <https://example.org/mex-ontologi/connection-condition/catalogo>,
+        <https://example.org/mex-ontologi/connection-condition/contexto>,
+        <https://example.org/mex-ontologi/connection-condition/grano>,
+        <https://example.org/mex-ontologi/connection-condition/periodo>,
+        <https://example.org/mex-ontologi/connection-condition/rol>,
+        <https://example.org/mex-ontologi/connection-condition/unidad> .
+
+<https://example.org/mex-ontologi/concept/fecha-resultado-suero-rickettsia-ser1> a skos:Concept,
+        mex:ConceptoCompartido ;
+    rdfs:label "Fecha de resultado de primera muestra de suero"@es ;
+    skos:broader <https://example.org/mex-ontologi/concept/tiempo> ;
+    skos:definition "Fecha de resultado de la primera muestra de suero para rickettsiosis según su definición (texto original «suer»); conserva «primera muestra de suero». «ser1» es identificador de la variable sin deducir prueba. No equivale a toma, recepción ni a «PCR tiempo real»."@es ;
+    skos:inScheme <https://example.org/mex-ontologi/concept-scheme/nucleo-compartido> ;
+    skos:prefLabel "Fecha de resultado de primera muestra de suero"@es ;
+    prov:wasDerivedFrom <file:///C:/Users/marti/Documents/MEX-Ontologi/ontologia/semantica.json> ;
+    mex:requiereCondicion <https://example.org/mex-ontologi/connection-condition/catalogo>,
+        <https://example.org/mex-ontologi/connection-condition/contexto>,
+        <https://example.org/mex-ontologi/connection-condition/grano>,
+        <https://example.org/mex-ontologi/connection-condition/periodo>,
+        <https://example.org/mex-ontologi/connection-condition/rol>,
+        <https://example.org/mex-ontologi/connection-condition/unidad> .
+
+<https://example.org/mex-ontologi/concept/fecha-titulacion-titulado> a skos:Concept,
+        mex:ConceptoCompartido ;
+    rdfs:label "Fecha de titulación del titulado"@es ;
+    skos:broader <https://example.org/mex-ontologi/concept/tiempo> ;
+    skos:definition "Fecha en que el titulado se tituló; distinta de ingreso y egreso. Conserva población titulado."@es ;
+    skos:inScheme <https://example.org/mex-ontologi/concept-scheme/nucleo-compartido> ;
+    skos:prefLabel "Fecha de titulación del titulado"@es ;
+    prov:wasDerivedFrom <file:///C:/Users/marti/Documents/MEX-Ontologi/ontologia/semantica.json> ;
+    mex:requiereCondicion <https://example.org/mex-ontologi/connection-condition/catalogo>,
+        <https://example.org/mex-ontologi/connection-condition/contexto>,
+        <https://example.org/mex-ontologi/connection-condition/grano>,
+        <https://example.org/mex-ontologi/connection-condition/periodo>,
+        <https://example.org/mex-ontologi/connection-condition/rol>,
+        <https://example.org/mex-ontologi/connection-condition/unidad> .
+
+<https://example.org/mex-ontologi/concept/fecha-toma-sangre-rickettsia> a skos:Concept,
+        mex:ConceptoCompartido ;
+    rdfs:label "Fecha de toma de sangre"@es ;
+    skos:broader <https://example.org/mex-ontologi/concept/tiempo> ;
+    skos:definition "Fecha de toma de muestra de sangre para rickettsiosis; conserva muestra sangre. La definición no precisa secuencia ni prueba posterior."@es ;
+    skos:inScheme <https://example.org/mex-ontologi/concept-scheme/nucleo-compartido> ;
+    skos:prefLabel "Fecha de toma de sangre"@es ;
+    prov:wasDerivedFrom <file:///C:/Users/marti/Documents/MEX-Ontologi/ontologia/semantica.json> ;
+    mex:requiereCondicion <https://example.org/mex-ontologi/connection-condition/catalogo>,
+        <https://example.org/mex-ontologi/connection-condition/contexto>,
+        <https://example.org/mex-ontologi/connection-condition/grano>,
+        <https://example.org/mex-ontologi/connection-condition/periodo>,
+        <https://example.org/mex-ontologi/connection-condition/rol>,
+        <https://example.org/mex-ontologi/connection-condition/unidad> .
+
+<https://example.org/mex-ontologi/concept/fecha-toma-suero-rickettsia-ser1> a skos:Concept,
+        mex:ConceptoCompartido ;
+    rdfs:label "Fecha de toma de primera muestra de suero"@es ;
+    skos:broader <https://example.org/mex-ontologi/concept/tiempo> ;
+    skos:definition "Fecha en la que se toma la primera muestra de suero para rickettsiosis según su definición; conserva la expresión documentada «primera muestra de suero». «ser1» se conserva como identificador de la variable sin deducir tipo de prueba serológica. No equivale a recepción ni a resultado."@es ;
+    skos:inScheme <https://example.org/mex-ontologi/concept-scheme/nucleo-compartido> ;
+    skos:prefLabel "Fecha de toma de primera muestra de suero"@es ;
+    prov:wasDerivedFrom <file:///C:/Users/marti/Documents/MEX-Ontologi/ontologia/semantica.json> ;
+    mex:requiereCondicion <https://example.org/mex-ontologi/connection-condition/catalogo>,
+        <https://example.org/mex-ontologi/connection-condition/contexto>,
+        <https://example.org/mex-ontologi/connection-condition/grano>,
+        <https://example.org/mex-ontologi/connection-condition/periodo>,
+        <https://example.org/mex-ontologi/connection-condition/rol>,
+        <https://example.org/mex-ontologi/connection-condition/unidad> .
+
+<https://example.org/mex-ontologi/concept/hora-defuncion> a skos:Concept,
+        mex:ConceptoCompartido ;
+    rdfs:label "Hora del fallecimiento"@es ;
+    skos:broader <https://example.org/mex-ontologi/concept/tiempo> ;
+    skos:definition "Hora de la defunción según el diccionario; no aporta fecha o zona horaria por sí sola."@es ;
+    skos:inScheme <https://example.org/mex-ontologi/concept-scheme/nucleo-compartido> ;
+    skos:prefLabel "Hora del fallecimiento"@es ;
+    prov:wasDerivedFrom <file:///C:/Users/marti/Documents/MEX-Ontologi/ontologia/semantica.json> ;
+    mex:requiereCondicion <https://example.org/mex-ontologi/connection-condition/catalogo>,
+        <https://example.org/mex-ontologi/connection-condition/contexto>,
+        <https://example.org/mex-ontologi/connection-condition/grano>,
+        <https://example.org/mex-ontologi/connection-condition/periodo>,
+        <https://example.org/mex-ontologi/connection-condition/rol>,
+        <https://example.org/mex-ontologi/connection-condition/unidad> .
+
+<https://example.org/mex-ontologi/concept/localidad-atencion> a skos:Concept,
+        mex:ConceptoCompartido ;
+    rdfs:label "Localidad de atención"@es ;
+    skos:broader <https://example.org/mex-ontologi/concept/localidad> ;
+    skos:definition "Localidad donde se brindó la atención según la fuente."@es ;
+    skos:inScheme <https://example.org/mex-ontologi/concept-scheme/nucleo-compartido> ;
+    skos:prefLabel "Localidad de atención"@es ;
+    prov:wasDerivedFrom <file:///C:/Users/marti/Documents/MEX-Ontologi/ontologia/semantica.json> ;
+    mex:requiereCondicion <https://example.org/mex-ontologi/connection-condition/catalogo>,
+        <https://example.org/mex-ontologi/connection-condition/contexto>,
+        <https://example.org/mex-ontologi/connection-condition/grano>,
+        <https://example.org/mex-ontologi/connection-condition/periodo>,
+        <https://example.org/mex-ontologi/connection-condition/rol>,
+        <https://example.org/mex-ontologi/connection-condition/unidad> .
+
+<https://example.org/mex-ontologi/concept/localidad-comite> a skos:Concept,
+        mex:ConceptoCompartido ;
+    rdfs:label "Localidad de integración del comité"@es ;
+    skos:broader <https://example.org/mex-ontologi/concept/localidad> ;
+    skos:definition "Localidad de la integración del comité según la fuente."@es ;
+    skos:inScheme <https://example.org/mex-ontologi/concept-scheme/nucleo-compartido> ;
+    skos:prefLabel "Localidad de integración del comité"@es ;
+    prov:wasDerivedFrom <file:///C:/Users/marti/Documents/MEX-Ontologi/ontologia/semantica.json> ;
+    mex:requiereCondicion <https://example.org/mex-ontologi/connection-condition/catalogo>,
+        <https://example.org/mex-ontologi/connection-condition/contexto>,
+        <https://example.org/mex-ontologi/connection-condition/grano>,
+        <https://example.org/mex-ontologi/connection-condition/periodo>,
+        <https://example.org/mex-ontologi/connection-condition/rol>,
+        <https://example.org/mex-ontologi/connection-condition/unidad> .
+
+<https://example.org/mex-ontologi/concept/localidad-delito> a skos:Concept,
+        mex:ConceptoCompartido ;
+    rdfs:label "Localidad del delito"@es ;
+    skos:broader <https://example.org/mex-ontologi/concept/localidad> ;
+    skos:definition "Localidad donde se efectuó el delito según su definición."@es ;
+    skos:inScheme <https://example.org/mex-ontologi/concept-scheme/nucleo-compartido> ;
+    skos:prefLabel "Localidad del delito"@es ;
+    prov:wasDerivedFrom <file:///C:/Users/marti/Documents/MEX-Ontologi/ontologia/semantica.json> ;
+    mex:requiereCondicion <https://example.org/mex-ontologi/connection-condition/catalogo>,
+        <https://example.org/mex-ontologi/connection-condition/contexto>,
+        <https://example.org/mex-ontologi/connection-condition/grano>,
+        <https://example.org/mex-ontologi/connection-condition/periodo>,
+        <https://example.org/mex-ontologi/connection-condition/rol>,
+        <https://example.org/mex-ontologi/connection-condition/unidad> .
+
+<https://example.org/mex-ontologi/concept/localidad-origen-llamada> a skos:Concept,
+        mex:ConceptoCompartido ;
+    rdfs:label "Localidad de origen de la llamada"@es ;
+    skos:broader <https://example.org/mex-ontologi/concept/localidad> ;
+    skos:definition "Localidad desde la que se realizó la llamada."@es ;
+    skos:inScheme <https://example.org/mex-ontologi/concept-scheme/nucleo-compartido> ;
+    skos:prefLabel "Localidad de origen de la llamada"@es ;
+    prov:wasDerivedFrom <file:///C:/Users/marti/Documents/MEX-Ontologi/ontologia/semantica.json> ;
+    mex:requiereCondicion <https://example.org/mex-ontologi/connection-condition/catalogo>,
+        <https://example.org/mex-ontologi/connection-condition/contexto>,
+        <https://example.org/mex-ontologi/connection-condition/grano>,
+        <https://example.org/mex-ontologi/connection-condition/periodo>,
+        <https://example.org/mex-ontologi/connection-condition/rol>,
+        <https://example.org/mex-ontologi/connection-condition/unidad> .
+
+<https://example.org/mex-ontologi/concept/localidad-residencia-beneficiario> a skos:Concept,
+        mex:ConceptoCompartido ;
+    rdfs:label "Localidad de residencia del beneficiario"@es ;
+    skos:broader <https://example.org/mex-ontologi/concept/localidad> ;
+    skos:definition "Localidad donde reside el beneficiario según la fuente."@es ;
+    skos:inScheme <https://example.org/mex-ontologi/concept-scheme/nucleo-compartido> ;
+    skos:prefLabel "Localidad de residencia del beneficiario"@es ;
+    prov:wasDerivedFrom <file:///C:/Users/marti/Documents/MEX-Ontologi/ontologia/semantica.json> ;
+    mex:requiereCondicion <https://example.org/mex-ontologi/connection-condition/catalogo>,
+        <https://example.org/mex-ontologi/connection-condition/contexto>,
+        <https://example.org/mex-ontologi/connection-condition/grano>,
+        <https://example.org/mex-ontologi/connection-condition/periodo>,
+        <https://example.org/mex-ontologi/connection-condition/rol>,
+        <https://example.org/mex-ontologi/connection-condition/unidad> .
+
+<https://example.org/mex-ontologi/concept/localidad-ubicacion> a skos:Concept,
+        mex:ConceptoCompartido ;
+    rdfs:label "Localidad de ubicación"@es ;
+    skos:broader <https://example.org/mex-ontologi/concept/localidad> ;
+    skos:definition "Localidad donde se ubica el objeto descrito por la fuente."@es ;
+    skos:inScheme <https://example.org/mex-ontologi/concept-scheme/nucleo-compartido> ;
+    skos:prefLabel "Localidad de ubicación"@es ;
+    prov:wasDerivedFrom <file:///C:/Users/marti/Documents/MEX-Ontologi/ontologia/semantica.json> ;
+    mex:requiereCondicion <https://example.org/mex-ontologi/connection-condition/catalogo>,
+        <https://example.org/mex-ontologi/connection-condition/contexto>,
+        <https://example.org/mex-ontologi/connection-condition/grano>,
+        <https://example.org/mex-ontologi/connection-condition/periodo>,
+        <https://example.org/mex-ontologi/connection-condition/rol>,
+        <https://example.org/mex-ontologi/connection-condition/unidad> .
+
+<https://example.org/mex-ontologi/concept/mes-atencion> a skos:Concept,
+        mex:ConceptoCompartido ;
+    rdfs:label "Mes de atención"@es ;
+    skos:broader <https://example.org/mex-ontologi/concept/tiempo> ;
+    skos:definition "Meses en que se brindó la atención según Atenciones brindadas; conserva evento atención. Población no precisada en la definición (contexto: personas atendidas); requiere año como contexto y no equivale a registro o captura."@es ;
+    skos:inScheme <https://example.org/mex-ontologi/concept-scheme/nucleo-compartido> ;
+    skos:prefLabel "Mes de atención"@es ;
+    prov:wasDerivedFrom <file:///C:/Users/marti/Documents/MEX-Ontologi/ontologia/semantica.json> ;
+    mex:requiereCondicion <https://example.org/mex-ontologi/connection-condition/catalogo>,
+        <https://example.org/mex-ontologi/connection-condition/contexto>,
+        <https://example.org/mex-ontologi/connection-condition/grano>,
+        <https://example.org/mex-ontologi/connection-condition/periodo>,
+        <https://example.org/mex-ontologi/connection-condition/rol>,
+        <https://example.org/mex-ontologi/connection-condition/unidad> .
+
+<https://example.org/mex-ontologi/concept/municipio-atencion> a skos:Concept,
+        mex:ConceptoCompartido ;
+    rdfs:label "Municipio de atención"@es ;
+    skos:broader <https://example.org/mex-ontologi/concept/municipio> ;
+    skos:definition "Municipio donde se brindó la atención según la fuente."@es ;
+    skos:inScheme <https://example.org/mex-ontologi/concept-scheme/nucleo-compartido> ;
+    skos:prefLabel "Municipio de atención"@es ;
+    prov:wasDerivedFrom <file:///C:/Users/marti/Documents/MEX-Ontologi/ontologia/semantica.json> ;
+    mex:requiereCondicion <https://example.org/mex-ontologi/connection-condition/catalogo>,
+        <https://example.org/mex-ontologi/connection-condition/contexto>,
+        <https://example.org/mex-ontologi/connection-condition/grano>,
+        <https://example.org/mex-ontologi/connection-condition/periodo>,
+        <https://example.org/mex-ontologi/connection-condition/rol>,
+        <https://example.org/mex-ontologi/connection-condition/unidad> .
+
+<https://example.org/mex-ontologi/concept/municipio-comite> a skos:Concept,
+        mex:ConceptoCompartido ;
+    rdfs:label "Municipio de integración del comité"@es ;
+    skos:broader <https://example.org/mex-ontologi/concept/municipio> ;
+    skos:definition "Municipio de la integración del comité según la fuente."@es ;
+    skos:inScheme <https://example.org/mex-ontologi/concept-scheme/nucleo-compartido> ;
+    skos:prefLabel "Municipio de integración del comité"@es ;
+    prov:wasDerivedFrom <file:///C:/Users/marti/Documents/MEX-Ontologi/ontologia/semantica.json> ;
+    mex:requiereCondicion <https://example.org/mex-ontologi/connection-condition/catalogo>,
+        <https://example.org/mex-ontologi/connection-condition/contexto>,
+        <https://example.org/mex-ontologi/connection-condition/grano>,
+        <https://example.org/mex-ontologi/connection-condition/periodo>,
+        <https://example.org/mex-ontologi/connection-condition/rol>,
+        <https://example.org/mex-ontologi/connection-condition/unidad> .
+
+<https://example.org/mex-ontologi/concept/municipio-denuncia> a skos:Concept,
+        mex:ConceptoCompartido ;
+    rdfs:label "Municipio de reporte de la denuncia"@es ;
+    skos:broader <https://example.org/mex-ontologi/concept/municipio> ;
+    skos:definition "Municipio donde se reportó la denuncia, sin afirmar lugar de ocurrencia del hecho denunciado."@es ;
+    skos:inScheme <https://example.org/mex-ontologi/concept-scheme/nucleo-compartido> ;
+    skos:prefLabel "Municipio de reporte de la denuncia"@es ;
+    prov:wasDerivedFrom <file:///C:/Users/marti/Documents/MEX-Ontologi/ontologia/semantica.json> ;
+    mex:requiereCondicion <https://example.org/mex-ontologi/connection-condition/catalogo>,
+        <https://example.org/mex-ontologi/connection-condition/contexto>,
+        <https://example.org/mex-ontologi/connection-condition/grano>,
+        <https://example.org/mex-ontologi/connection-condition/periodo>,
+        <https://example.org/mex-ontologi/connection-condition/rol>,
+        <https://example.org/mex-ontologi/connection-condition/unidad> .
+
+<https://example.org/mex-ontologi/concept/municipio-detencion> a skos:Concept,
+        mex:ConceptoCompartido ;
+    rdfs:label "Municipio de la detención"@es ;
+    skos:broader <https://example.org/mex-ontologi/concept/municipio> ;
+    skos:definition "Municipio en que se realizó la detención según su diccionario."@es ;
+    skos:inScheme <https://example.org/mex-ontologi/concept-scheme/nucleo-compartido> ;
+    skos:prefLabel "Municipio de la detención"@es ;
+    prov:wasDerivedFrom <file:///C:/Users/marti/Documents/MEX-Ontologi/ontologia/semantica.json> ;
+    mex:requiereCondicion <https://example.org/mex-ontologi/connection-condition/catalogo>,
+        <https://example.org/mex-ontologi/connection-condition/contexto>,
+        <https://example.org/mex-ontologi/connection-condition/grano>,
+        <https://example.org/mex-ontologi/connection-condition/periodo>,
+        <https://example.org/mex-ontologi/connection-condition/rol>,
+        <https://example.org/mex-ontologi/connection-condition/unidad> .
+
+<https://example.org/mex-ontologi/concept/municipio-entrega-apoyo> a skos:Concept,
+        mex:ConceptoCompartido ;
+    rdfs:label "Municipio de entrega de apoyos"@es ;
+    skos:broader <https://example.org/mex-ontologi/concept/municipio> ;
+    skos:definition "Municipio donde se entregaron los apoyos; no implica residencia del beneficiario."@es ;
+    skos:inScheme <https://example.org/mex-ontologi/concept-scheme/nucleo-compartido> ;
+    skos:prefLabel "Municipio de entrega de apoyos"@es ;
+    prov:wasDerivedFrom <file:///C:/Users/marti/Documents/MEX-Ontologi/ontologia/semantica.json> ;
+    mex:requiereCondicion <https://example.org/mex-ontologi/connection-condition/catalogo>,
+        <https://example.org/mex-ontologi/connection-condition/contexto>,
+        <https://example.org/mex-ontologi/connection-condition/grano>,
+        <https://example.org/mex-ontologi/connection-condition/periodo>,
+        <https://example.org/mex-ontologi/connection-condition/rol>,
+        <https://example.org/mex-ontologi/connection-condition/unidad> .
+
+<https://example.org/mex-ontologi/concept/municipio-nacimiento-externado> a skos:Concept,
+        mex:ConceptoCompartido ;
+    rdfs:label "Municipio de nacimiento de la persona externada"@es ;
+    skos:broader <https://example.org/mex-ontologi/concept/municipio> ;
+    skos:definition "Municipio donde nació la persona externada según la fuente."@es ;
+    skos:inScheme <https://example.org/mex-ontologi/concept-scheme/nucleo-compartido> ;
+    skos:prefLabel "Municipio de nacimiento de la persona externada"@es ;
+    prov:wasDerivedFrom <file:///C:/Users/marti/Documents/MEX-Ontologi/ontologia/semantica.json> ;
+    mex:requiereCondicion <https://example.org/mex-ontologi/connection-condition/catalogo>,
+        <https://example.org/mex-ontologi/connection-condition/contexto>,
+        <https://example.org/mex-ontologi/connection-condition/grano>,
+        <https://example.org/mex-ontologi/connection-condition/periodo>,
+        <https://example.org/mex-ontologi/connection-condition/rol>,
+        <https://example.org/mex-ontologi/connection-condition/unidad> .
+
+<https://example.org/mex-ontologi/concept/municipio-nacimiento-internado> a skos:Concept,
+        mex:ConceptoCompartido ;
+    rdfs:label "Municipio de nacimiento de la persona internada"@es ;
+    skos:broader <https://example.org/mex-ontologi/concept/municipio> ;
+    skos:definition "Municipio donde nació la persona internada, no el municipio de internamiento."@es ;
+    skos:inScheme <https://example.org/mex-ontologi/concept-scheme/nucleo-compartido> ;
+    skos:prefLabel "Municipio de nacimiento de la persona internada"@es ;
+    prov:wasDerivedFrom <file:///C:/Users/marti/Documents/MEX-Ontologi/ontologia/semantica.json> ;
+    mex:requiereCondicion <https://example.org/mex-ontologi/connection-condition/catalogo>,
+        <https://example.org/mex-ontologi/connection-condition/contexto>,
+        <https://example.org/mex-ontologi/connection-condition/grano>,
+        <https://example.org/mex-ontologi/connection-condition/periodo>,
+        <https://example.org/mex-ontologi/connection-condition/rol>,
+        <https://example.org/mex-ontologi/connection-condition/unidad> .
+
+<https://example.org/mex-ontologi/concept/municipio-nacimiento-madre> a skos:Concept,
+        mex:ConceptoCompartido ;
+    rdfs:label "Municipio de nacimiento de la madre"@es ;
+    skos:broader <https://example.org/mex-ontologi/concept/municipio> ;
+    skos:definition "Municipio donde nació la madre, no donde ocurrió el nacimiento del recién nacido."@es ;
+    skos:inScheme <https://example.org/mex-ontologi/concept-scheme/nucleo-compartido> ;
+    skos:prefLabel "Municipio de nacimiento de la madre"@es ;
+    prov:wasDerivedFrom <file:///C:/Users/marti/Documents/MEX-Ontologi/ontologia/semantica.json> ;
+    mex:requiereCondicion <https://example.org/mex-ontologi/connection-condition/catalogo>,
+        <https://example.org/mex-ontologi/connection-condition/contexto>,
+        <https://example.org/mex-ontologi/connection-condition/grano>,
+        <https://example.org/mex-ontologi/connection-condition/periodo>,
+        <https://example.org/mex-ontologi/connection-condition/rol>,
+        <https://example.org/mex-ontologi/connection-condition/unidad> .
+
+<https://example.org/mex-ontologi/concept/municipio-origen-llamada> a skos:Concept,
+        mex:ConceptoCompartido ;
+    rdfs:label "Municipio de origen de la llamada"@es ;
+    skos:broader <https://example.org/mex-ontologi/concept/municipio> ;
+    skos:definition "Municipio desde el que se realizó la llamada según su diccionario."@es ;
+    skos:inScheme <https://example.org/mex-ontologi/concept-scheme/nucleo-compartido> ;
+    skos:prefLabel "Municipio de origen de la llamada"@es ;
+    prov:wasDerivedFrom <file:///C:/Users/marti/Documents/MEX-Ontologi/ontologia/semantica.json> ;
+    mex:requiereCondicion <https://example.org/mex-ontologi/connection-condition/catalogo>,
+        <https://example.org/mex-ontologi/connection-condition/contexto>,
+        <https://example.org/mex-ontologi/connection-condition/grano>,
+        <https://example.org/mex-ontologi/connection-condition/periodo>,
+        <https://example.org/mex-ontologi/connection-condition/rol>,
+        <https://example.org/mex-ontologi/connection-condition/unidad> .
+
+<https://example.org/mex-ontologi/concept/municipio-parto> a skos:Concept,
+        mex:ConceptoCompartido ;
+    rdfs:label "Municipio del parto"@es ;
+    skos:broader <https://example.org/mex-ontologi/concept/municipio> ;
+    skos:definition "Municipio donde ocurrió el parto según la fuente."@es ;
+    skos:inScheme <https://example.org/mex-ontologi/concept-scheme/nucleo-compartido> ;
+    skos:prefLabel "Municipio del parto"@es ;
+    prov:wasDerivedFrom <file:///C:/Users/marti/Documents/MEX-Ontologi/ontologia/semantica.json> ;
+    mex:requiereCondicion <https://example.org/mex-ontologi/connection-condition/catalogo>,
+        <https://example.org/mex-ontologi/connection-condition/contexto>,
+        <https://example.org/mex-ontologi/connection-condition/grano>,
+        <https://example.org/mex-ontologi/connection-condition/periodo>,
+        <https://example.org/mex-ontologi/connection-condition/rol>,
+        <https://example.org/mex-ontologi/connection-condition/unidad> .
+
+<https://example.org/mex-ontologi/concept/municipio-pertenencia-beneficiario> a skos:Concept,
+        mex:ConceptoCompartido ;
+    rdfs:label "Municipio de pertenencia del beneficiario"@es ;
+    skos:broader <https://example.org/mex-ontologi/concept/municipio> ;
+    skos:definition "Municipio al que pertenece el beneficiario según la fuente; la definición no precisa domicilio."@es ;
+    skos:inScheme <https://example.org/mex-ontologi/concept-scheme/nucleo-compartido> ;
+    skos:prefLabel "Municipio de pertenencia del beneficiario"@es ;
+    prov:wasDerivedFrom <file:///C:/Users/marti/Documents/MEX-Ontologi/ontologia/semantica.json> ;
+    mex:requiereCondicion <https://example.org/mex-ontologi/connection-condition/catalogo>,
+        <https://example.org/mex-ontologi/connection-condition/contexto>,
+        <https://example.org/mex-ontologi/connection-condition/grano>,
+        <https://example.org/mex-ontologi/connection-condition/periodo>,
+        <https://example.org/mex-ontologi/connection-condition/rol>,
+        <https://example.org/mex-ontologi/connection-condition/unidad> .
+
+<https://example.org/mex-ontologi/concept/municipio-precipitacion> a skos:Concept,
+        mex:ConceptoCompartido ;
+    rdfs:label "Municipio del registro de precipitación"@es ;
+    skos:broader <https://example.org/mex-ontologi/concept/municipio> ;
+    skos:definition "Municipio donde se registró la precipitación según la definición."@es ;
+    skos:inScheme <https://example.org/mex-ontologi/concept-scheme/nucleo-compartido> ;
+    skos:prefLabel "Municipio del registro de precipitación"@es ;
+    prov:wasDerivedFrom <file:///C:/Users/marti/Documents/MEX-Ontologi/ontologia/semantica.json> ;
+    mex:requiereCondicion <https://example.org/mex-ontologi/connection-condition/catalogo>,
+        <https://example.org/mex-ontologi/connection-condition/contexto>,
+        <https://example.org/mex-ontologi/connection-condition/grano>,
+        <https://example.org/mex-ontologi/connection-condition/periodo>,
+        <https://example.org/mex-ontologi/connection-condition/rol>,
+        <https://example.org/mex-ontologi/connection-condition/unidad> .
+
+<https://example.org/mex-ontologi/concept/municipio-registro-delito> a skos:Concept,
+        mex:ConceptoCompartido ;
+    rdfs:label "Municipio de registro de delitos"@es ;
+    skos:broader <https://example.org/mex-ontologi/concept/municipio-registro> ;
+    skos:definition "Municipio en que se registraron los delitos; no implica residencia ni ocurrencia."@es ;
+    skos:inScheme <https://example.org/mex-ontologi/concept-scheme/nucleo-compartido> ;
+    skos:prefLabel "Municipio de registro de delitos"@es ;
+    prov:wasDerivedFrom <file:///C:/Users/marti/Documents/MEX-Ontologi/ontologia/semantica.json> ;
+    mex:requiereCondicion <https://example.org/mex-ontologi/connection-condition/catalogo>,
+        <https://example.org/mex-ontologi/connection-condition/contexto>,
+        <https://example.org/mex-ontologi/connection-condition/grano>,
+        <https://example.org/mex-ontologi/connection-condition/periodo>,
+        <https://example.org/mex-ontologi/connection-condition/rol>,
+        <https://example.org/mex-ontologi/connection-condition/unidad> .
+
+<https://example.org/mex-ontologi/concept/municipio-ubicacion> a skos:Concept,
+        mex:ConceptoCompartido ;
+    rdfs:label "Municipio de ubicación"@es ;
+    skos:broader <https://example.org/mex-ontologi/concept/municipio> ;
+    skos:definition "Localización municipal de una instalación u objeto; el objeto concreto debe conservarse en la definición de la variable."@es ;
+    skos:inScheme <https://example.org/mex-ontologi/concept-scheme/nucleo-compartido> ;
+    skos:prefLabel "Municipio de ubicación"@es ;
+    prov:wasDerivedFrom <file:///C:/Users/marti/Documents/MEX-Ontologi/ontologia/semantica.json> ;
+    mex:requiereCondicion <https://example.org/mex-ontologi/connection-condition/catalogo>,
+        <https://example.org/mex-ontologi/connection-condition/contexto>,
+        <https://example.org/mex-ontologi/connection-condition/grano>,
+        <https://example.org/mex-ontologi/connection-condition/periodo>,
+        <https://example.org/mex-ontologi/connection-condition/rol>,
+        <https://example.org/mex-ontologi/connection-condition/unidad> .
+
+<https://example.org/mex-ontologi/concept/periodo-escolar> a skos:Concept,
+        mex:ConceptoCompartido ;
+    rdfs:label "Periodo escolar"@es ;
+    skos:broader <https://example.org/mex-ontologi/concept/tiempo> ;
+    skos:definition "Periodo de referencia escolar que debe conservar su institución, calendario y alcance declarado u observado."@es ;
+    skos:inScheme <https://example.org/mex-ontologi/concept-scheme/nucleo-compartido> ;
+    skos:prefLabel "Periodo escolar"@es ;
+    prov:wasDerivedFrom <file:///C:/Users/marti/Documents/MEX-Ontologi/ontologia/semantica.json> ;
+    mex:requiereCondicion <https://example.org/mex-ontologi/connection-condition/catalogo>,
+        <https://example.org/mex-ontologi/connection-condition/contexto>,
+        <https://example.org/mex-ontologi/connection-condition/grano>,
+        <https://example.org/mex-ontologi/connection-condition/periodo>,
+        <https://example.org/mex-ontologi/connection-condition/rol>,
+        <https://example.org/mex-ontologi/connection-condition/unidad> .
+
+<https://example.org/mex-ontologi/concept/region-municipio> a skos:Concept,
+        mex:ConceptoCompartido ;
+    rdfs:label "Región geográfica del municipio"@es ;
+    skos:broader <https://example.org/mex-ontologi/concept/territorio> ;
+    skos:definition "Región geográfica del estado a la que pertenece el municipio según la clasificación de esta fuente."@es ;
+    skos:inScheme <https://example.org/mex-ontologi/concept-scheme/nucleo-compartido> ;
+    skos:prefLabel "Región geográfica del municipio"@es ;
+    prov:wasDerivedFrom <file:///C:/Users/marti/Documents/MEX-Ontologi/ontologia/semantica.json> ;
+    mex:requiereCondicion <https://example.org/mex-ontologi/connection-condition/catalogo>,
+        <https://example.org/mex-ontologi/connection-condition/contexto>,
+        <https://example.org/mex-ontologi/connection-condition/grano>,
+        <https://example.org/mex-ontologi/connection-condition/periodo>,
+        <https://example.org/mex-ontologi/connection-condition/rol>,
+        <https://example.org/mex-ontologi/connection-condition/unidad> .
+
+<https://example.org/mex-ontologi/concept/sexo-difunto> a skos:Concept,
+        mex:ConceptoCompartido ;
+    rdfs:label "Sexo del difunto"@es ;
+    skos:broader <https://example.org/mex-ontologi/concept/sexo-declarado> ;
+    skos:definition "Clasificación del sexo del difunto según su diccionario; conserva categorías y población."@es ;
+    skos:inScheme <https://example.org/mex-ontologi/concept-scheme/nucleo-compartido> ;
+    skos:prefLabel "Sexo del difunto"@es ;
+    prov:wasDerivedFrom <file:///C:/Users/marti/Documents/MEX-Ontologi/ontologia/semantica.json> ;
+    mex:requiereCondicion <https://example.org/mex-ontologi/connection-condition/catalogo>,
+        <https://example.org/mex-ontologi/connection-condition/contexto>,
+        <https://example.org/mex-ontologi/connection-condition/grano>,
+        <https://example.org/mex-ontologi/connection-condition/periodo>,
+        <https://example.org/mex-ontologi/connection-condition/rol>,
+        <https://example.org/mex-ontologi/connection-condition/unidad> .
+
+<https://example.org/mex-ontologi/concept/unidad-hospitalaria-donacion> a skos:Concept,
+        mex:ConceptoCompartido ;
+    rdfs:label "Unidad hospitalaria de donación"@es ;
+    skos:broader <https://example.org/mex-ontologi/concept/organizacion> ;
+    skos:definition "Unidad hospitalaria donde se realizó la donación; conserva objeto hospitalario y evento donación. No acredita pertenencia a catálogo CLUES ni distingue publicadora/capturadora."@es ;
+    skos:inScheme <https://example.org/mex-ontologi/concept-scheme/nucleo-compartido> ;
+    skos:prefLabel "Unidad hospitalaria de donación"@es ;
+    prov:wasDerivedFrom <file:///C:/Users/marti/Documents/MEX-Ontologi/ontologia/semantica.json> ;
+    mex:requiereCondicion <https://example.org/mex-ontologi/connection-condition/catalogo>,
+        <https://example.org/mex-ontologi/connection-condition/contexto>,
+        <https://example.org/mex-ontologi/connection-condition/grano>,
+        <https://example.org/mex-ontologi/connection-condition/periodo>,
+        <https://example.org/mex-ontologi/connection-condition/rol>,
+        <https://example.org/mex-ontologi/connection-condition/unidad> .
+
+<https://example.org/mex-ontologi/ontology/nucleo-semantico> a owl:Ontology ;
+    rdfs:label "Núcleo semántico de MEX-Ontologi"@es ;
+    prov:wasDerivedFrom <file:///C:/Users/marti/Documents/MEX-Ontologi/ontologia/semantica.json> .
+
+mex:CatalogoPublicado a owl:Class ;
+    rdfs:label "Catálogo publicado identificado"@es .
+
+mex:ComprobacionAplicacionTerritorial a owl:Class ;
+    rdfs:label "Comprobación de claves territoriales"@es .
+
+mex:ComprobacionLocalidadCensal a owl:Class ;
+    rdfs:label "Coincidencia observada IML e ITER"@es .
+
+mex:ContrasteLocalidadesCensales a owl:Class ;
+    rdfs:label "Contraste IML 2020 con ITER 2020"@es .
+
+mex:CorrespondenciaSemantica a owl:Class ;
+    rdfs:label "Correspondencia semántica de columna"@es .
+
+mex:CorrespondenciaTerritorial a owl:Class ;
+    rdfs:label "Correspondencia territorial entre referencias"@es .
+
+mex:DictamenPendienteSemantico a owl:Class ;
+    rdfs:label "Dictamen de pendiente semántico"@es .
+
+mex:EntradaCatalogo a owl:Class ;
+    rdfs:label "Entrada de catálogo de códigos"@es ;
+    rdfs:subClassOf skos:Concept .
+
+mex:EntradaCatalogoPublicado a owl:Class ;
+    rdfs:label "Entrada de catálogo publicado"@es .
+
+mex:EntradaReferenciaTerritorial a owl:Class ;
+    rdfs:label "Entrada de referencia territorial"@es .
+
+mex:EvaluacionPipelineConsulta a owl:Class ;
+    rdfs:label "Diagnóstico parcial del pipeline fuente de consulta"@es .
+
+mex:LocalidadObservada a owl:Class ;
+    rdfs:label "Localidad observada en IML 2020"@es .
+
+mex:MunicipioSegunFuente a owl:Class ;
+    rdfs:label "Municipio según referencia del portal"@es .
+
+mex:ReferenciaCatalogoDeclarada a owl:Class ;
+    rdfs:label "Referencia a catálogo declarada"@es .
+
+mex:ReferenciaLocalidadesObservada a owl:Class ;
+    rdfs:label "Referencia de localidades observada en IML 2020"@es .
+
+mex:ReferenciaTerritorial a owl:Class ;
+    rdfs:label "Referencia territorial recuperada"@es .
+
+mex:ResultadoCasoEvaluacion a owl:Class ;
+    rdfs:label "Resultado de caso de evaluación del pipeline fuente"@es .
+
+mex:RevisionVigenciaCatalogo a owl:Class ;
+    rdfs:label "Revisión de vigencia de catálogo"@es .
+
+mex:SistemaIdentificadores a owl:Class ;
+    rdfs:label "Sistema de identificadores observado"@es .
+
+mex:VariableDocumentada a owl:Class ;
+    rdfs:label "Variable documentada"@es .
+
+mex:VinculoCatalogoPublicado a owl:Class ;
+    rdfs:label "Vínculo documental a catálogo publicado"@es .
+
+mex:VinculoCatalogoTerritorial a owl:Class ;
+    rdfs:label "Identificación documental de catálogo territorial"@es .
+
+mex:aciertosEvaluacion a owl:DatatypeProperty ;
+    rdfs:label "Aciertos observados"@es .
+
+mex:alcanceReferencia a owl:DatatypeProperty ;
+    rdfs:label "alcanceReferencia"@es .
+
+mex:anioDeclaradoIML a owl:DatatypeProperty ;
+    rdfs:label "Año declarado por IML"@es .
+
+mex:archivoSha256 a owl:DatatypeProperty ;
+    rdfs:label "SHA-256 del archivo publicado"@es,
+        "archivoSha256"@es .
+
+mex:campoComprobado a owl:DatatypeProperty ;
+    rdfs:label "Nombre físico de campo comprobado"@es .
+
+mex:canalEvaluado a owl:DatatypeProperty ;
+    rdfs:label "Canal evaluado"@es .
+
+mex:casosIntentados a owl:DatatypeProperty ;
+    rdfs:label "Casos intentados"@es .
+
+mex:catalogoDeclarado a owl:ObjectProperty ;
+    rdfs:label "Referencia a catálogo declarada por la fuente"@es .
+
+mex:catalogoRecuperado a owl:ObjectProperty ;
+    rdfs:label "Catálogo recuperado"@es,
+        "catalogoRecuperado"@es .
+
+mex:celdaCodigo a owl:DatatypeProperty ;
+    rdfs:label "celdaCodigo"@es .
+
+mex:celdaNombre a owl:DatatypeProperty ;
+    rdfs:label "celdaNombre"@es .
+
+mex:claveCensalOriginal a owl:DatatypeProperty ;
+    rdfs:label "Clave compuesta de componentes censales originales"@es .
+
+mex:claveEspecialNoMunicipal a owl:DatatypeProperty ;
+    rdfs:label "Clave observada de categoría no municipal"@es .
+
+mex:claveObservada a owl:DatatypeProperty ;
+    rdfs:label "Clave distinta observada"@es .
+
+mex:coberturaComprobacion a owl:DatatypeProperty ;
+    rdfs:label "Cobertura de comprobación"@es .
+
+mex:codigoOriginal a owl:DatatypeProperty ;
+    rdfs:label "Código original"@es,
+        "codigoOriginal"@es .
+
+mex:columnaComprobada a owl:ObjectProperty ;
+    rdfs:label "Columna física comprobada"@es .
+
+mex:columnaOrigen a owl:ObjectProperty ;
+    rdfs:label "Columna de origen de la correspondencia"@es .
+
+mex:componenteEntidad a owl:DatatypeProperty ;
+    rdfs:label "Componente entidad del código"@es .
+
+mex:componenteLocalidad a owl:DatatypeProperty ;
+    rdfs:label "Componente localidad"@es .
+
+mex:componenteMunicipio a owl:DatatypeProperty ;
+    rdfs:label "Componente municipio del código"@es .
+
+mex:contrasteLocalidades a owl:ObjectProperty ;
+    rdfs:label "Contraste entre fuentes censales"@es .
+
+mex:criterioRevision a owl:DatatypeProperty ;
+    rdfs:label "Criterio de revisión documental de esta correspondencia"@es .
+
+mex:defineReferenciaTerritorial a owl:ObjectProperty ;
+    rdfs:label "defineReferenciaTerritorial"@es .
+
+mex:definicionOriginal a owl:ObjectProperty ;
+    rdfs:label "Definición original de la variable"@es .
+
+mex:denotaMunicipioFuente a owl:ObjectProperty ;
+    rdfs:label "Municipio identificado por la entrada en esta referencia"@es .
+
+mex:encabezadoOriginal a owl:DatatypeProperty ;
+    rdfs:label "Encabezado original"@es .
+
+mex:entradaLocalidadObservada a owl:ObjectProperty ;
+    rdfs:label "Entrada de localidad observada"@es .
+
+mex:entradaTerritorialDestino a owl:ObjectProperty ;
+    rdfs:label "entradaTerritorialDestino"@es .
+
+mex:entradaTerritorialOrigen a owl:ObjectProperty ;
+    rdfs:label "entradaTerritorialOrigen"@es .
+
+mex:estadoCasoEvaluacion a owl:DatatypeProperty ;
+    rdfs:label "Estado observado del caso"@es .
+
+mex:estadoCoincidenciaCensal a owl:DatatypeProperty ;
+    rdfs:label "Estado de coincidencia entre fuentes publicadas"@es .
+
+mex:estadoComprobacion a owl:DatatypeProperty ;
+    rdfs:label "Resultado de comprobación"@es .
+
+mex:estadoContraste a owl:DatatypeProperty ;
+    rdfs:label "Estado de contraste entre dos fuentes"@es .
+
+mex:estadoCorrespondencia a owl:DatatypeProperty ;
+    rdfs:label "Estado de correspondencia entre columna y variable"@es .
+
+mex:estadoCorrespondenciaTerritorial a owl:DatatypeProperty ;
+    rdfs:label "estadoCorrespondenciaTerritorial"@es .
+
+mex:estadoDictamen a owl:DatatypeProperty ;
+    rdfs:label "Estado de dictamen"@es .
+
+mex:estadoEvaluacionUI a owl:DatatypeProperty ;
+    rdfs:label "Estado de evaluación de la interfaz"@es .
+
+mex:estadoReferenciaCatalogo a owl:DatatypeProperty ;
+    rdfs:label "Estado de resolución del catálogo"@es .
+
+mex:estadoReferenciaObservada a owl:DatatypeProperty ;
+    rdfs:label "Estado de referencia observada"@es .
+
+mex:estadoSemantico a owl:DatatypeProperty ;
+    rdfs:label "Estado de interpretación semántica"@es .
+
+mex:estadoVigencia a owl:DatatypeProperty ;
+    rdfs:label "Estado de vigencia documental"@es,
+        "estadoVigencia"@es .
+
+mex:estadoVigenciaRevisada a owl:DatatypeProperty ;
+    rdfs:label "Resultado de revisión de vigencia"@es .
+
+mex:evaluacionConsulta a owl:ObjectProperty ;
+    rdfs:label "Evaluación de consulta a la que pertenece el caso"@es .
+
+mex:evidenciaComprobacionJson a owl:DatatypeProperty ;
+    rdfs:label "Detalle reproducible de comprobación (JSON)"@es .
+
+mex:evidenciaRevisionJson a owl:DatatypeProperty ;
+    rdfs:label "Evidencia y alcance de revisión (JSON)"@es .
+
+mex:evidenciaTextual a owl:DatatypeProperty ;
+    rdfs:label "Definición textual usada como evidencia"@es .
+
+mex:facetasVigenciaJson a owl:DatatypeProperty ;
+    rdfs:label "Publicación, periodo, edición y aplicabilidad (JSON)"@es .
+
+mex:fallosRecuperacion a owl:DatatypeProperty ;
+    rdfs:label "Fallos observados de recuperación"@es .
+
+mex:fechaConsultaCkan a owl:DatatypeProperty ;
+    rdfs:label "Fecha UTC de consulta de metadatos CKAN"@es .
+
+mex:fechaReferenciaCensal a owl:DatatypeProperty ;
+    rdfs:label "Fecha de referencia declarada por ITER"@es .
+
+mex:filaFuenteCensal a owl:DatatypeProperty ;
+    rdfs:label "Fila del CSV censal"@es .
+
+mex:filaOriginal a owl:DatatypeProperty ;
+    rdfs:label "Fila original"@es .
+
+mex:filaOriginalJson a owl:DatatypeProperty ;
+    rdfs:label "Contenido literal de fila publicada (JSON)"@es .
+
+mex:filasComprobadas a owl:DatatypeProperty ;
+    rdfs:label "Filas comprobadas"@es .
+
+mex:hojaOriginal a owl:DatatypeProperty ;
+    rdfs:label "Hoja original"@es,
+        "hojaOriginal"@es .
+
+mex:huellaEsquemaRevisado a owl:DatatypeProperty ;
+    rdfs:label "Huella del esquema revisado"@es .
+
+mex:huellaFilaDiccionario a owl:DatatypeProperty ;
+    rdfs:label "Huella de la fila del diccionario revisada"@es .
+
+mex:identidadBackend a owl:DatatypeProperty ;
+    rdfs:label "Identidad con backend instalado"@es .
+
+mex:intentosSinRespuesta a owl:DatatypeProperty ;
+    rdfs:label "Intentos sin respuesta por HTTP o cuota"@es .
+
+mex:limiteSemantico a owl:DatatypeProperty ;
+    rdfs:label "Límite de interpretación"@es .
+
+mex:localidadesComprobadas a owl:DatatypeProperty ;
+    rdfs:label "Localidades IML comprobadas contra ITER"@es .
+
+mex:localidadesSoloFuenteCensal a owl:DatatypeProperty ;
+    rdfs:label "Localidades publicadas solo en ITER"@es .
+
+mex:nombreCatalogoDeclarado a owl:DatatypeProperty ;
+    rdfs:label "Nombre de catálogo declarado"@es .
+
+mex:nombreCensalOriginal a owl:DatatypeProperty ;
+    rdfs:label "Nombre censal original"@es .
+
+mex:nombreComparado a owl:DatatypeProperty ;
+    rdfs:label "nombreComparado"@es .
+
+mex:nombreMunicipioCensalOriginal a owl:DatatypeProperty ;
+    rdfs:label "Nombre municipal censal original"@es .
+
+mex:nombreMunicipioOriginal a owl:DatatypeProperty ;
+    rdfs:label "Nombre original del municipio"@es .
+
+mex:nombreOriginal a owl:DatatypeProperty ;
+    rdfs:label "Nombre original"@es,
+        "nombreOriginal"@es .
+
+mex:nombreVariableLocal a owl:DatatypeProperty ;
+    rdfs:label "Nombre de variable local"@es .
+
+mex:objetoRevisado a owl:ObjectProperty ;
+    rdfs:label "Objeto de revisión"@es .
+
+mex:patronCodigo a owl:DatatypeProperty ;
+    rdfs:label "Patrón de código observado"@es .
+
+mex:periodoComprobado a owl:DatatypeProperty ;
+    rdfs:label "Periodo observado"@es .
+
+mex:poblacionCoincidente a owl:DatatypeProperty ;
+    rdfs:label "Población coincidente en las dos fuentes examinadas"@es .
+
+mex:preguntaEvaluacion a owl:DatatypeProperty ;
+    rdfs:label "Pregunta de evaluación"@es .
+
+mex:preguntaPublicador a owl:DatatypeProperty ;
+    rdfs:label "Pregunta preparada sin enviar al publicador"@es .
+
+mex:recursoComprobado a owl:ObjectProperty ;
+    rdfs:label "Recurso comprobado"@es .
+
+mex:referenciaComprobada a owl:ObjectProperty ;
+    rdfs:label "Referencia usada en comprobación"@es .
+
+mex:referenciaDeclarada a owl:ObjectProperty ;
+    rdfs:label "Referencia declarada"@es,
+        "referenciaDeclarada"@es .
+
+mex:referenciaLocalidadesObservada a owl:ObjectProperty ;
+    rdfs:label "Referencia de localidades observada en este recurso"@es .
+
+mex:referenciaTerritorial a owl:ObjectProperty ;
+    rdfs:label "referenciaTerritorial"@es .
+
+mex:reglaSemantica a owl:DatatypeProperty ;
+    rdfs:label "Regla de interpretación documentada"@es .
+
+mex:representacionDocumentada a owl:DatatypeProperty ;
+    rdfs:label "Representación documental de la variable"@es .
+
+mex:requiereCondicion a owl:ObjectProperty ;
+    rdfs:label "Condición necesaria para conectar"@es .
+
+mex:requiereDistinguirDe a owl:ObjectProperty ;
+    rdfs:label "Sentido que debe distinguirse"@es .
+
+mex:respuestaEsperada a owl:DatatypeProperty ;
+    rdfs:label "Respuesta esperada en la instantánea evaluada"@es .
+
+mex:respuestaObtenida a owl:DatatypeProperty ;
+    rdfs:label "Respuesta obtenida del modelo"@es .
+
+mex:respuestasModelo a owl:DatatypeProperty ;
+    rdfs:label "Intentos con respuesta del modelo"@es .
+
+mex:sha256CatalogoComprobado a owl:DatatypeProperty ;
+    rdfs:label "SHA-256 de catálogo usado en comprobación"@es .
+
+mex:sha256FuenteCensal a owl:DatatypeProperty ;
+    rdfs:label "SHA-256 de la fuente censal"@es .
+
+mex:sha256GrafoAntesRonda2 a owl:DatatypeProperty ;
+    rdfs:label "SHA-256 del archivo de grafo previo a ronda 2"@es .
+
+mex:significadoCandidato a owl:ObjectProperty ;
+    rdfs:label "Significado candidato sin confirmar"@es .
+
+mex:significadoDocumentado a owl:ObjectProperty ;
+    rdfs:label "Significado respaldado por definición documental"@es .
+
+mex:tipoDatoOriginal a owl:DatatypeProperty ;
+    rdfs:label "Tipo de dato declarado original"@es .
+
+mex:tipoPendiente a owl:DatatypeProperty ;
+    rdfs:label "Tipo de pendiente revisado"@es .
+
+mex:totalLocalidadesFuenteCensal a owl:DatatypeProperty ;
+    rdfs:label "Localidades publicadas en ITER"@es .
+
+mex:transformacionCodigo a owl:DatatypeProperty ;
+    rdfs:label "transformacionCodigo"@es .
+
+mex:ubicacionComprobadaJson a owl:DatatypeProperty ;
+    rdfs:label "Ubicación física comprobada (JSON)"@es .
+
+mex:unidadOriginal a owl:DatatypeProperty ;
+    rdfs:label "Unidad original sin homologar"@es .
+
+mex:usaSistemaIdentificadores a owl:ObjectProperty ;
+    rdfs:label "Sistema de identificadores observado en esta columna"@es .
+
+mex:variableDestino a owl:ObjectProperty ;
+    rdfs:label "Variable documental de destino"@es .
+
+mex:variableDocumentada a owl:ObjectProperty ;
+    rdfs:label "Variable documentada del conjunto"@es .
+
+<https://example.org/mex-ontologi/concept/anio-agricola> a skos:Concept,
+        mex:ConceptoCompartido ;
+    rdfs:label "Año agrícola de referencia"@es ;
+    skos:broader <https://example.org/mex-ontologi/concept/anio> ;
+    skos:definition "Año agrícola declarado por la fuente; su calendario no se presume equivalente al año civil."@es ;
+    skos:inScheme <https://example.org/mex-ontologi/concept-scheme/nucleo-compartido> ;
+    skos:prefLabel "Año agrícola de referencia"@es ;
+    prov:wasDerivedFrom <file:///C:/Users/marti/Documents/MEX-Ontologi/ontologia/semantica.json> ;
+    mex:requiereCondicion <https://example.org/mex-ontologi/connection-condition/catalogo>,
+        <https://example.org/mex-ontologi/connection-condition/contexto>,
+        <https://example.org/mex-ontologi/connection-condition/grano>,
+        <https://example.org/mex-ontologi/connection-condition/periodo>,
+        <https://example.org/mex-ontologi/connection-condition/rol>,
+        <https://example.org/mex-ontologi/connection-condition/unidad> ;
+    mex:requiereDistinguirDe <https://example.org/mex-ontologi/concept/anio> .
+
+<https://example.org/mex-ontologi/concept/anio-captura> a skos:Concept,
+        mex:ConceptoCompartido ;
+    rdfs:label "Año de captura"@es ;
+    skos:broader <https://example.org/mex-ontologi/concept/anio> ;
+    skos:definition "Año de captura de la información, sin equipararlo al de ocurrencia."@es ;
+    skos:inScheme <https://example.org/mex-ontologi/concept-scheme/nucleo-compartido> ;
+    skos:prefLabel "Año de captura"@es ;
+    prov:wasDerivedFrom <file:///C:/Users/marti/Documents/MEX-Ontologi/ontologia/semantica.json> ;
+    mex:requiereCondicion <https://example.org/mex-ontologi/connection-condition/catalogo>,
+        <https://example.org/mex-ontologi/connection-condition/contexto>,
+        <https://example.org/mex-ontologi/connection-condition/grano>,
+        <https://example.org/mex-ontologi/connection-condition/periodo>,
+        <https://example.org/mex-ontologi/connection-condition/rol>,
+        <https://example.org/mex-ontologi/connection-condition/unidad> ;
+    mex:requiereDistinguirDe <https://example.org/mex-ontologi/concept/anio-registro> .
+
+<https://example.org/mex-ontologi/concept/anio-defuncion> a skos:Concept,
+        mex:ConceptoCompartido ;
+    rdfs:label "Año de fallecimiento"@es ;
+    skos:broader <https://example.org/mex-ontologi/concept/anio> ;
+    skos:definition "Año en que ocurrió el fallecimiento según la definición documental."@es ;
+    skos:inScheme <https://example.org/mex-ontologi/concept-scheme/nucleo-compartido> ;
+    skos:prefLabel "Año de fallecimiento"@es ;
+    prov:wasDerivedFrom <file:///C:/Users/marti/Documents/MEX-Ontologi/ontologia/semantica.json> ;
+    mex:requiereCondicion <https://example.org/mex-ontologi/connection-condition/catalogo>,
+        <https://example.org/mex-ontologi/connection-condition/contexto>,
+        <https://example.org/mex-ontologi/connection-condition/grano>,
+        <https://example.org/mex-ontologi/connection-condition/periodo>,
+        <https://example.org/mex-ontologi/connection-condition/rol>,
+        <https://example.org/mex-ontologi/connection-condition/unidad> ;
+    mex:requiereDistinguirDe <https://example.org/mex-ontologi/concept/anio-registro> .
+
+<https://example.org/mex-ontologi/concept/conteo-consultas> a skos:Concept,
+        mex:ConceptoCompartido ;
+    rdfs:label "Total de consultas"@es ;
+    skos:definition "Conteo de consultas según la definición; no implica pacientes únicos ni la misma modalidad de atención."@es ;
+    skos:inScheme <https://example.org/mex-ontologi/concept-scheme/nucleo-compartido> ;
+    skos:prefLabel "Total de consultas"@es ;
+    prov:wasDerivedFrom <file:///C:/Users/marti/Documents/MEX-Ontologi/ontologia/semantica.json> ;
+    mex:requiereCondicion <https://example.org/mex-ontologi/connection-condition/catalogo>,
+        <https://example.org/mex-ontologi/connection-condition/contexto>,
+        <https://example.org/mex-ontologi/connection-condition/grano>,
+        <https://example.org/mex-ontologi/connection-condition/periodo>,
+        <https://example.org/mex-ontologi/connection-condition/rol>,
+        <https://example.org/mex-ontologi/connection-condition/unidad> .
+
+<https://example.org/mex-ontologi/concept/edad-fallecimiento> a skos:Concept,
+        mex:ConceptoCompartido ;
+    rdfs:label "Edad al fallecer"@es ;
+    skos:definition "Edad al fallecer según la fuente; la unidad debe conservarse y comprobarse antes de comparar."@es ;
+    skos:inScheme <https://example.org/mex-ontologi/concept-scheme/nucleo-compartido> ;
+    skos:prefLabel "Edad al fallecer"@es ;
+    prov:wasDerivedFrom <file:///C:/Users/marti/Documents/MEX-Ontologi/ontologia/semantica.json> ;
+    mex:requiereCondicion <https://example.org/mex-ontologi/connection-condition/catalogo>,
+        <https://example.org/mex-ontologi/connection-condition/contexto>,
+        <https://example.org/mex-ontologi/connection-condition/grano>,
+        <https://example.org/mex-ontologi/connection-condition/periodo>,
+        <https://example.org/mex-ontologi/connection-condition/rol>,
+        <https://example.org/mex-ontologi/connection-condition/unidad> .
+
+<https://example.org/mex-ontologi/concept/fecha-localizacion-victima> a skos:Concept,
+        mex:ConceptoCompartido ;
+    rdfs:label "Fecha de localización de la víctima"@es ;
+    skos:broader <https://example.org/mex-ontologi/concept/tiempo> ;
+    skos:definition "Fecha de localización de la víctima según la fuente."@es ;
+    skos:inScheme <https://example.org/mex-ontologi/concept-scheme/nucleo-compartido> ;
+    skos:prefLabel "Fecha de localización de la víctima"@es ;
+    prov:wasDerivedFrom <file:///C:/Users/marti/Documents/MEX-Ontologi/ontologia/semantica.json> ;
+    mex:requiereCondicion <https://example.org/mex-ontologi/connection-condition/catalogo>,
+        <https://example.org/mex-ontologi/connection-condition/contexto>,
+        <https://example.org/mex-ontologi/connection-condition/grano>,
+        <https://example.org/mex-ontologi/connection-condition/periodo>,
+        <https://example.org/mex-ontologi/connection-condition/rol>,
+        <https://example.org/mex-ontologi/connection-condition/unidad> ;
+    mex:requiereDistinguirDe <https://example.org/mex-ontologi/concept/fecha-reporte-victima> .
+
+<https://example.org/mex-ontologi/concept/fecha-reporte-victima> a skos:Concept,
+        mex:ConceptoCompartido ;
+    rdfs:label "Fecha del reporte de la víctima"@es ;
+    skos:broader <https://example.org/mex-ontologi/concept/tiempo> ;
+    skos:definition "Fecha del reporte de la víctima; el nombre fecha_hechos no prueba la fecha de ocurrencia."@es ;
+    skos:inScheme <https://example.org/mex-ontologi/concept-scheme/nucleo-compartido> ;
+    skos:prefLabel "Fecha del reporte de la víctima"@es ;
+    prov:wasDerivedFrom <file:///C:/Users/marti/Documents/MEX-Ontologi/ontologia/semantica.json> ;
+    mex:requiereCondicion <https://example.org/mex-ontologi/connection-condition/catalogo>,
+        <https://example.org/mex-ontologi/connection-condition/contexto>,
+        <https://example.org/mex-ontologi/connection-condition/grano>,
+        <https://example.org/mex-ontologi/connection-condition/periodo>,
+        <https://example.org/mex-ontologi/connection-condition/rol>,
+        <https://example.org/mex-ontologi/connection-condition/unidad> ;
+    mex:requiereDistinguirDe <https://example.org/mex-ontologi/concept/fecha-localizacion-victima> .
+
+<https://example.org/mex-ontologi/concept/grupo-edad> a skos:Concept,
+        mex:ConceptoCompartido ;
+    rdfs:label "Grupo de edad declarado"@es ;
+    skos:definition "Agrupación por edad declarada; sus intervalos y población se conservan por fuente."@es ;
+    skos:inScheme <https://example.org/mex-ontologi/concept-scheme/nucleo-compartido> ;
+    skos:prefLabel "Grupo de edad declarado"@es ;
+    prov:wasDerivedFrom <file:///C:/Users/marti/Documents/MEX-Ontologi/ontologia/semantica.json> ;
+    mex:requiereCondicion <https://example.org/mex-ontologi/connection-condition/catalogo>,
+        <https://example.org/mex-ontologi/connection-condition/contexto>,
+        <https://example.org/mex-ontologi/connection-condition/grano>,
+        <https://example.org/mex-ontologi/connection-condition/periodo>,
+        <https://example.org/mex-ontologi/connection-condition/rol>,
+        <https://example.org/mex-ontologi/connection-condition/unidad> .
+
+<https://example.org/mex-ontologi/concept/localidad-defuncion> a skos:Concept,
+        mex:ConceptoCompartido ;
+    rdfs:label "Localidad del fallecimiento"@es ;
+    skos:broader <https://example.org/mex-ontologi/concept/localidad> ;
+    skos:definition "Localidad donde ocurrió la defunción; no es la de residencia o registro."@es ;
+    skos:inScheme <https://example.org/mex-ontologi/concept-scheme/nucleo-compartido> ;
+    skos:prefLabel "Localidad del fallecimiento"@es ;
+    prov:wasDerivedFrom <file:///C:/Users/marti/Documents/MEX-Ontologi/ontologia/semantica.json> ;
+    mex:requiereCondicion <https://example.org/mex-ontologi/connection-condition/catalogo>,
+        <https://example.org/mex-ontologi/connection-condition/contexto>,
+        <https://example.org/mex-ontologi/connection-condition/grano>,
+        <https://example.org/mex-ontologi/connection-condition/periodo>,
+        <https://example.org/mex-ontologi/connection-condition/rol>,
+        <https://example.org/mex-ontologi/connection-condition/unidad> ;
+    mex:requiereDistinguirDe <https://example.org/mex-ontologi/concept/localidad-residencia-difunto> .
+
+<https://example.org/mex-ontologi/concept/localidad-parto> a skos:Concept,
+        mex:ConceptoCompartido ;
+    rdfs:label "Localidad del parto"@es ;
+    skos:broader <https://example.org/mex-ontologi/concept/localidad> ;
+    skos:definition "Localidad donde ocurrió el parto según la fuente."@es ;
+    skos:inScheme <https://example.org/mex-ontologi/concept-scheme/nucleo-compartido> ;
+    skos:prefLabel "Localidad del parto"@es ;
+    prov:wasDerivedFrom <file:///C:/Users/marti/Documents/MEX-Ontologi/ontologia/semantica.json> ;
+    mex:requiereCondicion <https://example.org/mex-ontologi/connection-condition/catalogo>,
+        <https://example.org/mex-ontologi/connection-condition/contexto>,
+        <https://example.org/mex-ontologi/connection-condition/grano>,
+        <https://example.org/mex-ontologi/connection-condition/periodo>,
+        <https://example.org/mex-ontologi/connection-condition/rol>,
+        <https://example.org/mex-ontologi/connection-condition/unidad> ;
+    mex:requiereDistinguirDe <https://example.org/mex-ontologi/concept/localidad-residencia-madre> .
+
+<https://example.org/mex-ontologi/concept/localidad-residencia-difunto> a skos:Concept,
+        mex:ConceptoCompartido ;
+    rdfs:label "Localidad de residencia del difunto"@es ;
+    skos:broader <https://example.org/mex-ontologi/concept/localidad> ;
+    skos:definition "Localidad donde residía el difunto; necesita contexto territorial y catálogo para interpretar códigos."@es ;
+    skos:inScheme <https://example.org/mex-ontologi/concept-scheme/nucleo-compartido> ;
+    skos:prefLabel "Localidad de residencia del difunto"@es ;
+    prov:wasDerivedFrom <file:///C:/Users/marti/Documents/MEX-Ontologi/ontologia/semantica.json> ;
+    mex:requiereCondicion <https://example.org/mex-ontologi/connection-condition/catalogo>,
+        <https://example.org/mex-ontologi/connection-condition/contexto>,
+        <https://example.org/mex-ontologi/connection-condition/grano>,
+        <https://example.org/mex-ontologi/connection-condition/periodo>,
+        <https://example.org/mex-ontologi/connection-condition/rol>,
+        <https://example.org/mex-ontologi/connection-condition/unidad> ;
+    mex:requiereDistinguirDe <https://example.org/mex-ontologi/concept/localidad-defuncion> .
+
+<https://example.org/mex-ontologi/concept/localidad-residencia-madre> a skos:Concept,
+        mex:ConceptoCompartido ;
+    rdfs:label "Localidad de residencia de la madre"@es ;
+    skos:broader <https://example.org/mex-ontologi/concept/localidad> ;
+    skos:definition "Localidad donde reside la madre; no es la localidad del parto."@es ;
+    skos:inScheme <https://example.org/mex-ontologi/concept-scheme/nucleo-compartido> ;
+    skos:prefLabel "Localidad de residencia de la madre"@es ;
+    prov:wasDerivedFrom <file:///C:/Users/marti/Documents/MEX-Ontologi/ontologia/semantica.json> ;
+    mex:requiereCondicion <https://example.org/mex-ontologi/connection-condition/catalogo>,
+        <https://example.org/mex-ontologi/connection-condition/contexto>,
+        <https://example.org/mex-ontologi/connection-condition/grano>,
+        <https://example.org/mex-ontologi/connection-condition/periodo>,
+        <https://example.org/mex-ontologi/connection-condition/rol>,
+        <https://example.org/mex-ontologi/connection-condition/unidad> ;
+    mex:requiereDistinguirDe <https://example.org/mex-ontologi/concept/localidad-parto> .
+
+<https://example.org/mex-ontologi/concept/mes> a skos:Concept,
+        mex:ConceptoCompartido ;
+    rdfs:label "Mes, evento no especificado"@es ;
+    skos:broader <https://example.org/mex-ontologi/concept/tiempo> ;
+    skos:definition "Referencia expresada en meses sin atribuir un evento ni un año que la definición no indique."@es ;
+    skos:inScheme <https://example.org/mex-ontologi/concept-scheme/nucleo-compartido> ;
+    skos:prefLabel "Mes, evento no especificado"@es ;
+    prov:wasDerivedFrom <file:///C:/Users/marti/Documents/MEX-Ontologi/ontologia/semantica.json> ;
+    mex:requiereCondicion <https://example.org/mex-ontologi/connection-condition/catalogo>,
+        <https://example.org/mex-ontologi/connection-condition/contexto>,
+        <https://example.org/mex-ontologi/connection-condition/grano>,
+        <https://example.org/mex-ontologi/connection-condition/periodo>,
+        <https://example.org/mex-ontologi/connection-condition/rol>,
+        <https://example.org/mex-ontologi/connection-condition/unidad> .
+
+<https://example.org/mex-ontologi/concept/mes-defuncion> a skos:Concept,
+        mex:ConceptoCompartido ;
+    rdfs:label "Mes del fallecimiento"@es ;
+    skos:broader <https://example.org/mex-ontologi/concept/mes> ;
+    skos:definition "Mes en que ocurrió el fallecimiento; requiere año como contexto."@es ;
+    skos:inScheme <https://example.org/mex-ontologi/concept-scheme/nucleo-compartido> ;
+    skos:prefLabel "Mes del fallecimiento"@es ;
+    prov:wasDerivedFrom <file:///C:/Users/marti/Documents/MEX-Ontologi/ontologia/semantica.json> ;
+    mex:requiereCondicion <https://example.org/mex-ontologi/connection-condition/catalogo>,
+        <https://example.org/mex-ontologi/connection-condition/contexto>,
+        <https://example.org/mex-ontologi/connection-condition/grano>,
+        <https://example.org/mex-ontologi/connection-condition/periodo>,
+        <https://example.org/mex-ontologi/connection-condition/rol>,
+        <https://example.org/mex-ontologi/connection-condition/unidad> ;
+    mex:requiereDistinguirDe <https://example.org/mex-ontologi/concept/mes-registro> .
+
+<https://example.org/mex-ontologi/concept/mes-registro> a skos:Concept,
+        mex:ConceptoCompartido ;
+    rdfs:label "Mes de registro"@es ;
+    skos:broader <https://example.org/mex-ontologi/concept/tiempo> ;
+    skos:definition "Mes en que se registra el hecho; necesita el año como contexto temporal."@es ;
+    skos:inScheme <https://example.org/mex-ontologi/concept-scheme/nucleo-compartido> ;
+    skos:prefLabel "Mes de registro"@es ;
+    prov:wasDerivedFrom <file:///C:/Users/marti/Documents/MEX-Ontologi/ontologia/semantica.json> ;
+    mex:requiereCondicion <https://example.org/mex-ontologi/connection-condition/catalogo>,
+        <https://example.org/mex-ontologi/connection-condition/contexto>,
+        <https://example.org/mex-ontologi/connection-condition/grano>,
+        <https://example.org/mex-ontologi/connection-condition/periodo>,
+        <https://example.org/mex-ontologi/connection-condition/rol>,
+        <https://example.org/mex-ontologi/connection-condition/unidad> ;
+    mex:requiereDistinguirDe <https://example.org/mex-ontologi/concept/mes-defuncion> .
+
+<https://example.org/mex-ontologi/concept/municipio-defuncion> a skos:Concept,
+        mex:ConceptoCompartido ;
+    rdfs:label "Municipio donde ocurrió la defunción"@es ;
+    skos:broader <https://example.org/mex-ontologi/concept/municipio> ;
+    skos:definition "Localización municipal del fallecimiento, diferente del registro y la residencia."@es ;
+    skos:inScheme <https://example.org/mex-ontologi/concept-scheme/nucleo-compartido> ;
+    skos:prefLabel "Municipio donde ocurrió la defunción"@es ;
+    prov:wasDerivedFrom <file:///C:/Users/marti/Documents/MEX-Ontologi/ontologia/semantica.json> ;
+    mex:requiereCondicion <https://example.org/mex-ontologi/connection-condition/catalogo>,
+        <https://example.org/mex-ontologi/connection-condition/contexto>,
+        <https://example.org/mex-ontologi/connection-condition/grano>,
+        <https://example.org/mex-ontologi/connection-condition/periodo>,
+        <https://example.org/mex-ontologi/connection-condition/rol>,
+        <https://example.org/mex-ontologi/connection-condition/unidad> ;
+    mex:requiereDistinguirDe <https://example.org/mex-ontologi/concept/municipio-registro> .
+
+<https://example.org/mex-ontologi/concept/municipio-escuela> a skos:Concept,
+        mex:ConceptoCompartido ;
+    rdfs:label "Municipio de la escuela"@es ;
+    skos:broader <https://example.org/mex-ontologi/concept/municipio> ;
+    skos:definition "Municipio del domicilio de la escuela; no implica residencia del estudiante."@es ;
+    skos:inScheme <https://example.org/mex-ontologi/concept-scheme/nucleo-compartido> ;
+    skos:prefLabel "Municipio de la escuela"@es ;
+    prov:wasDerivedFrom <file:///C:/Users/marti/Documents/MEX-Ontologi/ontologia/semantica.json> ;
+    mex:requiereCondicion <https://example.org/mex-ontologi/connection-condition/catalogo>,
+        <https://example.org/mex-ontologi/connection-condition/contexto>,
+        <https://example.org/mex-ontologi/connection-condition/grano>,
+        <https://example.org/mex-ontologi/connection-condition/periodo>,
+        <https://example.org/mex-ontologi/connection-condition/rol>,
+        <https://example.org/mex-ontologi/connection-condition/unidad> ;
+    mex:requiereDistinguirDe <https://example.org/mex-ontologi/concept/municipio-residencia> .
+
+<https://example.org/mex-ontologi/concept/organizacion-capturadora> a skos:Concept,
+        mex:ConceptoCompartido ;
+    rdfs:label "Organización capturadora"@es ;
+    skos:broader <https://example.org/mex-ontologi/concept/organizacion> ;
+    skos:definition "Dependencia que captura un registro; no se equipara a su organización publicadora."@es ;
+    skos:inScheme <https://example.org/mex-ontologi/concept-scheme/nucleo-compartido> ;
+    skos:prefLabel "Organización capturadora"@es ;
+    prov:wasDerivedFrom <file:///C:/Users/marti/Documents/MEX-Ontologi/ontologia/semantica.json> ;
+    mex:requiereCondicion <https://example.org/mex-ontologi/connection-condition/catalogo>,
+        <https://example.org/mex-ontologi/connection-condition/contexto>,
+        <https://example.org/mex-ontologi/connection-condition/grano>,
+        <https://example.org/mex-ontologi/connection-condition/periodo>,
+        <https://example.org/mex-ontologi/connection-condition/rol>,
+        <https://example.org/mex-ontologi/connection-condition/unidad> ;
+    mex:requiereDistinguirDe <https://example.org/mex-ontologi/concept/organizacion-publicadora> .
+
+<https://example.org/mex-ontologi/concept/organizacion-publicadora> a skos:Concept,
+        mex:ConceptoCompartido ;
+    rdfs:label "Organización publicadora"@es ;
+    skos:broader <https://example.org/mex-ontologi/concept/organizacion> ;
+    skos:definition "Organización que publica un conjunto según los metadatos del catálogo."@es ;
+    skos:inScheme <https://example.org/mex-ontologi/concept-scheme/nucleo-compartido> ;
+    skos:prefLabel "Organización publicadora"@es ;
+    prov:wasDerivedFrom <file:///C:/Users/marti/Documents/MEX-Ontologi/ontologia/semantica.json> ;
+    mex:requiereCondicion <https://example.org/mex-ontologi/connection-condition/catalogo>,
+        <https://example.org/mex-ontologi/connection-condition/contexto>,
+        <https://example.org/mex-ontologi/connection-condition/grano>,
+        <https://example.org/mex-ontologi/connection-condition/periodo>,
+        <https://example.org/mex-ontologi/connection-condition/rol>,
+        <https://example.org/mex-ontologi/connection-condition/unidad> ;
+    mex:requiereDistinguirDe <https://example.org/mex-ontologi/concept/organizacion-capturadora> .
+
+<https://example.org/mex-ontologi/concept/poblacion-total> a skos:Concept,
+        mex:ConceptoCompartido ;
+    rdfs:label "Población total declarada"@es ;
+    skos:definition "Población total según el ámbito y periodo de cada fuente; no implica un universo o método común entre conjuntos."@es ;
+    skos:inScheme <https://example.org/mex-ontologi/concept-scheme/nucleo-compartido> ;
+    skos:prefLabel "Población total declarada"@es ;
+    prov:wasDerivedFrom <file:///C:/Users/marti/Documents/MEX-Ontologi/ontologia/semantica.json> ;
+    mex:requiereCondicion <https://example.org/mex-ontologi/connection-condition/catalogo>,
+        <https://example.org/mex-ontologi/connection-condition/contexto>,
+        <https://example.org/mex-ontologi/connection-condition/grano>,
+        <https://example.org/mex-ontologi/connection-condition/periodo>,
+        <https://example.org/mex-ontologi/connection-condition/rol>,
+        <https://example.org/mex-ontologi/connection-condition/unidad> .
+
+<https://example.org/mex-ontologi/concept/precipitacion-diaria> a skos:Concept,
+        mex:ConceptoCompartido ;
+    rdfs:label "Precipitación diaria por municipio"@es ;
+    skos:definition "Cantidad de lluvia registrada en el día por municipio; la unidad y fecha se conservan según la fuente."@es ;
+    skos:inScheme <https://example.org/mex-ontologi/concept-scheme/nucleo-compartido> ;
+    skos:prefLabel "Precipitación diaria por municipio"@es ;
+    prov:wasDerivedFrom <file:///C:/Users/marti/Documents/MEX-Ontologi/ontologia/semantica.json> ;
+    mex:requiereCondicion <https://example.org/mex-ontologi/connection-condition/catalogo>,
+        <https://example.org/mex-ontologi/connection-condition/contexto>,
+        <https://example.org/mex-ontologi/connection-condition/grano>,
+        <https://example.org/mex-ontologi/connection-condition/periodo>,
+        <https://example.org/mex-ontologi/connection-condition/rol>,
+        <https://example.org/mex-ontologi/connection-condition/unidad> .
+
+<https://example.org/mex-ontologi/concept/programa-educativo> a skos:Concept,
+        mex:ConceptoCompartido ;
+    rdfs:label "Programa educativo"@es ;
+    skos:definition "Programa de estudios identificado por la fuente. Un nombre o código no es una identidad global entre instituciones o planes."@es ;
+    skos:inScheme <https://example.org/mex-ontologi/concept-scheme/nucleo-compartido> ;
+    skos:prefLabel "Programa educativo"@es ;
+    prov:wasDerivedFrom <file:///C:/Users/marti/Documents/MEX-Ontologi/ontologia/semantica.json> ;
+    mex:requiereCondicion <https://example.org/mex-ontologi/connection-condition/catalogo>,
+        <https://example.org/mex-ontologi/connection-condition/contexto>,
+        <https://example.org/mex-ontologi/connection-condition/grano>,
+        <https://example.org/mex-ontologi/connection-condition/periodo>,
+        <https://example.org/mex-ontologi/connection-condition/rol>,
+        <https://example.org/mex-ontologi/connection-condition/unidad> .
+
+<https://example.org/mex-ontologi/concept/unidad-salud> a skos:Concept,
+        mex:ConceptoCompartido ;
+    rdfs:label "Unidad de salud"@es ;
+    skos:definition "Unidad de atención identificada por una fuente de salud; la pertenencia a un catálogo CLUES requiere evidencia adicional."@es ;
+    skos:inScheme <https://example.org/mex-ontologi/concept-scheme/nucleo-compartido> ;
+    skos:prefLabel "Unidad de salud"@es ;
+    prov:wasDerivedFrom <file:///C:/Users/marti/Documents/MEX-Ontologi/ontologia/semantica.json> ;
+    mex:requiereCondicion <https://example.org/mex-ontologi/connection-condition/catalogo>,
+        <https://example.org/mex-ontologi/connection-condition/contexto>,
+        <https://example.org/mex-ontologi/connection-condition/grano>,
+        <https://example.org/mex-ontologi/connection-condition/periodo>,
+        <https://example.org/mex-ontologi/connection-condition/rol>,
+        <https://example.org/mex-ontologi/connection-condition/unidad> .
+
+<https://example.org/mex-ontologi/concept/anio-registro> a skos:Concept,
+        mex:ConceptoCompartido ;
+    rdfs:label "Año de registro"@es ;
+    skos:broader <https://example.org/mex-ontologi/concept/anio> ;
+    skos:definition "Año en que se registra un hecho según la definición documental; no implica que el hecho haya ocurrido ese año."@es ;
+    skos:inScheme <https://example.org/mex-ontologi/concept-scheme/nucleo-compartido> ;
+    skos:prefLabel "Año de registro"@es ;
+    prov:wasDerivedFrom <file:///C:/Users/marti/Documents/MEX-Ontologi/ontologia/semantica.json> ;
+    mex:requiereCondicion <https://example.org/mex-ontologi/connection-condition/catalogo>,
+        <https://example.org/mex-ontologi/connection-condition/contexto>,
+        <https://example.org/mex-ontologi/connection-condition/grano>,
+        <https://example.org/mex-ontologi/connection-condition/periodo>,
+        <https://example.org/mex-ontologi/connection-condition/rol>,
+        <https://example.org/mex-ontologi/connection-condition/unidad> ;
+    mex:requiereDistinguirDe <https://example.org/mex-ontologi/concept/anio-captura>,
+        <https://example.org/mex-ontologi/concept/anio-defuncion> .
+
+<https://example.org/mex-ontologi/concept/municipio-residencia> a skos:Concept,
+        mex:ConceptoCompartido ;
+    rdfs:label "Municipio de residencia"@es ;
+    skos:broader <https://example.org/mex-ontologi/concept/municipio> ;
+    skos:definition "Municipio de residencia del sujeto identificado por la fuente. La madre, el difunto y un beneficiario no son poblaciones intercambiables."@es ;
+    skos:inScheme <https://example.org/mex-ontologi/concept-scheme/nucleo-compartido> ;
+    skos:prefLabel "Municipio de residencia"@es ;
+    prov:wasDerivedFrom <file:///C:/Users/marti/Documents/MEX-Ontologi/ontologia/semantica.json> ;
+    mex:requiereCondicion <https://example.org/mex-ontologi/connection-condition/catalogo>,
+        <https://example.org/mex-ontologi/connection-condition/contexto>,
+        <https://example.org/mex-ontologi/connection-condition/grano>,
+        <https://example.org/mex-ontologi/connection-condition/periodo>,
+        <https://example.org/mex-ontologi/connection-condition/rol>,
+        <https://example.org/mex-ontologi/connection-condition/unidad> ;
+    mex:requiereDistinguirDe <https://example.org/mex-ontologi/concept/municipio-escuela>,
+        <https://example.org/mex-ontologi/concept/municipio-registro> .
+
+<https://example.org/mex-ontologi/concept/nacimientos-femenino> a skos:Concept,
+        mex:ConceptoCompartido ;
+    rdfs:label "Nacimientos de sexo femenino"@es ;
+    skos:definition "Conteo de nacimientos de sexo femenino según su diccionario; no supone exhaustividad de categorías."@es ;
+    skos:inScheme <https://example.org/mex-ontologi/concept-scheme/nucleo-compartido> ;
+    skos:prefLabel "Nacimientos de sexo femenino"@es ;
+    prov:wasDerivedFrom <file:///C:/Users/marti/Documents/MEX-Ontologi/ontologia/semantica.json> ;
+    mex:requiereCondicion <https://example.org/mex-ontologi/connection-condition/catalogo>,
+        <https://example.org/mex-ontologi/connection-condition/contexto>,
+        <https://example.org/mex-ontologi/connection-condition/grano>,
+        <https://example.org/mex-ontologi/connection-condition/periodo>,
+        <https://example.org/mex-ontologi/connection-condition/rol>,
+        <https://example.org/mex-ontologi/connection-condition/unidad> ;
+    mex:requiereDistinguirDe <https://example.org/mex-ontologi/concept/nacimientos-total> .
+
+<https://example.org/mex-ontologi/concept/nacimientos-masculino> a skos:Concept,
+        mex:ConceptoCompartido ;
+    rdfs:label "Nacimientos de sexo masculino"@es ;
+    skos:definition "Conteo de nacimientos de sexo masculino según su diccionario; conserva ámbito de registro."@es ;
+    skos:inScheme <https://example.org/mex-ontologi/concept-scheme/nucleo-compartido> ;
+    skos:prefLabel "Nacimientos de sexo masculino"@es ;
+    prov:wasDerivedFrom <file:///C:/Users/marti/Documents/MEX-Ontologi/ontologia/semantica.json> ;
+    mex:requiereCondicion <https://example.org/mex-ontologi/connection-condition/catalogo>,
+        <https://example.org/mex-ontologi/connection-condition/contexto>,
+        <https://example.org/mex-ontologi/connection-condition/grano>,
+        <https://example.org/mex-ontologi/connection-condition/periodo>,
+        <https://example.org/mex-ontologi/connection-condition/rol>,
+        <https://example.org/mex-ontologi/connection-condition/unidad> ;
+    mex:requiereDistinguirDe <https://example.org/mex-ontologi/concept/nacimientos-total> .
+
+<https://example.org/mex-ontologi/concept/sexo-declarado> a skos:Concept,
+        mex:ConceptoCompartido ;
+    rdfs:label "Sexo declarado por la fuente"@es ;
+    skos:definition "Clasificación de sexo declarada; conserva población, categorías y codificación de la fuente sin homologarlas."@es ;
+    skos:inScheme <https://example.org/mex-ontologi/concept-scheme/nucleo-compartido> ;
+    skos:prefLabel "Sexo declarado por la fuente"@es ;
+    prov:wasDerivedFrom <file:///C:/Users/marti/Documents/MEX-Ontologi/ontologia/semantica.json> ;
+    mex:requiereCondicion <https://example.org/mex-ontologi/connection-condition/catalogo>,
+        <https://example.org/mex-ontologi/connection-condition/contexto>,
+        <https://example.org/mex-ontologi/connection-condition/grano>,
+        <https://example.org/mex-ontologi/connection-condition/periodo>,
+        <https://example.org/mex-ontologi/connection-condition/rol>,
+        <https://example.org/mex-ontologi/connection-condition/unidad> .
+
+<https://example.org/mex-ontologi/concept/entidad> a skos:Concept,
+        mex:ConceptoCompartido ;
+    rdfs:label "Entidad federativa"@es ;
+    skos:broader <https://example.org/mex-ontologi/concept/territorio> ;
+    skos:definition "Referencia a una entidad federativa; no implica un catálogo ni una codificación concretos."@es ;
+    skos:inScheme <https://example.org/mex-ontologi/concept-scheme/nucleo-compartido> ;
+    skos:prefLabel "Entidad federativa"@es ;
+    prov:wasDerivedFrom <file:///C:/Users/marti/Documents/MEX-Ontologi/ontologia/semantica.json> ;
+    mex:requiereCondicion <https://example.org/mex-ontologi/connection-condition/catalogo>,
+        <https://example.org/mex-ontologi/connection-condition/contexto>,
+        <https://example.org/mex-ontologi/connection-condition/grano>,
+        <https://example.org/mex-ontologi/connection-condition/periodo>,
+        <https://example.org/mex-ontologi/connection-condition/rol>,
+        <https://example.org/mex-ontologi/connection-condition/unidad> .
+
+<https://example.org/mex-ontologi/concept/municipio-registro> a skos:Concept,
+        mex:ConceptoCompartido ;
+    rdfs:label "Municipio de registro"@es ;
+    skos:broader <https://example.org/mex-ontologi/concept/municipio> ;
+    skos:definition "Municipio en el que se registra el hecho o expediente según la definición de la fuente."@es ;
+    skos:inScheme <https://example.org/mex-ontologi/concept-scheme/nucleo-compartido> ;
+    skos:prefLabel "Municipio de registro"@es ;
+    prov:wasDerivedFrom <file:///C:/Users/marti/Documents/MEX-Ontologi/ontologia/semantica.json> ;
+    mex:requiereCondicion <https://example.org/mex-ontologi/connection-condition/catalogo>,
+        <https://example.org/mex-ontologi/connection-condition/contexto>,
+        <https://example.org/mex-ontologi/connection-condition/grano>,
+        <https://example.org/mex-ontologi/connection-condition/periodo>,
+        <https://example.org/mex-ontologi/connection-condition/rol>,
+        <https://example.org/mex-ontologi/connection-condition/unidad> ;
+    mex:requiereDistinguirDe <https://example.org/mex-ontologi/concept/municipio-defuncion>,
+        <https://example.org/mex-ontologi/concept/municipio-residencia> .
+
+<https://example.org/mex-ontologi/concept/nacimientos-total> a skos:Concept,
+        mex:ConceptoCompartido ;
+    rdfs:label "Total de nacimientos registrados"@es ;
+    skos:definition "Total de nacimientos declarado por la fuente; no demuestra igualdad con subtotales ni año de ocurrencia."@es ;
+    skos:inScheme <https://example.org/mex-ontologi/concept-scheme/nucleo-compartido> ;
+    skos:prefLabel "Total de nacimientos registrados"@es ;
+    prov:wasDerivedFrom <file:///C:/Users/marti/Documents/MEX-Ontologi/ontologia/semantica.json> ;
+    mex:requiereCondicion <https://example.org/mex-ontologi/connection-condition/catalogo>,
+        <https://example.org/mex-ontologi/connection-condition/contexto>,
+        <https://example.org/mex-ontologi/connection-condition/grano>,
+        <https://example.org/mex-ontologi/connection-condition/periodo>,
+        <https://example.org/mex-ontologi/connection-condition/rol>,
+        <https://example.org/mex-ontologi/connection-condition/unidad> ;
+    mex:requiereDistinguirDe <https://example.org/mex-ontologi/concept/nacimientos-femenino>,
+        <https://example.org/mex-ontologi/concept/nacimientos-masculino> .
+
+<https://example.org/mex-ontologi/concept/organizacion> a skos:Concept,
+        mex:ConceptoCompartido ;
+    rdfs:label "Organización o institución"@es ;
+    skos:definition "Organización identificada por la fuente; su papel de publicadora, capturadora o institución de referencia se expresa por separado."@es ;
+    skos:inScheme <https://example.org/mex-ontologi/concept-scheme/nucleo-compartido> ;
+    skos:prefLabel "Organización o institución"@es ;
+    prov:wasDerivedFrom <file:///C:/Users/marti/Documents/MEX-Ontologi/ontologia/semantica.json> ;
+    mex:requiereCondicion <https://example.org/mex-ontologi/connection-condition/catalogo>,
+        <https://example.org/mex-ontologi/connection-condition/contexto>,
+        <https://example.org/mex-ontologi/connection-condition/grano>,
+        <https://example.org/mex-ontologi/connection-condition/periodo>,
+        <https://example.org/mex-ontologi/connection-condition/rol>,
+        <https://example.org/mex-ontologi/connection-condition/unidad> .
+
+mex:CondicionConexion a owl:Class ;
+    rdfs:label "Condición para conectar información"@es .
+
+<https://example.org/mex-ontologi/concept/territorio> a skos:Concept,
+        mex:ConceptoCompartido ;
+    rdfs:label "Referencia territorial"@es ;
+    skos:definition "Unidad territorial a la que se refiere una variable; su nivel y función deben especificarse."@es ;
+    skos:inScheme <https://example.org/mex-ontologi/concept-scheme/nucleo-compartido> ;
+    skos:prefLabel "Referencia territorial"@es ;
+    prov:wasDerivedFrom <file:///C:/Users/marti/Documents/MEX-Ontologi/ontologia/semantica.json> ;
+    mex:requiereCondicion <https://example.org/mex-ontologi/connection-condition/catalogo>,
+        <https://example.org/mex-ontologi/connection-condition/contexto>,
+        <https://example.org/mex-ontologi/connection-condition/grano>,
+        <https://example.org/mex-ontologi/connection-condition/periodo>,
+        <https://example.org/mex-ontologi/connection-condition/rol>,
+        <https://example.org/mex-ontologi/connection-condition/unidad> .
+
+<https://example.org/mex-ontologi/concept/anio> a skos:Concept,
+        mex:ConceptoCompartido ;
+    rdfs:label "Referencia anual"@es ;
+    skos:broader <https://example.org/mex-ontologi/concept/tiempo> ;
+    skos:definition "Referencia expresada en años. El evento de registro, ocurrencia u otro debe expresarse por separado cuando esté documentado."@es ;
+    skos:inScheme <https://example.org/mex-ontologi/concept-scheme/nucleo-compartido> ;
+    skos:prefLabel "Referencia anual"@es ;
+    prov:wasDerivedFrom <file:///C:/Users/marti/Documents/MEX-Ontologi/ontologia/semantica.json> ;
+    mex:requiereCondicion <https://example.org/mex-ontologi/connection-condition/catalogo>,
+        <https://example.org/mex-ontologi/connection-condition/contexto>,
+        <https://example.org/mex-ontologi/connection-condition/grano>,
+        <https://example.org/mex-ontologi/connection-condition/periodo>,
+        <https://example.org/mex-ontologi/connection-condition/rol>,
+        <https://example.org/mex-ontologi/connection-condition/unidad> ;
+    mex:requiereDistinguirDe <https://example.org/mex-ontologi/concept/anio-agricola> .
+
+<https://example.org/mex-ontologi/concept/localidad> a skos:Concept,
+        mex:ConceptoCompartido ;
+    rdfs:label "Localidad, función no especificada"@es ;
+    skos:broader <https://example.org/mex-ontologi/concept/territorio> ;
+    skos:definition "Referencia a localidad; los identificadores pueden requerir entidad y municipio como contexto."@es ;
+    skos:inScheme <https://example.org/mex-ontologi/concept-scheme/nucleo-compartido> ;
+    skos:prefLabel "Localidad, función no especificada"@es ;
+    prov:wasDerivedFrom <file:///C:/Users/marti/Documents/MEX-Ontologi/ontologia/semantica.json> ;
+    mex:requiereCondicion <https://example.org/mex-ontologi/connection-condition/catalogo>,
+        <https://example.org/mex-ontologi/connection-condition/contexto>,
+        <https://example.org/mex-ontologi/connection-condition/grano>,
+        <https://example.org/mex-ontologi/connection-condition/periodo>,
+        <https://example.org/mex-ontologi/connection-condition/rol>,
+        <https://example.org/mex-ontologi/connection-condition/unidad> .
+
+<https://example.org/mex-ontologi/concept/municipio> a skos:Concept,
+        mex:ConceptoCompartido ;
+    rdfs:label "Referencia municipal"@es ;
+    skos:broader <https://example.org/mex-ontologi/concept/territorio> ;
+    skos:definition "Referencia a una unidad municipal. Su función de registro, residencia, ocurrencia u otra debe expresarse por separado cuando esté documentada."@es ;
+    skos:inScheme <https://example.org/mex-ontologi/concept-scheme/nucleo-compartido> ;
+    skos:prefLabel "Referencia municipal"@es ;
+    prov:wasDerivedFrom <file:///C:/Users/marti/Documents/MEX-Ontologi/ontologia/semantica.json> ;
+    mex:requiereCondicion <https://example.org/mex-ontologi/connection-condition/catalogo>,
+        <https://example.org/mex-ontologi/connection-condition/contexto>,
+        <https://example.org/mex-ontologi/connection-condition/grano>,
+        <https://example.org/mex-ontologi/connection-condition/periodo>,
+        <https://example.org/mex-ontologi/connection-condition/rol>,
+        <https://example.org/mex-ontologi/connection-condition/unidad> .
+
+<https://example.org/mex-ontologi/concept/tiempo> a skos:Concept,
+        mex:ConceptoCompartido ;
+    rdfs:label "Referencia temporal"@es ;
+    skos:definition "Dimensión temporal cuyo evento, unidad y cobertura deben especificarse."@es ;
+    skos:inScheme <https://example.org/mex-ontologi/concept-scheme/nucleo-compartido> ;
+    skos:prefLabel "Referencia temporal"@es ;
+    prov:wasDerivedFrom <file:///C:/Users/marti/Documents/MEX-Ontologi/ontologia/semantica.json> ;
+    mex:requiereCondicion <https://example.org/mex-ontologi/connection-condition/catalogo>,
+        <https://example.org/mex-ontologi/connection-condition/contexto>,
+        <https://example.org/mex-ontologi/connection-condition/grano>,
+        <https://example.org/mex-ontologi/connection-condition/periodo>,
+        <https://example.org/mex-ontologi/connection-condition/rol>,
+        <https://example.org/mex-ontologi/connection-condition/unidad> .
+
+<https://example.org/mex-ontologi/concept-scheme/nucleo-compartido> a skos:ConceptScheme ;
+    rdfs:label "Conceptos compartidos de MEX-Ontologi"@es ;
+    skos:hasTopConcept <https://example.org/mex-ontologi/concept/conteo-consultas>,
+        <https://example.org/mex-ontologi/concept/edad-fallecimiento>,
+        <https://example.org/mex-ontologi/concept/grupo-edad>,
+        <https://example.org/mex-ontologi/concept/nacimientos-femenino>,
+        <https://example.org/mex-ontologi/concept/nacimientos-masculino>,
+        <https://example.org/mex-ontologi/concept/nacimientos-total>,
+        <https://example.org/mex-ontologi/concept/organizacion>,
+        <https://example.org/mex-ontologi/concept/poblacion-total>,
+        <https://example.org/mex-ontologi/concept/precipitacion-diaria>,
+        <https://example.org/mex-ontologi/concept/programa-educativo>,
+        <https://example.org/mex-ontologi/concept/sexo-declarado>,
+        <https://example.org/mex-ontologi/concept/territorio>,
+        <https://example.org/mex-ontologi/concept/tiempo>,
+        <https://example.org/mex-ontologi/concept/unidad-salud> ;
+    skos:note "Glosario local de conceptos compartidos y correspondencias documentales. No declara equivalencia de códigos, entidades, medidas o conjuntos."@es ;
+    prov:wasDerivedFrom <file:///C:/Users/marti/Documents/MEX-Ontologi/ontologia/semantica.json> .
+
+<https://example.org/mex-ontologi/connection-condition/catalogo> a mex:CondicionConexion ;
+    rdfs:label "Comprobar catalogo"@es ;
+    dct:description "Identificar el mismo catálogo y su versión, o una correspondencia explícita de identificadores con evidencia. Parecerse numéricamente no basta."@es ;
+    prov:wasDerivedFrom <file:///C:/Users/marti/Documents/MEX-Ontologi/ontologia/semantica.json> .
+
+<https://example.org/mex-ontologi/connection-condition/contexto> a mex:CondicionConexion ;
+    rdfs:label "Comprobar contexto"@es ;
+    dct:description "Conservar entidad para códigos municipales y entidad/municipio para localidades cuando el identificador lo requiera."@es ;
+    prov:wasDerivedFrom <file:///C:/Users/marti/Documents/MEX-Ontologi/ontologia/semantica.json> .
+
+<https://example.org/mex-ontologi/connection-condition/grano> a mex:CondicionConexion ;
+    rdfs:label "Comprobar grano"@es ;
+    dct:description "Comprobar unicidad y cardinalidad; agregar al mismo nivel antes de unir medidas y evitar multiplicación de filas."@es ;
+    prov:wasDerivedFrom <file:///C:/Users/marti/Documents/MEX-Ontologi/ontologia/semantica.json> .
+
+<https://example.org/mex-ontologi/connection-condition/periodo> a mex:CondicionConexion ;
+    rdfs:label "Comprobar periodo"@es ;
+    dct:description "Distinguir evento temporal y cobertura declarada frente a observada; no equiparar registro con ocurrencia."@es ;
+    prov:wasDerivedFrom <file:///C:/Users/marti/Documents/MEX-Ontologi/ontologia/semantica.json> .
+
+<https://example.org/mex-ontologi/connection-condition/rol> a mex:CondicionConexion ;
+    rdfs:label "Comprobar rol"@es ;
+    dct:description "Conservar la función y población de referencia: registro, residencia, ocurrencia, madre, difunto u organización capturadora/publicadora."@es ;
+    prov:wasDerivedFrom <file:///C:/Users/marti/Documents/MEX-Ontologi/ontologia/semantica.json> .
+
+<https://example.org/mex-ontologi/connection-condition/unidad> a mex:CondicionConexion ;
+    rdfs:label "Comprobar unidad"@es ;
+    dct:description "Identificar unidad, población y regla de agregación de cada medida; no sumar promedios ni interpretar vacíos como cero."@es ;
+    prov:wasDerivedFrom <file:///C:/Users/marti/Documents/MEX-Ontologi/ontologia/semantica.json> .
+
+mex:ConceptoCompartido a owl:Class ;
+    rdfs:label "Concepto compartido"@es ;
+    rdfs:subClassOf skos:Concept .
+

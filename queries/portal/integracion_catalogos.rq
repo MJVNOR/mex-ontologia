@@ -1,0 +1,6 @@
+PREFIX mex: <{{BASE_IRI}}vocab/>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+SELECT ?vinculo ?nombre ?referencia ?catalogo ?criterio WHERE {
+  ?vinculo a mex:VinculoCatalogoPublicado ; rdfs:label ?nombre ;
+    mex:referenciaDeclarada ?referencia ; mex:catalogoRecuperado ?catalogo ; mex:criterioRevision ?criterio .
+} ORDER BY ?nombre

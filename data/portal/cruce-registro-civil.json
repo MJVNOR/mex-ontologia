@@ -1,0 +1,566 @@
+{
+  "generado_en_utc": "2026-10-23T06:30:16.975545+00:00",
+  "fuentes": [
+    {
+      "recurso_id": "7b8638e8-d0d5-4311-b43f-51e2d343efb1",
+      "conjunto_id": "1cf9c8e2-e7e4-43d8-a9fd-6da790e64c98",
+      "nombre": "Matrimonios 2022",
+      "campo_anio": "año_matrimonio",
+      "total_registros": 13881,
+      "municipios_observados": 67,
+      "consultas": [
+        "https://datos.sonora.gob.mx/api/3/action/datastore_search?resource_id=7b8638e8-d0d5-4311-b43f-51e2d343efb1&fields=_id%2Cmunicipio%2Ca%C3%B1o_matrimonio&sort=_id+asc&limit=5000&offset=0",
+        "https://datos.sonora.gob.mx/api/3/action/datastore_search?resource_id=7b8638e8-d0d5-4311-b43f-51e2d343efb1&fields=_id%2Cmunicipio%2Ca%C3%B1o_matrimonio&sort=_id+asc&limit=5000&offset=5000",
+        "https://datos.sonora.gob.mx/api/3/action/datastore_search?resource_id=7b8638e8-d0d5-4311-b43f-51e2d343efb1&fields=_id%2Cmunicipio%2Ca%C3%B1o_matrimonio&sort=_id+asc&limit=5000&offset=10000"
+      ],
+      "validacion_total_y_ids": true,
+      "diccionario_id": "364ffa5c-e1c2-4185-a22f-80bede6735d0",
+      "evidencia_clave": {
+        "hoja": "CSV",
+        "Nombre variable": "municipio",
+        "Tipo de dato": "Numérico entero",
+        "Formato": "NN",
+        "Unidad de medida": "",
+        "Descripción": "Municipio de registro",
+        "Indicación de obligarotiedad": "Si",
+        "Catálogo de referencia": "",
+        "Identificador de valures nulos": "",
+        "Ejemplo de dato": ""
+      },
+      "evidencia_anio": {
+        "hoja": "CSV",
+        "Nombre variable": "año_matrimonio",
+        "Tipo de dato": "Numérico entero",
+        "Formato": "NNNN",
+        "Unidad de medida": "",
+        "Descripción": "Año de registro",
+        "Indicación de obligarotiedad": "Si",
+        "Catálogo de referencia": "",
+        "Identificador de valures nulos": "",
+        "Ejemplo de dato": ""
+      },
+      "publicador_iri": "https://example.org/mex-ontologi/organization/ea178cfc-acbd-45b3-bcec-ac96f6dfd49c"
+    },
+    {
+      "recurso_id": "63940761-d099-4a39-bb92-e81e4a6d31e1",
+      "conjunto_id": "c6140d53-1f16-4dd8-8ab3-d2b47f03a921",
+      "nombre": "Divorcios 2022",
+      "campo_anio": "año_registro",
+      "total_registros": 6064,
+      "municipios_observados": 62,
+      "consultas": [
+        "https://datos.sonora.gob.mx/api/3/action/datastore_search?resource_id=63940761-d099-4a39-bb92-e81e4a6d31e1&fields=_id%2Cmunicipio%2Ca%C3%B1o_registro&sort=_id+asc&limit=5000&offset=0",
+        "https://datos.sonora.gob.mx/api/3/action/datastore_search?resource_id=63940761-d099-4a39-bb92-e81e4a6d31e1&fields=_id%2Cmunicipio%2Ca%C3%B1o_registro&sort=_id+asc&limit=5000&offset=5000"
+      ],
+      "validacion_total_y_ids": true,
+      "diccionario_id": "10357304-e171-44ca-a453-f989e6a2ff83",
+      "evidencia_clave": {
+        "hoja": "CSV",
+        "Nombre variable": "municipio",
+        "Tipo de dato": "Numérico entero",
+        "Formato": "NN",
+        "Unidad de medida": "",
+        "Descripción": "Municipio de registro",
+        "Indicación de obligarotiedad": "Si",
+        "Catálogo de referencia": "",
+        "Identificador de valures nulos": "",
+        "Ejemplo de dato": ""
+      },
+      "evidencia_anio": {
+        "hoja": "CSV",
+        "Nombre variable": "año_registro",
+        "Tipo de dato": "Numérico entero",
+        "Formato": "NNNN",
+        "Unidad de medida": "",
+        "Descripción": "Año de registro del divorcio",
+        "Indicación de obligarotiedad": "Si",
+        "Catálogo de referencia": "",
+        "Identificador de valures nulos": "",
+        "Ejemplo de dato": ""
+      },
+      "publicador_iri": "https://example.org/mex-ontologi/organization/ea178cfc-acbd-45b3-bcec-ac96f6dfd49c"
+    }
+  ],
+  "metodo": "Conteos independientes por código municipal local y año de registro; unión externa de agregados",
+  "alcance": "Cruce exploratorio dentro del Registro Civil de Sonora. Coincidencia de códigos locales y definiciones; catálogo oficial de correspondencia no publicado en estos diccionarios.",
+  "limites": [
+    "No vincula personas ni matrimonios con sus divorcios.",
+    "No mide probabilidad de divorcio ni relación causal.",
+    "Código sin filas en una fuente se conserva como null; no se infiere cero.",
+    "Conteo de filas publicadas, sin deduplicación de eventos no identificables.",
+    "No se asignan nombres ni códigos INEGI sin catálogo de correspondencia.",
+    "Consultas paginadas y comprobación de totales; API no ofrece instantánea transaccional."
+  ],
+  "filas": [
+    {
+      "codigo_municipio_fuente": 1,
+      "anio_registro": 2022,
+      "registros_matrimonios": 16,
+      "registros_divorcios": 3,
+      "presente_en_ambas": true
+    },
+    {
+      "codigo_municipio_fuente": 2,
+      "anio_registro": 2022,
+      "registros_matrimonios": 145,
+      "registros_divorcios": 125,
+      "presente_en_ambas": true
+    },
+    {
+      "codigo_municipio_fuente": 3,
+      "anio_registro": 2022,
+      "registros_matrimonios": 90,
+      "registros_divorcios": 55,
+      "presente_en_ambas": true
+    },
+    {
+      "codigo_municipio_fuente": 4,
+      "anio_registro": 2022,
+      "registros_matrimonios": 34,
+      "registros_divorcios": 15,
+      "presente_en_ambas": true
+    },
+    {
+      "codigo_municipio_fuente": 5,
+      "anio_registro": 2022,
+      "registros_matrimonios": 15,
+      "registros_divorcios": 3,
+      "presente_en_ambas": true
+    },
+    {
+      "codigo_municipio_fuente": 6,
+      "anio_registro": 2022,
+      "registros_matrimonios": 11,
+      "registros_divorcios": 1,
+      "presente_en_ambas": true
+    },
+    {
+      "codigo_municipio_fuente": 8,
+      "anio_registro": 2022,
+      "registros_matrimonios": 5,
+      "registros_divorcios": 2,
+      "presente_en_ambas": true
+    },
+    {
+      "codigo_municipio_fuente": 9,
+      "anio_registro": 2022,
+      "registros_matrimonios": 3,
+      "registros_divorcios": 1,
+      "presente_en_ambas": true
+    },
+    {
+      "codigo_municipio_fuente": 10,
+      "anio_registro": 2022,
+      "registros_matrimonios": 4,
+      "registros_divorcios": 2,
+      "presente_en_ambas": true
+    },
+    {
+      "codigo_municipio_fuente": 11,
+      "anio_registro": 2022,
+      "registros_matrimonios": 12,
+      "registros_divorcios": 5,
+      "presente_en_ambas": true
+    },
+    {
+      "codigo_municipio_fuente": 12,
+      "anio_registro": 2022,
+      "registros_matrimonios": 175,
+      "registros_divorcios": 72,
+      "presente_en_ambas": true
+    },
+    {
+      "codigo_municipio_fuente": 13,
+      "anio_registro": 2022,
+      "registros_matrimonios": 8,
+      "registros_divorcios": 4,
+      "presente_en_ambas": true
+    },
+    {
+      "codigo_municipio_fuente": 14,
+      "anio_registro": 2022,
+      "registros_matrimonios": 16,
+      "registros_divorcios": 12,
+      "presente_en_ambas": true
+    },
+    {
+      "codigo_municipio_fuente": 15,
+      "anio_registro": 2022,
+      "registros_matrimonios": 4,
+      "registros_divorcios": 1,
+      "presente_en_ambas": true
+    },
+    {
+      "codigo_municipio_fuente": 16,
+      "anio_registro": 2022,
+      "registros_matrimonios": 30,
+      "registros_divorcios": 29,
+      "presente_en_ambas": true
+    },
+    {
+      "codigo_municipio_fuente": 17,
+      "anio_registro": 2022,
+      "registros_matrimonios": 104,
+      "registros_divorcios": 113,
+      "presente_en_ambas": true
+    },
+    {
+      "codigo_municipio_fuente": 18,
+      "anio_registro": 2022,
+      "registros_matrimonios": 1516,
+      "registros_divorcios": 951,
+      "presente_en_ambas": true
+    },
+    {
+      "codigo_municipio_fuente": 19,
+      "anio_registro": 2022,
+      "registros_matrimonios": 200,
+      "registros_divorcios": 123,
+      "presente_en_ambas": true
+    },
+    {
+      "codigo_municipio_fuente": 20,
+      "anio_registro": 2022,
+      "registros_matrimonios": 36,
+      "registros_divorcios": 9,
+      "presente_en_ambas": true
+    },
+    {
+      "codigo_municipio_fuente": 21,
+      "anio_registro": 2022,
+      "registros_matrimonios": 176,
+      "registros_divorcios": 70,
+      "presente_en_ambas": true
+    },
+    {
+      "codigo_municipio_fuente": 22,
+      "anio_registro": 2022,
+      "registros_matrimonios": 7,
+      "registros_divorcios": 3,
+      "presente_en_ambas": true
+    },
+    {
+      "codigo_municipio_fuente": 23,
+      "anio_registro": 2022,
+      "registros_matrimonios": 37,
+      "registros_divorcios": 14,
+      "presente_en_ambas": true
+    },
+    {
+      "codigo_municipio_fuente": 24,
+      "anio_registro": 2022,
+      "registros_matrimonios": 2,
+      "registros_divorcios": null,
+      "presente_en_ambas": false
+    },
+    {
+      "codigo_municipio_fuente": 25,
+      "anio_registro": 2022,
+      "registros_matrimonios": 250,
+      "registros_divorcios": 113,
+      "presente_en_ambas": true
+    },
+    {
+      "codigo_municipio_fuente": 26,
+      "anio_registro": 2022,
+      "registros_matrimonios": 200,
+      "registros_divorcios": 94,
+      "presente_en_ambas": true
+    },
+    {
+      "codigo_municipio_fuente": 27,
+      "anio_registro": 2022,
+      "registros_matrimonios": 332,
+      "registros_divorcios": 42,
+      "presente_en_ambas": true
+    },
+    {
+      "codigo_municipio_fuente": 28,
+      "anio_registro": 2022,
+      "registros_matrimonios": 5,
+      "registros_divorcios": 5,
+      "presente_en_ambas": true
+    },
+    {
+      "codigo_municipio_fuente": 29,
+      "anio_registro": 2022,
+      "registros_matrimonios": 826,
+      "registros_divorcios": 458,
+      "presente_en_ambas": true
+    },
+    {
+      "codigo_municipio_fuente": 30,
+      "anio_registro": 2022,
+      "registros_matrimonios": 3610,
+      "registros_divorcios": 1414,
+      "presente_en_ambas": true
+    },
+    {
+      "codigo_municipio_fuente": 31,
+      "anio_registro": 2022,
+      "registros_matrimonios": 6,
+      "registros_divorcios": null,
+      "presente_en_ambas": false
+    },
+    {
+      "codigo_municipio_fuente": 32,
+      "anio_registro": 2022,
+      "registros_matrimonios": 4,
+      "registros_divorcios": 1,
+      "presente_en_ambas": true
+    },
+    {
+      "codigo_municipio_fuente": 33,
+      "anio_registro": 2022,
+      "registros_matrimonios": 227,
+      "registros_divorcios": 127,
+      "presente_en_ambas": true
+    },
+    {
+      "codigo_municipio_fuente": 34,
+      "anio_registro": 2022,
+      "registros_matrimonios": 5,
+      "registros_divorcios": 2,
+      "presente_en_ambas": true
+    },
+    {
+      "codigo_municipio_fuente": 35,
+      "anio_registro": 2022,
+      "registros_matrimonios": 557,
+      "registros_divorcios": 112,
+      "presente_en_ambas": true
+    },
+    {
+      "codigo_municipio_fuente": 36,
+      "anio_registro": 2022,
+      "registros_matrimonios": 94,
+      "registros_divorcios": 56,
+      "presente_en_ambas": true
+    },
+    {
+      "codigo_municipio_fuente": 37,
+      "anio_registro": 2022,
+      "registros_matrimonios": 12,
+      "registros_divorcios": 5,
+      "presente_en_ambas": true
+    },
+    {
+      "codigo_municipio_fuente": 38,
+      "anio_registro": 2022,
+      "registros_matrimonios": 35,
+      "registros_divorcios": 9,
+      "presente_en_ambas": true
+    },
+    {
+      "codigo_municipio_fuente": 40,
+      "anio_registro": 2022,
+      "registros_matrimonios": 4,
+      "registros_divorcios": 6,
+      "presente_en_ambas": true
+    },
+    {
+      "codigo_municipio_fuente": 41,
+      "anio_registro": 2022,
+      "registros_matrimonios": 62,
+      "registros_divorcios": 41,
+      "presente_en_ambas": true
+    },
+    {
+      "codigo_municipio_fuente": 42,
+      "anio_registro": 2022,
+      "registros_matrimonios": 777,
+      "registros_divorcios": 367,
+      "presente_en_ambas": true
+    },
+    {
+      "codigo_municipio_fuente": 43,
+      "anio_registro": 2022,
+      "registros_matrimonios": 738,
+      "registros_divorcios": 363,
+      "presente_en_ambas": true
+    },
+    {
+      "codigo_municipio_fuente": 45,
+      "anio_registro": 2022,
+      "registros_matrimonios": 7,
+      "registros_divorcios": 5,
+      "presente_en_ambas": true
+    },
+    {
+      "codigo_municipio_fuente": 46,
+      "anio_registro": 2022,
+      "registros_matrimonios": 58,
+      "registros_divorcios": 12,
+      "presente_en_ambas": true
+    },
+    {
+      "codigo_municipio_fuente": 47,
+      "anio_registro": 2022,
+      "registros_matrimonios": 261,
+      "registros_divorcios": 74,
+      "presente_en_ambas": true
+    },
+    {
+      "codigo_municipio_fuente": 48,
+      "anio_registro": 2022,
+      "registros_matrimonios": 335,
+      "registros_divorcios": 171,
+      "presente_en_ambas": true
+    },
+    {
+      "codigo_municipio_fuente": 49,
+      "anio_registro": 2022,
+      "registros_matrimonios": 17,
+      "registros_divorcios": 7,
+      "presente_en_ambas": true
+    },
+    {
+      "codigo_municipio_fuente": 50,
+      "anio_registro": 2022,
+      "registros_matrimonios": 10,
+      "registros_divorcios": 4,
+      "presente_en_ambas": true
+    },
+    {
+      "codigo_municipio_fuente": 51,
+      "anio_registro": 2022,
+      "registros_matrimonios": 20,
+      "registros_divorcios": 13,
+      "presente_en_ambas": true
+    },
+    {
+      "codigo_municipio_fuente": 52,
+      "anio_registro": 2022,
+      "registros_matrimonios": 8,
+      "registros_divorcios": 15,
+      "presente_en_ambas": true
+    },
+    {
+      "codigo_municipio_fuente": 55,
+      "anio_registro": 2022,
+      "registros_matrimonios": 2177,
+      "registros_divorcios": 664,
+      "presente_en_ambas": true
+    },
+    {
+      "codigo_municipio_fuente": 56,
+      "anio_registro": 2022,
+      "registros_matrimonios": 105,
+      "registros_divorcios": 20,
+      "presente_en_ambas": true
+    },
+    {
+      "codigo_municipio_fuente": 57,
+      "anio_registro": 2022,
+      "registros_matrimonios": 10,
+      "registros_divorcios": 3,
+      "presente_en_ambas": true
+    },
+    {
+      "codigo_municipio_fuente": 58,
+      "anio_registro": 2022,
+      "registros_matrimonios": 74,
+      "registros_divorcios": 51,
+      "presente_en_ambas": true
+    },
+    {
+      "codigo_municipio_fuente": 59,
+      "anio_registro": 2022,
+      "registros_matrimonios": 34,
+      "registros_divorcios": 6,
+      "presente_en_ambas": true
+    },
+    {
+      "codigo_municipio_fuente": 60,
+      "anio_registro": 2022,
+      "registros_matrimonios": 9,
+      "registros_divorcios": null,
+      "presente_en_ambas": false
+    },
+    {
+      "codigo_municipio_fuente": 61,
+      "anio_registro": 2022,
+      "registros_matrimonios": 37,
+      "registros_divorcios": 8,
+      "presente_en_ambas": true
+    },
+    {
+      "codigo_municipio_fuente": 62,
+      "anio_registro": 2022,
+      "registros_matrimonios": 6,
+      "registros_divorcios": null,
+      "presente_en_ambas": false
+    },
+    {
+      "codigo_municipio_fuente": 63,
+      "anio_registro": 2022,
+      "registros_matrimonios": 18,
+      "registros_divorcios": null,
+      "presente_en_ambas": false
+    },
+    {
+      "codigo_municipio_fuente": 64,
+      "anio_registro": 2022,
+      "registros_matrimonios": 8,
+      "registros_divorcios": 3,
+      "presente_en_ambas": true
+    },
+    {
+      "codigo_municipio_fuente": 65,
+      "anio_registro": 2022,
+      "registros_matrimonios": 6,
+      "registros_divorcios": 4,
+      "presente_en_ambas": true
+    },
+    {
+      "codigo_municipio_fuente": 66,
+      "anio_registro": 2022,
+      "registros_matrimonios": 70,
+      "registros_divorcios": 51,
+      "presente_en_ambas": true
+    },
+    {
+      "codigo_municipio_fuente": 67,
+      "anio_registro": 2022,
+      "registros_matrimonios": 5,
+      "registros_divorcios": 2,
+      "presente_en_ambas": true
+    },
+    {
+      "codigo_municipio_fuente": 68,
+      "anio_registro": 2022,
+      "registros_matrimonios": 11,
+      "registros_divorcios": 3,
+      "presente_en_ambas": true
+    },
+    {
+      "codigo_municipio_fuente": 69,
+      "anio_registro": 2022,
+      "registros_matrimonios": 13,
+      "registros_divorcios": 5,
+      "presente_en_ambas": true
+    },
+    {
+      "codigo_municipio_fuente": 70,
+      "anio_registro": 2022,
+      "registros_matrimonios": 92,
+      "registros_divorcios": 42,
+      "presente_en_ambas": true
+    },
+    {
+      "codigo_municipio_fuente": 71,
+      "anio_registro": 2022,
+      "registros_matrimonios": 41,
+      "registros_divorcios": 50,
+      "presente_en_ambas": true
+    },
+    {
+      "codigo_municipio_fuente": 72,
+      "anio_registro": 2022,
+      "registros_matrimonios": 59,
+      "registros_divorcios": 23,
+      "presente_en_ambas": true
+    }
+  ],
+  "sha256_agregados": "ef0253cd3d5b985c57ade061a0ec92b0226ab5dedfc90bb741bd7468212486be"
+}

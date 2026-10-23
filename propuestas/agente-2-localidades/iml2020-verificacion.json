@@ -1,0 +1,198 @@
+{
+  "catalogo_publicado_0c1554d8": {
+    "archivo": "catalogo_mun_ent_solo.xlsx",
+    "sha256": "ea54aad30b7342ce678d1d66157325a5cbaa492380ee4d807b20918198c5b0f5",
+    "hojas": [
+      "Catalogo_Estado",
+      "Catalogo_Municipios"
+    ],
+    "detalle": {
+      "Catalogo_Estado": {
+        "filas_totales": 33,
+        "encabezado": [
+          "CLAVE_ENT",
+          "NOM_ENT"
+        ]
+      },
+      "Catalogo_Municipios": {
+        "filas_totales": 2476,
+        "encabezado": [
+          "CLAVE",
+          "CLAVE_ENT",
+          "NOM_ENT",
+          "NOM_MUN"
+        ]
+      }
+    }
+  },
+  "diccionario_251309e5": {
+    "archivo": "diccionario_localidad.xlsx",
+    "sha256": "67eda17676ff37a1fe0d0564ec9ea5b8cdad4de6c0d331a1b6fed4a544c89f3f",
+    "hojas": [
+      "marginacion_localidades"
+    ],
+    "detalle": {
+      "marginacion_localidades": {
+        "filas_totales": 20,
+        "encabezado": [
+          "Nombre variable",
+          "Tipo de dato",
+          "Formato",
+          "Unidad de medida",
+          "Descripción",
+          "Indicación de obligatoriedad",
+          "Catálogo de referencia",
+          "Identificador de valures nulos",
+          "Ejemplo de dato"
+        ]
+      }
+    }
+  },
+  "derivada_IML_2020": {
+    "archivo": "IML_2020_datos.xlsx",
+    "sha256": "771cc22d44fcba3d70c8762d6c90aebfbe1dd738e5f94cf3119d80d3fc01773e",
+    "hoja": "IML_2020",
+    "fila_encabezado": 1,
+    "columnas": [
+      "CVE_LOC",
+      "ENT",
+      "NOM_ENT",
+      "MUN",
+      "NOM_MUN",
+      "LOC",
+      "NOM_LOC",
+      "POB_TOT",
+      "ANALF",
+      "SBASC",
+      "OVSDE",
+      "OVSEE",
+      "OVSAE",
+      "OVPT",
+      "OVSREF",
+      "OVHAC",
+      "IM_2020",
+      "GM_2020",
+      "IMN_2020",
+      ""
+    ],
+    "filas_datos": 1850,
+    "ents_distintos_raw": [
+      "26"
+    ],
+    "n_municipios_distintos_par_ent_mun": 72,
+    "cve_loc_unicos_padding9": 1850,
+    "composicion_padding_ENT2_MUN3_LOC4_vs_CVELOC9": {
+      "ok": 1850,
+      "falla": 0
+    },
+    "ejemplos_falla": [],
+    "cve_con_mas_de_un_par_nombres": {},
+    "pares_mun_loc_homonimos_solo_conteo": 23,
+    "ejemplos_homonimos_max5": {
+      "Caborca||La Primavera": [
+        "260170320",
+        "260170779"
+      ],
+      "Caborca||El Deseo": [
+        "260170646",
+        "260171002"
+      ],
+      "Cajeme||San Antonio": [
+        "260181600",
+        "260182953"
+      ],
+      "Empalme||Úrsulo Galván": [
+        "260250069",
+        "260250176"
+      ],
+      "Etchojoa||El Salitral": [
+        "260260068",
+        "260260108"
+      ]
+    },
+    "candidatos_categoria_especial": 14,
+    "ejemplos_especiales_max10": [
+      {
+        "CVE_LOC": "260020009",
+        "ENT": "26",
+        "MUN": "002",
+        "LOC": "0009",
+        "NOM_MUN": "Agua Prieta",
+        "NOM_LOC": "Cabullona"
+      },
+      {
+        "CVE_LOC": "260060009",
+        "ENT": "26",
+        "MUN": "006",
+        "LOC": "0009",
+        "NOM_MUN": "Arizpe",
+        "NOM_LOC": "Bamori"
+      },
+      {
+        "CVE_LOC": "260130099",
+        "ENT": "26",
+        "MUN": "013",
+        "LOC": "0099",
+        "NOM_MUN": "Banámichi",
+        "NOM_LOC": "El Bajío de Palo Blanco"
+      },
+      {
+        "CVE_LOC": "260170009",
+        "ENT": "26",
+        "MUN": "017",
+        "LOC": "0009",
+        "NOM_MUN": "Caborca",
+        "NOM_LOC": "Álvaro Obregón"
+      },
+      {
+        "CVE_LOC": "260260009",
+        "ENT": "26",
+        "MUN": "026",
+        "LOC": "0009",
+        "NOM_MUN": "Etchojoa",
+        "NOM_LOC": "Bacame Viejo"
+      },
+      {
+        "CVE_LOC": "260300999",
+        "ENT": "26",
+        "MUN": "030",
+        "LOC": "0999",
+        "NOM_MUN": "Hermosillo",
+        "NOM_LOC": "María del Carmen"
+      },
+      {
+        "CVE_LOC": "260330099",
+        "ENT": "26",
+        "MUN": "033",
+        "LOC": "0099",
+        "NOM_MUN": "Huatabampo",
+        "NOM_LOC": "Yavaros (Isla las Viejas)"
+      },
+      {
+        "CVE_LOC": "260420009",
+        "ENT": "26",
+        "MUN": "042",
+        "LOC": "0009",
+        "NOM_MUN": "Navojoa",
+        "NOM_LOC": "Basiabampo"
+      },
+      {
+        "CVE_LOC": "260420099",
+        "ENT": "26",
+        "MUN": "042",
+        "LOC": "0099",
+        "NOM_MUN": "Navojoa",
+        "NOM_LOC": "El Recodo"
+      },
+      {
+        "CVE_LOC": "260550099",
+        "ENT": "26",
+        "MUN": "055",
+        "LOC": "0099",
+        "NOM_MUN": "San Luis Río Colorado",
+        "NOM_LOC": "El Vado"
+      }
+    ],
+    "nota_ceros": "Los valores numericos de Excel pierden ceros a la izquierda al leerse como numero; el padding 2/3/4/9 es TRANSFORMACION propuesta y separada, no dato original."
+  }
+}

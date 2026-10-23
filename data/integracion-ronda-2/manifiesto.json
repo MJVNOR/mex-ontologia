@@ -1,0 +1,654 @@
+{
+  "fecha_utc": "2026-10-23T10:03:03.372404+00:00",
+  "respaldo": "data\\backups\\integracion-ronda-2-20261023T100302Z.zip",
+  "archivos": {
+    "data\\integracion-ronda-2\\entregas\\agente-1-correspondencias\\propuestas.json": {
+      "origen": "propuestas\\ronda-2\\agente-1-correspondencias\\propuestas.json",
+      "sha256": "45437f20659b8e50414cd25a7e44218e2de792c245b3f88650a724f9ee551276"
+    },
+    "data\\integracion-ronda-2\\entregas\\agente-1-correspondencias\\resultado.md": {
+      "origen": "propuestas\\ronda-2\\agente-1-correspondencias\\resultado.md",
+      "sha256": "24015ccbeeed4e9c395725a773a52d6770088bffca293f3b4f06312c03973729"
+    },
+    "data\\integracion-ronda-2\\entregas\\agente-1-correspondencias\\revisar.py": {
+      "origen": "propuestas\\ronda-2\\agente-1-correspondencias\\revisar.py",
+      "sha256": "16a8ced43f40b02c94293c0607431f989bf5589bbec7c5bedd5c95a13b0dcccf"
+    },
+    "data\\integracion-ronda-2\\entregas\\agente-1-correspondencias\\test_revision.py": {
+      "origen": "propuestas\\ronda-2\\agente-1-correspondencias\\test_revision.py",
+      "sha256": "1a8d4e545fac717cc9d494b166badbc96bd500cb09881378652b50bc1f456aff"
+    },
+    "data\\integracion-ronda-2\\entregas\\agente-2-pendientes\\preguntas-publicador.md": {
+      "origen": "propuestas\\ronda-2\\agente-2-pendientes\\preguntas-publicador.md",
+      "sha256": "0f157fad538e21fcede59843477940c206cb17fb1d42dacaba1c4f74b9175cac"
+    },
+    "data\\integracion-ronda-2\\entregas\\agente-2-pendientes\\propuestas.json": {
+      "origen": "propuestas\\ronda-2\\agente-2-pendientes\\propuestas.json",
+      "sha256": "225214a06ecbc2ce028d1287b970ec00f05f4b7f46e93138f08f1bbed9e62c0a"
+    },
+    "data\\integracion-ronda-2\\entregas\\agente-2-pendientes\\resultado.md": {
+      "origen": "propuestas\\ronda-2\\agente-2-pendientes\\resultado.md",
+      "sha256": "46b74141ff1da6ea13fbb9e8674f1c488a90c20c069be28105274dd3369e5b60"
+    },
+    "data\\integracion-ronda-2\\entregas\\agente-2-pendientes\\verificar.py": {
+      "origen": "propuestas\\ronda-2\\agente-2-pendientes\\verificar.py",
+      "sha256": "381a80ed612d15e63004d59014c07d1da5a287f19bd62066a2ea56fdf72f6b75"
+    },
+    "data\\integracion-ronda-2\\entregas\\agente-3-localidades-inegi\\contrastar.py": {
+      "origen": "propuestas\\ronda-2\\agente-3-localidades-inegi\\contrastar.py",
+      "sha256": "13cda2645bd58e54699c2f999073cd0f96e419f8e5a57b74d8b741ee8748000d"
+    },
+    "data\\integracion-ronda-2\\entregas\\agente-3-localidades-inegi\\contraste-localidades.json": {
+      "origen": "propuestas\\ronda-2\\agente-3-localidades-inegi\\contraste-localidades.json",
+      "sha256": "7aa179e51feb9ace284942e8973d26c3d7cb254d8037073c249be4ad7845c385"
+    },
+    "data\\integracion-ronda-2\\entregas\\agente-3-localidades-inegi\\descargar_iter.py": {
+      "origen": "propuestas\\ronda-2\\agente-3-localidades-inegi\\descargar_iter.py",
+      "sha256": "fb956cc77ce17540eacc836edd90962e641ecff750d0594359b786afe2496667"
+    },
+    "data\\integracion-ronda-2\\entregas\\agente-3-localidades-inegi\\inegi-fuente.json": {
+      "origen": "propuestas\\ronda-2\\agente-3-localidades-inegi\\inegi-fuente.json",
+      "sha256": "f19abc744f361f10555176bd261f514a0972786023ab02eadb01c2bead27ea9b"
+    },
+    "data\\integracion-ronda-2\\entregas\\agente-3-localidades-inegi\\propuestas.json": {
+      "origen": "propuestas\\ronda-2\\agente-3-localidades-inegi\\propuestas.json",
+      "sha256": "6a3b954bc191b0553d4450f83e861ebd1f0ac8c17fc037f55bef39fc4ef3e199"
+    },
+    "data\\integracion-ronda-2\\entregas\\agente-3-localidades-inegi\\resultado.md": {
+      "origen": "propuestas\\ronda-2\\agente-3-localidades-inegi\\resultado.md",
+      "sha256": "04d1d925609606fe4818d917f99ae2cea2a66a12370851b83137ecfa3c05aac8"
+    },
+    "data\\integracion-ronda-2\\entregas\\agente-3-localidades-inegi\\solo-ITER-CVE.json": {
+      "origen": "propuestas\\ronda-2\\agente-3-localidades-inegi\\solo-ITER-CVE.json",
+      "sha256": "1bd3327234f781341a562954dc276414037e0867ed7886f53aebd7552454d93c"
+    },
+    "data\\integracion-ronda-2\\entregas\\agente-3-localidades-inegi\\fuentes\\fd_iter_cpv2020.pdf": {
+      "origen": "propuestas\\ronda-2\\agente-3-localidades-inegi\\fuentes\\fd_iter_cpv2020.pdf",
+      "sha256": "1b7ea20fb8f00b9ed248da725a43bda0c7bab6c96d4fe77d6ddf51b1876525eb"
+    },
+    "data\\integracion-ronda-2\\entregas\\agente-3-localidades-inegi\\fuentes\\iter_26_cpv2020_csv.zip": {
+      "origen": "propuestas\\ronda-2\\agente-3-localidades-inegi\\fuentes\\iter_26_cpv2020_csv.zip",
+      "sha256": "4ad9380527c248bb236bd90eefed760b0f8796eaeab7c469f95ead033e96dee2"
+    },
+    "data\\integracion-ronda-2\\entregas\\agente-4-vigencia\\correccion.py": {
+      "origen": "propuestas\\ronda-2\\agente-4-vigencia\\correccion.py",
+      "sha256": "86a41e959db6686a397557780d5ffea0df0c123457505ea2d0f0f7ec9d87fc6d"
+    },
+    "data\\integracion-ronda-2\\entregas\\agente-4-vigencia\\derivar_propuestas.py": {
+      "origen": "propuestas\\ronda-2\\agente-4-vigencia\\derivar_propuestas.py",
+      "sha256": "423dde5ca53bac10312667fbc3c8a107d79eec5d6f8919d22727d368bb8a2028"
+    },
+    "data\\integracion-ronda-2\\entregas\\agente-4-vigencia\\fetch_ckan.py": {
+      "origen": "propuestas\\ronda-2\\agente-4-vigencia\\fetch_ckan.py",
+      "sha256": "1cf82679de011a5918c97462332d6a7cc1266703d2ffeb156a8cf50b974f8ed4"
+    },
+    "data\\integracion-ronda-2\\entregas\\agente-4-vigencia\\fetch_externa.py": {
+      "origen": "propuestas\\ronda-2\\agente-4-vigencia\\fetch_externa.py",
+      "sha256": "12ce2597fb743852199d4713b0e2aa23e2e8d2800e27e2311cdb12ecd74da9ff"
+    },
+    "data\\integracion-ronda-2\\entregas\\agente-4-vigencia\\inspeccionar.py": {
+      "origen": "propuestas\\ronda-2\\agente-4-vigencia\\inspeccionar.py",
+      "sha256": "d857400c38ab75bd479f5b95a85b009f31d961b0ac3ed2eea84d6d3e1b1bc09e"
+    },
+    "data\\integracion-ronda-2\\entregas\\agente-4-vigencia\\matriz-vigencia.json": {
+      "origen": "propuestas\\ronda-2\\agente-4-vigencia\\matriz-vigencia.json",
+      "sha256": "60ba6dda7540ee0b77c5e3c26aa77eeb44cc9c677eb09049705eb6fa0be4cccf"
+    },
+    "data\\integracion-ronda-2\\entregas\\agente-4-vigencia\\matriz-vigencia.md": {
+      "origen": "propuestas\\ronda-2\\agente-4-vigencia\\matriz-vigencia.md",
+      "sha256": "30e15d92fd62062cd8068bdf789e999ce120b6f044e13148b0fa866ebed3c774"
+    },
+    "data\\integracion-ronda-2\\entregas\\agente-4-vigencia\\notas-busqueda.md": {
+      "origen": "propuestas\\ronda-2\\agente-4-vigencia\\notas-busqueda.md",
+      "sha256": "2d2578f20242a3dc5265ee8a95527807a82ebafabc02f7bfc32857e138018d7c"
+    },
+    "data\\integracion-ronda-2\\entregas\\agente-4-vigencia\\propuestas.json": {
+      "origen": "propuestas\\ronda-2\\agente-4-vigencia\\propuestas.json",
+      "sha256": "2bd888741fb86f31c24901ec45a7572a10a20385d9103213297f574453bc157d"
+    },
+    "data\\integracion-ronda-2\\entregas\\agente-4-vigencia\\resultado.md": {
+      "origen": "propuestas\\ronda-2\\agente-4-vigencia\\resultado.md",
+      "sha256": "2cbf36d2d99a8faf83c1983ec147f77f31bec2087cc9148b2e6192bfffa379c5"
+    },
+    "data\\integracion-ronda-2\\entregas\\agente-4-vigencia\\verificar.py": {
+      "origen": "propuestas\\ronda-2\\agente-4-vigencia\\verificar.py",
+      "sha256": "25c4d02a3e8ee7864739dcf3a1ca8ab0a224b1bf3883655c2d5c4d080d8e9832"
+    },
+    "data\\integracion-ronda-2\\entregas\\agente-4-vigencia\\evidencia\\ckan_manifiesto.json": {
+      "origen": "propuestas\\ronda-2\\agente-4-vigencia\\evidencia\\ckan_manifiesto.json",
+      "sha256": "f0f2f7b25914f8ef37834b25ad49130dc619e512a931d151b4d2bdb934c76008"
+    },
+    "data\\integracion-ronda-2\\entregas\\agente-4-vigencia\\evidencia\\ckan\\package_0b5f5e16-2de3-4be1-811f-4b0976ed82d3.json": {
+      "origen": "propuestas\\ronda-2\\agente-4-vigencia\\evidencia\\ckan\\package_0b5f5e16-2de3-4be1-811f-4b0976ed82d3.json",
+      "sha256": "4ca156b4619b9bcc9d69b6ced3cc3ed4b1b07e586c674acdfc3f907304bc6749"
+    },
+    "data\\integracion-ronda-2\\entregas\\agente-4-vigencia\\evidencia\\ckan\\package_403912fd-5853-4e18-8256-f77206f855bd.json": {
+      "origen": "propuestas\\ronda-2\\agente-4-vigencia\\evidencia\\ckan\\package_403912fd-5853-4e18-8256-f77206f855bd.json",
+      "sha256": "84b12a9a43b94bc6dc808af9f21bc7ea441847a18b46234a4b646887cd301707"
+    },
+    "data\\integracion-ronda-2\\entregas\\agente-4-vigencia\\evidencia\\ckan\\package_5494daa1-09ca-4750-aeac-2558553700e1.json": {
+      "origen": "propuestas\\ronda-2\\agente-4-vigencia\\evidencia\\ckan\\package_5494daa1-09ca-4750-aeac-2558553700e1.json",
+      "sha256": "e751fe481af047f3ffa6facc57c9d04952e5f874186be2d2fb4a6ae20f9a0154"
+    },
+    "data\\integracion-ronda-2\\entregas\\agente-4-vigencia\\evidencia\\ckan\\package_85ee0e2b-ba05-4d9a-8177-cdbf0cb42f8f.json": {
+      "origen": "propuestas\\ronda-2\\agente-4-vigencia\\evidencia\\ckan\\package_85ee0e2b-ba05-4d9a-8177-cdbf0cb42f8f.json",
+      "sha256": "cd67f8b7a85cbf34a1be9d09b9db216e49c9fa49ef2eea879f22d0f84123af90"
+    },
+    "data\\integracion-ronda-2\\entregas\\agente-4-vigencia\\evidencia\\ckan\\package_93ca5e1c-702e-4e62-bc61-638907be184a.json": {
+      "origen": "propuestas\\ronda-2\\agente-4-vigencia\\evidencia\\ckan\\package_93ca5e1c-702e-4e62-bc61-638907be184a.json",
+      "sha256": "97bcc5d6f7f7068c2ecfb1fab2be0cdc00fbab48f47cf84ce95f2a7a4354f465"
+    },
+    "data\\integracion-ronda-2\\entregas\\agente-4-vigencia\\evidencia\\ckan\\package_943d0723-afbb-470a-8fe8-d62e8671de84.json": {
+      "origen": "propuestas\\ronda-2\\agente-4-vigencia\\evidencia\\ckan\\package_943d0723-afbb-470a-8fe8-d62e8671de84.json",
+      "sha256": "a9db4b4c37edf34bf71a5181c7988424c9afd1a73e0ed1bfd2a46a13731b6dc7"
+    },
+    "data\\integracion-ronda-2\\entregas\\agente-4-vigencia\\evidencia\\ckan\\package_960ef0a9-73ed-4191-ae0b-b868d7e48292.json": {
+      "origen": "propuestas\\ronda-2\\agente-4-vigencia\\evidencia\\ckan\\package_960ef0a9-73ed-4191-ae0b-b868d7e48292.json",
+      "sha256": "267f9dcacbd3e24cddc5118cf2e3044c414a60b174e233320efe7b74445fea0b"
+    },
+    "data\\integracion-ronda-2\\entregas\\agente-4-vigencia\\evidencia\\ckan\\package_caf587a5-23ac-496b-85d4-6ceb1d615d78.json": {
+      "origen": "propuestas\\ronda-2\\agente-4-vigencia\\evidencia\\ckan\\package_caf587a5-23ac-496b-85d4-6ceb1d615d78.json",
+      "sha256": "3ac8a95ddb372a1df97a9c8acec9defbaf917662ec58fb6eff52762c98ee926d"
+    },
+    "data\\integracion-ronda-2\\entregas\\agente-4-vigencia\\evidencia\\ckan\\package_e5aad52d-5760-481c-ba65-db0ba4a5315e.json": {
+      "origen": "propuestas\\ronda-2\\agente-4-vigencia\\evidencia\\ckan\\package_e5aad52d-5760-481c-ba65-db0ba4a5315e.json",
+      "sha256": "567f6d915116ac7994d1aee77ba80825b206660df8165676dbf01a499899a0c8"
+    },
+    "data\\integracion-ronda-2\\entregas\\agente-4-vigencia\\evidencia\\ckan\\package_e7a3d62f-4ace-479c-aa52-1c9e384dc429.json": {
+      "origen": "propuestas\\ronda-2\\agente-4-vigencia\\evidencia\\ckan\\package_e7a3d62f-4ace-479c-aa52-1c9e384dc429.json",
+      "sha256": "e76d0e249a4e001589b581bf84eb5dadf5bf93890f668152efec9275e6d6d562"
+    },
+    "data\\integracion-ronda-2\\entregas\\agente-4-vigencia\\evidencia\\ckan\\package_ee8f639f-5e89-46ae-93b9-934b05fc6233.json": {
+      "origen": "propuestas\\ronda-2\\agente-4-vigencia\\evidencia\\ckan\\package_ee8f639f-5e89-46ae-93b9-934b05fc6233.json",
+      "sha256": "2776b9297d47743ea0e18888e03e0a27bb1e7cd778375ada435c6f470472e625"
+    },
+    "data\\integracion-ronda-2\\entregas\\agente-4-vigencia\\evidencia\\externa\\cmpe2016_inegi.pdf": {
+      "origen": "propuestas\\ronda-2\\agente-4-vigencia\\evidencia\\externa\\cmpe2016_inegi.pdf",
+      "sha256": "66ba2fd24aa01d82684df52677b792e17fe55d38273d6325ff4f6f66a3ef714b"
+    },
+    "data\\integracion-ronda-2\\entregas\\agente-4-vigencia\\evidencia\\externa\\cmpe2016_snieg.pdf": {
+      "origen": "propuestas\\ronda-2\\agente-4-vigencia\\evidencia\\externa\\cmpe2016_snieg.pdf",
+      "sha256": "66ba2fd24aa01d82684df52677b792e17fe55d38273d6325ff4f6f66a3ef714b"
+    },
+    "data\\integracion-ronda-2\\entregas\\agente-4-vigencia\\evidencia\\externa\\manifiesto_externa.json": {
+      "origen": "propuestas\\ronda-2\\agente-4-vigencia\\evidencia\\externa\\manifiesto_externa.json",
+      "sha256": "ccd0d35c8ec95a4fef18ba57c849e7e19f293b79837bf41bb080adb9e788af89"
+    },
+    "data\\integracion-ronda-2\\entregas\\agente-4-vigencia\\evidencia\\extractos\\cmpe2016_citas.json": {
+      "origen": "propuestas\\ronda-2\\agente-4-vigencia\\evidencia\\extractos\\cmpe2016_citas.json",
+      "sha256": "315051c7ffeb13cf30a7662d075fc3b8741afbf0158df05a8d8871333a5b7787"
+    },
+    "data\\integracion-ronda-2\\entregas\\agente-4-vigencia\\evidencia\\extractos\\resumen_fuentes.json": {
+      "origen": "propuestas\\ronda-2\\agente-4-vigencia\\evidencia\\extractos\\resumen_fuentes.json",
+      "sha256": "b50f3899a8a543941c8b1cb11fecc4dc0326825d1f9baaee7aa7f9d17d6a20ad"
+    },
+    "data\\integracion-ronda-2\\entregas\\agente-5-evaluacion-chat\\alcance.json": {
+      "origen": "propuestas\\ronda-2\\agente-5-evaluacion-chat\\alcance.json",
+      "sha256": "131906aa2fe7a4fb3f2887a39337b0218ece870ee4863feb4973450ed01dc3c1"
+    },
+    "data\\integracion-ronda-2\\entregas\\agente-5-evaluacion-chat\\casos.json": {
+      "origen": "propuestas\\ronda-2\\agente-5-evaluacion-chat\\casos.json",
+      "sha256": "49ab988e9764e6943fb77d70194a14f3a96ff4187dc46a9c5fad005ccd2f0168"
+    },
+    "data\\integracion-ronda-2\\entregas\\agente-5-evaluacion-chat\\ejecutar_chat.mjs": {
+      "origen": "propuestas\\ronda-2\\agente-5-evaluacion-chat\\ejecutar_chat.mjs",
+      "sha256": "865a240dba7dd2f1976e5ad86eee2316ed7a6e06b0296db1e59a84cc6bc080f9"
+    },
+    "data\\integracion-ronda-2\\entregas\\agente-5-evaluacion-chat\\propuestas.json": {
+      "origen": "propuestas\\ronda-2\\agente-5-evaluacion-chat\\propuestas.json",
+      "sha256": "5d3e3c52d23b043acb866eedfd75368fcddc99e5bf55d7756f4d1b8e58a4c502"
+    },
+    "data\\integracion-ronda-2\\entregas\\agente-5-evaluacion-chat\\registro.json": {
+      "origen": "propuestas\\ronda-2\\agente-5-evaluacion-chat\\registro.json",
+      "sha256": "76b0fecd36bab722d586a649431681f357844cb8d60ce360788c5efd86f99089"
+    },
+    "data\\integracion-ronda-2\\entregas\\agente-5-evaluacion-chat\\resultado.md": {
+      "origen": "propuestas\\ronda-2\\agente-5-evaluacion-chat\\resultado.md",
+      "sha256": "a5c47181895e29e8b55b5deb7ce8a798656866604a169d97198791650b7406b7"
+    },
+    "data\\integracion-ronda-2\\entregas\\agente-5-evaluacion-chat\\verificar_base.py": {
+      "origen": "propuestas\\ronda-2\\agente-5-evaluacion-chat\\verificar_base.py",
+      "sha256": "4c7b00a692ab4bf2da7b7ad8c82798299248b6c2fbbbf6a8835c9142a96be396"
+    },
+    "data\\integracion-ronda-2\\entregas\\agente-5-evaluacion-chat\\verificar_entrega.py": {
+      "origen": "propuestas\\ronda-2\\agente-5-evaluacion-chat\\verificar_entrega.py",
+      "sha256": "a70681a103eb1686d15c2edc23e11f6d27b818968efeb5e877ea659fd3d480b6"
+    },
+    "data\\integracion-ronda-2\\entregas\\agente-5-evaluacion-chat\\respuestas_brutas\\C01.contexto.txt": {
+      "origen": "propuestas\\ronda-2\\agente-5-evaluacion-chat\\respuestas_brutas\\C01.contexto.txt",
+      "sha256": "c176b600ad47b77a9365a2b5de42f54969e5f94522f9b8c4836a2be4ad9b5419"
+    },
+    "data\\integracion-ronda-2\\entregas\\agente-5-evaluacion-chat\\respuestas_brutas\\C01.md": {
+      "origen": "propuestas\\ronda-2\\agente-5-evaluacion-chat\\respuestas_brutas\\C01.md",
+      "sha256": "9e3a938794b0c261409c9754d577f48acc4f47efc82ee066f2ad9eb8c1da837c"
+    },
+    "data\\integracion-ronda-2\\entregas\\agente-5-evaluacion-chat\\respuestas_brutas\\C02.contexto.txt": {
+      "origen": "propuestas\\ronda-2\\agente-5-evaluacion-chat\\respuestas_brutas\\C02.contexto.txt",
+      "sha256": "b3073165276cabaf45a07f7f6436c4af4b780f12b2dd79195e40c9111e148856"
+    },
+    "data\\integracion-ronda-2\\entregas\\agente-5-evaluacion-chat\\respuestas_brutas\\C02.md": {
+      "origen": "propuestas\\ronda-2\\agente-5-evaluacion-chat\\respuestas_brutas\\C02.md",
+      "sha256": "9c6705a2cc2689a3ae2e22a1c6cc586e29a1e0cd82d939cb2c4e0dc774782b5b"
+    },
+    "data\\integracion-ronda-2\\entregas\\agente-5-evaluacion-chat\\respuestas_brutas\\C03.contexto.txt": {
+      "origen": "propuestas\\ronda-2\\agente-5-evaluacion-chat\\respuestas_brutas\\C03.contexto.txt",
+      "sha256": "594c15cc2ea4b25c26c433a09f87afdebad67a64ea863c4fa68a3891e0aad56f"
+    },
+    "data\\integracion-ronda-2\\entregas\\agente-5-evaluacion-chat\\respuestas_brutas\\C03.md": {
+      "origen": "propuestas\\ronda-2\\agente-5-evaluacion-chat\\respuestas_brutas\\C03.md",
+      "sha256": "63649e54390aabe8c755281c157d5e48288a509497dffb4fd759ed13521debda"
+    },
+    "data\\integracion-ronda-2\\entregas\\agente-5-evaluacion-chat\\respuestas_brutas\\C04.contexto.txt": {
+      "origen": "propuestas\\ronda-2\\agente-5-evaluacion-chat\\respuestas_brutas\\C04.contexto.txt",
+      "sha256": "8944efd4492daf83a08d58aeb6000065753da9ddcf09713d0160b47be79092bf"
+    },
+    "data\\integracion-ronda-2\\entregas\\agente-5-evaluacion-chat\\respuestas_brutas\\C04.md": {
+      "origen": "propuestas\\ronda-2\\agente-5-evaluacion-chat\\respuestas_brutas\\C04.md",
+      "sha256": "d15b439a465766b31461f4717e0f99c7c63d64df66262352559788a364682c0a"
+    },
+    "data\\integracion-ronda-2\\entregas\\agente-5-evaluacion-chat\\respuestas_brutas\\C05.contexto.txt": {
+      "origen": "propuestas\\ronda-2\\agente-5-evaluacion-chat\\respuestas_brutas\\C05.contexto.txt",
+      "sha256": "1f9de9cb83c38ff74b1b0e00ba67de1f793bfe65540fe6c4dcc03229477ef844"
+    },
+    "data\\integracion-ronda-2\\entregas\\agente-5-evaluacion-chat\\respuestas_brutas\\C05.md": {
+      "origen": "propuestas\\ronda-2\\agente-5-evaluacion-chat\\respuestas_brutas\\C05.md",
+      "sha256": "98c0ab9412c27a550783fb1957192846b2a2ccdf4fdbc585f293532b0a9fac97"
+    },
+    "data\\integracion-ronda-2\\entregas\\agente-5-evaluacion-chat\\respuestas_brutas\\C06.contexto.txt": {
+      "origen": "propuestas\\ronda-2\\agente-5-evaluacion-chat\\respuestas_brutas\\C06.contexto.txt",
+      "sha256": "d148853c84cfc06f17fbe17c8f0483ec5d36dafa4283a21669eac06339eee5eb"
+    },
+    "data\\integracion-ronda-2\\entregas\\agente-5-evaluacion-chat\\respuestas_brutas\\C06.md": {
+      "origen": "propuestas\\ronda-2\\agente-5-evaluacion-chat\\respuestas_brutas\\C06.md",
+      "sha256": "612917f11f3d20252f1e9bd5e499c3b2daaf3a8796bd5eb3a32a30230ba2237a"
+    },
+    "data\\integracion-ronda-2\\entregas\\agente-5-evaluacion-chat\\respuestas_brutas\\C07.contexto.txt": {
+      "origen": "propuestas\\ronda-2\\agente-5-evaluacion-chat\\respuestas_brutas\\C07.contexto.txt",
+      "sha256": "91791c02771a84af5a0dfd4d065890f62415602dacaf0bf64bae322066c3ce98"
+    },
+    "data\\integracion-ronda-2\\entregas\\agente-5-evaluacion-chat\\respuestas_brutas\\C07.md": {
+      "origen": "propuestas\\ronda-2\\agente-5-evaluacion-chat\\respuestas_brutas\\C07.md",
+      "sha256": "bd078ecdf40c19eab8cfde928206431e3a68aa72ccaae08b9bfd68435f5b4b04"
+    },
+    "data\\integracion-ronda-2\\entregas\\agente-5-evaluacion-chat\\respuestas_brutas\\C08.contexto.txt": {
+      "origen": "propuestas\\ronda-2\\agente-5-evaluacion-chat\\respuestas_brutas\\C08.contexto.txt",
+      "sha256": "d733950eb5a7db536f07de717165a7984f2678d767d405721be59e917fb9a4a9"
+    },
+    "data\\integracion-ronda-2\\entregas\\agente-5-evaluacion-chat\\respuestas_brutas\\C08.md": {
+      "origen": "propuestas\\ronda-2\\agente-5-evaluacion-chat\\respuestas_brutas\\C08.md",
+      "sha256": "11076c82b06fb8a83ba7419cb7f004292881318dcd101dbfca1414e5d8d2e229"
+    },
+    "data\\integracion-ronda-2\\entregas\\agente-5-evaluacion-chat\\respuestas_brutas\\C09.contexto.txt": {
+      "origen": "propuestas\\ronda-2\\agente-5-evaluacion-chat\\respuestas_brutas\\C09.contexto.txt",
+      "sha256": "72b42f75551132ff80e7d5f6dab2bf0fb315f82202eac702fe58c5af87439b03"
+    },
+    "data\\integracion-ronda-2\\entregas\\agente-5-evaluacion-chat\\respuestas_brutas\\C09.md": {
+      "origen": "propuestas\\ronda-2\\agente-5-evaluacion-chat\\respuestas_brutas\\C09.md",
+      "sha256": "5f17a03a00b0b523b4128b0d33eaa12a4674633a3721bdd11b558d0c0db33184"
+    },
+    "data\\integracion-ronda-2\\entregas\\agente-5-evaluacion-chat\\respuestas_brutas\\C10.contexto.txt": {
+      "origen": "propuestas\\ronda-2\\agente-5-evaluacion-chat\\respuestas_brutas\\C10.contexto.txt",
+      "sha256": "8963be49f14219c375f44cd2eef1a902e5731c45deb387f5312c11b3eccd31f7"
+    },
+    "data\\integracion-ronda-2\\entregas\\agente-5-evaluacion-chat\\respuestas_brutas\\C10.md": {
+      "origen": "propuestas\\ronda-2\\agente-5-evaluacion-chat\\respuestas_brutas\\C10.md",
+      "sha256": "73a202201b32a3e47a1ed3ec539b125cae656ea724a65e6157d5b0db7a1075ef"
+    },
+    "data\\integracion-ronda-2\\entregas\\agente-5-evaluacion-chat\\respuestas_brutas\\C11.contexto.txt": {
+      "origen": "propuestas\\ronda-2\\agente-5-evaluacion-chat\\respuestas_brutas\\C11.contexto.txt",
+      "sha256": "b086bd05b8a590b4883231b7715b68fe811ac220ec5933938d5e5cd5d75fa789"
+    },
+    "data\\integracion-ronda-2\\entregas\\agente-5-evaluacion-chat\\respuestas_brutas\\C11.md": {
+      "origen": "propuestas\\ronda-2\\agente-5-evaluacion-chat\\respuestas_brutas\\C11.md",
+      "sha256": "060228ec47c1664c46615f800acd5872927e0e5c6d69e68cb52ac2951db77d6c"
+    },
+    "data\\integracion-ronda-2\\entregas\\agente-5-evaluacion-chat\\respuestas_brutas\\C12.contexto.txt": {
+      "origen": "propuestas\\ronda-2\\agente-5-evaluacion-chat\\respuestas_brutas\\C12.contexto.txt",
+      "sha256": "a7280abc87645d7c9b5967f1a80eb871c4906a26a27e36afc58f133388a41519"
+    },
+    "data\\integracion-ronda-2\\entregas\\agente-5-evaluacion-chat\\respuestas_brutas\\C12.md": {
+      "origen": "propuestas\\ronda-2\\agente-5-evaluacion-chat\\respuestas_brutas\\C12.md",
+      "sha256": "220594d3946ff84cf190d050754f982322ce1f88cbf23583e89cd3b62b14b5d7"
+    },
+    "data\\integracion-ronda-2\\entregas\\agente-5-evaluacion-chat\\respuestas_brutas\\C13.contexto.txt": {
+      "origen": "propuestas\\ronda-2\\agente-5-evaluacion-chat\\respuestas_brutas\\C13.contexto.txt",
+      "sha256": "8766245bee5b17617d9629a8d0b64da14e04dbcc69a1795a130c4a57c134b5e6"
+    },
+    "data\\integracion-ronda-2\\entregas\\agente-5-evaluacion-chat\\respuestas_brutas\\C13.md": {
+      "origen": "propuestas\\ronda-2\\agente-5-evaluacion-chat\\respuestas_brutas\\C13.md",
+      "sha256": "2d39f2ed86a5efb958647ef76aa1adcfc6a451dba7e0e8af9ef3adfceab5f7f6"
+    },
+    "data\\integracion-ronda-2\\entregas\\agente-5-evaluacion-chat\\respuestas_brutas\\C14.contexto.txt": {
+      "origen": "propuestas\\ronda-2\\agente-5-evaluacion-chat\\respuestas_brutas\\C14.contexto.txt",
+      "sha256": "8a3999ed4f9e67b2afe50f098d19d450b05eba8b046af1c9a2d80ef30552c02d"
+    },
+    "data\\integracion-ronda-2\\entregas\\agente-5-evaluacion-chat\\respuestas_brutas\\C14.md": {
+      "origen": "propuestas\\ronda-2\\agente-5-evaluacion-chat\\respuestas_brutas\\C14.md",
+      "sha256": "8836a0a2e99c641e8ce6216616ea7b836d2251401bc679861632514436d99abc"
+    },
+    "data\\integracion-ronda-2\\entregas\\agente-5-evaluacion-chat\\respuestas_brutas\\C15.contexto.txt": {
+      "origen": "propuestas\\ronda-2\\agente-5-evaluacion-chat\\respuestas_brutas\\C15.contexto.txt",
+      "sha256": "8a3999ed4f9e67b2afe50f098d19d450b05eba8b046af1c9a2d80ef30552c02d"
+    },
+    "data\\integracion-ronda-2\\entregas\\agente-5-evaluacion-chat\\respuestas_brutas\\C15.md": {
+      "origen": "propuestas\\ronda-2\\agente-5-evaluacion-chat\\respuestas_brutas\\C15.md",
+      "sha256": "ed3f88b750f61b78517ad5dc68776a7e37d3aab93e4d959450d0b2abe82c172e"
+    },
+    "data\\integracion-ronda-2\\entregas\\agente-5-evaluacion-chat\\respuestas_brutas\\C16.contexto.txt": {
+      "origen": "propuestas\\ronda-2\\agente-5-evaluacion-chat\\respuestas_brutas\\C16.contexto.txt",
+      "sha256": "a7280abc87645d7c9b5967f1a80eb871c4906a26a27e36afc58f133388a41519"
+    },
+    "data\\integracion-ronda-2\\entregas\\agente-5-evaluacion-chat\\respuestas_brutas\\C16.md": {
+      "origen": "propuestas\\ronda-2\\agente-5-evaluacion-chat\\respuestas_brutas\\C16.md",
+      "sha256": "34e3ab247b9eb3751ca5b2a051542946a30807616c787df1583e0e05a8b45fa6"
+    },
+    "data\\integracion-ronda-2\\entregas\\agente-5-evaluacion-chat\\respuestas_brutas\\C17.contexto.txt": {
+      "origen": "propuestas\\ronda-2\\agente-5-evaluacion-chat\\respuestas_brutas\\C17.contexto.txt",
+      "sha256": "0405ca3151297d43176ecaf13951298b26893ce0792484764c300dbd692e7704"
+    },
+    "data\\integracion-ronda-2\\entregas\\agente-5-evaluacion-chat\\respuestas_brutas\\C17.md": {
+      "origen": "propuestas\\ronda-2\\agente-5-evaluacion-chat\\respuestas_brutas\\C17.md",
+      "sha256": "71aa49ae23cdd1bddc42856279828825e36c4488af109cdfbbd8c4e531e24362"
+    },
+    "data\\integracion-ronda-2\\entregas\\agente-5-evaluacion-chat\\respuestas_brutas\\C18.contexto.txt": {
+      "origen": "propuestas\\ronda-2\\agente-5-evaluacion-chat\\respuestas_brutas\\C18.contexto.txt",
+      "sha256": "83cd837661d88ec5182b2213c48d493e5aeb3684a9b17a60a1fde02a80dcafa0"
+    },
+    "data\\integracion-ronda-2\\entregas\\agente-5-evaluacion-chat\\respuestas_brutas\\C18.md": {
+      "origen": "propuestas\\ronda-2\\agente-5-evaluacion-chat\\respuestas_brutas\\C18.md",
+      "sha256": "b2bc72ad1f0e9d9d82bb01a9a8262cd9f075fbe9c7d43b1bdec16ff6da2d2aed"
+    },
+    "data\\integracion-ronda-2\\entregas\\agente-5-evaluacion-chat\\respuestas_brutas\\C19.contexto.txt": {
+      "origen": "propuestas\\ronda-2\\agente-5-evaluacion-chat\\respuestas_brutas\\C19.contexto.txt",
+      "sha256": "e508e753c1786ae5cabff02352a736a6fdbf4e35639c62f03e030580e867b8b0"
+    },
+    "data\\integracion-ronda-2\\entregas\\agente-5-evaluacion-chat\\respuestas_brutas\\C19.md": {
+      "origen": "propuestas\\ronda-2\\agente-5-evaluacion-chat\\respuestas_brutas\\C19.md",
+      "sha256": "ff394459dde479cefb64b54ccc19613e03391b0a812a9e263716f75b662f231f"
+    },
+    "data\\integracion-ronda-2\\entregas\\agente-5-evaluacion-chat\\respuestas_brutas\\C20.contexto.txt": {
+      "origen": "propuestas\\ronda-2\\agente-5-evaluacion-chat\\respuestas_brutas\\C20.contexto.txt",
+      "sha256": "128ab21a228b1f63280aa6cd7e37087af47889ac09893384b1e170336dd80315"
+    },
+    "data\\integracion-ronda-2\\entregas\\agente-5-evaluacion-chat\\respuestas_brutas\\C20.md": {
+      "origen": "propuestas\\ronda-2\\agente-5-evaluacion-chat\\respuestas_brutas\\C20.md",
+      "sha256": "fd972681568bab98e6bb32f7d4972278bd574d77c9368ac630d66ffd3f74e773"
+    },
+    "data\\integracion-ronda-2\\entregas\\agente-5-evaluacion-chat\\fuentes\\sparql\\alias_precip.json": {
+      "origen": "propuestas\\ronda-2\\agente-5-evaluacion-chat\\fuentes\\sparql\\alias_precip.json",
+      "sha256": "c9e40ac4f86e87423a518a649b8869d6c48c6f49b37d006f6d5ac4eb81894daf"
+    },
+    "data\\integracion-ronda-2\\entregas\\agente-5-evaluacion-chat\\fuentes\\sparql\\alias_precip.rq": {
+      "origen": "propuestas\\ronda-2\\agente-5-evaluacion-chat\\fuentes\\sparql\\alias_precip.rq",
+      "sha256": "5f483705ba0a83989cca190a30368c4109c7bef6e9c7287455fafaa351605636"
+    },
+    "data\\integracion-ronda-2\\entregas\\agente-5-evaluacion-chat\\fuentes\\sparql\\ambigua.json": {
+      "origen": "propuestas\\ronda-2\\agente-5-evaluacion-chat\\fuentes\\sparql\\ambigua.json",
+      "sha256": "7581b5d72c3285ba89aa23a293e712b98434b873f7b4108a53211b8e10f1520e"
+    },
+    "data\\integracion-ronda-2\\entregas\\agente-5-evaluacion-chat\\fuentes\\sparql\\ambigua.rq": {
+      "origen": "propuestas\\ronda-2\\agente-5-evaluacion-chat\\fuentes\\sparql\\ambigua.rq",
+      "sha256": "8aa282fe07afc196b386d04c573d722b764845070d96ce9e7f09dc20431f3675"
+    },
+    "data\\integracion-ronda-2\\entregas\\agente-5-evaluacion-chat\\fuentes\\sparql\\anio_mat.json": {
+      "origen": "propuestas\\ronda-2\\agente-5-evaluacion-chat\\fuentes\\sparql\\anio_mat.json",
+      "sha256": "10454aff34d3f580b8c27ea8fcb3402c631c65529fb63447833a5a38d6b7dbef"
+    },
+    "data\\integracion-ronda-2\\entregas\\agente-5-evaluacion-chat\\fuentes\\sparql\\anio_mat.rq": {
+      "origen": "propuestas\\ronda-2\\agente-5-evaluacion-chat\\fuentes\\sparql\\anio_mat.rq",
+      "sha256": "54f8548750d524da4b7bf9ffa47965644eb87c9c10dcb5c95eda9dbd962f50de"
+    },
+    "data\\integracion-ronda-2\\entregas\\agente-5-evaluacion-chat\\fuentes\\sparql\\ao_col.json": {
+      "origen": "propuestas\\ronda-2\\agente-5-evaluacion-chat\\fuentes\\sparql\\ao_col.json",
+      "sha256": "b3a7c53f5a808726e14fde0b9da12311e871e12ec36ee135297b014259396d8a"
+    },
+    "data\\integracion-ronda-2\\entregas\\agente-5-evaluacion-chat\\fuentes\\sparql\\ao_col.rq": {
+      "origen": "propuestas\\ronda-2\\agente-5-evaluacion-chat\\fuentes\\sparql\\ao_col.rq",
+      "sha256": "d778e77343d96980e6f4b7bc544fe648f2cef1fa118bb360c33719978ba1f06f"
+    },
+    "data\\integracion-ronda-2\\entregas\\agente-5-evaluacion-chat\\fuentes\\sparql\\base_comp.json": {
+      "origen": "propuestas\\ronda-2\\agente-5-evaluacion-chat\\fuentes\\sparql\\base_comp.json",
+      "sha256": "c134e2f882125783efe11f54d45c276bea9be028c1d90e5fcbb89c6ccc39e795"
+    },
+    "data\\integracion-ronda-2\\entregas\\agente-5-evaluacion-chat\\fuentes\\sparql\\base_comp.rq": {
+      "origen": "propuestas\\ronda-2\\agente-5-evaluacion-chat\\fuentes\\sparql\\base_comp.rq",
+      "sha256": "da71b8250ead90e15f8ff077d07a639eb92f1e627634877223cdf851c5d6a22c"
+    },
+    "data\\integracion-ronda-2\\entregas\\agente-5-evaluacion-chat\\fuentes\\sparql\\base_comprob.json": {
+      "origen": "propuestas\\ronda-2\\agente-5-evaluacion-chat\\fuentes\\sparql\\base_comprob.json",
+      "sha256": "3916af4bcf836396494c72b8668c0e56c2346ab47f48f37ae8d91ba48e763da2"
+    },
+    "data\\integracion-ronda-2\\entregas\\agente-5-evaluacion-chat\\fuentes\\sparql\\base_comprob.rq": {
+      "origen": "propuestas\\ronda-2\\agente-5-evaluacion-chat\\fuentes\\sparql\\base_comprob.rq",
+      "sha256": "80a06782b3af29d666e93bcae1d9861d6fa944c1119b4ee39ee707017e4d558d"
+    },
+    "data\\integracion-ronda-2\\entregas\\agente-5-evaluacion-chat\\fuentes\\sparql\\base_conceptos.json": {
+      "origen": "propuestas\\ronda-2\\agente-5-evaluacion-chat\\fuentes\\sparql\\base_conceptos.json",
+      "sha256": "35baa8aaf5e2594077c58b397119709c183fd13e0c6ab19edd831899715cc671"
+    },
+    "data\\integracion-ronda-2\\entregas\\agente-5-evaluacion-chat\\fuentes\\sparql\\base_conceptos.rq": {
+      "origen": "propuestas\\ronda-2\\agente-5-evaluacion-chat\\fuentes\\sparql\\base_conceptos.rq",
+      "sha256": "e8710abb180f16d929662d4fa749482aafff1efb0490f47e9a9e482f6ee9b119"
+    },
+    "data\\integracion-ronda-2\\entregas\\agente-5-evaluacion-chat\\fuentes\\sparql\\base_corr.json": {
+      "origen": "propuestas\\ronda-2\\agente-5-evaluacion-chat\\fuentes\\sparql\\base_corr.json",
+      "sha256": "7abb3b5339ced5d6391e0182703c8ed2e9ba3fb800cc32de481e870cb052d414"
+    },
+    "data\\integracion-ronda-2\\entregas\\agente-5-evaluacion-chat\\fuentes\\sparql\\base_corr.rq": {
+      "origen": "propuestas\\ronda-2\\agente-5-evaluacion-chat\\fuentes\\sparql\\base_corr.rq",
+      "sha256": "a6140826cfe92df8852c5c97e8a11f479d9c942baec46f0b565ca523dfa76c32"
+    },
+    "data\\integracion-ronda-2\\entregas\\agente-5-evaluacion-chat\\fuentes\\sparql\\base_corresp.json": {
+      "origen": "propuestas\\ronda-2\\agente-5-evaluacion-chat\\fuentes\\sparql\\base_corresp.json",
+      "sha256": "b6f3487b85bde649b7cddc179bf99314c626ac36c57ea24c85ddd5b481ed5acb"
+    },
+    "data\\integracion-ronda-2\\entregas\\agente-5-evaluacion-chat\\fuentes\\sparql\\base_corresp.rq": {
+      "origen": "propuestas\\ronda-2\\agente-5-evaluacion-chat\\fuentes\\sparql\\base_corresp.rq",
+      "sha256": "15dbcf301197c8f69b51626b15e60704ad1bddbeb26ff4e037b9efdba9441abf"
+    },
+    "data\\integracion-ronda-2\\entregas\\agente-5-evaluacion-chat\\fuentes\\sparql\\base_localidades.json": {
+      "origen": "propuestas\\ronda-2\\agente-5-evaluacion-chat\\fuentes\\sparql\\base_localidades.json",
+      "sha256": "fbe8f6b08198629bca044a02b2e4981fcdb23496b6161c8c6dbc19b4cd10c0b1"
+    },
+    "data\\integracion-ronda-2\\entregas\\agente-5-evaluacion-chat\\fuentes\\sparql\\base_localidades.rq": {
+      "origen": "propuestas\\ronda-2\\agente-5-evaluacion-chat\\fuentes\\sparql\\base_localidades.rq",
+      "sha256": "8125c60da0d9fe62f1cc18222668a779288a6d022204da757eac20dc9148b78a"
+    },
+    "data\\integracion-ronda-2\\entregas\\agente-5-evaluacion-chat\\fuentes\\sparql\\base_refs.json": {
+      "origen": "propuestas\\ronda-2\\agente-5-evaluacion-chat\\fuentes\\sparql\\base_refs.json",
+      "sha256": "11642a7994ffd411a9a27627a71dacd9de5c39bbe56e1f296da32e100c0c73bd"
+    },
+    "data\\integracion-ronda-2\\entregas\\agente-5-evaluacion-chat\\fuentes\\sparql\\base_refs.rq": {
+      "origen": "propuestas\\ronda-2\\agente-5-evaluacion-chat\\fuentes\\sparql\\base_refs.rq",
+      "sha256": "7963742717d13ef23622aa0593a43e2c539db450164dcbf56b4e62b8934d027e"
+    },
+    "data\\integracion-ronda-2\\entregas\\agente-5-evaluacion-chat\\fuentes\\sparql\\base_varest.json": {
+      "origen": "propuestas\\ronda-2\\agente-5-evaluacion-chat\\fuentes\\sparql\\base_varest.json",
+      "sha256": "cf3ef448a77afbeeddbee40c27b32870f8a3ef148d3e59f8ea4145a1edaad384"
+    },
+    "data\\integracion-ronda-2\\entregas\\agente-5-evaluacion-chat\\fuentes\\sparql\\base_varest.rq": {
+      "origen": "propuestas\\ronda-2\\agente-5-evaluacion-chat\\fuentes\\sparql\\base_varest.rq",
+      "sha256": "5f8127e6432ab1aee3433ac8924a3288701a15f9171bca2afc2294fc2cc85bab"
+    },
+    "data\\integracion-ronda-2\\entregas\\agente-5-evaluacion-chat\\fuentes\\sparql\\buscar_ao.json": {
+      "origen": "propuestas\\ronda-2\\agente-5-evaluacion-chat\\fuentes\\sparql\\buscar_ao.json",
+      "sha256": "06be09d72c7e5a01f01bbc25b126fc8950bff7f6316d1b2a97afde7ea508659e"
+    },
+    "data\\integracion-ronda-2\\entregas\\agente-5-evaluacion-chat\\fuentes\\sparql\\buscar_ao.rq": {
+      "origen": "propuestas\\ronda-2\\agente-5-evaluacion-chat\\fuentes\\sparql\\buscar_ao.rq",
+      "sha256": "377b2b7b20b3914c5de148be61ade0cdd66ed36ec8363302283071e26d4e33a1"
+    },
+    "data\\integracion-ronda-2\\entregas\\agente-5-evaluacion-chat\\fuentes\\sparql\\buscar_precip.json": {
+      "origen": "propuestas\\ronda-2\\agente-5-evaluacion-chat\\fuentes\\sparql\\buscar_precip.json",
+      "sha256": "ade7ab4263706fbc0955bc3ba459e0d1a899cf081b8aa99e119991d24580e269"
+    },
+    "data\\integracion-ronda-2\\entregas\\agente-5-evaluacion-chat\\fuentes\\sparql\\buscar_precip.rq": {
+      "origen": "propuestas\\ronda-2\\agente-5-evaluacion-chat\\fuentes\\sparql\\buscar_precip.rq",
+      "sha256": "fd0cce11582bef296c202040c82413296ef8b719cfa3f6abd5c36aebc0cf9687"
+    },
+    "data\\integracion-ronda-2\\entregas\\agente-5-evaluacion-chat\\fuentes\\sparql\\c01c02_corr.json": {
+      "origen": "propuestas\\ronda-2\\agente-5-evaluacion-chat\\fuentes\\sparql\\c01c02_corr.json",
+      "sha256": "4772c4bf1977fcf16515148a7313cc1995a4552b3a2e90ed7acddc2d4f0231ff"
+    },
+    "data\\integracion-ronda-2\\entregas\\agente-5-evaluacion-chat\\fuentes\\sparql\\c01c02_corr.rq": {
+      "origen": "propuestas\\ronda-2\\agente-5-evaluacion-chat\\fuentes\\sparql\\c01c02_corr.rq",
+      "sha256": "4d4c56c87996a8dbeb6912c4366390e46cf757a7bfd17e321d1bf1fed1f0f989"
+    },
+    "data\\integracion-ronda-2\\entregas\\agente-5-evaluacion-chat\\fuentes\\sparql\\c01_anio_matrimonio.json": {
+      "origen": "propuestas\\ronda-2\\agente-5-evaluacion-chat\\fuentes\\sparql\\c01_anio_matrimonio.json",
+      "sha256": "5a0c5dd891864875e7a523f6ff29a35a22eb5d1ccf458b77876323032a590090"
+    },
+    "data\\integracion-ronda-2\\entregas\\agente-5-evaluacion-chat\\fuentes\\sparql\\c01_anio_matrimonio.rq": {
+      "origen": "propuestas\\ronda-2\\agente-5-evaluacion-chat\\fuentes\\sparql\\c01_anio_matrimonio.rq",
+      "sha256": "88741aaf74d1b9e19a6fd5a897dcabdc2e2e4f52c24b3c0631b905eb60f54428"
+    },
+    "data\\integracion-ronda-2\\entregas\\agente-5-evaluacion-chat\\fuentes\\sparql\\c01_rev.json": {
+      "origen": "propuestas\\ronda-2\\agente-5-evaluacion-chat\\fuentes\\sparql\\c01_rev.json",
+      "sha256": "82d3d4feec5f6c53c9b84ddf782596b0d8bb33048012cf068c2c6a840301a3b4"
+    },
+    "data\\integracion-ronda-2\\entregas\\agente-5-evaluacion-chat\\fuentes\\sparql\\c01_rev.rq": {
+      "origen": "propuestas\\ronda-2\\agente-5-evaluacion-chat\\fuentes\\sparql\\c01_rev.rq",
+      "sha256": "0a15e78adc351b1bab6cb708f4d853aa554ba26f6b15c93c7ec78778422727e6"
+    },
+    "data\\integracion-ronda-2\\entregas\\agente-5-evaluacion-chat\\fuentes\\sparql\\c02_anio_defuncion.json": {
+      "origen": "propuestas\\ronda-2\\agente-5-evaluacion-chat\\fuentes\\sparql\\c02_anio_defuncion.json",
+      "sha256": "5a3ba8a653992ac188389b937585938660a04d11f1a770add418188ebc3dc8e4"
+    },
+    "data\\integracion-ronda-2\\entregas\\agente-5-evaluacion-chat\\fuentes\\sparql\\c02_anio_defuncion.rq": {
+      "origen": "propuestas\\ronda-2\\agente-5-evaluacion-chat\\fuentes\\sparql\\c02_anio_defuncion.rq",
+      "sha256": "a14b33c2d5476521a258a4eef07870b0195e4824b37cd2e7034de7f90cc85efe"
+    },
+    "data\\integracion-ronda-2\\entregas\\agente-5-evaluacion-chat\\fuentes\\sparql\\c02_rev.json": {
+      "origen": "propuestas\\ronda-2\\agente-5-evaluacion-chat\\fuentes\\sparql\\c02_rev.json",
+      "sha256": "7db86440322a15743849905504ed3eac83abdc1d9cb65a94f0e784abbc3e7f40"
+    },
+    "data\\integracion-ronda-2\\entregas\\agente-5-evaluacion-chat\\fuentes\\sparql\\c02_rev.rq": {
+      "origen": "propuestas\\ronda-2\\agente-5-evaluacion-chat\\fuentes\\sparql\\c02_rev.rq",
+      "sha256": "a2865803f7f5a6f0865779f11f4bffffec53ef902d4069ea0df6d55a50351054"
+    },
+    "data\\integracion-ronda-2\\entregas\\agente-5-evaluacion-chat\\fuentes\\sparql\\c05_mat2022.json": {
+      "origen": "propuestas\\ronda-2\\agente-5-evaluacion-chat\\fuentes\\sparql\\c05_mat2022.json",
+      "sha256": "9cf4e2b6daef2e9e01086083dd698f6b0155bb6faa6a9c68460829252a9ba37c"
+    },
+    "data\\integracion-ronda-2\\entregas\\agente-5-evaluacion-chat\\fuentes\\sparql\\c05_mat2022.rq": {
+      "origen": "propuestas\\ronda-2\\agente-5-evaluacion-chat\\fuentes\\sparql\\c05_mat2022.rq",
+      "sha256": "3edee55773818bf792eee82e6292c501c9c1aeb704ce7dde76d38f0c57776a46"
+    },
+    "data\\integracion-ronda-2\\entregas\\agente-5-evaluacion-chat\\fuentes\\sparql\\c07_alias.json": {
+      "origen": "propuestas\\ronda-2\\agente-5-evaluacion-chat\\fuentes\\sparql\\c07_alias.json",
+      "sha256": "85cc4d4935bf3ac5cda25650e9e8d589ff4ca0b4fb426d95dce7908b101c31b6"
+    },
+    "data\\integracion-ronda-2\\entregas\\agente-5-evaluacion-chat\\fuentes\\sparql\\c07_alias.rq": {
+      "origen": "propuestas\\ronda-2\\agente-5-evaluacion-chat\\fuentes\\sparql\\c07_alias.rq",
+      "sha256": "f93e379d046ad751718615bbbdbb696f303a89b7c9bc4c2854128caf850b43ba"
+    },
+    "data\\integracion-ronda-2\\entregas\\agente-5-evaluacion-chat\\fuentes\\sparql\\c08_desmpo_ref.json": {
+      "origen": "propuestas\\ronda-2\\agente-5-evaluacion-chat\\fuentes\\sparql\\c08_desmpo_ref.json",
+      "sha256": "a5776952584455f8911d93de0b1de5f0245ba9ffd4b112b23abf14872adf8523"
+    },
+    "data\\integracion-ronda-2\\entregas\\agente-5-evaluacion-chat\\fuentes\\sparql\\c08_desmpo_ref.rq": {
+      "origen": "propuestas\\ronda-2\\agente-5-evaluacion-chat\\fuentes\\sparql\\c08_desmpo_ref.rq",
+      "sha256": "b3259473c697e5da76b0e92c3d1fc11a8f076ef2cf3629a611245d25a82d3138"
+    },
+    "data\\integracion-ronda-2\\entregas\\agente-5-evaluacion-chat\\fuentes\\sparql\\c14_loc.json": {
+      "origen": "propuestas\\ronda-2\\agente-5-evaluacion-chat\\fuentes\\sparql\\c14_loc.json",
+      "sha256": "fbe8f6b08198629bca044a02b2e4981fcdb23496b6161c8c6dbc19b4cd10c0b1"
+    },
+    "data\\integracion-ronda-2\\entregas\\agente-5-evaluacion-chat\\fuentes\\sparql\\c14_loc.rq": {
+      "origen": "propuestas\\ronda-2\\agente-5-evaluacion-chat\\fuentes\\sparql\\c14_loc.rq",
+      "sha256": "8125c60da0d9fe62f1cc18222668a779288a6d022204da757eac20dc9148b78a"
+    },
+    "data\\integracion-ronda-2\\entregas\\agente-5-evaluacion-chat\\fuentes\\sparql\\c17_cat.json": {
+      "origen": "propuestas\\ronda-2\\agente-5-evaluacion-chat\\fuentes\\sparql\\c17_cat.json",
+      "sha256": "18c17cd67a56f91230c36d982a530eb558bffa799346a01f0ec8f205f2a2496b"
+    },
+    "data\\integracion-ronda-2\\entregas\\agente-5-evaluacion-chat\\fuentes\\sparql\\c17_cat.rq": {
+      "origen": "propuestas\\ronda-2\\agente-5-evaluacion-chat\\fuentes\\sparql\\c17_cat.rq",
+      "sha256": "ef4e062ef24fc3a0c1f724a0c07c3f419892f222ab55633d5da7dc9cfd3fa292"
+    },
+    "data\\integracion-ronda-2\\entregas\\agente-5-evaluacion-chat\\fuentes\\sparql\\c20_comp.json": {
+      "origen": "propuestas\\ronda-2\\agente-5-evaluacion-chat\\fuentes\\sparql\\c20_comp.json",
+      "sha256": "3916af4bcf836396494c72b8668c0e56c2346ab47f48f37ae8d91ba48e763da2"
+    },
+    "data\\integracion-ronda-2\\entregas\\agente-5-evaluacion-chat\\fuentes\\sparql\\c20_comp.rq": {
+      "origen": "propuestas\\ronda-2\\agente-5-evaluacion-chat\\fuentes\\sparql\\c20_comp.rq",
+      "sha256": "80a06782b3af29d666e93bcae1d9861d6fa944c1119b4ee39ee707017e4d558d"
+    },
+    "data\\integracion-ronda-2\\entregas\\agente-5-evaluacion-chat\\fuentes\\sparql\\cat26998.json": {
+      "origen": "propuestas\\ronda-2\\agente-5-evaluacion-chat\\fuentes\\sparql\\cat26998.json",
+      "sha256": "b8731e1bda43a0aa6d6eb7643a60afede3b55cd3cf9464d5604b47a4f1efd8e1"
+    },
+    "data\\integracion-ronda-2\\entregas\\agente-5-evaluacion-chat\\fuentes\\sparql\\cat26998.rq": {
+      "origen": "propuestas\\ronda-2\\agente-5-evaluacion-chat\\fuentes\\sparql\\cat26998.rq",
+      "sha256": "a727c822a1ef73a94349beeb2b87ee29a7b853fb27eca301ac04f0bc77666923"
+    },
+    "data\\integracion-ronda-2\\entregas\\agente-5-evaluacion-chat\\fuentes\\sparql\\clues_detalle.json": {
+      "origen": "propuestas\\ronda-2\\agente-5-evaluacion-chat\\fuentes\\sparql\\clues_detalle.json",
+      "sha256": "054d14af074dc2974f82bdd433294fdd109fb2a6e3ee0dd899ec7ce57a536b42"
+    },
+    "data\\integracion-ronda-2\\entregas\\agente-5-evaluacion-chat\\fuentes\\sparql\\clues_detalle.rq": {
+      "origen": "propuestas\\ronda-2\\agente-5-evaluacion-chat\\fuentes\\sparql\\clues_detalle.rq",
+      "sha256": "764b32c79726df7e1b34e42191bcfed362090961c7dcc8a406c1d259d1cf1d03"
+    },
+    "data\\integracion-ronda-2\\entregas\\agente-5-evaluacion-chat\\fuentes\\sparql\\cvegeo.json": {
+      "origen": "propuestas\\ronda-2\\agente-5-evaluacion-chat\\fuentes\\sparql\\cvegeo.json",
+      "sha256": "a47d2a9fc6d63cab0d4bc4dd2b2123bbfa08abdd95d2f28055f4e3cbf76235fc"
+    },
+    "data\\integracion-ronda-2\\entregas\\agente-5-evaluacion-chat\\fuentes\\sparql\\cvegeo.rq": {
+      "origen": "propuestas\\ronda-2\\agente-5-evaluacion-chat\\fuentes\\sparql\\cvegeo.rq",
+      "sha256": "39602377d3f93ce8665a2bb8381c8b1e1cb6e28bc230ba6c0c1fa600849d32a5"
+    },
+    "data\\integracion-ronda-2\\entregas\\agente-5-evaluacion-chat\\fuentes\\sparql\\desmpo.json": {
+      "origen": "propuestas\\ronda-2\\agente-5-evaluacion-chat\\fuentes\\sparql\\desmpo.json",
+      "sha256": "8d0ebbf56cb150ac70a3bd45b696a5e87b385d7414cb96d4f9d4b603eb78024c"
+    },
+    "data\\integracion-ronda-2\\entregas\\agente-5-evaluacion-chat\\fuentes\\sparql\\desmpo.rq": {
+      "origen": "propuestas\\ronda-2\\agente-5-evaluacion-chat\\fuentes\\sparql\\desmpo.rq",
+      "sha256": "d4d8be5e1dfe54c08908b74cf651abc3f5bdf21bf1c34246077da1da500e9778"
+    },
+    "data\\integracion-ronda-2\\entregas\\agente-5-evaluacion-chat\\fuentes\\sparql\\nac2024_cand.json": {
+      "origen": "propuestas\\ronda-2\\agente-5-evaluacion-chat\\fuentes\\sparql\\nac2024_cand.json",
+      "sha256": "a43ac2b3bd2854dffa66022c79db5f044d48a57c8231f99d38a222cf4b8b9c01"
+    },
+    "data\\integracion-ronda-2\\entregas\\agente-5-evaluacion-chat\\fuentes\\sparql\\nac2024_cand.rq": {
+      "origen": "propuestas\\ronda-2\\agente-5-evaluacion-chat\\fuentes\\sparql\\nac2024_cand.rq",
+      "sha256": "fa8f05f778021ac408959d65d8e20b0ca4fdedbced64840f2d307ec4088c4f1f"
+    },
+    "data\\integracion-ronda-2\\entregas\\agente-5-evaluacion-chat\\fuentes\\sparql\\nac2024_cols.json": {
+      "origen": "propuestas\\ronda-2\\agente-5-evaluacion-chat\\fuentes\\sparql\\nac2024_cols.json",
+      "sha256": "7792f2f58892408f4eb6e3253d2ed7a5253258c00944dc0b41cb849c7aa4969d"
+    },
+    "data\\integracion-ronda-2\\entregas\\agente-5-evaluacion-chat\\fuentes\\sparql\\nac2024_cols.rq": {
+      "origen": "propuestas\\ronda-2\\agente-5-evaluacion-chat\\fuentes\\sparql\\nac2024_cols.rq",
+      "sha256": "8400f394f5e1d0e193f8babd12380e67b1cc80df2f323e341fef61d316727d37"
+    },
+    "data\\integracion-ronda-2\\entregas\\agente-5-evaluacion-chat\\fuentes\\sparql\\pendientes.json": {
+      "origen": "propuestas\\ronda-2\\agente-5-evaluacion-chat\\fuentes\\sparql\\pendientes.json",
+      "sha256": "4cc9d2bd92650dbae010e14f9328f6ab5441246323c43421734462d8c93f90f2"
+    },
+    "data\\integracion-ronda-2\\entregas\\agente-5-evaluacion-chat\\fuentes\\sparql\\pendientes.rq": {
+      "origen": "propuestas\\ronda-2\\agente-5-evaluacion-chat\\fuentes\\sparql\\pendientes.rq",
+      "sha256": "f1fa451b3db0e2a3a99ccc68d43bcf5249e58b5c034f207908547d2b85cfdc96"
+    },
+    "data\\integracion-ronda-2\\entregas\\agente-5-evaluacion-chat\\fuentes\\sparql\\precip.json": {
+      "origen": "propuestas\\ronda-2\\agente-5-evaluacion-chat\\fuentes\\sparql\\precip.json",
+      "sha256": "1296cda6ca0371ec9a8256e1c42e97072922e3122b048dd5ce3752a87cdc9999"
+    },
+    "data\\integracion-ronda-2\\entregas\\agente-5-evaluacion-chat\\fuentes\\sparql\\precip.rq": {
+      "origen": "propuestas\\ronda-2\\agente-5-evaluacion-chat\\fuentes\\sparql\\precip.rq",
+      "sha256": "0fd170debfce328dea57ca260b20ed40196abb7210536c754ebcff338cfd8fd0"
+    },
+    "data\\integracion-ronda-2\\entregas\\agente-5-evaluacion-chat\\fuentes\\sparql\\var_estados.json": {
+      "origen": "propuestas\\ronda-2\\agente-5-evaluacion-chat\\fuentes\\sparql\\var_estados.json",
+      "sha256": "c867452c86852f606c8d21be63bc97321f2406aa28630e0080d953f45eb70e84"
+    },
+    "data\\integracion-ronda-2\\entregas\\agente-5-evaluacion-chat\\fuentes\\sparql\\var_estados.rq": {
+      "origen": "propuestas\\ronda-2\\agente-5-evaluacion-chat\\fuentes\\sparql\\var_estados.rq",
+      "sha256": "c31822552667a9c86a16e147d931263edbf8eff29a2fa247521f3e105bc155b6"
+    },
+    "data\\integracion-ronda-2\\entregas\\agente-5-evaluacion-chat\\fuentes\\sparql\\_meta.json": {
+      "origen": "propuestas\\ronda-2\\agente-5-evaluacion-chat\\fuentes\\sparql\\_meta.json",
+      "sha256": "e869f5052684f9fa66ecff3740c1cab9d67ca0c7b181753fc15c251e381c1a6c"
+    }
+  }
+}

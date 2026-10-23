@@ -1,0 +1,142 @@
+[
+  {
+    "id": "C01",
+    "tema": "anio_matrimonio registro",
+    "pregunta": "Consulta el grafo y muestra la evidencia con procedencia, sin editar ni corregir: variable año_matrimonio. ¿Qué registra el grafo sobre su significado? Cita definición original, fuente y estado.",
+    "esperada": "Año de registro; Matrimonios 2022 documental_revisada; no inferir fallecimiento.",
+    "tipo": "acredita"
+  },
+  {
+    "id": "C02",
+    "tema": "anio_defuncion fallecimiento",
+    "pregunta": "Consulta el grafo y muestra la evidencia con procedencia, sin editar ni corregir: variable año_defuncion. ¿Qué registra el grafo sobre su significado? Cita definición original, fuente y estado.",
+    "esperada": "Año en el que fallecio; Defunciones 2022 documental_revisada; distinto de registro.",
+    "tipo": "acredita"
+  },
+  {
+    "id": "C03",
+    "tema": "a-o Nacimientos 2024 pendiente",
+    "pregunta": "Consulta el grafo y muestra la evidencia con procedencia, sin editar ni corregir: columna a–o de Nacimientos 2024. ¿Qué registra el grafo sobre su estado? Cita límite y columna.",
+    "esperada": "No acreditada: pendiente; esquema trae a–o, diccionario año; sin corrección automática ni transferencia de 2022.",
+    "tipo": "no_acredita"
+  },
+  {
+    "id": "C04",
+    "tema": "CLUES concreto pendiente",
+    "pregunta": "Consulta el grafo y muestra la evidencia con procedencia, sin editar ni corregir: variable CLUES de Información Sobre Nacimientos. ¿Qué registra el grafo sobre su estado? Cita conjunto y descripción.",
+    "esperada": "No acreditada: candidata_sin_definicion_suficiente; Pendiente de especificar; no generalizar a la otra CLUES (Defunciones).",
+    "tipo": "no_acredita"
+  },
+  {
+    "id": "C05",
+    "tema": "Matrimonios 2022 revisadas",
+    "pregunta": "Consulta el grafo y muestra la evidencia con procedencia, sin editar ni corregir: correspondencias de Matrimonios 2022. ¿Qué registra el grafo sobre sus estados y lista? Cita mapeos y columnas.",
+    "esperada": "Lista revisadas 2022 con documental_revisada; coexisten candidatas_por_nombre en otros recursos; no generalizar año/recurso.",
+    "tipo": "acredita"
+  },
+  {
+    "id": "C06",
+    "tema": "estados globales correspondencias",
+    "pregunta": "Consulta el grafo y muestra la evidencia con procedencia, sin editar ni corregir: estados de correspondencias semánticas. ¿Qué conteos registra el grafo? Cita totales por estado.",
+    "esperada": "162 documental_revisada, 792 candidata_por_nombre, 6 ambigua_por_nombre; total 960.",
+    "tipo": "acredita"
+  },
+  {
+    "id": "C07",
+    "tema": "alias Precipitacion_mm limitado",
+    "pregunta": "Consulta el grafo y muestra la evidencia con procedencia, sin editar ni corregir: alias Precipitacion_mm. ¿Qué alcance registra el grafo? Cita columna y límite.",
+    "esperada": "Alcance limitado a su columna/variable documentada (precipitación diaria); no extender a otras columnas.",
+    "tipo": "acredita"
+  },
+  {
+    "id": "C08",
+    "tema": "des_mpo_res sin resolver",
+    "pregunta": "Consulta el grafo y muestra la evidencia con procedencia, sin editar ni corregir: referencia des_mpo_res. ¿Qué registra el grafo sobre su resolución? Cita estado y límite.",
+    "esperada": "No acreditada: solo_referencia_declarada_sin_resolver; sin recurso publicado; texto libre municipal.",
+    "tipo": "no_acredita"
+  },
+  {
+    "id": "C09",
+    "tema": "des_mpo_res filas degeneradas",
+    "pregunta": "Consulta el grafo y muestra la evidencia con procedencia, sin editar ni corregir: filas de diccionario de des_mpo_res e ide_id. ¿Qué registra el grafo? Cita filas conservadas.",
+    "esperada": "Dos filas conservadas; fila 177/178 con columnas desplazadas (Nombre variable ide_id); se conservan sin corregir.",
+    "tipo": "acredita"
+  },
+  {
+    "id": "C10",
+    "tema": "ide_id ambigua sin elegir",
+    "pregunta": "Consulta el grafo y muestra la evidencia con procedencia, sin editar ni corregir: columna ide_id de Fiebre manchada 2022/2023/2024. ¿Qué registra el grafo? Cita estado.",
+    "esperada": "No acreditada: 3 columnas ambiguas / 6 vínculos ambigua_por_nombre; sin elegir interpretación.",
+    "tipo": "no_acredita"
+  },
+  {
+    "id": "C11",
+    "tema": "CVEGEO solo GeoJSON",
+    "pregunta": "Consulta el grafo y muestra la evidencia con procedencia, sin editar ni corregir: CVEGEO. ¿Qué registra el grafo sobre su alcance? Cita sistema y límite.",
+    "esperada": "Composición 26 + municipio de 3 comprobada en la referencia GeoJSON (identifier-system/geojson-d20d36c4…); lo no acreditado es que códigos de otros recursos correspondan al mismo sistema o su equivalencia con IML/Registro Civil (límite IML_2020: composición y correspondencia con CVEGEO no resueltas para ese recurso).",
+    "tipo": "no_acredita"
+  },
+  {
+    "id": "C12",
+    "tema": "catalogos identificados",
+    "pregunta": "Consulta el grafo y muestra la evidencia con procedencia, sin editar ni corregir: referencias de catálogo identificadas. ¿Qué registra el grafo? Cita conteo y ejemplo.",
+    "esperada": "16 recurso_catalogo_identificado, 1 sin resolver; ej. CAMPO DE FORMACIÓN ACADÉMICA y Clave de presas.",
+    "tipo": "acredita"
+  },
+  {
+    "id": "C13",
+    "tema": "vigencia historica",
+    "pregunta": "Consulta el grafo y muestra la evidencia con procedencia, sin editar ni corregir: vigencia histórica de catálogos. ¿Qué registra el grafo? Cita límite.",
+    "esperada": "No acreditada: compatibilidad no demuestra vigencia histórica; estadoVigencia solo informativo.",
+    "tipo": "no_acredita"
+  },
+  {
+    "id": "C14",
+    "tema": "1850 localidades IML_2020",
+    "pregunta": "Consulta el grafo y muestra la evidencia con procedencia, sin editar ni corregir: localidades observadas IML_2020. ¿Qué conteo registra el grafo? Cita referencia y estado.",
+    "esperada": "1850 LocalidadObservada en IML_2020, estado derivada_observada_sin_completitud_oficial.",
+    "tipo": "acredita"
+  },
+  {
+    "id": "C15",
+    "tema": "composicion 2+3+4",
+    "pregunta": "Consulta el grafo y muestra la evidencia con procedencia, sin editar ni corregir: composición de clave de localidad IML_2020. ¿Qué registra el grafo? Cita formato.",
+    "esperada": "Composición cruda exacta 2+3+4, sin padding ni conversión numérica.",
+    "tipo": "acredita"
+  },
+  {
+    "id": "C16",
+    "tema": "no catalogo oficial ni INEGI",
+    "pregunta": "Consulta el grafo y muestra la evidencia con procedencia, sin editar ni corregir: ¿El grafo acredita catálogo oficial completo o cotejo INEGI para las 1850 localidades? Cita límite.",
+    "esperada": "No acreditado: son localidades incluidas en IML_2020, no catálogo oficial completo ni equivalencia INEGI.",
+    "tipo": "no_acredita"
+  },
+  {
+    "id": "C17",
+    "tema": "26998 26999 no municipales",
+    "pregunta": "Consulta el grafo y muestra la evidencia con procedencia, sin editar ni corregir: claves 26998 y 26999. ¿Qué registra el grafo? Cita categoría.",
+    "esperada": "categoria_no_municipal: 26998 No Especificado, 26999 Otros Municipios; van como excepciones.",
+    "tipo": "acredita"
+  },
+  {
+    "id": "C18",
+    "tema": "Victimas 2015 sin Clave_Ent",
+    "pregunta": "Consulta el grafo y muestra la evidencia con procedencia, sin editar ni corregir: comprobación Clave_Ent Víctimas 2015. ¿Qué registra el grafo? Cita estado y cobertura.",
+    "esperada": "No validación: sin_columna_fisica; encabezado completo; validación de valores no aplicable.",
+    "tipo": "no_acredita"
+  },
+  {
+    "id": "C19",
+    "tema": "compatibilidad no autoriza cruces",
+    "pregunta": "Consulta el grafo y muestra la evidencia con procedencia, sin editar ni corregir: límite de comprobaciones territoriales. ¿Autoriza el grafo cruces? Cita texto del límite.",
+    "esperada": "No autoriza: Compatibilidad de valores no demuestra vigencia histórica ni autoriza cruces entre poblaciones, periodos o niveles.",
+    "tipo": "no_acredita"
+  },
+  {
+    "id": "C20",
+    "tema": "28 comprobaciones desglose",
+    "pregunta": "Consulta el grafo y muestra la evidencia con procedencia, sin editar ni corregir: comprobaciones territoriales. ¿Qué desglose registra el grafo? Cita conteos por estado.",
+    "esperada": "28 comprobaciones: 16 compatible, 11 compatible_con_excepciones, 1 sin_columna_fisica.",
+    "tipo": "acredita"
+  }
+]

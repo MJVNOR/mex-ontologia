@@ -1,0 +1,34 @@
+@prefix sh: <http://www.w3.org/ns/shacl#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+@prefix mex: <{{BASE_IRI}}vocab/> .
+@prefix shape: <{{BASE_IRI}}shapes/> .
+
+shape:ReferenciaTerritorial a sh:NodeShape ; sh:targetClass mex:ReferenciaTerritorial ;
+    sh:property [ sh:path mex:archivoSha256 ; sh:minCount 1 ; sh:maxCount 1 ; sh:datatype xsd:string ; sh:pattern "^[0-9a-f]{64}$" ] ;
+    sh:property [ sh:path mex:hojaOriginal ; sh:minCount 1 ; sh:maxCount 1 ; sh:datatype xsd:string ] ;
+    sh:property [ sh:path mex:estadoVigencia ; sh:minCount 1 ; sh:maxCount 1 ; sh:hasValue "no_documentada" ] ;
+    sh:property [ sh:path prov:wasDerivedFrom ; sh:minCount 1 ; sh:nodeKind sh:IRI ] .
+
+shape:EntradaReferenciaTerritorial a sh:NodeShape ; sh:targetClass mex:EntradaReferenciaTerritorial ;
+    sh:property [ sh:path skos:inScheme ; sh:minCount 1 ; sh:maxCount 1 ; sh:class mex:ReferenciaTerritorial ] ;
+    sh:property [ sh:path skos:notation ; sh:minCount 1 ; sh:maxCount 1 ; sh:datatype xsd:string ] ;
+    sh:property [ sh:path mex:nombreOriginal ; sh:minCount 1 ; sh:maxCount 1 ; sh:datatype xsd:string ] ;
+    sh:property [ sh:path mex:celdaCodigo ; sh:minCount 1 ; sh:maxCount 1 ; sh:datatype xsd:string ] .
+
+shape:CorrespondenciaTerritorial a sh:NodeShape ; sh:targetClass mex:CorrespondenciaTerritorial ;
+    sh:property [ sh:path mex:entradaTerritorialOrigen ; sh:minCount 1 ; sh:maxCount 1 ; sh:class mex:EntradaReferenciaTerritorial ] ;
+    sh:property [ sh:path mex:entradaTerritorialDestino ; sh:maxCount 1 ; sh:class mex:EntradaCatalogo ] ;
+    sh:property [ sh:path mex:estadoCorrespondenciaTerritorial ; sh:minCount 1 ; sh:maxCount 1 ;
+        sh:in ("codigo_y_nombre_exacto" "codigo_y_nombre_normalizado" "codigo_y_nombre_con_reparacion_codificacion" "codigo_y_alias_revisado" "pendiente_nombre_distinto" "categoria_no_municipal" "sin_codigo_destino") ] ;
+    sh:property [ sh:path mex:transformacionCodigo ; sh:minCount 1 ] ;
+    sh:property [ sh:path mex:limiteSemantico ; sh:minCount 1 ] ;
+    sh:property [ sh:path prov:wasDerivedFrom ; sh:minCount 2 ; sh:nodeKind sh:IRI ] .
+
+shape:VinculoCatalogoTerritorial a sh:NodeShape ; sh:targetClass mex:VinculoCatalogoTerritorial ;
+    sh:property [ sh:path mex:referenciaDeclarada ; sh:minCount 1 ; sh:maxCount 1 ; sh:class mex:ReferenciaCatalogoDeclarada ] ;
+    sh:property [ sh:path mex:catalogoRecuperado ; sh:minCount 1 ; sh:maxCount 1 ; sh:class mex:ReferenciaTerritorial ] ;
+    sh:property [ sh:path mex:variableDestino ; sh:minCount 1 ; sh:maxCount 1 ; sh:class mex:VariableDocumentada ] ;
+    sh:property [ sh:path mex:criterioRevision ; sh:minCount 1 ] ;
+    sh:property [ sh:path prov:wasDerivedFrom ; sh:minCount 2 ; sh:nodeKind sh:IRI ] .

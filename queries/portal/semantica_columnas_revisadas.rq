@@ -1,0 +1,5 @@
+PREFIX mex: <{{BASE_IRI}}vocab/>
+PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+SELECT ?columna ?campo ?significado WHERE {
+  ?columna a mex:ColumnaObservada ; mex:nombreCampo ?campo ; mex:significadoDocumentado/skos:prefLabel ?significado .
+} ORDER BY ?campo ?columna

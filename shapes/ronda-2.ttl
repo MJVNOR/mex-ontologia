@@ -1,0 +1,48 @@
+@prefix sh: <http://www.w3.org/ns/shacl#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+@prefix mex: <{{BASE_IRI}}vocab/> .
+@prefix shape: <{{BASE_IRI}}shapes/> .
+
+shape:DictamenPendienteSemantico a sh:NodeShape ; sh:targetClass mex:DictamenPendienteSemantico ;
+  sh:property [ sh:path mex:objetoRevisado ; sh:minCount 1 ; sh:maxCount 1 ; sh:nodeKind sh:IRI ] ;
+  sh:property [ sh:path mex:estadoDictamen ; sh:minCount 1 ; sh:maxCount 1 ; sh:in ("requiere_aclaracion_publicador" "documentado_con_limite" "ya_resuelto_en_integracion") ] ;
+  sh:property [ sh:path mex:evidenciaRevisionJson ; sh:minCount 1 ; sh:maxCount 1 ; sh:datatype xsd:string ] ;
+  sh:property [ sh:path prov:wasDerivedFrom ; sh:minCount 1 ; sh:nodeKind sh:IRI ] .
+
+shape:ContrasteLocalidadesCensales a sh:NodeShape ; sh:targetClass mex:ContrasteLocalidadesCensales ;
+  sh:property [ sh:path mex:estadoContraste ; sh:hasValue "contraste_completo_entre_dos_fuentes" ; sh:maxCount 1 ] ;
+  sh:property [ sh:path mex:localidadesComprobadas ; sh:minCount 1 ; sh:maxCount 1 ; sh:datatype xsd:integer ; sh:minInclusive 0 ] ;
+  sh:property [ sh:path mex:sha256FuenteCensal ; sh:minCount 1 ; sh:maxCount 1 ; sh:pattern "^[0-9a-f]{64}$" ] ;
+  sh:property [ sh:path mex:limiteSemantico ; sh:minCount 1 ] ;
+  sh:property [ sh:path prov:wasDerivedFrom ; sh:minCount 2 ; sh:nodeKind sh:IRI ] .
+
+shape:ComprobacionLocalidadCensal a sh:NodeShape ; sh:targetClass mex:ComprobacionLocalidadCensal ;
+  sh:property [ sh:path mex:entradaLocalidadObservada ; sh:minCount 1 ; sh:maxCount 1 ; sh:class mex:LocalidadObservada ] ;
+  sh:property [ sh:path mex:contrasteLocalidades ; sh:minCount 1 ; sh:maxCount 1 ; sh:class mex:ContrasteLocalidadesCensales ] ;
+  sh:property [ sh:path mex:claveCensalOriginal ; sh:minCount 1 ; sh:maxCount 1 ; sh:datatype xsd:string ; sh:pattern "^26[0-9]{7}$" ] ;
+  sh:property [ sh:path mex:estadoCoincidenciaCensal ; sh:hasValue "clave_nombre_poblacion_coincidentes_en_fuentes" ; sh:maxCount 1 ] ;
+  sh:property [ sh:path mex:poblacionCoincidente ; sh:minCount 1 ; sh:maxCount 1 ; sh:datatype xsd:integer ; sh:minInclusive 0 ] ;
+  sh:property [ sh:path prov:wasDerivedFrom ; sh:minCount 2 ; sh:nodeKind sh:IRI ] .
+
+shape:RevisionVigenciaCatalogo a sh:NodeShape ; sh:targetClass mex:RevisionVigenciaCatalogo ;
+  sh:property [ sh:path mex:referenciaDeclarada ; sh:minCount 1 ; sh:maxCount 1 ; sh:class mex:ReferenciaCatalogoDeclarada ] ;
+  sh:property [ sh:path mex:estadoVigenciaRevisada ; sh:hasValue "no_acreditada" ; sh:maxCount 1 ] ;
+  sh:property [ sh:path mex:facetasVigenciaJson ; sh:minCount 1 ; sh:maxCount 1 ; sh:datatype xsd:string ] ;
+  sh:property [ sh:path mex:limiteSemantico ; sh:minCount 1 ] ;
+  sh:property [ sh:path prov:wasDerivedFrom ; sh:minCount 2 ; sh:nodeKind sh:IRI ] .
+
+shape:EvaluacionPipelineConsulta a sh:NodeShape ; sh:targetClass mex:EvaluacionPipelineConsulta ;
+  sh:property [ sh:path mex:estadoEvaluacionUI ; sh:hasValue "no_ejecutada" ; sh:maxCount 1 ] ;
+  sh:property [ sh:path mex:identidadBackend ; sh:hasValue "no_demostrada_con_instalacion_Studio" ; sh:maxCount 1 ] ;
+  sh:property [ sh:path mex:casosIntentados ; sh:minCount 1 ; sh:maxCount 1 ; sh:datatype xsd:integer ] ;
+  sh:property [ sh:path mex:respuestasModelo ; sh:minCount 1 ; sh:maxCount 1 ; sh:datatype xsd:integer ] ;
+  sh:property [ sh:path mex:limiteSemantico ; sh:minCount 1 ] ;
+  sh:property [ sh:path prov:wasDerivedFrom ; sh:minCount 1 ; sh:nodeKind sh:IRI ] .
+
+shape:ResultadoCasoEvaluacion a sh:NodeShape ; sh:targetClass mex:ResultadoCasoEvaluacion ;
+  sh:property [ sh:path mex:evaluacionConsulta ; sh:minCount 1 ; sh:maxCount 1 ; sh:class mex:EvaluacionPipelineConsulta ] ;
+  sh:property [ sh:path mex:estadoCasoEvaluacion ; sh:minCount 1 ; sh:maxCount 1 ; sh:in ("acierto" "fallo_recuperacion_contexto_parcial" "no_ejecutado_cuota_modelo") ] ;
+  sh:property [ sh:path mex:preguntaEvaluacion ; sh:minCount 1 ; sh:maxCount 1 ; sh:datatype xsd:string ] ;
+  sh:property [ sh:path mex:respuestaObtenida ; sh:maxCount 1 ; sh:datatype xsd:string ] ;
+  sh:property [ sh:path prov:wasDerivedFrom ; sh:minCount 1 ; sh:nodeKind sh:IRI ] .

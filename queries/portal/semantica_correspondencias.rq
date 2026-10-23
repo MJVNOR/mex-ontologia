@@ -1,0 +1,4 @@
+PREFIX mex: <{{BASE_IRI}}vocab/>
+SELECT ?estado (COUNT(?correspondencia) AS ?cantidad) WHERE {
+  ?correspondencia a mex:CorrespondenciaSemantica ; mex:estadoCorrespondencia ?estado .
+} GROUP BY ?estado ORDER BY ?estado

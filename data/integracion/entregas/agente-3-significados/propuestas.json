@@ -1,0 +1,2826 @@
+{
+  "generado_en_utc": "2026-10-23T09:04:43.402799+00:00",
+  "alcance": "Propuestas no aplicadas al vocabulario central (ontologia/semantica.json, data/semantica/*). Unidad de trabajo: variable documentada y su definición. Sin correspondencias con columnas físicas. Sin ampliar a las 1,308 fuera del núcleo.",
+  "fuentes_revisadas": [
+    "data/semantica/cobertura.json",
+    "ontologia/semantica.json",
+    "docs/nucleo-semantico.md"
+  ],
+  "resumen": {
+    "total": 47,
+    "proponer": 24,
+    "mantener_pendiente": 23,
+    "motivos_pendiente": {
+      "descripcion_generica_insuficiente": 5,
+      "descripcion_pendiente_explicita": 17,
+      "descripcion_truncada": 1
+    },
+    "conceptos_nuevos": 20,
+    "reglas_nuevas": 20
+  },
+  "variables": [
+    {
+      "variable": "Mes",
+      "conjunto": "a723a8e4-b944-405e-b897-bd27f8c67cf9",
+      "titulo_conjunto": "Atenciones brindadas",
+      "diccionario": "e2b59a36-0fe1-4106-9756-ed9aca7dd9d0",
+      "descripcion_literal": "meses en que se brindó la atención",
+      "definicion_iri": "https://example.org/mex-ontologi/definition/e2b59a36-0fe1-4106-9756-ed9aca7dd9d0%2F1",
+      "huella_fila_diccionario": "d9fa87c5f2ed61f03727aa03991a64828dafe8b744e3b2a4f47cb446fa022351",
+      "catalogo_declarado": "",
+      "estado_previo": "candidata_sin_definicion_suficiente",
+      "concepto_pista_previo": "tiempo",
+      "decision": "proponer",
+      "motivo_pendiente": null,
+      "concepto_propuesto": {
+        "id": "mes-atencion",
+        "etiqueta": "Mes de atención",
+        "definicion": "Meses en que se brindó la atención según Atenciones brindadas; conserva evento atención. Población no precisada en la definición (contexto: personas atendidas); requiere año como contexto y no equivale a registro o captura.",
+        "padre": "tiempo",
+        "existente": false
+      },
+      "regla_propuesta": {
+        "id": "mes-atencion",
+        "representacion": "mes",
+        "descripciones_cubiertas": [
+          "meses en que se brindó la atención"
+        ],
+        "definiciones_objetivo": [
+          "https://example.org/mex-ontologi/definition/e2b59a36-0fe1-4106-9756-ed9aca7dd9d0%2F1"
+        ],
+        "diccionarios_objetivo": [
+          "e2b59a36-0fe1-4106-9756-ed9aca7dd9d0"
+        ],
+        "conjuntos_objetivo": [
+          "a723a8e4-b944-405e-b897-bd27f8c67cf9"
+        ],
+        "variables_objetivo": [
+          "Mes"
+        ]
+      },
+      "evidencia": {
+        "descripcion_literal": "meses en que se brindó la atención",
+        "definicion_iri": "https://example.org/mex-ontologi/definition/e2b59a36-0fe1-4106-9756-ed9aca7dd9d0%2F1",
+        "huella": "d9fa87c5f2ed61f03727aa03991a64828dafe8b744e3b2a4f47cb446fa022351",
+        "diccionario": "e2b59a36-0fe1-4106-9756-ed9aca7dd9d0",
+        "conjunto": "a723a8e4-b944-405e-b897-bd27f8c67cf9"
+      },
+      "alcance": "Solo la variable documentada Mes del diccionario e2b59a36-0fe1-4106-9756-ed9aca7dd9d0 (Atenciones brindadas), definición https://example.org/mex-ontologi/definition/e2b59a36-0fe1-4106-9756-ed9aca7dd9d0%2F1. No declara correspondencia con columnas físicas ni se aplica al vocabulario central.",
+      "limitaciones": [
+        "requiere año como contexto y no equivale a registro o captura."
+      ],
+      "documentado_vs_inferencia": "Documentado: 'meses en que se brindó la atención'. Inferencia separada: el concepto/regla propuestos interpretan ese texto; no se validan valores ni catálogos.",
+      "ejemplos_positivos": [
+        "meses en que se brindó la atención"
+      ],
+      "contraejemplos": [
+        "Año de captura (evento distinto)",
+        "Mes de registro genérico de otro conjunto (contexto distinto)"
+      ]
+    },
+    {
+      "variable": "Fecha",
+      "conjunto": "8c1f452e-7967-4c6b-a7b5-f2279360ad6c",
+      "titulo_conjunto": "Cuerpos de Agua en el Estado de Sonora: Ubicación de las Presas",
+      "diccionario": "bfb8788b-8ce3-475e-8bbd-dd1c5154c877",
+      "descripcion_literal": "Fecha del registro.",
+      "definicion_iri": "https://example.org/mex-ontologi/definition/bfb8788b-8ce3-475e-8bbd-dd1c5154c877%2F2",
+      "huella_fila_diccionario": "2186c3ca8317f63c694219598478b0d6bbb92fa403d90b1cd3185f7d8cd97e45",
+      "catalogo_declarado": "",
+      "estado_previo": "candidata_sin_definicion_suficiente",
+      "concepto_pista_previo": "tiempo",
+      "decision": "mantener_pendiente",
+      "motivo_pendiente": "descripcion_generica_insuficiente",
+      "motivo_detalle": "Descripción genérica o ambigua: no precisa evento, papel, unidad o representación para respaldar concepto/regla.",
+      "concepto_propuesto": null,
+      "regla_propuesta": null,
+      "evidencia": {
+        "descripcion_literal": "Fecha del registro.",
+        "definicion_iri": "https://example.org/mex-ontologi/definition/bfb8788b-8ce3-475e-8bbd-dd1c5154c877%2F2",
+        "huella": "2186c3ca8317f63c694219598478b0d6bbb92fa403d90b1cd3185f7d8cd97e45",
+        "diccionario": "bfb8788b-8ce3-475e-8bbd-dd1c5154c877",
+        "conjunto": "8c1f452e-7967-4c6b-a7b5-f2279360ad6c"
+      },
+      "alcance": "Solo la variable documentada Fecha del diccionario bfb8788b-8ce3-475e-8bbd-dd1c5154c877 (Cuerpos de Agua en el Estado de Sonora: Ubicación de las Presas). Permanece candidata; no se propone concepto ni regla.",
+      "limitaciones": [
+        "Sin respaldo suficiente en la definición; no deducir por el nombre de la variable."
+      ],
+      "documentado_vs_inferencia": "Documentado: 'Fecha del registro.'. Inferencia separada: ninguna; mantener pendiente."
+    },
+    {
+      "variable": "FECHA RECEPCION",
+      "conjunto": "c589afac-79f1-4aac-9ade-e949301bcca3",
+      "titulo_conjunto": "Denuncias Ambientales",
+      "diccionario": "3f6942e3-a9c5-42c0-a38b-2c7aad2a6c99",
+      "descripcion_literal": "Fecha de la denuncia",
+      "definicion_iri": "https://example.org/mex-ontologi/definition/3f6942e3-a9c5-42c0-a38b-2c7aad2a6c99%2F4",
+      "huella_fila_diccionario": "a36c2deed414ebc1b03397deaeda60f7b7881371a9514b48a378a5ddcb75544b",
+      "catalogo_declarado": "",
+      "estado_previo": "candidata_sin_definicion_suficiente",
+      "concepto_pista_previo": "tiempo",
+      "decision": "proponer",
+      "motivo_pendiente": null,
+      "concepto_propuesto": {
+        "id": "fecha-denuncia",
+        "etiqueta": "Fecha de la denuncia",
+        "definicion": "Fecha de la denuncia según Denuncias Ambientales; conserva evento denuncia. El nombre de la variable menciona recepción pero la descripción no la confirma; no se asume recepción ni fecha de ocurrencia de los hechos.",
+        "padre": "tiempo",
+        "existente": false
+      },
+      "regla_propuesta": {
+        "id": "fecha-denuncia",
+        "representacion": "fecha",
+        "descripciones_cubiertas": [
+          "Fecha de la denuncia"
+        ],
+        "definiciones_objetivo": [
+          "https://example.org/mex-ontologi/definition/3f6942e3-a9c5-42c0-a38b-2c7aad2a6c99%2F4"
+        ],
+        "diccionarios_objetivo": [
+          "3f6942e3-a9c5-42c0-a38b-2c7aad2a6c99"
+        ],
+        "conjuntos_objetivo": [
+          "c589afac-79f1-4aac-9ade-e949301bcca3"
+        ],
+        "variables_objetivo": [
+          "FECHA RECEPCION"
+        ]
+      },
+      "evidencia": {
+        "descripcion_literal": "Fecha de la denuncia",
+        "definicion_iri": "https://example.org/mex-ontologi/definition/3f6942e3-a9c5-42c0-a38b-2c7aad2a6c99%2F4",
+        "huella": "a36c2deed414ebc1b03397deaeda60f7b7881371a9514b48a378a5ddcb75544b",
+        "diccionario": "3f6942e3-a9c5-42c0-a38b-2c7aad2a6c99",
+        "conjunto": "c589afac-79f1-4aac-9ade-e949301bcca3"
+      },
+      "alcance": "Solo la variable documentada FECHA RECEPCION del diccionario 3f6942e3-a9c5-42c0-a38b-2c7aad2a6c99 (Denuncias Ambientales), definición https://example.org/mex-ontologi/definition/3f6942e3-a9c5-42c0-a38b-2c7aad2a6c99%2F4. No declara correspondencia con columnas físicas ni se aplica al vocabulario central.",
+      "limitaciones": [
+        "no se asume recepción ni fecha de ocurrencia de los hechos."
+      ],
+      "documentado_vs_inferencia": "Documentado: 'Fecha de la denuncia'. Inferencia separada: el concepto/regla propuestos interpretan ese texto; no se validan valores ni catálogos.",
+      "ejemplos_positivos": [
+        "Fecha de la denuncia en Denuncias Ambientales"
+      ],
+      "contraejemplos": [
+        "TRIMESTRE del estrato (granularidad y evento distintos)",
+        "Fecha de ocurrencia de los hechos (no documentada)"
+      ]
+    },
+    {
+      "variable": "TRIMESTRE",
+      "conjunto": "c589afac-79f1-4aac-9ade-e949301bcca3",
+      "titulo_conjunto": "Denuncias Ambientales",
+      "diccionario": "3f6942e3-a9c5-42c0-a38b-2c7aad2a6c99",
+      "descripcion_literal": "Trimestre del estrato",
+      "definicion_iri": "https://example.org/mex-ontologi/definition/3f6942e3-a9c5-42c0-a38b-2c7aad2a6c99%2F2",
+      "huella_fila_diccionario": "799f924f8f10e3831cebdb4fbbc233cb6965caae8902f799881277d12f24320d",
+      "catalogo_declarado": "",
+      "estado_previo": "candidata_sin_definicion_suficiente",
+      "concepto_pista_previo": "tiempo",
+      "decision": "mantener_pendiente",
+      "motivo_pendiente": "descripcion_generica_insuficiente",
+      "motivo_detalle": "Descripción genérica o ambigua: no precisa evento, papel, unidad o representación para respaldar concepto/regla.",
+      "concepto_propuesto": null,
+      "regla_propuesta": null,
+      "evidencia": {
+        "descripcion_literal": "Trimestre del estrato",
+        "definicion_iri": "https://example.org/mex-ontologi/definition/3f6942e3-a9c5-42c0-a38b-2c7aad2a6c99%2F2",
+        "huella": "799f924f8f10e3831cebdb4fbbc233cb6965caae8902f799881277d12f24320d",
+        "diccionario": "3f6942e3-a9c5-42c0-a38b-2c7aad2a6c99",
+        "conjunto": "c589afac-79f1-4aac-9ade-e949301bcca3"
+      },
+      "alcance": "Solo la variable documentada TRIMESTRE del diccionario 3f6942e3-a9c5-42c0-a38b-2c7aad2a6c99 (Denuncias Ambientales). Permanece candidata; no se propone concepto ni regla.",
+      "limitaciones": [
+        "Sin respaldo suficiente en la definición; no deducir por el nombre de la variable."
+      ],
+      "documentado_vs_inferencia": "Documentado: 'Trimestre del estrato'. Inferencia separada: ninguna; mantener pendiente."
+    },
+    {
+      "variable": "Institucion",
+      "conjunto": "e863b72e-7a08-4bc7-bdab-c26ee116a383",
+      "titulo_conjunto": "Donaciones de Órganos y Tejidos",
+      "diccionario": "52fbcaaa-765b-4c92-8418-ccebc3fcfdcd",
+      "descripcion_literal": "Unidad Hospitalaria donde se realizo la donacion",
+      "definicion_iri": "https://example.org/mex-ontologi/definition/52fbcaaa-765b-4c92-8418-ccebc3fcfdcd%2F4",
+      "huella_fila_diccionario": "80d1ee444e0856c21a7763b491074204954652980ab497fd74ea52fb73e84532",
+      "catalogo_declarado": "",
+      "estado_previo": "candidata_sin_definicion_suficiente",
+      "concepto_pista_previo": "organizacion",
+      "decision": "proponer",
+      "motivo_pendiente": null,
+      "concepto_propuesto": {
+        "id": "unidad-hospitalaria-donacion",
+        "etiqueta": "Unidad hospitalaria de donación",
+        "definicion": "Unidad hospitalaria donde se realizó la donación; conserva objeto hospitalario y evento donación. No acredita pertenencia a catálogo CLUES ni distingue publicadora/capturadora.",
+        "padre": "organizacion",
+        "existente": false
+      },
+      "regla_propuesta": {
+        "id": "unidad-hospitalaria-donacion",
+        "representacion": "no_especificada",
+        "descripciones_cubiertas": [
+          "Unidad Hospitalaria donde se realizo la donacion"
+        ],
+        "definiciones_objetivo": [
+          "https://example.org/mex-ontologi/definition/52fbcaaa-765b-4c92-8418-ccebc3fcfdcd%2F4"
+        ],
+        "diccionarios_objetivo": [
+          "52fbcaaa-765b-4c92-8418-ccebc3fcfdcd"
+        ],
+        "conjuntos_objetivo": [
+          "e863b72e-7a08-4bc7-bdab-c26ee116a383"
+        ],
+        "variables_objetivo": [
+          "Institucion"
+        ]
+      },
+      "evidencia": {
+        "descripcion_literal": "Unidad Hospitalaria donde se realizo la donacion",
+        "definicion_iri": "https://example.org/mex-ontologi/definition/52fbcaaa-765b-4c92-8418-ccebc3fcfdcd%2F4",
+        "huella": "80d1ee444e0856c21a7763b491074204954652980ab497fd74ea52fb73e84532",
+        "diccionario": "52fbcaaa-765b-4c92-8418-ccebc3fcfdcd",
+        "conjunto": "e863b72e-7a08-4bc7-bdab-c26ee116a383"
+      },
+      "alcance": "Solo la variable documentada Institucion del diccionario 52fbcaaa-765b-4c92-8418-ccebc3fcfdcd (Donaciones de Órganos y Tejidos), definición https://example.org/mex-ontologi/definition/52fbcaaa-765b-4c92-8418-ccebc3fcfdcd%2F4. No declara correspondencia con columnas físicas ni se aplica al vocabulario central.",
+      "limitaciones": [
+        "conserva objeto hospitalario y evento donación. No acredita pertenencia a catálogo CLUES ni distingue publicadora/capturadora."
+      ],
+      "documentado_vs_inferencia": "Documentado: 'Unidad Hospitalaria donde se realizo la donacion'. Inferencia separada: el concepto/regla propuestos interpretan ese texto; no se validan valores ni catálogos.",
+      "ejemplos_positivos": [
+        "Unidad Hospitalaria donde se realizo la donacion"
+      ],
+      "contraejemplos": [
+        "CLUES con descripción pendiente (sin respaldo)",
+        "Dependencia que capturó (papel distinto)"
+      ]
+    },
+    {
+      "variable": "fecha_fin_trat_ricket",
+      "conjunto": "5494daa1-09ca-4750-aeac-2558553700e1",
+      "titulo_conjunto": "Fiebre manchada (Rickettsia)",
+      "diccionario": "33d0a99e-c721-496f-a05e-07646e9ae42a",
+      "descripcion_literal": "Fecha de termino de tratamiento para rickettsiosis",
+      "definicion_iri": "https://example.org/mex-ontologi/definition/33d0a99e-c721-496f-a05e-07646e9ae42a%2F171",
+      "huella_fila_diccionario": "71114fe3000c34648951eb44c3b03a660501e52a1c7a86c463bd02fc3462d17f",
+      "catalogo_declarado": "",
+      "estado_previo": "candidata_sin_definicion_suficiente",
+      "concepto_pista_previo": "tiempo",
+      "decision": "proponer",
+      "motivo_pendiente": null,
+      "concepto_propuesto": {
+        "id": "fecha-fin-tratamiento-rickettsia",
+        "etiqueta": "Fecha de término de tratamiento",
+        "definicion": "Fecha de término de tratamiento para rickettsiosis; conserva evento término y enfermedad. Población paciente solo contextual.",
+        "padre": "tiempo",
+        "existente": false
+      },
+      "regla_propuesta": {
+        "id": "fecha-fin-tratamiento-rickettsia",
+        "representacion": "fecha",
+        "descripciones_cubiertas": [
+          "Fecha de termino de tratamiento para rickettsiosis"
+        ],
+        "definiciones_objetivo": [
+          "https://example.org/mex-ontologi/definition/33d0a99e-c721-496f-a05e-07646e9ae42a%2F171"
+        ],
+        "diccionarios_objetivo": [
+          "33d0a99e-c721-496f-a05e-07646e9ae42a"
+        ],
+        "conjuntos_objetivo": [
+          "5494daa1-09ca-4750-aeac-2558553700e1"
+        ],
+        "variables_objetivo": [
+          "fecha_fin_trat_ricket"
+        ]
+      },
+      "evidencia": {
+        "descripcion_literal": "Fecha de termino de tratamiento para rickettsiosis",
+        "definicion_iri": "https://example.org/mex-ontologi/definition/33d0a99e-c721-496f-a05e-07646e9ae42a%2F171",
+        "huella": "71114fe3000c34648951eb44c3b03a660501e52a1c7a86c463bd02fc3462d17f",
+        "diccionario": "33d0a99e-c721-496f-a05e-07646e9ae42a",
+        "conjunto": "5494daa1-09ca-4750-aeac-2558553700e1"
+      },
+      "alcance": "Solo la variable documentada fecha_fin_trat_ricket del diccionario 33d0a99e-c721-496f-a05e-07646e9ae42a (Fiebre manchada (Rickettsia)), definición https://example.org/mex-ontologi/definition/33d0a99e-c721-496f-a05e-07646e9ae42a%2F171. No declara correspondencia con columnas físicas ni se aplica al vocabulario central.",
+      "limitaciones": [
+        "conserva evento término y enfermedad. Población paciente solo contextual."
+      ],
+      "documentado_vs_inferencia": "Documentado: 'Fecha de termino de tratamiento para rickettsiosis'. Inferencia separada: el concepto/regla propuestos interpretan ese texto; no se validan valores ni catálogos.",
+      "ejemplos_positivos": [
+        "Fecha de termino de tratamiento para rickettsiosis"
+      ],
+      "contraejemplos": [
+        "Fecha de inicio (evento distinto)",
+        "Fecha de egreso (evento distinto)"
+      ]
+    },
+    {
+      "variable": "fecha_ingreso",
+      "conjunto": "5494daa1-09ca-4750-aeac-2558553700e1",
+      "titulo_conjunto": "Fiebre manchada (Rickettsia)",
+      "diccionario": "33d0a99e-c721-496f-a05e-07646e9ae42a",
+      "descripcion_literal": "Fecha de ingreso del paciente",
+      "definicion_iri": "https://example.org/mex-ontologi/definition/33d0a99e-c721-496f-a05e-07646e9ae42a%2F122",
+      "huella_fila_diccionario": "c44f56eb6597d3aea8e9a1895bd3a4e87c1889fe39737fe9a78492fe6d6926d7",
+      "catalogo_declarado": "",
+      "estado_previo": "candidata_sin_definicion_suficiente",
+      "concepto_pista_previo": "tiempo",
+      "decision": "proponer",
+      "motivo_pendiente": null,
+      "concepto_propuesto": {
+        "id": "fecha-ingreso-paciente",
+        "etiqueta": "Fecha de ingreso del paciente",
+        "definicion": "Fecha de ingreso del paciente según su diccionario; no especifica servicio ni institución de ingreso.",
+        "padre": "tiempo",
+        "existente": false
+      },
+      "regla_propuesta": {
+        "id": "fecha-ingreso-paciente",
+        "representacion": "fecha",
+        "descripciones_cubiertas": [
+          "Fecha de ingreso del paciente"
+        ],
+        "definiciones_objetivo": [
+          "https://example.org/mex-ontologi/definition/33d0a99e-c721-496f-a05e-07646e9ae42a%2F122"
+        ],
+        "diccionarios_objetivo": [
+          "33d0a99e-c721-496f-a05e-07646e9ae42a"
+        ],
+        "conjuntos_objetivo": [
+          "5494daa1-09ca-4750-aeac-2558553700e1"
+        ],
+        "variables_objetivo": [
+          "fecha_ingreso"
+        ]
+      },
+      "evidencia": {
+        "descripcion_literal": "Fecha de ingreso del paciente",
+        "definicion_iri": "https://example.org/mex-ontologi/definition/33d0a99e-c721-496f-a05e-07646e9ae42a%2F122",
+        "huella": "c44f56eb6597d3aea8e9a1895bd3a4e87c1889fe39737fe9a78492fe6d6926d7",
+        "diccionario": "33d0a99e-c721-496f-a05e-07646e9ae42a",
+        "conjunto": "5494daa1-09ca-4750-aeac-2558553700e1"
+      },
+      "alcance": "Solo la variable documentada fecha_ingreso del diccionario 33d0a99e-c721-496f-a05e-07646e9ae42a (Fiebre manchada (Rickettsia)), definición https://example.org/mex-ontologi/definition/33d0a99e-c721-496f-a05e-07646e9ae42a%2F122. No declara correspondencia con columnas físicas ni se aplica al vocabulario central.",
+      "limitaciones": [
+        "no especifica servicio ni institución de ingreso."
+      ],
+      "documentado_vs_inferencia": "Documentado: 'Fecha de ingreso del paciente'. Inferencia separada: el concepto/regla propuestos interpretan ese texto; no se validan valores ni catálogos.",
+      "ejemplos_positivos": [
+        "Fecha de ingreso del paciente = 2024-05-01"
+      ],
+      "contraejemplos": [
+        "Fecha de egreso del paciente (no es ingreso)",
+        "Fecha de ingreso de la llamada (otra población)"
+      ]
+    },
+    {
+      "variable": "fecha_ini_trat_ricket",
+      "conjunto": "5494daa1-09ca-4750-aeac-2558553700e1",
+      "titulo_conjunto": "Fiebre manchada (Rickettsia)",
+      "diccionario": "33d0a99e-c721-496f-a05e-07646e9ae42a",
+      "descripcion_literal": "Fecha de inicio de tratamiento para rickettsiosis",
+      "definicion_iri": "https://example.org/mex-ontologi/definition/33d0a99e-c721-496f-a05e-07646e9ae42a%2F170",
+      "huella_fila_diccionario": "03ace0fe6eb4b31f68cc7b1bd21020a1917915323a6d85b8562b2ce82ad8d9ba",
+      "catalogo_declarado": "",
+      "estado_previo": "candidata_sin_definicion_suficiente",
+      "concepto_pista_previo": "tiempo",
+      "decision": "proponer",
+      "motivo_pendiente": null,
+      "concepto_propuesto": {
+        "id": "fecha-inicio-tratamiento-rickettsia",
+        "etiqueta": "Fecha de inicio de tratamiento",
+        "definicion": "Fecha de inicio de tratamiento para rickettsiosis; conserva evento inicio y enfermedad. Población paciente implícita por contexto, no declarada en la definición.",
+        "padre": "tiempo",
+        "existente": false
+      },
+      "regla_propuesta": {
+        "id": "fecha-inicio-tratamiento-rickettsia",
+        "representacion": "fecha",
+        "descripciones_cubiertas": [
+          "Fecha de inicio de tratamiento para rickettsiosis"
+        ],
+        "definiciones_objetivo": [
+          "https://example.org/mex-ontologi/definition/33d0a99e-c721-496f-a05e-07646e9ae42a%2F170"
+        ],
+        "diccionarios_objetivo": [
+          "33d0a99e-c721-496f-a05e-07646e9ae42a"
+        ],
+        "conjuntos_objetivo": [
+          "5494daa1-09ca-4750-aeac-2558553700e1"
+        ],
+        "variables_objetivo": [
+          "fecha_ini_trat_ricket"
+        ]
+      },
+      "evidencia": {
+        "descripcion_literal": "Fecha de inicio de tratamiento para rickettsiosis",
+        "definicion_iri": "https://example.org/mex-ontologi/definition/33d0a99e-c721-496f-a05e-07646e9ae42a%2F170",
+        "huella": "03ace0fe6eb4b31f68cc7b1bd21020a1917915323a6d85b8562b2ce82ad8d9ba",
+        "diccionario": "33d0a99e-c721-496f-a05e-07646e9ae42a",
+        "conjunto": "5494daa1-09ca-4750-aeac-2558553700e1"
+      },
+      "alcance": "Solo la variable documentada fecha_ini_trat_ricket del diccionario 33d0a99e-c721-496f-a05e-07646e9ae42a (Fiebre manchada (Rickettsia)), definición https://example.org/mex-ontologi/definition/33d0a99e-c721-496f-a05e-07646e9ae42a%2F170. No declara correspondencia con columnas físicas ni se aplica al vocabulario central.",
+      "limitaciones": [
+        "conserva evento inicio y enfermedad. Población paciente implícita por contexto, no declarada en la definición."
+      ],
+      "documentado_vs_inferencia": "Documentado: 'Fecha de inicio de tratamiento para rickettsiosis'. Inferencia separada: el concepto/regla propuestos interpretan ese texto; no se validan valores ni catálogos.",
+      "ejemplos_positivos": [
+        "Fecha de inicio de tratamiento para rickettsiosis"
+      ],
+      "contraejemplos": [
+        "Fecha de término (evento distinto)",
+        "Fecha de ingreso (evento distinto)"
+      ]
+    },
+    {
+      "variable": "fecha_recep_rickett_sangre",
+      "conjunto": "5494daa1-09ca-4750-aeac-2558553700e1",
+      "titulo_conjunto": "Fiebre manchada (Rickettsia)",
+      "diccionario": "33d0a99e-c721-496f-a05e-07646e9ae42a",
+      "descripcion_literal": "Fecha de recepción de primera muestra de sangre para rickettsiosis",
+      "definicion_iri": "https://example.org/mex-ontologi/definition/33d0a99e-c721-496f-a05e-07646e9ae42a%2F160",
+      "huella_fila_diccionario": "acac085686e81639dd8302d22bf5c550b4c63457b63285b72df81d23ae4f3025",
+      "catalogo_declarado": "",
+      "estado_previo": "candidata_sin_definicion_suficiente",
+      "concepto_pista_previo": "tiempo",
+      "decision": "proponer",
+      "motivo_pendiente": null,
+      "concepto_propuesto": {
+        "id": "fecha-recepcion-sangre-rickettsia",
+        "etiqueta": "Fecha de recepción de sangre",
+        "definicion": "Fecha de recepción de la primera muestra de sangre para rickettsiosis; conserva muestra sangre y secuencia primera. No equivale a toma ni a resultado.",
+        "padre": "tiempo",
+        "existente": false
+      },
+      "regla_propuesta": {
+        "id": "fecha-recepcion-sangre-rickettsia",
+        "representacion": "fecha",
+        "descripciones_cubiertas": [
+          "Fecha de recepción de primera muestra de sangre para rickettsiosis"
+        ],
+        "definiciones_objetivo": [
+          "https://example.org/mex-ontologi/definition/33d0a99e-c721-496f-a05e-07646e9ae42a%2F160"
+        ],
+        "diccionarios_objetivo": [
+          "33d0a99e-c721-496f-a05e-07646e9ae42a"
+        ],
+        "conjuntos_objetivo": [
+          "5494daa1-09ca-4750-aeac-2558553700e1"
+        ],
+        "variables_objetivo": [
+          "fecha_recep_rickett_sangre"
+        ]
+      },
+      "evidencia": {
+        "descripcion_literal": "Fecha de recepción de primera muestra de sangre para rickettsiosis",
+        "definicion_iri": "https://example.org/mex-ontologi/definition/33d0a99e-c721-496f-a05e-07646e9ae42a%2F160",
+        "huella": "acac085686e81639dd8302d22bf5c550b4c63457b63285b72df81d23ae4f3025",
+        "diccionario": "33d0a99e-c721-496f-a05e-07646e9ae42a",
+        "conjunto": "5494daa1-09ca-4750-aeac-2558553700e1"
+      },
+      "alcance": "Solo la variable documentada fecha_recep_rickett_sangre del diccionario 33d0a99e-c721-496f-a05e-07646e9ae42a (Fiebre manchada (Rickettsia)), definición https://example.org/mex-ontologi/definition/33d0a99e-c721-496f-a05e-07646e9ae42a%2F160. No declara correspondencia con columnas físicas ni se aplica al vocabulario central.",
+      "limitaciones": [
+        "conserva muestra sangre y secuencia primera. No equivale a toma ni a resultado."
+      ],
+      "documentado_vs_inferencia": "Documentado: 'Fecha de recepción de primera muestra de sangre para rickettsiosis'. Inferencia separada: el concepto/regla propuestos interpretan ese texto; no se validan valores ni catálogos.",
+      "ejemplos_positivos": [
+        "Fecha de recepción de primera muestra de sangre para rickettsiosis"
+      ],
+      "contraejemplos": [
+        "Fecha de recepción de suero (muestra distinta)",
+        "Fecha de toma de sangre (evento distinto)"
+      ]
+    },
+    {
+      "variable": "fecha_recep_rickett_ser1",
+      "conjunto": "5494daa1-09ca-4750-aeac-2558553700e1",
+      "titulo_conjunto": "Fiebre manchada (Rickettsia)",
+      "diccionario": "33d0a99e-c721-496f-a05e-07646e9ae42a",
+      "descripcion_literal": "Fecha de recepción de primera muestra de suero para rickettsiosis",
+      "definicion_iri": "https://example.org/mex-ontologi/definition/33d0a99e-c721-496f-a05e-07646e9ae42a%2F156",
+      "huella_fila_diccionario": "7acfcf13545a39b97dd6bb1f86ee7cb3ebca25225c9980b477d294759751d18d",
+      "catalogo_declarado": "",
+      "estado_previo": "candidata_sin_definicion_suficiente",
+      "concepto_pista_previo": "tiempo",
+      "decision": "proponer",
+      "motivo_pendiente": null,
+      "concepto_propuesto": {
+        "id": "fecha-recepcion-suero-rickettsia-ser1",
+        "etiqueta": "Fecha de recepción de primera muestra de suero",
+        "definicion": "Fecha de recepción de la primera muestra de suero para rickettsiosis según su definición; conserva «primera muestra de suero». «ser1» es identificador de la variable, no prueba tipificada. No equivale a toma ni a resultado.",
+        "padre": "tiempo",
+        "existente": false
+      },
+      "regla_propuesta": {
+        "id": "fecha-recepcion-suero-rickettsia-ser1",
+        "representacion": "fecha",
+        "descripciones_cubiertas": [
+          "Fecha de recepción de primera muestra de suero para rickettsiosis"
+        ],
+        "definiciones_objetivo": [
+          "https://example.org/mex-ontologi/definition/33d0a99e-c721-496f-a05e-07646e9ae42a%2F156"
+        ],
+        "diccionarios_objetivo": [
+          "33d0a99e-c721-496f-a05e-07646e9ae42a"
+        ],
+        "conjuntos_objetivo": [
+          "5494daa1-09ca-4750-aeac-2558553700e1"
+        ],
+        "variables_objetivo": [
+          "fecha_recep_rickett_ser1"
+        ]
+      },
+      "evidencia": {
+        "descripcion_literal": "Fecha de recepción de primera muestra de suero para rickettsiosis",
+        "definicion_iri": "https://example.org/mex-ontologi/definition/33d0a99e-c721-496f-a05e-07646e9ae42a%2F156",
+        "huella": "7acfcf13545a39b97dd6bb1f86ee7cb3ebca25225c9980b477d294759751d18d",
+        "diccionario": "33d0a99e-c721-496f-a05e-07646e9ae42a",
+        "conjunto": "5494daa1-09ca-4750-aeac-2558553700e1"
+      },
+      "alcance": "Solo la variable documentada fecha_recep_rickett_ser1 del diccionario 33d0a99e-c721-496f-a05e-07646e9ae42a (Fiebre manchada (Rickettsia)), definición https://example.org/mex-ontologi/definition/33d0a99e-c721-496f-a05e-07646e9ae42a%2F156. No declara correspondencia con columnas físicas ni se aplica al vocabulario central.",
+      "limitaciones": [
+        "conserva «primera muestra de suero». «ser1» es identificador de la variable, no prueba tipificada. No equivale a toma ni a resultado."
+      ],
+      "documentado_vs_inferencia": "Documentado: 'Fecha de recepción de primera muestra de suero para rickettsiosis'. Inferencia separada: el concepto/regla propuestos interpretan ese texto; no se validan valores ni catálogos.",
+      "ejemplos_positivos": [
+        "Fecha de recepción de primera muestra de suero para rickettsiosis"
+      ],
+      "contraejemplos": [
+        "Fecha de toma (evento distinto)",
+        "Fecha de recepción de sangre (muestra distinta)"
+      ]
+    },
+    {
+      "variable": "fecha_resultado_rickett_rtpcr",
+      "conjunto": "5494daa1-09ca-4750-aeac-2558553700e1",
+      "titulo_conjunto": "Fiebre manchada (Rickettsia)",
+      "diccionario": "33d0a99e-c721-496f-a05e-07646e9ae42a",
+      "descripcion_literal": "Fecha de resultado PCR tiempo real para rickettsiosis",
+      "definicion_iri": "https://example.org/mex-ontologi/definition/33d0a99e-c721-496f-a05e-07646e9ae42a%2F167",
+      "huella_fila_diccionario": "5e50a9e078eb066f98cc57a44a4e85c34084a73f6932993285f18ccd45cc4e5f",
+      "catalogo_declarado": "",
+      "estado_previo": "candidata_sin_definicion_suficiente",
+      "concepto_pista_previo": "tiempo",
+      "decision": "proponer",
+      "motivo_pendiente": null,
+      "concepto_propuesto": {
+        "id": "fecha-resultado-pcr-tiempo-real-rickettsia",
+        "etiqueta": "Fecha de resultado PCR tiempo real",
+        "definicion": "Fecha de resultado «PCR tiempo real» para rickettsiosis según su definición; conserva la expresión documentada sin tipificar ensayo. No equivale a toma, recepción ni a resultado de suero.",
+        "padre": "tiempo",
+        "existente": false
+      },
+      "regla_propuesta": {
+        "id": "fecha-resultado-pcr-tiempo-real-rickettsia",
+        "representacion": "fecha",
+        "descripciones_cubiertas": [
+          "Fecha de resultado PCR tiempo real para rickettsiosis"
+        ],
+        "definiciones_objetivo": [
+          "https://example.org/mex-ontologi/definition/33d0a99e-c721-496f-a05e-07646e9ae42a%2F167"
+        ],
+        "diccionarios_objetivo": [
+          "33d0a99e-c721-496f-a05e-07646e9ae42a"
+        ],
+        "conjuntos_objetivo": [
+          "5494daa1-09ca-4750-aeac-2558553700e1"
+        ],
+        "variables_objetivo": [
+          "fecha_resultado_rickett_rtpcr"
+        ]
+      },
+      "evidencia": {
+        "descripcion_literal": "Fecha de resultado PCR tiempo real para rickettsiosis",
+        "definicion_iri": "https://example.org/mex-ontologi/definition/33d0a99e-c721-496f-a05e-07646e9ae42a%2F167",
+        "huella": "5e50a9e078eb066f98cc57a44a4e85c34084a73f6932993285f18ccd45cc4e5f",
+        "diccionario": "33d0a99e-c721-496f-a05e-07646e9ae42a",
+        "conjunto": "5494daa1-09ca-4750-aeac-2558553700e1"
+      },
+      "alcance": "Solo la variable documentada fecha_resultado_rickett_rtpcr del diccionario 33d0a99e-c721-496f-a05e-07646e9ae42a (Fiebre manchada (Rickettsia)), definición https://example.org/mex-ontologi/definition/33d0a99e-c721-496f-a05e-07646e9ae42a%2F167. No declara correspondencia con columnas físicas ni se aplica al vocabulario central.",
+      "limitaciones": [
+        "conserva la expresión documentada sin tipificar ensayo. No equivale a toma, recepción ni a resultado de suero."
+      ],
+      "documentado_vs_inferencia": "Documentado: 'Fecha de resultado PCR tiempo real para rickettsiosis'. Inferencia separada: el concepto/regla propuestos interpretan ese texto; no se validan valores ni catálogos.",
+      "ejemplos_positivos": [
+        "Fecha de resultado PCR tiempo real para rickettsiosis"
+      ],
+      "contraejemplos": [
+        "Fecha de resultado de primera muestra de suero (muestra/expresión distinta)",
+        "Fecha de toma con «PCR tiempo real» (evento distinto)"
+      ]
+    },
+    {
+      "variable": "fecha_resultado_rickett_ser1",
+      "conjunto": "5494daa1-09ca-4750-aeac-2558553700e1",
+      "titulo_conjunto": "Fiebre manchada (Rickettsia)",
+      "diccionario": "33d0a99e-c721-496f-a05e-07646e9ae42a",
+      "descripcion_literal": "Fecha de resultado de la primera muestra de suer para rickettsiosis",
+      "definicion_iri": "https://example.org/mex-ontologi/definition/33d0a99e-c721-496f-a05e-07646e9ae42a%2F157",
+      "huella_fila_diccionario": "e1e372021336d839cf3bc0165da66355938e7ce845e74920f95cd6c85d52f164",
+      "catalogo_declarado": "",
+      "estado_previo": "candidata_sin_definicion_suficiente",
+      "concepto_pista_previo": "tiempo",
+      "decision": "proponer",
+      "motivo_pendiente": null,
+      "concepto_propuesto": {
+        "id": "fecha-resultado-suero-rickettsia-ser1",
+        "etiqueta": "Fecha de resultado de primera muestra de suero",
+        "definicion": "Fecha de resultado de la primera muestra de suero para rickettsiosis según su definición (texto original «suer»); conserva «primera muestra de suero». «ser1» es identificador de la variable sin deducir prueba. No equivale a toma, recepción ni a «PCR tiempo real».",
+        "padre": "tiempo",
+        "existente": false
+      },
+      "regla_propuesta": {
+        "id": "fecha-resultado-suero-rickettsia-ser1",
+        "representacion": "fecha",
+        "descripciones_cubiertas": [
+          "Fecha de resultado de la primera muestra de suer para rickettsiosis"
+        ],
+        "definiciones_objetivo": [
+          "https://example.org/mex-ontologi/definition/33d0a99e-c721-496f-a05e-07646e9ae42a%2F157"
+        ],
+        "diccionarios_objetivo": [
+          "33d0a99e-c721-496f-a05e-07646e9ae42a"
+        ],
+        "conjuntos_objetivo": [
+          "5494daa1-09ca-4750-aeac-2558553700e1"
+        ],
+        "variables_objetivo": [
+          "fecha_resultado_rickett_ser1"
+        ]
+      },
+      "evidencia": {
+        "descripcion_literal": "Fecha de resultado de la primera muestra de suer para rickettsiosis",
+        "definicion_iri": "https://example.org/mex-ontologi/definition/33d0a99e-c721-496f-a05e-07646e9ae42a%2F157",
+        "huella": "e1e372021336d839cf3bc0165da66355938e7ce845e74920f95cd6c85d52f164",
+        "diccionario": "33d0a99e-c721-496f-a05e-07646e9ae42a",
+        "conjunto": "5494daa1-09ca-4750-aeac-2558553700e1"
+      },
+      "alcance": "Solo la variable documentada fecha_resultado_rickett_ser1 del diccionario 33d0a99e-c721-496f-a05e-07646e9ae42a (Fiebre manchada (Rickettsia)), definición https://example.org/mex-ontologi/definition/33d0a99e-c721-496f-a05e-07646e9ae42a%2F157. No declara correspondencia con columnas físicas ni se aplica al vocabulario central.",
+      "limitaciones": [
+        "conserva «primera muestra de suero». «ser1» es identificador de la variable sin deducir prueba. No equivale a toma, recepción ni a «PCR tiempo real»."
+      ],
+      "documentado_vs_inferencia": "Documentado: 'Fecha de resultado de la primera muestra de suer para rickettsiosis'. Inferencia separada: el concepto/regla propuestos interpretan ese texto; no se validan valores ni catálogos.",
+      "ejemplos_positivos": [
+        "Fecha de resultado de la primera muestra de suero para rickettsiosis"
+      ],
+      "contraejemplos": [
+        "Fecha de resultado «PCR tiempo real» (expresión distinta)",
+        "Fecha de toma (evento distinto)"
+      ]
+    },
+    {
+      "variable": "fecha_toma_rickett_sangre",
+      "conjunto": "5494daa1-09ca-4750-aeac-2558553700e1",
+      "titulo_conjunto": "Fiebre manchada (Rickettsia)",
+      "diccionario": "33d0a99e-c721-496f-a05e-07646e9ae42a",
+      "descripcion_literal": "Fecha de toma muestra de sangre para rickettsiosis",
+      "definicion_iri": "https://example.org/mex-ontologi/definition/33d0a99e-c721-496f-a05e-07646e9ae42a%2F159",
+      "huella_fila_diccionario": "d7c7d8a271ed777f712b45f809bf981eaa4efa782aad9ae7d0c440f7942c135a",
+      "catalogo_declarado": "",
+      "estado_previo": "candidata_sin_definicion_suficiente",
+      "concepto_pista_previo": "tiempo",
+      "decision": "proponer",
+      "motivo_pendiente": null,
+      "concepto_propuesto": {
+        "id": "fecha-toma-sangre-rickettsia",
+        "etiqueta": "Fecha de toma de sangre",
+        "definicion": "Fecha de toma de muestra de sangre para rickettsiosis; conserva muestra sangre. La definición no precisa secuencia ni prueba posterior.",
+        "padre": "tiempo",
+        "existente": false
+      },
+      "regla_propuesta": {
+        "id": "fecha-toma-sangre-rickettsia",
+        "representacion": "fecha",
+        "descripciones_cubiertas": [
+          "Fecha de toma muestra de sangre para rickettsiosis"
+        ],
+        "definiciones_objetivo": [
+          "https://example.org/mex-ontologi/definition/33d0a99e-c721-496f-a05e-07646e9ae42a%2F159"
+        ],
+        "diccionarios_objetivo": [
+          "33d0a99e-c721-496f-a05e-07646e9ae42a"
+        ],
+        "conjuntos_objetivo": [
+          "5494daa1-09ca-4750-aeac-2558553700e1"
+        ],
+        "variables_objetivo": [
+          "fecha_toma_rickett_sangre"
+        ]
+      },
+      "evidencia": {
+        "descripcion_literal": "Fecha de toma muestra de sangre para rickettsiosis",
+        "definicion_iri": "https://example.org/mex-ontologi/definition/33d0a99e-c721-496f-a05e-07646e9ae42a%2F159",
+        "huella": "d7c7d8a271ed777f712b45f809bf981eaa4efa782aad9ae7d0c440f7942c135a",
+        "diccionario": "33d0a99e-c721-496f-a05e-07646e9ae42a",
+        "conjunto": "5494daa1-09ca-4750-aeac-2558553700e1"
+      },
+      "alcance": "Solo la variable documentada fecha_toma_rickett_sangre del diccionario 33d0a99e-c721-496f-a05e-07646e9ae42a (Fiebre manchada (Rickettsia)), definición https://example.org/mex-ontologi/definition/33d0a99e-c721-496f-a05e-07646e9ae42a%2F159. No declara correspondencia con columnas físicas ni se aplica al vocabulario central.",
+      "limitaciones": [
+        "conserva muestra sangre. La definición no precisa secuencia ni prueba posterior."
+      ],
+      "documentado_vs_inferencia": "Documentado: 'Fecha de toma muestra de sangre para rickettsiosis'. Inferencia separada: el concepto/regla propuestos interpretan ese texto; no se validan valores ni catálogos.",
+      "ejemplos_positivos": [
+        "Fecha de toma muestra de sangre para rickettsiosis"
+      ],
+      "contraejemplos": [
+        "Fecha de toma de suero (muestra distinta)",
+        "Fecha de recepción de sangre (evento distinto)"
+      ]
+    },
+    {
+      "variable": "fecha_toma_rickett_ser1",
+      "conjunto": "5494daa1-09ca-4750-aeac-2558553700e1",
+      "titulo_conjunto": "Fiebre manchada (Rickettsia)",
+      "diccionario": "33d0a99e-c721-496f-a05e-07646e9ae42a",
+      "descripcion_literal": "Fecha en la que se toma la primera muestra de suero para rickettsiosis",
+      "definicion_iri": "https://example.org/mex-ontologi/definition/33d0a99e-c721-496f-a05e-07646e9ae42a%2F155",
+      "huella_fila_diccionario": "c7f25229e7f3978b89732a1edbadbf2c0593c2629449180e0576eb7634e4b28f",
+      "catalogo_declarado": "",
+      "estado_previo": "candidata_sin_definicion_suficiente",
+      "concepto_pista_previo": "tiempo",
+      "decision": "proponer",
+      "motivo_pendiente": null,
+      "concepto_propuesto": {
+        "id": "fecha-toma-suero-rickettsia-ser1",
+        "etiqueta": "Fecha de toma de primera muestra de suero",
+        "definicion": "Fecha en la que se toma la primera muestra de suero para rickettsiosis según su definición; conserva la expresión documentada «primera muestra de suero». «ser1» se conserva como identificador de la variable sin deducir tipo de prueba serológica. No equivale a recepción ni a resultado.",
+        "padre": "tiempo",
+        "existente": false
+      },
+      "regla_propuesta": {
+        "id": "fecha-toma-suero-rickettsia-ser1",
+        "representacion": "fecha",
+        "descripciones_cubiertas": [
+          "Fecha en la que se toma la primera muestra de suero para rickettsiosis"
+        ],
+        "definiciones_objetivo": [
+          "https://example.org/mex-ontologi/definition/33d0a99e-c721-496f-a05e-07646e9ae42a%2F155"
+        ],
+        "diccionarios_objetivo": [
+          "33d0a99e-c721-496f-a05e-07646e9ae42a"
+        ],
+        "conjuntos_objetivo": [
+          "5494daa1-09ca-4750-aeac-2558553700e1"
+        ],
+        "variables_objetivo": [
+          "fecha_toma_rickett_ser1"
+        ]
+      },
+      "evidencia": {
+        "descripcion_literal": "Fecha en la que se toma la primera muestra de suero para rickettsiosis",
+        "definicion_iri": "https://example.org/mex-ontologi/definition/33d0a99e-c721-496f-a05e-07646e9ae42a%2F155",
+        "huella": "c7f25229e7f3978b89732a1edbadbf2c0593c2629449180e0576eb7634e4b28f",
+        "diccionario": "33d0a99e-c721-496f-a05e-07646e9ae42a",
+        "conjunto": "5494daa1-09ca-4750-aeac-2558553700e1"
+      },
+      "alcance": "Solo la variable documentada fecha_toma_rickett_ser1 del diccionario 33d0a99e-c721-496f-a05e-07646e9ae42a (Fiebre manchada (Rickettsia)), definición https://example.org/mex-ontologi/definition/33d0a99e-c721-496f-a05e-07646e9ae42a%2F155. No declara correspondencia con columnas físicas ni se aplica al vocabulario central.",
+      "limitaciones": [
+        "conserva la expresión documentada «primera muestra de suero». «ser1» se conserva como identificador de la variable sin deducir tipo de prueba serológica. No equivale a recepción ni a resultado."
+      ],
+      "documentado_vs_inferencia": "Documentado: 'Fecha en la que se toma la primera muestra de suero para rickettsiosis'. Inferencia separada: el concepto/regla propuestos interpretan ese texto; no se validan valores ni catálogos.",
+      "ejemplos_positivos": [
+        "Fecha en la que se toma la primera muestra de suero para rickettsiosis"
+      ],
+      "contraejemplos": [
+        "Fecha de recepción de esa muestra (evento distinto)",
+        "Fecha de toma de sangre (muestra distinta)"
+      ]
+    },
+    {
+      "variable": "CVE_LOC",
+      "conjunto": "b54f94ee-b5f1-404c-ab41-f19f6dcc8b4f",
+      "titulo_conjunto": "Indice de marginación por localidad",
+      "diccionario": "251309e5-0309-46ed-9711-77a1dd408eeb",
+      "descripcion_literal": "Clave geográfica",
+      "definicion_iri": "https://example.org/mex-ontologi/definition/251309e5-0309-46ed-9711-77a1dd408eeb%2F1",
+      "huella_fila_diccionario": "e94b7111521507993b7fdc300e1f645d879d4b3433e915de0c0ed5b86bd31578",
+      "catalogo_declarado": "",
+      "estado_previo": "candidata_sin_definicion_suficiente",
+      "concepto_pista_previo": "localidad",
+      "decision": "mantener_pendiente",
+      "motivo_pendiente": "descripcion_generica_insuficiente",
+      "motivo_detalle": "Descripción genérica o ambigua: no precisa evento, papel, unidad o representación para respaldar concepto/regla.",
+      "concepto_propuesto": null,
+      "regla_propuesta": null,
+      "evidencia": {
+        "descripcion_literal": "Clave geográfica",
+        "definicion_iri": "https://example.org/mex-ontologi/definition/251309e5-0309-46ed-9711-77a1dd408eeb%2F1",
+        "huella": "e94b7111521507993b7fdc300e1f645d879d4b3433e915de0c0ed5b86bd31578",
+        "diccionario": "251309e5-0309-46ed-9711-77a1dd408eeb",
+        "conjunto": "b54f94ee-b5f1-404c-ab41-f19f6dcc8b4f"
+      },
+      "alcance": "Solo la variable documentada CVE_LOC del diccionario 251309e5-0309-46ed-9711-77a1dd408eeb (Indice de marginación por localidad). Permanece candidata; no se propone concepto ni regla.",
+      "limitaciones": [
+        "Sin respaldo suficiente en la definición; no deducir por el nombre de la variable."
+      ],
+      "documentado_vs_inferencia": "Documentado: 'Clave geográfica'. Inferencia separada: ninguna; mantener pendiente."
+    },
+    {
+      "variable": "CLUES",
+      "conjunto": "940de7d8-73ec-4a08-8d26-b7cc97ff17bd",
+      "titulo_conjunto": "Información Sobre Nacimientos",
+      "diccionario": "22202305-2d02-4c49-b216-cc98224357f0",
+      "descripcion_literal": "Pendiente de especificar",
+      "definicion_iri": "https://example.org/mex-ontologi/definition/22202305-2d02-4c49-b216-cc98224357f0%2F83",
+      "huella_fila_diccionario": "8acb1135cdd9dbc95750049533a5dacc41a05b4da37d6fe4ea9d19ea5b059a1d",
+      "catalogo_declarado": "",
+      "estado_previo": "candidata_sin_definicion_suficiente",
+      "concepto_pista_previo": "unidad-salud",
+      "decision": "mantener_pendiente",
+      "motivo_pendiente": "descripcion_pendiente_explicita",
+      "motivo_detalle": "Descripción literal «Pendiente de especificar»: sin respaldo documental; no se deduce por el nombre (nucleo-semantico.md:52).",
+      "concepto_propuesto": null,
+      "regla_propuesta": null,
+      "evidencia": {
+        "descripcion_literal": "Pendiente de especificar",
+        "definicion_iri": "https://example.org/mex-ontologi/definition/22202305-2d02-4c49-b216-cc98224357f0%2F83",
+        "huella": "8acb1135cdd9dbc95750049533a5dacc41a05b4da37d6fe4ea9d19ea5b059a1d",
+        "diccionario": "22202305-2d02-4c49-b216-cc98224357f0",
+        "conjunto": "940de7d8-73ec-4a08-8d26-b7cc97ff17bd"
+      },
+      "alcance": "Solo la variable documentada CLUES del diccionario 22202305-2d02-4c49-b216-cc98224357f0 (Información Sobre Nacimientos). Permanece candidata; no se propone concepto ni regla.",
+      "limitaciones": [
+        "Sin respaldo suficiente en la definición; no deducir por el nombre de la variable."
+      ],
+      "documentado_vs_inferencia": "Documentado: 'Pendiente de especificar'. Inferencia separada: ninguna; mantener pendiente."
+    },
+    {
+      "variable": "LOCALIDADCERTIFICA",
+      "conjunto": "940de7d8-73ec-4a08-8d26-b7cc97ff17bd",
+      "titulo_conjunto": "Información Sobre Nacimientos",
+      "diccionario": "22202305-2d02-4c49-b216-cc98224357f0",
+      "descripcion_literal": "Pendiente de especificar",
+      "definicion_iri": "https://example.org/mex-ontologi/definition/22202305-2d02-4c49-b216-cc98224357f0%2F104",
+      "huella_fila_diccionario": "bda091e282317f0b810033ac9f31188dcecfe6208940a47fae73f4fb6ca85499",
+      "catalogo_declarado": "",
+      "estado_previo": "candidata_sin_definicion_suficiente",
+      "concepto_pista_previo": "localidad",
+      "decision": "mantener_pendiente",
+      "motivo_pendiente": "descripcion_pendiente_explicita",
+      "motivo_detalle": "Descripción literal «Pendiente de especificar»: sin respaldo documental; no se deduce por el nombre (nucleo-semantico.md:52).",
+      "concepto_propuesto": null,
+      "regla_propuesta": null,
+      "evidencia": {
+        "descripcion_literal": "Pendiente de especificar",
+        "definicion_iri": "https://example.org/mex-ontologi/definition/22202305-2d02-4c49-b216-cc98224357f0%2F104",
+        "huella": "bda091e282317f0b810033ac9f31188dcecfe6208940a47fae73f4fb6ca85499",
+        "diccionario": "22202305-2d02-4c49-b216-cc98224357f0",
+        "conjunto": "940de7d8-73ec-4a08-8d26-b7cc97ff17bd"
+      },
+      "alcance": "Solo la variable documentada LOCALIDADCERTIFICA del diccionario 22202305-2d02-4c49-b216-cc98224357f0 (Información Sobre Nacimientos). Permanece candidata; no se propone concepto ni regla.",
+      "limitaciones": [
+        "Sin respaldo suficiente en la definición; no deducir por el nombre de la variable."
+      ],
+      "documentado_vs_inferencia": "Documentado: 'Pendiente de especificar'. Inferencia separada: ninguna; mantener pendiente."
+    },
+    {
+      "variable": "LOCALIDADCERTIFICAD",
+      "conjunto": "940de7d8-73ec-4a08-8d26-b7cc97ff17bd",
+      "titulo_conjunto": "Información Sobre Nacimientos",
+      "diccionario": "22202305-2d02-4c49-b216-cc98224357f0",
+      "descripcion_literal": "Pendiente de especificar",
+      "definicion_iri": "https://example.org/mex-ontologi/definition/22202305-2d02-4c49-b216-cc98224357f0%2F105",
+      "huella_fila_diccionario": "c77a7050ed8af0bf7ab37ca07a830539d720a02adb9c4722d417fcdcdabd4146",
+      "catalogo_declarado": "",
+      "estado_previo": "candidata_sin_definicion_suficiente",
+      "concepto_pista_previo": "localidad",
+      "decision": "mantener_pendiente",
+      "motivo_pendiente": "descripcion_pendiente_explicita",
+      "motivo_detalle": "Descripción literal «Pendiente de especificar»: sin respaldo documental; no se deduce por el nombre (nucleo-semantico.md:52).",
+      "concepto_propuesto": null,
+      "regla_propuesta": null,
+      "evidencia": {
+        "descripcion_literal": "Pendiente de especificar",
+        "definicion_iri": "https://example.org/mex-ontologi/definition/22202305-2d02-4c49-b216-cc98224357f0%2F105",
+        "huella": "c77a7050ed8af0bf7ab37ca07a830539d720a02adb9c4722d417fcdcdabd4146",
+        "diccionario": "22202305-2d02-4c49-b216-cc98224357f0",
+        "conjunto": "940de7d8-73ec-4a08-8d26-b7cc97ff17bd"
+      },
+      "alcance": "Solo la variable documentada LOCALIDADCERTIFICAD del diccionario 22202305-2d02-4c49-b216-cc98224357f0 (Información Sobre Nacimientos). Permanece candidata; no se propone concepto ni regla.",
+      "limitaciones": [
+        "Sin respaldo suficiente en la definición; no deducir por el nombre de la variable."
+      ],
+      "documentado_vs_inferencia": "Documentado: 'Pendiente de especificar'. Inferencia separada: ninguna; mantener pendiente."
+    },
+    {
+      "variable": "MUNICIPIOCERTIFICA",
+      "conjunto": "940de7d8-73ec-4a08-8d26-b7cc97ff17bd",
+      "titulo_conjunto": "Información Sobre Nacimientos",
+      "diccionario": "22202305-2d02-4c49-b216-cc98224357f0",
+      "descripcion_literal": "Pendiente de especificar",
+      "definicion_iri": "https://example.org/mex-ontologi/definition/22202305-2d02-4c49-b216-cc98224357f0%2F102",
+      "huella_fila_diccionario": "21c7fce4e834b211e513fcdc8b55a757dc5afc3da9e2b846db7aba776cfbfdf5",
+      "catalogo_declarado": "",
+      "estado_previo": "candidata_sin_definicion_suficiente",
+      "concepto_pista_previo": "municipio",
+      "decision": "mantener_pendiente",
+      "motivo_pendiente": "descripcion_pendiente_explicita",
+      "motivo_detalle": "Descripción literal «Pendiente de especificar»: sin respaldo documental; no se deduce por el nombre (nucleo-semantico.md:52).",
+      "concepto_propuesto": null,
+      "regla_propuesta": null,
+      "evidencia": {
+        "descripcion_literal": "Pendiente de especificar",
+        "definicion_iri": "https://example.org/mex-ontologi/definition/22202305-2d02-4c49-b216-cc98224357f0%2F102",
+        "huella": "21c7fce4e834b211e513fcdc8b55a757dc5afc3da9e2b846db7aba776cfbfdf5",
+        "diccionario": "22202305-2d02-4c49-b216-cc98224357f0",
+        "conjunto": "940de7d8-73ec-4a08-8d26-b7cc97ff17bd"
+      },
+      "alcance": "Solo la variable documentada MUNICIPIOCERTIFICA del diccionario 22202305-2d02-4c49-b216-cc98224357f0 (Información Sobre Nacimientos). Permanece candidata; no se propone concepto ni regla.",
+      "limitaciones": [
+        "Sin respaldo suficiente en la definición; no deducir por el nombre de la variable."
+      ],
+      "documentado_vs_inferencia": "Documentado: 'Pendiente de especificar'. Inferencia separada: ninguna; mantener pendiente."
+    },
+    {
+      "variable": "MUNICIPIOCERTIFICAD",
+      "conjunto": "940de7d8-73ec-4a08-8d26-b7cc97ff17bd",
+      "titulo_conjunto": "Información Sobre Nacimientos",
+      "diccionario": "22202305-2d02-4c49-b216-cc98224357f0",
+      "descripcion_literal": "Pendiente de especificar",
+      "definicion_iri": "https://example.org/mex-ontologi/definition/22202305-2d02-4c49-b216-cc98224357f0%2F103",
+      "huella_fila_diccionario": "305e3ccb01619f50cab0ded3a82e6211d21b4dcbebecd506e6911f6b489cf8f3",
+      "catalogo_declarado": "",
+      "estado_previo": "candidata_sin_definicion_suficiente",
+      "concepto_pista_previo": "municipio",
+      "decision": "mantener_pendiente",
+      "motivo_pendiente": "descripcion_pendiente_explicita",
+      "motivo_detalle": "Descripción literal «Pendiente de especificar»: sin respaldo documental; no se deduce por el nombre (nucleo-semantico.md:52).",
+      "concepto_propuesto": null,
+      "regla_propuesta": null,
+      "evidencia": {
+        "descripcion_literal": "Pendiente de especificar",
+        "definicion_iri": "https://example.org/mex-ontologi/definition/22202305-2d02-4c49-b216-cc98224357f0%2F103",
+        "huella": "305e3ccb01619f50cab0ded3a82e6211d21b4dcbebecd506e6911f6b489cf8f3",
+        "diccionario": "22202305-2d02-4c49-b216-cc98224357f0",
+        "conjunto": "940de7d8-73ec-4a08-8d26-b7cc97ff17bd"
+      },
+      "alcance": "Solo la variable documentada MUNICIPIOCERTIFICAD del diccionario 22202305-2d02-4c49-b216-cc98224357f0 (Información Sobre Nacimientos). Permanece candidata; no se propone concepto ni regla.",
+      "limitaciones": [
+        "Sin respaldo suficiente en la definición; no deducir por el nombre de la variable."
+      ],
+      "documentado_vs_inferencia": "Documentado: 'Pendiente de especificar'. Inferencia separada: ninguna; mantener pendiente."
+    },
+    {
+      "variable": "Fecha de alternativa de titulación de examen prof.",
+      "conjunto": "e819466c-7282-46c5-84e9-65917dd8cc85",
+      "titulo_conjunto": "Matrículas de Estudiantes",
+      "diccionario": "8c0e76ff-3a86-4b1d-beee-b04bebe7df8d",
+      "descripcion_literal": "Pendiente de especificar",
+      "definicion_iri": "https://example.org/mex-ontologi/definition/8c0e76ff-3a86-4b1d-beee-b04bebe7df8d%2F66",
+      "huella_fila_diccionario": "e7e0a6b9c15be989bb0faca42c9b29e55a557cd16b0d417fbb4ba533330970d2",
+      "catalogo_declarado": "",
+      "estado_previo": "candidata_sin_definicion_suficiente",
+      "concepto_pista_previo": "tiempo",
+      "decision": "mantener_pendiente",
+      "motivo_pendiente": "descripcion_pendiente_explicita",
+      "motivo_detalle": "Descripción literal «Pendiente de especificar»: sin respaldo documental; no se deduce por el nombre (nucleo-semantico.md:52).",
+      "concepto_propuesto": null,
+      "regla_propuesta": null,
+      "evidencia": {
+        "descripcion_literal": "Pendiente de especificar",
+        "definicion_iri": "https://example.org/mex-ontologi/definition/8c0e76ff-3a86-4b1d-beee-b04bebe7df8d%2F66",
+        "huella": "e7e0a6b9c15be989bb0faca42c9b29e55a557cd16b0d417fbb4ba533330970d2",
+        "diccionario": "8c0e76ff-3a86-4b1d-beee-b04bebe7df8d",
+        "conjunto": "e819466c-7282-46c5-84e9-65917dd8cc85"
+      },
+      "alcance": "Solo la variable documentada Fecha de alternativa de titulación de examen prof. del diccionario 8c0e76ff-3a86-4b1d-beee-b04bebe7df8d (Matrículas de Estudiantes). Permanece candidata; no se propone concepto ni regla.",
+      "limitaciones": [
+        "Sin respaldo suficiente en la definición; no deducir por el nombre de la variable."
+      ],
+      "documentado_vs_inferencia": "Documentado: 'Pendiente de especificar'. Inferencia separada: ninguna; mantener pendiente."
+    },
+    {
+      "variable": "Fecha de alternativa de titulación de no exigibilidad",
+      "conjunto": "e819466c-7282-46c5-84e9-65917dd8cc85",
+      "titulo_conjunto": "Matrículas de Estudiantes",
+      "diccionario": "8c0e76ff-3a86-4b1d-beee-b04bebe7df8d",
+      "descripcion_literal": "Pendiente de especificar",
+      "definicion_iri": "https://example.org/mex-ontologi/definition/8c0e76ff-3a86-4b1d-beee-b04bebe7df8d%2F64",
+      "huella_fila_diccionario": "6759b8b1157290027ece3602d7dff3c8609984dfbbf14c5408e656de0fe1b612",
+      "catalogo_declarado": "",
+      "estado_previo": "candidata_sin_definicion_suficiente",
+      "concepto_pista_previo": "tiempo",
+      "decision": "mantener_pendiente",
+      "motivo_pendiente": "descripcion_pendiente_explicita",
+      "motivo_detalle": "Descripción literal «Pendiente de especificar»: sin respaldo documental; no se deduce por el nombre (nucleo-semantico.md:52).",
+      "concepto_propuesto": null,
+      "regla_propuesta": null,
+      "evidencia": {
+        "descripcion_literal": "Pendiente de especificar",
+        "definicion_iri": "https://example.org/mex-ontologi/definition/8c0e76ff-3a86-4b1d-beee-b04bebe7df8d%2F64",
+        "huella": "6759b8b1157290027ece3602d7dff3c8609984dfbbf14c5408e656de0fe1b612",
+        "diccionario": "8c0e76ff-3a86-4b1d-beee-b04bebe7df8d",
+        "conjunto": "e819466c-7282-46c5-84e9-65917dd8cc85"
+      },
+      "alcance": "Solo la variable documentada Fecha de alternativa de titulación de no exigibilidad del diccionario 8c0e76ff-3a86-4b1d-beee-b04bebe7df8d (Matrículas de Estudiantes). Permanece candidata; no se propone concepto ni regla.",
+      "limitaciones": [
+        "Sin respaldo suficiente en la definición; no deducir por el nombre de la variable."
+      ],
+      "documentado_vs_inferencia": "Documentado: 'Pendiente de especificar'. Inferencia separada: ninguna; mantener pendiente."
+    },
+    {
+      "variable": "Fecha de baja",
+      "conjunto": "e819466c-7282-46c5-84e9-65917dd8cc85",
+      "titulo_conjunto": "Matrículas de Estudiantes",
+      "diccionario": "8c0e76ff-3a86-4b1d-beee-b04bebe7df8d",
+      "descripcion_literal": "Fecha en la que el alumno se dio de baja",
+      "definicion_iri": "https://example.org/mex-ontologi/definition/8c0e76ff-3a86-4b1d-beee-b04bebe7df8d%2F59",
+      "huella_fila_diccionario": "3d15c35ec09f95e97e04b0f65c32d93d2836218220c19d484ee1c98264334889",
+      "catalogo_declarado": "",
+      "estado_previo": "candidata_sin_definicion_suficiente",
+      "concepto_pista_previo": "tiempo",
+      "decision": "proponer",
+      "motivo_pendiente": null,
+      "concepto_propuesto": {
+        "id": "fecha-baja-alumno",
+        "etiqueta": "Fecha de baja del alumno",
+        "definicion": "Fecha de baja del alumno; conserva población y evento baja. Distinta de inscripción y reinscripción.",
+        "padre": "tiempo",
+        "existente": false
+      },
+      "regla_propuesta": {
+        "id": "fecha-baja-alumno",
+        "representacion": "fecha",
+        "descripciones_cubiertas": [
+          "Fecha en la que el alumno se dio de baja"
+        ],
+        "definiciones_objetivo": [
+          "https://example.org/mex-ontologi/definition/8c0e76ff-3a86-4b1d-beee-b04bebe7df8d%2F59"
+        ],
+        "diccionarios_objetivo": [
+          "8c0e76ff-3a86-4b1d-beee-b04bebe7df8d"
+        ],
+        "conjuntos_objetivo": [
+          "e819466c-7282-46c5-84e9-65917dd8cc85"
+        ],
+        "variables_objetivo": [
+          "Fecha de baja"
+        ]
+      },
+      "evidencia": {
+        "descripcion_literal": "Fecha en la que el alumno se dio de baja",
+        "definicion_iri": "https://example.org/mex-ontologi/definition/8c0e76ff-3a86-4b1d-beee-b04bebe7df8d%2F59",
+        "huella": "3d15c35ec09f95e97e04b0f65c32d93d2836218220c19d484ee1c98264334889",
+        "diccionario": "8c0e76ff-3a86-4b1d-beee-b04bebe7df8d",
+        "conjunto": "e819466c-7282-46c5-84e9-65917dd8cc85"
+      },
+      "alcance": "Solo la variable documentada Fecha de baja del diccionario 8c0e76ff-3a86-4b1d-beee-b04bebe7df8d (Matrículas de Estudiantes), definición https://example.org/mex-ontologi/definition/8c0e76ff-3a86-4b1d-beee-b04bebe7df8d%2F59. No declara correspondencia con columnas físicas ni se aplica al vocabulario central.",
+      "limitaciones": [
+        "conserva población y evento baja. Distinta de inscripción y reinscripción."
+      ],
+      "documentado_vs_inferencia": "Documentado: 'Fecha en la que el alumno se dio de baja'. Inferencia separada: el concepto/regla propuestos interpretan ese texto; no se validan valores ni catálogos.",
+      "ejemplos_positivos": [
+        "Fecha en la que el alumno se dio de baja"
+      ],
+      "contraejemplos": [
+        "Fecha de reinscripción (evento distinto)",
+        "Periodo de la baja / Tipo de baja (no son fecha)"
+      ]
+    },
+    {
+      "variable": "Fecha de impresión del título profesional",
+      "conjunto": "e819466c-7282-46c5-84e9-65917dd8cc85",
+      "titulo_conjunto": "Matrículas de Estudiantes",
+      "diccionario": "8c0e76ff-3a86-4b1d-beee-b04bebe7df8d",
+      "descripcion_literal": "Pendiente de especificar",
+      "definicion_iri": "https://example.org/mex-ontologi/definition/8c0e76ff-3a86-4b1d-beee-b04bebe7df8d%2F68",
+      "huella_fila_diccionario": "0475086a02e3cd9f2d50ded42b978d782edb3e1ea742601c0c0b40fec2e43d58",
+      "catalogo_declarado": "",
+      "estado_previo": "candidata_sin_definicion_suficiente",
+      "concepto_pista_previo": "tiempo",
+      "decision": "mantener_pendiente",
+      "motivo_pendiente": "descripcion_pendiente_explicita",
+      "motivo_detalle": "Descripción literal «Pendiente de especificar»: sin respaldo documental; no se deduce por el nombre (nucleo-semantico.md:52).",
+      "concepto_propuesto": null,
+      "regla_propuesta": null,
+      "evidencia": {
+        "descripcion_literal": "Pendiente de especificar",
+        "definicion_iri": "https://example.org/mex-ontologi/definition/8c0e76ff-3a86-4b1d-beee-b04bebe7df8d%2F68",
+        "huella": "0475086a02e3cd9f2d50ded42b978d782edb3e1ea742601c0c0b40fec2e43d58",
+        "diccionario": "8c0e76ff-3a86-4b1d-beee-b04bebe7df8d",
+        "conjunto": "e819466c-7282-46c5-84e9-65917dd8cc85"
+      },
+      "alcance": "Solo la variable documentada Fecha de impresión del título profesional del diccionario 8c0e76ff-3a86-4b1d-beee-b04bebe7df8d (Matrículas de Estudiantes). Permanece candidata; no se propone concepto ni regla.",
+      "limitaciones": [
+        "Sin respaldo suficiente en la definición; no deducir por el nombre de la variable."
+      ],
+      "documentado_vs_inferencia": "Documentado: 'Pendiente de especificar'. Inferencia separada: ninguna; mantener pendiente."
+    },
+    {
+      "variable": "Fecha de la convalidación",
+      "conjunto": "e819466c-7282-46c5-84e9-65917dd8cc85",
+      "titulo_conjunto": "Matrículas de Estudiantes",
+      "diccionario": "8c0e76ff-3a86-4b1d-beee-b04bebe7df8d",
+      "descripcion_literal": "Pendiente de especificar",
+      "definicion_iri": "https://example.org/mex-ontologi/definition/8c0e76ff-3a86-4b1d-beee-b04bebe7df8d%2F69",
+      "huella_fila_diccionario": "a0792669fb9fb33d8e517cc98ef71161b90ee12f10a620cfa84b647522a5c6c1",
+      "catalogo_declarado": "",
+      "estado_previo": "candidata_sin_definicion_suficiente",
+      "concepto_pista_previo": "tiempo",
+      "decision": "mantener_pendiente",
+      "motivo_pendiente": "descripcion_pendiente_explicita",
+      "motivo_detalle": "Descripción literal «Pendiente de especificar»: sin respaldo documental; no se deduce por el nombre (nucleo-semantico.md:52).",
+      "concepto_propuesto": null,
+      "regla_propuesta": null,
+      "evidencia": {
+        "descripcion_literal": "Pendiente de especificar",
+        "definicion_iri": "https://example.org/mex-ontologi/definition/8c0e76ff-3a86-4b1d-beee-b04bebe7df8d%2F69",
+        "huella": "a0792669fb9fb33d8e517cc98ef71161b90ee12f10a620cfa84b647522a5c6c1",
+        "diccionario": "8c0e76ff-3a86-4b1d-beee-b04bebe7df8d",
+        "conjunto": "e819466c-7282-46c5-84e9-65917dd8cc85"
+      },
+      "alcance": "Solo la variable documentada Fecha de la convalidación del diccionario 8c0e76ff-3a86-4b1d-beee-b04bebe7df8d (Matrículas de Estudiantes). Permanece candidata; no se propone concepto ni regla.",
+      "limitaciones": [
+        "Sin respaldo suficiente en la definición; no deducir por el nombre de la variable."
+      ],
+      "documentado_vs_inferencia": "Documentado: 'Pendiente de especificar'. Inferencia separada: ninguna; mantener pendiente."
+    },
+    {
+      "variable": "Fecha de la equivalencia",
+      "conjunto": "e819466c-7282-46c5-84e9-65917dd8cc85",
+      "titulo_conjunto": "Matrículas de Estudiantes",
+      "diccionario": "8c0e76ff-3a86-4b1d-beee-b04bebe7df8d",
+      "descripcion_literal": "Pendiente de especificar",
+      "definicion_iri": "https://example.org/mex-ontologi/definition/8c0e76ff-3a86-4b1d-beee-b04bebe7df8d%2F70",
+      "huella_fila_diccionario": "1fe84a93ab498ab4d7dc47f0a54b4ad5278e0d9194e5cc00c06c3028927ff3b3",
+      "catalogo_declarado": "",
+      "estado_previo": "candidata_sin_definicion_suficiente",
+      "concepto_pista_previo": "tiempo",
+      "decision": "mantener_pendiente",
+      "motivo_pendiente": "descripcion_pendiente_explicita",
+      "motivo_detalle": "Descripción literal «Pendiente de especificar»: sin respaldo documental; no se deduce por el nombre (nucleo-semantico.md:52).",
+      "concepto_propuesto": null,
+      "regla_propuesta": null,
+      "evidencia": {
+        "descripcion_literal": "Pendiente de especificar",
+        "definicion_iri": "https://example.org/mex-ontologi/definition/8c0e76ff-3a86-4b1d-beee-b04bebe7df8d%2F70",
+        "huella": "1fe84a93ab498ab4d7dc47f0a54b4ad5278e0d9194e5cc00c06c3028927ff3b3",
+        "diccionario": "8c0e76ff-3a86-4b1d-beee-b04bebe7df8d",
+        "conjunto": "e819466c-7282-46c5-84e9-65917dd8cc85"
+      },
+      "alcance": "Solo la variable documentada Fecha de la equivalencia del diccionario 8c0e76ff-3a86-4b1d-beee-b04bebe7df8d (Matrículas de Estudiantes). Permanece candidata; no se propone concepto ni regla.",
+      "limitaciones": [
+        "Sin respaldo suficiente en la definición; no deducir por el nombre de la variable."
+      ],
+      "documentado_vs_inferencia": "Documentado: 'Pendiente de especificar'. Inferencia separada: ninguna; mantener pendiente."
+    },
+    {
+      "variable": "Fecha de titulación del título profesional",
+      "conjunto": "e819466c-7282-46c5-84e9-65917dd8cc85",
+      "titulo_conjunto": "Matrículas de Estudiantes",
+      "diccionario": "8c0e76ff-3a86-4b1d-beee-b04bebe7df8d",
+      "descripcion_literal": "Pendiente de especificar",
+      "definicion_iri": "https://example.org/mex-ontologi/definition/8c0e76ff-3a86-4b1d-beee-b04bebe7df8d%2F67",
+      "huella_fila_diccionario": "de5cd0cf3209d047b3dbc8b3a76992f8a52c6e1f6d5b20ca452b762f6b10e993",
+      "catalogo_declarado": "",
+      "estado_previo": "candidata_sin_definicion_suficiente",
+      "concepto_pista_previo": "tiempo",
+      "decision": "mantener_pendiente",
+      "motivo_pendiente": "descripcion_pendiente_explicita",
+      "motivo_detalle": "Descripción literal «Pendiente de especificar»: sin respaldo documental; no se deduce por el nombre (nucleo-semantico.md:52).",
+      "concepto_propuesto": null,
+      "regla_propuesta": null,
+      "evidencia": {
+        "descripcion_literal": "Pendiente de especificar",
+        "definicion_iri": "https://example.org/mex-ontologi/definition/8c0e76ff-3a86-4b1d-beee-b04bebe7df8d%2F67",
+        "huella": "de5cd0cf3209d047b3dbc8b3a76992f8a52c6e1f6d5b20ca452b762f6b10e993",
+        "diccionario": "8c0e76ff-3a86-4b1d-beee-b04bebe7df8d",
+        "conjunto": "e819466c-7282-46c5-84e9-65917dd8cc85"
+      },
+      "alcance": "Solo la variable documentada Fecha de titulación del título profesional del diccionario 8c0e76ff-3a86-4b1d-beee-b04bebe7df8d (Matrículas de Estudiantes). Permanece candidata; no se propone concepto ni regla.",
+      "limitaciones": [
+        "Sin respaldo suficiente en la definición; no deducir por el nombre de la variable."
+      ],
+      "documentado_vs_inferencia": "Documentado: 'Pendiente de especificar'. Inferencia separada: ninguna; mantener pendiente."
+    },
+    {
+      "variable": "Fecha inscripción ciclo escolar actual",
+      "conjunto": "e819466c-7282-46c5-84e9-65917dd8cc85",
+      "titulo_conjunto": "Matrículas de Estudiantes",
+      "diccionario": "8c0e76ff-3a86-4b1d-beee-b04bebe7df8d",
+      "descripcion_literal": "Fecha en la que el alumno se inscribio al ciclo escolar actual",
+      "definicion_iri": "https://example.org/mex-ontologi/definition/8c0e76ff-3a86-4b1d-beee-b04bebe7df8d%2F10",
+      "huella_fila_diccionario": "e39791526022d18b25ecc242b67f91e162b7bf11f9789e435473ca88e032d166",
+      "catalogo_declarado": "",
+      "estado_previo": "candidata_sin_definicion_suficiente",
+      "concepto_pista_previo": "tiempo",
+      "decision": "proponer",
+      "motivo_pendiente": null,
+      "concepto_propuesto": {
+        "id": "fecha-inscripcion-alumno",
+        "etiqueta": "Fecha de inscripción del alumno",
+        "definicion": "Fecha de inscripción del alumno al ciclo escolar actual; conserva población alumno y evento inscripción. Ciclo referenciado sin resolver periodo.",
+        "padre": "tiempo",
+        "existente": false
+      },
+      "regla_propuesta": {
+        "id": "fecha-inscripcion-alumno",
+        "representacion": "fecha",
+        "descripciones_cubiertas": [
+          "Fecha en la que el alumno se inscribio al ciclo escolar actual"
+        ],
+        "definiciones_objetivo": [
+          "https://example.org/mex-ontologi/definition/8c0e76ff-3a86-4b1d-beee-b04bebe7df8d%2F10"
+        ],
+        "diccionarios_objetivo": [
+          "8c0e76ff-3a86-4b1d-beee-b04bebe7df8d"
+        ],
+        "conjuntos_objetivo": [
+          "e819466c-7282-46c5-84e9-65917dd8cc85"
+        ],
+        "variables_objetivo": [
+          "Fecha inscripción ciclo escolar actual"
+        ]
+      },
+      "evidencia": {
+        "descripcion_literal": "Fecha en la que el alumno se inscribio al ciclo escolar actual",
+        "definicion_iri": "https://example.org/mex-ontologi/definition/8c0e76ff-3a86-4b1d-beee-b04bebe7df8d%2F10",
+        "huella": "e39791526022d18b25ecc242b67f91e162b7bf11f9789e435473ca88e032d166",
+        "diccionario": "8c0e76ff-3a86-4b1d-beee-b04bebe7df8d",
+        "conjunto": "e819466c-7282-46c5-84e9-65917dd8cc85"
+      },
+      "alcance": "Solo la variable documentada Fecha inscripción ciclo escolar actual del diccionario 8c0e76ff-3a86-4b1d-beee-b04bebe7df8d (Matrículas de Estudiantes), definición https://example.org/mex-ontologi/definition/8c0e76ff-3a86-4b1d-beee-b04bebe7df8d%2F10. No declara correspondencia con columnas físicas ni se aplica al vocabulario central.",
+      "limitaciones": [
+        "conserva población alumno y evento inscripción. Ciclo referenciado sin resolver periodo."
+      ],
+      "documentado_vs_inferencia": "Documentado: 'Fecha en la que el alumno se inscribio al ciclo escolar actual'. Inferencia separada: el concepto/regla propuestos interpretan ese texto; no se validan valores ni catálogos.",
+      "ejemplos_positivos": [
+        "Fecha en la que el alumno se inscribio al ciclo escolar actual"
+      ],
+      "contraejemplos": [
+        "Fecha de reinscripción (evento distinto)",
+        "Fecha de baja (evento distinto)"
+      ]
+    },
+    {
+      "variable": "Fecha inscripción en ciclo escolar  señalado",
+      "conjunto": "e819466c-7282-46c5-84e9-65917dd8cc85",
+      "titulo_conjunto": "Matrículas de Estudiantes",
+      "diccionario": "8c0e76ff-3a86-4b1d-beee-b04bebe7df8d",
+      "descripcion_literal": "Pendiente de especificar",
+      "definicion_iri": "https://example.org/mex-ontologi/definition/8c0e76ff-3a86-4b1d-beee-b04bebe7df8d%2F14",
+      "huella_fila_diccionario": "940c1f77837c39791ee0904bbe8123c69948da90bfc9965f38db9aacf6e680ec",
+      "catalogo_declarado": "",
+      "estado_previo": "candidata_sin_definicion_suficiente",
+      "concepto_pista_previo": "tiempo",
+      "decision": "mantener_pendiente",
+      "motivo_pendiente": "descripcion_pendiente_explicita",
+      "motivo_detalle": "Descripción literal «Pendiente de especificar»: sin respaldo documental; no se deduce por el nombre (nucleo-semantico.md:52).",
+      "concepto_propuesto": null,
+      "regla_propuesta": null,
+      "evidencia": {
+        "descripcion_literal": "Pendiente de especificar",
+        "definicion_iri": "https://example.org/mex-ontologi/definition/8c0e76ff-3a86-4b1d-beee-b04bebe7df8d%2F14",
+        "huella": "940c1f77837c39791ee0904bbe8123c69948da90bfc9965f38db9aacf6e680ec",
+        "diccionario": "8c0e76ff-3a86-4b1d-beee-b04bebe7df8d",
+        "conjunto": "e819466c-7282-46c5-84e9-65917dd8cc85"
+      },
+      "alcance": "Solo la variable documentada Fecha inscripción en ciclo escolar  señalado del diccionario 8c0e76ff-3a86-4b1d-beee-b04bebe7df8d (Matrículas de Estudiantes). Permanece candidata; no se propone concepto ni regla.",
+      "limitaciones": [
+        "Sin respaldo suficiente en la definición; no deducir por el nombre de la variable."
+      ],
+      "documentado_vs_inferencia": "Documentado: 'Pendiente de especificar'. Inferencia separada: ninguna; mantener pendiente."
+    },
+    {
+      "variable": "Municipio",
+      "conjunto": "e819466c-7282-46c5-84e9-65917dd8cc85",
+      "titulo_conjunto": "Matrículas de Estudiantes",
+      "diccionario": "8c0e76ff-3a86-4b1d-beee-b04bebe7df8d",
+      "descripcion_literal": "Municipio donde el alumno",
+      "definicion_iri": "https://example.org/mex-ontologi/definition/8c0e76ff-3a86-4b1d-beee-b04bebe7df8d%2F20",
+      "huella_fila_diccionario": "ad458441825d75edce0abc7e0082d73b2e3fbc9ec36dbb1687451d73ff9d3eba",
+      "catalogo_declarado": "",
+      "estado_previo": "candidata_sin_definicion_suficiente",
+      "concepto_pista_previo": "municipio",
+      "decision": "mantener_pendiente",
+      "motivo_pendiente": "descripcion_truncada",
+      "motivo_detalle": "Descripción truncada/incompleta: «Municipio donde el alumno» sin verbo ni papel territorial; no se infiere residencia, escuela ni nacimiento.",
+      "concepto_propuesto": null,
+      "regla_propuesta": null,
+      "evidencia": {
+        "descripcion_literal": "Municipio donde el alumno",
+        "definicion_iri": "https://example.org/mex-ontologi/definition/8c0e76ff-3a86-4b1d-beee-b04bebe7df8d%2F20",
+        "huella": "ad458441825d75edce0abc7e0082d73b2e3fbc9ec36dbb1687451d73ff9d3eba",
+        "diccionario": "8c0e76ff-3a86-4b1d-beee-b04bebe7df8d",
+        "conjunto": "e819466c-7282-46c5-84e9-65917dd8cc85"
+      },
+      "alcance": "Solo la variable documentada Municipio del diccionario 8c0e76ff-3a86-4b1d-beee-b04bebe7df8d (Matrículas de Estudiantes). Permanece candidata; no se propone concepto ni regla.",
+      "limitaciones": [
+        "Sin respaldo suficiente en la definición; no deducir por el nombre de la variable."
+      ],
+      "documentado_vs_inferencia": "Documentado: 'Municipio donde el alumno'. Inferencia separada: ninguna; mantener pendiente."
+    },
+    {
+      "variable": "fecha de reinscripción",
+      "conjunto": "e819466c-7282-46c5-84e9-65917dd8cc85",
+      "titulo_conjunto": "Matrículas de Estudiantes",
+      "diccionario": "8c0e76ff-3a86-4b1d-beee-b04bebe7df8d",
+      "descripcion_literal": "Fecha en la que se reinscribió el alumno",
+      "definicion_iri": "https://example.org/mex-ontologi/definition/8c0e76ff-3a86-4b1d-beee-b04bebe7df8d%2F38",
+      "huella_fila_diccionario": "62d7d4ba78b8fb437cc3d4ce7cbdfe9a2805d7cdb4b4068e52b0f2b8271ce193",
+      "catalogo_declarado": "",
+      "estado_previo": "candidata_sin_definicion_suficiente",
+      "concepto_pista_previo": "tiempo",
+      "decision": "proponer",
+      "motivo_pendiente": null,
+      "concepto_propuesto": {
+        "id": "fecha-reinscripcion-alumno",
+        "etiqueta": "Fecha de reinscripción del alumno",
+        "definicion": "Fecha de reinscripción del alumno; conserva población y evento reinscripción. Distinta de inscripción inicial y de baja.",
+        "padre": "tiempo",
+        "existente": false
+      },
+      "regla_propuesta": {
+        "id": "fecha-reinscripcion-alumno",
+        "representacion": "fecha",
+        "descripciones_cubiertas": [
+          "Fecha en la que se reinscribió el alumno"
+        ],
+        "definiciones_objetivo": [
+          "https://example.org/mex-ontologi/definition/8c0e76ff-3a86-4b1d-beee-b04bebe7df8d%2F38"
+        ],
+        "diccionarios_objetivo": [
+          "8c0e76ff-3a86-4b1d-beee-b04bebe7df8d"
+        ],
+        "conjuntos_objetivo": [
+          "e819466c-7282-46c5-84e9-65917dd8cc85"
+        ],
+        "variables_objetivo": [
+          "fecha de reinscripción"
+        ]
+      },
+      "evidencia": {
+        "descripcion_literal": "Fecha en la que se reinscribió el alumno",
+        "definicion_iri": "https://example.org/mex-ontologi/definition/8c0e76ff-3a86-4b1d-beee-b04bebe7df8d%2F38",
+        "huella": "62d7d4ba78b8fb437cc3d4ce7cbdfe9a2805d7cdb4b4068e52b0f2b8271ce193",
+        "diccionario": "8c0e76ff-3a86-4b1d-beee-b04bebe7df8d",
+        "conjunto": "e819466c-7282-46c5-84e9-65917dd8cc85"
+      },
+      "alcance": "Solo la variable documentada fecha de reinscripción del diccionario 8c0e76ff-3a86-4b1d-beee-b04bebe7df8d (Matrículas de Estudiantes), definición https://example.org/mex-ontologi/definition/8c0e76ff-3a86-4b1d-beee-b04bebe7df8d%2F38. No declara correspondencia con columnas físicas ni se aplica al vocabulario central.",
+      "limitaciones": [
+        "conserva población y evento reinscripción. Distinta de inscripción inicial y de baja."
+      ],
+      "documentado_vs_inferencia": "Documentado: 'Fecha en la que se reinscribió el alumno'. Inferencia separada: el concepto/regla propuestos interpretan ese texto; no se validan valores ni catálogos.",
+      "ejemplos_positivos": [
+        "Fecha en la que se reinscribió el alumno"
+      ],
+      "contraejemplos": [
+        "Fecha de inscripción inicial (evento distinto)",
+        "Fecha de baja (evento distinto)"
+      ]
+    },
+    {
+      "variable": "fecha_nac_vic",
+      "conjunto": "4c1084b7-b038-4084-83b2-5fe042b09ffb",
+      "titulo_conjunto": "Personas desaparecidas en Sonora",
+      "diccionario": "5e430f3c-09d9-4402-9f75-4cae840d5421",
+      "descripcion_literal": "Fecha de nacimiento de la víctima",
+      "definicion_iri": "https://example.org/mex-ontologi/definition/5e430f3c-09d9-4402-9f75-4cae840d5421%2F2",
+      "huella_fila_diccionario": "ef5dde019318d8de934d2f01837d852fcea23369b627bf8f22efb22048f041a5",
+      "catalogo_declarado": "",
+      "estado_previo": "candidata_sin_definicion_suficiente",
+      "concepto_pista_previo": "tiempo",
+      "decision": "proponer",
+      "motivo_pendiente": null,
+      "concepto_propuesto": {
+        "id": "fecha-nacimiento-victima",
+        "etiqueta": "Fecha de nacimiento de la víctima",
+        "definicion": "Fecha de nacimiento de la víctima; conserva población víctima y evento nacimiento. Distinta de nacimiento de titulado o alumno.",
+        "padre": "tiempo",
+        "existente": false
+      },
+      "regla_propuesta": {
+        "id": "fecha-nacimiento-victima",
+        "representacion": "fecha",
+        "descripciones_cubiertas": [
+          "Fecha de nacimiento de la víctima"
+        ],
+        "definiciones_objetivo": [
+          "https://example.org/mex-ontologi/definition/5e430f3c-09d9-4402-9f75-4cae840d5421%2F2"
+        ],
+        "diccionarios_objetivo": [
+          "5e430f3c-09d9-4402-9f75-4cae840d5421"
+        ],
+        "conjuntos_objetivo": [
+          "4c1084b7-b038-4084-83b2-5fe042b09ffb"
+        ],
+        "variables_objetivo": [
+          "fecha_nac_vic"
+        ]
+      },
+      "evidencia": {
+        "descripcion_literal": "Fecha de nacimiento de la víctima",
+        "definicion_iri": "https://example.org/mex-ontologi/definition/5e430f3c-09d9-4402-9f75-4cae840d5421%2F2",
+        "huella": "ef5dde019318d8de934d2f01837d852fcea23369b627bf8f22efb22048f041a5",
+        "diccionario": "5e430f3c-09d9-4402-9f75-4cae840d5421",
+        "conjunto": "4c1084b7-b038-4084-83b2-5fe042b09ffb"
+      },
+      "alcance": "Solo la variable documentada fecha_nac_vic del diccionario 5e430f3c-09d9-4402-9f75-4cae840d5421 (Personas desaparecidas en Sonora), definición https://example.org/mex-ontologi/definition/5e430f3c-09d9-4402-9f75-4cae840d5421%2F2. No declara correspondencia con columnas físicas ni se aplica al vocabulario central.",
+      "limitaciones": [
+        "conserva población víctima y evento nacimiento. Distinta de nacimiento de titulado o alumno."
+      ],
+      "documentado_vs_inferencia": "Documentado: 'Fecha de nacimiento de la víctima'. Inferencia separada: el concepto/regla propuestos interpretan ese texto; no se validan valores ni catálogos.",
+      "ejemplos_positivos": [
+        "Fecha de nacimiento de la víctima"
+      ],
+      "contraejemplos": [
+        "Fecha del reporte de la víctima (evento distinto)",
+        "Fecha de nacimiento del titulado (población distinta)"
+      ]
+    },
+    {
+      "variable": "periodo",
+      "conjunto": "5f2e31dd-83e8-4445-b132-cd0925045941",
+      "titulo_conjunto": "Poblacion Ceresos",
+      "diccionario": "2fc2fbc6-e918-4d5d-b907-1191e266b131",
+      "descripcion_literal": "perido del cual se informa la numero de poblacion",
+      "definicion_iri": "https://example.org/mex-ontologi/definition/2fc2fbc6-e918-4d5d-b907-1191e266b131%2F5",
+      "huella_fila_diccionario": "4a69626fb56cbe2f69696a21ea48a6eb10b6042fd2af693aae1dd333436a1fa2",
+      "catalogo_declarado": "",
+      "estado_previo": "candidata_sin_definicion_suficiente",
+      "concepto_pista_previo": "tiempo",
+      "decision": "mantener_pendiente",
+      "motivo_pendiente": "descripcion_generica_insuficiente",
+      "motivo_detalle": "Descripción genérica o ambigua: no precisa evento, papel, unidad o representación para respaldar concepto/regla.",
+      "concepto_propuesto": null,
+      "regla_propuesta": null,
+      "evidencia": {
+        "descripcion_literal": "perido del cual se informa la numero de poblacion",
+        "definicion_iri": "https://example.org/mex-ontologi/definition/2fc2fbc6-e918-4d5d-b907-1191e266b131%2F5",
+        "huella": "4a69626fb56cbe2f69696a21ea48a6eb10b6042fd2af693aae1dd333436a1fa2",
+        "diccionario": "2fc2fbc6-e918-4d5d-b907-1191e266b131",
+        "conjunto": "5f2e31dd-83e8-4445-b132-cd0925045941"
+      },
+      "alcance": "Solo la variable documentada periodo del diccionario 2fc2fbc6-e918-4d5d-b907-1191e266b131 (Poblacion Ceresos). Permanece candidata; no se propone concepto ni regla.",
+      "limitaciones": [
+        "Sin respaldo suficiente en la definición; no deducir por el nombre de la variable."
+      ],
+      "documentado_vs_inferencia": "Documentado: 'perido del cual se informa la numero de poblacion'. Inferencia separada: ninguna; mantener pendiente."
+    },
+    {
+      "variable": "Mes",
+      "conjunto": "7e97d026-d773-47b1-a0ec-078cce93fd13",
+      "titulo_conjunto": "Producción minera ",
+      "diccionario": "587a3ccd-a814-4190-8e6f-dfb20ccf44c4",
+      "descripcion_literal": "Registro cronológico de la produción del metal extraido",
+      "definicion_iri": "https://example.org/mex-ontologi/definition/587a3ccd-a814-4190-8e6f-dfb20ccf44c4%2F1",
+      "huella_fila_diccionario": "ec8c0b4b563119912bb74e809f9b97b7c99d6d2ac10dcb5b7ca988fbd585e1b8",
+      "catalogo_declarado": "",
+      "estado_previo": "candidata_sin_definicion_suficiente",
+      "concepto_pista_previo": "tiempo",
+      "decision": "mantener_pendiente",
+      "motivo_pendiente": "descripcion_generica_insuficiente",
+      "motivo_detalle": "Descripción genérica o ambigua: no precisa evento, papel, unidad o representación para respaldar concepto/regla.",
+      "concepto_propuesto": null,
+      "regla_propuesta": null,
+      "evidencia": {
+        "descripcion_literal": "Registro cronológico de la produción del metal extraido",
+        "definicion_iri": "https://example.org/mex-ontologi/definition/587a3ccd-a814-4190-8e6f-dfb20ccf44c4%2F1",
+        "huella": "ec8c0b4b563119912bb74e809f9b97b7c99d6d2ac10dcb5b7ca988fbd585e1b8",
+        "diccionario": "587a3ccd-a814-4190-8e6f-dfb20ccf44c4",
+        "conjunto": "7e97d026-d773-47b1-a0ec-078cce93fd13"
+      },
+      "alcance": "Solo la variable documentada Mes del diccionario 587a3ccd-a814-4190-8e6f-dfb20ccf44c4 (Producción minera ). Permanece candidata; no se propone concepto ni regla.",
+      "limitaciones": [
+        "Sin respaldo suficiente en la definición; no deducir por el nombre de la variable."
+      ],
+      "documentado_vs_inferencia": "Documentado: 'Registro cronológico de la produción del metal extraido'. Inferencia separada: ninguna; mantener pendiente."
+    },
+    {
+      "variable": "Fecha de Titulación",
+      "conjunto": "ccec926d-f2c7-4a12-8ca1-0738afd35b2c",
+      "titulo_conjunto": "Relación de Titulados - Licenciatura",
+      "diccionario": "5b587fca-6317-43a2-bdb3-6b3b046a0e76",
+      "descripcion_literal": "Fecha en la que el titulado se tituló",
+      "definicion_iri": "https://example.org/mex-ontologi/definition/5b587fca-6317-43a2-bdb3-6b3b046a0e76%2F7",
+      "huella_fila_diccionario": "f1f1e2d28ef0c9014eac2808fd0369de52ca309de153b100836eda6ff341241b",
+      "catalogo_declarado": "",
+      "estado_previo": "candidata_sin_definicion_suficiente",
+      "concepto_pista_previo": "tiempo",
+      "decision": "proponer",
+      "motivo_pendiente": null,
+      "concepto_propuesto": {
+        "id": "fecha-titulacion-titulado",
+        "etiqueta": "Fecha de titulación del titulado",
+        "definicion": "Fecha en que el titulado se tituló; distinta de ingreso y egreso. Conserva población titulado.",
+        "padre": "tiempo",
+        "existente": false
+      },
+      "regla_propuesta": {
+        "id": "fecha-titulacion-titulado",
+        "representacion": "fecha",
+        "descripciones_cubiertas": [
+          "Fecha en la que el titulado se tituló"
+        ],
+        "definiciones_objetivo": [
+          "https://example.org/mex-ontologi/definition/5b587fca-6317-43a2-bdb3-6b3b046a0e76%2F7"
+        ],
+        "diccionarios_objetivo": [
+          "5b587fca-6317-43a2-bdb3-6b3b046a0e76"
+        ],
+        "conjuntos_objetivo": [
+          "ccec926d-f2c7-4a12-8ca1-0738afd35b2c"
+        ],
+        "variables_objetivo": [
+          "Fecha de Titulación"
+        ]
+      },
+      "evidencia": {
+        "descripcion_literal": "Fecha en la que el titulado se tituló",
+        "definicion_iri": "https://example.org/mex-ontologi/definition/5b587fca-6317-43a2-bdb3-6b3b046a0e76%2F7",
+        "huella": "f1f1e2d28ef0c9014eac2808fd0369de52ca309de153b100836eda6ff341241b",
+        "diccionario": "5b587fca-6317-43a2-bdb3-6b3b046a0e76",
+        "conjunto": "ccec926d-f2c7-4a12-8ca1-0738afd35b2c"
+      },
+      "alcance": "Solo la variable documentada Fecha de Titulación del diccionario 5b587fca-6317-43a2-bdb3-6b3b046a0e76 (Relación de Titulados - Licenciatura), definición https://example.org/mex-ontologi/definition/5b587fca-6317-43a2-bdb3-6b3b046a0e76%2F7. No declara correspondencia con columnas físicas ni se aplica al vocabulario central.",
+      "limitaciones": [
+        "distinta de ingreso y egreso. Conserva población titulado."
+      ],
+      "documentado_vs_inferencia": "Documentado: 'Fecha en la que el titulado se tituló'. Inferencia separada: el concepto/regla propuestos interpretan ese texto; no se validan valores ni catálogos.",
+      "ejemplos_positivos": [
+        "Fecha en la que el titulado se tituló"
+      ],
+      "contraejemplos": [
+        "Fecha de egreso (evento distinto)",
+        "Fecha de titulación del título profesional con descripción pendiente (sin respaldo)"
+      ]
+    },
+    {
+      "variable": "Fecha de egreso",
+      "conjunto": "ccec926d-f2c7-4a12-8ca1-0738afd35b2c",
+      "titulo_conjunto": "Relación de Titulados - Licenciatura",
+      "diccionario": "5b587fca-6317-43a2-bdb3-6b3b046a0e76",
+      "descripcion_literal": "Fecha en la que el titulado egreso de la institucion",
+      "definicion_iri": "https://example.org/mex-ontologi/definition/5b587fca-6317-43a2-bdb3-6b3b046a0e76%2F6",
+      "huella_fila_diccionario": "6b5e888e586cb44bf27c9e79c9139017f88e778a0083f1fa61d487e2dfc29a9c",
+      "catalogo_declarado": "",
+      "estado_previo": "candidata_sin_definicion_suficiente",
+      "concepto_pista_previo": "tiempo",
+      "decision": "proponer",
+      "motivo_pendiente": null,
+      "concepto_propuesto": {
+        "id": "fecha-egreso-institucion-titulado",
+        "etiqueta": "Fecha de egreso del titulado",
+        "definicion": "Fecha de egreso del titulado de la institución; conserva población y evento egreso. Institución no identificada en la definición.",
+        "padre": "tiempo",
+        "existente": false
+      },
+      "regla_propuesta": {
+        "id": "fecha-egreso-institucion-titulado",
+        "representacion": "fecha",
+        "descripciones_cubiertas": [
+          "Fecha en la que el titulado egreso de la institucion"
+        ],
+        "definiciones_objetivo": [
+          "https://example.org/mex-ontologi/definition/5b587fca-6317-43a2-bdb3-6b3b046a0e76%2F6"
+        ],
+        "diccionarios_objetivo": [
+          "5b587fca-6317-43a2-bdb3-6b3b046a0e76"
+        ],
+        "conjuntos_objetivo": [
+          "ccec926d-f2c7-4a12-8ca1-0738afd35b2c"
+        ],
+        "variables_objetivo": [
+          "Fecha de egreso"
+        ]
+      },
+      "evidencia": {
+        "descripcion_literal": "Fecha en la que el titulado egreso de la institucion",
+        "definicion_iri": "https://example.org/mex-ontologi/definition/5b587fca-6317-43a2-bdb3-6b3b046a0e76%2F6",
+        "huella": "6b5e888e586cb44bf27c9e79c9139017f88e778a0083f1fa61d487e2dfc29a9c",
+        "diccionario": "5b587fca-6317-43a2-bdb3-6b3b046a0e76",
+        "conjunto": "ccec926d-f2c7-4a12-8ca1-0738afd35b2c"
+      },
+      "alcance": "Solo la variable documentada Fecha de egreso del diccionario 5b587fca-6317-43a2-bdb3-6b3b046a0e76 (Relación de Titulados - Licenciatura), definición https://example.org/mex-ontologi/definition/5b587fca-6317-43a2-bdb3-6b3b046a0e76%2F6. No declara correspondencia con columnas físicas ni se aplica al vocabulario central.",
+      "limitaciones": [
+        "conserva población y evento egreso. Institución no identificada en la definición."
+      ],
+      "documentado_vs_inferencia": "Documentado: 'Fecha en la que el titulado egreso de la institucion'. Inferencia separada: el concepto/regla propuestos interpretan ese texto; no se validan valores ni catálogos.",
+      "ejemplos_positivos": [
+        "Fecha en la que el titulado egreso de la institucion"
+      ],
+      "contraejemplos": [
+        "Fecha de ingreso (evento distinto)",
+        "Fecha de titulación (evento distinto)"
+      ]
+    },
+    {
+      "variable": "Fecha de ingreso",
+      "conjunto": "ccec926d-f2c7-4a12-8ca1-0738afd35b2c",
+      "titulo_conjunto": "Relación de Titulados - Licenciatura",
+      "diccionario": "5b587fca-6317-43a2-bdb3-6b3b046a0e76",
+      "descripcion_literal": "Fecha en la que el titulado ingreso a la institucion",
+      "definicion_iri": "https://example.org/mex-ontologi/definition/5b587fca-6317-43a2-bdb3-6b3b046a0e76%2F5",
+      "huella_fila_diccionario": "f28d4fcb558cfaca1f9bc675800a63763f37c7c15c9f7b6b34809f0e6b4e52be",
+      "catalogo_declarado": "",
+      "estado_previo": "candidata_sin_definicion_suficiente",
+      "concepto_pista_previo": "tiempo",
+      "decision": "proponer",
+      "motivo_pendiente": null,
+      "concepto_propuesto": {
+        "id": "fecha-ingreso-institucion-titulado",
+        "etiqueta": "Fecha de ingreso del titulado",
+        "definicion": "Fecha de ingreso del titulado a la institución; conserva población y evento ingreso. La definición no identifica institución concreta.",
+        "padre": "tiempo",
+        "existente": false
+      },
+      "regla_propuesta": {
+        "id": "fecha-ingreso-institucion-titulado",
+        "representacion": "fecha",
+        "descripciones_cubiertas": [
+          "Fecha en la que el titulado ingreso a la institucion"
+        ],
+        "definiciones_objetivo": [
+          "https://example.org/mex-ontologi/definition/5b587fca-6317-43a2-bdb3-6b3b046a0e76%2F5"
+        ],
+        "diccionarios_objetivo": [
+          "5b587fca-6317-43a2-bdb3-6b3b046a0e76"
+        ],
+        "conjuntos_objetivo": [
+          "ccec926d-f2c7-4a12-8ca1-0738afd35b2c"
+        ],
+        "variables_objetivo": [
+          "Fecha de ingreso"
+        ]
+      },
+      "evidencia": {
+        "descripcion_literal": "Fecha en la que el titulado ingreso a la institucion",
+        "definicion_iri": "https://example.org/mex-ontologi/definition/5b587fca-6317-43a2-bdb3-6b3b046a0e76%2F5",
+        "huella": "f28d4fcb558cfaca1f9bc675800a63763f37c7c15c9f7b6b34809f0e6b4e52be",
+        "diccionario": "5b587fca-6317-43a2-bdb3-6b3b046a0e76",
+        "conjunto": "ccec926d-f2c7-4a12-8ca1-0738afd35b2c"
+      },
+      "alcance": "Solo la variable documentada Fecha de ingreso del diccionario 5b587fca-6317-43a2-bdb3-6b3b046a0e76 (Relación de Titulados - Licenciatura), definición https://example.org/mex-ontologi/definition/5b587fca-6317-43a2-bdb3-6b3b046a0e76%2F5. No declara correspondencia con columnas físicas ni se aplica al vocabulario central.",
+      "limitaciones": [
+        "conserva población y evento ingreso. La definición no identifica institución concreta."
+      ],
+      "documentado_vs_inferencia": "Documentado: 'Fecha en la que el titulado ingreso a la institucion'. Inferencia separada: el concepto/regla propuestos interpretan ese texto; no se validan valores ni catálogos.",
+      "ejemplos_positivos": [
+        "Fecha en la que el titulado ingreso a la institucion"
+      ],
+      "contraejemplos": [
+        "Fecha de egreso (evento distinto)",
+        "Fecha de ingreso del paciente (población distinta)"
+      ]
+    },
+    {
+      "variable": "Fecha de nacimiento",
+      "conjunto": "ccec926d-f2c7-4a12-8ca1-0738afd35b2c",
+      "titulo_conjunto": "Relación de Titulados - Licenciatura",
+      "diccionario": "5b587fca-6317-43a2-bdb3-6b3b046a0e76",
+      "descripcion_literal": "Fecha de nacimiento del titulado",
+      "definicion_iri": "https://example.org/mex-ontologi/definition/5b587fca-6317-43a2-bdb3-6b3b046a0e76%2F2",
+      "huella_fila_diccionario": "9949b5c82a2ecf85259978f7f5f36877091bd1aa02d2daf4bf6db8cdb8a2d8bc",
+      "catalogo_declarado": "",
+      "estado_previo": "candidata_sin_definicion_suficiente",
+      "concepto_pista_previo": "tiempo",
+      "decision": "proponer",
+      "motivo_pendiente": null,
+      "concepto_propuesto": {
+        "id": "fecha-nacimiento-titulado",
+        "etiqueta": "Fecha de nacimiento del titulado",
+        "definicion": "Fecha de nacimiento del titulado; conserva población titulado y evento nacimiento. No precisa lugar.",
+        "padre": "tiempo",
+        "existente": false
+      },
+      "regla_propuesta": {
+        "id": "fecha-nacimiento-titulado",
+        "representacion": "fecha",
+        "descripciones_cubiertas": [
+          "Fecha de nacimiento del titulado"
+        ],
+        "definiciones_objetivo": [
+          "https://example.org/mex-ontologi/definition/5b587fca-6317-43a2-bdb3-6b3b046a0e76%2F2"
+        ],
+        "diccionarios_objetivo": [
+          "5b587fca-6317-43a2-bdb3-6b3b046a0e76"
+        ],
+        "conjuntos_objetivo": [
+          "ccec926d-f2c7-4a12-8ca1-0738afd35b2c"
+        ],
+        "variables_objetivo": [
+          "Fecha de nacimiento"
+        ]
+      },
+      "evidencia": {
+        "descripcion_literal": "Fecha de nacimiento del titulado",
+        "definicion_iri": "https://example.org/mex-ontologi/definition/5b587fca-6317-43a2-bdb3-6b3b046a0e76%2F2",
+        "huella": "9949b5c82a2ecf85259978f7f5f36877091bd1aa02d2daf4bf6db8cdb8a2d8bc",
+        "diccionario": "5b587fca-6317-43a2-bdb3-6b3b046a0e76",
+        "conjunto": "ccec926d-f2c7-4a12-8ca1-0738afd35b2c"
+      },
+      "alcance": "Solo la variable documentada Fecha de nacimiento del diccionario 5b587fca-6317-43a2-bdb3-6b3b046a0e76 (Relación de Titulados - Licenciatura), definición https://example.org/mex-ontologi/definition/5b587fca-6317-43a2-bdb3-6b3b046a0e76%2F2. No declara correspondencia con columnas físicas ni se aplica al vocabulario central.",
+      "limitaciones": [
+        "conserva población titulado y evento nacimiento. No precisa lugar."
+      ],
+      "documentado_vs_inferencia": "Documentado: 'Fecha de nacimiento del titulado'. Inferencia separada: el concepto/regla propuestos interpretan ese texto; no se validan valores ni catálogos.",
+      "ejemplos_positivos": [
+        "Fecha de nacimiento del titulado"
+      ],
+      "contraejemplos": [
+        "Fecha de nacimiento de la víctima (población distinta)",
+        "Fecha de ingreso del titulado (evento distinto)"
+      ]
+    },
+    {
+      "variable": "Fecha de Titulación",
+      "conjunto": "598143a6-6ab1-464c-a9fd-8f4ff49d6223",
+      "titulo_conjunto": "Relación de Titulados - Posgrado",
+      "diccionario": "3f4a7c9e-78ed-4f0d-93b1-595c07e4059f",
+      "descripcion_literal": "Fecha en la que el titulado se tituló",
+      "definicion_iri": "https://example.org/mex-ontologi/definition/3f4a7c9e-78ed-4f0d-93b1-595c07e4059f%2F7",
+      "huella_fila_diccionario": "f1f1e2d28ef0c9014eac2808fd0369de52ca309de153b100836eda6ff341241b",
+      "catalogo_declarado": "",
+      "estado_previo": "candidata_sin_definicion_suficiente",
+      "concepto_pista_previo": "tiempo",
+      "decision": "proponer",
+      "motivo_pendiente": null,
+      "concepto_propuesto": {
+        "id": "fecha-titulacion-titulado",
+        "etiqueta": "Fecha de titulación del titulado",
+        "definicion": "Fecha en que el titulado se tituló; distinta de ingreso y egreso. Conserva población titulado.",
+        "padre": "tiempo",
+        "existente": false
+      },
+      "regla_propuesta": {
+        "id": "fecha-titulacion-titulado",
+        "representacion": "fecha",
+        "descripciones_cubiertas": [
+          "Fecha en la que el titulado se tituló"
+        ],
+        "definiciones_objetivo": [
+          "https://example.org/mex-ontologi/definition/3f4a7c9e-78ed-4f0d-93b1-595c07e4059f%2F7"
+        ],
+        "diccionarios_objetivo": [
+          "3f4a7c9e-78ed-4f0d-93b1-595c07e4059f"
+        ],
+        "conjuntos_objetivo": [
+          "598143a6-6ab1-464c-a9fd-8f4ff49d6223"
+        ],
+        "variables_objetivo": [
+          "Fecha de Titulación"
+        ]
+      },
+      "evidencia": {
+        "descripcion_literal": "Fecha en la que el titulado se tituló",
+        "definicion_iri": "https://example.org/mex-ontologi/definition/3f4a7c9e-78ed-4f0d-93b1-595c07e4059f%2F7",
+        "huella": "f1f1e2d28ef0c9014eac2808fd0369de52ca309de153b100836eda6ff341241b",
+        "diccionario": "3f4a7c9e-78ed-4f0d-93b1-595c07e4059f",
+        "conjunto": "598143a6-6ab1-464c-a9fd-8f4ff49d6223"
+      },
+      "alcance": "Solo la variable documentada Fecha de Titulación del diccionario 3f4a7c9e-78ed-4f0d-93b1-595c07e4059f (Relación de Titulados - Posgrado), definición https://example.org/mex-ontologi/definition/3f4a7c9e-78ed-4f0d-93b1-595c07e4059f%2F7. No declara correspondencia con columnas físicas ni se aplica al vocabulario central.",
+      "limitaciones": [
+        "distinta de ingreso y egreso. Conserva población titulado."
+      ],
+      "documentado_vs_inferencia": "Documentado: 'Fecha en la que el titulado se tituló'. Inferencia separada: el concepto/regla propuestos interpretan ese texto; no se validan valores ni catálogos.",
+      "ejemplos_positivos": [
+        "Fecha en la que el titulado se tituló"
+      ],
+      "contraejemplos": [
+        "Fecha de egreso (evento distinto)",
+        "Fecha de titulación del título profesional con descripción pendiente (sin respaldo)"
+      ]
+    },
+    {
+      "variable": "Fecha de egreso",
+      "conjunto": "598143a6-6ab1-464c-a9fd-8f4ff49d6223",
+      "titulo_conjunto": "Relación de Titulados - Posgrado",
+      "diccionario": "3f4a7c9e-78ed-4f0d-93b1-595c07e4059f",
+      "descripcion_literal": "Fecha en la que el titulado egreso de la institucion",
+      "definicion_iri": "https://example.org/mex-ontologi/definition/3f4a7c9e-78ed-4f0d-93b1-595c07e4059f%2F6",
+      "huella_fila_diccionario": "6b5e888e586cb44bf27c9e79c9139017f88e778a0083f1fa61d487e2dfc29a9c",
+      "catalogo_declarado": "",
+      "estado_previo": "candidata_sin_definicion_suficiente",
+      "concepto_pista_previo": "tiempo",
+      "decision": "proponer",
+      "motivo_pendiente": null,
+      "concepto_propuesto": {
+        "id": "fecha-egreso-institucion-titulado",
+        "etiqueta": "Fecha de egreso del titulado",
+        "definicion": "Fecha de egreso del titulado de la institución; conserva población y evento egreso. Institución no identificada en la definición.",
+        "padre": "tiempo",
+        "existente": false
+      },
+      "regla_propuesta": {
+        "id": "fecha-egreso-institucion-titulado",
+        "representacion": "fecha",
+        "descripciones_cubiertas": [
+          "Fecha en la que el titulado egreso de la institucion"
+        ],
+        "definiciones_objetivo": [
+          "https://example.org/mex-ontologi/definition/3f4a7c9e-78ed-4f0d-93b1-595c07e4059f%2F6"
+        ],
+        "diccionarios_objetivo": [
+          "3f4a7c9e-78ed-4f0d-93b1-595c07e4059f"
+        ],
+        "conjuntos_objetivo": [
+          "598143a6-6ab1-464c-a9fd-8f4ff49d6223"
+        ],
+        "variables_objetivo": [
+          "Fecha de egreso"
+        ]
+      },
+      "evidencia": {
+        "descripcion_literal": "Fecha en la que el titulado egreso de la institucion",
+        "definicion_iri": "https://example.org/mex-ontologi/definition/3f4a7c9e-78ed-4f0d-93b1-595c07e4059f%2F6",
+        "huella": "6b5e888e586cb44bf27c9e79c9139017f88e778a0083f1fa61d487e2dfc29a9c",
+        "diccionario": "3f4a7c9e-78ed-4f0d-93b1-595c07e4059f",
+        "conjunto": "598143a6-6ab1-464c-a9fd-8f4ff49d6223"
+      },
+      "alcance": "Solo la variable documentada Fecha de egreso del diccionario 3f4a7c9e-78ed-4f0d-93b1-595c07e4059f (Relación de Titulados - Posgrado), definición https://example.org/mex-ontologi/definition/3f4a7c9e-78ed-4f0d-93b1-595c07e4059f%2F6. No declara correspondencia con columnas físicas ni se aplica al vocabulario central.",
+      "limitaciones": [
+        "conserva población y evento egreso. Institución no identificada en la definición."
+      ],
+      "documentado_vs_inferencia": "Documentado: 'Fecha en la que el titulado egreso de la institucion'. Inferencia separada: el concepto/regla propuestos interpretan ese texto; no se validan valores ni catálogos.",
+      "ejemplos_positivos": [
+        "Fecha en la que el titulado egreso de la institucion"
+      ],
+      "contraejemplos": [
+        "Fecha de ingreso (evento distinto)",
+        "Fecha de titulación (evento distinto)"
+      ]
+    },
+    {
+      "variable": "Fecha de ingreso",
+      "conjunto": "598143a6-6ab1-464c-a9fd-8f4ff49d6223",
+      "titulo_conjunto": "Relación de Titulados - Posgrado",
+      "diccionario": "3f4a7c9e-78ed-4f0d-93b1-595c07e4059f",
+      "descripcion_literal": "Fecha en la que el titulado ingreso a la institucion",
+      "definicion_iri": "https://example.org/mex-ontologi/definition/3f4a7c9e-78ed-4f0d-93b1-595c07e4059f%2F5",
+      "huella_fila_diccionario": "f28d4fcb558cfaca1f9bc675800a63763f37c7c15c9f7b6b34809f0e6b4e52be",
+      "catalogo_declarado": "",
+      "estado_previo": "candidata_sin_definicion_suficiente",
+      "concepto_pista_previo": "tiempo",
+      "decision": "proponer",
+      "motivo_pendiente": null,
+      "concepto_propuesto": {
+        "id": "fecha-ingreso-institucion-titulado",
+        "etiqueta": "Fecha de ingreso del titulado",
+        "definicion": "Fecha de ingreso del titulado a la institución; conserva población y evento ingreso. La definición no identifica institución concreta.",
+        "padre": "tiempo",
+        "existente": false
+      },
+      "regla_propuesta": {
+        "id": "fecha-ingreso-institucion-titulado",
+        "representacion": "fecha",
+        "descripciones_cubiertas": [
+          "Fecha en la que el titulado ingreso a la institucion"
+        ],
+        "definiciones_objetivo": [
+          "https://example.org/mex-ontologi/definition/3f4a7c9e-78ed-4f0d-93b1-595c07e4059f%2F5"
+        ],
+        "diccionarios_objetivo": [
+          "3f4a7c9e-78ed-4f0d-93b1-595c07e4059f"
+        ],
+        "conjuntos_objetivo": [
+          "598143a6-6ab1-464c-a9fd-8f4ff49d6223"
+        ],
+        "variables_objetivo": [
+          "Fecha de ingreso"
+        ]
+      },
+      "evidencia": {
+        "descripcion_literal": "Fecha en la que el titulado ingreso a la institucion",
+        "definicion_iri": "https://example.org/mex-ontologi/definition/3f4a7c9e-78ed-4f0d-93b1-595c07e4059f%2F5",
+        "huella": "f28d4fcb558cfaca1f9bc675800a63763f37c7c15c9f7b6b34809f0e6b4e52be",
+        "diccionario": "3f4a7c9e-78ed-4f0d-93b1-595c07e4059f",
+        "conjunto": "598143a6-6ab1-464c-a9fd-8f4ff49d6223"
+      },
+      "alcance": "Solo la variable documentada Fecha de ingreso del diccionario 3f4a7c9e-78ed-4f0d-93b1-595c07e4059f (Relación de Titulados - Posgrado), definición https://example.org/mex-ontologi/definition/3f4a7c9e-78ed-4f0d-93b1-595c07e4059f%2F5. No declara correspondencia con columnas físicas ni se aplica al vocabulario central.",
+      "limitaciones": [
+        "conserva población y evento ingreso. La definición no identifica institución concreta."
+      ],
+      "documentado_vs_inferencia": "Documentado: 'Fecha en la que el titulado ingreso a la institucion'. Inferencia separada: el concepto/regla propuestos interpretan ese texto; no se validan valores ni catálogos.",
+      "ejemplos_positivos": [
+        "Fecha en la que el titulado ingreso a la institucion"
+      ],
+      "contraejemplos": [
+        "Fecha de egreso (evento distinto)",
+        "Fecha de ingreso del paciente (población distinta)"
+      ]
+    },
+    {
+      "variable": "Fecha de nacimiento",
+      "conjunto": "598143a6-6ab1-464c-a9fd-8f4ff49d6223",
+      "titulo_conjunto": "Relación de Titulados - Posgrado",
+      "diccionario": "3f4a7c9e-78ed-4f0d-93b1-595c07e4059f",
+      "descripcion_literal": "Fecha de nacimiento del titulado",
+      "definicion_iri": "https://example.org/mex-ontologi/definition/3f4a7c9e-78ed-4f0d-93b1-595c07e4059f%2F2",
+      "huella_fila_diccionario": "9949b5c82a2ecf85259978f7f5f36877091bd1aa02d2daf4bf6db8cdb8a2d8bc",
+      "catalogo_declarado": "",
+      "estado_previo": "candidata_sin_definicion_suficiente",
+      "concepto_pista_previo": "tiempo",
+      "decision": "proponer",
+      "motivo_pendiente": null,
+      "concepto_propuesto": {
+        "id": "fecha-nacimiento-titulado",
+        "etiqueta": "Fecha de nacimiento del titulado",
+        "definicion": "Fecha de nacimiento del titulado; conserva población titulado y evento nacimiento. No precisa lugar.",
+        "padre": "tiempo",
+        "existente": false
+      },
+      "regla_propuesta": {
+        "id": "fecha-nacimiento-titulado",
+        "representacion": "fecha",
+        "descripciones_cubiertas": [
+          "Fecha de nacimiento del titulado"
+        ],
+        "definiciones_objetivo": [
+          "https://example.org/mex-ontologi/definition/3f4a7c9e-78ed-4f0d-93b1-595c07e4059f%2F2"
+        ],
+        "diccionarios_objetivo": [
+          "3f4a7c9e-78ed-4f0d-93b1-595c07e4059f"
+        ],
+        "conjuntos_objetivo": [
+          "598143a6-6ab1-464c-a9fd-8f4ff49d6223"
+        ],
+        "variables_objetivo": [
+          "Fecha de nacimiento"
+        ]
+      },
+      "evidencia": {
+        "descripcion_literal": "Fecha de nacimiento del titulado",
+        "definicion_iri": "https://example.org/mex-ontologi/definition/3f4a7c9e-78ed-4f0d-93b1-595c07e4059f%2F2",
+        "huella": "9949b5c82a2ecf85259978f7f5f36877091bd1aa02d2daf4bf6db8cdb8a2d8bc",
+        "diccionario": "3f4a7c9e-78ed-4f0d-93b1-595c07e4059f",
+        "conjunto": "598143a6-6ab1-464c-a9fd-8f4ff49d6223"
+      },
+      "alcance": "Solo la variable documentada Fecha de nacimiento del diccionario 3f4a7c9e-78ed-4f0d-93b1-595c07e4059f (Relación de Titulados - Posgrado), definición https://example.org/mex-ontologi/definition/3f4a7c9e-78ed-4f0d-93b1-595c07e4059f%2F2. No declara correspondencia con columnas físicas ni se aplica al vocabulario central.",
+      "limitaciones": [
+        "conserva población titulado y evento nacimiento. No precisa lugar."
+      ],
+      "documentado_vs_inferencia": "Documentado: 'Fecha de nacimiento del titulado'. Inferencia separada: el concepto/regla propuestos interpretan ese texto; no se validan valores ni catálogos.",
+      "ejemplos_positivos": [
+        "Fecha de nacimiento del titulado"
+      ],
+      "contraejemplos": [
+        "Fecha de nacimiento de la víctima (población distinta)",
+        "Fecha de ingreso del titulado (evento distinto)"
+      ]
+    },
+    {
+      "variable": "CLUES",
+      "conjunto": "cd3d6e34-3789-479e-9f2b-a717b8419f9c",
+      "titulo_conjunto": "Sistema Epidemiológico y Estadístico de Defunciones",
+      "diccionario": "12f684e9-f4d5-4714-933d-aa153a812174",
+      "descripcion_literal": "Pendiente de especificar",
+      "definicion_iri": "https://example.org/mex-ontologi/definition/12f684e9-f4d5-4714-933d-aa153a812174%2F38",
+      "huella_fila_diccionario": "1b32ad8dbecd8c74b4f0bfd3497c88a32c8b2f8590a4a9f42f2b10717804423b",
+      "catalogo_declarado": "",
+      "estado_previo": "candidata_sin_definicion_suficiente",
+      "concepto_pista_previo": "unidad-salud",
+      "decision": "mantener_pendiente",
+      "motivo_pendiente": "descripcion_pendiente_explicita",
+      "motivo_detalle": "Descripción literal «Pendiente de especificar»: sin respaldo documental; no se deduce por el nombre (nucleo-semantico.md:52).",
+      "concepto_propuesto": null,
+      "regla_propuesta": null,
+      "evidencia": {
+        "descripcion_literal": "Pendiente de especificar",
+        "definicion_iri": "https://example.org/mex-ontologi/definition/12f684e9-f4d5-4714-933d-aa153a812174%2F38",
+        "huella": "1b32ad8dbecd8c74b4f0bfd3497c88a32c8b2f8590a4a9f42f2b10717804423b",
+        "diccionario": "12f684e9-f4d5-4714-933d-aa153a812174",
+        "conjunto": "cd3d6e34-3789-479e-9f2b-a717b8419f9c"
+      },
+      "alcance": "Solo la variable documentada CLUES del diccionario 12f684e9-f4d5-4714-933d-aa153a812174 (Sistema Epidemiológico y Estadístico de Defunciones). Permanece candidata; no se propone concepto ni regla.",
+      "limitaciones": [
+        "Sin respaldo suficiente en la definición; no deducir por el nombre de la variable."
+      ],
+      "documentado_vs_inferencia": "Documentado: 'Pendiente de especificar'. Inferencia separada: ninguna; mantener pendiente."
+    },
+    {
+      "variable": "LOCALIDADOCURRENCIA",
+      "conjunto": "cd3d6e34-3789-479e-9f2b-a717b8419f9c",
+      "titulo_conjunto": "Sistema Epidemiológico y Estadístico de Defunciones",
+      "diccionario": "12f684e9-f4d5-4714-933d-aa153a812174",
+      "descripcion_literal": "Pendiente de especificar",
+      "definicion_iri": "https://example.org/mex-ontologi/definition/12f684e9-f4d5-4714-933d-aa153a812174%2F74",
+      "huella_fila_diccionario": "0485c56408609aa3a1cab7e67e8e7b1f0b4ee7cd6607fbe8c97de194423cac9d",
+      "catalogo_declarado": "",
+      "estado_previo": "candidata_sin_definicion_suficiente",
+      "concepto_pista_previo": "localidad",
+      "decision": "mantener_pendiente",
+      "motivo_pendiente": "descripcion_pendiente_explicita",
+      "motivo_detalle": "Descripción literal «Pendiente de especificar»: sin respaldo documental; no se deduce por el nombre (nucleo-semantico.md:52).",
+      "concepto_propuesto": null,
+      "regla_propuesta": null,
+      "evidencia": {
+        "descripcion_literal": "Pendiente de especificar",
+        "definicion_iri": "https://example.org/mex-ontologi/definition/12f684e9-f4d5-4714-933d-aa153a812174%2F74",
+        "huella": "0485c56408609aa3a1cab7e67e8e7b1f0b4ee7cd6607fbe8c97de194423cac9d",
+        "diccionario": "12f684e9-f4d5-4714-933d-aa153a812174",
+        "conjunto": "cd3d6e34-3789-479e-9f2b-a717b8419f9c"
+      },
+      "alcance": "Solo la variable documentada LOCALIDADOCURRENCIA del diccionario 12f684e9-f4d5-4714-933d-aa153a812174 (Sistema Epidemiológico y Estadístico de Defunciones). Permanece candidata; no se propone concepto ni regla.",
+      "limitaciones": [
+        "Sin respaldo suficiente en la definición; no deducir por el nombre de la variable."
+      ],
+      "documentado_vs_inferencia": "Documentado: 'Pendiente de especificar'. Inferencia separada: ninguna; mantener pendiente."
+    },
+    {
+      "variable": "LOCALIDADOCURRENCIAD",
+      "conjunto": "cd3d6e34-3789-479e-9f2b-a717b8419f9c",
+      "titulo_conjunto": "Sistema Epidemiológico y Estadístico de Defunciones",
+      "diccionario": "12f684e9-f4d5-4714-933d-aa153a812174",
+      "descripcion_literal": "Pendiente de especificar",
+      "definicion_iri": "https://example.org/mex-ontologi/definition/12f684e9-f4d5-4714-933d-aa153a812174%2F75",
+      "huella_fila_diccionario": "6f76513d06bf1de37df4a91e3103ac0e3782913df200633ca0673e907e345bd4",
+      "catalogo_declarado": "",
+      "estado_previo": "candidata_sin_definicion_suficiente",
+      "concepto_pista_previo": "localidad",
+      "decision": "mantener_pendiente",
+      "motivo_pendiente": "descripcion_pendiente_explicita",
+      "motivo_detalle": "Descripción literal «Pendiente de especificar»: sin respaldo documental; no se deduce por el nombre (nucleo-semantico.md:52).",
+      "concepto_propuesto": null,
+      "regla_propuesta": null,
+      "evidencia": {
+        "descripcion_literal": "Pendiente de especificar",
+        "definicion_iri": "https://example.org/mex-ontologi/definition/12f684e9-f4d5-4714-933d-aa153a812174%2F75",
+        "huella": "6f76513d06bf1de37df4a91e3103ac0e3782913df200633ca0673e907e345bd4",
+        "diccionario": "12f684e9-f4d5-4714-933d-aa153a812174",
+        "conjunto": "cd3d6e34-3789-479e-9f2b-a717b8419f9c"
+      },
+      "alcance": "Solo la variable documentada LOCALIDADOCURRENCIAD del diccionario 12f684e9-f4d5-4714-933d-aa153a812174 (Sistema Epidemiológico y Estadístico de Defunciones). Permanece candidata; no se propone concepto ni regla.",
+      "limitaciones": [
+        "Sin respaldo suficiente en la definición; no deducir por el nombre de la variable."
+      ],
+      "documentado_vs_inferencia": "Documentado: 'Pendiente de especificar'. Inferencia separada: ninguna; mantener pendiente."
+    },
+    {
+      "variable": "MUNICIPIOOCURRENCIA",
+      "conjunto": "cd3d6e34-3789-479e-9f2b-a717b8419f9c",
+      "titulo_conjunto": "Sistema Epidemiológico y Estadístico de Defunciones",
+      "diccionario": "12f684e9-f4d5-4714-933d-aa153a812174",
+      "descripcion_literal": "Pendiente de especificar",
+      "definicion_iri": "https://example.org/mex-ontologi/definition/12f684e9-f4d5-4714-933d-aa153a812174%2F72",
+      "huella_fila_diccionario": "da9a0fcd2979fbcca215523a090a0332d76bfb531c9f92fecae3bd347819febf",
+      "catalogo_declarado": "",
+      "estado_previo": "candidata_sin_definicion_suficiente",
+      "concepto_pista_previo": "municipio",
+      "decision": "mantener_pendiente",
+      "motivo_pendiente": "descripcion_pendiente_explicita",
+      "motivo_detalle": "Descripción literal «Pendiente de especificar»: sin respaldo documental; no se deduce por el nombre (nucleo-semantico.md:52).",
+      "concepto_propuesto": null,
+      "regla_propuesta": null,
+      "evidencia": {
+        "descripcion_literal": "Pendiente de especificar",
+        "definicion_iri": "https://example.org/mex-ontologi/definition/12f684e9-f4d5-4714-933d-aa153a812174%2F72",
+        "huella": "da9a0fcd2979fbcca215523a090a0332d76bfb531c9f92fecae3bd347819febf",
+        "diccionario": "12f684e9-f4d5-4714-933d-aa153a812174",
+        "conjunto": "cd3d6e34-3789-479e-9f2b-a717b8419f9c"
+      },
+      "alcance": "Solo la variable documentada MUNICIPIOOCURRENCIA del diccionario 12f684e9-f4d5-4714-933d-aa153a812174 (Sistema Epidemiológico y Estadístico de Defunciones). Permanece candidata; no se propone concepto ni regla.",
+      "limitaciones": [
+        "Sin respaldo suficiente en la definición; no deducir por el nombre de la variable."
+      ],
+      "documentado_vs_inferencia": "Documentado: 'Pendiente de especificar'. Inferencia separada: ninguna; mantener pendiente."
+    },
+    {
+      "variable": "MUNICIPIOOCURRENCIAD",
+      "conjunto": "cd3d6e34-3789-479e-9f2b-a717b8419f9c",
+      "titulo_conjunto": "Sistema Epidemiológico y Estadístico de Defunciones",
+      "diccionario": "12f684e9-f4d5-4714-933d-aa153a812174",
+      "descripcion_literal": "Pendiente de especificar",
+      "definicion_iri": "https://example.org/mex-ontologi/definition/12f684e9-f4d5-4714-933d-aa153a812174%2F73",
+      "huella_fila_diccionario": "45f58439a5c544c88713e5f5ba62c1a0ddf40f9aa6181a506e30f6d50a6e1b85",
+      "catalogo_declarado": "",
+      "estado_previo": "candidata_sin_definicion_suficiente",
+      "concepto_pista_previo": "municipio",
+      "decision": "mantener_pendiente",
+      "motivo_pendiente": "descripcion_pendiente_explicita",
+      "motivo_detalle": "Descripción literal «Pendiente de especificar»: sin respaldo documental; no se deduce por el nombre (nucleo-semantico.md:52).",
+      "concepto_propuesto": null,
+      "regla_propuesta": null,
+      "evidencia": {
+        "descripcion_literal": "Pendiente de especificar",
+        "definicion_iri": "https://example.org/mex-ontologi/definition/12f684e9-f4d5-4714-933d-aa153a812174%2F73",
+        "huella": "45f58439a5c544c88713e5f5ba62c1a0ddf40f9aa6181a506e30f6d50a6e1b85",
+        "diccionario": "12f684e9-f4d5-4714-933d-aa153a812174",
+        "conjunto": "cd3d6e34-3789-479e-9f2b-a717b8419f9c"
+      },
+      "alcance": "Solo la variable documentada MUNICIPIOOCURRENCIAD del diccionario 12f684e9-f4d5-4714-933d-aa153a812174 (Sistema Epidemiológico y Estadístico de Defunciones). Permanece candidata; no se propone concepto ni regla.",
+      "limitaciones": [
+        "Sin respaldo suficiente en la definición; no deducir por el nombre de la variable."
+      ],
+      "documentado_vs_inferencia": "Documentado: 'Pendiente de especificar'. Inferencia separada: ninguna; mantener pendiente."
+    }
+  ],
+  "conceptos_nuevos": [
+    {
+      "id": "fecha-ingreso-paciente",
+      "etiqueta": "Fecha de ingreso del paciente",
+      "definicion": "Fecha de ingreso del paciente según su diccionario; no especifica servicio ni institución de ingreso.",
+      "padre": "tiempo"
+    },
+    {
+      "id": "fecha-toma-suero-rickettsia-ser1",
+      "etiqueta": "Fecha de toma de primera muestra de suero",
+      "definicion": "Fecha en la que se toma la primera muestra de suero para rickettsiosis según su definición; conserva la expresión documentada «primera muestra de suero». «ser1» se conserva como identificador de la variable sin deducir tipo de prueba serológica. No equivale a recepción ni a resultado.",
+      "padre": "tiempo"
+    },
+    {
+      "id": "fecha-recepcion-suero-rickettsia-ser1",
+      "etiqueta": "Fecha de recepción de primera muestra de suero",
+      "definicion": "Fecha de recepción de la primera muestra de suero para rickettsiosis según su definición; conserva «primera muestra de suero». «ser1» es identificador de la variable, no prueba tipificada. No equivale a toma ni a resultado.",
+      "padre": "tiempo"
+    },
+    {
+      "id": "fecha-resultado-suero-rickettsia-ser1",
+      "etiqueta": "Fecha de resultado de primera muestra de suero",
+      "definicion": "Fecha de resultado de la primera muestra de suero para rickettsiosis según su definición (texto original «suer»); conserva «primera muestra de suero». «ser1» es identificador de la variable sin deducir prueba. No equivale a toma, recepción ni a «PCR tiempo real».",
+      "padre": "tiempo"
+    },
+    {
+      "id": "fecha-toma-sangre-rickettsia",
+      "etiqueta": "Fecha de toma de sangre",
+      "definicion": "Fecha de toma de muestra de sangre para rickettsiosis; conserva muestra sangre. La definición no precisa secuencia ni prueba posterior.",
+      "padre": "tiempo"
+    },
+    {
+      "id": "fecha-recepcion-sangre-rickettsia",
+      "etiqueta": "Fecha de recepción de sangre",
+      "definicion": "Fecha de recepción de la primera muestra de sangre para rickettsiosis; conserva muestra sangre y secuencia primera. No equivale a toma ni a resultado.",
+      "padre": "tiempo"
+    },
+    {
+      "id": "fecha-resultado-pcr-tiempo-real-rickettsia",
+      "etiqueta": "Fecha de resultado PCR tiempo real",
+      "definicion": "Fecha de resultado «PCR tiempo real» para rickettsiosis según su definición; conserva la expresión documentada sin tipificar ensayo. No equivale a toma, recepción ni a resultado de suero.",
+      "padre": "tiempo"
+    },
+    {
+      "id": "fecha-inicio-tratamiento-rickettsia",
+      "etiqueta": "Fecha de inicio de tratamiento",
+      "definicion": "Fecha de inicio de tratamiento para rickettsiosis; conserva evento inicio y enfermedad. Población paciente implícita por contexto, no declarada en la definición.",
+      "padre": "tiempo"
+    },
+    {
+      "id": "fecha-fin-tratamiento-rickettsia",
+      "etiqueta": "Fecha de término de tratamiento",
+      "definicion": "Fecha de término de tratamiento para rickettsiosis; conserva evento término y enfermedad. Población paciente solo contextual.",
+      "padre": "tiempo"
+    },
+    {
+      "id": "fecha-nacimiento-titulado",
+      "etiqueta": "Fecha de nacimiento del titulado",
+      "definicion": "Fecha de nacimiento del titulado; conserva población titulado y evento nacimiento. No precisa lugar.",
+      "padre": "tiempo"
+    },
+    {
+      "id": "fecha-ingreso-institucion-titulado",
+      "etiqueta": "Fecha de ingreso del titulado",
+      "definicion": "Fecha de ingreso del titulado a la institución; conserva población y evento ingreso. La definición no identifica institución concreta.",
+      "padre": "tiempo"
+    },
+    {
+      "id": "fecha-egreso-institucion-titulado",
+      "etiqueta": "Fecha de egreso del titulado",
+      "definicion": "Fecha de egreso del titulado de la institución; conserva población y evento egreso. Institución no identificada en la definición.",
+      "padre": "tiempo"
+    },
+    {
+      "id": "fecha-titulacion-titulado",
+      "etiqueta": "Fecha de titulación del titulado",
+      "definicion": "Fecha en que el titulado se tituló; distinta de ingreso y egreso. Conserva población titulado.",
+      "padre": "tiempo"
+    },
+    {
+      "id": "fecha-denuncia",
+      "etiqueta": "Fecha de la denuncia",
+      "definicion": "Fecha de la denuncia según Denuncias Ambientales; conserva evento denuncia. El nombre de la variable menciona recepción pero la descripción no la confirma; no se asume recepción ni fecha de ocurrencia de los hechos.",
+      "padre": "tiempo"
+    },
+    {
+      "id": "unidad-hospitalaria-donacion",
+      "etiqueta": "Unidad hospitalaria de donación",
+      "definicion": "Unidad hospitalaria donde se realizó la donación; conserva objeto hospitalario y evento donación. No acredita pertenencia a catálogo CLUES ni distingue publicadora/capturadora.",
+      "padre": "organizacion"
+    },
+    {
+      "id": "fecha-nacimiento-victima",
+      "etiqueta": "Fecha de nacimiento de la víctima",
+      "definicion": "Fecha de nacimiento de la víctima; conserva población víctima y evento nacimiento. Distinta de nacimiento de titulado o alumno.",
+      "padre": "tiempo"
+    },
+    {
+      "id": "fecha-inscripcion-alumno",
+      "etiqueta": "Fecha de inscripción del alumno",
+      "definicion": "Fecha de inscripción del alumno al ciclo escolar actual; conserva población alumno y evento inscripción. Ciclo referenciado sin resolver periodo.",
+      "padre": "tiempo"
+    },
+    {
+      "id": "fecha-reinscripcion-alumno",
+      "etiqueta": "Fecha de reinscripción del alumno",
+      "definicion": "Fecha de reinscripción del alumno; conserva población y evento reinscripción. Distinta de inscripción inicial y de baja.",
+      "padre": "tiempo"
+    },
+    {
+      "id": "fecha-baja-alumno",
+      "etiqueta": "Fecha de baja del alumno",
+      "definicion": "Fecha de baja del alumno; conserva población y evento baja. Distinta de inscripción y reinscripción.",
+      "padre": "tiempo"
+    },
+    {
+      "id": "mes-atencion",
+      "etiqueta": "Mes de atención",
+      "definicion": "Meses en que se brindó la atención según Atenciones brindadas; conserva evento atención. Población no precisada en la definición (contexto: personas atendidas); requiere año como contexto y no equivale a registro o captura.",
+      "padre": "tiempo"
+    }
+  ],
+  "reglas_nuevas": [
+    {
+      "id": "fecha-baja-alumno",
+      "concepto": "fecha-baja-alumno",
+      "representacion": "fecha",
+      "descripciones_cubiertas": [
+        "Fecha en la que el alumno se dio de baja"
+      ],
+      "definiciones_objetivo": [
+        "https://example.org/mex-ontologi/definition/8c0e76ff-3a86-4b1d-beee-b04bebe7df8d%2F59"
+      ],
+      "diccionarios_objetivo": [
+        "8c0e76ff-3a86-4b1d-beee-b04bebe7df8d"
+      ],
+      "conjuntos_objetivo": [
+        "e819466c-7282-46c5-84e9-65917dd8cc85"
+      ],
+      "variables_objetivo": [
+        "8c0e76ff-3a86-4b1d-beee-b04bebe7df8d|Fecha de baja"
+      ],
+      "ejemplos_positivos": [
+        "Fecha en la que el alumno se dio de baja"
+      ],
+      "contraejemplos": [
+        "Fecha de reinscripción (evento distinto)",
+        "Periodo de la baja / Tipo de baja (no son fecha)"
+      ],
+      "alcance": "Solo 1 definición/variable objetivo listadas en definiciones_objetivo; no se aplica al vocabulario central ni declara correspondencias con columnas.",
+      "alcance_verificable": true
+    },
+    {
+      "id": "fecha-denuncia",
+      "concepto": "fecha-denuncia",
+      "representacion": "fecha",
+      "descripciones_cubiertas": [
+        "Fecha de la denuncia"
+      ],
+      "definiciones_objetivo": [
+        "https://example.org/mex-ontologi/definition/3f6942e3-a9c5-42c0-a38b-2c7aad2a6c99%2F4"
+      ],
+      "diccionarios_objetivo": [
+        "3f6942e3-a9c5-42c0-a38b-2c7aad2a6c99"
+      ],
+      "conjuntos_objetivo": [
+        "c589afac-79f1-4aac-9ade-e949301bcca3"
+      ],
+      "variables_objetivo": [
+        "3f6942e3-a9c5-42c0-a38b-2c7aad2a6c99|FECHA RECEPCION"
+      ],
+      "ejemplos_positivos": [
+        "Fecha de la denuncia en Denuncias Ambientales"
+      ],
+      "contraejemplos": [
+        "TRIMESTRE del estrato (granularidad y evento distintos)",
+        "Fecha de ocurrencia de los hechos (no documentada)"
+      ],
+      "alcance": "Solo 1 definición/variable objetivo listadas en definiciones_objetivo; no se aplica al vocabulario central ni declara correspondencias con columnas.",
+      "alcance_verificable": true
+    },
+    {
+      "id": "fecha-egreso-institucion-titulado",
+      "concepto": "fecha-egreso-institucion-titulado",
+      "representacion": "fecha",
+      "descripciones_cubiertas": [
+        "Fecha en la que el titulado egreso de la institucion"
+      ],
+      "definiciones_objetivo": [
+        "https://example.org/mex-ontologi/definition/3f4a7c9e-78ed-4f0d-93b1-595c07e4059f%2F6",
+        "https://example.org/mex-ontologi/definition/5b587fca-6317-43a2-bdb3-6b3b046a0e76%2F6"
+      ],
+      "diccionarios_objetivo": [
+        "3f4a7c9e-78ed-4f0d-93b1-595c07e4059f",
+        "5b587fca-6317-43a2-bdb3-6b3b046a0e76"
+      ],
+      "conjuntos_objetivo": [
+        "598143a6-6ab1-464c-a9fd-8f4ff49d6223",
+        "ccec926d-f2c7-4a12-8ca1-0738afd35b2c"
+      ],
+      "variables_objetivo": [
+        "3f4a7c9e-78ed-4f0d-93b1-595c07e4059f|Fecha de egreso",
+        "5b587fca-6317-43a2-bdb3-6b3b046a0e76|Fecha de egreso"
+      ],
+      "ejemplos_positivos": [
+        "Fecha en la que el titulado egreso de la institucion"
+      ],
+      "contraejemplos": [
+        "Fecha de ingreso (evento distinto)",
+        "Fecha de titulación (evento distinto)"
+      ],
+      "alcance": "Solo 2 definición/variable objetivo listadas en definiciones_objetivo; no se aplica al vocabulario central ni declara correspondencias con columnas.",
+      "alcance_verificable": true
+    },
+    {
+      "id": "fecha-fin-tratamiento-rickettsia",
+      "concepto": "fecha-fin-tratamiento-rickettsia",
+      "representacion": "fecha",
+      "descripciones_cubiertas": [
+        "Fecha de termino de tratamiento para rickettsiosis"
+      ],
+      "definiciones_objetivo": [
+        "https://example.org/mex-ontologi/definition/33d0a99e-c721-496f-a05e-07646e9ae42a%2F171"
+      ],
+      "diccionarios_objetivo": [
+        "33d0a99e-c721-496f-a05e-07646e9ae42a"
+      ],
+      "conjuntos_objetivo": [
+        "5494daa1-09ca-4750-aeac-2558553700e1"
+      ],
+      "variables_objetivo": [
+        "33d0a99e-c721-496f-a05e-07646e9ae42a|fecha_fin_trat_ricket"
+      ],
+      "ejemplos_positivos": [
+        "Fecha de termino de tratamiento para rickettsiosis"
+      ],
+      "contraejemplos": [
+        "Fecha de inicio (evento distinto)",
+        "Fecha de egreso (evento distinto)"
+      ],
+      "alcance": "Solo 1 definición/variable objetivo listadas en definiciones_objetivo; no se aplica al vocabulario central ni declara correspondencias con columnas.",
+      "alcance_verificable": true
+    },
+    {
+      "id": "fecha-ingreso-institucion-titulado",
+      "concepto": "fecha-ingreso-institucion-titulado",
+      "representacion": "fecha",
+      "descripciones_cubiertas": [
+        "Fecha en la que el titulado ingreso a la institucion"
+      ],
+      "definiciones_objetivo": [
+        "https://example.org/mex-ontologi/definition/3f4a7c9e-78ed-4f0d-93b1-595c07e4059f%2F5",
+        "https://example.org/mex-ontologi/definition/5b587fca-6317-43a2-bdb3-6b3b046a0e76%2F5"
+      ],
+      "diccionarios_objetivo": [
+        "3f4a7c9e-78ed-4f0d-93b1-595c07e4059f",
+        "5b587fca-6317-43a2-bdb3-6b3b046a0e76"
+      ],
+      "conjuntos_objetivo": [
+        "598143a6-6ab1-464c-a9fd-8f4ff49d6223",
+        "ccec926d-f2c7-4a12-8ca1-0738afd35b2c"
+      ],
+      "variables_objetivo": [
+        "3f4a7c9e-78ed-4f0d-93b1-595c07e4059f|Fecha de ingreso",
+        "5b587fca-6317-43a2-bdb3-6b3b046a0e76|Fecha de ingreso"
+      ],
+      "ejemplos_positivos": [
+        "Fecha en la que el titulado ingreso a la institucion"
+      ],
+      "contraejemplos": [
+        "Fecha de egreso (evento distinto)",
+        "Fecha de ingreso del paciente (población distinta)"
+      ],
+      "alcance": "Solo 2 definición/variable objetivo listadas en definiciones_objetivo; no se aplica al vocabulario central ni declara correspondencias con columnas.",
+      "alcance_verificable": true
+    },
+    {
+      "id": "fecha-ingreso-paciente",
+      "concepto": "fecha-ingreso-paciente",
+      "representacion": "fecha",
+      "descripciones_cubiertas": [
+        "Fecha de ingreso del paciente"
+      ],
+      "definiciones_objetivo": [
+        "https://example.org/mex-ontologi/definition/33d0a99e-c721-496f-a05e-07646e9ae42a%2F122"
+      ],
+      "diccionarios_objetivo": [
+        "33d0a99e-c721-496f-a05e-07646e9ae42a"
+      ],
+      "conjuntos_objetivo": [
+        "5494daa1-09ca-4750-aeac-2558553700e1"
+      ],
+      "variables_objetivo": [
+        "33d0a99e-c721-496f-a05e-07646e9ae42a|fecha_ingreso"
+      ],
+      "ejemplos_positivos": [
+        "Fecha de ingreso del paciente = 2024-05-01"
+      ],
+      "contraejemplos": [
+        "Fecha de egreso del paciente (no es ingreso)",
+        "Fecha de ingreso de la llamada (otra población)"
+      ],
+      "alcance": "Solo 1 definición/variable objetivo listadas en definiciones_objetivo; no se aplica al vocabulario central ni declara correspondencias con columnas.",
+      "alcance_verificable": true
+    },
+    {
+      "id": "fecha-inicio-tratamiento-rickettsia",
+      "concepto": "fecha-inicio-tratamiento-rickettsia",
+      "representacion": "fecha",
+      "descripciones_cubiertas": [
+        "Fecha de inicio de tratamiento para rickettsiosis"
+      ],
+      "definiciones_objetivo": [
+        "https://example.org/mex-ontologi/definition/33d0a99e-c721-496f-a05e-07646e9ae42a%2F170"
+      ],
+      "diccionarios_objetivo": [
+        "33d0a99e-c721-496f-a05e-07646e9ae42a"
+      ],
+      "conjuntos_objetivo": [
+        "5494daa1-09ca-4750-aeac-2558553700e1"
+      ],
+      "variables_objetivo": [
+        "33d0a99e-c721-496f-a05e-07646e9ae42a|fecha_ini_trat_ricket"
+      ],
+      "ejemplos_positivos": [
+        "Fecha de inicio de tratamiento para rickettsiosis"
+      ],
+      "contraejemplos": [
+        "Fecha de término (evento distinto)",
+        "Fecha de ingreso (evento distinto)"
+      ],
+      "alcance": "Solo 1 definición/variable objetivo listadas en definiciones_objetivo; no se aplica al vocabulario central ni declara correspondencias con columnas.",
+      "alcance_verificable": true
+    },
+    {
+      "id": "fecha-inscripcion-alumno",
+      "concepto": "fecha-inscripcion-alumno",
+      "representacion": "fecha",
+      "descripciones_cubiertas": [
+        "Fecha en la que el alumno se inscribio al ciclo escolar actual"
+      ],
+      "definiciones_objetivo": [
+        "https://example.org/mex-ontologi/definition/8c0e76ff-3a86-4b1d-beee-b04bebe7df8d%2F10"
+      ],
+      "diccionarios_objetivo": [
+        "8c0e76ff-3a86-4b1d-beee-b04bebe7df8d"
+      ],
+      "conjuntos_objetivo": [
+        "e819466c-7282-46c5-84e9-65917dd8cc85"
+      ],
+      "variables_objetivo": [
+        "8c0e76ff-3a86-4b1d-beee-b04bebe7df8d|Fecha inscripción ciclo escolar actual"
+      ],
+      "ejemplos_positivos": [
+        "Fecha en la que el alumno se inscribio al ciclo escolar actual"
+      ],
+      "contraejemplos": [
+        "Fecha de reinscripción (evento distinto)",
+        "Fecha de baja (evento distinto)"
+      ],
+      "alcance": "Solo 1 definición/variable objetivo listadas en definiciones_objetivo; no se aplica al vocabulario central ni declara correspondencias con columnas.",
+      "alcance_verificable": true
+    },
+    {
+      "id": "fecha-nacimiento-titulado",
+      "concepto": "fecha-nacimiento-titulado",
+      "representacion": "fecha",
+      "descripciones_cubiertas": [
+        "Fecha de nacimiento del titulado"
+      ],
+      "definiciones_objetivo": [
+        "https://example.org/mex-ontologi/definition/3f4a7c9e-78ed-4f0d-93b1-595c07e4059f%2F2",
+        "https://example.org/mex-ontologi/definition/5b587fca-6317-43a2-bdb3-6b3b046a0e76%2F2"
+      ],
+      "diccionarios_objetivo": [
+        "3f4a7c9e-78ed-4f0d-93b1-595c07e4059f",
+        "5b587fca-6317-43a2-bdb3-6b3b046a0e76"
+      ],
+      "conjuntos_objetivo": [
+        "598143a6-6ab1-464c-a9fd-8f4ff49d6223",
+        "ccec926d-f2c7-4a12-8ca1-0738afd35b2c"
+      ],
+      "variables_objetivo": [
+        "3f4a7c9e-78ed-4f0d-93b1-595c07e4059f|Fecha de nacimiento",
+        "5b587fca-6317-43a2-bdb3-6b3b046a0e76|Fecha de nacimiento"
+      ],
+      "ejemplos_positivos": [
+        "Fecha de nacimiento del titulado"
+      ],
+      "contraejemplos": [
+        "Fecha de nacimiento de la víctima (población distinta)",
+        "Fecha de ingreso del titulado (evento distinto)"
+      ],
+      "alcance": "Solo 2 definición/variable objetivo listadas en definiciones_objetivo; no se aplica al vocabulario central ni declara correspondencias con columnas.",
+      "alcance_verificable": true
+    },
+    {
+      "id": "fecha-nacimiento-victima",
+      "concepto": "fecha-nacimiento-victima",
+      "representacion": "fecha",
+      "descripciones_cubiertas": [
+        "Fecha de nacimiento de la víctima"
+      ],
+      "definiciones_objetivo": [
+        "https://example.org/mex-ontologi/definition/5e430f3c-09d9-4402-9f75-4cae840d5421%2F2"
+      ],
+      "diccionarios_objetivo": [
+        "5e430f3c-09d9-4402-9f75-4cae840d5421"
+      ],
+      "conjuntos_objetivo": [
+        "4c1084b7-b038-4084-83b2-5fe042b09ffb"
+      ],
+      "variables_objetivo": [
+        "5e430f3c-09d9-4402-9f75-4cae840d5421|fecha_nac_vic"
+      ],
+      "ejemplos_positivos": [
+        "Fecha de nacimiento de la víctima"
+      ],
+      "contraejemplos": [
+        "Fecha del reporte de la víctima (evento distinto)",
+        "Fecha de nacimiento del titulado (población distinta)"
+      ],
+      "alcance": "Solo 1 definición/variable objetivo listadas en definiciones_objetivo; no se aplica al vocabulario central ni declara correspondencias con columnas.",
+      "alcance_verificable": true
+    },
+    {
+      "id": "fecha-recepcion-sangre-rickettsia",
+      "concepto": "fecha-recepcion-sangre-rickettsia",
+      "representacion": "fecha",
+      "descripciones_cubiertas": [
+        "Fecha de recepción de primera muestra de sangre para rickettsiosis"
+      ],
+      "definiciones_objetivo": [
+        "https://example.org/mex-ontologi/definition/33d0a99e-c721-496f-a05e-07646e9ae42a%2F160"
+      ],
+      "diccionarios_objetivo": [
+        "33d0a99e-c721-496f-a05e-07646e9ae42a"
+      ],
+      "conjuntos_objetivo": [
+        "5494daa1-09ca-4750-aeac-2558553700e1"
+      ],
+      "variables_objetivo": [
+        "33d0a99e-c721-496f-a05e-07646e9ae42a|fecha_recep_rickett_sangre"
+      ],
+      "ejemplos_positivos": [
+        "Fecha de recepción de primera muestra de sangre para rickettsiosis"
+      ],
+      "contraejemplos": [
+        "Fecha de recepción de suero (muestra distinta)",
+        "Fecha de toma de sangre (evento distinto)"
+      ],
+      "alcance": "Solo 1 definición/variable objetivo listadas en definiciones_objetivo; no se aplica al vocabulario central ni declara correspondencias con columnas.",
+      "alcance_verificable": true
+    },
+    {
+      "id": "fecha-recepcion-suero-rickettsia-ser1",
+      "concepto": "fecha-recepcion-suero-rickettsia-ser1",
+      "representacion": "fecha",
+      "descripciones_cubiertas": [
+        "Fecha de recepción de primera muestra de suero para rickettsiosis"
+      ],
+      "definiciones_objetivo": [
+        "https://example.org/mex-ontologi/definition/33d0a99e-c721-496f-a05e-07646e9ae42a%2F156"
+      ],
+      "diccionarios_objetivo": [
+        "33d0a99e-c721-496f-a05e-07646e9ae42a"
+      ],
+      "conjuntos_objetivo": [
+        "5494daa1-09ca-4750-aeac-2558553700e1"
+      ],
+      "variables_objetivo": [
+        "33d0a99e-c721-496f-a05e-07646e9ae42a|fecha_recep_rickett_ser1"
+      ],
+      "ejemplos_positivos": [
+        "Fecha de recepción de primera muestra de suero para rickettsiosis"
+      ],
+      "contraejemplos": [
+        "Fecha de toma (evento distinto)",
+        "Fecha de recepción de sangre (muestra distinta)"
+      ],
+      "alcance": "Solo 1 definición/variable objetivo listadas en definiciones_objetivo; no se aplica al vocabulario central ni declara correspondencias con columnas.",
+      "alcance_verificable": true
+    },
+    {
+      "id": "fecha-reinscripcion-alumno",
+      "concepto": "fecha-reinscripcion-alumno",
+      "representacion": "fecha",
+      "descripciones_cubiertas": [
+        "Fecha en la que se reinscribió el alumno"
+      ],
+      "definiciones_objetivo": [
+        "https://example.org/mex-ontologi/definition/8c0e76ff-3a86-4b1d-beee-b04bebe7df8d%2F38"
+      ],
+      "diccionarios_objetivo": [
+        "8c0e76ff-3a86-4b1d-beee-b04bebe7df8d"
+      ],
+      "conjuntos_objetivo": [
+        "e819466c-7282-46c5-84e9-65917dd8cc85"
+      ],
+      "variables_objetivo": [
+        "8c0e76ff-3a86-4b1d-beee-b04bebe7df8d|fecha de reinscripción"
+      ],
+      "ejemplos_positivos": [
+        "Fecha en la que se reinscribió el alumno"
+      ],
+      "contraejemplos": [
+        "Fecha de inscripción inicial (evento distinto)",
+        "Fecha de baja (evento distinto)"
+      ],
+      "alcance": "Solo 1 definición/variable objetivo listadas en definiciones_objetivo; no se aplica al vocabulario central ni declara correspondencias con columnas.",
+      "alcance_verificable": true
+    },
+    {
+      "id": "fecha-resultado-pcr-tiempo-real-rickettsia",
+      "concepto": "fecha-resultado-pcr-tiempo-real-rickettsia",
+      "representacion": "fecha",
+      "descripciones_cubiertas": [
+        "Fecha de resultado PCR tiempo real para rickettsiosis"
+      ],
+      "definiciones_objetivo": [
+        "https://example.org/mex-ontologi/definition/33d0a99e-c721-496f-a05e-07646e9ae42a%2F167"
+      ],
+      "diccionarios_objetivo": [
+        "33d0a99e-c721-496f-a05e-07646e9ae42a"
+      ],
+      "conjuntos_objetivo": [
+        "5494daa1-09ca-4750-aeac-2558553700e1"
+      ],
+      "variables_objetivo": [
+        "33d0a99e-c721-496f-a05e-07646e9ae42a|fecha_resultado_rickett_rtpcr"
+      ],
+      "ejemplos_positivos": [
+        "Fecha de resultado PCR tiempo real para rickettsiosis"
+      ],
+      "contraejemplos": [
+        "Fecha de resultado de primera muestra de suero (muestra/expresión distinta)",
+        "Fecha de toma con «PCR tiempo real» (evento distinto)"
+      ],
+      "alcance": "Solo 1 definición/variable objetivo listadas en definiciones_objetivo; no se aplica al vocabulario central ni declara correspondencias con columnas.",
+      "alcance_verificable": true
+    },
+    {
+      "id": "fecha-resultado-suero-rickettsia-ser1",
+      "concepto": "fecha-resultado-suero-rickettsia-ser1",
+      "representacion": "fecha",
+      "descripciones_cubiertas": [
+        "Fecha de resultado de la primera muestra de suer para rickettsiosis"
+      ],
+      "definiciones_objetivo": [
+        "https://example.org/mex-ontologi/definition/33d0a99e-c721-496f-a05e-07646e9ae42a%2F157"
+      ],
+      "diccionarios_objetivo": [
+        "33d0a99e-c721-496f-a05e-07646e9ae42a"
+      ],
+      "conjuntos_objetivo": [
+        "5494daa1-09ca-4750-aeac-2558553700e1"
+      ],
+      "variables_objetivo": [
+        "33d0a99e-c721-496f-a05e-07646e9ae42a|fecha_resultado_rickett_ser1"
+      ],
+      "ejemplos_positivos": [
+        "Fecha de resultado de la primera muestra de suero para rickettsiosis"
+      ],
+      "contraejemplos": [
+        "Fecha de resultado «PCR tiempo real» (expresión distinta)",
+        "Fecha de toma (evento distinto)"
+      ],
+      "alcance": "Solo 1 definición/variable objetivo listadas en definiciones_objetivo; no se aplica al vocabulario central ni declara correspondencias con columnas.",
+      "alcance_verificable": true
+    },
+    {
+      "id": "fecha-titulacion-titulado",
+      "concepto": "fecha-titulacion-titulado",
+      "representacion": "fecha",
+      "descripciones_cubiertas": [
+        "Fecha en la que el titulado se tituló"
+      ],
+      "definiciones_objetivo": [
+        "https://example.org/mex-ontologi/definition/3f4a7c9e-78ed-4f0d-93b1-595c07e4059f%2F7",
+        "https://example.org/mex-ontologi/definition/5b587fca-6317-43a2-bdb3-6b3b046a0e76%2F7"
+      ],
+      "diccionarios_objetivo": [
+        "3f4a7c9e-78ed-4f0d-93b1-595c07e4059f",
+        "5b587fca-6317-43a2-bdb3-6b3b046a0e76"
+      ],
+      "conjuntos_objetivo": [
+        "598143a6-6ab1-464c-a9fd-8f4ff49d6223",
+        "ccec926d-f2c7-4a12-8ca1-0738afd35b2c"
+      ],
+      "variables_objetivo": [
+        "3f4a7c9e-78ed-4f0d-93b1-595c07e4059f|Fecha de Titulación",
+        "5b587fca-6317-43a2-bdb3-6b3b046a0e76|Fecha de Titulación"
+      ],
+      "ejemplos_positivos": [
+        "Fecha en la que el titulado se tituló"
+      ],
+      "contraejemplos": [
+        "Fecha de egreso (evento distinto)",
+        "Fecha de titulación del título profesional con descripción pendiente (sin respaldo)"
+      ],
+      "alcance": "Solo 2 definición/variable objetivo listadas en definiciones_objetivo; no se aplica al vocabulario central ni declara correspondencias con columnas.",
+      "alcance_verificable": true
+    },
+    {
+      "id": "fecha-toma-sangre-rickettsia",
+      "concepto": "fecha-toma-sangre-rickettsia",
+      "representacion": "fecha",
+      "descripciones_cubiertas": [
+        "Fecha de toma muestra de sangre para rickettsiosis"
+      ],
+      "definiciones_objetivo": [
+        "https://example.org/mex-ontologi/definition/33d0a99e-c721-496f-a05e-07646e9ae42a%2F159"
+      ],
+      "diccionarios_objetivo": [
+        "33d0a99e-c721-496f-a05e-07646e9ae42a"
+      ],
+      "conjuntos_objetivo": [
+        "5494daa1-09ca-4750-aeac-2558553700e1"
+      ],
+      "variables_objetivo": [
+        "33d0a99e-c721-496f-a05e-07646e9ae42a|fecha_toma_rickett_sangre"
+      ],
+      "ejemplos_positivos": [
+        "Fecha de toma muestra de sangre para rickettsiosis"
+      ],
+      "contraejemplos": [
+        "Fecha de toma de suero (muestra distinta)",
+        "Fecha de recepción de sangre (evento distinto)"
+      ],
+      "alcance": "Solo 1 definición/variable objetivo listadas en definiciones_objetivo; no se aplica al vocabulario central ni declara correspondencias con columnas.",
+      "alcance_verificable": true
+    },
+    {
+      "id": "fecha-toma-suero-rickettsia-ser1",
+      "concepto": "fecha-toma-suero-rickettsia-ser1",
+      "representacion": "fecha",
+      "descripciones_cubiertas": [
+        "Fecha en la que se toma la primera muestra de suero para rickettsiosis"
+      ],
+      "definiciones_objetivo": [
+        "https://example.org/mex-ontologi/definition/33d0a99e-c721-496f-a05e-07646e9ae42a%2F155"
+      ],
+      "diccionarios_objetivo": [
+        "33d0a99e-c721-496f-a05e-07646e9ae42a"
+      ],
+      "conjuntos_objetivo": [
+        "5494daa1-09ca-4750-aeac-2558553700e1"
+      ],
+      "variables_objetivo": [
+        "33d0a99e-c721-496f-a05e-07646e9ae42a|fecha_toma_rickett_ser1"
+      ],
+      "ejemplos_positivos": [
+        "Fecha en la que se toma la primera muestra de suero para rickettsiosis"
+      ],
+      "contraejemplos": [
+        "Fecha de recepción de esa muestra (evento distinto)",
+        "Fecha de toma de sangre (muestra distinta)"
+      ],
+      "alcance": "Solo 1 definición/variable objetivo listadas en definiciones_objetivo; no se aplica al vocabulario central ni declara correspondencias con columnas.",
+      "alcance_verificable": true
+    },
+    {
+      "id": "mes-atencion",
+      "concepto": "mes-atencion",
+      "representacion": "mes",
+      "descripciones_cubiertas": [
+        "meses en que se brindó la atención"
+      ],
+      "definiciones_objetivo": [
+        "https://example.org/mex-ontologi/definition/e2b59a36-0fe1-4106-9756-ed9aca7dd9d0%2F1"
+      ],
+      "diccionarios_objetivo": [
+        "e2b59a36-0fe1-4106-9756-ed9aca7dd9d0"
+      ],
+      "conjuntos_objetivo": [
+        "a723a8e4-b944-405e-b897-bd27f8c67cf9"
+      ],
+      "variables_objetivo": [
+        "e2b59a36-0fe1-4106-9756-ed9aca7dd9d0|Mes"
+      ],
+      "ejemplos_positivos": [
+        "meses en que se brindó la atención"
+      ],
+      "contraejemplos": [
+        "Año de captura (evento distinto)",
+        "Mes de registro genérico de otro conjunto (contexto distinto)"
+      ],
+      "alcance": "Solo 1 definición/variable objetivo listadas en definiciones_objetivo; no se aplica al vocabulario central ni declara correspondencias con columnas.",
+      "alcance_verificable": true
+    },
+    {
+      "id": "unidad-hospitalaria-donacion",
+      "concepto": "unidad-hospitalaria-donacion",
+      "representacion": "no_especificada",
+      "descripciones_cubiertas": [
+        "Unidad Hospitalaria donde se realizo la donacion"
+      ],
+      "definiciones_objetivo": [
+        "https://example.org/mex-ontologi/definition/52fbcaaa-765b-4c92-8418-ccebc3fcfdcd%2F4"
+      ],
+      "diccionarios_objetivo": [
+        "52fbcaaa-765b-4c92-8418-ccebc3fcfdcd"
+      ],
+      "conjuntos_objetivo": [
+        "e863b72e-7a08-4bc7-bdab-c26ee116a383"
+      ],
+      "variables_objetivo": [
+        "52fbcaaa-765b-4c92-8418-ccebc3fcfdcd|Institucion"
+      ],
+      "ejemplos_positivos": [
+        "Unidad Hospitalaria donde se realizo la donacion"
+      ],
+      "contraejemplos": [
+        "CLUES con descripción pendiente (sin respaldo)",
+        "Dependencia que capturó (papel distinto)"
+      ],
+      "alcance": "Solo 1 definición/variable objetivo listadas en definiciones_objetivo; no se aplica al vocabulario central ni declara correspondencias con columnas.",
+      "alcance_verificable": true
+    }
+  ]
+}

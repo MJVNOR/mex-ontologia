@@ -1,0 +1,12 @@
+PREFIX mex: <{{BASE_IRI}}vocab/>
+PREFIX dct: <http://purl.org/dc/terms/>
+SELECT ?conjunto ?recurso ?columna ?tipo
+WHERE {
+  ?dataset mex:recurso ?r ; dct:title ?conjunto .
+  ?r dct:title ?recurso ; mex:esquema ?esquema ; mex:clasificacionPorMetadatos ?clase .
+  FILTER(?clase != "diccionario")
+  ?esquema mex:columna ?columna .
+  ?columna mex:nombreCampo "municipio" .
+  OPTIONAL { ?columna mex:tipoCampoDeclarado ?tipo }
+}
+ORDER BY ?conjunto ?recurso

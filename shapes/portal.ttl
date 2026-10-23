@@ -1,0 +1,36 @@
+@prefix sh: <http://www.w3.org/ns/shacl#> .
+@prefix dcat: <http://www.w3.org/ns/dcat#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+@prefix mex: <{{BASE_IRI}}vocab/> .
+@prefix shape: <{{BASE_IRI}}shapes/> .
+
+shape:Pagina a sh:NodeShape ; sh:targetClass mex:PaginaPortal ;
+    sh:property [ sh:path foaf:page ; sh:minCount 1 ; sh:maxCount 1 ; sh:nodeKind sh:IRI ] ;
+    sh:property [ sh:path mex:tipoPagina ; sh:minCount 1 ; sh:maxCount 1 ; sh:in ("seccion" "herramienta" "historia" "diagnostico" "analisis_dataton" "pagina_de_datos") ] ;
+    sh:property [ sh:path mex:visualizacionDeclarada ; sh:class mex:VisualizacionDeclarada ] ;
+    sh:property [ sh:path prov:wasDerivedFrom ; sh:minCount 1 ; sh:nodeKind sh:IRI ] .
+
+shape:Visualizacion a sh:NodeShape ; sh:targetClass mex:VisualizacionDeclarada ;
+    sh:property [ sh:path foaf:page ; sh:minCount 1 ; sh:maxCount 1 ; sh:nodeKind sh:IRI ] ;
+    sh:property [ sh:path prov:wasDerivedFrom ; sh:minCount 1 ; sh:nodeKind sh:IRI ] .
+
+shape:Esquema a sh:NodeShape ; sh:targetClass mex:EsquemaObservado ;
+    sh:property [ sh:path mex:columna ; sh:minCount 1 ; sh:class mex:ColumnaObservada ] ;
+    sh:property [ sh:path prov:wasDerivedFrom ; sh:minCount 1 ; sh:nodeKind sh:IRI ] .
+
+shape:Columna a sh:NodeShape ; sh:targetClass mex:ColumnaObservada ;
+    sh:property [ sh:path mex:nombreCampo ; sh:minCount 1 ; sh:maxCount 1 ; sh:datatype xsd:string ] ;
+    sh:property [ sh:path mex:posicionCampo ; sh:minCount 1 ; sh:maxCount 1 ; sh:datatype xsd:integer ; sh:minInclusive 1 ] ;
+    sh:property [ sh:path mex:campoInterno ; sh:minCount 1 ; sh:maxCount 1 ; sh:datatype xsd:boolean ] ;
+    sh:property [ sh:path dct:isPartOf ; sh:minCount 1 ; sh:maxCount 1 ; sh:class mex:EsquemaObservado ] .
+
+shape:Servicio a sh:NodeShape ; sh:targetClass dcat:DataService ;
+    sh:property [ sh:path dcat:endpointURL ; sh:minCount 1 ; sh:maxCount 1 ; sh:nodeKind sh:IRI ] .
+
+shape:Inspeccion a sh:NodeShape ; sh:targetSubjectsOf mex:estadoEstructura ;
+    sh:property [ sh:path mex:estadoEstructura ; sh:minCount 1 ; sh:maxCount 1 ; sh:in ("pendiente" "esquema_datastore_verificado") ] ;
+    sh:property [ sh:path mex:esquema ; sh:maxCount 1 ; sh:class mex:EsquemaObservado ] ;
+    sh:property [ sh:path mex:servicioConsulta ; sh:maxCount 1 ; sh:class dcat:DataService ] .

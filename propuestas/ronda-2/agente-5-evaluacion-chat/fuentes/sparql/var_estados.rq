@@ -1,0 +1,1 @@
+PREFIX mex: <https://example.org/mex-ontologi/vocab/> SELECT ?estado (COUNT(DISTINCT ?v) AS ?n) WHERE { ?v a mex:VariableObservada . ?v mex:estadoSemantico ?estado } GROUP BY ?estado ORDER BY ?estado

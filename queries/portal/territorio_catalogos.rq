@@ -1,0 +1,8 @@
+PREFIX mex: <{{BASE_IRI}}vocab/>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX prov: <http://www.w3.org/ns/prov#>
+SELECT ?declaracion ?nombre ?variable ?catalogo ?estado ?fuente WHERE {
+  ?vinculo a mex:VinculoCatalogoTerritorial ; mex:referenciaDeclarada ?declaracion ;
+    mex:variableDestino ?variable ; mex:catalogoRecuperado ?catalogo ; prov:wasDerivedFrom ?fuente .
+  ?declaracion rdfs:label ?nombre ; mex:estadoReferenciaCatalogo ?estado .
+} ORDER BY ?declaracion ?fuente

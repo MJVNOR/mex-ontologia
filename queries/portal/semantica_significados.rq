@@ -1,0 +1,7 @@
+PREFIX mex: <{{BASE_IRI}}vocab/>
+PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+PREFIX dct: <http://purl.org/dc/terms/>
+SELECT ?conjunto ?variable ?significado ?definicion WHERE {
+  ?dataset mex:variableDocumentada ?v ; dct:title ?conjunto .
+  ?v mex:nombreVariableLocal ?variable ; mex:significadoDocumentado/skos:prefLabel ?significado ; dct:description ?definicion .
+} ORDER BY ?significado ?conjunto ?variable

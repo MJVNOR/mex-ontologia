@@ -1,0 +1,30 @@
+@prefix sh: <http://www.w3.org/ns/shacl#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+@prefix mex: <{{BASE_IRI}}vocab/> .
+@prefix shape: <{{BASE_IRI}}shapes/> .
+
+shape:InspeccionContenido a sh:NodeShape ; sh:targetClass mex:InspeccionContenido ;
+    sh:property [ sh:path mex:resultadoInspeccion ; sh:minCount 1 ; sh:maxCount 1 ; sh:in ("observado" "no_disponible") ] ;
+    sh:property [ sh:path prov:wasDerivedFrom ; sh:minCount 1 ; sh:nodeKind sh:IRI ] ;
+    sh:property [ sh:path prov:endedAtTime ; sh:minCount 1 ; sh:maxCount 1 ; sh:datatype xsd:dateTime ] .
+
+shape:DefinicionVariable a sh:NodeShape ; sh:targetClass mex:DefinicionVariable ;
+    sh:property [ sh:path mex:nombreVariableDeclarado ; sh:minCount 1 ; sh:maxCount 1 ; sh:datatype xsd:string ] ;
+    sh:property [ sh:path mex:filaDiccionario ; sh:minCount 1 ; sh:maxCount 1 ; sh:datatype xsd:string ] ;
+    sh:property [ sh:path prov:wasDerivedFrom ; sh:minCount 1 ; sh:nodeKind sh:IRI ] .
+
+shape:ResumenMunicipal a sh:NodeShape ; sh:targetClass mex:ResumenMunicipalLocal ;
+    sh:property [ sh:path mex:codigoMunicipioFuente ; sh:minCount 1 ; sh:maxCount 1 ; sh:datatype xsd:integer ; sh:minInclusive 1 ; sh:maxInclusive 72 ] ;
+    sh:property [ sh:path mex:anioRegistro ; sh:minCount 1 ; sh:maxCount 1 ; sh:datatype xsd:integer ] ;
+    sh:property [ sh:path mex:conteoMatrimonios ; sh:maxCount 1 ; sh:datatype xsd:integer ; sh:minInclusive 0 ] ;
+    sh:property [ sh:path mex:conteoDivorcios ; sh:maxCount 1 ; sh:datatype xsd:integer ; sh:minInclusive 0 ] ;
+    sh:property [ sh:path mex:presenteEnAmbas ; sh:minCount 1 ; sh:maxCount 1 ; sh:datatype xsd:boolean ] ;
+    sh:property [ sh:path dct:isPartOf ; sh:minCount 1 ; sh:maxCount 1 ; sh:class mex:CruceAgregado ] .
+
+shape:Cruce a sh:NodeShape ; sh:targetClass mex:CruceAgregado ;
+    sh:property [ sh:path prov:wasDerivedFrom ; sh:minCount 2 ; sh:nodeKind sh:IRI ] ;
+    sh:property [ sh:path mex:resumenMunicipal ; sh:minCount 1 ; sh:class mex:ResumenMunicipalLocal ] ;
+    sh:property [ sh:path mex:limitacionCruce ; sh:minCount 1 ; sh:datatype rdf:langString ] .

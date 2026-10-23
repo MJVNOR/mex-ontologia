@@ -1,0 +1,7 @@
+PREFIX mex: <{{BASE_IRI}}vocab/>
+PREFIX dct: <http://purl.org/dc/terms/>
+SELECT ?variable ?descripcion ?unidad WHERE {
+  ?definicion a mex:DefinicionVariable ; mex:nombreVariableDeclarado ?variable .
+  OPTIONAL { ?definicion dct:description ?descripcion }
+  OPTIONAL { ?definicion mex:unidadDeclarada ?unidad }
+} ORDER BY ?variable LIMIT 100

@@ -1,0 +1,7 @@
+PREFIX mex: <{{BASE_IRI}}vocab/>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+SELECT ?entidad ?etiqueta ?observacion WHERE {
+  ?entidad mex:limiteSemantico ?observacion .
+  OPTIONAL { ?entidad rdfs:label ?etiqueta }
+  FILTER(!STRSTARTS(STR(?observacion), "Confirma la interpretación documental de esta columna"))
+} ORDER BY ?entidad ?observacion

@@ -1,0 +1,9 @@
+PREFIX mex: <{{BASE_IRI}}vocab/>
+SELECT ?estado ?clasificacion (COUNT(DISTINCT ?recurso) AS ?cantidad)
+WHERE {
+  ?recurso mex:clasificacionPorMetadatos ?clasificacion .
+  OPTIONAL { ?recurso mex:inspeccionContenido/mex:resultadoInspeccion ?nuevoEstado }
+  ?recurso mex:estadoEstructura ?estadoAnterior .
+  BIND(COALESCE(?nuevoEstado, ?estadoAnterior) AS ?estado)
+}
+GROUP BY ?estado ?clasificacion ORDER BY ?estado ?clasificacion

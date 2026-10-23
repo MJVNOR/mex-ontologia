@@ -1,0 +1,4 @@
+PREFIX mex: <{{BASE_IRI}}vocab/>
+SELECT ?estado (COUNT(?evaluacion) AS ?pares) WHERE {
+  ?evaluacion a mex:EvaluacionCruce ; mex:estadoOportunidad ?estado .
+} GROUP BY ?estado ORDER BY ?estado

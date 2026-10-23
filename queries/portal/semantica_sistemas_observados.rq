@@ -1,0 +1,6 @@
+PREFIX mex: <{{BASE_IRI}}vocab/>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+SELECT ?columna ?sistema ?limite WHERE {
+  ?columna mex:usaSistemaIdentificadores ?id .
+  ?id rdfs:label ?sistema ; mex:limiteSemantico ?limite .
+}

@@ -1,0 +1,1 @@
+PREFIX mex: <https://example.org/mex-ontologi/vocab/> SELECT ?estado (COUNT(?c) AS ?n) WHERE { ?c a mex:CorrespondenciaSemantica; mex:estadoCorrespondencia ?estado } GROUP BY ?estado ORDER BY ?estado
