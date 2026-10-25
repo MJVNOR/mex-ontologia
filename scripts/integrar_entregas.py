@@ -309,7 +309,148 @@ def construir(semantic, semantic_data, inventory, inspection, base):
                'comprobaciones_con_columna_del_grafo': sum(c['columna_enlazada'] for c in checks),
                'limites': ['Sin vigencia histórica acreditada', 'Sin asignación de localidades a otras fuentes',
                           'Sin cruces entre poblaciones', 'Muestras del agente 1 excluidas de las afirmaciones integradas']}
-    expected = config.get('esperado_actual', config['esperado'])
+    expected = dict(config.get('esperado_actual', config['esperado']))
+    r6cfg = ROOT / 'ontologia/revision-ronda-6.json'
+    if r6cfg.exists():
+        # R6 añade como máximo su vínculo auditado; el esperado histórico queda intacto.
+        r6exp = (json.loads(r6cfg.read_text(encoding='utf-8')).get('estados_correspondencias_esperados') or {})
+        if 'documental_revisada' in r6exp:
+            expected['correspondencias_revisadas'] = r6exp['documental_revisada']
+
+    r7cfg = ROOT / 'ontologia/revision-ronda-7.json'
+    if r7cfg.exists():
+        # R7: cadena auditada, luego deltas de backup congelado + accepted.
+        # Sin defaults permisivos ni observados como esperados.
+        if not r6cfg.exists():
+            raise ValueError('R7 exige su base R6 instalada')
+
+        from integrar_ronda_6 import cargar as cargar_ronda_6
+        from integrar_ronda_7 import cargar as cargar_ronda_7
+        r6c, r6f, r6base, r6accepted, r6s = cargar_ronda_6()
+        r7c, r7f, r7base, r7accepted, r7sources = cargar_ronda_7()
+        sources.update({k: v for k, v in r7sources.items() if k not in sources})
+        # R8 (solo si existe su config): proyecta el reporte vivo a su
+        # equivalente R7; el bloque historico siguiente corre intacto.
+        semantic_vivo = semantic
+        delta8 = None
+        if (ROOT / 'ontologia/revision-ronda-8.json').exists():
+            from integrar_ronda_8 import cargar as cargar_ronda_8
+            from r8_proyeccion import preparar_proyeccion_r7
+            r8c, r8f, r8base, r8accepted, r8sources = cargar_ronda_8(ROOT)
+            sources.update({k: v for k, v in r8sources.items() if k not in sources})
+            semantic, delta8 = preparar_proyeccion_r7(
+                semantic, r7base, r7accepted, r8base, r8accepted)
+        if r7base['reglas_descripcion_exacta'] != r6base['reglas_descripcion_exacta'] + r6accepted['reglas'] \
+                or r7base['vinculos_documentales_revisados'] != r6base['vinculos_documentales_revisados'] + r6accepted['vinculos']:
+            raise ValueError('Base R7 discontinua respecto a cadena R6')
+        for k, v in r6base['conceptos'].items():
+            if r7base['conceptos'].get(k) != v:
+                raise ValueError('Concepto base alterado en cadena R7: ' + k)
+        for k, v in r6accepted['conceptos'].items():
+            if r7base['conceptos'].get(k) != v:
+                raise ValueError('Concepto R6 ausente en base R7: ' + k)
+        n_reglas, n_vinc, n_con = (len(r7accepted[k]) for k in ('reglas', 'vinculos', 'conceptos'))
+        if (n_reglas, n_vinc, n_con) != (31, 3, 31):
+            raise ValueError('R7 fuera del lote auditado 31/3/31')
+        # Pre-estado R6 desde cobertura congelada con SHA del respaldo-previo.
+        bkroot = ROOT / 'propuestas/plan-paralelo-brechas-sin-gemma/ejecucion-20261024-072207Z/integracion/respaldo-previo'
+        bkman = json.loads((bkroot / 'manifiesto-respaldo.json').read_text(encoding='utf-8'))
+        pin = {c['original']: c['sha256'] for c in bkman['copias']}
+        if sha(bkroot / 'manifiesto-respaldo.json') != 'ea354f8a635e298ab6c886ea12fe3ebf4b592658a8592514c182842f4420d5cd':
+            raise ValueError('Manifiesto de respaldo-previo alterado')
+        bkcov = bkroot / 'data/semantica/cobertura.json'
+        if sha(bkcov) != pin.get('data/semantica/cobertura.json'):
+            raise ValueError('Cobertura R6 de respaldo alterada')
+        bkcob = json.loads(bkcov.read_text(encoding='utf-8'))
+        pre_est = {v['definicion_iri']: v['estado'] for v in bkcob['variables']}
+        backed = [r['definiciones'][0] for r in r7accepted['reglas']]
+        if any(pre_est.get(d) == 'respaldada_por_definicion' for d in backed):
+            raise ValueError('R7 re-respalda definición previa')
+        de_cand = [d for d in backed if pre_est.get(d) == 'candidata_sin_definicion_suficiente']
+        de_fuera = [d for d in backed if pre_est.get(d) == 'fuera_del_nucleo_actual']
+        if (len(de_cand), len(de_fuera)) != (3, 28):
+            raise ValueError('R7 sin partición 3 candidatas + 28 fuera')
+        pre_var = (json.loads(r6cfg.read_text(encoding='utf-8')).get('estados_variables_esperados') or {})
+        for clave in ('respaldada_por_definicion', 'fuera_del_nucleo_actual', 'candidata_sin_definicion_suficiente'):
+            if clave not in pre_var:
+                raise ValueError('Ancla histórica R6 ausente: ' + clave)
+        if len(r7base['conceptos']) + n_con != 1106:
+            raise ValueError('R7 sin 1106 conceptos derivados')
+        expected['conceptos'] = len(r7base['conceptos']) + n_con
+        expected['variables_respaldadas'] = pre_var['respaldada_por_definicion'] + n_reglas
+        if expected['variables_respaldadas'] != 1423:
+            raise ValueError('R7 sin 1423 variables derivadas')
+        expected['variables_pendientes'] = pre_var['candidata_sin_definicion_suficiente'] - len(de_cand)
+        if expected['variables_pendientes'] != 16:
+            raise ValueError('R7 sin 16 candidatas de significado')
+        expected['correspondencias_revisadas'] = len(r7base['vinculos_documentales_revisados']) + n_vinc
+        if expected['correspondencias_revisadas'] != 4478:
+            raise ValueError('R7 sin 4478 correspondencias derivadas')
+        # 28 coincidencias automáticas nuevas: candidatas visibles, no aprobadas.
+        pre_cand_cols = {m['columna'] for m in bkcob['correspondencias'] if m['estado'] == 'candidata_por_nombre'}
+        promovidas = {v['columna'] for v in r7accepted['vinculos']}
+        if not promovidas <= pre_cand_cols:
+            raise ValueError('Vínculo R7 fuera de candidatas previas')
+        viejas = pre_cand_cols - promovidas
+        if len(viejas) != 17:
+            raise ValueError('R7 sin 17 candidatas anteriores')
+        en_vivo = {m['columna'] for m in semantic['correspondencias'] if m['estado'] == 'candidata_por_nombre'}
+        nuevas = en_vivo - pre_cand_cols
+        if len(nuevas) != 28 or not nuevas.isdisjoint(viejas):
+            raise ValueError('R7 sin 28 coincidencias nuevas exactas')
+        vardef = {v['iri']: v['definicion_iri'] for v in semantic['variables'] if 'iri' in v}
+        for m in semantic['correspondencias']:
+            if m['columna'] in nuevas and vardef.get(m['variable']) not in backed:
+                raise ValueError('Coincidencia nueva sin respaldo R7: ' + m['columna'])
+        if len(en_vivo) != 45:
+            raise ValueError('R7 sin 45 candidatas (17 anteriores + 28 nuevas)')
+        if bkcob['resumen']['columnas_con_correspondencia'] + len(nuevas) != 4523:
+            raise ValueError('Pin histórico de columnas con correspondencia alterado')
+        if semantic['resumen']['columnas_con_correspondencia'] != 4523:
+            raise ValueError('R7 sin 4523 columnas con correspondencia')
+        # Pendientes 140 = fuera 124 + candidatas 16, con conservación.
+        fuera = pre_var['fuera_del_nucleo_actual'] - len(de_fuera)
+        if fuera != 124:
+            raise ValueError('R7 sin 124 fuera derivados')
+        tot = semantic['resumen']['definiciones_con_nombre_examinadas']
+        resp = semantic['resumen']['estados_variables']['respaldada_por_definicion']
+        cand = semantic['resumen']['estados_variables']['candidata_sin_definicion_suficiente']
+        if resp + fuera + cand != tot or fuera + cand != 140:
+            raise ValueError('R7 sin conservación 1423+124+16')
+        # Materialización fiel de cada regla aceptada (la cadena completa se
+        # valida en integrar_ronda_7.construir, fase R7 de la misma corrida).
+        variables = {v['definicion_iri']: v for v in semantic['variables']}
+        for row in r7accepted['reglas']:
+            observed = variables[row['definiciones'][0]]
+            if observed.get('estado') != 'respaldada_por_definicion' \
+                    or observed.get('regla') != row['id'] \
+                    or observed.get('concepto') != row['concepto'] \
+                    or observed.get('huella_fila_diccionario') != row['huella_fila_diccionario']:
+                raise ValueError('Regla R7 no materializada: ' + row['id'])
+        if delta8 is not None:
+            # Delta R8 derivado sobre el reporte vivo (nada observado).
+            res8 = semantic_vivo['resumen']
+            if res8['estados_correspondencias']['documental_revisada'] != 4478 + delta8['n_vinculos'] \
+                    or res8['estados_correspondencias']['candidata_por_nombre'] != 45 - delta8['n_vinculos']:
+                raise ValueError('R8 sin delta de correspondencias derivado')
+            if res8['conceptos_compartidos'] != 1106 + delta8['n_conceptos']:
+                raise ValueError('R8 sin delta de conceptos derivado')
+            est8 = res8['estados_variables']
+            if est8['respaldada_por_definicion'] != 1423 + delta8['n_reglas'] \
+                    or est8['candidata_sin_definicion_suficiente'] != 16 - delta8['n_reglas']:
+                raise ValueError('R8 sin delta de variables derivado')
+            if est8['respaldada_por_definicion'] + est8['fuera_del_nucleo_actual'] \
+                    + est8['candidata_sin_definicion_suficiente'] != res8['definiciones_con_nombre_examinadas']:
+                raise ValueError('R8 sin conservacion total derivada')
+            if res8['columnas_con_correspondencia'] != 4523:
+                raise ValueError('Pin historico de columnas con correspondencia alterado')
+            expected['conceptos'] += delta8['n_conceptos']
+            expected['variables_respaldadas'] += delta8['n_reglas']
+            expected['variables_pendientes'] -= delta8['n_reglas']
+            expected['correspondencias_revisadas'] += delta8['n_vinculos']
+            semantic = semantic_vivo
+
+
     actual = {'conceptos': semantic['resumen']['conceptos_compartidos'],
               'variables_respaldadas': semantic['resumen']['estados_variables']['respaldada_por_definicion'],
               'variables_pendientes': semantic['resumen']['estados_variables']['candidata_sin_definicion_suficiente'],
@@ -326,7 +467,7 @@ def construir(semantic, semantic_data, inventory, inspection, base):
     (ROOT / 'data/integracion/integracion.ttl').write_text(g.serialize(format='turtle'), encoding='utf-8')
     (ROOT / 'reports/integracion-agentes.json').write_text(json.dumps(summary, ensure_ascii=False, indent=2) + '\n', encoding='utf-8')
     lines = ['# Integración central de las cinco entregas — ronda 1', '',
-             'La tabla siguiente conserva los resultados históricos de la primera ronda. El estado actual posterior a la ronda 2 se documenta en reports/integracion-ronda-2.md.', '',
+             'La tabla siguiente conserva los resultados históricos de la primera ronda. El estado vigente se documenta en reports/consolidacion-semantica.md y reports/cobertura-muse.md.', '',
              'Las carpetas originales de propuestas se conservan. La generación lee copias de evidencia fijadas por SHA-256 en data/integracion; no depende de cambios posteriores en las carpetas de agentes ni consulta la red.', '',
              '| Resultado | Cantidad |', '| --- | ---: |',
              '| Conceptos compartidos | 103 |', '| Variables con significado documental | 232 |',
@@ -337,7 +478,7 @@ def construir(semantic, semantic_data, inventory, inspection, base):
              '## Decisiones y límites', '',
              '- Agente 1: ocho vínculos documentales a hojas completas. Las cuatro publicaciones educativas conservan sus referencias por conjunto, aunque comparten bytes. Las muestras de datos no se integran: algunos metadatos de muestra del JSON repiten el campo de servicios en otras variables; no se usan como evidencia de pertenencia. La identificación se sustenta en diccionario y catálogo completo. La referencia des_mpo_res sigue sin resolver y conserva las dos definiciones de origen.',
              '- Agente 2: 1850 observaciones con composición cruda exacta 2+3+4, sin padding ni conversión numérica. Son localidades incluidas en IML_2020, no un catálogo oficial completo ni una equivalencia con una edición INEGI. No se importó el contraste externo puntual como acreditación de cobertura.',
-             '- Agente 3: 20 conceptos/reglas, restringidos simultáneamente por definición, diccionario, conjunto, nombre y descripción. Promocionan 24 significados; 23 siguen pendientes. Las 1308 definiciones fuera del núcleo conservan ese estado.',
+             '- Agente 3: 20 conceptos/reglas, restringidos simultáneamente por definición, diccionario, conjunto, nombre y descripción. Esta ronda promocionó 24 significados; entonces quedaron 23 candidatos y 1308 definiciones fuera del núcleo. Las ampliaciones posteriores se registran en la cobertura vigente.',
              '- Agente 4: 99 correspondencias y un alias técnico limitado a la columna de divorcios 2023. a–o de nacimientos 2024 no se promueve. Las 62 revisiones existentes se conservan.',
              '- Agente 5: 16 comprobaciones compatibles, 11 con excepciones y una ausencia de columna. Se vuelven a leer las 25 fuentes y se verifican claves, filas, pertenencia a catálogo y composición exacta. No se asigna un sistema de identificadores a columnas ni se promociona su correspondencia semántica. 26998/26999 siguen siendo categorías no municipales. Víctimas 2015 solo tiene revisión completa de encabezado; validación de Clave_Ent no aplicable.', '',
              'No se acredita vigencia histórica, no se ejecutan nuevos cruces ni se crean owl:sameAs/skos:exactMatch. Las 5 inconsistencias documentales previas siguen visibles, incluida la limitación del ejemplo de formato municipal.', '',

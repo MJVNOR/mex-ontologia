@@ -1,0 +1,532 @@
+{
+ "comprobaciones": [
+  {
+   "detalle": "6 recursos en inventario (3 por conjunto): ['0df8592f-bb3d-466c-aec3-6cbc91253be0', '1a95d734-2f0e-4781-8831-77dcfcbe70f8', '54285a13-3a2a-4e47-b0af-e855861f5347', '6ce17dd1-5716-44e9-bc5f-603c0925afe6', '7922b8c8-db09-4172-ad7f-31b0ba0c68e3', '943e2919-6a8b-4776-ac4f-c3d6b02bb94e']",
+   "estado": "ok",
+   "id": "recursos_del_par"
+  },
+  {
+   "detalle": "54285a13-3a2a-4e47-b0af-e855861f5347 (conjunto A) == 6ce17dd1-5716-44e9-bc5f-603c0925afe6 (conjunto B), sha 9d710cb868c3fb6304a4310259bf4c7e64d2af7cdc15cd253bdc8dd86c9c2109, bytes 8955252, hoja LLAMADAS PROCEDENTES 911",
+   "estado": "ok",
+   "id": "duplicado_entre_conjuntos"
+  },
+  {
+   "detalle": "el sha aparece exactamente en 2 inspecciones: ['54285a13-3a2a-4e47-b0af-e855861f5347', '6ce17dd1-5716-44e9-bc5f-603c0925afe6']",
+   "estado": "ok",
+   "id": "duplicado_no_se_repite_en_corpus"
+  },
+  {
+   "detalle": "diccionarios de A y B con sha fcd73b159fdf46ce33a5d9c43f227b7a7b5e296cb197399a8eac6c6be57c5140; 7 variables; unidades vacias; sin variable 'motivo no procedente'",
+   "estado": "ok",
+   "id": "diccionarios_identicos"
+  },
+  {
+   "detalle": "columnas de improcedentes Q2 sin definicion en el diccionario: ['motivo no procedente']",
+   "estado": "no_acreditado",
+   "id": "columnas_sin_diccionario"
+  },
+  {
+   "detalle": "0df8592f solo tiene FECHA, HORA y MOTIVO NO PROCEDENTE; no permite corte por municipio",
+   "estado": "ok",
+   "id": "q2_improcedentes_sin_municipio"
+  },
+  {
+   "detalle": "unico XLSX con hoja de improcedentes: ['0df8592f-bb3d-466c-aec3-6cbc91253be0']; el Q1 del conjunto A es el duplicado de procedentes",
+   "estado": "ok",
+   "id": "improcedentes_reales_solo_q2"
+  },
+  {
+   "detalle": "la muestra A del lote se tomo de 54285a13-3a2a-4e47-b0af-e855861f5347 (procedentes Q1), no de 0df8592f; la comparacion muestral es procedentes Q1 vs procedentes Q2",
+   "estado": "ok",
+   "id": "muestra_a_desde_duplicado"
+  },
+  {
+   "detalle": "en el cruce, municipio/localidad/division_territorial_declarada solo enlazan columnas de 54285a13-3a2a-4e47-b0af-e855861f5347; sin el duplicado no hay familia territorial compartida",
+   "estado": "ok",
+   "id": "familias_territoriales_solo_por_duplicado"
+  },
+  {
+   "detalle": "FECHA existe en 0df8592f y en los procedentes; el periodo es la unica familia compartida con columna propia de improcedentes",
+   "estado": "ok",
+   "id": "periodo_compartido_real"
+  },
+  {
+   "detalle": "6 coincidencias textuales en muestra n=29 (CAJEME, GUAYMAS, HERMOSILLO, NOGALES, PUERTO PEÑASCO, SAN LUIS RIO COLORADO); interpretacion del lote: Coincidencia textual muestral, sin equivalencia ni cobertura demostradas",
+   "estado": "no_acreditado",
+   "id": "coincidencias_municipio_muestrales"
+  },
+  {
+   "detalle": "ningun recurso del par declara particion del universo ni total; descripcion nula en los 6",
+   "estado": "bloqueado",
+   "id": "particion_no_declarada"
+  },
+  {
+   "detalle": "no calculada: falta particion acreditada y, para improcedentes, falta MUNICIPIO",
+   "estado": "bloqueado",
+   "id": "proporcion"
+  },
+  {
+   "detalle": "no ejecutado: lote requiere_revision, ejecuciones vacias, sin grano/clave/cardinalidad validados",
+   "estado": "bloqueado",
+   "id": "join"
+  },
+  {
+   "detalle": "0 copias locales de filas 911 (xlsx/xls/csv); solo bytes y SHA de inspeccion",
+   "estado": "no_acreditado",
+   "id": "filas_locales"
+  },
+  {
+   "detalle": "vinculos semanticos de MUNICIPIO solo en ['54285a13-3a2a-4e47-b0af-e855861f5347', '6ce17dd1-5716-44e9-bc5f-603c0925afe6', '943e2919-6a8b-4776-ac4f-c3d6b02bb94e']; 0df8592f no tiene",
+   "estado": "no_acreditado",
+   "id": "concepto_municipio_improcedentes"
+  },
+  {
+   "detalle": "el vinculo HORA de 54285a13-3a2a-4e47-b0af-e855861f5347 usa concepto 'hora-ingreso-llamada-911-improcedente' aunque el archivo es procedentes: la etiqueta improcedente del conjunto se propago al contenido",
+   "estado": "ok",
+   "id": "conflicto_semantico_duplicado"
+  },
+  {
+   "detalle": "MOTIVO NO PROCEDENTE figura como 'sin_definicion_coincidente' en pendientes semanticos",
+   "estado": "no_acreditado",
+   "id": "motivo_sin_definicion"
+  }
+ ],
+ "conjuntos": {
+  "a": {
+   "recursos": [
+    "0df8592f-bb3d-466c-aec3-6cbc91253be0",
+    "54285a13-3a2a-4e47-b0af-e855861f5347",
+    "1a95d734-2f0e-4781-8831-77dcfcbe70f8"
+   ],
+   "titulo": "Llamadas Improcedentes 911"
+  },
+  "b": {
+   "recursos": [
+    "6ce17dd1-5716-44e9-bc5f-603c0925afe6",
+    "943e2919-6a8b-4776-ac4f-c3d6b02bb94e",
+    "7922b8c8-db09-4172-ad7f-31b0ba0c68e3"
+   ],
+   "titulo": "Llamadas Procedentes 911"
+  }
+ },
+ "ficha": {
+  "cardinalidad": {
+   "comprobado": [
+    "lote",
+    "duplicado entre conjuntos"
+   ],
+   "estado": "no_acreditada",
+   "evidencia": "Sin clave primaria declarada no hay cardinalidad 1:1 ni N:M demostrable. El lote queda en 'requiere_revision' con ejecuciones=[] y pendiente 'comprobar_cardinalidad_y_evitar_multiplicacion_de_filas'. Ademas el recurso etiquetado como improcedentes Q1 comparte SHA con procedentes Q1, de modo que una union ingenua duplicaria filas y ningun total es fiable.",
+   "pendiente": [
+    "conteo de filas por recurso",
+    "clave y cardinalidad declaradas"
+   ]
+  },
+  "claves": {
+   "comprobado": [
+    "esquemas",
+    "diccionario.Identificadores",
+    "oportunidad.pendientes"
+   ],
+   "estado": "no_acreditada",
+   "evidencia": "Ninguno de los 6 recursos declara columna identificadora: las 7 variables del diccionario 1a95d734 (sha fcd73b159fdf, identico en ambos conjuntos) no aportan identificador (6 con 'Identificadores' vacio y 'hora' solo con texto residual). 6 de 6 esquemas usan metodo_encabezado=heuristica_requiere_revision. El cruce R9 exige clave compuesta entidad+municipio y entidad+municipio+localidad.",
+   "pendiente": [
+    "catalogo de municipios con unicidad",
+    "contexto de clave documentado"
+   ]
+  },
+  "cobertura_datos": {
+   "comprobado": [
+    "inventario",
+    "esquemas",
+    "duplicado",
+    "lote.diagnostico_muestras"
+   ],
+   "estado": "parcial_y_asimetrica",
+   "evidencia": "Improcedentes reales: solo Q2 (0df8592f, 3 columnas FECHA/HORA/MOTIVO, sin MUNICIPIO). Procedentes: Q1 (6ce17dd1) y Q2 (943e2919), 7 columnas. El Q1 de improcedentes es un duplicado byte a byte de procedentes Q1. No hay conteos de filas: solo bytes leidos. Las dos muestras n=29 son de archivos procedentes (incluido el duplicado); no hay muestra de 0df8592f.",
+   "pendiente": [
+    "copia local de improcedentes Q2 con MUNICIPIO",
+    "conteos por municipio y mes"
+   ]
+  },
+  "grano": {
+   "comprobado": [
+    "esquemas",
+    "lote.decision",
+    "lote.ejecuciones"
+   ],
+   "estado": "fila_evento_llamada_sin_agregacion_validada",
+   "evidencia": "Los cuatro XLSX tienen grano de llamada individual (FECHA/HORA + atributos), sin columnas de total ni de resumen. El lote de cruces rechaza ejecutar por falta de estrategia de agregacion: Sin estrategia automática de agregación validada para las medidas y el grano de estos recursos.",
+   "pendiente": [
+    "regla de agregacion por municipio y mes"
+   ]
+  },
+  "periodo": {
+   "comprobado": [
+    "nombres/URL",
+    "lote.campos_solicitados"
+   ],
+   "estado": "nominal_2026_sin_verificar_contenido",
+   "evidencia": "Trimestres solo en nombres/URL: Q1 y Q2 de 2026 en los cuatro XLSX; el cruce solo coincide en el anio y 'solo en nombres'. Las muestras n=29 pidieron ['COLONIA', 'LOCALIDAD', 'MUNICIPIO'] y no FECHA, asi que no hay ningun valor de fecha leido localmente. Un recurso de improcedentes Q1 no existe: ese lugar lo ocupa el duplicado de procedentes Q1.",
+   "pendiente": [
+    "copias locales para verificar FECHA y cobertura mensual"
+   ]
+  },
+  "poblacion": {
+   "comprobado": [
+    "inventario",
+    "esquemas",
+    "duplicado"
+   ],
+   "estado": "sin_particion_acreditada",
+   "evidencia": "Procedentes e improcedentes viven en conjuntos separados y ningun recurso del par es un documento de particion: los 6 son XLSX/CSV de datos o diccionario, sin descripcion, y no aportan total del universo. El recurso de improcedentes Q1 (54285a13) contiene en realidad la hoja LLAMADAS PROCEDENTES 911 con sha 9d710cb868c3, identico a procedentes Q1 (6ce17dd1). Sin particion declarada no se calcula proporcion.",
+   "pendiente": [
+    "fe de erratas o diccionario que declare la particion y su total"
+   ]
+  },
+  "unicidad": {
+   "comprobado": [
+    "lote.diagnostico_muestras",
+    "lote.alcance"
+   ],
+   "estado": "no_acreditada",
+   "evidencia": "Solo hay diagnosticos de muestra n=29 con alcance literal 'no demuestra unicidad ni cobertura integral'. Repeticiones en la muestra: MUNICIPIO 20/29 (Q1) y 20/29 (Q2); LOCALIDAD 18/29 y 10/29; COLONIA 1/29 y 4/29. Una muestra no acredita unicidad del recurso completo.",
+   "pendiente": [
+    "copia local de filas y conteo de duplicados por clave"
+   ]
+  },
+  "unidades": {
+   "comprobado": [
+    "diccionario.Unidad de medida"
+   ],
+   "estado": "conteo_de_llamadas_sin_unidad_fisica",
+   "evidencia": "Las 7 variables del diccionario tienen 'Unidad de medida' vacia. La medida implicita es conteo de filas (llamadas), no una magnitud con unidad; no hay termino QUDT aplicable ni peticion a W que hacer por este par.",
+   "pendiente": []
+  }
+ },
+ "hallazgos": {
+  "coincidencias_municipio_muestrales": {
+   "ejemplos": [
+    "CAJEME",
+    "GUAYMAS",
+    "HERMOSILLO",
+    "NOGALES",
+    "PUERTO PEÑASCO",
+    "SAN LUIS RIO COLORADO"
+   ],
+   "interpretacion": "Coincidencia textual muestral, sin equivalencia ni cobertura demostradas",
+   "n": 6
+  },
+  "columnas_sin_diccionario": [
+   "motivo no procedente"
+  ],
+  "diccionarios_identicos": {
+   "detalle": "Mismo diccionario en ambos conjuntos; no define MOTIVO NO PROCEDENTE.",
+   "recursos": [
+    "1a95d734-2f0e-4781-8831-77dcfcbe70f8",
+    "7922b8c8-db09-4172-ad7f-31b0ba0c68e3"
+   ],
+   "sha256": "fcd73b159fdf46ce33a5d9c43f227b7a7b5e296cb197399a8eac6c6be57c5140",
+   "variables": [
+    "fecha",
+    "hora",
+    "municipio",
+    "localidad",
+    "colonia",
+    "sexo reportante",
+    "clasificacion"
+   ]
+  },
+  "duplicado_entre_conjuntos": {
+   "bytes": 8955252,
+   "detalle": "El recurso de improcedentes Q1 es byte a byte el de procedentes Q1; su URL tambien apunta al archivo de procedentes.",
+   "hoja": "LLAMADAS PROCEDENTES 911",
+   "recursos": [
+    "54285a13-3a2a-4e47-b0af-e855861f5347",
+    "6ce17dd1-5716-44e9-bc5f-603c0925afe6"
+   ],
+   "sha256": "9d710cb868c3fb6304a4310259bf4c7e64d2af7cdc15cd253bdc8dd86c9c2109"
+  },
+  "familias_territoriales_solo_por_duplicado": {
+   "detalle": "El 'municipio compartido' del cruce depende del duplicado; al excluirlo no hay clave territorial comun.",
+   "familias": [
+    "municipio",
+    "localidad",
+    "division_territorial_declarada"
+   ],
+   "recurso_unico": "54285a13-3a2a-4e47-b0af-e855861f5347"
+  },
+  "muestra_a_desde_duplicado": {
+   "detalle": "La comparacion muestral del lote nunca observa improcedentes: compara procedentes Q1 (duplicado) con procedentes Q2.",
+   "recurso_muestra_a": "54285a13-3a2a-4e47-b0af-e855861f5347",
+   "recurso_muestra_b": "943e2919-6a8b-4776-ac4f-c3d6b02bb94e"
+  },
+  "q2_improcedentes_sin_municipio": {
+   "columnas": [
+    "FECHA",
+    "HORA",
+    "MOTIVO NO PROCEDENTE"
+   ],
+   "detalle": "Sin MUNICIPIO ni LOCALIDAD; el corte territorial y la comparacion por municipio son imposibles para improcedentes.",
+   "recurso": "0df8592f-bb3d-466c-aec3-6cbc91253be0"
+  },
+  "sin_copias_locales_de_filas": {
+   "archivos": []
+  },
+  "sin_documento_de_particion": true
+ },
+ "join": {
+  "ejecutado": false,
+  "motivo": "lote requiere_revision sin ejecuciones; sin clave, grano ni cardinalidad validados; sin MUNICIPIO en improcedentes Q2."
+ },
+ "limites": [
+  "No se calculo ninguna proporcion ni tasa; no se ejecuto join.",
+  "No se infiere unicidad ni cardinalidad del universo a partir de muestras n=29.",
+  "Las coincidencias textuales de MUNICIPIO en la muestra no acreditan equivalencia entre conjuntos.",
+  "El duplicado Q1 se reporta como hallazgo; no se usa para agregar ni para sumar universos.",
+  "No se toco v001, el grafo, la configuracion IRI ni Studio."
+ ],
+ "par": {
+  "conjunto_a": "19e5036d-dbe3-4e1d-b021-df5d47b6fb1f",
+  "conjunto_b": "923b485b-515e-4fb9-a4ac-cccbeb88cc92",
+  "id": "19e5036d-dbe3-4e1d-b021-df5d47b6fb1f--923b485b-515e-4fb9-a4ac-cccbeb88cc92",
+  "titulo_a": "Llamadas Improcedentes 911",
+  "titulo_b": "Llamadas Procedentes 911"
+ },
+ "pregunta": "¿Se pueden comparar los volumenes clasificados como procedentes e improcedentes por municipio y mes? Solo calcular una proporcion si consta que las categorias forman una particion del mismo universo.",
+ "proporcion": {
+  "estado": "bloqueada",
+  "motivo": "No consta que procedentes e improcedentes particionen el mismo universo: no hay documento, total ni fe de erratas. Ademas el unico recurso real de improcedentes (Q2) no tiene MUNICIPIO.",
+  "requisito": "particion_acreditada_del_mismo_universo"
+ },
+ "reapertura": [
+  "Fe de erratas o diccionario del publicador que declare la particion procedentes/improcedentes del mismo universo con su total.",
+  "Correccion del recurso 54285a13 (hoy duplicado de procedentes Q1) o sustituto real de improcedentes Q1.",
+  "Esquema con MUNICIPIO para improcedentes Q2 (0df8592f) y catalogo de municipios con unicidad.",
+  "Copias locales de filas para verificar periodo, conteos por municipio y mes, y unicidad."
+ ],
+ "recursos": {
+  "0df8592f-bb3d-466c-aec3-6cbc91253be0": {
+   "bytes_leidos": 4822387,
+   "columnas": [
+    "FECHA",
+    "HORA",
+    "MOTIVO NO PROCEDENTE"
+   ],
+   "completo": true,
+   "conjunto": "Llamadas Improcedentes 911",
+   "conjunto_id": "19e5036d-dbe3-4e1d-b021-df5d47b6fb1f",
+   "consultado_en_utc": "2026-10-23T06:20:49.095073+00:00",
+   "descripcion": null,
+   "formato": "XLSX",
+   "hoja": "LLAMADA IMPROCEDENTES 911",
+   "http": 200,
+   "metodo_encabezado": "heuristica_requiere_revision",
+   "nombre": "Lamadas Improcedentes 911 segundo trimestre 2026",
+   "ok": true,
+   "sha256": "6aa7c1640e191f5ad8549be207c9787dca076f92dd20844dfe39c9eddc1509a3",
+   "url": "https://datos.sonora.gob.mx/dataset/19e5036d-dbe3-4e1d-b021-df5d47b6fb1f/resource/0df8592f-bb3d-466c-aec3-6cbc91253be0/download/llamadas-improcedentes-911-segundo-trimestre-2026.xlsx",
+   "vars": null
+  },
+  "1a95d734-2f0e-4781-8831-77dcfcbe70f8": {
+   "bytes_leidos": 972,
+   "columnas": [
+    "Nombre variable",
+    "Tipo de dato",
+    "Formato",
+    "Unidad de medida",
+    "Descripción",
+    "Identificadores",
+    "Catálogo de referencia",
+    "Detalle de relación con catálogos",
+    "Identificador de valores nulos",
+    "Ejemplo de dato"
+   ],
+   "completo": true,
+   "conjunto": "Llamadas Improcedentes 911",
+   "conjunto_id": "19e5036d-dbe3-4e1d-b021-df5d47b6fb1f",
+   "consultado_en_utc": "2026-10-23T06:20:48.843578+00:00",
+   "descripcion": null,
+   "formato": "CSV",
+   "hoja": "CSV",
+   "http": 200,
+   "metodo_encabezado": "heuristica_requiere_revision",
+   "nombre": "Diccionario",
+   "ok": true,
+   "sha256": "fcd73b159fdf46ce33a5d9c43f227b7a7b5e296cb197399a8eac6c6be57c5140",
+   "url": "https://datos.sonora.gob.mx/dataset/19e5036d-dbe3-4e1d-b021-df5d47b6fb1f/resource/1a95d734-2f0e-4781-8831-77dcfcbe70f8/download/diccionario.csv",
+   "vars": 7
+  },
+  "54285a13-3a2a-4e47-b0af-e855861f5347": {
+   "bytes_leidos": 8955252,
+   "columnas": [
+    "FECHA",
+    "HORA",
+    "MUNICIPIO",
+    "LOCALIDAD",
+    "COLONIA",
+    "SEXO REPORTANTE",
+    "CLASIFICACION"
+   ],
+   "completo": true,
+   "conjunto": "Llamadas Improcedentes 911",
+   "conjunto_id": "19e5036d-dbe3-4e1d-b021-df5d47b6fb1f",
+   "consultado_en_utc": "2026-10-23T06:20:48.852318+00:00",
+   "descripcion": null,
+   "formato": "XLSX",
+   "hoja": "LLAMADAS PROCEDENTES 911",
+   "http": 200,
+   "metodo_encabezado": "heuristica_requiere_revision",
+   "nombre": "Lamadas Improcedentes 911 primer trimestre 2026",
+   "ok": true,
+   "sha256": "9d710cb868c3fb6304a4310259bf4c7e64d2af7cdc15cd253bdc8dd86c9c2109",
+   "url": "https://datos.sonora.gob.mx/dataset/19e5036d-dbe3-4e1d-b021-df5d47b6fb1f/resource/54285a13-3a2a-4e47-b0af-e855861f5347/download/llamadas-procedentes-911-primer-trimestre-2026.xlsx",
+   "vars": null
+  },
+  "6ce17dd1-5716-44e9-bc5f-603c0925afe6": {
+   "bytes_leidos": 8955252,
+   "columnas": [
+    "FECHA",
+    "HORA",
+    "MUNICIPIO",
+    "LOCALIDAD",
+    "COLONIA",
+    "SEXO REPORTANTE",
+    "CLASIFICACION"
+   ],
+   "completo": true,
+   "conjunto": "Llamadas Procedentes 911",
+   "conjunto_id": "923b485b-515e-4fb9-a4ac-cccbeb88cc92",
+   "consultado_en_utc": "2026-10-23T06:21:38.837534+00:00",
+   "descripcion": null,
+   "formato": "XLSX",
+   "hoja": "LLAMADAS PROCEDENTES 911",
+   "http": 200,
+   "metodo_encabezado": "heuristica_requiere_revision",
+   "nombre": "Lamadas Procedentes 911 primer trimestre 2026",
+   "ok": true,
+   "sha256": "9d710cb868c3fb6304a4310259bf4c7e64d2af7cdc15cd253bdc8dd86c9c2109",
+   "url": "https://datos.sonora.gob.mx/dataset/923b485b-515e-4fb9-a4ac-cccbeb88cc92/resource/6ce17dd1-5716-44e9-bc5f-603c0925afe6/download/llamadas-procedentes-911-primer-trimestre-2026.xlsx",
+   "vars": null
+  },
+  "7922b8c8-db09-4172-ad7f-31b0ba0c68e3": {
+   "bytes_leidos": 972,
+   "columnas": [
+    "Nombre variable",
+    "Tipo de dato",
+    "Formato",
+    "Unidad de medida",
+    "Descripción",
+    "Identificadores",
+    "Catálogo de referencia",
+    "Detalle de relación con catálogos",
+    "Identificador de valores nulos",
+    "Ejemplo de dato"
+   ],
+   "completo": true,
+   "conjunto": "Llamadas Procedentes 911",
+   "conjunto_id": "923b485b-515e-4fb9-a4ac-cccbeb88cc92",
+   "consultado_en_utc": "2026-10-23T06:21:38.684196+00:00",
+   "descripcion": null,
+   "formato": "CSV",
+   "hoja": "CSV",
+   "http": 200,
+   "metodo_encabezado": "heuristica_requiere_revision",
+   "nombre": "Diccionario",
+   "ok": true,
+   "sha256": "fcd73b159fdf46ce33a5d9c43f227b7a7b5e296cb197399a8eac6c6be57c5140",
+   "url": "https://datos.sonora.gob.mx/dataset/923b485b-515e-4fb9-a4ac-cccbeb88cc92/resource/7922b8c8-db09-4172-ad7f-31b0ba0c68e3/download/diccionario.csv",
+   "vars": 7
+  },
+  "943e2919-6a8b-4776-ac4f-c3d6b02bb94e": {
+   "bytes_leidos": 10660357,
+   "columnas": [
+    "FECHA",
+    "HORA",
+    "MUNICIPIO",
+    "LOCALIDAD",
+    "COLONIA",
+    "SEXO REPORTANTE",
+    "CLASIFICACION"
+   ],
+   "completo": true,
+   "conjunto": "Llamadas Procedentes 911",
+   "conjunto_id": "923b485b-515e-4fb9-a4ac-cccbeb88cc92",
+   "consultado_en_utc": "2026-10-23T06:21:38.994315+00:00",
+   "descripcion": null,
+   "formato": "XLSX",
+   "hoja": "LLAMADAS PROCEDENTES 911",
+   "http": 200,
+   "metodo_encabezado": "heuristica_requiere_revision",
+   "nombre": "Lamadas Procedentes 911 segundo trimestre 2026",
+   "ok": true,
+   "sha256": "ddf434dc9502dfb6ce9acf05fbac555e1f81db33945338c58964ac1ea53cdf84",
+   "url": "https://datos.sonora.gob.mx/dataset/923b485b-515e-4fb9-a4ac-cccbeb88cc92/resource/943e2919-6a8b-4776-ac4f-c3d6b02bb94e/download/llamadas-procedentes-911-segundo-trimestre-2026.xlsx",
+   "vars": null
+  }
+ },
+ "resultado": "bloqueado",
+ "rol": "A1-911",
+ "verificacion": {
+  "datos_consultados_entre_utc": [
+   "2026-10-23T06:20:48.843578+00:00",
+   "2026-10-23T06:21:38.994315+00:00"
+  ],
+  "fuentes_sha256": {
+   "data/portal/contenido-inspeccion.json": {
+    "bytes": 2652648,
+    "sha256": "61861aab5bc2b334699c4d78f611a0e2d650c4649bd791927f9095c2ac785efb"
+   },
+   "data/portal/inspecciones/0df8592f-bb3d-466c-aec3-6cbc91253be0.json": {
+    "bytes": 1195,
+    "sha256": "cf02b4e7f50db6563d3a6e0b4f5152140f2450db88fb6aa3673f1fa8f945e2a6"
+   },
+   "data/portal/inspecciones/1a95d734-2f0e-4781-8831-77dcfcbe70f8.json": {
+    "bytes": 5127,
+    "sha256": "029123d21949d8047dcd8600ca58caa444ad5daadcb777adc9f4fefefb3c3fc6"
+   },
+   "data/portal/inspecciones/54285a13-3a2a-4e47-b0af-e855861f5347.json": {
+    "bytes": 1533,
+    "sha256": "65c2a3091926e0c4114b1293b7c6b1f6685924153e2f5c33322829b45c8379a9"
+   },
+   "data/portal/inspecciones/6ce17dd1-5716-44e9-bc5f-603c0925afe6.json": {
+    "bytes": 1533,
+    "sha256": "369fe04b9c08dbc9a478e0a6bb2c82d762b15f34f08490f2142aea907386166b"
+   },
+   "data/portal/inspecciones/7922b8c8-db09-4172-ad7f-31b0ba0c68e3.json": {
+    "bytes": 5127,
+    "sha256": "8b78d45362080888ee3864d6c3d17a6468b39448fc18e41a58a5d1089e19d468"
+   },
+   "data/portal/inspecciones/943e2919-6a8b-4776-ac4f-c3d6b02bb94e.json": {
+    "bytes": 1536,
+    "sha256": "a83567b73ce4eaf4e7e64264d9218ef963e49b2283995ae5e3057fd67c4af745"
+   },
+   "data/portal/inventario.json": {
+    "bytes": 716122,
+    "sha256": "783f12559b81e3c624e601c48d22733158135aa4229aad0feaea712824922faf"
+   },
+   "data/portal/lote-cruces/validacion-lote.json": {
+    "bytes": 1478239,
+    "sha256": "9031b875b1bf7873722f74847abbbce9b87201415f43788f60be1a75b50ede19"
+   },
+   "data/portal/oportunidades-cruce.json": {
+    "bytes": 9645149,
+    "sha256": "40f107d5cf9c11ce937073ac2f7b5b0e3c9db8c342f7414cecb0f0744e0d0c14"
+   },
+   "docs/plan-paralelo-ampliacion-post-r9.md": {
+    "bytes": 5672,
+    "sha256": "f43214a0d38ff2cb1fcdfb213d9aa0fba67415dc21b2033ac305a3a70eda0ce8"
+   },
+   "ontologia/semantica.json": {
+    "bytes": 6961897,
+    "sha256": "dba467b63286171bb68f5b1400a1ed51bfb99d5663e5b34a36f31fb94953cebd"
+   },
+   "reports/pendientes-semanticos.json": {
+    "bytes": 4807159,
+    "sha256": "42068c71f0d1578bcf4d8fe5b987d99bb90ec586eeab6bb1418b6a8918fb9adb"
+   }
+  },
+  "reproducir": "uv run python propuestas/ampliacion-post-r9/ejecucion-20261024/A1-911/v002/scripts/comprobar_a1_911.py"
+ },
+ "version": "v002"
+}

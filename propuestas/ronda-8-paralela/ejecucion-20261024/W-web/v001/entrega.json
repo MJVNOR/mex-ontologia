@@ -1,0 +1,114 @@
+{
+  "rol": "W-web",
+  "version": "v001",
+  "fecha_utc": "2026-10-24T08:45:00.368562+00:00",
+  "base": "reports/ronda-7.json",
+  "modelo": "opencode-go/muse-spark-1.3-contributor",
+  "asignacion": {
+    "ruta": "propuestas/ronda-8-paralela/ejecucion-20261024/W-web/asignacion.json",
+    "sha256": "cf341b1b66d98ad140899b4d1b815071119808c9c9bc12be6882451e2b61ae9f",
+    "casos_asignados": 0
+  },
+  "decisiones": [],
+  "disponibilidad": {
+    "obscura_catalogo_code_mode": true,
+    "obscura_tab_list": "OK: 4 tabs heredadas R7 (about:blank; datos.sonora.gob.mx; diagnostico-entorno-digital; ues.sonora.gob.mx/proyectos/titulacion)",
+    "navegaciones_nuevas": 0,
+    "descargas_nuevas": 0,
+    "via": "default.execute (Code Mode) -> tools.obscura.* (MCP nativo OpenCode, sin puentes ni CLI)",
+    "herramientas_no_usadas": [
+      "Gemma (excluida)",
+      "contactos externos (prohibidos)",
+      "busquedas genericas (prohibidas sin pista nueva)",
+      "tools.opencode.webfetch"
+    ]
+  },
+  "barridos_peticiones": [
+    {
+      "cuando": "inicio",
+      "peticiones_r8": 0
+    },
+    {
+      "cuando": "tras 45s",
+      "peticiones_r8": 0
+    }
+  ],
+  "cobertura": [
+    {
+      "peticion": "(ninguna publicada por hermanos al corte)",
+      "atendida": "sin_peticiones",
+      "casos": [],
+      "via": [
+        "default.glob/shell"
+      ]
+    }
+  ],
+  "expediente_revisado": [
+    {
+      "ruta": "propuestas/ronda-8-paralela/ejecucion-20261024/W-web/asignacion.json",
+      "sha256": "cf341b1b66d98ad140899b4d1b815071119808c9c9bc12be6882451e2b61ae9f",
+      "localizador": "asignacion W-web R8: rol, alcance, casos=[]"
+    },
+    {
+      "ruta": "reports/ronda-7.json",
+      "sha256": "197054973a25496ed30b393c566b689e43d6cf46d012f79e644cb0521a32d787",
+      "localizador": "base R7 json"
+    },
+    {
+      "ruta": "reports/ronda-7.md",
+      "sha256": "9e725b0aa6aa2774868de00dbb6bcd1b2a8389afddc48a7bd9f45be103a9fc9c",
+      "localizador": "base R7 md"
+    },
+    {
+      "ruta": "docs/investigacion-opencode-obscura.md",
+      "sha256": "23a30b6910bbb67f87784a2ac566e1a25d8865c9d336874f5442db6aa04a15e0",
+      "localizador": "instruccion Obscura/OpenCode"
+    },
+    {
+      "ruta": "propuestas/plan-paralelo-brechas-sin-gemma/ejecucion-20261024-072207Z/W-web/paquete/cobertura-peticiones.json",
+      "sha256": "6fab7a8a0b48c2408ad0fbfe50e9cc78eacae4010298d7f99e34264ba54ad43a",
+      "localizador": "W R7 v001 cobertura"
+    },
+    {
+      "ruta": "propuestas/plan-paralelo-brechas-sin-gemma/ejecucion-20261024-072207Z/W-web/paquete-v002/cobertura-peticiones-v002.json",
+      "sha256": "c38beed53ff102af5fedbc37b948ae73306c95c578fb49949c084d3eb861a1d5",
+      "localizador": "W R7 v002 cobertura"
+    },
+    {
+      "ruta": "propuestas/plan-paralelo-brechas-sin-gemma/ejecucion-20261024-072207Z/W-web/paquete-v003/cobertura-v003.json",
+      "sha256": "b1949beb451e4486b34b66c8241f05e4c5fcdec572c8b7663cf093d0878d5be9",
+      "localizador": "W R7 v003 cobertura"
+    },
+    {
+      "ruta": "propuestas/plan-paralelo-brechas-sin-gemma/ejecucion-20261024-072207Z/W-web/paquete-v004/cobertura-v004.json",
+      "sha256": "59883c18d85759f7096ddcfc5541488f60bcd596b846e306cd9716184dbb28ca",
+      "localizador": "W R7 v004 cobertura"
+    },
+    {
+      "ruta": "propuestas/plan-paralelo-brechas-sin-gemma/ejecucion-20261024-072207Z/W-web/paquete-v004/disponibilidad-v004.json",
+      "sha256": "38d522b8b1831ab7be35748cfff8dc8a08534b18aac68484a1127ddfa61f9641",
+      "localizador": "W R7 v004 disponibilidad"
+    },
+    {
+      "ruta": "propuestas/plan-paralelo-brechas-sin-gemma/ejecucion-20261024-072207Z/W-web/paquete-v004/congelada-v004.json",
+      "sha256": "c239c080ccb4ef1c912b8ef05963073f89df315cfd17afaa2e15c16802433f0e",
+      "localizador": "W R7 v004 cierre"
+    }
+  ],
+  "vias_agotadas_no_repetidas": [
+    "S1-WEB-01 (sonora.gob.mx/datos/defunciones render): sin_hallazgo v002, ya_atendida v004; no re-navegar sin cambio concreto.",
+    "WEB-S4-01 (diccionario vigilancia epidemiologica): atendida_con_negativa_fechada_y_copia v002; no repetir.",
+    "P-S6-01/P-S6-02 (PROAES/SAGARHPA): sin_hallazgo v002; no repetir busquedas genericas.",
+    "WEB-MAT-02 (norma UES era-2022): sin_hallazgo v004 (403/443/TLS/guia XLV posterior); no re-navegar."
+  ],
+  "espera_siguiente_instruccion": true,
+  "regla_version": "Nuevas peticiones-web.json de hermanos se atienden solo en v002 (nuevo paquete versionado); v001 no se edita tras congelar.",
+  "gemma": "excluido",
+  "contactos_externos": 0,
+  "limites": [
+    "Sin decisiones por ID: 0 casos asignados -> 0 decisiones (exacto).",
+    "Sin navegacion nueva: ninguna peticion documenta pista primaria nueva concreta.",
+    "Negativas y ausencias acotadas a lo revisado el 2026-10-24; no ausencia universal.",
+    "No se clausura tarea no examinada; v001 solo documenta disponibilidad + barrido + expediente."
+  ]
+}

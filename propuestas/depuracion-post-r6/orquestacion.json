@@ -1,0 +1,43 @@
+{
+  "alcance": "Depuración documental posterior a R6: tres agentes OpenCode en paralelo; sin cambio de fuentes históricas ni grafo.",
+  "tareas": [
+    {
+      "tarea": "encabezados",
+      "session_id": "ses_e93828108ffeoRDdMlNaMZizGr",
+      "job_id": "job_2fce85bd2fd2439aa9da0af597be48ab",
+      "modelo": "opencode-go/muse-spark-1.3-contributor",
+      "salida": "propuestas/depuracion-post-r6/encabezados/"
+    },
+    {
+      "tarea": "significados",
+      "session_id": "ses_e93828049ffeXyJOyIfg2UsM7L",
+      "job_id": "job_fbf5aa6acd1a45f7b4cfbf35690547f8",
+      "modelo": "opencode-go/muse-spark-1.3-contributor",
+      "salida": "propuestas/depuracion-post-r6/significados/"
+    },
+    {
+      "tarea": "catalogos",
+      "session_id": "ses_e93827f87ffezq7NhlmykByHto",
+      "job_id": "job_5b025042f51f47e4b152762adf2353b2",
+      "modelo": "opencode-go/muse-spark-1.3-contributor",
+      "salida": "propuestas/depuracion-post-r6/catalogos/"
+    }
+  ],
+  "base_fuentes": {
+    "ontologia/semantica.json": "a30a2842d10699a1a78ddeae6121dad42b2166af1cd9aac6a5ed52f047fc68ca",
+    "data/semantica/cobertura.json": "7ef11b0a4ad9ee3aa3d3512ab2a431cee29b9295db9da76daae2e054378a39a9",
+    "reports/pendientes-ronda-5.json": "46f3b6f8826379be5124fb85cf6128b705fbe90deebf2c99bff64098608c8f11",
+    "reports/ronda-5.json": "3c392d113669469a61a3e8e84293cdd6a95829925f14cb10de01108244d6f8af",
+    "reports/ronda-5.md": "ad263fefa13005c19eb5bd7076650f980c74762c23be48e6f508aad28cf86dbc",
+    "reports/ronda-6.json": "52b6abc5dd2632e9c33d27f13016f01e85e63fb4284f43a1fcc481ee770d1a47",
+    "reports/ronda-6.md": "74981fe76bb09b00478b5f10ab20bf9406e7bfb5c64b851149ec35b90f22167a",
+    "data/integracion-ronda-5/manifiesto.json": "0dc74594574db81029455e997c009804aa5fc7af1346b6fb6f1d29693958626f",
+    "data/integracion-ronda-6/manifiesto.json": "2b618252e4198e8e4a8c992d65ed288b4766c59d049e96dfc004c4a28206f5f2",
+    "reports/solicitudes-publicador-ronda-5.json": "2a160ee9d5981348c42e5cc355b68b36a12a01711a980fd765e4133864fb8ace"
+  },
+  "criterios": [
+    "171 registros históricos = 169 significados accionables + 2 encabezados corruptos conservados",
+    "16 vigencias V01-V16 + 1 caso heredado des_mpo_res vinculado a las dos filas corruptas",
+    "No inventar definiciones/vigencias; no contactos externos; chat diferido"
+  ]
+}

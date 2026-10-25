@@ -1,0 +1,109 @@
+{
+  "fecha_local": "2026-10-24",
+  "base": {
+    "ronda": 8,
+    "estado": "cerrado_integrado_validado_y_sincronizado",
+    "sha_informe": "5ac384bc4c253f5310ae69402c8d9249d2ee85082086c2dca85483f8b4b7eacb",
+    "significados_respaldados": 1423,
+    "conceptos": 1106,
+    "correspondencias_revisadas": 4506,
+    "candidatas": 17,
+    "ambiguas": 0,
+    "significados_reales_pendientes": 138,
+    "vigencias_pendientes": 16,
+    "candidatas_semanticas_dependientes": 17,
+    "encabezados_corruptos": 2,
+    "referencia_catalogo_no_resuelta": "des_mpo_res",
+    "acceso_vigencias_no_resuelto": ["V13", "V14"],
+    "columnas": {
+      "total": 5523,
+      "revisadas": 4506,
+      "candidatas": 17,
+      "sin_definicion_coincidente": 833,
+      "definicion_sin_interpretacion": 154,
+      "sin_diccionario_en_conjunto": 13,
+      "observaciones_de_esquema": 5
+    },
+    "validacion": {
+      "pruebas_python": 181,
+      "resultado_pruebas": "OK",
+      "triples_carga_portal": 322343,
+      "triples_studio": 322952,
+      "studio_verificado": true,
+      "rdf_sintaxis": true,
+      "shacl_conforms": true,
+      "shacl_violations": 0,
+      "unmatched_shape_sin_instancias": "ResultadoMunicipalLote"
+    }
+  },
+  "comprobaciones_independientes": [
+    {"comprobacion": "SHA de reports/ronda-8.json coincide con el recibo del cierre", "resultado": "coincide"},
+    {"comprobacion": "carga, estadísticas y grafo combinado del portal coinciden en triples", "resultado": "coincide: 322343"},
+    {"comprobacion": "informe R8 y recibo Studio coinciden en total, verificación y SHACL", "resultado": "coincide: 322952; verificado=true"},
+    {"comprobacion": "SHA del log de 181 pruebas R8 coincide con el informe", "resultado": "coincide"},
+    {"comprobacion": "SHA posterior de cuatro documentos coincide con el cierre R8", "resultado": "coincide"}
+  ],
+  "orden": [
+    {
+      "fase": 0,
+      "nombre": "Congelar base R8",
+      "responsable": "coordinador",
+      "salida": "snapshot recuperable y hashes de entradas",
+      "dependencias": []
+    },
+    {
+      "fase": 1,
+      "nombre": "Auditoría local de cobertura y priorización",
+      "responsable": "4 agentes OpenCode Muse 1.3 en paralelo + auditor",
+      "salidas": ["correspondencias-17/entrega.json", "oportunidades-r8/entrega.json", "cobertura-r8/entrega.json", "referencias-anomalias/entrega.json"],
+      "dependencias": [0],
+      "sin_edicion_nucleo": true
+    },
+    {
+      "fase": 2,
+      "nombre": "Reabrir brechas sólo con pistas primarias concretas",
+      "responsable": "agente temático por fuente + Obscura compartido cuando aplique",
+      "salida": "expedientes nuevos por caso en propuestas/plan-tras-r8",
+      "dependencias": [0, 1],
+      "condicion": "no repetir búsquedas generales agotadas; no enviar solicitudes a publicadores"
+    },
+    {
+      "fase": 3,
+      "nombre": "Pilotos QUDT, OWL-Time, jerarquía clínica y SHACL/versionado",
+      "responsable": "4 agentes OpenCode Muse 1.3 en paralelo",
+      "salidas": ["piloto-qudt", "piloto-owl-time", "jerarquia-clinica", "shacl-versionado"],
+      "dependencias": [0],
+      "sin_edicion_nucleo": true
+    },
+    {
+      "fase": 4,
+      "nombre": "Auditorías A/B e integración serial",
+      "responsable": "dos auditores + un integrador",
+      "salida": "propuestas aprobadas, manifiesto siguiente, RDF generado",
+      "dependencias": [1, 3],
+      "preservar_manifiestos": "R1-R8"
+    },
+    {
+      "fase": 5,
+      "nombre": "Validar y sincronizar",
+      "responsable": "validadores en paralelo; un operador Studio",
+      "salida": "suite Python, RDF, SHACL, consultas, respaldo y recibo vivo",
+      "dependencias": [4]
+    }
+  ],
+  "criterios_de_integracion": {
+    "correspondencias": "Una candidatura sólo se promueve con significado respaldado y evidencia física específica del recurso/columna/edición.",
+    "qudt": "Unidad sólo si la fuente la declara; valor/unidad y conversiones sólo si están respaldados por datos y escala.",
+    "owl_time": "Intervalo sólo con límites y referencia temporal documentados.",
+    "skos": "Cada broader debe tener respaldo semántico; conservar la definición de cada caso-con particular.",
+    "shacl": "Permitir que casos sin resolver tengan ninguno de los dos significados y prohibir que tengan ambos.",
+    "provenance": "Correspondencias ya exigen al menos dos prov:wasDerivedFrom; preservar, no duplicar.",
+    "external_evidence": "Sin fuente primaria aplicable, conservar como pendiente con condición de reapertura."
+  },
+  "limites": [
+    "R8 no aprobó significados ni conceptos nuevos.",
+    "Las 28 correspondencias SINAC son locales a las columnas y definiciones revisadas; no autorizan joins, códigos, vigencias o identidad de catálogos.",
+    "Los conteos de carga del portal y de Studio tienen ámbitos distintos y no deben igualarse artificialmente.",
+    "La siguiente versión representa un corte fechado, no cobertura permanente de un portal cambiante."
+  ]
+}

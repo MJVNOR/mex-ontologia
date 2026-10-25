@@ -1,0 +1,60 @@
+@prefix sh: <http://www.w3.org/ns/shacl#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+@prefix mex: <{{BASE_IRI}}vocab/> .
+@prefix shape: <{{BASE_IRI}}shapes/> .
+
+shape:ConceptoCompartido a sh:NodeShape ; sh:targetClass mex:ConceptoCompartido ;
+    sh:property [ sh:path skos:definition ; sh:minCount 1 ; sh:maxCount 1 ; sh:datatype rdf:langString ] ;
+    sh:property [ sh:path skos:prefLabel ; sh:minCount 1 ; sh:datatype rdf:langString ] ;
+    sh:property [ sh:path skos:inScheme ; sh:minCount 1 ; sh:maxCount 1 ; sh:class skos:ConceptScheme ] ;
+    sh:property [ sh:path mex:requiereCondicion ; sh:minCount 1 ; sh:class mex:CondicionConexion ] .
+
+shape:VariableDocumentada a sh:NodeShape ; sh:targetClass mex:VariableDocumentada ;
+    sh:property [ sh:path mex:nombreVariableLocal ; sh:minCount 1 ; sh:maxCount 1 ; sh:datatype xsd:string ] ;
+    sh:property [ sh:path mex:definicionOriginal ; sh:minCount 1 ; sh:maxCount 1 ; sh:class mex:DefinicionVariable ] ;
+    sh:property [ sh:path mex:estadoSemantico ; sh:minCount 1 ; sh:maxCount 1 ;
+        sh:in ("respaldada_por_definicion" "candidata_sin_definicion_suficiente" "fuera_del_nucleo_actual") ] ;
+    sh:property [ sh:path mex:significadoDocumentado ; sh:maxCount 1 ; sh:class mex:ConceptoCompartido ] ;
+    sh:property [ sh:path mex:significadoCandidato ; sh:maxCount 1 ; sh:class mex:ConceptoCompartido ] ;
+    sh:property [ sh:path mex:tieneCalificadorDocumentado ; sh:class mex:CalificadorDocumental ; sh:nodeKind sh:IRI ] ;
+    sh:property [ sh:path prov:wasDerivedFrom ; sh:minCount 1 ; sh:nodeKind sh:IRI ] .
+
+shape:CorrespondenciaSemantica a sh:NodeShape ; sh:targetClass mex:CorrespondenciaSemantica ;
+    sh:property [ sh:path mex:columnaOrigen ; sh:minCount 1 ; sh:maxCount 1 ; sh:class mex:ColumnaObservada ] ;
+    sh:property [ sh:path mex:variableDestino ; sh:minCount 1 ; sh:maxCount 1 ; sh:class mex:VariableDocumentada ] ;
+    sh:property [ sh:path mex:estadoCorrespondencia ; sh:minCount 1 ; sh:maxCount 1 ;
+        sh:in ("documental_revisada" "candidata_por_nombre" "ambigua_por_nombre") ] ;
+    sh:property [ sh:path prov:wasDerivedFrom ; sh:minCount 2 ; sh:nodeKind sh:IRI ] .
+
+shape:CalificadorDocumental a sh:NodeShape ; sh:targetClass mex:CalificadorDocumental ;
+    sh:property [ sh:path mex:dimensionCalificador ; sh:minCount 1 ; sh:maxCount 1 ; sh:datatype xsd:string ; sh:minLength 1 ; sh:pattern "\\S" ] ;
+    sh:property [ sh:path mex:valorCalificador ; sh:minCount 1 ; sh:maxCount 1 ; sh:datatype xsd:string ; sh:minLength 1 ; sh:pattern "\\S" ] ;
+    sh:property [ sh:path prov:wasDerivedFrom ; sh:minCount 2 ; sh:nodeKind sh:IRI ] .
+
+shape:ReferenciaCatalogoDeclarada a sh:NodeShape ; sh:targetClass mex:ReferenciaCatalogoDeclarada ;
+    sh:property [ sh:path mex:nombreCatalogoDeclarado ; sh:minCount 1 ; sh:maxCount 1 ; sh:datatype xsd:string ] ;
+    sh:property [ sh:path mex:estadoReferenciaCatalogo ; sh:minCount 1 ; sh:maxCount 1 ; sh:in ("solo_referencia_declarada_sin_resolver" "recurso_catalogo_identificado") ] ;
+    sh:property [ sh:path prov:wasDerivedFrom ; sh:minCount 1 ; sh:nodeKind sh:IRI ] .
+
+shape:SistemaIdentificadores a sh:NodeShape ; sh:targetClass mex:SistemaIdentificadores ;
+    sh:property [ sh:path mex:patronCodigo ; sh:minCount 1 ; sh:maxCount 1 ; sh:datatype xsd:string ] ;
+    sh:property [ sh:path prov:wasDerivedFrom ; sh:minCount 1 ; sh:nodeKind sh:IRI ] .
+
+shape:EntradaCatalogo a sh:NodeShape ; sh:targetClass mex:EntradaCatalogo ;
+    sh:property [ sh:path skos:notation ; sh:minCount 1 ; sh:maxCount 1 ; sh:datatype xsd:string ; sh:pattern "^26[0-9]{3}$" ] ;
+    sh:property [ sh:path skos:inScheme ; sh:minCount 1 ; sh:maxCount 1 ; sh:class mex:SistemaIdentificadores ] ;
+    sh:property [ sh:path mex:denotaMunicipioFuente ; sh:minCount 1 ; sh:maxCount 1 ; sh:class mex:MunicipioSegunFuente ] .
+
+shape:SistemaUsado a sh:NodeShape ; sh:targetSubjectsOf mex:usaSistemaIdentificadores ;
+    sh:property [ sh:path mex:usaSistemaIdentificadores ; sh:maxCount 1 ; sh:class mex:SistemaIdentificadores ] .
+
+shape:RevisionDocumental a sh:NodeShape ; sh:targetSubjectsOf mex:huellaEsquemaRevisado ;
+    sh:property [ sh:path mex:estadoCorrespondencia ; sh:hasValue "documental_revisada" ; sh:maxCount 1 ] ;
+    sh:property [ sh:path mex:huellaEsquemaRevisado ; sh:minCount 1 ; sh:maxCount 1 ; sh:datatype xsd:string ; sh:pattern "^[0-9a-f]{64}$" ] ;
+    sh:property [ sh:path mex:huellaFilaDiccionario ; sh:minCount 1 ; sh:maxCount 1 ; sh:datatype xsd:string ; sh:pattern "^[0-9a-f]{64}$" ] ;
+    sh:property [ sh:path mex:criterioRevision ; sh:minCount 1 ; sh:datatype rdf:langString ] ;
+    sh:property [ sh:path mex:evidenciaTextual ; sh:minCount 1 ; sh:datatype rdf:langString ] ;
+    sh:property [ sh:path mex:limiteSemantico ; sh:minCount 1 ; sh:datatype rdf:langString ] .

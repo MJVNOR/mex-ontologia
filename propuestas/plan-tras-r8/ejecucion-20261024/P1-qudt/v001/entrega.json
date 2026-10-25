@@ -1,0 +1,138 @@
+{
+ "rol": "P1-qudt",
+ "version": "v001",
+ "fecha_utc": "2026-10-24",
+ "estado": "propuesta_para_auditar",
+ "base": {
+  "informe": "reports/ronda-8.json",
+  "estado_r8": "cerrado_integrado_validado_y_sincronizado"
+ },
+ "casos": [
+  {
+   "id": "P1-Q1",
+   "concepto": "precipitacion-diaria",
+   "variable": "Precipitacion_mm",
+   "recurso_conjunto": "8b4edefe-cb1a-401c-90c6-05548779defd",
+   "diccionario": "6713de4e-1e2b-447d-8000-f6ceaabd8473",
+   "unidad_literal": "Milimetros",
+   "unidad_qudt_candidata_sin_verificar": "unit:MilliM (millimetre)",
+   "definicion_iri": "https://example.org/mex-ontologi/definition/6713de4e-1e2b-447d-8000-f6ceaabd8473%2F6",
+   "huella_fila_diccionario": "dec3bb83da6fe2209575146e9775fc615c0473c13209cb9a05f16b492e28bb9f",
+   "localizador": "definiciones[5]: Nombre variable=Precipitacion_mm, Unidad de medida=Milimetros, Ejemplo=12.5",
+   "resultado": "declaracion_cualificada_propuesta"
+  },
+  {
+   "id": "P1-Q2",
+   "concepto": "volumen-agua-presas",
+   "variable": "Almacenamiento(hm3)",
+   "recurso_conjunto": "ee8f639f-5e89-46ae-93b9-934b05fc6233",
+   "diccionario": "ca5574f0-d59d-4fc1-a52f-5c533b2abf82",
+   "unidad_literal": "Hectometros cubicos",
+   "unidad_qudt_candidata_sin_verificar": "unit:HectoM3 (cubic hectometre)",
+   "definicion_iri": "https://example.org/mex-ontologi/definition/ca5574f0-d59d-4fc1-a52f-5c533b2abf82%2F3",
+   "huella_fila_diccionario": "7f846ce0b9f83f30c32ea09ab7b09ba328ea4826b1c5ec2b3dede27003aaac3b",
+   "localizador": "definiciones: Nombre variable=Almacenamiento(hm3), Unidad de medida=Hectometros cubicos, Ejemplo=738.54",
+   "resultado": "declaracion_cualificada_propuesta"
+  },
+  {
+   "id": "P1-Q3",
+   "concepto": "superficie-sembrada-cultivo",
+   "variable": "SUPSEM",
+   "recurso_conjunto": "3e17a7e8-c8d4-49c4-a426-4dec099cd0cd",
+   "diccionario": "94215f51-9c89-414d-8c3d-92792e609a2a",
+   "unidad_literal": "Hectareas",
+   "unidad_qudt_candidata_sin_verificar": "unit:HectoHA (hectare)",
+   "definicion_iri": "https://example.org/mex-ontologi/definition/94215f51-9c89-414d-8c3d-92792e609a2a%2F14",
+   "huella_fila_diccionario": "208a95e2c54e495723b39a3b528deb22f6147dfd3bd080f867e6bea2c191f321",
+   "localizador": "definiciones: Nombre variable=SUPSEM, Unidad de medida=Hectareas, Descripcion=Cantidad de hectareas sembradas",
+   "resultado": "declaracion_cualificada_propuesta"
+  }
+ ],
+ "archivos_propuestos": [
+  "v001/propuesta-qudt.ttl",
+  "v001/consultas/q1-declaraciones-por-variable.rq",
+  "v001/consultas/q2-declaraciones-por-conjunto.rq",
+  "v001/fixtures/P1-Q1-Precipitacion_mm.json",
+  "v001/fixtures/P1-Q2-Almacenamiento(hm3).json",
+  "v001/fixtures/P1-Q3-SUPSEM.json",
+  "v001/inventario-unidades.json"
+ ],
+ "validacion_local": {
+  "turtle_parse_ok": true,
+  "q1_filas": 3,
+  "q2_filas": 3,
+  "validador": "rdflib del proyecto (sin instalar nada)"
+ },
+ "fuentes": [
+  {
+   "ruta": "data/portal/inspecciones/6713de4e-1e2b-447d-8000-f6ceaabd8473.json",
+   "sha256": "693fefe10791a61ad263c17d03b4b9d4560add66dca7c2ca15ad9db2daac8ffd",
+   "url": "https://datos.sonora.gob.mx/api/3/action/datastore_search?resource_id=6713de4e-1e2b-447d-8000-f6ceaabd8473&limit=1000&offset=0&sort=_id+asc"
+  },
+  {
+   "ruta": "data/portal/inspecciones/ca5574f0-d59d-4fc1-a52f-5c533b2abf82.json",
+   "sha256": "de7a4426f4845b9d86b518313cec4f345685bd94cd365927cd68ca4b6f7c4a6b",
+   "url": "https://datos.sonora.gob.mx/dataset/ee8f639f-5e89-46ae-93b9-934b05fc6233/resource/ca5574f0-d59d-4fc1-a52f-5c533b2abf82/download/diccionario_recursos_hidricos.csv"
+  },
+  {
+   "ruta": "data/portal/inspecciones/94215f51-9c89-414d-8c3d-92792e609a2a.json",
+   "sha256": "9d341703f8a358fbbdce04fa416a121c3df6d5bcde0c771a5c442c7733ca556c",
+   "url": "https://datos.sonora.gob.mx/api/3/action/datastore_search?resource_id=94215f51-9c89-414d-8c3d-92792e609a2a&limit=1000&offset=0&sort=_id+asc"
+  },
+  {
+   "ruta": "data/portal/inspecciones/bfb8788b-8ce3-475e-8bbd-dd1c5154c877.json",
+   "sha256": "4a7a46906b2590cf7eba7c40e7e418768f4e6559a2ae7713eb98aed20cc3e61c"
+  },
+  {
+   "ruta": "data/portal/inspecciones/a6cdb7ad-ec32-44aa-851d-684947df4243.json",
+   "sha256": "1f88f1a751fda87440d341caa9143549be86245a7cd0fc3ba23ff60723eb969a"
+  },
+  {
+   "ruta": "data/integracion-cobertura/entregas/territorio-economia/entrega.json",
+   "sha256": "6f02a6c5a94f64acd46a53844f6c33bc1c26b1cfd58daed5c0617dc2d3f4d0ed"
+  },
+  {
+   "ruta": "data/semantica/cobertura.json",
+   "sha256": "683f58b24d23b9c97b569ae19dd14ed43b722a08857519766c435e447e9c3638"
+  },
+  {
+   "ruta": "reports/ronda-8.json",
+   "sha256": "5ac384bc4c253f5310ae69402c8d9249d2ee85082086c2dca85483f8b4b7eacb"
+  },
+  {
+   "ruta": "docs/plan-actualizado-tras-r8.md",
+   "sha256": "751411a04650c484e97161912aadb23d6800b08d24b39df43c5f92c0b8a6ea59"
+  },
+  {
+   "ruta": "docs/plan-actualizado-tras-r8.json",
+   "sha256": "418cda3ae229df4bebb90a43363ba96e64eec4f631034c975ac5dc18af0473c0"
+  },
+  {
+   "ruta": "propuestas/plan-tras-r8/ejecucion-20261024/base.json",
+   "sha256": "b3ac1894567579899741655fb5f47c2dbc9dc3662f971bd1c2f9246733a7bf9a"
+  },
+  {
+   "ruta": "propuestas/plan-tras-r8/ejecucion-20261024/base-semantica.json",
+   "sha256": "dba467b63286171bb68f5b1400a1ed51bfb99d5663e5b34a36f31fb94953cebd"
+  },
+  {
+   "ruta": "propuestas/plan-tras-r8/ejecucion-20261024/P1-qudt/asignacion.json",
+   "sha256": "0739a5cbaffd0e7930ccb534601d0843d123fda089b9ced3c4c0151f449b0528"
+  }
+ ],
+ "limites": [
+  "Gemma excluido; sin contactos externos; sin promocion por nombre.",
+  "Sin cambios a nucleo, shapes, manifiestos previos, grafo ni Studio.",
+  "Solo se declara la unidad de la variable por recurso; no se afirman valores observados (ejemplos 12.5/738.54 son ilustrativos de la fila, no hechos).",
+  "Sin conversiones y sin qudt:QuantityValue.",
+  "URIs QUDT candidatos SIN VERIFICAR: mex:unidadQudt omitida hasta respuesta de W (peticiones-web.json P1-W-01..03).",
+  "Altitud-Grados y descriptores/codigos excluidos con motivo (ver inventario).",
+  "Familia de marginacion/metodologia nacional separada como descriptores, sin adoptar codificacion."
+ ],
+ "condiciones_aceptacion": [
+  "W verifica URI QUDT exacto + documento normativo para P1-W-01..03.",
+  "Auditor replica SHA256 de fuentes y localizadores de fila.",
+  "Q1/Q2 devuelven 3 filas sobre propuesta-qudt.ttl.",
+  "Sin esta verificacion, la propuesta NO se integra (v001 queda como propuesta_para_auditar)."
+ ]
+}

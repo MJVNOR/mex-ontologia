@@ -1,0 +1,204 @@
+r3a6-001 | cve_estado | 'Clave del estado' | entidad | codigo
+r3a6-002 | des_estado | 'Nombre del Estado' | entidad | nombre
+r3a6-003 | cve_jurisd | 'Clave de la Jurisdiccion' | jurisdiccion-sanitaria | codigo
+r3a6-004 | des_jurisd | 'Nombre de la Jurisdiccion' | jurisdiccion-sanitaria | nombre
+r3a6-005 | cve_diagno | 'Clave del diagnostico' | diagnostico-vigilancia | codigo
+r3a6-006 | des_diagno | 'Descripción del diagnostico' | diagnostico-vigilancia | nombre
+r3a6-007 | menores_1 | 'Total de personas en vigilancia que son menores de 1 año' | vigilancia-personas-menores-1-ano | no_especificada
+r3a6-008 | de01_a_04 | 'Total de personas en vigilancia entre 1 y 5 años' | vigilancia-personas-de-1-a-4-anos | no_especificada
+r3a6-009 | de05_a_09 | 'Total de personas en vigilancia entre 5 y 9 años' | vigilancia-personas-de-5-a-9-anos | no_especificada
+r3a6-010 | de10_a_14 | 'Total de personas en vigilancia entre 10 y 14 años' | vigilancia-personas-de-10-a-14-anos | no_especificada
+r3a6-011 | de15_a_19 | 'Total de personas en vigilancia entre 15 y 19 años' | vigilancia-personas-de-15-a-19-anos | no_especificada
+r3a6-012 | de20_a_24 | 'Total de personas en vigilancia entre 20 y 24 años' | vigilancia-personas-de-20-a-24-anos | no_especificada
+r3a6-013 | de25_a_44 | 'Total de personas en vigilancia entre 25 y 44 años' | vigilancia-personas-de-25-a-44-anos | no_especificada
+r3a6-014 | de45_a_49 | 'Total de personas en vigilancia entre 45 y 49 años' | vigilancia-personas-de-45-a-49-anos | no_especificada
+r3a6-015 | de50_a_59 | 'Total de personas en vigilancia entre 50 y 59 años' | vigilancia-personas-de-50-a-59-anos | no_especificada
+r3a6-016 | de60_a_64 | 'Total de personas en vigilancia entre 60 y 64 años' | vigilancia-personas-de-60-a-64-anos | no_especificada
+r3a6-017 | de65_y_mas | 'Total de personas en vigilanciade 65 años o más' | vigilancia-personas-de-65-y-mas-anos | no_especificada
+r3a6-018 | enero | 'Vigilancias totales en enero' | vigilancia-total-enero | no_especificada
+r3a6-019 | febrero | 'Vigilancias totales en febrero' | vigilancia-total-febrero | no_especificada
+r3a6-020 | marzo | 'Vigilancias totales en marzo' | vigilancia-total-marzo | no_especificada
+r3a6-021 | abril | 'Vigilancias totales en abril' | vigilancia-total-abril | no_especificada
+r3a6-022 | mayo | 'Vigilancias totales en mayo' | vigilancia-total-mayo | no_especificada
+r3a6-023 | junio | 'Vigilancias totales en junio' | vigilancia-total-junio | no_especificada
+r3a6-024 | julio | 'Vigilancias totales en julio' | vigilancia-total-julio | no_especificada
+r3a6-025 | agosto | 'Vigilancias totales en agosto' | vigilancia-total-agosto | no_especificada
+r3a6-026 | septiembre | 'Vigilancias totales en septiembre' | vigilancia-total-septiembre | no_especificada
+r3a6-027 | octubre | 'Vigilancias totales en octubre' | vigilancia-total-octubre | no_especificada
+r3a6-028 | noviembre | 'Vigilancias totales en noviembre' | vigilancia-total-noviembre | no_especificada
+r3a6-029 | diciembre | 'Vigilancias totales en diciembre' | vigilancia-total-diciembre | no_especificada
+r3a6-030 | totalm | 'Total acumulado de Hombres' | vigilancia-total-hombres | no_especificada
+r3a6-031 | totalf | 'Total acumulado de Mujeres' | vigilancia-total-mujeres | no_especificada
+r3a6-032 | ide_sex | 'Sexo del caso 1=Masculino 2= Femenino' | sexo-declarado | no_especificada
+r3a6-033 | ide_eda_ano | 'Edad en años del paciente' | edad-paciente-anos | no_especificada
+r3a6-034 | des_cal | 'Tipo de calle donde reside el caso' | tipo-calle-residencia-caso | nombre
+r3a6-035 | ide_col | 'Colonia donde reside el caso' | colonia-residencia-caso | nombre
+r3a6-036 | des_jur_res | 'Jurisdicción donde reside el caso' | jurisdiccion-sanitaria | nombre
+r3a6-037 | des_mpo_res | 'Municipio donde reside el caso' | municipio-residencia | nombre
+r3a6-038 | cve_loc_res | 'Clave de localidad de residencia' | localidad-residencia-caso | codigo
+r3a6-039 | des_loc_res | 'Localidad donde reside el caso' | localidad-residencia-caso | nombre
+r3a6-040 | id_cp | 'Código postal donde reside el caso' | codigo-postal-residencia-caso | codigo
+r3a6-041 | es_indigena | 'El paciente es indígena 1=Si 2=No' | condicion-indigena-caso | no_especificada
+r3a6-042 | lengua_indigena | 'El paciente habla lengua indígena 1=Si 2=No' | habla-lengua-indigena-caso | no_especificada
+r3a6-043 | des_cual_lengua | 'Lengua que habla el paciente' | lengua-hablada-caso | nombre
+r3a6-044 | des_ocupacion | 'Ocupación del paciente' | ocupacion-caso | nombre
+r3a6-045 | estatus_caso | 'Estatus del caso del paciente 1=Probable 2=Confirmado 3=Descartado' | estatus-caso-rickettsia | no_especificada
+r3a6-046 | fec_sol_aten | 'Fecha de la solicitud de atención del paciente' | fecha-solicitud-atencion-caso | fecha
+r3a6-047 | fec_ini_estudio | 'Fecha de inicio de estudios del paciente' | fecha-inicio-estudio-caso | fecha
+r3a6-048 | fec_fin_estudio | 'Fecha fin de estudios del paciente' | fecha-fin-estudio-caso | fecha
+r3a6-049 | des_diag_probable | 'Diagnóstico probable del paciente' | diagnostico-probable-rickettsia | nombre
+r3a6-050 | des_diag_final | 'Diagnóstico final del paciente' | diagnostico-final-rickettsia | nombre
+r3a6-051 | contacto_garrapata | 'El paciente tuvo contacto con garrapatas 1=Si 0=No' | contacto-garrapatas-caso | no_especificada
+r3a6-052 | contacto_otr | 'El paciente tuvo contacto con otro animal' | contacto-otro-animal-caso | no_especificada
+r3a6-053 | agua_potable | 'Tiene acceso a agua potable 1=Si 2=No' | acceso-agua-potable-caso | no_especificada
+r3a6-054 | eliminacion_basura | 'Tiene cobertura de eliminación de basura (al menos un día a la semana) 1=Si 2=No' | cobertura-eliminacion-basura-caso | no_especificada
+r3a6-055 | fec_ini_signos_sint | 'Fecha de inicio de signos y síntomas del cuadro clínico actual' | fecha-inicio-signos-sintomas-caso | fecha
+r3a6-056 | fec_ini_fiebre | 'Fecha de incio de fiebre' | fecha-inicio-fiebre-caso | fecha
+r3a6-057 | temperatura | 'Temperatura del paciente' | temperatura-caso | no_especificada
+r3a6-058 | cefalea | 'El paciente presenta Cefalea 1=Si 2=No' | caso-con-cefalea | no_especificada
+r3a6-059 | mialgias | 'El paciente presenta Mialgias 1=Si 2=No' | caso-con-mialgias | no_especificada
+r3a6-060 | artralgias | 'El paciente presenta Artralgias 1=Si 2=No' | caso-con-artralgias | no_especificada
+r3a6-061 | poliartralgias | 'El paciente presenta Poliartralgias 1=Si 2=No' | caso-con-poliartralgias | no_especificada
+r3a6-062 | artritis | 'El paciente presenta Artritis 1=Si 2=No' | caso-con-artritis | no_especificada
+r3a6-063 | dolor_retroocular | 'El paciente presenta Dolor retroocular 1=Si 2=No' | caso-con-dolor-retroocular | no_especificada
+r3a6-064 | exantema | 'El paciente presenta Exantema 1=Si 2=No' | caso-con-exantema | no_especificada
+r3a6-065 | nauseas | 'El paciente presenta Nauseas 1=Si 2=No' | caso-con-nauseas | no_especificada
+r3a6-066 | vomito | 'El paciente presenta Vómito 1=Si 2=No' | caso-con-vomito | no_especificada
+r3a6-067 | petequias | 'El paciente presenta Petequias 1=Si 2=No' | caso-con-petequias | no_especificada
+r3a6-068 | torniquete_positivo | 'El paciente presenta un torniquete positivo 1=Si 2=No' | caso-con-un-torniquete-positivo | no_especificada
+r3a6-069 | fec_ini_signos_alarma | 'Fecha inicio signos de alarma' | fecha-inicio-signos-alarma-caso | fecha
+r3a6-070 | vomito_persistente | 'El paciente presenta Vómito persistente 1=Si 2=No' | caso-con-vomito-persistente | no_especificada
+r3a6-071 | dolor_abdominal | 'El paciente presenta Dolor abdominal 1=Si 2=No' | caso-con-dolor-abdominal | no_especificada
+r3a6-072 | acumulacion_liquidos | 'El paciente presenta acumulación de líquidos 1=Si 2=No' | caso-con-acumulacion-de-liquidos | no_especificada
+r3a6-073 | sangrado_mucosas | 'El paciente presenta Sangrado en mucosa 1=Si 2=No' | caso-con-sangrado-en-mucosa | no_especificada
+r3a6-074 | letargo | 'El paciente presenta Letargo 1=Si 2=No' | caso-con-letargo | no_especificada
+r3a6-075 | irritabilidad | 'El paciente presenta Irritabilidad 1=Si 2=No' | caso-con-irritabilidad | no_especificada
+r3a6-076 | hipotension_postural | 'El paciente presenta Hipotensión postural 1=Si 2=No' | caso-con-hipotension-postural | no_especificada
+r3a6-077 | hepatomegalia | 'El paciente presenta Hepatomegalia 1=Si 2=No' | caso-con-hepatomegalia | no_especificada
+r3a6-078 | aumento_hematocrito | 'El paciente presenta aumento en hematocrito 1=Si 2=No' | caso-con-aumento-en-hematocrito | no_especificada
+r3a6-079 | escape_plasma | 'El paciente presenta escape importante de plasma o pulso débil o indetectable 1=Si 2=No' | caso-con-escape-importante-de-plasma-o-pulso-debil-o-indetectable | no_especificada
+r3a6-080 | taquicardia | 'El paciente presenta Taquicardia 1=Si 2=No' | caso-con-taquicardia | no_especificada
+r3a6-081 | extremidades_frias | 'El paciente presenta Extremidades frías 1=Si 2=No' | caso-con-extremidades-frias | no_especificada
+r3a6-082 | llenado_capilar | 'El paciente presenta llenado capilar ≥3 seg. 1=Si 2=No' | caso-con-llenado-capilar-3-seg | no_especificada
+r3a6-083 | presion_convergente | 'El paciente presenta  presión arterial convergente <20 mmhg 1=Si 2=No' | caso-con-presion-arterial-convergente-20-mmhg | no_especificada
+r3a6-084 | hipotension_arterial | 'El paciente presenta hipotensión arterial en fase tardía 1=Si 2=No' | caso-con-hipotension-arterial-en-fase-tardia | no_especificada
+r3a6-085 | insuficiencia_respiratoria | 'El paciente presenta insuficiencia respiratoria 1=Si 2=No' | caso-con-insuficiencia-respiratoria | no_especificada
+r3a6-086 | hematemesis | 'El paciente presenta hematémisis 1=Si 2=No' | caso-con-hematemisis | no_especificada
+r3a6-087 | melena | 'El paciente presenta melena 1=Si 2=No' | caso-con-melena | no_especificada
+r3a6-088 | metrorrragia_voluminosa | 'El paciente presenta metrorragia voluminosa 1=Si 2=No' | caso-con-metrorragia-voluminosa | no_especificada
+r3a6-089 | ast_alt | 'El paciente presenta AST o ALT ≥1000UI 1=Si 2=No' | caso-con-ast-o-alt-1000ui | no_especificada
+r3a6-090 | alteraciones_conciencias | 'El paciente presenta alteraciones de conciencia 1=Si 2=No' | caso-con-alteraciones-de-conciencia | no_especificada
+r3a6-091 | miocarditis | 'El paciente presenta miocarditis 1=Si 2=No' | caso-con-miocarditis | no_especificada
+r3a6-092 | compromiso_organos | 'El paciente presenta compromiso grave de otros órganos 1=Si 2=No' | caso-con-compromiso-grave-de-otros-organos | no_especificada
+r3a6-093 | dolor_espalda | 'El paciente presenta dolor de espalda 1=Si 2=No' | caso-con-dolor-de-espalda | no_especificada
+r3a6-094 | prurito | 'El paciente presenta prurito 1=Si 2=No' | caso-con-prurito | no_especificada
+r3a6-095 | diaforesis | 'El paciente presenta diaforesis 1=Si 2=No' | caso-con-diaforesis | no_especificada
+r3a6-096 | escalofríos | 'El paciente presenta escalofríos 1=Si 2=No' | caso-con-escalofrios | no_especificada
+r3a6-097 | fotofobia | 'El paciente presenta fotofobia 1=Si 2=No' | caso-con-fotofobia | no_especificada
+r3a6-098 | lipotimia | 'El paciente presenta lipotimia 1=Si 2=No' | caso-con-lipotimia | no_especificada
+r3a6-099 | diarrea | 'El paciente presenta diarrea 1=Si 2=No' | caso-con-diarrea | no_especificada
+r3a6-100 | conjuntivitis | 'El paciente presenta conjuntivitis 1=Si 2=No' | caso-con-conjuntivitis | no_especificada
+r3a6-101 | congestion_nasal | 'El paciente presenta congestión nasal 1=Si 2=No' | caso-con-congestion-nasal | no_especificada
+r3a6-102 | tos | 'El paciente presenta tos 1=Si 2=No' | caso-con-tos | no_especificada
+r3a6-103 | faringitis | 'El paciente presenta faringitis 1=Si 2=No' | caso-con-faringitis | no_especificada
+r3a6-104 | esplenomegalia | 'El paciente presenta esplenomegalia 1=Si 2=No' | caso-con-esplenomegalia | no_especificada
+r3a6-105 | alteraciones_gusto | 'El paciente presenta alteraciones del gusto 1=Si 2=No' | caso-con-alteraciones-del-gusto | no_especificada
+r3a6-106 | adenomegalias | 'El paciente presenta adenomegalias 1=Si 2=No' | caso-con-adenomegalias | no_especificada
+r3a6-107 | disnea | 'El paciente presenta disnea 1=Si 2=No' | caso-con-disnea | no_especificada
+r3a6-108 | alteraciones_cardiacas | 'El paciente presenta alteraciones cardiacas 1=Si 2=No' | caso-con-alteraciones-cardiacas | no_especificada
+r3a6-109 | nodulos | 'El paciente presenta lesiones nodulares 1=Si 2=No' | caso-con-lesiones-nodulares | no_especificada
+r3a6-110 | ulceras | 'El paciente presenta ulceras 1=Si 2=No' | caso-con-ulceras | no_especificada
+r3a6-111 | lesion_membranas | 'El paciente presenta lesión en membranas o mucosas 1=Si 2=No' | caso-con-lesion-en-membranas-o-mucosas | no_especificada
+r3a6-112 | ictericia | 'El paciente presenta ictericia 1=Si 2=No' | caso-con-ictericia | no_especificada
+r3a6-113 | desorientacion | 'El paciente presenta desorientación 1=Si 2=No' | caso-con-desorientacion | no_especificada
+r3a6-114 | convulsiones | 'El paciente presenta convulsiones 1=Si 2=No' | caso-con-convulsiones | no_especificada
+r3a6-115 | debilidad_muscular | 'El paciente presenta debilidad muscular 1=Si 2=No' | caso-con-debilidad-muscular | no_especificada
+r3a6-116 | paralisis | 'El paciente presenta parálisis 1=Si 2=No' | caso-con-paralisis | no_especificada
+r3a6-117 | otitis | 'El paciente presenta otitis 1=Si 2=No' | caso-con-otitis | no_especificada
+r3a6-118 | choque | 'El paciente presenta choque 1=Si 2=No' | caso-con-choque | no_especificada
+r3a6-119 | equimosis | 'El paciente presenta equimosis 1=Si 2=No' | caso-con-equimosis | no_especificada
+r3a6-120 | hematomas | 'El paciente presenta hematomas 1=Si 2=No' | caso-con-hematomas | no_especificada
+r3a6-121 | ascitis | 'El paciente presenta ascitis 1=Si 2=No' | caso-con-ascitis | no_especificada
+r3a6-122 | derrame_pleural | 'El paciente presenta derrame pleural 1=Si 2=No' | caso-con-derrame-pleural | no_especificada
+r3a6-123 | edema | 'El paciente presenta edema 1=Si 2=No' | caso-con-edema | no_especificada
+r3a6-124 | gingivorragia | 'El paciente presenta gingivorragia 1=Si 2=No' | caso-con-gingivorragia | no_especificada
+r3a6-125 | epistaxis | 'El paciente presenta epistaxis 1=Si 2=No' | caso-con-epistaxis | no_especificada
+r3a6-126 | edema_articular | 'El paciente presenta edema articular 1=Si 2=No' | caso-con-edema-articular | no_especificada
+r3a6-127 | anorexia | 'El paciente presenta anorexia 1=Si 2=No' | caso-con-anorexia | no_especificada
+r3a6-128 | cardiopatia_dilatada | 'El paciente presenta cardiopatia dilatada 1=Si 2=No' | caso-con-cardiopatia-dilatada | no_especificada
+r3a6-129 | changoma | 'El paciente presenta chagoma de inoculación 1=Si 2=No' | caso-con-chagoma-de-inoculacion | no_especificada
+r3a6-130 | fatiga | 'El paciente presenta fatiga 1=Si 2=No' | caso-con-fatiga | no_especificada
+r3a6-131 | mmegacolon | 'El paciente presenta megacolon 1=Si 2=No' | caso-con-megacolon | no_especificada
+r3a6-132 | alteraciones_neurologicas | 'El paciente presenta alteraciones neurológicas 1=Si 2=No' | caso-con-alteraciones-neurologicas | no_especificada
+r3a6-133 | mmegaesofago | 'El paciente presenta megaesófago 1=Si 2=No' | caso-con-megaesofago | no_especificada
+r3a6-134 | miocardiopatia | 'El paciente presenta miocardiopatía 1=Si 2=No' | caso-con-miocardiopatia | no_especificada
+r3a6-135 | signo_romana | 'El paciente presenta signo de romaña 1=Si 2=No' | caso-con-signo-de-romana | no_especificada
+r3a6-136 | adinamia | 'El paciente presenta adinamia 1=Si 2=No' | caso-con-adinamia | no_especificada
+r3a6-137 | hiperemia_faringea | 'El paciente presenta hiperemia faringea 1=Si 2=No' | caso-con-hiperemia-faringea | no_especificada
+r3a6-138 | astenia | 'El paciente presenta astenia 1=Si 2=No' | caso-con-astenia | no_especificada
+r3a6-139 | signos_meningeos | 'El paciente presenta signos meningeos 1=Si 2=No' | caso-con-signos-meningeos | no_especificada
+r3a6-140 | encefalitis | 'El paciente presenta encefalitis 1=Si 2=No' | caso-con-encefalitis | no_especificada
+r3a6-141 | meningitis | 'El paciente presenta meningitis 1=Si 2=No' | caso-con-meningitis | no_especificada
+r3a6-142 | cefalea_frontal | 'El paciente presenta cefalea frontal 1=Si 2=No' | caso-con-cefalea-frontal | no_especificada
+r3a6-143 | perdida_peso | 'El paciente presenta pérdida de peso 1=Si 2=No' | caso-con-perdida-de-peso | no_especificada
+r3a6-144 | hiperacusia | 'El paciente presenta hipercusia 1=Si 2=No' | caso-con-hipercusia | no_especificada
+r3a6-145 | somolencia | 'El paciente presenta sonmnolencia 1=Si 2=No' | caso-con-sonmnolencia | no_especificada
+r3a6-146 | dismin_plaquetas | 'El paciente presenta disminunción de plaquetas 1=Si 2=No' | caso-con-disminuncion-de-plaquetas | no_especificada
+r3a6-147 | dismin_hemoglob | 'El paciente presenta disminunción de hemoglobina 1=Si 2=No' | caso-con-disminuncion-de-hemoglobina | no_especificada
+r3a6-148 | linfadenopatia | 'El paciente presenta linfadenopatía 1=Si 2=No' | caso-con-linfadenopatia | no_especificada
+r3a6-149 | manejo | 'El manejo del paciente es 1=Hospitalario 2=Ambulatorio' | manejo-caso-rickettsia | no_especificada
+r3a6-150 | cve_uni_med_trat | 'Clave de la unidad médica tratante' | unidad-salud | codigo
+r3a6-151 | des_uni_med_trat | 'Nombre de la unidad médica tratante' | unidad-salud | nombre
+r3a6-152 | des_jur_uni_trat | 'Jurisdicción de la unidad médica tratante' | jurisdiccion-sanitaria | nombre
+r3a6-153 | des_mpo_uni_trat | 'Municipio donde pertenece la unidad médica tratante' | municipio-ubicacion | nombre
+r3a6-154 | des_ins_uni_trat | 'Institución de la unidad tratante' | organizacion | nombre
+r3a6-155 | cve_diag_hospit | 'Diagnóstico emitido por el hospital' | diagnostico-hospital-rickettsia | nombre
+r3a6-156 | servic_atencion | 'Tipo de servicio de atención' | tipo-servicio-atencion | no_especificada
+r3a6-157 | trans_hemorr | 'El paciente presenta transtornos hemorrágicos 1=Si 2=No' | caso-con-transtornos-hemorragicos | no_especificada
+r3a6-158 | diabetes | 'El paciente presenta diabetes 1=Si 2=No' | caso-con-diabetes | no_especificada
+r3a6-159 | hipertensión | 'El paciente presenta hipertensión 1=Si 2=No' | caso-con-hipertension | no_especificada
+r3a6-160 | enf_ulcero_peptica | 'El paciente presenta enfermedad ulcero péptica 1=Si 2=No' | caso-con-enfermedad-ulcero-peptica | no_especificada
+r3a6-161 | enf_renal | 'El paciente presenta enfermedad renal 1=Si 2=No' | caso-con-enfermedad-renal | no_especificada
+r3a6-162 | inmunosupresión | 'El paciente presenta inmunosupresión 1=Si 2=No' | caso-con-inmunosupresion | no_especificada
+r3a6-163 | cirrosis_hepática | 'El paciente presenta cirrosis hepática 1=Si 2=No' | caso-con-cirrosis-hepatica | no_especificada
+r3a6-164 | embarazo | 'El paciente presenta embarazo 1=Si 2=No' | caso-con-embarazo | no_especificada
+r3a6-165 | sem_gest | 'Semanas de gestación del paciente (Si aplica)' | semanas-gestacion-caso | no_especificada
+r3a6-166 | evolucion | 'Evolución del caso 1=Estable 2=Grave 3=Mejoría' | evolucion-caso-rickettsia | no_especificada
+r3a6-167 | lcr | 'Se tomó muestra del liquído cefalorraquideo con aspecto de agua de roca 1=Si 2=No' | muestra-lcr-caso | no_especificada
+r3a6-168 | bilirrubina_directa | 'Resultado de bilirrubina directa' | resultado-bilirrubina-directa-caso | no_especificada
+r3a6-169 | bilirrubina_total | 'Resultado total de bilirrubina' | resultado-bilirrubina-total-caso | no_especificada
+r3a6-170 | dhl | 'Resultados de Deshidrogenasa Láctica' | resultado-dhl-caso | no_especificada
+r3a6-171 | alt | 'Resultados de Alanina aminotransferasa' | resultado-alt-caso | no_especificada
+r3a6-172 | ast | 'Resultados de Aspartato aminotransferasa' | resultado-ast-caso | no_especificada
+r3a6-173 | liquido_cavidad_abdominal | 'El paciente presenta líquido periviceral y/o en cavidad abdominal' | caso-con-liquido-periviceral-y-o-en-cavidad-abdominal | no_especificada
+r3a6-174 | liquido_cavidad_toracica | 'El paciente presenta líquido en cavidad torácica' | caso-con-liquido-en-cavidad-toracica | no_especificada
+r3a6-175 | fec_egreso | 'Fecha de egreso del paciente' | fecha-egreso-caso | fecha
+r3a6-176 | cve_egreso | 'Motivo de egreso 1=Alta por mejoría 2=Alta voluntaria 3=Defunción' | motivo-egreso-caso | no_especificada
+r3a6-177 | fec_defuncion | 'Fecha de defunción del paciente' | fecha-defuncion-caso | fecha
+r3a6-178 | cve_defunción | 'Indica defunción 1=Si 2=No' | defuncion-caso | no_especificada
+r3a6-179 | muestra_lab | 'Se tomó muestra en laboratorio 1=Si 2=No' | muestra-laboratorio-caso | no_especificada
+r3a6-180 | rickett_resultado_ser1 | 'Resultado de la primera muestra de suero para rickettsiosis 1=Positivo 2=Negativo' | resultado-suero-ser1-rickettsia | no_especificada
+r3a6-181 | muestra_rech_ricket_sangre | 'Rechazo de muestra de sangre del paciente 1=Si 2=No' | rechazo-muestra-sangre-rickettsia | no_especificada
+r3a6-182 | motiv_rech_ricket_sangre | 'Motivo de rechazo de la muestra de sangre del paciente' | motivo-rechazo-muestra-sangre | no_especificada
+r3a6-183 | res_final_ricket_inmuno | 'Resultado de inmunoflourecencia indirecta 1=Si 2=No' | resultado-inmunofluorescencia-rickettsia | no_especificada
+r3a6-184 | res_final_ricket_rtpcr | 'Resultado tiempo real para ricketsiosis 1=Positivo 2=Negativo 3=Indeterminado' | resultado-rtpcr-rickettsia | no_especificada
+r3a6-185 | ricket_especie_rtpcr | 'Resultado especie PCR tiempo real al INDRE para rickettsiosis' | especie-rickettsia-rtpcr | no_especificada
+r3a6-186 | tratamiento_rickettsiosis | 'Recibe tratamiento para rickettsiosis 1=Si 2=No' | tratamiento-rickettsiosis-caso | no_especificada
+r3a6-187 | med_trat_ricket | 'Medicamento para el tratamiento para rickettsiosis 1=Doxiciclina 2=Cloramfenicol' | medicamento-tratamiento-rickettsia | no_especificada
+r3a6-188 | des_ins_uni_trat_norm | 'Nombre de la institución tratante normalizado' | organizacion | nombre
+r3a6-189 | Nombre_Establecimiento | 'Nombre del establecimiento' | unidad-salud | nombre
+r3a6-190 | JS_Cve | 'Clave de Jurisdiccion' | jurisdiccion-sanitaria | codigo
+r3a6-191 | JS_Nombre | 'Nombre de Jurisdiccion' | jurisdiccion-sanitaria | nombre
+r3a6-192 | CIE10_Descrip | 'Descripcion de diagnostico' | diagnostico-declarado-atencion | nombre
+r3a6-193 | Total_Urgencias | 'Total de urgencias atendidas' | total-urgencias-atendidas | no_especificada
+r3a6-194 | Sexo | 'Sexo de la persona' | sexo-declarado | no_especificada
+r3a6-195 | Tipo de Muerte | 'Tipo de muerte' | tipo-muerte-donante | no_especificada
+r3a6-196 | Donacion | 'Organos donados' | organos-donados | nombre
+r3a6-197 | Cantidad donada | 'Cantidad de organos donados' | cantidad-organos-donados | no_especificada
+r3a6-198 | Nombre_Establecimiento | 'Nombre del establecimiento' | unidad-salud | nombre
+r3a6-199 | Cve_JS | 'Clave de Jurisdiccion' | jurisdiccion-sanitaria | codigo
+r3a6-200 | Nomb_JS | 'Nombre de Jurisdiccion' | jurisdiccion-sanitaria | nombre
+r3a6-201 | Nombre_Establecimiento | 'Nombre del establecimiento' | unidad-salud | nombre
+r3a6-202 | JS_Cve | 'Clave de Jurisdiccion' | jurisdiccion-sanitaria | codigo
+r3a6-203 | JS_Nombre | 'Nombre de Jurisdiccion' | jurisdiccion-sanitaria | nombre
+r3a6-204 | CIE10_Descrip | 'Descripcion de diagnostico' | diagnostico-declarado-atencion | nombre

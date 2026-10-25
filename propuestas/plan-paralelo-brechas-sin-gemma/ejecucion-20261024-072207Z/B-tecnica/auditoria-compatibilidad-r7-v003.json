@@ -1,0 +1,31 @@
+{
+ "defectos": [],
+ "dictamen": "aceptar",
+ "staging": {
+  "veredicto": "aceptar",
+  "version": "v003"
+ },
+ "verificacion": {
+  "backup_cov_pin_real": "manifiesto-respaldo.json ea354f8a635e298ab6c886ea12fe3ebf4b592658a8592514c182842f4420d5cd + sha(bkcov)==pin.get(data/semantica/cobertura.json); particion 3 candidatas + 28 fuera, viejas 17, nuevas 28, en_vivo 45, columnas 4523, fuera 124, conservacion 1423+124+16",
+  "baseline_aceptada_cadena_exacta_R6_R7": "r7base reglas/vinculos == r6base + r6accepted; conceptos r6base y r6accepted presentes en r7base; lote (31,3,31)",
+  "expected_real_R7": "1423 respaldadas (pre_var+31), 1106 conceptos (len(r7base)+31), 16 candidatas significado (pre_var-3), 124 fuera (pre_var-28), 4478 revisadas (len(r7base)+3), 45 candidatas (17 old + 28 new), 3 vinculos/31 reglas/31 conceptos accepted",
+  "fuentes_inmutables": "manifiesto SHA + sha(path)!=meta sha raise + is_relative_to data/integracion y OUT; encabezados/filas/claves reverificados",
+  "no_observados_como_expected": "expected solo de base+accepted+pre_var+viejas/nuevas; semantic resumen solo en actual para comparacion final",
+  "sha_definida": "def sha(path) en ambos (entregas L20, ronda_2 L18)",
+  "unico_bloque_R7_por_file": "un solo if r7cfg.exists() por file (entregas L321, ronda_2 L315)"
+ },
+ "referencias": [
+  {
+   "ruta": "propuestas/plan-paralelo-brechas-sin-gemma/ejecucion-20261024-072207Z/integracion/compatibilidad-v003/congelada.json",
+   "sha256": "b0c9774d2a7ea0c070223ba8cb0e2902cc3b3e4b582981df313b91c840ed58bf"
+  },
+  {
+   "ruta": "propuestas/plan-paralelo-brechas-sin-gemma/ejecucion-20261024-072207Z/integracion/compatibilidad-v003/integrar_entregas.py",
+   "sha256": "b32380bee1f3c89f1aa26533f2f4b37eb8d2ec6cb534b91ed39719892a008685"
+  },
+  {
+   "ruta": "propuestas/plan-paralelo-brechas-sin-gemma/ejecucion-20261024-072207Z/integracion/compatibilidad-v003/integrar_ronda_2.py",
+   "sha256": "97e2f845cab0e40287667200c11485585621f245d3e7969b5a750e49078aca90"
+  }
+ ]
+}

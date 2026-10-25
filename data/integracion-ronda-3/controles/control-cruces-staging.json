@@ -1,0 +1,155 @@
+{
+  "consulta_filas": 72,
+  "fichas": 3,
+  "comparaciones": 72,
+  "shacl_nativo": {
+    "positivo": {
+      "conforms": true,
+      "focus_nodes": 579,
+      "scope": {
+        "complete": true,
+        "default_graph": true,
+        "note": "every graph in the store, the default graph included. On a store that keeps several versions of an entity in several named graphs this union is a state that held at no instant.",
+        "selector": "whole-store",
+        "semantics_version": "temporal/2"
+      },
+      "unmatched_shapes": [],
+      "violation_count": 0,
+      "violations": []
+    },
+    "negativo_sin_sha": {
+      "conforms": false,
+      "focus_nodes": 579,
+      "scope": {
+        "complete": true,
+        "default_graph": true,
+        "note": "every graph in the store, the default graph included. On a store that keeps several versions of an entity in several named graphs this union is a state that held at no instant.",
+        "selector": "whole-store",
+        "semantics_version": "temporal/2"
+      },
+      "unmatched_shapes": [],
+      "violation_count": 1,
+      "violations": [
+        {
+          "constraint": "minCount",
+          "focus_node": "https://example.org/mex-ontologi/cruce-r3-2020-evidencia/26042%2Fgrandes_grupos",
+          "message": "Property <https://example.org/mex-ontologi/vocab/shaFuente> has fewer than 1 values",
+          "node_shape": "https://example.org/mex-ontologi/shapes/EvidenciaFuenteComparacion",
+          "path": "https://example.org/mex-ontologi/vocab/shaFuente",
+          "result_path": "https://example.org/mex-ontologi/vocab/shaFuente",
+          "severity": "Violation",
+          "source_constraint_component": "http://www.w3.org/ns/shacl#MinCountConstraintComponent",
+          "source_shape": "_:fa7c7a0af4a3deb09a188559a16af818"
+        }
+      ]
+    },
+    "negativo_otro_periodo": {
+      "conforms": false,
+      "focus_nodes": 579,
+      "scope": {
+        "complete": true,
+        "default_graph": true,
+        "note": "every graph in the store, the default graph included. On a store that keeps several versions of an entity in several named graphs this union is a state that held at no instant.",
+        "selector": "whole-store",
+        "semantics_version": "temporal/2"
+      },
+      "unmatched_shapes": [],
+      "violation_count": 1,
+      "violations": [
+        {
+          "constraint": "hasValue",
+          "focus_node": "https://example.org/mex-ontologi/cruce-r3-2020/26053",
+          "message": "Required value \"2020\" is not present",
+          "node_shape": "https://example.org/mex-ontologi/shapes/ComparacionMunicipal2020",
+          "path": "https://example.org/mex-ontologi/vocab/periodoCruzado",
+          "result_path": "https://example.org/mex-ontologi/vocab/periodoCruzado",
+          "severity": "Violation",
+          "source_constraint_component": "http://www.w3.org/ns/shacl#HasValueConstraintComponent",
+          "source_shape": "_:b3e4c44c9671b5a67775417affee63c5"
+        }
+      ]
+    },
+    "negativo_fila_sin_rol": {
+      "conforms": false,
+      "focus_nodes": 580,
+      "scope": {
+        "complete": true,
+        "default_graph": true,
+        "note": "every graph in the store, the default graph included. On a store that keeps several versions of an entity in several named graphs this union is a state that held at no instant.",
+        "selector": "whole-store",
+        "semantics_version": "temporal/2"
+      },
+      "unmatched_shapes": [],
+      "violation_count": 6,
+      "violations": [
+        {
+          "constraint": "maxCount",
+          "focus_node": "https://example.org/mex-ontologi/cruce-r3-2020-evidencia/26046%2Fgrandes_grupos",
+          "message": "Property <https://example.org/mex-ontologi/vocab/filaOrigen> has more than 0 values",
+          "node_shape": "https://example.org/mex-ontologi/shapes/FilasGrandesGrupos",
+          "path": "https://example.org/mex-ontologi/vocab/filaOrigen",
+          "result_path": "https://example.org/mex-ontologi/vocab/filaOrigen",
+          "severity": "Violation",
+          "source_constraint_component": "http://www.w3.org/ns/shacl#MaxCountConstraintComponent",
+          "source_shape": "_:c6f5fffe0c047680eb6d5233e78aeed5"
+        },
+        {
+          "constraint": "maxCount",
+          "focus_node": "https://example.org/mex-ontologi/cruce-r3-2020-evidencia/26046%2Fgrandes_grupos",
+          "message": "Property <https://example.org/mex-ontologi/vocab/filaOrigenMujeres> has more than 0 values",
+          "node_shape": "https://example.org/mex-ontologi/shapes/FilaIndicadores",
+          "path": "https://example.org/mex-ontologi/vocab/filaOrigenMujeres",
+          "result_path": "https://example.org/mex-ontologi/vocab/filaOrigenMujeres",
+          "severity": "Violation",
+          "source_constraint_component": "http://www.w3.org/ns/shacl#MaxCountConstraintComponent",
+          "source_shape": "_:e0917290f3a7cff451f999e85a93b482"
+        },
+        {
+          "constraint": "maxCount",
+          "focus_node": "https://example.org/mex-ontologi/cruce-r3-2020-evidencia/26046%2Fgrandes_grupos",
+          "message": "Property <https://example.org/mex-ontologi/vocab/filaOrigenHombres> has more than 0 values",
+          "node_shape": "https://example.org/mex-ontologi/shapes/FilaIndicadores",
+          "path": "https://example.org/mex-ontologi/vocab/filaOrigenHombres",
+          "result_path": "https://example.org/mex-ontologi/vocab/filaOrigenHombres",
+          "severity": "Violation",
+          "source_constraint_component": "http://www.w3.org/ns/shacl#MaxCountConstraintComponent",
+          "source_shape": "_:db493cb5235af936469f896dd5b630df"
+        },
+        {
+          "constraint": "hasValue",
+          "focus_node": "https://example.org/mex-ontologi/cruce-r3-2020-evidencia/26046%2Fgrandes_grupos",
+          "message": "Required value \"indicadores\" is not present",
+          "node_shape": "https://example.org/mex-ontologi/shapes/FilaIndicadores",
+          "path": "https://example.org/mex-ontologi/vocab/fuenteRol",
+          "result_path": "https://example.org/mex-ontologi/vocab/fuenteRol",
+          "severity": "Violation",
+          "source_constraint_component": "http://www.w3.org/ns/shacl#HasValueConstraintComponent",
+          "source_shape": "_:c51ec47507648ae954fc9470d70134b3"
+        },
+        {
+          "constraint": "maxCount",
+          "focus_node": "https://example.org/mex-ontologi/cruce-r3-2020-evidencia/26046%2Fgrandes_grupos",
+          "message": "Property <https://example.org/mex-ontologi/vocab/filaOrigen> has more than 0 values",
+          "node_shape": "https://example.org/mex-ontologi/shapes/FilasGrandesGrupos",
+          "path": "https://example.org/mex-ontologi/vocab/filaOrigen",
+          "result_path": "https://example.org/mex-ontologi/vocab/filaOrigen",
+          "severity": "Violation",
+          "source_constraint_component": "http://www.w3.org/ns/shacl#MaxCountConstraintComponent",
+          "source_shape": "_:c6f5fffe0c047680eb6d5233e78aeed5"
+        },
+        {
+          "constraint": "maxCount",
+          "focus_node": "https://example.org/mex-ontologi/cruce-r3-2020-evidencia/26046%2Fgrandes_grupos",
+          "message": "Property <https://example.org/mex-ontologi/vocab/filaOrigen> has more than 0 values",
+          "node_shape": "https://example.org/mex-ontologi/shapes/FilasGrandesGrupos",
+          "path": "https://example.org/mex-ontologi/vocab/filaOrigen",
+          "result_path": "https://example.org/mex-ontologi/vocab/filaOrigen",
+          "severity": "Violation",
+          "source_constraint_component": "http://www.w3.org/ns/shacl#MaxCountConstraintComponent",
+          "source_shape": "_:c6f5fffe0c047680eb6d5233e78aeed5"
+        }
+      ]
+    }
+  },
+  "studio_modificado": false
+}

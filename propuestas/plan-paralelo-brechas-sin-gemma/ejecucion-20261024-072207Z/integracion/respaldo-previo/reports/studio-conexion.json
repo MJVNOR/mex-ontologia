@@ -1,0 +1,103 @@
+{
+  "alcance": "Prueba de integración del motor con los endpoints usados por Studio; no prueba de interfaz Tauri",
+  "motor": "C:\\Users\\marti\\Documents\\open-ontologies\\target\\release\\open-ontologies.exe",
+  "url": "http://127.0.0.1:8137",
+  "cargas": [
+    {
+      "ok": true,
+      "triples_loaded": 50
+    },
+    {
+      "ok": true,
+      "triples_loaded": 8181
+    }
+  ],
+  "stats": {
+    "classes": 4,
+    "data_properties": 9,
+    "individuals": 698,
+    "object_properties": 2,
+    "properties": 11,
+    "triples": 8231
+  },
+  "datasets": {
+    "results": [
+      {
+        "n": "\"89\"^^<http://www.w3.org/2001/XMLSchema#integer>"
+      }
+    ],
+    "variables": [
+      "n"
+    ]
+  },
+  "recursos": {
+    "results": [
+      {
+        "n": "\"486\"^^<http://www.w3.org/2001/XMLSchema#integer>"
+      }
+    ],
+    "variables": [
+      "n"
+    ]
+  },
+  "studio_classes": {
+    "results": [
+      {
+        "c": "<https://example.org/mex-ontologi/vocab/RecursoCatalogado>",
+        "l": "\"Recurso registrado en CKAN\"@es"
+      },
+      {
+        "c": "<https://example.org/mex-ontologi/vocab/RecursoCatalogado>",
+        "l": "\"Recurso registrado en CKAN\"@es"
+      }
+    ],
+    "variables": [
+      "c",
+      "l"
+    ]
+  },
+  "studio_edges": {
+    "results": [
+      {
+        "a": "<https://example.org/mex-ontologi/vocab/RecursoCatalogado>",
+        "b": "<http://www.w3.org/2000/01/rdf-schema#Resource>"
+      }
+    ],
+    "variables": [
+      "a",
+      "b"
+    ]
+  },
+  "studio_sparql_compatible": false,
+  "mcp_initialize": {
+    "jsonrpc": "2.0",
+    "id": 1,
+    "result": {
+      "protocolVersion": "2025-03-26",
+      "capabilities": {
+        "prompts": {},
+        "tools": {}
+      },
+      "serverInfo": {
+        "name": "rmcp",
+        "version": "1.4.0"
+      },
+      "instructions": "Open Ontologies: AI-native ontology engine, an RDF/OWL/SPARQL MCP server with 114 tools and 6 workflow prompts for ontology engineering, validation, comparison, alignment, data ingestion, and exploration. 8 further tools are compiled in but NOT advertised, because this build lacks the Cargo feature each one needs and a tool that is guaranteed to fail should not appear in tools/list: onto_plugin_list (--features plugins), onto_plugin_call (--features plugins), onto_embed (--features embeddings), onto_hnsw_build (--features embeddings), onto_search (--features embeddings), onto_similarity (--features embeddings), onto_import_schema (--features postgres or duckdb), onto_sql_ingest (--features postgres or duckdb). Rebuild with the feature to get them."
+    }
+  },
+  "mcp_tools_count": 114,
+  "mcp_query": {
+    "jsonrpc": "2.0",
+    "id": 3,
+    "result": {
+      "content": [
+        {
+          "type": "text",
+          "text": "{\"results\":[{\"n\":\"\\\"89\\\"^^<http://www.w3.org/2001/XMLSchema#integer>\"}],\"variables\":[\"n\"]}"
+        }
+      ],
+      "isError": false
+    }
+  },
+  "servidor_cerrado_al_final": true
+}

@@ -1,0 +1,121 @@
+{
+  "fecha_local": "2026-10-24",
+  "release": "R9",
+  "estado": "cerrado_integrado_validado_y_sincronizado",
+  "plan_r8": {
+    "ruta": "docs/plan-actualizado-tras-r8.md",
+    "estado": "conservado_como_plan_recibido_historico"
+  },
+  "base_actual": {
+    "significados_respaldados": 1423,
+    "conceptos": 1106,
+    "correspondencias_revisadas": 4506,
+    "candidatas": 17,
+    "ambiguas": 0,
+    "significados_reales_pendientes": 138,
+    "vigencias_pendientes": 16,
+    "candidatas_dependientes_de_evidencia": 17,
+    "referencia_catalogo_no_resuelta": "des_mpo_res",
+    "encabezados_corruptos_fuera_del_conteo": 2,
+    "acceso_no_resuelto": ["V13", "V14"],
+    "columnas": {
+      "total": 5523,
+      "revisadas": 4506,
+      "candidatas": 17,
+      "sin_definicion_coincidente": 833,
+      "definicion_sin_interpretacion": 154,
+      "sin_diccionario_en_conjunto": 13,
+      "observaciones_esquema": 5
+    },
+    "pares_priorizados": 1191,
+    "top_50_son_joins_validados": false
+  },
+  "delta_r9": {
+    "significados": 0,
+    "conceptos": 0,
+    "correspondencias_revisadas": 0,
+    "declaraciones_unidad": 2,
+    "formas_shacl_exclusion": 1,
+    "intervalos": 0,
+    "jerarquias_clinicas": 0,
+    "unidades": [
+      {
+        "literal_fuente": "Milímetros",
+        "iri_qudt": "http://qudt.org/vocab/unit/MilliM",
+        "propiedad_local": "mex:unidadQudt",
+        "alcance": "sólo la definición y el recurso evidenciados en P1-Q1"
+      },
+      {
+        "literal_fuente": "Hectáreas",
+        "iri_qudt": "http://qudt.org/vocab/unit/HA",
+        "propiedad_local": "mex:unidadQudt",
+        "alcance": "sólo la definición y el recurso evidenciados en P1-Q3"
+      }
+    ],
+    "qudt_quantityvalue": false,
+    "valores_observados_y_conversiones": false,
+    "hm3": {
+      "unidad_literal_fuente": "Hectómetros cúbicos",
+      "estado_literal": "documentado",
+      "vinculo_qudt": "sin término precoordinado aplicable verificado en QUDT 3.5.3; HectoM3 devolvió 404 y no aparece en el índice revisado",
+      "reemplazo_m3_o_factor_inferido": false,
+      "estado_instalacion": "sin vínculo QUDT aceptado; fuera del grafo instalable"
+    }
+  },
+  "fases": [
+    {"id": "R8-base", "estado": "completada", "pruebas": ["base", "respaldo", "manifiesto R9", "aplicación"]},
+    {"id": "C1-candidatas", "estado": "completada", "resultado": "17 trazadas; cero promociones"},
+    {"id": "C2-oportunidades", "estado": "completada", "resultado": "1191 pares priorizados; top50 sin joins"},
+    {"id": "C3-cobertura", "estado": "completada", "resultado": "5523 columnas reconciliadas; cinco observaciones preservadas"},
+    {"id": "C4-referencias", "estado": "completada", "resultado": "19 casos, 104 evidencias y siete necesidades/preguntas no enviadas"},
+    {"id": "P1-QUDT", "estado": "completada_parcialmente_con_alcance_explicito", "resultado": "2 declaraciones de unidad; literal hm3 Hectómetros cúbicos documentado pero sin término QUDT precoordinado verificado; sin QuantityValue ni conversiones"},
+    {"id": "P2-OWL-Time", "estado": "completada_resultado_negativo", "resultado": "0 intervalos; faltan límites y referencia temporal"},
+    {"id": "P3-jerarquia-clinica", "estado": "completada_resultado_negativo", "resultado": "0 jerarquías; 101 conceptos revisados sin respaldo para broader"},
+    {"id": "P4-SHACL-versionado", "estado": "completada", "resultado": "prohíbe significado documentado y candidato simultáneos, permite ninguno; format_version distinto de release"},
+    {"id": "auditoria-integracion", "estado": "completada", "resultado": "I rechazado; K aceptado por auditorías A/B"},
+    {"id": "validacion", "estado": "completada", "resultado": "204 pruebas antes y después; regresión R9 23 OK; RDF/SHACL conformes; Studio verificado"}
+  ],
+  "recibos_verificados": {
+    "suite_postgeneracion_sha_coincide": true,
+    "suite_postgeneracion": 204,
+    "regresion_r9": 23,
+    "vistas_derivadas": {"esperadas": 101, "ausentes": 0, "hashes_discrepantes": 0},
+    "portal_triples": 322405,
+    "studio_triples": 323014,
+    "studio_verificado": true,
+    "shacl_conforms": true,
+    "shacl_violations": 0,
+    "discrepancia_material": false,
+    "nota": "La carga del portal y Studio tienen ámbitos distintos; ResultadoMunicipalLote está unmatched por no tener instancias, no es una violación."
+  },
+  "pendientes_condicionados": {
+    "significados": 138,
+    "vigencias": 16,
+    "vigencias_acceso_no_resuelto": ["V13", "V14"],
+    "referencia_catalogo": "des_mpo_res",
+    "encabezados_corruptos": 2,
+    "candidatas": 17,
+    "observaciones_esquema": 5,
+    "condicion": "reabrir sólo con fuente primaria, cambio verificable o respuesta que vincule campo, recurso y edición/periodo; no repetir búsqueda genérica agotada"
+  },
+  "alcance_investigacion_significados": {
+    "138_individualmente_revisados": "R8, documentado en reports/investigacion-post-r6.md",
+    "R9": "reconcilió conteos y mantuvo pendientes; no repitió la investigación documental individual",
+    "evidencia_primaria_nueva_R9": 0
+  },
+  "reglas_siguiente_trabajo": [
+    "No repetir las auditorías C1-C4 ni los pilotos P1-P4 de R9 sin evidencia nueva.",
+    "No promover candidatas por nombre ni ejecutar joins basados en la lista top50.",
+    "No enviar las preguntas documentales; están preparadas pero no enviadas.",
+    "No editar manifiestos R1-R9.",
+    "Si aparece evidencia nueva, asignar sólo casos vinculados, guardar en subcarpetas separadas, auditar A/B e integrar con un solo escritor."
+  ],
+  "fuentes": [
+    "reports/ronda-9.json",
+    "reports/portal-carga.json",
+    "reports/studio-portal-sync.json",
+    "propuestas/plan-tras-r8/ejecucion-20261024/",
+    "docs/plan-paralelo-ronda-9-sin-gemma.md",
+    "docs/versionado-y-lanzamientos.md"
+  ]
+}

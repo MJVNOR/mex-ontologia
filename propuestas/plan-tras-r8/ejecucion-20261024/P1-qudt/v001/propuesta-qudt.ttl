@@ -1,0 +1,42 @@
+@prefix mex: <https://example.org/mex-ontologi/vocab/> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+
+# P1-QUDT v001 (propuesta_para_auditar, NO integrada).
+# Solo declara la unidad de la variable por recurso, cualificada por fuente.
+# Sin valores observados, sin conversiones, sin qudt:QuantityValue.
+# mex:unidadQudt se omite hasta que W verifique el URI exacto (peticiones P1-W-01..03).
+# Propiedades mex:* nuevas son locales a la propuesta; no renombran el nucleo.
+
+<https://example.org/mex-ontologi/propuesta/p1-qudt/v001/declaracion-precipitacion-mm> a mex:UnidadDeclarada ;
+    rdfs:label "Precipitacion diaria: unidad Milimetros (declaracion cualificada)"@es ;
+    mex:variableDocumentada <https://example.org/mex-ontologi/documented-variable/6713de4e-1e2b-447d-8000-f6ceaabd8473%2F6> ;
+    mex:definicionFuente <https://example.org/mex-ontologi/definition/6713de4e-1e2b-447d-8000-f6ceaabd8473%2F6> ;
+    mex:conjuntoFuente "8b4edefe-cb1a-401c-90c6-05548779defd" ;
+    mex:unidadLiteral "Milimetros" ;
+    mex:unidadQudtCandidata "unit:MilliM (millimetre) - SIN VERIFICAR, peticion P1-W-01" ;
+    mex:estadoPropuesta "propuesta_para_auditar" ;
+    prov:wasDerivedFrom <https://datos.sonora.gob.mx/api/3/action/datastore_search?resource_id=6713de4e-1e2b-447d-8000-f6ceaabd8473&limit=1000&offset=0&sort=_id+asc> ;
+    rdfs:comment "Alcance: solo variable Precipitacion_mm del diccionario 6713de4e. No afirma valores observados ni conversiones."@es .
+
+<https://example.org/mex-ontologi/propuesta/p1-qudt/v001/declaracion-volumen-agua-hm3> a mex:UnidadDeclarada ;
+    rdfs:label "Volumen de agua en presas: unidad Hectometros cubicos (declaracion cualificada)"@es ;
+    mex:variableDocumentada <https://example.org/mex-ontologi/documented-variable/ca5574f0-d59d-4fc1-a52f-5c533b2abf82%2F3> ;
+    mex:definicionFuente <https://example.org/mex-ontologi/definition/ca5574f0-d59d-4fc1-a52f-5c533b2abf82%2F3> ;
+    mex:conjuntoFuente "ee8f639f-5e89-46ae-93b9-934b05fc6233" ;
+    mex:unidadLiteral "Hectometros cubicos" ;
+    mex:unidadQudtCandidata "unit:HectoM3 (cubic hectometre) - SIN VERIFICAR, peticion P1-W-02" ;
+    mex:estadoPropuesta "propuesta_para_auditar" ;
+    prov:wasDerivedFrom <https://datos.sonora.gob.mx/dataset/ee8f639f-5e89-46ae-93b9-934b05fc6233/resource/ca5574f0-d59d-4fc1-a52f-5c533b2abf82/download/diccionario_recursos_hidricos.csv> ;
+    rdfs:comment "Alcance: solo variable Almacenamiento(hm3) del diccionario ca5574f0. No afirma valores observados ni conversiones."@es .
+
+<https://example.org/mex-ontologi/propuesta/p1-qudt/v001/declaracion-superficie-ha> a mex:UnidadDeclarada ;
+    rdfs:label "Superficie sembrada: unidad Hectareas (declaracion cualificada)"@es ;
+    mex:variableDocumentada <https://example.org/mex-ontologi/documented-variable/94215f51-9c89-414d-8c3d-92792e609a2a%2F14> ;
+    mex:definicionFuente <https://example.org/mex-ontologi/definition/94215f51-9c89-414d-8c3d-92792e609a2a%2F14> ;
+    mex:conjuntoFuente "3e17a7e8-c8d4-49c4-a426-4dec099cd0cd" ;
+    mex:unidadLiteral "Hectareas" ;
+    mex:unidadQudtCandidata "unit:HectoHA (hectare) - SIN VERIFICAR, peticion P1-W-03" ;
+    mex:estadoPropuesta "propuesta_para_auditar" ;
+    prov:wasDerivedFrom <https://datos.sonora.gob.mx/api/3/action/datastore_search?resource_id=94215f51-9c89-414d-8c3d-92792e609a2a&limit=1000&offset=0&sort=_id+asc> ;
+    rdfs:comment "Alcance: solo variable SUPSEM del diccionario 94215f51. No afirma valores observados ni conversiones."@es .

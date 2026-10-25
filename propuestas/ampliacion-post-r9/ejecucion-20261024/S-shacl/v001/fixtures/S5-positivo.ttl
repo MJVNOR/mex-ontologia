@@ -1,0 +1,14 @@
+@prefix ex: <https://example.org/mex-ontologi/prueba-s-shacl/> .
+@prefix mex: <https://example.org/mex-ontologi/vocab/> .
+@prefix dct: <http://purl.org/dc/terms/> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+
+ex:condicion a mex:CondicionConexion ;
+    rdfs:label "Comprobar unidad" ;
+    dct:description "Identificar unidad, población y regla de agregación de cada medida." ;
+    prov:wasDerivedFrom <https://example.org/fuente/semantica.json> .
+
+ex:municipio a mex:MunicipioSegunFuente ;
+    rdfs:label "Aconchi" ;
+    prov:wasDerivedFrom <https://example.org/fuente/municipios.csv> .

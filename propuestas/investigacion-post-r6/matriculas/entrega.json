@@ -1,0 +1,1194 @@
+{
+ "grupo_fuente": "matriculas",
+ "generado_en_utc": "2026-10-24T06:30:00+00:00",
+ "ids_asignados": 30,
+ "ids_cubiertos": 30,
+ "propuestas_respaldadas": 0,
+ "sigue_pendiente": 30,
+ "investigacion_resumen": "Reverificacion viva del diccionario (package_show + datastore_search 2026-10-24: 0 cambios en las 30 filas); primera explotacion del recurso de datos 58f2d5a6 (Matriculas-2022-2.xlsx, 15212x70, sha 1b68919c...) con distribuciones por columna y vinculo columna<->fila por nombre identico; 5 documentos normativos UES nuevos frente a R6 (Reglamentos Escolares 2021-02 y 2026, Reglamento de Convalidacion y Equivalencia 2023, Lineamientos abrogados, Reglamento de Becas y Estimulos 2026) examinados por termino con fragmentos; paginas de Normatividad y Titulacion UES y busqueda negativa de calendario 2022-2. Resultado: 0 promociones (toda norma es anterior/posterior sin vinculo edicion-recurso-periodo o define procesos sin fijar campo); brechas por variable sustancialmente acotadas con dominios empiricos.",
+ "fuentes_nuevas_frente_a_r6": [
+  "Matriculas-2022-2.xlsx + distribuciones.json (recurso de datos nunca explotado)",
+  "Reglamento_Escolar_2021-02.pdf (edicion XXXVII 2021)",
+  "Reglamento_Escolar_2026.pdf (edicion vigente LVII)",
+  "Reglamento_Convalidacion_Equivalencia_2023.pdf (XLVI 2023) + Lineamientos abrogados",
+  "Reglamento_Becas_Estimulos_2026.pdf (LV 2026)",
+  "package_matriculas.json + datastore_diccionario.json (reverificacion 2026-10-24)"
+ ],
+ "fuentes": [
+  {
+   "ruta": "propuestas/investigacion-post-r6/matriculas/evidencia/package_matriculas.json",
+   "url": "https://datos.sonora.gob.mx/api/3/action/package_show?id=e819466c-7282-46c5-84e9-65917dd8cc85",
+   "sha256": "8752e00e44cdcfd8a7c6bb556b7028754da5a7e2a3387c04182d6435d056d7b7",
+   "fecha_consulta": "2026-10-24",
+   "localizador": "result.resources[1]: Matriculas - 2022 - 2 (start_date 2022-01-01, end_date 2022-06-01, publisher Lic. Diana Laura Ballesteros Valenzuela); result.resources[0]: Diccionario (last_modified 2024-11-01); result.notes/numero_variables/fuentes_extras",
+   "afirmacion_soportada": "El recurso de datos 58f2d5a6 cubre periodo 2022-01-01 a 2022-06-01; el diccionario sigue vigente sin descripciones nuevas en metadatos; el paquete no publica codebook ni matriz adicional."
+  },
+  {
+   "ruta": "propuestas/investigacion-post-r6/matriculas/evidencia/datastore_diccionario.json",
+   "url": "https://datos.sonora.gob.mx/api/3/action/datastore_search?resource_id=8c0e76ff-3a86-4b1d-beee-b04bebe7df8d&limit=100",
+   "sha256": "c68a276e7aeff4e1d08ecc984ce48f25e34138f751f8d6988f57bdf25041ea0d",
+   "fecha_consulta": "2026-10-24",
+   "localizador": "result.records (70 filas): campo Descripcion por variable asignada",
+   "afirmacion_soportada": "2026-10-24 en vivo: las 30 filas asignadas conservan Descripcion 'Pendiente de especificar' (28) o truncada sin catalogo (Municipio, Tipo de baja); 0 cambios frente a inspeccion local."
+  },
+  {
+   "ruta": "propuestas/investigacion-post-r6/matriculas/evidencia/Matriculas-2022-2.xlsx",
+   "url": "https://datos.sonora.gob.mx/dataset/e819466c-7282-46c5-84e9-65917dd8cc85/resource/58f2d5a6-0432-48f1-8a35-a5efcce78bac/download/202209271427270-file.xlsx",
+   "sha256": "1b68919ce503511a167e2a375a695fee5447787322db2d7dc8132142ff3bdeaf",
+   "fecha_consulta": "2026-10-24",
+   "localizador": "hoja 'Estudiantes 2022-2', 15212 filas de datos x 70 columnas; cabecera = nombres del diccionario",
+   "afirmacion_soportada": "Muestra censal del recurso de datos: distribuciones empiricas por columna (ver distribuciones.json); cabeceras identicas a las variables del diccionario = vinculo campo-recurso local."
+  },
+  {
+   "ruta": "propuestas/investigacion-post-r6/matriculas/evidencia/distribuciones.json",
+   "url": null,
+   "sha256": "bd2dbe8084963134d93daa29c4ba311531f624850205ac7a73d2f35cc9d89943",
+   "fecha_consulta": "2026-10-24",
+   "localizador": "derivado local de Matriculas-2022-2.xlsx (conteo exacto por valor, 30 columnas asignadas)",
+   "afirmacion_soportada": "Dominios empiricos observados por variable (top valores + nulos + distintos); no es codebook del publicador."
+  },
+  {
+   "ruta": "propuestas/investigacion-post-r6/matriculas/evidencia/Reglamento_Convalidacion_Equivalencia_2023.pdf",
+   "url": "https://ues.sonora.gob.mx/images/Normatividad/Reglamento%20de%20Convalidacion%20y%20Equivalencia%206%20-12-2023%20correcto.pdf",
+   "sha256": "6d405d92d56d525722d087947f2621bade2235c3c8085773ea4071d9e56dbf98",
+   "fecha_consulta": "2026-10-24",
+   "localizador": "portada: XLVI Sesion Ordinaria, 06-dic-2023; art.2 convalidacion / art.3 equivalencia (procesos); art.7 periodos segun calendario; art.11 cuotas",
+   "afirmacion_soportada": "Define convalidacion/equivalencia como procesos; edicion 2023-12 posterior al dato 2022-2, sin vinculo a filas /17 /69 /70 ni a sus representaciones/fechas."
+  },
+  {
+   "ruta": "propuestas/investigacion-post-r6/matriculas/evidencia/Reglamento_Becas_Estimulos_2026.pdf",
+   "url": "https://www.ues.mx/archivos/conocenos/normatividad/REGLAMENTO%20BECAS%20Y%20ESTIMULOS%20%2026%20Marzo%202026.pdf",
+   "sha256": "ee4aef4df2b7befd40ba0bbcc6ac1db9f0d3eacc59f553c15ad06524be89d989",
+   "fecha_consulta": "2026-10-24",
+   "localizador": "portada: LV Sesion Ordinaria, 26-mar-2026; art.30 estimulo deportivo; art.32 estimulo intercultural 100%",
+   "afirmacion_soportada": "Catalogo de estimulos con porcentajes vigente 2026; posterior al dato, terminologia distinta a los 14 valores 2022; sin vinculo a /25."
+  },
+  {
+   "ruta": "propuestas/investigacion-post-r6/matriculas/evidencia/Reglamento_Escolar_2026.pdf",
+   "url": "https://www.ues.mx/archivos/alumnos/reglamentos/ReglamentoEscolar2026.pdf",
+   "sha256": "562849ded9ca7edb7be6ea59f5557a53b493e7cf128f694c9537d8ff33b1b6dd",
+   "fecha_consulta": "2026-10-24",
+   "localizador": "portada: LVII Sesion Ordinaria (2026, Reglamento de Control Escolar); cap.XIV arts.54-59 bajas (voluntaria/automatica/definitiva); examen profesional solo Mencion Honorifica; art.26-28 equivalencia/convalidacion",
+   "afirmacion_soportada": "Edicion vigente 2026: fija subtipos de baja y menciona examen profesional en contexto distinto; posterior al dato, sin 'no exigibilidad', sin tipos aplicables a 2022-2, sin vinculo a /61 /63-/66."
+  },
+  {
+   "ruta": "propuestas/investigacion-post-r6/matriculas/evidencia/Reglamento_Escolar_2021-02.pdf",
+   "url": "https://www.ues.mx/archivos/conocenos/normatividad/Reglamento%20Escolar%202021.02.pdf",
+   "sha256": "9cc14608d598e5f69b45278ea1cf66261ce8fa34fb2a55bfcce175dfd2ba16ae",
+   "fecha_consulta": "2026-10-24",
+   "localizador": "portada: XXXVII Sesion Ordinaria, 10-sep-2021; busqueda textual: 0 'no exigibilidad', 0 'examen profesional'",
+   "afirmacion_soportada": "Edicion anterior al dato (2021): tampoco contiene la terminologia de /63-/66; sin vinculo a variables ni periodo 2022-2."
+  },
+  {
+   "ruta": "propuestas/investigacion-post-r6/matriculas/evidencia/Lineamientos_Operacion_Convalidacion.pdf",
+   "url": "https://www.ues.mx/archivos/conocenos/normatividad/LineamientosparalaOperaciondelosProcesosdeConvalidacion.pdf",
+   "sha256": "7b23ce8bab71e60b336d3336afd10dd6f1abc88cee8f7b071d91fc060e890ca3",
+   "fecha_consulta": "2026-10-24",
+   "localizador": "1 pagina: ABROGADO POR EL REGLAMENTO DE CONVALIDACION Y EQUIVALENCIA",
+   "afirmacion_soportada": "Documento abrogado; solo acredita la cadena normativa, sin contenido aplicable."
+  },
+  {
+   "ruta": "data/portal/inspecciones/8c0e76ff-3a86-4b1d-beee-b04bebe7df8d.json",
+   "url": null,
+   "sha256": "73c4f6243458d700a99df5d3c55327bc9fde1a94d75f94a443606237327574b2",
+   "fecha_consulta": "2026-10-23 (preservada; verificada intacta 2026-10-24)",
+   "localizador": "/definiciones/{fila-1} por variable (huellas 30/30 recomputadas R6)",
+   "afirmacion_soportada": "Estado base de cada fila: descripcion/catalogo/ejemplo; huellas inmutables."
+  },
+  {
+   "ruta": "propuestas/pendientes-muse-r5/matriculas/adenda-web.md",
+   "url": null,
+   "sha256": "c2f52cdb75d0db5ce12e24cef42bb8a6999fb736c55aa946951cfd8911a3cd9c",
+   "fecha_consulta": "2026-10-23 (preservada; verificada intacta 2026-10-24)",
+   "localizador": "veredictos MAT-W-01..05; arts. 23-25/4/9/21/55/63 edicion XLI sep-2022; Guia 2023 sin 'no exigibilidad'/'examen profesional'",
+   "afirmacion_soportada": "Linea R5 agotada (reglamentos 2019/2022 + guia 2023) que esta investigacion no repite."
+  },
+  {
+   "ruta": "propuestas/pendientes-muse-r6/matriculas/entrega.json",
+   "url": null,
+   "sha256": "157aeea6e69030eb931fd809a4e86771abfc9da115337a6d46cfea9fb3fe35d8",
+   "fecha_consulta": "2026-10-23 (preservada; verificada intacta 2026-10-24)",
+   "localizador": "30 decisiones pendiente + novedades R6 (URL vigente = edicion 2019; calendario 2022-2 no localizado)",
+   "afirmacion_soportada": "Punto de partida: dependencias del publicador por variable."
+  },
+  {
+   "ruta": null,
+   "url": "https://ues.sonora.gob.mx/conocenos/normatividad",
+   "sha256": null,
+   "fecha_consulta": "2026-10-24",
+   "localizador": "lista de normatividad vigente: 'Reglamento Escolar' -> ReglamentoEscolar2026.pdf; 'Guia informativa opciones de titulacion' -> edicion XLV ago-2023; 'Reglamento de Convalidacion y equivalencia' ed. 2023",
+   "afirmacion_soportada": "La UES solo publica guia de titulacion XLV-2023 y reglamento 2026; no existe guia de la era 2022 ni calendario 2022-2 enlazado.",
+   "fragmento_breve": "Guia informativa opciones de titulacion (XLV agosto 2023); Reglamento Escolar (2026); Reglamento de Convalidacion y Equivalencia 6-12-2023."
+  },
+  {
+   "ruta": null,
+   "url": "https://ues.sonora.gob.mx/proyectos/titulacion",
+   "sha256": null,
+   "fecha_consulta": "2026-10-24",
+   "localizador": "seccion Requisitos: 'Cumplir con alguna de las opciones establecidas en la guia informativa Opciones de Titulacion de Licenciatura'",
+   "afirmacion_soportada": "El tramite remite genericamente a la guia vigente (2023); sin opciones literales ni edicion aplicable a 2022-2.",
+   "fragmento_breve": "Cumplir con alguna de las opciones establecidas en la guia informativa Opciones de Titulacion de Licenciatura."
+  },
+  {
+   "ruta": null,
+   "url": "busqueda web 'UES calendario escolar 2022-2 semestre' (2026-10-24)",
+   "sha256": null,
+   "fecha_consulta": "2026-10-24",
+   "localizador": "resultados: UNISON (otra universidad), aviso LinkedIn UES reinscripciones 2022-1, pagina UES Virtual sin calendario",
+   "afirmacion_soportada": "Busqueda negativa acotada: calendario UES 2022-2 no localizado en publicacion primaria; no se reutiliza Scribd.",
+   "fragmento_breve": "Cero resultados site ues.mx con calendario 2022-2; solo UNISON y avisos 2022-1."
+  }
+ ],
+ "decisiones": [
+  {
+   "definicion_iri": "https://example.org/mex-ontologi/definition/8c0e76ff-3a86-4b1d-beee-b04bebe7df8d%2F8",
+   "variable": "Inscrito ciclo  escolar actual",
+   "descripcion_original": "Pendiente de especificar",
+   "huella_fila_diccionario": "3dd942d8dd7eb14fd47c95b838b12e050c0c674607696cfa614e3793e51cc9f6",
+   "estado": "sigue_pendiente",
+   "significado_propuesto": null,
+   "evidencia": [
+    {
+     "ruta": "data/portal/inspecciones/8c0e76ff-3a86-4b1d-beee-b04bebe7df8d.json",
+     "sha256": "73c4f6243458d700a99df5d3c55327bc9fde1a94d75f94a443606237327574b2",
+     "localizador": "/definiciones/7",
+     "afirmacion_soportada": "Fila 8: descripcion='Pendiente de especificar', catalogo=''."
+    },
+    {
+     "ruta": "propuestas/investigacion-post-r6/matriculas/evidencia/datastore_diccionario.json",
+     "sha256": "c68a276e7aeff4e1d08ecc984ce48f25e34138f751f8d6988f57bdf25041ea0d",
+     "localizador": "result.records: variable='Inscrito ciclo  escolar actual'",
+     "afirmacion_soportada": "En vivo 2026-10-24 conserva la misma descripcion/catalogo: 0 cambios (verificado campo por campo)."
+    },
+    {
+     "ruta": "propuestas/investigacion-post-r6/matriculas/evidencia/Matriculas-2022-2.xlsx",
+     "sha256": "1b68919ce503511a167e2a375a695fee5447787322db2d7dc8132142ff3bdeaf",
+     "localizador": "hoja 'Estudiantes 2022-2', columna='Inscrito ciclo  escolar actual' (15212 filas)",
+     "afirmacion_soportada": "dominio empirico {222 (Reing):11139, 222 (NI):4073}, 0 nulos; columna identica a /12 en 15212/15212; cruce con 'Nuevo Ingreso/Reingreso': NI<->Nuevo Ingreso 4073/4138 (65 cruces), Reing<->Reingreso 11074/11139."
+    }
+   ],
+   "vinculo_fuente_local": "Columna 'Inscrito ciclo  escolar actual' de la hoja 'Estudiantes 2022-2' del recurso 58f2d5a6 (Matriculas - 2022 - 2, periodo declarado 2022-01-01 a 2022-06-01, package propuestas/investigacion-post-r6/matriculas/evidencia/package_matriculas.json) <-> fila 8 del diccionario 8c0e76ff (nombre de columna identico al de variable; huella 3dd942d8dd7eb14f...).",
+   "evidencia_faltante": "Definición del valor '222 (Reing)' y del ciclo actual de referencia en el diccionario o muestra de valores.",
+   "motivo": "El dominio empirico del recurso acota valores pero no fija sentido literal, unidad, metodo ni vigencia; ninguna norma examinada (2019/2021/2022_01/2023/2026) vincula edicion-recurso-periodo 2022-2 a esta fila. No se promueve por nombre, ejemplo ni inferencia.",
+   "limites": [
+    "Alcance simultaneo por conjunto, diccionario, definicion, nombre y descripcion; sin cruces, homologaciones ni equivalencias.",
+    "Distribuciones empiricas descritas, no convertidas en codebook; la columna vacia tambien se documenta como tal."
+   ]
+  },
+  {
+   "definicion_iri": "https://example.org/mex-ontologi/definition/8c0e76ff-3a86-4b1d-beee-b04bebe7df8d%2F11",
+   "variable": "Ciclo escolar actual motivo no inscrito",
+   "descripcion_original": "Pendiente de especificar",
+   "huella_fila_diccionario": "1dd4685994413b9b5fdd5a1f362345a209c546c08b25138563091c9048eb7fb3",
+   "estado": "sigue_pendiente",
+   "significado_propuesto": null,
+   "evidencia": [
+    {
+     "ruta": "data/portal/inspecciones/8c0e76ff-3a86-4b1d-beee-b04bebe7df8d.json",
+     "sha256": "73c4f6243458d700a99df5d3c55327bc9fde1a94d75f94a443606237327574b2",
+     "localizador": "/definiciones/10",
+     "afirmacion_soportada": "Fila 11: descripcion='Pendiente de especificar', catalogo=''."
+    },
+    {
+     "ruta": "propuestas/investigacion-post-r6/matriculas/evidencia/datastore_diccionario.json",
+     "sha256": "c68a276e7aeff4e1d08ecc984ce48f25e34138f751f8d6988f57bdf25041ea0d",
+     "localizador": "result.records: variable='Ciclo escolar actual motivo no inscrito'",
+     "afirmacion_soportada": "En vivo 2026-10-24 conserva la misma descripcion/catalogo: 0 cambios (verificado campo por campo)."
+    },
+    {
+     "ruta": "propuestas/investigacion-post-r6/matriculas/evidencia/Matriculas-2022-2.xlsx",
+     "sha256": "1b68919ce503511a167e2a375a695fee5447787322db2d7dc8132142ff3bdeaf",
+     "localizador": "hoja 'Estudiantes 2022-2', columna='Ciclo escolar actual motivo no inscrito' (15212 filas)",
+     "afirmacion_soportada": "columna totalmente vacia (15212 nulos): sin dominio observable."
+    }
+   ],
+   "vinculo_fuente_local": "Columna 'Ciclo escolar actual motivo no inscrito' de la hoja 'Estudiantes 2022-2' del recurso 58f2d5a6 (Matriculas - 2022 - 2, periodo declarado 2022-01-01 a 2022-06-01, package propuestas/investigacion-post-r6/matriculas/evidencia/package_matriculas.json) <-> fila 11 del diccionario 8c0e76ff (nombre de columna identico al de variable; huella 1dd4685994413b9b...).",
+   "evidencia_faltante": "Dominio de motivos de no inscripción (catálogo o texto libre) con ejemplos por valor.",
+   "motivo": "El dominio empirico del recurso acota valores pero no fija sentido literal, unidad, metodo ni vigencia; ninguna norma examinada (2019/2021/2022_01/2023/2026) vincula edicion-recurso-periodo 2022-2 a esta fila. No se promueve por nombre, ejemplo ni inferencia.",
+   "limites": [
+    "Alcance simultaneo por conjunto, diccionario, definicion, nombre y descripcion; sin cruces, homologaciones ni equivalencias.",
+    "Distribuciones empiricas descritas, no convertidas en codebook; la columna vacia tambien se documenta como tal."
+   ]
+  },
+  {
+   "definicion_iri": "https://example.org/mex-ontologi/definition/8c0e76ff-3a86-4b1d-beee-b04bebe7df8d%2F12",
+   "variable": "Inscritos ciclo escolar señalado",
+   "descripcion_original": "Pendiente de especificar",
+   "huella_fila_diccionario": "bee5ed0527cc903199e43aa35596fa40ac6f849f09d98400728cb8eb7350f088",
+   "estado": "sigue_pendiente",
+   "significado_propuesto": null,
+   "evidencia": [
+    {
+     "ruta": "data/portal/inspecciones/8c0e76ff-3a86-4b1d-beee-b04bebe7df8d.json",
+     "sha256": "73c4f6243458d700a99df5d3c55327bc9fde1a94d75f94a443606237327574b2",
+     "localizador": "/definiciones/11",
+     "afirmacion_soportada": "Fila 12: descripcion='Pendiente de especificar', catalogo=''."
+    },
+    {
+     "ruta": "propuestas/investigacion-post-r6/matriculas/evidencia/datastore_diccionario.json",
+     "sha256": "c68a276e7aeff4e1d08ecc984ce48f25e34138f751f8d6988f57bdf25041ea0d",
+     "localizador": "result.records: variable='Inscritos ciclo escolar señalado'",
+     "afirmacion_soportada": "En vivo 2026-10-24 conserva la misma descripcion/catalogo: 0 cambios (verificado campo por campo)."
+    },
+    {
+     "ruta": "propuestas/investigacion-post-r6/matriculas/evidencia/Matriculas-2022-2.xlsx",
+     "sha256": "1b68919ce503511a167e2a375a695fee5447787322db2d7dc8132142ff3bdeaf",
+     "localizador": "hoja 'Estudiantes 2022-2', columna='Inscritos ciclo escolar señalado' (15212 filas)",
+     "afirmacion_soportada": "dominio empirico identico a /8 en las 15212 filas ({222 (Reing), 222 (NI)}): 'senalado' = 'actual' = 222 en este recurso."
+    }
+   ],
+   "vinculo_fuente_local": "Columna 'Inscritos ciclo escolar señalado' de la hoja 'Estudiantes 2022-2' del recurso 58f2d5a6 (Matriculas - 2022 - 2, periodo declarado 2022-01-01 a 2022-06-01, package propuestas/investigacion-post-r6/matriculas/evidencia/package_matriculas.json) <-> fila 12 del diccionario 8c0e76ff (nombre de columna identico al de variable; huella bee5ed0527cc9031...).",
+   "evidencia_faltante": "Definición del valor '222 (Reing)' y del ciclo señalado de referencia.",
+   "motivo": "El dominio empirico del recurso acota valores pero no fija sentido literal, unidad, metodo ni vigencia; ninguna norma examinada (2019/2021/2022_01/2023/2026) vincula edicion-recurso-periodo 2022-2 a esta fila. No se promueve por nombre, ejemplo ni inferencia.",
+   "limites": [
+    "Alcance simultaneo por conjunto, diccionario, definicion, nombre y descripcion; sin cruces, homologaciones ni equivalencias.",
+    "Distribuciones empiricas descritas, no convertidas en codebook; la columna vacia tambien se documenta como tal."
+   ]
+  },
+  {
+   "definicion_iri": "https://example.org/mex-ontologi/definition/8c0e76ff-3a86-4b1d-beee-b04bebe7df8d%2F13",
+   "variable": "Grupos asignaturas inscrito en ciclo escolar  señalado",
+   "descripcion_original": "Pendiente de especificar",
+   "huella_fila_diccionario": "cd96c069426c8b03bf31bbc3aff4b85f74358687b4b6283d7f81fa970cfb3803",
+   "estado": "sigue_pendiente",
+   "significado_propuesto": null,
+   "evidencia": [
+    {
+     "ruta": "data/portal/inspecciones/8c0e76ff-3a86-4b1d-beee-b04bebe7df8d.json",
+     "sha256": "73c4f6243458d700a99df5d3c55327bc9fde1a94d75f94a443606237327574b2",
+     "localizador": "/definiciones/12",
+     "afirmacion_soportada": "Fila 13: descripcion='Pendiente de especificar', catalogo=''."
+    },
+    {
+     "ruta": "propuestas/investigacion-post-r6/matriculas/evidencia/datastore_diccionario.json",
+     "sha256": "c68a276e7aeff4e1d08ecc984ce48f25e34138f751f8d6988f57bdf25041ea0d",
+     "localizador": "result.records: variable='Grupos asignaturas inscrito en ciclo escolar  señalado'",
+     "afirmacion_soportada": "En vivo 2026-10-24 conserva la misma descripcion/catalogo: 0 cambios (verificado campo por campo)."
+    },
+    {
+     "ruta": "propuestas/investigacion-post-r6/matriculas/evidencia/Matriculas-2022-2.xlsx",
+     "sha256": "1b68919ce503511a167e2a375a695fee5447787322db2d7dc8132142ff3bdeaf",
+     "localizador": "hoja 'Estudiantes 2022-2', columna='Grupos asignaturas inscrito en ciclo escolar  señalado' (15212 filas)",
+     "afirmacion_soportada": "6935 valores distintos, 0 nulos; patron CODIGO-grupo (p.ej. SSO01C1-001 x262); mismo formato que la hermana resuelta 'Grupos ... ciclo escolar actual'."
+    }
+   ],
+   "vinculo_fuente_local": "Columna 'Grupos asignaturas inscrito en ciclo escolar  señalado' de la hoja 'Estudiantes 2022-2' del recurso 58f2d5a6 (Matriculas - 2022 - 2, periodo declarado 2022-01-01 a 2022-06-01, package propuestas/investigacion-post-r6/matriculas/evidencia/package_matriculas.json) <-> fila 13 del diccionario 8c0e76ff (nombre de columna identico al de variable; huella cd96c069426c8b03...).",
+   "evidencia_faltante": "Descripción que fije a qué ciclo remite 'señalado' y qué denotan los códigos de grupo.",
+   "motivo": "El dominio empirico del recurso acota valores pero no fija sentido literal, unidad, metodo ni vigencia; ninguna norma examinada (2019/2021/2022_01/2023/2026) vincula edicion-recurso-periodo 2022-2 a esta fila. No se promueve por nombre, ejemplo ni inferencia.",
+   "limites": [
+    "Alcance simultaneo por conjunto, diccionario, definicion, nombre y descripcion; sin cruces, homologaciones ni equivalencias.",
+    "Distribuciones empiricas descritas, no convertidas en codebook; la columna vacia tambien se documenta como tal."
+   ]
+  },
+  {
+   "definicion_iri": "https://example.org/mex-ontologi/definition/8c0e76ff-3a86-4b1d-beee-b04bebe7df8d%2F14",
+   "variable": "Fecha inscripción en ciclo escolar  señalado",
+   "descripcion_original": "Pendiente de especificar",
+   "huella_fila_diccionario": "940c1f77837c39791ee0904bbe8123c69948da90bfc9965f38db9aacf6e680ec",
+   "estado": "sigue_pendiente",
+   "significado_propuesto": null,
+   "evidencia": [
+    {
+     "ruta": "data/portal/inspecciones/8c0e76ff-3a86-4b1d-beee-b04bebe7df8d.json",
+     "sha256": "73c4f6243458d700a99df5d3c55327bc9fde1a94d75f94a443606237327574b2",
+     "localizador": "/definiciones/13",
+     "afirmacion_soportada": "Fila 14: descripcion='Pendiente de especificar', catalogo=''."
+    },
+    {
+     "ruta": "propuestas/investigacion-post-r6/matriculas/evidencia/datastore_diccionario.json",
+     "sha256": "c68a276e7aeff4e1d08ecc984ce48f25e34138f751f8d6988f57bdf25041ea0d",
+     "localizador": "result.records: variable='Fecha inscripción en ciclo escolar  señalado'",
+     "afirmacion_soportada": "En vivo 2026-10-24 conserva la misma descripcion/catalogo: 0 cambios (verificado campo por campo)."
+    },
+    {
+     "ruta": "propuestas/investigacion-post-r6/matriculas/evidencia/Matriculas-2022-2.xlsx",
+     "sha256": "1b68919ce503511a167e2a375a695fee5447787322db2d7dc8132142ff3bdeaf",
+     "localizador": "hoja 'Estudiantes 2022-2', columna='Fecha inscripción en ciclo escolar  señalado' (15212 filas)",
+     "afirmacion_soportada": "89 fechas dd/mm/2022 (jun-ago; top 02/08/2022 x3366), 0 nulos: evento de inscripcion en ventana 2022."
+    }
+   ],
+   "vinculo_fuente_local": "Columna 'Fecha inscripción en ciclo escolar  señalado' de la hoja 'Estudiantes 2022-2' del recurso 58f2d5a6 (Matriculas - 2022 - 2, periodo declarado 2022-01-01 a 2022-06-01, package propuestas/investigacion-post-r6/matriculas/evidencia/package_matriculas.json) <-> fila 14 del diccionario 8c0e76ff (nombre de columna identico al de variable; huella 940c1f77837c3979...).",
+   "evidencia_faltante": "Descripción que fije evento y ciclo de la fecha de inscripción.",
+   "motivo": "El dominio empirico del recurso acota valores pero no fija sentido literal, unidad, metodo ni vigencia; ninguna norma examinada (2019/2021/2022_01/2023/2026) vincula edicion-recurso-periodo 2022-2 a esta fila. No se promueve por nombre, ejemplo ni inferencia.",
+   "limites": [
+    "Alcance simultaneo por conjunto, diccionario, definicion, nombre y descripcion; sin cruces, homologaciones ni equivalencias.",
+    "Distribuciones empiricas descritas, no convertidas en codebook; la columna vacia tambien se documenta como tal."
+   ]
+  },
+  {
+   "definicion_iri": "https://example.org/mex-ontologi/definition/8c0e76ff-3a86-4b1d-beee-b04bebe7df8d%2F17",
+   "variable": "Se realizo equivalencia en el ciclo actual",
+   "descripcion_original": "Pendiente de especificar",
+   "huella_fila_diccionario": "c72f79c67b3d7ea96d457eb05aacd319901dcfdd94433c8867b7058e940bfa80",
+   "estado": "sigue_pendiente",
+   "significado_propuesto": null,
+   "evidencia": [
+    {
+     "ruta": "data/portal/inspecciones/8c0e76ff-3a86-4b1d-beee-b04bebe7df8d.json",
+     "sha256": "73c4f6243458d700a99df5d3c55327bc9fde1a94d75f94a443606237327574b2",
+     "localizador": "/definiciones/16",
+     "afirmacion_soportada": "Fila 17: descripcion='Pendiente de especificar', catalogo=''."
+    },
+    {
+     "ruta": "propuestas/investigacion-post-r6/matriculas/evidencia/datastore_diccionario.json",
+     "sha256": "c68a276e7aeff4e1d08ecc984ce48f25e34138f751f8d6988f57bdf25041ea0d",
+     "localizador": "result.records: variable='Se realizo equivalencia en el ciclo actual'",
+     "afirmacion_soportada": "En vivo 2026-10-24 conserva la misma descripcion/catalogo: 0 cambios (verificado campo por campo)."
+    },
+    {
+     "ruta": "propuestas/investigacion-post-r6/matriculas/evidencia/Matriculas-2022-2.xlsx",
+     "sha256": "1b68919ce503511a167e2a375a695fee5447787322db2d7dc8132142ff3bdeaf",
+     "localizador": "hoja 'Estudiantes 2022-2', columna='Se realizo equivalencia en el ciclo actual' (15212 filas)",
+     "afirmacion_soportada": "columna totalmente vacia (15212 nulos): sin dominio observable; reglamento 2022_01 (R5) y 2026 definen equivalencia como proceso, no su representacion en este campo."
+    }
+   ],
+   "vinculo_fuente_local": "Columna 'Se realizo equivalencia en el ciclo actual' de la hoja 'Estudiantes 2022-2' del recurso 58f2d5a6 (Matriculas - 2022 - 2, periodo declarado 2022-01-01 a 2022-06-01, package propuestas/investigacion-post-r6/matriculas/evidencia/package_matriculas.json) <-> fila 17 del diccionario 8c0e76ff (nombre de columna identico al de variable; huella c72f79c67b3d7ea9...).",
+   "evidencia_faltante": "Dominio y representación del campo de equivalencia en el diccionario o muestra de valores.",
+   "motivo": "El dominio empirico del recurso acota valores pero no fija sentido literal, unidad, metodo ni vigencia; ninguna norma examinada (2019/2021/2022_01/2023/2026) vincula edicion-recurso-periodo 2022-2 a esta fila. No se promueve por nombre, ejemplo ni inferencia.",
+   "limites": [
+    "Alcance simultaneo por conjunto, diccionario, definicion, nombre y descripcion; sin cruces, homologaciones ni equivalencias.",
+    "Distribuciones empiricas descritas, no convertidas en codebook; la columna vacia tambien se documenta como tal."
+   ]
+  },
+  {
+   "definicion_iri": "https://example.org/mex-ontologi/definition/8c0e76ff-3a86-4b1d-beee-b04bebe7df8d%2F20",
+   "variable": "Municipio",
+   "descripcion_original": "Municipio donde el alumno",
+   "huella_fila_diccionario": "ad458441825d75edce0abc7e0082d73b2e3fbc9ec36dbb1687451d73ff9d3eba",
+   "estado": "sigue_pendiente",
+   "significado_propuesto": null,
+   "evidencia": [
+    {
+     "ruta": "data/portal/inspecciones/8c0e76ff-3a86-4b1d-beee-b04bebe7df8d.json",
+     "sha256": "73c4f6243458d700a99df5d3c55327bc9fde1a94d75f94a443606237327574b2",
+     "localizador": "/definiciones/19",
+     "afirmacion_soportada": "Fila 20: descripcion='Municipio donde el alumno', catalogo=''."
+    },
+    {
+     "ruta": "propuestas/investigacion-post-r6/matriculas/evidencia/datastore_diccionario.json",
+     "sha256": "c68a276e7aeff4e1d08ecc984ce48f25e34138f751f8d6988f57bdf25041ea0d",
+     "localizador": "result.records: variable='Municipio'",
+     "afirmacion_soportada": "En vivo 2026-10-24 conserva la misma descripcion/catalogo: 0 cambios (verificado campo por campo)."
+    },
+    {
+     "ruta": "propuestas/investigacion-post-r6/matriculas/evidencia/Matriculas-2022-2.xlsx",
+     "sha256": "1b68919ce503511a167e2a375a695fee5447787322db2d7dc8132142ff3bdeaf",
+     "localizador": "hoja 'Estudiantes 2022-2', columna='Municipio' (15212 filas)",
+     "afirmacion_soportada": "162 valores distintos, 1328 nulos; top HERMOSILLO 6356; texto libre con variantes (acentos/duplicados SAN LUIS RIO COLORADO) e incluye municipios de otros estados (MEXICALI, CHINIPAS): funcion municipal (residencia/registro/otra) sin fijar."
+    }
+   ],
+   "vinculo_fuente_local": "Columna 'Municipio' de la hoja 'Estudiantes 2022-2' del recurso 58f2d5a6 (Matriculas - 2022 - 2, periodo declarado 2022-01-01 a 2022-06-01, package propuestas/investigacion-post-r6/matriculas/evidencia/package_matriculas.json) <-> fila 20 del diccionario 8c0e76ff (nombre de columna identico al de variable; huella ad458441825d75ed...).",
+   "evidencia_faltante": "Descripción completa con la función municipal (residencia, registro u otra).",
+   "motivo": "El dominio empirico del recurso acota valores pero no fija sentido literal, unidad, metodo ni vigencia; ninguna norma examinada (2019/2021/2022_01/2023/2026) vincula edicion-recurso-periodo 2022-2 a esta fila. No se promueve por nombre, ejemplo ni inferencia.",
+   "limites": [
+    "Alcance simultaneo por conjunto, diccionario, definicion, nombre y descripcion; sin cruces, homologaciones ni equivalencias.",
+    "Distribuciones empiricas descritas, no convertidas en codebook; la columna vacia tambien se documenta como tal."
+   ]
+  },
+  {
+   "definicion_iri": "https://example.org/mex-ontologi/definition/8c0e76ff-3a86-4b1d-beee-b04bebe7df8d%2F25",
+   "variable": "Estimulo Ciclo Actual",
+   "descripcion_original": "Pendiente de especificar",
+   "huella_fila_diccionario": "6c81db2a713a0c8a2f49c1b2395851d585cf59c95242360e1187ed61650b2671",
+   "estado": "sigue_pendiente",
+   "significado_propuesto": null,
+   "evidencia": [
+    {
+     "ruta": "data/portal/inspecciones/8c0e76ff-3a86-4b1d-beee-b04bebe7df8d.json",
+     "sha256": "73c4f6243458d700a99df5d3c55327bc9fde1a94d75f94a443606237327574b2",
+     "localizador": "/definiciones/24",
+     "afirmacion_soportada": "Fila 25: descripcion='Pendiente de especificar', catalogo=''."
+    },
+    {
+     "ruta": "propuestas/investigacion-post-r6/matriculas/evidencia/datastore_diccionario.json",
+     "sha256": "c68a276e7aeff4e1d08ecc984ce48f25e34138f751f8d6988f57bdf25041ea0d",
+     "localizador": "result.records: variable='Estimulo Ciclo Actual'",
+     "afirmacion_soportada": "En vivo 2026-10-24 conserva la misma descripcion/catalogo: 0 cambios (verificado campo por campo)."
+    },
+    {
+     "ruta": "propuestas/investigacion-post-r6/matriculas/evidencia/Matriculas-2022-2.xlsx",
+     "sha256": "1b68919ce503511a167e2a375a695fee5447787322db2d7dc8132142ff3bdeaf",
+     "localizador": "hoja 'Estudiantes 2022-2', columna='Estimulo Ciclo Actual' (15212 filas)",
+     "afirmacion_soportada": "14 valores + 10179 nulos; etiquetas autodescriptivas con porcentajes (p.ej. ESTIMULO ACADEMICO [Inscripcion 0%,Materias 50%] x3331); Becas y Estimulos 2026 es posterior y con otra terminologia."
+    }
+   ],
+   "vinculo_fuente_local": "Columna 'Estimulo Ciclo Actual' de la hoja 'Estudiantes 2022-2' del recurso 58f2d5a6 (Matriculas - 2022 - 2, periodo declarado 2022-01-01 a 2022-06-01, package propuestas/investigacion-post-r6/matriculas/evidencia/package_matriculas.json) <-> fila 25 del diccionario 8c0e76ff (nombre de columna identico al de variable; huella 6c81db2a713a0c8a...).",
+   "evidencia_faltante": "Dominio del campo Estímulo (catálogo de estímulos o indicador) con ejemplos.",
+   "motivo": "El dominio empirico del recurso acota valores pero no fija sentido literal, unidad, metodo ni vigencia; ninguna norma examinada (2019/2021/2022_01/2023/2026) vincula edicion-recurso-periodo 2022-2 a esta fila. No se promueve por nombre, ejemplo ni inferencia.",
+   "limites": [
+    "Alcance simultaneo por conjunto, diccionario, definicion, nombre y descripcion; sin cruces, homologaciones ni equivalencias.",
+    "Distribuciones empiricas descritas, no convertidas en codebook; la columna vacia tambien se documenta como tal."
+   ]
+  },
+  {
+   "definicion_iri": "https://example.org/mex-ontologi/definition/8c0e76ff-3a86-4b1d-beee-b04bebe7df8d%2F26",
+   "variable": "Grupo Indig.(Pertenece)",
+   "descripcion_original": "Pendiente de especificar",
+   "huella_fila_diccionario": "efc5620974168fb407fddd931ea38baa0b5ad61298dcefc4fc63b3c73dae24ed",
+   "estado": "sigue_pendiente",
+   "significado_propuesto": null,
+   "evidencia": [
+    {
+     "ruta": "data/portal/inspecciones/8c0e76ff-3a86-4b1d-beee-b04bebe7df8d.json",
+     "sha256": "73c4f6243458d700a99df5d3c55327bc9fde1a94d75f94a443606237327574b2",
+     "localizador": "/definiciones/25",
+     "afirmacion_soportada": "Fila 26: descripcion='Pendiente de especificar', catalogo=''."
+    },
+    {
+     "ruta": "propuestas/investigacion-post-r6/matriculas/evidencia/datastore_diccionario.json",
+     "sha256": "c68a276e7aeff4e1d08ecc984ce48f25e34138f751f8d6988f57bdf25041ea0d",
+     "localizador": "result.records: variable='Grupo Indig.(Pertenece)'",
+     "afirmacion_soportada": "En vivo 2026-10-24 conserva la misma descripcion/catalogo: 0 cambios (verificado campo por campo)."
+    },
+    {
+     "ruta": "propuestas/investigacion-post-r6/matriculas/evidencia/Matriculas-2022-2.xlsx",
+     "sha256": "1b68919ce503511a167e2a375a695fee5447787322db2d7dc8132142ff3bdeaf",
+     "localizador": "hoja 'Estudiantes 2022-2', columna='Grupo Indig.(Pertenece)' (15212 filas)",
+     "afirmacion_soportada": "binario {SI:629} + 14583 nulos (solo pertenencia afirmativa registrada)."
+    }
+   ],
+   "vinculo_fuente_local": "Columna 'Grupo Indig.(Pertenece)' de la hoja 'Estudiantes 2022-2' del recurso 58f2d5a6 (Matriculas - 2022 - 2, periodo declarado 2022-01-01 a 2022-06-01, package propuestas/investigacion-post-r6/matriculas/evidencia/package_matriculas.json) <-> fila 26 del diccionario 8c0e76ff (nombre de columna identico al de variable; huella efc5620974168fb4...).",
+   "evidencia_faltante": "Instrumento de captación o diccionario corregido con descripción, representación y valores de la faceta de pertenencia.",
+   "motivo": "El dominio empirico del recurso acota valores pero no fija sentido literal, unidad, metodo ni vigencia; ninguna norma examinada (2019/2021/2022_01/2023/2026) vincula edicion-recurso-periodo 2022-2 a esta fila. No se promueve por nombre, ejemplo ni inferencia.",
+   "limites": [
+    "Alcance simultaneo por conjunto, diccionario, definicion, nombre y descripcion; sin cruces, homologaciones ni equivalencias.",
+    "Distribuciones empiricas descritas, no convertidas en codebook; la columna vacia tambien se documenta como tal."
+   ]
+  },
+  {
+   "definicion_iri": "https://example.org/mex-ontologi/definition/8c0e76ff-3a86-4b1d-beee-b04bebe7df8d%2F27",
+   "variable": "Grupo Indig. (Habla)",
+   "descripcion_original": "Pendiente de especificar",
+   "huella_fila_diccionario": "65ab41f7c96c6137da69aa44b8b72f4365220c57fde711848e1305949f5d0af0",
+   "estado": "sigue_pendiente",
+   "significado_propuesto": null,
+   "evidencia": [
+    {
+     "ruta": "data/portal/inspecciones/8c0e76ff-3a86-4b1d-beee-b04bebe7df8d.json",
+     "sha256": "73c4f6243458d700a99df5d3c55327bc9fde1a94d75f94a443606237327574b2",
+     "localizador": "/definiciones/26",
+     "afirmacion_soportada": "Fila 27: descripcion='Pendiente de especificar', catalogo=''."
+    },
+    {
+     "ruta": "propuestas/investigacion-post-r6/matriculas/evidencia/datastore_diccionario.json",
+     "sha256": "c68a276e7aeff4e1d08ecc984ce48f25e34138f751f8d6988f57bdf25041ea0d",
+     "localizador": "result.records: variable='Grupo Indig. (Habla)'",
+     "afirmacion_soportada": "En vivo 2026-10-24 conserva la misma descripcion/catalogo: 0 cambios (verificado campo por campo)."
+    },
+    {
+     "ruta": "propuestas/investigacion-post-r6/matriculas/evidencia/Matriculas-2022-2.xlsx",
+     "sha256": "1b68919ce503511a167e2a375a695fee5447787322db2d7dc8132142ff3bdeaf",
+     "localizador": "hoja 'Estudiantes 2022-2', columna='Grupo Indig. (Habla)' (15212 filas)",
+     "afirmacion_soportada": "binario {SI:187} + 15025 nulos."
+    }
+   ],
+   "vinculo_fuente_local": "Columna 'Grupo Indig. (Habla)' de la hoja 'Estudiantes 2022-2' del recurso 58f2d5a6 (Matriculas - 2022 - 2, periodo declarado 2022-01-01 a 2022-06-01, package propuestas/investigacion-post-r6/matriculas/evidencia/package_matriculas.json) <-> fila 27 del diccionario 8c0e76ff (nombre de columna identico al de variable; huella 65ab41f7c96c6137...).",
+   "evidencia_faltante": "Instrumento de captación o diccionario corregido con descripción y valores de la faceta de habla.",
+   "motivo": "El dominio empirico del recurso acota valores pero no fija sentido literal, unidad, metodo ni vigencia; ninguna norma examinada (2019/2021/2022_01/2023/2026) vincula edicion-recurso-periodo 2022-2 a esta fila. No se promueve por nombre, ejemplo ni inferencia.",
+   "limites": [
+    "Alcance simultaneo por conjunto, diccionario, definicion, nombre y descripcion; sin cruces, homologaciones ni equivalencias.",
+    "Distribuciones empiricas descritas, no convertidas en codebook; la columna vacia tambien se documenta como tal."
+   ]
+  },
+  {
+   "definicion_iri": "https://example.org/mex-ontologi/definition/8c0e76ff-3a86-4b1d-beee-b04bebe7df8d%2F28",
+   "variable": "Grupo Indig. (Vive en Comunidad)",
+   "descripcion_original": "Pendiente de especificar",
+   "huella_fila_diccionario": "097d21e65ccbb7ec1bac73f45a22ea46eb49a43038a61fdf9946d399973e9e84",
+   "estado": "sigue_pendiente",
+   "significado_propuesto": null,
+   "evidencia": [
+    {
+     "ruta": "data/portal/inspecciones/8c0e76ff-3a86-4b1d-beee-b04bebe7df8d.json",
+     "sha256": "73c4f6243458d700a99df5d3c55327bc9fde1a94d75f94a443606237327574b2",
+     "localizador": "/definiciones/27",
+     "afirmacion_soportada": "Fila 28: descripcion='Pendiente de especificar', catalogo=''."
+    },
+    {
+     "ruta": "propuestas/investigacion-post-r6/matriculas/evidencia/datastore_diccionario.json",
+     "sha256": "c68a276e7aeff4e1d08ecc984ce48f25e34138f751f8d6988f57bdf25041ea0d",
+     "localizador": "result.records: variable='Grupo Indig. (Vive en Comunidad)'",
+     "afirmacion_soportada": "En vivo 2026-10-24 conserva la misma descripcion/catalogo: 0 cambios (verificado campo por campo)."
+    },
+    {
+     "ruta": "propuestas/investigacion-post-r6/matriculas/evidencia/Matriculas-2022-2.xlsx",
+     "sha256": "1b68919ce503511a167e2a375a695fee5447787322db2d7dc8132142ff3bdeaf",
+     "localizador": "hoja 'Estudiantes 2022-2', columna='Grupo Indig. (Vive en Comunidad)' (15212 filas)",
+     "afirmacion_soportada": "binario {SI:792} + 14420 nulos."
+    }
+   ],
+   "vinculo_fuente_local": "Columna 'Grupo Indig. (Vive en Comunidad)' de la hoja 'Estudiantes 2022-2' del recurso 58f2d5a6 (Matriculas - 2022 - 2, periodo declarado 2022-01-01 a 2022-06-01, package propuestas/investigacion-post-r6/matriculas/evidencia/package_matriculas.json) <-> fila 28 del diccionario 8c0e76ff (nombre de columna identico al de variable; huella 097d21e65ccbb7ec...).",
+   "evidencia_faltante": "Instrumento de captación o diccionario corregido con descripción y valores de la faceta de residencia en comunidad.",
+   "motivo": "El dominio empirico del recurso acota valores pero no fija sentido literal, unidad, metodo ni vigencia; ninguna norma examinada (2019/2021/2022_01/2023/2026) vincula edicion-recurso-periodo 2022-2 a esta fila. No se promueve por nombre, ejemplo ni inferencia.",
+   "limites": [
+    "Alcance simultaneo por conjunto, diccionario, definicion, nombre y descripcion; sin cruces, homologaciones ni equivalencias.",
+    "Distribuciones empiricas descritas, no convertidas en codebook; la columna vacia tambien se documenta como tal."
+   ]
+  },
+  {
+   "definicion_iri": "https://example.org/mex-ontologi/definition/8c0e76ff-3a86-4b1d-beee-b04bebe7df8d%2F29",
+   "variable": "Grupo Indig. (Padres)",
+   "descripcion_original": "Pendiente de especificar",
+   "huella_fila_diccionario": "4f809b2005251a58f4449e2ca6319fea6500df31234aaf2c8a3bf32f0cc78e12",
+   "estado": "sigue_pendiente",
+   "significado_propuesto": null,
+   "evidencia": [
+    {
+     "ruta": "data/portal/inspecciones/8c0e76ff-3a86-4b1d-beee-b04bebe7df8d.json",
+     "sha256": "73c4f6243458d700a99df5d3c55327bc9fde1a94d75f94a443606237327574b2",
+     "localizador": "/definiciones/28",
+     "afirmacion_soportada": "Fila 29: descripcion='Pendiente de especificar', catalogo=''."
+    },
+    {
+     "ruta": "propuestas/investigacion-post-r6/matriculas/evidencia/datastore_diccionario.json",
+     "sha256": "c68a276e7aeff4e1d08ecc984ce48f25e34138f751f8d6988f57bdf25041ea0d",
+     "localizador": "result.records: variable='Grupo Indig. (Padres)'",
+     "afirmacion_soportada": "En vivo 2026-10-24 conserva la misma descripcion/catalogo: 0 cambios (verificado campo por campo)."
+    },
+    {
+     "ruta": "propuestas/investigacion-post-r6/matriculas/evidencia/Matriculas-2022-2.xlsx",
+     "sha256": "1b68919ce503511a167e2a375a695fee5447787322db2d7dc8132142ff3bdeaf",
+     "localizador": "hoja 'Estudiantes 2022-2', columna='Grupo Indig. (Padres)' (15212 filas)",
+     "afirmacion_soportada": "binario {SI:582} + 14630 nulos."
+    }
+   ],
+   "vinculo_fuente_local": "Columna 'Grupo Indig. (Padres)' de la hoja 'Estudiantes 2022-2' del recurso 58f2d5a6 (Matriculas - 2022 - 2, periodo declarado 2022-01-01 a 2022-06-01, package propuestas/investigacion-post-r6/matriculas/evidencia/package_matriculas.json) <-> fila 29 del diccionario 8c0e76ff (nombre de columna identico al de variable; huella 4f809b2005251a58...).",
+   "evidencia_faltante": "Instrumento de captación o diccionario corregido con descripción y valores de la faceta de padres.",
+   "motivo": "El dominio empirico del recurso acota valores pero no fija sentido literal, unidad, metodo ni vigencia; ninguna norma examinada (2019/2021/2022_01/2023/2026) vincula edicion-recurso-periodo 2022-2 a esta fila. No se promueve por nombre, ejemplo ni inferencia.",
+   "limites": [
+    "Alcance simultaneo por conjunto, diccionario, definicion, nombre y descripcion; sin cruces, homologaciones ni equivalencias.",
+    "Distribuciones empiricas descritas, no convertidas en codebook; la columna vacia tambien se documenta como tal."
+   ]
+  },
+  {
+   "definicion_iri": "https://example.org/mex-ontologi/definition/8c0e76ff-3a86-4b1d-beee-b04bebe7df8d%2F35",
+   "variable": "Área Bachillerato",
+   "descripcion_original": "Pendiente de especificar",
+   "huella_fila_diccionario": "ca77e79d29f195dcb9be9084d4352373de85538a651d75cc84fc5b331d50c98f",
+   "estado": "sigue_pendiente",
+   "significado_propuesto": null,
+   "evidencia": [
+    {
+     "ruta": "data/portal/inspecciones/8c0e76ff-3a86-4b1d-beee-b04bebe7df8d.json",
+     "sha256": "73c4f6243458d700a99df5d3c55327bc9fde1a94d75f94a443606237327574b2",
+     "localizador": "/definiciones/34",
+     "afirmacion_soportada": "Fila 35: descripcion='Pendiente de especificar', catalogo=''."
+    },
+    {
+     "ruta": "propuestas/investigacion-post-r6/matriculas/evidencia/datastore_diccionario.json",
+     "sha256": "c68a276e7aeff4e1d08ecc984ce48f25e34138f751f8d6988f57bdf25041ea0d",
+     "localizador": "result.records: variable='Área Bachillerato'",
+     "afirmacion_soportada": "En vivo 2026-10-24 conserva la misma descripcion/catalogo: 0 cambios (verificado campo por campo)."
+    },
+    {
+     "ruta": "propuestas/investigacion-post-r6/matriculas/evidencia/Matriculas-2022-2.xlsx",
+     "sha256": "1b68919ce503511a167e2a375a695fee5447787322db2d7dc8132142ff3bdeaf",
+     "localizador": "hoja 'Estudiantes 2022-2', columna='Área Bachillerato' (15212 filas)",
+     "afirmacion_soportada": "72 valores + 1987 nulos; top OTRAS 2155, ADMINISTRACION DE EMPRESAS 1382; texto libre sin catalogo."
+    }
+   ],
+   "vinculo_fuente_local": "Columna 'Área Bachillerato' de la hoja 'Estudiantes 2022-2' del recurso 58f2d5a6 (Matriculas - 2022 - 2, periodo declarado 2022-01-01 a 2022-06-01, package propuestas/investigacion-post-r6/matriculas/evidencia/package_matriculas.json) <-> fila 35 del diccionario 8c0e76ff (nombre de columna identico al de variable; huella ca77e79d29f195dc...).",
+   "evidencia_faltante": "Dominio del campo Área de Bachillerato (catálogo de áreas o texto libre) con ejemplos.",
+   "motivo": "El dominio empirico del recurso acota valores pero no fija sentido literal, unidad, metodo ni vigencia; ninguna norma examinada (2019/2021/2022_01/2023/2026) vincula edicion-recurso-periodo 2022-2 a esta fila. No se promueve por nombre, ejemplo ni inferencia.",
+   "limites": [
+    "Alcance simultaneo por conjunto, diccionario, definicion, nombre y descripcion; sin cruces, homologaciones ni equivalencias.",
+    "Distribuciones empiricas descritas, no convertidas en codebook; la columna vacia tambien se documenta como tal."
+   ]
+  },
+  {
+   "definicion_iri": "https://example.org/mex-ontologi/definition/8c0e76ff-3a86-4b1d-beee-b04bebe7df8d%2F47",
+   "variable": "Promedio anterior al ciclo inscrito (Solo asig. aprobadas)",
+   "descripcion_original": "Pendiente de especificar",
+   "huella_fila_diccionario": "9df2a9f55cbfef2f78d5798d2e0e68782f1a422755938281dc3cf71a4b76544c",
+   "estado": "sigue_pendiente",
+   "significado_propuesto": null,
+   "evidencia": [
+    {
+     "ruta": "data/portal/inspecciones/8c0e76ff-3a86-4b1d-beee-b04bebe7df8d.json",
+     "sha256": "73c4f6243458d700a99df5d3c55327bc9fde1a94d75f94a443606237327574b2",
+     "localizador": "/definiciones/46",
+     "afirmacion_soportada": "Fila 47: descripcion='Pendiente de especificar', catalogo=''."
+    },
+    {
+     "ruta": "propuestas/investigacion-post-r6/matriculas/evidencia/datastore_diccionario.json",
+     "sha256": "c68a276e7aeff4e1d08ecc984ce48f25e34138f751f8d6988f57bdf25041ea0d",
+     "localizador": "result.records: variable='Promedio anterior al ciclo inscrito (Solo asig. aprobadas)'",
+     "afirmacion_soportada": "En vivo 2026-10-24 conserva la misma descripcion/catalogo: 0 cambios (verificado campo por campo)."
+    },
+    {
+     "ruta": "propuestas/investigacion-post-r6/matriculas/evidencia/Matriculas-2022-2.xlsx",
+     "sha256": "1b68919ce503511a167e2a375a695fee5447787322db2d7dc8132142ff3bdeaf",
+     "localizador": "hoja 'Estudiantes 2022-2', columna='Promedio anterior al ciclo inscrito (Solo asig. aprobadas)' (15212 filas)",
+     "afirmacion_soportada": "53 valores escala 0-10 (top 0 x5197, luego 10..6); 0 nulos; sin definicion de metodo/conjunto/redondeo."
+    }
+   ],
+   "vinculo_fuente_local": "Columna 'Promedio anterior al ciclo inscrito (Solo asig. aprobadas)' de la hoja 'Estudiantes 2022-2' del recurso 58f2d5a6 (Matriculas - 2022 - 2, periodo declarado 2022-01-01 a 2022-06-01, package propuestas/investigacion-post-r6/matriculas/evidencia/package_matriculas.json) <-> fila 47 del diccionario 8c0e76ff (nombre de columna identico al de variable; huella 9df2a9f55cbfef2f...).",
+   "evidencia_faltante": "Descripción con escala, rango, método y cobertura de asignaturas del promedio.",
+   "motivo": "El dominio empirico del recurso acota valores pero no fija sentido literal, unidad, metodo ni vigencia; ninguna norma examinada (2019/2021/2022_01/2023/2026) vincula edicion-recurso-periodo 2022-2 a esta fila. No se promueve por nombre, ejemplo ni inferencia.",
+   "limites": [
+    "Alcance simultaneo por conjunto, diccionario, definicion, nombre y descripcion; sin cruces, homologaciones ni equivalencias.",
+    "Distribuciones empiricas descritas, no convertidas en codebook; la columna vacia tambien se documenta como tal."
+   ]
+  },
+  {
+   "definicion_iri": "https://example.org/mex-ontologi/definition/8c0e76ff-3a86-4b1d-beee-b04bebe7df8d%2F48",
+   "variable": "Promedio anterior al ciclo inscrito (Todas las asignaturas)",
+   "descripcion_original": "Pendiente de especificar",
+   "huella_fila_diccionario": "6a40c43efeecb0fc1db0b2f04bab7ccc589b32d8cb9f040b9107ebd3e727573d",
+   "estado": "sigue_pendiente",
+   "significado_propuesto": null,
+   "evidencia": [
+    {
+     "ruta": "data/portal/inspecciones/8c0e76ff-3a86-4b1d-beee-b04bebe7df8d.json",
+     "sha256": "73c4f6243458d700a99df5d3c55327bc9fde1a94d75f94a443606237327574b2",
+     "localizador": "/definiciones/47",
+     "afirmacion_soportada": "Fila 48: descripcion='Pendiente de especificar', catalogo=''."
+    },
+    {
+     "ruta": "propuestas/investigacion-post-r6/matriculas/evidencia/datastore_diccionario.json",
+     "sha256": "c68a276e7aeff4e1d08ecc984ce48f25e34138f751f8d6988f57bdf25041ea0d",
+     "localizador": "result.records: variable='Promedio anterior al ciclo inscrito (Todas las asignaturas)'",
+     "afirmacion_soportada": "En vivo 2026-10-24 conserva la misma descripcion/catalogo: 0 cambios (verificado campo por campo)."
+    },
+    {
+     "ruta": "propuestas/investigacion-post-r6/matriculas/evidencia/Matriculas-2022-2.xlsx",
+     "sha256": "1b68919ce503511a167e2a375a695fee5447787322db2d7dc8132142ff3bdeaf",
+     "localizador": "hoja 'Estudiantes 2022-2', columna='Promedio anterior al ciclo inscrito (Todas las asignaturas)' (15212 filas)",
+     "afirmacion_soportada": "62 valores escala 0-10 (top 0 x4996); 0 nulos; misma falta de metodo que /47."
+    }
+   ],
+   "vinculo_fuente_local": "Columna 'Promedio anterior al ciclo inscrito (Todas las asignaturas)' de la hoja 'Estudiantes 2022-2' del recurso 58f2d5a6 (Matriculas - 2022 - 2, periodo declarado 2022-01-01 a 2022-06-01, package propuestas/investigacion-post-r6/matriculas/evidencia/package_matriculas.json) <-> fila 48 del diccionario 8c0e76ff (nombre de columna identico al de variable; huella 6a40c43efeecb0fc...).",
+   "evidencia_faltante": "Descripción con escala, rango, método y cobertura de asignaturas del promedio.",
+   "motivo": "El dominio empirico del recurso acota valores pero no fija sentido literal, unidad, metodo ni vigencia; ninguna norma examinada (2019/2021/2022_01/2023/2026) vincula edicion-recurso-periodo 2022-2 a esta fila. No se promueve por nombre, ejemplo ni inferencia.",
+   "limites": [
+    "Alcance simultaneo por conjunto, diccionario, definicion, nombre y descripcion; sin cruces, homologaciones ni equivalencias.",
+    "Distribuciones empiricas descritas, no convertidas en codebook; la columna vacia tambien se documenta como tal."
+   ]
+  },
+  {
+   "definicion_iri": "https://example.org/mex-ontologi/definition/8c0e76ff-3a86-4b1d-beee-b04bebe7df8d%2F49",
+   "variable": "Num. asignaturas reprobadas ciclo anterior al ciclo inscrito",
+   "descripcion_original": "Pendiente de especificar",
+   "huella_fila_diccionario": "57422aa3d40ece38f8a4434b0e62f4d6c190c95c4418eda1e87895ed54433259",
+   "estado": "sigue_pendiente",
+   "significado_propuesto": null,
+   "evidencia": [
+    {
+     "ruta": "data/portal/inspecciones/8c0e76ff-3a86-4b1d-beee-b04bebe7df8d.json",
+     "sha256": "73c4f6243458d700a99df5d3c55327bc9fde1a94d75f94a443606237327574b2",
+     "localizador": "/definiciones/48",
+     "afirmacion_soportada": "Fila 49: descripcion='Pendiente de especificar', catalogo=''."
+    },
+    {
+     "ruta": "propuestas/investigacion-post-r6/matriculas/evidencia/datastore_diccionario.json",
+     "sha256": "c68a276e7aeff4e1d08ecc984ce48f25e34138f751f8d6988f57bdf25041ea0d",
+     "localizador": "result.records: variable='Num. asignaturas reprobadas ciclo anterior al ciclo inscrito'",
+     "afirmacion_soportada": "En vivo 2026-10-24 conserva la misma descripcion/catalogo: 0 cambios (verificado campo por campo)."
+    },
+    {
+     "ruta": "propuestas/investigacion-post-r6/matriculas/evidencia/Matriculas-2022-2.xlsx",
+     "sha256": "1b68919ce503511a167e2a375a695fee5447787322db2d7dc8132142ff3bdeaf",
+     "localizador": "hoja 'Estudiantes 2022-2', columna='Num. asignaturas reprobadas ciclo anterior al ciclo inscrito' (15212 filas)",
+     "afirmacion_soportada": "conteo {0:14753, 1:411, 2:40, 3:7, 4:1}; metodo de conteo sin declarar."
+    }
+   ],
+   "vinculo_fuente_local": "Columna 'Num. asignaturas reprobadas ciclo anterior al ciclo inscrito' de la hoja 'Estudiantes 2022-2' del recurso 58f2d5a6 (Matriculas - 2022 - 2, periodo declarado 2022-01-01 a 2022-06-01, package propuestas/investigacion-post-r6/matriculas/evidencia/package_matriculas.json) <-> fila 49 del diccionario 8c0e76ff (nombre de columna identico al de variable; huella 57422aa3d40ece38...).",
+   "evidencia_faltante": "Descripción con método de conteo de asignaturas reprobadas.",
+   "motivo": "El dominio empirico del recurso acota valores pero no fija sentido literal, unidad, metodo ni vigencia; ninguna norma examinada (2019/2021/2022_01/2023/2026) vincula edicion-recurso-periodo 2022-2 a esta fila. No se promueve por nombre, ejemplo ni inferencia.",
+   "limites": [
+    "Alcance simultaneo por conjunto, diccionario, definicion, nombre y descripcion; sin cruces, homologaciones ni equivalencias.",
+    "Distribuciones empiricas descritas, no convertidas en codebook; la columna vacia tambien se documenta como tal."
+   ]
+  },
+  {
+   "definicion_iri": "https://example.org/mex-ontologi/definition/8c0e76ff-3a86-4b1d-beee-b04bebe7df8d%2F52",
+   "variable": "Promedio periodo escolar inscrito (Solo asig. aprobadas)",
+   "descripcion_original": "Pendiente de especificar",
+   "huella_fila_diccionario": "518d3dd1d17fdcf7146020e16dc0898f76104fb6319003e07c3227852f0f9f76",
+   "estado": "sigue_pendiente",
+   "significado_propuesto": null,
+   "evidencia": [
+    {
+     "ruta": "data/portal/inspecciones/8c0e76ff-3a86-4b1d-beee-b04bebe7df8d.json",
+     "sha256": "73c4f6243458d700a99df5d3c55327bc9fde1a94d75f94a443606237327574b2",
+     "localizador": "/definiciones/51",
+     "afirmacion_soportada": "Fila 52: descripcion='Pendiente de especificar', catalogo=''."
+    },
+    {
+     "ruta": "propuestas/investigacion-post-r6/matriculas/evidencia/datastore_diccionario.json",
+     "sha256": "c68a276e7aeff4e1d08ecc984ce48f25e34138f751f8d6988f57bdf25041ea0d",
+     "localizador": "result.records: variable='Promedio periodo escolar inscrito (Solo asig. aprobadas)'",
+     "afirmacion_soportada": "En vivo 2026-10-24 conserva la misma descripcion/catalogo: 0 cambios (verificado campo por campo)."
+    },
+    {
+     "ruta": "propuestas/investigacion-post-r6/matriculas/evidencia/Matriculas-2022-2.xlsx",
+     "sha256": "1b68919ce503511a167e2a375a695fee5447787322db2d7dc8132142ff3bdeaf",
+     "localizador": "hoja 'Estudiantes 2022-2', columna='Promedio periodo escolar inscrito (Solo asig. aprobadas)' (15212 filas)",
+     "afirmacion_soportada": "15 valores; 15186 ceros + 26 valores en escala 0-100 (100, 98, ...): doble escala sin declarar; sin metodo."
+    }
+   ],
+   "vinculo_fuente_local": "Columna 'Promedio periodo escolar inscrito (Solo asig. aprobadas)' de la hoja 'Estudiantes 2022-2' del recurso 58f2d5a6 (Matriculas - 2022 - 2, periodo declarado 2022-01-01 a 2022-06-01, package propuestas/investigacion-post-r6/matriculas/evidencia/package_matriculas.json) <-> fila 52 del diccionario 8c0e76ff (nombre de columna identico al de variable; huella 518d3dd1d17fdcf7...).",
+   "evidencia_faltante": "Descripción con escala y método del promedio del periodo inscrito.",
+   "motivo": "El dominio empirico del recurso acota valores pero no fija sentido literal, unidad, metodo ni vigencia; ninguna norma examinada (2019/2021/2022_01/2023/2026) vincula edicion-recurso-periodo 2022-2 a esta fila. No se promueve por nombre, ejemplo ni inferencia.",
+   "limites": [
+    "Alcance simultaneo por conjunto, diccionario, definicion, nombre y descripcion; sin cruces, homologaciones ni equivalencias.",
+    "Distribuciones empiricas descritas, no convertidas en codebook; la columna vacia tambien se documenta como tal."
+   ]
+  },
+  {
+   "definicion_iri": "https://example.org/mex-ontologi/definition/8c0e76ff-3a86-4b1d-beee-b04bebe7df8d%2F53",
+   "variable": "Promedio periodo escolar inscrito (todas las asignaturas)",
+   "descripcion_original": "Pendiente de especificar",
+   "huella_fila_diccionario": "636ef2fcec0d8c30b0aa97bc406864c1140e73287b70a90ee5dc24812e812183",
+   "estado": "sigue_pendiente",
+   "significado_propuesto": null,
+   "evidencia": [
+    {
+     "ruta": "data/portal/inspecciones/8c0e76ff-3a86-4b1d-beee-b04bebe7df8d.json",
+     "sha256": "73c4f6243458d700a99df5d3c55327bc9fde1a94d75f94a443606237327574b2",
+     "localizador": "/definiciones/52",
+     "afirmacion_soportada": "Fila 53: descripcion='Pendiente de especificar', catalogo=''."
+    },
+    {
+     "ruta": "propuestas/investigacion-post-r6/matriculas/evidencia/datastore_diccionario.json",
+     "sha256": "c68a276e7aeff4e1d08ecc984ce48f25e34138f751f8d6988f57bdf25041ea0d",
+     "localizador": "result.records: variable='Promedio periodo escolar inscrito (todas las asignaturas)'",
+     "afirmacion_soportada": "En vivo 2026-10-24 conserva la misma descripcion/catalogo: 0 cambios (verificado campo por campo)."
+    },
+    {
+     "ruta": "propuestas/investigacion-post-r6/matriculas/evidencia/Matriculas-2022-2.xlsx",
+     "sha256": "1b68919ce503511a167e2a375a695fee5447787322db2d7dc8132142ff3bdeaf",
+     "localizador": "hoja 'Estudiantes 2022-2', columna='Promedio periodo escolar inscrito (todas las asignaturas)' (15212 filas)",
+     "afirmacion_soportada": "17 valores; 15185 ceros + 27 valores en escala 0-100: doble escala sin declarar; sin metodo."
+    }
+   ],
+   "vinculo_fuente_local": "Columna 'Promedio periodo escolar inscrito (todas las asignaturas)' de la hoja 'Estudiantes 2022-2' del recurso 58f2d5a6 (Matriculas - 2022 - 2, periodo declarado 2022-01-01 a 2022-06-01, package propuestas/investigacion-post-r6/matriculas/evidencia/package_matriculas.json) <-> fila 53 del diccionario 8c0e76ff (nombre de columna identico al de variable; huella 636ef2fcec0d8c30...).",
+   "evidencia_faltante": "Descripción con escala y método del promedio del periodo inscrito.",
+   "motivo": "El dominio empirico del recurso acota valores pero no fija sentido literal, unidad, metodo ni vigencia; ninguna norma examinada (2019/2021/2022_01/2023/2026) vincula edicion-recurso-periodo 2022-2 a esta fila. No se promueve por nombre, ejemplo ni inferencia.",
+   "limites": [
+    "Alcance simultaneo por conjunto, diccionario, definicion, nombre y descripcion; sin cruces, homologaciones ni equivalencias.",
+    "Distribuciones empiricas descritas, no convertidas en codebook; la columna vacia tambien se documenta como tal."
+   ]
+  },
+  {
+   "definicion_iri": "https://example.org/mex-ontologi/definition/8c0e76ff-3a86-4b1d-beee-b04bebe7df8d%2F54",
+   "variable": "Inscrito ciclo actual (solo Serv.Soc. y Pract.Prof.)",
+   "descripcion_original": "Pendiente de especificar",
+   "huella_fila_diccionario": "7604572758cf453dde067084f33ae7d7d2faaee3b944554f0f25b7b5fba6a6e0",
+   "estado": "sigue_pendiente",
+   "significado_propuesto": null,
+   "evidencia": [
+    {
+     "ruta": "data/portal/inspecciones/8c0e76ff-3a86-4b1d-beee-b04bebe7df8d.json",
+     "sha256": "73c4f6243458d700a99df5d3c55327bc9fde1a94d75f94a443606237327574b2",
+     "localizador": "/definiciones/53",
+     "afirmacion_soportada": "Fila 54: descripcion='Pendiente de especificar', catalogo=''."
+    },
+    {
+     "ruta": "propuestas/investigacion-post-r6/matriculas/evidencia/datastore_diccionario.json",
+     "sha256": "c68a276e7aeff4e1d08ecc984ce48f25e34138f751f8d6988f57bdf25041ea0d",
+     "localizador": "result.records: variable='Inscrito ciclo actual (solo Serv.Soc. y Pract.Prof.)'",
+     "afirmacion_soportada": "En vivo 2026-10-24 conserva la misma descripcion/catalogo: 0 cambios (verificado campo por campo)."
+    },
+    {
+     "ruta": "propuestas/investigacion-post-r6/matriculas/evidencia/Matriculas-2022-2.xlsx",
+     "sha256": "1b68919ce503511a167e2a375a695fee5447787322db2d7dc8132142ff3bdeaf",
+     "localizador": "hoja 'Estudiantes 2022-2', columna='Inscrito ciclo actual (solo Serv.Soc. y Pract.Prof.)' (15212 filas)",
+     "afirmacion_soportada": "{222:903} + 14309 nulos: marca de inscripcion solo-Serv.Soc./Pract.Prof. con clave 222."
+    }
+   ],
+   "vinculo_fuente_local": "Columna 'Inscrito ciclo actual (solo Serv.Soc. y Pract.Prof.)' de la hoja 'Estudiantes 2022-2' del recurso 58f2d5a6 (Matriculas - 2022 - 2, periodo declarado 2022-01-01 a 2022-06-01, package propuestas/investigacion-post-r6/matriculas/evidencia/package_matriculas.json) <-> fila 54 del diccionario 8c0e76ff (nombre de columna identico al de variable; huella 7604572758cf453d...).",
+   "evidencia_faltante": "Representación y dominio del campo con muestra de valores no vacíos.",
+   "motivo": "El dominio empirico del recurso acota valores pero no fija sentido literal, unidad, metodo ni vigencia; ninguna norma examinada (2019/2021/2022_01/2023/2026) vincula edicion-recurso-periodo 2022-2 a esta fila. No se promueve por nombre, ejemplo ni inferencia.",
+   "limites": [
+    "Alcance simultaneo por conjunto, diccionario, definicion, nombre y descripcion; sin cruces, homologaciones ni equivalencias.",
+    "Distribuciones empiricas descritas, no convertidas en codebook; la columna vacia tambien se documenta como tal."
+   ]
+  },
+  {
+   "definicion_iri": "https://example.org/mex-ontologi/definition/8c0e76ff-3a86-4b1d-beee-b04bebe7df8d%2F58",
+   "variable": "Periodo escolar de egreso",
+   "descripcion_original": "Pendiente de especificar",
+   "huella_fila_diccionario": "29d62a8cf94e56924762fd9ecbf15fe7a1cb365700fc7243f326315273388beb",
+   "estado": "sigue_pendiente",
+   "significado_propuesto": null,
+   "evidencia": [
+    {
+     "ruta": "data/portal/inspecciones/8c0e76ff-3a86-4b1d-beee-b04bebe7df8d.json",
+     "sha256": "73c4f6243458d700a99df5d3c55327bc9fde1a94d75f94a443606237327574b2",
+     "localizador": "/definiciones/57",
+     "afirmacion_soportada": "Fila 58: descripcion='Pendiente de especificar', catalogo=''."
+    },
+    {
+     "ruta": "propuestas/investigacion-post-r6/matriculas/evidencia/datastore_diccionario.json",
+     "sha256": "c68a276e7aeff4e1d08ecc984ce48f25e34138f751f8d6988f57bdf25041ea0d",
+     "localizador": "result.records: variable='Periodo escolar de egreso'",
+     "afirmacion_soportada": "En vivo 2026-10-24 conserva la misma descripcion/catalogo: 0 cambios (verificado campo por campo)."
+    },
+    {
+     "ruta": "propuestas/investigacion-post-r6/matriculas/evidencia/Matriculas-2022-2.xlsx",
+     "sha256": "1b68919ce503511a167e2a375a695fee5447787322db2d7dc8132142ff3bdeaf",
+     "localizador": "hoja 'Estudiantes 2022-2', columna='Periodo escolar de egreso' (15212 filas)",
+     "afirmacion_soportada": "{223:11, 222:4, 221:2} + 15195 nulos: confirma patron de clave ano+periodo; sin definicion de representacion."
+    }
+   ],
+   "vinculo_fuente_local": "Columna 'Periodo escolar de egreso' de la hoja 'Estudiantes 2022-2' del recurso 58f2d5a6 (Matriculas - 2022 - 2, periodo declarado 2022-01-01 a 2022-06-01, package propuestas/investigacion-post-r6/matriculas/evidencia/package_matriculas.json) <-> fila 58 del diccionario 8c0e76ff (nombre de columna identico al de variable; huella 29d62a8cf94e5692...).",
+   "evidencia_faltante": "Definición del periodo escolar de egreso y su representación (clave, año u otra) con ejemplos.",
+   "motivo": "El dominio empirico del recurso acota valores pero no fija sentido literal, unidad, metodo ni vigencia; ninguna norma examinada (2019/2021/2022_01/2023/2026) vincula edicion-recurso-periodo 2022-2 a esta fila. No se promueve por nombre, ejemplo ni inferencia.",
+   "limites": [
+    "Alcance simultaneo por conjunto, diccionario, definicion, nombre y descripcion; sin cruces, homologaciones ni equivalencias.",
+    "Distribuciones empiricas descritas, no convertidas en codebook; la columna vacia tambien se documenta como tal."
+   ]
+  },
+  {
+   "definicion_iri": "https://example.org/mex-ontologi/definition/8c0e76ff-3a86-4b1d-beee-b04bebe7df8d%2F61",
+   "variable": "Tipo de baja",
+   "descripcion_original": "Tipo de baja",
+   "huella_fila_diccionario": "72da417aacf46c2518fa8ef9397a7bd08aff9a3049855e469d785dbba91b0343",
+   "estado": "sigue_pendiente",
+   "significado_propuesto": null,
+   "evidencia": [
+    {
+     "ruta": "data/portal/inspecciones/8c0e76ff-3a86-4b1d-beee-b04bebe7df8d.json",
+     "sha256": "73c4f6243458d700a99df5d3c55327bc9fde1a94d75f94a443606237327574b2",
+     "localizador": "/definiciones/60",
+     "afirmacion_soportada": "Fila 61: descripcion='Tipo de baja', catalogo=''."
+    },
+    {
+     "ruta": "propuestas/investigacion-post-r6/matriculas/evidencia/datastore_diccionario.json",
+     "sha256": "c68a276e7aeff4e1d08ecc984ce48f25e34138f751f8d6988f57bdf25041ea0d",
+     "localizador": "result.records: variable='Tipo de baja'",
+     "afirmacion_soportada": "En vivo 2026-10-24 conserva la misma descripcion/catalogo: 0 cambios (verificado campo por campo)."
+    },
+    {
+     "ruta": "propuestas/investigacion-post-r6/matriculas/evidencia/Matriculas-2022-2.xlsx",
+     "sha256": "1b68919ce503511a167e2a375a695fee5447787322db2d7dc8132142ff3bdeaf",
+     "localizador": "hoja 'Estudiantes 2022-2', columna='Tipo de baja' (15212 filas)",
+     "afirmacion_soportada": "{Voluntaria:1} + 15211 nulos: unico valor coincide literalmente con 'baja voluntaria' del Reglamento 2026 art.55, pero esa edicion es posterior (2026) y sin vinculo a 2022-2."
+    }
+   ],
+   "vinculo_fuente_local": "Columna 'Tipo de baja' de la hoja 'Estudiantes 2022-2' del recurso 58f2d5a6 (Matriculas - 2022 - 2, periodo declarado 2022-01-01 a 2022-06-01, package propuestas/investigacion-post-r6/matriculas/evidencia/package_matriculas.json) <-> fila 61 del diccionario 8c0e76ff (nombre de columna identico al de variable; huella 72da417aacf46c25...).",
+   "evidencia_faltante": "Dominio y valores admisibles del tipo de baja con ejemplos.",
+   "motivo": "El dominio empirico del recurso acota valores pero no fija sentido literal, unidad, metodo ni vigencia; ninguna norma examinada (2019/2021/2022_01/2023/2026) vincula edicion-recurso-periodo 2022-2 a esta fila. No se promueve por nombre, ejemplo ni inferencia.",
+   "limites": [
+    "Alcance simultaneo por conjunto, diccionario, definicion, nombre y descripcion; sin cruces, homologaciones ni equivalencias.",
+    "Distribuciones empiricas descritas, no convertidas en codebook; la columna vacia tambien se documenta como tal."
+   ]
+  },
+  {
+   "definicion_iri": "https://example.org/mex-ontologi/definition/8c0e76ff-3a86-4b1d-beee-b04bebe7df8d%2F62",
+   "variable": "Cambio de Unidad Académica",
+   "descripcion_original": "Pendiente de especificar",
+   "huella_fila_diccionario": "3ff4624691f3351ee662a0ccffff065246d9216ef3dff79060f2a856849e25a8",
+   "estado": "sigue_pendiente",
+   "significado_propuesto": null,
+   "evidencia": [
+    {
+     "ruta": "data/portal/inspecciones/8c0e76ff-3a86-4b1d-beee-b04bebe7df8d.json",
+     "sha256": "73c4f6243458d700a99df5d3c55327bc9fde1a94d75f94a443606237327574b2",
+     "localizador": "/definiciones/61",
+     "afirmacion_soportada": "Fila 62: descripcion='Pendiente de especificar', catalogo=''."
+    },
+    {
+     "ruta": "propuestas/investigacion-post-r6/matriculas/evidencia/datastore_diccionario.json",
+     "sha256": "c68a276e7aeff4e1d08ecc984ce48f25e34138f751f8d6988f57bdf25041ea0d",
+     "localizador": "result.records: variable='Cambio de Unidad Académica'",
+     "afirmacion_soportada": "En vivo 2026-10-24 conserva la misma descripcion/catalogo: 0 cambios (verificado campo por campo)."
+    },
+    {
+     "ruta": "propuestas/investigacion-post-r6/matriculas/evidencia/Matriculas-2022-2.xlsx",
+     "sha256": "1b68919ce503511a167e2a375a695fee5447787322db2d7dc8132142ff3bdeaf",
+     "localizador": "hoja 'Estudiantes 2022-2', columna='Cambio de Unidad Académica' (15212 filas)",
+     "afirmacion_soportada": "20 valores 'Cambio U.A. <origen> a <destino>' + 15014 nulos (top Mag->Hillo x45; hay truncados 'Mag a'); art.21 regula el tramite, no el dominio de este campo."
+    }
+   ],
+   "vinculo_fuente_local": "Columna 'Cambio de Unidad Académica' de la hoja 'Estudiantes 2022-2' del recurso 58f2d5a6 (Matriculas - 2022 - 2, periodo declarado 2022-01-01 a 2022-06-01, package propuestas/investigacion-post-r6/matriculas/evidencia/package_matriculas.json) <-> fila 62 del diccionario 8c0e76ff (nombre de columna identico al de variable; huella 3ff4624691f3351e...).",
+   "evidencia_faltante": "Representación y dominio del campo de cambio de unidad con ejemplos.",
+   "motivo": "El dominio empirico del recurso acota valores pero no fija sentido literal, unidad, metodo ni vigencia; ninguna norma examinada (2019/2021/2022_01/2023/2026) vincula edicion-recurso-periodo 2022-2 a esta fila. No se promueve por nombre, ejemplo ni inferencia.",
+   "limites": [
+    "Alcance simultaneo por conjunto, diccionario, definicion, nombre y descripcion; sin cruces, homologaciones ni equivalencias.",
+    "Distribuciones empiricas descritas, no convertidas en codebook; la columna vacia tambien se documenta como tal."
+   ]
+  },
+  {
+   "definicion_iri": "https://example.org/mex-ontologi/definition/8c0e76ff-3a86-4b1d-beee-b04bebe7df8d%2F63",
+   "variable": "Alternativa de titulación de no exigibilidad",
+   "descripcion_original": "Pendiente de especificar",
+   "huella_fila_diccionario": "4f697985f3ab526291a07e8bf12510c7b5ad126699989151526ad6af270786ea",
+   "estado": "sigue_pendiente",
+   "significado_propuesto": null,
+   "evidencia": [
+    {
+     "ruta": "data/portal/inspecciones/8c0e76ff-3a86-4b1d-beee-b04bebe7df8d.json",
+     "sha256": "73c4f6243458d700a99df5d3c55327bc9fde1a94d75f94a443606237327574b2",
+     "localizador": "/definiciones/62",
+     "afirmacion_soportada": "Fila 63: descripcion='Pendiente de especificar', catalogo=''."
+    },
+    {
+     "ruta": "propuestas/investigacion-post-r6/matriculas/evidencia/datastore_diccionario.json",
+     "sha256": "c68a276e7aeff4e1d08ecc984ce48f25e34138f751f8d6988f57bdf25041ea0d",
+     "localizador": "result.records: variable='Alternativa de titulación de no exigibilidad'",
+     "afirmacion_soportada": "En vivo 2026-10-24 conserva la misma descripcion/catalogo: 0 cambios (verificado campo por campo)."
+    },
+    {
+     "ruta": "propuestas/investigacion-post-r6/matriculas/evidencia/Matriculas-2022-2.xlsx",
+     "sha256": "1b68919ce503511a167e2a375a695fee5447787322db2d7dc8132142ff3bdeaf",
+     "localizador": "hoja 'Estudiantes 2022-2', columna='Alternativa de titulación de no exigibilidad' (15212 filas)",
+     "afirmacion_soportada": "4 valores (Alto Desempeno Academico 3, Diplomado 2, Examen de Validacion 1, variante minuscula 1) + 15205 nulos; coinciden con opciones de la Guia 2023 pero 'no exigibilidad' no existe en ninguna edicion examinada (2019/2021/2022_01/2023/2026)."
+    }
+   ],
+   "vinculo_fuente_local": "Columna 'Alternativa de titulación de no exigibilidad' de la hoja 'Estudiantes 2022-2' del recurso 58f2d5a6 (Matriculas - 2022 - 2, periodo declarado 2022-01-01 a 2022-06-01, package propuestas/investigacion-post-r6/matriculas/evidencia/package_matriculas.json) <-> fila 63 del diccionario 8c0e76ff (nombre de columna identico al de variable; huella 4f697985f3ab5262...).",
+   "evidencia_faltante": "Norma de titulación UES que defina la alternativa de no exigibilidad y su registro.",
+   "motivo": "El dominio empirico del recurso acota valores pero no fija sentido literal, unidad, metodo ni vigencia; ninguna norma examinada (2019/2021/2022_01/2023/2026) vincula edicion-recurso-periodo 2022-2 a esta fila. No se promueve por nombre, ejemplo ni inferencia.",
+   "limites": [
+    "Alcance simultaneo por conjunto, diccionario, definicion, nombre y descripcion; sin cruces, homologaciones ni equivalencias.",
+    "Distribuciones empiricas descritas, no convertidas en codebook; la columna vacia tambien se documenta como tal."
+   ]
+  },
+  {
+   "definicion_iri": "https://example.org/mex-ontologi/definition/8c0e76ff-3a86-4b1d-beee-b04bebe7df8d%2F64",
+   "variable": "Fecha de alternativa de titulación de no exigibilidad",
+   "descripcion_original": "Pendiente de especificar",
+   "huella_fila_diccionario": "6759b8b1157290027ece3602d7dff3c8609984dfbbf14c5408e656de0fe1b612",
+   "estado": "sigue_pendiente",
+   "significado_propuesto": null,
+   "evidencia": [
+    {
+     "ruta": "data/portal/inspecciones/8c0e76ff-3a86-4b1d-beee-b04bebe7df8d.json",
+     "sha256": "73c4f6243458d700a99df5d3c55327bc9fde1a94d75f94a443606237327574b2",
+     "localizador": "/definiciones/63",
+     "afirmacion_soportada": "Fila 64: descripcion='Pendiente de especificar', catalogo=''."
+    },
+    {
+     "ruta": "propuestas/investigacion-post-r6/matriculas/evidencia/datastore_diccionario.json",
+     "sha256": "c68a276e7aeff4e1d08ecc984ce48f25e34138f751f8d6988f57bdf25041ea0d",
+     "localizador": "result.records: variable='Fecha de alternativa de titulación de no exigibilidad'",
+     "afirmacion_soportada": "En vivo 2026-10-24 conserva la misma descripcion/catalogo: 0 cambios (verificado campo por campo)."
+    },
+    {
+     "ruta": "propuestas/investigacion-post-r6/matriculas/evidencia/Matriculas-2022-2.xlsx",
+     "sha256": "1b68919ce503511a167e2a375a695fee5447787322db2d7dc8132142ff3bdeaf",
+     "localizador": "hoja 'Estudiantes 2022-2', columna='Fecha de alternativa de titulación de no exigibilidad' (15212 filas)",
+     "afirmacion_soportada": "6 fechas (5 en ago-sep 2022 + 1 en 2018) + 15205 nulos: evento sin norma vinculada."
+    }
+   ],
+   "vinculo_fuente_local": "Columna 'Fecha de alternativa de titulación de no exigibilidad' de la hoja 'Estudiantes 2022-2' del recurso 58f2d5a6 (Matriculas - 2022 - 2, periodo declarado 2022-01-01 a 2022-06-01, package propuestas/investigacion-post-r6/matriculas/evidencia/package_matriculas.json) <-> fila 64 del diccionario 8c0e76ff (nombre de columna identico al de variable; huella 6759b8b115729002...).",
+   "evidencia_faltante": "Descripción del evento y norma UES de la alternativa de no exigibilidad.",
+   "motivo": "El dominio empirico del recurso acota valores pero no fija sentido literal, unidad, metodo ni vigencia; ninguna norma examinada (2019/2021/2022_01/2023/2026) vincula edicion-recurso-periodo 2022-2 a esta fila. No se promueve por nombre, ejemplo ni inferencia.",
+   "limites": [
+    "Alcance simultaneo por conjunto, diccionario, definicion, nombre y descripcion; sin cruces, homologaciones ni equivalencias.",
+    "Distribuciones empiricas descritas, no convertidas en codebook; la columna vacia tambien se documenta como tal."
+   ]
+  },
+  {
+   "definicion_iri": "https://example.org/mex-ontologi/definition/8c0e76ff-3a86-4b1d-beee-b04bebe7df8d%2F65",
+   "variable": "Alternativa de titulación de examen profesional",
+   "descripcion_original": "Pendiente de especificar",
+   "huella_fila_diccionario": "874bceffaf3fe861bf15f437f4d4e8dbb8abcbf090300c5e758c2e02556ae293",
+   "estado": "sigue_pendiente",
+   "significado_propuesto": null,
+   "evidencia": [
+    {
+     "ruta": "data/portal/inspecciones/8c0e76ff-3a86-4b1d-beee-b04bebe7df8d.json",
+     "sha256": "73c4f6243458d700a99df5d3c55327bc9fde1a94d75f94a443606237327574b2",
+     "localizador": "/definiciones/64",
+     "afirmacion_soportada": "Fila 65: descripcion='Pendiente de especificar', catalogo=''."
+    },
+    {
+     "ruta": "propuestas/investigacion-post-r6/matriculas/evidencia/datastore_diccionario.json",
+     "sha256": "c68a276e7aeff4e1d08ecc984ce48f25e34138f751f8d6988f57bdf25041ea0d",
+     "localizador": "result.records: variable='Alternativa de titulación de examen profesional'",
+     "afirmacion_soportada": "En vivo 2026-10-24 conserva la misma descripcion/catalogo: 0 cambios (verificado campo por campo)."
+    },
+    {
+     "ruta": "propuestas/investigacion-post-r6/matriculas/evidencia/Matriculas-2022-2.xlsx",
+     "sha256": "1b68919ce503511a167e2a375a695fee5447787322db2d7dc8132142ff3bdeaf",
+     "localizador": "hoja 'Estudiantes 2022-2', columna='Alternativa de titulación de examen profesional' (15212 filas)",
+     "afirmacion_soportada": "columna totalmente vacia (15212 nulos) y termino ausente en ediciones 2019/2021/2022_01/2023; 2026 solo lo usa para Mencion Honorifica."
+    }
+   ],
+   "vinculo_fuente_local": "Columna 'Alternativa de titulación de examen profesional' de la hoja 'Estudiantes 2022-2' del recurso 58f2d5a6 (Matriculas - 2022 - 2, periodo declarado 2022-01-01 a 2022-06-01, package propuestas/investigacion-post-r6/matriculas/evidencia/package_matriculas.json) <-> fila 65 del diccionario 8c0e76ff (nombre de columna identico al de variable; huella 874bceffaf3fe861...).",
+   "evidencia_faltante": "Norma de titulación UES que defina la alternativa de examen profesional y su registro.",
+   "motivo": "El dominio empirico del recurso acota valores pero no fija sentido literal, unidad, metodo ni vigencia; ninguna norma examinada (2019/2021/2022_01/2023/2026) vincula edicion-recurso-periodo 2022-2 a esta fila. No se promueve por nombre, ejemplo ni inferencia.",
+   "limites": [
+    "Alcance simultaneo por conjunto, diccionario, definicion, nombre y descripcion; sin cruces, homologaciones ni equivalencias.",
+    "Distribuciones empiricas descritas, no convertidas en codebook; la columna vacia tambien se documenta como tal."
+   ]
+  },
+  {
+   "definicion_iri": "https://example.org/mex-ontologi/definition/8c0e76ff-3a86-4b1d-beee-b04bebe7df8d%2F66",
+   "variable": "Fecha de alternativa de titulación de examen prof.",
+   "descripcion_original": "Pendiente de especificar",
+   "huella_fila_diccionario": "e7e0a6b9c15be989bb0faca42c9b29e55a557cd16b0d417fbb4ba533330970d2",
+   "estado": "sigue_pendiente",
+   "significado_propuesto": null,
+   "evidencia": [
+    {
+     "ruta": "data/portal/inspecciones/8c0e76ff-3a86-4b1d-beee-b04bebe7df8d.json",
+     "sha256": "73c4f6243458d700a99df5d3c55327bc9fde1a94d75f94a443606237327574b2",
+     "localizador": "/definiciones/65",
+     "afirmacion_soportada": "Fila 66: descripcion='Pendiente de especificar', catalogo=''."
+    },
+    {
+     "ruta": "propuestas/investigacion-post-r6/matriculas/evidencia/datastore_diccionario.json",
+     "sha256": "c68a276e7aeff4e1d08ecc984ce48f25e34138f751f8d6988f57bdf25041ea0d",
+     "localizador": "result.records: variable='Fecha de alternativa de titulación de examen prof.'",
+     "afirmacion_soportada": "En vivo 2026-10-24 conserva la misma descripcion/catalogo: 0 cambios (verificado campo por campo)."
+    },
+    {
+     "ruta": "propuestas/investigacion-post-r6/matriculas/evidencia/Matriculas-2022-2.xlsx",
+     "sha256": "1b68919ce503511a167e2a375a695fee5447787322db2d7dc8132142ff3bdeaf",
+     "localizador": "hoja 'Estudiantes 2022-2', columna='Fecha de alternativa de titulación de examen prof.' (15212 filas)",
+     "afirmacion_soportada": "columna totalmente vacia (15212 nulos); misma ausencia terminologica que /65."
+    }
+   ],
+   "vinculo_fuente_local": "Columna 'Fecha de alternativa de titulación de examen prof.' de la hoja 'Estudiantes 2022-2' del recurso 58f2d5a6 (Matriculas - 2022 - 2, periodo declarado 2022-01-01 a 2022-06-01, package propuestas/investigacion-post-r6/matriculas/evidencia/package_matriculas.json) <-> fila 66 del diccionario 8c0e76ff (nombre de columna identico al de variable; huella e7e0a6b9c15be989...).",
+   "evidencia_faltante": "Descripción del evento y norma UES de la alternativa de examen profesional.",
+   "motivo": "El dominio empirico del recurso acota valores pero no fija sentido literal, unidad, metodo ni vigencia; ninguna norma examinada (2019/2021/2022_01/2023/2026) vincula edicion-recurso-periodo 2022-2 a esta fila. No se promueve por nombre, ejemplo ni inferencia.",
+   "limites": [
+    "Alcance simultaneo por conjunto, diccionario, definicion, nombre y descripcion; sin cruces, homologaciones ni equivalencias.",
+    "Distribuciones empiricas descritas, no convertidas en codebook; la columna vacia tambien se documenta como tal."
+   ]
+  },
+  {
+   "definicion_iri": "https://example.org/mex-ontologi/definition/8c0e76ff-3a86-4b1d-beee-b04bebe7df8d%2F67",
+   "variable": "Fecha de titulación del título profesional",
+   "descripcion_original": "Pendiente de especificar",
+   "huella_fila_diccionario": "de5cd0cf3209d047b3dbc8b3a76992f8a52c6e1f6d5b20ca452b762f6b10e993",
+   "estado": "sigue_pendiente",
+   "significado_propuesto": null,
+   "evidencia": [
+    {
+     "ruta": "data/portal/inspecciones/8c0e76ff-3a86-4b1d-beee-b04bebe7df8d.json",
+     "sha256": "73c4f6243458d700a99df5d3c55327bc9fde1a94d75f94a443606237327574b2",
+     "localizador": "/definiciones/66",
+     "afirmacion_soportada": "Fila 67: descripcion='Pendiente de especificar', catalogo=''."
+    },
+    {
+     "ruta": "propuestas/investigacion-post-r6/matriculas/evidencia/datastore_diccionario.json",
+     "sha256": "c68a276e7aeff4e1d08ecc984ce48f25e34138f751f8d6988f57bdf25041ea0d",
+     "localizador": "result.records: variable='Fecha de titulación del título profesional'",
+     "afirmacion_soportada": "En vivo 2026-10-24 conserva la misma descripcion/catalogo: 0 cambios (verificado campo por campo)."
+    },
+    {
+     "ruta": "propuestas/investigacion-post-r6/matriculas/evidencia/Matriculas-2022-2.xlsx",
+     "sha256": "1b68919ce503511a167e2a375a695fee5447787322db2d7dc8132142ff3bdeaf",
+     "localizador": "hoja 'Estudiantes 2022-2', columna='Fecha de titulación del título profesional' (15212 filas)",
+     "afirmacion_soportada": "{08/09/2018:1} + 15211 nulos: unico acto anterior al periodo del dato, sin norma vinculada."
+    }
+   ],
+   "vinculo_fuente_local": "Columna 'Fecha de titulación del título profesional' de la hoja 'Estudiantes 2022-2' del recurso 58f2d5a6 (Matriculas - 2022 - 2, periodo declarado 2022-01-01 a 2022-06-01, package propuestas/investigacion-post-r6/matriculas/evidencia/package_matriculas.json) <-> fila 67 del diccionario 8c0e76ff (nombre de columna identico al de variable; huella de5cd0cf3209d047...).",
+   "evidencia_faltante": "Descripción que fije el evento de titulación del título profesional.",
+   "motivo": "El dominio empirico del recurso acota valores pero no fija sentido literal, unidad, metodo ni vigencia; ninguna norma examinada (2019/2021/2022_01/2023/2026) vincula edicion-recurso-periodo 2022-2 a esta fila. No se promueve por nombre, ejemplo ni inferencia.",
+   "limites": [
+    "Alcance simultaneo por conjunto, diccionario, definicion, nombre y descripcion; sin cruces, homologaciones ni equivalencias.",
+    "Distribuciones empiricas descritas, no convertidas en codebook; la columna vacia tambien se documenta como tal."
+   ]
+  },
+  {
+   "definicion_iri": "https://example.org/mex-ontologi/definition/8c0e76ff-3a86-4b1d-beee-b04bebe7df8d%2F68",
+   "variable": "Fecha de impresión del título profesional",
+   "descripcion_original": "Pendiente de especificar",
+   "huella_fila_diccionario": "0475086a02e3cd9f2d50ded42b978d782edb3e1ea742601c0c0b40fec2e43d58",
+   "estado": "sigue_pendiente",
+   "significado_propuesto": null,
+   "evidencia": [
+    {
+     "ruta": "data/portal/inspecciones/8c0e76ff-3a86-4b1d-beee-b04bebe7df8d.json",
+     "sha256": "73c4f6243458d700a99df5d3c55327bc9fde1a94d75f94a443606237327574b2",
+     "localizador": "/definiciones/67",
+     "afirmacion_soportada": "Fila 68: descripcion='Pendiente de especificar', catalogo=''."
+    },
+    {
+     "ruta": "propuestas/investigacion-post-r6/matriculas/evidencia/datastore_diccionario.json",
+     "sha256": "c68a276e7aeff4e1d08ecc984ce48f25e34138f751f8d6988f57bdf25041ea0d",
+     "localizador": "result.records: variable='Fecha de impresión del título profesional'",
+     "afirmacion_soportada": "En vivo 2026-10-24 conserva la misma descripcion/catalogo: 0 cambios (verificado campo por campo)."
+    },
+    {
+     "ruta": "propuestas/investigacion-post-r6/matriculas/evidencia/Matriculas-2022-2.xlsx",
+     "sha256": "1b68919ce503511a167e2a375a695fee5447787322db2d7dc8132142ff3bdeaf",
+     "localizador": "hoja 'Estudiantes 2022-2', columna='Fecha de impresión del título profesional' (15212 filas)",
+     "afirmacion_soportada": "columna totalmente vacia (15212 nulos): sin dominio observable."
+    }
+   ],
+   "vinculo_fuente_local": "Columna 'Fecha de impresión del título profesional' de la hoja 'Estudiantes 2022-2' del recurso 58f2d5a6 (Matriculas - 2022 - 2, periodo declarado 2022-01-01 a 2022-06-01, package propuestas/investigacion-post-r6/matriculas/evidencia/package_matriculas.json) <-> fila 68 del diccionario 8c0e76ff (nombre de columna identico al de variable; huella 0475086a02e3cd9f...).",
+   "evidencia_faltante": "Descripción que fije el evento de impresión del título profesional.",
+   "motivo": "El dominio empirico del recurso acota valores pero no fija sentido literal, unidad, metodo ni vigencia; ninguna norma examinada (2019/2021/2022_01/2023/2026) vincula edicion-recurso-periodo 2022-2 a esta fila. No se promueve por nombre, ejemplo ni inferencia.",
+   "limites": [
+    "Alcance simultaneo por conjunto, diccionario, definicion, nombre y descripcion; sin cruces, homologaciones ni equivalencias.",
+    "Distribuciones empiricas descritas, no convertidas en codebook; la columna vacia tambien se documenta como tal."
+   ]
+  },
+  {
+   "definicion_iri": "https://example.org/mex-ontologi/definition/8c0e76ff-3a86-4b1d-beee-b04bebe7df8d%2F69",
+   "variable": "Fecha de la convalidación",
+   "descripcion_original": "Pendiente de especificar",
+   "huella_fila_diccionario": "a0792669fb9fb33d8e517cc98ef71161b90ee12f10a620cfa84b647522a5c6c1",
+   "estado": "sigue_pendiente",
+   "significado_propuesto": null,
+   "evidencia": [
+    {
+     "ruta": "data/portal/inspecciones/8c0e76ff-3a86-4b1d-beee-b04bebe7df8d.json",
+     "sha256": "73c4f6243458d700a99df5d3c55327bc9fde1a94d75f94a443606237327574b2",
+     "localizador": "/definiciones/68",
+     "afirmacion_soportada": "Fila 69: descripcion='Pendiente de especificar', catalogo=''."
+    },
+    {
+     "ruta": "propuestas/investigacion-post-r6/matriculas/evidencia/datastore_diccionario.json",
+     "sha256": "c68a276e7aeff4e1d08ecc984ce48f25e34138f751f8d6988f57bdf25041ea0d",
+     "localizador": "result.records: variable='Fecha de la convalidación'",
+     "afirmacion_soportada": "En vivo 2026-10-24 conserva la misma descripcion/catalogo: 0 cambios (verificado campo por campo)."
+    },
+    {
+     "ruta": "propuestas/investigacion-post-r6/matriculas/evidencia/Matriculas-2022-2.xlsx",
+     "sha256": "1b68919ce503511a167e2a375a695fee5447787322db2d7dc8132142ff3bdeaf",
+     "localizador": "hoja 'Estudiantes 2022-2', columna='Fecha de la convalidación' (15212 filas)",
+     "afirmacion_soportada": "354 fechas 2018-2022 + 13879 nulos; Reglamento Convalidacion 2023 define el proceso (posterior) pero no la representacion/fecha de este campo."
+    }
+   ],
+   "vinculo_fuente_local": "Columna 'Fecha de la convalidación' de la hoja 'Estudiantes 2022-2' del recurso 58f2d5a6 (Matriculas - 2022 - 2, periodo declarado 2022-01-01 a 2022-06-01, package propuestas/investigacion-post-r6/matriculas/evidencia/package_matriculas.json) <-> fila 69 del diccionario 8c0e76ff (nombre de columna identico al de variable; huella a0792669fb9fb33d...).",
+   "evidencia_faltante": "Descripción del evento y norma de convalidación.",
+   "motivo": "El dominio empirico del recurso acota valores pero no fija sentido literal, unidad, metodo ni vigencia; ninguna norma examinada (2019/2021/2022_01/2023/2026) vincula edicion-recurso-periodo 2022-2 a esta fila. No se promueve por nombre, ejemplo ni inferencia.",
+   "limites": [
+    "Alcance simultaneo por conjunto, diccionario, definicion, nombre y descripcion; sin cruces, homologaciones ni equivalencias.",
+    "Distribuciones empiricas descritas, no convertidas en codebook; la columna vacia tambien se documenta como tal."
+   ]
+  },
+  {
+   "definicion_iri": "https://example.org/mex-ontologi/definition/8c0e76ff-3a86-4b1d-beee-b04bebe7df8d%2F70",
+   "variable": "Fecha de la equivalencia",
+   "descripcion_original": "Pendiente de especificar",
+   "huella_fila_diccionario": "1fe84a93ab498ab4d7dc47f0a54b4ad5278e0d9194e5cc00c06c3028927ff3b3",
+   "estado": "sigue_pendiente",
+   "significado_propuesto": null,
+   "evidencia": [
+    {
+     "ruta": "data/portal/inspecciones/8c0e76ff-3a86-4b1d-beee-b04bebe7df8d.json",
+     "sha256": "73c4f6243458d700a99df5d3c55327bc9fde1a94d75f94a443606237327574b2",
+     "localizador": "/definiciones/69",
+     "afirmacion_soportada": "Fila 70: descripcion='Pendiente de especificar', catalogo=''."
+    },
+    {
+     "ruta": "propuestas/investigacion-post-r6/matriculas/evidencia/datastore_diccionario.json",
+     "sha256": "c68a276e7aeff4e1d08ecc984ce48f25e34138f751f8d6988f57bdf25041ea0d",
+     "localizador": "result.records: variable='Fecha de la equivalencia'",
+     "afirmacion_soportada": "En vivo 2026-10-24 conserva la misma descripcion/catalogo: 0 cambios (verificado campo por campo)."
+    },
+    {
+     "ruta": "propuestas/investigacion-post-r6/matriculas/evidencia/Matriculas-2022-2.xlsx",
+     "sha256": "1b68919ce503511a167e2a375a695fee5447787322db2d7dc8132142ff3bdeaf",
+     "localizador": "hoja 'Estudiantes 2022-2', columna='Fecha de la equivalencia' (15212 filas)",
+     "afirmacion_soportada": "157 fechas 2018-2022 + 14973 nulos; misma situacion que /69 para equivalencia."
+    }
+   ],
+   "vinculo_fuente_local": "Columna 'Fecha de la equivalencia' de la hoja 'Estudiantes 2022-2' del recurso 58f2d5a6 (Matriculas - 2022 - 2, periodo declarado 2022-01-01 a 2022-06-01, package propuestas/investigacion-post-r6/matriculas/evidencia/package_matriculas.json) <-> fila 70 del diccionario 8c0e76ff (nombre de columna identico al de variable; huella 1fe84a93ab498ab4...).",
+   "evidencia_faltante": "Descripción del evento y norma de equivalencia.",
+   "motivo": "El dominio empirico del recurso acota valores pero no fija sentido literal, unidad, metodo ni vigencia; ninguna norma examinada (2019/2021/2022_01/2023/2026) vincula edicion-recurso-periodo 2022-2 a esta fila. No se promueve por nombre, ejemplo ni inferencia.",
+   "limites": [
+    "Alcance simultaneo por conjunto, diccionario, definicion, nombre y descripcion; sin cruces, homologaciones ni equivalencias.",
+    "Distribuciones empiricas descritas, no convertidas en codebook; la columna vacia tambien se documenta como tal."
+   ]
+  }
+ ]
+}

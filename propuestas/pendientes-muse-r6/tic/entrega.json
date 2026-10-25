@@ -1,0 +1,535 @@
+{
+  "rol": "tic",
+  "ronda": "r6",
+  "conteos": {
+    "total": 24,
+    "pendiente": 24,
+    "proponer": 0,
+    "artefacto_documental": 0,
+    "reglas_nuevas": 0,
+    "conceptos_nuevos": 0
+  },
+  "decisiones_significados": [
+    {
+      "decision": "pendiente",
+      "definicion_iri": "https://example.org/mex-ontologi/definition/063058e6-aed3-4a60-b944-5e653c77b14d%2F10",
+      "evidencia": [
+        "data/semantica/cobertura.json definicion https://example.org/mex-ontologi/definition/063058e6-aed3-4a60-b944-5e653c77b14d%2F10 del diccionario 063058e6-aed3-4a60-b944-5e653c77b14d, conjunto aa353273-7ef0-4279-987a-40fc49b3d712, estado fuera_del_nucleo_actual, huella_fila_diccionario=f12d0cae51621dc25907c4b911f4de83803c39e4abc43e700df8a1398384d59e",
+        "data/portal/inspecciones/063058e6-aed3-4a60-b944-5e653c77b14d.json fila Hoja1 P10: Tipo de dato=Booleano Formato=Si/No, Descripcion de 197 caracteres que termina a mitad de palabra en '...que permit\\u2026', Ejemplo='Si'",
+        "Truncamiento a nivel de celda fuente: otras descripciones del portal alcanzan 395 caracteres, por lo que no hay tope de captura; re-descarga del xlsx el 2026-10-23 bloqueada por WAF del portal (pagina de firewall en lugar del archivo)",
+        "r6 2026-10-23: relectura de la fila exacta en data/portal/inspecciones/063058e6-aed3-4a60-b944-5e653c77b14d.json: tipo/ejemplo/descripcion byte-identicos a r5 (huella_fila_diccionario=f12d0cae51621dc25907c4b911f4de83803c39e4abc43e700df8a1398384d59e); inspeccion sha256 0ea3dfe7bd13b50aa647d976a6dd59ac9dd33c102eee2c6bc88b301d9f810be0",
+        "r6: cobertura.json sin correspondencias para esta definicion (0 vinculos en 4496); estado fuera_del_nucleo_actual",
+        "r5 catalogos-web S09 negativo-portal + respuesta tic-web-01: sin cuestionario/muestra publica para este caso; linea del portal agotada en r5, no se re-visita en r6"
+      ],
+      "limites": [
+        "No se infiere el final de la pregunta ni el objeto de 'permit...'.",
+        "No se propone significado parcial sobre el fragmento."
+      ],
+      "motivo": "pendiente: descripcion truncada a mitad de palabra en la celda fuente ('...que permit\\u2026'); no hay sentido literal completo. Confirma el pendiente r4-lote-5 tras relectura de la fila exacta. Requiere texto completo del cuestionario (ex solicitud tic-web-01). R6 confirma pendiente: fila byte-identica a r5 y linea web-portal agotada (S09 negativo); el documento exacto requerido esta en manos del publicador."
+    },
+    {
+      "decision": "pendiente",
+      "definicion_iri": "https://example.org/mex-ontologi/definition/063058e6-aed3-4a60-b944-5e653c77b14d%2F11",
+      "evidencia": [
+        "data/semantica/cobertura.json definicion https://example.org/mex-ontologi/definition/063058e6-aed3-4a60-b944-5e653c77b14d%2F11 del diccionario 063058e6-aed3-4a60-b944-5e653c77b14d, conjunto aa353273-7ef0-4279-987a-40fc49b3d712, estado fuera_del_nucleo_actual, huella_fila_diccionario=3754e039074ac352b83d8a19025561b2694774713bc34c6a4283eeac895af4",
+        "data/portal/inspecciones/063058e6-aed3-4a60-b944-5e653c77b14d.json fila Hoja1 P11: Tipo de dato=Texto, Descripcion='Enliste algunos ejemplos que reflejen lo anterior:', Ejemplo='Tecnologia 1, tecnologia 2'",
+        "La referencia ('lo anterior') remite a P10, cuya descripcion esta truncada (pendiente tic-web-01); el diccionario no declara vinculo filtro/detalle entre filas",
+        "r6 2026-10-23: relectura de la fila exacta en data/portal/inspecciones/063058e6-aed3-4a60-b944-5e653c77b14d.json: tipo/ejemplo/descripcion byte-identicos a r5 (huella_fila_diccionario=3754e039074ac352b83d8a19025561b2694774713bc34c6a6d4283eeac895af4); inspeccion sha256 0ea3dfe7bd13b50aa647d976a6dd59ac9dd33c102eee2c6bc88b301d9f810be0",
+        "r6: cobertura.json sin correspondencias para esta definicion (0 vinculos en 4496); estado fuera_del_nucleo_actual",
+        "r5 catalogos-web S09 negativo-portal + respuesta tic-web-01: sin cuestionario/muestra publica para este caso; linea del portal agotada en r5, no se re-visita en r6"
+      ],
+      "limites": [
+        "No se transfiere referente de P10 por proximidad.",
+        "No se fija a que aspecto responde el valor."
+      ],
+      "motivo": "pendiente: referencia anaforica ('lo anterior') cuyo referente es P10, a su vez truncada y pendiente; sin referente fijado no se fija a que aspecto responde el valor. Confirma el pendiente r4-lote-5. Requiere cuestionario completo (ex solicitud tic-web-01). R6 confirma pendiente: fila byte-identica a r5 y linea web-portal agotada (S09 negativo); el documento exacto requerido esta en manos del publicador."
+    },
+    {
+      "decision": "pendiente",
+      "definicion_iri": "https://example.org/mex-ontologi/definition/063058e6-aed3-4a60-b944-5e653c77b14d%2F16",
+      "evidencia": [
+        "data/semantica/cobertura.json definicion https://example.org/mex-ontologi/definition/063058e6-aed3-4a60-b944-5e653c77b14d%2F16 del diccionario 063058e6-aed3-4a60-b944-5e653c77b14d, conjunto aa353273-7ef0-4279-987a-40fc49b3d712, estado fuera_del_nucleo_actual, huella_fila_diccionario=b9c90f66d430431c37c00e624c437c76a2d5322baa95bb3e9db8c29526d85748",
+        "data/portal/inspecciones/063058e6-aed3-4a60-b944-5e653c77b14d.json fila Hoja1 P16: Tipo de dato=Booleano Formato=Si/No, Descripcion de 199 caracteres que termina en '...en ma...', Ejemplo='Si'",
+        "r6 2026-10-23: relectura de la fila exacta en data/portal/inspecciones/063058e6-aed3-4a60-b944-5e653c77b14d.json: tipo/ejemplo/descripcion byte-identicos a r5 (huella_fila_diccionario=b9c90f66d430431c37c00e624c437c76a2d5322baa95bb3e9db8c29526d85748); inspeccion sha256 0ea3dfe7bd13b50aa647d976a6dd59ac9dd33c102eee2c6bc88b301d9f810be0",
+        "r6: cobertura.json sin correspondencias para esta definicion (0 vinculos en 4496); estado fuera_del_nucleo_actual",
+        "r5 catalogos-web S09 negativo-portal + respuesta tic-web-01: sin cuestionario/muestra publica para este caso; linea del portal agotada en r5, no se re-visita en r6"
+      ],
+      "limites": [
+        "No se infiere el final del objeto ('en materia de ...').",
+        "Se distingue de P14 respaldada (sector, texto completo): no se equiparan."
+      ],
+      "motivo": "pendiente: descripcion truncada a mitad de frase en la celda fuente ('...en ma...'); no hay sentido literal completo. Confirma el pendiente r4-lote-5 tras relectura. Requiere texto completo (ex solicitud tic-web-01). R6 confirma pendiente: fila byte-identica a r5 y linea web-portal agotada (S09 negativo); el documento exacto requerido esta en manos del publicador."
+    },
+    {
+      "decision": "pendiente",
+      "definicion_iri": "https://example.org/mex-ontologi/definition/063058e6-aed3-4a60-b944-5e653c77b14d%2F18",
+      "evidencia": [
+        "data/semantica/cobertura.json definicion https://example.org/mex-ontologi/definition/063058e6-aed3-4a60-b944-5e653c77b14d%2F18 del diccionario 063058e6-aed3-4a60-b944-5e653c77b14d, conjunto aa353273-7ef0-4279-987a-40fc49b3d712, estado fuera_del_nucleo_actual, huella_fila_diccionario=600e59e30fdb8f070c636dbd6a5c7847559a8336a406a459cf96b8d0565e9e3b",
+        "data/portal/inspecciones/063058e6-aed3-4a60-b944-5e653c77b14d.json fila Hoja1 P18: Tipo de dato=Booleano Formato=Si/No, Descripcion de 199 caracteres que termina en '...materia d...', Ejemplo='No'",
+        "r6 2026-10-23: relectura de la fila exacta en data/portal/inspecciones/063058e6-aed3-4a60-b944-5e653c77b14d.json: tipo/ejemplo/descripcion byte-identicos a r5 (huella_fila_diccionario=600e59e30fdb8f070c636dbd6a5c7847559a8336a406a459cf96b8d0565e9e3b); inspeccion sha256 0ea3dfe7bd13b50aa647d976a6dd59ac9dd33c102eee2c6bc88b301d9f810be0",
+        "r6: cobertura.json sin correspondencias para esta definicion (0 vinculos en 4496); estado fuera_del_nucleo_actual",
+        "r5 catalogos-web S09 negativo-portal + respuesta tic-web-01: sin cuestionario/muestra publica para este caso; linea del portal agotada en r5, no se re-visita en r6"
+      ],
+      "limites": [
+        "No se infiere el final del objeto ni el alcance temporal exacto."
+      ],
+      "motivo": "pendiente: descripcion truncada a mitad de frase en la celda fuente ('...materia d...'). Confirma el pendiente r4-lote-5. Requiere texto completo (ex solicitud tic-web-01). R6 confirma pendiente: fila byte-identica a r5 y linea web-portal agotada (S09 negativo); el documento exacto requerido esta en manos del publicador."
+    },
+    {
+      "decision": "pendiente",
+      "definicion_iri": "https://example.org/mex-ontologi/definition/063058e6-aed3-4a60-b944-5e653c77b14d%2F21",
+      "evidencia": [
+        "data/semantica/cobertura.json definicion https://example.org/mex-ontologi/definition/063058e6-aed3-4a60-b944-5e653c77b14d%2F21 del diccionario 063058e6-aed3-4a60-b944-5e653c77b14d, conjunto aa353273-7ef0-4279-987a-40fc49b3d712, estado fuera_del_nucleo_actual, huella_fila_diccionario=475c015e01c163e51abfb2ba7fc0b9a873014f974371de968b123dfafd77b49e",
+        "data/portal/inspecciones/063058e6-aed3-4a60-b944-5e653c77b14d.json fila Hoja1 P21: Tipo de dato=Texto, Descripcion de 199 caracteres que termina en '...materia ...', Ejemplo='El reglamento 120 y el 159'",
+        "r6 2026-10-23: relectura de la fila exacta en data/portal/inspecciones/063058e6-aed3-4a60-b944-5e653c77b14d.json: tipo/ejemplo/descripcion byte-identicos a r5 (huella_fila_diccionario=475c015e01c163e51abfb2ba7fc0b9a873014f974371de968b123dfafd77b49e); inspeccion sha256 0ea3dfe7bd13b50aa647d976a6dd59ac9dd33c102eee2c6bc88b301d9f810be0",
+        "r6: cobertura.json sin correspondencias para esta definicion (0 vinculos en 4496); estado fuera_del_nucleo_actual",
+        "r5 catalogos-web S09 negativo-portal + respuesta tic-web-01: sin cuestionario/muestra publica para este caso; linea del portal agotada en r5, no se re-visita en r6"
+      ],
+      "limites": [
+        "El ejemplo no suple la descripcion truncada.",
+        "No se equipara a P17/P20 respaldadas."
+      ],
+      "motivo": "pendiente: descripcion truncada a mitad de frase en la celda fuente ('...materia ...') aunque el ejemplo este completo. Confirma el pendiente r4-lote-5. Requiere texto completo (ex solicitud tic-web-01). R6 confirma pendiente: fila byte-identica a r5 y linea web-portal agotada (S09 negativo); el documento exacto requerido esta en manos del publicador."
+    },
+    {
+      "decision": "pendiente",
+      "definicion_iri": "https://example.org/mex-ontologi/definition/3851f1c3-5045-4703-ba88-93b3d39e0b70%2F8",
+      "evidencia": [
+        "data/semantica/cobertura.json definicion https://example.org/mex-ontologi/definition/3851f1c3-5045-4703-ba88-93b3d39e0b70%2F8 del diccionario 3851f1c3-5045-4703-ba88-93b3d39e0b70, conjunto 0ec245ba-6941-4995-a564-52e0a4f3999f, estado fuera_del_nucleo_actual, huella_fila_diccionario=4f9fb5b377dfbe33f00c46630bfccd6746f2d2d814d9acaeb4ab2cc0975b6657",
+        "data/portal/inspecciones/3851f1c3-5045-4703-ba88-93b3d39e0b70.json fila Hoja1 P10: Tipo de dato=Texto, Descripcion='Actividades principales:', Ejemplo de dato='Actividades Principales'",
+        "r6 2026-10-23: relectura de la fila exacta en data/portal/inspecciones/3851f1c3-5045-4703-ba88-93b3d39e0b70.json: tipo/ejemplo/descripcion byte-identicos a r5 (huella_fila_diccionario=4f9fb5b377dfbe33f00c46630bfccd6746f2d2d814d9acaeb4ab2cc0975b6657); inspeccion sha256 e3d0e66563f7525a638a5a5d353d843af598a9910e3721dbddc5b39ba22e07f5",
+        "r6: cobertura.json sin correspondencias para esta definicion (0 vinculos en 4496); estado fuera_del_nucleo_actual",
+        "r5 catalogos-web S09 negativo-portal + respuesta tic-web-02: sin cuestionario/muestra publica para este caso; linea del portal agotada en r5, no se re-visita en r6"
+      ],
+      "limites": [
+        "El ejemplo repite el nombre del campo; no fija actividades.",
+        "No se infiere poblacion, periodo ni objeto de las actividades."
+      ],
+      "motivo": "pendiente: descripcion tautologica ('Actividades principales:') cuyo ejemplo repite el nombre sin definir que actividades. Confirma el pendiente r4-lote-5 tras relectura. Requiere documento que defina P10 (ex solicitud tic-web-02). R6 confirma pendiente: fila byte-identica a r5 y linea web-portal agotada (S09 negativo); el documento exacto requerido esta en manos del publicador."
+    },
+    {
+      "decision": "pendiente",
+      "definicion_iri": "https://example.org/mex-ontologi/definition/3851f1c3-5045-4703-ba88-93b3d39e0b70%2F9",
+      "evidencia": [
+        "data/semantica/cobertura.json definicion https://example.org/mex-ontologi/definition/3851f1c3-5045-4703-ba88-93b3d39e0b70%2F9 del diccionario 3851f1c3-5045-4703-ba88-93b3d39e0b70, conjunto 0ec245ba-6941-4995-a564-52e0a4f3999f, estado fuera_del_nucleo_actual, huella_fila_diccionario=4b88cf48467cccd83f412f108ef17a4f92ef8e2969ccb4f5d3cea31076f6ccab",
+        "data/portal/inspecciones/3851f1c3-5045-4703-ba88-93b3d39e0b70.json fila Hoja1 P11: Tipo de dato=Texto, Descripcion='¿De qué área depende?', Ejemplo de dato='Area 1'",
+        "Vecinas releidas P8 ('¿Su dependencia coordinadora cuenta con una unidad coordinadora de TIC?') y P9 ('Indique el nombre de la unidad coordinadora de TIC:'): el sujeto probable es la unidad, pero el diccionario no declara el vinculo",
+        "r6 2026-10-23: relectura de la fila exacta en data/portal/inspecciones/3851f1c3-5045-4703-ba88-93b3d39e0b70.json: tipo/ejemplo/descripcion byte-identicos a r5 (huella_fila_diccionario=4b88cf48467cccd83f412f108ef17a4f92ef8e2969ccb4f5d3cea31076f6ccab); inspeccion sha256 e3d0e66563f7525a638a5a5d353d843af598a9910e3721dbddc5b39ba22e07f5",
+        "r6: cobertura.json sin correspondencias para esta definicion (0 vinculos en 4496); estado fuera_del_nucleo_actual",
+        "r5 catalogos-web S09 negativo-portal + respuesta tic-web-02: sin cuestionario/muestra publica para este caso; linea del portal agotada en r5, no se re-visita en r6"
+      ],
+      "limites": [
+        "No se transfiere el sujeto de P9 por proximidad.",
+        "El ejemplo 'Area 1' no fija el papel."
+      ],
+      "motivo": "pendiente: pregunta sin sujeto explicito (quien depende de que area); el ejemplo no fija el papel y el diccionario no declara vinculo con P9. Confirma el pendiente r4-lote-5. Requiere cuestionario que fije el sujeto (ex solicitud tic-web-02). R6 confirma pendiente: fila byte-identica a r5 y linea web-portal agotada (S09 negativo); el documento exacto requerido esta en manos del publicador."
+    },
+    {
+      "decision": "pendiente",
+      "definicion_iri": "https://example.org/mex-ontologi/definition/3851f1c3-5045-4703-ba88-93b3d39e0b70%2F13",
+      "evidencia": [
+        "data/semantica/cobertura.json definicion https://example.org/mex-ontologi/definition/3851f1c3-5045-4703-ba88-93b3d39e0b70%2F13 del diccionario 3851f1c3-5045-4703-ba88-93b3d39e0b70, conjunto 0ec245ba-6941-4995-a564-52e0a4f3999f, estado fuera_del_nucleo_actual, huella_fila_diccionario=db97f09dc3371524cb030a644dca7e3901ba7ce374c07dc26b7e286b88250f93",
+        "data/portal/inspecciones/3851f1c3-5045-4703-ba88-93b3d39e0b70.json fila Hoja1 P15: Tipo de dato=Texto, Descripcion='Especifique el perfil:', Ejemplo de dato='Computologo'",
+        "Vecina releida P14 ('¿La persona a cargo tiene un perfil técnico?', Booleano Si/No): referente probable, pero el diccionario no declara el vinculo filtro/detalle P14-P15",
+        "r6 2026-10-23: relectura de la fila exacta en data/portal/inspecciones/3851f1c3-5045-4703-ba88-93b3d39e0b70.json: tipo/ejemplo/descripcion byte-identicos a r5 (huella_fila_diccionario=db97f09dc3371524cb030a644dca7e3901ba7ce374c07dc26b7e286b88250f93); inspeccion sha256 e3d0e66563f7525a638a5a5d353d843af598a9910e3721dbddc5b39ba22e07f5",
+        "r6: cobertura.json sin correspondencias para esta definicion (0 vinculos en 4496); estado fuera_del_nucleo_actual",
+        "r5 catalogos-web S09 negativo-portal + respuesta tic-web-02: sin cuestionario/muestra publica para este caso; linea del portal agotada en r5, no se re-visita en r6"
+      ],
+      "limites": [
+        "No se transfiere el referente de P14 por proximidad.",
+        "El ejemplo 'Computologo' no fija de quien es el perfil."
+      ],
+      "motivo": "pendiente: referencia anaforica ('el perfil') sin referente declarado en la propia fila. Confirma el pendiente r4-lote-5. Requiere documento que fije el referente (ex solicitud tic-web-02). R6 confirma pendiente: fila byte-identica a r5 y linea web-portal agotada (S09 negativo); el documento exacto requerido esta en manos del publicador."
+    },
+    {
+      "decision": "pendiente",
+      "definicion_iri": "https://example.org/mex-ontologi/definition/8f8e3cfb-e551-4a95-b382-4999351c5f29%2F11",
+      "evidencia": [
+        "data/semantica/cobertura.json definicion https://example.org/mex-ontologi/definition/8f8e3cfb-e551-4a95-b382-4999351c5f29%2F11 del diccionario 8f8e3cfb-e551-4a95-b382-4999351c5f29, conjunto 9208a313-553c-4308-8d58-506e037060b1, estado fuera_del_nucleo_actual, huella_fila_diccionario=0fda5e0941a806b4b187ba9d4af85fe2336a9ba992fa1f4fdf612b44380aafbf",
+        "data/portal/inspecciones/8f8e3cfb-e551-4a95-b382-4999351c5f29.json fila Hoja1 P11: Tipo de dato=Booleano Formato=Si/No, Descripcion='Si la respuesta es sí a la pregunta anterior ¿cuenta con una planeación presupuestal para este requerimiento?', Ejemplo de dato='Tecnologia 1, tecnologia 2'",
+        "r6 2026-10-23: relectura de la fila exacta en data/portal/inspecciones/8f8e3cfb-e551-4a95-b382-4999351c5f29.json: tipo/ejemplo/descripcion byte-identicos a r5 (huella_fila_diccionario=0fda5e0941a806b4b187ba9d4af85fe2336a9ba992fa1f4fdf612b44380aafbf); inspeccion sha256 e474f039c7b0a4b6cbd9a2f70744891c3eb71249b1ab02bf3d3cce4ecc6f4b5e",
+        "r6: cobertura.json sin correspondencias para esta definicion (0 vinculos en 4496); estado fuera_del_nucleo_actual",
+        "r5 catalogos-web S09 negativo-portal + respuesta tic-web-03: sin cuestionario/muestra publica para este caso; linea del portal agotada en r5, no se re-visita en r6"
+      ],
+      "limites": [
+        "La contradiccion tipo-vs-ejemplo se conserva; no se cura con una suposicion.",
+        "No se inventa significado alternativo de existencia ni de lista."
+      ],
+      "motivo": "pendiente: el Tipo declarado (Booleano Si/No) contradice el ejemplo (lista 'Tecnologia 1, tecnologia 2'); dominio de valores indeterminado. La remision a 'la pregunta anterior' (P10 respaldada) no resuelve el dominio. Confirma el pendiente r4-lote-5. Requiere muestra de valores de P11 en el recurso c6d42e45-2193-4e22-a5b1-aa2770e9acf1 o cuestionario (ex solicitud tic-web-03). R6 confirma pendiente: fila byte-identica a r5 y linea web-portal agotada (S09 negativo); el documento exacto requerido esta en manos del publicador."
+    },
+    {
+      "decision": "pendiente",
+      "definicion_iri": "https://example.org/mex-ontologi/definition/a4e8bee0-5493-4dec-bbce-0ba1e2fd4c2d%2F22",
+      "evidencia": [
+        "data/semantica/cobertura.json definicion https://example.org/mex-ontologi/definition/a4e8bee0-5493-4dec-bbce-0ba1e2fd4c2d%2F22 del diccionario a4e8bee0-5493-4dec-bbce-0ba1e2fd4c2d, conjunto c9a63b8b-4d70-47db-bfc7-cf86a10b0514, estado fuera_del_nucleo_actual, huella_fila_diccionario=2cdcdd7b899707963cf16780c196ee354d1c472f9475c835d57ae28bc4438754",
+        "data/portal/inspecciones/a4e8bee0-5493-4dec-bbce-0ba1e2fd4c2d.json fila Hoja1 P22: Tipo de dato=Booleano Formato=Si/No, Descripcion cortada a mitad de frase en '...equipos...' (sin cerrar parentesis ni enumeracion), Ejemplo='Si'",
+        "r6 2026-10-23: relectura de la fila exacta en data/portal/inspecciones/a4e8bee0-5493-4dec-bbce-0ba1e2fd4c2d.json: tipo/ejemplo/descripcion byte-identicos a r5 (huella_fila_diccionario=2cdcdd7b899707963cf16780c196ee354d1c472f9475c835d57ae28bc4438754); inspeccion sha256 1c2f73fbeee284d10be656eee951558ff8ddc14ac25305829e793579bd71ad85",
+        "r6: cobertura.json sin correspondencias para esta definicion (0 vinculos en 4496); estado fuera_del_nucleo_actual",
+        "r5 catalogos-web S09 negativo-portal + respuesta tic-web-04: sin cuestionario/muestra publica para este caso; linea del portal agotada en r5, no se re-visita en r6"
+      ],
+      "limites": [
+        "No se infiere el resto de la enumeracion ni el cierre de la pregunta.",
+        "No se propone significado parcial sobre el fragmento."
+      ],
+      "motivo": "pendiente: descripcion truncada a mitad de frase en la celda fuente ('...equipos...'); no se infiere el resto. Confirma el pendiente r4-lote-4 tras relectura de la fila exacta. Requiere texto completo (ex solicitud tic-web-04). R6 confirma pendiente: fila byte-identica a r5 y linea web-portal agotada (S09 negativo); el documento exacto requerido esta en manos del publicador."
+    },
+    {
+      "decision": "pendiente",
+      "definicion_iri": "https://example.org/mex-ontologi/definition/a4e8bee0-5493-4dec-bbce-0ba1e2fd4c2d%2F36",
+      "evidencia": [
+        "data/semantica/cobertura.json definicion https://example.org/mex-ontologi/definition/a4e8bee0-5493-4dec-bbce-0ba1e2fd4c2d%2F36 del diccionario a4e8bee0-5493-4dec-bbce-0ba1e2fd4c2d, conjunto c9a63b8b-4d70-47db-bfc7-cf86a10b0514, estado fuera_del_nucleo_actual, huella_fila_diccionario=a622c78b00fec5c4bbcf724bc106cb906b1673342bc41637a6229270c46d651b",
+        "data/portal/inspecciones/a4e8bee0-5493-4dec-bbce-0ba1e2fd4c2d.json fila Hoja1 P36: Tipo de dato=Booleano Formato=Si/No, Descripcion='¿Cuántos proyectos de desarrollo de software se encuentran en desarrollo actualmente por su dependencia?', Ejemplo='Si'",
+        "r6 2026-10-23: relectura de la fila exacta en data/portal/inspecciones/a4e8bee0-5493-4dec-bbce-0ba1e2fd4c2d.json: tipo/ejemplo/descripcion byte-identicos a r5 (huella_fila_diccionario=a622c78b00fec5c4bbcf724bc106cb906b1673342bc41637a6229270c46d651b); inspeccion sha256 1c2f73fbeee284d10be656eee951558ff8ddc14ac25305829e793579bd71ad85",
+        "r6: cobertura.json sin correspondencias para esta definicion (0 vinculos en 4496); estado fuera_del_nucleo_actual",
+        "r5 catalogos-web S09 negativo-portal + respuesta tic-web-04: sin cuestionario/muestra publica para este caso; linea del portal agotada en r5, no se re-visita en r6"
+      ],
+      "limites": [
+        "La contradiccion descripcion-vs-dominio se conserva como tal.",
+        "No se inventa significado alternativo de existencia Si/No ni conteo."
+      ],
+      "motivo": "pendiente: la pregunta pide un conteo ('Cuántos proyectos') pero el dominio declarado acreditable es Si/No con ejemplo 'Si'; no se distingue conteo de existencia. Confirma el pendiente r4-lote-4 tras relectura. Requiere muestra de valores de P36 en el recurso 91c95c1b-969e-414a-8f70-83576e881281 o cuestionario (ex solicitud tic-web-04). R6 confirma pendiente: fila byte-identica a r5 y linea web-portal agotada (S09 negativo); el documento exacto requerido esta en manos del publicador."
+    },
+    {
+      "decision": "pendiente",
+      "definicion_iri": "https://example.org/mex-ontologi/definition/a4e8bee0-5493-4dec-bbce-0ba1e2fd4c2d%2F39",
+      "evidencia": [
+        "data/semantica/cobertura.json definicion https://example.org/mex-ontologi/definition/a4e8bee0-5493-4dec-bbce-0ba1e2fd4c2d%2F39 del diccionario a4e8bee0-5493-4dec-bbce-0ba1e2fd4c2d, conjunto c9a63b8b-4d70-47db-bfc7-cf86a10b0514, estado fuera_del_nucleo_actual, huella_fila_diccionario=97b808090a361a57edc4330ddcb08facbf2df34aab5f81fc389e4dd316ae9729",
+        "data/portal/inspecciones/a4e8bee0-5493-4dec-bbce-0ba1e2fd4c2d.json fila Hoja1 P39: Tipo de dato=Booleano Formato=Si/No, Descripcion='¿Cómo atiene las incidencias, reportes de problemas técnicos, solución de dudas, etc.?', Ejemplo='Si'",
+        "r6 2026-10-23: relectura de la fila exacta en data/portal/inspecciones/a4e8bee0-5493-4dec-bbce-0ba1e2fd4c2d.json: tipo/ejemplo/descripcion byte-identicos a r5 (huella_fila_diccionario=97b808090a361a57edc4330ddcb08facbf2df34aab5f81fc389e4dd316ae9729); inspeccion sha256 1c2f73fbeee284d10be656eee951558ff8ddc14ac25305829e793579bd71ad85",
+        "r6: cobertura.json sin correspondencias para esta definicion (0 vinculos en 4496); estado fuera_del_nucleo_actual",
+        "r5 catalogos-web S09 negativo-portal + respuesta tic-web-04: sin cuestionario/muestra publica para este caso; linea del portal agotada en r5, no se re-visita en r6"
+      ],
+      "limites": [
+        "La contradiccion descripcion-vs-dominio se conserva como tal.",
+        "El valor acreditable Si/No no describe procedimiento; no se inventa mecanismo."
+      ],
+      "motivo": "pendiente: la pregunta pide una manera ('Cómo atiende...') pero el dominio declarado es Si/No con ejemplo 'Si'; el mecanismo no se fija. Confirma el pendiente r4-lote-4. Requiere muestra de valores o cuestionario (ex solicitud tic-web-04). R6 confirma pendiente: fila byte-identica a r5 y linea web-portal agotada (S09 negativo); el documento exacto requerido esta en manos del publicador."
+    },
+    {
+      "decision": "pendiente",
+      "definicion_iri": "https://example.org/mex-ontologi/definition/a4e8bee0-5493-4dec-bbce-0ba1e2fd4c2d%2F40",
+      "evidencia": [
+        "data/semantica/cobertura.json definicion https://example.org/mex-ontologi/definition/a4e8bee0-5493-4dec-bbce-0ba1e2fd4c2d%2F40 del diccionario a4e8bee0-5493-4dec-bbce-0ba1e2fd4c2d, conjunto c9a63b8b-4d70-47db-bfc7-cf86a10b0514, estado fuera_del_nucleo_actual, huella_fila_diccionario=7ce240ae95790d9120999d9fc11ca42d2fce329e8f002aebc6ffa9bde4d5ac20",
+        "data/portal/inspecciones/a4e8bee0-5493-4dec-bbce-0ba1e2fd4c2d.json fila Hoja1 P40: Tipo de dato=Booleano Formato=Si/No, Descripcion='¿Cuantas personas tiene dedicadas a labores de desarrollo de software?', Ejemplo='Si'",
+        "r6 2026-10-23: relectura de la fila exacta en data/portal/inspecciones/a4e8bee0-5493-4dec-bbce-0ba1e2fd4c2d.json: tipo/ejemplo/descripcion byte-identicos a r5 (huella_fila_diccionario=7ce240ae95790d9120999d9fc11ca42d2fce329e8f002aebc6ffa9bde4d5ac20); inspeccion sha256 1c2f73fbeee284d10be656eee951558ff8ddc14ac25305829e793579bd71ad85",
+        "r6: cobertura.json sin correspondencias para esta definicion (0 vinculos en 4496); estado fuera_del_nucleo_actual",
+        "r5 catalogos-web S09 negativo-portal + respuesta tic-web-04: sin cuestionario/muestra publica para este caso; linea del portal agotada en r5, no se re-visita en r6"
+      ],
+      "limites": [
+        "La contradiccion descripcion-vs-dominio se conserva como tal.",
+        "No se duplica la regla de conteo de personal respaldada en P7 (Numérico, ejemplo 15) ni se inventa existencia."
+      ],
+      "motivo": "pendiente: la pregunta pide un conteo ('Cuantas personas') pero el dominio declarado es Si/No con ejemplo 'Si'; la fila no acredita conteo. Confirma el pendiente r4-lote-4. Requiere muestra de valores o cuestionario (ex solicitud tic-web-04). R6 confirma pendiente: fila byte-identica a r5 y linea web-portal agotada (S09 negativo); el documento exacto requerido esta en manos del publicador."
+    },
+    {
+      "decision": "pendiente",
+      "definicion_iri": "https://example.org/mex-ontologi/definition/af14d207-7697-4d52-b99b-46a35a1b76ac%2F8",
+      "evidencia": [
+        "data/semantica/cobertura.json definicion https://example.org/mex-ontologi/definition/af14d207-7697-4d52-b99b-46a35a1b76ac%2F8 del diccionario af14d207-7697-4d52-b99b-46a35a1b76ac, conjunto d175b134-77f4-4201-9409-08b05c1d5ffa, estado fuera_del_nucleo_actual, huella_fila_diccionario=49268969a6e55b1a9591c2be36f50b3997a81a03ceea3b81a53e33c034f1c898",
+        "data/portal/inspecciones/af14d207-7697-4d52-b99b-46a35a1b76ac.json fila Hoja1 P8: Tipo de dato=Texto, Descripcion='¿Qué metodología de planeación utiliza y que documentación se realiza en un proyecto de desarrollo de software?', Ejemplo='Metodologia 0.5'",
+        "r6 2026-10-23: relectura de la fila exacta en data/portal/inspecciones/af14d207-7697-4d52-b99b-46a35a1b76ac.json: tipo/ejemplo/descripcion byte-identicos a r5 (huella_fila_diccionario=49268969a6e55b1a9591c2be36f50b3997a81a03ceea3b81a53e33c034f1c898); inspeccion sha256 2950f37c23c5c11ad941bf1bf5845e87b973e5c38fea652cbc023e31c276022e",
+        "r6: cobertura.json sin correspondencias para esta definicion (0 vinculos en 4496); estado fuera_del_nucleo_actual",
+        "r5 catalogos-web S09 negativo-portal + respuesta tic-web-05: sin cuestionario/muestra publica para este caso; linea del portal agotada en r5, no se re-visita en r6"
+      ],
+      "limites": [
+        "No se desagrega la pregunta compuesta ni se atribuye el valor a un aspecto.",
+        "El ejemplo 'Metodologia 0.5' no fija codigo, version ni texto."
+      ],
+      "motivo": "pendiente: pregunta doble (metodología Y documentación) en una sola variable; no se fija a qué aspecto responde el valor. Confirma el pendiente r4-lote-2 tras relectura. Requiere cuestionario que separe aspectos o muestra de valores (ex solicitud tic-web-05). R6 confirma pendiente: fila byte-identica a r5 y linea web-portal agotada (S09 negativo); el documento exacto requerido esta en manos del publicador."
+    },
+    {
+      "decision": "pendiente",
+      "definicion_iri": "https://example.org/mex-ontologi/definition/af14d207-7697-4d52-b99b-46a35a1b76ac%2F13",
+      "evidencia": [
+        "data/semantica/cobertura.json definicion https://example.org/mex-ontologi/definition/af14d207-7697-4d52-b99b-46a35a1b76ac%2F13 del diccionario af14d207-7697-4d52-b99b-46a35a1b76ac, conjunto d175b134-77f4-4201-9409-08b05c1d5ffa, estado fuera_del_nucleo_actual, huella_fila_diccionario=348163c8632f1c6ca793b7b4bcd827b3f135c6fba5326582f1392d6541d2a95b",
+        "data/portal/inspecciones/af14d207-7697-4d52-b99b-46a35a1b76ac.json fila Hoja1 P13: Tipo de dato=Texto, Descripcion='¿Qué tipo de pruebas realizan?', Ejemplo='Si'",
+        "r6 2026-10-23: relectura de la fila exacta en data/portal/inspecciones/af14d207-7697-4d52-b99b-46a35a1b76ac.json: tipo/ejemplo/descripcion byte-identicos a r5 (huella_fila_diccionario=348163c8632f1c6ca793b7b4bcd827b3f135c6fba5326582f1392d6541d2a95b); inspeccion sha256 2950f37c23c5c11ad941bf1bf5845e87b973e5c38fea652cbc023e31c276022e",
+        "r6: cobertura.json sin correspondencias para esta definicion (0 vinculos en 4496); estado fuera_del_nucleo_actual",
+        "r5 catalogos-web S09 negativo-portal + respuesta tic-web-05: sin cuestionario/muestra publica para este caso; linea del portal agotada en r5, no se re-visita en r6"
+      ],
+      "limites": [
+        "La contradiccion pregunta-vs-ejemplo se conserva como tal.",
+        "No se infiere catalogo de tipos de prueba."
+      ],
+      "motivo": "pendiente: la pregunta pide un tipo pero el ejemplo ('Si') responde existencia; dominio de valores indeterminado. Confirma el pendiente r4-lote-2. Requiere muestra de valores o cuestionario (ex solicitud tic-web-05). R6 confirma pendiente: fila byte-identica a r5 y linea web-portal agotada (S09 negativo); el documento exacto requerido esta en manos del publicador."
+    },
+    {
+      "decision": "pendiente",
+      "definicion_iri": "https://example.org/mex-ontologi/definition/af14d207-7697-4d52-b99b-46a35a1b76ac%2F36",
+      "evidencia": [
+        "data/semantica/cobertura.json definicion https://example.org/mex-ontologi/definition/af14d207-7697-4d52-b99b-46a35a1b76ac%2F36 del diccionario af14d207-7697-4d52-b99b-46a35a1b76ac, conjunto d175b134-77f4-4201-9409-08b05c1d5ffa, estado fuera_del_nucleo_actual, huella_fila_diccionario=a622c78b00fec5c4bbcf724bc106cb906b1673342bc41637a6229270c46d651b",
+        "data/portal/inspecciones/af14d207-7697-4d52-b99b-46a35a1b76ac.json fila Hoja1 P36: Tipo de dato=Booleano Formato=Si/No, Descripcion='¿Cuántos proyectos de desarrollo de software se encuentran en desarrollo actualmente por su dependencia?', Ejemplo='Si'",
+        "Misma descripcion que P36 del diccionario a4e8bee0 (Desarrollo de Software), tambien pendiente por la misma contradiccion",
+        "r6 2026-10-23: relectura de la fila exacta en data/portal/inspecciones/af14d207-7697-4d52-b99b-46a35a1b76ac.json: tipo/ejemplo/descripcion byte-identicos a r5 (huella_fila_diccionario=a622c78b00fec5c4bbcf724bc106cb906b1673342bc41637a6229270c46d651b); inspeccion sha256 2950f37c23c5c11ad941bf1bf5845e87b973e5c38fea652cbc023e31c276022e",
+        "r6: cobertura.json sin correspondencias para esta definicion (0 vinculos en 4496); estado fuera_del_nucleo_actual",
+        "r5 catalogos-web S09 negativo-portal + respuesta tic-web-05: sin cuestionario/muestra publica para este caso; linea del portal agotada en r5, no se re-visita en r6"
+      ],
+      "limites": [
+        "La contradiccion descripcion-vs-dominio se conserva como tal.",
+        "No se inventa significado alternativo de existencia ni conteo."
+      ],
+      "motivo": "pendiente: conteo pedido ('Cuántos proyectos') frente a dominio Si/No con ejemplo 'Si'. Confirma el pendiente r4-lote-2. Requiere muestra de valores de P36 en el recurso b444876c-8681-4503-98ca-06876a62faae o cuestionario (ex solicitud tic-web-05). R6 confirma pendiente: fila byte-identica a r5 y linea web-portal agotada (S09 negativo); el documento exacto requerido esta en manos del publicador."
+    },
+    {
+      "decision": "pendiente",
+      "definicion_iri": "https://example.org/mex-ontologi/definition/af14d207-7697-4d52-b99b-46a35a1b76ac%2F39",
+      "evidencia": [
+        "data/semantica/cobertura.json definicion https://example.org/mex-ontologi/definition/af14d207-7697-4d52-b99b-46a35a1b76ac%2F39 del diccionario af14d207-7697-4d52-b99b-46a35a1b76ac, conjunto d175b134-77f4-4201-9409-08b05c1d5ffa, estado fuera_del_nucleo_actual, huella_fila_diccionario=97b808090a361a57edc4330ddcb08facbf2df34aab5f81fc389e4dd316ae9729",
+        "data/portal/inspecciones/af14d207-7697-4d52-b99b-46a35a1b76ac.json fila Hoja1 P39: Tipo de dato=Booleano Formato=Si/No, Descripcion='¿Cómo atiene las incidencias, reportes de problemas técnicos, solución de dudas, etc.?', Ejemplo='Si'",
+        "r6 2026-10-23: relectura de la fila exacta en data/portal/inspecciones/af14d207-7697-4d52-b99b-46a35a1b76ac.json: tipo/ejemplo/descripcion byte-identicos a r5 (huella_fila_diccionario=97b808090a361a57edc4330ddcb08facbf2df34aab5f81fc389e4dd316ae9729); inspeccion sha256 2950f37c23c5c11ad941bf1bf5845e87b973e5c38fea652cbc023e31c276022e",
+        "r6: cobertura.json sin correspondencias para esta definicion (0 vinculos en 4496); estado fuera_del_nucleo_actual",
+        "r5 catalogos-web S09 negativo-portal + respuesta tic-web-05: sin cuestionario/muestra publica para este caso; linea del portal agotada en r5, no se re-visita en r6"
+      ],
+      "limites": [
+        "La contradiccion descripcion-vs-dominio se conserva como tal.",
+        "El valor Si/No no describe procedimiento."
+      ],
+      "motivo": "pendiente: manera pedida ('Cómo atiende...') frente a dominio Si/No con ejemplo 'Si'. Confirma el pendiente r4-lote-2. Requiere muestra de valores o cuestionario (ex solicitud tic-web-05). R6 confirma pendiente: fila byte-identica a r5 y linea web-portal agotada (S09 negativo); el documento exacto requerido esta en manos del publicador."
+    },
+    {
+      "decision": "pendiente",
+      "definicion_iri": "https://example.org/mex-ontologi/definition/af14d207-7697-4d52-b99b-46a35a1b76ac%2F40",
+      "evidencia": [
+        "data/semantica/cobertura.json definicion https://example.org/mex-ontologi/definition/af14d207-7697-4d52-b99b-46a35a1b76ac%2F40 del diccionario af14d207-7697-4d52-b99b-46a35a1b76ac, conjunto d175b134-77f4-4201-9409-08b05c1d5ffa, estado fuera_del_nucleo_actual, huella_fila_diccionario=7ce240ae95790d9120999d9fc11ca42d2fce329e8f002aebc6ffa9bde4d5ac20",
+        "data/portal/inspecciones/af14d207-7697-4d52-b99b-46a35a1b76ac.json fila Hoja1 P40: Tipo de dato=Booleano Formato=Si/No, Descripcion='¿Cuantas personas tiene dedicadas a labores de desarrollo de software?', Ejemplo='Si'",
+        "r6 2026-10-23: relectura de la fila exacta en data/portal/inspecciones/af14d207-7697-4d52-b99b-46a35a1b76ac.json: tipo/ejemplo/descripcion byte-identicos a r5 (huella_fila_diccionario=7ce240ae95790d9120999d9fc11ca42d2fce329e8f002aebc6ffa9bde4d5ac20); inspeccion sha256 2950f37c23c5c11ad941bf1bf5845e87b973e5c38fea652cbc023e31c276022e",
+        "r6: cobertura.json sin correspondencias para esta definicion (0 vinculos en 4496); estado fuera_del_nucleo_actual",
+        "r5 catalogos-web S09 negativo-portal + respuesta tic-web-05: sin cuestionario/muestra publica para este caso; linea del portal agotada en r5, no se re-visita en r6"
+      ],
+      "limites": [
+        "La contradiccion descripcion-vs-dominio se conserva como tal.",
+        "No se duplica la regla de conteo de personal respaldada en P7 (Numérico, ejemplo 15)."
+      ],
+      "motivo": "pendiente: conteo pedido ('Cuantas personas') frente a dominio Si/No con ejemplo 'Si'. Confirma el pendiente r4-lote-2. Requiere muestra de valores o cuestionario (ex solicitud tic-web-05). R6 confirma pendiente: fila byte-identica a r5 y linea web-portal agotada (S09 negativo); el documento exacto requerido esta en manos del publicador."
+    },
+    {
+      "decision": "pendiente",
+      "definicion_iri": "https://example.org/mex-ontologi/definition/bdbf043f-5d12-4362-bce0-bd4c8ab1e2a1%2F26",
+      "evidencia": [
+        "data/semantica/cobertura.json definicion https://example.org/mex-ontologi/definition/bdbf043f-5d12-4362-bce0-bd4c8ab1e2a1%2F26 del diccionario bdbf043f-5d12-4362-bce0-bd4c8ab1e2a1, conjunto 37ab8134-d376-4ebd-94cc-f48bcc7eacd6, estado fuera_del_nucleo_actual, huella_fila_diccionario=a0e8068c621f1f58f22f7ac54c60c5a5b235a4d3c9d9a1279555b5e45f072b4b",
+        "data/portal/inspecciones/bdbf043f-5d12-4362-bce0-bd4c8ab1e2a1.json fila Hoja1 P27: Tipo de dato=Texto, Descripcion='¿Cuáles?', Ejemplo='Normatividad 1, normatividad 2'",
+        "Vecina releida P26 ('¿Cuenta con alguna normativa de ciberseguridad?', Booleano Si/No): referente probable, pero el diccionario no declara vinculo filtro/detalle P26-P27",
+        "r6 2026-10-23: relectura de la fila exacta en data/portal/inspecciones/bdbf043f-5d12-4362-bce0-bd4c8ab1e2a1.json: tipo/ejemplo/descripcion byte-identicos a r5 (huella_fila_diccionario=a0e8068c621f1f58f22f7ac54c60c5a5b235a4d3c9d9a1279555b5e45f072b4b); inspeccion sha256 1b4660882f2c1d165dc3b4deb9e19b8e1f61f09b1bd9dbcfdead4bd09e8f741a",
+        "r6: cobertura.json sin correspondencias para esta definicion (0 vinculos en 4496); estado fuera_del_nucleo_actual",
+        "r5 catalogos-web S09 negativo-portal + respuesta tic-web-06: sin cuestionario/muestra publica para este caso; linea del portal agotada en r5, no se re-visita en r6"
+      ],
+      "limites": [
+        "No se transfiere el referente de P26 por proximidad.",
+        "El ejemplo no fija de que norma se trata."
+      ],
+      "motivo": "pendiente: descripcion vacua ('¿Cuáles?') sin referente en la propia fila; el vinculo con la pregunta filtro no esta declarado en el diccionario. Confirma el pendiente r4-lote-6 tras relectura de vecinas. Requiere cuestionario que vincule P26-P27 (ex solicitud tic-web-06). R6 confirma pendiente: fila byte-identica a r5 y linea web-portal agotada (S09 negativo); el documento exacto requerido esta en manos del publicador."
+    },
+    {
+      "decision": "pendiente",
+      "definicion_iri": "https://example.org/mex-ontologi/definition/bdbf043f-5d12-4362-bce0-bd4c8ab1e2a1%2F28",
+      "evidencia": [
+        "data/semantica/cobertura.json definicion https://example.org/mex-ontologi/definition/bdbf043f-5d12-4362-bce0-bd4c8ab1e2a1%2F28 del diccionario bdbf043f-5d12-4362-bce0-bd4c8ab1e2a1, conjunto 37ab8134-d376-4ebd-94cc-f48bcc7eacd6, estado fuera_del_nucleo_actual, huella_fila_diccionario=ac2c83b54d1ed131f828e0a762766f5aaaf88164886236f0d40b74e6db9bf4df",
+        "data/portal/inspecciones/bdbf043f-5d12-4362-bce0-bd4c8ab1e2a1.json fila Hoja1 P29: Tipo de dato=Texto, Descripcion='¿Cuáles?', Ejemplo='Normas especificas'",
+        "Vecina releida P28 ('¿Cuenta con normas específicas respecto a la respuesta a incidentes, gestión de crisis y resiliencia digital?', Booleano Si/No): referente probable, vinculo no declarado",
+        "r6 2026-10-23: relectura de la fila exacta en data/portal/inspecciones/bdbf043f-5d12-4362-bce0-bd4c8ab1e2a1.json: tipo/ejemplo/descripcion byte-identicos a r5 (huella_fila_diccionario=ac2c83b54d1ed131f828e0a762766f5aaaf88164886236f0d40b74e6db9bf4df); inspeccion sha256 1b4660882f2c1d165dc3b4deb9e19b8e1f61f09b1bd9dbcfdead4bd09e8f741a",
+        "r6: cobertura.json sin correspondencias para esta definicion (0 vinculos en 4496); estado fuera_del_nucleo_actual",
+        "r5 catalogos-web S09 negativo-portal + respuesta tic-web-06: sin cuestionario/muestra publica para este caso; linea del portal agotada en r5, no se re-visita en r6"
+      ],
+      "limites": [
+        "No se transfiere el referente de P28 por proximidad."
+      ],
+      "motivo": "pendiente: descripcion vacua ('¿Cuáles?') sin referente propio. Confirma el pendiente r4-lote-6. Requiere cuestionario que vincule P28-P29 (ex solicitud tic-web-06). R6 confirma pendiente: fila byte-identica a r5 y linea web-portal agotada (S09 negativo); el documento exacto requerido esta en manos del publicador."
+    },
+    {
+      "decision": "pendiente",
+      "definicion_iri": "https://example.org/mex-ontologi/definition/bdbf043f-5d12-4362-bce0-bd4c8ab1e2a1%2F30",
+      "evidencia": [
+        "data/semantica/cobertura.json definicion https://example.org/mex-ontologi/definition/bdbf043f-5d12-4362-bce0-bd4c8ab1e2a1%2F30 del diccionario bdbf043f-5d12-4362-bce0-bd4c8ab1e2a1, conjunto 37ab8134-d376-4ebd-94cc-f48bcc7eacd6, estado fuera_del_nucleo_actual, huella_fila_diccionario=4f9b41ed2ebc8bb469abab687d020141c788adc85f7b342b72e8bc66faee8ea6",
+        "data/portal/inspecciones/bdbf043f-5d12-4362-bce0-bd4c8ab1e2a1.json fila Hoja1 P31: Tipo de dato=Texto, Descripcion='¿Cuáles?', Ejemplo='Normas especificas'",
+        "Vecina releida P30 ('¿Cuenta con normas específicas respecto a la respuesta a incidentes?', Booleano Si/No): referente probable, vinculo no declarado",
+        "r6 2026-10-23: relectura de la fila exacta en data/portal/inspecciones/bdbf043f-5d12-4362-bce0-bd4c8ab1e2a1.json: tipo/ejemplo/descripcion byte-identicos a r5 (huella_fila_diccionario=4f9b41ed2ebc8bb469abab687d020141c788adc85f7b342b72e8bc66faee8ea6); inspeccion sha256 1b4660882f2c1d165dc3b4deb9e19b8e1f61f09b1bd9dbcfdead4bd09e8f741a",
+        "r6: cobertura.json sin correspondencias para esta definicion (0 vinculos en 4496); estado fuera_del_nucleo_actual",
+        "r5 catalogos-web S09 negativo-portal + respuesta tic-web-06: sin cuestionario/muestra publica para este caso; linea del portal agotada en r5, no se re-visita en r6"
+      ],
+      "limites": [
+        "No se transfiere el referente de P30 por proximidad."
+      ],
+      "motivo": "pendiente: descripcion vacua ('¿Cuáles?') sin referente propio. Confirma el pendiente r4-lote-6. Requiere cuestionario que vincule P30-P31 (ex solicitud tic-web-06). R6 confirma pendiente: fila byte-identica a r5 y linea web-portal agotada (S09 negativo); el documento exacto requerido esta en manos del publicador."
+    },
+    {
+      "decision": "pendiente",
+      "definicion_iri": "https://example.org/mex-ontologi/definition/bdbf043f-5d12-4362-bce0-bd4c8ab1e2a1%2F32",
+      "evidencia": [
+        "data/semantica/cobertura.json definicion https://example.org/mex-ontologi/definition/bdbf043f-5d12-4362-bce0-bd4c8ab1e2a1%2F32 del diccionario bdbf043f-5d12-4362-bce0-bd4c8ab1e2a1, conjunto 37ab8134-d376-4ebd-94cc-f48bcc7eacd6, estado fuera_del_nucleo_actual, huella_fila_diccionario=ddf4237e2b6938bdc5f24fd12b883882e0cbeb4f803b9b9a64b8e781326de106",
+        "data/portal/inspecciones/bdbf043f-5d12-4362-bce0-bd4c8ab1e2a1.json fila Hoja1 P33: Tipo de dato=Texto, Descripcion='¿Cuáles?4', Ejemplo='Normas especificas'",
+        "Vecina releida P32 ('¿Existen normas específicas respecto a la protección de infraestructuras críticas?', Booleano Si/No): referente probable, vinculo no declarado; el '4' final no tiene nota al pie en el diccionario",
+        "r6 2026-10-23: relectura de la fila exacta en data/portal/inspecciones/bdbf043f-5d12-4362-bce0-bd4c8ab1e2a1.json: tipo/ejemplo/descripcion byte-identicos a r5 (huella_fila_diccionario=ddf4237e2b6938bdc5f24fd12b883882e0cbeb4f803b9b9a64b8e781326de106); inspeccion sha256 1b4660882f2c1d165dc3b4deb9e19b8e1f61f09b1bd9dbcfdead4bd09e8f741a",
+        "r6: cobertura.json sin correspondencias para esta definicion (0 vinculos en 4496); estado fuera_del_nucleo_actual",
+        "r5 catalogos-web S09 negativo-portal + respuesta tic-web-06: sin cuestionario/muestra publica para este caso; linea del portal agotada en r5, no se re-visita en r6"
+      ],
+      "limites": [
+        "No se transfiere el referente de P32 por proximidad.",
+        "El '4' se conserva tal cual; no se interpreta como nota ni se corrige."
+      ],
+      "motivo": "pendiente: descripcion vacua ('¿Cuáles?4') sin referente propio y con marca '4' sin nota que la explique. Confirma el pendiente r4-lote-6. Requiere cuestionario que vincule P32-P33 y aclare la marca (ex solicitud tic-web-06). R6 confirma pendiente: fila byte-identica a r5 y linea web-portal agotada (S09 negativo); el documento exacto requerido esta en manos del publicador."
+    },
+    {
+      "decision": "pendiente",
+      "definicion_iri": "https://example.org/mex-ontologi/definition/c65eb4e7-a17d-43c7-b08c-05811505edf1%2F7",
+      "evidencia": [
+        "data/semantica/cobertura.json definicion https://example.org/mex-ontologi/definition/c65eb4e7-a17d-43c7-b08c-05811505edf1%2F7 del diccionario c65eb4e7-a17d-43c7-b08c-05811505edf1, conjunto a3ea3c02-2e31-40b6-a90b-c12be719f9da, estado fuera_del_nucleo_actual, huella_fila_diccionario=bcdbc5b839080631c8b00c4de5676bae31c8a82953aed84c48f2d17ece70f0d1",
+        "data/portal/inspecciones/c65eb4e7-a17d-43c7-b08c-05811505edf1.json fila Hoja1 P7: Tipo de dato=Texto, Descripcion='¿Cómo se generan?', Ejemplo='Se generan realizando proyectos'",
+        "Vecina releida P6 ('¿En su dependencia coordinadora se generan proyectos para uso, adquisición y arrendamiento de bienes, contratación y/o renovación de servicios en materia de TIC?', Booleano Si/No): el ejemplo ecoa 'proyectos' pero la fila no declara de que proyectos se trata ni el vinculo P6-P7",
+        "r6 2026-10-23: relectura de la fila exacta en data/portal/inspecciones/c65eb4e7-a17d-43c7-b08c-05811505edf1.json: tipo/ejemplo/descripcion byte-identicos a r5 (huella_fila_diccionario=bcdbc5b839080631c8b00c4de5676bae31c8a82953aed84c48f2d17ece70f0d1); inspeccion sha256 90116c242b20debee37a0002c763602f57a578a7350a616d89aae4233ad0f9bf",
+        "r6: cobertura.json sin correspondencias para esta definicion (0 vinculos en 4496); estado fuera_del_nucleo_actual",
+        "r5 catalogos-web S09 negativo-portal + respuesta tic-web-07: sin cuestionario/muestra publica para este caso; linea del portal agotada en r5, no se re-visita en r6"
+      ],
+      "limites": [
+        "No se transfiere el sujeto de P6 por proximidad ni por el eco del ejemplo.",
+        "El ejemplo no fija objeto, sujeto ni mecanismo."
+      ],
+      "motivo": "pendiente: pregunta sin sujeto ('¿Cómo se generan?') incompleta por si sola. Confirma el pendiente r4-lote-4 tras relectura de vecina y ejemplo. Requiere cuestionario que fije el referente (ex solicitud tic-web-07). R6 confirma pendiente: fila byte-identica a r5 y linea web-portal agotada (S09 negativo); el documento exacto requerido esta en manos del publicador."
+    },
+    {
+      "decision": "pendiente",
+      "definicion_iri": "https://example.org/mex-ontologi/definition/f3ecd3d2-2156-4251-82e5-13b079471ee9%2F7",
+      "evidencia": [
+        "data/semantica/cobertura.json definicion https://example.org/mex-ontologi/definition/f3ecd3d2-2156-4251-82e5-13b079471ee9%2F7 del diccionario f3ecd3d2-2156-4251-82e5-13b079471ee9, conjunto 7c6183e5-5903-47c6-9fce-34f018bbdb6a, estado fuera_del_nucleo_actual, huella_fila_diccionario=bcdbc5b839080631c8b00c4de5676bae31c8a82953aed84c48f2d17ece70f0d1",
+        "data/portal/inspecciones/f3ecd3d2-2156-4251-82e5-13b079471ee9.json fila Hoja1 P7: Tipo de dato=Texto, Descripcion='¿Cómo se generan?', Ejemplo='Se generan realizando proyectos'",
+        "Vecina releida P6 identica a la de Gobernanza Tecnologica; mismo contenido de fila (huella identica entre diccionarios) pero cada definicion requiere decision individual: tampoco aqui la fila declara referente",
+        "r6 2026-10-23: relectura de la fila exacta en data/portal/inspecciones/f3ecd3d2-2156-4251-82e5-13b079471ee9.json: tipo/ejemplo/descripcion byte-identicos a r5 (huella_fila_diccionario=bcdbc5b839080631c8b00c4de5676bae31c8a82953aed84c48f2d17ece70f0d1); inspeccion sha256 7f0fe9071a5c3cf4b94e9f8a3330447a4ec6ab8263521cb426606a59f6388106",
+        "r6: cobertura.json sin correspondencias para esta definicion (0 vinculos en 4496); estado fuera_del_nucleo_actual",
+        "r5 catalogos-web S09 negativo-portal + respuesta tic-web-07: sin cuestionario/muestra publica para este caso; linea del portal agotada en r5, no se re-visita en r6"
+      ],
+      "limites": [
+        "No se transfiere el sujeto de P6 por proximidad.",
+        "No se equipara a la P7 de Gobernanza aunque el contenido sea identico: cada regla queda restringida a su definicion."
+      ],
+      "motivo": "pendiente: pregunta sin sujeto, misma situacion que su gemela de Gobernanza. Confirma el pendiente r4-lote-4. Requiere cuestionario que fije el referente (ex solicitud tic-web-07). R6 confirma pendiente: fila byte-identica a r5 y linea web-portal agotada (S09 negativo); el documento exacto requerido esta en manos del publicador."
+    }
+  ],
+  "decisiones_columnas": [],
+  "fuentes": [
+    {
+      "aplicabilidad": "Evidencia primaria de cada fila: nombre, tipo, formato, descripcion, ejemplo y catalogo declarado. Re-verificada byte-identica en r6.",
+      "localizador": "data/portal/inspecciones/063058e6-aed3-4a60-b944-5e653c77b14d.json, 3851f1c3-5045-4703-ba88-93b3d39e0b70.json, 8f8e3cfb-e551-4a95-b382-4999351c5f29.json, a4e8bee0-5493-4dec-bbce-0ba1e2fd4c2d.json, af14d207-7697-4d52-b99b-46a35a1b76ac.json, bdbf043f-5d12-4362-bce0-bd4c8ab1e2a1.json, c65eb4e7-a17d-43c7-b08c-05811505edf1.json, f3ecd3d2-2156-4251-82e5-13b079471ee9.json",
+      "sha256": "0ea3dfe7bd13b50aa647d976a6dd59ac9dd33c102eee2c6bc88b301d9f810be0; e3d0e66563f7525a638a5a5d353d843af598a9910e3721dbddc5b39ba22e07f5; e474f039c7b0a4b6cbd9a2f70744891c3eb71249b1ab02bf3d3cce4ecc6f4b5e; 1c2f73fbeee284d10be656eee951558ff8ddc14ac25305829e793579bd71ad85; 2950f37c23c5c11ad941bf1bf5845e87b973e5c38fea652cbc023e31c276022e; 1b4660882f2c1d165dc3b4deb9e19b8e1f61f09b1bd9dbcfdead4bd09e8f741a; 90116c242b20debee37a0002c763602f57a578a7350a616d89aae4233ad0f9bf; 7f0fe9071a5c3cf4b94e9f8a3330447a4ec6ab8263521cb426606a59f6388106",
+      "url": "https://datos.sonora.gob.mx/dataset/<conjunto>/resource/<diccionario>/download/diccionario.xlsx (capturas locales fijadas; re-descarga bloqueada por WAF desde r5, no se reintenta en r6)"
+    },
+    {
+      "aplicabilidad": "Estados, huellas y ausencia de correspondencias de cada definicion asignada.",
+      "localizador": "data/semantica/cobertura.json",
+      "sha256": "19237e41757af3c7109c88515e1215339a14d5c5188ad9a4d569b9e335ae0ee4",
+      "url": "local"
+    },
+    {
+      "aplicabilidad": "Dictamenes previos r5 (7 proponer fuera del alcance r6; 24 pendientes heredados) y respuestas web S09/tic-web-01..07 negativo-portal: linea del portal agotada, no repetida en r6.",
+      "localizador": "propuestas/pendientes-muse-r5/tic/entrega.json; propuestas/pendientes-muse-r5/catalogos-web/respuestas_web.json y evidencia_web_solicitudes.json (S09)",
+      "url": "local"
+    }
+  ],
+  "pendientes": [
+    {
+      "definicion_iri": "https://example.org/mex-ontologi/definition/063058e6-aed3-4a60-b944-5e653c77b14d%2F10",
+      "requerido": "Texto literal completo de P10 (termina en \"...que permit...\"). Solo el publicador lo tiene: cuestionario original de Politica Digital."
+    },
+    {
+      "definicion_iri": "https://example.org/mex-ontologi/definition/063058e6-aed3-4a60-b944-5e653c77b14d%2F11",
+      "requerido": "Cuestionario que fije el referente de \"lo anterior\" (P10 truncada). En manos del publicador."
+    },
+    {
+      "definicion_iri": "https://example.org/mex-ontologi/definition/063058e6-aed3-4a60-b944-5e653c77b14d%2F16",
+      "requerido": "Texto literal completo de P16 (\"...en ma...\"). En manos del publicador."
+    },
+    {
+      "definicion_iri": "https://example.org/mex-ontologi/definition/063058e6-aed3-4a60-b944-5e653c77b14d%2F18",
+      "requerido": "Texto literal completo de P18 (\"...materia d...\"). En manos del publicador."
+    },
+    {
+      "definicion_iri": "https://example.org/mex-ontologi/definition/063058e6-aed3-4a60-b944-5e653c77b14d%2F21",
+      "requerido": "Texto literal completo de P21 (\"...materia ...\"). En manos del publicador."
+    },
+    {
+      "definicion_iri": "https://example.org/mex-ontologi/definition/3851f1c3-5045-4703-ba88-93b3d39e0b70%2F8",
+      "requerido": "Documento que defina que actividades cubre P10 (\"Actividades principales:\"). En manos del publicador."
+    },
+    {
+      "definicion_iri": "https://example.org/mex-ontologi/definition/3851f1c3-5045-4703-ba88-93b3d39e0b70%2F9",
+      "requerido": "Cuestionario que fije el sujeto de P11 (\"De que area depende?\"). En manos del publicador."
+    },
+    {
+      "definicion_iri": "https://example.org/mex-ontologi/definition/3851f1c3-5045-4703-ba88-93b3d39e0b70%2F13",
+      "requerido": "Documento que fije el referente de \"el perfil\" en P15 (vinculo P14-P15). En manos del publicador."
+    },
+    {
+      "definicion_iri": "https://example.org/mex-ontologi/definition/8f8e3cfb-e551-4a95-b382-4999351c5f29%2F11",
+      "requerido": "Muestra de valores de P11 en el recurso c6d42e45-2193-4e22-a5b1-aa2770e9acf1 o cuestionario que fije el dominio. En manos del publicador."
+    },
+    {
+      "definicion_iri": "https://example.org/mex-ontologi/definition/a4e8bee0-5493-4dec-bbce-0ba1e2fd4c2d%2F22",
+      "requerido": "Texto literal completo de P22 (\"...equipos...\"). En manos del publicador."
+    },
+    {
+      "definicion_iri": "https://example.org/mex-ontologi/definition/a4e8bee0-5493-4dec-bbce-0ba1e2fd4c2d%2F36",
+      "requerido": "Muestra de valores de P36 en el recurso 91c95c1b-969e-414a-8f70-83576e881281 o cuestionario. En manos del publicador."
+    },
+    {
+      "definicion_iri": "https://example.org/mex-ontologi/definition/a4e8bee0-5493-4dec-bbce-0ba1e2fd4c2d%2F39",
+      "requerido": "Muestra de valores de P39 en el recurso 91c95c1b-969e-414a-8f70-83576e881281 o cuestionario. En manos del publicador."
+    },
+    {
+      "definicion_iri": "https://example.org/mex-ontologi/definition/a4e8bee0-5493-4dec-bbce-0ba1e2fd4c2d%2F40",
+      "requerido": "Muestra de valores de P40 en el recurso 91c95c1b-969e-414a-8f70-83576e881281 o cuestionario. En manos del publicador."
+    },
+    {
+      "definicion_iri": "https://example.org/mex-ontologi/definition/af14d207-7697-4d52-b99b-46a35a1b76ac%2F8",
+      "requerido": "Cuestionario que separe metodologia y documentacion en P8, o muestra de valores. En manos del publicador."
+    },
+    {
+      "definicion_iri": "https://example.org/mex-ontologi/definition/af14d207-7697-4d52-b99b-46a35a1b76ac%2F13",
+      "requerido": "Muestra de valores de P13 o cuestionario que fije el dominio. En manos del publicador."
+    },
+    {
+      "definicion_iri": "https://example.org/mex-ontologi/definition/af14d207-7697-4d52-b99b-46a35a1b76ac%2F36",
+      "requerido": "Muestra de valores de P36 en el recurso b444876c-8681-4503-98ca-06876a62faae o cuestionario. En manos del publicador."
+    },
+    {
+      "definicion_iri": "https://example.org/mex-ontologi/definition/af14d207-7697-4d52-b99b-46a35a1b76ac%2F39",
+      "requerido": "Muestra de valores de P39 en el recurso b444876c-8681-4503-98ca-06876a62faae o cuestionario. En manos del publicador."
+    },
+    {
+      "definicion_iri": "https://example.org/mex-ontologi/definition/af14d207-7697-4d52-b99b-46a35a1b76ac%2F40",
+      "requerido": "Muestra de valores de P40 en el recurso b444876c-8681-4503-98ca-06876a62faae o cuestionario. En manos del publicador."
+    },
+    {
+      "definicion_iri": "https://example.org/mex-ontologi/definition/bdbf043f-5d12-4362-bce0-bd4c8ab1e2a1%2F26",
+      "requerido": "Cuestionario que vincule P26-P27 y fije el referente de \"Cuales?\". En manos del publicador."
+    },
+    {
+      "definicion_iri": "https://example.org/mex-ontologi/definition/bdbf043f-5d12-4362-bce0-bd4c8ab1e2a1%2F28",
+      "requerido": "Cuestionario que vincule P28-P29. En manos del publicador."
+    },
+    {
+      "definicion_iri": "https://example.org/mex-ontologi/definition/bdbf043f-5d12-4362-bce0-bd4c8ab1e2a1%2F30",
+      "requerido": "Cuestionario que vincule P30-P31. En manos del publicador."
+    },
+    {
+      "definicion_iri": "https://example.org/mex-ontologi/definition/bdbf043f-5d12-4362-bce0-bd4c8ab1e2a1%2F32",
+      "requerido": "Cuestionario que vincule P32-P33 y aclare la marca \"4\". En manos del publicador."
+    },
+    {
+      "definicion_iri": "https://example.org/mex-ontologi/definition/c65eb4e7-a17d-43c7-b08c-05811505edf1%2F7",
+      "requerido": "Cuestionario que fije el referente de \"Como se generan?\" (Gobernanza). En manos del publicador."
+    },
+    {
+      "definicion_iri": "https://example.org/mex-ontologi/definition/f3ecd3d2-2156-4251-82e5-13b079471ee9%2F7",
+      "requerido": "Cuestionario que fije el referente de \"Como se generan?\" (Fortalezas). En manos del publicador."
+    }
+  ],
+  "novedades_r6": "Ninguna definicion nueva proponible: las 24 filas estan byte-identicas a r5 (mismas huellas, mismas descripciones truncadas/anaforicas/contradictorias, 0 correspondencias) y la unica linea publica razonable (paginas del portal) ya dio negativo en r5 (S09 + tic-web-01..07). R6 no repite visitas ni presenta esos negativos como hallazgos nuevos; documenta la dependencia precisa del publicador por definicion y cierra.",
+  "conjuntos": [
+    "0ec245ba-6941-4995-a564-52e0a4f3999f",
+    "37ab8134-d376-4ebd-94cc-f48bcc7eacd6",
+    "7c6183e5-5903-47c6-9fce-34f018bbdb6a",
+    "9208a313-553c-4308-8d58-506e037060b1",
+    "a3ea3c02-2e31-40b6-a90b-c12be719f9da",
+    "aa353273-7ef0-4279-987a-40fc49b3d712",
+    "c9a63b8b-4d70-47db-bfc7-cf86a10b0514",
+    "d175b134-77f4-4201-9409-08b05c1d5ffa"
+  ]
+}

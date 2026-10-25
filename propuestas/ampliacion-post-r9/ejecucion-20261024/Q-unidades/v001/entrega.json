@@ -1,0 +1,203 @@
+{
+ "rol": "Q-unidades",
+ "version": "v001",
+ "fecha_utc": "2026-10-24",
+ "estado": "propuesta_para_auditar_NO_instalable",
+ "base": {
+  "informe": "reports/ronda-9.json",
+  "estado_r9": "cerrado_integrado_validado_y_sincronizado"
+ },
+ "casos": [
+  {
+   "id": "Q-U01",
+   "variable": "PRODTON",
+   "literal": "Toneladas",
+   "huella": "4d79bbed1d9c773b0d698043641547ed27c82aa6ba6061e81ecc1d4f1e0f602c",
+   "definicion_iri": "https://example.org/mex-ontologi/definition/94215f51-9c89-414d-8c3d-92792e609a2a%2F17",
+   "documented_iri": "https://example.org/mex-ontologi/documented-variable/94215f51-9c89-414d-8c3d-92792e609a2a%2F17",
+   "conjunto": "3e17a7e8-c8d4-49c4-a426-4dec099cd0cd",
+   "w": "Q-W-01",
+   "pista": "tonelada metrica",
+   "fuente_url": "https://datos.sonora.gob.mx/api/3/action/datastore_search?resource_id=94215f51-9c89-414d-8c3d-92792e609a2a&limit=1000&offset=0&sort=_id+asc",
+   "descripcion": "Producción total obtenida.",
+   "diccionario": "94215f51-9c89-414d-8c3d-92792e609a2a"
+  },
+  {
+   "id": "Q-U02",
+   "variable": "pesoprom",
+   "literal": "Kilogramos",
+   "huella": "3ebcb68ece60f6fc5da04c112dd6d71cce237fd73b8201bb7807caa26892d957",
+   "definicion_iri": "https://example.org/mex-ontologi/definition/a4eb0b8b-d6c6-44b8-b00a-f5f45c1875a5%2F11",
+   "documented_iri": "https://example.org/mex-ontologi/documented-variable/a4eb0b8b-d6c6-44b8-b00a-f5f45c1875a5%2F11",
+   "conjunto": "932de35b-e9d4-4acb-bd1e-d54c70f6f45e",
+   "w": "Q-W-02",
+   "pista": "kilogramo",
+   "fuente_url": "https://datos.sonora.gob.mx/dataset/932de35b-e9d4-4acb-bd1e-d54c70f6f45e/resource/a4eb0b8b-d6c6-44b8-b00a-f5f45c1875a5/download/diccionario_subastas_ganado.csv",
+   "descripcion": "Peso promedio por cabeza del lote subastado",
+   "diccionario": "a4eb0b8b-d6c6-44b8-b00a-f5f45c1875a5"
+  },
+  {
+   "id": "Q-U03",
+   "variable": "Unidad de Medida",
+   "literal": "MW",
+   "huella": "7d4b4ed61114b9f8b7bd8605475246ec1d22a3518f3798f67fdf4b0be570d632",
+   "definicion_iri": "https://example.org/mex-ontologi/definition/a6cdb7ad-ec32-44aa-851d-684947df4243%2F9",
+   "documented_iri": "https://example.org/mex-ontologi/documented-variable/a6cdb7ad-ec32-44aa-851d-684947df4243%2F9",
+   "conjunto": "8f11b2e0-c51d-4719-a7ef-fcf8e8ab70bb",
+   "w": "Q-W-03",
+   "pista": "megavatio",
+   "fuente_url": "https://datos.sonora.gob.mx/dataset/8f11b2e0-c51d-4719-a7ef-fcf8e8ab70bb/resource/a6cdb7ad-ec32-44aa-851d-684947df4243/download/diccionario-plantas-electricas.xlsx",
+   "descripcion": "Son las unidades que representan la capacidad de potencia.",
+   "diccionario": "a6cdb7ad-ec32-44aa-851d-684947df4243"
+  },
+  {
+   "id": "Q-U04",
+   "variable": "Unidad de Medida",
+   "literal": "GWh",
+   "huella": "d33c36c8f0d76e45ad837aba00fadf0bf6fe0b45105dfe5d404c005b27c8e788",
+   "definicion_iri": "https://example.org/mex-ontologi/definition/a6cdb7ad-ec32-44aa-851d-684947df4243%2F11",
+   "documented_iri": "https://example.org/mex-ontologi/documented-variable/a6cdb7ad-ec32-44aa-851d-684947df4243%2F11",
+   "conjunto": "8f11b2e0-c51d-4719-a7ef-fcf8e8ab70bb",
+   "w": "Q-W-04",
+   "pista": "gigavatio-hora",
+   "fuente_url": "https://datos.sonora.gob.mx/dataset/8f11b2e0-c51d-4719-a7ef-fcf8e8ab70bb/resource/a6cdb7ad-ec32-44aa-851d-684947df4243/download/diccionario-plantas-electricas.xlsx",
+   "descripcion": "Son las unidades que representan la generación de energía eléctrica estimada.",
+   "diccionario": "a6cdb7ad-ec32-44aa-851d-684947df4243"
+  },
+  {
+   "id": "Q-U05",
+   "variable": "ANALF",
+   "literal": "Porcentaje",
+   "huella": "1931b14a42ac6447d8aafd3fdfdc575cf1ac8a34e3b059a91ac405a2d95e9b50",
+   "definicion_iri": "https://example.org/mex-ontologi/definition/251309e5-0309-46ed-9711-77a1dd408eeb%2F9",
+   "documented_iri": "https://example.org/mex-ontologi/documented-variable/251309e5-0309-46ed-9711-77a1dd408eeb%2F9",
+   "conjunto": "b54f94ee-b5f1-404c-ab41-f19f6dcc8b4f",
+   "w": "Q-W-05",
+   "pista": "porcentaje",
+   "fuente_url": "https://datos.sonora.gob.mx/dataset/b54f94ee-b5f1-404c-ab41-f19f6dcc8b4f/resource/251309e5-0309-46ed-9711-77a1dd408eeb/download/diccionario.xlsx",
+   "descripcion": "Porcentaje de población de 15 años y más analfabeta",
+   "diccionario": "251309e5-0309-46ed-9711-77a1dd408eeb"
+  },
+  {
+   "id": "Q-U06",
+   "variable": "temperatura",
+   "literal": "Grados celcius",
+   "huella": "ecf25e75c913056ed2937001c74ab55e5bb1c09b69dc85d8146260ecc4b490f1",
+   "definicion_iri": "https://example.org/mex-ontologi/definition/33d0a99e-c721-496f-a05e-07646e9ae42a%2F27",
+   "documented_iri": "https://example.org/mex-ontologi/documented-variable/33d0a99e-c721-496f-a05e-07646e9ae42a%2F27",
+   "conjunto": "5494daa1-09ca-4750-aeac-2558553700e1",
+   "w": "Q-W-06",
+   "pista": "grado Celsius",
+   "fuente_url": "https://datos.sonora.gob.mx/api/3/action/datastore_search?resource_id=33d0a99e-c721-496f-a05e-07646e9ae42a&limit=1000&offset=0&sort=_id+asc",
+   "descripcion": "Temperatura del paciente",
+   "diccionario": "33d0a99e-c721-496f-a05e-07646e9ae42a"
+  }
+ ],
+ "grafo": {
+  "archivo": "v001/propuesta-q-unidades.ttl",
+  "declaraciones": 6,
+  "sin_unidadQudt": true,
+  "sin_QuantityValue": true,
+  "sin_conversiones": true
+ },
+ "inventario": {
+  "archivo": "v001/inventario-unidades.json",
+  "literales_distintos": 61,
+  "filas_con_unidad": 259,
+  "inspecciones": 486,
+  "con_definiciones_no_completas": 35
+ },
+ "modelo": "opencode/deepseek-v4.1-flash-free",
+ "reproducible_con": "uv run python propuestas/ampliacion-post-r9/ejecucion-20261024/Q-unidades/v001/scripts/generar_v001.py (solo lectura local; sin red, sin grafo, escribe solo en v001/)",
+ "peticiones_w": {
+  "ruta": "Q-unidades/peticiones-web.json",
+  "solicitudes": [
+   "Q-W-01",
+   "Q-W-02",
+   "Q-W-03",
+   "Q-W-04",
+   "Q-W-05",
+   "Q-W-06"
+  ]
+ },
+ "fuentes": [
+  {
+   "ruta": "data/portal/inspecciones/94215f51-9c89-414d-8c3d-92792e609a2a.json",
+   "sha256": "9d341703f8a358fbbdce04fa416a121c3df6d5bcde0c771a5c442c7733ca556c",
+   "url": "https://datos.sonora.gob.mx/api/3/action/datastore_search?resource_id=94215f51-9c89-414d-8c3d-92792e609a2a&limit=1000&offset=0&sort=_id+asc",
+   "localizador": "PRODTON, Unidad de medida exacta"
+  },
+  {
+   "ruta": "data/portal/inspecciones/a4eb0b8b-d6c6-44b8-b00a-f5f45c1875a5.json",
+   "sha256": "2cf0e9ea26e5015e4473719d942f5a51463bb5cd816d308fed51c3b88b866624",
+   "url": "https://datos.sonora.gob.mx/dataset/932de35b-e9d4-4acb-bd1e-d54c70f6f45e/resource/a4eb0b8b-d6c6-44b8-b00a-f5f45c1875a5/download/diccionario_subastas_ganado.csv",
+   "localizador": "pesoprom, Unidad de medida exacta"
+  },
+  {
+   "ruta": "data/portal/inspecciones/a6cdb7ad-ec32-44aa-851d-684947df4243.json",
+   "sha256": "1f88f1a751fda87440d341caa9143549be86245a7cd0fc3ba23ff60723eb969a",
+   "url": "https://datos.sonora.gob.mx/dataset/8f11b2e0-c51d-4719-a7ef-fcf8e8ab70bb/resource/a6cdb7ad-ec32-44aa-851d-684947df4243/download/diccionario-plantas-electricas.xlsx",
+   "localizador": "Unidad de Medida, Unidad de medida exacta"
+  },
+  {
+   "ruta": "data/portal/inspecciones/a6cdb7ad-ec32-44aa-851d-684947df4243.json",
+   "sha256": "1f88f1a751fda87440d341caa9143549be86245a7cd0fc3ba23ff60723eb969a",
+   "url": "https://datos.sonora.gob.mx/dataset/8f11b2e0-c51d-4719-a7ef-fcf8e8ab70bb/resource/a6cdb7ad-ec32-44aa-851d-684947df4243/download/diccionario-plantas-electricas.xlsx",
+   "localizador": "Unidad de Medida, Unidad de medida exacta"
+  },
+  {
+   "ruta": "data/portal/inspecciones/251309e5-0309-46ed-9711-77a1dd408eeb.json",
+   "sha256": "9a7a38a6ad3025579bbadd0f01f6c152fa8540db5f09e8add5d161d555a01b58",
+   "url": "https://datos.sonora.gob.mx/dataset/b54f94ee-b5f1-404c-ab41-f19f6dcc8b4f/resource/251309e5-0309-46ed-9711-77a1dd408eeb/download/diccionario.xlsx",
+   "localizador": "ANALF, Unidad de medida exacta"
+  },
+  {
+   "ruta": "data/portal/inspecciones/33d0a99e-c721-496f-a05e-07646e9ae42a.json",
+   "sha256": "bba195a85b95be895e09c47dd419b6a55a2197afa7ccbcc6e23c2aab91eed179",
+   "url": "https://datos.sonora.gob.mx/api/3/action/datastore_search?resource_id=33d0a99e-c721-496f-a05e-07646e9ae42a&limit=1000&offset=0&sort=_id+asc",
+   "localizador": "temperatura, Unidad de medida exacta"
+  },
+  {
+   "ruta": "data/semantica/cobertura.json",
+   "sha256": "1486fcae52a210c803e1173aa0ecbfddd40d1e66a3147aebb1c64fdfa39dfb31",
+   "localizador": "estados respaldada_por_definicion"
+  },
+  {
+   "ruta": "propuestas/plan-tras-r8/ejecucion-20261024/P1-qudt/v003/entrega.json",
+   "sha256": "7a5c7441465d00611475a2b32b3e8faa396a22ee1dfb0886de297031028330c8",
+   "localizador": "inventario P1 y 2 unidades R9 (no duplicadas)"
+  },
+  {
+   "ruta": "propuestas/plan-tras-r8/ejecucion-20261024/P1-qudt/v003/congelada.json",
+   "sha256": "2dbb1f844f621d512408da22889916b93a08a64d8233ac221164639a9113d077",
+   "localizador": "sello P1 (contraste del hash de entrega)"
+  },
+  {
+   "ruta": "propuestas/plan-tras-r8/ejecucion-20261024/P1-qudt/presas_vars.json",
+   "sha256": "6bbc4004a8fb29ccaf6d79ccdece91494100a15046779d50b4c7f650a4093229",
+   "localizador": "22 filas (hm3 en cap_name, cap_namo, vol_muerto, Almacenamiento; Altitud en Grados)"
+  },
+  {
+   "ruta": "propuestas/plan-tras-r8/ejecucion-20261024/W-estandares/v003/congelada.json",
+   "sha256": "6876a312956e110fff535df9aea8eeee27e25ce5a11f58b10c280f52126b3190",
+   "localizador": "sello W v003 (HectoM3 ausente)"
+  },
+  {
+   "ruta": "propuestas/plan-tras-r8/ejecucion-20261024/W-estandares/v003/entrega.json",
+   "sha256": "7900e3e92596b8e0d1502abb431964c98ed27b8c31a74ad06dcf0e7cb76c6bf0",
+   "localizador": "W v003 entrega"
+  },
+  {
+   "ruta": "propuestas/ampliacion-post-r9/ejecucion-20261024/Q-unidades/peticiones-web.json",
+   "sha256": "00921b383e537dda8cbbeea1d31aef9bb2ff6d3ab0e57ab644536bfb17643452",
+   "localizador": "6 solicitudes Q-W-01..06 a W"
+  }
+ ],
+ "limites": [
+  "v001 no instalable: sin vinculo QUDT hasta sello W; solo declaracion cualificada.",
+  "No se duplica R9 (Milimetros/Hectareas) ni se repite HectoM3 (sello W v003).",
+  "Compuestas (Pesos/kilogramo, Toneladas/hectareas, Pesos por tonelada), moneda, Grados y conteos: en informe-exclusiones.md.",
+  "Inventario = piso de literales legibles en data/portal/inspecciones (no censo del portal).",
+  "Sin QuantityValue, factores, atribucion global, Gemma ni contactos."
+ ]
+}

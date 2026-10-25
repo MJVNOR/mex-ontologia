@@ -1,0 +1,264 @@
+{
+ "sha_entregas": {
+  "nacimientos": "eec89c6c221121d297b26b315548826bc9c968454b6a9203a1697859bcbf0bce",
+  "defunciones": "4f58c5434a000248e104fe6b8fd843df0088afb1c359e8c93a8844880308f979",
+  "epidemiologia": "5145bbe267feb45ce25c19fecf7d343ade421d407203eb635c86fdae165e1c1c",
+  "diversos": "231f4d97f902de99b7cee124bb2c49c1f6354d96881c7a8ccd4388b5ad3b7223",
+  "presas": "020dc9607ff443e2777673e8a3eb4c006f93739f70a1a8b3de0694fa81acec75",
+  "tic": "d720e4286fc9cbc4abafebbce508ba951c7c3c96c1e69247a2e54c49b065c172",
+  "matriculas": "e8ce4f70c618570aa56ba97adab35c47f31f7ae8478eb541ca724daa5902dc35"
+ },
+ "checks": [
+  {
+   "id": "nacimientos.listo",
+   "ok": true,
+   "detalle": "listo=eec89c6c221121d297b26b315548826bc9c968454b6a9203a1697859bcbf0bce file=eec89c6c2211"
+  },
+  {
+   "id": "defunciones.listo",
+   "ok": true,
+   "detalle": "listo=4f58c5434a000248e104fe6b8fd843df0088afb1c359e8c93a8844880308f979 file=4f58c5434a00"
+  },
+  {
+   "id": "epidemiologia.listo",
+   "ok": true,
+   "detalle": "listo=5145bbe267feb45ce25c19fecf7d343ade421d407203eb635c86fdae165e1c1c file=5145bbe267fe"
+  },
+  {
+   "id": "diversos.listo",
+   "ok": true,
+   "detalle": "listo=231f4d97f902de99b7cee124bb2c49c1f6354d96881c7a8ccd4388b5ad3b7223 file=231f4d97f902"
+  },
+  {
+   "id": "presas.listo",
+   "ok": true,
+   "detalle": "listo=020dc9607ff443e2777673e8a3eb4c006f93739f70a1a8b3de0694fa81acec75 file=020dc9607ff4"
+  },
+  {
+   "id": "nacimientos.control",
+   "ok": true,
+   "detalle": "control coincide"
+  },
+  {
+   "id": "defunciones.control",
+   "ok": true,
+   "detalle": "control coincide"
+  },
+  {
+   "id": "diversos.control",
+   "ok": true,
+   "detalle": "control coincide"
+  },
+  {
+   "id": "nac18.fisica",
+   "ok": true,
+   "detalle": "{'id': 'RESIDEEXTRANJEROD', 'posicion_original': 18}"
+  },
+  {
+   "id": "nac18.huella_esquema",
+   "ok": true,
+   "detalle": "9b46e1c0e32acd903780264f0ebbc538a835eb1bf92a70faa36ba7e839a1ec95"
+  },
+  {
+   "id": "nac18.fila",
+   "ok": true,
+   "detalle": "{'Nombre variable': 'RESIDEEXTRANJEROD', 'Tipo de dato': 'Texto', 'Descripción': 'Indicador textual de si la madre es residente extranjera', 'Ejemplo de dato': 'NO'}"
+  },
+  {
+   "id": "nac18.tipo-contradiccion",
+   "ok": true,
+   "detalle": "Texto vs Numerico entero; descripciones distintas"
+  },
+  {
+   "id": "nac18.sin-alias",
+   "ok": true,
+   "detalle": "RESIDEEXTRANJEROD"
+  },
+  {
+   "id": "nac18.conjunto-unico",
+   "ok": true,
+   "detalle": "fuera_del_nucleo_actual"
+  },
+  {
+   "id": "nac18.regla-literal",
+   "ok": true,
+   "detalle": "r5-nac-resideextranjerod-no_especificada"
+  },
+  {
+   "id": "nac18.precedente-r3a7",
+   "ok": true,
+   "detalle": "separacion documentada"
+  },
+  {
+   "id": "nac18.decision",
+   "ok": true,
+   "detalle": "proponer"
+  },
+  {
+   "id": "nac18.no-solape",
+   "ok": true,
+   "detalle": "nueva"
+  },
+  {
+   "id": "presas.fisica",
+   "ok": true,
+   "detalle": "pos1 Clave unica"
+  },
+  {
+   "id": "presas.filas",
+   "ok": true,
+   "detalle": "f1 vs f4"
+  },
+  {
+   "id": "presas.def1",
+   "ok": true,
+   "detalle": "r3a10-0363"
+  },
+  {
+   "id": "presas.def4",
+   "ok": true,
+   "detalle": "r3a10-0365"
+  },
+  {
+   "id": "presas.pendiente",
+   "ok": true,
+   "detalle": "no se fuerza por nombre"
+  }
+ ],
+ "dictamenes": [
+  {
+   "tipo": "reglas",
+   "id": "r5-nac-resideextranjerod-no_especificada",
+   "dictamen": "aceptar",
+   "motivo": "Fila /18 literal exacta (nombre, descripcion, Texto, ejemplo NO), huella RAW verificada, definicion unica, concepto nuevo limitado a lo documentado; no unifica con /17 por contradiccion de tipo (Texto vs Numerico entero) y descripciones distintas, con precedente r3a7.",
+   "evidencia": [
+    "data/portal/inspecciones/22202305-2d02-4c49-b216-cc98224357f0.json fila 18 huella 3c0156d2",
+    "r3a7-nac-resideextranjero-codigo vigente en ontologia/semantica.json",
+    "definicion https://example.org/mex-ontologi/definition/22202305-2d02-4c49-b216-cc98224357f0%2F18"
+   ]
+  },
+  {
+   "tipo": "vinculos",
+   "id": "https://example.org/mex-ontologi/file-column/46977217-9396-4f9c-bddb-6616e82530b4%2FSINAC%202022%2026-09-22%2F18",
+   "dictamen": "aceptar",
+   "motivo": "Columna fisica pos 18 hoja SINAC 2022 26-09-22 verificada + huella_esquema exacta; mismo conjunto; fila /18 exacta sin alias; concepto respaldado por regla literal nueva.",
+   "evidencia": [
+    "data/portal/contenido-inspeccion.json recurso 46977217 huella 9b46e1c0",
+    "huella_fila 3c0156d2 recomputada de RAW",
+    "definicion https://example.org/mex-ontologi/definition/22202305-2d02-4c49-b216-cc98224357f0%2F18"
+   ]
+  },
+  {
+   "tipo": "pendientes",
+   "id": "https://example.org/mex-ontologi/file-column/4219d141-5084-4308-bda3-d44ca28a4f53%2Fcat_estatal%2F1",
+   "dictamen": "aceptar",
+   "motivo": "Se acepta mantener pendiente: dos filas Clave respaldadas con distinta hoja/descripcion; hoja fisica sin correspondencia exacta; dominio compartido no verificable (sin recurso Historico_presas ni datastore). Elegir /1 o /4 seria aprobar por nombre.",
+   "evidencia": [
+    "huella_esquema 29af60e8 re-verificada",
+    "huellas f1 87295257 / f4 d1208344 re-verificadas",
+    "2 correspondencias ambigua_por_nombre vigentes en cobertura"
+   ]
+  },
+  {
+   "tipo": "cierre",
+   "id": "epidemiologia/listo.json",
+   "dictamen": "corregir",
+   "motivo": "Contenido SHA coincide (5145bbe2) pero la clave es sha256_entrega_json en vez de sha256_entrega; el verificador de control no la reconoce. Renombrar clave, sin tocar entrega.",
+   "evidencia": [
+    "listo.json key sha256_entrega_json",
+    "control.json error registrado"
+   ]
+  },
+  {
+   "tipo": "reglas",
+   "id": "r5-tic-001",
+   "dictamen": "aceptar",
+   "motivo": "Fila literal exacta (huella RAW verificada), fuera_del_nucleo (requiere regla), nombre unico; concepto exacto; lecciones R4 como limites (no separar codigo/nombre, no equiparar entre encuestas/dependencias, montos sin inferir). Vinculo aun no propuesto: 7 links se auditan al cierre contra adicionales.json.",
+   "evidencia": [
+    "huella 7e4792227b1e recomputada",
+    "definicion https://example.org/mex-ontologi/definition/063058e6-aed3-4a60-b944-5e653c77b14d%2F2",
+    "concepto sector-dependencia-diagnostico"
+   ]
+  },
+  {
+   "tipo": "reglas",
+   "id": "r5-tic-002",
+   "dictamen": "aceptar",
+   "motivo": "Fila literal exacta (huella RAW verificada), fuera_del_nucleo (requiere regla), nombre unico; concepto exacto; lecciones R4 como limites (no separar codigo/nombre, no equiparar entre encuestas/dependencias, montos sin inferir). Vinculo aun no propuesto: 7 links se auditan al cierre contra adicionales.json.",
+   "evidencia": [
+    "huella 7e4792227b1e recomputada",
+    "definicion https://example.org/mex-ontologi/definition/3851f1c3-5045-4703-ba88-93b3d39e0b70%2F2",
+    "concepto sector-dependencia-diagnostico"
+   ]
+  },
+  {
+   "tipo": "reglas",
+   "id": "r5-tic-003",
+   "dictamen": "aceptar",
+   "motivo": "Fila literal exacta (huella RAW verificada), fuera_del_nucleo (requiere regla), nombre unico; concepto exacto; lecciones R4 como limites (no separar codigo/nombre, no equiparar entre encuestas/dependencias, montos sin inferir). Vinculo aun no propuesto: 7 links se auditan al cierre contra adicionales.json.",
+   "evidencia": [
+    "huella 7e4792227b1e recomputada",
+    "definicion https://example.org/mex-ontologi/definition/3b314916-24f7-4c48-bcb5-c5fe112a9123%2F2",
+    "concepto sector-dependencia-diagnostico"
+   ]
+  },
+  {
+   "tipo": "reglas",
+   "id": "r5-tic-004",
+   "dictamen": "aceptar",
+   "motivo": "Fila literal exacta (huella RAW verificada), fuera_del_nucleo (requiere regla), nombre unico; concepto exacto; lecciones R4 como limites (no separar codigo/nombre, no equiparar entre encuestas/dependencias, montos sin inferir). Vinculo aun no propuesto: 7 links se auditan al cierre contra adicionales.json.",
+   "evidencia": [
+    "huella 7e4792227b1e recomputada",
+    "definicion https://example.org/mex-ontologi/definition/8f8e3cfb-e551-4a95-b382-4999351c5f29%2F2",
+    "concepto sector-dependencia-diagnostico"
+   ]
+  },
+  {
+   "tipo": "reglas",
+   "id": "r5-tic-005",
+   "dictamen": "aceptar",
+   "motivo": "Fila literal exacta (huella RAW verificada), fuera_del_nucleo (requiere regla), nombre unico; concepto exacto; lecciones R4 como limites (no separar codigo/nombre, no equiparar entre encuestas/dependencias, montos sin inferir). Vinculo aun no propuesto: 7 links se auditan al cierre contra adicionales.json.",
+   "evidencia": [
+    "huella 7e4792227b1e recomputada",
+    "definicion https://example.org/mex-ontologi/definition/af14d207-7697-4d52-b99b-46a35a1b76ac%2F2",
+    "concepto sector-dependencia-diagnostico"
+   ]
+  },
+  {
+   "tipo": "reglas",
+   "id": "r5-tic-006",
+   "dictamen": "aceptar",
+   "motivo": "Fila literal exacta (huella RAW verificada), fuera_del_nucleo (requiere regla), nombre unico; concepto exacto; lecciones R4 como limites (no separar codigo/nombre, no equiparar entre encuestas/dependencias, montos sin inferir). Vinculo aun no propuesto: 7 links se auditan al cierre contra adicionales.json.",
+   "evidencia": [
+    "huella fefc6b0d6cee recomputada",
+    "definicion https://example.org/mex-ontologi/definition/063058e6-aed3-4a60-b944-5e653c77b14d%2F7",
+    "concepto condiciones-innovacion-tic-declaradas"
+   ]
+  },
+  {
+   "tipo": "reglas",
+   "id": "r5-tic-007",
+   "dictamen": "aceptar",
+   "motivo": "Fila literal exacta (huella RAW verificada), fuera_del_nucleo (requiere regla), nombre unico; concepto exacto; lecciones R4 como limites (no separar codigo/nombre, no equiparar entre encuestas/dependencias, montos sin inferir). Vinculo aun no propuesto: 7 links se auditan al cierre contra adicionales.json.",
+   "evidencia": [
+    "huella fed72d1b1f28 recomputada",
+    "definicion https://example.org/mex-ontologi/definition/063058e6-aed3-4a60-b944-5e653c77b14d%2F13",
+    "concepto recursos-anuales-innovacion-declarados"
+   ]
+  }
+ ],
+ "pendientes_cierre": {
+  "links_tic_7": "auditar al cierre contra tic/adicionales.json (ausente; especialista en curso). Sin espera pasiva: dictamenes de reglas ya emitidos.",
+  "manifiesto": "se fijara al terminar"
+ },
+ "conteo_dictamenes": {
+  "aceptar": 10,
+  "corregir": 1,
+  "rechazar": 0
+ },
+ "simulacion_esperada": {
+  "base": "1384 respaldadas / 4466 revisadas",
+  "esperado": "1392 respaldadas / 4467 revisadas",
+  "delta": "8 significados (7 TIC + 1 nacimientos), 1 correspondencia (nacimientos col 18)"
+ }
+}

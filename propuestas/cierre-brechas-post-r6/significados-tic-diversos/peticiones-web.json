@@ -1,0 +1,103 @@
+{
+ "fecha": "2026-10-24",
+ "nota": "Navegacion Obscura compartida reservada al agente web-obscura; este archivo es la peticion. Al crearla (2026-10-24 temprano) el paquete web-obscura aun no habia salido; resultados disponibles despues se referencian abajo con ruta y SHA, sin alterar originales ni fuentes historicas.",
+ "consultas": [
+  {
+   "id": "WEB-TIC-01",
+   "estado": "atendida_negativa",
+   "casos": [
+    "https://example.org/mex-ontologi/definition/063058e6-aed3-4a60-b944-5e653c77b14d%2F10",
+    "https://example.org/mex-ontologi/definition/063058e6-aed3-4a60-b944-5e653c77b14d%2F11",
+    "https://example.org/mex-ontologi/definition/063058e6-aed3-4a60-b944-5e653c77b14d%2F16",
+    "https://example.org/mex-ontologi/definition/063058e6-aed3-4a60-b944-5e653c77b14d%2F18",
+    "https://example.org/mex-ontologi/definition/063058e6-aed3-4a60-b944-5e653c77b14d%2F21",
+    "https://example.org/mex-ontologi/definition/3851f1c3-5045-4703-ba88-93b3d39e0b70%2F13",
+    "https://example.org/mex-ontologi/definition/3851f1c3-5045-4703-ba88-93b3d39e0b70%2F8",
+    "https://example.org/mex-ontologi/definition/3851f1c3-5045-4703-ba88-93b3d39e0b70%2F9",
+    "https://example.org/mex-ontologi/definition/8f8e3cfb-e551-4a95-b382-4999351c5f29%2F11",
+    "https://example.org/mex-ontologi/definition/a4e8bee0-5493-4dec-bbce-0ba1e2fd4c2d%2F22",
+    "https://example.org/mex-ontologi/definition/a4e8bee0-5493-4dec-bbce-0ba1e2fd4c2d%2F36",
+    "https://example.org/mex-ontologi/definition/a4e8bee0-5493-4dec-bbce-0ba1e2fd4c2d%2F39",
+    "https://example.org/mex-ontologi/definition/a4e8bee0-5493-4dec-bbce-0ba1e2fd4c2d%2F40",
+    "https://example.org/mex-ontologi/definition/af14d207-7697-4d52-b99b-46a35a1b76ac%2F13",
+    "https://example.org/mex-ontologi/definition/af14d207-7697-4d52-b99b-46a35a1b76ac%2F36",
+    "https://example.org/mex-ontologi/definition/af14d207-7697-4d52-b99b-46a35a1b76ac%2F39",
+    "https://example.org/mex-ontologi/definition/af14d207-7697-4d52-b99b-46a35a1b76ac%2F40",
+    "https://example.org/mex-ontologi/definition/af14d207-7697-4d52-b99b-46a35a1b76ac%2F8",
+    "https://example.org/mex-ontologi/definition/bdbf043f-5d12-4362-bce0-bd4c8ab1e2a1%2F26",
+    "https://example.org/mex-ontologi/definition/bdbf043f-5d12-4362-bce0-bd4c8ab1e2a1%2F28",
+    "https://example.org/mex-ontologi/definition/bdbf043f-5d12-4362-bce0-bd4c8ab1e2a1%2F30",
+    "https://example.org/mex-ontologi/definition/bdbf043f-5d12-4362-bce0-bd4c8ab1e2a1%2F32",
+    "https://example.org/mex-ontologi/definition/c65eb4e7-a17d-43c7-b08c-05811505edf1%2F7",
+    "https://example.org/mex-ontologi/definition/f3ecd3d2-2156-4251-82e5-13b079471ee9%2F7"
+   ],
+   "conteo_casos": 24,
+   "alcance": "total",
+   "consulta": "Sonora Diagnostico del Entorno Digital: cuestionario/codebook que fije referentes, textos completos y dominios (24 IDs TIC)",
+   "url_sugerida": "https://datos.sonora.gob.mx/",
+   "utilidad": "Cuestionario/codebook vinculado a fila",
+   "resultado_web_obscura": {
+    "ruta": "propuestas/cierre-brechas-post-r6/web-obscura/obs-diagnostico-2026-10-24.json",
+    "sha256": "e4d80cf40a3cbeaf0084a7ca32d059a9c82c63e6637b43fb737c5090dbf76eeb",
+    "veredicto": "Negativo via DOM renderizado: cascaron JS + PowerBI, sin cuestionario extraible. No se cuenta como cumplida: brecha intacta."
+   }
+  },
+  {
+   "id": "WEB-DIV-EGR",
+   "estado": "atendida_negativa",
+   "casos": [
+    "https://example.org/mex-ontologi/definition/f89137ba-d82e-44fe-80c7-cc355f09f9f5%2F15"
+   ],
+   "conteo_casos": 1,
+   "alcance": "total",
+   "consulta": "DGIS Descripcion de variables egresos hospitalarios (Total_Egresos: egresos vs urgencias)",
+   "url_sugerida": "https://www.gob.mx/salud/acciones-y-programas/direccion-general-de-informacion-en-salud-dgis",
+   "utilidad": "Tabla de variables aplicable a la fila",
+   "resultado_web_obscura": {
+    "ruta": "propuestas/cierre-brechas-post-r6/web-obscura/obs-dgis-2026-10-24.json",
+    "sha256": "164a01dd6f32e708530cc39373cc29718dc0b78b06f230b0a4345083454ec785",
+    "veredicto": "Negativo via DOM renderizado: pagina carga sin tabla (text_len 9, iframe Fuentes vacio). No se cuenta como cumplida."
+   }
+  },
+  {
+   "id": "WEB-DIV-CLASIF",
+   "estado": "pendiente",
+   "casos": [
+    "https://example.org/mex-ontologi/definition/67156807-2013-4117-9ca9-394aea647127%2F5"
+   ],
+   "conteo_casos": 1,
+   "alcance": "total",
+   "consulta": "CONAPO IMUC 2020: documento que declare que clasifica CLASIF (limite C1)",
+   "url_sugerida": "https://www.gob.mx/conapo/documentos/indices-de-marginacion-2020-284372",
+   "utilidad": "Objeto clasificado",
+   "resultado_web_obscura": null
+  },
+  {
+   "id": "WEB-DIV-TRIM",
+   "estado": "pendiente",
+   "casos": [
+    "https://example.org/mex-ontologi/definition/3f6942e3-a9c5-42c0-a38b-2c7aad2a6c99%2F2"
+   ],
+   "conteo_casos": 1,
+   "alcance": "total",
+   "consulta": "Sonora PROAES: metodologia que defina 'estrato' (TRIMESTRE)",
+   "url_sugerida": "https://datos.sonora.gob.mx/",
+   "utilidad": "Definicion de estrato",
+   "resultado_web_obscura": null
+  },
+  {
+   "id": "WEB-DIV-PESCA",
+   "estado": "pendiente",
+   "casos": [
+    "https://example.org/mex-ontologi/definition/863b9cc8-daeb-4430-b835-6a0ced5abd31%2F7",
+    "https://example.org/mex-ontologi/definition/863b9cc8-daeb-4430-b835-6a0ced5abd31%2F8"
+   ],
+   "conteo_casos": 2,
+   "alcance": "total",
+   "consulta": "Sonora SAGARHPA pesca: diccionario/metodologia que complete Clave/Nombre de otras",
+   "url_sugerida": "https://datos.sonora.gob.mx/",
+   "utilidad": "Objeto y catalogo de 'otras'",
+   "resultado_web_obscura": null
+  }
+ ]
+}

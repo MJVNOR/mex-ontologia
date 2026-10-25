@@ -1,0 +1,2190 @@
+{
+ "rol": "auditoria-documental",
+ "version": "final",
+ "modelo": "Muse 1.3",
+ "sha_entregas": {
+  "tic": "555232d0117aa15876d9d7b08402f821f7e2bda5e0d705782dfd76d12ccf700f",
+  "matriculas": "157aeea6e69030eb931fd809a4e86771abfc9da115337a6d46cfea9fb3fe35d8",
+  "epidemiologia": "c105170dc193f44edf9e648b8f9dbc85251f8509ab1a9644e92adf3f719c7bed",
+  "catalogos": "649bbe7e5feca82b7e8d5c5144de78b1d8ceccb1c217ca976347b1c9a05cb74b",
+  "salud": "c598972e85c3ef9a94c24c528e6c45c45fd005c87d6c73275755130251f89687",
+  "diversos-presas": "aae9211f86f9411a1c90c131226dc26a7f44d394908dad50d477e82465491b67",
+  "web": "2daa44084dd30e8c3a1f06628ff54475c481fb7c6265bf2ed9d3f52957fa6449"
+ },
+ "preservacion_179_171": "R5: 179 pendientes; 8 aceptadas (7 TIC+1 nac) -> 171 = tic24+nac53+def32+epi25+mat30+div7. R6 agrupa salud85=nac53+def32, diversos-presas7. Auditados 171/171 + catalogos17 + web21.",
+ "diferenciacion_artefactos": "2 artefactos (filas 177/178, headers duplicados, motivos distintos: 177 detalla des_mpo_res como nombre de fila 7; 178 gemela+difiere id_cp) vs 169 carencias de definicion sin interpretar. Total 171 sin interpretar; 0 resueltos en R6; no se inflan resueltos.",
+ "base_inmutable": true,
+ "dictamenes": [
+  {
+   "tipo": "decision",
+   "id": "https://example.org/mex-ontologi/definition/063058e6-aed3-4a60-b944-5e653c77b14d%2F10",
+   "entrega": "tic",
+   "dictamen": "resolucion",
+   "motivo": "Verificado con marker exacto. pendiente: descripcion truncada a mitad de palabra en la celda fuente ('...que permit\\u2026'); no hay sentido literal completo. Confirma el pendiente r4-lote-5 tras relectura de la fila exacta. Requie",
+   "evidencia": [
+    "propuestas/pendientes-muse-r6/tic/entrega.json"
+   ]
+  },
+  {
+   "tipo": "decision",
+   "id": "https://example.org/mex-ontologi/definition/063058e6-aed3-4a60-b944-5e653c77b14d%2F11",
+   "entrega": "tic",
+   "dictamen": "resolucion",
+   "motivo": "Verificado con marker exacto. pendiente: referencia anaforica ('lo anterior') cuyo referente es P10, a su vez truncada y pendiente; sin referente fijado no se fija a que aspecto responde el valor. Confirma el pendiente r4-lote-5. ",
+   "evidencia": [
+    "propuestas/pendientes-muse-r6/tic/entrega.json"
+   ]
+  },
+  {
+   "tipo": "decision",
+   "id": "https://example.org/mex-ontologi/definition/063058e6-aed3-4a60-b944-5e653c77b14d%2F16",
+   "entrega": "tic",
+   "dictamen": "resolucion",
+   "motivo": "Verificado con marker exacto. pendiente: descripcion truncada a mitad de frase en la celda fuente ('...en ma...'); no hay sentido literal completo. Confirma el pendiente r4-lote-5 tras relectura. Requiere texto completo (ex solici",
+   "evidencia": [
+    "propuestas/pendientes-muse-r6/tic/entrega.json"
+   ]
+  },
+  {
+   "tipo": "decision",
+   "id": "https://example.org/mex-ontologi/definition/063058e6-aed3-4a60-b944-5e653c77b14d%2F18",
+   "entrega": "tic",
+   "dictamen": "resolucion",
+   "motivo": "Verificado con marker exacto. pendiente: descripcion truncada a mitad de frase en la celda fuente ('...materia d...'). Confirma el pendiente r4-lote-5. Requiere texto completo (ex solicitud tic-web-01). R6 confirma pendiente: fila",
+   "evidencia": [
+    "propuestas/pendientes-muse-r6/tic/entrega.json"
+   ]
+  },
+  {
+   "tipo": "decision",
+   "id": "https://example.org/mex-ontologi/definition/063058e6-aed3-4a60-b944-5e653c77b14d%2F21",
+   "entrega": "tic",
+   "dictamen": "resolucion",
+   "motivo": "Verificado con marker exacto. pendiente: descripcion truncada a mitad de frase en la celda fuente ('...materia ...') aunque el ejemplo este completo. Confirma el pendiente r4-lote-5. Requiere texto completo (ex solicitud tic-web-0",
+   "evidencia": [
+    "propuestas/pendientes-muse-r6/tic/entrega.json"
+   ]
+  },
+  {
+   "tipo": "decision",
+   "id": "https://example.org/mex-ontologi/definition/3851f1c3-5045-4703-ba88-93b3d39e0b70%2F8",
+   "entrega": "tic",
+   "dictamen": "resolucion",
+   "motivo": "Verificado con marker exacto. pendiente: descripcion tautologica ('Actividades principales:') cuyo ejemplo repite el nombre sin definir que actividades. Confirma el pendiente r4-lote-5 tras relectura. Requiere documento que defina",
+   "evidencia": [
+    "propuestas/pendientes-muse-r6/tic/entrega.json"
+   ]
+  },
+  {
+   "tipo": "decision",
+   "id": "https://example.org/mex-ontologi/definition/3851f1c3-5045-4703-ba88-93b3d39e0b70%2F9",
+   "entrega": "tic",
+   "dictamen": "resolucion",
+   "motivo": "Verificado con marker exacto. pendiente: pregunta sin sujeto explicito (quien depende de que area); el ejemplo no fija el papel y el diccionario no declara vinculo con P9. Confirma el pendiente r4-lote-5. Requiere cuestionario que",
+   "evidencia": [
+    "propuestas/pendientes-muse-r6/tic/entrega.json"
+   ]
+  },
+  {
+   "tipo": "decision",
+   "id": "https://example.org/mex-ontologi/definition/3851f1c3-5045-4703-ba88-93b3d39e0b70%2F13",
+   "entrega": "tic",
+   "dictamen": "resolucion",
+   "motivo": "Verificado con marker exacto. pendiente: referencia anaforica ('el perfil') sin referente declarado en la propia fila. Confirma el pendiente r4-lote-5. Requiere documento que fije el referente (ex solicitud tic-web-02). R6 confirm",
+   "evidencia": [
+    "propuestas/pendientes-muse-r6/tic/entrega.json"
+   ]
+  },
+  {
+   "tipo": "decision",
+   "id": "https://example.org/mex-ontologi/definition/8f8e3cfb-e551-4a95-b382-4999351c5f29%2F11",
+   "entrega": "tic",
+   "dictamen": "resolucion",
+   "motivo": "Verificado con marker exacto. pendiente: el Tipo declarado (Booleano Si/No) contradice el ejemplo (lista 'Tecnologia 1, tecnologia 2'); dominio de valores indeterminado. La remision a 'la pregunta anterior' (P10 respaldada) no res",
+   "evidencia": [
+    "propuestas/pendientes-muse-r6/tic/entrega.json"
+   ]
+  },
+  {
+   "tipo": "decision",
+   "id": "https://example.org/mex-ontologi/definition/a4e8bee0-5493-4dec-bbce-0ba1e2fd4c2d%2F22",
+   "entrega": "tic",
+   "dictamen": "resolucion",
+   "motivo": "Verificado con marker exacto. pendiente: descripcion truncada a mitad de frase en la celda fuente ('...equipos...'); no se infiere el resto. Confirma el pendiente r4-lote-4 tras relectura de la fila exacta. Requiere texto completo",
+   "evidencia": [
+    "propuestas/pendientes-muse-r6/tic/entrega.json"
+   ]
+  },
+  {
+   "tipo": "decision",
+   "id": "https://example.org/mex-ontologi/definition/a4e8bee0-5493-4dec-bbce-0ba1e2fd4c2d%2F36",
+   "entrega": "tic",
+   "dictamen": "resolucion",
+   "motivo": "Verificado con marker exacto. pendiente: la pregunta pide un conteo ('Cuántos proyectos') pero el dominio declarado acreditable es Si/No con ejemplo 'Si'; no se distingue conteo de existencia. Confirma el pendiente r4-lote-4 tras ",
+   "evidencia": [
+    "propuestas/pendientes-muse-r6/tic/entrega.json"
+   ]
+  },
+  {
+   "tipo": "decision",
+   "id": "https://example.org/mex-ontologi/definition/a4e8bee0-5493-4dec-bbce-0ba1e2fd4c2d%2F39",
+   "entrega": "tic",
+   "dictamen": "resolucion",
+   "motivo": "Verificado con marker exacto. pendiente: la pregunta pide una manera ('Cómo atiende...') pero el dominio declarado es Si/No con ejemplo 'Si'; el mecanismo no se fija. Confirma el pendiente r4-lote-4. Requiere muestra de valores o ",
+   "evidencia": [
+    "propuestas/pendientes-muse-r6/tic/entrega.json"
+   ]
+  },
+  {
+   "tipo": "decision",
+   "id": "https://example.org/mex-ontologi/definition/a4e8bee0-5493-4dec-bbce-0ba1e2fd4c2d%2F40",
+   "entrega": "tic",
+   "dictamen": "resolucion",
+   "motivo": "Verificado con marker exacto. pendiente: la pregunta pide un conteo ('Cuantas personas') pero el dominio declarado es Si/No con ejemplo 'Si'; la fila no acredita conteo. Confirma el pendiente r4-lote-4. Requiere muestra de valores",
+   "evidencia": [
+    "propuestas/pendientes-muse-r6/tic/entrega.json"
+   ]
+  },
+  {
+   "tipo": "decision",
+   "id": "https://example.org/mex-ontologi/definition/af14d207-7697-4d52-b99b-46a35a1b76ac%2F8",
+   "entrega": "tic",
+   "dictamen": "resolucion",
+   "motivo": "Verificado con marker exacto. pendiente: pregunta doble (metodología Y documentación) en una sola variable; no se fija a qué aspecto responde el valor. Confirma el pendiente r4-lote-2 tras relectura. Requiere cuestionario que sepa",
+   "evidencia": [
+    "propuestas/pendientes-muse-r6/tic/entrega.json"
+   ]
+  },
+  {
+   "tipo": "decision",
+   "id": "https://example.org/mex-ontologi/definition/af14d207-7697-4d52-b99b-46a35a1b76ac%2F13",
+   "entrega": "tic",
+   "dictamen": "resolucion",
+   "motivo": "Verificado con marker exacto. pendiente: la pregunta pide un tipo pero el ejemplo ('Si') responde existencia; dominio de valores indeterminado. Confirma el pendiente r4-lote-2. Requiere muestra de valores o cuestionario (ex solici",
+   "evidencia": [
+    "propuestas/pendientes-muse-r6/tic/entrega.json"
+   ]
+  },
+  {
+   "tipo": "decision",
+   "id": "https://example.org/mex-ontologi/definition/af14d207-7697-4d52-b99b-46a35a1b76ac%2F36",
+   "entrega": "tic",
+   "dictamen": "resolucion",
+   "motivo": "Verificado con marker exacto. pendiente: conteo pedido ('Cuántos proyectos') frente a dominio Si/No con ejemplo 'Si'. Confirma el pendiente r4-lote-2. Requiere muestra de valores de P36 en el recurso b444876c-8681-4503-98ca-06876a",
+   "evidencia": [
+    "propuestas/pendientes-muse-r6/tic/entrega.json"
+   ]
+  },
+  {
+   "tipo": "decision",
+   "id": "https://example.org/mex-ontologi/definition/af14d207-7697-4d52-b99b-46a35a1b76ac%2F39",
+   "entrega": "tic",
+   "dictamen": "resolucion",
+   "motivo": "Verificado con marker exacto. pendiente: manera pedida ('Cómo atiende...') frente a dominio Si/No con ejemplo 'Si'. Confirma el pendiente r4-lote-2. Requiere muestra de valores o cuestionario (ex solicitud tic-web-05). R6 confirma",
+   "evidencia": [
+    "propuestas/pendientes-muse-r6/tic/entrega.json"
+   ]
+  },
+  {
+   "tipo": "decision",
+   "id": "https://example.org/mex-ontologi/definition/af14d207-7697-4d52-b99b-46a35a1b76ac%2F40",
+   "entrega": "tic",
+   "dictamen": "resolucion",
+   "motivo": "Verificado con marker exacto. pendiente: conteo pedido ('Cuantas personas') frente a dominio Si/No con ejemplo 'Si'. Confirma el pendiente r4-lote-2. Requiere muestra de valores o cuestionario (ex solicitud tic-web-05). R6 confirm",
+   "evidencia": [
+    "propuestas/pendientes-muse-r6/tic/entrega.json"
+   ]
+  },
+  {
+   "tipo": "decision",
+   "id": "https://example.org/mex-ontologi/definition/bdbf043f-5d12-4362-bce0-bd4c8ab1e2a1%2F26",
+   "entrega": "tic",
+   "dictamen": "resolucion",
+   "motivo": "Verificado con marker exacto. pendiente: descripcion vacua ('¿Cuáles?') sin referente en la propia fila; el vinculo con la pregunta filtro no esta declarado en el diccionario. Confirma el pendiente r4-lote-6 tras relectura de veci",
+   "evidencia": [
+    "propuestas/pendientes-muse-r6/tic/entrega.json"
+   ]
+  },
+  {
+   "tipo": "decision",
+   "id": "https://example.org/mex-ontologi/definition/bdbf043f-5d12-4362-bce0-bd4c8ab1e2a1%2F28",
+   "entrega": "tic",
+   "dictamen": "resolucion",
+   "motivo": "Verificado con marker exacto. pendiente: descripcion vacua ('¿Cuáles?') sin referente propio. Confirma el pendiente r4-lote-6. Requiere cuestionario que vincule P28-P29 (ex solicitud tic-web-06). R6 confirma pendiente: fila byte-i",
+   "evidencia": [
+    "propuestas/pendientes-muse-r6/tic/entrega.json"
+   ]
+  },
+  {
+   "tipo": "decision",
+   "id": "https://example.org/mex-ontologi/definition/bdbf043f-5d12-4362-bce0-bd4c8ab1e2a1%2F30",
+   "entrega": "tic",
+   "dictamen": "resolucion",
+   "motivo": "Verificado con marker exacto. pendiente: descripcion vacua ('¿Cuáles?') sin referente propio. Confirma el pendiente r4-lote-6. Requiere cuestionario que vincule P30-P31 (ex solicitud tic-web-06). R6 confirma pendiente: fila byte-i",
+   "evidencia": [
+    "propuestas/pendientes-muse-r6/tic/entrega.json"
+   ]
+  },
+  {
+   "tipo": "decision",
+   "id": "https://example.org/mex-ontologi/definition/bdbf043f-5d12-4362-bce0-bd4c8ab1e2a1%2F32",
+   "entrega": "tic",
+   "dictamen": "resolucion",
+   "motivo": "Verificado con marker exacto. pendiente: descripcion vacua ('¿Cuáles?4') sin referente propio y con marca '4' sin nota que la explique. Confirma el pendiente r4-lote-6. Requiere cuestionario que vincule P32-P33 y aclare la marca (",
+   "evidencia": [
+    "propuestas/pendientes-muse-r6/tic/entrega.json"
+   ]
+  },
+  {
+   "tipo": "decision",
+   "id": "https://example.org/mex-ontologi/definition/c65eb4e7-a17d-43c7-b08c-05811505edf1%2F7",
+   "entrega": "tic",
+   "dictamen": "resolucion",
+   "motivo": "Verificado con marker exacto. pendiente: pregunta sin sujeto ('¿Cómo se generan?') incompleta por si sola. Confirma el pendiente r4-lote-4 tras relectura de vecina y ejemplo. Requiere cuestionario que fije el referente (ex solicit",
+   "evidencia": [
+    "propuestas/pendientes-muse-r6/tic/entrega.json"
+   ]
+  },
+  {
+   "tipo": "decision",
+   "id": "https://example.org/mex-ontologi/definition/f3ecd3d2-2156-4251-82e5-13b079471ee9%2F7",
+   "entrega": "tic",
+   "dictamen": "resolucion",
+   "motivo": "Verificado con marker exacto. pendiente: pregunta sin sujeto, misma situacion que su gemela de Gobernanza. Confirma el pendiente r4-lote-4. Requiere cuestionario que fije el referente (ex solicitud tic-web-07). R6 confirma pendien",
+   "evidencia": [
+    "propuestas/pendientes-muse-r6/tic/entrega.json"
+   ]
+  },
+  {
+   "tipo": "decision",
+   "id": "https://example.org/mex-ontologi/definition/8c0e76ff-3a86-4b1d-beee-b04bebe7df8d%2F11",
+   "entrega": "matriculas",
+   "dictamen": "resolucion",
+   "motivo": "Verificado con marker exacto. Descripción vacía, tipo Texto y ejemplo vacío: sin dominio ni valores no se fija si es código, motivo en texto libre o indicador. Sin regla revisada que respalde el significado; no se aprueba por nomb",
+   "evidencia": [
+    "propuestas/pendientes-muse-r6/matriculas/entrega.json"
+   ]
+  },
+  {
+   "tipo": "decision",
+   "id": "https://example.org/mex-ontologi/definition/8c0e76ff-3a86-4b1d-beee-b04bebe7df8d%2F12",
+   "entrega": "matriculas",
+   "dictamen": "resolucion",
+   "motivo": "Verificado con marker exacto. Descripción vacía; el ejemplo '222 (Reing)' no define qué denota el valor ni a qué ciclo remite 'señalado'. Sin regla revisada que respalde el significado; no se aprueba por nombre. Sin regla revisada",
+   "evidencia": [
+    "propuestas/pendientes-muse-r6/matriculas/entrega.json"
+   ]
+  },
+  {
+   "tipo": "decision",
+   "id": "https://example.org/mex-ontologi/definition/8c0e76ff-3a86-4b1d-beee-b04bebe7df8d%2F13",
+   "entrega": "matriculas",
+   "dictamen": "resolucion",
+   "motivo": "Verificado con marker exacto. Propuesta r5mat-001 RETIRADA (bloqueo auditor r5): Descripción vacía ('Pendiente de especificar'). Nombre, tipo y ejemplo no bastan para fijar concepto; no se aprueba por nombre. Sin regla revisada ni",
+   "evidencia": [
+    "propuestas/pendientes-muse-r6/matriculas/entrega.json"
+   ]
+  },
+  {
+   "tipo": "decision",
+   "id": "https://example.org/mex-ontologi/definition/8c0e76ff-3a86-4b1d-beee-b04bebe7df8d%2F14",
+   "entrega": "matriculas",
+   "dictamen": "resolucion",
+   "motivo": "Verificado con marker exacto. Propuesta r5mat-002 RETIRADA (bloqueo auditor r5): Descripción vacía ('Pendiente de especificar'). Nombre, tipo y ejemplo no bastan para fijar concepto; no se aprueba por nombre. Sin regla revisada ni",
+   "evidencia": [
+    "propuestas/pendientes-muse-r6/matriculas/entrega.json"
+   ]
+  },
+  {
+   "tipo": "decision",
+   "id": "https://example.org/mex-ontologi/definition/8c0e76ff-3a86-4b1d-beee-b04bebe7df8d%2F17",
+   "entrega": "matriculas",
+   "dictamen": "resolucion",
+   "motivo": "Verificado con marker exacto. Descripción vacía, tipo Texto y ejemplo vacío: no se fija si es indicador Sí/No, fecha, folio o texto. Sin regla revisada que respalde el significado; no se aprueba por nombre. Sin regla revisada ni e",
+   "evidencia": [
+    "propuestas/pendientes-muse-r6/matriculas/entrega.json"
+   ]
+  },
+  {
+   "tipo": "decision",
+   "id": "https://example.org/mex-ontologi/definition/8c0e76ff-3a86-4b1d-beee-b04bebe7df8d%2F20",
+   "entrega": "matriculas",
+   "dictamen": "resolucion",
+   "motivo": "Verificado con marker exacto. Propuesta r5mat-003 RETIRADA (bloqueo auditor r5): Descripción trunca sin verbo ('Municipio donde el alumno': función ausente). Nombre, tipo y ejemplo no bastan para fijar concepto; no se aprueba por ",
+   "evidencia": [
+    "propuestas/pendientes-muse-r6/matriculas/entrega.json"
+   ]
+  },
+  {
+   "tipo": "decision",
+   "id": "https://example.org/mex-ontologi/definition/8c0e76ff-3a86-4b1d-beee-b04bebe7df8d%2F25",
+   "entrega": "matriculas",
+   "dictamen": "resolucion",
+   "motivo": "Verificado con marker exacto. Descripción vacía, tipo Texto y ejemplo vacío: no se fija si es tipo de estímulo, monto, indicador o programa. Sin regla revisada que respalde el significado; no se aprueba por nombre. Sin regla revis",
+   "evidencia": [
+    "propuestas/pendientes-muse-r6/matriculas/entrega.json"
+   ]
+  },
+  {
+   "tipo": "decision",
+   "id": "https://example.org/mex-ontologi/definition/8c0e76ff-3a86-4b1d-beee-b04bebe7df8d%2F26",
+   "entrega": "matriculas",
+   "dictamen": "resolucion",
+   "motivo": "Verificado con marker exacto. Descripción vacía y ejemplo vacío: la faceta 'pertenece' solo consta en el nombre; representación y dominio sin documentar. Sin regla revisada que respalde el significado; no se aprueba por nombre. Si",
+   "evidencia": [
+    "propuestas/pendientes-muse-r6/matriculas/entrega.json"
+   ]
+  },
+  {
+   "tipo": "decision",
+   "id": "https://example.org/mex-ontologi/definition/8c0e76ff-3a86-4b1d-beee-b04bebe7df8d%2F27",
+   "entrega": "matriculas",
+   "dictamen": "resolucion",
+   "motivo": "Verificado con marker exacto. Descripción vacía y ejemplo vacío: la faceta 'habla' solo consta en el nombre; sin valores no se fija indicador ni lengua. Sin regla revisada que respalde el significado; no se aprueba por nombre. Sin",
+   "evidencia": [
+    "propuestas/pendientes-muse-r6/matriculas/entrega.json"
+   ]
+  },
+  {
+   "tipo": "decision",
+   "id": "https://example.org/mex-ontologi/definition/8c0e76ff-3a86-4b1d-beee-b04bebe7df8d%2F28",
+   "entrega": "matriculas",
+   "dictamen": "resolucion",
+   "motivo": "Verificado con marker exacto. Descripción vacía y ejemplo vacío: la faceta solo consta en el nombre; sin valores no se fija indicador ni comunidad. Sin regla revisada que respalde el significado; no se aprueba por nombre. Sin regl",
+   "evidencia": [
+    "propuestas/pendientes-muse-r6/matriculas/entrega.json"
+   ]
+  },
+  {
+   "tipo": "decision",
+   "id": "https://example.org/mex-ontologi/definition/8c0e76ff-3a86-4b1d-beee-b04bebe7df8d%2F29",
+   "entrega": "matriculas",
+   "dictamen": "resolucion",
+   "motivo": "Verificado con marker exacto. Descripción vacía y ejemplo vacío: la faceta solo consta en el nombre; no se fija si refiere a pertenencia, habla o ascendencia de los padres. Sin regla revisada que respalde el significado; no se apr",
+   "evidencia": [
+    "propuestas/pendientes-muse-r6/matriculas/entrega.json"
+   ]
+  },
+  {
+   "tipo": "decision",
+   "id": "https://example.org/mex-ontologi/definition/8c0e76ff-3a86-4b1d-beee-b04bebe7df8d%2F35",
+   "entrega": "matriculas",
+   "dictamen": "resolucion",
+   "motivo": "Verificado con marker exacto. Descripción vacía y ejemplo en blanco: sin dominio no se fija si es área de conocimiento, plantel o texto libre. Sin regla revisada que respalde el significado; no se aprueba por nombre. Sin regla rev",
+   "evidencia": [
+    "propuestas/pendientes-muse-r6/matriculas/entrega.json"
+   ]
+  },
+  {
+   "tipo": "decision",
+   "id": "https://example.org/mex-ontologi/definition/8c0e76ff-3a86-4b1d-beee-b04bebe7df8d%2F47",
+   "entrega": "matriculas",
+   "dictamen": "resolucion",
+   "motivo": "Verificado con marker exacto. Propuesta r5mat-004 RETIRADA (bloqueo auditor r5): Descripción vacía ('Pendiente de especificar'). Nombre, tipo y ejemplo no bastan para fijar concepto; no se aprueba por nombre. Sin regla revisada ni",
+   "evidencia": [
+    "propuestas/pendientes-muse-r6/matriculas/entrega.json"
+   ]
+  },
+  {
+   "tipo": "decision",
+   "id": "https://example.org/mex-ontologi/definition/8c0e76ff-3a86-4b1d-beee-b04bebe7df8d%2F48",
+   "entrega": "matriculas",
+   "dictamen": "resolucion",
+   "motivo": "Verificado con marker exacto. Propuesta r5mat-005 RETIRADA (bloqueo auditor r5): Descripción vacía ('Pendiente de especificar'). Nombre, tipo y ejemplo no bastan para fijar concepto; no se aprueba por nombre. Sin regla revisada ni",
+   "evidencia": [
+    "propuestas/pendientes-muse-r6/matriculas/entrega.json"
+   ]
+  },
+  {
+   "tipo": "decision",
+   "id": "https://example.org/mex-ontologi/definition/8c0e76ff-3a86-4b1d-beee-b04bebe7df8d%2F49",
+   "entrega": "matriculas",
+   "dictamen": "resolucion",
+   "motivo": "Verificado con marker exacto. Propuesta r5mat-006 RETIRADA (bloqueo auditor r5): Descripción vacía ('Pendiente de especificar'). Nombre, tipo y ejemplo no bastan para fijar concepto; no se aprueba por nombre. Sin regla revisada ni",
+   "evidencia": [
+    "propuestas/pendientes-muse-r6/matriculas/entrega.json"
+   ]
+  },
+  {
+   "tipo": "decision",
+   "id": "https://example.org/mex-ontologi/definition/8c0e76ff-3a86-4b1d-beee-b04bebe7df8d%2F52",
+   "entrega": "matriculas",
+   "dictamen": "resolucion",
+   "motivo": "Verificado con marker exacto. Propuesta r5mat-007 RETIRADA (bloqueo auditor r5): Descripción vacía ('Pendiente de especificar'). Nombre, tipo y ejemplo no bastan para fijar concepto; no se aprueba por nombre. Sin regla revisada ni",
+   "evidencia": [
+    "propuestas/pendientes-muse-r6/matriculas/entrega.json"
+   ]
+  },
+  {
+   "tipo": "decision",
+   "id": "https://example.org/mex-ontologi/definition/8c0e76ff-3a86-4b1d-beee-b04bebe7df8d%2F53",
+   "entrega": "matriculas",
+   "dictamen": "resolucion",
+   "motivo": "Verificado con marker exacto. Propuesta r5mat-008 RETIRADA (bloqueo auditor r5): Descripción vacía ('Pendiente de especificar'). Nombre, tipo y ejemplo no bastan para fijar concepto; no se aprueba por nombre. Sin regla revisada ni",
+   "evidencia": [
+    "propuestas/pendientes-muse-r6/matriculas/entrega.json"
+   ]
+  },
+  {
+   "tipo": "decision",
+   "id": "https://example.org/mex-ontologi/definition/8c0e76ff-3a86-4b1d-beee-b04bebe7df8d%2F54",
+   "entrega": "matriculas",
+   "dictamen": "resolucion",
+   "motivo": "Verificado con marker exacto. Descripción vacía y ejemplo en blanco con tipo Numérico entero: no se fija indicador, conteo ni clave. Sin regla revisada que respalde el significado; no se aprueba por nombre. Sin regla revisada ni e",
+   "evidencia": [
+    "propuestas/pendientes-muse-r6/matriculas/entrega.json"
+   ]
+  },
+  {
+   "tipo": "decision",
+   "id": "https://example.org/mex-ontologi/definition/8c0e76ff-3a86-4b1d-beee-b04bebe7df8d%2F58",
+   "entrega": "matriculas",
+   "dictamen": "resolucion",
+   "motivo": "Verificado con marker exacto. Descripción vacía y ejemplo vacío con tipo Numérico entero: no se fija si es clave de periodo, año o conteo. Sin regla revisada que respalde el significado; no se aprueba por nombre. Sin regla revisad",
+   "evidencia": [
+    "propuestas/pendientes-muse-r6/matriculas/entrega.json"
+   ]
+  },
+  {
+   "tipo": "decision",
+   "id": "https://example.org/mex-ontologi/definition/8c0e76ff-3a86-4b1d-beee-b04bebe7df8d%2F61",
+   "entrega": "matriculas",
+   "dictamen": "resolucion",
+   "motivo": "Verificado con marker exacto. Propuesta r5mat-009 RETIRADA (bloqueo auditor r5): Descripción tautológica ('Tipo de baja' repite el nombre; sin sujeto, dominio ni valores). Nombre, tipo y ejemplo no bastan para fijar concepto; no s",
+   "evidencia": [
+    "propuestas/pendientes-muse-r6/matriculas/entrega.json"
+   ]
+  },
+  {
+   "tipo": "decision",
+   "id": "https://example.org/mex-ontologi/definition/8c0e76ff-3a86-4b1d-beee-b04bebe7df8d%2F62",
+   "entrega": "matriculas",
+   "dictamen": "resolucion",
+   "motivo": "Verificado con marker exacto. Descripción vacía y ejemplo vacío con tipo Texto: no se fija si es indicador, nombre de unidad destino o fecha. Sin regla revisada que respalde el significado; no se aprueba por nombre. Sin regla revi",
+   "evidencia": [
+    "propuestas/pendientes-muse-r6/matriculas/entrega.json"
+   ]
+  },
+  {
+   "tipo": "decision",
+   "id": "https://example.org/mex-ontologi/definition/8c0e76ff-3a86-4b1d-beee-b04bebe7df8d%2F63",
+   "entrega": "matriculas",
+   "dictamen": "resolucion",
+   "motivo": "Verificado con marker exacto. Descripción vacía y ejemplo vacío: la alternativa solo consta en el nombre; sin norma de titulación no se fija su contenido. Sin regla revisada que respalde el significado; no se aprueba por nombre. S",
+   "evidencia": [
+    "propuestas/pendientes-muse-r6/matriculas/entrega.json"
+   ]
+  },
+  {
+   "tipo": "decision",
+   "id": "https://example.org/mex-ontologi/definition/8c0e76ff-3a86-4b1d-beee-b04bebe7df8d%2F64",
+   "entrega": "matriculas",
+   "dictamen": "resolucion",
+   "motivo": "Verificado con marker exacto. Propuesta r5mat-010 RETIRADA (bloqueo auditor r5): Descripción vacía ('Pendiente de especificar'). Nombre, tipo y ejemplo no bastan para fijar concepto; no se aprueba por nombre. Sin regla revisada ni",
+   "evidencia": [
+    "propuestas/pendientes-muse-r6/matriculas/entrega.json"
+   ]
+  },
+  {
+   "tipo": "decision",
+   "id": "https://example.org/mex-ontologi/definition/8c0e76ff-3a86-4b1d-beee-b04bebe7df8d%2F65",
+   "entrega": "matriculas",
+   "dictamen": "resolucion",
+   "motivo": "Verificado con marker exacto. Descripción vacía y ejemplo vacío: la alternativa solo consta en el nombre; sin norma no se fija su contenido. Sin regla revisada que respalde el significado; no se aprueba por nombre. Sin regla revis",
+   "evidencia": [
+    "propuestas/pendientes-muse-r6/matriculas/entrega.json"
+   ]
+  },
+  {
+   "tipo": "decision",
+   "id": "https://example.org/mex-ontologi/definition/8c0e76ff-3a86-4b1d-beee-b04bebe7df8d%2F66",
+   "entrega": "matriculas",
+   "dictamen": "resolucion",
+   "motivo": "Verificado con marker exacto. Propuesta r5mat-011 RETIRADA (bloqueo auditor r5): Descripción vacía ('Pendiente de especificar'). Nombre, tipo y ejemplo no bastan para fijar concepto; no se aprueba por nombre. Sin regla revisada ni",
+   "evidencia": [
+    "propuestas/pendientes-muse-r6/matriculas/entrega.json"
+   ]
+  },
+  {
+   "tipo": "decision",
+   "id": "https://example.org/mex-ontologi/definition/8c0e76ff-3a86-4b1d-beee-b04bebe7df8d%2F67",
+   "entrega": "matriculas",
+   "dictamen": "resolucion",
+   "motivo": "Verificado con marker exacto. Propuesta r5mat-012 RETIRADA (bloqueo auditor r5): Descripción vacía ('Pendiente de especificar'). Nombre, tipo y ejemplo no bastan para fijar concepto; no se aprueba por nombre. Sin regla revisada ni",
+   "evidencia": [
+    "propuestas/pendientes-muse-r6/matriculas/entrega.json"
+   ]
+  },
+  {
+   "tipo": "decision",
+   "id": "https://example.org/mex-ontologi/definition/8c0e76ff-3a86-4b1d-beee-b04bebe7df8d%2F68",
+   "entrega": "matriculas",
+   "dictamen": "resolucion",
+   "motivo": "Verificado con marker exacto. Propuesta r5mat-013 RETIRADA (bloqueo auditor r5): Descripción vacía ('Pendiente de especificar'). Nombre, tipo y ejemplo no bastan para fijar concepto; no se aprueba por nombre. Sin regla revisada ni",
+   "evidencia": [
+    "propuestas/pendientes-muse-r6/matriculas/entrega.json"
+   ]
+  },
+  {
+   "tipo": "decision",
+   "id": "https://example.org/mex-ontologi/definition/8c0e76ff-3a86-4b1d-beee-b04bebe7df8d%2F69",
+   "entrega": "matriculas",
+   "dictamen": "resolucion",
+   "motivo": "Verificado con marker exacto. Propuesta r5mat-014 RETIRADA (bloqueo auditor r5): Descripción vacía ('Pendiente de especificar'). Nombre, tipo y ejemplo no bastan para fijar concepto; no se aprueba por nombre. Sin regla revisada ni",
+   "evidencia": [
+    "propuestas/pendientes-muse-r6/matriculas/entrega.json"
+   ]
+  },
+  {
+   "tipo": "decision",
+   "id": "https://example.org/mex-ontologi/definition/8c0e76ff-3a86-4b1d-beee-b04bebe7df8d%2F70",
+   "entrega": "matriculas",
+   "dictamen": "resolucion",
+   "motivo": "Verificado con marker exacto. Propuesta r5mat-015 RETIRADA (bloqueo auditor r5): Descripción vacía ('Pendiente de especificar'). Nombre, tipo y ejemplo no bastan para fijar concepto; no se aprueba por nombre. Sin regla revisada ni",
+   "evidencia": [
+    "propuestas/pendientes-muse-r6/matriculas/entrega.json"
+   ]
+  },
+  {
+   "tipo": "decision",
+   "id": "https://example.org/mex-ontologi/definition/8c0e76ff-3a86-4b1d-beee-b04bebe7df8d%2F8",
+   "entrega": "matriculas",
+   "dictamen": "resolucion",
+   "motivo": "Verificado con marker exacto. Descripción vacía; el ejemplo '222 (Reing)' parece clave de ciclo con calificador de reingreso pero ningún documento lo define. Sin regla revisada que respalde el significado; no se aprueba por nombre",
+   "evidencia": [
+    "propuestas/pendientes-muse-r6/matriculas/entrega.json"
+   ]
+  },
+  {
+   "tipo": "decision",
+   "id": "https://example.org/mex-ontologi/definition/2334deaa-dd0c-444e-b038-4cc556ad715d%2F11",
+   "entrega": "epidemiologia",
+   "dictamen": "resolucion",
+   "motivo": "Verificado con marker exacto. 'Acumulados' no fija objeto ni periodo de acumulacion; columna fisica pos 11 observada en hoja SUIVE sin documentar su computo. Sin respaldo explicito vinculado a esta definicion; no se aprueba por no",
+   "evidencia": [
+    "propuestas/pendientes-muse-r6/epidemiologia/entrega.json"
+   ]
+  },
+  {
+   "tipo": "decision",
+   "id": "https://example.org/mex-ontologi/definition/2334deaa-dd0c-444e-b038-4cc556ad715d%2F13",
+   "entrega": "epidemiologia",
+   "dictamen": "resolucion",
+   "motivo": "Verificado con marker exacto. Fila contradictoria: nombre de01_a_04 (1 a 4) frente a descripcion literal 'Total de personas en vigilancia entre 1 y 5 anos', que ademas solapa la edad 5 con de05_a_09 ('entre 5 y 9'). Las reglas her",
+   "evidencia": [
+    "propuestas/pendientes-muse-r6/epidemiologia/entrega.json"
+   ]
+  },
+  {
+   "tipo": "decision",
+   "id": "https://example.org/mex-ontologi/definition/2334deaa-dd0c-444e-b038-4cc556ad715d%2F23",
+   "entrega": "epidemiologia",
+   "dictamen": "resolucion",
+   "motivo": "Verificado con marker exacto. Descripcion 'Pendiente de especificar': sin respaldo explicito vinculado a esta definicion; no se interpreta el nombre. Columna fisica pos 23 observada. Sin respaldo explicito vinculado a esta definic",
+   "evidencia": [
+    "propuestas/pendientes-muse-r6/epidemiologia/entrega.json"
+   ]
+  },
+  {
+   "tipo": "decision",
+   "id": "https://example.org/mex-ontologi/definition/2334deaa-dd0c-444e-b038-4cc556ad715d%2F24",
+   "entrega": "epidemiologia",
+   "dictamen": "resolucion",
+   "motivo": "Verificado con marker exacto. Descripcion 'Pendiente de especificar': sin respaldo explicito vinculado a esta definicion; no se interpreta el sufijo f por simetria con la serie sin sufijo ni por proximidad a totalf ('Total acumula",
+   "evidencia": [
+    "propuestas/pendientes-muse-r6/epidemiologia/entrega.json"
+   ]
+  },
+  {
+   "tipo": "decision",
+   "id": "https://example.org/mex-ontologi/definition/2334deaa-dd0c-444e-b038-4cc556ad715d%2F25",
+   "entrega": "epidemiologia",
+   "dictamen": "resolucion",
+   "motivo": "Verificado con marker exacto. Descripcion 'Pendiente de especificar': sin respaldo explicito vinculado a esta definicion; no se interpreta el sufijo f por simetria con la serie sin sufijo ni por proximidad a totalf ('Total acumula",
+   "evidencia": [
+    "propuestas/pendientes-muse-r6/epidemiologia/entrega.json"
+   ]
+  },
+  {
+   "tipo": "decision",
+   "id": "https://example.org/mex-ontologi/definition/2334deaa-dd0c-444e-b038-4cc556ad715d%2F26",
+   "entrega": "epidemiologia",
+   "dictamen": "resolucion",
+   "motivo": "Verificado con marker exacto. Descripcion 'Pendiente de especificar': sin respaldo explicito vinculado a esta definicion; no se interpreta el sufijo f por simetria con la serie sin sufijo ni por proximidad a totalf ('Total acumula",
+   "evidencia": [
+    "propuestas/pendientes-muse-r6/epidemiologia/entrega.json"
+   ]
+  },
+  {
+   "tipo": "decision",
+   "id": "https://example.org/mex-ontologi/definition/2334deaa-dd0c-444e-b038-4cc556ad715d%2F27",
+   "entrega": "epidemiologia",
+   "dictamen": "resolucion",
+   "motivo": "Verificado con marker exacto. Descripcion 'Pendiente de especificar': sin respaldo explicito vinculado a esta definicion; no se interpreta el sufijo f por simetria con la serie sin sufijo ni por proximidad a totalf ('Total acumula",
+   "evidencia": [
+    "propuestas/pendientes-muse-r6/epidemiologia/entrega.json"
+   ]
+  },
+  {
+   "tipo": "decision",
+   "id": "https://example.org/mex-ontologi/definition/2334deaa-dd0c-444e-b038-4cc556ad715d%2F28",
+   "entrega": "epidemiologia",
+   "dictamen": "resolucion",
+   "motivo": "Verificado con marker exacto. Descripcion 'Pendiente de especificar': sin respaldo explicito vinculado a esta definicion; no se interpreta el sufijo f por simetria con la serie sin sufijo ni por proximidad a totalf ('Total acumula",
+   "evidencia": [
+    "propuestas/pendientes-muse-r6/epidemiologia/entrega.json"
+   ]
+  },
+  {
+   "tipo": "decision",
+   "id": "https://example.org/mex-ontologi/definition/2334deaa-dd0c-444e-b038-4cc556ad715d%2F29",
+   "entrega": "epidemiologia",
+   "dictamen": "resolucion",
+   "motivo": "Verificado con marker exacto. Descripcion 'Pendiente de especificar': sin respaldo explicito vinculado a esta definicion; no se interpreta el sufijo f por simetria con la serie sin sufijo ni por proximidad a totalf ('Total acumula",
+   "evidencia": [
+    "propuestas/pendientes-muse-r6/epidemiologia/entrega.json"
+   ]
+  },
+  {
+   "tipo": "decision",
+   "id": "https://example.org/mex-ontologi/definition/2334deaa-dd0c-444e-b038-4cc556ad715d%2F30",
+   "entrega": "epidemiologia",
+   "dictamen": "resolucion",
+   "motivo": "Verificado con marker exacto. Descripcion 'Pendiente de especificar': sin respaldo explicito vinculado a esta definicion; no se interpreta el sufijo f por simetria con la serie sin sufijo ni por proximidad a totalf ('Total acumula",
+   "evidencia": [
+    "propuestas/pendientes-muse-r6/epidemiologia/entrega.json"
+   ]
+  },
+  {
+   "tipo": "decision",
+   "id": "https://example.org/mex-ontologi/definition/2334deaa-dd0c-444e-b038-4cc556ad715d%2F31",
+   "entrega": "epidemiologia",
+   "dictamen": "resolucion",
+   "motivo": "Verificado con marker exacto. Descripcion 'Pendiente de especificar': sin respaldo explicito vinculado a esta definicion; no se interpreta el sufijo f por simetria con la serie sin sufijo ni por proximidad a totalf ('Total acumula",
+   "evidencia": [
+    "propuestas/pendientes-muse-r6/epidemiologia/entrega.json"
+   ]
+  },
+  {
+   "tipo": "decision",
+   "id": "https://example.org/mex-ontologi/definition/2334deaa-dd0c-444e-b038-4cc556ad715d%2F32",
+   "entrega": "epidemiologia",
+   "dictamen": "resolucion",
+   "motivo": "Verificado con marker exacto. Descripcion 'Pendiente de especificar': sin respaldo explicito vinculado a esta definicion; no se interpreta el sufijo f por simetria con la serie sin sufijo ni por proximidad a totalf ('Total acumula",
+   "evidencia": [
+    "propuestas/pendientes-muse-r6/epidemiologia/entrega.json"
+   ]
+  },
+  {
+   "tipo": "decision",
+   "id": "https://example.org/mex-ontologi/definition/2334deaa-dd0c-444e-b038-4cc556ad715d%2F33",
+   "entrega": "epidemiologia",
+   "dictamen": "resolucion",
+   "motivo": "Verificado con marker exacto. Descripcion 'Pendiente de especificar': sin respaldo explicito vinculado a esta definicion; no se interpreta el sufijo f por simetria con la serie sin sufijo ni por proximidad a totalf ('Total acumula",
+   "evidencia": [
+    "propuestas/pendientes-muse-r6/epidemiologia/entrega.json"
+   ]
+  },
+  {
+   "tipo": "decision",
+   "id": "https://example.org/mex-ontologi/definition/2334deaa-dd0c-444e-b038-4cc556ad715d%2F34",
+   "entrega": "epidemiologia",
+   "dictamen": "resolucion",
+   "motivo": "Verificado con marker exacto. Descripcion 'Pendiente de especificar': sin respaldo explicito vinculado a esta definicion; no se interpreta el sufijo f por simetria con la serie sin sufijo ni por proximidad a totalf ('Total acumula",
+   "evidencia": [
+    "propuestas/pendientes-muse-r6/epidemiologia/entrega.json"
+   ]
+  },
+  {
+   "tipo": "decision",
+   "id": "https://example.org/mex-ontologi/definition/2334deaa-dd0c-444e-b038-4cc556ad715d%2F35",
+   "entrega": "epidemiologia",
+   "dictamen": "resolucion",
+   "motivo": "Verificado con marker exacto. Descripcion 'Pendiente de especificar': sin respaldo explicito vinculado a esta definicion; no se interpreta el sufijo f por simetria con la serie sin sufijo ni por proximidad a totalf ('Total acumula",
+   "evidencia": [
+    "propuestas/pendientes-muse-r6/epidemiologia/entrega.json"
+   ]
+  },
+  {
+   "tipo": "decision",
+   "id": "https://example.org/mex-ontologi/definition/2334deaa-dd0c-444e-b038-4cc556ad715d%2F36",
+   "entrega": "epidemiologia",
+   "dictamen": "resolucion",
+   "motivo": "Verificado con marker exacto. Descripcion 'Pendiente de especificar': sin respaldo explicito vinculado a esta definicion; no se interpretan las siglas (ssa) como institucion ni como objeto contado. Columna fisica pos 36 observada,",
+   "evidencia": [
+    "propuestas/pendientes-muse-r6/epidemiologia/entrega.json"
+   ]
+  },
+  {
+   "tipo": "decision",
+   "id": "https://example.org/mex-ontologi/definition/2334deaa-dd0c-444e-b038-4cc556ad715d%2F37",
+   "entrega": "epidemiologia",
+   "dictamen": "resolucion",
+   "motivo": "Verificado con marker exacto. Descripcion 'Pendiente de especificar': sin respaldo explicito vinculado a esta definicion; no se interpretan las siglas (imss_ord) como institucion ni como objeto contado. Columna fisica pos 37 obser",
+   "evidencia": [
+    "propuestas/pendientes-muse-r6/epidemiologia/entrega.json"
+   ]
+  },
+  {
+   "tipo": "decision",
+   "id": "https://example.org/mex-ontologi/definition/2334deaa-dd0c-444e-b038-4cc556ad715d%2F38",
+   "entrega": "epidemiologia",
+   "dictamen": "resolucion",
+   "motivo": "Verificado con marker exacto. Descripcion 'Pendiente de especificar': sin respaldo explicito vinculado a esta definicion; no se interpretan las siglas (issste) como institucion ni como objeto contado. Columna fisica pos 38 observa",
+   "evidencia": [
+    "propuestas/pendientes-muse-r6/epidemiologia/entrega.json"
+   ]
+  },
+  {
+   "tipo": "decision",
+   "id": "https://example.org/mex-ontologi/definition/2334deaa-dd0c-444e-b038-4cc556ad715d%2F39",
+   "entrega": "epidemiologia",
+   "dictamen": "resolucion",
+   "motivo": "Verificado con marker exacto. Descripcion 'Pendiente de especificar': sin respaldo explicito vinculado a esta definicion; no se interpretan las siglas (otras) como institucion ni como objeto contado. Columna fisica pos 39 observad",
+   "evidencia": [
+    "propuestas/pendientes-muse-r6/epidemiologia/entrega.json"
+   ]
+  },
+  {
+   "tipo": "decision",
+   "id": "https://example.org/mex-ontologi/definition/2334deaa-dd0c-444e-b038-4cc556ad715d%2F40",
+   "entrega": "epidemiologia",
+   "dictamen": "resolucion",
+   "motivo": "Verificado con marker exacto. Descripcion 'Pendiente de especificar': sin respaldo explicito vinculado a esta definicion; no se interpretan las siglas (imss_sol) como institucion ni como objeto contado. Columna fisica pos 40 obser",
+   "evidencia": [
+    "propuestas/pendientes-muse-r6/epidemiologia/entrega.json"
+   ]
+  },
+  {
+   "tipo": "decision",
+   "id": "https://example.org/mex-ontologi/definition/2334deaa-dd0c-444e-b038-4cc556ad715d%2F41",
+   "entrega": "epidemiologia",
+   "dictamen": "resolucion",
+   "motivo": "Verificado con marker exacto. Descripcion 'Pendiente de especificar': sin respaldo explicito vinculado a esta definicion; no se interpretan las siglas (d_if) como institucion ni como objeto contado. Columna fisica pos 41 observada",
+   "evidencia": [
+    "propuestas/pendientes-muse-r6/epidemiologia/entrega.json"
+   ]
+  },
+  {
+   "tipo": "decision",
+   "id": "https://example.org/mex-ontologi/definition/2334deaa-dd0c-444e-b038-4cc556ad715d%2F42",
+   "entrega": "epidemiologia",
+   "dictamen": "resolucion",
+   "motivo": "Verificado con marker exacto. Descripcion 'Pendiente de especificar': sin respaldo explicito vinculado a esta definicion; no se interpretan las siglas (pemex) como institucion ni como objeto contado. Columna fisica pos 42 observad",
+   "evidencia": [
+    "propuestas/pendientes-muse-r6/epidemiologia/entrega.json"
+   ]
+  },
+  {
+   "tipo": "decision",
+   "id": "https://example.org/mex-ontologi/definition/2334deaa-dd0c-444e-b038-4cc556ad715d%2F43",
+   "entrega": "epidemiologia",
+   "dictamen": "resolucion",
+   "motivo": "Verificado con marker exacto. Descripcion 'Pendiente de especificar': sin respaldo explicito vinculado a esta definicion; no se interpretan las siglas (sedena) como institucion ni como objeto contado. Columna fisica pos 43 observa",
+   "evidencia": [
+    "propuestas/pendientes-muse-r6/epidemiologia/entrega.json"
+   ]
+  },
+  {
+   "tipo": "decision",
+   "id": "https://example.org/mex-ontologi/definition/2334deaa-dd0c-444e-b038-4cc556ad715d%2F44",
+   "entrega": "epidemiologia",
+   "dictamen": "resolucion",
+   "motivo": "Verificado con marker exacto. Descripcion 'Pendiente de especificar': sin respaldo explicito vinculado a esta definicion; no se interpretan las siglas (sedemar) como institucion ni como objeto contado. Columna fisica pos 44 observ",
+   "evidencia": [
+    "propuestas/pendientes-muse-r6/epidemiologia/entrega.json"
+   ]
+  },
+  {
+   "tipo": "decision",
+   "id": "https://example.org/mex-ontologi/definition/2334deaa-dd0c-444e-b038-4cc556ad715d%2F9",
+   "entrega": "epidemiologia",
+   "dictamen": "resolucion",
+   "motivo": "Verificado con marker exacto. Descripcion generica 'Clave' sin objeto fijado; el ejemplo sugiere CIE pero inferirlo seria interpretar nombre y ejemplo, no respaldo explicito. Catalogo declarado vacio en las 59 filas. Regla r3a6-00",
+   "evidencia": [
+    "propuestas/pendientes-muse-r6/epidemiologia/entrega.json"
+   ]
+  },
+  {
+   "tipo": "decision",
+   "id": "https://example.org/mex-ontologi/definition/12f684e9-f4d5-4714-933d-aa153a812174%2F17",
+   "entrega": "salud",
+   "dictamen": "resolucion",
+   "motivo": "Verificado con marker exacto. pendiente: descripcion 'Pendiente de especificar', catalogo_declarado='' y sin literal especifico; dictamen previo R4 lote-6 (pendiente) revisado y confirmado con datastore live 2026-10-23. Ejemplo ai",
+   "evidencia": [
+    "propuestas/pendientes-muse-r6/salud/entrega.json"
+   ]
+  },
+  {
+   "tipo": "decision",
+   "id": "https://example.org/mex-ontologi/definition/12f684e9-f4d5-4714-933d-aa153a812174%2F30",
+   "entrega": "salud",
+   "dictamen": "resolucion",
+   "motivo": "Verificado con marker exacto. pendiente: descripcion 'Pendiente de especificar', catalogo_declarado='' y sin literal especifico; dictamen previo R4 lote-6 (pendiente) revisado y confirmado con datastore live 2026-10-23. Ejemplo ai",
+   "evidencia": [
+    "propuestas/pendientes-muse-r6/salud/entrega.json"
+   ]
+  },
+  {
+   "tipo": "decision",
+   "id": "https://example.org/mex-ontologi/definition/12f684e9-f4d5-4714-933d-aa153a812174%2F31",
+   "entrega": "salud",
+   "dictamen": "resolucion",
+   "motivo": "Verificado con marker exacto. pendiente: descripcion 'Pendiente de especificar', catalogo_declarado='' y sin literal especifico; dictamen previo R4 lote-6 (pendiente) revisado y confirmado con datastore live 2026-10-23. Ejemplo ai",
+   "evidencia": [
+    "propuestas/pendientes-muse-r6/salud/entrega.json"
+   ]
+  },
+  {
+   "tipo": "decision",
+   "id": "https://example.org/mex-ontologi/definition/12f684e9-f4d5-4714-933d-aa153a812174%2F32",
+   "entrega": "salud",
+   "dictamen": "resolucion",
+   "motivo": "Verificado con marker exacto. pendiente: descripcion 'Pendiente de especificar', catalogo_declarado='' y sin literal especifico; dictamen previo R4 lote-6 (pendiente) revisado y confirmado con datastore live 2026-10-23. Ejemplo ai",
+   "evidencia": [
+    "propuestas/pendientes-muse-r6/salud/entrega.json"
+   ]
+  },
+  {
+   "tipo": "decision",
+   "id": "https://example.org/mex-ontologi/definition/12f684e9-f4d5-4714-933d-aa153a812174%2F33",
+   "entrega": "salud",
+   "dictamen": "resolucion",
+   "motivo": "Verificado con marker exacto. pendiente: descripcion 'Pendiente de especificar', catalogo_declarado='' y sin literal especifico; dictamen previo R4 lote-6 (pendiente) revisado y confirmado con datastore live 2026-10-23. Ejemplo ai",
+   "evidencia": [
+    "propuestas/pendientes-muse-r6/salud/entrega.json"
+   ]
+  },
+  {
+   "tipo": "decision",
+   "id": "https://example.org/mex-ontologi/definition/12f684e9-f4d5-4714-933d-aa153a812174%2F34",
+   "entrega": "salud",
+   "dictamen": "resolucion",
+   "motivo": "Verificado con marker exacto. pendiente: descripcion 'Pendiente de especificar', catalogo_declarado='' y sin literal especifico; dictamen previo R4 lote-6 (pendiente) revisado y confirmado con datastore live 2026-10-23. Ejemplo ai",
+   "evidencia": [
+    "propuestas/pendientes-muse-r6/salud/entrega.json"
+   ]
+  },
+  {
+   "tipo": "decision",
+   "id": "https://example.org/mex-ontologi/definition/12f684e9-f4d5-4714-933d-aa153a812174%2F35",
+   "entrega": "salud",
+   "dictamen": "resolucion",
+   "motivo": "Verificado con marker exacto. pendiente: descripcion 'Pendiente de especificar', catalogo_declarado='' y sin literal especifico; dictamen previo R4 lote-6 (pendiente) revisado y confirmado con datastore live 2026-10-23. Ejemplo ai",
+   "evidencia": [
+    "propuestas/pendientes-muse-r6/salud/entrega.json"
+   ]
+  },
+  {
+   "tipo": "decision",
+   "id": "https://example.org/mex-ontologi/definition/12f684e9-f4d5-4714-933d-aa153a812174%2F36",
+   "entrega": "salud",
+   "dictamen": "resolucion",
+   "motivo": "Verificado con marker exacto. pendiente: descripcion 'Pendiente de especificar', catalogo_declarado='' y sin literal especifico; dictamen previo R4 lote-6 (pendiente) revisado y confirmado con datastore live 2026-10-23. Ejemplo ai",
+   "evidencia": [
+    "propuestas/pendientes-muse-r6/salud/entrega.json"
+   ]
+  },
+  {
+   "tipo": "decision",
+   "id": "https://example.org/mex-ontologi/definition/12f684e9-f4d5-4714-933d-aa153a812174%2F37",
+   "entrega": "salud",
+   "dictamen": "resolucion",
+   "motivo": "Verificado con marker exacto. pendiente: descripcion 'Pendiente de especificar', catalogo_declarado='' y sin literal especifico; dictamen previo R4 lote-6 (pendiente) revisado y confirmado con datastore live 2026-10-23. Ejemplo ai",
+   "evidencia": [
+    "propuestas/pendientes-muse-r6/salud/entrega.json"
+   ]
+  },
+  {
+   "tipo": "decision",
+   "id": "https://example.org/mex-ontologi/definition/12f684e9-f4d5-4714-933d-aa153a812174%2F38",
+   "entrega": "salud",
+   "dictamen": "resolucion",
+   "motivo": "Verificado con marker exacto. pendiente: descripcion 'Pendiente de especificar' sin vinculo local; no se promueve por nombre. Dictamen previo R4 (pendiente + pista_nombre_o_clasificador_sin_promocion) revisado y confirmado; fuente",
+   "evidencia": [
+    "propuestas/pendientes-muse-r6/salud/entrega.json"
+   ]
+  },
+  {
+   "tipo": "decision",
+   "id": "https://example.org/mex-ontologi/definition/12f684e9-f4d5-4714-933d-aa153a812174%2F53",
+   "entrega": "salud",
+   "dictamen": "resolucion",
+   "motivo": "Verificado con marker exacto. pendiente: descripcion 'Pendiente de especificar', catalogo_declarado='' y sin literal especifico; dictamen previo R4 lote-6 (pendiente) revisado y confirmado con datastore live 2026-10-23. Ejemplo ai",
+   "evidencia": [
+    "propuestas/pendientes-muse-r6/salud/entrega.json"
+   ]
+  },
+  {
+   "tipo": "decision",
+   "id": "https://example.org/mex-ontologi/definition/12f684e9-f4d5-4714-933d-aa153a812174%2F54",
+   "entrega": "salud",
+   "dictamen": "resolucion",
+   "motivo": "Verificado con marker exacto. pendiente: descripcion 'Pendiente de especificar', catalogo_declarado='' y sin literal especifico; dictamen previo R4 lote-6 (pendiente) revisado y confirmado con datastore live 2026-10-23. Ejemplo ai",
+   "evidencia": [
+    "propuestas/pendientes-muse-r6/salud/entrega.json"
+   ]
+  },
+  {
+   "tipo": "decision",
+   "id": "https://example.org/mex-ontologi/definition/12f684e9-f4d5-4714-933d-aa153a812174%2F55",
+   "entrega": "salud",
+   "dictamen": "resolucion",
+   "motivo": "Verificado con marker exacto. pendiente: descripcion 'Pendiente de especificar', catalogo_declarado='' y sin literal especifico; dictamen previo R4 lote-6 (pendiente) revisado y confirmado con datastore live 2026-10-23. Ejemplo ai",
+   "evidencia": [
+    "propuestas/pendientes-muse-r6/salud/entrega.json"
+   ]
+  },
+  {
+   "tipo": "decision",
+   "id": "https://example.org/mex-ontologi/definition/12f684e9-f4d5-4714-933d-aa153a812174%2F56",
+   "entrega": "salud",
+   "dictamen": "resolucion",
+   "motivo": "Verificado con marker exacto. pendiente: descripcion 'Pendiente de especificar', catalogo_declarado='' y sin literal especifico; dictamen previo R4 lote-6 (pendiente) revisado y confirmado con datastore live 2026-10-23. Ejemplo ai",
+   "evidencia": [
+    "propuestas/pendientes-muse-r6/salud/entrega.json"
+   ]
+  },
+  {
+   "tipo": "decision",
+   "id": "https://example.org/mex-ontologi/definition/12f684e9-f4d5-4714-933d-aa153a812174%2F57",
+   "entrega": "salud",
+   "dictamen": "resolucion",
+   "motivo": "Verificado con marker exacto. pendiente: descripcion 'Pendiente de especificar', catalogo_declarado='' y sin literal especifico; dictamen previo R4 lote-6 (pendiente) revisado y confirmado con datastore live 2026-10-23. Ejemplo ai",
+   "evidencia": [
+    "propuestas/pendientes-muse-r6/salud/entrega.json"
+   ]
+  },
+  {
+   "tipo": "decision",
+   "id": "https://example.org/mex-ontologi/definition/12f684e9-f4d5-4714-933d-aa153a812174%2F58",
+   "entrega": "salud",
+   "dictamen": "resolucion",
+   "motivo": "Verificado con marker exacto. pendiente: descripcion 'Pendiente de especificar', catalogo_declarado='' y sin literal especifico; dictamen previo R4 lote-6 (pendiente) revisado y confirmado con datastore live 2026-10-23. Ejemplo ai",
+   "evidencia": [
+    "propuestas/pendientes-muse-r6/salud/entrega.json"
+   ]
+  },
+  {
+   "tipo": "decision",
+   "id": "https://example.org/mex-ontologi/definition/12f684e9-f4d5-4714-933d-aa153a812174%2F63",
+   "entrega": "salud",
+   "dictamen": "resolucion",
+   "motivo": "Verificado con marker exacto. pendiente: descripcion 'Pendiente de especificar', catalogo_declarado='' y sin literal especifico; dictamen previo R4 lote-6 (pendiente) revisado y confirmado con datastore live 2026-10-23. Ejemplo ai",
+   "evidencia": [
+    "propuestas/pendientes-muse-r6/salud/entrega.json"
+   ]
+  },
+  {
+   "tipo": "decision",
+   "id": "https://example.org/mex-ontologi/definition/12f684e9-f4d5-4714-933d-aa153a812174%2F64",
+   "entrega": "salud",
+   "dictamen": "resolucion",
+   "motivo": "Verificado con marker exacto. pendiente: descripcion 'Pendiente de especificar', catalogo_declarado='' y sin literal especifico; dictamen previo R4 lote-6 (pendiente) revisado y confirmado con datastore live 2026-10-23. Ejemplo ai",
+   "evidencia": [
+    "propuestas/pendientes-muse-r6/salud/entrega.json"
+   ]
+  },
+  {
+   "tipo": "decision",
+   "id": "https://example.org/mex-ontologi/definition/12f684e9-f4d5-4714-933d-aa153a812174%2F67",
+   "entrega": "salud",
+   "dictamen": "resolucion",
+   "motivo": "Verificado con marker exacto. pendiente: descripcion 'Pendiente de especificar', catalogo_declarado='' y sin literal especifico; dictamen previo R4 lote-6 (pendiente) revisado y confirmado con datastore live 2026-10-23. Ejemplo ai",
+   "evidencia": [
+    "propuestas/pendientes-muse-r6/salud/entrega.json"
+   ]
+  },
+  {
+   "tipo": "decision",
+   "id": "https://example.org/mex-ontologi/definition/12f684e9-f4d5-4714-933d-aa153a812174%2F68",
+   "entrega": "salud",
+   "dictamen": "resolucion",
+   "motivo": "Verificado con marker exacto. pendiente: descripcion 'Pendiente de especificar', catalogo_declarado='' y sin literal especifico; dictamen previo R4 lote-6 (pendiente) revisado y confirmado con datastore live 2026-10-23. Ejemplo ai",
+   "evidencia": [
+    "propuestas/pendientes-muse-r6/salud/entrega.json"
+   ]
+  },
+  {
+   "tipo": "decision",
+   "id": "https://example.org/mex-ontologi/definition/12f684e9-f4d5-4714-933d-aa153a812174%2F69",
+   "entrega": "salud",
+   "dictamen": "resolucion",
+   "motivo": "Verificado con marker exacto. pendiente: descripcion 'Pendiente de especificar', catalogo_declarado='' y sin literal especifico; dictamen previo R4 lote-6 (pendiente) revisado y confirmado con datastore live 2026-10-23. Ejemplo ai",
+   "evidencia": [
+    "propuestas/pendientes-muse-r6/salud/entrega.json"
+   ]
+  },
+  {
+   "tipo": "decision",
+   "id": "https://example.org/mex-ontologi/definition/12f684e9-f4d5-4714-933d-aa153a812174%2F70",
+   "entrega": "salud",
+   "dictamen": "resolucion",
+   "motivo": "Verificado con marker exacto. pendiente: descripcion 'Pendiente de especificar', catalogo_declarado='' y sin literal especifico; dictamen previo R4 lote-6 (pendiente) revisado y confirmado con datastore live 2026-10-23. Ejemplo ai",
+   "evidencia": [
+    "propuestas/pendientes-muse-r6/salud/entrega.json"
+   ]
+  },
+  {
+   "tipo": "decision",
+   "id": "https://example.org/mex-ontologi/definition/12f684e9-f4d5-4714-933d-aa153a812174%2F71",
+   "entrega": "salud",
+   "dictamen": "resolucion",
+   "motivo": "Verificado con marker exacto. pendiente: descripcion 'Pendiente de especificar', catalogo_declarado='' y sin literal especifico; dictamen previo R4 lote-6 (pendiente) revisado y confirmado con datastore live 2026-10-23. Ejemplo ai",
+   "evidencia": [
+    "propuestas/pendientes-muse-r6/salud/entrega.json"
+   ]
+  },
+  {
+   "tipo": "decision",
+   "id": "https://example.org/mex-ontologi/definition/12f684e9-f4d5-4714-933d-aa153a812174%2F72",
+   "entrega": "salud",
+   "dictamen": "resolucion",
+   "motivo": "Verificado con marker exacto. pendiente: descripcion 'Pendiente de especificar' sin vinculo local; no se promueve por nombre. Dictamen previo R4 (pendiente + pista_nombre_o_clasificador_sin_promocion) revisado y confirmado; fuente",
+   "evidencia": [
+    "propuestas/pendientes-muse-r6/salud/entrega.json"
+   ]
+  },
+  {
+   "tipo": "decision",
+   "id": "https://example.org/mex-ontologi/definition/12f684e9-f4d5-4714-933d-aa153a812174%2F73",
+   "entrega": "salud",
+   "dictamen": "resolucion",
+   "motivo": "Verificado con marker exacto. pendiente: descripcion 'Pendiente de especificar' sin vinculo local; no se promueve por nombre. Dictamen previo R4 (pendiente + pista_nombre_o_clasificador_sin_promocion) revisado y confirmado; fuente",
+   "evidencia": [
+    "propuestas/pendientes-muse-r6/salud/entrega.json"
+   ]
+  },
+  {
+   "tipo": "decision",
+   "id": "https://example.org/mex-ontologi/definition/12f684e9-f4d5-4714-933d-aa153a812174%2F74",
+   "entrega": "salud",
+   "dictamen": "resolucion",
+   "motivo": "Verificado con marker exacto. pendiente: descripcion 'Pendiente de especificar' sin vinculo local; no se promueve por nombre. Dictamen previo R4 (pendiente + pista_nombre_o_clasificador_sin_promocion) revisado y confirmado; fuente",
+   "evidencia": [
+    "propuestas/pendientes-muse-r6/salud/entrega.json"
+   ]
+  },
+  {
+   "tipo": "decision",
+   "id": "https://example.org/mex-ontologi/definition/12f684e9-f4d5-4714-933d-aa153a812174%2F75",
+   "entrega": "salud",
+   "dictamen": "resolucion",
+   "motivo": "Verificado con marker exacto. pendiente: descripcion 'Pendiente de especificar' sin vinculo local; no se promueve por nombre. Dictamen previo R4 (pendiente + pista_nombre_o_clasificador_sin_promocion) revisado y confirmado; fuente",
+   "evidencia": [
+    "propuestas/pendientes-muse-r6/salud/entrega.json"
+   ]
+  },
+  {
+   "tipo": "decision",
+   "id": "https://example.org/mex-ontologi/definition/12f684e9-f4d5-4714-933d-aa153a812174%2F76",
+   "entrega": "salud",
+   "dictamen": "resolucion",
+   "motivo": "Verificado con marker exacto. pendiente: descripcion 'Pendiente de especificar', catalogo_declarado='' y sin literal especifico; dictamen previo R4 lote-6 (pendiente) revisado y confirmado con datastore live 2026-10-23. Ejemplo ai",
+   "evidencia": [
+    "propuestas/pendientes-muse-r6/salud/entrega.json"
+   ]
+  },
+  {
+   "tipo": "decision",
+   "id": "https://example.org/mex-ontologi/definition/12f684e9-f4d5-4714-933d-aa153a812174%2F77",
+   "entrega": "salud",
+   "dictamen": "resolucion",
+   "motivo": "Verificado con marker exacto. pendiente: descripcion 'Pendiente de especificar', catalogo_declarado='' y sin literal especifico; dictamen previo R4 lote-6 (pendiente) revisado y confirmado con datastore live 2026-10-23. Ejemplo ai",
+   "evidencia": [
+    "propuestas/pendientes-muse-r6/salud/entrega.json"
+   ]
+  },
+  {
+   "tipo": "decision",
+   "id": "https://example.org/mex-ontologi/definition/12f684e9-f4d5-4714-933d-aa153a812174%2F78",
+   "entrega": "salud",
+   "dictamen": "resolucion",
+   "motivo": "Verificado con marker exacto. pendiente: descripcion 'Pendiente de especificar', catalogo_declarado='' y sin literal especifico; dictamen previo R4 lote-6 (pendiente) revisado y confirmado con datastore live 2026-10-23. Ejemplo ai",
+   "evidencia": [
+    "propuestas/pendientes-muse-r6/salud/entrega.json"
+   ]
+  },
+  {
+   "tipo": "decision",
+   "id": "https://example.org/mex-ontologi/definition/12f684e9-f4d5-4714-933d-aa153a812174%2F79",
+   "entrega": "salud",
+   "dictamen": "resolucion",
+   "motivo": "Verificado con marker exacto. pendiente: descripcion 'Pendiente de especificar', catalogo_declarado='' y sin literal especifico; dictamen previo R4 lote-6 (pendiente) revisado y confirmado con datastore live 2026-10-23. Ejemplo ai",
+   "evidencia": [
+    "propuestas/pendientes-muse-r6/salud/entrega.json"
+   ]
+  },
+  {
+   "tipo": "decision",
+   "id": "https://example.org/mex-ontologi/definition/12f684e9-f4d5-4714-933d-aa153a812174%2F80",
+   "entrega": "salud",
+   "dictamen": "resolucion",
+   "motivo": "Verificado con marker exacto. pendiente: descripcion 'Pendiente de especificar', catalogo_declarado='' y sin literal especifico; dictamen previo R4 lote-6 (pendiente) revisado y confirmado con datastore live 2026-10-23. Ejemplo ai",
+   "evidencia": [
+    "propuestas/pendientes-muse-r6/salud/entrega.json"
+   ]
+  },
+  {
+   "tipo": "decision",
+   "id": "https://example.org/mex-ontologi/definition/22202305-2d02-4c49-b216-cc98224357f0%2F100",
+   "entrega": "salud",
+   "dictamen": "resolucion",
+   "motivo": "Verificado con marker exacto. pendiente: descripcion 'Pendiente de especificar' en la fila del diccionario (huella 0488d75a073d... verificada); tipo y ejemplo no definen el significado; no se aprueba por nombre ni por ejemplo. Rev",
+   "evidencia": [
+    "propuestas/pendientes-muse-r6/salud/entrega.json"
+   ]
+  },
+  {
+   "tipo": "decision",
+   "id": "https://example.org/mex-ontologi/definition/22202305-2d02-4c49-b216-cc98224357f0%2F101",
+   "entrega": "salud",
+   "dictamen": "resolucion",
+   "motivo": "Verificado con marker exacto. pendiente: descripcion 'Pendiente de especificar' en la fila del diccionario (huella 8c3167a1e501... verificada); tipo y ejemplo no definen el significado; no se aprueba por nombre ni por ejemplo. Rev",
+   "evidencia": [
+    "propuestas/pendientes-muse-r6/salud/entrega.json"
+   ]
+  },
+  {
+   "tipo": "decision",
+   "id": "https://example.org/mex-ontologi/definition/22202305-2d02-4c49-b216-cc98224357f0%2F102",
+   "entrega": "salud",
+   "dictamen": "resolucion",
+   "motivo": "Verificado con marker exacto. pendiente: descripcion 'Pendiente de especificar' en la fila del diccionario (huella 21c7fce4e834... verificada); tipo y ejemplo no definen el significado; no se aprueba por nombre ni por ejemplo. Rev",
+   "evidencia": [
+    "propuestas/pendientes-muse-r6/salud/entrega.json"
+   ]
+  },
+  {
+   "tipo": "decision",
+   "id": "https://example.org/mex-ontologi/definition/22202305-2d02-4c49-b216-cc98224357f0%2F103",
+   "entrega": "salud",
+   "dictamen": "resolucion",
+   "motivo": "Verificado con marker exacto. pendiente: descripcion 'Pendiente de especificar' en la fila del diccionario (huella 305e3ccb0161... verificada); tipo y ejemplo no definen el significado; no se aprueba por nombre ni por ejemplo. Rev",
+   "evidencia": [
+    "propuestas/pendientes-muse-r6/salud/entrega.json"
+   ]
+  },
+  {
+   "tipo": "decision",
+   "id": "https://example.org/mex-ontologi/definition/22202305-2d02-4c49-b216-cc98224357f0%2F104",
+   "entrega": "salud",
+   "dictamen": "resolucion",
+   "motivo": "Verificado con marker exacto. pendiente: descripcion 'Pendiente de especificar' en la fila del diccionario (huella bda091e28231... verificada); tipo y ejemplo no definen el significado; no se aprueba por nombre ni por ejemplo. Rev",
+   "evidencia": [
+    "propuestas/pendientes-muse-r6/salud/entrega.json"
+   ]
+  },
+  {
+   "tipo": "decision",
+   "id": "https://example.org/mex-ontologi/definition/22202305-2d02-4c49-b216-cc98224357f0%2F105",
+   "entrega": "salud",
+   "dictamen": "resolucion",
+   "motivo": "Verificado con marker exacto. pendiente: descripcion 'Pendiente de especificar' en la fila del diccionario (huella c77a7050ed8a... verificada); tipo y ejemplo no definen el significado; no se aprueba por nombre ni por ejemplo. Rev",
+   "evidencia": [
+    "propuestas/pendientes-muse-r6/salud/entrega.json"
+   ]
+  },
+  {
+   "tipo": "decision",
+   "id": "https://example.org/mex-ontologi/definition/22202305-2d02-4c49-b216-cc98224357f0%2F106",
+   "entrega": "salud",
+   "dictamen": "resolucion",
+   "motivo": "Verificado con marker exacto. pendiente: descripcion 'Pendiente de especificar' en la fila del diccionario (huella f8189968786a... verificada); tipo y ejemplo no definen el significado; no se aprueba por nombre ni por ejemplo. Rev",
+   "evidencia": [
+    "propuestas/pendientes-muse-r6/salud/entrega.json"
+   ]
+  },
+  {
+   "tipo": "decision",
+   "id": "https://example.org/mex-ontologi/definition/22202305-2d02-4c49-b216-cc98224357f0%2F31",
+   "entrega": "salud",
+   "dictamen": "resolucion",
+   "motivo": "Verificado con marker exacto. pendiente: descripcion 'Pendiente de especificar' en la fila del diccionario (huella 62c0bf687eac... verificada); tipo y ejemplo no definen el significado; no se aprueba por nombre ni por ejemplo. Rev",
+   "evidencia": [
+    "propuestas/pendientes-muse-r6/salud/entrega.json"
+   ]
+  },
+  {
+   "tipo": "decision",
+   "id": "https://example.org/mex-ontologi/definition/22202305-2d02-4c49-b216-cc98224357f0%2F32",
+   "entrega": "salud",
+   "dictamen": "resolucion",
+   "motivo": "Verificado con marker exacto. pendiente: descripcion 'Pendiente de especificar' en la fila del diccionario (huella e7c4525ef6cf... verificada); tipo y ejemplo no definen el significado; no se aprueba por nombre ni por ejemplo. Rev",
+   "evidencia": [
+    "propuestas/pendientes-muse-r6/salud/entrega.json"
+   ]
+  },
+  {
+   "tipo": "decision",
+   "id": "https://example.org/mex-ontologi/definition/22202305-2d02-4c49-b216-cc98224357f0%2F33",
+   "entrega": "salud",
+   "dictamen": "resolucion",
+   "motivo": "Verificado con marker exacto. pendiente: descripcion 'Pendiente de especificar' en la fila del diccionario (huella 9c1e7a74998c... verificada); tipo y ejemplo no definen el significado; no se aprueba por nombre ni por ejemplo. Rev",
+   "evidencia": [
+    "propuestas/pendientes-muse-r6/salud/entrega.json"
+   ]
+  },
+  {
+   "tipo": "decision",
+   "id": "https://example.org/mex-ontologi/definition/22202305-2d02-4c49-b216-cc98224357f0%2F34",
+   "entrega": "salud",
+   "dictamen": "resolucion",
+   "motivo": "Verificado con marker exacto. pendiente: descripcion 'Pendiente de especificar' en la fila del diccionario (huella d4bd97f89757... verificada); tipo y ejemplo no definen el significado; no se aprueba por nombre ni por ejemplo. Rev",
+   "evidencia": [
+    "propuestas/pendientes-muse-r6/salud/entrega.json"
+   ]
+  },
+  {
+   "tipo": "decision",
+   "id": "https://example.org/mex-ontologi/definition/22202305-2d02-4c49-b216-cc98224357f0%2F35",
+   "entrega": "salud",
+   "dictamen": "resolucion",
+   "motivo": "Verificado con marker exacto. pendiente: descripcion 'Pendiente de especificar' en la fila del diccionario (huella fd83ec861012... verificada); tipo y ejemplo no definen el significado; no se aprueba por nombre ni por ejemplo. Rev",
+   "evidencia": [
+    "propuestas/pendientes-muse-r6/salud/entrega.json"
+   ]
+  },
+  {
+   "tipo": "decision",
+   "id": "https://example.org/mex-ontologi/definition/22202305-2d02-4c49-b216-cc98224357f0%2F37",
+   "entrega": "salud",
+   "dictamen": "resolucion",
+   "motivo": "Verificado con marker exacto. pendiente: descripcion 'Pendiente de especificar' en la fila del diccionario (huella 14ac2d127fc5... verificada); tipo y ejemplo no definen el significado; no se aprueba por nombre ni por ejemplo. Rev",
+   "evidencia": [
+    "propuestas/pendientes-muse-r6/salud/entrega.json"
+   ]
+  },
+  {
+   "tipo": "decision",
+   "id": "https://example.org/mex-ontologi/definition/22202305-2d02-4c49-b216-cc98224357f0%2F38",
+   "entrega": "salud",
+   "dictamen": "resolucion",
+   "motivo": "Verificado con marker exacto. pendiente: descripcion 'Pendiente de especificar' en la fila del diccionario (huella 15bbcb6b1edc... verificada); tipo y ejemplo no definen el significado; no se aprueba por nombre ni por ejemplo. Rev",
+   "evidencia": [
+    "propuestas/pendientes-muse-r6/salud/entrega.json"
+   ]
+  },
+  {
+   "tipo": "decision",
+   "id": "https://example.org/mex-ontologi/definition/22202305-2d02-4c49-b216-cc98224357f0%2F39",
+   "entrega": "salud",
+   "dictamen": "resolucion",
+   "motivo": "Verificado con marker exacto. pendiente: descripcion 'Pendiente de especificar' en la fila del diccionario (huella 093044228380... verificada); tipo y ejemplo no definen el significado; no se aprueba por nombre ni por ejemplo. Rev",
+   "evidencia": [
+    "propuestas/pendientes-muse-r6/salud/entrega.json"
+   ]
+  },
+  {
+   "tipo": "decision",
+   "id": "https://example.org/mex-ontologi/definition/22202305-2d02-4c49-b216-cc98224357f0%2F40",
+   "entrega": "salud",
+   "dictamen": "resolucion",
+   "motivo": "Verificado con marker exacto. pendiente: descripcion 'Pendiente de especificar' en la fila del diccionario (huella bdba1b01977e... verificada); tipo y ejemplo no definen el significado; no se aprueba por nombre ni por ejemplo. Rev",
+   "evidencia": [
+    "propuestas/pendientes-muse-r6/salud/entrega.json"
+   ]
+  },
+  {
+   "tipo": "decision",
+   "id": "https://example.org/mex-ontologi/definition/22202305-2d02-4c49-b216-cc98224357f0%2F43",
+   "entrega": "salud",
+   "dictamen": "resolucion",
+   "motivo": "Verificado con marker exacto. pendiente: descripcion 'Pendiente de especificar' en la fila del diccionario (huella a38193f5f7f9... verificada); tipo y ejemplo no definen el significado; no se aprueba por nombre ni por ejemplo. Rev",
+   "evidencia": [
+    "propuestas/pendientes-muse-r6/salud/entrega.json"
+   ]
+  },
+  {
+   "tipo": "decision",
+   "id": "https://example.org/mex-ontologi/definition/22202305-2d02-4c49-b216-cc98224357f0%2F44",
+   "entrega": "salud",
+   "dictamen": "resolucion",
+   "motivo": "Verificado con marker exacto. pendiente: descripcion 'Pendiente de especificar' en la fila del diccionario (huella b85ad2ff8e7a... verificada); tipo y ejemplo no definen el significado; no se aprueba por nombre ni por ejemplo. Rev",
+   "evidencia": [
+    "propuestas/pendientes-muse-r6/salud/entrega.json"
+   ]
+  },
+  {
+   "tipo": "decision",
+   "id": "https://example.org/mex-ontologi/definition/22202305-2d02-4c49-b216-cc98224357f0%2F45",
+   "entrega": "salud",
+   "dictamen": "resolucion",
+   "motivo": "Verificado con marker exacto. pendiente: descripcion 'Pendiente de especificar' en la fila del diccionario (huella b161763fd6f8... verificada); tipo y ejemplo no definen el significado; no se aprueba por nombre ni por ejemplo. Rev",
+   "evidencia": [
+    "propuestas/pendientes-muse-r6/salud/entrega.json"
+   ]
+  },
+  {
+   "tipo": "decision",
+   "id": "https://example.org/mex-ontologi/definition/22202305-2d02-4c49-b216-cc98224357f0%2F46",
+   "entrega": "salud",
+   "dictamen": "resolucion",
+   "motivo": "Verificado con marker exacto. pendiente: descripcion 'Pendiente de especificar' en la fila del diccionario (huella 4c7482453a69... verificada); tipo y ejemplo no definen el significado; no se aprueba por nombre ni por ejemplo. Rev",
+   "evidencia": [
+    "propuestas/pendientes-muse-r6/salud/entrega.json"
+   ]
+  },
+  {
+   "tipo": "decision",
+   "id": "https://example.org/mex-ontologi/definition/22202305-2d02-4c49-b216-cc98224357f0%2F57",
+   "entrega": "salud",
+   "dictamen": "resolucion",
+   "motivo": "Verificado con marker exacto. pendiente: descripcion 'Pendiente de especificar' en la fila del diccionario (huella fb648dfc6707... verificada); tipo y ejemplo no definen el significado; no se aprueba por nombre ni por ejemplo. Rev",
+   "evidencia": [
+    "propuestas/pendientes-muse-r6/salud/entrega.json"
+   ]
+  },
+  {
+   "tipo": "decision",
+   "id": "https://example.org/mex-ontologi/definition/22202305-2d02-4c49-b216-cc98224357f0%2F58",
+   "entrega": "salud",
+   "dictamen": "resolucion",
+   "motivo": "Verificado con marker exacto. pendiente: descripcion 'Pendiente de especificar' en la fila del diccionario (huella 8cca9f0576b6... verificada); tipo y ejemplo no definen el significado; no se aprueba por nombre ni por ejemplo. Rev",
+   "evidencia": [
+    "propuestas/pendientes-muse-r6/salud/entrega.json"
+   ]
+  },
+  {
+   "tipo": "decision",
+   "id": "https://example.org/mex-ontologi/definition/22202305-2d02-4c49-b216-cc98224357f0%2F59",
+   "entrega": "salud",
+   "dictamen": "resolucion",
+   "motivo": "Verificado con marker exacto. pendiente: descripcion 'Pendiente de especificar' en la fila del diccionario (huella dd61c41708d6... verificada); tipo y ejemplo no definen el significado; no se aprueba por nombre ni por ejemplo. Rev",
+   "evidencia": [
+    "propuestas/pendientes-muse-r6/salud/entrega.json"
+   ]
+  },
+  {
+   "tipo": "decision",
+   "id": "https://example.org/mex-ontologi/definition/22202305-2d02-4c49-b216-cc98224357f0%2F60",
+   "entrega": "salud",
+   "dictamen": "resolucion",
+   "motivo": "Verificado con marker exacto. pendiente: descripcion 'Pendiente de especificar' en la fila del diccionario (huella bc45d3d55cf9... verificada); tipo y ejemplo no definen el significado; no se aprueba por nombre ni por ejemplo. Rev",
+   "evidencia": [
+    "propuestas/pendientes-muse-r6/salud/entrega.json"
+   ]
+  },
+  {
+   "tipo": "decision",
+   "id": "https://example.org/mex-ontologi/definition/22202305-2d02-4c49-b216-cc98224357f0%2F61",
+   "entrega": "salud",
+   "dictamen": "resolucion",
+   "motivo": "Verificado con marker exacto. pendiente: descripcion 'Pendiente de especificar' en la fila del diccionario (huella 68a7b66c7d98... verificada); tipo y ejemplo no definen el significado; no se aprueba por nombre ni por ejemplo. Rev",
+   "evidencia": [
+    "propuestas/pendientes-muse-r6/salud/entrega.json"
+   ]
+  },
+  {
+   "tipo": "decision",
+   "id": "https://example.org/mex-ontologi/definition/22202305-2d02-4c49-b216-cc98224357f0%2F62",
+   "entrega": "salud",
+   "dictamen": "resolucion",
+   "motivo": "Verificado con marker exacto. pendiente: descripcion 'Pendiente de especificar' en la fila del diccionario (huella 8d1404d50e5b... verificada); tipo y ejemplo no definen el significado; no se aprueba por nombre ni por ejemplo. Rev",
+   "evidencia": [
+    "propuestas/pendientes-muse-r6/salud/entrega.json"
+   ]
+  },
+  {
+   "tipo": "decision",
+   "id": "https://example.org/mex-ontologi/definition/22202305-2d02-4c49-b216-cc98224357f0%2F63",
+   "entrega": "salud",
+   "dictamen": "resolucion",
+   "motivo": "Verificado con marker exacto. pendiente: descripcion 'Pendiente de especificar' en la fila del diccionario (huella 1c1c42a9160b... verificada); tipo y ejemplo no definen el significado; no se aprueba por nombre ni por ejemplo. Rev",
+   "evidencia": [
+    "propuestas/pendientes-muse-r6/salud/entrega.json"
+   ]
+  },
+  {
+   "tipo": "decision",
+   "id": "https://example.org/mex-ontologi/definition/22202305-2d02-4c49-b216-cc98224357f0%2F64",
+   "entrega": "salud",
+   "dictamen": "resolucion",
+   "motivo": "Verificado con marker exacto. pendiente: descripcion 'Pendiente de especificar' en la fila del diccionario (huella 94eb763aae3f... verificada); tipo y ejemplo no definen el significado; no se aprueba por nombre ni por ejemplo. Rev",
+   "evidencia": [
+    "propuestas/pendientes-muse-r6/salud/entrega.json"
+   ]
+  },
+  {
+   "tipo": "decision",
+   "id": "https://example.org/mex-ontologi/definition/22202305-2d02-4c49-b216-cc98224357f0%2F65",
+   "entrega": "salud",
+   "dictamen": "resolucion",
+   "motivo": "Verificado con marker exacto. pendiente: descripcion 'Pendiente de especificar' en la fila del diccionario (huella 1cb751023a12... verificada); tipo y ejemplo no definen el significado; no se aprueba por nombre ni por ejemplo. Rev",
+   "evidencia": [
+    "propuestas/pendientes-muse-r6/salud/entrega.json"
+   ]
+  },
+  {
+   "tipo": "decision",
+   "id": "https://example.org/mex-ontologi/definition/22202305-2d02-4c49-b216-cc98224357f0%2F66",
+   "entrega": "salud",
+   "dictamen": "resolucion",
+   "motivo": "Verificado con marker exacto. pendiente: descripcion 'Pendiente de especificar' en la fila del diccionario (huella 27d2b9db3b29... verificada); tipo y ejemplo no definen el significado; no se aprueba por nombre ni por ejemplo. Rev",
+   "evidencia": [
+    "propuestas/pendientes-muse-r6/salud/entrega.json"
+   ]
+  },
+  {
+   "tipo": "decision",
+   "id": "https://example.org/mex-ontologi/definition/22202305-2d02-4c49-b216-cc98224357f0%2F67",
+   "entrega": "salud",
+   "dictamen": "resolucion",
+   "motivo": "Verificado con marker exacto. pendiente: descripcion 'Pendiente de especificar' en la fila del diccionario (huella 7180af0ba9ef... verificada); tipo y ejemplo no definen el significado; no se aprueba por nombre ni por ejemplo. Rev",
+   "evidencia": [
+    "propuestas/pendientes-muse-r6/salud/entrega.json"
+   ]
+  },
+  {
+   "tipo": "decision",
+   "id": "https://example.org/mex-ontologi/definition/22202305-2d02-4c49-b216-cc98224357f0%2F68",
+   "entrega": "salud",
+   "dictamen": "resolucion",
+   "motivo": "Verificado con marker exacto. pendiente: descripcion 'Pendiente de especificar' en la fila del diccionario (huella 77a7e92944de... verificada); tipo y ejemplo no definen el significado; no se aprueba por nombre ni por ejemplo. Rev",
+   "evidencia": [
+    "propuestas/pendientes-muse-r6/salud/entrega.json"
+   ]
+  },
+  {
+   "tipo": "decision",
+   "id": "https://example.org/mex-ontologi/definition/22202305-2d02-4c49-b216-cc98224357f0%2F69",
+   "entrega": "salud",
+   "dictamen": "resolucion",
+   "motivo": "Verificado con marker exacto. pendiente: descripcion 'Pendiente de especificar' en la fila del diccionario (huella b66a776bd99b... verificada); tipo y ejemplo no definen el significado; no se aprueba por nombre ni por ejemplo. Rev",
+   "evidencia": [
+    "propuestas/pendientes-muse-r6/salud/entrega.json"
+   ]
+  },
+  {
+   "tipo": "decision",
+   "id": "https://example.org/mex-ontologi/definition/22202305-2d02-4c49-b216-cc98224357f0%2F70",
+   "entrega": "salud",
+   "dictamen": "resolucion",
+   "motivo": "Verificado con marker exacto. pendiente: descripcion 'Pendiente de especificar' en la fila del diccionario (huella 256dc8ca620c... verificada); tipo y ejemplo no definen el significado; no se aprueba por nombre ni por ejemplo. Rev",
+   "evidencia": [
+    "propuestas/pendientes-muse-r6/salud/entrega.json"
+   ]
+  },
+  {
+   "tipo": "decision",
+   "id": "https://example.org/mex-ontologi/definition/22202305-2d02-4c49-b216-cc98224357f0%2F71",
+   "entrega": "salud",
+   "dictamen": "resolucion",
+   "motivo": "Verificado con marker exacto. pendiente: descripcion 'Pendiente de especificar' en la fila del diccionario (huella abcad05c8850... verificada); tipo y ejemplo no definen el significado; no se aprueba por nombre ni por ejemplo. Rev",
+   "evidencia": [
+    "propuestas/pendientes-muse-r6/salud/entrega.json"
+   ]
+  },
+  {
+   "tipo": "decision",
+   "id": "https://example.org/mex-ontologi/definition/22202305-2d02-4c49-b216-cc98224357f0%2F72",
+   "entrega": "salud",
+   "dictamen": "resolucion",
+   "motivo": "Verificado con marker exacto. pendiente: descripcion 'Pendiente de especificar' en la fila del diccionario (huella ebfe8f35dcd8... verificada); tipo y ejemplo no definen el significado; no se aprueba por nombre ni por ejemplo. Rev",
+   "evidencia": [
+    "propuestas/pendientes-muse-r6/salud/entrega.json"
+   ]
+  },
+  {
+   "tipo": "decision",
+   "id": "https://example.org/mex-ontologi/definition/22202305-2d02-4c49-b216-cc98224357f0%2F73",
+   "entrega": "salud",
+   "dictamen": "resolucion",
+   "motivo": "Verificado con marker exacto. pendiente: descripcion 'Pendiente de especificar' en la fila del diccionario (huella df1529b004a8... verificada); tipo y ejemplo no definen el significado; no se aprueba por nombre ni por ejemplo. Rev",
+   "evidencia": [
+    "propuestas/pendientes-muse-r6/salud/entrega.json"
+   ]
+  },
+  {
+   "tipo": "decision",
+   "id": "https://example.org/mex-ontologi/definition/22202305-2d02-4c49-b216-cc98224357f0%2F74",
+   "entrega": "salud",
+   "dictamen": "resolucion",
+   "motivo": "Verificado con marker exacto. pendiente: descripcion 'Pendiente de especificar' en la fila del diccionario (huella 109d0f8a09c2... verificada); tipo y ejemplo no definen el significado; no se aprueba por nombre ni por ejemplo. Rev",
+   "evidencia": [
+    "propuestas/pendientes-muse-r6/salud/entrega.json"
+   ]
+  },
+  {
+   "tipo": "decision",
+   "id": "https://example.org/mex-ontologi/definition/22202305-2d02-4c49-b216-cc98224357f0%2F75",
+   "entrega": "salud",
+   "dictamen": "resolucion",
+   "motivo": "Verificado con marker exacto. pendiente: descripcion 'Pendiente de especificar' en la fila del diccionario (huella e8dae3f19613... verificada); tipo y ejemplo no definen el significado; no se aprueba por nombre ni por ejemplo. Rev",
+   "evidencia": [
+    "propuestas/pendientes-muse-r6/salud/entrega.json"
+   ]
+  },
+  {
+   "tipo": "decision",
+   "id": "https://example.org/mex-ontologi/definition/22202305-2d02-4c49-b216-cc98224357f0%2F76",
+   "entrega": "salud",
+   "dictamen": "resolucion",
+   "motivo": "Verificado con marker exacto. pendiente: descripcion 'Pendiente de especificar' en la fila del diccionario (huella 998a3d29cfa9... verificada); tipo y ejemplo no definen el significado; no se aprueba por nombre ni por ejemplo. Rev",
+   "evidencia": [
+    "propuestas/pendientes-muse-r6/salud/entrega.json"
+   ]
+  },
+  {
+   "tipo": "decision",
+   "id": "https://example.org/mex-ontologi/definition/22202305-2d02-4c49-b216-cc98224357f0%2F77",
+   "entrega": "salud",
+   "dictamen": "resolucion",
+   "motivo": "Verificado con marker exacto. pendiente: descripcion 'Pendiente de especificar' en la fila del diccionario (huella f4c1bedd6497... verificada); tipo y ejemplo no definen el significado; no se aprueba por nombre ni por ejemplo. Rev",
+   "evidencia": [
+    "propuestas/pendientes-muse-r6/salud/entrega.json"
+   ]
+  },
+  {
+   "tipo": "decision",
+   "id": "https://example.org/mex-ontologi/definition/22202305-2d02-4c49-b216-cc98224357f0%2F78",
+   "entrega": "salud",
+   "dictamen": "resolucion",
+   "motivo": "Verificado con marker exacto. pendiente: descripcion 'Pendiente de especificar' en la fila del diccionario (huella b7f0279e5088... verificada); tipo y ejemplo no definen el significado; no se aprueba por nombre ni por ejemplo. Rev",
+   "evidencia": [
+    "propuestas/pendientes-muse-r6/salud/entrega.json"
+   ]
+  },
+  {
+   "tipo": "decision",
+   "id": "https://example.org/mex-ontologi/definition/22202305-2d02-4c49-b216-cc98224357f0%2F79",
+   "entrega": "salud",
+   "dictamen": "resolucion",
+   "motivo": "Verificado con marker exacto. pendiente: descripcion 'Pendiente de especificar' en la fila del diccionario (huella 221fff103485... verificada); tipo y ejemplo no definen el significado; no se aprueba por nombre ni por ejemplo. Rev",
+   "evidencia": [
+    "propuestas/pendientes-muse-r6/salud/entrega.json"
+   ]
+  },
+  {
+   "tipo": "decision",
+   "id": "https://example.org/mex-ontologi/definition/22202305-2d02-4c49-b216-cc98224357f0%2F80",
+   "entrega": "salud",
+   "dictamen": "resolucion",
+   "motivo": "Verificado con marker exacto. pendiente: descripcion 'Pendiente de especificar' en la fila del diccionario (huella 167ceaf4b233... verificada); tipo y ejemplo no definen el significado; no se aprueba por nombre ni por ejemplo. Rev",
+   "evidencia": [
+    "propuestas/pendientes-muse-r6/salud/entrega.json"
+   ]
+  },
+  {
+   "tipo": "decision",
+   "id": "https://example.org/mex-ontologi/definition/22202305-2d02-4c49-b216-cc98224357f0%2F83",
+   "entrega": "salud",
+   "dictamen": "resolucion",
+   "motivo": "Verificado con marker exacto. pendiente: descripcion 'Pendiente de especificar' en la fila del diccionario (huella 8acb1135cdd9... verificada); tipo y ejemplo no definen el significado; no se aprueba por nombre ni por ejemplo. Rev",
+   "evidencia": [
+    "propuestas/pendientes-muse-r6/salud/entrega.json"
+   ]
+  },
+  {
+   "tipo": "decision",
+   "id": "https://example.org/mex-ontologi/definition/22202305-2d02-4c49-b216-cc98224357f0%2F84",
+   "entrega": "salud",
+   "dictamen": "resolucion",
+   "motivo": "Verificado con marker exacto. pendiente: descripcion 'Pendiente de especificar' en la fila del diccionario (huella 1991915d59e2... verificada); tipo y ejemplo no definen el significado; no se aprueba por nombre ni por ejemplo. Rev",
+   "evidencia": [
+    "propuestas/pendientes-muse-r6/salud/entrega.json"
+   ]
+  },
+  {
+   "tipo": "decision",
+   "id": "https://example.org/mex-ontologi/definition/22202305-2d02-4c49-b216-cc98224357f0%2F87",
+   "entrega": "salud",
+   "dictamen": "resolucion",
+   "motivo": "Verificado con marker exacto. pendiente: descripcion 'Pendiente de especificar' en la fila del diccionario (huella 511637fdd52b... verificada); tipo y ejemplo no definen el significado; no se aprueba por nombre ni por ejemplo. Rev",
+   "evidencia": [
+    "propuestas/pendientes-muse-r6/salud/entrega.json"
+   ]
+  },
+  {
+   "tipo": "decision",
+   "id": "https://example.org/mex-ontologi/definition/22202305-2d02-4c49-b216-cc98224357f0%2F88",
+   "entrega": "salud",
+   "dictamen": "resolucion",
+   "motivo": "Verificado con marker exacto. pendiente: descripcion 'Pendiente de especificar' en la fila del diccionario (huella fad6728687d3... verificada); tipo y ejemplo no definen el significado; no se aprueba por nombre ni por ejemplo. Rev",
+   "evidencia": [
+    "propuestas/pendientes-muse-r6/salud/entrega.json"
+   ]
+  },
+  {
+   "tipo": "decision",
+   "id": "https://example.org/mex-ontologi/definition/22202305-2d02-4c49-b216-cc98224357f0%2F89",
+   "entrega": "salud",
+   "dictamen": "resolucion",
+   "motivo": "Verificado con marker exacto. pendiente: descripcion 'Pendiente de especificar' en la fila del diccionario (huella eb4257a20d25... verificada); tipo y ejemplo no definen el significado; no se aprueba por nombre ni por ejemplo. Rev",
+   "evidencia": [
+    "propuestas/pendientes-muse-r6/salud/entrega.json"
+   ]
+  },
+  {
+   "tipo": "decision",
+   "id": "https://example.org/mex-ontologi/definition/22202305-2d02-4c49-b216-cc98224357f0%2F90",
+   "entrega": "salud",
+   "dictamen": "resolucion",
+   "motivo": "Verificado con marker exacto. pendiente: descripcion 'Pendiente de especificar' en la fila del diccionario (huella 8c3fb03e75a7... verificada); tipo y ejemplo no definen el significado; no se aprueba por nombre ni por ejemplo. Rev",
+   "evidencia": [
+    "propuestas/pendientes-muse-r6/salud/entrega.json"
+   ]
+  },
+  {
+   "tipo": "decision",
+   "id": "https://example.org/mex-ontologi/definition/22202305-2d02-4c49-b216-cc98224357f0%2F97",
+   "entrega": "salud",
+   "dictamen": "resolucion",
+   "motivo": "Verificado con marker exacto. pendiente: descripcion 'Pendiente de especificar' en la fila del diccionario (huella 64c94f6639e0... verificada); tipo y ejemplo no definen el significado; no se aprueba por nombre ni por ejemplo. Rev",
+   "evidencia": [
+    "propuestas/pendientes-muse-r6/salud/entrega.json"
+   ]
+  },
+  {
+   "tipo": "decision",
+   "id": "https://example.org/mex-ontologi/definition/22202305-2d02-4c49-b216-cc98224357f0%2F98",
+   "entrega": "salud",
+   "dictamen": "resolucion",
+   "motivo": "Verificado con marker exacto. pendiente: descripcion 'Pendiente de especificar' en la fila del diccionario (huella 37610ad8c1e9... verificada); tipo y ejemplo no definen el significado; no se aprueba por nombre ni por ejemplo. Rev",
+   "evidencia": [
+    "propuestas/pendientes-muse-r6/salud/entrega.json"
+   ]
+  },
+  {
+   "tipo": "decision",
+   "id": "https://example.org/mex-ontologi/definition/22202305-2d02-4c49-b216-cc98224357f0%2F99",
+   "entrega": "salud",
+   "dictamen": "resolucion",
+   "motivo": "Verificado con marker exacto. pendiente: descripcion 'Pendiente de especificar' en la fila del diccionario (huella dc38e62e8b63... verificada); tipo y ejemplo no definen el significado; no se aprueba por nombre ni por ejemplo. Rev",
+   "evidencia": [
+    "propuestas/pendientes-muse-r6/salud/entrega.json"
+   ]
+  },
+  {
+   "tipo": "decision",
+   "id": "https://example.org/mex-ontologi/definition/33d0a99e-c721-496f-a05e-07646e9ae42a%2F177",
+   "entrega": "diversos-presas",
+   "dictamen": "resolucion",
+   "motivo": "Verificado con marker exacto. Fila corrupta: repite la cabecera del diccionario como valores; catalogo_declarado des_mpo_res es el nombre de la variable de fila 7 (texto libre con ejemplo 'Hermosillo'), no una referencia real a ca",
+   "evidencia": [
+    "propuestas/pendientes-muse-r6/diversos-presas/entrega.json"
+   ]
+  },
+  {
+   "tipo": "decision",
+   "id": "https://example.org/mex-ontologi/definition/33d0a99e-c721-496f-a05e-07646e9ae42a%2F178",
+   "entrega": "diversos-presas",
+   "dictamen": "resolucion",
+   "motivo": "Verificado con marker exacto. Fila corrupta gemela de la 177 (encabezados como valores, difiere solo en id_cp); artefacto conservado sin curar; requiere fe de erratas del publicador.",
+   "evidencia": [
+    "propuestas/pendientes-muse-r6/diversos-presas/entrega.json"
+   ]
+  },
+  {
+   "tipo": "decision",
+   "id": "https://example.org/mex-ontologi/definition/3f6942e3-a9c5-42c0-a38b-2c7aad2a6c99%2F2",
+   "entrega": "diversos-presas",
+   "dictamen": "resolucion",
+   "motivo": "Verificado con marker exacto. Descripcion insuficiente: 'Trimestre del estrato' no define si es trimestre calendario de denuncia o estrato muestral/operativo; tipo entero y ejemplo 1 sin mapa; sin metodologia ni catalogo. No se pr",
+   "evidencia": [
+    "propuestas/pendientes-muse-r6/diversos-presas/entrega.json"
+   ]
+  },
+  {
+   "tipo": "decision",
+   "id": "https://example.org/mex-ontologi/definition/67156807-2013-4117-9ca9-394aea647127%2F5",
+   "entrega": "diversos-presas",
+   "dictamen": "resolucion",
+   "motivo": "Verificado con marker exacto. Descripcion generica 'Clasificacion' sin objeto declarado; la lista de unidad sugiere pero no declara que clasifique el asentamiento. Linea nueva (atributo 'clasificacion de la colonia' INEGI/CONAPO) ",
+   "evidencia": [
+    "propuestas/pendientes-muse-r6/diversos-presas/entrega.json"
+   ]
+  },
+  {
+   "tipo": "decision",
+   "id": "https://example.org/mex-ontologi/definition/863b9cc8-daeb-4430-b835-6a0ced5abd31%2F7",
+   "entrega": "diversos-presas",
+   "dictamen": "resolucion",
+   "motivo": "Verificado con marker exacto. Descripcion trunca 'Clave de otras': objeto indeterminado (otras oficinas, especies u origenes). Sin ejemplo, unidad ni catalogo que la resuelva. Documento exacto necesario: diccionario corregido o me",
+   "evidencia": [
+    "propuestas/pendientes-muse-r6/diversos-presas/entrega.json"
+   ]
+  },
+  {
+   "tipo": "decision",
+   "id": "https://example.org/mex-ontologi/definition/863b9cc8-daeb-4430-b835-6a0ced5abd31%2F8",
+   "entrega": "diversos-presas",
+   "dictamen": "resolucion",
+   "motivo": "Verificado con marker exacto. Descripcion trunca gemela de CVOTRAS; mismo objeto indeterminado. Documento exacto necesario: diccionario corregido o metodologia de pesca (en manos del publicador) o evidencia web (SW6-DIV-03).",
+   "evidencia": [
+    "propuestas/pendientes-muse-r6/diversos-presas/entrega.json"
+   ]
+  },
+  {
+   "tipo": "decision",
+   "id": "https://example.org/mex-ontologi/definition/f89137ba-d82e-44fe-80c7-cc355f09f9f5%2F15",
+   "entrega": "diversos-presas",
+   "dictamen": "resolucion",
+   "motivo": "Verificado con marker exacto. Contradiccion conservada y ahora reforzada: la norma nacional separa egresos (GIIS-B002) de urgencias (GIIS-B014), por lo que 'Total_Egresos = Total de urgencias atendidas' no puede curarse por suposi",
+   "evidencia": [
+    "propuestas/pendientes-muse-r6/diversos-presas/entrega.json"
+   ]
+  },
+  {
+   "tipo": "decision",
+   "id": "V01",
+   "entrega": "catalogos",
+   "dictamen": "resolucion",
+   "motivo": "Verificado con marker exacto. F3 acreditada (CMPE 2016, evidencia primaria). F4 ausente: el publicador (UTH) no declara adopción de la CMPE y la búsqueda web de adopción es negativa; SNIEG solo acredita marco nacional.",
+   "evidencia": [
+    "propuestas/pendientes-muse-r6/catalogos/entrega.json"
+   ]
+  },
+  {
+   "tipo": "decision",
+   "id": "V02",
+   "entrega": "catalogos",
+   "dictamen": "resolucion",
+   "motivo": "Verificado con marker exacto. F3 acreditada. F4 ausente: nota del conjunto describe el campo pero no declara edición ni adopción de la CMPE para 2022-2026.",
+   "evidencia": [
+    "propuestas/pendientes-muse-r6/catalogos/entrega.json"
+   ]
+  },
+  {
+   "tipo": "decision",
+   "id": "V03",
+   "entrega": "catalogos",
+   "dictamen": "resolucion",
+   "motivo": "Verificado con marker exacto. F3 acreditada. F4 ausente: sin declaración del publicador que vincule la CMPE 2016 con los periodos anuales 2022-2025.",
+   "evidencia": [
+    "propuestas/pendientes-muse-r6/catalogos/entrega.json"
+   ]
+  },
+  {
+   "tipo": "decision",
+   "id": "V04",
+   "entrega": "catalogos",
+   "dictamen": "resolucion",
+   "motivo": "Verificado con marker exacto. F3 acreditada. F4 ausente: sin declaración del publicador que vincule la CMPE 2016 con los periodos anuales 2022-2025.",
+   "evidencia": [
+    "propuestas/pendientes-muse-r6/catalogos/entrega.json"
+   ]
+  },
+  {
+   "tipo": "decision",
+   "id": "V05",
+   "entrega": "catalogos",
+   "dictamen": "resolucion",
+   "motivo": "Verificado con marker exacto. F3+F4 ausentes: el portal confirma el hueco 1960-1969 (recurso listado sin descarga) y no declara edición/versión/fecha del Catálogo_estatal ni su rango de aplicación.",
+   "evidencia": [
+    "propuestas/pendientes-muse-r6/catalogos/entrega.json"
+   ]
+  },
+  {
+   "tipo": "decision",
+   "id": "V06",
+   "entrega": "catalogos",
+   "dictamen": "resolucion",
+   "motivo": "Verificado con marker exacto. F3+F4 ausentes: el portal no declara edición/versión de la hoja Catalogo Servicios ni su aplicación a 2022-2024.",
+   "evidencia": [
+    "propuestas/pendientes-muse-r6/catalogos/entrega.json"
+   ]
+  },
+  {
+   "tipo": "decision",
+   "id": "V07",
+   "entrega": "catalogos",
+   "dictamen": "resolucion",
+   "motivo": "Verificado con marker exacto. F3+F4 ausentes: sin declaración de edición/versión de la hoja Catalogo rechazo ni su aplicación a 2022-2024.",
+   "evidencia": [
+    "propuestas/pendientes-muse-r6/catalogos/entrega.json"
+   ]
+  },
+  {
+   "tipo": "decision",
+   "id": "V08",
+   "entrega": "catalogos",
+   "dictamen": "resolucion",
+   "motivo": "Verificado con marker exacto. F3+F4 ausentes: sin declaración de edición/versión de la hoja Catalogo especie ni su aplicación a 2022-2024.",
+   "evidencia": [
+    "propuestas/pendientes-muse-r6/catalogos/entrega.json"
+   ]
+  },
+  {
+   "tipo": "decision",
+   "id": "V09",
+   "entrega": "catalogos",
+   "dictamen": "resolucion",
+   "motivo": "Verificado con marker exacto. Avance F3 parcial (fuente metodológica CONAPO citada por el publicador, conteo 2475 consistente) pero sin declaración de edición/versión del catalogo.xlsx y con desfase de corte (local 1990-2019/2020-",
+   "evidencia": [
+    "propuestas/pendientes-muse-r6/catalogos/entrega.json"
+   ]
+  },
+  {
+   "tipo": "decision",
+   "id": "V10",
+   "entrega": "catalogos",
+   "dictamen": "resolucion",
+   "motivo": "Verificado con marker exacto. Igual que V09 para la hoja Catalogo_Estado/CLAVE_ENT: fuente CONAPO citada sin declaración de edición del catálogo ni vínculo de aplicación.",
+   "evidencia": [
+    "propuestas/pendientes-muse-r6/catalogos/entrega.json"
+   ]
+  },
+  {
+   "tipo": "decision",
+   "id": "V11",
+   "entrega": "catalogos",
+   "dictamen": "resolucion",
+   "motivo": "Verificado con marker exacto. F3 parcial (misma fuente CONAPO candidata) sin declaración de edición del catálogo; F4 ausente.",
+   "evidencia": [
+    "propuestas/pendientes-muse-r6/catalogos/entrega.json"
+   ]
+  },
+  {
+   "tipo": "decision",
+   "id": "V12",
+   "entrega": "catalogos",
+   "dictamen": "resolucion",
+   "motivo": "Verificado con marker exacto. Igual que V11 para la hoja Catalogo_Estado/CLAVE_ENT.",
+   "evidencia": [
+    "propuestas/pendientes-muse-r6/catalogos/entrega.json"
+   ]
+  },
+  {
+   "tipo": "decision",
+   "id": "V13",
+   "entrega": "catalogos",
+   "dictamen": "resolucion",
+   "motivo": "Verificado con marker exacto. Procedencia SESNSP declarada por el publicador (avance de contexto), pero sin declaración de edición/versión/corte del cat_municipio local ni vínculo con 2015-2025.",
+   "evidencia": [
+    "propuestas/pendientes-muse-r6/catalogos/entrega.json"
+   ]
+  },
+  {
+   "tipo": "decision",
+   "id": "V14",
+   "entrega": "catalogos",
+   "dictamen": "resolucion",
+   "motivo": "Verificado con marker exacto. Procedencia SESNSP declarada (avance de contexto), pero sin declaración de edición/versión/corte del cat_entidad local ni vínculo con 2015-2025.",
+   "evidencia": [
+    "propuestas/pendientes-muse-r6/catalogos/entrega.json"
+   ]
+  },
+  {
+   "tipo": "decision",
+   "id": "V15",
+   "entrega": "catalogos",
+   "dictamen": "resolucion",
+   "motivo": "Verificado con marker exacto. F3 parcial (fuente CONAPO 1990-2040 citada) sin declaración de edición del catálogo; F4 ausente para el rango 1990-2040.",
+   "evidencia": [
+    "propuestas/pendientes-muse-r6/catalogos/entrega.json"
+   ]
+  },
+  {
+   "tipo": "decision",
+   "id": "V16",
+   "entrega": "catalogos",
+   "dictamen": "resolucion",
+   "motivo": "Verificado con marker exacto. Igual que V15 para la hoja Catalogo_Estado/CLAVE_ENT.",
+   "evidencia": [
+    "propuestas/pendientes-muse-r6/catalogos/entrega.json"
+   ]
+  },
+  {
+   "tipo": "decision",
+   "id": "des_mpo_res",
+   "entrega": "catalogos",
+   "dictamen": "resolucion",
+   "motivo": "Verificado con marker exacto. Filas 177/178 degeneradas confirmadas; el portal no publica ningún catálogo de municipios de residencia aplicable. Solo el publicador puede aclararlo.",
+   "evidencia": [
+    "propuestas/pendientes-muse-r6/catalogos/entrega.json"
+   ]
+  },
+  {
+   "tipo": "solicitud_web",
+   "id": "r6-tic-web-01",
+   "entrega": "web",
+   "dictamen": "resolucion",
+   "motivo": "Verificado. URL primaria real y viva (verificada VW-17); el documento exacto nuevo (cuestionario integro P10/P16/P18/P21 + referente P11) no existe en publico: solo el publicador (Agencia de Transformacion Digita",
+   "evidencia": [
+    "propuestas/pendientes-muse-r6/web/entrega.json"
+   ]
+  },
+  {
+   "tipo": "solicitud_web",
+   "id": "r6-tic-web-02",
+   "entrega": "web",
+   "dictamen": "resolucion",
+   "motivo": "Verificado. URL primaria real y viva; sin cuestionario ni vinculo P14-P15 en publico. Solo publicador.",
+   "evidencia": [
+    "propuestas/pendientes-muse-r6/web/entrega.json"
+   ]
+  },
+  {
+   "tipo": "solicitud_web",
+   "id": "r6-tic-web-03",
+   "entrega": "web",
+   "dictamen": "resolucion",
+   "motivo": "Verificado. URL primaria real y viva; sin muestra de P11 ni cuestionario en publico. Solo publicador.",
+   "evidencia": [
+    "propuestas/pendientes-muse-r6/web/entrega.json"
+   ]
+  },
+  {
+   "tipo": "solicitud_web",
+   "id": "r6-tic-web-04",
+   "entrega": "web",
+   "dictamen": "resolucion",
+   "motivo": "Verificado. URL primaria real y viva; P22 integro y valores P36/P39/P40 sin fuente publica. Solo publicador.",
+   "evidencia": [
+    "propuestas/pendientes-muse-r6/web/entrega.json"
+   ]
+  },
+  {
+   "tipo": "solicitud_web",
+   "id": "r6-tic-web-05",
+   "entrega": "web",
+   "dictamen": "resolucion",
+   "motivo": "Verificado. URL primaria real y viva; sin cuestionario (P8/P13) ni valores verificables. Solo publicador.",
+   "evidencia": [
+    "propuestas/pendientes-muse-r6/web/entrega.json"
+   ]
+  },
+  {
+   "tipo": "solicitud_web",
+   "id": "r6-tic-web-06",
+   "entrega": "web",
+   "dictamen": "resolucion",
+   "motivo": "Verificado. URL primaria real y viva; sin vinculos filtro-detalle ni nota de marca 4. Solo publicador.",
+   "evidencia": [
+    "propuestas/pendientes-muse-r6/web/entrega.json"
+   ]
+  },
+  {
+   "tipo": "solicitud_web",
+   "id": "r6-tic-web-07",
+   "entrega": "web",
+   "dictamen": "resolucion",
+   "motivo": "Verificado. URLs primarias reales y vivas; sin cuestionario que fije referente de P7. Solo publicador.",
+   "evidencia": [
+    "propuestas/pendientes-muse-r6/web/entrega.json"
+   ]
+  },
+  {
+   "tipo": "solicitud_web",
+   "id": "MAT-R6-01",
+   "entrega": "web",
+   "dictamen": "resolucion",
+   "motivo": "Verificado. URL solicitada con /sr_Latn/ devuelve 404 (cita literal verificada); canonica sin locale verificada viva (VW-23). El diccionario con descripciones no vacias sigue solo en manos del publicador (UES).",
+   "evidencia": [
+    "propuestas/pendientes-muse-r6/web/entrega.json"
+   ]
+  },
+  {
+   "tipo": "solicitud_web",
+   "id": "MAT-R6-02",
+   "entrega": "web",
+   "dictamen": "resolucion",
+   "motivo": "Verificado. Pagina real (200) pero sin contenido extraible (negativo acotado a esta visita). Calendario 2022-2 con clave 222/(Reing) solo en manos del publicador.",
+   "evidencia": [
+    "propuestas/pendientes-muse-r6/web/entrega.json"
+   ]
+  },
+  {
+   "tipo": "solicitud_web",
+   "id": "MAT-R6-03",
+   "entrega": "web",
+   "dictamen": "resolucion",
+   "motivo": "Verificado. URL real (sirve PDF); sin OCR/extraccion en este rol. La edicion aplicable al dato 2022-2 (distinta de 2019) sigue solo en manos del publicador.",
+   "evidencia": [
+    "propuestas/pendientes-muse-r6/web/entrega.json"
+   ]
+  },
+  {
+   "tipo": "solicitud_web",
+   "id": "SAL-R6-01",
+   "entrega": "web",
+   "dictamen": "resolucion",
+   "motivo": "Verificado. URLs reales y vivas; diccionario corregido con descripciones y codebook + vinculo edicion-recurso-periodo (recurso 46977217, 2022-01-01/2022-09-26) solo en manos del publicador.",
+   "evidencia": [
+    "propuestas/pendientes-muse-r6/web/entrega.json"
+   ]
+  },
+  {
+   "tipo": "solicitud_web",
+   "id": "SAL-R6-02",
+   "entrega": "web",
+   "dictamen": "resolucion",
+   "motivo": "Verificado. Pagina SINAC viva pero sin manual de nacimiento ni edicion 2022; Manual Modelo 2015 no cubre vigencia 2022. Solo DGIS/publicador.",
+   "evidencia": [
+    "propuestas/pendientes-muse-r6/web/entrega.json"
+   ]
+  },
+  {
+   "tipo": "solicitud_web",
+   "id": "SAL-R6-03",
+   "entrega": "web",
+   "dictamen": "resolucion",
+   "motivo": "Verificado. NUEVO: Manual SEED Modelo 2022 autentico y preservado (SHA 698ee48a); periodo del recurso fijado (2022-01-01/2022-09-22). Falta nota del publicador que vincule manual-recurso-CIE aplicable 2022.",
+   "evidencia": [
+    "propuestas/pendientes-muse-r6/web/entrega.json"
+   ]
+  },
+  {
+   "tipo": "solicitud_web",
+   "id": "SAL-R6-04",
+   "entrega": "web",
+   "dictamen": "resolucion",
+   "motivo": "Verificado. NUEVO: preguntas exactas localizadas (P17 informante vs P34 agresor; P31-36 intencionalidad; P32 lugar lesion; edad gestacional semanas). La correspondencia con columnas D/locales la decide salud.",
+   "evidencia": [
+    "propuestas/pendientes-muse-r6/web/entrega.json"
+   ]
+  },
+  {
+   "tipo": "solicitud_web",
+   "id": "EPI-R6-01",
+   "entrega": "web",
+   "dictamen": "resolucion",
+   "motivo": "Verificado. Sin instrumento SUIVE edicion 2022 ni nota de vinculo en publico; portal sin Fuentes extras. Solo publicador Sonora.",
+   "evidencia": [
+    "propuestas/pendientes-muse-r6/web/entrega.json"
+   ]
+  },
+  {
+   "tipo": "solicitud_web",
+   "id": "EPI-R6-02",
+   "entrega": "web",
+   "dictamen": "resolucion",
+   "motivo": "Verificado. Recurso diccionario vivo pero sin descripciones corregidas ni regla de computo en publico. Solo publicador.",
+   "evidencia": [
+    "propuestas/pendientes-muse-r6/web/entrega.json"
+   ]
+  },
+  {
+   "tipo": "solicitud_web",
+   "id": "EPI-R6-03",
+   "entrega": "web",
+   "dictamen": "resolucion",
+   "motivo": "Verificado. Sin version CIE aplicable al recurso 2022 ni nota de intervalo/borde edad 5; CIE-10 vigente solo marco nacional. Solo publicador.",
+   "evidencia": [
+    "propuestas/pendientes-muse-r6/web/entrega.json"
+   ]
+  },
+  {
+   "tipo": "solicitud_web",
+   "id": "SW6-PRESAS-01",
+   "entrega": "web",
+   "dictamen": "resolucion",
+   "motivo": "Verificado. Dominio Clave CCCCC acreditado con archivo autentico (9 valores LCDSO-IRASO, hoja cat_estatal); SINA no aporta. Falta declaracion de edicion/version del catalogo y su vinculo temporal (F3/F4).",
+   "evidencia": [
+    "propuestas/pendientes-muse-r6/web/entrega.json"
+   ]
+  },
+  {
+   "tipo": "solicitud_web",
+   "id": "SW6-DIV-01",
+   "entrega": "web",
+   "dictamen": "resolucion",
+   "motivo": "Verificado. UUID ya no resuelve (usar slug); sin vinculo INEGI/CONAPO para CLASIF ni nota COESPO en publico. Solo publicador.",
+   "evidencia": [
+    "propuestas/pendientes-muse-r6/web/entrega.json"
+   ]
+  },
+  {
+   "tipo": "solicitud_web",
+   "id": "SW6-DIV-02",
+   "entrega": "web",
+   "dictamen": "resolucion",
+   "motivo": "Verificado. Cubo verificado; archivo Descripcion de variables enlazado pero sin texto extraible en esta visita (negativo acotado). Sin variable mixta verificable. Ruta alterna o publicador.",
+   "evidencia": [
+    "propuestas/pendientes-muse-r6/web/entrega.json"
+   ]
+  },
+  {
+   "tipo": "solicitud_web",
+   "id": "SW6-DIV-03",
+   "entrega": "web",
+   "dictamen": "resolucion",
+   "motivo": "Verificado. UUID verificado vivo en VW-05 (correccion); conclusion negativa intacta: otras sin definir, catalogo sin hoja para otras. Diccionario corregido solo en manos de SAGARHPA.",
+   "evidencia": [
+    "propuestas/pendientes-muse-r6/web/entrega.json"
+   ]
+  },
+  {
+   "tipo": "advertencia",
+   "id": "ADV-TIC-PROSA",
+   "entrega": "tic",
+   "dictamen": "advertencia",
+   "motivo": "Prosa 6+11+6+1 incompatible con motivos por ID (5/9/9/1; ver adenda-tic-prosa.md). Total 24 por ID correcto; no usar conteos de prosa como evidencia.",
+   "evidencia": [
+    "propuestas/pendientes-muse-r6/auditoria-documental/adenda-tic-prosa.md"
+   ]
+  },
+  {
+   "tipo": "advertencia",
+   "id": "ADV-WEB-CONTEOS",
+   "entrega": "web",
+   "dictamen": "advertencia",
+   "motivo": "21 decisiones todas pendiente pero conteos dicen pendiente:20 + resuelto-dominio:1. Corregir conteos (SW6-PRESAS-01 es pendiente con dominio acreditado, no resuelto). Misma clase de error que TIC-prosa.",
+   "evidencia": [
+    "propuestas/pendientes-muse-r6/web/entrega.json"
+   ]
+  },
+  {
+   "tipo": "advertencia",
+   "id": "ADV-CAT-URLS",
+   "entrega": "catalogos",
+   "dictamen": "advertencia",
+   "motivo": "URLs INV-R4C construidas desde titulos sin re-verificacion UUID/URL-final en R6. Decisiones sostenidas por C1/C2 (primarias, frescas); normalizar a UUID/slug y registrar query+fecha de busquedas negativas (DuckDuckGo acotada OK, sin pretension universal).",
+   "evidencia": [
+    "propuestas/pendientes-muse-r6/catalogos/entrega.json#fuentes"
+   ]
+  },
+  {
+   "tipo": "advertencia",
+   "id": "ADV-SALUD-MANUAL",
+   "entrega": "salud",
+   "dictamen": "advertencia",
+   "motivo": "Manual SEED 2022 autentico (HTTP 200, PDF, SHA 698ee48a) con preguntas exactas (P17/P34/P31-36/edad-gestacional/P32) no examinado por ID en salud (0/85 motivos lo citan). Pendientes sostenibles, pero completar examen por ID: para cada candidata (PARENTESCOAGRESORD, EDADGESTACIONAL, SITIOOCURRENCIALESION, CERTIFICADOPOR...) citar pregunta exacta del manual y por que la correspondencia formal falla (sin mapa campo-codigo/posicion, ejemplo incompatible, ambito fetal vs general) o vinculo del publicador. Edicion/contexto por si solos no vinculan; mismo sistema+periodo solo con uso formal de var inequivoca, no alias por nombre; no exigir mencion de Sonora como unico criterio.",
+   "evidencia": [
+    "propuestas/pendientes-muse-r6/web/verificacion_nuevas.json#VW-27,VW-28"
+   ]
+  },
+  {
+   "tipo": "advertencia",
+   "id": "ADV-PRESAS-VW33",
+   "entrega": "diversos-presas",
+   "dictamen": "advertencia",
+   "motivo": "VW-33 posterior a la entrega presas: descarga NORMAL del cat_estatal_1.xlsx (HTTP 200, PK, 11981 B, SHA b7a398a0) con 9 Claves CCCCC y hoja coincidente; el bloqueo WAF quedo superado para este archivo. Actualizar el registro presas: dominio+hoja acreditados; pendiente solo por F3/F4 (edicion/version + vinculo temporal). Vigencias/presas no se cierran sin prueba: correcto mantener pendiente.",
+   "evidencia": [
+    "propuestas/pendientes-muse-r6/web/verificacion_nuevas.json#VW-33"
+   ]
+  }
+ ],
+ "en_manos_publicador_exclusivo": [
+  "Cuestionarios originales completos TIC (P10/P16/P18/P21+P11, P14-P15, P27-P33 filtros, P7 referentes) y muestras P11/P22/P36/P39/P40.",
+  "Diccionario SEED corregido + codebook + vinculo manual-recurso-CIE 2022 y nota edicion-recurso-periodo (nacimientos/defunciones).",
+  "Diccionario/matriz Matriculas con descripciones + codebook 222/(Reing) + calendario 2022-2 y edicion aplicable distinta de 2019.",
+  "Instrumento SUIVE edicion 2022 + diccionario corregido + regla de computo + version CIE + nota borde edad 5.",
+  "Nota presas: hoja de cat_estatal + dominio de Clave + edicion/version del catalogo + F3/F4.",
+  "CLASIF (nota COESPO + metodologia indice), TRIMESTRE (metodologia denuncias), CVOTRAS/DOTRAS (diccionario pesca), Total_Egresos (aclaracion egresos vs urgencias).",
+  "Vigencias F3/F4: adopcion UTH-CMPE, ediciones de Catalogo_estatal/Catalogo Servicios/especie, catalogos Rickettsia y COESPO, cortes SESNSP cat_municipio/entidad."
+ ],
+ "resolucion_posible_investigacion": [
+  "Manual SEED 2022 ya preservado: completar examen por ID (ADV-SALUD-MANUAL); formalizar correspondencias inequivocas si existen.",
+  "C1/C2 (API version=null + core-properties) reutilizables como linea base negativa estructurada.",
+  "cat_estatal_1.xlsx autentico ya preservado (VW-33): dominio CCCCC cerrado; falta solo F3/F4.",
+  "CONAPO 09-05-2024 y SESNSP examinados formalmente (desfase de cortes documentado): solo falta declaracion del publicador."
+ ],
+ "fuentes_no_verificadas": [
+  "Slugs dataset construidos desde titulos (ADV-CAT-URLS).",
+  "Busquedas DuckDuckGo: acotadas pero sin query+fecha registrada.",
+  "EPI-R6/MAT-R6/TIC-r6 solicitudes: en manos web/publicador.",
+  "WAF presas: superado para cat_estatal (VW-33); resto de archivos no reintentado."
+ ],
+ "conteos": {
+  "decisiones_171": 171,
+  "artefactos_2": 2,
+  "carencias_169": 169,
+  "resolucion": 209,
+  "advertencia": 5,
+  "reglas_nuevas_r6": 0,
+  "catalogos_17_pendientes": 17,
+  "web_21": 21
+ }
+}

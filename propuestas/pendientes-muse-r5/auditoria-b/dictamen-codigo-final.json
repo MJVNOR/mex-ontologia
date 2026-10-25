@@ -1,0 +1,27 @@
+{
+ "alcance": "codigo de integracion R5 (staging, no aplicado a central)",
+ "archivos": {
+  "scripts/integrar_ronda_5.py": {
+   "dictamen": "aceptar",
+   "sha256": "daa3ed01558971d89b5a0586509d4516bec698087c7b249f31af2d93161c3e8c",
+   "nota": "H1 corregida y verificada: exige archivos/insumos dict + 4 entradas + [] + origenes fijados; 9/9 tests"
+  },
+  "scripts/consolidar_semantica.py": {
+   "dictamen": "aceptar",
+   "sha256": "8ef7b80c40d1db03b7afe1b698e2023de6404ee39a4eb986e6b59fc93f0ca490",
+   "nota": "bloque r5 aditivo tras r4, con guarda revision-ronda-5.json; huellas_entrada despues; sin rehash"
+  },
+  "scripts/integrar_ronda_4.py": {
+   "dictamen": "aceptar",
+   "sha256": "b0f208f5545ba7905934915f8f7896d4a716ae8f5eb2b9ca89794492842265ac",
+   "nota": "delega a validar_sobre_base si existe R5; elif preserva exactitud previa; checks R4 intactos"
+  },
+  "tests/test_ronda_5.py": {
+   "dictamen": "aceptar",
+   "sha256": "4e20a49c2bcd2f3cf96027c2b4cf9249e64638cc9b614c3f02c5e46632f46c16",
+   "nota": "9/9 en staging (manifiesto incompleto + origen no fijado incluidos); sin tocar core"
+  }
+ },
+ "cierre": "H1 resuelto y sellado; codigo aceptado completo",
+ "verificado": "9/9 tests + sondas fail-open/orden + ROOT + hook live"
+}

@@ -1,0 +1,24 @@
+diff --git a/shapes/semantica.ttl b/propuestas/ronda-3/agente-13-calificadores/staging/semantica.ttl
+index 4ce8cad..b730085 100644
+--- a/shapes/semantica.ttl
++++ b/propuestas/ronda-3/agente-13-calificadores/staging/semantica.ttl
+@@ -19,7 +19,7 @@ shape:VariableDocumentada a sh:NodeShape ; sh:targetClass mex:VariableDocumentad
+         sh:in ("respaldada_por_definicion" "candidata_sin_definicion_suficiente" "fuera_del_nucleo_actual") ] ;
+     sh:property [ sh:path mex:significadoDocumentado ; sh:maxCount 1 ; sh:class mex:ConceptoCompartido ] ;
+     sh:property [ sh:path mex:significadoCandidato ; sh:maxCount 1 ; sh:class mex:ConceptoCompartido ] ;
+-    sh:property [ sh:path mex:tieneCalificadorDocumentado ; sh:class mex:CalificadorDocumental ] ;
++    sh:property [ sh:path mex:tieneCalificadorDocumentado ; sh:class mex:CalificadorDocumental ; sh:nodeKind sh:IRI ] ;
+     sh:property [ sh:path prov:wasDerivedFrom ; sh:minCount 1 ; sh:nodeKind sh:IRI ] .
+ 
+ shape:CorrespondenciaSemantica a sh:NodeShape ; sh:targetClass mex:CorrespondenciaSemantica ;
+@@ -30,8 +30,8 @@ shape:CorrespondenciaSemantica a sh:NodeShape ; sh:targetClass mex:Correspondenc
+     sh:property [ sh:path prov:wasDerivedFrom ; sh:minCount 2 ; sh:nodeKind sh:IRI ] .
+ 
+ shape:CalificadorDocumental a sh:NodeShape ; sh:targetClass mex:CalificadorDocumental ;
+-    sh:property [ sh:path mex:dimensionCalificador ; sh:minCount 1 ; sh:maxCount 1 ; sh:datatype xsd:string ; sh:minLength 1 ] ;
+-    sh:property [ sh:path mex:valorCalificador ; sh:minCount 1 ; sh:maxCount 1 ; sh:datatype xsd:string ; sh:minLength 1 ] ;
++    sh:property [ sh:path mex:dimensionCalificador ; sh:minCount 1 ; sh:maxCount 1 ; sh:datatype xsd:string ; sh:minLength 1 ; sh:pattern "\\S" ] ;
++    sh:property [ sh:path mex:valorCalificador ; sh:minCount 1 ; sh:maxCount 1 ; sh:datatype xsd:string ; sh:minLength 1 ; sh:pattern "\\S" ] ;
+     sh:property [ sh:path prov:wasDerivedFrom ; sh:minCount 2 ; sh:nodeKind sh:IRI ] .
+ 
+ shape:ReferenciaCatalogoDeclarada a sh:NodeShape ; sh:targetClass mex:ReferenciaCatalogoDeclarada ;

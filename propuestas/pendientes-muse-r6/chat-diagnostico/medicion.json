@@ -1,0 +1,249 @@
+{
+  "sonda": "medicion (cero modelo; solo SELECT contra motor vivo)",
+  "triples": 321209,
+  "modelo": "gemma-4-31b-it",
+  "qa_system_prompt_chars": 4453,
+  "onta_max_output_tokens_efectivo": "4096 (defecto openai.ts; suma a la ventana junto a la entrada)",
+  "casos": [
+    {
+      "id": "C1-totales",
+      "anchors": 13,
+      "hechos": 20,
+      "secciones": {
+        "correspondencias": true,
+        "recurso": false,
+        "variable": false,
+        "ficha": false,
+        "codigo": false
+      },
+      "con_presupuesto": {
+        "contexto_chars": 17491,
+        "est_input_tokens": 6337,
+        "presupuesto": {
+          "maxInputTokens": 6500,
+          "pacingMs": 65000
+        },
+        "scan": {
+          "controles": 0,
+          "sustitutos_sueltos": 0,
+          "linea_max_chars": 745,
+          "bytes": 17635
+        }
+      },
+      "sin_presupuesto": {
+        "contexto_chars": 49795,
+        "est_input_tokens": 15625,
+        "presupuesto": {
+          "maxInputTokens": null,
+          "pacingMs": 0
+        },
+        "scan": {
+          "controles": 0,
+          "sustitutos_sueltos": 0,
+          "linea_max_chars": 745,
+          "bytes": 50298
+        }
+      }
+    },
+    {
+      "id": "C2-f2-evidencia",
+      "anchors": 17,
+      "hechos": 20,
+      "secciones": {
+        "correspondencias": false,
+        "recurso": false,
+        "variable": false,
+        "ficha": true,
+        "codigo": false
+      },
+      "con_presupuesto": {
+        "contexto_chars": 17469,
+        "est_input_tokens": 6333,
+        "presupuesto": {
+          "maxInputTokens": 6500,
+          "pacingMs": 65000
+        },
+        "scan": {
+          "controles": 0,
+          "sustitutos_sueltos": 0,
+          "linea_max_chars": 443,
+          "bytes": 17585
+        }
+      },
+      "sin_presupuesto": {
+        "contexto_chars": 74667,
+        "est_input_tokens": 22778,
+        "presupuesto": {
+          "maxInputTokens": null,
+          "pacingMs": 0
+        },
+        "scan": {
+          "controles": 0,
+          "sustitutos_sueltos": 0,
+          "linea_max_chars": 443,
+          "bytes": 75074
+        }
+      }
+    },
+    {
+      "id": "C3-f2-igualdad",
+      "anchors": 16,
+      "hechos": 82,
+      "secciones": {
+        "correspondencias": false,
+        "recurso": false,
+        "variable": false,
+        "ficha": false,
+        "codigo": false
+      },
+      "con_presupuesto": {
+        "contexto_chars": 17561,
+        "est_input_tokens": 6353,
+        "presupuesto": {
+          "maxInputTokens": 6500,
+          "pacingMs": 65000
+        },
+        "scan": {
+          "controles": 0,
+          "sustitutos_sueltos": 0,
+          "linea_max_chars": 299,
+          "bytes": 17781
+        }
+      },
+      "sin_presupuesto": {
+        "contexto_chars": 28881,
+        "est_input_tokens": 9607,
+        "presupuesto": {
+          "maxInputTokens": null,
+          "pacingMs": 0
+        },
+        "scan": {
+          "controles": 0,
+          "sustitutos_sueltos": 0,
+          "linea_max_chars": 327,
+          "bytes": 29239
+        }
+      }
+    },
+    {
+      "id": "C4-definicion-diccionario",
+      "anchors": 16,
+      "hechos": 6,
+      "secciones": {
+        "correspondencias": true,
+        "recurso": false,
+        "variable": false,
+        "ficha": false,
+        "codigo": false
+      },
+      "con_presupuesto": {
+        "contexto_chars": 17600,
+        "est_input_tokens": 6371,
+        "presupuesto": {
+          "maxInputTokens": 6500,
+          "pacingMs": 65000
+        },
+        "scan": {
+          "controles": 0,
+          "sustitutos_sueltos": 0,
+          "linea_max_chars": 578,
+          "bytes": 17799
+        }
+      },
+      "sin_presupuesto": {
+        "contexto_chars": 144922,
+        "est_input_tokens": 42976,
+        "presupuesto": {
+          "maxInputTokens": null,
+          "pacingMs": 0
+        },
+        "scan": {
+          "controles": 0,
+          "sustitutos_sueltos": 0,
+          "linea_max_chars": 1225,
+          "bytes": 147246
+        }
+      }
+    },
+    {
+      "id": "C5-diferencia-variables",
+      "anchors": 16,
+      "hechos": 6,
+      "secciones": {
+        "correspondencias": true,
+        "recurso": false,
+        "variable": false,
+        "ficha": false,
+        "codigo": false
+      },
+      "con_presupuesto": {
+        "contexto_chars": 17602,
+        "est_input_tokens": 6381,
+        "presupuesto": {
+          "maxInputTokens": 6500,
+          "pacingMs": 65000
+        },
+        "scan": {
+          "controles": 0,
+          "sustitutos_sueltos": 0,
+          "linea_max_chars": 544,
+          "bytes": 17784
+        }
+      },
+      "sin_presupuesto": {
+        "contexto_chars": 199565,
+        "est_input_tokens": 58695,
+        "presupuesto": {
+          "maxInputTokens": null,
+          "pacingMs": 0
+        },
+        "scan": {
+          "controles": 0,
+          "sustitutos_sueltos": 0,
+          "linea_max_chars": 1225,
+          "bytes": 202591
+        }
+      }
+    },
+    {
+      "id": "C6-clave-26001",
+      "anchors": 16,
+      "hechos": 10,
+      "secciones": {
+        "correspondencias": true,
+        "recurso": false,
+        "variable": false,
+        "ficha": false,
+        "codigo": true
+      },
+      "con_presupuesto": {
+        "contexto_chars": 17494,
+        "est_input_tokens": 6351,
+        "presupuesto": {
+          "maxInputTokens": 6500,
+          "pacingMs": 65000
+        },
+        "scan": {
+          "controles": 0,
+          "sustitutos_sueltos": 0,
+          "linea_max_chars": 1291,
+          "bytes": 17555
+        }
+      },
+      "sin_presupuesto": {
+        "contexto_chars": 481883,
+        "est_input_tokens": 139862,
+        "presupuesto": {
+          "maxInputTokens": null,
+          "pacingMs": 0
+        },
+        "scan": {
+          "controles": 0,
+          "sustitutos_sueltos": 0,
+          "linea_max_chars": 1404,
+          "bytes": 488046
+        }
+      }
+    }
+  ]
+}

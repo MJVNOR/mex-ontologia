@@ -1,0 +1,16 @@
+@prefix ns1: <https://example.org/mex-ontologi/vocab/> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+
+<https://example.org/mex-ontologi/file-column/4219d141-5084-4308-bda3-d44ca28a4f53%2Fcat_estatal%2F1> ns1:significadoDocumentado <https://example.org/mex-ontologi/concept/clave-identificadora-presa> .
+
+<https://example.org/mex-ontologi/semantic-mapping/f7835481dc2d7b36657aaffe1cd476e6cd50185284f972052801637e3b8de65f> prov:wasDerivedFrom <file:///C:/Users/marti/Documents/MEX-Ontologi/data/integracion-ronda-6/adenda-presas.json>,
+        <file:///C:/Users/marti/Documents/MEX-Ontologi/ontologia/semantica.json> ;
+    ns1:criterioRevision "Revision explicita del archivo autentico (bytes, hoja, orden, tipos, 9 valores CCCCC unicos) y de su fila de diccionario en el mismo conjunto: la fila fisica integra el objeto de atributos por presa (13 columnas hermanas ya documental_revisada a Catalogo_estatal: /7,/20,/8,/9,/10,/11,/12,/13,/15,/16,/17,/18,/22), mientras que el diccionario define el objeto Historico_presas como serie (Clave, Fecha, Almacenamiento); la ausencia de columnas de fecha/almacenamiento en la hoja fisica corrobora, sin ser por si sola la prueba, la pertenencia al objeto catalogo. Alcance de interpretacion documental; no se validan valores contra catalogo publicado (no identificado en las fuentes consultadas), no se habilitan joins, no se confirma vigencia ni edicion."@es ;
+    ns1:estadoCorrespondencia "documental_revisada" ;
+    ns1:huellaEsquemaRevisado "29af60e8a6e9e2026623388d9e06cddb2689bfd25de8db395ab97bf7e47eecfd" ;
+    ns1:huellaFilaDiccionario "d120834445f43d0bb67d135c256e73c91984a2fad6ec8ddbc5639c023dd44153" ;
+    ns1:limiteSemantico "Confirma la interpretación documental de esta columna; no valida filas, catálogos, unidades ni equivalencia con otras fuentes."@es .
+
+<file:///C:/Users/marti/Documents/MEX-Ontologi/data/integracion-ronda-6/adenda-presas.json> a prov:Entity ;
+    ns1:sha256Evidencia "186896992d38129df4b8d6347c174663cdf3ca87e082d2ce60730a35537574a6" .
+

@@ -1,0 +1,184 @@
+diff --git a/studio/src-tauri/src/chat.rs b/studio/src-tauri/src/chat.rs
+index 53f22ca..6c924bb 100644
+--- a/studio/src-tauri/src/chat.rs
++++ b/studio/src-tauri/src/chat.rs
+@@ -3,7 +3,10 @@ use std::io::Write;
+ use std::path::{Path, PathBuf};
+ use std::process::{Child, Command, Stdio};
+ use std::sync::Mutex;
++use std::collections::BTreeMap;
+ use tauri::{Emitter, Manager};
++#[cfg(target_os = "windows")]
++use std::os::windows::process::CommandExt;
+ 
+ use crate::engine;
+ 
+@@ -11,7 +14,17 @@ pub struct ChatState {
+     pub process: Mutex<Option<Child>>,
+ }
+ 
+-fn resolve_node_binary() -> PathBuf {
++fn resolve_node_binary(configured: Option<&str>) -> PathBuf {
++    if let Some(path) = configured.filter(|path| !path.is_empty()) {
++        return PathBuf::from(path);
++    }
++    // Version managers may expose a shim that exits when used with piped
++    // stdin. Let a desktop launcher select the actual runtime explicitly.
++    if let Some(path) = std::env::var_os("ONTO_NODE_BINARY") {
++        if !path.is_empty() {
++            return PathBuf::from(path);
++        }
++    }
+     #[cfg(target_os = "windows")]
+     {
+         let candidates = [
+@@ -116,17 +129,78 @@ fn sidecar_entry(app: &tauri::AppHandle) -> Result<PathBuf, String> {
+     )
+ }
+ 
++fn node_entry_path(path: PathBuf) -> PathBuf {
++    // Tauri returns Windows verbatim paths. Node 22 fails with EISDIR at
++    // "C:" when realpathSync receives a \\?\-prefixed entry point.
++    let text = path.to_string_lossy();
++    if let Some(unc) = text.strip_prefix(r"\\?\UNC\") {
++        return PathBuf::from(format!(r"\\{}", unc));
++    }
++    if let Some(disk) = text.strip_prefix(r"\\?\") {
++        return PathBuf::from(disk);
++    }
++    path
++}
++
++fn parse_agent_env(contents: &str) -> Result<BTreeMap<String, String>, String> {
++    let allowed = ["ONTO_PROVIDER", "ONTO_LLM_BASE_URL", "ONTO_LLM_MODEL", "ONTO_LLM_API_KEY", "ONTO_NODE_BINARY"];
++    let mut settings = BTreeMap::new();
++    for (index, line) in contents.trim_start_matches('\u{feff}').lines().enumerate() {
++        let line = line.trim();
++        if line.is_empty() || line.starts_with('#') { continue; }
++        let Some((key, value)) = line.split_once('=') else {
++            return Err(format!("Invalid .env assignment at line {}", index + 1));
++        };
++        let key = key.trim();
++        if !allowed.contains(&key) { continue; }
++        let value = value.trim();
++        let value = if value.len() >= 2 && ((value.starts_with('"') && value.ends_with('"')) || (value.starts_with('\'') && value.ends_with('\''))) {
++            &value[1..value.len() - 1]
++        } else { value };
++        if value.is_empty() {
++            return Err(format!("Falta {} en el .env del chat", key));
++        }
++        settings.insert(key.to_string(), value.to_string());
++    }
++    for key in &allowed[..4] {
++        if !settings.contains_key(*key) {
++            return Err(format!("Falta {} en el .env del chat", key));
++        }
++    }
++    Ok(settings)
++}
++
++fn load_agent_settings(executable_dir: &Path) -> Result<BTreeMap<String, String>, String> {
++    // This file stores only a path. Credentials stay in the user's ignored .env.
++    let pointer = executable_dir.join("agent-env-path.txt");
++    if !pointer.exists() { return Ok(BTreeMap::new()); }
++    let path = std::fs::read_to_string(pointer)
++        .map_err(|_| "No se pudo leer agent-env-path.txt".to_string())?;
++    let path = Path::new(path.trim().trim_start_matches('\u{feff}'));
++    if !path.is_absolute() {
++        return Err("agent-env-path.txt debe contener la ruta absoluta al .env del chat".into());
++    }
++    let contents = std::fs::read_to_string(path)
++        .map_err(|_| "No se pudo leer el .env configurado para el chat".to_string())?;
++    parse_agent_env(&contents)
++}
++
+ pub fn spawn_agent_sidecar(app: &tauri::AppHandle) -> Result<(), String> {
+-    let entry = sidecar_entry(app)?;
+-    let node = resolve_node_binary();
++    let entry = node_entry_path(sidecar_entry(app)?);
++    let executable = std::env::current_exe().map_err(|_| "No se pudo localizar Studio")?;
++    let settings = load_agent_settings(executable.parent().ok_or("Studio no tiene directorio")?)?;
++    let node = resolve_node_binary(settings.get("ONTO_NODE_BINARY").map(String::as_str));
+ 
+     // Same port the engine itself was spawned with (see engine::engine_port,
+     // the single place that resolves it). Passed through the environment
+     // rather than re-resolved here so the sidecar can't drift from it.
+     let port = engine::engine_port();
+ 
+-    let mut child = Command::new(&node)
+-        .arg(&entry)
++    let mut command = Command::new(&node);
++    command.envs(settings);
++    #[cfg(target_os = "windows")]
++    command.creation_flags(0x08000000); // CREATE_NO_WINDOW for the Node sidecar.
++    let mut child = command.arg(&entry)
+         .stdin(Stdio::piped())
+         .stdout(Stdio::piped())
+         .stderr(Stdio::piped())
+@@ -198,6 +272,44 @@ mod tests {
+     use super::*;
+     use std::fs;
+ 
++    const TEST_ENV: &str = "ONTO_PROVIDER=openai-compatible\nONTO_LLM_BASE_URL=https://example.invalid/v1\nONTO_LLM_MODEL='test-model'\nONTO_LLM_API_KEY=test-only=not-a-secret\n";
++
++    #[test]
++    fn saved_chat_settings_load_without_launcher_environment() {
++        let temp = tempfile::tempdir().unwrap();
++        let env_path = temp.path().join("chat.env");
++        fs::write(&env_path, TEST_ENV).unwrap();
++        fs::write(temp.path().join("agent-env-path.txt"), env_path.to_str().unwrap()).unwrap();
++        let settings = load_agent_settings(temp.path()).unwrap();
++        assert_eq!(settings["ONTO_LLM_MODEL"], "test-model");
++        assert_eq!(settings["ONTO_LLM_API_KEY"], "test-only=not-a-secret");
++    }
++
++    #[test]
++    fn env_parser_ignores_unrelated_variables_without_evaluating_values() {
++        let settings = parse_agent_env(&format!("\u{feff}# comment\n{}PATH=other\nONTO_NODE_BINARY=\"C:/Program Files/node.exe\"\n", TEST_ENV)).unwrap();
++        assert!(!settings.contains_key("PATH"));
++        assert_eq!(settings["ONTO_NODE_BINARY"], "C:/Program Files/node.exe");
++    }
++
++    #[test]
++    fn missing_or_broken_saved_configuration_does_not_silently_use_default_model() {
++        let temp = tempfile::tempdir().unwrap();
++        assert!(load_agent_settings(temp.path()).unwrap().is_empty());
++        fs::write(temp.path().join("agent-env-path.txt"), "relative.env").unwrap();
++        assert!(load_agent_settings(temp.path()).is_err());
++        assert!(parse_agent_env("ONTO_LLM_MODEL=test\n").unwrap_err().contains("ONTO_PROVIDER"));
++        let message = parse_agent_env(&format!("{}\ninvalid test-only-sensitive-value", TEST_ENV)).unwrap_err();
++        assert!(!message.contains("sensitive"));
++    }
++
++    #[test]
++    fn node_accepts_regular_disk_and_unc_entry_paths() {
++        assert_eq!(node_entry_path(PathBuf::from(r"\\?\C:\Studio\index.js")), PathBuf::from(r"C:\Studio\index.js"));
++        assert_eq!(node_entry_path(PathBuf::from(r"\\?\UNC\server\Studio\index.js")), PathBuf::from(r"\\server\Studio\index.js"));
++        assert_eq!(node_entry_path(PathBuf::from("/opt/studio/index.js")), PathBuf::from("/opt/studio/index.js"));
++    }
++
+     #[test]
+     fn dev_fallback_points_at_the_source_sidecar() {
+         let path = dev_sidecar_entry();
+diff --git a/studio/src-tauri/src/lib.rs b/studio/src-tauri/src/lib.rs
+index 7afd259..ff72c63 100644
+--- a/studio/src-tauri/src/lib.rs
++++ b/studio/src-tauri/src/lib.rs
+@@ -9,7 +9,7 @@ use engine::EngineState;
+ use mcp::McpState;
+ use std::sync::atomic::{AtomicBool, Ordering};
+ use std::sync::{Arc, Mutex};
+-use tauri::Manager;
++use tauri::{Emitter, Manager};
+ 
+ #[tauri::command]
+ fn engine_status(state: tauri::State<EngineState>) -> bool {
+@@ -48,6 +48,8 @@ pub fn run() {
+                 std::thread::sleep(std::time::Duration::from_secs(3));
+                 if let Err(e) = chat::spawn_agent_sidecar(&agent_handle) {
+                     eprintln!("Failed to start agent sidecar: {e}");
++                    let payload = serde_json::json!({ "type": "error", "error": e }).to_string();
++                    let _ = agent_handle.emit("agent-message", payload);
+                 }
+             });
+ 

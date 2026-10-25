@@ -1,0 +1,11 @@
+@prefix ex: <https://example.org/mex-ontologi/prueba-s-shacl/> .
+@prefix mex: <https://example.org/mex-ontologi/vocab/> .
+
+ex:r-incompleto a mex:ResumenMunicipalLocal ;
+    mex:presenteEnAmbas true ;
+    mex:conteoMatrimonios 12 .
+
+ex:r-ambas-sin-bandera a mex:ResumenMunicipalLocal ;
+    mex:presenteEnAmbas false ;
+    mex:conteoMatrimonios 12 ;
+    mex:conteoDivorcios 3 .

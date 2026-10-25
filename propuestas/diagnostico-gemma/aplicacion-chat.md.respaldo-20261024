@@ -1,0 +1,54 @@
+# Aplicación pendiente 2: política acotada Gemma4 en el sidecar (chat/Studio)
+
+Aprobado por `auditoria-chat/dictamen-codigo-aplicar.json`
+(`aceptar-aplicar-con-respaldo`). 4 archivos aplicados byte-exactos a la
+fuente real del sidecar; bundle reconstruido, instalado con respaldo y
+verificado con sonda de 6 casos. Modelo Studio intacto: `gemma-4-31b-it`.
+
+## Reconciliación de auditorías
+
+`dictamen-codigo-final.json` (12:37) es anterior: aceptó `index.ts`
+(`1bccefb8`, idéntico hoy) y dejó `openai.ts` (`1789d26d`), `types.ts` y el
+test (`a54f57f8`) como `pendiente-verificacion-root`. El staging evolucionó
+después (21:09/21:10), el marker `listo-codigo-final.json` (21:12) fijó los
+SHAs nuevos y `dictamen-codigo-aplicar.json` (21:17) releyó completos los 4
+archivos actuales y aceptó (con 21/21 propios y las 2 pruebas que final
+exigía). Disco == aplicar == marker 4/4, sin cambios posteriores. Final
+irrelevante; instalación cubierta. Sin brecha.
+
+## Aplicación, pruebas y build
+
+- Fuente real `studio/src-tauri/sidecars/agent/`: `index.ts` (4
+  sustituciones: `exigirRespuestaVisible`, sin fallback a `runTurn`),
+  `providers/openai.ts` (política solo host Google + Gemma4: mutex, pacing
+  ≥65s, 1 reintento 429/500/502/503+TimeoutError, cooldown; resto
+  byte-idéntico), `providers/types.ts` (`minIntervalMs?` opcional),
+  `tests/politica-gemma.test.ts` nuevo.
+- Vitest 21/21 offline en fuente real; suite del sidecar 49 passed/1 skipped
+  (existentes intactos, incl. `stripThoughtBlocks`); `tsc --noEmit` limpio;
+  `npm run build` determinista → `dist/index.js` `5b190f2c…` (antes
+  `37f19638…`).
+- Respaldo fuente+bundle: `data/backups/chat-antes-aplicar-20261024T044400Z/`.
+  Instalado en la ruta real de Studio con respaldo del instalado.
+  Reinicio documentado OK; handshake `Model: gemma-4-31b-it`; grafo 321210
+  conservado; semántica R6 4475/20/0 intacta.
+
+## Sonda 360 s (bundle instalado, 1 pasada, 0 intentos extra)
+
+| Caso | Resultado |
+|---|---|
+| C1-totales | error 503 UNAVAILABLE, intento 2/2 |
+| C2-f2-evidencia | error 503, intento 2/2 |
+| C3-f2-igualdad | error 500 INTERNAL, intento 2/2 |
+| C4-definicion | **respondido** (577 chars) |
+| C5-diferencia | error 500 INTERNAL, intento 2/2 |
+| C6-clave-26001 | error TimeoutError tras 360 s |
+
+Política observada: 1 reintento solo en lo dictaminado, clasificación
+servidor/cuota, pacing ≥65 s, errores visibles sin fallback, grafo sin mutar
+(321210 = 321210). Fallos del lado servidor (demanda 503, 500 selectivo,
+lentitud C6), mismo modo que la línea base. Sin rebajar seguridad ni fallback
+de edición. Log: `prueba-bundle-360s-20261024T044700Z.log`; historial previo
+en `prueba-bundle-antes-360s-20261024T044500Z/`.
+
+Detalles máquina-verificables: `reports/aplicacion-chat.json`.

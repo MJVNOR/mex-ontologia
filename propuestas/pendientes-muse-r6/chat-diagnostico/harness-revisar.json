@@ -1,0 +1,28 @@
+{
+  "modo": "revisar (sin spawn, sin modelo; solo lectura local)",
+  "bundle": {
+    "ruta": "C:/Users/marti/Documents/open-ontologies/studio/src-tauri/sidecars/agent/dist/index.js",
+    "bytes": 564051,
+    "sha256": "37f19638e24dcb8b9b5699be367a2ab56230b70909b9b2b3ef6763381514000c"
+  },
+  "env_seguro": {
+    "puntero": "C:/Users/marti/AppData/Local/Packages/OpenAI.Codex_2p2nqsd0c76g0/LocalCache/Local/open-ontologies-studio/agent-env-path.txt",
+    "claves_esperadas": [
+      "ONTO_PROVIDER",
+      "ONTO_LLM_BASE_URL",
+      "ONTO_LLM_MODEL",
+      "ONTO_LLM_API_KEY"
+    ]
+  },
+  "engine_8137_triples": 321209,
+  "casos": [
+    "C1-totales",
+    "C2-f2-evidencia",
+    "C3-f2-igualdad",
+    "C4-definicion-diccionario",
+    "C5-diferencia-variables",
+    "C6-clave-26001"
+  ],
+  "comando_handshake": "ONTO_ALLOW_CALLS=1 node harness_stdio.mjs --handshake   (solo root)",
+  "comando_casos": "ONTO_ALLOW_CALLS=1 node harness_stdio.mjs --casos   (solo root/integrador, >=65s entre llamadas)"
+}

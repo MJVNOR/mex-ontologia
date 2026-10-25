@@ -1,0 +1,123 @@
+{
+  "dictamen": "aceptar",
+  "alcance": {
+    "tareas": [
+      "vigencias-uth-presas",
+      "vigencias-salud",
+      "vigencias-coespo",
+      "vigencias-seguridad"
+    ],
+    "ids_asignados": 16,
+    "ids_decididos": 16,
+    "ids": [
+      "V01",
+      "V02",
+      "V03",
+      "V04",
+      "V05",
+      "V06",
+      "V07",
+      "V08",
+      "V09",
+      "V10",
+      "V11",
+      "V12",
+      "V13",
+      "V14",
+      "V15",
+      "V16"
+    ],
+    "estados": {
+      "sigue_pendiente": 16,
+      "propuesta_resolucion": 0
+    }
+  },
+  "defectos": [],
+  "resoluciones_aprobadas": [],
+  "resoluciones_estructurales": [],
+  "referencias": [
+    {
+      "ruta": "propuestas/cierre-brechas-post-r6/vigencias-uth-presas/asignacion.json",
+      "sha256": "eb2ac521efb9e10de34dc5fec59b5c00e911da485cbc0bd50c97657302cb7222"
+    },
+    {
+      "ruta": "propuestas/cierre-brechas-post-r6/vigencias-uth-presas/entrega.json",
+      "sha256": "55c2e5debf58b84afa2b587ce02aa4ad3252b11e8b05fe75f2ed6c9e0291f001"
+    },
+    {
+      "ruta": "propuestas/cierre-brechas-post-r6/vigencias-uth-presas/entrega.md",
+      "sha256": "915b5d39c8dbf63cb05df73cb1ae2f8a9a1dedc2be1a5ac4a95954a434cbc6fa"
+    },
+    {
+      "ruta": "propuestas/cierre-brechas-post-r6/vigencias-uth-presas/cierrelisto.json",
+      "sha256": "789eba3fd29cc99711fbb60adb7005434493598e6611579be6f2fd7586c92fb1"
+    },
+    {
+      "ruta": "propuestas/cierre-brechas-post-r6/vigencias-salud/asignacion.json",
+      "sha256": "0a482afbba75b65fbf0a4decb7dd613b9abba1ba8ec10bde068f0ef8f59a456e"
+    },
+    {
+      "ruta": "propuestas/cierre-brechas-post-r6/vigencias-salud/entrega.json",
+      "sha256": "c31108abf95eefe4418cc834a7a1d602896015f0276e98c982cff5b5b55b0fe2"
+    },
+    {
+      "ruta": "propuestas/cierre-brechas-post-r6/vigencias-salud/entrega.md",
+      "sha256": "a15725aa8d9e3219bdd4f12cd6517e984e879a4a913d6628c46943f533c3c37f"
+    },
+    {
+      "ruta": "propuestas/cierre-brechas-post-r6/vigencias-salud/cierrelisto.json",
+      "sha256": "97dba478426ee4e0f5ac3d10bd3d26b7fc5b04d820550b1bf864b983721ec507"
+    },
+    {
+      "ruta": "propuestas/cierre-brechas-post-r6/vigencias-coespo/asignacion.json",
+      "sha256": "123e0b1001a43828516c6ca1d7f1d155d1e52e941f49a02c0609891a678c02b6"
+    },
+    {
+      "ruta": "propuestas/cierre-brechas-post-r6/vigencias-coespo/entrega.json",
+      "sha256": "abe3464d228e07fb7a481e46b228efa669216e17e4be021754783f751e8c897f"
+    },
+    {
+      "ruta": "propuestas/cierre-brechas-post-r6/vigencias-coespo/entrega.md",
+      "sha256": "a5a4c0ed785d48f5f8fe076fa1f1ac4058a37ccd33bea58f236121ad4d71ca4f"
+    },
+    {
+      "ruta": "propuestas/cierre-brechas-post-r6/vigencias-coespo/cierrelisto.json",
+      "sha256": "b048656e03e5e262f6c138c7cb0180d281738f16b3b9e6a72a6f6358ac74ac0a"
+    },
+    {
+      "ruta": "propuestas/cierre-brechas-post-r6/vigencias-seguridad/asignacion.json",
+      "sha256": "17b2b1d487ec3cc0174351ffa9ebd2b8590af00c51599a333ee3059201ba6a51"
+    },
+    {
+      "ruta": "propuestas/cierre-brechas-post-r6/vigencias-seguridad/entrega.json",
+      "sha256": "ac2b4b5377a2a55fe0ea6f1f62dfd5f40ab57a6a44ba48554949186b8e075184"
+    },
+    {
+      "ruta": "propuestas/cierre-brechas-post-r6/vigencias-seguridad/resultado.md",
+      "sha256": "8ec91619c4fe443b0f152e2f43c10f9d4ecb8bc57aeef1ed355d921a7a0a935d"
+    },
+    {
+      "ruta": "propuestas/cierre-brechas-post-r6/vigencias-seguridad/cierre-listo.json",
+      "sha256": "00f6655f7b4eac57fecf74cffab7b3668aa496f2195c175cf37a9fb0399ff917"
+    }
+  ],
+  "limites": [
+    "Aceptar investigacion con pendientes es valido: 16 sigue_pendiente sostenibles, 0 propuestas; no forzar resolucion.",
+    "Periodos solo declarados por titulos CKAN/notas; sin inferir historia ni cobertura observada.",
+    "Catalogo actual/nombre de archivo no infiere vigencia; version=null, placeholder 1989-06-04 y core-properties no acreditan F3/F4.",
+    "Adopcion de norma general (Acuerdo CMPE DOF 16-04-2012, SNIEG, SESNSP, CONAPO) no equivale a adopcion institucional del publicador.",
+    "CMPE aplicable a V01-V04 es edicion 2016 (pdf 66ba2fd2); pista SEP 2011 (F-CMPE-01) es solo contexto.",
+    "SESNSP/CONAPO documentan fuente y desfase de corte (local vs 1990-2020/2021-2040); no transfieren vigencia al catalogo local.",
+    "HTTP bloqueado/404/plantilla sin href no es conclusion de inexistencia; hueco 1960-1969 y challenge SESNSP quedan como constancia, no cierre.",
+    "Sin joins por compartir Clave ni identidad automatica de catalogos; sin extender a otros conjuntos/periodos."
+  ],
+  "verificacion": {
+    "base_intacta": true,
+    "originales_intactos": 16,
+    "estados_validos": 16,
+    "evidencia_faltante_presente": 16,
+    "negativas_delimitadas": true,
+    "contactos_externos": 0,
+    "gemma": "excluido"
+  }
+}

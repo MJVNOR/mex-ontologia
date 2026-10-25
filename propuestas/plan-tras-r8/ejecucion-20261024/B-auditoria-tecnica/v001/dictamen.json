@@ -1,0 +1,253 @@
+{
+ "rol": "B-auditoria-tecnica",
+ "version": "v001",
+ "fecha_utc": "2026-10-24T10:22:53.687076+00:00",
+ "alcance": "Auditoria tecnica de sellados C1,C2,C3,C4,P2,P3 bajo propuestas/plan-tras-r8/ejecucion-20261024/. Excluye P1/P4 (no dictaminados), produccion, Gemma y Studio.",
+ "nota_metodo": "AGENTS.md no existe en el repo (busqueda **/AGENTS.md sin resultados); se aplicaron restricciones de la asignacion: solo escritura en B-auditoria-tecnica/v001, sin MCP-CLI ajenos, verificacion SHA-256 por codigo con stdlib y uv.",
+ "fuente_R8": {
+  "base": "propuestas/plan-tras-r8/ejecucion-20261024/base.json",
+  "sha256_base_json": "b3ac1894567579899741655fb5f47c2dbc9dc3662f971bd1c2f9246733a7bf9a",
+  "verificacion": "todas las rutas de base.json sha256 coinciden byte a byte con el arbol actual (inmutable OK)",
+  "resumen_congelado": {
+   "definiciones_con_nombre": 1563,
+   "variables_materializadas": 1442,
+   "columnas_totales": 5523,
+   "columnas_con_correspondencia": 4523,
+   "conceptos": 1106,
+   "referencia_sin_resolver": "des_mpo_res",
+   "condiciones_conexion": 6
+  }
+ },
+ "sellos": {
+  "ubicacion": {
+   "C1-candidatas": "propuestas/plan-tras-r8/ejecucion-20261024/C1-candidatas/v001/congelada.json",
+   "C2-oportunidades": "propuestas/plan-tras-r8/ejecucion-20261024/C2-oportunidades/v001/congelada.json",
+   "C3-cobertura": "propuestas/plan-tras-r8/ejecucion-20261024/C3-cobertura/v001/congelada.json",
+   "C4-referencias": "propuestas/plan-tras-r8/ejecucion-20261024/C4-referencias/v001/congelada.json",
+   "P2-owl-time": "propuestas/plan-tras-r8/ejecucion-20261024/P2-owl-time/congelada.json",
+   "P3-jerarquia-clinica": "propuestas/plan-tras-r8/ejecucion-20261024/P3-jerarquia-clinica/congelada.json"
+  },
+  "verificacion": "SHA-256 y bytes de cada archivo listado coinciden con el contenido actual (integros OK en C1,C2,C3,C4,P2,P3)",
+  "particularidad": "P2 y P3 sellan en la raiz del rol y referencian v001 (consultas+fixtures fuera de v001, entregas dentro); C1-C4 sellan dentro de v001. Ambas formas verificadas."
+ },
+ "sha_entregas": {
+  "C1-candidatas": [
+   {
+    "ruta": "propuestas/plan-tras-r8/ejecucion-20261024/C1-candidatas/v001/entrega.json",
+    "sha256": "e664d16c226387f1c0cb02e87307a001e86a4429b42ad773038d4d970a116f72",
+    "bytes": 68136
+   },
+   {
+    "ruta": "propuestas/plan-tras-r8/ejecucion-20261024/C1-candidatas/v001/entrega.md",
+    "sha256": "cf4da50e17677c132804d02eebf142224e2c8f903a506fe29aef2e87fa33747a",
+    "bytes": 43791
+   }
+  ],
+  "C2-oportunidades": [
+   {
+    "ruta": "propuestas/plan-tras-r8/ejecucion-20261024/C2-oportunidades/v001/entrega.json",
+    "sha256": "386aaea02748f4492e6368d3d5a0fdca5c420c39dc477ec6216eb07f28b05481",
+    "bytes": 28321
+   },
+   {
+    "ruta": "propuestas/plan-tras-r8/ejecucion-20261024/C2-oportunidades/v001/entrega.md",
+    "sha256": "81790c3cf6229d571dd6b37f1b3ef2e5e33ccd94ef7e2612c90533e3424d7870",
+    "bytes": 4090
+   },
+   {
+    "ruta": "propuestas/plan-tras-r8/ejecucion-20261024/C2-oportunidades/v001/matriz_pares_relevantes.csv",
+    "sha256": "2f5fec408edf6dd216f93abcdd962f4163e4b7e070761f7ea57dd5dc5203db58",
+    "bytes": 682244
+   },
+   {
+    "ruta": "propuestas/plan-tras-r8/ejecucion-20261024/C2-oportunidades/v001/prioridades_top50.csv",
+    "sha256": "db1182cda8be4686b4335ed443f3bf22480f04dccaa62f9b71358994c5d6174a",
+    "bytes": 9660
+   },
+   {
+    "ruta": "propuestas/plan-tras-r8/ejecucion-20261024/C2-oportunidades/v001/criterio.json",
+    "sha256": "2296486dc646b7b2fce1e5fafe56e81e34a290bbd341a771b9404d5583111306",
+    "bytes": 1800
+   },
+   {
+    "ruta": "propuestas/plan-tras-r8/ejecucion-20261024/C2-oportunidades/v001/consultas/reproducir.py",
+    "sha256": "b1ad47eab8453492e1c65f0931c23426be0782458c03d8a2a0636b2379762a44",
+    "bytes": 1038
+   },
+   {
+    "ruta": "propuestas/plan-tras-r8/ejecucion-20261024/C2-oportunidades/v001/fixtures/par_ejemplo.json",
+    "sha256": "f8ec214055a3c6f163db1b17ce12d027bcbf6f42e957bb4fb00465908060957e",
+    "bytes": 647
+   }
+  ],
+  "C3-cobertura": [
+   {
+    "ruta": "propuestas/plan-tras-r8/ejecucion-20261024/C3-cobertura/v001/entrega.json",
+    "sha256": "04a3fc2b29014907b4b6b398044b4716e723e5eb6c95cc1c454e8f6b7573cb13",
+    "bytes": 4618
+   },
+   {
+    "ruta": "propuestas/plan-tras-r8/ejecucion-20261024/C3-cobertura/v001/entrega.md",
+    "sha256": "2fd78215a9cac13457132b2b47edf4b73d44b071d9ac1377eb77a67c0c634c3c",
+    "bytes": 2694
+   },
+   {
+    "ruta": "propuestas/plan-tras-r8/ejecucion-20261024/C3-cobertura/v001/matriz-columnas-5523.csv",
+    "sha256": "b6082557b8e2a2eb29f94210616e89baf42a4512449913951440ef95628e17ac",
+    "bytes": 2168469
+   },
+   {
+    "ruta": "propuestas/plan-tras-r8/ejecucion-20261024/C3-cobertura/v001/totales-cruces-observaciones.json",
+    "sha256": "cb5d5110f9a01c4f1fe2472adf13a886235115220322865a7a6b046fb038790e",
+    "bytes": 169266
+   }
+  ],
+  "C4-referencias": [
+   {
+    "ruta": "propuestas/plan-tras-r8/ejecucion-20261024/C4-referencias/v001/entrega.json",
+    "sha256": "88a20430d0311a7e6da4c041111eee4ec7094c7f7505c5ac4da2cb511e568f61",
+    "bytes": 91306
+   },
+   {
+    "ruta": "propuestas/plan-tras-r8/ejecucion-20261024/C4-referencias/v001/entrega.md",
+    "sha256": "9edadb0d61326fb7eaa66285956ad180e2d5be38dcf1e18ce7ce84eaac7e9138",
+    "bytes": 4673
+   },
+   {
+    "ruta": "propuestas/plan-tras-r8/ejecucion-20261024/C4-referencias/v001/matriz-preguntas.json",
+    "sha256": "e505b161ad60653a8c8d248b8dbd77ab9c7e2829a1486fcbe958315eebf0efb1",
+    "bytes": 8151
+   },
+   {
+    "ruta": "propuestas/plan-tras-r8/ejecucion-20261024/C4-referencias/v001/peticiones-web.json",
+    "sha256": "03a264adedcd08e870c8d521c763b067e41dbb6717e67d31a1b40067cf135aec",
+    "bytes": 265
+   }
+  ],
+  "P2-owl-time": [
+   {
+    "ruta": "propuestas/plan-tras-r8/ejecucion-20261024/P2-owl-time/v001/entrega.json",
+    "sha256": "fca5a9234ccc42495002dffc5403082ccab72ab9ec0d42a145cff750e6dd0433",
+    "bytes": 11679
+   },
+   {
+    "ruta": "propuestas/plan-tras-r8/ejecucion-20261024/P2-owl-time/v001/entrega.md",
+    "sha256": "e276d0930129a5f941302d2c33db493cdb66d37234b0a8307a4528689ce3cd0c",
+    "bytes": 1212
+   },
+   {
+    "ruta": "propuestas/plan-tras-r8/ejecucion-20261024/P2-owl-time/v001/piloto-owl-time.ttl",
+    "sha256": "7ca618133431fedffa05df1670e77c5221a49a5f6ffd6379c6e311b0b3d0c807",
+    "bytes": 777
+   },
+   {
+    "ruta": "propuestas/plan-tras-r8/ejecucion-20261024/P2-owl-time/consultas/intervalos-periodos.rq",
+    "sha256": "6f8a7efe2802678f31d323b123de74693804962628b3ee083ffd23a111bcf223",
+    "bytes": 402
+   },
+   {
+    "ruta": "propuestas/plan-tras-r8/ejecucion-20261024/P2-owl-time/consultas/fixtures/resultado-esperado.json",
+    "sha256": "889a791ad870d63b5d643f9480d1fa94389a7d76111e726e6bf33af037eca983",
+    "bytes": 124
+   },
+   {
+    "ruta": "propuestas/plan-tras-r8/ejecucion-20261024/P2-owl-time/peticiones-web.json",
+    "sha256": "e2f19882fdb86e8c89196130acef11de2e08a98dcac6e65218f7f292b67ca14e",
+    "bytes": 824
+   }
+  ],
+  "P3-jerarquia-clinica": [
+   {
+    "ruta": "propuestas/plan-tras-r8/ejecucion-20261024/P3-jerarquia-clinica/v001/entrega.json",
+    "sha256": "99f106c920f81f1009dea2a144a299351e8fe56b7c13efaddb8cfec5c6b0a2ac",
+    "bytes": 98658
+   },
+   {
+    "ruta": "propuestas/plan-tras-r8/ejecucion-20261024/P3-jerarquia-clinica/v001/entrega.md",
+    "sha256": "5d44066eb299cfc13fd3b4b3d94ba2a0c188aa1c26b854b7c8747f7dc81bea66",
+    "bytes": 1464
+   },
+   {
+    "ruta": "propuestas/plan-tras-r8/ejecucion-20261024/P3-jerarquia-clinica/consultas/grupo-caso-con.rq",
+    "sha256": "c5db2018fae2bccf7bd724d959110d08a39c9f3dc0eee47ee23cfac75bbae598",
+    "bytes": 600
+   },
+   {
+    "ruta": "propuestas/plan-tras-r8/ejecucion-20261024/P3-jerarquia-clinica/consultas/detalle-caso-con.rq",
+    "sha256": "8edfb1ffab344657b1c532c6f926a6360a7e34ddeb1dc7bcfdb170812ab835bd",
+    "bytes": 875
+   },
+   {
+    "ruta": "propuestas/plan-tras-r8/ejecucion-20261024/P3-jerarquia-clinica/consultas/fixtures/resultado-grupo-esperado.json",
+    "sha256": "e5a46cf9728b5b58bc7856d5712983dc8394ec6d08fcdc171f30c69459150a86",
+    "bytes": 258
+   },
+   {
+    "ruta": "propuestas/plan-tras-r8/ejecucion-20261024/P3-jerarquia-clinica/peticiones-web.json",
+    "sha256": "13c73deccd2a36f260dfbe3aa33e906d93633bd07ad169368bdf2693360aabc2",
+    "bytes": 293
+   }
+  ]
+ },
+ "verificaciones": {
+  "C1-candidatas": {
+   "casos": "17/17 cubiertos, 0 promociones",
+   "decision": "CONFORME",
+   "detalle": "17 columnas trazadas 1:1 columna+definicion por nombre; 16 dependen de significado candidata, 1 (Total_Egresos) fuera_del_nucleo con contradiccion; ninguna cumple Puerta 1. Sin artefactos de integracion (no_aplica declarado). Fuentes con ruta+sha+localizador verificables."
+  },
+  "C2-oportunidades": {
+   "mapa": "3916 pares (2328+1191+396+1=3916) verificado contra data/portal/oportunidades-cruce.json; insumos 4/4 SHA vigentes",
+   "matriz": "1191 filas unicas = 100% de candidatas_por_validar; recalculo independiente score=suma(pesos)+suma(penalizaciones), orden score desc/id asc, coincide fila a fila con CSV",
+   "top50": "50 filas; coincide con recalculo y con entrega.json top50_resumen (0 discrepancias)",
+   "decision": "CONFORME",
+   "detalle": "Vista nueva sin reescribir mapa; oportunidad != join declarado; overlay R8 requerido documentado."
+  },
+  "C3-cobertura": {
+   "csv": "5523 filas, columna_iri unica (5523/5523)",
+   "particion": "4506+17+833+154+13=5523 verificada en CSV (documental_revisada 4506, candidata_por_nombre 17, sin_definicion 833, definicion_sin_interpretacion 154, sin_diccionario 13); 4523=4506+17 con correspondencia",
+   "niveles": "variables 1563 definiciones con nombre (cobertura.json variables=1563, con iri=1442); 1442=1423+16+3 con 3 fuera_con_iri identificados por huella; 154 columnas no presentadas como definiciones; 140=138+2 headers documentado; 5 observaciones con recurso/columna/localizador",
+   "decision": "CONFORME"
+  },
+  "C4-referencias": {
+   "casos": "19/19 (16 vigencias + 2 encabezados corruptos + des_mpo_res)",
+   "evidencias": "104/104 SHA-256 coinciden byte a byte",
+   "propuestas": "0 para integrar; conserva 138 significados, 16 vigencias, des_mpo_res, 17 candidatas; V13/V14 acceso no resuelto declarado",
+   "decision": "CONFORME"
+  },
+  "P2-owl-time": {
+   "inventario": "4/4 familias (1 escolar cuatrimestral, 1 matricula 2022-2 15212 filas, 2 agricolas), 0 intervalos instanciados",
+   "consultas": "consultas/intervalos-periodos.rq (espera 0 filas) + fixture resultado-esperado.json (bindings 0); plantilla piloto-owl-time.ttl 0 triples ProperInterval",
+   "fuentes": "11 fuentes con sha; base.json sha coincide",
+   "sello": "raiz del rol, cubre consultas+fixture+v001; integro",
+   "decision": "CONFORME como propuesta negativa (nada que integrar)"
+  },
+  "P3-jerarquia-clinica": {
+   "casos": "101/101 exactos; set(entrega)==set(asignacion); unicos 101",
+   "broader": "0 ocurrencias de 'broader' en ontologia/semantica.json y revision-ronda-8; diccionario 33d0a99e plano, Unidad vacia en las 101",
+   "consultas": "grupo-caso-con.rq (101 filas, 0 broader) + detalle-caso-con.rq (ejemplo cefalea-frontal) + fixture (filas_esperadas 101, con_broader 0)",
+   "sello": "raiz del rol, referencia v001; integro",
+   "decision": "CONFORME como propuesta negativa (nada que integrar)"
+  }
+ },
+ "fuera_de_alcance": [
+  "P1-qudt (no auditado en este dictamen)",
+  "P4-shacl-versionado (no auditado)",
+  "W-estandares",
+  "produccion/ontologia/shapes/manifiestos/grafo/Studio (solo lectura de hashes; propuestas/plan-tras-r8 es arbol untracked nuevo, sin modificar tracked)",
+  "Gemma (excluido)"
+ ],
+ "limites": [
+  "Solo escritura en propuestas/plan-tras-r8/ejecucion-20261024/B-auditoria-tecnica/v001",
+  "Sin contactos externos ni navegacion (auditoria local de sellados)",
+  "Sin promocion semantica; Puerta 1 vigente",
+  "Correcciones futuras en v002 sin editar lo congelado"
+ ],
+ "decisiones_globales": [
+  "Sellos SHA integros en los 6 roles",
+  "Reproducibilidad C2 verificada por recalculo (1191/50/3916)",
+  "CSV C3 y particiones verificados (5523; 4506+17+833+154+13; 1442 vs 1563)",
+  "P3 101 exactas y consultas verificadas",
+  "FuenteR8 inmutable (base.json hashes vigentes)",
+  "P1/P4 pendientes, no dictaminados"
+ ]
+}

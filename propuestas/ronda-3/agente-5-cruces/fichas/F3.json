@@ -1,0 +1,38 @@
+{
+ "caso": "F3",
+ "alcance": "Union reconstruida desde listas por fuente de validacion-lote.json (xlsx UES leidos completos con sha; periodo de metadatos sin validacion externa). No es lectura de microdatos personales: conteos por (programa, sede).",
+ "titulados_egresados": {
+  "union": 175,
+  "ambas_con_valor": 54,
+  "total_a": 1404,
+  "total_b": 1947,
+  "periodo": "2020-2021"
+ },
+ "nuevo_reingreso": {
+  "union": 165,
+  "ambas_con_valor": 59,
+  "total_a": 3385,
+  "total_b": 12271,
+  "periodo": "2021-2022"
+ },
+ "condiciones_verificadas": [
+  "archivos xlsx leidos completos con sha (bfe28103, 3bdc9bc3, 9e898830, 2fe45473)",
+  "mismo periodo declarado dentro de cada par (2020-2021 / 2021-2022)",
+  "unicidad (programa, sede) reconstruida; sumas == totales; ausencia NULL, 0 publicado distinto",
+  "claves con/sin acento conviven sin fusionarse (verificado, no homologado)"
+ ],
+ "condiciones_que_impiden_uso_interpretativo": [
+  "identidad de programa por nombre literal UES: acentos/variantes no homologados",
+  "periodo solo declarado en metadatos, sin validacion externa",
+  "fuente agregada (listas por fuente con huella), no filas crudas",
+  "grano programa/sede de una institucion: no extrapolable; no tasas ni cohortes"
+ ],
+ "decision": "habilitable_con_condiciones",
+ "conclusion": "Conteos independientes por (programa, sede) y periodo coincidente declarado; union externa con ausencia=null.",
+ "no_concluye": [
+  "tasa de titulacion/egreso",
+  "seguimiento de cohortes",
+  "homologacion de programas con/sin acento",
+  "mezcla de periodos 2020-2021 con 2021-2022"
+ ]
+}

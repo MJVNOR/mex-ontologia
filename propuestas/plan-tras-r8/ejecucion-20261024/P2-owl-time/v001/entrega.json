@@ -1,0 +1,210 @@
+{
+  "rol": "P2-owl-time",
+  "version": "v001",
+  "fecha_utc": "2026-10-24T10:06:39.505895+00:00",
+  "modelo": "opencode-go/muse-spark-1.3-contributor",
+  "estado": "sin_evidencia_para_integrar",
+  "resumen": "4/4 familias de periodos inventariadas con limites documentados (1 escolar UTH cuatrimestral, 1 matricula 2022-2, 2 agricolas). Ninguna acredita inicio+fin con referencia calendario/precision: propuesta negativa, no integrar. Titulo/anio (2022-2, 2022-2023, Enero-Abril) y cobertura manual CKAN no definen bordes.",
+  "inventario": [
+    {
+      "id": "promedio-academico-cuatrimestre",
+      "familia": "escolar",
+      "variable": "CUATRIMESTRE",
+      "descripcion_literal_diccionario": "Cuatrimestre del que se reporta la información ( Enero - Abril, Mayo - Agosto y Septiembre - Diciembre)",
+      "ejemplo_de_dato": "Enero - Abril",
+      "tipo_de_dato": "Texto",
+      "catalogo_de_referencia": "",
+      "definicion_iri": "https://example.org/mex-ontologi/definition/ed82f8a6-6414-4ce4-94df-302408eb2f67%2F2",
+      "huella_fila_diccionario": "8cf8b7c54f31a288bfe380387612cef0f97386e7a567be39c3a83aabecdeb806",
+      "contexto_fuente": {
+        "conjunto": "403912fd-5853-4e18-8256-f77206f855bd",
+        "titulo_conjunto": "Promedio Academico",
+        "diccionario": "ed82f8a6-6414-4ce4-94df-302408eb2f67",
+        "frecuencia": "cuatrimestral",
+        "organizacion": "Universidad Tecnologica de Hermosillo",
+        "recursos_cuatrimestrales": "Enero-Abril / Mayo-Agosto / Septiembre-Diciembre por anio (p. ej. d62602e7, ca957782, 63918648 para 2022)"
+      },
+      "bordes_acreditados": {
+        "inicio": null,
+        "fin": null,
+        "referencia_calendario": null,
+        "precision": null
+      },
+      "limite": "Bandas mensuales en texto (Enero - Abril, ...) sin dia, sin anio en la variable (el anio solo esta en el titulo del recurso) y sin calendario/referencia ni precision declarados. No se convierte en time:Interval.",
+      "decision": "no_integrar"
+    },
+    {
+      "id": "matriculas-2022-2-periodo-escolar",
+      "familia": "escolar",
+      "hoja": "Estudiantes 2022-2",
+      "filas_datos": 15212,
+      "columnas_ciclo": [
+        "Inscrito ciclo  escolar actual",
+        "Ciclo escolar actual motivo no inscrito",
+        "Inscritos ciclo escolar senalado",
+        "Grupos asignaturas inscrito en ciclo escolar  senalado",
+        "Fecha inscripcion en ciclo escolar  senalado",
+        "Se realizo equivalencia en el ciclo actual",
+        "Estimulo Ciclo Actual",
+        "Ultimo ciclo  escolar cursado",
+        "Promedio periodo escolar inscrito (Solo asig. aprobadas)",
+        "Promedio periodo escolar inscrito (todas las asignaturas)"
+      ],
+      "contexto_fuente": {
+        "recurso": "58f2d5a6-0432-48f1-8a35-a5efcce78bac",
+        "nombre_recurso": "Matriculas - 2022 - 2",
+        "conjunto": "e819466c-7282-46c5-84e9-65917dd8cc85",
+        "titulo_conjunto": "Matriculas de Estudiantes",
+        "diccionario": "8c0e76ff-3a86-4b1d-beee-b04bebe7df8d"
+      },
+      "bordes_acreditados": {
+        "inicio": null,
+        "fin": null,
+        "referencia_calendario": null,
+        "precision": null
+      },
+      "limite": "Titulo/anio 2022-2 no define bordes (R8: sin calendario UES 2022-2 localizado; adenda-web MAT-W-03 parcial+negativo). Ninguna columna trae fechas de inicio/fin del periodo lectivo.",
+      "decision": "no_integrar"
+    },
+    {
+      "id": "agricultura-sonora-ciclo",
+      "familia": "agricola",
+      "variable": "CICLO",
+      "descripcion_literal_diccionario": "Ciclo agrícola de siembra",
+      "definicion_iri": "https://example.org/mex-ontologi/definition/a7591bc9-f905-45cb-ba6c-ae3588d87594%2F2",
+      "huella_fila_diccionario": "257b589d1d1fd4e4b1758ea39222f2c7f05ce840560400fb7f61acd5a8dbcdbd",
+      "contexto_fuente": {
+        "conjunto": "3e17a7e8-c8d4-49c4-a426-4dec099cd0cd",
+        "titulo_conjunto": "Agricultura Sonora",
+        "diccionario": "94215f51-9c89-414d-8c3d-92792e609a2a",
+        "recursos_anuales": "Agricultura Sonora anio 1999, 2000, ... 2023"
+      },
+      "bordes_acreditados": {
+        "inicio": null,
+        "fin": null,
+        "referencia_calendario": null,
+        "precision": null
+      },
+      "limite": "Descripcion generica del ciclo de produccion; sin valores de ciclo (O-I/P-V) ni fechas en la definicion. Los titulos anuales de recursos no acreditan bordes de ciclo.",
+      "decision": "no_integrar"
+    },
+    {
+      "id": "permisos-trigo-ano-ciclo",
+      "familia": "agricola",
+      "variables": [
+        "ANO",
+        "CICLO"
+      ],
+      "descripcion_literal_diccionario": {
+        "ANO": "Año agrícola de referencia",
+        "CICLO": "Ciclo agrícola de siembra"
+      },
+      "definicion_iri": {
+        "ANO": "https://example.org/mex-ontologi/definition/a7591bc9-f905-45cb-ba6c-ae3588d87594%2F1",
+        "CICLO": "https://example.org/mex-ontologi/definition/a7591bc9-f905-45cb-ba6c-ae3588d87594%2F2"
+      },
+      "huella_fila_diccionario": {
+        "ANO": "0eb6828148182026b3277bbec6cdeafba825fd9147cd3244805f216489fa2465",
+        "CICLO": "257b589d1d1fd4e4b1758ea39222f2c7f05ce840560400fb7f61acd5a8dbcdbd"
+      },
+      "contexto_fuente": {
+        "conjunto": "207dc91e-ffef-47a6-891a-1a43dab05ee9",
+        "titulo_conjunto": "Permisos de Siembra de Trigo y sus variedades",
+        "diccionario": "a7591bc9-f905-45cb-ba6c-ae3588d87594",
+        "recursos_por_ciclo": "Permisos de Siembra de Trigo Ciclo 2020-2021, 2021-2022, 2022-2023, 2023-2024, 2024-2025"
+      },
+      "bordes_acreditados": {
+        "inicio": null,
+        "fin": null,
+        "referencia_calendario": null,
+        "precision": null
+      },
+      "limite": "Etiqueta de ciclo 2022-2023 en titulo de recurso no define bordes; sin fechas de inicio/fin ni calendario/precision en las definiciones. No se infiere O-I ni equivalencia con anio civil.",
+      "decision": "no_integrar"
+    }
+  ],
+  "intervalo_propuesto": null,
+  "motivo_sin_intervalo": "Ningun caso formal: ningun periodo acredita inicio+fin con referencia calendario/precision. Un titulo o anio aislado (2022-2, 2022-2023, Enero-Abril) no se convierte en time:Interval; cobertura CKAN manual (start/end) no es vigencia ni intervalo lectivo.",
+  "diseno": {
+    "ttl": "v001/piloto-owl-time.ttl (plantilla de forma, 0 intervalos instanciados)",
+    "regla": "Solo instanciar time:ProperInterval con time:hasBeginning y time:hasEnd acreditados (xsd:date o dateTime con referencia y precision declaradas por la fuente). Prohibido inventar UTC/medianoche o calendario por nombre.",
+    "consulta": "consultas/intervalos-periodos.rq (espera 0 filas hoy)",
+    "fixture": "consultas/fixtures/resultado-esperado.json"
+  },
+  "prueba_negativa_aceptacion": "La consulta de intervalos sobre el grafo devuelve 0 filas (fixture). El criterio se cumple como NEGATIVO: nada que integrar hasta reapertura.",
+  "consultas": [
+    "consultas/intervalos-periodos.rq",
+    "consultas/fixtures/resultado-esperado.json"
+  ],
+  "peticiones_web": "peticiones-web.json (1 peticion a W-estandares: especificacion primaria W3C OWL Time; se continua localmente)",
+  "fuentes": [
+    {
+      "ruta": "propuestas/plan-tras-r8/ejecucion-20261024/P2-owl-time/asignacion.json",
+      "sha256": "6025b04c4e852f8d21ed22f75d3d9aca3bb7440b586b304f053c9b3201a5ee61",
+      "localizador": "rol P2-owl-time, 0 casos asignados; alcance: inventario + piloto solo con limites documentados"
+    },
+    {
+      "ruta": "docs/plan-actualizado-tras-r8.md",
+      "sha256": "751411a04650c484e97161912aadb23d6800b08d24b39df43c5f92c0b8a6ea59",
+      "localizador": "fase 3, fila P2: intervalo solo para periodo con limites temporales documentados"
+    },
+    {
+      "ruta": "docs/plan-actualizado-tras-r8.json",
+      "sha256": "418cda3ae229df4bebb90a43363ba96e64eec4f631034c975ac5dc18af0473c0",
+      "localizador": "criterios_de_integracion.owl_time: intervalo solo con limites y referencia temporal documentados"
+    },
+    {
+      "ruta": "propuestas/plan-tras-r8/ejecucion-20261024/base.json",
+      "sha256": "b3ac1894567579899741655fb5f47c2dbc9dc3662f971bd1c2f9246733a7bf9a",
+      "localizador": "hashes base R8; gemma excluido"
+    },
+    {
+      "ruta": "ontologia/semantica.json",
+      "sha256": "dba467b63286171bb68f5b1400a1ed51bfb99d5663e5b34a36f31fb94953cebd",
+      "localizador": "conceptos periodo-escolar/ciclo-agricola/anio-agricola: definiciones sin bordes ni calendario"
+    },
+    {
+      "ruta": "data/semantica/cobertura.json",
+      "sha256": "683f58b24d23b9c97b569ae19dd14ed43b722a08857519766c435e447e9c3638",
+      "localizador": "4 variables (huellas 8cf8b7c5 CUATRIMESTRE, 91012fac CICLO agricultura, 0eb68281 ANO trigo, 257b589d CICLO trigo)"
+    },
+    {
+      "ruta": "data/integracion-cobertura/entregas/educacion/entrega.json",
+      "sha256": "3e2df431fb4a6337ebf1d9b3888233179e66e620fa902dfe8a0390e3f728792f",
+      "localizador": "CUATRIMESTRE: descripcion con bandas Enero-Abril/Mayo-Agosto/Septiembre-Diciembre, ejemplo Enero - Abril; frecuencia cuatrimestral UTH"
+    },
+    {
+      "ruta": "propuestas/investigacion-post-r6/matriculas/evidencia/Matriculas-2022-2.xlsx",
+      "sha256": "1b68919ce503511a167e2a375a695fee5447787322db2d7dc8132142ff3bdeaf",
+      "localizador": "hoja Estudiantes 2022-2: 15212 filas datos + encabezado (70 cols); columnas de ciclo actual/senalado sin bordes"
+    },
+    {
+      "ruta": "data/integracion-ronda-5-web/matriculas/adenda-web.json",
+      "sha256": "9c234e3db04e912fd067567e0805099ba8797666eed906afe9d63b2925cf1738",
+      "localizador": "MAT-W-03: calendario 2022-2 no localizado; 222 es ruido de fuente, sin ciclo senalado"
+    },
+    {
+      "ruta": "reports/catalogo-perfil.json",
+      "sha256": "aae23b2eb8f8e37cbee18d86c0cac7c73f0899f02fbd417bc90d01a8fd54fc43",
+      "localizador": "titulos de recursos: Promedio Enero-Abril/Mayo-Agosto/Septiembre-Diciembre 2022; Permisos Ciclo 2020-2021..2024-2025; Matriculas - 2022 - 2 (titulos, no bordes)"
+    },
+    {
+      "ruta": "propuestas/cierre-brechas-post-r6/vigencias-salud/evidencia/api_package_show_2026-10-24.json",
+      "sha256": "e751fe481af047f3ffa6facc57c9d04952e5f874186be2d2fb4a6ae20f9a0154",
+      "localizador": "result.version=null; recurso Catalogo 08d3b1a7 start 2022-01-01/end 2026-12-31 = cobertura manual, no edicion ni vigencia"
+    }
+  ],
+  "limites": [
+    "Anio o titulo aislado (2022-2, 2022-2023, O-I, Enero-Abril) no define bordes de intervalo.",
+    "Solo intervalo con inicio+fin y referencia calendario/precision acreditados; prohibido inventar UTC, medianoche o calendario por nombre.",
+    "Cobertura CKAN manual (start/end) no es vigencia de catalogo ni intervalo lectivo.",
+    "TRIMESTRE (Denuncias Ambientales) fuera de alcance escolar/agricola; no se reabren vigencias por inferir periodo.",
+    "Sin edicion de ontologia, shapes, manifiestos, grafo ni Studio; Gemma excluido; sin contactos externos."
+  ],
+  "condiciones_de_aceptacion": [
+    "Auditor verifica: 4/4 familias inventariadas, 0 intervalos instanciados, hashes de las 11 fuentes.",
+    "Aceptar como propuesta negativa: nada que integrar; inventario y plantilla quedan publicados.",
+    "Reapertura solo con documento del publicador que declare inicio+fin+referencia/precision para recurso/edicion/periodo concretos (p. ej. calendario UES 2022-2 o nota de ciclo agricola con fechas).",
+    "Correcciones futuras en v002+ sin editar lo congelado."
+  ]
+}

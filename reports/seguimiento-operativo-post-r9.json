@@ -1,0 +1,106 @@
+{
+  "format_version": 1,
+  "release_base": "R9",
+  "estado": "seguimiento_documental_completado",
+  "fecha_utc": "2026-10-24T19:59:58.614533+00:00",
+  "expediente": "propuestas/cobertura-operativa-post-r9/ejecucion-20261024",
+  "avances": [
+    "Reporte operativo R9 publicado con 26 frentes y criterios de reapertura.",
+    "Siete necesidades y siete preguntas conservadas sin envío, copia exacta del expediente previo.",
+    "Presas cotejado con evidencia R6–R9: sin evidencia primaria nueva que reabra V05."
+  ],
+  "presas": {
+    "correspondencia_cat_estatal_clave": "ya_integrada_R6",
+    "vigencia_V05": "sin_acreditar",
+    "integraciones_nuevas": 0,
+    "dictamen": {
+      "ruta": "propuestas/cobertura-operativa-post-r9/ejecucion-20261024/A-presas/entrega.json",
+      "sha256": "5cf07fefb8fe15b4887f048d2eec47493f28b125aef83f6548d88677c8924e51"
+    }
+  },
+  "pendientes": {
+    "significados_reales": 138,
+    "vigencias": 16,
+    "acceso_no_resuelto": [
+      "V13",
+      "V14"
+    ],
+    "candidatas": 17,
+    "referencia_catalogo": "des_mpo_res",
+    "encabezados_corruptos": 2,
+    "observaciones_esquema": 5
+  },
+  "reporte_operativo": {
+    "ruta": "reports/cobertura-operativa-r9.json",
+    "sha256": "fd64a9aeb622255f98c3bdcd2ebf311757113982ac9ff62770615a73a4175ab8"
+  },
+  "auditoria_independiente": {
+    "ruta": "propuestas/cobertura-operativa-post-r9/ejecucion-20261024/D-auditoria/v002/entrega.json",
+    "sha256": "f498ef167858a76e974aa2145f4f06513eec1a0405ad81d4cfaa6690694564b2"
+  },
+  "pruebas": {
+    "ruta": "propuestas/cobertura-operativa-post-r9/ejecucion-20261024/validacion/suite.log",
+    "sha256": "17527f7148cd38cd653d298b35101a59c53a0205a5299224cf366ed23f3d5b10",
+    "pruebas": 213,
+    "resultado": "OK",
+    "segundos": 51.065
+  },
+  "validacion": {
+    "ruta": "propuestas/cobertura-operativa-post-r9/ejecucion-20261024/validacion/grafos.json",
+    "sha256": "9b380256637f923e2bfac6902ad4931aaf45186eb5daf516e2ad2a14ac64837c",
+    "portal_triples": 322405,
+    "studio_triples": 323014,
+    "rdf_y_shacl_conformes": true,
+    "studio_identico_a_r9": true,
+    "modo": "Comprobación de sincronización por exportación de solo lectura; sin update/load en Studio."
+  },
+  "preguntas": {
+    "ruta": "propuestas/cobertura-operativa-post-r9/ejecucion-20261024/C-preguntas/preguntas-documentales.json",
+    "sha256": "8c180f57898b5e83826d14d69037c353d2bb1dd5bbd9c12ecd2ebab21b7333c4",
+    "necesidades": 7,
+    "preguntas": 7,
+    "estado": "preparadas_no_enviadas"
+  },
+  "archivos_modificados_o_nuevos": [
+    {
+      "ruta": "scripts/generar_cobertura_operativa.py",
+      "sha256": "5394a7353dda05c08ce528b39985d7a285bb4aecee4e83a5b875508fd68162a1"
+    },
+    {
+      "ruta": "tests/test_generar_cobertura_operativa.py",
+      "sha256": "f239ca49176606123bb2cae1e0b7de2af7dba94fcf046d4e6dfde51c7aa4fc73"
+    },
+    {
+      "ruta": "reports/cobertura-operativa-r9.json",
+      "sha256": "fd64a9aeb622255f98c3bdcd2ebf311757113982ac9ff62770615a73a4175ab8"
+    },
+    {
+      "ruta": "reports/cobertura-operativa-r9.md",
+      "sha256": "dd6c5b5ad98b09bb857e77b9ad653cae0ee47a0e634161b5791cadecb83854ae"
+    },
+    {
+      "ruta": "README.md",
+      "sha256_antes": "f06078318cd1cd70c62847bfde07f3573971b5a6d379cd343ae41e5c23fad94a",
+      "sha256": "92597fce765239b4833fefcec47be20f94ba2458920a07a63668eb6ce0384ce2",
+      "respaldo": "propuestas/cobertura-operativa-post-r9/ejecucion-20261024/respaldo-documentacion/README.md"
+    },
+    {
+      "ruta": "PLAN.md",
+      "sha256_antes": "51a683d5c0defe0f93f044c3392baf31d9d7dd8282ba9994f8833593e927fe5c",
+      "sha256": "304b89d08cac27c8532ddf837fef88ae32b6a89cb5380b8692e5b457d4b374c7",
+      "respaldo": "propuestas/cobertura-operativa-post-r9/ejecucion-20261024/respaldo-documentacion/PLAN.md"
+    }
+  ],
+  "integridad": {
+    "base": {
+      "ruta": "propuestas/cobertura-operativa-post-r9/ejecucion-20261024/base.json",
+      "sha256": "b678788e2350a721c17e7b9572775c9ab5a5d1b39f7644b0777ee34ebfb0b87b"
+    },
+    "archivos_estado_r9_preservados": 52,
+    "discrepancias": [],
+    "manifiestos_R1_R9": "sin_cambios"
+  },
+  "grafo_modificado": false,
+  "gemma": "excluido_sin_cambios",
+  "contactos_externos": 0
+}

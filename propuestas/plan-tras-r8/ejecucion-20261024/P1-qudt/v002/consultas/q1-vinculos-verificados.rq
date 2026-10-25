@@ -1,0 +1,2 @@
+PREFIX mex: <https://example.org/mex-ontologi/vocab/>
+SELECT ?d ?var ?u WHERE { ?d a mex:UnidadDeclarada ; mex:variableDocumentada ?var ; mex:unidadQudt ?u } ORDER BY ?d

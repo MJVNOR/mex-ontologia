@@ -1,0 +1,497 @@
+{
+  "rol": "R-documental",
+  "version": "v001",
+  "fecha_utc": "2026-10-24T20:22:02+00:00",
+  "objeto": "Dictamen semantico/documental independiente de T-top50/v001 y A2-registro-civil/v001",
+  "alcance": [
+    "T-top50/v001: 3916 pares, 1191 candidatas, top50, scores, fuentes y sellos.",
+    "A2-registro-civil/v001: par matrimonios/nacimientos, 8 ejes, veredicto y sellos."
+  ],
+  "fuera_de_alcance": [
+    "A1-911, A3-itama, Q-unidades y S: en elaboracion; no se aprueban entregas futuras.",
+    "Base IRI / example.org: intacta y no evaluada.",
+    "Integracion, publicacion en reports/, grafo, Studio y escritores centrales."
+  ],
+  "metodo": [
+    "Lectura directa de fuentes locales; sin red, sin grafo, sin Studio.",
+    "Recomputo independiente de scores y orden (no importa el codigo de T).",
+    "Reproduccion integra de resultados.json de A2 desde fuentes y comparacion de igualdad.",
+    "SHA256 de cada archivo calculado por codigo; snapshots antes/despues para probar no escritura."
+  ],
+  "veredicto_global": "FAVORABLE CON OBSERVACIONES",
+  "entregas": {
+    "T-top50/v001": {
+      "veredicto": "FAVORABLE CON OBSERVACIONES",
+      "checks": 16,
+      "checks_ok": 16,
+      "sellos": "verificados (7/7 archivos, bytes y SHA256)",
+      "hallazgos": [
+        "H-01"
+      ],
+      "sintesis": "3916 pares, 1191 candidatas y top50 recomputados por codigo: rangos, scores, orden, titulos, familias, bloqueadores y conjuntos coinciden. 50/50 filas en NO_JOIN_APROBADO; ningun join ni rate se deriva del ranking."
+    },
+    "A2-registro-civil/v001": {
+      "veredicto": "FAVORABLE CON OBSERVACIONES",
+      "checks": 15,
+      "checks_ok": 15,
+      "sellos": "verificados (5/5 archivos y sidecar)",
+      "hallazgos": [
+        "H-02",
+        "H-03",
+        "H-04"
+      ],
+      "sintesis": "BLOQUEADO reproducido: grano evento vs agregado, unicidad/cardinalidad no acreditadas (muestras n=100), total!=hombres+mujeres en 5/6 pruebas, meses faltantes, ambito de registro y poblaciones distintas. Sin comparacion ni join."
+    },
+    "A1-911 / A3-itama / Q-unidades / S": {
+      "veredicto": "NO EVALUADO",
+      "checks": 0,
+      "checks_ok": 0,
+      "sellos": "no aplica",
+      "hallazgos": [],
+      "sintesis": "En elaboracion. No se extiende aprobacion ni se anticipa dictamen."
+    }
+  },
+  "hallazgos": [
+    {
+      "id": "H-01",
+      "entrega": "T-top50/v001",
+      "severidad": "menor",
+      "tipo": "trazabilidad",
+      "titulo": "Huella declarada del plan no corresponde al archivo actual",
+      "descripcion": "La unica fuente de T cuya huella no coincide es docs/plan-paralelo-ampliacion-post-r9.md. Su mtime (2026-10-24T20:15:39.270348+00:00) es posterior al sellado de T (2026-10-24T20:09:42.611856+00:00); el cambio es posterior, no atribuible al carril. Las cifras no dependen de ese archivo y fueron recomputadas.",
+      "evidencia": {
+        "declarado": "807a05e4473597ced2e1d708fb2069884d9a669cc0ec823d6a1aca316a680e9c",
+        "actual": "f43214a0d38ff2cb1fcdfb213d9aa0fba67415dc21b2033ac305a3a70eda0ce8",
+        "mtime_plan": "2026-10-24T20:15:39.270348+00:00",
+        "mtime_sello_T": "2026-10-24T20:09:42.611856+00:00"
+      },
+      "impacto": "La huella del insumo ya no ancla el texto vigente; no altera 3916/1191/50 ni scores.",
+      "accion": "Al congelar el plan, re-declarar su huella en T v002 (o registrar la version usada)."
+    },
+    {
+      "id": "H-02",
+      "entrega": "A2-registro-civil/v001",
+      "severidad": "menor",
+      "tipo": "documental",
+      "titulo": "Conteo de recursos distinto entre resultados.md y resultados.json",
+      "descripcion": "El md dice 10 recursos Matrimonios y 15 Nacimientos; el JSON registra 11 y 16. La diferencia es el recurso Diccionario de cada conjunto: ambos conteos son compatibles si el md explicita que excluye diccionarios.",
+      "evidencia": {
+        "md": "10 Matrimonios / 15 Nacimientos",
+        "json": {
+          "mat": 11,
+          "nac": 16
+        },
+        "diccionarios": [
+          "364ffa5c-e1c2-4185-a22f-80bede6735d0",
+          "6bcf5b63-0855-4f3b-81a0-4bca82e97272"
+        ]
+      },
+      "impacto": "Ambiguedad de lectura del inventario; no afecta el veredicto BLOQUEADO.",
+      "accion": "Precisar en v002: '10 recursos de datos + 1 diccionario' y '15 + 1'."
+    },
+    {
+      "id": "H-03",
+      "entrega": "A2-registro-civil/v001",
+      "severidad": "menor",
+      "tipo": "semantico",
+      "titulo": "La frase 'sin catalogo de correspondencia' es mas amplia que la evidencia",
+      "descripcion": "El repositorio contiene correspondencias territoriales (506 entradas, con referencia Catalogo_Municipios) para otros conjuntos, pero ninguna cubre los recursos de Matrimonios/Nacimientos y el diccionario no declara catalogo de referencia. Lo no acreditado es la correspondencia para este par, no la inexistencia de catalogo en el portal.",
+      "evidencia": {
+        "correspondencias_territoriales": 506,
+        "recursos_del_par_sin_correspondencia": 14,
+        "catalogo_de_referencia_diccionario": "",
+        "fuente": "data/territorio/verificacion.json"
+      },
+      "impacto": "Redaccion; el eje sigue no acreditado y el veredicto no cambia.",
+      "accion": "Reformular: 'sin correspondencia acreditada para estos recursos'."
+    },
+    {
+      "id": "H-04",
+      "entrega": "A2-registro-civil/v001",
+      "severidad": "menor",
+      "tipo": "trazabilidad",
+      "titulo": "Fuentes locales sin huella SHA256 de archivo completo",
+      "descripcion": "fuentes_locales registra conteos, hashes de fragmento de diccionario y estados, pero no el SHA256 de reports/catalogo-perfil.json, contenido-inspeccion.json, oportunidades-cruce.json ni validacion-lote.json. La reproduccion depende de bytes que no quedan anclados en la entrega.",
+      "evidencia": {
+        "reports/catalogo-perfil.json": "aae23b2eb8f8e37cbee18d86c0cac7c73f0899f02fbd417bc90d01a8fd54fc43",
+        "data/portal/contenido-inspeccion.json": "61861aab5bc2b334699c4d78f611a0e2d650c4649bd791927f9095c2ac785efb",
+        "data/portal/oportunidades-cruce.json": "40f107d5cf9c11ce937073ac2f7b5b0e3c9db8c342f7414cecb0f0744e0d0c14",
+        "data/portal/lote-cruces/validacion-lote.json": "9031b875b1bf7873722f74847abbbce9b87201415f43788f60be1a75b50ede19"
+      },
+      "impacto": "Trazabilidad; el contenido se reprodujo y coincide, pero el sello no fija las fuentes.",
+      "accion": "Anadir huellas completas de las cuatro fuentes en A2 v002."
+    }
+  ],
+  "checks": [
+    {
+      "id": "T-01",
+      "entrega": "T",
+      "enunciado": "Mapa con 3916 pares y 1191 candidatas",
+      "ok": true,
+      "detalle": "pares=3916 estados={'sin_clave_detectada': 2328, 'candidata_por_validar': 1191, 'solo_dimensiones_amplias_o_tiempo': 396, 'exploratorio_ejecutado': 1}",
+      "hallazgo": null
+    },
+    {
+      "id": "T-02",
+      "entrega": "T",
+      "enunciado": "Reparto de estados 2328/1191/396/1",
+      "ok": true,
+      "detalle": "{\"candidata_por_validar\": 1191, \"exploratorio_ejecutado\": 1, \"sin_clave_detectada\": 2328, \"solo_dimensiones_amplias_o_tiempo\": 396}",
+      "hallazgo": null
+    },
+    {
+      "id": "T-03",
+      "entrega": "T",
+      "enunciado": "1191 ids candidatos unicos",
+      "ok": true,
+      "detalle": "unicos=1191",
+      "hallazgo": null
+    },
+    {
+      "id": "T-04",
+      "entrega": "T",
+      "enunciado": "Matriz 1191 filas, ids unicos y 1191 scores recomputados iguales",
+      "ok": true,
+      "detalle": "desiguales=0",
+      "hallazgo": null
+    },
+    {
+      "id": "T-05",
+      "entrega": "T",
+      "enunciado": "Top50: rangos 1-50, ids unicos, orden score desc/id asc y 50 scores iguales",
+      "ok": true,
+      "detalle": "n=50 primer=27a5c80c-514a-4170-a2e5-7ef40d818641--4d27a1c4-381d-4ce0-a663-0d3e23a93848 score=5.0",
+      "hallazgo": null
+    },
+    {
+      "id": "T-06",
+      "entrega": "T",
+      "enunciado": "Top1 ITAMA con pesos 13.0, penalizaciones -8.0 y score 5.0",
+      "ok": true,
+      "detalle": "id=27a5c80c-514a-4170-a2e5-7ef40d818641--4d27a1c4-381d-4ce0-a663-0d3e23a93848 score=5.0",
+      "hallazgo": null
+    },
+    {
+      "id": "T-07",
+      "entrega": "T",
+      "enunciado": "A1/A2/A3 por ID exacto en top50 con rango, score y titulos del mapa",
+      "ok": true,
+      "detalle": "A1=(2, 3.0) A2=(4, 3.0) A3=(1, 5.0)",
+      "hallazgo": null
+    },
+    {
+      "id": "T-08a",
+      "entrega": "T",
+      "enunciado": "Staging JSON: meta con huellas reales, 3916/1191 y estado NO_JOIN",
+      "ok": true,
+      "detalle": "filas=50",
+      "hallazgo": null
+    },
+    {
+      "id": "T-08b",
+      "entrega": "T",
+      "enunciado": "Staging JSON: 50 filas fieles al mapa/CSV (titulos, familias, bloqueadores, conjuntos, carril)",
+      "ok": true,
+      "detalle": "desviaciones=[]",
+      "hallazgo": null
+    },
+    {
+      "id": "T-09",
+      "entrega": "T",
+      "enunciado": "Vistas md/html contienen las 50 filas y el estado NO_JOIN_APROBADO",
+      "ok": true,
+      "detalle": "md=50 html=50 filas_html=50",
+      "hallazgo": null
+    },
+    {
+      "id": "T-10",
+      "entrega": "T",
+      "enunciado": "Ningun join ni rate aprobado por el ranking",
+      "ok": true,
+      "detalle": "estado_filas=NO_JOIN_APROBADO",
+      "hallazgo": null
+    },
+    {
+      "id": "T-11",
+      "entrega": "T",
+      "enunciado": "Huellas de fuentes declaradas coinciden con los bytes actuales (6/7; plan desactualizado, H-01)",
+      "ok": true,
+      "detalle": "coinciden=6/7 no_coinciden=['docs/plan-paralelo-ampliacion-post-r9.md']",
+      "hallazgo": "H-01"
+    },
+    {
+      "id": "T-12",
+      "entrega": "T",
+      "enunciado": "Cobertura R9: 1423/1106/138/16/17 y estado declarados coinciden con el reporte",
+      "ok": true,
+      "detalle": "estado=cobertura_operativa_validada_sin_cambios_al_grafo",
+      "hallazgo": null
+    },
+    {
+      "id": "T-13",
+      "entrega": "T",
+      "enunciado": "Sellos T: 7 archivos con SHA256/bytes correctos y sin omisiones",
+      "ok": true,
+      "detalle": "declarados=7 en_disco=8",
+      "hallazgo": null
+    },
+    {
+      "id": "T-14",
+      "entrega": "T",
+      "enunciado": "Matriz ordenada por rango 1-1191, score no creciente y mismas 50 primeras",
+      "ok": true,
+      "detalle": "rango1=1 rangoN=1191",
+      "hallazgo": null
+    },
+    {
+      "id": "T-15",
+      "entrega": "T",
+      "enunciado": "Resumenes de entrega (top50, matriz, mapa, top1) coinciden con el recomputo",
+      "ok": true,
+      "detalle": "prosa de resultados verificada contra recomputo",
+      "hallazgo": null
+    },
+    {
+      "id": "A2-01",
+      "entrega": "A2",
+      "enunciado": "Sellos A2: 5 archivos con SHA256 correctos, sidecar y sin omisiones",
+      "ok": true,
+      "detalle": "declarados=5 en_disco=7",
+      "hallazgo": null
+    },
+    {
+      "id": "A2-02",
+      "entrega": "A2",
+      "enunciado": "resultados.json se reproduce integramente desde fuentes locales (8 ejes, causas, fuentes, metodo)",
+      "ok": true,
+      "detalle": "claves_divergentes=[]",
+      "hallazgo": null
+    },
+    {
+      "id": "A2-03",
+      "entrega": "A2",
+      "enunciado": "Eje claves: par candidata_por_validar, pendientes de catalogo/unicidad y campo municipio sin garantia",
+      "ok": true,
+      "detalle": "estado=candidata_por_validar pendientes=7",
+      "hallazgo": null
+    },
+    {
+      "id": "A2-04",
+      "entrega": "A2",
+      "enunciado": "Eje grano: Matrimonios fila-evento (dia/edad/sexo) vs Nacimientos agregado (hombres/mujeres/total)",
+      "ok": true,
+      "detalle": "vars_mat=8 vars_nac=6",
+      "hallazgo": null
+    },
+    {
+      "id": "A2-05",
+      "entrega": "A2",
+      "enunciado": "Eje unicidad: dos muestras n=100 declaran no demostrar unicidad ni cobertura integral",
+      "ok": true,
+      "detalle": "a=Matrimonios 2023 b=Nacimientos 2024",
+      "hallazgo": null
+    },
+    {
+      "id": "A2-06",
+      "entrega": "A2",
+      "enunciado": "Eje cardinalidad: 6 pruebas, decision de fallo, 5 total!=hombres+mujeres y 1 meses faltantes",
+      "ok": true,
+      "detalle": "anios=[2015, 2016, 2020, 2021, 2022, 2023] total=5 meses=1",
+      "hallazgo": null
+    },
+    {
+      "id": "A2-07",
+      "entrega": "A2",
+      "enunciado": "Eje poblacion: actos con dos contrayentes sin id de persona vs conteos agregados por sexo",
+      "ok": true,
+      "detalle": "sin id_persona en ambos diccionarios",
+      "hallazgo": null
+    },
+    {
+      "id": "A2-08",
+      "entrega": "A2",
+      "enunciado": "Eje periodo/ambito: solape 2015-2024 solo por nombres, periodo de registro y sin residencia",
+      "ok": true,
+      "detalle": "anios=2015-2024 registro=True residencia=False",
+      "hallazgo": null
+    },
+    {
+      "id": "A2-09",
+      "entrega": "A2",
+      "enunciado": "Eje unidades: fila-evento vs fila-agregado, pendiente de unidades y sin tasas",
+      "ok": true,
+      "detalle": "pendiente de unidades presente en el mapa",
+      "hallazgo": null
+    },
+    {
+      "id": "A2-10",
+      "entrega": "A2",
+      "enunciado": "Eje cobertura: muestras n=100 con totales 14685/627 de recursos-anios distintos y meses faltantes",
+      "ok": true,
+      "detalle": "total_a=14685 total_b=627",
+      "hallazgo": null
+    },
+    {
+      "id": "A2-11",
+      "entrega": "A2",
+      "enunciado": "Ficha: 8 ejes con veredicto coherente con resultados.json",
+      "ok": true,
+      "detalle": "filas=8 ejes=8",
+      "hallazgo": null
+    },
+    {
+      "id": "A2-12",
+      "entrega": "A2",
+      "enunciado": "resultados.md: BLOQUEADO, 5 causas y anios de inconsistencia 2015/2020-2023",
+      "ok": true,
+      "detalle": "causas=5",
+      "hallazgo": null
+    },
+    {
+      "id": "A2-13",
+      "entrega": "A2",
+      "enunciado": "Inventario: 11 recursos Matrimonios (2015-2024) y 16 Nacimientos (2010-2024), diccionario incluido",
+      "ok": true,
+      "detalle": "mat=11 2015-2024; nac=16 2010-2024",
+      "hallazgo": null
+    },
+    {
+      "id": "A2-14",
+      "entrega": "A2",
+      "enunciado": "Script A2: solo stdlib, rutas e IDs correctos, sin red/grafo/studio",
+      "ok": true,
+      "detalle": "imports=['hashlib', 'json'] rutas_ids=True",
+      "hallazgo": null
+    },
+    {
+      "id": "A2-15",
+      "entrega": "A2",
+      "enunciado": "A2 no calcula comparacion ni join: ambos campos nulos y sin tasas",
+      "ok": true,
+      "detalle": "comparacion_volumenes=null join_grafo=null",
+      "hallazgo": null
+    },
+    {
+      "id": "G-01",
+      "entrega": "GLOBAL",
+      "enunciado": "Ningun byte de las entregas selladas cambio durante la auditoria",
+      "ok": true,
+      "detalle": "snapshots inicio/fin identicos",
+      "hallazgo": null
+    }
+  ],
+  "checks_resumen": {
+    "total": 32,
+    "ok": 32,
+    "fallas": []
+  },
+  "hashes_fuentes": {
+    "data/portal/oportunidades-cruce.json": {
+      "sha256": "40f107d5cf9c11ce937073ac2f7b5b0e3c9db8c342f7414cecb0f0744e0d0c14",
+      "bytes": 9645149
+    },
+    "propuestas/plan-tras-r8/ejecucion-20261024/C2-oportunidades/v001/criterio.json": {
+      "sha256": "2296486dc646b7b2fce1e5fafe56e81e34a290bbd341a771b9404d5583111306",
+      "bytes": 1800
+    },
+    "propuestas/plan-tras-r8/ejecucion-20261024/C2-oportunidades/v001/prioridades_top50.csv": {
+      "sha256": "db1182cda8be4686b4335ed443f3bf22480f04dccaa62f9b71358994c5d6174a",
+      "bytes": 9660
+    },
+    "propuestas/plan-tras-r8/ejecucion-20261024/C2-oportunidades/v001/matriz_pares_relevantes.csv": {
+      "sha256": "2f5fec408edf6dd216f93abcdd962f4163e4b7e070761f7ea57dd5dc5203db58",
+      "bytes": 682244
+    },
+    "reports/cobertura-operativa-r9.json": {
+      "sha256": "fd64a9aeb622255f98c3bdcd2ebf311757113982ac9ff62770615a73a4175ab8",
+      "bytes": 77758
+    },
+    "reports/catalogo-perfil.json": {
+      "sha256": "aae23b2eb8f8e37cbee18d86c0cac7c73f0899f02fbd417bc90d01a8fd54fc43",
+      "bytes": 227576
+    },
+    "data/portal/contenido-inspeccion.json": {
+      "sha256": "61861aab5bc2b334699c4d78f611a0e2d650c4649bd791927f9095c2ac785efb",
+      "bytes": 2652648
+    },
+    "data/portal/lote-cruces/validacion-lote.json": {
+      "sha256": "9031b875b1bf7873722f74847abbbce9b87201415f43788f60be1a75b50ede19",
+      "bytes": 1478239
+    },
+    "docs/plan-paralelo-ampliacion-post-r9.md": {
+      "sha256": "f43214a0d38ff2cb1fcdfb213d9aa0fba67415dc21b2033ac305a3a70eda0ce8",
+      "bytes": 5672
+    },
+    "reports/seguimiento-operativo-post-r9.json": {
+      "sha256": "73103b1d2ff6daa7fdc2665e42c68802a98169005c5144129048e2f7a0c4698b",
+      "bytes": 4319
+    },
+    "data/territorio/verificacion.json": {
+      "sha256": "e0ce33f797861235daec8c849810ce0f934d27d0fb573f7ef5179f6937b662e9",
+      "bytes": 362941
+    }
+  },
+  "hashes_entregas": {
+    "T-top50/v001": {
+      "propuestas/ampliacion-post-r9/ejecucion-20261024/T-top50/v001/entrega.json": {
+        "sha256": "a8e88771cb796388b43199c82421ab986658473bbab7a251ba992100c0514230",
+        "bytes": 6170
+      },
+      "propuestas/ampliacion-post-r9/ejecucion-20261024/T-top50/v001/entrega.md": {
+        "sha256": "a5459e0f7630cf02eadc625b82f64846f38b869a59cfcac7a4c43fb2fc32592f",
+        "bytes": 2328
+      },
+      "propuestas/ampliacion-post-r9/ejecucion-20261024/T-top50/v001/scripts/reproducir_top50_r9.py": {
+        "sha256": "1a88b779b3ad5253ab3423c094226e369e21ac057fd3f29ca95e4d60b37102b2",
+        "bytes": 7846
+      },
+      "propuestas/ampliacion-post-r9/ejecucion-20261024/T-top50/v001/tests/test_top50_r9.py": {
+        "sha256": "b7be5301aa52d732de498a286a5bc1a22d71c2a975b4901766b6c45ef34a818a",
+        "bytes": 3395
+      },
+      "propuestas/ampliacion-post-r9/ejecucion-20261024/T-top50/v001/top50-oportunidades-r9.json": {
+        "sha256": "a8a2134b5d3de4f63b61802e7c54ae9c3cc175dc0ecb548cc1e5a99bc118f375",
+        "bytes": 60154
+      },
+      "propuestas/ampliacion-post-r9/ejecucion-20261024/T-top50/v001/top50-oportunidades-r9.md": {
+        "sha256": "22d9504bec57fe8f7d03eb3a7990f55f3ed064ec47eae32f1e2d0c1fc6b847d0",
+        "bytes": 31005
+      },
+      "propuestas/ampliacion-post-r9/ejecucion-20261024/T-top50/v001/vista-top50-r9.html": {
+        "sha256": "6e954950c4f271085e8d35bac1a7a9c324aa32ea3709da2e22b73bec69502287",
+        "bytes": 35024
+      }
+    },
+    "A2-registro-civil/v001": {
+      "A2-pregunta-ficha.md": {
+        "sha256": "0ae5190cb341512f8a14b6d663e2e69219dc1fc83ed38a0d41655141765cae81",
+        "bytes": 2288
+      },
+      "resultados.md": {
+        "sha256": "7c8ac97f756e8347c4b234e4a1484f7f80d8a9cf8ffb8abba2ddc7e2e30b3d96",
+        "bytes": 1002
+      },
+      "resultados.json": {
+        "sha256": "b724656745008ee8612c2e60e3ab0e79fa3764a586110414d038a7fda9df6e52",
+        "bytes": 4640
+      },
+      "scripts/analizar.py": {
+        "sha256": "53d60a063a6ea468a971b07fb14a5be04fcdbec0238df6e6be120939e530bd35",
+        "bytes": 7315
+      },
+      "tests/test_bloqueo.py": {
+        "sha256": "97ba05fcfeadd0526855dc99b1702a6bdb10cf9f276fa3a535b4b84dc38c8795",
+        "bytes": 1256
+      }
+    }
+  },
+  "sello": {
+    "ruta": "propuestas/ampliacion-post-r9/ejecucion-20261024/R-documental/v001/sello.json",
+    "nota": "SHA256 de esta entrega y de los bytes auditados; hash propio en sello.sha256"
+  },
+  "limites": [
+    "No se re-ejecutaron los scripts sellados para no escribir en sus carpetas; su logica se reprodujo de forma independiente.",
+    "La auditoria verifica coherencia interna y contra fuentes locales; no acredita verdad extramuros ni calidad de los datos originales publicados.",
+    "No se evaluan entregas A1/A3/Q/S ni se aprueba integracion alguna."
+  ]
+}

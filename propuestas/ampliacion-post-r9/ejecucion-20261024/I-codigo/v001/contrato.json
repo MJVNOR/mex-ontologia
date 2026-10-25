@@ -1,0 +1,327 @@
+{
+  "format_version": 1,
+  "release": "R10",
+  "release_base": "R9",
+  "estado": "staging_para_auditoria_no_instalado_sin_aprobaciones_reales",
+  "base_iri": "https://example.org/mex-ontologi/",
+  "base_iri_decision": "fuera_de_alcance_no_modificar",
+  "rutas": {
+    "config": "ontologia/revision-ronda-10.json",
+    "evidencia": "data/integracion-ronda-10",
+    "manifiesto": "data/integracion-ronda-10/manifiesto.json",
+    "aceptadas": "data/integracion-ronda-10/aceptadas.json",
+    "base_semantica": "data/integracion-ronda-10/base-semantica.json",
+    "cobertura_r9": "data/integracion-ronda-10/cobertura-r9.json",
+    "config_iri_base": "data/integracion-ronda-10/config-iri-base.toml",
+    "datos": "data/integracion-ronda-10/datos/unidades.ttl",
+    "modelo": "data/integracion-ronda-10/modelo/unidades.ttl (opcional)",
+    "shapes": "data/integracion-ronda-10/shapes/adicionales.ttl",
+    "auditorias": [
+      "data/integracion-ronda-10/auditorias/a.json",
+      "data/integracion-ronda-10/auditorias/b.json"
+    ],
+    "filas": "data/integracion-ronda-10/filas/{id}.json",
+    "normativa": "data/integracion-ronda-10/normativa/{id}.txt"
+  },
+  "json_schema": {
+    "$schema": "https://json-schema.org/draft/2020-12/schema",
+    "$id": "https://example.org/mex-ontologi/contrato-r10-v001",
+    "title": "Contrato de integración R10 (staging)",
+    "type": "object",
+    "additionalProperties": false,
+    "required": ["config", "manifiesto", "aceptadas", "auditoria"],
+    "properties": {
+      "config": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": ["format_version", "release", "evidencia", "manifiesto_sha256"],
+        "properties": {
+          "format_version": { "const": 1 },
+          "release": { "const": "R10" },
+          "evidencia": { "const": "data/integracion-ronda-10" },
+          "manifiesto_sha256": { "$ref": "#/$defs/sha" }
+        }
+      },
+      "manifiesto": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": ["format_version", "release", "archivos"],
+        "properties": {
+          "format_version": { "const": 1 },
+          "release": { "const": "R10" },
+          "archivos": {
+            "type": "object",
+            "minProperties": 8,
+            "propertyNames": {
+              "pattern": "^(aceptadas\\.json|base-semantica\\.json|cobertura-r9\\.json|config-iri-base\\.toml|datos/unidades\\.ttl|modelo/unidades\\.ttl|shapes/adicionales\\.ttl|auditorias/[ab]\\.json|filas/[A-Za-z0-9][A-Za-z0-9._-]{0,63}\\.json|normativa/[A-Za-z0-9][A-Za-z0-9._-]{0,63}\\.txt)$"
+            },
+            "additionalProperties": { "$ref": "#/$defs/sha" }
+          }
+        }
+      },
+      "aceptadas": { "$ref": "#/$defs/aceptadas" },
+      "auditoria": { "$ref": "#/$defs/auditoria" }
+    },
+    "$defs": {
+      "sha": {
+        "type": "string",
+        "pattern": "^[0-9a-f]{64}$"
+      },
+      "uuid": {
+        "type": "string",
+        "pattern": "^[0-9a-f]{8}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{12}$"
+      },
+      "id": {
+        "type": "string",
+        "pattern": "^[A-Za-z0-9][A-Za-z0-9._-]{0,63}$"
+      },
+      "aceptadas": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": ["format_version", "release", "release_base", "unidades", "formas", "archivos_instalables"],
+        "properties": {
+          "format_version": { "const": 1 },
+          "release": { "const": "R10" },
+          "release_base": { "const": "R9" },
+          "unidades": {
+            "type": "array",
+            "maxItems": 6,
+            "items": { "$ref": "#/$defs/unidad" }
+          },
+          "formas": {
+            "type": "array",
+            "items": { "$ref": "#/$defs/forma" }
+          },
+          "archivos_instalables": {
+            "type": "object",
+            "additionalProperties": false,
+            "required": ["datos", "shapes"],
+            "properties": {
+              "datos": { "$ref": "#/$defs/sha" },
+              "shapes": { "$ref": "#/$defs/sha" },
+              "modelo": { "$ref": "#/$defs/sha" }
+            }
+          }
+        }
+      },
+      "unidad": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": [
+          "id", "diccionario", "fila", "conjunto", "nombre", "unidad_literal",
+          "unidad_qudt", "normativa_uri", "normativa_sha256",
+          "huella_fila_diccionario", "fuente_url", "sujeto", "variable",
+          "definicion_iri"
+        ],
+        "properties": {
+          "id": { "$ref": "#/$defs/id" },
+          "diccionario": { "$ref": "#/$defs/uuid" },
+          "fila": { "type": "integer", "minimum": 1 },
+          "conjunto": { "$ref": "#/$defs/uuid" },
+          "nombre": { "type": "string", "minLength": 1 },
+          "unidad_literal": { "type": "string", "minLength": 1 },
+          "unidad_qudt": {
+            "type": "string",
+            "format": "uri",
+            "pattern": "^http://qudt\\.org/vocab/unit/"
+          },
+          "normativa_uri": {
+            "type": "string",
+            "format": "uri",
+            "pattern": "^http://qudt\\.org/vocab/unit/"
+          },
+          "normativa_sha256": { "$ref": "#/$defs/sha" },
+          "huella_fila_diccionario": { "$ref": "#/$defs/sha" },
+          "fuente_url": { "type": "string", "format": "uri", "pattern": "^https?://" },
+          "sujeto": {
+            "type": "string",
+            "format": "uri",
+            "pattern": "^https://example\\.org/mex-ontologi/"
+          },
+          "variable": {
+            "type": "string",
+            "format": "uri",
+            "pattern": "^https://example\\.org/mex-ontologi/documented-variable/"
+          },
+          "definicion_iri": {
+            "type": "string",
+            "format": "uri",
+            "pattern": "^https://example\\.org/mex-ontologi/definition/"
+          },
+          "etiqueta": { "type": "string", "minLength": 1 },
+          "comentario": { "type": "string", "minLength": 1 },
+          "evidencia_normativa": { "type": "string", "minLength": 1 }
+        }
+      },
+      "forma": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": ["id"],
+        "properties": {
+          "id": { "$ref": "#/$defs/id" }
+        }
+      },
+      "auditoria": {
+        "type": "object",
+        "additionalProperties": true,
+        "required": ["auditor", "dictamen", "aceptadas_sha256", "dictamenes"],
+        "properties": {
+          "auditor": { "enum": ["a", "b"] },
+          "dictamen": { "const": "aceptar" },
+          "aceptadas_sha256": { "$ref": "#/$defs/sha" },
+          "dictamenes": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "additionalProperties": true,
+              "required": ["id", "dictamen"],
+              "properties": {
+                "id": { "$ref": "#/$defs/id" },
+                "dictamen": { "const": "aceptar" }
+              }
+            }
+          }
+        }
+      }
+    }
+  },
+  "validaciones": [
+    {
+      "id": "V01",
+      "descripcion": "Toda ruta del manifiesto es relativa, POSIX, sin .., sin unidad de disco y queda confinada a data/integracion-ronda-10; se rechazan rutas resueltas duplicadas.",
+      "implementa": "dentro()"
+    },
+    {
+      "id": "V02",
+      "descripcion": "El manifiesto contiene exactamente los archivos obligatorios mas filas/{id}.json y normativa/{id}.txt de cada unidad; modelo/unidades.ttl solo si archivos_instalables.modelo existe. Cada SHA coincide con el archivo.",
+      "implementa": "cargar(), _validar_archivos()"
+    },
+    {
+      "id": "V03",
+      "descripcion": "config-iri-base.toml es copia byte a byte de config.toml y config.toml declara la baseIRI actual https://example.org/mex-ontologi/. No hay migracion de IRI.",
+      "implementa": "cargar()"
+    },
+    {
+      "id": "V04",
+      "descripcion": "base-semantica.json tiene el SHA fijado dba467b6... y es igual a ontologia/semantica.json vivo.",
+      "implementa": "cargar()"
+    },
+    {
+      "id": "V05",
+      "descripcion": "cobertura-r9.json conserva el resumen R9 exacto: 1423 respaldadas, 1106 conceptos, 4506 correspondencias documentales, 17 candidatas, 1442 variables materializadas y el resto de conteos.",
+      "implementa": "comprobar_resumen()"
+    },
+    {
+      "id": "V06",
+      "descripcion": "report.resumen vivo es igual al snapshot R9 y cada unidad nueva coincide exactamente con la variable viva y la del snapshot en definicion, variable, conjunto, diccionario, nombre y huella de fila.",
+      "implementa": "construir()"
+    },
+    {
+      "id": "V07",
+      "descripcion": "La fila fuente es JSON canonico (sort_keys, separadores compactos) y su SHA-256 es la huella_fila_diccionario del reporte vivo y del snapshot. El literal de unidad y el nombre se comparan sin normalizar tildes, mayusculas ni espacios.",
+      "implementa": "construir()"
+    },
+    {
+      "id": "V08",
+      "descripcion": "normativa/{id}.txt tiene el SHA fijado, contiene la version QUDT 3.5.3 y la URI canonica exacta, que debe ser igual a unidad_qudt y usar http://qudt.org/vocab/unit/.",
+      "implementa": "construir()"
+    },
+    {
+      "id": "V09",
+      "descripcion": "El grafo datos/unidades.ttl se compara como conjunto exacto de tripletas contra la whitelist estructural: sujetos, predicados y objetos exactos; no se inspeccionan textos ni comentarios para decidir predicados.",
+      "implementa": "_datos()"
+    },
+    {
+      "id": "V10",
+      "descripcion": "Se rechazan sujetos extra, rdf:type distinto de mex:UnidadDeclarada, datoscore, estadoPropuesta, motivoNegativo, negativos, M3, factores, conversiones y QuantityValue.",
+      "implementa": "_datos(), _politica_literal()"
+    },
+    {
+      "id": "V11",
+      "descripcion": "No se repiten las dos declaraciones R9: se rechazan por sujeto, definicion_iri o par diccionario/fila.",
+      "implementa": "_validar_unidad()"
+    },
+    {
+      "id": "V12",
+      "descripcion": "Cada forma y cada unidad tiene una entrada de dictamen aceptar en a.json y en b.json, sin duplicados ni faltantes, y ambos declaran el SHA exacto de aceptadas.json.",
+      "implementa": "_auditorias()"
+    },
+    {
+      "id": "V13",
+      "descripcion": "Si no hay formas, shapes/adicionales.ttl debe estar vacio; si hay formas, debe ser Turtle valido con al menos una forma SHACL y predicados/objetos en SHACL/RDF/RDFS/XSD/mex.",
+      "implementa": "_shapes()"
+    },
+    {
+      "id": "V14",
+      "descripcion": "construir() anade entidades PROV de fila y normativa con su SHA, sin alterar la cadena R1-R9.",
+      "implementa": "construir()"
+    }
+  ],
+  "prohibiciones": [
+    "No se modifica config.toml ni se migra la baseIRI; example.org queda fuera de alcance.",
+    "No se acepta hm3 sin termino exacto QUDT 3.5.3; no se sustituye por M3.",
+    "Toneladas solo pasa si es tonelada metrica exacta (QUDT TON) y las dos auditorias reales la aprueban; si no, queda fuera.",
+    "No se aceptan factores, conversiones, QuantityValue, valores ni atribucion global.",
+    "No se aceptan sujetos, predicados u objetos fuera de la whitelist estructural; las etiquetas no crean predicados.",
+    "No se duplican las dos declaraciones R9.",
+    "No se aceptan formas sin SHA exacto y dictamen por id en ambas auditorias.",
+    "No se incluyen aprobaciones, plantillas de dictamen ni material real en esta entrega.",
+    "No se ejecuta produccion ni Studio; los tests usan solo mocks en TEMP."
+  ],
+  "aprobaciones": {
+    "requeridas": 2,
+    "archivos": [
+      "auditorias/a.json",
+      "auditorias/b.json"
+    ],
+    "dictamen": "aceptar",
+    "sha": "sha256(aceptadas.json) exacto en ambas",
+    "por_id": "una entrada por unidad y por forma, sin duplicados ni faltantes",
+    "estado_entrega": "no incluidas: Q/W/S siguen completando; los tests usan mocks en TEMP"
+  },
+  "r9": {
+    "release": "R9",
+    "resumen_exacto": {
+      "definiciones_con_nombre_examinadas": 1563,
+      "filas_sin_nombre": 7,
+      "estados_variables": {
+        "respaldada_por_definicion": 1423,
+        "fuera_del_nucleo_actual": 124,
+        "candidata_sin_definicion_suficiente": 16
+      },
+      "variables_materializadas": 1442,
+      "estados_correspondencias": {
+        "documental_revisada": 4506,
+        "candidata_por_nombre": 17
+      },
+      "columnas_totales_examinadas": 5523,
+      "columnas_con_correspondencia": 4523,
+      "conceptos_compartidos": 1106,
+      "referencias_catalogo_sin_resolver": 1,
+      "sistemas_identificadores_recuperados": 1,
+      "condiciones_conexion": 6,
+      "referencias_catalogo_con_recurso_identificado": 16
+    },
+    "no_duplicar": {
+      "definiciones": [
+        "https://example.org/mex-ontologi/definition/6713de4e-1e2b-447d-8000-f6ceaabd8473%2F6",
+        "https://example.org/mex-ontologi/definition/94215f51-9c89-414d-8c3d-92792e609a2a%2F14"
+      ],
+      "sujetos": [
+        "https://example.org/mex-ontologi/propuesta/p1-qudt/v003/declaracion-precipitacion-mm",
+        "https://example.org/mex-ontologi/propuesta/p1-qudt/v003/declaracion-superficie-ha"
+      ],
+      "pares_diccionario_fila": [
+        ["6713de4e-1e2b-447d-8000-f6ceaabd8473", 6],
+        ["94215f51-9c89-414d-8c3d-92792e609a2a", 14]
+      ]
+    }
+  },
+  "notas": [
+    "El contrato es anterior al material: Q/W6 unidades y S formas siguen completando; no se inventan aprobaciones.",
+    "Los unicos fixtures con dictamenes viven en tests/test_ronda_10.py y se crean en un directorio temporal.",
+    "consolidar_semantica.py y ampliar_portal.py son copias completas con un hook R10 despues del bloque R9; la cadena previa no cambia.",
+    "La version corregida de esta entrega sera v002; no se sobrescribe v001.",
+    "Modelo de esta sesion: opencode/deepseek-v4.1-flash-free (Muse agotado)."
+  ]
+}

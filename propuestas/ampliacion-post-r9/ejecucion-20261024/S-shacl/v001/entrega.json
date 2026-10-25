@@ -1,0 +1,849 @@
+{
+  "base_iri": {
+    "decision": "fuera_de_alcance_no_modificar",
+    "origen": "config.toml",
+    "sha256_config": "0fa293d24094e70d81be6df257c4081627e1d571f9fc44dabb5e7bd21b1ff0c4",
+    "valor": "https://example.org/mex-ontologi/"
+  },
+  "carril": "S-shacl",
+  "fixtures": {
+    "archivos": {
+      "negativo.ttl": "5b3e981e753b18abcc2fb69f02c465fabe436c1a6ef5e2adc77f183c1ce7f77d",
+      "positivo-instancias-r9.ttl": "263c563c58c7818096acf08136b643820e73d82f9eb931f5146b62d1614e493e",
+      "positivo.ttl": "1d9a4ff92ecc724647fdc021e5a037939ff774766e042d088e32c5474b9eb242"
+    },
+    "directorio": "propuestas/ampliacion-post-r9/ejecucion-20261024/S-shacl/v001/fixtures",
+    "esperado_sha256": "ac71a867855731f29121b477bd520ab3d2cf09dffe6b0799c299d2c7d8a45741"
+  },
+  "formas": {
+    "archivo": "propuestas/ampliacion-post-r9/ejecucion-20261024/S-shacl/v001/shapes.ttl",
+    "reglas": [
+      {
+        "clases_objetivo": [
+          "https://example.org/mex-ontologi/vocab/CorrespondenciaSemantica"
+        ],
+        "descripcion": "R5. Una CorrespondenciaSemantica con estadoCorrespondencia documental_revisada debe apuntar a una VariableDocumentada con estadoSemantico respaldada_por_definicion. No se aplica a candidata_por_nombre ni a ambigua_por_nombre, de modo que las 17 candidatas de R9 (16 candidata_sin_definicion_suficiente y Total_Egresos fuera_del_nucleo_actual) no se rechazan por esta regla.",
+        "forma": "https://example.org/mex-ontologi/shapes/CorrespondenciaRevisadaVariableRespaldada",
+        "id": "CorrespondenciaRevisadaVariableRespaldada",
+        "propiedades": [],
+        "sparql": [
+          {
+            "mensaje": "R5: correspondencia documental_revisada sin variableDestino respaldada_por_definicion",
+            "select": "SELECT $this WHERE {\n  $this <https://example.org/mex-ontologi/vocab/estadoCorrespondencia> \"documental_revisada\" .\n  FILTER NOT EXISTS {\n    $this <https://example.org/mex-ontologi/vocab/variableDestino> ?variable .\n    ?variable <https://example.org/mex-ontologi/vocab/estadoSemantico> \"respaldada_por_definicion\" .\n  }\n}",
+            "severidad": "http://www.w3.org/ns/shacl#Violation"
+          }
+        ]
+      },
+      {
+        "clases_objetivo": [
+          "https://example.org/mex-ontologi/vocab/UnidadDeclarada"
+        ],
+        "descripcion": "R6. Contrato de UnidadDeclarada: enlaces funcionales y con clase, unidad literal preservada, unidadQudt opcional como IRI (sin lista cerrada de terminos, para admitir ampliaciones de Q), y procedencia. No exige ni prohibe propiedades adicionales: no hay sh:closed.",
+        "forma": "https://example.org/mex-ontologi/shapes/UnidadDeclaradaContrato",
+        "id": "UnidadDeclaradaContrato",
+        "propiedades": [
+          {
+            "clase": "https://example.org/mex-ontologi/vocab/VariableDocumentada",
+            "datatype": null,
+            "maxCount": "1",
+            "mensaje": "R6a: UnidadDeclarada requiere exactamente un mex:variableDocumentada IRI de clase VariableDocumentada",
+            "minCount": "1",
+            "nodeKind": "http://www.w3.org/ns/shacl#IRI",
+            "ruta": "https://example.org/mex-ontologi/vocab/variableDocumentada"
+          },
+          {
+            "clase": "https://example.org/mex-ontologi/vocab/DefinicionVariable",
+            "datatype": null,
+            "maxCount": "1",
+            "mensaje": "R6b: UnidadDeclarada requiere exactamente un mex:definicionFuente IRI de clase DefinicionVariable",
+            "minCount": "1",
+            "nodeKind": "http://www.w3.org/ns/shacl#IRI",
+            "ruta": "https://example.org/mex-ontologi/vocab/definicionFuente"
+          },
+          {
+            "clase": null,
+            "datatype": "http://www.w3.org/2001/XMLSchema#string",
+            "maxCount": "1",
+            "mensaje": "R6c: UnidadDeclarada requiere exactamente una unidad literal (xsd:string) sin sustituirla por el termino normalizado",
+            "minCount": "1",
+            "nodeKind": null,
+            "ruta": "https://example.org/mex-ontologi/vocab/unidadLiteral"
+          },
+          {
+            "clase": null,
+            "datatype": null,
+            "maxCount": "1",
+            "mensaje": "R6d: UnidadDeclarada admite como maximo un mex:unidadQudt y debe ser IRI; no se impone una lista cerrada de terminos",
+            "minCount": null,
+            "nodeKind": "http://www.w3.org/ns/shacl#IRI",
+            "ruta": "https://example.org/mex-ontologi/vocab/unidadQudt"
+          },
+          {
+            "clase": null,
+            "datatype": null,
+            "maxCount": null,
+            "mensaje": "R6e: UnidadDeclarada requiere procedencia prov:wasDerivedFrom IRI",
+            "minCount": "1",
+            "nodeKind": "http://www.w3.org/ns/shacl#IRI",
+            "ruta": "http://www.w3.org/ns/prov#wasDerivedFrom"
+          }
+        ],
+        "sparql": []
+      },
+      {
+        "clases_objetivo": [
+          "https://example.org/mex-ontologi/vocab/VariableDocumentada"
+        ],
+        "descripcion": "R3. Una VariableDocumentada con estadoSemantico candidata_sin_definicion_suficiente debe conservar al menos un significadoCandidato; las 16 candidatas de R9 lo cumplen.",
+        "forma": "https://example.org/mex-ontologi/shapes/VariableCandidataConSignificadoCandidato",
+        "id": "VariableCandidataConSignificadoCandidato",
+        "propiedades": [],
+        "sparql": [
+          {
+            "mensaje": "R3: VariableDocumentada candidata_sin_definicion_suficiente sin mex:significadoCandidato",
+            "select": "SELECT $this WHERE {\n  $this <https://example.org/mex-ontologi/vocab/estadoSemantico> \"candidata_sin_definicion_suficiente\" .\n  FILTER NOT EXISTS { $this <https://example.org/mex-ontologi/vocab/significadoCandidato> ?candidato }\n}",
+            "severidad": "http://www.w3.org/ns/shacl#Violation"
+          }
+        ]
+      },
+      {
+        "clases_objetivo": [
+          "https://example.org/mex-ontologi/vocab/VariableDocumentada"
+        ],
+        "descripcion": "R4. Una VariableDocumentada candidata_sin_definicion_suficiente no puede declarar significadoDocumentado: seria promocion encubierta sin respaldo documental.",
+        "forma": "https://example.org/mex-ontologi/shapes/VariableCandidataSinSignificadoDocumentado",
+        "id": "VariableCandidataSinSignificadoDocumentado",
+        "propiedades": [],
+        "sparql": [
+          {
+            "mensaje": "R4: VariableDocumentada candidata_sin_definicion_suficiente con mex:significadoDocumentado",
+            "select": "SELECT $this WHERE {\n  $this <https://example.org/mex-ontologi/vocab/estadoSemantico> \"candidata_sin_definicion_suficiente\" .\n  $this <https://example.org/mex-ontologi/vocab/significadoDocumentado> ?significado .\n}",
+            "severidad": "http://www.w3.org/ns/shacl#Violation"
+          }
+        ]
+      },
+      {
+        "clases_objetivo": [
+          "https://example.org/mex-ontologi/vocab/VariableDocumentada"
+        ],
+        "descripcion": "R1. Una VariableDocumentada con estadoSemantico respaldada_por_definicion debe tener al menos un significadoDocumentado. Los 1423 casos respaldados de R9 lo cumplen y los 3 casos fuera_del_nucleo_actual quedan excluidos por el filtro de estado.",
+        "forma": "https://example.org/mex-ontologi/shapes/VariableRespaldadaConSignificadoDocumentado",
+        "id": "VariableRespaldadaConSignificadoDocumentado",
+        "propiedades": [],
+        "sparql": [
+          {
+            "mensaje": "R1: VariableDocumentada respaldada_por_definicion sin mex:significadoDocumentado",
+            "select": "SELECT $this WHERE {\n  $this <https://example.org/mex-ontologi/vocab/estadoSemantico> \"respaldada_por_definicion\" .\n  FILTER NOT EXISTS { $this <https://example.org/mex-ontologi/vocab/significadoDocumentado> ?significado }\n}",
+            "severidad": "http://www.w3.org/ns/shacl#Violation"
+          }
+        ]
+      },
+      {
+        "clases_objetivo": [
+          "https://example.org/mex-ontologi/vocab/VariableDocumentada"
+        ],
+        "descripcion": "R2. Una VariableDocumentada respaldada_por_definicion no puede declarar significadoCandidato: el estado respaldado exige significado documentado y excluye el candidato.",
+        "forma": "https://example.org/mex-ontologi/shapes/VariableRespaldadaSinSignificadoCandidato",
+        "id": "VariableRespaldadaSinSignificadoCandidato",
+        "propiedades": [],
+        "sparql": [
+          {
+            "mensaje": "R2: VariableDocumentada respaldada_por_definicion con mex:significadoCandidato",
+            "select": "SELECT $this WHERE {\n  $this <https://example.org/mex-ontologi/vocab/estadoSemantico> \"respaldada_por_definicion\" .\n  $this <https://example.org/mex-ontologi/vocab/significadoCandidato> ?candidato .\n}",
+            "severidad": "http://www.w3.org/ns/shacl#Violation"
+          }
+        ]
+      }
+    ],
+    "sha256": "0f342433c003d20cdda74fd8190cb746c8f7c665875b0584e5b5759dcf205566",
+    "total_reglas": 6
+  },
+  "generado_en_utc": "2026-10-24T20:32:31.318531+00:00",
+  "motor": {
+    "argumentos": [
+      "--no-connect",
+      "--data-dir <store temporal>",
+      "validate|load|shacl"
+    ],
+    "ejecutable": "tools/open-ontologies.exe",
+    "invocado_desde": "scripts/construir_catalogo.py:motor",
+    "modo_almacenamiento": "persistent",
+    "sh_sparql_soportado": true,
+    "sha256_ejecutable": "765803297dbaaeef6fce9bcb2b1794d0bd6683a21afa7981d504722ff611e1bf"
+  },
+  "pruebas": {
+    "negativo.ttl": {
+      "coincide": true,
+      "conforms": false,
+      "corpus": "propuestas/ampliacion-post-r9/ejecucion-20261024/S-shacl/v001/fixtures/negativo.ttl",
+      "duracion_shacl_s": 0.285,
+      "esperado": {
+        "conforms": false,
+        "violations": [
+          {
+            "focus": "https://example.org/mex-ontologi/prueba-s-shacl/v001/n-r1",
+            "shape": "https://example.org/mex-ontologi/shapes/VariableRespaldadaConSignificadoDocumentado"
+          },
+          {
+            "focus": "https://example.org/mex-ontologi/prueba-s-shacl/v001/n-r2",
+            "shape": "https://example.org/mex-ontologi/shapes/VariableRespaldadaSinSignificadoCandidato"
+          },
+          {
+            "focus": "https://example.org/mex-ontologi/prueba-s-shacl/v001/n-r3",
+            "shape": "https://example.org/mex-ontologi/shapes/VariableCandidataConSignificadoCandidato"
+          },
+          {
+            "focus": "https://example.org/mex-ontologi/prueba-s-shacl/v001/n-r4",
+            "shape": "https://example.org/mex-ontologi/shapes/VariableCandidataSinSignificadoDocumentado"
+          },
+          {
+            "focus": "https://example.org/mex-ontologi/prueba-s-shacl/v001/n-r5a",
+            "shape": "https://example.org/mex-ontologi/shapes/CorrespondenciaRevisadaVariableRespaldada"
+          },
+          {
+            "focus": "https://example.org/mex-ontologi/prueba-s-shacl/v001/n-r5b",
+            "shape": "https://example.org/mex-ontologi/shapes/CorrespondenciaRevisadaVariableRespaldada"
+          },
+          {
+            "focus": "https://example.org/mex-ontologi/prueba-s-shacl/v001/n-r5c",
+            "shape": "https://example.org/mex-ontologi/shapes/CorrespondenciaRevisadaVariableRespaldada"
+          },
+          {
+            "focus": "https://example.org/mex-ontologi/prueba-s-shacl/v001/n-r6a",
+            "shape": "https://example.org/mex-ontologi/shapes/UnidadDeclaradaContrato"
+          },
+          {
+            "focus": "https://example.org/mex-ontologi/prueba-s-shacl/v001/n-r6b",
+            "shape": "https://example.org/mex-ontologi/shapes/UnidadDeclaradaContrato"
+          },
+          {
+            "focus": "https://example.org/mex-ontologi/prueba-s-shacl/v001/n-r6c",
+            "shape": "https://example.org/mex-ontologi/shapes/UnidadDeclaradaContrato"
+          },
+          {
+            "focus": "https://example.org/mex-ontologi/prueba-s-shacl/v001/n-r6d",
+            "shape": "https://example.org/mex-ontologi/shapes/UnidadDeclaradaContrato"
+          },
+          {
+            "focus": "https://example.org/mex-ontologi/prueba-s-shacl/v001/n-r6e",
+            "shape": "https://example.org/mex-ontologi/shapes/UnidadDeclaradaContrato"
+          },
+          {
+            "focus": "https://example.org/mex-ontologi/prueba-s-shacl/v001/n-r6f",
+            "shape": "https://example.org/mex-ontologi/shapes/UnidadDeclaradaContrato"
+          },
+          {
+            "focus": "https://example.org/mex-ontologi/prueba-s-shacl/v001/n-r6g",
+            "shape": "https://example.org/mex-ontologi/shapes/UnidadDeclaradaContrato"
+          },
+          {
+            "focus": "https://example.org/mex-ontologi/prueba-s-shacl/v001/n-r6h",
+            "shape": "https://example.org/mex-ontologi/shapes/UnidadDeclaradaContrato"
+          }
+        ]
+      },
+      "focus_nodes": 39,
+      "load": {
+        "ok": true,
+        "path": "C:\\Users\\marti\\Documents\\MEX-Ontologi\\propuestas\\ampliacion-post-r9\\ejecucion-20261024\\S-shacl\\v001\\fixtures\\negativo.ttl",
+        "triples_loaded": 75
+      },
+      "ok_motor": true,
+      "pares_actuales": [
+        {
+          "focus": "https://example.org/mex-ontologi/prueba-s-shacl/v001/n-r5a",
+          "shape": "https://example.org/mex-ontologi/shapes/CorrespondenciaRevisadaVariableRespaldada"
+        },
+        {
+          "focus": "https://example.org/mex-ontologi/prueba-s-shacl/v001/n-r5b",
+          "shape": "https://example.org/mex-ontologi/shapes/CorrespondenciaRevisadaVariableRespaldada"
+        },
+        {
+          "focus": "https://example.org/mex-ontologi/prueba-s-shacl/v001/n-r5c",
+          "shape": "https://example.org/mex-ontologi/shapes/CorrespondenciaRevisadaVariableRespaldada"
+        },
+        {
+          "focus": "https://example.org/mex-ontologi/prueba-s-shacl/v001/n-r6a",
+          "shape": "https://example.org/mex-ontologi/shapes/UnidadDeclaradaContrato"
+        },
+        {
+          "focus": "https://example.org/mex-ontologi/prueba-s-shacl/v001/n-r6b",
+          "shape": "https://example.org/mex-ontologi/shapes/UnidadDeclaradaContrato"
+        },
+        {
+          "focus": "https://example.org/mex-ontologi/prueba-s-shacl/v001/n-r6c",
+          "shape": "https://example.org/mex-ontologi/shapes/UnidadDeclaradaContrato"
+        },
+        {
+          "focus": "https://example.org/mex-ontologi/prueba-s-shacl/v001/n-r6d",
+          "shape": "https://example.org/mex-ontologi/shapes/UnidadDeclaradaContrato"
+        },
+        {
+          "focus": "https://example.org/mex-ontologi/prueba-s-shacl/v001/n-r6e",
+          "shape": "https://example.org/mex-ontologi/shapes/UnidadDeclaradaContrato"
+        },
+        {
+          "focus": "https://example.org/mex-ontologi/prueba-s-shacl/v001/n-r6f",
+          "shape": "https://example.org/mex-ontologi/shapes/UnidadDeclaradaContrato"
+        },
+        {
+          "focus": "https://example.org/mex-ontologi/prueba-s-shacl/v001/n-r6g",
+          "shape": "https://example.org/mex-ontologi/shapes/UnidadDeclaradaContrato"
+        },
+        {
+          "focus": "https://example.org/mex-ontologi/prueba-s-shacl/v001/n-r6h",
+          "shape": "https://example.org/mex-ontologi/shapes/UnidadDeclaradaContrato"
+        },
+        {
+          "focus": "https://example.org/mex-ontologi/prueba-s-shacl/v001/n-r3",
+          "shape": "https://example.org/mex-ontologi/shapes/VariableCandidataConSignificadoCandidato"
+        },
+        {
+          "focus": "https://example.org/mex-ontologi/prueba-s-shacl/v001/n-r4",
+          "shape": "https://example.org/mex-ontologi/shapes/VariableCandidataSinSignificadoDocumentado"
+        },
+        {
+          "focus": "https://example.org/mex-ontologi/prueba-s-shacl/v001/n-r1",
+          "shape": "https://example.org/mex-ontologi/shapes/VariableRespaldadaConSignificadoDocumentado"
+        },
+        {
+          "focus": "https://example.org/mex-ontologi/prueba-s-shacl/v001/n-r2",
+          "shape": "https://example.org/mex-ontologi/shapes/VariableRespaldadaSinSignificadoCandidato"
+        }
+      ],
+      "restricciones_ignoradas": [],
+      "sha256_corpus": "5b3e981e753b18abcc2fb69f02c465fabe436c1a6ef5e2adc77f183c1ce7f77d",
+      "shacl": {
+        "conforms": false,
+        "focus_nodes": 39,
+        "scope": {
+          "complete": true,
+          "default_graph": true,
+          "note": "every graph in the store, the default graph included. On a store that keeps several versions of an entity in several named graphs this union is a state that held at no instant.",
+          "selector": "whole-store",
+          "semantics_version": "temporal/2"
+        },
+        "unmatched_shapes": [],
+        "violation_count": 15,
+        "violations": [
+          {
+            "constraint": "minCount",
+            "focus_node": "https://example.org/mex-ontologi/prueba-s-shacl/v001/n-r6e",
+            "message": "R6e: UnidadDeclarada requiere procedencia prov:wasDerivedFrom IRI",
+            "node_shape": "https://example.org/mex-ontologi/shapes/UnidadDeclaradaContrato",
+            "path": "http://www.w3.org/ns/prov#wasDerivedFrom",
+            "result_path": "http://www.w3.org/ns/prov#wasDerivedFrom",
+            "severity": "Violation",
+            "source_constraint_component": "http://www.w3.org/ns/shacl#MinCountConstraintComponent",
+            "source_shape": "_:f4f6d1acc5598a56280e1b1a54663457"
+          },
+          {
+            "constraint": "maxCount",
+            "focus_node": "https://example.org/mex-ontologi/prueba-s-shacl/v001/n-r6b",
+            "message": "R6d: UnidadDeclarada admite como maximo un mex:unidadQudt y debe ser IRI; no se impone una lista cerrada de terminos",
+            "node_shape": "https://example.org/mex-ontologi/shapes/UnidadDeclaradaContrato",
+            "path": "https://example.org/mex-ontologi/vocab/unidadQudt",
+            "result_path": "https://example.org/mex-ontologi/vocab/unidadQudt",
+            "severity": "Violation",
+            "source_constraint_component": "http://www.w3.org/ns/shacl#MaxCountConstraintComponent",
+            "source_shape": "_:e87b1fac93bc6e4295b1605a54b6bad5"
+          },
+          {
+            "constraint": "nodeKind",
+            "focus_node": "https://example.org/mex-ontologi/prueba-s-shacl/v001/n-r6c",
+            "message": "R6d: UnidadDeclarada admite como maximo un mex:unidadQudt y debe ser IRI; no se impone una lista cerrada de terminos",
+            "node_shape": "https://example.org/mex-ontologi/shapes/UnidadDeclaradaContrato",
+            "path": "https://example.org/mex-ontologi/vocab/unidadQudt",
+            "result_path": "https://example.org/mex-ontologi/vocab/unidadQudt",
+            "severity": "Violation",
+            "source_constraint_component": "http://www.w3.org/ns/shacl#NodeKindConstraintComponent",
+            "source_shape": "_:e87b1fac93bc6e4295b1605a54b6bad5"
+          },
+          {
+            "constraint": "minCount",
+            "focus_node": "https://example.org/mex-ontologi/prueba-s-shacl/v001/n-r6d",
+            "message": "R6c: UnidadDeclarada requiere exactamente una unidad literal (xsd:string) sin sustituirla por el termino normalizado",
+            "node_shape": "https://example.org/mex-ontologi/shapes/UnidadDeclaradaContrato",
+            "path": "https://example.org/mex-ontologi/vocab/unidadLiteral",
+            "result_path": "https://example.org/mex-ontologi/vocab/unidadLiteral",
+            "severity": "Violation",
+            "source_constraint_component": "http://www.w3.org/ns/shacl#MinCountConstraintComponent",
+            "source_shape": "_:f411567a1486ce43be3fbac7f6aaf7fd"
+          },
+          {
+            "constraint": "class",
+            "focus_node": "https://example.org/mex-ontologi/prueba-s-shacl/v001/n-r6g",
+            "message": "R6b: UnidadDeclarada requiere exactamente un mex:definicionFuente IRI de clase DefinicionVariable",
+            "node_shape": "https://example.org/mex-ontologi/shapes/UnidadDeclaradaContrato",
+            "path": "https://example.org/mex-ontologi/vocab/definicionFuente",
+            "result_path": "https://example.org/mex-ontologi/vocab/definicionFuente",
+            "severity": "Violation",
+            "source_constraint_component": "http://www.w3.org/ns/shacl#ClassConstraintComponent",
+            "source_shape": "_:b61623892b34aab5ee8c41c3d3abdb6c"
+          },
+          {
+            "constraint": "minCount",
+            "focus_node": "https://example.org/mex-ontologi/prueba-s-shacl/v001/n-r6a",
+            "message": "R6a: UnidadDeclarada requiere exactamente un mex:variableDocumentada IRI de clase VariableDocumentada",
+            "node_shape": "https://example.org/mex-ontologi/shapes/UnidadDeclaradaContrato",
+            "path": "https://example.org/mex-ontologi/vocab/variableDocumentada",
+            "result_path": "https://example.org/mex-ontologi/vocab/variableDocumentada",
+            "severity": "Violation",
+            "source_constraint_component": "http://www.w3.org/ns/shacl#MinCountConstraintComponent",
+            "source_shape": "_:cfa08e8c3e9ca4df1b5c29a1d6983519"
+          },
+          {
+            "constraint": "maxCount",
+            "focus_node": "https://example.org/mex-ontologi/prueba-s-shacl/v001/n-r6h",
+            "message": "R6a: UnidadDeclarada requiere exactamente un mex:variableDocumentada IRI de clase VariableDocumentada",
+            "node_shape": "https://example.org/mex-ontologi/shapes/UnidadDeclaradaContrato",
+            "path": "https://example.org/mex-ontologi/vocab/variableDocumentada",
+            "result_path": "https://example.org/mex-ontologi/vocab/variableDocumentada",
+            "severity": "Violation",
+            "source_constraint_component": "http://www.w3.org/ns/shacl#MaxCountConstraintComponent",
+            "source_shape": "_:cfa08e8c3e9ca4df1b5c29a1d6983519"
+          },
+          {
+            "constraint": "class",
+            "focus_node": "https://example.org/mex-ontologi/prueba-s-shacl/v001/n-r6f",
+            "message": "R6a: UnidadDeclarada requiere exactamente un mex:variableDocumentada IRI de clase VariableDocumentada",
+            "node_shape": "https://example.org/mex-ontologi/shapes/UnidadDeclaradaContrato",
+            "path": "https://example.org/mex-ontologi/vocab/variableDocumentada",
+            "result_path": "https://example.org/mex-ontologi/vocab/variableDocumentada",
+            "severity": "Violation",
+            "source_constraint_component": "http://www.w3.org/ns/shacl#ClassConstraintComponent",
+            "source_shape": "_:cfa08e8c3e9ca4df1b5c29a1d6983519"
+          },
+          {
+            "constraint": "sparql",
+            "focus_node": "https://example.org/mex-ontologi/prueba-s-shacl/v001/n-r5a",
+            "message": "R5: correspondencia documental_revisada sin variableDestino respaldada_por_definicion",
+            "node_shape": "https://example.org/mex-ontologi/shapes/CorrespondenciaRevisadaVariableRespaldada",
+            "severity": "Violation",
+            "source_constraint_component": "http://www.w3.org/ns/shacl#SPARQLConstraintComponent",
+            "source_shape": "https://example.org/mex-ontologi/shapes/CorrespondenciaRevisadaVariableRespaldada"
+          },
+          {
+            "constraint": "sparql",
+            "focus_node": "https://example.org/mex-ontologi/prueba-s-shacl/v001/n-r5b",
+            "message": "R5: correspondencia documental_revisada sin variableDestino respaldada_por_definicion",
+            "node_shape": "https://example.org/mex-ontologi/shapes/CorrespondenciaRevisadaVariableRespaldada",
+            "severity": "Violation",
+            "source_constraint_component": "http://www.w3.org/ns/shacl#SPARQLConstraintComponent",
+            "source_shape": "https://example.org/mex-ontologi/shapes/CorrespondenciaRevisadaVariableRespaldada"
+          },
+          {
+            "constraint": "sparql",
+            "focus_node": "https://example.org/mex-ontologi/prueba-s-shacl/v001/n-r5c",
+            "message": "R5: correspondencia documental_revisada sin variableDestino respaldada_por_definicion",
+            "node_shape": "https://example.org/mex-ontologi/shapes/CorrespondenciaRevisadaVariableRespaldada",
+            "severity": "Violation",
+            "source_constraint_component": "http://www.w3.org/ns/shacl#SPARQLConstraintComponent",
+            "source_shape": "https://example.org/mex-ontologi/shapes/CorrespondenciaRevisadaVariableRespaldada"
+          },
+          {
+            "constraint": "sparql",
+            "focus_node": "https://example.org/mex-ontologi/prueba-s-shacl/v001/n-r4",
+            "message": "R4: VariableDocumentada candidata_sin_definicion_suficiente con mex:significadoDocumentado",
+            "node_shape": "https://example.org/mex-ontologi/shapes/VariableCandidataSinSignificadoDocumentado",
+            "severity": "Violation",
+            "source_constraint_component": "http://www.w3.org/ns/shacl#SPARQLConstraintComponent",
+            "source_shape": "https://example.org/mex-ontologi/shapes/VariableCandidataSinSignificadoDocumentado"
+          },
+          {
+            "constraint": "sparql",
+            "focus_node": "https://example.org/mex-ontologi/prueba-s-shacl/v001/n-r3",
+            "message": "R3: VariableDocumentada candidata_sin_definicion_suficiente sin mex:significadoCandidato",
+            "node_shape": "https://example.org/mex-ontologi/shapes/VariableCandidataConSignificadoCandidato",
+            "severity": "Violation",
+            "source_constraint_component": "http://www.w3.org/ns/shacl#SPARQLConstraintComponent",
+            "source_shape": "https://example.org/mex-ontologi/shapes/VariableCandidataConSignificadoCandidato"
+          },
+          {
+            "constraint": "sparql",
+            "focus_node": "https://example.org/mex-ontologi/prueba-s-shacl/v001/n-r2",
+            "message": "R2: VariableDocumentada respaldada_por_definicion con mex:significadoCandidato",
+            "node_shape": "https://example.org/mex-ontologi/shapes/VariableRespaldadaSinSignificadoCandidato",
+            "severity": "Violation",
+            "source_constraint_component": "http://www.w3.org/ns/shacl#SPARQLConstraintComponent",
+            "source_shape": "https://example.org/mex-ontologi/shapes/VariableRespaldadaSinSignificadoCandidato"
+          },
+          {
+            "constraint": "sparql",
+            "focus_node": "https://example.org/mex-ontologi/prueba-s-shacl/v001/n-r1",
+            "message": "R1: VariableDocumentada respaldada_por_definicion sin mex:significadoDocumentado",
+            "node_shape": "https://example.org/mex-ontologi/shapes/VariableRespaldadaConSignificadoDocumentado",
+            "severity": "Violation",
+            "source_constraint_component": "http://www.w3.org/ns/shacl#SPARQLConstraintComponent",
+            "source_shape": "https://example.org/mex-ontologi/shapes/VariableRespaldadaConSignificadoDocumentado"
+          }
+        ]
+      },
+      "shapes_sin_instancias": [],
+      "store_central_usado": false,
+      "store_eliminado": true,
+      "store_temporal_aislado": "C:\\Users\\marti\\AppData\\Local\\Temp\\s-shacl-v001-fixture-negativo-0whf6f_f",
+      "studio_ejecutado": false,
+      "triples_cargados": 75,
+      "validate": {
+        "ok": true,
+        "statements": 75,
+        "triples": 75
+      },
+      "violaciones": [
+        {
+          "focus": "https://example.org/mex-ontologi/prueba-s-shacl/v001/n-r6e",
+          "forma": "https://example.org/mex-ontologi/shapes/UnidadDeclaradaContrato",
+          "mensaje": "R6e: UnidadDeclarada requiere procedencia prov:wasDerivedFrom IRI",
+          "restriccion": "minCount",
+          "ruta": "http://www.w3.org/ns/prov#wasDerivedFrom",
+          "severidad": "Violation"
+        },
+        {
+          "focus": "https://example.org/mex-ontologi/prueba-s-shacl/v001/n-r6b",
+          "forma": "https://example.org/mex-ontologi/shapes/UnidadDeclaradaContrato",
+          "mensaje": "R6d: UnidadDeclarada admite como maximo un mex:unidadQudt y debe ser IRI; no se impone una lista cerrada de terminos",
+          "restriccion": "maxCount",
+          "ruta": "https://example.org/mex-ontologi/vocab/unidadQudt",
+          "severidad": "Violation"
+        },
+        {
+          "focus": "https://example.org/mex-ontologi/prueba-s-shacl/v001/n-r6c",
+          "forma": "https://example.org/mex-ontologi/shapes/UnidadDeclaradaContrato",
+          "mensaje": "R6d: UnidadDeclarada admite como maximo un mex:unidadQudt y debe ser IRI; no se impone una lista cerrada de terminos",
+          "restriccion": "nodeKind",
+          "ruta": "https://example.org/mex-ontologi/vocab/unidadQudt",
+          "severidad": "Violation"
+        },
+        {
+          "focus": "https://example.org/mex-ontologi/prueba-s-shacl/v001/n-r6d",
+          "forma": "https://example.org/mex-ontologi/shapes/UnidadDeclaradaContrato",
+          "mensaje": "R6c: UnidadDeclarada requiere exactamente una unidad literal (xsd:string) sin sustituirla por el termino normalizado",
+          "restriccion": "minCount",
+          "ruta": "https://example.org/mex-ontologi/vocab/unidadLiteral",
+          "severidad": "Violation"
+        },
+        {
+          "focus": "https://example.org/mex-ontologi/prueba-s-shacl/v001/n-r6g",
+          "forma": "https://example.org/mex-ontologi/shapes/UnidadDeclaradaContrato",
+          "mensaje": "R6b: UnidadDeclarada requiere exactamente un mex:definicionFuente IRI de clase DefinicionVariable",
+          "restriccion": "class",
+          "ruta": "https://example.org/mex-ontologi/vocab/definicionFuente",
+          "severidad": "Violation"
+        },
+        {
+          "focus": "https://example.org/mex-ontologi/prueba-s-shacl/v001/n-r6a",
+          "forma": "https://example.org/mex-ontologi/shapes/UnidadDeclaradaContrato",
+          "mensaje": "R6a: UnidadDeclarada requiere exactamente un mex:variableDocumentada IRI de clase VariableDocumentada",
+          "restriccion": "minCount",
+          "ruta": "https://example.org/mex-ontologi/vocab/variableDocumentada",
+          "severidad": "Violation"
+        },
+        {
+          "focus": "https://example.org/mex-ontologi/prueba-s-shacl/v001/n-r6h",
+          "forma": "https://example.org/mex-ontologi/shapes/UnidadDeclaradaContrato",
+          "mensaje": "R6a: UnidadDeclarada requiere exactamente un mex:variableDocumentada IRI de clase VariableDocumentada",
+          "restriccion": "maxCount",
+          "ruta": "https://example.org/mex-ontologi/vocab/variableDocumentada",
+          "severidad": "Violation"
+        },
+        {
+          "focus": "https://example.org/mex-ontologi/prueba-s-shacl/v001/n-r6f",
+          "forma": "https://example.org/mex-ontologi/shapes/UnidadDeclaradaContrato",
+          "mensaje": "R6a: UnidadDeclarada requiere exactamente un mex:variableDocumentada IRI de clase VariableDocumentada",
+          "restriccion": "class",
+          "ruta": "https://example.org/mex-ontologi/vocab/variableDocumentada",
+          "severidad": "Violation"
+        },
+        {
+          "focus": "https://example.org/mex-ontologi/prueba-s-shacl/v001/n-r5a",
+          "forma": "https://example.org/mex-ontologi/shapes/CorrespondenciaRevisadaVariableRespaldada",
+          "mensaje": "R5: correspondencia documental_revisada sin variableDestino respaldada_por_definicion",
+          "restriccion": "sparql",
+          "ruta": null,
+          "severidad": "Violation"
+        },
+        {
+          "focus": "https://example.org/mex-ontologi/prueba-s-shacl/v001/n-r5b",
+          "forma": "https://example.org/mex-ontologi/shapes/CorrespondenciaRevisadaVariableRespaldada",
+          "mensaje": "R5: correspondencia documental_revisada sin variableDestino respaldada_por_definicion",
+          "restriccion": "sparql",
+          "ruta": null,
+          "severidad": "Violation"
+        },
+        {
+          "focus": "https://example.org/mex-ontologi/prueba-s-shacl/v001/n-r5c",
+          "forma": "https://example.org/mex-ontologi/shapes/CorrespondenciaRevisadaVariableRespaldada",
+          "mensaje": "R5: correspondencia documental_revisada sin variableDestino respaldada_por_definicion",
+          "restriccion": "sparql",
+          "ruta": null,
+          "severidad": "Violation"
+        },
+        {
+          "focus": "https://example.org/mex-ontologi/prueba-s-shacl/v001/n-r4",
+          "forma": "https://example.org/mex-ontologi/shapes/VariableCandidataSinSignificadoDocumentado",
+          "mensaje": "R4: VariableDocumentada candidata_sin_definicion_suficiente con mex:significadoDocumentado",
+          "restriccion": "sparql",
+          "ruta": null,
+          "severidad": "Violation"
+        },
+        {
+          "focus": "https://example.org/mex-ontologi/prueba-s-shacl/v001/n-r3",
+          "forma": "https://example.org/mex-ontologi/shapes/VariableCandidataConSignificadoCandidato",
+          "mensaje": "R3: VariableDocumentada candidata_sin_definicion_suficiente sin mex:significadoCandidato",
+          "restriccion": "sparql",
+          "ruta": null,
+          "severidad": "Violation"
+        },
+        {
+          "focus": "https://example.org/mex-ontologi/prueba-s-shacl/v001/n-r2",
+          "forma": "https://example.org/mex-ontologi/shapes/VariableRespaldadaSinSignificadoCandidato",
+          "mensaje": "R2: VariableDocumentada respaldada_por_definicion con mex:significadoCandidato",
+          "restriccion": "sparql",
+          "ruta": null,
+          "severidad": "Violation"
+        },
+        {
+          "focus": "https://example.org/mex-ontologi/prueba-s-shacl/v001/n-r1",
+          "forma": "https://example.org/mex-ontologi/shapes/VariableRespaldadaConSignificadoDocumentado",
+          "mensaje": "R1: VariableDocumentada respaldada_por_definicion sin mex:significadoDocumentado",
+          "restriccion": "sparql",
+          "ruta": null,
+          "severidad": "Violation"
+        }
+      ],
+      "violation_count": 15
+    },
+    "portal-322405": {
+      "coincide": true,
+      "conforms": true,
+      "corpus": "data/portal/portal-completo.ttl",
+      "duracion_shacl_s": 15.757,
+      "esperado": {
+        "conforms": true,
+        "triples": 322405,
+        "violations": []
+      },
+      "focus_nodes": 10293,
+      "load": {
+        "ok": true,
+        "path": "C:\\Users\\marti\\Documents\\MEX-Ontologi\\data\\portal\\portal-completo.ttl",
+        "triples_loaded": 322405
+      },
+      "ok_motor": true,
+      "restricciones_ignoradas": [],
+      "sha256_corpus": "b4ea9e921872cff0600a4909cc9e51d5c673251a74c9aefa8d64335c11459091",
+      "shacl": {
+        "conforms": true,
+        "focus_nodes": 10293,
+        "scope": {
+          "complete": true,
+          "default_graph": true,
+          "note": "every graph in the store, the default graph included. On a store that keeps several versions of an entity in several named graphs this union is a state that held at no instant.",
+          "selector": "whole-store",
+          "semantics_version": "temporal/2"
+        },
+        "unmatched_shapes": [],
+        "violation_count": 0,
+        "violations": []
+      },
+      "shapes_sin_instancias": [],
+      "store_central_usado": false,
+      "store_eliminado": true,
+      "store_temporal_aislado": "C:\\Users\\marti\\AppData\\Local\\Temp\\s-shacl-v001-copia-portal-322405-fbukqdfm",
+      "studio_ejecutado": false,
+      "triples_cargados": 322405,
+      "triples_coinciden": true,
+      "triples_esperados": 322405,
+      "validate": {
+        "ok": true,
+        "statements": 322405,
+        "triples": 322405
+      },
+      "violaciones": [],
+      "violation_count": 0
+    },
+    "positivo-instancias-r9.ttl": {
+      "coincide": true,
+      "conforms": true,
+      "corpus": "propuestas/ampliacion-post-r9/ejecucion-20261024/S-shacl/v001/fixtures/positivo-instancias-r9.ttl",
+      "duracion_shacl_s": 0.312,
+      "esperado": {
+        "conforms": true,
+        "requiere": {
+          "correspondencias_candidata_por_nombre": 17,
+          "variable_estado_fuera": 3
+        },
+        "violations": []
+      },
+      "focus_nodes": 93,
+      "load": {
+        "ok": true,
+        "path": "C:\\Users\\marti\\Documents\\MEX-Ontologi\\propuestas\\ampliacion-post-r9\\ejecucion-20261024\\S-shacl\\v001\\fixtures\\positivo-instancias-r9.ttl",
+        "triples_loaded": 358
+      },
+      "ok_motor": true,
+      "pares_actuales": [],
+      "requiere_observado": {
+        "correspondencias_candidata_por_nombre": 17,
+        "variable_estado_fuera": 3
+      },
+      "restricciones_ignoradas": [],
+      "sha256_corpus": "263c563c58c7818096acf08136b643820e73d82f9eb931f5146b62d1614e493e",
+      "shacl": {
+        "conforms": true,
+        "focus_nodes": 93,
+        "scope": {
+          "complete": true,
+          "default_graph": true,
+          "note": "every graph in the store, the default graph included. On a store that keeps several versions of an entity in several named graphs this union is a state that held at no instant.",
+          "selector": "whole-store",
+          "semantics_version": "temporal/2"
+        },
+        "unmatched_shapes": [
+          {
+            "shape": "https://example.org/mex-ontologi/shapes/UnidadDeclaradaContrato",
+            "target": "https://example.org/mex-ontologi/vocab/UnidadDeclarada",
+            "target_class": "https://example.org/mex-ontologi/vocab/UnidadDeclarada",
+            "target_form": "class"
+          }
+        ],
+        "violation_count": 0,
+        "violations": []
+      },
+      "shapes_sin_instancias": [
+        {
+          "shape": "https://example.org/mex-ontologi/shapes/UnidadDeclaradaContrato",
+          "target": "https://example.org/mex-ontologi/vocab/UnidadDeclarada",
+          "target_class": "https://example.org/mex-ontologi/vocab/UnidadDeclarada",
+          "target_form": "class"
+        }
+      ],
+      "store_central_usado": false,
+      "store_eliminado": true,
+      "store_temporal_aislado": "C:\\Users\\marti\\AppData\\Local\\Temp\\s-shacl-v001-fixture-positivo-instancias-r9-f9sicxbw",
+      "studio_ejecutado": false,
+      "triples_cargados": 358,
+      "validate": {
+        "ok": true,
+        "statements": 358,
+        "triples": 358
+      },
+      "violaciones": [],
+      "violation_count": 0
+    },
+    "positivo.ttl": {
+      "coincide": true,
+      "conforms": true,
+      "corpus": "propuestas/ampliacion-post-r9/ejecucion-20261024/S-shacl/v001/fixtures/positivo.ttl",
+      "duracion_shacl_s": 0.289,
+      "esperado": {
+        "conforms": true,
+        "violations": []
+      },
+      "focus_nodes": 26,
+      "load": {
+        "ok": true,
+        "path": "C:\\Users\\marti\\Documents\\MEX-Ontologi\\propuestas\\ampliacion-post-r9\\ejecucion-20261024\\S-shacl\\v001\\fixtures\\positivo.ttl",
+        "triples_loaded": 45
+      },
+      "ok_motor": true,
+      "pares_actuales": [],
+      "restricciones_ignoradas": [],
+      "sha256_corpus": "1d9a4ff92ecc724647fdc021e5a037939ff774766e042d088e32c5474b9eb242",
+      "shacl": {
+        "conforms": true,
+        "focus_nodes": 26,
+        "scope": {
+          "complete": true,
+          "default_graph": true,
+          "note": "every graph in the store, the default graph included. On a store that keeps several versions of an entity in several named graphs this union is a state that held at no instant.",
+          "selector": "whole-store",
+          "semantics_version": "temporal/2"
+        },
+        "unmatched_shapes": [],
+        "violation_count": 0,
+        "violations": []
+      },
+      "shapes_sin_instancias": [],
+      "store_central_usado": false,
+      "store_eliminado": true,
+      "store_temporal_aislado": "C:\\Users\\marti\\AppData\\Local\\Temp\\s-shacl-v001-fixture-positivo-7v_wfj75",
+      "studio_ejecutado": false,
+      "triples_cargados": 45,
+      "validate": {
+        "ok": true,
+        "statements": 45,
+        "triples": 45
+      },
+      "violaciones": [],
+      "violation_count": 0
+    },
+    "studio-323014": {
+      "coincide": true,
+      "conforms": true,
+      "corpus": "data/portal/studio-verificacion.ttl",
+      "duracion_shacl_s": 16.147,
+      "esperado": {
+        "conforms": true,
+        "triples": 323014,
+        "violations": []
+      },
+      "focus_nodes": 10293,
+      "load": {
+        "ok": true,
+        "path": "C:\\Users\\marti\\Documents\\MEX-Ontologi\\data\\portal\\studio-verificacion.ttl",
+        "triples_loaded": 323014
+      },
+      "ok_motor": true,
+      "restricciones_ignoradas": [],
+      "sha256_corpus": "bb03a389cca120f1f798458e18b1edf38dbb9d726f84652f14db49a4fd422812",
+      "shacl": {
+        "conforms": true,
+        "focus_nodes": 10293,
+        "scope": {
+          "complete": true,
+          "default_graph": true,
+          "note": "every graph in the store, the default graph included. On a store that keeps several versions of an entity in several named graphs this union is a state that held at no instant.",
+          "selector": "whole-store",
+          "semantics_version": "temporal/2"
+        },
+        "unmatched_shapes": [],
+        "violation_count": 0,
+        "violations": []
+      },
+      "shapes_sin_instancias": [],
+      "store_central_usado": false,
+      "store_eliminado": true,
+      "store_temporal_aislado": "C:\\Users\\marti\\AppData\\Local\\Temp\\s-shacl-v001-copia-studio-323014-hsfseste",
+      "studio_ejecutado": false,
+      "triples_cargados": 323014,
+      "triples_coinciden": true,
+      "triples_esperados": 323014,
+      "validate": {
+        "ok": true,
+        "statements": 323014,
+        "triples": 323014
+      },
+      "violaciones": [],
+      "violation_count": 0
+    }
+  },
+  "restricciones_ignoradas": [],
+  "resultado_global": {
+    "fallos": [],
+    "ok": true,
+    "pruebas_ok": 5,
+    "pruebas_total": 5
+  },
+  "shapes_sin_instancias": [
+    {
+      "prueba": "positivo-instancias-r9.ttl",
+      "shape": "https://example.org/mex-ontologi/shapes/UnidadDeclaradaContrato",
+      "target": "https://example.org/mex-ontologi/vocab/UnidadDeclarada",
+      "target_class": "https://example.org/mex-ontologi/vocab/UnidadDeclarada",
+      "target_form": "class"
+    }
+  ],
+  "version": "v001"
+}

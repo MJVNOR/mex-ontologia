@@ -1,0 +1,9 @@
+# Intervalos OWL-Time vinculados a periodos escolares/agricolas del nucleo.
+# Resultado esperado hoy: 0 filas (propuesta negativa v001; nada integrado).
+PREFIX time: <http://www.w3.org/2006/time#>
+SELECT ?interval ?inicio ?fin WHERE {
+  ?interval a time:ProperInterval ;
+            time:hasBeginning/time:inXSDDate ?inicio ;
+            time:hasEnd/time:inXSDDate ?fin .
+}
+ORDER BY ?interval

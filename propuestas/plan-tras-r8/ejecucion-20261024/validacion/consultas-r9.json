@@ -1,0 +1,112 @@
+{
+  "store_dir": "store\\portal-20261024T103843130698Z",
+  "portal_triples": 322405,
+  "consultas": {
+    "declaraciones": {
+      "sparql": "SELECT (COUNT(DISTINCT ?s) AS ?n) WHERE { ?s a <https://example.org/mex-ontologi/vocab/UnidadDeclarada> }",
+      "resultado": {
+        "results": [
+          {
+            "n": "\"2\"^^<http://www.w3.org/2001/XMLSchema#integer>"
+          }
+        ],
+        "variables": [
+          "n"
+        ]
+      }
+    },
+    "variables_con_ambos": {
+      "sparql": "SELECT (COUNT(DISTINCT ?s) AS ?n) WHERE { ?s a <https://example.org/mex-ontologi/vocab/VariableDocumentada> ; <https://example.org/mex-ontologi/vocab/significadoDocumentado> ?d ; <https://example.org/mex-ontologi/vocab/significadoCandidato> ?c }",
+      "resultado": {
+        "results": [
+          {
+            "n": "\"0\"^^<http://www.w3.org/2001/XMLSchema#integer>"
+          }
+        ],
+        "variables": [
+          "n"
+        ]
+      }
+    },
+    "q1-vinculos-verificados": {
+      "ruta": "propuestas/plan-tras-r8/ejecucion-20261024/P1-qudt/v003/consultas/q1-vinculos-verificados.rq",
+      "sha256": "f633584d95459b9d4a4df006955875187030249abeaf295c4ef415b968de5800",
+      "filas": 2,
+      "resultado": {
+        "results": [
+          {
+            "d": "<https://example.org/mex-ontologi/propuesta/p1-qudt/v003/declaracion-precipitacion-mm>",
+            "u": "<http://qudt.org/vocab/unit/MilliM>",
+            "var": "<https://example.org/mex-ontologi/documented-variable/6713de4e-1e2b-447d-8000-f6ceaabd8473%2F6>"
+          },
+          {
+            "d": "<https://example.org/mex-ontologi/propuesta/p1-qudt/v003/declaracion-superficie-ha>",
+            "u": "<http://qudt.org/vocab/unit/HA>",
+            "var": "<https://example.org/mex-ontologi/documented-variable/94215f51-9c89-414d-8c3d-92792e609a2a%2F14>"
+          }
+        ],
+        "variables": [
+          "d",
+          "var",
+          "u"
+        ]
+      }
+    },
+    "q3-trazabilidad": {
+      "ruta": "propuestas/plan-tras-r8/ejecucion-20261024/P1-qudt/v003/consultas/q3-trazabilidad.rq",
+      "sha256": "3958f49cd94f2da7244bb37adf47e2a1e236c13b5f58ade8dec7b9068c301428",
+      "filas": 8,
+      "resultado": {
+        "results": [
+          {
+            "d": "<https://example.org/mex-ontologi/propuesta/p1-qudt/v003/declaracion-precipitacion-mm>",
+            "lit": "\"Milímetros\"",
+            "src": "<file:///C:/Users/marti/Documents/MEX-Ontologi/data/integracion-ronda-9/filas/P1-Q1.json>"
+          },
+          {
+            "d": "<https://example.org/mex-ontologi/propuesta/p1-qudt/v003/declaracion-precipitacion-mm>",
+            "lit": "\"Milímetros\"",
+            "src": "<file:///C:/Users/marti/Documents/MEX-Ontologi/data/integracion-ronda-9/normativa/P1-Q1.txt>"
+          },
+          {
+            "d": "<https://example.org/mex-ontologi/propuesta/p1-qudt/v003/declaracion-precipitacion-mm>",
+            "lit": "\"Milímetros\"",
+            "src": "<http://qudt.org/vocab/unit/MilliM>"
+          },
+          {
+            "d": "<https://example.org/mex-ontologi/propuesta/p1-qudt/v003/declaracion-precipitacion-mm>",
+            "lit": "\"Milímetros\"",
+            "src": "<https://datos.sonora.gob.mx/api/3/action/datastore_search?resource_id=6713de4e-1e2b-447d-8000-f6ceaabd8473&limit=1000&offset=0&sort=_id+asc>"
+          },
+          {
+            "d": "<https://example.org/mex-ontologi/propuesta/p1-qudt/v003/declaracion-superficie-ha>",
+            "lit": "\"Hectáreas\"",
+            "src": "<file:///C:/Users/marti/Documents/MEX-Ontologi/data/integracion-ronda-9/filas/P1-Q3.json>"
+          },
+          {
+            "d": "<https://example.org/mex-ontologi/propuesta/p1-qudt/v003/declaracion-superficie-ha>",
+            "lit": "\"Hectáreas\"",
+            "src": "<file:///C:/Users/marti/Documents/MEX-Ontologi/data/integracion-ronda-9/normativa/P1-Q3.txt>"
+          },
+          {
+            "d": "<https://example.org/mex-ontologi/propuesta/p1-qudt/v003/declaracion-superficie-ha>",
+            "lit": "\"Hectáreas\"",
+            "src": "<http://qudt.org/vocab/unit/HA>"
+          },
+          {
+            "d": "<https://example.org/mex-ontologi/propuesta/p1-qudt/v003/declaracion-superficie-ha>",
+            "lit": "\"Hectáreas\"",
+            "src": "<https://datos.sonora.gob.mx/api/3/action/datastore_search?resource_id=94215f51-9c89-414d-8c3d-92792e609a2a&limit=1000&offset=0&sort=_id+asc>"
+          }
+        ],
+        "variables": [
+          "d",
+          "lit",
+          "src"
+        ]
+      }
+    }
+  },
+  "declaraciones": 2,
+  "variables_con_ambos": 0
+}

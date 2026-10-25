@@ -1,0 +1,26 @@
+{
+  "conforms": false,
+  "focus_nodes": 2354,
+  "scope": {
+    "complete": true,
+    "default_graph": true,
+    "note": "every graph in the store, the default graph included. On a store that keeps several versions of an entity in several named graphs this union is a state that held at no instant.",
+    "selector": "whole-store",
+    "semantics_version": "temporal/2"
+  },
+  "unmatched_shapes": [],
+  "violation_count": 1,
+  "violations": [
+    {
+      "constraint": "minCount",
+      "focus_node": "https://example.org/mex-ontologi/column/087efeed-26c4-4ec4-8128-49f257d518d2/Cat%C3%A1logo%20de%20referencia",
+      "message": "Property <https://example.org/mex-ontologi/vocab/nombreCampo> has fewer than 1 values",
+      "node_shape": "https://example.org/mex-ontologi/shapes/Columna",
+      "path": "https://example.org/mex-ontologi/vocab/nombreCampo",
+      "result_path": "https://example.org/mex-ontologi/vocab/nombreCampo",
+      "severity": "Violation",
+      "source_constraint_component": "http://www.w3.org/ns/shacl#MinCountConstraintComponent",
+      "source_shape": "_:b3153ceb3f250d73fb353e6fe17eee8b"
+    }
+  ]
+}

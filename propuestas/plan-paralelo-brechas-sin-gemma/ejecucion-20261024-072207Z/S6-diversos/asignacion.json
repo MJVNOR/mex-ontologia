@@ -1,0 +1,978 @@
+{
+  "rol": "S6-diversos",
+  "conteo": 5,
+  "casos": [
+    {
+      "id": "https://example.org/mex-ontologi/definition/f89137ba-d82e-44fe-80c7-cc355f09f9f5%2F15",
+      "tipo": "significados",
+      "original": {
+        "definicion_iri": "https://example.org/mex-ontologi/definition/f89137ba-d82e-44fe-80c7-cc355f09f9f5%2F15",
+        "descripcion_original": "Total de urgencias atendidas",
+        "estado": "sigue_pendiente",
+        "evidencia": [
+          {
+            "afirmacion_soportada": "El diccionario local define Total_Egresos como 'Total de urgencias atendidas' (Numérico entero, ejemplo 2), fila 15/15.",
+            "localizador": "/definiciones/14 (Nombre variable=Total_Egresos)",
+            "ruta": "data/portal/inspecciones/f89137ba-d82e-44fe-80c7-cc355f09f9f5.json",
+            "sha256": "59c6077b4f8bb93f2bf002284cf0c18e0c6c9d1f91ded2e834756dbd45ffd73b"
+          },
+          {
+            "afirmacion_soportada": "La hoja física se titula 'Egresos Hospitalarios 2018-2022' y Total_Egresos es la columna 15/15 en el mismo orden del diccionario (vínculo posicional diccionario↔columna, método heurístico). El título de hoja contradice la descripción sin resolverla.",
+            "localizador": "tablas[0].hoja + campos[14].id=Total_Egresos, posicion_original 15",
+            "ruta": "data/portal/inspecciones/ad6f77b8-569d-4826-8ce0-3c6efddcb098.json",
+            "sha256": "6c28880ccf4c8d9aa94493e7e1d1b359663137e1449d8747fb60139382aae068"
+          },
+          {
+            "afirmacion_soportada": "El publicador declara el conjunto como Egresos Hospitalarios (15 variables, base de datos interna, actualización trimestral) con un solo recurso de datos 2015-01-01 a 2022-12-31; Fuentes extras vacías: no hay metodología ni vínculo a norma nacional.",
+            "localizador": "result.notas/frequency/fuentes_extras/resources[1].start_date+end_date",
+            "ruta": "propuestas/investigacion-post-r6/diversos/evidencia/ckan-egresos.json",
+            "sha256": "65229d1d77ae5c0ce9476a30bf50542a842708f27ef5897c0107dce6e8d3ca25"
+          },
+          {
+            "afirmacion_soportada": "La norma nacional cubre egresos 2000-2023 (SSA) y morbilidad del sector 2004-2022, y remite a un archivo 'Descripción de variables' separado: existe el documento de variables pero no define la fila local.",
+            "localizador": "párrafos 'Egresos Hospitalarios Cubos dinámicos' + tabla 'Descripción de variables'; 'Última modificación: Martes 21 de abril de 2026'",
+            "ruta": "propuestas/investigacion-post-r6/diversos/evidencia/dgis-cubo-egresos.html",
+            "sha256": "a33c7841a1d6bd2591337646db28feaf6f22d75d9577c4dce8069171c3a41fd9"
+          },
+          {
+            "afirmacion_soportada": "Egresos = hospitalización (morbilidad: todos los casos atendidos en hospitales; mortalidad: motivo de egreso = defunción); fuente: registro de médicos sobre pacientes que abandonan un hospital. Nada de urgencias.",
+            "localizador": "párrafos 1-2 del iframe de Fuentes ('La estadística de egresos hospitalarios…' / 'Acerca de la fuente de información…')",
+            "ruta": "propuestas/investigacion-post-r6/diversos/evidencia/dgis-ehosp-fuentes.html",
+            "sha256": "1c89dc6d5e8c942d0fb607af2a85f6c4a1b3b4a3424251ab6541c3121457d807"
+          },
+          {
+            "afirmacion_soportada": "Las urgencias son un subsistema separado del SINAIS (GIIS-B014-03-08 v3.8 vigente, 2026-06-01), no una acepción de egresos. Segunda evidencia primaria de la separación (la primera fue la guía B002 de R6).",
+            "localizador": "Nombre/Clave/Versión/Estatus + 'Subsistema de Urgencias del SINAIS'; 'Última modificación: Lunes 01 de junio de 2026'",
+            "ruta": "propuestas/investigacion-post-r6/diversos/evidencia/dgis-urgencias-b014.html",
+            "sha256": "5b19b86b3facc21ec947ee7147cf835b8a1cb259345b405f54f8e9820171f834"
+          },
+          {
+            "afirmacion_soportada": "La guía de Egresos Hospitalarios v5.9 separa el Subsistema de Urgencias Médicas (GIIS-B014); 'urgencias' solo aparece como área de procedencia. Evidencia R6 reutilizada, hash re-verificado.",
+            "localizador": "evidencia R6 citada en entrega diversos-presas",
+            "ruta": "propuestas/pendientes-muse-r6/diversos-presas/evidencia/DGIS_GIIS-B002-05-09_egresos-v5.9.zip",
+            "sha256": "eaea651efb3f558a47fb1211762e7f3f413b32b13e018700921756fefdd44bb5"
+          },
+          {
+            "ruta": "propuestas/investigacion-post-r6/diversos/evidencia/dgis-ehosp-descripcion-minusculas.html",
+            "sha256": "a7840926d6f4f4fcf8bedc3875a3ec22763c06129e1628ff2e8ec38fc56a8b0e",
+            "localizador": "sha idéntico al intento con mayúsculas: mismo marco sin tabla",
+            "afirmacion_soportada": "El contenido no depende de la capitalización de la URL: ambas variantes sirven el mismo marco."
+          },
+          {
+            "ruta": "propuestas/investigacion-post-r6/diversos/evidencia/dgis-cubo-sectorial-1822.html",
+            "sha256": "1c445b46eff1132922e9ffab2bd77f54690fda07bcdc07b64ae082a90ecdf17f",
+            "localizador": "contenedor JS de 5625 bytes, solo título; sin tabla de variables extraíble",
+            "afirmacion_soportada": "El cubo sectorial 2018-2022 (época del recurso local) tampoco expone su diccionario de variables por estas vías."
+          },
+          {
+            "ruta": "propuestas/investigacion-post-r6/diversos/evidencia/http-log-ronda2c.json",
+            "sha256": "3069bfbe53bb9b643a1e89ef6a8ff47f586432f059068ff4a33868d4738d0b4c",
+            "localizador": "entradas stmenu.js (404), fuentes/ (403), sectorial (200), https (timeout)",
+            "afirmacion_soportada": "Registro de la ronda 2c: el archivo de variables no existe en fuentes/ (404), el menú JS no se sirve (404) y no hay listado (403)."
+          }
+        ],
+        "evidencia_faltante": "Documento que fije qué cuenta Total_Egresos (egresos vs urgencias): aclaración aplicable a la fila o diccionario corregido / fe de erratas (conjunto+diccionario+fila+huella citados). No localizado en fuentes examinadas (portal CKAN, DGIS/CONAPO/INEGI revisados; R6). En manos del publicador según R6; la búsqueda negativa acotada no prueba exclusividad ni capacidad única: vale cualquier evidencia primaria inequívoca vinculada a la fila, venga de la fuente que venga.",
+        "huella_fila_diccionario": "98c73e56ff407766447b52e08850d0b8669f6979145b4c66fac1f1f83aec9f05",
+        "limites": [
+          "No se interpreta como egresos ni como urgencias; no se usa para tasas ni agregaciones.",
+          "Las guías DGIS 2026 (B002 y B014) son contexto normativo vigente, no definición local ni fe de erratas, y no cubren la época local 2015-2022.",
+          "El vínculo posicional diccionario↔columna es heurístico (requiere revisión) y no acredita sentido."
+        ],
+        "motivo": "Contradicción conservada y reforzada por segunda vía primaria: el título de la hoja física del publicador ('Egresos Hospitalarios 2018-2022') y la página del cubo/fuentes DGIS hablan de hospitalización, mientras la descripción local dice 'urgencias'; la página de urgencias DGIS acredita un subsistema separado (GIIS-B014). Ninguna evidencia fija qué cuenta la columna local: sigue pendiente. Ronda 2 (2026-10-24): agotadas las rutas efectivas del marco (variante en minúsculas con bytes idénticos, ruta fuentes/ 404, stmenu.js 404, listado de directorio 403, https con timeout, cubo sectorial 2018-2022 sin tabla): la tabla de variables DGIS no es recuperable por estas vías.",
+        "variable": "Total_Egresos",
+        "vinculo_fuente_local": "Diccionario f89137ba fila 15 ↔ hoja física 'Egresos Hospitalarios 2018-2022' col. Total_Egresos pos 15 (mismo orden 1:1, método heurístico); recurso CKAN ad6f77b8 (2015-01-01 a 2022-12-31) del conjunto 8993c917.",
+        "grupo_fuente": "diversos"
+      },
+      "antecedente": {
+        "id": "https://example.org/mex-ontologi/definition/f89137ba-d82e-44fe-80c7-cc355f09f9f5%2F15",
+        "estado": "sigue_pendiente",
+        "original": {
+          "definicion_iri": "https://example.org/mex-ontologi/definition/f89137ba-d82e-44fe-80c7-cc355f09f9f5%2F15",
+          "descripcion_original": "Total de urgencias atendidas",
+          "estado": "sigue_pendiente",
+          "evidencia": [
+            {
+              "afirmacion_soportada": "El diccionario local define Total_Egresos como 'Total de urgencias atendidas' (Numérico entero, ejemplo 2), fila 15/15.",
+              "localizador": "/definiciones/14 (Nombre variable=Total_Egresos)",
+              "ruta": "data/portal/inspecciones/f89137ba-d82e-44fe-80c7-cc355f09f9f5.json",
+              "sha256": "59c6077b4f8bb93f2bf002284cf0c18e0c6c9d1f91ded2e834756dbd45ffd73b"
+            },
+            {
+              "afirmacion_soportada": "La hoja física se titula 'Egresos Hospitalarios 2018-2022' y Total_Egresos es la columna 15/15 en el mismo orden del diccionario (vínculo posicional diccionario↔columna, método heurístico). El título de hoja contradice la descripción sin resolverla.",
+              "localizador": "tablas[0].hoja + campos[14].id=Total_Egresos, posicion_original 15",
+              "ruta": "data/portal/inspecciones/ad6f77b8-569d-4826-8ce0-3c6efddcb098.json",
+              "sha256": "6c28880ccf4c8d9aa94493e7e1d1b359663137e1449d8747fb60139382aae068"
+            },
+            {
+              "afirmacion_soportada": "El publicador declara el conjunto como Egresos Hospitalarios (15 variables, base de datos interna, actualización trimestral) con un solo recurso de datos 2015-01-01 a 2022-12-31; Fuentes extras vacías: no hay metodología ni vínculo a norma nacional.",
+              "localizador": "result.notas/frequency/fuentes_extras/resources[1].start_date+end_date",
+              "ruta": "propuestas/investigacion-post-r6/diversos/evidencia/ckan-egresos.json",
+              "sha256": "65229d1d77ae5c0ce9476a30bf50542a842708f27ef5897c0107dce6e8d3ca25"
+            },
+            {
+              "afirmacion_soportada": "La norma nacional cubre egresos 2000-2023 (SSA) y morbilidad del sector 2004-2022, y remite a un archivo 'Descripción de variables' separado: existe el documento de variables pero no define la fila local.",
+              "localizador": "párrafos 'Egresos Hospitalarios Cubos dinámicos' + tabla 'Descripción de variables'; 'Última modificación: Martes 21 de abril de 2026'",
+              "ruta": "propuestas/investigacion-post-r6/diversos/evidencia/dgis-cubo-egresos.html",
+              "sha256": "a33c7841a1d6bd2591337646db28feaf6f22d75d9577c4dce8069171c3a41fd9"
+            },
+            {
+              "afirmacion_soportada": "Egresos = hospitalización (morbilidad: todos los casos atendidos en hospitales; mortalidad: motivo de egreso = defunción); fuente: registro de médicos sobre pacientes que abandonan un hospital. Nada de urgencias.",
+              "localizador": "párrafos 1-2 del iframe de Fuentes ('La estadística de egresos hospitalarios…' / 'Acerca de la fuente de información…')",
+              "ruta": "propuestas/investigacion-post-r6/diversos/evidencia/dgis-ehosp-fuentes.html",
+              "sha256": "1c89dc6d5e8c942d0fb607af2a85f6c4a1b3b4a3424251ab6541c3121457d807"
+            },
+            {
+              "afirmacion_soportada": "Las urgencias son un subsistema separado del SINAIS (GIIS-B014-03-08 v3.8 vigente, 2026-06-01), no una acepción de egresos. Segunda evidencia primaria de la separación (la primera fue la guía B002 de R6).",
+              "localizador": "Nombre/Clave/Versión/Estatus + 'Subsistema de Urgencias del SINAIS'; 'Última modificación: Lunes 01 de junio de 2026'",
+              "ruta": "propuestas/investigacion-post-r6/diversos/evidencia/dgis-urgencias-b014.html",
+              "sha256": "5b19b86b3facc21ec947ee7147cf835b8a1cb259345b405f54f8e9820171f834"
+            },
+            {
+              "afirmacion_soportada": "La guía de Egresos Hospitalarios v5.9 separa el Subsistema de Urgencias Médicas (GIIS-B014); 'urgencias' solo aparece como área de procedencia. Evidencia R6 reutilizada, hash re-verificado.",
+              "localizador": "evidencia R6 citada en entrega diversos-presas",
+              "ruta": "propuestas/pendientes-muse-r6/diversos-presas/evidencia/DGIS_GIIS-B002-05-09_egresos-v5.9.zip",
+              "sha256": "eaea651efb3f558a47fb1211762e7f3f413b32b13e018700921756fefdd44bb5"
+            },
+            {
+              "ruta": "propuestas/investigacion-post-r6/diversos/evidencia/dgis-ehosp-descripcion-minusculas.html",
+              "sha256": "a7840926d6f4f4fcf8bedc3875a3ec22763c06129e1628ff2e8ec38fc56a8b0e",
+              "localizador": "sha idéntico al intento con mayúsculas: mismo marco sin tabla",
+              "afirmacion_soportada": "El contenido no depende de la capitalización de la URL: ambas variantes sirven el mismo marco."
+            },
+            {
+              "ruta": "propuestas/investigacion-post-r6/diversos/evidencia/dgis-cubo-sectorial-1822.html",
+              "sha256": "1c445b46eff1132922e9ffab2bd77f54690fda07bcdc07b64ae082a90ecdf17f",
+              "localizador": "contenedor JS de 5625 bytes, solo título; sin tabla de variables extraíble",
+              "afirmacion_soportada": "El cubo sectorial 2018-2022 (época del recurso local) tampoco expone su diccionario de variables por estas vías."
+            },
+            {
+              "ruta": "propuestas/investigacion-post-r6/diversos/evidencia/http-log-ronda2c.json",
+              "sha256": "3069bfbe53bb9b643a1e89ef6a8ff47f586432f059068ff4a33868d4738d0b4c",
+              "localizador": "entradas stmenu.js (404), fuentes/ (403), sectorial (200), https (timeout)",
+              "afirmacion_soportada": "Registro de la ronda 2c: el archivo de variables no existe en fuentes/ (404), el menú JS no se sirve (404) y no hay listado (403)."
+            }
+          ],
+          "evidencia_faltante": "Documento que fije qué cuenta Total_Egresos (egresos vs urgencias): aclaración aplicable a la fila o diccionario corregido / fe de erratas (conjunto+diccionario+fila+huella citados). No localizado en fuentes examinadas (portal CKAN, DGIS/CONAPO/INEGI revisados; R6). En manos del publicador según R6; la búsqueda negativa acotada no prueba exclusividad ni capacidad única: vale cualquier evidencia primaria inequívoca vinculada a la fila, venga de la fuente que venga.",
+          "huella_fila_diccionario": "98c73e56ff407766447b52e08850d0b8669f6979145b4c66fac1f1f83aec9f05",
+          "limites": [
+            "No se interpreta como egresos ni como urgencias; no se usa para tasas ni agregaciones.",
+            "Las guías DGIS 2026 (B002 y B014) son contexto normativo vigente, no definición local ni fe de erratas, y no cubren la época local 2015-2022.",
+            "El vínculo posicional diccionario↔columna es heurístico (requiere revisión) y no acredita sentido."
+          ],
+          "motivo": "Contradicción conservada y reforzada por segunda vía primaria: el título de la hoja física del publicador ('Egresos Hospitalarios 2018-2022') y la página del cubo/fuentes DGIS hablan de hospitalización, mientras la descripción local dice 'urgencias'; la página de urgencias DGIS acredita un subsistema separado (GIIS-B014). Ninguna evidencia fija qué cuenta la columna local: sigue pendiente. Ronda 2 (2026-10-24): agotadas las rutas efectivas del marco (variante en minúsculas con bytes idénticos, ruta fuentes/ 404, stmenu.js 404, listado de directorio 403, https con timeout, cubo sectorial 2018-2022 sin tabla): la tabla de variables DGIS no es recuperable por estas vías.",
+          "variable": "Total_Egresos",
+          "vinculo_fuente_local": "Diccionario f89137ba fila 15 ↔ hoja física 'Egresos Hospitalarios 2018-2022' col. Total_Egresos pos 15 (mismo orden 1:1, método heurístico); recurso CKAN ad6f77b8 (2015-01-01 a 2022-12-31) del conjunto 8993c917.",
+          "grupo_fuente": "diversos"
+        },
+        "motivo": "Contradicción conservada y reforzada por segunda vía primaria: el título de la hoja física del publicador ('Egresos Hospitalarios 2018-2022') y la página del cubo/fuentes DGIS hablan de hospitalización, mientras la descripción local dice 'urgencias'; la página de urgencias DGIS acredita un subsistema separado (GIIS-B014). Ninguna evidencia fija qué cuenta la columna local: sigue pendiente. Ronda 2 (2026-10-24): agotadas las rutas efectivas del marco (variante en minúsculas con bytes idénticos, ruta fuentes/ 404, stmenu.js 404, listado de directorio 403, https con timeout, cubo sectorial 2018-2022 sin tabla): la tabla de variables DGIS no es recuperable por estas vías. | Cierre-brechas 2026-10-24: 50/50 evidencias previas re-verificadas por bytes (SHA OK); pista nueva concreta examinada (ver última evidencia) y agotada sin vínculo campo/recurso/edición/periodo. Sin propuesta: acreditar exigiría fuente primaria vinculada a la fila.",
+        "evidencia_faltante": "Documento que fije qué cuenta Total_Egresos (egresos vs urgencias): aclaración aplicable a la fila o diccionario corregido / fe de erratas (conjunto+diccionario+fila+huella citados). No localizado en fuentes examinadas (portal CKAN, DGIS/CONAPO/INEGI revisados; R6). En manos del publicador según R6; la búsqueda negativa acotada no prueba exclusividad ni capacidad única: vale cualquier evidencia primaria inequívoca vinculada a la fila, venga de la fuente que venga.",
+        "evidencia": [
+          {
+            "ruta": "data/portal/inspecciones/f89137ba-d82e-44fe-80c7-cc355f09f9f5.json",
+            "sha256": "59c6077b4f8bb93f2bf002284cf0c18e0c6c9d1f91ded2e834756dbd45ffd73b",
+            "localizador": "/definiciones/14 (Nombre variable=Total_Egresos)",
+            "afirmacion_soportada": "El diccionario local define Total_Egresos como 'Total de urgencias atendidas' (Numérico entero, ejemplo 2), fila 15/15."
+          },
+          {
+            "ruta": "data/portal/inspecciones/ad6f77b8-569d-4826-8ce0-3c6efddcb098.json",
+            "sha256": "6c28880ccf4c8d9aa94493e7e1d1b359663137e1449d8747fb60139382aae068",
+            "localizador": "tablas[0].hoja + campos[14].id=Total_Egresos, posicion_original 15",
+            "afirmacion_soportada": "La hoja física se titula 'Egresos Hospitalarios 2018-2022' y Total_Egresos es la columna 15/15 en el mismo orden del diccionario (vínculo posicional diccionario↔columna, método heurístico). El título de hoja contradice la descripción sin resolverla."
+          },
+          {
+            "ruta": "propuestas/investigacion-post-r6/diversos/evidencia/ckan-egresos.json",
+            "sha256": "65229d1d77ae5c0ce9476a30bf50542a842708f27ef5897c0107dce6e8d3ca25",
+            "localizador": "result.notas/frequency/fuentes_extras/resources[1].start_date+end_date",
+            "afirmacion_soportada": "El publicador declara el conjunto como Egresos Hospitalarios (15 variables, base de datos interna, actualización trimestral) con un solo recurso de datos 2015-01-01 a 2022-12-31; Fuentes extras vacías: no hay metodología ni vínculo a norma nacional."
+          },
+          {
+            "ruta": "propuestas/investigacion-post-r6/diversos/evidencia/dgis-cubo-egresos.html",
+            "sha256": "a33c7841a1d6bd2591337646db28feaf6f22d75d9577c4dce8069171c3a41fd9",
+            "localizador": "párrafos 'Egresos Hospitalarios Cubos dinámicos' + tabla 'Descripción de variables'; 'Última modificación: Martes 21 de abril de 2026'",
+            "afirmacion_soportada": "La norma nacional cubre egresos 2000-2023 (SSA) y morbilidad del sector 2004-2022, y remite a un archivo 'Descripción de variables' separado: existe el documento de variables pero no define la fila local."
+          },
+          {
+            "ruta": "propuestas/investigacion-post-r6/diversos/evidencia/dgis-ehosp-fuentes.html",
+            "sha256": "1c89dc6d5e8c942d0fb607af2a85f6c4a1b3b4a3424251ab6541c3121457d807",
+            "localizador": "párrafos 1-2 del iframe de Fuentes ('La estadística de egresos hospitalarios…' / 'Acerca de la fuente de información…')",
+            "afirmacion_soportada": "Egresos = hospitalización (morbilidad: todos los casos atendidos en hospitales; mortalidad: motivo de egreso = defunción); fuente: registro de médicos sobre pacientes que abandonan un hospital. Nada de urgencias."
+          },
+          {
+            "ruta": "propuestas/investigacion-post-r6/diversos/evidencia/dgis-urgencias-b014.html",
+            "sha256": "5b19b86b3facc21ec947ee7147cf835b8a1cb259345b405f54f8e9820171f834",
+            "localizador": "Nombre/Clave/Versión/Estatus + 'Subsistema de Urgencias del SINAIS'; 'Última modificación: Lunes 01 de junio de 2026'",
+            "afirmacion_soportada": "Las urgencias son un subsistema separado del SINAIS (GIIS-B014-03-08 v3.8 vigente, 2026-06-01), no una acepción de egresos. Segunda evidencia primaria de la separación (la primera fue la guía B002 de R6)."
+          },
+          {
+            "ruta": "propuestas/pendientes-muse-r6/diversos-presas/evidencia/DGIS_GIIS-B002-05-09_egresos-v5.9.zip",
+            "sha256": "eaea651efb3f558a47fb1211762e7f3f413b32b13e018700921756fefdd44bb5",
+            "localizador": "evidencia R6 citada en entrega diversos-presas",
+            "afirmacion_soportada": "La guía de Egresos Hospitalarios v5.9 separa el Subsistema de Urgencias Médicas (GIIS-B014); 'urgencias' solo aparece como área de procedencia. Evidencia R6 reutilizada, hash re-verificado."
+          },
+          {
+            "ruta": "propuestas/investigacion-post-r6/diversos/evidencia/dgis-ehosp-descripcion-minusculas.html",
+            "sha256": "a7840926d6f4f4fcf8bedc3875a3ec22763c06129e1628ff2e8ec38fc56a8b0e",
+            "localizador": "sha idéntico al intento con mayúsculas: mismo marco sin tabla",
+            "afirmacion_soportada": "El contenido no depende de la capitalización de la URL: ambas variantes sirven el mismo marco."
+          },
+          {
+            "ruta": "propuestas/investigacion-post-r6/diversos/evidencia/dgis-cubo-sectorial-1822.html",
+            "sha256": "1c445b46eff1132922e9ffab2bd77f54690fda07bcdc07b64ae082a90ecdf17f",
+            "localizador": "contenedor JS de 5625 bytes, solo título; sin tabla de variables extraíble",
+            "afirmacion_soportada": "El cubo sectorial 2018-2022 (época del recurso local) tampoco expone su diccionario de variables por estas vías."
+          },
+          {
+            "ruta": "propuestas/investigacion-post-r6/diversos/evidencia/http-log-ronda2c.json",
+            "sha256": "3069bfbe53bb9b643a1e89ef6a8ff47f586432f059068ff4a33868d4738d0b4c",
+            "localizador": "entradas stmenu.js (404), fuentes/ (403), sectorial (200), https (timeout)",
+            "afirmacion_soportada": "Registro de la ronda 2c: el archivo de variables no existe en fuentes/ (404), el menú JS no se sirve (404) y no hay listado (403)."
+          },
+          {
+            "ruta": "propuestas/cierre-brechas-post-r6/significados-tic-diversos/evidencia/nueva-dgis-egresos-2026-10-24.md",
+            "sha256": "6a837fa3a937b411d1c97bfcd84bd031691f82f1348c9dd9d5a7d67cb95ceb16",
+            "localizador": "enlace Descripción de variables sinba08 + intentos http vacío/https error 2026-10-24",
+            "afirmacion_soportada": "Pista nueva (enlace directo sinba08) examinada y agotada 2026-10-24: marco vacío por http y error de transporte por https; no fija qué cuenta Total_Egresos."
+          }
+        ],
+        "limites": [
+          "No se interpreta como egresos ni como urgencias; no se usa para tasas ni agregaciones.",
+          "Las guías DGIS 2026 (B002 y B014) son contexto normativo vigente, no definición local ni fe de erratas, y no cubren la época local 2015-2022.",
+          "El vínculo posicional diccionario↔columna es heurístico (requiere revisión) y no acredita sentido."
+        ],
+        "tarea": "significados-tic-diversos",
+        "tipo": "significados"
+      }
+    },
+    {
+      "id": "https://example.org/mex-ontologi/definition/67156807-2013-4117-9ca9-394aea647127%2F5",
+      "tipo": "significados",
+      "original": {
+        "definicion_iri": "https://example.org/mex-ontologi/definition/67156807-2013-4117-9ca9-394aea647127%2F5",
+        "descripcion_original": "Clasificación",
+        "estado": "sigue_pendiente",
+        "evidencia": [
+          {
+            "afirmacion_soportada": "Fila 5: CLASIF, Categórico, descripción genérica 'Clasificación', unidad = lista de 7 valores, ejemplo Colonia, sin catálogo.",
+            "localizador": "/definiciones/4 (Nombre variable=CLASIF)",
+            "ruta": "data/portal/inspecciones/67156807-2013-4117-9ca9-394aea647127.json",
+            "sha256": "c1d42eba568474e6170cc54eba5f26334e11e5ae3e882ea9148a219485b783d3"
+          },
+          {
+            "afirmacion_soportada": "CLASIF es la columna física 5 de la hoja IMC_2020 del recurso de datos 2020 (misma sigla que la base CONAPO IMC_2020; coincidencia nominal registrada, sin inferencia).",
+            "localizador": "tablas[0].hoja=IMC_2020, campos[4].id=CLASIF, posicion_original 5",
+            "ruta": "data/portal/inspecciones/09ef2342-fd9f-4334-bcd5-9c969baca32f.json",
+            "sha256": "5fa955a221017d4449bc728f0e9f334a00ab8cf1dc703f05a038ca7bb057c3ff"
+          },
+          {
+            "afirmacion_soportada": "El catálogo del conjunto solo trae Catalogo_Estado y Catalogo_Municipios: no existe dominio publicado para CLASIF (negativo local nuevo frente a R6, que no examinó este recurso).",
+            "localizador": "tablas[].hoja = Catalogo_Estado, Catalogo_Municipios (sin hoja de clasificación)",
+            "ruta": "data/portal/inspecciones/483259a2-b688-4f4b-beae-9c7016881a63.json",
+            "sha256": "393ada3f742c61a08a8f2d7de10bbe027ec476244b14fa4ac4120a4bd75295c0"
+          },
+          {
+            "afirmacion_soportada": "El publicador declara base censal INEGI y enlaza como Fuentes extras la página CONAPO de índices 2020 (único conjunto diverso con Fuentes extras no vacías); sin metodología COESPO ni vínculo a variable.",
+            "localizador": "result.notes (base censal INEGI) + result.fuentes_extras + resources[Diccionario, Catalogo, 2020]",
+            "ruta": "propuestas/investigacion-post-r6/diversos/evidencia/ckan-marginacion.json",
+            "sha256": "44594c502e004937eb2a910815f1225cb1adffaa0fd226321dedbec14663a777"
+          },
+          {
+            "afirmacion_soportada": "CONAPO publica por primera vez estimación a nivel de colonias: base IMC_2020.zip, shp imc2020_shp.zip, programa de cálculo y documento urbana.pdf (idéntico al de R6). Existe el referendo nacional a nivel colonia, sin vínculo a la columna local.",
+            "localizador": "nota de observación (fragmentos: 'por primera ocasión, una estimación a nivel de colonias', enlaces IMC_2020.zip/shp/RAR, urbana.pdf file/828844)",
+            "ruta": "propuestas/investigacion-post-r6/diversos/evidencia/conapo-im2020-nota-webfetch.md",
+            "sha256": "122da75153f2b125355d8917d188926c7e9f77093ad465d8fbeee3e42a6eb9fd"
+          },
+          {
+            "afirmacion_soportada": "El catálogo nacional INEGI de tipo de asentamiento (v_tip_asen, RNM) tiene 43 categorías con códigos numéricos 1-43 (+Ninguno/Otro); los 7 valores locales existen en él (Barrio=3, Colonia=7, Ejido=13, Fraccionamiento=16, Privada=23, Residencial=30, Unidad habitacional=36) pero el subconjunto cerrado sin códigos ni 'Otro'/'Ninguno' impide homologar sin vínculo del publicador. Referente genérico sin vínculo local: no acredita.",
+            "localizador": "'Tipo de asentamiento humano (v_tip_asen)' + tabla de categorías 1-43 + 'Es la clasificación del tipo del asentamiento que determina la autoridad local…' + Definición ('Clave que identifica el tipo de asentamiento…')",
+            "ruta": "propuestas/investigacion-post-r6/diversos/evidencia/inegi-rnm-v450.html",
+            "sha256": "0eb78483fa130f553b607efe792ef92f217725dd65873cae8d21596e054e9466"
+          },
+          {
+            "afirmacion_soportada": "Anexo B del documento CONAPO (notas 98-99, 109): atributos de capa simplificada de colonias y catálogo geoestadístico INEGI de asentamientos. Evidencia R6 reutilizada como contexto, hash re-verificado.",
+            "localizador": "evidencia R6 citada en entrega diversos-presas",
+            "ruta": "propuestas/pendientes-muse-r6/diversos-presas/evidencia/CONAPO_IMU_2020_urbana.pdf",
+            "sha256": "21b5e82399d6beaa900620c21328d1e057faf79fac79ccfbea1457a665c966be"
+          },
+          {
+            "ruta": "propuestas/investigacion-post-r6/diversos/evidencia/sonora-imc2020-local.xlsx",
+            "sha256": "14a741bb438adbf82aa535baaf87abe0fab94fd23c8df86b84fa98d1904b5224",
+            "localizador": "hoja IMC_2020, 28 columnas, 2129 filas de datos; conteo CLASIF idéntico al nacional-Sonora",
+            "afirmacion_soportada": "Archivo local auténtico (sha idéntico a la inspección preservada): el extracto Sonora del producto nacional, con nulo '-' declarado."
+          },
+          {
+            "ruta": "propuestas/investigacion-post-r6/diversos/evidencia/conapo-IMC_2020.zip",
+            "sha256": "5d93b314428f88008ba380bac56b587169cfefd3acaf4659857a07874822b8bb",
+            "localizador": "IMUC_2020.xlsx: hojas IMUC_2020_* (74227 filas) + Diccionario (CLASIF='Clasificación', Fuente CONAPO/INEGI Censo 2020)",
+            "afirmacion_soportada": "El producto nacional a nivel colonia trae diccionario espejo del local (28 variables) y datos Sonora (2129 filas) idénticos al archivo local."
+          },
+          {
+            "ruta": "propuestas/investigacion-post-r6/diversos/evidencia/conapo-imc2020_shp.zip",
+            "sha256": "69d73b5bb0127df6c81701684eb28cd6bd666d9319a1ffb45da76446ae278426",
+            "localizador": "colonias_imc2020.dbf: campo CLASIF C(25); subset CVE_ENT=26 → 2129 registros, 8 valores, conteos idénticos",
+            "afirmacion_soportada": "La cartografía nacional a nivel colonia confirma variable, nivel y dominio con la misma distribución exacta."
+          },
+          {
+            "ruta": "propuestas/investigacion-post-r6/diversos/evidencia/conapo-imc-diccionario-nota.md",
+            "sha256": "97ac6f973389087eac54346b1893dd7cacaa8fba443b21bc14e2d7980f374ccd",
+            "localizador": "tabla Variable|Descripción + pie de fuente + encabezado IMUC_2020_NAY-ZAC",
+            "afirmacion_soportada": "Transcripción citable del diccionario nacional y del esquema de datos a nivel colonia."
+          },
+          {
+            "ruta": "propuestas/investigacion-post-r6/diversos/evidencia/conapo-clasif-comparativa-nota.md",
+            "sha256": "9738fdfc38f56a89e513d2b5b8d14e4580b635366545fa43bcc8141a140c1762",
+            "localizador": "tablas de conteos local/nacional-xlsx/nacional-shp + dominio nacional de 38 valores",
+            "afirmacion_soportada": "Identidad de valores local↔Sonora-nacional; dominio nacional 38 valores; códigos INEGI no adoptados."
+          },
+          {
+            "ruta": "propuestas/investigacion-post-r6/diversos/evidencia/conapo-calculo-colonia-2020.rar",
+            "sha256": "27ade0e655d49570cafcfe5d13540430bbc13891ac5a8129c3f41a9195a59ee0",
+            "localizador": "magia Rar! (verificada), 3193 bytes; sin extractor (unrar/7z/bsdtar ausentes)",
+            "afirmacion_soportada": "El programa de cálculo existe y es un RAR genuino, pero su contenido no pudo examinarse (NEG-DIV-06)."
+          },
+          {
+            "ruta": "propuestas/investigacion-post-r6/diversos/evidencia/calculo-extraido/Indice_de_marginacion_urbana_por_colonia_2020.txt",
+            "sha256": "8d361a603b7c17e7ab027aff4bf8e6fc2e5c8e7d0e5985dbb56e7d4db7580e39",
+            "localizador": "líneas 42-43 (lectura IMUC_2020 + rbind), 59-69 (DP2 sobre columnas 15:25), 104 (enlace nota metodológica); sin mención a CLASIF",
+            "afirmacion_soportada": "El programa oficial lee las hojas IMUC_2020, calcula el índice solo con columnas 15:25 y arrastra CLASIF (1:25) sin definirla; remite a la nota metodológica."
+          },
+          {
+            "ruta": "propuestas/investigacion-post-r6/diversos/evidencia/conapo-nota-tecnica-IMUC_2020.pdf",
+            "sha256": "7143fe571176450ff839af719e2b6a6354f5f6f11bd296841e5d9f05ce3f8a26",
+            "localizador": "p4, nota 10 al pie: 'Los atributos seleccionados para generar una capa simplificada de colonias fueron: clave y nombre de municipio, clasificación de la colonia y código postal'",
+            "afirmacion_soportada": "Única mención (1 en 18 pp.): 'clasificación de la colonia' como atributo de la capa simplificada; el token CLASIF aparece 0 veces y 'tipo de asentamiento' 0 veces: sin definición explícita del objeto."
+          },
+          {
+            "ruta": "propuestas/investigacion-post-r6/diversos/evidencia/nota-tecnica-p4.txt",
+            "sha256": "14334c627e375e08c1b6fcbed7736e3e80d51b4bf15f9883a4e4eac8bc5e9f2d",
+            "localizador": "p4 íntegra (nota 10)",
+            "afirmacion_soportada": "Transcripción citable del contexto: capa simplificada de colonias por disolución de polígonos; atributo listado sin definición."
+          }
+        ],
+        "evidencia_faltante": "Documento del publicador que fije el objeto clasificado por CLASIF (qué clasifica: tipo de asentamiento u otro) y su lista cerrada de valores, aplicable a la fila (conjunto+diccionario+fila+huella citados); o diccionario corregido / fe de erratas; o evidencia primaria inequívoca vinculada explícitamente a la definición. No localizado en fuentes examinadas (portal CKAN con Fuentes extras a nivel de conjunto; diccionarios nacional y local describen CLASIF solo como 'Clasificación'/'Clasificacion'; R6). En manos del publicador según R6; la búsqueda negativa acotada no prueba exclusividad ni capacidad única: vale cualquier evidencia primaria inequívoca vinculada a la fila, venga de la fuente que venga.",
+        "huella_fila_diccionario": "c16feb711c8027da46df863668671e9f35e699129da382b494d45039abe1f232",
+        "limites": [
+          "C1 (objeto sin resolver): ninguna fuente examinada declara qué clasifica CLASIF; 'tipo de asentamiento' no tiene fuente explícita y no se adopta.",
+          "C2 (valores observados, sin catálogo): los 38 valores nacionales y los 7+'-' de Sonora son conteos observados en datos, no un catálogo publicado; no se adoptan códigos INEGI 1-43; '-' = nulo declarado (obligatoriedad: No), no un tipo.",
+          "C3 (sin joins ni identidad de catálogos): la identidad de valores del subset Sonora (2129 filas) es compatibilidad documental, no autoriza joins por CLASIF ni fusión/identidad entre el recurso local y el producto nacional.",
+          "C4 (vínculo a nivel conjunto): la declaración del publicador (Fuentes extras CKAN) no cita fila+huella; no suple el documento exacto faltante.",
+          "No se equipara localidad/AGEB con colonia: toda la evidencia es de producto a nivel colonia (IMUC_2020).",
+          "El RAR del programa de cálculo no fue examinado (sin extractor): no aporta ni resta."
+        ],
+        "motivo": "Sigue pendiente: identidad documental confirmada pero brecha de significado abierta. Confirmado: el archivo local (hoja IMC_2020, 2129 filas, 28 columnas) coincide en valores con el subset Sonora del producto nacional IMC_2020 ed. 2020; el diccionario local es espejo del nacional (28 variables, CLASIF='Clasificación' en ambos); el script oficial arrastra CLASIF sin definirla; la nota técnica solo lista 'clasificación de la colonia' como atributo de capa (0 menciones a CLASIF/'tipo de asentamiento'). Brecha: ninguna fuente declara el objeto clasificado; 'tipo de asentamiento' carece de fuente explícita. Falta el documento exacto citado en evidencia_faltante; límites C1-C4 vigentes.",
+        "variable": "CLASIF",
+        "vinculo_fuente_local": "Diccionario 67156807 fila 5 ↔ hoja física IMC_2020 col. CLASIF pos 5 del recurso 09ef2342 (2020); catálogo 483259a2 del mismo conjunto verificado sin dominio CLASIF; Fuentes extras CKAN → página CONAPO índices-2020. Archivo local 09ef2342 (hoja IMC_2020, 2129 filas) idéntico en valores, distribución, esquema (28 columnas) y formato de clave (nnnnn_nnnn) al extracto Sonora (CVE_ENT=26) del producto nacional IMC_2020, ed. 2020, enlazado por el publicador en Fuentes extras.",
+        "historial_propuesta_rechazada": {
+          "significado_propuesto_original": "Clasificación del tipo de asentamiento de la colonia: atributo CLASIF del producto CONAPO Índice de marginación urbana por colonia 2020 (IMC_2020), a nivel colonia, estimado con base en el Censo de Población y Vivienda 2020. Dominio de referencia nacional: 38 valores observados; en Sonora se observan 7 (Barrio, Colonia, Ejido, Fraccionamiento, Privada, Residencial, Unidad habitacional) más '-' como marcador de nulo declarado en el diccionario local.",
+          "fecha_propuesta": "2026-10-24",
+          "decision": "NO promover (integrador tras 2 auditorías)",
+          "fecha_decision": "2026-10-24",
+          "motivos": [
+            "Ambas auditorías coinciden: 'tipo de asentamiento' carece de fuente explícita.",
+            "La lectura mínima genérica ('Clasificación', atributo CLASIF del producto 2020) acredita procedencia/contexto pero no resuelve el objeto clasificado exigido por el criterio.",
+            "No crear concepto tautológico para bajar el conteo de pendientes."
+          ],
+          "refs_auditorias": [
+            "cotejo coordinador: mismatch descripcion_original CLASIF ('Clasificación' con tilde)",
+            "dictamen auditor-otros: 3 defectos (tilde; exclusividad incl. TRIMESTRE; listo SHA)",
+            "decisión integrador: NO promover CLASIF"
+          ],
+          "motivo_propuesta_original": "Propuesta respaldada bajo el criterio, opción (3): el publicador declara en CKAN base censal INEGI y Fuentes extras = página CONAPO índices-2020 (evidencia primaria del propio publicador vinculada al conjunto); el producto enlazado (IMC_2020, ed. 2020, a nivel colonia, sin equiparar localidad/AGEB) trae diccionario espejo con CLASIF y datos cuyo extracto Sonora es idéntico al archivo local (2129 filas, distribución exacta 1050/854/119/89/7/7/2/1, clave nnnnn_nnnn, 28 columnas); el '-' es nulo declarado (obligatoriedad: No). Cadena recurso/campo/versión vinculada sin definiciones inventadas."
+        },
+        "grupo_fuente": "diversos"
+      },
+      "antecedente": {
+        "id": "https://example.org/mex-ontologi/definition/67156807-2013-4117-9ca9-394aea647127%2F5",
+        "estado": "sigue_pendiente",
+        "original": {
+          "definicion_iri": "https://example.org/mex-ontologi/definition/67156807-2013-4117-9ca9-394aea647127%2F5",
+          "descripcion_original": "Clasificación",
+          "estado": "sigue_pendiente",
+          "evidencia": [
+            {
+              "afirmacion_soportada": "Fila 5: CLASIF, Categórico, descripción genérica 'Clasificación', unidad = lista de 7 valores, ejemplo Colonia, sin catálogo.",
+              "localizador": "/definiciones/4 (Nombre variable=CLASIF)",
+              "ruta": "data/portal/inspecciones/67156807-2013-4117-9ca9-394aea647127.json",
+              "sha256": "c1d42eba568474e6170cc54eba5f26334e11e5ae3e882ea9148a219485b783d3"
+            },
+            {
+              "afirmacion_soportada": "CLASIF es la columna física 5 de la hoja IMC_2020 del recurso de datos 2020 (misma sigla que la base CONAPO IMC_2020; coincidencia nominal registrada, sin inferencia).",
+              "localizador": "tablas[0].hoja=IMC_2020, campos[4].id=CLASIF, posicion_original 5",
+              "ruta": "data/portal/inspecciones/09ef2342-fd9f-4334-bcd5-9c969baca32f.json",
+              "sha256": "5fa955a221017d4449bc728f0e9f334a00ab8cf1dc703f05a038ca7bb057c3ff"
+            },
+            {
+              "afirmacion_soportada": "El catálogo del conjunto solo trae Catalogo_Estado y Catalogo_Municipios: no existe dominio publicado para CLASIF (negativo local nuevo frente a R6, que no examinó este recurso).",
+              "localizador": "tablas[].hoja = Catalogo_Estado, Catalogo_Municipios (sin hoja de clasificación)",
+              "ruta": "data/portal/inspecciones/483259a2-b688-4f4b-beae-9c7016881a63.json",
+              "sha256": "393ada3f742c61a08a8f2d7de10bbe027ec476244b14fa4ac4120a4bd75295c0"
+            },
+            {
+              "afirmacion_soportada": "El publicador declara base censal INEGI y enlaza como Fuentes extras la página CONAPO de índices 2020 (único conjunto diverso con Fuentes extras no vacías); sin metodología COESPO ni vínculo a variable.",
+              "localizador": "result.notes (base censal INEGI) + result.fuentes_extras + resources[Diccionario, Catalogo, 2020]",
+              "ruta": "propuestas/investigacion-post-r6/diversos/evidencia/ckan-marginacion.json",
+              "sha256": "44594c502e004937eb2a910815f1225cb1adffaa0fd226321dedbec14663a777"
+            },
+            {
+              "afirmacion_soportada": "CONAPO publica por primera vez estimación a nivel de colonias: base IMC_2020.zip, shp imc2020_shp.zip, programa de cálculo y documento urbana.pdf (idéntico al de R6). Existe el referendo nacional a nivel colonia, sin vínculo a la columna local.",
+              "localizador": "nota de observación (fragmentos: 'por primera ocasión, una estimación a nivel de colonias', enlaces IMC_2020.zip/shp/RAR, urbana.pdf file/828844)",
+              "ruta": "propuestas/investigacion-post-r6/diversos/evidencia/conapo-im2020-nota-webfetch.md",
+              "sha256": "122da75153f2b125355d8917d188926c7e9f77093ad465d8fbeee3e42a6eb9fd"
+            },
+            {
+              "afirmacion_soportada": "El catálogo nacional INEGI de tipo de asentamiento (v_tip_asen, RNM) tiene 43 categorías con códigos numéricos 1-43 (+Ninguno/Otro); los 7 valores locales existen en él (Barrio=3, Colonia=7, Ejido=13, Fraccionamiento=16, Privada=23, Residencial=30, Unidad habitacional=36) pero el subconjunto cerrado sin códigos ni 'Otro'/'Ninguno' impide homologar sin vínculo del publicador. Referente genérico sin vínculo local: no acredita.",
+              "localizador": "'Tipo de asentamiento humano (v_tip_asen)' + tabla de categorías 1-43 + 'Es la clasificación del tipo del asentamiento que determina la autoridad local…' + Definición ('Clave que identifica el tipo de asentamiento…')",
+              "ruta": "propuestas/investigacion-post-r6/diversos/evidencia/inegi-rnm-v450.html",
+              "sha256": "0eb78483fa130f553b607efe792ef92f217725dd65873cae8d21596e054e9466"
+            },
+            {
+              "afirmacion_soportada": "Anexo B del documento CONAPO (notas 98-99, 109): atributos de capa simplificada de colonias y catálogo geoestadístico INEGI de asentamientos. Evidencia R6 reutilizada como contexto, hash re-verificado.",
+              "localizador": "evidencia R6 citada en entrega diversos-presas",
+              "ruta": "propuestas/pendientes-muse-r6/diversos-presas/evidencia/CONAPO_IMU_2020_urbana.pdf",
+              "sha256": "21b5e82399d6beaa900620c21328d1e057faf79fac79ccfbea1457a665c966be"
+            },
+            {
+              "ruta": "propuestas/investigacion-post-r6/diversos/evidencia/sonora-imc2020-local.xlsx",
+              "sha256": "14a741bb438adbf82aa535baaf87abe0fab94fd23c8df86b84fa98d1904b5224",
+              "localizador": "hoja IMC_2020, 28 columnas, 2129 filas de datos; conteo CLASIF idéntico al nacional-Sonora",
+              "afirmacion_soportada": "Archivo local auténtico (sha idéntico a la inspección preservada): el extracto Sonora del producto nacional, con nulo '-' declarado."
+            },
+            {
+              "ruta": "propuestas/investigacion-post-r6/diversos/evidencia/conapo-IMC_2020.zip",
+              "sha256": "5d93b314428f88008ba380bac56b587169cfefd3acaf4659857a07874822b8bb",
+              "localizador": "IMUC_2020.xlsx: hojas IMUC_2020_* (74227 filas) + Diccionario (CLASIF='Clasificación', Fuente CONAPO/INEGI Censo 2020)",
+              "afirmacion_soportada": "El producto nacional a nivel colonia trae diccionario espejo del local (28 variables) y datos Sonora (2129 filas) idénticos al archivo local."
+            },
+            {
+              "ruta": "propuestas/investigacion-post-r6/diversos/evidencia/conapo-imc2020_shp.zip",
+              "sha256": "69d73b5bb0127df6c81701684eb28cd6bd666d9319a1ffb45da76446ae278426",
+              "localizador": "colonias_imc2020.dbf: campo CLASIF C(25); subset CVE_ENT=26 → 2129 registros, 8 valores, conteos idénticos",
+              "afirmacion_soportada": "La cartografía nacional a nivel colonia confirma variable, nivel y dominio con la misma distribución exacta."
+            },
+            {
+              "ruta": "propuestas/investigacion-post-r6/diversos/evidencia/conapo-imc-diccionario-nota.md",
+              "sha256": "97ac6f973389087eac54346b1893dd7cacaa8fba443b21bc14e2d7980f374ccd",
+              "localizador": "tabla Variable|Descripción + pie de fuente + encabezado IMUC_2020_NAY-ZAC",
+              "afirmacion_soportada": "Transcripción citable del diccionario nacional y del esquema de datos a nivel colonia."
+            },
+            {
+              "ruta": "propuestas/investigacion-post-r6/diversos/evidencia/conapo-clasif-comparativa-nota.md",
+              "sha256": "9738fdfc38f56a89e513d2b5b8d14e4580b635366545fa43bcc8141a140c1762",
+              "localizador": "tablas de conteos local/nacional-xlsx/nacional-shp + dominio nacional de 38 valores",
+              "afirmacion_soportada": "Identidad de valores local↔Sonora-nacional; dominio nacional 38 valores; códigos INEGI no adoptados."
+            },
+            {
+              "ruta": "propuestas/investigacion-post-r6/diversos/evidencia/conapo-calculo-colonia-2020.rar",
+              "sha256": "27ade0e655d49570cafcfe5d13540430bbc13891ac5a8129c3f41a9195a59ee0",
+              "localizador": "magia Rar! (verificada), 3193 bytes; sin extractor (unrar/7z/bsdtar ausentes)",
+              "afirmacion_soportada": "El programa de cálculo existe y es un RAR genuino, pero su contenido no pudo examinarse (NEG-DIV-06)."
+            },
+            {
+              "ruta": "propuestas/investigacion-post-r6/diversos/evidencia/calculo-extraido/Indice_de_marginacion_urbana_por_colonia_2020.txt",
+              "sha256": "8d361a603b7c17e7ab027aff4bf8e6fc2e5c8e7d0e5985dbb56e7d4db7580e39",
+              "localizador": "líneas 42-43 (lectura IMUC_2020 + rbind), 59-69 (DP2 sobre columnas 15:25), 104 (enlace nota metodológica); sin mención a CLASIF",
+              "afirmacion_soportada": "El programa oficial lee las hojas IMUC_2020, calcula el índice solo con columnas 15:25 y arrastra CLASIF (1:25) sin definirla; remite a la nota metodológica."
+            },
+            {
+              "ruta": "propuestas/investigacion-post-r6/diversos/evidencia/conapo-nota-tecnica-IMUC_2020.pdf",
+              "sha256": "7143fe571176450ff839af719e2b6a6354f5f6f11bd296841e5d9f05ce3f8a26",
+              "localizador": "p4, nota 10 al pie: 'Los atributos seleccionados para generar una capa simplificada de colonias fueron: clave y nombre de municipio, clasificación de la colonia y código postal'",
+              "afirmacion_soportada": "Única mención (1 en 18 pp.): 'clasificación de la colonia' como atributo de la capa simplificada; el token CLASIF aparece 0 veces y 'tipo de asentamiento' 0 veces: sin definición explícita del objeto."
+            },
+            {
+              "ruta": "propuestas/investigacion-post-r6/diversos/evidencia/nota-tecnica-p4.txt",
+              "sha256": "14334c627e375e08c1b6fcbed7736e3e80d51b4bf15f9883a4e4eac8bc5e9f2d",
+              "localizador": "p4 íntegra (nota 10)",
+              "afirmacion_soportada": "Transcripción citable del contexto: capa simplificada de colonias por disolución de polígonos; atributo listado sin definición."
+            }
+          ],
+          "evidencia_faltante": "Documento del publicador que fije el objeto clasificado por CLASIF (qué clasifica: tipo de asentamiento u otro) y su lista cerrada de valores, aplicable a la fila (conjunto+diccionario+fila+huella citados); o diccionario corregido / fe de erratas; o evidencia primaria inequívoca vinculada explícitamente a la definición. No localizado en fuentes examinadas (portal CKAN con Fuentes extras a nivel de conjunto; diccionarios nacional y local describen CLASIF solo como 'Clasificación'/'Clasificacion'; R6). En manos del publicador según R6; la búsqueda negativa acotada no prueba exclusividad ni capacidad única: vale cualquier evidencia primaria inequívoca vinculada a la fila, venga de la fuente que venga.",
+          "huella_fila_diccionario": "c16feb711c8027da46df863668671e9f35e699129da382b494d45039abe1f232",
+          "limites": [
+            "C1 (objeto sin resolver): ninguna fuente examinada declara qué clasifica CLASIF; 'tipo de asentamiento' no tiene fuente explícita y no se adopta.",
+            "C2 (valores observados, sin catálogo): los 38 valores nacionales y los 7+'-' de Sonora son conteos observados en datos, no un catálogo publicado; no se adoptan códigos INEGI 1-43; '-' = nulo declarado (obligatoriedad: No), no un tipo.",
+            "C3 (sin joins ni identidad de catálogos): la identidad de valores del subset Sonora (2129 filas) es compatibilidad documental, no autoriza joins por CLASIF ni fusión/identidad entre el recurso local y el producto nacional.",
+            "C4 (vínculo a nivel conjunto): la declaración del publicador (Fuentes extras CKAN) no cita fila+huella; no suple el documento exacto faltante.",
+            "No se equipara localidad/AGEB con colonia: toda la evidencia es de producto a nivel colonia (IMUC_2020).",
+            "El RAR del programa de cálculo no fue examinado (sin extractor): no aporta ni resta."
+          ],
+          "motivo": "Sigue pendiente: identidad documental confirmada pero brecha de significado abierta. Confirmado: el archivo local (hoja IMC_2020, 2129 filas, 28 columnas) coincide en valores con el subset Sonora del producto nacional IMC_2020 ed. 2020; el diccionario local es espejo del nacional (28 variables, CLASIF='Clasificación' en ambos); el script oficial arrastra CLASIF sin definirla; la nota técnica solo lista 'clasificación de la colonia' como atributo de capa (0 menciones a CLASIF/'tipo de asentamiento'). Brecha: ninguna fuente declara el objeto clasificado; 'tipo de asentamiento' carece de fuente explícita. Falta el documento exacto citado en evidencia_faltante; límites C1-C4 vigentes.",
+          "variable": "CLASIF",
+          "vinculo_fuente_local": "Diccionario 67156807 fila 5 ↔ hoja física IMC_2020 col. CLASIF pos 5 del recurso 09ef2342 (2020); catálogo 483259a2 del mismo conjunto verificado sin dominio CLASIF; Fuentes extras CKAN → página CONAPO índices-2020. Archivo local 09ef2342 (hoja IMC_2020, 2129 filas) idéntico en valores, distribución, esquema (28 columnas) y formato de clave (nnnnn_nnnn) al extracto Sonora (CVE_ENT=26) del producto nacional IMC_2020, ed. 2020, enlazado por el publicador en Fuentes extras.",
+          "historial_propuesta_rechazada": {
+            "significado_propuesto_original": "Clasificación del tipo de asentamiento de la colonia: atributo CLASIF del producto CONAPO Índice de marginación urbana por colonia 2020 (IMC_2020), a nivel colonia, estimado con base en el Censo de Población y Vivienda 2020. Dominio de referencia nacional: 38 valores observados; en Sonora se observan 7 (Barrio, Colonia, Ejido, Fraccionamiento, Privada, Residencial, Unidad habitacional) más '-' como marcador de nulo declarado en el diccionario local.",
+            "fecha_propuesta": "2026-10-24",
+            "decision": "NO promover (integrador tras 2 auditorías)",
+            "fecha_decision": "2026-10-24",
+            "motivos": [
+              "Ambas auditorías coinciden: 'tipo de asentamiento' carece de fuente explícita.",
+              "La lectura mínima genérica ('Clasificación', atributo CLASIF del producto 2020) acredita procedencia/contexto pero no resuelve el objeto clasificado exigido por el criterio.",
+              "No crear concepto tautológico para bajar el conteo de pendientes."
+            ],
+            "refs_auditorias": [
+              "cotejo coordinador: mismatch descripcion_original CLASIF ('Clasificación' con tilde)",
+              "dictamen auditor-otros: 3 defectos (tilde; exclusividad incl. TRIMESTRE; listo SHA)",
+              "decisión integrador: NO promover CLASIF"
+            ],
+            "motivo_propuesta_original": "Propuesta respaldada bajo el criterio, opción (3): el publicador declara en CKAN base censal INEGI y Fuentes extras = página CONAPO índices-2020 (evidencia primaria del propio publicador vinculada al conjunto); el producto enlazado (IMC_2020, ed. 2020, a nivel colonia, sin equiparar localidad/AGEB) trae diccionario espejo con CLASIF y datos cuyo extracto Sonora es idéntico al archivo local (2129 filas, distribución exacta 1050/854/119/89/7/7/2/1, clave nnnnn_nnnn, 28 columnas); el '-' es nulo declarado (obligatoriedad: No). Cadena recurso/campo/versión vinculada sin definiciones inventadas."
+          },
+          "grupo_fuente": "diversos"
+        },
+        "motivo": "Sigue pendiente: identidad documental confirmada pero brecha de significado abierta. Confirmado: el archivo local (hoja IMC_2020, 2129 filas, 28 columnas) coincide en valores con el subset Sonora del producto nacional IMC_2020 ed. 2020; el diccionario local es espejo del nacional (28 variables, CLASIF='Clasificación' en ambos); el script oficial arrastra CLASIF sin definirla; la nota técnica solo lista 'clasificación de la colonia' como atributo de capa (0 menciones a CLASIF/'tipo de asentamiento'). Brecha: ninguna fuente declara el objeto clasificado; 'tipo de asentamiento' carece de fuente explícita. Falta el documento exacto citado en evidencia_faltante; límites C1-C4 vigentes. | Cierre-brechas 2026-10-24: 50/50 evidencias previas re-verificadas por bytes (SHA OK); pista nueva concreta examinada (ver última evidencia) y agotada sin vínculo campo/recurso/edición/periodo. Sin propuesta: acreditar exigiría fuente primaria vinculada a la fila.",
+        "evidencia_faltante": "Documento del publicador que fije el objeto clasificado por CLASIF (qué clasifica: tipo de asentamiento u otro) y su lista cerrada de valores, aplicable a la fila (conjunto+diccionario+fila+huella citados); o diccionario corregido / fe de erratas; o evidencia primaria inequívoca vinculada explícitamente a la definición. No localizado en fuentes examinadas (portal CKAN con Fuentes extras a nivel de conjunto; diccionarios nacional y local describen CLASIF solo como 'Clasificación'/'Clasificacion'; R6). En manos del publicador según R6; la búsqueda negativa acotada no prueba exclusividad ni capacidad única: vale cualquier evidencia primaria inequívoca vinculada a la fila, venga de la fuente que venga.",
+        "evidencia": [
+          {
+            "ruta": "data/portal/inspecciones/67156807-2013-4117-9ca9-394aea647127.json",
+            "sha256": "c1d42eba568474e6170cc54eba5f26334e11e5ae3e882ea9148a219485b783d3",
+            "localizador": "/definiciones/4 (Nombre variable=CLASIF)",
+            "afirmacion_soportada": "Fila 5: CLASIF, Categórico, descripción genérica 'Clasificación', unidad = lista de 7 valores, ejemplo Colonia, sin catálogo."
+          },
+          {
+            "ruta": "data/portal/inspecciones/09ef2342-fd9f-4334-bcd5-9c969baca32f.json",
+            "sha256": "5fa955a221017d4449bc728f0e9f334a00ab8cf1dc703f05a038ca7bb057c3ff",
+            "localizador": "tablas[0].hoja=IMC_2020, campos[4].id=CLASIF, posicion_original 5",
+            "afirmacion_soportada": "CLASIF es la columna física 5 de la hoja IMC_2020 del recurso de datos 2020 (misma sigla que la base CONAPO IMC_2020; coincidencia nominal registrada, sin inferencia)."
+          },
+          {
+            "ruta": "data/portal/inspecciones/483259a2-b688-4f4b-beae-9c7016881a63.json",
+            "sha256": "393ada3f742c61a08a8f2d7de10bbe027ec476244b14fa4ac4120a4bd75295c0",
+            "localizador": "tablas[].hoja = Catalogo_Estado, Catalogo_Municipios (sin hoja de clasificación)",
+            "afirmacion_soportada": "El catálogo del conjunto solo trae Catalogo_Estado y Catalogo_Municipios: no existe dominio publicado para CLASIF (negativo local nuevo frente a R6, que no examinó este recurso)."
+          },
+          {
+            "ruta": "propuestas/investigacion-post-r6/diversos/evidencia/ckan-marginacion.json",
+            "sha256": "44594c502e004937eb2a910815f1225cb1adffaa0fd226321dedbec14663a777",
+            "localizador": "result.notes (base censal INEGI) + result.fuentes_extras + resources[Diccionario, Catalogo, 2020]",
+            "afirmacion_soportada": "El publicador declara base censal INEGI y enlaza como Fuentes extras la página CONAPO de índices 2020 (único conjunto diverso con Fuentes extras no vacías); sin metodología COESPO ni vínculo a variable."
+          },
+          {
+            "ruta": "propuestas/investigacion-post-r6/diversos/evidencia/conapo-im2020-nota-webfetch.md",
+            "sha256": "122da75153f2b125355d8917d188926c7e9f77093ad465d8fbeee3e42a6eb9fd",
+            "localizador": "nota de observación (fragmentos: 'por primera ocasión, una estimación a nivel de colonias', enlaces IMC_2020.zip/shp/RAR, urbana.pdf file/828844)",
+            "afirmacion_soportada": "CONAPO publica por primera vez estimación a nivel de colonias: base IMC_2020.zip, shp imc2020_shp.zip, programa de cálculo y documento urbana.pdf (idéntico al de R6). Existe el referendo nacional a nivel colonia, sin vínculo a la columna local."
+          },
+          {
+            "ruta": "propuestas/investigacion-post-r6/diversos/evidencia/inegi-rnm-v450.html",
+            "sha256": "0eb78483fa130f553b607efe792ef92f217725dd65873cae8d21596e054e9466",
+            "localizador": "'Tipo de asentamiento humano (v_tip_asen)' + tabla de categorías 1-43 + 'Es la clasificación del tipo del asentamiento que determina la autoridad local…' + Definición ('Clave que identifica el tipo de asentamiento…')",
+            "afirmacion_soportada": "El catálogo nacional INEGI de tipo de asentamiento (v_tip_asen, RNM) tiene 43 categorías con códigos numéricos 1-43 (+Ninguno/Otro); los 7 valores locales existen en él (Barrio=3, Colonia=7, Ejido=13, Fraccionamiento=16, Privada=23, Residencial=30, Unidad habitacional=36) pero el subconjunto cerrado sin códigos ni 'Otro'/'Ninguno' impide homologar sin vínculo del publicador. Referente genérico sin vínculo local: no acredita."
+          },
+          {
+            "ruta": "propuestas/pendientes-muse-r6/diversos-presas/evidencia/CONAPO_IMU_2020_urbana.pdf",
+            "sha256": "21b5e82399d6beaa900620c21328d1e057faf79fac79ccfbea1457a665c966be",
+            "localizador": "evidencia R6 citada en entrega diversos-presas",
+            "afirmacion_soportada": "Anexo B del documento CONAPO (notas 98-99, 109): atributos de capa simplificada de colonias y catálogo geoestadístico INEGI de asentamientos. Evidencia R6 reutilizada como contexto, hash re-verificado."
+          },
+          {
+            "ruta": "propuestas/investigacion-post-r6/diversos/evidencia/sonora-imc2020-local.xlsx",
+            "sha256": "14a741bb438adbf82aa535baaf87abe0fab94fd23c8df86b84fa98d1904b5224",
+            "localizador": "hoja IMC_2020, 28 columnas, 2129 filas de datos; conteo CLASIF idéntico al nacional-Sonora",
+            "afirmacion_soportada": "Archivo local auténtico (sha idéntico a la inspección preservada): el extracto Sonora del producto nacional, con nulo '-' declarado."
+          },
+          {
+            "ruta": "propuestas/investigacion-post-r6/diversos/evidencia/conapo-IMC_2020.zip",
+            "sha256": "5d93b314428f88008ba380bac56b587169cfefd3acaf4659857a07874822b8bb",
+            "localizador": "IMUC_2020.xlsx: hojas IMUC_2020_* (74227 filas) + Diccionario (CLASIF='Clasificación', Fuente CONAPO/INEGI Censo 2020)",
+            "afirmacion_soportada": "El producto nacional a nivel colonia trae diccionario espejo del local (28 variables) y datos Sonora (2129 filas) idénticos al archivo local."
+          },
+          {
+            "ruta": "propuestas/investigacion-post-r6/diversos/evidencia/conapo-imc2020_shp.zip",
+            "sha256": "69d73b5bb0127df6c81701684eb28cd6bd666d9319a1ffb45da76446ae278426",
+            "localizador": "colonias_imc2020.dbf: campo CLASIF C(25); subset CVE_ENT=26 → 2129 registros, 8 valores, conteos idénticos",
+            "afirmacion_soportada": "La cartografía nacional a nivel colonia confirma variable, nivel y dominio con la misma distribución exacta."
+          },
+          {
+            "ruta": "propuestas/investigacion-post-r6/diversos/evidencia/conapo-imc-diccionario-nota.md",
+            "sha256": "97ac6f973389087eac54346b1893dd7cacaa8fba443b21bc14e2d7980f374ccd",
+            "localizador": "tabla Variable|Descripción + pie de fuente + encabezado IMUC_2020_NAY-ZAC",
+            "afirmacion_soportada": "Transcripción citable del diccionario nacional y del esquema de datos a nivel colonia."
+          },
+          {
+            "ruta": "propuestas/investigacion-post-r6/diversos/evidencia/conapo-clasif-comparativa-nota.md",
+            "sha256": "9738fdfc38f56a89e513d2b5b8d14e4580b635366545fa43bcc8141a140c1762",
+            "localizador": "tablas de conteos local/nacional-xlsx/nacional-shp + dominio nacional de 38 valores",
+            "afirmacion_soportada": "Identidad de valores local↔Sonora-nacional; dominio nacional 38 valores; códigos INEGI no adoptados."
+          },
+          {
+            "ruta": "propuestas/investigacion-post-r6/diversos/evidencia/conapo-calculo-colonia-2020.rar",
+            "sha256": "27ade0e655d49570cafcfe5d13540430bbc13891ac5a8129c3f41a9195a59ee0",
+            "localizador": "magia Rar! (verificada), 3193 bytes; sin extractor (unrar/7z/bsdtar ausentes)",
+            "afirmacion_soportada": "El programa de cálculo existe y es un RAR genuino, pero su contenido no pudo examinarse (NEG-DIV-06)."
+          },
+          {
+            "ruta": "propuestas/investigacion-post-r6/diversos/evidencia/calculo-extraido/Indice_de_marginacion_urbana_por_colonia_2020.txt",
+            "sha256": "8d361a603b7c17e7ab027aff4bf8e6fc2e5c8e7d0e5985dbb56e7d4db7580e39",
+            "localizador": "líneas 42-43 (lectura IMUC_2020 + rbind), 59-69 (DP2 sobre columnas 15:25), 104 (enlace nota metodológica); sin mención a CLASIF",
+            "afirmacion_soportada": "El programa oficial lee las hojas IMUC_2020, calcula el índice solo con columnas 15:25 y arrastra CLASIF (1:25) sin definirla; remite a la nota metodológica."
+          },
+          {
+            "ruta": "propuestas/investigacion-post-r6/diversos/evidencia/conapo-nota-tecnica-IMUC_2020.pdf",
+            "sha256": "7143fe571176450ff839af719e2b6a6354f5f6f11bd296841e5d9f05ce3f8a26",
+            "localizador": "p4, nota 10 al pie: 'Los atributos seleccionados para generar una capa simplificada de colonias fueron: clave y nombre de municipio, clasificación de la colonia y código postal'",
+            "afirmacion_soportada": "Única mención (1 en 18 pp.): 'clasificación de la colonia' como atributo de la capa simplificada; el token CLASIF aparece 0 veces y 'tipo de asentamiento' 0 veces: sin definición explícita del objeto."
+          },
+          {
+            "ruta": "propuestas/investigacion-post-r6/diversos/evidencia/nota-tecnica-p4.txt",
+            "sha256": "14334c627e375e08c1b6fcbed7736e3e80d51b4bf15f9883a4e4eac8bc5e9f2d",
+            "localizador": "p4 íntegra (nota 10)",
+            "afirmacion_soportada": "Transcripción citable del contexto: capa simplificada de colonias por disolución de polígonos; atributo listado sin definición."
+          },
+          {
+            "ruta": "propuestas/cierre-brechas-post-r6/significados-tic-diversos/evidencia/nueva-diversos-2026-10-24.md",
+            "sha256": "67088fd454ae669df92cf582393535b10dd5f6118b6b144f0be10bdbf77aeeb9",
+            "localizador": "búsquedas CONAPO/PROAES/SAGARHPA 2026-10-24, sin vínculo a fila",
+            "afirmacion_soportada": "Pistas nuevas 2026-10-24 sin documento vinculado a fila/huella: sin cambio en la brecha."
+          }
+        ],
+        "limites": [
+          "C1 (objeto sin resolver): ninguna fuente examinada declara qué clasifica CLASIF; 'tipo de asentamiento' no tiene fuente explícita y no se adopta.",
+          "C2 (valores observados, sin catálogo): los 38 valores nacionales y los 7+'-' de Sonora son conteos observados en datos, no un catálogo publicado; no se adoptan códigos INEGI 1-43; '-' = nulo declarado (obligatoriedad: No), no un tipo.",
+          "C3 (sin joins ni identidad de catálogos): la identidad de valores del subset Sonora (2129 filas) es compatibilidad documental, no autoriza joins por CLASIF ni fusión/identidad entre el recurso local y el producto nacional.",
+          "C4 (vínculo a nivel conjunto): la declaración del publicador (Fuentes extras CKAN) no cita fila+huella; no suple el documento exacto faltante.",
+          "No se equipara localidad/AGEB con colonia: toda la evidencia es de producto a nivel colonia (IMUC_2020).",
+          "El RAR del programa de cálculo no fue examinado (sin extractor): no aporta ni resta."
+        ],
+        "tarea": "significados-tic-diversos",
+        "tipo": "significados"
+      }
+    },
+    {
+      "id": "https://example.org/mex-ontologi/definition/3f6942e3-a9c5-42c0-a38b-2c7aad2a6c99%2F2",
+      "tipo": "significados",
+      "original": {
+        "definicion_iri": "https://example.org/mex-ontologi/definition/3f6942e3-a9c5-42c0-a38b-2c7aad2a6c99%2F2",
+        "descripcion_original": "Trimestre del estrato",
+        "estado": "sigue_pendiente",
+        "evidencia": [
+          {
+            "afirmacion_soportada": "Fila 2: TRIMESTRE, Numérico entero, 'Trimestre del estrato', ejemplo 1, sin catálogo; convive con FECHA RECEPCION (Fecha mm/dd/AAAA, ejemplo 1/14/2022), lo que impide leer 'trimestre' como mera derivación calendárica sin documento que defina 'estrato'.",
+            "localizador": "/definiciones/1 (TRIMESTRE) y /definiciones/3 (FECHA RECEPCION)",
+            "ruta": "data/portal/inspecciones/3f6942e3-a9c5-42c0-a38b-2c7aad2a6c99.json",
+            "sha256": "e463ea718d587e0e5407554a11e03c96643cccaa18e7caca7f57d81052b381c1"
+          },
+          {
+            "afirmacion_soportada": "Hoja física '2020' (nombre estancado) con TRIMESTRE pos 2 y FECHA RECEPCION pos 4; el recurso cubre 2022-01-01 a 2022-03-31, por lo que el nombre de hoja no fecha los datos.",
+            "localizador": "tablas[0].hoja=2020, campos[1].id=TRIMESTRE pos 2, campos[3].id=FECHA RECEPCION pos 4",
+            "ruta": "data/portal/inspecciones/5772b8ec-e272-4265-a757-f7ddd179fe04.json",
+            "sha256": "2c3c0e293052e25e5b4af24d9a5c332189a4544f48d1732f69306210b1fe909d"
+          },
+          {
+            "afirmacion_soportada": "El publicador parte el conjunto por trimestre (recurso 'Denuncias 1er Trimestre 2022', 2022-01-01 a 2022-03-31, frecuencia trimestral, granularidad diaria) y deja Fuentes extras vacías: el trimestre del recurso es partición de publicación, no definición de 'estrato'.",
+            "localizador": "result.frequency/fuentes_extras + resources[1].name/start_date/end_date/region",
+            "ruta": "propuestas/investigacion-post-r6/diversos/evidencia/ckan-denuncias.json",
+            "sha256": "3eafe5c95f99dbbeb94dc2867b3c818ae1a1c59362a87aeadf2dbb761eadac09"
+          }
+        ],
+        "evidencia_faltante": "Metodología o cuestionario PROAES de Denuncias Ambientales que defina 'estrato' y a qué trimestre refiere TRIMESTRE (calendario de denuncia vs estrato operativo/muestral). No localizado en fuentes examinadas (portal CKAN, DGIS/CONAPO/INEGI revisados; R6). En manos del publicador según R6; la búsqueda negativa acotada no prueba exclusividad ni capacidad única: vale cualquier evidencia primaria inequívoca vinculada a la fila, venga de la fuente que venga.",
+        "huella_fila_diccionario": "799f924f8f10e3831cebdb4fbbc233cb6965caae8902f799881277d12f24320d",
+        "limites": [
+          "No se interpreta evento, calendario ni cobertura; no se homologa a trimestre calendario aunque el ejemplo (1) coincida con el Q1 del recurso.",
+          "El nombre de hoja '2020' no se usa para fechar nada."
+        ],
+        "motivo": "La evidencia nueva (partición trimestral de publicación Q1 2022 + coexistencia con fecha exacta de denuncia + hoja con nombre estancado '2020') explica por qué el ejemplo 1 no resuelve nada: 'estrato' sigue sin objeto declarado y el trimestre del recurso es metadato de publicación, no definición de la variable. Sigue pendiente.",
+        "variable": "TRIMESTRE",
+        "vinculo_fuente_local": "Diccionario 3f6942e3 fila 2 ↔ hoja física '2020' col. TRIMESTRE pos 2 del recurso 5772b8ec (Denuncias 1er Trimestre 2022, 2022-01-01 a 2022-03-31); mismo recurso trae FECHA RECEPCION pos 4.",
+        "grupo_fuente": "diversos"
+      },
+      "antecedente": {
+        "id": "https://example.org/mex-ontologi/definition/3f6942e3-a9c5-42c0-a38b-2c7aad2a6c99%2F2",
+        "estado": "sigue_pendiente",
+        "original": {
+          "definicion_iri": "https://example.org/mex-ontologi/definition/3f6942e3-a9c5-42c0-a38b-2c7aad2a6c99%2F2",
+          "descripcion_original": "Trimestre del estrato",
+          "estado": "sigue_pendiente",
+          "evidencia": [
+            {
+              "afirmacion_soportada": "Fila 2: TRIMESTRE, Numérico entero, 'Trimestre del estrato', ejemplo 1, sin catálogo; convive con FECHA RECEPCION (Fecha mm/dd/AAAA, ejemplo 1/14/2022), lo que impide leer 'trimestre' como mera derivación calendárica sin documento que defina 'estrato'.",
+              "localizador": "/definiciones/1 (TRIMESTRE) y /definiciones/3 (FECHA RECEPCION)",
+              "ruta": "data/portal/inspecciones/3f6942e3-a9c5-42c0-a38b-2c7aad2a6c99.json",
+              "sha256": "e463ea718d587e0e5407554a11e03c96643cccaa18e7caca7f57d81052b381c1"
+            },
+            {
+              "afirmacion_soportada": "Hoja física '2020' (nombre estancado) con TRIMESTRE pos 2 y FECHA RECEPCION pos 4; el recurso cubre 2022-01-01 a 2022-03-31, por lo que el nombre de hoja no fecha los datos.",
+              "localizador": "tablas[0].hoja=2020, campos[1].id=TRIMESTRE pos 2, campos[3].id=FECHA RECEPCION pos 4",
+              "ruta": "data/portal/inspecciones/5772b8ec-e272-4265-a757-f7ddd179fe04.json",
+              "sha256": "2c3c0e293052e25e5b4af24d9a5c332189a4544f48d1732f69306210b1fe909d"
+            },
+            {
+              "afirmacion_soportada": "El publicador parte el conjunto por trimestre (recurso 'Denuncias 1er Trimestre 2022', 2022-01-01 a 2022-03-31, frecuencia trimestral, granularidad diaria) y deja Fuentes extras vacías: el trimestre del recurso es partición de publicación, no definición de 'estrato'.",
+              "localizador": "result.frequency/fuentes_extras + resources[1].name/start_date/end_date/region",
+              "ruta": "propuestas/investigacion-post-r6/diversos/evidencia/ckan-denuncias.json",
+              "sha256": "3eafe5c95f99dbbeb94dc2867b3c818ae1a1c59362a87aeadf2dbb761eadac09"
+            }
+          ],
+          "evidencia_faltante": "Metodología o cuestionario PROAES de Denuncias Ambientales que defina 'estrato' y a qué trimestre refiere TRIMESTRE (calendario de denuncia vs estrato operativo/muestral). No localizado en fuentes examinadas (portal CKAN, DGIS/CONAPO/INEGI revisados; R6). En manos del publicador según R6; la búsqueda negativa acotada no prueba exclusividad ni capacidad única: vale cualquier evidencia primaria inequívoca vinculada a la fila, venga de la fuente que venga.",
+          "huella_fila_diccionario": "799f924f8f10e3831cebdb4fbbc233cb6965caae8902f799881277d12f24320d",
+          "limites": [
+            "No se interpreta evento, calendario ni cobertura; no se homologa a trimestre calendario aunque el ejemplo (1) coincida con el Q1 del recurso.",
+            "El nombre de hoja '2020' no se usa para fechar nada."
+          ],
+          "motivo": "La evidencia nueva (partición trimestral de publicación Q1 2022 + coexistencia con fecha exacta de denuncia + hoja con nombre estancado '2020') explica por qué el ejemplo 1 no resuelve nada: 'estrato' sigue sin objeto declarado y el trimestre del recurso es metadato de publicación, no definición de la variable. Sigue pendiente.",
+          "variable": "TRIMESTRE",
+          "vinculo_fuente_local": "Diccionario 3f6942e3 fila 2 ↔ hoja física '2020' col. TRIMESTRE pos 2 del recurso 5772b8ec (Denuncias 1er Trimestre 2022, 2022-01-01 a 2022-03-31); mismo recurso trae FECHA RECEPCION pos 4.",
+          "grupo_fuente": "diversos"
+        },
+        "motivo": "La evidencia nueva (partición trimestral de publicación Q1 2022 + coexistencia con fecha exacta de denuncia + hoja con nombre estancado '2020') explica por qué el ejemplo 1 no resuelve nada: 'estrato' sigue sin objeto declarado y el trimestre del recurso es metadato de publicación, no definición de la variable. Sigue pendiente. | Cierre-brechas 2026-10-24: 50/50 evidencias previas re-verificadas por bytes (SHA OK); pista nueva concreta examinada (ver última evidencia) y agotada sin vínculo campo/recurso/edición/periodo. Sin propuesta: acreditar exigiría fuente primaria vinculada a la fila.",
+        "evidencia_faltante": "Metodología o cuestionario PROAES de Denuncias Ambientales que defina 'estrato' y a qué trimestre refiere TRIMESTRE (calendario de denuncia vs estrato operativo/muestral). No localizado en fuentes examinadas (portal CKAN, DGIS/CONAPO/INEGI revisados; R6). En manos del publicador según R6; la búsqueda negativa acotada no prueba exclusividad ni capacidad única: vale cualquier evidencia primaria inequívoca vinculada a la fila, venga de la fuente que venga.",
+        "evidencia": [
+          {
+            "ruta": "data/portal/inspecciones/3f6942e3-a9c5-42c0-a38b-2c7aad2a6c99.json",
+            "sha256": "e463ea718d587e0e5407554a11e03c96643cccaa18e7caca7f57d81052b381c1",
+            "localizador": "/definiciones/1 (TRIMESTRE) y /definiciones/3 (FECHA RECEPCION)",
+            "afirmacion_soportada": "Fila 2: TRIMESTRE, Numérico entero, 'Trimestre del estrato', ejemplo 1, sin catálogo; convive con FECHA RECEPCION (Fecha mm/dd/AAAA, ejemplo 1/14/2022), lo que impide leer 'trimestre' como mera derivación calendárica sin documento que defina 'estrato'."
+          },
+          {
+            "ruta": "data/portal/inspecciones/5772b8ec-e272-4265-a757-f7ddd179fe04.json",
+            "sha256": "2c3c0e293052e25e5b4af24d9a5c332189a4544f48d1732f69306210b1fe909d",
+            "localizador": "tablas[0].hoja=2020, campos[1].id=TRIMESTRE pos 2, campos[3].id=FECHA RECEPCION pos 4",
+            "afirmacion_soportada": "Hoja física '2020' (nombre estancado) con TRIMESTRE pos 2 y FECHA RECEPCION pos 4; el recurso cubre 2022-01-01 a 2022-03-31, por lo que el nombre de hoja no fecha los datos."
+          },
+          {
+            "ruta": "propuestas/investigacion-post-r6/diversos/evidencia/ckan-denuncias.json",
+            "sha256": "3eafe5c95f99dbbeb94dc2867b3c818ae1a1c59362a87aeadf2dbb761eadac09",
+            "localizador": "result.frequency/fuentes_extras + resources[1].name/start_date/end_date/region",
+            "afirmacion_soportada": "El publicador parte el conjunto por trimestre (recurso 'Denuncias 1er Trimestre 2022', 2022-01-01 a 2022-03-31, frecuencia trimestral, granularidad diaria) y deja Fuentes extras vacías: el trimestre del recurso es partición de publicación, no definición de 'estrato'."
+          },
+          {
+            "ruta": "propuestas/cierre-brechas-post-r6/significados-tic-diversos/evidencia/nueva-diversos-2026-10-24.md",
+            "sha256": "67088fd454ae669df92cf582393535b10dd5f6118b6b144f0be10bdbf77aeeb9",
+            "localizador": "búsquedas CONAPO/PROAES/SAGARHPA 2026-10-24, sin vínculo a fila",
+            "afirmacion_soportada": "Pistas nuevas 2026-10-24 sin documento vinculado a fila/huella: sin cambio en la brecha."
+          }
+        ],
+        "limites": [
+          "No se interpreta evento, calendario ni cobertura; no se homologa a trimestre calendario aunque el ejemplo (1) coincida con el Q1 del recurso.",
+          "El nombre de hoja '2020' no se usa para fechar nada."
+        ],
+        "tarea": "significados-tic-diversos",
+        "tipo": "significados"
+      }
+    },
+    {
+      "id": "https://example.org/mex-ontologi/definition/863b9cc8-daeb-4430-b835-6a0ced5abd31%2F7",
+      "tipo": "significados",
+      "original": {
+        "definicion_iri": "https://example.org/mex-ontologi/definition/863b9cc8-daeb-4430-b835-6a0ced5abd31%2F7",
+        "descripcion_original": "Clave de otras",
+        "estado": "sigue_pendiente",
+        "evidencia": [
+          {
+            "afirmacion_soportada": "Fila 7: CVOTRAS, Numérico Int, 'Clave de otras', sin ejemplo, unidad ni catálogo; forma pareja posicional con DOTRAS (fila 8, Texto 'Nombre de otras'), en la serie de pares clave-nombre del diccionario (CDDR/NDDR, CVEOF/NOFICINA, CESPE/ESPECIE, CVORIGEN/ORIGEN). La posición sugiere pareja código-nombre pero el objeto de 'otras' sigue indeterminado.",
+            "localizador": "/definiciones/6 (CVOTRAS) y /definiciones/7 (DOTRAS); serie /definiciones/1-11",
+            "ruta": "data/portal/inspecciones/863b9cc8-daeb-4430-b835-6a0ced5abd31.json",
+            "sha256": "3281c0dc4105077da1b5a5a7c48adb9dbf154c40bc3dd062708f996aca77a5af"
+          },
+          {
+            "afirmacion_soportada": "El catálogo publicado tiene 4 hojas (Especie_Pesca, Distritos, Municipios, Regiones) y ninguna hoja 'otras' ni dominio para CVOTRAS/DOTRAS (re-verificado por bytes; hash idéntico a R5).",
+            "localizador": "tablas[].hoja = Especie_Pesca, Distritos, Municipios, Regiones",
+            "ruta": "data/portal/inspecciones/b38645a9-bf15-4366-a1e0-63f5cfbd91c1.json",
+            "sha256": "1e73a9e3f3e5425260c8f7dd0711235437423178c1b88f4e69087c7d5b6247f4"
+          },
+          {
+            "afirmacion_soportada": "El conjunto publica 21 recursos (Diccionario + Catalogo + 19 anuales 2005-2023), granularidad anual, Fuentes extras vacías: no hay metodología SAGARHPA ni diccionario corregido publicados.",
+            "localizador": "result.num_resources/fuentes_extras + resources[0..20]",
+            "ruta": "propuestas/investigacion-post-r6/diversos/evidencia/ckan-pesca.json",
+            "sha256": "17e20d534ccaee27b8d1f095c39c2ed690e47b62e0dc6736c3f28469a504984b"
+          }
+        ],
+        "evidencia_faltante": "Diccionario corregido o metodología que complete 'Clave de otras' (objeto: otras oficinas, especies, orígenes u otro) y su catálogo, con edición y periodo; o evidencia primaria inequívoca vinculada a la fila. No localizado en fuentes examinadas (portal CKAN, DGIS/CONAPO/INEGI revisados; R6). En manos del publicador según R6; la búsqueda negativa acotada no prueba exclusividad ni capacidad única: vale cualquier evidencia primaria inequívoca vinculada a la fila, venga de la fuente que venga.",
+        "huella_fila_diccionario": "7b43908359031edee596dab23b179df402c2da718dff957ef86902d8127c49c4",
+        "limites": [
+          "No se interpreta objeto, código ni catálogo; no se vincula a hojas del catálogo local.",
+          "La posición contigua CVOTRAS/DOTRAS no autoriza afirmar pareja código-nombre más allá de registrarla.",
+          "No se usa para joins ni identidad de catálogos."
+        ],
+        "motivo": "Descripción trunca con objeto indeterminado. Lo nuevo (catálogo sin 'otras' re-verificado + serie de pares clave-nombre del diccionario + 21 recursos sin metodología publicada) acota el hueco pero no lo cierra: sin el objeto de 'otras' no hay significado acreditable.",
+        "variable": "CVOTRAS",
+        "vinculo_fuente_local": "Diccionario 863b9cc8 fila 7 (tabla_hoja 'otras' según R6) del conjunto e093cf34; catálogo b38645a9 del mismo conjunto verificado sin hoja 'otras'.",
+        "grupo_fuente": "diversos"
+      },
+      "antecedente": {
+        "id": "https://example.org/mex-ontologi/definition/863b9cc8-daeb-4430-b835-6a0ced5abd31%2F7",
+        "estado": "sigue_pendiente",
+        "original": {
+          "definicion_iri": "https://example.org/mex-ontologi/definition/863b9cc8-daeb-4430-b835-6a0ced5abd31%2F7",
+          "descripcion_original": "Clave de otras",
+          "estado": "sigue_pendiente",
+          "evidencia": [
+            {
+              "afirmacion_soportada": "Fila 7: CVOTRAS, Numérico Int, 'Clave de otras', sin ejemplo, unidad ni catálogo; forma pareja posicional con DOTRAS (fila 8, Texto 'Nombre de otras'), en la serie de pares clave-nombre del diccionario (CDDR/NDDR, CVEOF/NOFICINA, CESPE/ESPECIE, CVORIGEN/ORIGEN). La posición sugiere pareja código-nombre pero el objeto de 'otras' sigue indeterminado.",
+              "localizador": "/definiciones/6 (CVOTRAS) y /definiciones/7 (DOTRAS); serie /definiciones/1-11",
+              "ruta": "data/portal/inspecciones/863b9cc8-daeb-4430-b835-6a0ced5abd31.json",
+              "sha256": "3281c0dc4105077da1b5a5a7c48adb9dbf154c40bc3dd062708f996aca77a5af"
+            },
+            {
+              "afirmacion_soportada": "El catálogo publicado tiene 4 hojas (Especie_Pesca, Distritos, Municipios, Regiones) y ninguna hoja 'otras' ni dominio para CVOTRAS/DOTRAS (re-verificado por bytes; hash idéntico a R5).",
+              "localizador": "tablas[].hoja = Especie_Pesca, Distritos, Municipios, Regiones",
+              "ruta": "data/portal/inspecciones/b38645a9-bf15-4366-a1e0-63f5cfbd91c1.json",
+              "sha256": "1e73a9e3f3e5425260c8f7dd0711235437423178c1b88f4e69087c7d5b6247f4"
+            },
+            {
+              "afirmacion_soportada": "El conjunto publica 21 recursos (Diccionario + Catalogo + 19 anuales 2005-2023), granularidad anual, Fuentes extras vacías: no hay metodología SAGARHPA ni diccionario corregido publicados.",
+              "localizador": "result.num_resources/fuentes_extras + resources[0..20]",
+              "ruta": "propuestas/investigacion-post-r6/diversos/evidencia/ckan-pesca.json",
+              "sha256": "17e20d534ccaee27b8d1f095c39c2ed690e47b62e0dc6736c3f28469a504984b"
+            }
+          ],
+          "evidencia_faltante": "Diccionario corregido o metodología que complete 'Clave de otras' (objeto: otras oficinas, especies, orígenes u otro) y su catálogo, con edición y periodo; o evidencia primaria inequívoca vinculada a la fila. No localizado en fuentes examinadas (portal CKAN, DGIS/CONAPO/INEGI revisados; R6). En manos del publicador según R6; la búsqueda negativa acotada no prueba exclusividad ni capacidad única: vale cualquier evidencia primaria inequívoca vinculada a la fila, venga de la fuente que venga.",
+          "huella_fila_diccionario": "7b43908359031edee596dab23b179df402c2da718dff957ef86902d8127c49c4",
+          "limites": [
+            "No se interpreta objeto, código ni catálogo; no se vincula a hojas del catálogo local.",
+            "La posición contigua CVOTRAS/DOTRAS no autoriza afirmar pareja código-nombre más allá de registrarla.",
+            "No se usa para joins ni identidad de catálogos."
+          ],
+          "motivo": "Descripción trunca con objeto indeterminado. Lo nuevo (catálogo sin 'otras' re-verificado + serie de pares clave-nombre del diccionario + 21 recursos sin metodología publicada) acota el hueco pero no lo cierra: sin el objeto de 'otras' no hay significado acreditable.",
+          "variable": "CVOTRAS",
+          "vinculo_fuente_local": "Diccionario 863b9cc8 fila 7 (tabla_hoja 'otras' según R6) del conjunto e093cf34; catálogo b38645a9 del mismo conjunto verificado sin hoja 'otras'.",
+          "grupo_fuente": "diversos"
+        },
+        "motivo": "Descripción trunca con objeto indeterminado. Lo nuevo (catálogo sin 'otras' re-verificado + serie de pares clave-nombre del diccionario + 21 recursos sin metodología publicada) acota el hueco pero no lo cierra: sin el objeto de 'otras' no hay significado acreditable. | Cierre-brechas 2026-10-24: 50/50 evidencias previas re-verificadas por bytes (SHA OK); pista nueva concreta examinada (ver última evidencia) y agotada sin vínculo campo/recurso/edición/periodo. Sin propuesta: acreditar exigiría fuente primaria vinculada a la fila.",
+        "evidencia_faltante": "Diccionario corregido o metodología que complete 'Clave de otras' (objeto: otras oficinas, especies, orígenes u otro) y su catálogo, con edición y periodo; o evidencia primaria inequívoca vinculada a la fila. No localizado en fuentes examinadas (portal CKAN, DGIS/CONAPO/INEGI revisados; R6). En manos del publicador según R6; la búsqueda negativa acotada no prueba exclusividad ni capacidad única: vale cualquier evidencia primaria inequívoca vinculada a la fila, venga de la fuente que venga.",
+        "evidencia": [
+          {
+            "ruta": "data/portal/inspecciones/863b9cc8-daeb-4430-b835-6a0ced5abd31.json",
+            "sha256": "3281c0dc4105077da1b5a5a7c48adb9dbf154c40bc3dd062708f996aca77a5af",
+            "localizador": "/definiciones/6 (CVOTRAS) y /definiciones/7 (DOTRAS); serie /definiciones/1-11",
+            "afirmacion_soportada": "Fila 7: CVOTRAS, Numérico Int, 'Clave de otras', sin ejemplo, unidad ni catálogo; forma pareja posicional con DOTRAS (fila 8, Texto 'Nombre de otras'), en la serie de pares clave-nombre del diccionario (CDDR/NDDR, CVEOF/NOFICINA, CESPE/ESPECIE, CVORIGEN/ORIGEN). La posición sugiere pareja código-nombre pero el objeto de 'otras' sigue indeterminado."
+          },
+          {
+            "ruta": "data/portal/inspecciones/b38645a9-bf15-4366-a1e0-63f5cfbd91c1.json",
+            "sha256": "1e73a9e3f3e5425260c8f7dd0711235437423178c1b88f4e69087c7d5b6247f4",
+            "localizador": "tablas[].hoja = Especie_Pesca, Distritos, Municipios, Regiones",
+            "afirmacion_soportada": "El catálogo publicado tiene 4 hojas (Especie_Pesca, Distritos, Municipios, Regiones) y ninguna hoja 'otras' ni dominio para CVOTRAS/DOTRAS (re-verificado por bytes; hash idéntico a R5)."
+          },
+          {
+            "ruta": "propuestas/investigacion-post-r6/diversos/evidencia/ckan-pesca.json",
+            "sha256": "17e20d534ccaee27b8d1f095c39c2ed690e47b62e0dc6736c3f28469a504984b",
+            "localizador": "result.num_resources/fuentes_extras + resources[0..20]",
+            "afirmacion_soportada": "El conjunto publica 21 recursos (Diccionario + Catalogo + 19 anuales 2005-2023), granularidad anual, Fuentes extras vacías: no hay metodología SAGARHPA ni diccionario corregido publicados."
+          },
+          {
+            "ruta": "propuestas/cierre-brechas-post-r6/significados-tic-diversos/evidencia/nueva-diversos-2026-10-24.md",
+            "sha256": "67088fd454ae669df92cf582393535b10dd5f6118b6b144f0be10bdbf77aeeb9",
+            "localizador": "búsquedas CONAPO/PROAES/SAGARHPA 2026-10-24, sin vínculo a fila",
+            "afirmacion_soportada": "Pistas nuevas 2026-10-24 sin documento vinculado a fila/huella: sin cambio en la brecha."
+          }
+        ],
+        "limites": [
+          "No se interpreta objeto, código ni catálogo; no se vincula a hojas del catálogo local.",
+          "La posición contigua CVOTRAS/DOTRAS no autoriza afirmar pareja código-nombre más allá de registrarla.",
+          "No se usa para joins ni identidad de catálogos."
+        ],
+        "tarea": "significados-tic-diversos",
+        "tipo": "significados"
+      }
+    },
+    {
+      "id": "https://example.org/mex-ontologi/definition/863b9cc8-daeb-4430-b835-6a0ced5abd31%2F8",
+      "tipo": "significados",
+      "original": {
+        "definicion_iri": "https://example.org/mex-ontologi/definition/863b9cc8-daeb-4430-b835-6a0ced5abd31%2F8",
+        "descripcion_original": "Nombre de otras",
+        "estado": "sigue_pendiente",
+        "evidencia": [
+          {
+            "afirmacion_soportada": "Fila 8: DOTRAS, Texto, 'Nombre de otras', sin ejemplo ni catálogo; gemela de CVOTRAS, mismo objeto indeterminado.",
+            "localizador": "/definiciones/7 (DOTRAS)",
+            "ruta": "data/portal/inspecciones/863b9cc8-daeb-4430-b835-6a0ced5abd31.json",
+            "sha256": "3281c0dc4105077da1b5a5a7c48adb9dbf154c40bc3dd062708f996aca77a5af"
+          },
+          {
+            "afirmacion_soportada": "Sin hoja 'otras' ni dominio para DOTRAS en el catálogo (mismo negativo que CVOTRAS).",
+            "localizador": "tablas[].hoja = Especie_Pesca, Distritos, Municipios, Regiones",
+            "ruta": "data/portal/inspecciones/b38645a9-bf15-4366-a1e0-63f5cfbd91c1.json",
+            "sha256": "1e73a9e3f3e5425260c8f7dd0711235437423178c1b88f4e69087c7d5b6247f4"
+          },
+          {
+            "afirmacion_soportada": "Sin metodología ni diccionario corregido entre los 21 recursos del conjunto; Fuentes extras vacías.",
+            "localizador": "result.num_resources/fuentes_extras",
+            "ruta": "propuestas/investigacion-post-r6/diversos/evidencia/ckan-pesca.json",
+            "sha256": "17e20d534ccaee27b8d1f095c39c2ed690e47b62e0dc6736c3f28469a504984b"
+          }
+        ],
+        "evidencia_faltante": "Diccionario corregido o metodología que complete 'Clave/Nombre de otras' y su catálogo; o evidencia primaria inequívoca vinculada a la fila. No localizado en fuentes examinadas (portal CKAN, DGIS/CONAPO/INEGI revisados; R6). En manos del publicador según R6; la búsqueda negativa acotada no prueba exclusividad ni capacidad única: vale cualquier evidencia primaria inequívoca vinculada a la fila, venga de la fuente que venga.",
+        "huella_fila_diccionario": "738de0329c2d2e19f50d85dc13b3e6a05c4d79fda579701c400d01e4ebc806b3",
+        "limites": [
+          "No se interpreta objeto ni se asume pareja código-nombre más allá de la posición contigua.",
+          "No se usa para joins ni identidad de catálogos."
+        ],
+        "motivo": "Gemela trunca de CVOTRAS; mismo hueco de objeto. Sigue pendiente.",
+        "variable": "DOTRAS",
+        "vinculo_fuente_local": "Diccionario 863b9cc8 fila 8 (tabla_hoja 'otras' según R6) del conjunto e093cf34; catálogo b38645a9 sin hoja 'otras'.",
+        "grupo_fuente": "diversos"
+      },
+      "antecedente": {
+        "id": "https://example.org/mex-ontologi/definition/863b9cc8-daeb-4430-b835-6a0ced5abd31%2F8",
+        "estado": "sigue_pendiente",
+        "original": {
+          "definicion_iri": "https://example.org/mex-ontologi/definition/863b9cc8-daeb-4430-b835-6a0ced5abd31%2F8",
+          "descripcion_original": "Nombre de otras",
+          "estado": "sigue_pendiente",
+          "evidencia": [
+            {
+              "afirmacion_soportada": "Fila 8: DOTRAS, Texto, 'Nombre de otras', sin ejemplo ni catálogo; gemela de CVOTRAS, mismo objeto indeterminado.",
+              "localizador": "/definiciones/7 (DOTRAS)",
+              "ruta": "data/portal/inspecciones/863b9cc8-daeb-4430-b835-6a0ced5abd31.json",
+              "sha256": "3281c0dc4105077da1b5a5a7c48adb9dbf154c40bc3dd062708f996aca77a5af"
+            },
+            {
+              "afirmacion_soportada": "Sin hoja 'otras' ni dominio para DOTRAS en el catálogo (mismo negativo que CVOTRAS).",
+              "localizador": "tablas[].hoja = Especie_Pesca, Distritos, Municipios, Regiones",
+              "ruta": "data/portal/inspecciones/b38645a9-bf15-4366-a1e0-63f5cfbd91c1.json",
+              "sha256": "1e73a9e3f3e5425260c8f7dd0711235437423178c1b88f4e69087c7d5b6247f4"
+            },
+            {
+              "afirmacion_soportada": "Sin metodología ni diccionario corregido entre los 21 recursos del conjunto; Fuentes extras vacías.",
+              "localizador": "result.num_resources/fuentes_extras",
+              "ruta": "propuestas/investigacion-post-r6/diversos/evidencia/ckan-pesca.json",
+              "sha256": "17e20d534ccaee27b8d1f095c39c2ed690e47b62e0dc6736c3f28469a504984b"
+            }
+          ],
+          "evidencia_faltante": "Diccionario corregido o metodología que complete 'Clave/Nombre de otras' y su catálogo; o evidencia primaria inequívoca vinculada a la fila. No localizado en fuentes examinadas (portal CKAN, DGIS/CONAPO/INEGI revisados; R6). En manos del publicador según R6; la búsqueda negativa acotada no prueba exclusividad ni capacidad única: vale cualquier evidencia primaria inequívoca vinculada a la fila, venga de la fuente que venga.",
+          "huella_fila_diccionario": "738de0329c2d2e19f50d85dc13b3e6a05c4d79fda579701c400d01e4ebc806b3",
+          "limites": [
+            "No se interpreta objeto ni se asume pareja código-nombre más allá de la posición contigua.",
+            "No se usa para joins ni identidad de catálogos."
+          ],
+          "motivo": "Gemela trunca de CVOTRAS; mismo hueco de objeto. Sigue pendiente.",
+          "variable": "DOTRAS",
+          "vinculo_fuente_local": "Diccionario 863b9cc8 fila 8 (tabla_hoja 'otras' según R6) del conjunto e093cf34; catálogo b38645a9 sin hoja 'otras'.",
+          "grupo_fuente": "diversos"
+        },
+        "motivo": "Gemela trunca de CVOTRAS; mismo hueco de objeto. Sigue pendiente. | Cierre-brechas 2026-10-24: 50/50 evidencias previas re-verificadas por bytes (SHA OK); pista nueva concreta examinada (ver última evidencia) y agotada sin vínculo campo/recurso/edición/periodo. Sin propuesta: acreditar exigiría fuente primaria vinculada a la fila.",
+        "evidencia_faltante": "Diccionario corregido o metodología que complete 'Clave/Nombre de otras' y su catálogo; o evidencia primaria inequívoca vinculada a la fila. No localizado en fuentes examinadas (portal CKAN, DGIS/CONAPO/INEGI revisados; R6). En manos del publicador según R6; la búsqueda negativa acotada no prueba exclusividad ni capacidad única: vale cualquier evidencia primaria inequívoca vinculada a la fila, venga de la fuente que venga.",
+        "evidencia": [
+          {
+            "ruta": "data/portal/inspecciones/863b9cc8-daeb-4430-b835-6a0ced5abd31.json",
+            "sha256": "3281c0dc4105077da1b5a5a7c48adb9dbf154c40bc3dd062708f996aca77a5af",
+            "localizador": "/definiciones/7 (DOTRAS)",
+            "afirmacion_soportada": "Fila 8: DOTRAS, Texto, 'Nombre de otras', sin ejemplo ni catálogo; gemela de CVOTRAS, mismo objeto indeterminado."
+          },
+          {
+            "ruta": "data/portal/inspecciones/b38645a9-bf15-4366-a1e0-63f5cfbd91c1.json",
+            "sha256": "1e73a9e3f3e5425260c8f7dd0711235437423178c1b88f4e69087c7d5b6247f4",
+            "localizador": "tablas[].hoja = Especie_Pesca, Distritos, Municipios, Regiones",
+            "afirmacion_soportada": "Sin hoja 'otras' ni dominio para DOTRAS en el catálogo (mismo negativo que CVOTRAS)."
+          },
+          {
+            "ruta": "propuestas/investigacion-post-r6/diversos/evidencia/ckan-pesca.json",
+            "sha256": "17e20d534ccaee27b8d1f095c39c2ed690e47b62e0dc6736c3f28469a504984b",
+            "localizador": "result.num_resources/fuentes_extras",
+            "afirmacion_soportada": "Sin metodología ni diccionario corregido entre los 21 recursos del conjunto; Fuentes extras vacías."
+          },
+          {
+            "ruta": "propuestas/cierre-brechas-post-r6/significados-tic-diversos/evidencia/nueva-diversos-2026-10-24.md",
+            "sha256": "67088fd454ae669df92cf582393535b10dd5f6118b6b144f0be10bdbf77aeeb9",
+            "localizador": "búsquedas CONAPO/PROAES/SAGARHPA 2026-10-24, sin vínculo a fila",
+            "afirmacion_soportada": "Pistas nuevas 2026-10-24 sin documento vinculado a fila/huella: sin cambio en la brecha."
+          }
+        ],
+        "limites": [
+          "No se interpreta objeto ni se asume pareja código-nombre más allá de la posición contigua.",
+          "No se usa para joins ni identidad de catálogos."
+        ],
+        "tarea": "significados-tic-diversos",
+        "tipo": "significados"
+      }
+    }
+  ]
+}

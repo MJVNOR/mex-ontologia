@@ -1,0 +1,18 @@
+PETICION P1-W-02 (caso P1-Q2: hectometro cubico) — NEGATIVO NORMATIVO, no alias por parecido.
+Fecha: 2026-10-24. Navegador Obscura, MCP nativo OpenCode.
+
+1. URL candidata https://qudt.org/vocab/unit/HectoM3 -> "404 Not Found / The requested URL was not found on this server."
+   (snapshot Obscura, titulo "404 Not Found").
+2. Indice oficial https://qudt.org/vocab/unit/ (volcado Turtle completo del vocabulario 3.5.3):
+   browser_search "HectoM3" -> No matches. "HectoM2" -> No matches. "CubicHectoM" -> No matches.
+   "cubic hectometer" -> No matches. "unit:HectoM" -> 1 match: solo unit:HectoM (100-fold del metro, longitud), sin variantes cubicas.
+   Patron confirmado por analogia: existen unit:DecaM3 ("1 000-fold of the power of the SI base unit metre by exponent 3"),
+   unit:MilliM3, unit:CentiM3, unit:KiloM3-PER-SEC2; NO existe HectoM3 en QUDT 3.5.3.
+3. HectoHA (usado en P1 v1 sin verificar): https://qudt.org/vocab/unit/HectoHA -> 404 Not Found el 2026-10-24. RECHAZADO.
+
+CONCLUSION: no existe IRI QUDT precoordinada para el hectometro cubico en la fuente primaria.
+Puente termino-QUDT: NEGATIVO (ausencia verificada en pagina candidata + indice). P1 debe usar la
+alternativa normativa verificada http://qudt.org/vocab/unit/M3 (metro cubico, exponente 3 sobre unit:M,
+ver unit-M3-evidencia.txt) con factor documentado desde la fuente local, o conservar el caso pendiente.
+No se acepta ningun alias por parecido (HectoHA, HectoM3 inventado).
+No se promueve ningun caso local desde esta respuesta.

@@ -1,0 +1,3228 @@
+<!DOCTYPE html>
+<!--[if IE 9]> <html lang="es" class="ie9"> <![endif]-->
+<!--[if gt IE 8]><!--> <html lang="es"> <!--<![endif]-->
+  <head >
+
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-Z360D5Z3YK"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'G-Z360D5Z3YK');
+    </script>  
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/xlsx/0.17.0/xlsx.full.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <meta charset="utf-8" />
+      <meta name="generator" content="ckan 2.9.7" />
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pesca y Acuacultura - Conjunto de datos - Portal de Datos Abiertos del Gobierno del Estado de Sonora</title>
+
+
+
+    
+    <link rel="shortcut icon" href="/images/favicon.png" />
+    
+
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;800&family=Roboto:wght@300;400;500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/css/vendor.min.css" />
+    <link rel="stylesheet" href="/css/app.min.css" />
+    <link rel="stylesheet" href="/sonora_theme.css" />
+      
+      
+      
+      
+     
+    
+
+    
+      
+      
+    
+  
+  <meta property="og:title" content="Pesca y Acuacultura - Portal de Datos Abiertos del Gobierno del Estado de Sonora">
+  <meta property="og:description" content="La producción histórica de la pesca en Sonora">
+
+
+ 
+    
+    
+  </head>
+
+  
+  <body class="app app-public"  data-site-root="https://datos.sonora.gob.mx/" data-locale-root="https://datos.sonora.gob.mx/" >
+
+    
+    <div class="sr-only sr-only-focusable"><a href="#content">Ir al contenido</a></div>
+  
+
+  
+     
+  
+
+<style>
+  .customHeader{
+    height: 96px;
+    width: 100%;
+    display: flex;
+    background-image: url('/images/BG expediente.jpg');
+    background-size: cover;
+    background-position: center;
+  }
+
+  .headerLinks{
+    font-family: 'Montserrat', sans-serif;
+    display: flex;
+    gap: 2rem;
+    color: white;
+    align-items: center;
+    margin-left: auto;
+    margin-right: 16%;
+  }
+
+  .headerLinks a {
+    font-weight: 600;
+    position: relative;
+    font-size: 12.8px;
+    color: rgb(255, 255, 255, 0.85);
+    text-transform: uppercase;
+    letter-spacing: 0.02em;
+    text-decoration: none;
+    padding: 0.25rem 0;
+    transition: color 0.3s ease;
+  }
+
+  .headerLinks a:hover{
+    color: white;
+  }
+
+  /* underline animation */
+  .headerLinks a::after {
+    content: "";
+    position: absolute;
+    left: 50%;
+    bottom: 0;
+    transform: translateX(-50%) scaleX(0);
+    transform-origin: center;
+    width: 100%;
+    height: 2px;
+    background-color: #fff;
+    transition: transform 0.3s ease;
+  }
+
+  .headerLinks a:hover::after {
+    transform: translateX(-50%) scaleX(1);
+  }
+
+  .logoHeaderWrapper{
+    margin-left: 16%;
+  }
+
+  @media (max-width: 900px) {
+    .headerLinks {
+      display: none !important;
+    }
+
+    .logoHeaderWrapper{
+      margin-inline: auto;
+    }
+
+    .navbar-toggler{
+      margin-left: 1rem;
+    }
+  }
+</style>
+
+<div class="customHeader">
+  <a href="/" title="Inicio" style="padding-block: 1rem;" class="logoHeaderWrapper"> 
+    <img style="height: 100%" class="sppb-img-responsive sppb-element-lazy sppb-element-loaded" src="/images/Datos abiertos blanco.svg" alt="Gobierno del Estado de Sonora" title="" loading="lazy">
+  </a>
+
+  <div class="headerLinks">
+    <a href="https://www.sonora.gob.mx/servicios-y-tramites" class="nav-link " target="_blank" rel="noopener noreferrer">Servicios y Trámites</a>
+
+    <a href="https://www.sonora.gob.mx/gobierno" class="nav-link " target="_blank" rel="noopener noreferrer">Gobierno</a>
+
+    <a href="https://datos.sonora.gob.mx" class="nav-link " target="_blank" rel="noopener noreferrer">Datos Abiertos</a>
+
+    <a href="https://cultura.sonora.gob.mx" class="nav-link " target="_blank" rel="noopener noreferrer">Cultura</a>
+
+    <a href="https://expediente.sonora.gob.mx" class="nav-link " target="_blank" rel="noopener noreferrer">Mi Expediente</a>
+  </div>
+</div>
+
+
+
+<div class="tool-bar">
+  <div class="container">
+      <nav class="navbar navbar-expand-sm bg-white navbar-tools mx-0  py-0 py-sm-3 px-0">
+          <div class="container-fluid">
+
+            <style>
+              @media only screen and (max-width: 799px) {
+                .container-fluid{
+                  padding-block: .5rem;
+                  padding-inline: 0;
+                }
+
+                .boxSearchHead{
+                  display: none;
+                }
+
+                span.name{
+                  display: none;
+                }
+
+                .tool-bar .container{
+                  margin-left: 0;
+                  padding-left: 0;
+                }
+
+                .navbar-nav .nav-link{
+                  padding: 1rem 0.9rem;
+                }
+              }
+
+              @media (max-width: 572px){
+                .navbar-toggler{
+                  position: relative; 
+                  margin-left: 1rem; 
+                  display: flex; 
+                  align-items: center; 
+                  border: none !important;
+                  gap: .5rem;
+                }
+              }
+            </style>
+
+              <!-- Quitamos el boton -->
+              <a class="btn btn-outline-secondary d-none" aria-current="page" href="#"><span class="mdi mdi-chevron-left"></span>Regresar a Pagos Directos</a>
+              <!-- el menú se oculta -->
+              <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                  <span class="mdi mdi-menu"></span>
+                  <span style="font-size: 16px;">
+                    Menu
+                  </span>
+              </button>
+
+              <!-- el menú se oculta -->
+              
+                <div class="collapse navbar-collapse menu-tools" id="navbarSupportedContent">
+                    <ul class="navbar-nav me-auto mb-0" style="margin-inline: auto;">
+                      
+
+                      <li class="nav-item">
+                        <a href="/" class="nav-link " title="Inicio">
+                          <span class="text">Inicio</span>
+                        </a>
+                      </li>
+        
+                        <li class="nav-item">
+                          <a href="/dataset/" class="nav-link " title="Conjuntos de datos">
+                            <span class="text">Conjuntos de datos</span>
+                          </a>
+                        </li>
+
+                        <li class="nav-item">
+                          <a href="/organization/" class="nav-link " title="Organizaciones">
+                            <span class="text">Organizaciones</span>
+                          </a>
+                        </li>
+
+                        <li class="nav-item">
+                          <a href="/group/" class="nav-link " title="Grupos">
+                            <span class="text">Grupos</span>
+                          </a>
+                        </li>
+
+                        <!-- <li class="nav-item">
+                          <a href="/about" class="nav-link " title="Acerca de">
+                            <span class="text">Acerca de</span>
+                          </a>
+                        </li> -->
+
+                      
+                  </ul>
+                </div>
+               
+
+
+           
+              
+                <style>
+                  @media only screen and (max-width: 799px) {
+                    .customSearchBox{
+                      display: none;
+                    }
+                  }
+                </style>
+                
+                <div class="searchBox boxSearchHead customSearchBox" >
+                  <form id="contentSearch" class="" action="/dataset/" method="get">
+                    <input type="text" name="q" title="Búsqueda" aria-label="¿Qué dato estás buscando?" placeholder="¿Qué dato estás buscando?" class="input bg-red" id="search-input">
+                    <button type="submit" class="search" id="search-btn"><i class="fa fa-search"></i></button>
+                  </form>
+                </div> 
+                
+              
+
+
+              <!-- se muestran al iniciar sesión -->
+
+              
+               
+                   
+                  
+                  
+                  
+                  <style>
+                    @media only screen and (max-width: 999px) {
+                      .account{
+                        width: 150px;
+                      }
+                    }
+                    @media only screen and (max-width: 799px){
+                      .btnLogin{
+                        margin-left: -3rem;
+                      }
+                    }
+                  </style>
+                  <nav class="account not-authed" aria-label="Cuenta">
+                    <ul class="navbar-nav ms-auto ms-sm-auto flex-row account-tools">
+                      
+
+                      
+                      <li>
+                        <a href="/user/login" class="btn btn-outline-primary btnLogin" style="width: 147px;" title="Iniciar Sesión">
+                          <span class="text">Iniciar Sesión</span>
+                        </a>
+                      </li>
+                      
+
+
+                      
+
+                      
+
+                    </ul>
+                  </nav>
+                   
+                
+              
+
+          </div>
+      </nav>
+  </div>
+</div>
+
+
+
+
+
+
+
+
+
+  
+    <div class="main">
+      <div id="content" class="container">
+        
+          
+            <div class="flash-messages">
+              
+                 
+              
+            </div>
+          
+
+          
+            
+              <div class="toolbar" role="navigation" aria-label="Miga de pan">
+                <style>
+                  @media only screen and (max-width: 799px) {
+                    .toolbar{
+                      display: none;
+                      height: 0;
+                    }
+                  }
+                </style>
+                
+                  
+                    <ol class="breadcrumb">
+                      
+<li class="home"><a href="/" aria-label="Inicio"><i class="fa fa-home"></i><span> Inicio</span></a></li>
+                      
+  
+    
+    
+      
+      
+      <li><a href="/organization/">Organizaciones</a></li>
+      <li><a href="/organization/sagarhpa">Secretaría de Agricultura,...</a></li>
+    
+    <li class="active"><a href="/dataset/Pesca%20y%20Acuacultura">Pesca y Acuacultura</a></li>
+  
+
+                    </ol>
+                  
+                
+              </div>
+            
+          
+
+          <div class="row wrapper">
+            
+            
+            
+
+            
+              <aside class="secondary col-sm-3">
+                
+                
+
+  
+
+  
+    
+
+  <!-- 
+    <section class="module module-narrow">
+      <div class="module context-info">
+        <div class="module-content">
+          
+            
+              <h1 class="heading">Pesca y Acuacultura</h1>
+            
+            
+              
+              <div class="nums">
+                <dl>
+                  <dt>Seguidores</dt>
+                  <dd data-module="followers-counter" data-module-id="e093cf34-7da0-4efb-89a3-7b473a5013ab" data-module-num_followers="0"><span>0</span></dd>
+                </dl>
+              </div>
+            
+            
+              
+                <div class="follow_button">
+                  
+                </div>
+              
+            
+          
+        </div>
+      </div>
+    </section>
+   -->
+
+  
+
+  
+    
+      
+      
+
+
+
+
+
+  
+  <div class="module module-narrow module-shallow context-info">
+    
+      <h2 class="module-heading"> Organización</h2>
+    
+    <section class="module-content">
+      
+      
+        <div class="image">
+          <a href="/organization/sagarhpa">
+            <img src="https://datos.sonora.gob.mx/uploads/group/2023-09-30-055257.742148SAGARHPA.svg" width="200" alt="sagarhpa" />
+          </a>
+        </div>
+      
+      
+      <h1 class="heading">Secretaría de Agricultura, Ganadería, Recursos Hidráulicos, Pesca y Acuacultura
+        
+      </h1>
+      
+      
+      
+        
+          <p class="description">
+            La "Secretaría de Agricultura, Ganadería, Recursos Hidráulicos, Pesca y Acuacultura" es una entidad gubernamental encargada de diseñar, implementar y supervisar las políticas...
+          </p>
+          <p class="read-more">
+            <a href="/organization/about/sagarhpa">leer más</a>
+          </p>
+        
+      
+      
+      
+      
+      
+
+    </section>
+  </div>
+  
+    
+  
+
+  
+    
+
+
+  <!-- <section class="module module-narrow social">
+    
+      <h2 class="module-heading"><i class="fa fa-share-square-o"></i> Social</h2>
+    
+    
+      <ul class="nav nav-simple">
+        <li class="nav-item"><a href="https://twitter.com/share?url=https://datos.sonora.gob.mx/dataset/e093cf34-7da0-4efb-89a3-7b473a5013ab" target="_blank"><i class="mdi mdi-twitter"></i> Twitter</a></li>
+        <li class="nav-item"><a href="https://www.facebook.com/sharer.php?u=https://datos.sonora.gob.mx/dataset/e093cf34-7da0-4efb-89a3-7b473a5013ab" target="_blank"><i class="mdi mdi-facebook"></i> Facebook</a></li>
+      </ul>
+    
+  </section> -->
+
+  
+
+  
+    
+
+
+  
+      
+        <section class="module module-narrow module-shallow license">
+          
+            <h2 class="module-heading"><i class="fa fa-lock"></i> Licencia</h2>
+          
+          
+          
+            <p class="module-content">
+              
+                
+  
+    <a href="http://www.opendefinition.org/licenses/cc-by" rel="dc:rights">Creative Commons Attribution</a>
+  
+
+                
+                  <a href="http://opendefinition.org/okd/" title="Este conjunto de datos cumple con la Definición de Conocimiento Abierto - Open Definition.">
+                      <img class="open-data" src="/base/images/od_80x15_blue.png" alt="[Open Data]" />
+                  </a>
+                
+              
+            </p>
+          
+        </section>
+      
+  
+
+  
+
+
+              </aside>
+            
+
+            
+              <div class="primary col-sm-9 col-xs-12" role="main">
+                
+                
+                  <article class="module">
+                    
+                      <header class="module-content page-header">
+                        
+                        <ul class="nav nav-tabs">
+                          
+  <li class="active"><a href="/dataset/Pesca%20y%20Acuacultura"><i class="fa fa-sitemap"></i> Conjunto de datos</a></li>
+  <li><a href="/dataset/groups/Pesca%20y%20Acuacultura"><i class="fa fa-users"></i> Grupos</a></li>
+  
+
+                        </ul>
+                      </header>
+                    
+                    <div class="module-content">
+                      
+                      
+  
+                      
+  
+    
+    
+      
+    
+    <h1>
+      
+        Pesca y Acuacultura
+        
+        
+      
+    </h1>
+    
+    <div class="notes embedded-content" style="overflow-wrap: break-word; word-wrap: break-word; word-break:break-all">
+      <p>La producción histórica de la pesca en Sonora</p>
+    </div>
+  
+
+    
+    <span class="insert-comment-thread"></span>
+  
+  <span class="sonora-read"></span>
+  
+    
+<section id="dataset-resources" class="resources">
+  
+  <h2 style="margin-bottom: 1rem; display: flex; justify-content: space-between; align-items: center;">
+    Datos
+    <a class="btn btn-success" style="background-color: #237469; border-color: #237469" href="/dataset/Pesca%20y%20Acuacultura/download_all">
+      <i class="mdi mdi-arrow-down-circle-outline" style="margin-right: .25rem;"></i>
+      Descargar todo
+    </a>
+  </h2>
+  
+    
+      <ul class="resource-list">
+        
+          
+          
+            
+            
+            
+              
+
+
+
+<li 
+  class="resource-item" 
+  data-id="f94879f2-9a94-481c-bdc1-6f919f408cc1" 
+  style="
+    display: flex;
+    
+      border-style: none none solid none;
+      border-color: #C0C0C0;
+      border-width: 1px;
+      border-radius: 0;
+    
+  ">
+  
+  <a class="heading" href="/dataset/Pesca%20y%20Acuacultura/resource/f94879f2-9a94-481c-bdc1-6f919f408cc1" title="Pesca y Acuacultura 2005" style="height: 2rem; display: flex; align-items: center;">
+    Pesca y Acuacultura 2005<span class="format-label" property="dc:format" data-format="xlsx">XLSX</span>
+    
+
+  </a>
+  
+  
+    <!-- <p class="description">
+      
+    </p> -->
+  
+  
+  
+  <script>
+    document.addEventListener("DOMContentLoaded", function () {
+      var tooltipTriggerList = [].slice.call(document.querySelectorAll('[data-bs-toggle="tooltip"]'));
+      tooltipTriggerList.map(function (tooltipTriggerEl) {
+        return new bootstrap.Tooltip(tooltipTriggerEl);
+      });
+    });
+  </script>
+  <div 
+    class="" 
+    style="
+      margin-left: auto;
+      display: flex;
+      align-items: center;
+    "
+  >
+    <a 
+      href="/dataset/Pesca%20y%20Acuacultura/resource/f94879f2-9a94-481c-bdc1-6f919f408cc1" 
+      class=""
+      data-bs-toggle="tooltip" 
+      data-bs-placement="top" 
+      title="Ver detalle"
+      style="font-size: 24px; margin-right: .5rem"
+    >
+      
+      <span class="mdi mdi-eye-outline"></span>
+
+      
+    </a>
+    <a 
+      href="https://datos.sonora.gob.mx/dataset/e093cf34-7da0-4efb-89a3-7b473a5013ab/resource/f94879f2-9a94-481c-bdc1-6f919f408cc1/download/pesca_sonora_2005.xlsx" 
+      class="resource-url-analytics" 
+      target="_blank"
+      data-bs-toggle="tooltip" 
+      data-bs-placement="top" 
+      style="font-size: 24px; color: #960E53;"
+      title="Descargar recurso"
+    >
+      
+        <i class="mdi mdi-arrow-down-circle-outline"></i>
+      
+    </a>
+    
+  </div>
+  <!-- <div class="dropdown btn-group shadow-sm">
+    <a href="#" class="btn btn-primary dropdown-toggle" data-bs-toggle="dropdown">
+      Explorar
+    </a>
+    <ul class="dropdown-menu">
+      
+      <li class="dropdown-item">
+        <a href="/dataset/Pesca%20y%20Acuacultura/resource/f94879f2-9a94-481c-bdc1-6f919f408cc1" class="link-dark">
+          
+            <i class="mdi mdi-chart-bar"></i>
+            Previsualización
+          
+        </a>
+      </li>
+      
+      <li class="dropdown-item">
+        <a href="https://datos.sonora.gob.mx/dataset/e093cf34-7da0-4efb-89a3-7b473a5013ab/resource/f94879f2-9a94-481c-bdc1-6f919f408cc1/download/pesca_sonora_2005.xlsx" class="resource-url-analytics link-dark" target="_blank">
+          
+            <i class="mdi mdi-arrow-down-circle-outline"></i>
+            Descargar
+          
+        </a>
+      </li>
+      
+      
+    </ul>
+  </div> -->
+  
+  
+  
+</li>
+            
+              
+
+
+
+<li 
+  class="resource-item" 
+  data-id="ccb81cc3-2866-43c0-9e0b-9be7e5c7c95b" 
+  style="
+    display: flex;
+    
+      border-style: none none solid none;
+      border-color: #C0C0C0;
+      border-width: 1px;
+      border-radius: 0;
+    
+  ">
+  
+  <a class="heading" href="/dataset/Pesca%20y%20Acuacultura/resource/ccb81cc3-2866-43c0-9e0b-9be7e5c7c95b" title="Pesca y Acuacultura 2006" style="height: 2rem; display: flex; align-items: center;">
+    Pesca y Acuacultura 2006<span class="format-label" property="dc:format" data-format="xlsx">XLSX</span>
+    
+
+  </a>
+  
+  
+    <!-- <p class="description">
+      
+    </p> -->
+  
+  
+  
+  <script>
+    document.addEventListener("DOMContentLoaded", function () {
+      var tooltipTriggerList = [].slice.call(document.querySelectorAll('[data-bs-toggle="tooltip"]'));
+      tooltipTriggerList.map(function (tooltipTriggerEl) {
+        return new bootstrap.Tooltip(tooltipTriggerEl);
+      });
+    });
+  </script>
+  <div 
+    class="" 
+    style="
+      margin-left: auto;
+      display: flex;
+      align-items: center;
+    "
+  >
+    <a 
+      href="/dataset/Pesca%20y%20Acuacultura/resource/ccb81cc3-2866-43c0-9e0b-9be7e5c7c95b" 
+      class=""
+      data-bs-toggle="tooltip" 
+      data-bs-placement="top" 
+      title="Ver detalle"
+      style="font-size: 24px; margin-right: .5rem"
+    >
+      
+      <span class="mdi mdi-eye-outline"></span>
+
+      
+    </a>
+    <a 
+      href="https://datos.sonora.gob.mx/dataset/e093cf34-7da0-4efb-89a3-7b473a5013ab/resource/ccb81cc3-2866-43c0-9e0b-9be7e5c7c95b/download/pesca_sonora_2006.xlsx" 
+      class="resource-url-analytics" 
+      target="_blank"
+      data-bs-toggle="tooltip" 
+      data-bs-placement="top" 
+      style="font-size: 24px; color: #960E53;"
+      title="Descargar recurso"
+    >
+      
+        <i class="mdi mdi-arrow-down-circle-outline"></i>
+      
+    </a>
+    
+  </div>
+  <!-- <div class="dropdown btn-group shadow-sm">
+    <a href="#" class="btn btn-primary dropdown-toggle" data-bs-toggle="dropdown">
+      Explorar
+    </a>
+    <ul class="dropdown-menu">
+      
+      <li class="dropdown-item">
+        <a href="/dataset/Pesca%20y%20Acuacultura/resource/ccb81cc3-2866-43c0-9e0b-9be7e5c7c95b" class="link-dark">
+          
+            <i class="mdi mdi-chart-bar"></i>
+            Previsualización
+          
+        </a>
+      </li>
+      
+      <li class="dropdown-item">
+        <a href="https://datos.sonora.gob.mx/dataset/e093cf34-7da0-4efb-89a3-7b473a5013ab/resource/ccb81cc3-2866-43c0-9e0b-9be7e5c7c95b/download/pesca_sonora_2006.xlsx" class="resource-url-analytics link-dark" target="_blank">
+          
+            <i class="mdi mdi-arrow-down-circle-outline"></i>
+            Descargar
+          
+        </a>
+      </li>
+      
+      
+    </ul>
+  </div> -->
+  
+  
+  
+</li>
+            
+              
+
+
+
+<li 
+  class="resource-item" 
+  data-id="a97aaba0-2dbe-4461-af61-fb27b144ad4a" 
+  style="
+    display: flex;
+    
+      border-style: none none solid none;
+      border-color: #C0C0C0;
+      border-width: 1px;
+      border-radius: 0;
+    
+  ">
+  
+  <a class="heading" href="/dataset/Pesca%20y%20Acuacultura/resource/a97aaba0-2dbe-4461-af61-fb27b144ad4a" title="Pesca y Acuacultura 2007" style="height: 2rem; display: flex; align-items: center;">
+    Pesca y Acuacultura 2007<span class="format-label" property="dc:format" data-format="xlsx">XLSX</span>
+    
+
+  </a>
+  
+  
+    <!-- <p class="description">
+      
+    </p> -->
+  
+  
+  
+  <script>
+    document.addEventListener("DOMContentLoaded", function () {
+      var tooltipTriggerList = [].slice.call(document.querySelectorAll('[data-bs-toggle="tooltip"]'));
+      tooltipTriggerList.map(function (tooltipTriggerEl) {
+        return new bootstrap.Tooltip(tooltipTriggerEl);
+      });
+    });
+  </script>
+  <div 
+    class="" 
+    style="
+      margin-left: auto;
+      display: flex;
+      align-items: center;
+    "
+  >
+    <a 
+      href="/dataset/Pesca%20y%20Acuacultura/resource/a97aaba0-2dbe-4461-af61-fb27b144ad4a" 
+      class=""
+      data-bs-toggle="tooltip" 
+      data-bs-placement="top" 
+      title="Ver detalle"
+      style="font-size: 24px; margin-right: .5rem"
+    >
+      
+      <span class="mdi mdi-eye-outline"></span>
+
+      
+    </a>
+    <a 
+      href="https://datos.sonora.gob.mx/dataset/e093cf34-7da0-4efb-89a3-7b473a5013ab/resource/a97aaba0-2dbe-4461-af61-fb27b144ad4a/download/pesca_sonora_2007.xlsx" 
+      class="resource-url-analytics" 
+      target="_blank"
+      data-bs-toggle="tooltip" 
+      data-bs-placement="top" 
+      style="font-size: 24px; color: #960E53;"
+      title="Descargar recurso"
+    >
+      
+        <i class="mdi mdi-arrow-down-circle-outline"></i>
+      
+    </a>
+    
+  </div>
+  <!-- <div class="dropdown btn-group shadow-sm">
+    <a href="#" class="btn btn-primary dropdown-toggle" data-bs-toggle="dropdown">
+      Explorar
+    </a>
+    <ul class="dropdown-menu">
+      
+      <li class="dropdown-item">
+        <a href="/dataset/Pesca%20y%20Acuacultura/resource/a97aaba0-2dbe-4461-af61-fb27b144ad4a" class="link-dark">
+          
+            <i class="mdi mdi-chart-bar"></i>
+            Previsualización
+          
+        </a>
+      </li>
+      
+      <li class="dropdown-item">
+        <a href="https://datos.sonora.gob.mx/dataset/e093cf34-7da0-4efb-89a3-7b473a5013ab/resource/a97aaba0-2dbe-4461-af61-fb27b144ad4a/download/pesca_sonora_2007.xlsx" class="resource-url-analytics link-dark" target="_blank">
+          
+            <i class="mdi mdi-arrow-down-circle-outline"></i>
+            Descargar
+          
+        </a>
+      </li>
+      
+      
+    </ul>
+  </div> -->
+  
+  
+  
+</li>
+            
+              
+
+
+
+<li 
+  class="resource-item" 
+  data-id="0c851a96-1d3d-4c6d-80e4-6c06f9adf445" 
+  style="
+    display: flex;
+    
+      border-style: none none solid none;
+      border-color: #C0C0C0;
+      border-width: 1px;
+      border-radius: 0;
+    
+  ">
+  
+  <a class="heading" href="/dataset/Pesca%20y%20Acuacultura/resource/0c851a96-1d3d-4c6d-80e4-6c06f9adf445" title="Pesca y Acuacultura 2008" style="height: 2rem; display: flex; align-items: center;">
+    Pesca y Acuacultura 2008<span class="format-label" property="dc:format" data-format="xlsx">XLSX</span>
+    
+
+  </a>
+  
+  
+    <!-- <p class="description">
+      
+    </p> -->
+  
+  
+  
+  <script>
+    document.addEventListener("DOMContentLoaded", function () {
+      var tooltipTriggerList = [].slice.call(document.querySelectorAll('[data-bs-toggle="tooltip"]'));
+      tooltipTriggerList.map(function (tooltipTriggerEl) {
+        return new bootstrap.Tooltip(tooltipTriggerEl);
+      });
+    });
+  </script>
+  <div 
+    class="" 
+    style="
+      margin-left: auto;
+      display: flex;
+      align-items: center;
+    "
+  >
+    <a 
+      href="/dataset/Pesca%20y%20Acuacultura/resource/0c851a96-1d3d-4c6d-80e4-6c06f9adf445" 
+      class=""
+      data-bs-toggle="tooltip" 
+      data-bs-placement="top" 
+      title="Ver detalle"
+      style="font-size: 24px; margin-right: .5rem"
+    >
+      
+      <span class="mdi mdi-eye-outline"></span>
+
+      
+    </a>
+    <a 
+      href="https://datos.sonora.gob.mx/dataset/e093cf34-7da0-4efb-89a3-7b473a5013ab/resource/0c851a96-1d3d-4c6d-80e4-6c06f9adf445/download/pesca_sonora_2008.xlsx" 
+      class="resource-url-analytics" 
+      target="_blank"
+      data-bs-toggle="tooltip" 
+      data-bs-placement="top" 
+      style="font-size: 24px; color: #960E53;"
+      title="Descargar recurso"
+    >
+      
+        <i class="mdi mdi-arrow-down-circle-outline"></i>
+      
+    </a>
+    
+  </div>
+  <!-- <div class="dropdown btn-group shadow-sm">
+    <a href="#" class="btn btn-primary dropdown-toggle" data-bs-toggle="dropdown">
+      Explorar
+    </a>
+    <ul class="dropdown-menu">
+      
+      <li class="dropdown-item">
+        <a href="/dataset/Pesca%20y%20Acuacultura/resource/0c851a96-1d3d-4c6d-80e4-6c06f9adf445" class="link-dark">
+          
+            <i class="mdi mdi-chart-bar"></i>
+            Previsualización
+          
+        </a>
+      </li>
+      
+      <li class="dropdown-item">
+        <a href="https://datos.sonora.gob.mx/dataset/e093cf34-7da0-4efb-89a3-7b473a5013ab/resource/0c851a96-1d3d-4c6d-80e4-6c06f9adf445/download/pesca_sonora_2008.xlsx" class="resource-url-analytics link-dark" target="_blank">
+          
+            <i class="mdi mdi-arrow-down-circle-outline"></i>
+            Descargar
+          
+        </a>
+      </li>
+      
+      
+    </ul>
+  </div> -->
+  
+  
+  
+</li>
+            
+              
+
+
+
+<li 
+  class="resource-item" 
+  data-id="8ee2baf9-d9f5-433b-957f-c7f2904272c1" 
+  style="
+    display: flex;
+    
+      border-style: none none solid none;
+      border-color: #C0C0C0;
+      border-width: 1px;
+      border-radius: 0;
+    
+  ">
+  
+  <a class="heading" href="/dataset/Pesca%20y%20Acuacultura/resource/8ee2baf9-d9f5-433b-957f-c7f2904272c1" title="Pesca y Acuacultura 2009" style="height: 2rem; display: flex; align-items: center;">
+    Pesca y Acuacultura 2009<span class="format-label" property="dc:format" data-format="xlsx">XLSX</span>
+    
+
+  </a>
+  
+  
+    <!-- <p class="description">
+      
+    </p> -->
+  
+  
+  
+  <script>
+    document.addEventListener("DOMContentLoaded", function () {
+      var tooltipTriggerList = [].slice.call(document.querySelectorAll('[data-bs-toggle="tooltip"]'));
+      tooltipTriggerList.map(function (tooltipTriggerEl) {
+        return new bootstrap.Tooltip(tooltipTriggerEl);
+      });
+    });
+  </script>
+  <div 
+    class="" 
+    style="
+      margin-left: auto;
+      display: flex;
+      align-items: center;
+    "
+  >
+    <a 
+      href="/dataset/Pesca%20y%20Acuacultura/resource/8ee2baf9-d9f5-433b-957f-c7f2904272c1" 
+      class=""
+      data-bs-toggle="tooltip" 
+      data-bs-placement="top" 
+      title="Ver detalle"
+      style="font-size: 24px; margin-right: .5rem"
+    >
+      
+      <span class="mdi mdi-eye-outline"></span>
+
+      
+    </a>
+    <a 
+      href="https://datos.sonora.gob.mx/dataset/e093cf34-7da0-4efb-89a3-7b473a5013ab/resource/8ee2baf9-d9f5-433b-957f-c7f2904272c1/download/pesca_sonora_2009.xlsx" 
+      class="resource-url-analytics" 
+      target="_blank"
+      data-bs-toggle="tooltip" 
+      data-bs-placement="top" 
+      style="font-size: 24px; color: #960E53;"
+      title="Descargar recurso"
+    >
+      
+        <i class="mdi mdi-arrow-down-circle-outline"></i>
+      
+    </a>
+    
+  </div>
+  <!-- <div class="dropdown btn-group shadow-sm">
+    <a href="#" class="btn btn-primary dropdown-toggle" data-bs-toggle="dropdown">
+      Explorar
+    </a>
+    <ul class="dropdown-menu">
+      
+      <li class="dropdown-item">
+        <a href="/dataset/Pesca%20y%20Acuacultura/resource/8ee2baf9-d9f5-433b-957f-c7f2904272c1" class="link-dark">
+          
+            <i class="mdi mdi-chart-bar"></i>
+            Previsualización
+          
+        </a>
+      </li>
+      
+      <li class="dropdown-item">
+        <a href="https://datos.sonora.gob.mx/dataset/e093cf34-7da0-4efb-89a3-7b473a5013ab/resource/8ee2baf9-d9f5-433b-957f-c7f2904272c1/download/pesca_sonora_2009.xlsx" class="resource-url-analytics link-dark" target="_blank">
+          
+            <i class="mdi mdi-arrow-down-circle-outline"></i>
+            Descargar
+          
+        </a>
+      </li>
+      
+      
+    </ul>
+  </div> -->
+  
+  
+  
+</li>
+            
+              
+
+
+
+<li 
+  class="resource-item" 
+  data-id="3b751f8d-dba8-4f75-9274-94cd3d8fea8c" 
+  style="
+    display: flex;
+    
+      border-style: none none solid none;
+      border-color: #C0C0C0;
+      border-width: 1px;
+      border-radius: 0;
+    
+  ">
+  
+  <a class="heading" href="/dataset/Pesca%20y%20Acuacultura/resource/3b751f8d-dba8-4f75-9274-94cd3d8fea8c" title="Pesca y Acuacultura 2010" style="height: 2rem; display: flex; align-items: center;">
+    Pesca y Acuacultura 2010<span class="format-label" property="dc:format" data-format="xlsx">XLSX</span>
+    
+
+  </a>
+  
+  
+    <!-- <p class="description">
+      
+    </p> -->
+  
+  
+  
+  <script>
+    document.addEventListener("DOMContentLoaded", function () {
+      var tooltipTriggerList = [].slice.call(document.querySelectorAll('[data-bs-toggle="tooltip"]'));
+      tooltipTriggerList.map(function (tooltipTriggerEl) {
+        return new bootstrap.Tooltip(tooltipTriggerEl);
+      });
+    });
+  </script>
+  <div 
+    class="" 
+    style="
+      margin-left: auto;
+      display: flex;
+      align-items: center;
+    "
+  >
+    <a 
+      href="/dataset/Pesca%20y%20Acuacultura/resource/3b751f8d-dba8-4f75-9274-94cd3d8fea8c" 
+      class=""
+      data-bs-toggle="tooltip" 
+      data-bs-placement="top" 
+      title="Ver detalle"
+      style="font-size: 24px; margin-right: .5rem"
+    >
+      
+      <span class="mdi mdi-eye-outline"></span>
+
+      
+    </a>
+    <a 
+      href="https://datos.sonora.gob.mx/dataset/e093cf34-7da0-4efb-89a3-7b473a5013ab/resource/3b751f8d-dba8-4f75-9274-94cd3d8fea8c/download/pesca_sonora_2010.xlsx" 
+      class="resource-url-analytics" 
+      target="_blank"
+      data-bs-toggle="tooltip" 
+      data-bs-placement="top" 
+      style="font-size: 24px; color: #960E53;"
+      title="Descargar recurso"
+    >
+      
+        <i class="mdi mdi-arrow-down-circle-outline"></i>
+      
+    </a>
+    
+  </div>
+  <!-- <div class="dropdown btn-group shadow-sm">
+    <a href="#" class="btn btn-primary dropdown-toggle" data-bs-toggle="dropdown">
+      Explorar
+    </a>
+    <ul class="dropdown-menu">
+      
+      <li class="dropdown-item">
+        <a href="/dataset/Pesca%20y%20Acuacultura/resource/3b751f8d-dba8-4f75-9274-94cd3d8fea8c" class="link-dark">
+          
+            <i class="mdi mdi-chart-bar"></i>
+            Previsualización
+          
+        </a>
+      </li>
+      
+      <li class="dropdown-item">
+        <a href="https://datos.sonora.gob.mx/dataset/e093cf34-7da0-4efb-89a3-7b473a5013ab/resource/3b751f8d-dba8-4f75-9274-94cd3d8fea8c/download/pesca_sonora_2010.xlsx" class="resource-url-analytics link-dark" target="_blank">
+          
+            <i class="mdi mdi-arrow-down-circle-outline"></i>
+            Descargar
+          
+        </a>
+      </li>
+      
+      
+    </ul>
+  </div> -->
+  
+  
+  
+</li>
+            
+              
+
+
+
+<li 
+  class="resource-item" 
+  data-id="0403d99f-1925-49d4-9540-b4941aa2ad32" 
+  style="
+    display: flex;
+    
+      border-style: none none solid none;
+      border-color: #C0C0C0;
+      border-width: 1px;
+      border-radius: 0;
+    
+  ">
+  
+  <a class="heading" href="/dataset/Pesca%20y%20Acuacultura/resource/0403d99f-1925-49d4-9540-b4941aa2ad32" title="Pesca y Acuacultura 2011" style="height: 2rem; display: flex; align-items: center;">
+    Pesca y Acuacultura 2011<span class="format-label" property="dc:format" data-format="xlsx">XLSX</span>
+    
+
+  </a>
+  
+  
+    <!-- <p class="description">
+      
+    </p> -->
+  
+  
+  
+  <script>
+    document.addEventListener("DOMContentLoaded", function () {
+      var tooltipTriggerList = [].slice.call(document.querySelectorAll('[data-bs-toggle="tooltip"]'));
+      tooltipTriggerList.map(function (tooltipTriggerEl) {
+        return new bootstrap.Tooltip(tooltipTriggerEl);
+      });
+    });
+  </script>
+  <div 
+    class="" 
+    style="
+      margin-left: auto;
+      display: flex;
+      align-items: center;
+    "
+  >
+    <a 
+      href="/dataset/Pesca%20y%20Acuacultura/resource/0403d99f-1925-49d4-9540-b4941aa2ad32" 
+      class=""
+      data-bs-toggle="tooltip" 
+      data-bs-placement="top" 
+      title="Ver detalle"
+      style="font-size: 24px; margin-right: .5rem"
+    >
+      
+      <span class="mdi mdi-eye-outline"></span>
+
+      
+    </a>
+    <a 
+      href="https://datos.sonora.gob.mx/dataset/e093cf34-7da0-4efb-89a3-7b473a5013ab/resource/0403d99f-1925-49d4-9540-b4941aa2ad32/download/pesca_sonora_2011.xlsx" 
+      class="resource-url-analytics" 
+      target="_blank"
+      data-bs-toggle="tooltip" 
+      data-bs-placement="top" 
+      style="font-size: 24px; color: #960E53;"
+      title="Descargar recurso"
+    >
+      
+        <i class="mdi mdi-arrow-down-circle-outline"></i>
+      
+    </a>
+    
+  </div>
+  <!-- <div class="dropdown btn-group shadow-sm">
+    <a href="#" class="btn btn-primary dropdown-toggle" data-bs-toggle="dropdown">
+      Explorar
+    </a>
+    <ul class="dropdown-menu">
+      
+      <li class="dropdown-item">
+        <a href="/dataset/Pesca%20y%20Acuacultura/resource/0403d99f-1925-49d4-9540-b4941aa2ad32" class="link-dark">
+          
+            <i class="mdi mdi-chart-bar"></i>
+            Previsualización
+          
+        </a>
+      </li>
+      
+      <li class="dropdown-item">
+        <a href="https://datos.sonora.gob.mx/dataset/e093cf34-7da0-4efb-89a3-7b473a5013ab/resource/0403d99f-1925-49d4-9540-b4941aa2ad32/download/pesca_sonora_2011.xlsx" class="resource-url-analytics link-dark" target="_blank">
+          
+            <i class="mdi mdi-arrow-down-circle-outline"></i>
+            Descargar
+          
+        </a>
+      </li>
+      
+      
+    </ul>
+  </div> -->
+  
+  
+  
+</li>
+            
+              
+
+
+
+<li 
+  class="resource-item" 
+  data-id="d925b494-90c9-4a3c-9cf6-5e1ac8c06464" 
+  style="
+    display: flex;
+    
+      border-style: none none solid none;
+      border-color: #C0C0C0;
+      border-width: 1px;
+      border-radius: 0;
+    
+  ">
+  
+  <a class="heading" href="/dataset/Pesca%20y%20Acuacultura/resource/d925b494-90c9-4a3c-9cf6-5e1ac8c06464" title="Pesca y Acuacultura 2012" style="height: 2rem; display: flex; align-items: center;">
+    Pesca y Acuacultura 2012<span class="format-label" property="dc:format" data-format="xlsx">XLSX</span>
+    
+
+  </a>
+  
+  
+    <!-- <p class="description">
+      
+    </p> -->
+  
+  
+  
+  <script>
+    document.addEventListener("DOMContentLoaded", function () {
+      var tooltipTriggerList = [].slice.call(document.querySelectorAll('[data-bs-toggle="tooltip"]'));
+      tooltipTriggerList.map(function (tooltipTriggerEl) {
+        return new bootstrap.Tooltip(tooltipTriggerEl);
+      });
+    });
+  </script>
+  <div 
+    class="" 
+    style="
+      margin-left: auto;
+      display: flex;
+      align-items: center;
+    "
+  >
+    <a 
+      href="/dataset/Pesca%20y%20Acuacultura/resource/d925b494-90c9-4a3c-9cf6-5e1ac8c06464" 
+      class=""
+      data-bs-toggle="tooltip" 
+      data-bs-placement="top" 
+      title="Ver detalle"
+      style="font-size: 24px; margin-right: .5rem"
+    >
+      
+      <span class="mdi mdi-eye-outline"></span>
+
+      
+    </a>
+    <a 
+      href="https://datos.sonora.gob.mx/dataset/e093cf34-7da0-4efb-89a3-7b473a5013ab/resource/d925b494-90c9-4a3c-9cf6-5e1ac8c06464/download/pesca_sonora_2012.xlsx" 
+      class="resource-url-analytics" 
+      target="_blank"
+      data-bs-toggle="tooltip" 
+      data-bs-placement="top" 
+      style="font-size: 24px; color: #960E53;"
+      title="Descargar recurso"
+    >
+      
+        <i class="mdi mdi-arrow-down-circle-outline"></i>
+      
+    </a>
+    
+  </div>
+  <!-- <div class="dropdown btn-group shadow-sm">
+    <a href="#" class="btn btn-primary dropdown-toggle" data-bs-toggle="dropdown">
+      Explorar
+    </a>
+    <ul class="dropdown-menu">
+      
+      <li class="dropdown-item">
+        <a href="/dataset/Pesca%20y%20Acuacultura/resource/d925b494-90c9-4a3c-9cf6-5e1ac8c06464" class="link-dark">
+          
+            <i class="mdi mdi-chart-bar"></i>
+            Previsualización
+          
+        </a>
+      </li>
+      
+      <li class="dropdown-item">
+        <a href="https://datos.sonora.gob.mx/dataset/e093cf34-7da0-4efb-89a3-7b473a5013ab/resource/d925b494-90c9-4a3c-9cf6-5e1ac8c06464/download/pesca_sonora_2012.xlsx" class="resource-url-analytics link-dark" target="_blank">
+          
+            <i class="mdi mdi-arrow-down-circle-outline"></i>
+            Descargar
+          
+        </a>
+      </li>
+      
+      
+    </ul>
+  </div> -->
+  
+  
+  
+</li>
+            
+              
+
+
+
+<li 
+  class="resource-item" 
+  data-id="4e822a2f-4cf3-4c49-9ea5-23f89e03337a" 
+  style="
+    display: flex;
+    
+      border-style: none none solid none;
+      border-color: #C0C0C0;
+      border-width: 1px;
+      border-radius: 0;
+    
+  ">
+  
+  <a class="heading" href="/dataset/Pesca%20y%20Acuacultura/resource/4e822a2f-4cf3-4c49-9ea5-23f89e03337a" title="Pesca y Acuacultura 2013" style="height: 2rem; display: flex; align-items: center;">
+    Pesca y Acuacultura 2013<span class="format-label" property="dc:format" data-format="xlsx">XLSX</span>
+    
+
+  </a>
+  
+  
+    <!-- <p class="description">
+      
+    </p> -->
+  
+  
+  
+  <script>
+    document.addEventListener("DOMContentLoaded", function () {
+      var tooltipTriggerList = [].slice.call(document.querySelectorAll('[data-bs-toggle="tooltip"]'));
+      tooltipTriggerList.map(function (tooltipTriggerEl) {
+        return new bootstrap.Tooltip(tooltipTriggerEl);
+      });
+    });
+  </script>
+  <div 
+    class="" 
+    style="
+      margin-left: auto;
+      display: flex;
+      align-items: center;
+    "
+  >
+    <a 
+      href="/dataset/Pesca%20y%20Acuacultura/resource/4e822a2f-4cf3-4c49-9ea5-23f89e03337a" 
+      class=""
+      data-bs-toggle="tooltip" 
+      data-bs-placement="top" 
+      title="Ver detalle"
+      style="font-size: 24px; margin-right: .5rem"
+    >
+      
+      <span class="mdi mdi-eye-outline"></span>
+
+      
+    </a>
+    <a 
+      href="https://datos.sonora.gob.mx/dataset/e093cf34-7da0-4efb-89a3-7b473a5013ab/resource/4e822a2f-4cf3-4c49-9ea5-23f89e03337a/download/pesca_sonora_2013.xlsx" 
+      class="resource-url-analytics" 
+      target="_blank"
+      data-bs-toggle="tooltip" 
+      data-bs-placement="top" 
+      style="font-size: 24px; color: #960E53;"
+      title="Descargar recurso"
+    >
+      
+        <i class="mdi mdi-arrow-down-circle-outline"></i>
+      
+    </a>
+    
+  </div>
+  <!-- <div class="dropdown btn-group shadow-sm">
+    <a href="#" class="btn btn-primary dropdown-toggle" data-bs-toggle="dropdown">
+      Explorar
+    </a>
+    <ul class="dropdown-menu">
+      
+      <li class="dropdown-item">
+        <a href="/dataset/Pesca%20y%20Acuacultura/resource/4e822a2f-4cf3-4c49-9ea5-23f89e03337a" class="link-dark">
+          
+            <i class="mdi mdi-chart-bar"></i>
+            Previsualización
+          
+        </a>
+      </li>
+      
+      <li class="dropdown-item">
+        <a href="https://datos.sonora.gob.mx/dataset/e093cf34-7da0-4efb-89a3-7b473a5013ab/resource/4e822a2f-4cf3-4c49-9ea5-23f89e03337a/download/pesca_sonora_2013.xlsx" class="resource-url-analytics link-dark" target="_blank">
+          
+            <i class="mdi mdi-arrow-down-circle-outline"></i>
+            Descargar
+          
+        </a>
+      </li>
+      
+      
+    </ul>
+  </div> -->
+  
+  
+  
+</li>
+            
+              
+
+
+
+<li 
+  class="resource-item" 
+  data-id="1e3b24c2-9e6f-4e9b-b285-8dccc0763209" 
+  style="
+    display: flex;
+    
+      border-style: none none solid none;
+      border-color: #C0C0C0;
+      border-width: 1px;
+      border-radius: 0;
+    
+  ">
+  
+  <a class="heading" href="/dataset/Pesca%20y%20Acuacultura/resource/1e3b24c2-9e6f-4e9b-b285-8dccc0763209" title="Pesca y Acuacultura 2014" style="height: 2rem; display: flex; align-items: center;">
+    Pesca y Acuacultura 2014<span class="format-label" property="dc:format" data-format="xlsx">XLSX</span>
+    
+
+  </a>
+  
+  
+    <!-- <p class="description">
+      
+    </p> -->
+  
+  
+  
+  <script>
+    document.addEventListener("DOMContentLoaded", function () {
+      var tooltipTriggerList = [].slice.call(document.querySelectorAll('[data-bs-toggle="tooltip"]'));
+      tooltipTriggerList.map(function (tooltipTriggerEl) {
+        return new bootstrap.Tooltip(tooltipTriggerEl);
+      });
+    });
+  </script>
+  <div 
+    class="" 
+    style="
+      margin-left: auto;
+      display: flex;
+      align-items: center;
+    "
+  >
+    <a 
+      href="/dataset/Pesca%20y%20Acuacultura/resource/1e3b24c2-9e6f-4e9b-b285-8dccc0763209" 
+      class=""
+      data-bs-toggle="tooltip" 
+      data-bs-placement="top" 
+      title="Ver detalle"
+      style="font-size: 24px; margin-right: .5rem"
+    >
+      
+      <span class="mdi mdi-eye-outline"></span>
+
+      
+    </a>
+    <a 
+      href="https://datos.sonora.gob.mx/dataset/e093cf34-7da0-4efb-89a3-7b473a5013ab/resource/1e3b24c2-9e6f-4e9b-b285-8dccc0763209/download/pesca_sonora_2014.xlsx" 
+      class="resource-url-analytics" 
+      target="_blank"
+      data-bs-toggle="tooltip" 
+      data-bs-placement="top" 
+      style="font-size: 24px; color: #960E53;"
+      title="Descargar recurso"
+    >
+      
+        <i class="mdi mdi-arrow-down-circle-outline"></i>
+      
+    </a>
+    
+  </div>
+  <!-- <div class="dropdown btn-group shadow-sm">
+    <a href="#" class="btn btn-primary dropdown-toggle" data-bs-toggle="dropdown">
+      Explorar
+    </a>
+    <ul class="dropdown-menu">
+      
+      <li class="dropdown-item">
+        <a href="/dataset/Pesca%20y%20Acuacultura/resource/1e3b24c2-9e6f-4e9b-b285-8dccc0763209" class="link-dark">
+          
+            <i class="mdi mdi-chart-bar"></i>
+            Previsualización
+          
+        </a>
+      </li>
+      
+      <li class="dropdown-item">
+        <a href="https://datos.sonora.gob.mx/dataset/e093cf34-7da0-4efb-89a3-7b473a5013ab/resource/1e3b24c2-9e6f-4e9b-b285-8dccc0763209/download/pesca_sonora_2014.xlsx" class="resource-url-analytics link-dark" target="_blank">
+          
+            <i class="mdi mdi-arrow-down-circle-outline"></i>
+            Descargar
+          
+        </a>
+      </li>
+      
+      
+    </ul>
+  </div> -->
+  
+  
+  
+</li>
+            
+              
+
+
+
+<li 
+  class="resource-item" 
+  data-id="21502618-e2ad-410c-9e64-dd084dc17c9d" 
+  style="
+    display: flex;
+    
+      border-style: none none solid none;
+      border-color: #C0C0C0;
+      border-width: 1px;
+      border-radius: 0;
+    
+  ">
+  
+  <a class="heading" href="/dataset/Pesca%20y%20Acuacultura/resource/21502618-e2ad-410c-9e64-dd084dc17c9d" title="Pesca y Acuacultura 2015" style="height: 2rem; display: flex; align-items: center;">
+    Pesca y Acuacultura 2015<span class="format-label" property="dc:format" data-format="xlsx">XLSX</span>
+    
+
+  </a>
+  
+  
+    <!-- <p class="description">
+      
+    </p> -->
+  
+  
+  
+  <script>
+    document.addEventListener("DOMContentLoaded", function () {
+      var tooltipTriggerList = [].slice.call(document.querySelectorAll('[data-bs-toggle="tooltip"]'));
+      tooltipTriggerList.map(function (tooltipTriggerEl) {
+        return new bootstrap.Tooltip(tooltipTriggerEl);
+      });
+    });
+  </script>
+  <div 
+    class="" 
+    style="
+      margin-left: auto;
+      display: flex;
+      align-items: center;
+    "
+  >
+    <a 
+      href="/dataset/Pesca%20y%20Acuacultura/resource/21502618-e2ad-410c-9e64-dd084dc17c9d" 
+      class=""
+      data-bs-toggle="tooltip" 
+      data-bs-placement="top" 
+      title="Ver detalle"
+      style="font-size: 24px; margin-right: .5rem"
+    >
+      
+      <span class="mdi mdi-eye-outline"></span>
+
+      
+    </a>
+    <a 
+      href="https://datos.sonora.gob.mx/dataset/e093cf34-7da0-4efb-89a3-7b473a5013ab/resource/21502618-e2ad-410c-9e64-dd084dc17c9d/download/pesca_sonora_2015.xlsx" 
+      class="resource-url-analytics" 
+      target="_blank"
+      data-bs-toggle="tooltip" 
+      data-bs-placement="top" 
+      style="font-size: 24px; color: #960E53;"
+      title="Descargar recurso"
+    >
+      
+        <i class="mdi mdi-arrow-down-circle-outline"></i>
+      
+    </a>
+    
+  </div>
+  <!-- <div class="dropdown btn-group shadow-sm">
+    <a href="#" class="btn btn-primary dropdown-toggle" data-bs-toggle="dropdown">
+      Explorar
+    </a>
+    <ul class="dropdown-menu">
+      
+      <li class="dropdown-item">
+        <a href="/dataset/Pesca%20y%20Acuacultura/resource/21502618-e2ad-410c-9e64-dd084dc17c9d" class="link-dark">
+          
+            <i class="mdi mdi-chart-bar"></i>
+            Previsualización
+          
+        </a>
+      </li>
+      
+      <li class="dropdown-item">
+        <a href="https://datos.sonora.gob.mx/dataset/e093cf34-7da0-4efb-89a3-7b473a5013ab/resource/21502618-e2ad-410c-9e64-dd084dc17c9d/download/pesca_sonora_2015.xlsx" class="resource-url-analytics link-dark" target="_blank">
+          
+            <i class="mdi mdi-arrow-down-circle-outline"></i>
+            Descargar
+          
+        </a>
+      </li>
+      
+      
+    </ul>
+  </div> -->
+  
+  
+  
+</li>
+            
+              
+
+
+
+<li 
+  class="resource-item" 
+  data-id="55eff4b6-1efd-4c4f-b3c2-68a0f9b9683c" 
+  style="
+    display: flex;
+    
+      border-style: none none solid none;
+      border-color: #C0C0C0;
+      border-width: 1px;
+      border-radius: 0;
+    
+  ">
+  
+  <a class="heading" href="/dataset/Pesca%20y%20Acuacultura/resource/55eff4b6-1efd-4c4f-b3c2-68a0f9b9683c" title="Pesca y Acuacultura 2016" style="height: 2rem; display: flex; align-items: center;">
+    Pesca y Acuacultura 2016<span class="format-label" property="dc:format" data-format="xlsx">XLSX</span>
+    
+
+  </a>
+  
+  
+    <!-- <p class="description">
+      
+    </p> -->
+  
+  
+  
+  <script>
+    document.addEventListener("DOMContentLoaded", function () {
+      var tooltipTriggerList = [].slice.call(document.querySelectorAll('[data-bs-toggle="tooltip"]'));
+      tooltipTriggerList.map(function (tooltipTriggerEl) {
+        return new bootstrap.Tooltip(tooltipTriggerEl);
+      });
+    });
+  </script>
+  <div 
+    class="" 
+    style="
+      margin-left: auto;
+      display: flex;
+      align-items: center;
+    "
+  >
+    <a 
+      href="/dataset/Pesca%20y%20Acuacultura/resource/55eff4b6-1efd-4c4f-b3c2-68a0f9b9683c" 
+      class=""
+      data-bs-toggle="tooltip" 
+      data-bs-placement="top" 
+      title="Ver detalle"
+      style="font-size: 24px; margin-right: .5rem"
+    >
+      
+      <span class="mdi mdi-eye-outline"></span>
+
+      
+    </a>
+    <a 
+      href="https://datos.sonora.gob.mx/dataset/e093cf34-7da0-4efb-89a3-7b473a5013ab/resource/55eff4b6-1efd-4c4f-b3c2-68a0f9b9683c/download/pesca_sonora_2016.xlsx" 
+      class="resource-url-analytics" 
+      target="_blank"
+      data-bs-toggle="tooltip" 
+      data-bs-placement="top" 
+      style="font-size: 24px; color: #960E53;"
+      title="Descargar recurso"
+    >
+      
+        <i class="mdi mdi-arrow-down-circle-outline"></i>
+      
+    </a>
+    
+  </div>
+  <!-- <div class="dropdown btn-group shadow-sm">
+    <a href="#" class="btn btn-primary dropdown-toggle" data-bs-toggle="dropdown">
+      Explorar
+    </a>
+    <ul class="dropdown-menu">
+      
+      <li class="dropdown-item">
+        <a href="/dataset/Pesca%20y%20Acuacultura/resource/55eff4b6-1efd-4c4f-b3c2-68a0f9b9683c" class="link-dark">
+          
+            <i class="mdi mdi-chart-bar"></i>
+            Previsualización
+          
+        </a>
+      </li>
+      
+      <li class="dropdown-item">
+        <a href="https://datos.sonora.gob.mx/dataset/e093cf34-7da0-4efb-89a3-7b473a5013ab/resource/55eff4b6-1efd-4c4f-b3c2-68a0f9b9683c/download/pesca_sonora_2016.xlsx" class="resource-url-analytics link-dark" target="_blank">
+          
+            <i class="mdi mdi-arrow-down-circle-outline"></i>
+            Descargar
+          
+        </a>
+      </li>
+      
+      
+    </ul>
+  </div> -->
+  
+  
+  
+</li>
+            
+              
+
+
+
+<li 
+  class="resource-item" 
+  data-id="3905f9fe-66ed-43cc-bf44-dd7c6a324445" 
+  style="
+    display: flex;
+    
+      border-style: none none solid none;
+      border-color: #C0C0C0;
+      border-width: 1px;
+      border-radius: 0;
+    
+  ">
+  
+  <a class="heading" href="/dataset/Pesca%20y%20Acuacultura/resource/3905f9fe-66ed-43cc-bf44-dd7c6a324445" title="Pesca y Acuacultura 2017" style="height: 2rem; display: flex; align-items: center;">
+    Pesca y Acuacultura 2017<span class="format-label" property="dc:format" data-format="xlsx">XLSX</span>
+    
+
+  </a>
+  
+  
+    <!-- <p class="description">
+      
+    </p> -->
+  
+  
+  
+  <script>
+    document.addEventListener("DOMContentLoaded", function () {
+      var tooltipTriggerList = [].slice.call(document.querySelectorAll('[data-bs-toggle="tooltip"]'));
+      tooltipTriggerList.map(function (tooltipTriggerEl) {
+        return new bootstrap.Tooltip(tooltipTriggerEl);
+      });
+    });
+  </script>
+  <div 
+    class="" 
+    style="
+      margin-left: auto;
+      display: flex;
+      align-items: center;
+    "
+  >
+    <a 
+      href="/dataset/Pesca%20y%20Acuacultura/resource/3905f9fe-66ed-43cc-bf44-dd7c6a324445" 
+      class=""
+      data-bs-toggle="tooltip" 
+      data-bs-placement="top" 
+      title="Ver detalle"
+      style="font-size: 24px; margin-right: .5rem"
+    >
+      
+      <span class="mdi mdi-eye-outline"></span>
+
+      
+    </a>
+    <a 
+      href="https://datos.sonora.gob.mx/dataset/e093cf34-7da0-4efb-89a3-7b473a5013ab/resource/3905f9fe-66ed-43cc-bf44-dd7c6a324445/download/pesca_sonora_2017.xlsx" 
+      class="resource-url-analytics" 
+      target="_blank"
+      data-bs-toggle="tooltip" 
+      data-bs-placement="top" 
+      style="font-size: 24px; color: #960E53;"
+      title="Descargar recurso"
+    >
+      
+        <i class="mdi mdi-arrow-down-circle-outline"></i>
+      
+    </a>
+    
+  </div>
+  <!-- <div class="dropdown btn-group shadow-sm">
+    <a href="#" class="btn btn-primary dropdown-toggle" data-bs-toggle="dropdown">
+      Explorar
+    </a>
+    <ul class="dropdown-menu">
+      
+      <li class="dropdown-item">
+        <a href="/dataset/Pesca%20y%20Acuacultura/resource/3905f9fe-66ed-43cc-bf44-dd7c6a324445" class="link-dark">
+          
+            <i class="mdi mdi-chart-bar"></i>
+            Previsualización
+          
+        </a>
+      </li>
+      
+      <li class="dropdown-item">
+        <a href="https://datos.sonora.gob.mx/dataset/e093cf34-7da0-4efb-89a3-7b473a5013ab/resource/3905f9fe-66ed-43cc-bf44-dd7c6a324445/download/pesca_sonora_2017.xlsx" class="resource-url-analytics link-dark" target="_blank">
+          
+            <i class="mdi mdi-arrow-down-circle-outline"></i>
+            Descargar
+          
+        </a>
+      </li>
+      
+      
+    </ul>
+  </div> -->
+  
+  
+  
+</li>
+            
+              
+
+
+
+<li 
+  class="resource-item" 
+  data-id="06b7915a-412c-4f22-a92b-9526b0d3a381" 
+  style="
+    display: flex;
+    
+      border-style: none none solid none;
+      border-color: #C0C0C0;
+      border-width: 1px;
+      border-radius: 0;
+    
+  ">
+  
+  <a class="heading" href="/dataset/Pesca%20y%20Acuacultura/resource/06b7915a-412c-4f22-a92b-9526b0d3a381" title="Pesca y Acuacultura 2018" style="height: 2rem; display: flex; align-items: center;">
+    Pesca y Acuacultura 2018<span class="format-label" property="dc:format" data-format="xlsx">XLSX</span>
+    
+
+  </a>
+  
+  
+    <!-- <p class="description">
+      
+    </p> -->
+  
+  
+  
+  <script>
+    document.addEventListener("DOMContentLoaded", function () {
+      var tooltipTriggerList = [].slice.call(document.querySelectorAll('[data-bs-toggle="tooltip"]'));
+      tooltipTriggerList.map(function (tooltipTriggerEl) {
+        return new bootstrap.Tooltip(tooltipTriggerEl);
+      });
+    });
+  </script>
+  <div 
+    class="" 
+    style="
+      margin-left: auto;
+      display: flex;
+      align-items: center;
+    "
+  >
+    <a 
+      href="/dataset/Pesca%20y%20Acuacultura/resource/06b7915a-412c-4f22-a92b-9526b0d3a381" 
+      class=""
+      data-bs-toggle="tooltip" 
+      data-bs-placement="top" 
+      title="Ver detalle"
+      style="font-size: 24px; margin-right: .5rem"
+    >
+      
+      <span class="mdi mdi-eye-outline"></span>
+
+      
+    </a>
+    <a 
+      href="https://datos.sonora.gob.mx/dataset/e093cf34-7da0-4efb-89a3-7b473a5013ab/resource/06b7915a-412c-4f22-a92b-9526b0d3a381/download/pesca_sonora_2018.xlsx" 
+      class="resource-url-analytics" 
+      target="_blank"
+      data-bs-toggle="tooltip" 
+      data-bs-placement="top" 
+      style="font-size: 24px; color: #960E53;"
+      title="Descargar recurso"
+    >
+      
+        <i class="mdi mdi-arrow-down-circle-outline"></i>
+      
+    </a>
+    
+  </div>
+  <!-- <div class="dropdown btn-group shadow-sm">
+    <a href="#" class="btn btn-primary dropdown-toggle" data-bs-toggle="dropdown">
+      Explorar
+    </a>
+    <ul class="dropdown-menu">
+      
+      <li class="dropdown-item">
+        <a href="/dataset/Pesca%20y%20Acuacultura/resource/06b7915a-412c-4f22-a92b-9526b0d3a381" class="link-dark">
+          
+            <i class="mdi mdi-chart-bar"></i>
+            Previsualización
+          
+        </a>
+      </li>
+      
+      <li class="dropdown-item">
+        <a href="https://datos.sonora.gob.mx/dataset/e093cf34-7da0-4efb-89a3-7b473a5013ab/resource/06b7915a-412c-4f22-a92b-9526b0d3a381/download/pesca_sonora_2018.xlsx" class="resource-url-analytics link-dark" target="_blank">
+          
+            <i class="mdi mdi-arrow-down-circle-outline"></i>
+            Descargar
+          
+        </a>
+      </li>
+      
+      
+    </ul>
+  </div> -->
+  
+  
+  
+</li>
+            
+              
+
+
+
+<li 
+  class="resource-item" 
+  data-id="56c707ab-2b24-497f-adb9-b739a2ebf9b6" 
+  style="
+    display: flex;
+    
+      border-style: none none solid none;
+      border-color: #C0C0C0;
+      border-width: 1px;
+      border-radius: 0;
+    
+  ">
+  
+  <a class="heading" href="/dataset/Pesca%20y%20Acuacultura/resource/56c707ab-2b24-497f-adb9-b739a2ebf9b6" title="Pesca y Acuacultura 2019" style="height: 2rem; display: flex; align-items: center;">
+    Pesca y Acuacultura 2019<span class="format-label" property="dc:format" data-format="xlsx">XLSX</span>
+    
+
+  </a>
+  
+  
+    <!-- <p class="description">
+      
+    </p> -->
+  
+  
+  
+  <script>
+    document.addEventListener("DOMContentLoaded", function () {
+      var tooltipTriggerList = [].slice.call(document.querySelectorAll('[data-bs-toggle="tooltip"]'));
+      tooltipTriggerList.map(function (tooltipTriggerEl) {
+        return new bootstrap.Tooltip(tooltipTriggerEl);
+      });
+    });
+  </script>
+  <div 
+    class="" 
+    style="
+      margin-left: auto;
+      display: flex;
+      align-items: center;
+    "
+  >
+    <a 
+      href="/dataset/Pesca%20y%20Acuacultura/resource/56c707ab-2b24-497f-adb9-b739a2ebf9b6" 
+      class=""
+      data-bs-toggle="tooltip" 
+      data-bs-placement="top" 
+      title="Ver detalle"
+      style="font-size: 24px; margin-right: .5rem"
+    >
+      
+      <span class="mdi mdi-eye-outline"></span>
+
+      
+    </a>
+    <a 
+      href="https://datos.sonora.gob.mx/dataset/e093cf34-7da0-4efb-89a3-7b473a5013ab/resource/56c707ab-2b24-497f-adb9-b739a2ebf9b6/download/pesca_sonora_2019.xlsx" 
+      class="resource-url-analytics" 
+      target="_blank"
+      data-bs-toggle="tooltip" 
+      data-bs-placement="top" 
+      style="font-size: 24px; color: #960E53;"
+      title="Descargar recurso"
+    >
+      
+        <i class="mdi mdi-arrow-down-circle-outline"></i>
+      
+    </a>
+    
+  </div>
+  <!-- <div class="dropdown btn-group shadow-sm">
+    <a href="#" class="btn btn-primary dropdown-toggle" data-bs-toggle="dropdown">
+      Explorar
+    </a>
+    <ul class="dropdown-menu">
+      
+      <li class="dropdown-item">
+        <a href="/dataset/Pesca%20y%20Acuacultura/resource/56c707ab-2b24-497f-adb9-b739a2ebf9b6" class="link-dark">
+          
+            <i class="mdi mdi-chart-bar"></i>
+            Previsualización
+          
+        </a>
+      </li>
+      
+      <li class="dropdown-item">
+        <a href="https://datos.sonora.gob.mx/dataset/e093cf34-7da0-4efb-89a3-7b473a5013ab/resource/56c707ab-2b24-497f-adb9-b739a2ebf9b6/download/pesca_sonora_2019.xlsx" class="resource-url-analytics link-dark" target="_blank">
+          
+            <i class="mdi mdi-arrow-down-circle-outline"></i>
+            Descargar
+          
+        </a>
+      </li>
+      
+      
+    </ul>
+  </div> -->
+  
+  
+  
+</li>
+            
+              
+
+
+
+<li 
+  class="resource-item" 
+  data-id="ff741d71-cd93-49ca-b4a3-ee01eb1cc165" 
+  style="
+    display: flex;
+    
+      border-style: none none solid none;
+      border-color: #C0C0C0;
+      border-width: 1px;
+      border-radius: 0;
+    
+  ">
+  
+  <a class="heading" href="/dataset/Pesca%20y%20Acuacultura/resource/ff741d71-cd93-49ca-b4a3-ee01eb1cc165" title="Pesca y Acuacultura 2020" style="height: 2rem; display: flex; align-items: center;">
+    Pesca y Acuacultura 2020<span class="format-label" property="dc:format" data-format="xlsx">XLSX</span>
+    
+
+  </a>
+  
+  
+    <!-- <p class="description">
+      
+    </p> -->
+  
+  
+  
+  <script>
+    document.addEventListener("DOMContentLoaded", function () {
+      var tooltipTriggerList = [].slice.call(document.querySelectorAll('[data-bs-toggle="tooltip"]'));
+      tooltipTriggerList.map(function (tooltipTriggerEl) {
+        return new bootstrap.Tooltip(tooltipTriggerEl);
+      });
+    });
+  </script>
+  <div 
+    class="" 
+    style="
+      margin-left: auto;
+      display: flex;
+      align-items: center;
+    "
+  >
+    <a 
+      href="/dataset/Pesca%20y%20Acuacultura/resource/ff741d71-cd93-49ca-b4a3-ee01eb1cc165" 
+      class=""
+      data-bs-toggle="tooltip" 
+      data-bs-placement="top" 
+      title="Ver detalle"
+      style="font-size: 24px; margin-right: .5rem"
+    >
+      
+      <span class="mdi mdi-eye-outline"></span>
+
+      
+    </a>
+    <a 
+      href="https://datos.sonora.gob.mx/dataset/e093cf34-7da0-4efb-89a3-7b473a5013ab/resource/ff741d71-cd93-49ca-b4a3-ee01eb1cc165/download/pesca_sonora_2020.xlsx" 
+      class="resource-url-analytics" 
+      target="_blank"
+      data-bs-toggle="tooltip" 
+      data-bs-placement="top" 
+      style="font-size: 24px; color: #960E53;"
+      title="Descargar recurso"
+    >
+      
+        <i class="mdi mdi-arrow-down-circle-outline"></i>
+      
+    </a>
+    
+  </div>
+  <!-- <div class="dropdown btn-group shadow-sm">
+    <a href="#" class="btn btn-primary dropdown-toggle" data-bs-toggle="dropdown">
+      Explorar
+    </a>
+    <ul class="dropdown-menu">
+      
+      <li class="dropdown-item">
+        <a href="/dataset/Pesca%20y%20Acuacultura/resource/ff741d71-cd93-49ca-b4a3-ee01eb1cc165" class="link-dark">
+          
+            <i class="mdi mdi-chart-bar"></i>
+            Previsualización
+          
+        </a>
+      </li>
+      
+      <li class="dropdown-item">
+        <a href="https://datos.sonora.gob.mx/dataset/e093cf34-7da0-4efb-89a3-7b473a5013ab/resource/ff741d71-cd93-49ca-b4a3-ee01eb1cc165/download/pesca_sonora_2020.xlsx" class="resource-url-analytics link-dark" target="_blank">
+          
+            <i class="mdi mdi-arrow-down-circle-outline"></i>
+            Descargar
+          
+        </a>
+      </li>
+      
+      
+    </ul>
+  </div> -->
+  
+  
+  
+</li>
+            
+              
+
+
+
+<li 
+  class="resource-item" 
+  data-id="494390c9-5dc6-4140-b63a-f058f8e3b623" 
+  style="
+    display: flex;
+    
+      border-style: none none solid none;
+      border-color: #C0C0C0;
+      border-width: 1px;
+      border-radius: 0;
+    
+  ">
+  
+  <a class="heading" href="/dataset/Pesca%20y%20Acuacultura/resource/494390c9-5dc6-4140-b63a-f058f8e3b623" title="Pesca y Acuacultura 2021" style="height: 2rem; display: flex; align-items: center;">
+    Pesca y Acuacultura 2021<span class="format-label" property="dc:format" data-format="xlsx">XLSX</span>
+    
+
+  </a>
+  
+  
+    <!-- <p class="description">
+      
+    </p> -->
+  
+  
+  
+  <script>
+    document.addEventListener("DOMContentLoaded", function () {
+      var tooltipTriggerList = [].slice.call(document.querySelectorAll('[data-bs-toggle="tooltip"]'));
+      tooltipTriggerList.map(function (tooltipTriggerEl) {
+        return new bootstrap.Tooltip(tooltipTriggerEl);
+      });
+    });
+  </script>
+  <div 
+    class="" 
+    style="
+      margin-left: auto;
+      display: flex;
+      align-items: center;
+    "
+  >
+    <a 
+      href="/dataset/Pesca%20y%20Acuacultura/resource/494390c9-5dc6-4140-b63a-f058f8e3b623" 
+      class=""
+      data-bs-toggle="tooltip" 
+      data-bs-placement="top" 
+      title="Ver detalle"
+      style="font-size: 24px; margin-right: .5rem"
+    >
+      
+      <span class="mdi mdi-eye-outline"></span>
+
+      
+    </a>
+    <a 
+      href="https://datos.sonora.gob.mx/dataset/e093cf34-7da0-4efb-89a3-7b473a5013ab/resource/494390c9-5dc6-4140-b63a-f058f8e3b623/download/pesca_sonora_2021.xlsx" 
+      class="resource-url-analytics" 
+      target="_blank"
+      data-bs-toggle="tooltip" 
+      data-bs-placement="top" 
+      style="font-size: 24px; color: #960E53;"
+      title="Descargar recurso"
+    >
+      
+        <i class="mdi mdi-arrow-down-circle-outline"></i>
+      
+    </a>
+    
+  </div>
+  <!-- <div class="dropdown btn-group shadow-sm">
+    <a href="#" class="btn btn-primary dropdown-toggle" data-bs-toggle="dropdown">
+      Explorar
+    </a>
+    <ul class="dropdown-menu">
+      
+      <li class="dropdown-item">
+        <a href="/dataset/Pesca%20y%20Acuacultura/resource/494390c9-5dc6-4140-b63a-f058f8e3b623" class="link-dark">
+          
+            <i class="mdi mdi-chart-bar"></i>
+            Previsualización
+          
+        </a>
+      </li>
+      
+      <li class="dropdown-item">
+        <a href="https://datos.sonora.gob.mx/dataset/e093cf34-7da0-4efb-89a3-7b473a5013ab/resource/494390c9-5dc6-4140-b63a-f058f8e3b623/download/pesca_sonora_2021.xlsx" class="resource-url-analytics link-dark" target="_blank">
+          
+            <i class="mdi mdi-arrow-down-circle-outline"></i>
+            Descargar
+          
+        </a>
+      </li>
+      
+      
+    </ul>
+  </div> -->
+  
+  
+  
+</li>
+            
+              
+
+
+
+<li 
+  class="resource-item" 
+  data-id="ce83f0bd-050e-4eb2-90c0-c17f2773ebf2" 
+  style="
+    display: flex;
+    
+      border-style: none none solid none;
+      border-color: #C0C0C0;
+      border-width: 1px;
+      border-radius: 0;
+    
+  ">
+  
+  <a class="heading" href="/dataset/Pesca%20y%20Acuacultura/resource/ce83f0bd-050e-4eb2-90c0-c17f2773ebf2" title="Pesca y Acuacultura 2022" style="height: 2rem; display: flex; align-items: center;">
+    Pesca y Acuacultura 2022<span class="format-label" property="dc:format" data-format="xlsx">XLSX</span>
+    
+
+  </a>
+  
+  
+    <!-- <p class="description">
+      
+    </p> -->
+  
+  
+  
+  <script>
+    document.addEventListener("DOMContentLoaded", function () {
+      var tooltipTriggerList = [].slice.call(document.querySelectorAll('[data-bs-toggle="tooltip"]'));
+      tooltipTriggerList.map(function (tooltipTriggerEl) {
+        return new bootstrap.Tooltip(tooltipTriggerEl);
+      });
+    });
+  </script>
+  <div 
+    class="" 
+    style="
+      margin-left: auto;
+      display: flex;
+      align-items: center;
+    "
+  >
+    <a 
+      href="/dataset/Pesca%20y%20Acuacultura/resource/ce83f0bd-050e-4eb2-90c0-c17f2773ebf2" 
+      class=""
+      data-bs-toggle="tooltip" 
+      data-bs-placement="top" 
+      title="Ver detalle"
+      style="font-size: 24px; margin-right: .5rem"
+    >
+      
+      <span class="mdi mdi-eye-outline"></span>
+
+      
+    </a>
+    <a 
+      href="https://datos.sonora.gob.mx/dataset/e093cf34-7da0-4efb-89a3-7b473a5013ab/resource/ce83f0bd-050e-4eb2-90c0-c17f2773ebf2/download/pesca_sonora_2022.xlsx" 
+      class="resource-url-analytics" 
+      target="_blank"
+      data-bs-toggle="tooltip" 
+      data-bs-placement="top" 
+      style="font-size: 24px; color: #960E53;"
+      title="Descargar recurso"
+    >
+      
+        <i class="mdi mdi-arrow-down-circle-outline"></i>
+      
+    </a>
+    
+  </div>
+  <!-- <div class="dropdown btn-group shadow-sm">
+    <a href="#" class="btn btn-primary dropdown-toggle" data-bs-toggle="dropdown">
+      Explorar
+    </a>
+    <ul class="dropdown-menu">
+      
+      <li class="dropdown-item">
+        <a href="/dataset/Pesca%20y%20Acuacultura/resource/ce83f0bd-050e-4eb2-90c0-c17f2773ebf2" class="link-dark">
+          
+            <i class="mdi mdi-chart-bar"></i>
+            Previsualización
+          
+        </a>
+      </li>
+      
+      <li class="dropdown-item">
+        <a href="https://datos.sonora.gob.mx/dataset/e093cf34-7da0-4efb-89a3-7b473a5013ab/resource/ce83f0bd-050e-4eb2-90c0-c17f2773ebf2/download/pesca_sonora_2022.xlsx" class="resource-url-analytics link-dark" target="_blank">
+          
+            <i class="mdi mdi-arrow-down-circle-outline"></i>
+            Descargar
+          
+        </a>
+      </li>
+      
+      
+    </ul>
+  </div> -->
+  
+  
+  
+</li>
+            
+              
+
+
+
+<li 
+  class="resource-item" 
+  data-id="baa39192-8bc4-4af9-8e9c-6d2803acc95f" 
+  style="
+    display: flex;
+    
+      border-style: none none solid none;
+      border-color: #C0C0C0;
+      border-width: 1px;
+      border-radius: 0;
+    
+  ">
+  
+  <a class="heading" href="/dataset/Pesca%20y%20Acuacultura/resource/baa39192-8bc4-4af9-8e9c-6d2803acc95f" title="Pesca y Acuacultura 2023" style="height: 2rem; display: flex; align-items: center;">
+    Pesca y Acuacultura 2023<span class="format-label" property="dc:format" data-format="xlsx">XLSX</span>
+    
+
+  </a>
+  
+  
+    <!-- <p class="description">
+      
+    </p> -->
+  
+  
+  
+  <script>
+    document.addEventListener("DOMContentLoaded", function () {
+      var tooltipTriggerList = [].slice.call(document.querySelectorAll('[data-bs-toggle="tooltip"]'));
+      tooltipTriggerList.map(function (tooltipTriggerEl) {
+        return new bootstrap.Tooltip(tooltipTriggerEl);
+      });
+    });
+  </script>
+  <div 
+    class="" 
+    style="
+      margin-left: auto;
+      display: flex;
+      align-items: center;
+    "
+  >
+    <a 
+      href="/dataset/Pesca%20y%20Acuacultura/resource/baa39192-8bc4-4af9-8e9c-6d2803acc95f" 
+      class=""
+      data-bs-toggle="tooltip" 
+      data-bs-placement="top" 
+      title="Ver detalle"
+      style="font-size: 24px; margin-right: .5rem"
+    >
+      
+      <span class="mdi mdi-eye-outline"></span>
+
+      
+    </a>
+    <a 
+      href="https://datos.sonora.gob.mx/dataset/e093cf34-7da0-4efb-89a3-7b473a5013ab/resource/baa39192-8bc4-4af9-8e9c-6d2803acc95f/download/cierre-pesca-y-acuacutura-estatal-mun-ddr_2023.xlsx" 
+      class="resource-url-analytics" 
+      target="_blank"
+      data-bs-toggle="tooltip" 
+      data-bs-placement="top" 
+      style="font-size: 24px; color: #960E53;"
+      title="Descargar recurso"
+    >
+      
+        <i class="mdi mdi-arrow-down-circle-outline"></i>
+      
+    </a>
+    
+  </div>
+  <!-- <div class="dropdown btn-group shadow-sm">
+    <a href="#" class="btn btn-primary dropdown-toggle" data-bs-toggle="dropdown">
+      Explorar
+    </a>
+    <ul class="dropdown-menu">
+      
+      <li class="dropdown-item">
+        <a href="/dataset/Pesca%20y%20Acuacultura/resource/baa39192-8bc4-4af9-8e9c-6d2803acc95f" class="link-dark">
+          
+            <i class="mdi mdi-chart-bar"></i>
+            Previsualización
+          
+        </a>
+      </li>
+      
+      <li class="dropdown-item">
+        <a href="https://datos.sonora.gob.mx/dataset/e093cf34-7da0-4efb-89a3-7b473a5013ab/resource/baa39192-8bc4-4af9-8e9c-6d2803acc95f/download/cierre-pesca-y-acuacutura-estatal-mun-ddr_2023.xlsx" class="resource-url-analytics link-dark" target="_blank">
+          
+            <i class="mdi mdi-arrow-down-circle-outline"></i>
+            Descargar
+          
+        </a>
+      </li>
+      
+      
+    </ul>
+  </div> -->
+  
+  
+  
+</li>
+        
+      </ul>
+      <h2 style="margin-bottom: 1rem;">Recursos</h2>
+      <ul class="resource-list">
+        
+          
+          
+            
+              
+
+
+
+<li 
+  class="resource-item" 
+  data-id="863b9cc8-daeb-4430-b835-6a0ced5abd31" 
+  style="
+    display: flex;
+    
+  ">
+  
+  <a class="heading" href="/dataset/Pesca%20y%20Acuacultura/resource/863b9cc8-daeb-4430-b835-6a0ced5abd31" title="Diccionario" style="height: 2rem; display: flex; align-items: center;">
+    Diccionario<span class="format-label" property="dc:format" data-format="csv">CSV</span>
+    
+
+  </a>
+  
+  
+    <!-- <p class="description">
+      
+    </p> -->
+  
+  
+  
+  <script>
+    document.addEventListener("DOMContentLoaded", function () {
+      var tooltipTriggerList = [].slice.call(document.querySelectorAll('[data-bs-toggle="tooltip"]'));
+      tooltipTriggerList.map(function (tooltipTriggerEl) {
+        return new bootstrap.Tooltip(tooltipTriggerEl);
+      });
+    });
+  </script>
+  <div 
+    class="" 
+    style="
+      margin-left: auto;
+      display: flex;
+      align-items: center;
+    "
+  >
+    <a 
+      href="/dataset/Pesca%20y%20Acuacultura/resource/863b9cc8-daeb-4430-b835-6a0ced5abd31" 
+      class=""
+      data-bs-toggle="tooltip" 
+      data-bs-placement="top" 
+      title="Ver detalle"
+      style="font-size: 24px; margin-right: .5rem"
+    >
+      
+      <span class="mdi mdi-eye-outline"></span>
+
+      
+    </a>
+    <a 
+      href="https://datos.sonora.gob.mx/dataset/e093cf34-7da0-4efb-89a3-7b473a5013ab/resource/863b9cc8-daeb-4430-b835-6a0ced5abd31/download/diccionario-pesca-sonora.csv" 
+      class="resource-url-analytics" 
+      target="_blank"
+      data-bs-toggle="tooltip" 
+      data-bs-placement="top" 
+      style="font-size: 24px; color: #960E53;"
+      title="Descargar recurso"
+    >
+      
+        <i class="mdi mdi-arrow-down-circle-outline"></i>
+      
+    </a>
+    
+  </div>
+  <!-- <div class="dropdown btn-group shadow-sm">
+    <a href="#" class="btn btn-primary dropdown-toggle" data-bs-toggle="dropdown">
+      Explorar
+    </a>
+    <ul class="dropdown-menu">
+      
+      <li class="dropdown-item">
+        <a href="/dataset/Pesca%20y%20Acuacultura/resource/863b9cc8-daeb-4430-b835-6a0ced5abd31" class="link-dark">
+          
+            <i class="mdi mdi-chart-bar"></i>
+            Previsualización
+          
+        </a>
+      </li>
+      
+      <li class="dropdown-item">
+        <a href="https://datos.sonora.gob.mx/dataset/e093cf34-7da0-4efb-89a3-7b473a5013ab/resource/863b9cc8-daeb-4430-b835-6a0ced5abd31/download/diccionario-pesca-sonora.csv" class="resource-url-analytics link-dark" target="_blank">
+          
+            <i class="mdi mdi-arrow-down-circle-outline"></i>
+            Descargar
+          
+        </a>
+      </li>
+      
+      
+    </ul>
+  </div> -->
+  
+  
+  
+</li>
+            
+              
+
+
+
+<li 
+  class="resource-item" 
+  data-id="b38645a9-bf15-4366-a1e0-63f5cfbd91c1" 
+  style="
+    display: flex;
+    
+  ">
+  
+  <a class="heading" href="/dataset/Pesca%20y%20Acuacultura/resource/b38645a9-bf15-4366-a1e0-63f5cfbd91c1" title="Catalogo" style="height: 2rem; display: flex; align-items: center;">
+    Catalogo<span class="format-label" property="dc:format" data-format="xlsx">XLSX</span>
+    
+
+  </a>
+  
+  
+    <!-- <p class="description">
+      
+    </p> -->
+  
+  
+  
+  <script>
+    document.addEventListener("DOMContentLoaded", function () {
+      var tooltipTriggerList = [].slice.call(document.querySelectorAll('[data-bs-toggle="tooltip"]'));
+      tooltipTriggerList.map(function (tooltipTriggerEl) {
+        return new bootstrap.Tooltip(tooltipTriggerEl);
+      });
+    });
+  </script>
+  <div 
+    class="" 
+    style="
+      margin-left: auto;
+      display: flex;
+      align-items: center;
+    "
+  >
+    <a 
+      href="/dataset/Pesca%20y%20Acuacultura/resource/b38645a9-bf15-4366-a1e0-63f5cfbd91c1" 
+      class=""
+      data-bs-toggle="tooltip" 
+      data-bs-placement="top" 
+      title="Ver detalle"
+      style="font-size: 24px; margin-right: .5rem"
+    >
+      
+      <span class="mdi mdi-eye-outline"></span>
+
+      
+    </a>
+    <a 
+      href="https://datos.sonora.gob.mx/dataset/e093cf34-7da0-4efb-89a3-7b473a5013ab/resource/b38645a9-bf15-4366-a1e0-63f5cfbd91c1/download/catalogo.xlsx" 
+      class="resource-url-analytics" 
+      target="_blank"
+      data-bs-toggle="tooltip" 
+      data-bs-placement="top" 
+      style="font-size: 24px; color: #960E53;"
+      title="Descargar recurso"
+    >
+      
+        <i class="mdi mdi-arrow-down-circle-outline"></i>
+      
+    </a>
+    
+  </div>
+  <!-- <div class="dropdown btn-group shadow-sm">
+    <a href="#" class="btn btn-primary dropdown-toggle" data-bs-toggle="dropdown">
+      Explorar
+    </a>
+    <ul class="dropdown-menu">
+      
+      <li class="dropdown-item">
+        <a href="/dataset/Pesca%20y%20Acuacultura/resource/b38645a9-bf15-4366-a1e0-63f5cfbd91c1" class="link-dark">
+          
+            <i class="mdi mdi-chart-bar"></i>
+            Previsualización
+          
+        </a>
+      </li>
+      
+      <li class="dropdown-item">
+        <a href="https://datos.sonora.gob.mx/dataset/e093cf34-7da0-4efb-89a3-7b473a5013ab/resource/b38645a9-bf15-4366-a1e0-63f5cfbd91c1/download/catalogo.xlsx" class="resource-url-analytics link-dark" target="_blank">
+          
+            <i class="mdi mdi-arrow-down-circle-outline"></i>
+            Descargar
+          
+        </a>
+      </li>
+      
+      
+    </ul>
+  </div> -->
+  
+  
+  
+</li>
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+        
+      </ul>
+    
+  
+</section>
+  
+
+  
+    
+
+  <section class="tags">
+    
+
+
+  <ul class="tag-list well" style="padding: 10px 10px 5px 0px;">
+    
+      <li>
+        <a class="tag" href="/dataset/?tags=acuacultura">acuacultura</a>
+      </li>
+    
+      <li>
+        <a class="tag" href="/dataset/?tags=arribos">arribos</a>
+      </li>
+    
+      <li>
+        <a class="tag" href="/dataset/?tags=camaron">camaron</a>
+      </li>
+    
+      <li>
+        <a class="tag" href="/dataset/?tags=pesca+sonora">pesca sonora</a>
+      </li>
+    
+      <li>
+        <a class="tag" href="/dataset/?tags=sardina">sardina</a>
+      </li>
+    
+  </ul>
+
+  </section>
+
+  
+
+  
+  <section class="additional-info ai-sonora" style="margin-top: 1rem;">
+  <h2 style="margin-bottom: 1rem;">Información adicional</h2>
+  <table class="table table-bordered table-condensed">
+    <thead>
+      <tr style="background-color:  #F2F2F2;">
+        <th style="font-weight: 500; color: black;" scope="col">Campo</th>
+        <th style="font-weight: 500; color: black;" scope="col">Valor</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <th style="font-weight: normal;" scope="row" class="dataset-label">
+          Número de variables/columnas
+        </th>
+        <td class="dataset-details"
+          
+        >15</td>
+      </tr><tr>
+        <th style="font-weight: normal;" scope="row" class="dataset-label">
+          Fuente de los datos
+        </th>
+        <td class="dataset-details"
+          
+        >Informes gubernamentales</td>
+      </tr><tr>
+        <th style="font-weight: normal;" scope="row" class="dataset-label">
+          Granularidad de los datos
+        </th>
+        <td class="dataset-details"
+          
+        >Anual</td>
+      </tr><tr>
+        <th style="font-weight: normal;" scope="row" class="dataset-label">
+          Jurisdicción
+        </th>
+        <td class="dataset-details"
+          
+        >Estatal</td>
+      </tr><tr>
+        <th style="font-weight: normal;" scope="row" class="dataset-label">
+          Frecuencia de actualización
+        </th>
+        <td class="dataset-details"
+          
+        >Anual</td>
+      </tr><tr>
+        <th style="font-weight: normal;" scope="row" class="dataset-label">
+          Fuentes extras
+        </th>
+        <td class="dataset-details"
+          
+        ></td>
+      </tr><!--  -->
+
+    </tbody>
+  </table>
+</section>
+
+
+
+                    </div>
+                  </article>
+                
+              </div>
+            
+          </div>
+        
+      </div>
+    </div>
+  
+    <div class="site-footer_d d-none">
+  <div class="container">
+    
+    <div class="row">
+      <div class="col-md-8 footer-links">
+        
+          <ul class="list-unstyled">
+            
+              <li><a href="/about">Acerca de Portal de Datos Abiertos del Gobierno del Estado de Sonora</a></li>
+            
+          </ul>
+          <ul class="list-unstyled">
+            
+              
+              <li><a href="http://docs.ckan.org/en/2.9/api/">API CKAN</a></li>
+              <li><a href="http://www.ckan.org/">CKAN Association</a></li>
+              <li><a href="http://www.opendefinition.org/okd/"><img src="/base/images/od_80x15_blue.png" alt="Open Data"></a></li>
+            
+          </ul>
+        
+      </div>
+      <div class="col-md-4 attribution">
+        
+          <p><strong>Gestionado con </strong> <a class="hide-text ckan-footer-logo" href="http://ckan.org">CKAN</a></p>
+        
+
+      </div>
+    </div>
+    
+  </div>
+
+  
+    
+  
+
+  
+    
+<form class="form-inline form-select lang-select" action="/util/redirect" data-module="select-switch" method="POST">
+  <label for="field-lang-select">Idioma</label>
+  <select id="field-lang-select" name="url" data-module="autocomplete" data-module-dropdown-class="lang-dropdown" data-module-container-class="lang-container">
+    
+      <option value="/es/dataset/Pesca%20y%20Acuacultura" selected="selected">
+        español
+      </option>
+    
+  </select>
+  <button class="btn btn-default js-hide" type="submit">Ir</button>
+</form>
+  
+
+
+</div>
+
+
+<section id="pre-footer" class="d-none d-sm-block">
+
+  <div class="container">
+      <div class="container-inner">
+
+          <div class="row">
+
+              <div class="col-sm-7">
+
+                  <div class="info">
+                      <h6 class="fw-bold">Gobierno del Estado de Sonora</h6>
+                      <p>
+                        <strong>Dirección:</strong> Comonfort y Dr. Paliza S/N, Colonia Centenario, C.P. 83260. Hermosillo, Sonora, México.
+                        <br><strong>Teléfonos:</strong> Atención Ciudadana (662) 108 4324, Palacio de Gobierno (662) 289 3800
+                        <br><strong>Correo Electrónico:</strong> <a href="/cdn-cgi/l/email-protection#95f4e1f0fbf6fcfafbf6fce0f1f4f1f4fbf4d5e6fafbfae7f4bbf2faf7bbf8edaae6e0f7fff0f6e1a8d8f0fbe6f4fff0b0a7a5d0fbe3fcf4f1fab0a7a5f1f0e6f1f0b0a7a5f0f9b0a7a5c5fae7e1f4f9b0a7a5f1f0f9b0a7a5d2faf7fcf0e7fbfab0a7a5f1f0b0a7a5c6fafbfae7f4"><span class="__cf_email__" data-cfemail="d5b4a1b0bbb6bcbabbb6bca0b1b4b1b4bbb495a6babbbaa7b4fbb2bab7fbb8ad">[email&#160;protected]</span></a>
+                      </p>
+                  </div>
+
+
+              </div>
+
+
+              <div class="col-sm-5 ">
+                  <div class="social-networks">
+                      <div class="d-flex justify-content-center justify-content-sm-end">
+                          <a href="https://www.facebook.com/GobiernoSonora" target="_blank" rel="nofollow noreferrer noopener" class=""><i class="fab fa-facebook" aria-hidden="true"></i> <span>Facebook</span></a>
+                          <style>
+                            #xCustomLogo{
+                              display: flex;
+                              justify-content: center;
+                              align-items:center;
+                            }
+                            
+                            #xCustomLogo img{
+                              object-fit: contain;
+                            }
+
+                            #xCustomLogoOrange{
+                              display: flex !important;
+                              justify-content: center;
+                              align-items:center;
+                            }
+    
+                            #xCustomLogoOrange img{
+                              object-fit: contain;
+                            }
+                          </style>
+                          
+                          <a href="https://www.twitter.com/gobiernosonora" id="xCustomLogoOrange">
+                            <img src="/images/x-orange2.png" alt="" width="33" height="33">
+                          </a>
+                          <!-- <a href="https://www.facebook.com/GobiernoSonora" target="_blank" rel="nofollow noreferrer noopener"  class=""><i class="fab fa-twitter" aria-hidden="true"></i><span>Twitter</span></a> -->
+                          <a href="https://www.instagram.com/gobiernodesonora/" target="_blank" rel="nofollow noreferrer noopener"class=""><i class="fab fa-instagram" aria-hidden="true"></i> <span>Instagram</span></a>
+                          <a href="https://www.tiktok.com/@gobierno.sonora" target="_blank" rel="nofollow noreferrer noopener" class=""><i class="fab fa-tiktok" aria-hidden="true"></i> <span>Tiktok</span></a>
+                          <a href="https://www.youtube.com/@GobiernodeSonoraTV" target="_blank" rel="nofollow noreferrer noopener" class=""><i class="fab fa-youtube" aria-hidden="true"></i> <span>Youtube</span></a>
+                       
+                          <a href="#" target="_blank" rel="nofollow noreferrer noopener" id="btn-16660239335493" class="">@GobiernoSonora</a>
+                      </div>
+                  </div>
+
+                  <div class="privacy">
+                      <div class="text-center text-sm-end mt-2">
+                          <p>
+                              <a href="https://www.sonora.gob.mx/politica-de-uso.html" target="_blank" rel="nofollow noreferrer noopener" id="btn-16660237556920" class="btn btn-link link-dark py-0 px-1">Política de Uso y Privacidad</a>
+                              <a href="https://denunciapp.sonora.gob.mx" target="_blank" rel="nofollow noreferrer noopener" id="btn-16660237556921" class="btn btn-link link-dark py-0 px-1">Denuncia Ciudadana</a>
+                              <a href="https://www.sonora.gob.mx/contacto.html" target="_blank" rel="nofollow noreferrer noopener" id="btn-16660237556922" class="btn btn-link link-dark py-0 px-1">Contacto</a>
+
+                          </p>
+
+
+                          <p>Todos los derechos reservados. Sitio web desarrollado por
+                              <a href="https://oficialiamayor.sonora.gob.mx" target="_blank" rel="noopener">Oficialía Mayor</a>
+                          </p>
+
+
+                      </div>
+                  </div>
+
+
+              </div>
+
+
+          </div>
+
+         
+</div></div></section>
+
+  <style>
+    .old-site{
+      background-color: #dc7f37;
+      padding-block: 8px;
+      display: flex;
+    }
+
+    .newFoot{
+      display: none;
+    }
+
+    @media only screen and (max-width: 799px) {
+      .newFoot{
+        display: block;
+        background-color: #410123;
+        height: max-content;
+        padding-bottom: 1rem;
+      }
+      .innerFoot{
+        display: flex;
+        flex-direction: column;
+        gap: .5rem;
+        justify-content: center;
+        align-items: center;
+      }
+      .socalSpecial{
+        display: flex;
+        flex-direction: row;
+        gap: 1rem;
+        padding: 0;
+      }
+    }
+  </style>
+
+
+<div class="newFoot">
+  <div class="innerFoot">
+    <img class="" src="/images/logo-sonora-white.svg" alt="Gobierno del Estado de Sonora" title="" loading="lazy" style="width: 60%; margin-top: 1rem">
+    <div class="col-sm-3">
+      <div class="mt-3 mb-3">
+    <ul class="socalSpecial d-flex justify-content-center">
+      <a style="color: white; font-size:x-large" href="https://www.facebook.com/gobiernosonora" aria-label="Facebook" target="_blank" rel="nofollow noreferrer noopener"><i class="fab fa-facebook " aria-hidden="true" title="Facebook"></i></a>
+      <!-- <a style="color: white; font-size:x-large" href="https://www.twitter.com/gobiernosonora" aria-label="Twitter" target="_blank" rel="nofollow noreferrer noopener"><i class="fab fa-twitter " aria-hidden="true" title="Twitter"></i></a> -->
+      <a style="color: white; font-size:x-large" href="https://www.instagram.com/gobiernodesonora" aria-label="Instagram" target="_blank" rel="nofollow noreferrer noopener"><i class="fab fa-instagram " aria-hidden="true" title="Instagram"></i></a>
+      <a style="color: white; font-size:x-large" href="https://www.tiktok.com/@gobierno.sonora" aria-label="TikTok" target="_blank" rel="nofollow noreferrer noopener"><i class="fab fa-tiktok " aria-hidden="true" title="TikTok"></i></a>
+      <a style="color: white; font-size:x-large" href="https://www.youtube.com/c/GobiernodeSonoraTV" aria-label="Youtube" target="_blank" rel="nofollow noreferrer noopener"><i class="fab fa-youtube " aria-hidden="true" title="Youtube"></i></a>
+    </ul>
+    </div>
+    </div> 
+    <div class="text-center mb-3" style="color: white;">
+      @GobiernoSonora
+    </div>
+    <a href="tel://911" target="_blank" style="width: 60%; display:flex; align-items:center;"><img class="" src="/images/911.svg" alt="911 Número de Emergencias" title="" loading="lazy" style="width: 100%;"></a>
+  </div>
+</div>
+
+<footer class="d-none d-sm-block">
+  <div class="container">
+      <div class="row">
+
+          <div class="col-sm-2">
+              <div class="logo mb-3">
+                  <img class="" src="/images/logo-sonora-white.svg" alt="Gobierno del Estado de Sonora" title="" loading="lazy">
+              </div>
+          </div>
+
+          <div class="col-sm-4"></div>
+
+          <div class="col-sm-3">
+              <div class="mt-3 mb-3">
+                <ul class="social-networks d-flex justify-content-center">
+                    <a href="https://www.facebook.com/gobiernosonora" aria-label="Facebook" target="_blank" rel="nofollow noreferrer noopener"><i class="fab fa-facebook " aria-hidden="true" title="Facebook"></i></a>
+                    <a href="https://www.twitter.com/gobiernosonora" id="xCustomLogo">
+                      <img src="/images/x-white.png" alt="" width="33" height="33">
+                    </a>
+                    <!-- <a href="https://www.twitter.com/gobiernosonora" aria-label="Twitter" target="_blank" rel="nofollow noreferrer noopener"><i class="fab fa-twitter " aria-hidden="true" title="Twitter"></i></a> -->
+                    <a href="https://www.instagram.com/gobiernodesonora" aria-label="Instagram" target="_blank" rel="nofollow noreferrer noopener"><i class="fab fa-instagram " aria-hidden="true" title="Instagram"></i></a>
+                    <a href="https://www.tiktok.com/@gobierno.sonora" aria-label="TikTok" target="_blank" rel="nofollow noreferrer noopener"><i class="fab fa-tiktok " aria-hidden="true" title="TikTok"></i></a>
+                    <a href="https://www.youtube.com/c/GobiernodeSonoraTV" aria-label="Youtube" target="_blank" rel="nofollow noreferrer noopener"><i class="fab fa-youtube " aria-hidden="true" title="Youtube"></i></a>
+                </ul>
+              </div>
+
+              <div class="text-center mb-3">
+                  @GobiernoSonora
+              </div>
+
+          </div>
+
+          <div class="col-sm-3 text-end">
+              <div class="emergency me-auto">
+                  <a href="tel://911" target="_blank"><img class="" src="/images/911.svg" alt="911 Número de Emergencias" title="" loading="lazy"></a>
+              </div>
+          </div>
+
+      </div>
+  </div>
+</footer>
+  
+  
+  
+  
+  
+    
+
+      
+
+    
+    
+ 
+    <script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script src="/webassets/vendor/d8ae4bed_jquery.js" type="text/javascript"></script>
+<script src="/webassets/vendor/fb6095a0_vendor.js" type="text/javascript"></script>
+<script src="/webassets/vendor/517cca6f_bootstrap.js" type="text/javascript"></script>
+<script src="/webassets/base/15a18f6c_main.js" type="text/javascript"></script>
+<script src="/webassets/base/bff92684_ckan.js" type="text/javascript"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+      // updated 2019
+        //const input = document.getElementById("search-input");
+        //const searchBtn = document.getElementById("search-btn");
+
+        const popoverTriggerList = document.querySelectorAll('[data-bs-toggle="popover"]')
+        const popoverList = [...popoverTriggerList].map(popoverTriggerEl => new bootstrap.Popover(popoverTriggerEl))
+
+
+        /*
+        const expand = () => {
+          searchBtn.classList.toggle("close");
+          input.classList.toggle("square");
+        };*/
+
+        //searchBtn.addEventListener("click", expand);
+
+
+    </script>
+
+  <script type="module" src="https://static.cloudflareinsights.com/beacon.min.js/vce701823e78c4301a35b7e07294d87301792088814092" integrity="sha512-UKNk8GbxkABxKcXYuLkO16EleLGUkcvJWtpSNmExE0Too3ZaFAxTscNWEc1OdAv5/BikHawapSCaiD2XCmp+Bw==" data-cf-beacon='{"version":"2024.11.0","token":"acfb988d291d41f1846540e7c6312446","spa":2}' crossorigin="anonymous"></script>
+</body>
+</html>

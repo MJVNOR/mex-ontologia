@@ -1,0 +1,93 @@
+{
+ "dictamen": "aceptar",
+ "alcance": "compatibilidad-v001 (staging, sin instalar): rama R7 en integrar_entregas.py e integrar_ronda_2.py. Resto de scripts de integracion sin esperados bloqueantes.",
+ "defectos": [
+  {
+   "archivo": "scripts/integrar_entregas.py",
+   "lineas": "312-326",
+   "esperado_historico": {
+    "conceptos": 1075,
+    "variables_respaldadas": 1392,
+    "variables_pendientes": 19,
+    "correspondencias_revisadas": 4475
+   },
+   "observado_R7": {
+    "conceptos": 1106,
+    "variables_respaldadas": 1423,
+    "correspondencias_revisadas": 4478
+   },
+   "bloqueo": "ValueError 'Resultado inesperado' (conceptos 1106 reportado). Parche R6 solo cubria revisadas=4475.",
+   "estado": "resuelto_en_staging_v001",
+   "correccion_minima": "Rama R7 con derivados baseline+accepted auditados y pines 1106/1423/4478/140 + fiel regla por regla; anclas historicas intactas."
+  },
+  {
+   "archivo": "scripts/integrar_ronda_2.py",
+   "lineas": "306-316",
+   "esperado_historico": {
+    "revisadas": 4475,
+    "candidatas": 20
+   },
+   "observado_R7": {
+    "revisadas": 4478,
+    "candidatas": 17
+   },
+   "bloqueo": "ValueError 'Conteos inesperados de ronda 2'.",
+   "estado": "resuelto_en_staging_v001",
+   "correccion_minima": "Rama R7: revisadas=base+3 con pin 4478, candidatas=esperado_actual-3 con pin 17; lote exacto 31/31/3."
+  },
+  {
+   "codigo": "D3",
+   "donde": "compatibilidad-v001/integrar_entregas.py:333 e integrar_ronda_2.py:323",
+   "descripcion": "Tupla de lote (n_reglas,n_vinc,n_con) comparada contra (31,31,3); lo correcto es (31,3,31). Con el lote auditado real siempre levantaba ValueError: bloqueante total de la rama R7.",
+   "detectado_por": "coordinador",
+   "confirmado_por": "B-tecnica (bytes v001)",
+   "estado": "corregido_en_staging_v002",
+   "congelada_v001": "intacta, no editar"
+  }
+ ],
+ "verificados_sin_bloqueo": [
+  "integrar_ronda_3.py (865 exactas de su lote), integrar_ronda_4/5/6.py (base+delta exactos, sin conteos globales)",
+  "integrar_cobertura.py y consolidar_semantica.py (estructurales, sin literales de conteo)",
+  "ampliar_portal.py y sincronizar_studio_portal.py (serializacion atomica + shapes, sin conteos)",
+  "depurar_pendientes.py:145-147 hardcodeado R6 pero standalone verificado (sin importadores en la cadena): no bloquea, no tocar"
+ ],
+ "staging": {
+  "version": "v002",
+  "veredicto": "aceptar",
+  "motivo": "Tupla corregida a (31,3,31) en ambos archivos (verificado por diff estructural: solo tuple+mensaje+reduccion de bloque); bloque entregas reducido (cadena historica cargar() primero, fidelidad por regla en construir fase R7 con gate dual); R6cfg estados_variables_esperados verificado presente (1392/152/19, el codigo falla si falta: sin asuncion); sources.update valido (sources en scope en ambas funciones construir, cero source_files en repo); delta estructuralmente correcta; pines y anclas como v001.",
+  "archivos_sha256": {
+   "integrar_entregas.py": "7918e11de66f",
+   "integrar_ronda_2.py": "f4ae132f71fd",
+   "nota-revision-B.md": "c2ec804744b1"
+  }
+ },
+ "observaciones": [
+  "tests/test_integracion_agentes.py y tests/test_ronda_2.py solo R6-aware (r6n), sin rama R7: fuera de alcance (no tests), pendiente para CI."
+ ],
+ "referencias": [
+  {
+   "ruta": "propuestas/plan-paralelo-brechas-sin-gemma/ejecucion-20261024-072207Z/integracion/compatibilidad-v002/congelada.json",
+   "sha256": "58678cdf7aa74dae999baa5dfae70ebc00468fa8b7900bbcb20f340af509c750"
+  },
+  {
+   "ruta": "propuestas/plan-paralelo-brechas-sin-gemma/ejecucion-20261024-072207Z/integracion/compatibilidad-v002/integrar_entregas.py",
+   "sha256": "7918e11de66f932455f8f5fdc2c208b09f52c8d04c56d3d7b1b52f5fabf802bf"
+  },
+  {
+   "ruta": "propuestas/plan-paralelo-brechas-sin-gemma/ejecucion-20261024-072207Z/integracion/compatibilidad-v002/integrar_ronda_2.py",
+   "sha256": "f4ae132f71fd775d37efb3365bd97c885be668ad4c638876c16ccaf6c32fff34"
+  },
+  {
+   "ruta": "propuestas/plan-paralelo-brechas-sin-gemma/ejecucion-20261024-072207Z/integracion/compatibilidad-v002/nota-revision-B.md",
+   "sha256": "c2ec804744b19725bb48be8d760bc992e65c82cbd6cffb46aba298b6ad4ca89a"
+  },
+  {
+   "ruta": "scripts/integrar_entregas.py",
+   "sha256": "8ef4d4b0bb3cb9cad84d8d8a35bd87a7a7f5582caa8c6c34f0417f30d38738bd"
+  },
+  {
+   "ruta": "scripts/integrar_ronda_2.py",
+   "sha256": "dd74ed14bf695a3209670f8631bf8a2a952cfc2aca6b8224678bb013ed122a90"
+  }
+ ]
+}

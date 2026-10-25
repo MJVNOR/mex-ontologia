@@ -1,0 +1,129 @@
+{
+ "rol": "P1-qudt",
+ "version": "v003",
+ "fecha_utc": "2026-10-24",
+ "estado": "propuesta_para_auditar",
+ "corrige_a": "v002",
+ "defecto_corregido": "unidadLiteral normalizado sin tilde; v003 usa literales exactos de fila",
+ "base": {
+  "informe": "reports/ronda-8.json",
+  "estado_r8": "cerrado_integrado_validado_y_sincronizado"
+ },
+ "casos": [
+  {
+   "id": "P1-Q1",
+   "variable": "Precipitacion_mm",
+   "dataset_uuid": "8b4edefe-cb1a-401c-90c6-05548779defd",
+   "resource_uuid": "6713de4e-1e2b-447d-8000-f6ceaabd8473",
+   "definicion_iri": "https://example.org/mex-ontologi/definition/6713de4e-1e2b-447d-8000-f6ceaabd8473%2F6",
+   "huella": "dec3bb83da6fe2209575146e9775fc615c0473c13209cb9a05f16b492e28bb9f8",
+   "unidad_literal": "Milímetros",
+   "unidad_qudt": "http://qudt.org/vocab/unit/MilliM",
+   "resultado": "propuesta_para_auditar"
+  },
+  {
+   "id": "P1-Q3",
+   "variable": "SUPSEM",
+   "dataset_uuid": "3e17a7e8-c8d4-49c4-a426-4dec099cd0cd",
+   "resource_uuid": "94215f51-9c89-414d-8c3d-92792e609a2a",
+   "definicion_iri": "https://example.org/mex-ontologi/definition/94215f51-9c89-414d-8c3d-92792e609a2a%2F14",
+   "huella": "208a95e2c54e495723b39a3b528deb22f6147dfd3bd080f867e6bea2c191f321",
+   "unidad_literal": "Hectáreas",
+   "unidad_qudt": "http://qudt.org/vocab/unit/HA",
+   "resultado": "propuesta_para_auditar"
+  },
+  {
+   "id": "P1-Q2",
+   "resultado": "sin_evidencia_para_integrar",
+   "informe": "v003/informe-negativo-Q2.md",
+   "nota": "Fuera del grafo instalable; sin vinculo, sin M3, sin factor."
+  }
+ ],
+ "archivos_instalables": [
+  "v003/vocabulario.ttl",
+  "v003/propuesta-qudt.ttl"
+ ],
+ "validacion_local": {
+  "turtle_parse_ok": true,
+  "q1-vinculos-verificados": 2,
+  "q3-trazabilidad": 4,
+  "checks": {
+   "literales_exactos_fila": true,
+   "literales_con_tilde": true,
+   "sujetos_http_exactos": true,
+   "solo_iris_qudt_http": true,
+   "solo_q1q3_en_grafo": true,
+   "sin_aprobacion_en_grafo": true,
+   "sin_quantityvalue": true,
+   "sin_conversion": true,
+   "dataset_distinto_resource": true
+  }
+ },
+ "fuentes": [
+  {
+   "ruta": "data/portal/inspecciones/6713de4e-1e2b-447d-8000-f6ceaabd8473.json",
+   "sha256": "693fefe10791a61ad263c17d03b4b9d4560add66dca7c2ca15ad9db2daac8ffd",
+   "url": "https://datos.sonora.gob.mx/api/3/action/datastore_search?resource_id=6713de4e-1e2b-447d-8000-f6ceaabd8473&limit=1000&offset=0&sort=_id+asc",
+   "localizador": "Precipitacion_mm, Unidad de medida exacta de fila, Ejemplo=12.5"
+  },
+  {
+   "ruta": "data/portal/inspecciones/94215f51-9c89-414d-8c3d-92792e609a2a.json",
+   "sha256": "9d341703f8a358fbbdce04fa416a121c3df6d5bcde0c771a5c442c7733ca556c",
+   "url": "https://datos.sonora.gob.mx/api/3/action/datastore_search?resource_id=94215f51-9c89-414d-8c3d-92792e609a2a&limit=1000&offset=0&sort=_id+asc",
+   "localizador": "SUPSEM, Unidad de medida exacta de fila"
+  },
+  {
+   "ruta": "data/semantica/cobertura.json",
+   "sha256": "683f58b24d23b9c97b569ae19dd14ed43b722a08857519766c435e447e9c3638",
+   "localizador": "estados respaldada_por_definicion"
+  },
+  {
+   "ruta": "reports/ronda-8.json",
+   "sha256": "5ac384bc4c253f5310ae69402c8d9249d2ee85082086c2dca85483f8b4b7eacb",
+   "localizador": "base cerrada R8"
+  },
+  {
+   "ruta": "propuestas/plan-tras-r8/ejecucion-20261024/W-estandares/v002/normativa/unit-MilliM-evidencia.txt",
+   "sha256": "5e63691124e69c162ddfa65bde77fb1ad3e9a2173ffd33b9910100880a9ea9a7",
+   "url": "https://qudt.org/vocab/unit/MilliM",
+   "localizador": "W P1-W-01 VERIFICADO, sujeto http"
+  },
+  {
+   "ruta": "propuestas/plan-tras-r8/ejecucion-20261024/W-estandares/v002/normativa/unit-HA-evidencia.txt",
+   "sha256": "9095968323f72af577b4a94684a78e2f806595ca118529b5e47cb0b2acd1ee3e",
+   "url": "https://qudt.org/vocab/unit/HA",
+   "localizador": "W P1-W-03 VERIFICADO, sujeto http; HectoHA 404"
+  },
+  {
+   "ruta": "propuestas/plan-tras-r8/ejecucion-20261024/W-estandares/v003/congelada.json",
+   "sha256": "6876a312956e110fff535df9aea8eeee27e25ce5a11f58b10c280f52126b3190",
+   "localizador": "sello final W v003 existente"
+  },
+  {
+   "ruta": "propuestas/plan-tras-r8/ejecucion-20261024/W-estandares/v003/entrega.json",
+   "sha256": "7900e3e92596b8e0d1502abb431964c98ed27b8c31a74ad06dcf0e7cb76c6bf0",
+   "localizador": "W v003 entrega (M3 no autoriza sustituciones ni factores)"
+  },
+  {
+   "ruta": "propuestas/plan-tras-r8/ejecucion-20261024/W-estandares/v003/verificacion-hashes.json",
+   "sha256": "9a7d5dca8abcb724ccfb6603350b625b0ecec5d348f73d04482025984974d6f1",
+   "localizador": "verificacion de hashes por codigo W"
+  }
+ ],
+ "sello_w_v003": {
+  "ruta": "propuestas/plan-tras-r8/ejecucion-20261024/W-estandares/v003/congelada.json",
+  "sha256": "6876a312956e110fff535df9aea8eeee27e25ce5a11f58b10c280f52126b3190",
+  "estado": "existente_verificado_por_codigo"
+ },
+ "limites": [
+  "v001/v002 preservadas sin edicion; v003 no las modifica.",
+  "Literales exactos de fila, sin normalizar; semantica conceptual sin cambios.",
+  "Grafo instalable: solo Q1+Q3; Q2 en informe aparte.",
+  "Sin QuantityValue, conversiones, factores, alias, atribucion global, produccion, Gemma."
+ ],
+ "condiciones_aceptacion": [
+  "Auditor replica SHAs y Q1=2/Q3=4 filas.",
+  "Sello W v003 citado coincide por codigo.",
+  "Q2 permanece fuera."
+ ]
+}

@@ -1,0 +1,64 @@
+{
+  "inicio": "2026-10-24T05:29:37.870Z",
+  "caso": "C6-clave-26001",
+  "modo": "offline: intercept Google antes de red, 0 llamadas reales",
+  "modelo": "gemma-4-31b-it",
+  "bundle": "C:\\Users\\marti\\AppData\\Local\\Packages\\OpenAI.Codex_2p2nqsd0c76g0\\LocalCache\\Local\\open-ontologies-studio\\sidecars\\agent\\dist\\index.js",
+  "bundle_sha256": "5b190f2c982239779233478a41ae15d78ecc857e67605c2b9f23c403e863050b",
+  "grafo_antes": {
+    "classes": 56,
+    "data_properties": 155,
+    "individuals": 27200,
+    "object_properties": 48,
+    "properties": 203,
+    "triples": 321210
+  },
+  "metodo": "Bundle instalado por STDIO via preload --import; mismo motor que Studio a traves de proxy MCP solo lectura; sin UI.",
+  "bloqueos": [],
+  "casos": [
+    {
+      "id": "C6-clave-26001",
+      "pregunta": "Para la clave 26001 en las comparaciones de 2020, muestra los dos valores con medida, nombre de origen, archivo y filas. ¿Son códigos INEGI?",
+      "inicio": "2026-10-24T05:29:38.073Z",
+      "events": [
+        {
+          "type": "retrieval",
+          "anchors": 16,
+          "facts": 10,
+          "claims": 0,
+          "conflicts": 0
+        },
+        {
+          "type": "text",
+          "content": "_Retrieved a subgraph: 16 anchor entities, 10 relationships, 0 document claims; correspondence states checked across all result pages._"
+        },
+        {
+          "type": "error",
+          "error": "Error: DIAG_CAPTURA_C6: payload interceptado antes de red; llamada real NO emitida (0 requests Google)"
+        },
+        {
+          "type": "done",
+          "mutated": false
+        }
+      ],
+      "respuesta": "",
+      "errores": [
+        "Error: DIAG_CAPTURA_C6: payload interceptado antes de red; llamada real NO emitida (0 requests Google)"
+      ],
+      "estado": "error",
+      "mutado": false
+    }
+  ],
+  "handshake": "_Connected: 2 ontology tools. Model: gemma-4-31b-it._",
+  "corpus_pregunta": "Para la clave 26001 en las comparaciones de 2020, muestra los dos valores con medida, nombre de origen, archivo y filas. ¿Son códigos INEGI?",
+  "fin": "2026-10-24T05:29:41.368Z",
+  "grafo_despues": {
+    "classes": 56,
+    "data_properties": 155,
+    "individuals": 27200,
+    "object_properties": 48,
+    "properties": 203,
+    "triples": 321210
+  },
+  "grafo_conservado": true
+}

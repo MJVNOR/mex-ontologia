@@ -1,0 +1,33 @@
+{
+  "sonda": "sidecar-protocolo",
+  "conclusion": "health/model.status/message NO admitidos por index.ts: solo chat y reset; la prueba viva cubre reset (sin modelo)",
+  "auditoria_estatica": {
+    "admite_health": false,
+    "admite_model_status": false,
+    "admite_message": false,
+    "tipos_entrada_reales": [
+      "chat",
+      "reset"
+    ],
+    "tipos_salida_reales": [
+      "text",
+      "error",
+      "tool_call",
+      "progress",
+      "retrieval",
+      "done",
+      "ready",
+      "reset_done"
+    ]
+  },
+  "prueba_viva_reset": {
+    "lineas": [
+      "{\"type\":\"text\",\"content\":\"_Connected: 114 ontology tools. Model: default._\"}",
+      "{\"type\":\"ready\"}",
+      "{\"type\":\"reset_done\"}"
+    ],
+    "ok": true,
+    "error": null,
+    "reset_enviado": true
+  }
+}

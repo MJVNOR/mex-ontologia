@@ -1,0 +1,29 @@
+{
+  "fecha_utc": "2026-10-23T11:35:47.694759+00:00",
+  "verificado": true,
+  "canal": "SELECT sobre http://127.0.0.1:8137/api/query",
+  "conteos": {
+    "variables_respaldadas": 1212,
+    "significados_candidatos": 23,
+    "conceptos": 940,
+    "correspondencias_revisadas": 836,
+    "correspondencias_candidatas": 3312,
+    "vinculos_ambiguos": 12,
+    "variables_calificadas": 149,
+    "componentes_calificador": 195
+  },
+  "consultas": {
+    "variables_respaldadas": "PREFIX mex: <https://example.org/mex-ontologi/vocab/> SELECT (COUNT(DISTINCT ?item) AS ?total) WHERE { ?item a mex:VariableDocumentada; mex:estadoSemantico \"respaldada_por_definicion\" . }",
+    "significados_candidatos": "PREFIX mex: <https://example.org/mex-ontologi/vocab/> SELECT (COUNT(DISTINCT ?item) AS ?total) WHERE { ?item a mex:VariableDocumentada; mex:estadoSemantico \"candidata_sin_definicion_suficiente\" . }",
+    "conceptos": "PREFIX mex: <https://example.org/mex-ontologi/vocab/> SELECT (COUNT(DISTINCT ?item) AS ?total) WHERE { ?item a mex:ConceptoCompartido . }",
+    "correspondencias_revisadas": "PREFIX mex: <https://example.org/mex-ontologi/vocab/> SELECT (COUNT(DISTINCT ?item) AS ?total) WHERE { ?item a mex:CorrespondenciaSemantica; mex:estadoCorrespondencia \"documental_revisada\" . }",
+    "correspondencias_candidatas": "PREFIX mex: <https://example.org/mex-ontologi/vocab/> SELECT (COUNT(DISTINCT ?item) AS ?total) WHERE { ?item a mex:CorrespondenciaSemantica; mex:estadoCorrespondencia \"candidata_por_nombre\" . }",
+    "vinculos_ambiguos": "PREFIX mex: <https://example.org/mex-ontologi/vocab/> SELECT (COUNT(DISTINCT ?item) AS ?total) WHERE { ?item a mex:CorrespondenciaSemantica; mex:estadoCorrespondencia \"ambigua_por_nombre\" . }",
+    "variables_calificadas": "PREFIX mex: <https://example.org/mex-ontologi/vocab/> SELECT (COUNT(DISTINCT ?item) AS ?total) WHERE { ?item mex:tieneCalificadorDocumentado ?q . }",
+    "componentes_calificador": "PREFIX mex: <https://example.org/mex-ontologi/vocab/> SELECT (COUNT(DISTINCT ?item) AS ?total) WHERE { ?v mex:tieneCalificadorDocumentado ?item . }"
+  },
+  "semantica_sha256": "df6effb8b64bafc32680e42a94870f191800107124ca7dd637dd70951185601f",
+  "manifiesto_sha256": "b7f3876ae7203e9ee191eb86d8f6f59255492c50343e91ed2b7541f7a931fbec",
+  "respaldo_verificado": true,
+  "limite": "No evalúa respuestas del chat ni habilita cruces entre fuentes."
+}

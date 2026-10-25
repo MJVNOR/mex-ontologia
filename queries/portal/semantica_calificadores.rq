@@ -1,0 +1,8 @@
+PREFIX mex: <{{BASE_IRI}}vocab/>
+SELECT ?variable ?nombre ?concepto ?dimension ?valor WHERE {
+  ?variable mex:nombreVariableLocal ?nombre ;
+            mex:significadoDocumentado ?concepto ;
+            mex:tieneCalificadorDocumentado ?calificador .
+  ?calificador mex:dimensionCalificador ?dimension ; mex:valorCalificador ?valor .
+}
+ORDER BY ?nombre ?dimension

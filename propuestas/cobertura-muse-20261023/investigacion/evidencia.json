@@ -1,0 +1,86 @@
+{
+ "fecha_utc": "2026-10-23",
+ "herramienta": "tools.obscura (pestaña propia tab-2, cerrada al final; sin otro navegador/curl/requests)",
+ "consultas_temas": 4,
+ "fuentes": [
+  {
+   "tema": "Portal Sonora: conjunto SEED Defunciones (publicador)",
+   "url": "https://datos.sonora.gob.mx/dataset/Sistema%20Epidemiol%C3%B3gico%20y%20Estad%C3%ADstico%20de%20Defunciones",
+   "titulo": "Sistema Epidemiológico y Estadístico de Defunciones - Portal de Datos Abiertos Sonora",
+   "fecha_consulta_utc": "2026-10-23",
+   "fragmento": "Recursos publicados: Diccionario y Defunciones 2022. Sin catálogo ni manual vinculado.",
+   "iris_variables": [
+    "https://example.org/mex-ontologi/definition/12f684e9-f4d5-4714-933d-aa153a812174%2F76",
+    "https://example.org/mex-ontologi/definition/12f684e9-f4d5-4714-933d-aa153a812174%2F77",
+    "https://example.org/mex-ontologi/definition/12f684e9-f4d5-4714-933d-aa153a812174%2F36",
+    "https://example.org/mex-ontologi/definition/12f684e9-f4d5-4714-933d-aa153a812174%2F37",
+    "https://example.org/mex-ontologi/definition/12f684e9-f4d5-4714-933d-aa153a812174%2F78"
+   ],
+   "variables": "CERTIFICADOPOR(D), SITIODEFUNCION(D), FECHACERTIFICACION (agente-7, pendientes)",
+   "nombre_publicado": "Sistema Epidemiológico y Estadístico de Defunciones (Secretaría de Salud Pública)",
+   "vigencia_acreditada": false,
+   "aplicabilidad_limitacion": "El publicador no publica manual/catálogo que vincule estas variables; solo diccionario con 'Pendiente de especificar'.",
+   "conclusion": "NEGATIVO: ninguna referencia que vincule variable local a manual/catálogo. No resuelve pendientes."
+  },
+  {
+   "tema": "DGIS: índice de catálogos NOM-024-SSA3-2012",
+   "url": "http://www.dgis.salud.gob.mx/contenidos/intercambio/iis_catalogos_gobmx.html",
+   "titulo": "Catálogos - DGIS",
+   "fecha_consulta_utc": "2026-10-23",
+   "fragmento": "SIRES deben utilizar catálogos fundamentales del Apéndice Normativo A, matriz publicada aquí.",
+   "iris_variables": [],
+   "variables": "(índice; remite a CLUES, Municipios, Localidades, Entidades, Lenguas Indígenas, Diagnósticos)",
+   "nombre_publicado": "Matriz de Catálogos Fundamentales, NOM-024-SSA3-2012",
+   "vigencia_acreditada": false,
+   "aplicabilidad_limitacion": "Índice general; no vincula por sí solo ninguna variable local.",
+   "conclusion": "NEUTRO: confirma existencia de catálogos candidatos (Entidades, Diagnósticos) sin documentar su contenido. CLUES/Municipios ya cubiertos por piloto."
+  },
+  {
+   "tema": "DGIS: Catálogo Lenguas Indígenas CAT_LENGUAS_INDIGENAS",
+   "url": "http://www.dgis.salud.gob.mx/contenidos/intercambio/lenguas_indigenas_gobmx.html",
+   "titulo": "Catálogo Lenguas Indígenas - DGIS",
+   "fecha_consulta_utc": "2026-10-23",
+   "fragmento": "Clasificación De Lenguas Indígenas. CAT_LENGUAS_INDIGENAS. Registrar la lengua indígena. INEGI.",
+   "iris_variables": [
+    "https://example.org/mex-ontologi/definition/12f684e9-f4d5-4714-933d-aa153a812174%2F10",
+    "https://example.org/mex-ontologi/definition/12f684e9-f4d5-4714-933d-aa153a812174%2F11",
+    "https://example.org/mex-ontologi/definition/22202305-2d02-4c49-b216-cc98224357f0%2F13",
+    "https://example.org/mex-ontologi/definition/22202305-2d02-4c49-b216-cc98224357f0%2F14",
+    "https://example.org/mex-ontologi/definition/8c0e76ff-3a86-4b1d-beee-b04bebe7df8d%2F27"
+   ],
+   "variables": "HABLALENGUAINDIGENA(D) SEED; HABLALENGUAINDIGENA(D) Nacimientos; Grupo Indig. (Habla) educación",
+   "nombre_publicado": "Clasificación De Lenguas Indígenas, CAT_LENGUAS_INDIGENAS, origen INEGI; actualización 2018, página 2021-07-01",
+   "vigencia_acreditada": false,
+   "aplicabilidad_limitacion": "Catálogo nacional genérico; diccionarios locales no declaran catálogo ni versión; última actualización 2018 previa a los datos.",
+   "conclusion": "CANDIDATA SIN CONFIRMAR: documenta el catálogo nacional pertinente pero NO acredita que las variables locales lo usen. Sin promoción."
+  },
+  {
+   "tema": "DGIS: Catálogo Localidades CAT_LOCALIDADES",
+   "url": "http://www.dgis.salud.gob.mx/contenidos/intercambio/localidades_gobmx.html",
+   "titulo": "Catálogo Localidades - DGIS",
+   "fecha_consulta_utc": "2026-10-23",
+   "fragmento": "Catálogo de Claves de Localidades. CAT_LOCALIDADES. Ubicar referencia geográfica. INEGI mensual.",
+   "iris_variables": [
+    "https://example.org/mex-ontologi/definition/12f684e9-f4d5-4714-933d-aa153a812174%2F74",
+    "https://example.org/mex-ontologi/definition/12f684e9-f4d5-4714-933d-aa153a812174%2F75",
+    "https://example.org/mex-ontologi/definition/22202305-2d02-4c49-b216-cc98224357f0%2F104",
+    "https://example.org/mex-ontologi/definition/22202305-2d02-4c49-b216-cc98224357f0%2F105"
+   ],
+   "variables": "LOCALIDADOCURRENCIA(D), LOCALIDADCERTIFICA(D)",
+   "nombre_publicado": "Catálogo de Claves de Localidades, CAT_LOCALIDADES, origen INEGI; actualización septiembre 2026, página 2026-10-21",
+   "vigencia_acreditada": false,
+   "aplicabilidad_limitacion": "Catálogo vigente y fechado, pero diccionarios locales no declaran catálogo; descripciones 'Pendiente de especificar'.",
+   "conclusion": "CANDIDATA SIN CONFIRMAR: fuente vigente pertinente, sin vínculo declarado a variables locales. Sin promoción."
+  }
+ ],
+ "negativos": [
+  "tools.obscura.browser_search sin resultados para toda consulta (no usable); se uso navegacion directa + Bing via browser_navigate.",
+  "Google bloquea automatizacion (CAPTCHA trafico inusual); sin resultados Google.",
+  "gob.mx/sesnsp URL adivinada devuelve 404; instrumento SESNSP de registro de delitos no localizado en presupuesto.",
+  "Bing INEGI defunciones solo devuelve portada inegi.gob.mx; cuestionario/formato no localizado en presupuesto.",
+  "Certificado de defuncion SSA/DGIS (CERTIFICADOPOR, SITIODEFUNCION, SITIOOCURRENCIALESION, CIECAUSABASICA): sin pagina oficial localizada.",
+  "Semana epidemiologica DGE/SINAVE (no_semana), SEP formato 911 (educacion), INEGI Marco Geoestadistico: no consultados (fuera de presupuesto)."
+ ],
+ "sin_promociones": true,
+ "sin_cambios_diccionarios": true
+}

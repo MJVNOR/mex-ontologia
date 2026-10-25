@@ -1,0 +1,209 @@
+{
+ "rol": "B-auditoria-tecnica",
+ "version": "v002",
+ "fecha_utc": "2026-10-24T10:24:47.204811+00:00",
+ "artefacto": "auditoria-codigo",
+ "estado": "BLOQUEADO_pendiente_sello_I-codigo_v001",
+ "alcance": "Auditoria de codigo I-codigo/v001 + P1-final (v002) + P4-v002 bajo propuestas/plan-tras-r8/ejecucion-20261024/. Sin integrar codigo. Sin produccion, sin Gemma, sin Studio.",
+ "v001_preservado": {
+  "nota": "v001 terminado e intacto; este v002 no lo modifica",
+  "archivos": [
+   {
+    "ruta": "propuestas/plan-tras-r8/ejecucion-20261024/B-auditoria-tecnica/v001/dictamen.json",
+    "sha256": "0f43545b3fcef99588ac17fde2fca9784cf368a4cffb7ac0604894f29fb0f481",
+    "bytes": 12481
+   },
+   {
+    "ruta": "propuestas/plan-tras-r8/ejecucion-20261024/B-auditoria-tecnica/v001/dictamen.md",
+    "sha256": "ab8546cd8c9bbb1822621b65dceb2f962076108506246cdf7f80e4259ef74c1d",
+    "bytes": 4798
+   }
+  ]
+ },
+ "sellos_verificados_por_codigo": {
+  "P1-qudt_v002": {
+   "sello": "propuestas/plan-tras-r8/ejecucion-20261024/P1-qudt/v002/congelada.json",
+   "archivos_sellados": 21,
+   "verificacion": "21/21 SHA coinciden (incluye raiz P1: build/verify v001+v002, candidatas, evidencias; excluye v001 historica y el propio sello)",
+   "exclusion_v001_historica": true
+  },
+  "P4-shacl-versionado_v002": {
+   "sello": "propuestas/plan-tras-r8/ejecucion-20261024/P4-shacl-versionado/v002/congelada.json",
+   "archivos_sellados": 3,
+   "verificacion": "3/3 SHA coinciden (entrega.json/entrega.md/generar_v002.py)",
+   "conteos_sellados": {
+    "ambos_en_snapshot": 0,
+    "fixtures_true": 3,
+    "fixtures_false": 1
+   }
+  },
+  "W-estandares_v003": {
+   "sello": "propuestas/plan-tras-r8/ejecucion-20261024/W-estandares/v003/congelada.json",
+   "archivos_sellados": 20,
+   "verificacion": "20/20 SHA+bytes coinciden; v001/v002 preservadas sin edicion"
+  }
+ },
+ "sha_entregas": {
+  "P1-qudt_v002": [
+   {
+    "ruta": "propuestas/plan-tras-r8/ejecucion-20261024/P1-qudt/v002/entrega.json",
+    "sha256": "d8a05a0af516db2c041118176f6b55628cd4ff5a6f2732d30d5b56f6d4d13357",
+    "bytes": 6776
+   },
+   {
+    "ruta": "propuestas/plan-tras-r8/ejecucion-20261024/P1-qudt/v002/entrega.md",
+    "sha256": "f2026a268fae3194d0ea5c0b940f817953dc40cf296638bafb7d340336d2d212",
+    "bytes": 697
+   },
+   {
+    "ruta": "propuestas/plan-tras-r8/ejecucion-20261024/P1-qudt/v002/propuesta-qudt.ttl",
+    "sha256": "fc804fa2199b1b558d44bc9986497632b873a45bf27b1a48dff8909cb409ade9"
+   },
+   {
+    "ruta": "propuestas/plan-tras-r8/ejecucion-20261024/P1-qudt/v002/vocabulario.ttl",
+    "sha256": "9dcff9420cb6e31b9efb4b11c21ba39c0a09ad9249b0f44a41a46bc1f9ae75c8"
+   },
+   {
+    "ruta": "propuestas/plan-tras-r8/ejecucion-20261024/P1-qudt/v002/pruebas.json",
+    "sha256": "a364b8da88aab6f425053a72be9841dac4abc2eab3a904e9849d20f597f7aaa0"
+   }
+  ],
+  "P4-shacl-versionado_v002": [
+   {
+    "ruta": "propuestas/plan-tras-r8/ejecucion-20261024/P4-shacl-versionado/v002/entrega.json",
+    "sha256": "991ad6d5fbbebad17681b2209873cd547b9c42b1866ac2c366a43d620f5ae4aa"
+   },
+   {
+    "ruta": "propuestas/plan-tras-r8/ejecucion-20261024/P4-shacl-versionado/v002/entrega.md",
+    "sha256": "bc5c9fcac530ce3efdc2dd3f2d18d6da9ffb5e7fcd15977dcb77d37920b57ecd"
+   },
+   {
+    "ruta": "propuestas/plan-tras-r8/ejecucion-20261024/P4-shacl-versionado/v002/generar_v002.py",
+    "sha256": "0df6514736f2b0532455471704c7bdd9ab1e2411c9af8c21f33e03b34f8f1650",
+    "nota": "generador: NO ejecutado (auditoria no integra codigo)"
+   }
+  ],
+  "W-estandares_v003": [
+   {
+    "ruta": "propuestas/plan-tras-r8/ejecucion-20261024/W-estandares/v003/entrega.json",
+    "sha256": "7900e3e92596b8e0d1502abb431964c98ed27b8c31a74ad06dcf0e7cb76c6bf0",
+    "bytes": 8634
+   },
+   {
+    "ruta": "propuestas/plan-tras-r8/ejecucion-20261024/W-estandares/v003/verificacion-hashes.json",
+    "sha256": "9a7d5dca8abcb724ccfb6603350b625b0ecec5d348f73d04482025984974d6f1",
+    "bytes": 3886
+   }
+  ]
+ },
+ "P1_estadoPropuesta": {
+  "estado": "propuesta_para_auditar",
+  "casos": [
+   {
+    "id": "P1-Q1",
+    "resultado": "propuesta_para_auditar",
+    "unidad_qudt": "http://qudt.org/vocab/unit/MilliM"
+   },
+   {
+    "id": "P1-Q2",
+    "resultado": "sin_evidencia_para_integrar",
+    "unidad_qudt": null
+   },
+   {
+    "id": "P1-Q3",
+    "resultado": "propuesta_para_auditar",
+    "unidad_qudt": "http://qudt.org/vocab/unit/HA"
+   }
+  ],
+  "nota": "Q1 MilliM y Q3 HA propuesta_para_auditar (IRIs http verificadas); Q2 HectoM3 sin_evidencia_para_integrar (negativo W, sin conversion ni factor). v001 antecedente rechazado preservado.",
+  "sello_w_pendiente_resuelto": "P1 v002 declaraba sello W v002 PENDIENTE; W v003 (sellado 20/20) verifica los 4 SHAs normativos citados por P1 y repara el hash truncado de peticiones P2: condicion lista para auditor.",
+  "consultas": {
+   "q1_filas": 2,
+   "q2_filas": 1,
+   "q3_filas": 5,
+   "checks": {
+    "sujetos_http_exactos": true,
+    "solo_iris_qudt_http": true,
+    "sin_hecto_alias": true,
+    "sin_quantityvalue": true,
+    "sin_conversion": true,
+    "sin_aprobacion_en_grafo": true,
+    "dataset_distinto_resource": true,
+    "uuid_con_formato": true,
+    "q2_sin_vinculo": true
+   }
+  }
+ },
+ "W_reparacion_metadato": {
+  "defecto": "v002/entrega.json citaba para P2-owl-time/peticiones-web.json un sha256 truncado de 41 chars",
+  "citado_truncado": "e2f19882fdb86e8c89196130acef7f292b67ca14e",
+  "real_64hex_verificado": "e2f19882fdb86e8c89196130acef11de2e08a98dcac6e65218f7f292b67ca14e",
+  "reparado_en": "W v003 (sellado); verificacion-hashes.json 11/11 (10 coinciden + 1 reparado)",
+  "ningun_otro_hash_difiere": true,
+  "aclaracion_M3": "M3 acredita solo existencia de la IRI; no autoriza sustitucion hm3->M3 ni factores; Q2 sigue pendiente"
+ },
+ "P4_v002_resumen": {
+  "estado": "propuesta_para_auditar",
+  "forma_v001_sha": "fc301d854b6c9175be601282ab4073f054a1736103b92ea634003c7bcc2b148d",
+  "snapshot": "data/catalogo/studio-live.ttl @ ebce180573d745f98798732e83a9ea9b79681d47cb71f5cec5a18d3543a2fe57",
+  "snapshot_stats": {
+   "classes": 56,
+   "data_properties": 155,
+   "individuals": 27314,
+   "object_properties": 48,
+   "properties": 203,
+   "triples": 322952
+  },
+  "resultado": "conforms=true, 0 violaciones, 1442 focos (1423 doc + 16 cand + 0 ambos; 3 sin ninguno)",
+  "fixtures": "3x true + 1x false con motor real",
+  "versionado": {
+   "format_version": "1 (esquema de esta entrega; sube solo si cambia el esquema)",
+   "release": "R8 vigente (cambia solo con ronda aprobada; R9 cuando se integre lo aprobado)",
+   "regla": "manifiestos R1-R8 intactos; solo append/snapshots futuros; sin migraciones historicas"
+  },
+  "nota_motor": "open-ontologies.exe por SHA (sin --version); sh:not/xone acotado a instalacion probada"
+ },
+ "I-codigo_v001": {
+  "sello": "AUSENTE (sin congelada.json ni entrega.json; en elaboracion)",
+  "inventario_exactos_no_sello": [
+   {
+    "ruta": "propuestas/plan-tras-r8/ejecucion-20261024/I-codigo/v001/scripts/consolidar_semantica.py",
+    "sha256": "2a2e79d1b54ba393c05b913055cff0ec488bb22fcf4554e5ba541707c442d2f8",
+    "bytes": 38772
+   },
+   {
+    "ruta": "propuestas/plan-tras-r8/ejecucion-20261024/I-codigo/v001/scripts/ampliar_portal.py",
+    "sha256": "58603b22c277d74ff61c45884cf985710c29addc581ee462a72a28b6d0d361a4",
+    "bytes": 16638
+   },
+   {
+    "ruta": "propuestas/plan-tras-r8/ejecucion-20261024/I-codigo/v001/data-integracion-ronda-9/modelo/vocabulario-minimo.ttl",
+    "sha256": "9dcff9420cb6e31b9efb4b11c21ba39c0a09ad9249b0f44a41a46bc1f9ae75c8",
+    "bytes": 1875
+   },
+   {
+    "ruta": "propuestas/plan-tras-r8/ejecucion-20261024/I-codigo/v001/data-integracion-ronda-9/shapes/shape-exclusion-significado.ttl",
+    "sha256": "fc301d854b6c9175be601282ab4073f054a1736103b92ea634003c7bcc2b148d",
+    "bytes": 1056
+   }
+  ],
+  "consistencias_observadas": [
+   "vocabulario-minimo.ttl == P1 v002 vocabulario.ttl (9dcff942...)",
+   "shape-exclusion-significado.ttl == P4 v002 forma_exacta_v001 (fc301d85...)"
+  ],
+  "tests_staging": "NO ejecutables: tests/ solo contiene fixtures/ vacio; sin casos ni manifiestos sellados",
+  "invariantes_R8_manifiesto_AmasB": "NO verificables: sin manifiesto ni auditorias A/B selladas en v001"
+ },
+ "desbloqueo_requerido": [
+  "I-codigo/v001/congelada.json (SHA-256 por codigo, cubriendo scripts+tests+datos+manifiesto)",
+  "I-codigo/v001/entrega.json (estado, alcance, invariantes R8, manifiesto, auditorias A/B por caso, scope)",
+  "tests staging con fixtures sellados y comandos de ejecucion",
+  "tras ello: ejecutar tests staging en aislado, verificar invariantes/manifiesto/A+B por caso, y emitir dictamen v002 final"
+ ],
+ "limites": [
+  "No se ejecuto ningun generador (generar_v002.py, build_*.py) ni se integro codigo",
+  "Solo lectura fuera de B-auditoria-tecnica/v002; unica escritura: v002/auditoria-codigo.json/md",
+  "Sin produccion/ontologia/shapes/manifiestos/grafo/Studio; sin Gemma; sin contactos externos",
+  "Correcciones futuras en v003+ sin editar lo sellado"
+ ]
+}

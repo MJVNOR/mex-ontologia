@@ -1,0 +1,89 @@
+{
+  "modelo": "gemma-4-31b-it",
+  "tpm": 16000,
+  "pacing_ms": 65000,
+  "espaciado_minimo_ms": 65000,
+  "espera_maxima_ms": 900000,
+  "max_input_tokens": 6500,
+  "llamadas_modelo": 0,
+  "corpus_historico": "propuestas/pendientes-muse-r4/chat/corpus.json (intacto; C1 fijado pre-sync)",
+  "corpus_vigente": "propuestas/pendientes-muse-r4/recuperacion-f2/corpus-vigente.json (C1 con conteos dinamicos del grafo)",
+  "conteos_vivos": {
+    "revisadas": 4466,
+    "comparaciones2020": 72,
+    "evidencias": 144,
+    "triples": 320869
+  },
+  "evidencia_contextual_usuario": {
+    "tipo": "captura dashboard Google aportada por el usuario",
+    "modelo_observado": "gemma-4-31b",
+    "rpm": "1/30",
+    "tpm": "13.08K/16K",
+    "rpd": "1/14.4K",
+    "interpretacion": "TPM por minuto casi agotado con RPM y RPD holgados: compatible con limite por minuto por llamadas sucesivas (hipotesis; harness anterior con 2s entre ellas). NO prueba peticion individual >16K ni cuota diaria agotada (RPD 1/14.4K)."
+  },
+  "triples_antes": 320869,
+  "triples_despues": 320869,
+  "grafo_sin_cambios": true,
+  "casos": [
+    {
+      "id": "C1-totales",
+      "contexto_caracteres": 17532,
+      "est_input_tokens": 6349,
+      "bajo_presupuesto": true,
+      "faltan": [],
+      "algunoOk": true,
+      "prohibidos": [],
+      "conteos_vivos": {
+        "revisadas": 4466,
+        "comparaciones2020": 72,
+        "evidencias": 144
+      }
+    },
+    {
+      "id": "C2-f2-evidencia",
+      "contexto_caracteres": 17348,
+      "est_input_tokens": 6298,
+      "bajo_presupuesto": true,
+      "faltan": [],
+      "algunoOk": true,
+      "prohibidos": []
+    },
+    {
+      "id": "C3-f2-igualdad",
+      "contexto_caracteres": 17561,
+      "est_input_tokens": 6353,
+      "bajo_presupuesto": true,
+      "faltan": [],
+      "algunoOk": true,
+      "prohibidos": []
+    },
+    {
+      "id": "C4-definicion-diccionario",
+      "contexto_caracteres": 17600,
+      "est_input_tokens": 6371,
+      "bajo_presupuesto": true,
+      "faltan": [],
+      "algunoOk": true,
+      "prohibidos": []
+    },
+    {
+      "id": "C5-diferencia-variables",
+      "contexto_caracteres": 17602,
+      "est_input_tokens": 6381,
+      "bajo_presupuesto": true,
+      "faltan": [],
+      "algunoOk": true,
+      "prohibidos": []
+    },
+    {
+      "id": "C6-clave-26001",
+      "contexto_caracteres": 17494,
+      "est_input_tokens": 6351,
+      "bajo_presupuesto": true,
+      "faltan": [],
+      "algunoOk": true,
+      "prohibidos": []
+    }
+  ]
+}

@@ -1,0 +1,148 @@
+{
+  "accion": "fase-2 gemma-real: presupuesto 6500 + strip thought + build + instalar bundle efectivo Codex (sin reiniciar, sin modelo, sin tocar proceso/engine/UI/grafo/.env)",
+  "repo_archivos": {
+    "graphrag_ts": {
+      "pre_fase2": {
+        "sha256": "030d539b8806614040c4ec7e660fc5fa79faefc474b9b47fae45b96b37ed8d",
+        "nota": "v4 con presupuesto 10000"
+      },
+      "post": {
+        "sha256": "378a1ad210ccc089acf1502bf7c87b714a48a4c1d7733f773a2e4eae4a37fef9",
+        "bytes": 69960
+      },
+      "copia_propuesta": {
+        "sha256": "378a1ad210ccc089acf1502bf7c87b714a48a4c1d7733f773a2e4eae4a37fef9",
+        "bytes": 69960
+      },
+      "copia_igual_repo": true,
+      "patch": {
+        "sha256": "3e94528dd1d815a3d1f1786b392ea4dbcbd23b81ff823ce451aab9f6dd8b1604",
+        "bytes": 29883,
+        "ruta": "propuestas/pendientes-muse-r4/recuperacion-f2/graphrag.f2.patch"
+      },
+      "respaldo_original": "propuestas/pendientes-muse-r4/recuperacion-f2/aplicacion/graphrag.ts.orig"
+    },
+    "index_ts": {
+      "pre": {
+        "sha256": "dd68d71b85833ef84c4548119b9497064f740fa171ceebe68d711555a337cd66",
+        "bytes": 13389
+      },
+      "post": {
+        "sha256": "cb7cdb83190a0ebc381562f6513ba96d1563cf5d4ff540548af607a6360a8d9c",
+        "bytes": 14408
+      },
+      "respaldo_patched": {
+        "sha256": "cb7cdb83190a0ebc381562f6513ba96d1563cf5d4ff540548af607a6360a8d9c",
+        "bytes": 14408
+      },
+      "cambio_propio": "EFFECTIVE_MODEL + retrieve(...,{model}) [fase-1] + import stripThoughtBlocks y filtrado en answerOnce + comentario 6500 [fase-2]"
+    },
+    "providers_openai_ts": {
+      "cambio_propio": "export stripThoughtBlocks() puro; sin tocar step/tool_calls/thought_signature ni otros proveedores",
+      "post": {
+        "sha256": "b65afd40429f2c7e132a5a7865fbf52af05459640c76c0c697990cb8171695d0",
+        "bytes": 5291
+      }
+    },
+    "openai_test_ts": {
+      "cambio_propio": "describe stripThoughtBlocks con 5 casos sinteticos (no reasoning real)"
+    }
+  },
+  "alcance_repo": {
+    "archivos_modificados": [
+      "studio/src-tauri/sidecars/agent/graphrag.ts",
+      "studio/src-tauri/sidecars/agent/index.ts",
+      "studio/src-tauri/sidecars/agent/providers/openai.ts (solo helper puro exportado)",
+      "studio/src-tauri/sidecars/agent/openai.test.ts (solo tests nuevos)"
+    ],
+    "archivos_no_tocados": [
+      "otros proveedores (anthropic/claudecli/alias/types intactos en comportamiento)",
+      ".env, motor, grafo, Studio UI, procesos"
+    ]
+  },
+  "presupuesto_6500": {
+    "motivo": "medido fase integrador: 9845 est -> 14072 reales (x1.43); 9607 est -> 14279 reales (x1.49); 10000 est ~= 14300 reales, demasiado cerca de 16000 TPM",
+    "max_input_tokens_estimados": 6500,
+    "reales_estimados": "~9300 + salida 4096 < 16000 TPM",
+    "salida_max_tokens": "4096 (ONTO_MAX_OUTPUT_TOKENS por defecto, sin cambio)",
+    "pacing_minimo_ms": 65000,
+    "tpm_proveedor": 16000
+  },
+  "control_salida_thought": {
+    "regla": "answerOnce filtra <thought>/<think> cerrados o truncados; si queda vacio no se afirma ni se cachea respuesta",
+    "sin_duplicar": "un solo helper + un solo call-site (answerFromGraph via answerOnce); tool_calls y thought_signature intactos"
+  },
+  "bundle_instalacion_efectiva_codex": {
+    "ruta": "C:/Users/marti/AppData/Local/Packages/OpenAI.Codex_2p2nqsd0c76g0/LocalCache/Local/open-ontologies-studio/sidecars/agent/dist/index.js",
+    "exe_igual_release": true,
+    "prueba_efectivo": "package.json de la instalacion declara main=dist/index.js junto al exe; tauri.conf mapea sidecars/agent/dist al mismo layout",
+    "respaldo_previo_fase2": "propuestas/pendientes-muse-r4/recuperacion-f2/aplicacion/dist-index.js.codex-instalado.pre6500.orig",
+    "pre": {
+      "sha256": "c1d2ac0eb09ee59abfafd1dac42f0be6f682d1f8d8f8e4fedc2f4df54a51415c",
+      "bytes": 563678
+    },
+    "post": {
+      "sha256": "37f19638e24dcb8b9b5699be367a2ab56230b70909b9b2b3ef6763381514000c",
+      "bytes": 564051
+    },
+    "igual_repo_recien_compilado": true,
+    "contiene_parche_y_strip": true,
+    "baks_previos_no_tocados": true
+  },
+  "bundle_arbol_release_repo": {
+    "ruta": "C:/Users/marti/Documents/open-ontologies/studio/src-tauri/target/release/sidecars/agent/dist/index.js",
+    "nota": "arbol de build del repo, NO la instalacion efectiva; en sync con el mismo build",
+    "post": {
+      "sha256": "37f19638e24dcb8b9b5699be367a2ab56230b70909b9b2b3ef6763381514000c",
+      "bytes": 564051
+    }
+  },
+  "efectos_postergados": "NO reiniciado por orden expresa (prueba espaciada de root en curso): el proceso Studio sigue con el bundle anterior en memoria hasta que el usuario lo reinicie",
+  "harness": {
+    "estado": "reparado y verificado por defecto (0 llamadas): llamada REAL con OpenAICompatibleProvider, Gemma4 fijado (rechaza otros), preflight 6500, >=65s entre inicios, RetryInfo (esperas >15min => pendiente_cuota), capturas saneadas, oraculo C1 dinamico + corpus-vigente.json (historico intacto)",
+    "sha256": "22f4801937ed182fbd279c75d618a15445b27c63eda89332c347bb18844deb88",
+    "corpus_vigente_sha256": "a612bd41f35d5d5a8b5c4aac90bf22448e110c3cac0c89b2303a171a834682d5"
+  },
+  "pruebas": {
+    "npm_test_repo": "vitest 49 passed, 1 skipped (44 previos + 5 stripThoughtBlocks nuevos)",
+    "npm_build": "tsc --noEmit OK + esbuild OK",
+    "test_recorte_thought": "RECORTE OK (11/11: presupuesto 6500, strip cerrado/incompleto/think/multiples/vacio/passthrough)",
+    "test_regresion": "REGRESION OK (C2 F2; resto byte-identicos salvo C6 aditivo)",
+    "test_fichas": "FICHAS OK incl. re-verificacion post-sync (F1/F3 sin texto F2, F9 vacio, F2 72/144)",
+    "test_presupuesto": "PRESUPUESTO OK 6/6 <= 6500 est (6298-6381), sin truncar, sin prohibidos",
+    "harness_gemma": "6/6 bajo presupuesto, C1 con conteos vivos 4466/72/144, 0 llamadas, grafo intacto antes==despues",
+    "llamadas_modelo": 0,
+    "solo_select": true
+  },
+  "estado_grafo_vivo_medido": {
+    "triples": 320869,
+    "revisadas": 4466,
+    "comparaciones_2020": 72,
+    "evidencias": 144,
+    "nota": "sync del integrador (ronda5); nuestras corridas no modifican el grafo (antes==despues)"
+  },
+  "reporte_honesto_429": {
+    "afirma": "cuota por minuto (TPM 13.08K/16K con RPM 1/30 y RPD 1/14.4K en dashboard del usuario)",
+    "causalidad_llamadas": "hipotesis compatible, NO probada solo con el dashboard",
+    "cuota_diaria_agotada": false,
+    "no_afirma": [
+      "que 13.08K pruebe una peticion individual >16K (de hecho C4/C5 con 1401/1508 est tambien dieron 500 externo)",
+      "cuota diaria agotada (RPD 1/14.4K la descarta)"
+    ],
+    "todas_las_cifras_de_tokens_son": "ESTIMADAS salvo prompt_tokens/completion_tokens del informe del integrador",
+    "mediciones_integrador": {
+      "C2": {
+        "est": 9833,
+        "prompt_tokens_reales": 14072,
+        "completion_tokens": 179
+      },
+      "C3": {
+        "est": 9607,
+        "prompt_tokens_reales": 14279,
+        "completion_tokens": 0
+      }
+    }
+  },
+  "entrega_congelada": "propuestas/pendientes-muse-r4/recuperacion-f2/entrega.json NO modificada",
+  "generado_por": "script json.dump con hashes calculados desde bytes, no transcritos"
+}

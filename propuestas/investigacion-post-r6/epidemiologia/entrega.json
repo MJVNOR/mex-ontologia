@@ -1,0 +1,1250 @@
+{
+  "grupo_fuente": "epidemiologia",
+  "generado_en_utc": "2026-10-24T06:25:00+00:00",
+  "ids_asignados": 25,
+  "resumen_investigacion": "Revalidacion fresca 2026-10-24 del package (sin cambios: version null, fuentes_extras vacio, edicion 2022-01-01/2022-12-31) y del datastore del diccionario (59 filas; 22 en Pendiente de especificar; catalogos vacios). Novedad frente a R6: (1) examen por ID del Manual SUIVE 32 (pp. 17, 18, 24, 26, 50) que R6 solo cito como contexto: el instrumento nacional no acredita ninguna columna local (formato de 30 columnas vs 59 locales; lista de instituciones distinta; acumulado como concepto analitico semanal sin regla de computo local; Ign. de pantalla SUAVE sin vinculo; sin version CIE vinculada al recurso 2022); (2) re-descarga del manual desde URL oficial DGE: byte-identico (mismo SHA), Last-Modified 2021-08-10 anterior al periodo 2022, luego sin vinculo edicion-recurso-periodo; (3) busquedas web nuevas acotadas: sin edicion 2022 del instrumento ni codebook/nota del publicador Sonora; boletin Sonora SE 37 pista bloqueada por 403. Resultado: 0 propuestas (ningun ID satisface el criterio de aceptacion: documento del publicador que fije sentido literal con conjunto+diccionario+fila+huella y vincule edicion-recurso-periodo, o diccionario corregido/codebook aplicable); 25 siguen pendientes con hueco exacto identificado.",
+  "fuentes": [
+    {
+      "ruta": "propuestas/investigacion-post-r6/epidemiologia/evidencia/package_show_2026-10-24.json",
+      "url": "https://datos.sonora.gob.mx/api/3/action/package_show?id=dca16d84-dbf0-4501-b702-dc6372a480ea",
+      "sha256": "0a09e4667f14edee56e8ae5e931d22b7766161621b765ed8f88c295c1f2a68d1",
+      "fecha_consulta": "2026-10-24",
+      "localizador": "result.resources[1] edicion 2022; result.fuentes_extras; result.version",
+      "rol": "Fija edicion aplicable y confirma sin Fuentes extras ni nota metodologica (sin cambios vs R6)."
+    },
+    {
+      "ruta": "propuestas/investigacion-post-r6/epidemiologia/evidencia/datastore_diccionario_2026-10-24.json",
+      "url": "https://datos.sonora.gob.mx/api/3/action/datastore_search?resource_id=2334deaa-dd0c-444e-b038-4cc556ad715d&limit=60&offset=0",
+      "sha256": "dfe6e73b759a22c5b0a2acc5c9b03573b5d1fed39cd088f5b542c907ca91b348",
+      "fecha_consulta": "2026-10-24",
+      "localizador": "records[_id=9..44]",
+      "rol": "Revalidacion live: descripciones y catalogos vacios sin cambios vs R6."
+    },
+    {
+      "ruta": "propuestas/investigacion-post-r6/epidemiologia/evidencia/http_log.json",
+      "url": null,
+      "origen": "generado local 2026-10-24 (cabeceras curl + resultados webfetch/websearch)",
+      "sha256": "0f0c01573fe25b4e1a659fc01154b678b8a8956156787f8099f6af7876e706a0",
+      "fecha_consulta": "2026-10-24",
+      "localizador": "consultas[] + busquedas_web_limitadas[]",
+      "rol": "Log HTTP y busquedas negativas acotadas (manual 200 byte-identico; xlsx/csv/boletin 403 Cloudflare sin evadir)."
+    },
+    {
+      "ruta": "propuestas/investigacion-post-r6/epidemiologia/evidencia/examen_manual_suive32_paginas.txt",
+      "url": "https://epidemiologia.salud.gob.mx/gobmx/salud/documentos/manuales/32_ManualSuive.pdf",
+      "origen": "texto extraido del preservado local (byte-identico al fresco 2026-10-24)",
+      "sha256": "9c20cd10f4673483d449551e2a48613e5c030d73ad929aa7ff033f06bf7393cc",
+      "fecha_consulta": "2026-10-24",
+      "localizador": "paginas 17, 18, 24, 26, 50 (texto integro normalizado)",
+      "rol": "Examen por ID nuevo frente a R6: el manual nacional no acredita ninguna de las 25 columnas (30 vs 59 columnas; instituciones distintas; Last-Modified 2021-08-10 < 2022)."
+    },
+    {
+      "ruta": "propuestas/pendientes-muse-r5/catalogos-web/evidencia/manual_suive_32.pdf",
+      "url": "https://epidemiologia.salud.gob.mx/gobmx/salud/documentos/manuales/32_ManualSuive.pdf",
+      "origen": "preservado local revalidado fresco 2026-10-24 (mismo SHA)",
+      "sha256": "f35746a0353c902b03d8ae01f703d1dfafdf3ad4bbf01777b648353d1b833757",
+      "fecha_consulta": "2026-10-24",
+      "localizador": "bytes completos; pp. 17, 18, 24, 26, 50",
+      "rol": "Instrumento nacional de contexto; sin vinculo edicion-recurso-periodo con el recurso local 2022."
+    },
+    {
+      "ruta": "data/portal/inspecciones/2334deaa-dd0c-444e-b038-4cc556ad715d.json",
+      "url": null,
+      "origen": "inspeccion local preservada",
+      "sha256": "298786f09028a94004420c08eb28120294b130378a0cf12d609a1bffb950288d",
+      "fecha_consulta": "2026-10-23 (preservada; revalidada via datastore 2026-10-24)",
+      "localizador": "/definiciones/8, /definiciones/10, /definiciones/12, /definiciones/22..43",
+      "rol": "Fila de diccionario por cada ID (descripcion/ejemplo/catalogo + huella)."
+    },
+    {
+      "ruta": "data/portal/inspecciones/1689b19c-b0dc-4e39-bf07-e3a2e684ef1a.json",
+      "url": null,
+      "origen": "inspeccion local preservada",
+      "sha256": "31861377197a43619d42bf22a49c3b3f34b122f800f0f29d4d2fdf75a03a4c60",
+      "fecha_consulta": "2026-10-23 (preservada)",
+      "localizador": "hoja=SUIVE posiciones 9, 11, 13, 23..44 (59 campos)",
+      "rol": "Esquema fisico: posicion de cada columna local."
+    }
+  ],
+  "decisiones": [
+    {
+      "definicion_iri": "https://example.org/mex-ontologi/definition/2334deaa-dd0c-444e-b038-4cc556ad715d%2F9",
+      "variable": "cve_cie10",
+      "descripcion_original": "Clave",
+      "huella_fila_diccionario": "681e909fd28c2155e3b0b4396e185e481355919e4d65c2888506c08869374114",
+      "estado": "sigue_pendiente",
+      "significado_propuesto": null,
+      "evidencia": [
+        {
+          "ruta": "data/portal/inspecciones/2334deaa-dd0c-444e-b038-4cc556ad715d.json",
+          "sha256": "298786f09028a94004420c08eb28120294b130378a0cf12d609a1bffb950288d",
+          "localizador": "/definiciones/8 (Nombre variable=cve_cie10)",
+          "afirmacion_soportada": "Descripcion='Clave', catalogo de referencia vacio, ejemplo registrado; huella 681e909fd28c2155e3b0b4396e185e481355919e4d65c2888506c08869374114."
+        },
+        {
+          "ruta": "data/portal/inspecciones/1689b19c-b0dc-4e39-bf07-e3a2e684ef1a.json",
+          "sha256": "31861377197a43619d42bf22a49c3b3f34b122f800f0f29d4d2fdf75a03a4c60",
+          "localizador": "hoja=SUIVE posicion_original=9 (id=cve_cie10)",
+          "afirmacion_soportada": "Columna fisica cve_cie10 observada en pos 9 del esquema de 59 campos; sin documentar su computo."
+        },
+        {
+          "ruta": "propuestas/investigacion-post-r6/epidemiologia/evidencia/datastore_diccionario_2026-10-24.json",
+          "sha256": "dfe6e73b759a22c5b0a2acc5c9b03573b5d1fed39cd088f5b542c907ca91b348",
+          "localizador": "records[_id=9] Nombre variable=cve_cie10",
+          "afirmacion_soportada": "Live 2026-10-24 confirma desc='Clave' y catalogo vacio; sin cambios vs R6."
+        },
+        {
+          "ruta": "propuestas/investigacion-post-r6/epidemiologia/evidencia/examen_manual_suive32_paginas.txt",
+          "sha256": "9c20cd10f4673483d449551e2a48613e5c030d73ad929aa7ff033f06bf7393cc",
+          "localizador": "paginas del manual: p18",
+          "afirmacion_soportada": "Manual p18: cada enfermedad incluye codigo CIE 10 (generico nacional, sin version/edicion); ejemplo local A04/A08-A09 no aparece en el manual."
+        },
+        {
+          "ruta": "propuestas/investigacion-post-r6/epidemiologia/evidencia/http_log.json",
+          "sha256": "0f0c01573fe25b4e1a659fc01154b678b8a8956156787f8099f6af7876e706a0",
+          "localizador": "consultas package_show/datastore/manual + 403 xlsx/csv/boletin",
+          "afirmacion_soportada": "Package sin cambios (fuentes_extras vacio, version null); manual fresco byte-identico Last-Modified 2021-08-10 < periodo 2022; descargas bloqueadas 403 sin evadir."
+        }
+      ],
+      "vinculo_fuente_local": "Diccionario data/portal/inspecciones/2334deaa-dd0c-444e-b038-4cc556ad715d.json /definiciones/8 (cve_cie10, fila 9, huella citada) + hoja SUIVE data/portal/inspecciones/1689b19c-b0dc-4e39-bf07-e3a2e684ef1a.json pos 9 + edicion package datos.sonora.gob.mx dca16d84 (recurso 1689b19c, 2022-01-01/2022-12-31). Vinculo verificado: columna fisica existe; NO acredita sentido (descripcion pendiente/generica).",
+      "evidencia_faltante": "EPI-R6-01 + EPI-R6-03: instrumento SUIVE edicion aplicable 2022 que fije objeto de cve_cie10 y version de catalogo CIE vinculada al recurso 1689b19c; o diccionario corregido/nota del publicador.",
+      "motivo": "Manual p18: cada enfermedad incluye codigo CIE 10 (generico nacional, sin version/edicion); ejemplo local A04/A08-A09 no aparece en el manual. Sin respaldo explicito vinculado a esta definicion; no se aprueba por nombre, ejemplo aislado ni catalogo nacional generico sin vinculo local. Criterio R6 conservado.",
+      "limites": [
+        "Alcance simultaneo por conjunto, diccionario, definicion, nombre y descripcion; no autoriza cruces, homologaciones ni equivalencias.",
+        "Evidencia negativa acotada a las busquedas 2026-10-24 documentadas en http_log.json, no ausencia universal."
+      ]
+    },
+    {
+      "definicion_iri": "https://example.org/mex-ontologi/definition/2334deaa-dd0c-444e-b038-4cc556ad715d%2F11",
+      "variable": "acumulado",
+      "descripcion_original": "Acumulados",
+      "huella_fila_diccionario": "f0d809e61ada2173fcef197ce73afddb2e8016b5e60becac65adb4622c52c4d6",
+      "estado": "sigue_pendiente",
+      "significado_propuesto": null,
+      "evidencia": [
+        {
+          "ruta": "data/portal/inspecciones/2334deaa-dd0c-444e-b038-4cc556ad715d.json",
+          "sha256": "298786f09028a94004420c08eb28120294b130378a0cf12d609a1bffb950288d",
+          "localizador": "/definiciones/10 (Nombre variable=acumulado)",
+          "afirmacion_soportada": "Descripcion='Acumulados', catalogo de referencia vacio, ejemplo registrado; huella f0d809e61ada2173fcef197ce73afddb2e8016b5e60becac65adb4622c52c4d6."
+        },
+        {
+          "ruta": "data/portal/inspecciones/1689b19c-b0dc-4e39-bf07-e3a2e684ef1a.json",
+          "sha256": "31861377197a43619d42bf22a49c3b3f34b122f800f0f29d4d2fdf75a03a4c60",
+          "localizador": "hoja=SUIVE posicion_original=11 (id=acumulado)",
+          "afirmacion_soportada": "Columna fisica acumulado observada en pos 11 del esquema de 59 campos; sin documentar su computo."
+        },
+        {
+          "ruta": "propuestas/investigacion-post-r6/epidemiologia/evidencia/datastore_diccionario_2026-10-24.json",
+          "sha256": "dfe6e73b759a22c5b0a2acc5c9b03573b5d1fed39cd088f5b542c907ca91b348",
+          "localizador": "records[_id=11] Nombre variable=acumulado",
+          "afirmacion_soportada": "Live 2026-10-24 confirma desc='Acumulados' y catalogo vacio; sin cambios vs R6."
+        },
+        {
+          "ruta": "propuestas/investigacion-post-r6/epidemiologia/evidencia/examen_manual_suive32_paginas.txt",
+          "sha256": "9c20cd10f4673483d449551e2a48613e5c030d73ad929aa7ff033f06bf7393cc",
+          "localizador": "paginas del manual: p26",
+          "afirmacion_soportada": "Manual p26: acumulado = total de casos acumulados hasta la semana epidemiologica del ano actual (concepto analitico nacional, no regla de computo de la columna local pos 11)."
+        },
+        {
+          "ruta": "propuestas/investigacion-post-r6/epidemiologia/evidencia/http_log.json",
+          "sha256": "0f0c01573fe25b4e1a659fc01154b678b8a8956156787f8099f6af7876e706a0",
+          "localizador": "consultas package_show/datastore/manual + 403 xlsx/csv/boletin",
+          "afirmacion_soportada": "Package sin cambios (fuentes_extras vacio, version null); manual fresco byte-identico Last-Modified 2021-08-10 < periodo 2022; descargas bloqueadas 403 sin evadir."
+        }
+      ],
+      "vinculo_fuente_local": "Diccionario data/portal/inspecciones/2334deaa-dd0c-444e-b038-4cc556ad715d.json /definiciones/10 (acumulado, fila 11, huella citada) + hoja SUIVE data/portal/inspecciones/1689b19c-b0dc-4e39-bf07-e3a2e684ef1a.json pos 11 + edicion package datos.sonora.gob.mx dca16d84 (recurso 1689b19c, 2022-01-01/2022-12-31). Vinculo verificado: columna fisica existe; NO acredita sentido (descripcion pendiente/generica).",
+      "evidencia_faltante": "EPI-R6-01 + EPI-R6-02: documento del publicador que fije objeto y periodo/regla de acumulacion de la columna pos 11; o diccionario corregido con regla de computo (totalm/totalf no la definen).",
+      "motivo": "Manual p26: acumulado = total de casos acumulados hasta la semana epidemiologica del ano actual (concepto analitico nacional, no regla de computo de la columna local pos 11). Sin respaldo explicito vinculado a esta definicion; no se aprueba por nombre, ejemplo aislado ni catalogo nacional generico sin vinculo local. Criterio R6 conservado.",
+      "limites": [
+        "Alcance simultaneo por conjunto, diccionario, definicion, nombre y descripcion; no autoriza cruces, homologaciones ni equivalencias.",
+        "Evidencia negativa acotada a las busquedas 2026-10-24 documentadas en http_log.json, no ausencia universal."
+      ]
+    },
+    {
+      "definicion_iri": "https://example.org/mex-ontologi/definition/2334deaa-dd0c-444e-b038-4cc556ad715d%2F13",
+      "variable": "de01_a_04",
+      "descripcion_original": "Total de personas en vigilancia entre 1 y 5 años",
+      "huella_fila_diccionario": "71e70bde79d363823ea85bc4003883140edd8c635069c12e4772ce021b6909dd",
+      "estado": "sigue_pendiente",
+      "significado_propuesto": null,
+      "evidencia": [
+        {
+          "ruta": "data/portal/inspecciones/2334deaa-dd0c-444e-b038-4cc556ad715d.json",
+          "sha256": "298786f09028a94004420c08eb28120294b130378a0cf12d609a1bffb950288d",
+          "localizador": "/definiciones/12 (Nombre variable=de01_a_04)",
+          "afirmacion_soportada": "Descripcion='Total de personas en vigilancia entre 1 y 5 años', catalogo de referencia vacio, ejemplo registrado; huella 71e70bde79d363823ea85bc4003883140edd8c635069c12e4772ce021b6909dd."
+        },
+        {
+          "ruta": "data/portal/inspecciones/1689b19c-b0dc-4e39-bf07-e3a2e684ef1a.json",
+          "sha256": "31861377197a43619d42bf22a49c3b3f34b122f800f0f29d4d2fdf75a03a4c60",
+          "localizador": "hoja=SUIVE posicion_original=13 (id=de01_a_04)",
+          "afirmacion_soportada": "Columna fisica de01_a_04 observada en pos 13 del esquema de 59 campos; sin documentar su computo."
+        },
+        {
+          "ruta": "propuestas/investigacion-post-r6/epidemiologia/evidencia/datastore_diccionario_2026-10-24.json",
+          "sha256": "dfe6e73b759a22c5b0a2acc5c9b03573b5d1fed39cd088f5b542c907ca91b348",
+          "localizador": "records[_id=13] Nombre variable=de01_a_04",
+          "afirmacion_soportada": "Live 2026-10-24 confirma desc='Total de personas en vigilancia entre 1 y 5 años' y catalogo vacio; sin cambios vs R6."
+        },
+        {
+          "ruta": "propuestas/investigacion-post-r6/epidemiologia/evidencia/examen_manual_suive32_paginas.txt",
+          "sha256": "9c20cd10f4673483d449551e2a48613e5c030d73ad929aa7ff033f06bf7393cc",
+          "localizador": "paginas del manual: p18",
+          "afirmacion_soportada": "Manual p18: formato nacional de 30 columnas con tabulacion por edad (layout distinto de las 59 locales); no fija intervalo 01-04 ni resuelve contradiccion nombre/descripcion ni solape edad 5."
+        },
+        {
+          "ruta": "propuestas/investigacion-post-r6/epidemiologia/evidencia/http_log.json",
+          "sha256": "0f0c01573fe25b4e1a659fc01154b678b8a8956156787f8099f6af7876e706a0",
+          "localizador": "consultas package_show/datastore/manual + 403 xlsx/csv/boletin",
+          "afirmacion_soportada": "Package sin cambios (fuentes_extras vacio, version null); manual fresco byte-identico Last-Modified 2021-08-10 < periodo 2022; descargas bloqueadas 403 sin evadir."
+        }
+      ],
+      "vinculo_fuente_local": "Diccionario data/portal/inspecciones/2334deaa-dd0c-444e-b038-4cc556ad715d.json /definiciones/12 (de01_a_04, fila 13, huella citada) + hoja SUIVE data/portal/inspecciones/1689b19c-b0dc-4e39-bf07-e3a2e684ef1a.json pos 13 + edicion package datos.sonora.gob.mx dca16d84 (recurso 1689b19c, 2022-01-01/2022-12-31). Vinculo verificado: columna fisica existe; NO acredita sentido (descripcion pendiente/generica).",
+      "evidencia_faltante": "EPI-R6-01 + EPI-R6-03: nota del publicador que fije el intervalo real (nombre 01-04 vs descripcion entre 1 y 5) y el tratamiento de la edad 5 frente a de05_a_09.",
+      "motivo": "Manual p18: formato nacional de 30 columnas con tabulacion por edad (layout distinto de las 59 locales); no fija intervalo 01-04 ni resuelve contradiccion nombre/descripcion ni solape edad 5. Sin respaldo explicito vinculado a esta definicion; no se aprueba por nombre, ejemplo aislado ni catalogo nacional generico sin vinculo local. Criterio R6 conservado.",
+      "limites": [
+        "Alcance simultaneo por conjunto, diccionario, definicion, nombre y descripcion; no autoriza cruces, homologaciones ni equivalencias.",
+        "Evidencia negativa acotada a las busquedas 2026-10-24 documentadas en http_log.json, no ausencia universal."
+      ]
+    },
+    {
+      "definicion_iri": "https://example.org/mex-ontologi/definition/2334deaa-dd0c-444e-b038-4cc556ad715d%2F23",
+      "variable": "se_ignoran",
+      "descripcion_original": "Pendiente de especificar",
+      "huella_fila_diccionario": "712a4678ea6443e9f58a98c49834483e2c2821fc6c09ff79afffed6d5b5e4d0c",
+      "estado": "sigue_pendiente",
+      "significado_propuesto": null,
+      "evidencia": [
+        {
+          "ruta": "data/portal/inspecciones/2334deaa-dd0c-444e-b038-4cc556ad715d.json",
+          "sha256": "298786f09028a94004420c08eb28120294b130378a0cf12d609a1bffb950288d",
+          "localizador": "/definiciones/22 (Nombre variable=se_ignoran)",
+          "afirmacion_soportada": "Descripcion='Pendiente de especificar', catalogo de referencia vacio, ejemplo registrado; huella 712a4678ea6443e9f58a98c49834483e2c2821fc6c09ff79afffed6d5b5e4d0c."
+        },
+        {
+          "ruta": "data/portal/inspecciones/1689b19c-b0dc-4e39-bf07-e3a2e684ef1a.json",
+          "sha256": "31861377197a43619d42bf22a49c3b3f34b122f800f0f29d4d2fdf75a03a4c60",
+          "localizador": "hoja=SUIVE posicion_original=23 (id=se_ignoran)",
+          "afirmacion_soportada": "Columna fisica se_ignoran observada en pos 23 del esquema de 59 campos; sin documentar su computo."
+        },
+        {
+          "ruta": "propuestas/investigacion-post-r6/epidemiologia/evidencia/datastore_diccionario_2026-10-24.json",
+          "sha256": "dfe6e73b759a22c5b0a2acc5c9b03573b5d1fed39cd088f5b542c907ca91b348",
+          "localizador": "records[_id=23] Nombre variable=se_ignoran",
+          "afirmacion_soportada": "Live 2026-10-24 confirma desc='Pendiente de especificar' y catalogo vacio; sin cambios vs R6."
+        },
+        {
+          "ruta": "propuestas/investigacion-post-r6/epidemiologia/evidencia/examen_manual_suive32_paginas.txt",
+          "sha256": "9c20cd10f4673483d449551e2a48613e5c030d73ad929aa7ff033f06bf7393cc",
+          "localizador": "paginas del manual: p50",
+          "afirmacion_soportada": "Manual p50: recuadro Ign. = casos de edad ignorada en pantalla SUAVE nacional; no es definicion de la columna local pos 23 ni vinculo edicion-recurso-periodo."
+        },
+        {
+          "ruta": "propuestas/investigacion-post-r6/epidemiologia/evidencia/http_log.json",
+          "sha256": "0f0c01573fe25b4e1a659fc01154b678b8a8956156787f8099f6af7876e706a0",
+          "localizador": "consultas package_show/datastore/manual + 403 xlsx/csv/boletin",
+          "afirmacion_soportada": "Package sin cambios (fuentes_extras vacio, version null); manual fresco byte-identico Last-Modified 2021-08-10 < periodo 2022; descargas bloqueadas 403 sin evadir."
+        }
+      ],
+      "vinculo_fuente_local": "Diccionario data/portal/inspecciones/2334deaa-dd0c-444e-b038-4cc556ad715d.json /definiciones/22 (se_ignoran, fila 23, huella citada) + hoja SUIVE data/portal/inspecciones/1689b19c-b0dc-4e39-bf07-e3a2e684ef1a.json pos 23 + edicion package datos.sonora.gob.mx dca16d84 (recurso 1689b19c, 2022-01-01/2022-12-31). Vinculo verificado: columna fisica existe; NO acredita sentido (descripcion pendiente/generica).",
+      "evidencia_faltante": "EPI-R6-01 + EPI-R6-02: diccionario corregido con descripcion para la columna se_ignoran pos 23, o nota del publicador que fije su sentido literal citando conjunto+diccionario+fila+huella y vincule edicion-recurso-periodo.",
+      "motivo": "Manual p50: recuadro Ign. = casos de edad ignorada en pantalla SUAVE nacional; no es definicion de la columna local pos 23 ni vinculo edicion-recurso-periodo. Sin respaldo explicito vinculado a esta definicion; no se aprueba por nombre, ejemplo aislado ni catalogo nacional generico sin vinculo local. Criterio R6 conservado.",
+      "limites": [
+        "Alcance simultaneo por conjunto, diccionario, definicion, nombre y descripcion; no autoriza cruces, homologaciones ni equivalencias.",
+        "Evidencia negativa acotada a las busquedas 2026-10-24 documentadas en http_log.json, no ausencia universal."
+      ]
+    },
+    {
+      "definicion_iri": "https://example.org/mex-ontologi/definition/2334deaa-dd0c-444e-b038-4cc556ad715d%2F24",
+      "variable": "menores_1f",
+      "descripcion_original": "Pendiente de especificar",
+      "huella_fila_diccionario": "9c235bec64ee84ac6be73f13281fb34ccfd77466e273cf25a2b893ed8b15694b",
+      "estado": "sigue_pendiente",
+      "significado_propuesto": null,
+      "evidencia": [
+        {
+          "ruta": "data/portal/inspecciones/2334deaa-dd0c-444e-b038-4cc556ad715d.json",
+          "sha256": "298786f09028a94004420c08eb28120294b130378a0cf12d609a1bffb950288d",
+          "localizador": "/definiciones/23 (Nombre variable=menores_1f)",
+          "afirmacion_soportada": "Descripcion='Pendiente de especificar', catalogo de referencia vacio, ejemplo registrado; huella 9c235bec64ee84ac6be73f13281fb34ccfd77466e273cf25a2b893ed8b15694b."
+        },
+        {
+          "ruta": "data/portal/inspecciones/1689b19c-b0dc-4e39-bf07-e3a2e684ef1a.json",
+          "sha256": "31861377197a43619d42bf22a49c3b3f34b122f800f0f29d4d2fdf75a03a4c60",
+          "localizador": "hoja=SUIVE posicion_original=24 (id=menores_1f)",
+          "afirmacion_soportada": "Columna fisica menores_1f observada en pos 24 del esquema de 59 campos; sin documentar su computo."
+        },
+        {
+          "ruta": "propuestas/investigacion-post-r6/epidemiologia/evidencia/datastore_diccionario_2026-10-24.json",
+          "sha256": "dfe6e73b759a22c5b0a2acc5c9b03573b5d1fed39cd088f5b542c907ca91b348",
+          "localizador": "records[_id=24] Nombre variable=menores_1f",
+          "afirmacion_soportada": "Live 2026-10-24 confirma desc='Pendiente de especificar' y catalogo vacio; sin cambios vs R6."
+        },
+        {
+          "ruta": "propuestas/investigacion-post-r6/epidemiologia/evidencia/examen_manual_suive32_paginas.txt",
+          "sha256": "9c20cd10f4673483d449551e2a48613e5c030d73ad929aa7ff033f06bf7393cc",
+          "localizador": "paginas del manual: p18",
+          "afirmacion_soportada": "Manual p18: subdivision por sexo del formato nacional; no define la convencion de sufijo f local. Inferir f=femenino por totalf esta prohibido sin respaldo explicito."
+        },
+        {
+          "ruta": "propuestas/investigacion-post-r6/epidemiologia/evidencia/http_log.json",
+          "sha256": "0f0c01573fe25b4e1a659fc01154b678b8a8956156787f8099f6af7876e706a0",
+          "localizador": "consultas package_show/datastore/manual + 403 xlsx/csv/boletin",
+          "afirmacion_soportada": "Package sin cambios (fuentes_extras vacio, version null); manual fresco byte-identico Last-Modified 2021-08-10 < periodo 2022; descargas bloqueadas 403 sin evadir."
+        }
+      ],
+      "vinculo_fuente_local": "Diccionario data/portal/inspecciones/2334deaa-dd0c-444e-b038-4cc556ad715d.json /definiciones/23 (menores_1f, fila 24, huella citada) + hoja SUIVE data/portal/inspecciones/1689b19c-b0dc-4e39-bf07-e3a2e684ef1a.json pos 24 + edicion package datos.sonora.gob.mx dca16d84 (recurso 1689b19c, 2022-01-01/2022-12-31). Vinculo verificado: columna fisica existe; NO acredita sentido (descripcion pendiente/generica).",
+      "evidencia_faltante": "EPI-R6-01 + EPI-R6-02: diccionario corregido con descripcion para la columna menores_1f pos 24, o nota del publicador que fije su sentido literal citando conjunto+diccionario+fila+huella y vincule edicion-recurso-periodo.",
+      "motivo": "Manual p18: subdivision por sexo del formato nacional; no define la convencion de sufijo f local. Inferir f=femenino por totalf esta prohibido sin respaldo explicito. Sin respaldo explicito vinculado a esta definicion; no se aprueba por nombre, ejemplo aislado ni catalogo nacional generico sin vinculo local. Criterio R6 conservado.",
+      "limites": [
+        "Alcance simultaneo por conjunto, diccionario, definicion, nombre y descripcion; no autoriza cruces, homologaciones ni equivalencias.",
+        "Evidencia negativa acotada a las busquedas 2026-10-24 documentadas en http_log.json, no ausencia universal."
+      ]
+    },
+    {
+      "definicion_iri": "https://example.org/mex-ontologi/definition/2334deaa-dd0c-444e-b038-4cc556ad715d%2F25",
+      "variable": "de01_a_04f",
+      "descripcion_original": "Pendiente de especificar",
+      "huella_fila_diccionario": "96785af1d47c13ccbdd90e122e3686aac5af1b7574f41d22f10ebe0f4fcaf744",
+      "estado": "sigue_pendiente",
+      "significado_propuesto": null,
+      "evidencia": [
+        {
+          "ruta": "data/portal/inspecciones/2334deaa-dd0c-444e-b038-4cc556ad715d.json",
+          "sha256": "298786f09028a94004420c08eb28120294b130378a0cf12d609a1bffb950288d",
+          "localizador": "/definiciones/24 (Nombre variable=de01_a_04f)",
+          "afirmacion_soportada": "Descripcion='Pendiente de especificar', catalogo de referencia vacio, ejemplo registrado; huella 96785af1d47c13ccbdd90e122e3686aac5af1b7574f41d22f10ebe0f4fcaf744."
+        },
+        {
+          "ruta": "data/portal/inspecciones/1689b19c-b0dc-4e39-bf07-e3a2e684ef1a.json",
+          "sha256": "31861377197a43619d42bf22a49c3b3f34b122f800f0f29d4d2fdf75a03a4c60",
+          "localizador": "hoja=SUIVE posicion_original=25 (id=de01_a_04f)",
+          "afirmacion_soportada": "Columna fisica de01_a_04f observada en pos 25 del esquema de 59 campos; sin documentar su computo."
+        },
+        {
+          "ruta": "propuestas/investigacion-post-r6/epidemiologia/evidencia/datastore_diccionario_2026-10-24.json",
+          "sha256": "dfe6e73b759a22c5b0a2acc5c9b03573b5d1fed39cd088f5b542c907ca91b348",
+          "localizador": "records[_id=25] Nombre variable=de01_a_04f",
+          "afirmacion_soportada": "Live 2026-10-24 confirma desc='Pendiente de especificar' y catalogo vacio; sin cambios vs R6."
+        },
+        {
+          "ruta": "propuestas/investigacion-post-r6/epidemiologia/evidencia/examen_manual_suive32_paginas.txt",
+          "sha256": "9c20cd10f4673483d449551e2a48613e5c030d73ad929aa7ff033f06bf7393cc",
+          "localizador": "paginas del manual: p18",
+          "afirmacion_soportada": "Manual p18: subdivision por sexo del formato nacional; no define la convencion de sufijo f local. Inferir f=femenino por totalf esta prohibido sin respaldo explicito."
+        },
+        {
+          "ruta": "propuestas/investigacion-post-r6/epidemiologia/evidencia/http_log.json",
+          "sha256": "0f0c01573fe25b4e1a659fc01154b678b8a8956156787f8099f6af7876e706a0",
+          "localizador": "consultas package_show/datastore/manual + 403 xlsx/csv/boletin",
+          "afirmacion_soportada": "Package sin cambios (fuentes_extras vacio, version null); manual fresco byte-identico Last-Modified 2021-08-10 < periodo 2022; descargas bloqueadas 403 sin evadir."
+        }
+      ],
+      "vinculo_fuente_local": "Diccionario data/portal/inspecciones/2334deaa-dd0c-444e-b038-4cc556ad715d.json /definiciones/24 (de01_a_04f, fila 25, huella citada) + hoja SUIVE data/portal/inspecciones/1689b19c-b0dc-4e39-bf07-e3a2e684ef1a.json pos 25 + edicion package datos.sonora.gob.mx dca16d84 (recurso 1689b19c, 2022-01-01/2022-12-31). Vinculo verificado: columna fisica existe; NO acredita sentido (descripcion pendiente/generica).",
+      "evidencia_faltante": "EPI-R6-01 + EPI-R6-02: diccionario corregido con descripcion para la columna de01_a_04f pos 25, o nota del publicador que fije su sentido literal citando conjunto+diccionario+fila+huella y vincule edicion-recurso-periodo.",
+      "motivo": "Manual p18: subdivision por sexo del formato nacional; no define la convencion de sufijo f local. Inferir f=femenino por totalf esta prohibido sin respaldo explicito. Sin respaldo explicito vinculado a esta definicion; no se aprueba por nombre, ejemplo aislado ni catalogo nacional generico sin vinculo local. Criterio R6 conservado.",
+      "limites": [
+        "Alcance simultaneo por conjunto, diccionario, definicion, nombre y descripcion; no autoriza cruces, homologaciones ni equivalencias.",
+        "Evidencia negativa acotada a las busquedas 2026-10-24 documentadas en http_log.json, no ausencia universal."
+      ]
+    },
+    {
+      "definicion_iri": "https://example.org/mex-ontologi/definition/2334deaa-dd0c-444e-b038-4cc556ad715d%2F26",
+      "variable": "de05_a_09f",
+      "descripcion_original": "Pendiente de especificar",
+      "huella_fila_diccionario": "971f30fab7a6a0948bcd4189a83f840ee1752c0668591c84c02a56b312e65893",
+      "estado": "sigue_pendiente",
+      "significado_propuesto": null,
+      "evidencia": [
+        {
+          "ruta": "data/portal/inspecciones/2334deaa-dd0c-444e-b038-4cc556ad715d.json",
+          "sha256": "298786f09028a94004420c08eb28120294b130378a0cf12d609a1bffb950288d",
+          "localizador": "/definiciones/25 (Nombre variable=de05_a_09f)",
+          "afirmacion_soportada": "Descripcion='Pendiente de especificar', catalogo de referencia vacio, ejemplo registrado; huella 971f30fab7a6a0948bcd4189a83f840ee1752c0668591c84c02a56b312e65893."
+        },
+        {
+          "ruta": "data/portal/inspecciones/1689b19c-b0dc-4e39-bf07-e3a2e684ef1a.json",
+          "sha256": "31861377197a43619d42bf22a49c3b3f34b122f800f0f29d4d2fdf75a03a4c60",
+          "localizador": "hoja=SUIVE posicion_original=26 (id=de05_a_09f)",
+          "afirmacion_soportada": "Columna fisica de05_a_09f observada en pos 26 del esquema de 59 campos; sin documentar su computo."
+        },
+        {
+          "ruta": "propuestas/investigacion-post-r6/epidemiologia/evidencia/datastore_diccionario_2026-10-24.json",
+          "sha256": "dfe6e73b759a22c5b0a2acc5c9b03573b5d1fed39cd088f5b542c907ca91b348",
+          "localizador": "records[_id=26] Nombre variable=de05_a_09f",
+          "afirmacion_soportada": "Live 2026-10-24 confirma desc='Pendiente de especificar' y catalogo vacio; sin cambios vs R6."
+        },
+        {
+          "ruta": "propuestas/investigacion-post-r6/epidemiologia/evidencia/examen_manual_suive32_paginas.txt",
+          "sha256": "9c20cd10f4673483d449551e2a48613e5c030d73ad929aa7ff033f06bf7393cc",
+          "localizador": "paginas del manual: p18",
+          "afirmacion_soportada": "Manual p18: subdivision por sexo del formato nacional; no define la convencion de sufijo f local. Inferir f=femenino por totalf esta prohibido sin respaldo explicito."
+        },
+        {
+          "ruta": "propuestas/investigacion-post-r6/epidemiologia/evidencia/http_log.json",
+          "sha256": "0f0c01573fe25b4e1a659fc01154b678b8a8956156787f8099f6af7876e706a0",
+          "localizador": "consultas package_show/datastore/manual + 403 xlsx/csv/boletin",
+          "afirmacion_soportada": "Package sin cambios (fuentes_extras vacio, version null); manual fresco byte-identico Last-Modified 2021-08-10 < periodo 2022; descargas bloqueadas 403 sin evadir."
+        }
+      ],
+      "vinculo_fuente_local": "Diccionario data/portal/inspecciones/2334deaa-dd0c-444e-b038-4cc556ad715d.json /definiciones/25 (de05_a_09f, fila 26, huella citada) + hoja SUIVE data/portal/inspecciones/1689b19c-b0dc-4e39-bf07-e3a2e684ef1a.json pos 26 + edicion package datos.sonora.gob.mx dca16d84 (recurso 1689b19c, 2022-01-01/2022-12-31). Vinculo verificado: columna fisica existe; NO acredita sentido (descripcion pendiente/generica).",
+      "evidencia_faltante": "EPI-R6-01 + EPI-R6-02: diccionario corregido con descripcion para la columna de05_a_09f pos 26, o nota del publicador que fije su sentido literal citando conjunto+diccionario+fila+huella y vincule edicion-recurso-periodo.",
+      "motivo": "Manual p18: subdivision por sexo del formato nacional; no define la convencion de sufijo f local. Inferir f=femenino por totalf esta prohibido sin respaldo explicito. Sin respaldo explicito vinculado a esta definicion; no se aprueba por nombre, ejemplo aislado ni catalogo nacional generico sin vinculo local. Criterio R6 conservado.",
+      "limites": [
+        "Alcance simultaneo por conjunto, diccionario, definicion, nombre y descripcion; no autoriza cruces, homologaciones ni equivalencias.",
+        "Evidencia negativa acotada a las busquedas 2026-10-24 documentadas en http_log.json, no ausencia universal."
+      ]
+    },
+    {
+      "definicion_iri": "https://example.org/mex-ontologi/definition/2334deaa-dd0c-444e-b038-4cc556ad715d%2F27",
+      "variable": "de10_a_14f",
+      "descripcion_original": "Pendiente de especificar",
+      "huella_fila_diccionario": "37d126eb7fdbc381aba67bb453c6af51c79b342e69a2ceff8428980bfdb1495d",
+      "estado": "sigue_pendiente",
+      "significado_propuesto": null,
+      "evidencia": [
+        {
+          "ruta": "data/portal/inspecciones/2334deaa-dd0c-444e-b038-4cc556ad715d.json",
+          "sha256": "298786f09028a94004420c08eb28120294b130378a0cf12d609a1bffb950288d",
+          "localizador": "/definiciones/26 (Nombre variable=de10_a_14f)",
+          "afirmacion_soportada": "Descripcion='Pendiente de especificar', catalogo de referencia vacio, ejemplo registrado; huella 37d126eb7fdbc381aba67bb453c6af51c79b342e69a2ceff8428980bfdb1495d."
+        },
+        {
+          "ruta": "data/portal/inspecciones/1689b19c-b0dc-4e39-bf07-e3a2e684ef1a.json",
+          "sha256": "31861377197a43619d42bf22a49c3b3f34b122f800f0f29d4d2fdf75a03a4c60",
+          "localizador": "hoja=SUIVE posicion_original=27 (id=de10_a_14f)",
+          "afirmacion_soportada": "Columna fisica de10_a_14f observada en pos 27 del esquema de 59 campos; sin documentar su computo."
+        },
+        {
+          "ruta": "propuestas/investigacion-post-r6/epidemiologia/evidencia/datastore_diccionario_2026-10-24.json",
+          "sha256": "dfe6e73b759a22c5b0a2acc5c9b03573b5d1fed39cd088f5b542c907ca91b348",
+          "localizador": "records[_id=27] Nombre variable=de10_a_14f",
+          "afirmacion_soportada": "Live 2026-10-24 confirma desc='Pendiente de especificar' y catalogo vacio; sin cambios vs R6."
+        },
+        {
+          "ruta": "propuestas/investigacion-post-r6/epidemiologia/evidencia/examen_manual_suive32_paginas.txt",
+          "sha256": "9c20cd10f4673483d449551e2a48613e5c030d73ad929aa7ff033f06bf7393cc",
+          "localizador": "paginas del manual: p18",
+          "afirmacion_soportada": "Manual p18: subdivision por sexo del formato nacional; no define la convencion de sufijo f local. Inferir f=femenino por totalf esta prohibido sin respaldo explicito."
+        },
+        {
+          "ruta": "propuestas/investigacion-post-r6/epidemiologia/evidencia/http_log.json",
+          "sha256": "0f0c01573fe25b4e1a659fc01154b678b8a8956156787f8099f6af7876e706a0",
+          "localizador": "consultas package_show/datastore/manual + 403 xlsx/csv/boletin",
+          "afirmacion_soportada": "Package sin cambios (fuentes_extras vacio, version null); manual fresco byte-identico Last-Modified 2021-08-10 < periodo 2022; descargas bloqueadas 403 sin evadir."
+        }
+      ],
+      "vinculo_fuente_local": "Diccionario data/portal/inspecciones/2334deaa-dd0c-444e-b038-4cc556ad715d.json /definiciones/26 (de10_a_14f, fila 27, huella citada) + hoja SUIVE data/portal/inspecciones/1689b19c-b0dc-4e39-bf07-e3a2e684ef1a.json pos 27 + edicion package datos.sonora.gob.mx dca16d84 (recurso 1689b19c, 2022-01-01/2022-12-31). Vinculo verificado: columna fisica existe; NO acredita sentido (descripcion pendiente/generica).",
+      "evidencia_faltante": "EPI-R6-01 + EPI-R6-02: diccionario corregido con descripcion para la columna de10_a_14f pos 27, o nota del publicador que fije su sentido literal citando conjunto+diccionario+fila+huella y vincule edicion-recurso-periodo.",
+      "motivo": "Manual p18: subdivision por sexo del formato nacional; no define la convencion de sufijo f local. Inferir f=femenino por totalf esta prohibido sin respaldo explicito. Sin respaldo explicito vinculado a esta definicion; no se aprueba por nombre, ejemplo aislado ni catalogo nacional generico sin vinculo local. Criterio R6 conservado.",
+      "limites": [
+        "Alcance simultaneo por conjunto, diccionario, definicion, nombre y descripcion; no autoriza cruces, homologaciones ni equivalencias.",
+        "Evidencia negativa acotada a las busquedas 2026-10-24 documentadas en http_log.json, no ausencia universal."
+      ]
+    },
+    {
+      "definicion_iri": "https://example.org/mex-ontologi/definition/2334deaa-dd0c-444e-b038-4cc556ad715d%2F28",
+      "variable": "de15_a_19f",
+      "descripcion_original": "Pendiente de especificar",
+      "huella_fila_diccionario": "a42fd90e2204759a31ee32e07cdfd56b4d77ff5eb4620463bae4efebc57514c7",
+      "estado": "sigue_pendiente",
+      "significado_propuesto": null,
+      "evidencia": [
+        {
+          "ruta": "data/portal/inspecciones/2334deaa-dd0c-444e-b038-4cc556ad715d.json",
+          "sha256": "298786f09028a94004420c08eb28120294b130378a0cf12d609a1bffb950288d",
+          "localizador": "/definiciones/27 (Nombre variable=de15_a_19f)",
+          "afirmacion_soportada": "Descripcion='Pendiente de especificar', catalogo de referencia vacio, ejemplo registrado; huella a42fd90e2204759a31ee32e07cdfd56b4d77ff5eb4620463bae4efebc57514c7."
+        },
+        {
+          "ruta": "data/portal/inspecciones/1689b19c-b0dc-4e39-bf07-e3a2e684ef1a.json",
+          "sha256": "31861377197a43619d42bf22a49c3b3f34b122f800f0f29d4d2fdf75a03a4c60",
+          "localizador": "hoja=SUIVE posicion_original=28 (id=de15_a_19f)",
+          "afirmacion_soportada": "Columna fisica de15_a_19f observada en pos 28 del esquema de 59 campos; sin documentar su computo."
+        },
+        {
+          "ruta": "propuestas/investigacion-post-r6/epidemiologia/evidencia/datastore_diccionario_2026-10-24.json",
+          "sha256": "dfe6e73b759a22c5b0a2acc5c9b03573b5d1fed39cd088f5b542c907ca91b348",
+          "localizador": "records[_id=28] Nombre variable=de15_a_19f",
+          "afirmacion_soportada": "Live 2026-10-24 confirma desc='Pendiente de especificar' y catalogo vacio; sin cambios vs R6."
+        },
+        {
+          "ruta": "propuestas/investigacion-post-r6/epidemiologia/evidencia/examen_manual_suive32_paginas.txt",
+          "sha256": "9c20cd10f4673483d449551e2a48613e5c030d73ad929aa7ff033f06bf7393cc",
+          "localizador": "paginas del manual: p18",
+          "afirmacion_soportada": "Manual p18: subdivision por sexo del formato nacional; no define la convencion de sufijo f local. Inferir f=femenino por totalf esta prohibido sin respaldo explicito."
+        },
+        {
+          "ruta": "propuestas/investigacion-post-r6/epidemiologia/evidencia/http_log.json",
+          "sha256": "0f0c01573fe25b4e1a659fc01154b678b8a8956156787f8099f6af7876e706a0",
+          "localizador": "consultas package_show/datastore/manual + 403 xlsx/csv/boletin",
+          "afirmacion_soportada": "Package sin cambios (fuentes_extras vacio, version null); manual fresco byte-identico Last-Modified 2021-08-10 < periodo 2022; descargas bloqueadas 403 sin evadir."
+        }
+      ],
+      "vinculo_fuente_local": "Diccionario data/portal/inspecciones/2334deaa-dd0c-444e-b038-4cc556ad715d.json /definiciones/27 (de15_a_19f, fila 28, huella citada) + hoja SUIVE data/portal/inspecciones/1689b19c-b0dc-4e39-bf07-e3a2e684ef1a.json pos 28 + edicion package datos.sonora.gob.mx dca16d84 (recurso 1689b19c, 2022-01-01/2022-12-31). Vinculo verificado: columna fisica existe; NO acredita sentido (descripcion pendiente/generica).",
+      "evidencia_faltante": "EPI-R6-01 + EPI-R6-02: diccionario corregido con descripcion para la columna de15_a_19f pos 28, o nota del publicador que fije su sentido literal citando conjunto+diccionario+fila+huella y vincule edicion-recurso-periodo.",
+      "motivo": "Manual p18: subdivision por sexo del formato nacional; no define la convencion de sufijo f local. Inferir f=femenino por totalf esta prohibido sin respaldo explicito. Sin respaldo explicito vinculado a esta definicion; no se aprueba por nombre, ejemplo aislado ni catalogo nacional generico sin vinculo local. Criterio R6 conservado.",
+      "limites": [
+        "Alcance simultaneo por conjunto, diccionario, definicion, nombre y descripcion; no autoriza cruces, homologaciones ni equivalencias.",
+        "Evidencia negativa acotada a las busquedas 2026-10-24 documentadas en http_log.json, no ausencia universal."
+      ]
+    },
+    {
+      "definicion_iri": "https://example.org/mex-ontologi/definition/2334deaa-dd0c-444e-b038-4cc556ad715d%2F29",
+      "variable": "de20_a_24f",
+      "descripcion_original": "Pendiente de especificar",
+      "huella_fila_diccionario": "0cc4157c95452c748982b1c0667684c551a6bdff52e795e20b71f7b7c2b52e14",
+      "estado": "sigue_pendiente",
+      "significado_propuesto": null,
+      "evidencia": [
+        {
+          "ruta": "data/portal/inspecciones/2334deaa-dd0c-444e-b038-4cc556ad715d.json",
+          "sha256": "298786f09028a94004420c08eb28120294b130378a0cf12d609a1bffb950288d",
+          "localizador": "/definiciones/28 (Nombre variable=de20_a_24f)",
+          "afirmacion_soportada": "Descripcion='Pendiente de especificar', catalogo de referencia vacio, ejemplo registrado; huella 0cc4157c95452c748982b1c0667684c551a6bdff52e795e20b71f7b7c2b52e14."
+        },
+        {
+          "ruta": "data/portal/inspecciones/1689b19c-b0dc-4e39-bf07-e3a2e684ef1a.json",
+          "sha256": "31861377197a43619d42bf22a49c3b3f34b122f800f0f29d4d2fdf75a03a4c60",
+          "localizador": "hoja=SUIVE posicion_original=29 (id=de20_a_24f)",
+          "afirmacion_soportada": "Columna fisica de20_a_24f observada en pos 29 del esquema de 59 campos; sin documentar su computo."
+        },
+        {
+          "ruta": "propuestas/investigacion-post-r6/epidemiologia/evidencia/datastore_diccionario_2026-10-24.json",
+          "sha256": "dfe6e73b759a22c5b0a2acc5c9b03573b5d1fed39cd088f5b542c907ca91b348",
+          "localizador": "records[_id=29] Nombre variable=de20_a_24f",
+          "afirmacion_soportada": "Live 2026-10-24 confirma desc='Pendiente de especificar' y catalogo vacio; sin cambios vs R6."
+        },
+        {
+          "ruta": "propuestas/investigacion-post-r6/epidemiologia/evidencia/examen_manual_suive32_paginas.txt",
+          "sha256": "9c20cd10f4673483d449551e2a48613e5c030d73ad929aa7ff033f06bf7393cc",
+          "localizador": "paginas del manual: p18",
+          "afirmacion_soportada": "Manual p18: subdivision por sexo del formato nacional; no define la convencion de sufijo f local. Inferir f=femenino por totalf esta prohibido sin respaldo explicito."
+        },
+        {
+          "ruta": "propuestas/investigacion-post-r6/epidemiologia/evidencia/http_log.json",
+          "sha256": "0f0c01573fe25b4e1a659fc01154b678b8a8956156787f8099f6af7876e706a0",
+          "localizador": "consultas package_show/datastore/manual + 403 xlsx/csv/boletin",
+          "afirmacion_soportada": "Package sin cambios (fuentes_extras vacio, version null); manual fresco byte-identico Last-Modified 2021-08-10 < periodo 2022; descargas bloqueadas 403 sin evadir."
+        }
+      ],
+      "vinculo_fuente_local": "Diccionario data/portal/inspecciones/2334deaa-dd0c-444e-b038-4cc556ad715d.json /definiciones/28 (de20_a_24f, fila 29, huella citada) + hoja SUIVE data/portal/inspecciones/1689b19c-b0dc-4e39-bf07-e3a2e684ef1a.json pos 29 + edicion package datos.sonora.gob.mx dca16d84 (recurso 1689b19c, 2022-01-01/2022-12-31). Vinculo verificado: columna fisica existe; NO acredita sentido (descripcion pendiente/generica).",
+      "evidencia_faltante": "EPI-R6-01 + EPI-R6-02: diccionario corregido con descripcion para la columna de20_a_24f pos 29, o nota del publicador que fije su sentido literal citando conjunto+diccionario+fila+huella y vincule edicion-recurso-periodo.",
+      "motivo": "Manual p18: subdivision por sexo del formato nacional; no define la convencion de sufijo f local. Inferir f=femenino por totalf esta prohibido sin respaldo explicito. Sin respaldo explicito vinculado a esta definicion; no se aprueba por nombre, ejemplo aislado ni catalogo nacional generico sin vinculo local. Criterio R6 conservado.",
+      "limites": [
+        "Alcance simultaneo por conjunto, diccionario, definicion, nombre y descripcion; no autoriza cruces, homologaciones ni equivalencias.",
+        "Evidencia negativa acotada a las busquedas 2026-10-24 documentadas en http_log.json, no ausencia universal."
+      ]
+    },
+    {
+      "definicion_iri": "https://example.org/mex-ontologi/definition/2334deaa-dd0c-444e-b038-4cc556ad715d%2F30",
+      "variable": "de25_a_44f",
+      "descripcion_original": "Pendiente de especificar",
+      "huella_fila_diccionario": "bfc6c152db70092a5c576d67ffcc541dee1af624ca1e1b0d95f1a6c6f8349b5a",
+      "estado": "sigue_pendiente",
+      "significado_propuesto": null,
+      "evidencia": [
+        {
+          "ruta": "data/portal/inspecciones/2334deaa-dd0c-444e-b038-4cc556ad715d.json",
+          "sha256": "298786f09028a94004420c08eb28120294b130378a0cf12d609a1bffb950288d",
+          "localizador": "/definiciones/29 (Nombre variable=de25_a_44f)",
+          "afirmacion_soportada": "Descripcion='Pendiente de especificar', catalogo de referencia vacio, ejemplo registrado; huella bfc6c152db70092a5c576d67ffcc541dee1af624ca1e1b0d95f1a6c6f8349b5a."
+        },
+        {
+          "ruta": "data/portal/inspecciones/1689b19c-b0dc-4e39-bf07-e3a2e684ef1a.json",
+          "sha256": "31861377197a43619d42bf22a49c3b3f34b122f800f0f29d4d2fdf75a03a4c60",
+          "localizador": "hoja=SUIVE posicion_original=30 (id=de25_a_44f)",
+          "afirmacion_soportada": "Columna fisica de25_a_44f observada en pos 30 del esquema de 59 campos; sin documentar su computo."
+        },
+        {
+          "ruta": "propuestas/investigacion-post-r6/epidemiologia/evidencia/datastore_diccionario_2026-10-24.json",
+          "sha256": "dfe6e73b759a22c5b0a2acc5c9b03573b5d1fed39cd088f5b542c907ca91b348",
+          "localizador": "records[_id=30] Nombre variable=de25_a_44f",
+          "afirmacion_soportada": "Live 2026-10-24 confirma desc='Pendiente de especificar' y catalogo vacio; sin cambios vs R6."
+        },
+        {
+          "ruta": "propuestas/investigacion-post-r6/epidemiologia/evidencia/examen_manual_suive32_paginas.txt",
+          "sha256": "9c20cd10f4673483d449551e2a48613e5c030d73ad929aa7ff033f06bf7393cc",
+          "localizador": "paginas del manual: p18",
+          "afirmacion_soportada": "Manual p18: subdivision por sexo del formato nacional; no define la convencion de sufijo f local. Inferir f=femenino por totalf esta prohibido sin respaldo explicito."
+        },
+        {
+          "ruta": "propuestas/investigacion-post-r6/epidemiologia/evidencia/http_log.json",
+          "sha256": "0f0c01573fe25b4e1a659fc01154b678b8a8956156787f8099f6af7876e706a0",
+          "localizador": "consultas package_show/datastore/manual + 403 xlsx/csv/boletin",
+          "afirmacion_soportada": "Package sin cambios (fuentes_extras vacio, version null); manual fresco byte-identico Last-Modified 2021-08-10 < periodo 2022; descargas bloqueadas 403 sin evadir."
+        }
+      ],
+      "vinculo_fuente_local": "Diccionario data/portal/inspecciones/2334deaa-dd0c-444e-b038-4cc556ad715d.json /definiciones/29 (de25_a_44f, fila 30, huella citada) + hoja SUIVE data/portal/inspecciones/1689b19c-b0dc-4e39-bf07-e3a2e684ef1a.json pos 30 + edicion package datos.sonora.gob.mx dca16d84 (recurso 1689b19c, 2022-01-01/2022-12-31). Vinculo verificado: columna fisica existe; NO acredita sentido (descripcion pendiente/generica).",
+      "evidencia_faltante": "EPI-R6-01 + EPI-R6-02: diccionario corregido con descripcion para la columna de25_a_44f pos 30, o nota del publicador que fije su sentido literal citando conjunto+diccionario+fila+huella y vincule edicion-recurso-periodo.",
+      "motivo": "Manual p18: subdivision por sexo del formato nacional; no define la convencion de sufijo f local. Inferir f=femenino por totalf esta prohibido sin respaldo explicito. Sin respaldo explicito vinculado a esta definicion; no se aprueba por nombre, ejemplo aislado ni catalogo nacional generico sin vinculo local. Criterio R6 conservado.",
+      "limites": [
+        "Alcance simultaneo por conjunto, diccionario, definicion, nombre y descripcion; no autoriza cruces, homologaciones ni equivalencias.",
+        "Evidencia negativa acotada a las busquedas 2026-10-24 documentadas en http_log.json, no ausencia universal."
+      ]
+    },
+    {
+      "definicion_iri": "https://example.org/mex-ontologi/definition/2334deaa-dd0c-444e-b038-4cc556ad715d%2F31",
+      "variable": "de45_a_49f",
+      "descripcion_original": "Pendiente de especificar",
+      "huella_fila_diccionario": "91c1f556eee3a0e4d124a37770bc921d895d4e3640fdcf669f6190d9c3ea6435",
+      "estado": "sigue_pendiente",
+      "significado_propuesto": null,
+      "evidencia": [
+        {
+          "ruta": "data/portal/inspecciones/2334deaa-dd0c-444e-b038-4cc556ad715d.json",
+          "sha256": "298786f09028a94004420c08eb28120294b130378a0cf12d609a1bffb950288d",
+          "localizador": "/definiciones/30 (Nombre variable=de45_a_49f)",
+          "afirmacion_soportada": "Descripcion='Pendiente de especificar', catalogo de referencia vacio, ejemplo registrado; huella 91c1f556eee3a0e4d124a37770bc921d895d4e3640fdcf669f6190d9c3ea6435."
+        },
+        {
+          "ruta": "data/portal/inspecciones/1689b19c-b0dc-4e39-bf07-e3a2e684ef1a.json",
+          "sha256": "31861377197a43619d42bf22a49c3b3f34b122f800f0f29d4d2fdf75a03a4c60",
+          "localizador": "hoja=SUIVE posicion_original=31 (id=de45_a_49f)",
+          "afirmacion_soportada": "Columna fisica de45_a_49f observada en pos 31 del esquema de 59 campos; sin documentar su computo."
+        },
+        {
+          "ruta": "propuestas/investigacion-post-r6/epidemiologia/evidencia/datastore_diccionario_2026-10-24.json",
+          "sha256": "dfe6e73b759a22c5b0a2acc5c9b03573b5d1fed39cd088f5b542c907ca91b348",
+          "localizador": "records[_id=31] Nombre variable=de45_a_49f",
+          "afirmacion_soportada": "Live 2026-10-24 confirma desc='Pendiente de especificar' y catalogo vacio; sin cambios vs R6."
+        },
+        {
+          "ruta": "propuestas/investigacion-post-r6/epidemiologia/evidencia/examen_manual_suive32_paginas.txt",
+          "sha256": "9c20cd10f4673483d449551e2a48613e5c030d73ad929aa7ff033f06bf7393cc",
+          "localizador": "paginas del manual: p18",
+          "afirmacion_soportada": "Manual p18: subdivision por sexo del formato nacional; no define la convencion de sufijo f local. Inferir f=femenino por totalf esta prohibido sin respaldo explicito."
+        },
+        {
+          "ruta": "propuestas/investigacion-post-r6/epidemiologia/evidencia/http_log.json",
+          "sha256": "0f0c01573fe25b4e1a659fc01154b678b8a8956156787f8099f6af7876e706a0",
+          "localizador": "consultas package_show/datastore/manual + 403 xlsx/csv/boletin",
+          "afirmacion_soportada": "Package sin cambios (fuentes_extras vacio, version null); manual fresco byte-identico Last-Modified 2021-08-10 < periodo 2022; descargas bloqueadas 403 sin evadir."
+        }
+      ],
+      "vinculo_fuente_local": "Diccionario data/portal/inspecciones/2334deaa-dd0c-444e-b038-4cc556ad715d.json /definiciones/30 (de45_a_49f, fila 31, huella citada) + hoja SUIVE data/portal/inspecciones/1689b19c-b0dc-4e39-bf07-e3a2e684ef1a.json pos 31 + edicion package datos.sonora.gob.mx dca16d84 (recurso 1689b19c, 2022-01-01/2022-12-31). Vinculo verificado: columna fisica existe; NO acredita sentido (descripcion pendiente/generica).",
+      "evidencia_faltante": "EPI-R6-01 + EPI-R6-02: diccionario corregido con descripcion para la columna de45_a_49f pos 31, o nota del publicador que fije su sentido literal citando conjunto+diccionario+fila+huella y vincule edicion-recurso-periodo.",
+      "motivo": "Manual p18: subdivision por sexo del formato nacional; no define la convencion de sufijo f local. Inferir f=femenino por totalf esta prohibido sin respaldo explicito. Sin respaldo explicito vinculado a esta definicion; no se aprueba por nombre, ejemplo aislado ni catalogo nacional generico sin vinculo local. Criterio R6 conservado.",
+      "limites": [
+        "Alcance simultaneo por conjunto, diccionario, definicion, nombre y descripcion; no autoriza cruces, homologaciones ni equivalencias.",
+        "Evidencia negativa acotada a las busquedas 2026-10-24 documentadas en http_log.json, no ausencia universal."
+      ]
+    },
+    {
+      "definicion_iri": "https://example.org/mex-ontologi/definition/2334deaa-dd0c-444e-b038-4cc556ad715d%2F32",
+      "variable": "de50_a_59f",
+      "descripcion_original": "Pendiente de especificar",
+      "huella_fila_diccionario": "0b783d062a8c4d6dc664997cbe2c2f62aac91a0a616b409f953f0c3d9e3f9988",
+      "estado": "sigue_pendiente",
+      "significado_propuesto": null,
+      "evidencia": [
+        {
+          "ruta": "data/portal/inspecciones/2334deaa-dd0c-444e-b038-4cc556ad715d.json",
+          "sha256": "298786f09028a94004420c08eb28120294b130378a0cf12d609a1bffb950288d",
+          "localizador": "/definiciones/31 (Nombre variable=de50_a_59f)",
+          "afirmacion_soportada": "Descripcion='Pendiente de especificar', catalogo de referencia vacio, ejemplo registrado; huella 0b783d062a8c4d6dc664997cbe2c2f62aac91a0a616b409f953f0c3d9e3f9988."
+        },
+        {
+          "ruta": "data/portal/inspecciones/1689b19c-b0dc-4e39-bf07-e3a2e684ef1a.json",
+          "sha256": "31861377197a43619d42bf22a49c3b3f34b122f800f0f29d4d2fdf75a03a4c60",
+          "localizador": "hoja=SUIVE posicion_original=32 (id=de50_a_59f)",
+          "afirmacion_soportada": "Columna fisica de50_a_59f observada en pos 32 del esquema de 59 campos; sin documentar su computo."
+        },
+        {
+          "ruta": "propuestas/investigacion-post-r6/epidemiologia/evidencia/datastore_diccionario_2026-10-24.json",
+          "sha256": "dfe6e73b759a22c5b0a2acc5c9b03573b5d1fed39cd088f5b542c907ca91b348",
+          "localizador": "records[_id=32] Nombre variable=de50_a_59f",
+          "afirmacion_soportada": "Live 2026-10-24 confirma desc='Pendiente de especificar' y catalogo vacio; sin cambios vs R6."
+        },
+        {
+          "ruta": "propuestas/investigacion-post-r6/epidemiologia/evidencia/examen_manual_suive32_paginas.txt",
+          "sha256": "9c20cd10f4673483d449551e2a48613e5c030d73ad929aa7ff033f06bf7393cc",
+          "localizador": "paginas del manual: p18",
+          "afirmacion_soportada": "Manual p18: subdivision por sexo del formato nacional; no define la convencion de sufijo f local. Inferir f=femenino por totalf esta prohibido sin respaldo explicito."
+        },
+        {
+          "ruta": "propuestas/investigacion-post-r6/epidemiologia/evidencia/http_log.json",
+          "sha256": "0f0c01573fe25b4e1a659fc01154b678b8a8956156787f8099f6af7876e706a0",
+          "localizador": "consultas package_show/datastore/manual + 403 xlsx/csv/boletin",
+          "afirmacion_soportada": "Package sin cambios (fuentes_extras vacio, version null); manual fresco byte-identico Last-Modified 2021-08-10 < periodo 2022; descargas bloqueadas 403 sin evadir."
+        }
+      ],
+      "vinculo_fuente_local": "Diccionario data/portal/inspecciones/2334deaa-dd0c-444e-b038-4cc556ad715d.json /definiciones/31 (de50_a_59f, fila 32, huella citada) + hoja SUIVE data/portal/inspecciones/1689b19c-b0dc-4e39-bf07-e3a2e684ef1a.json pos 32 + edicion package datos.sonora.gob.mx dca16d84 (recurso 1689b19c, 2022-01-01/2022-12-31). Vinculo verificado: columna fisica existe; NO acredita sentido (descripcion pendiente/generica).",
+      "evidencia_faltante": "EPI-R6-01 + EPI-R6-02: diccionario corregido con descripcion para la columna de50_a_59f pos 32, o nota del publicador que fije su sentido literal citando conjunto+diccionario+fila+huella y vincule edicion-recurso-periodo.",
+      "motivo": "Manual p18: subdivision por sexo del formato nacional; no define la convencion de sufijo f local. Inferir f=femenino por totalf esta prohibido sin respaldo explicito. Sin respaldo explicito vinculado a esta definicion; no se aprueba por nombre, ejemplo aislado ni catalogo nacional generico sin vinculo local. Criterio R6 conservado.",
+      "limites": [
+        "Alcance simultaneo por conjunto, diccionario, definicion, nombre y descripcion; no autoriza cruces, homologaciones ni equivalencias.",
+        "Evidencia negativa acotada a las busquedas 2026-10-24 documentadas en http_log.json, no ausencia universal."
+      ]
+    },
+    {
+      "definicion_iri": "https://example.org/mex-ontologi/definition/2334deaa-dd0c-444e-b038-4cc556ad715d%2F33",
+      "variable": "de60_a_64f",
+      "descripcion_original": "Pendiente de especificar",
+      "huella_fila_diccionario": "413000668b1a98f5b920a81d0ef2d809ec4245323b769e2cea0b2d9f793f3cf9",
+      "estado": "sigue_pendiente",
+      "significado_propuesto": null,
+      "evidencia": [
+        {
+          "ruta": "data/portal/inspecciones/2334deaa-dd0c-444e-b038-4cc556ad715d.json",
+          "sha256": "298786f09028a94004420c08eb28120294b130378a0cf12d609a1bffb950288d",
+          "localizador": "/definiciones/32 (Nombre variable=de60_a_64f)",
+          "afirmacion_soportada": "Descripcion='Pendiente de especificar', catalogo de referencia vacio, ejemplo registrado; huella 413000668b1a98f5b920a81d0ef2d809ec4245323b769e2cea0b2d9f793f3cf9."
+        },
+        {
+          "ruta": "data/portal/inspecciones/1689b19c-b0dc-4e39-bf07-e3a2e684ef1a.json",
+          "sha256": "31861377197a43619d42bf22a49c3b3f34b122f800f0f29d4d2fdf75a03a4c60",
+          "localizador": "hoja=SUIVE posicion_original=33 (id=de60_a_64f)",
+          "afirmacion_soportada": "Columna fisica de60_a_64f observada en pos 33 del esquema de 59 campos; sin documentar su computo."
+        },
+        {
+          "ruta": "propuestas/investigacion-post-r6/epidemiologia/evidencia/datastore_diccionario_2026-10-24.json",
+          "sha256": "dfe6e73b759a22c5b0a2acc5c9b03573b5d1fed39cd088f5b542c907ca91b348",
+          "localizador": "records[_id=33] Nombre variable=de60_a_64f",
+          "afirmacion_soportada": "Live 2026-10-24 confirma desc='Pendiente de especificar' y catalogo vacio; sin cambios vs R6."
+        },
+        {
+          "ruta": "propuestas/investigacion-post-r6/epidemiologia/evidencia/examen_manual_suive32_paginas.txt",
+          "sha256": "9c20cd10f4673483d449551e2a48613e5c030d73ad929aa7ff033f06bf7393cc",
+          "localizador": "paginas del manual: p18",
+          "afirmacion_soportada": "Manual p18: subdivision por sexo del formato nacional; no define la convencion de sufijo f local. Inferir f=femenino por totalf esta prohibido sin respaldo explicito."
+        },
+        {
+          "ruta": "propuestas/investigacion-post-r6/epidemiologia/evidencia/http_log.json",
+          "sha256": "0f0c01573fe25b4e1a659fc01154b678b8a8956156787f8099f6af7876e706a0",
+          "localizador": "consultas package_show/datastore/manual + 403 xlsx/csv/boletin",
+          "afirmacion_soportada": "Package sin cambios (fuentes_extras vacio, version null); manual fresco byte-identico Last-Modified 2021-08-10 < periodo 2022; descargas bloqueadas 403 sin evadir."
+        }
+      ],
+      "vinculo_fuente_local": "Diccionario data/portal/inspecciones/2334deaa-dd0c-444e-b038-4cc556ad715d.json /definiciones/32 (de60_a_64f, fila 33, huella citada) + hoja SUIVE data/portal/inspecciones/1689b19c-b0dc-4e39-bf07-e3a2e684ef1a.json pos 33 + edicion package datos.sonora.gob.mx dca16d84 (recurso 1689b19c, 2022-01-01/2022-12-31). Vinculo verificado: columna fisica existe; NO acredita sentido (descripcion pendiente/generica).",
+      "evidencia_faltante": "EPI-R6-01 + EPI-R6-02: diccionario corregido con descripcion para la columna de60_a_64f pos 33, o nota del publicador que fije su sentido literal citando conjunto+diccionario+fila+huella y vincule edicion-recurso-periodo.",
+      "motivo": "Manual p18: subdivision por sexo del formato nacional; no define la convencion de sufijo f local. Inferir f=femenino por totalf esta prohibido sin respaldo explicito. Sin respaldo explicito vinculado a esta definicion; no se aprueba por nombre, ejemplo aislado ni catalogo nacional generico sin vinculo local. Criterio R6 conservado.",
+      "limites": [
+        "Alcance simultaneo por conjunto, diccionario, definicion, nombre y descripcion; no autoriza cruces, homologaciones ni equivalencias.",
+        "Evidencia negativa acotada a las busquedas 2026-10-24 documentadas en http_log.json, no ausencia universal."
+      ]
+    },
+    {
+      "definicion_iri": "https://example.org/mex-ontologi/definition/2334deaa-dd0c-444e-b038-4cc556ad715d%2F34",
+      "variable": "de65_y_maf",
+      "descripcion_original": "Pendiente de especificar",
+      "huella_fila_diccionario": "dbf3d9f670449df35da5f8973d3e4491e8dd5ba5d334b1f87f0c0c1ab0ad88a6",
+      "estado": "sigue_pendiente",
+      "significado_propuesto": null,
+      "evidencia": [
+        {
+          "ruta": "data/portal/inspecciones/2334deaa-dd0c-444e-b038-4cc556ad715d.json",
+          "sha256": "298786f09028a94004420c08eb28120294b130378a0cf12d609a1bffb950288d",
+          "localizador": "/definiciones/33 (Nombre variable=de65_y_maf)",
+          "afirmacion_soportada": "Descripcion='Pendiente de especificar', catalogo de referencia vacio, ejemplo registrado; huella dbf3d9f670449df35da5f8973d3e4491e8dd5ba5d334b1f87f0c0c1ab0ad88a6."
+        },
+        {
+          "ruta": "data/portal/inspecciones/1689b19c-b0dc-4e39-bf07-e3a2e684ef1a.json",
+          "sha256": "31861377197a43619d42bf22a49c3b3f34b122f800f0f29d4d2fdf75a03a4c60",
+          "localizador": "hoja=SUIVE posicion_original=34 (id=de65_y_maf)",
+          "afirmacion_soportada": "Columna fisica de65_y_maf observada en pos 34 del esquema de 59 campos; sin documentar su computo."
+        },
+        {
+          "ruta": "propuestas/investigacion-post-r6/epidemiologia/evidencia/datastore_diccionario_2026-10-24.json",
+          "sha256": "dfe6e73b759a22c5b0a2acc5c9b03573b5d1fed39cd088f5b542c907ca91b348",
+          "localizador": "records[_id=34] Nombre variable=de65_y_maf",
+          "afirmacion_soportada": "Live 2026-10-24 confirma desc='Pendiente de especificar' y catalogo vacio; sin cambios vs R6."
+        },
+        {
+          "ruta": "propuestas/investigacion-post-r6/epidemiologia/evidencia/examen_manual_suive32_paginas.txt",
+          "sha256": "9c20cd10f4673483d449551e2a48613e5c030d73ad929aa7ff033f06bf7393cc",
+          "localizador": "paginas del manual: p18",
+          "afirmacion_soportada": "Manual p18: subdivision por sexo del formato nacional; no define la convencion de sufijo f local. Inferir f=femenino por totalf esta prohibido sin respaldo explicito."
+        },
+        {
+          "ruta": "propuestas/investigacion-post-r6/epidemiologia/evidencia/http_log.json",
+          "sha256": "0f0c01573fe25b4e1a659fc01154b678b8a8956156787f8099f6af7876e706a0",
+          "localizador": "consultas package_show/datastore/manual + 403 xlsx/csv/boletin",
+          "afirmacion_soportada": "Package sin cambios (fuentes_extras vacio, version null); manual fresco byte-identico Last-Modified 2021-08-10 < periodo 2022; descargas bloqueadas 403 sin evadir."
+        }
+      ],
+      "vinculo_fuente_local": "Diccionario data/portal/inspecciones/2334deaa-dd0c-444e-b038-4cc556ad715d.json /definiciones/33 (de65_y_maf, fila 34, huella citada) + hoja SUIVE data/portal/inspecciones/1689b19c-b0dc-4e39-bf07-e3a2e684ef1a.json pos 34 + edicion package datos.sonora.gob.mx dca16d84 (recurso 1689b19c, 2022-01-01/2022-12-31). Vinculo verificado: columna fisica existe; NO acredita sentido (descripcion pendiente/generica).",
+      "evidencia_faltante": "EPI-R6-01 + EPI-R6-02: diccionario corregido con descripcion para la columna de65_y_maf pos 34, o nota del publicador que fije su sentido literal citando conjunto+diccionario+fila+huella y vincule edicion-recurso-periodo.",
+      "motivo": "Manual p18: subdivision por sexo del formato nacional; no define la convencion de sufijo f local. Inferir f=femenino por totalf esta prohibido sin respaldo explicito. Sin respaldo explicito vinculado a esta definicion; no se aprueba por nombre, ejemplo aislado ni catalogo nacional generico sin vinculo local. Criterio R6 conservado.",
+      "limites": [
+        "Alcance simultaneo por conjunto, diccionario, definicion, nombre y descripcion; no autoriza cruces, homologaciones ni equivalencias.",
+        "Evidencia negativa acotada a las busquedas 2026-10-24 documentadas en http_log.json, no ausencia universal."
+      ]
+    },
+    {
+      "definicion_iri": "https://example.org/mex-ontologi/definition/2334deaa-dd0c-444e-b038-4cc556ad715d%2F35",
+      "variable": "se_ignoraf",
+      "descripcion_original": "Pendiente de especificar",
+      "huella_fila_diccionario": "2ca9f9926c9a1888648ca555419346e0d0d7c0340fa2f3883e4bec38eaa11ea3",
+      "estado": "sigue_pendiente",
+      "significado_propuesto": null,
+      "evidencia": [
+        {
+          "ruta": "data/portal/inspecciones/2334deaa-dd0c-444e-b038-4cc556ad715d.json",
+          "sha256": "298786f09028a94004420c08eb28120294b130378a0cf12d609a1bffb950288d",
+          "localizador": "/definiciones/34 (Nombre variable=se_ignoraf)",
+          "afirmacion_soportada": "Descripcion='Pendiente de especificar', catalogo de referencia vacio, ejemplo registrado; huella 2ca9f9926c9a1888648ca555419346e0d0d7c0340fa2f3883e4bec38eaa11ea3."
+        },
+        {
+          "ruta": "data/portal/inspecciones/1689b19c-b0dc-4e39-bf07-e3a2e684ef1a.json",
+          "sha256": "31861377197a43619d42bf22a49c3b3f34b122f800f0f29d4d2fdf75a03a4c60",
+          "localizador": "hoja=SUIVE posicion_original=35 (id=se_ignoraf)",
+          "afirmacion_soportada": "Columna fisica se_ignoraf observada en pos 35 del esquema de 59 campos; sin documentar su computo."
+        },
+        {
+          "ruta": "propuestas/investigacion-post-r6/epidemiologia/evidencia/datastore_diccionario_2026-10-24.json",
+          "sha256": "dfe6e73b759a22c5b0a2acc5c9b03573b5d1fed39cd088f5b542c907ca91b348",
+          "localizador": "records[_id=35] Nombre variable=se_ignoraf",
+          "afirmacion_soportada": "Live 2026-10-24 confirma desc='Pendiente de especificar' y catalogo vacio; sin cambios vs R6."
+        },
+        {
+          "ruta": "propuestas/investigacion-post-r6/epidemiologia/evidencia/examen_manual_suive32_paginas.txt",
+          "sha256": "9c20cd10f4673483d449551e2a48613e5c030d73ad929aa7ff033f06bf7393cc",
+          "localizador": "paginas del manual: p18",
+          "afirmacion_soportada": "Manual p18: subdivision por sexo del formato nacional; no define la convencion de sufijo f local. Inferir f=femenino por totalf esta prohibido sin respaldo explicito."
+        },
+        {
+          "ruta": "propuestas/investigacion-post-r6/epidemiologia/evidencia/http_log.json",
+          "sha256": "0f0c01573fe25b4e1a659fc01154b678b8a8956156787f8099f6af7876e706a0",
+          "localizador": "consultas package_show/datastore/manual + 403 xlsx/csv/boletin",
+          "afirmacion_soportada": "Package sin cambios (fuentes_extras vacio, version null); manual fresco byte-identico Last-Modified 2021-08-10 < periodo 2022; descargas bloqueadas 403 sin evadir."
+        }
+      ],
+      "vinculo_fuente_local": "Diccionario data/portal/inspecciones/2334deaa-dd0c-444e-b038-4cc556ad715d.json /definiciones/34 (se_ignoraf, fila 35, huella citada) + hoja SUIVE data/portal/inspecciones/1689b19c-b0dc-4e39-bf07-e3a2e684ef1a.json pos 35 + edicion package datos.sonora.gob.mx dca16d84 (recurso 1689b19c, 2022-01-01/2022-12-31). Vinculo verificado: columna fisica existe; NO acredita sentido (descripcion pendiente/generica).",
+      "evidencia_faltante": "EPI-R6-01 + EPI-R6-02: diccionario corregido con descripcion para la columna se_ignoraf pos 35, o nota del publicador que fije su sentido literal citando conjunto+diccionario+fila+huella y vincule edicion-recurso-periodo.",
+      "motivo": "Manual p18: subdivision por sexo del formato nacional; no define la convencion de sufijo f local. Inferir f=femenino por totalf esta prohibido sin respaldo explicito. Sin respaldo explicito vinculado a esta definicion; no se aprueba por nombre, ejemplo aislado ni catalogo nacional generico sin vinculo local. Criterio R6 conservado.",
+      "limites": [
+        "Alcance simultaneo por conjunto, diccionario, definicion, nombre y descripcion; no autoriza cruces, homologaciones ni equivalencias.",
+        "Evidencia negativa acotada a las busquedas 2026-10-24 documentadas en http_log.json, no ausencia universal."
+      ]
+    },
+    {
+      "definicion_iri": "https://example.org/mex-ontologi/definition/2334deaa-dd0c-444e-b038-4cc556ad715d%2F36",
+      "variable": "ssa",
+      "descripcion_original": "Pendiente de especificar",
+      "huella_fila_diccionario": "892a850ba9bee2014e8ea5157ed208a1b7285937ec068a7600f3ced39786d710",
+      "estado": "sigue_pendiente",
+      "significado_propuesto": null,
+      "evidencia": [
+        {
+          "ruta": "data/portal/inspecciones/2334deaa-dd0c-444e-b038-4cc556ad715d.json",
+          "sha256": "298786f09028a94004420c08eb28120294b130378a0cf12d609a1bffb950288d",
+          "localizador": "/definiciones/35 (Nombre variable=ssa)",
+          "afirmacion_soportada": "Descripcion='Pendiente de especificar', catalogo de referencia vacio, ejemplo registrado; huella 892a850ba9bee2014e8ea5157ed208a1b7285937ec068a7600f3ced39786d710."
+        },
+        {
+          "ruta": "data/portal/inspecciones/1689b19c-b0dc-4e39-bf07-e3a2e684ef1a.json",
+          "sha256": "31861377197a43619d42bf22a49c3b3f34b122f800f0f29d4d2fdf75a03a4c60",
+          "localizador": "hoja=SUIVE posicion_original=36 (id=ssa)",
+          "afirmacion_soportada": "Columna fisica ssa observada en pos 36 del esquema de 59 campos; sin documentar su computo."
+        },
+        {
+          "ruta": "propuestas/investigacion-post-r6/epidemiologia/evidencia/datastore_diccionario_2026-10-24.json",
+          "sha256": "dfe6e73b759a22c5b0a2acc5c9b03573b5d1fed39cd088f5b542c907ca91b348",
+          "localizador": "records[_id=36] Nombre variable=ssa",
+          "afirmacion_soportada": "Live 2026-10-24 confirma desc='Pendiente de especificar' y catalogo vacio; sin cambios vs R6."
+        },
+        {
+          "ruta": "propuestas/investigacion-post-r6/epidemiologia/evidencia/examen_manual_suive32_paginas.txt",
+          "sha256": "9c20cd10f4673483d449551e2a48613e5c030d73ad929aa7ff033f06bf7393cc",
+          "localizador": "paginas del manual: p17",
+          "afirmacion_soportada": "Manual p17: instituciones nacionales SSA, IMSS, ISSSTE, Otras, IMSS-Prospera, DIF, PEMEX, SEDENA, SEMAR; conjunto DISTINTO de las 9 columnas locales (imss_ord/imss_sol/d_if/sedemar vs IMSS-Prospera/DIF/SEMAR). Sin equivalencia autorizada."
+        },
+        {
+          "ruta": "propuestas/investigacion-post-r6/epidemiologia/evidencia/http_log.json",
+          "sha256": "0f0c01573fe25b4e1a659fc01154b678b8a8956156787f8099f6af7876e706a0",
+          "localizador": "consultas package_show/datastore/manual + 403 xlsx/csv/boletin",
+          "afirmacion_soportada": "Package sin cambios (fuentes_extras vacio, version null); manual fresco byte-identico Last-Modified 2021-08-10 < periodo 2022; descargas bloqueadas 403 sin evadir."
+        }
+      ],
+      "vinculo_fuente_local": "Diccionario data/portal/inspecciones/2334deaa-dd0c-444e-b038-4cc556ad715d.json /definiciones/35 (ssa, fila 36, huella citada) + hoja SUIVE data/portal/inspecciones/1689b19c-b0dc-4e39-bf07-e3a2e684ef1a.json pos 36 + edicion package datos.sonora.gob.mx dca16d84 (recurso 1689b19c, 2022-01-01/2022-12-31). Vinculo verificado: columna fisica existe; NO acredita sentido (descripcion pendiente/generica).",
+      "evidencia_faltante": "EPI-R6-01 + EPI-R6-02: diccionario corregido con descripcion para la columna ssa pos 36, o nota del publicador que fije su sentido literal citando conjunto+diccionario+fila+huella y vincule edicion-recurso-periodo.",
+      "motivo": "Manual p17: instituciones nacionales SSA, IMSS, ISSSTE, Otras, IMSS-Prospera, DIF, PEMEX, SEDENA, SEMAR; conjunto DISTINTO de las 9 columnas locales (imss_ord/imss_sol/d_if/sedemar vs IMSS-Prospera/DIF/SEMAR). Sin equivalencia autorizada. Sin respaldo explicito vinculado a esta definicion; no se aprueba por nombre, ejemplo aislado ni catalogo nacional generico sin vinculo local. Criterio R6 conservado.",
+      "limites": [
+        "Alcance simultaneo por conjunto, diccionario, definicion, nombre y descripcion; no autoriza cruces, homologaciones ni equivalencias.",
+        "Evidencia negativa acotada a las busquedas 2026-10-24 documentadas en http_log.json, no ausencia universal."
+      ]
+    },
+    {
+      "definicion_iri": "https://example.org/mex-ontologi/definition/2334deaa-dd0c-444e-b038-4cc556ad715d%2F37",
+      "variable": "imss_ord",
+      "descripcion_original": "Pendiente de especificar",
+      "huella_fila_diccionario": "fed770c9cb25fcea694559f6ed09bb92b1338ec7499cd04ff202607d616af1a1",
+      "estado": "sigue_pendiente",
+      "significado_propuesto": null,
+      "evidencia": [
+        {
+          "ruta": "data/portal/inspecciones/2334deaa-dd0c-444e-b038-4cc556ad715d.json",
+          "sha256": "298786f09028a94004420c08eb28120294b130378a0cf12d609a1bffb950288d",
+          "localizador": "/definiciones/36 (Nombre variable=imss_ord)",
+          "afirmacion_soportada": "Descripcion='Pendiente de especificar', catalogo de referencia vacio, ejemplo registrado; huella fed770c9cb25fcea694559f6ed09bb92b1338ec7499cd04ff202607d616af1a1."
+        },
+        {
+          "ruta": "data/portal/inspecciones/1689b19c-b0dc-4e39-bf07-e3a2e684ef1a.json",
+          "sha256": "31861377197a43619d42bf22a49c3b3f34b122f800f0f29d4d2fdf75a03a4c60",
+          "localizador": "hoja=SUIVE posicion_original=37 (id=imss_ord)",
+          "afirmacion_soportada": "Columna fisica imss_ord observada en pos 37 del esquema de 59 campos; sin documentar su computo."
+        },
+        {
+          "ruta": "propuestas/investigacion-post-r6/epidemiologia/evidencia/datastore_diccionario_2026-10-24.json",
+          "sha256": "dfe6e73b759a22c5b0a2acc5c9b03573b5d1fed39cd088f5b542c907ca91b348",
+          "localizador": "records[_id=37] Nombre variable=imss_ord",
+          "afirmacion_soportada": "Live 2026-10-24 confirma desc='Pendiente de especificar' y catalogo vacio; sin cambios vs R6."
+        },
+        {
+          "ruta": "propuestas/investigacion-post-r6/epidemiologia/evidencia/examen_manual_suive32_paginas.txt",
+          "sha256": "9c20cd10f4673483d449551e2a48613e5c030d73ad929aa7ff033f06bf7393cc",
+          "localizador": "paginas del manual: p17",
+          "afirmacion_soportada": "Manual p17: instituciones nacionales SSA, IMSS, ISSSTE, Otras, IMSS-Prospera, DIF, PEMEX, SEDENA, SEMAR; conjunto DISTINTO de las 9 columnas locales (imss_ord/imss_sol/d_if/sedemar vs IMSS-Prospera/DIF/SEMAR). Sin equivalencia autorizada."
+        },
+        {
+          "ruta": "propuestas/investigacion-post-r6/epidemiologia/evidencia/http_log.json",
+          "sha256": "0f0c01573fe25b4e1a659fc01154b678b8a8956156787f8099f6af7876e706a0",
+          "localizador": "consultas package_show/datastore/manual + 403 xlsx/csv/boletin",
+          "afirmacion_soportada": "Package sin cambios (fuentes_extras vacio, version null); manual fresco byte-identico Last-Modified 2021-08-10 < periodo 2022; descargas bloqueadas 403 sin evadir."
+        }
+      ],
+      "vinculo_fuente_local": "Diccionario data/portal/inspecciones/2334deaa-dd0c-444e-b038-4cc556ad715d.json /definiciones/36 (imss_ord, fila 37, huella citada) + hoja SUIVE data/portal/inspecciones/1689b19c-b0dc-4e39-bf07-e3a2e684ef1a.json pos 37 + edicion package datos.sonora.gob.mx dca16d84 (recurso 1689b19c, 2022-01-01/2022-12-31). Vinculo verificado: columna fisica existe; NO acredita sentido (descripcion pendiente/generica).",
+      "evidencia_faltante": "EPI-R6-01 + EPI-R6-02: diccionario corregido con descripcion para la columna imss_ord pos 37, o nota del publicador que fije su sentido literal citando conjunto+diccionario+fila+huella y vincule edicion-recurso-periodo.",
+      "motivo": "Manual p17: instituciones nacionales SSA, IMSS, ISSSTE, Otras, IMSS-Prospera, DIF, PEMEX, SEDENA, SEMAR; conjunto DISTINTO de las 9 columnas locales (imss_ord/imss_sol/d_if/sedemar vs IMSS-Prospera/DIF/SEMAR). Sin equivalencia autorizada. Sin respaldo explicito vinculado a esta definicion; no se aprueba por nombre, ejemplo aislado ni catalogo nacional generico sin vinculo local. Criterio R6 conservado.",
+      "limites": [
+        "Alcance simultaneo por conjunto, diccionario, definicion, nombre y descripcion; no autoriza cruces, homologaciones ni equivalencias.",
+        "Evidencia negativa acotada a las busquedas 2026-10-24 documentadas en http_log.json, no ausencia universal."
+      ]
+    },
+    {
+      "definicion_iri": "https://example.org/mex-ontologi/definition/2334deaa-dd0c-444e-b038-4cc556ad715d%2F38",
+      "variable": "issste",
+      "descripcion_original": "Pendiente de especificar",
+      "huella_fila_diccionario": "eefa0119b32476dfc5c023afb1776ab4b3660f5c8c770c13bdfe549f7ea5e5cd",
+      "estado": "sigue_pendiente",
+      "significado_propuesto": null,
+      "evidencia": [
+        {
+          "ruta": "data/portal/inspecciones/2334deaa-dd0c-444e-b038-4cc556ad715d.json",
+          "sha256": "298786f09028a94004420c08eb28120294b130378a0cf12d609a1bffb950288d",
+          "localizador": "/definiciones/37 (Nombre variable=issste)",
+          "afirmacion_soportada": "Descripcion='Pendiente de especificar', catalogo de referencia vacio, ejemplo registrado; huella eefa0119b32476dfc5c023afb1776ab4b3660f5c8c770c13bdfe549f7ea5e5cd."
+        },
+        {
+          "ruta": "data/portal/inspecciones/1689b19c-b0dc-4e39-bf07-e3a2e684ef1a.json",
+          "sha256": "31861377197a43619d42bf22a49c3b3f34b122f800f0f29d4d2fdf75a03a4c60",
+          "localizador": "hoja=SUIVE posicion_original=38 (id=issste)",
+          "afirmacion_soportada": "Columna fisica issste observada en pos 38 del esquema de 59 campos; sin documentar su computo."
+        },
+        {
+          "ruta": "propuestas/investigacion-post-r6/epidemiologia/evidencia/datastore_diccionario_2026-10-24.json",
+          "sha256": "dfe6e73b759a22c5b0a2acc5c9b03573b5d1fed39cd088f5b542c907ca91b348",
+          "localizador": "records[_id=38] Nombre variable=issste",
+          "afirmacion_soportada": "Live 2026-10-24 confirma desc='Pendiente de especificar' y catalogo vacio; sin cambios vs R6."
+        },
+        {
+          "ruta": "propuestas/investigacion-post-r6/epidemiologia/evidencia/examen_manual_suive32_paginas.txt",
+          "sha256": "9c20cd10f4673483d449551e2a48613e5c030d73ad929aa7ff033f06bf7393cc",
+          "localizador": "paginas del manual: p17",
+          "afirmacion_soportada": "Manual p17: instituciones nacionales SSA, IMSS, ISSSTE, Otras, IMSS-Prospera, DIF, PEMEX, SEDENA, SEMAR; conjunto DISTINTO de las 9 columnas locales (imss_ord/imss_sol/d_if/sedemar vs IMSS-Prospera/DIF/SEMAR). Sin equivalencia autorizada."
+        },
+        {
+          "ruta": "propuestas/investigacion-post-r6/epidemiologia/evidencia/http_log.json",
+          "sha256": "0f0c01573fe25b4e1a659fc01154b678b8a8956156787f8099f6af7876e706a0",
+          "localizador": "consultas package_show/datastore/manual + 403 xlsx/csv/boletin",
+          "afirmacion_soportada": "Package sin cambios (fuentes_extras vacio, version null); manual fresco byte-identico Last-Modified 2021-08-10 < periodo 2022; descargas bloqueadas 403 sin evadir."
+        }
+      ],
+      "vinculo_fuente_local": "Diccionario data/portal/inspecciones/2334deaa-dd0c-444e-b038-4cc556ad715d.json /definiciones/37 (issste, fila 38, huella citada) + hoja SUIVE data/portal/inspecciones/1689b19c-b0dc-4e39-bf07-e3a2e684ef1a.json pos 38 + edicion package datos.sonora.gob.mx dca16d84 (recurso 1689b19c, 2022-01-01/2022-12-31). Vinculo verificado: columna fisica existe; NO acredita sentido (descripcion pendiente/generica).",
+      "evidencia_faltante": "EPI-R6-01 + EPI-R6-02: diccionario corregido con descripcion para la columna issste pos 38, o nota del publicador que fije su sentido literal citando conjunto+diccionario+fila+huella y vincule edicion-recurso-periodo.",
+      "motivo": "Manual p17: instituciones nacionales SSA, IMSS, ISSSTE, Otras, IMSS-Prospera, DIF, PEMEX, SEDENA, SEMAR; conjunto DISTINTO de las 9 columnas locales (imss_ord/imss_sol/d_if/sedemar vs IMSS-Prospera/DIF/SEMAR). Sin equivalencia autorizada. Sin respaldo explicito vinculado a esta definicion; no se aprueba por nombre, ejemplo aislado ni catalogo nacional generico sin vinculo local. Criterio R6 conservado.",
+      "limites": [
+        "Alcance simultaneo por conjunto, diccionario, definicion, nombre y descripcion; no autoriza cruces, homologaciones ni equivalencias.",
+        "Evidencia negativa acotada a las busquedas 2026-10-24 documentadas en http_log.json, no ausencia universal."
+      ]
+    },
+    {
+      "definicion_iri": "https://example.org/mex-ontologi/definition/2334deaa-dd0c-444e-b038-4cc556ad715d%2F39",
+      "variable": "otras",
+      "descripcion_original": "Pendiente de especificar",
+      "huella_fila_diccionario": "97798bd230f5554b464902d95c2a219314baa597c0011897a29bfbd786833877",
+      "estado": "sigue_pendiente",
+      "significado_propuesto": null,
+      "evidencia": [
+        {
+          "ruta": "data/portal/inspecciones/2334deaa-dd0c-444e-b038-4cc556ad715d.json",
+          "sha256": "298786f09028a94004420c08eb28120294b130378a0cf12d609a1bffb950288d",
+          "localizador": "/definiciones/38 (Nombre variable=otras)",
+          "afirmacion_soportada": "Descripcion='Pendiente de especificar', catalogo de referencia vacio, ejemplo registrado; huella 97798bd230f5554b464902d95c2a219314baa597c0011897a29bfbd786833877."
+        },
+        {
+          "ruta": "data/portal/inspecciones/1689b19c-b0dc-4e39-bf07-e3a2e684ef1a.json",
+          "sha256": "31861377197a43619d42bf22a49c3b3f34b122f800f0f29d4d2fdf75a03a4c60",
+          "localizador": "hoja=SUIVE posicion_original=39 (id=otras)",
+          "afirmacion_soportada": "Columna fisica otras observada en pos 39 del esquema de 59 campos; sin documentar su computo."
+        },
+        {
+          "ruta": "propuestas/investigacion-post-r6/epidemiologia/evidencia/datastore_diccionario_2026-10-24.json",
+          "sha256": "dfe6e73b759a22c5b0a2acc5c9b03573b5d1fed39cd088f5b542c907ca91b348",
+          "localizador": "records[_id=39] Nombre variable=otras",
+          "afirmacion_soportada": "Live 2026-10-24 confirma desc='Pendiente de especificar' y catalogo vacio; sin cambios vs R6."
+        },
+        {
+          "ruta": "propuestas/investigacion-post-r6/epidemiologia/evidencia/examen_manual_suive32_paginas.txt",
+          "sha256": "9c20cd10f4673483d449551e2a48613e5c030d73ad929aa7ff033f06bf7393cc",
+          "localizador": "paginas del manual: p17",
+          "afirmacion_soportada": "Manual p17: instituciones nacionales SSA, IMSS, ISSSTE, Otras, IMSS-Prospera, DIF, PEMEX, SEDENA, SEMAR; conjunto DISTINTO de las 9 columnas locales (imss_ord/imss_sol/d_if/sedemar vs IMSS-Prospera/DIF/SEMAR). Sin equivalencia autorizada."
+        },
+        {
+          "ruta": "propuestas/investigacion-post-r6/epidemiologia/evidencia/http_log.json",
+          "sha256": "0f0c01573fe25b4e1a659fc01154b678b8a8956156787f8099f6af7876e706a0",
+          "localizador": "consultas package_show/datastore/manual + 403 xlsx/csv/boletin",
+          "afirmacion_soportada": "Package sin cambios (fuentes_extras vacio, version null); manual fresco byte-identico Last-Modified 2021-08-10 < periodo 2022; descargas bloqueadas 403 sin evadir."
+        }
+      ],
+      "vinculo_fuente_local": "Diccionario data/portal/inspecciones/2334deaa-dd0c-444e-b038-4cc556ad715d.json /definiciones/38 (otras, fila 39, huella citada) + hoja SUIVE data/portal/inspecciones/1689b19c-b0dc-4e39-bf07-e3a2e684ef1a.json pos 39 + edicion package datos.sonora.gob.mx dca16d84 (recurso 1689b19c, 2022-01-01/2022-12-31). Vinculo verificado: columna fisica existe; NO acredita sentido (descripcion pendiente/generica).",
+      "evidencia_faltante": "EPI-R6-01 + EPI-R6-02: diccionario corregido con descripcion para la columna otras pos 39, o nota del publicador que fije su sentido literal citando conjunto+diccionario+fila+huella y vincule edicion-recurso-periodo.",
+      "motivo": "Manual p17: instituciones nacionales SSA, IMSS, ISSSTE, Otras, IMSS-Prospera, DIF, PEMEX, SEDENA, SEMAR; conjunto DISTINTO de las 9 columnas locales (imss_ord/imss_sol/d_if/sedemar vs IMSS-Prospera/DIF/SEMAR). Sin equivalencia autorizada. Sin respaldo explicito vinculado a esta definicion; no se aprueba por nombre, ejemplo aislado ni catalogo nacional generico sin vinculo local. Criterio R6 conservado.",
+      "limites": [
+        "Alcance simultaneo por conjunto, diccionario, definicion, nombre y descripcion; no autoriza cruces, homologaciones ni equivalencias.",
+        "Evidencia negativa acotada a las busquedas 2026-10-24 documentadas en http_log.json, no ausencia universal."
+      ]
+    },
+    {
+      "definicion_iri": "https://example.org/mex-ontologi/definition/2334deaa-dd0c-444e-b038-4cc556ad715d%2F40",
+      "variable": "imss_sol",
+      "descripcion_original": "Pendiente de especificar",
+      "huella_fila_diccionario": "ad7ad174a63ee88d244261373816f5c944ba444d1a8308d73d86d36d9bab61e4",
+      "estado": "sigue_pendiente",
+      "significado_propuesto": null,
+      "evidencia": [
+        {
+          "ruta": "data/portal/inspecciones/2334deaa-dd0c-444e-b038-4cc556ad715d.json",
+          "sha256": "298786f09028a94004420c08eb28120294b130378a0cf12d609a1bffb950288d",
+          "localizador": "/definiciones/39 (Nombre variable=imss_sol)",
+          "afirmacion_soportada": "Descripcion='Pendiente de especificar', catalogo de referencia vacio, ejemplo registrado; huella ad7ad174a63ee88d244261373816f5c944ba444d1a8308d73d86d36d9bab61e4."
+        },
+        {
+          "ruta": "data/portal/inspecciones/1689b19c-b0dc-4e39-bf07-e3a2e684ef1a.json",
+          "sha256": "31861377197a43619d42bf22a49c3b3f34b122f800f0f29d4d2fdf75a03a4c60",
+          "localizador": "hoja=SUIVE posicion_original=40 (id=imss_sol)",
+          "afirmacion_soportada": "Columna fisica imss_sol observada en pos 40 del esquema de 59 campos; sin documentar su computo."
+        },
+        {
+          "ruta": "propuestas/investigacion-post-r6/epidemiologia/evidencia/datastore_diccionario_2026-10-24.json",
+          "sha256": "dfe6e73b759a22c5b0a2acc5c9b03573b5d1fed39cd088f5b542c907ca91b348",
+          "localizador": "records[_id=40] Nombre variable=imss_sol",
+          "afirmacion_soportada": "Live 2026-10-24 confirma desc='Pendiente de especificar' y catalogo vacio; sin cambios vs R6."
+        },
+        {
+          "ruta": "propuestas/investigacion-post-r6/epidemiologia/evidencia/examen_manual_suive32_paginas.txt",
+          "sha256": "9c20cd10f4673483d449551e2a48613e5c030d73ad929aa7ff033f06bf7393cc",
+          "localizador": "paginas del manual: p17",
+          "afirmacion_soportada": "Manual p17: instituciones nacionales SSA, IMSS, ISSSTE, Otras, IMSS-Prospera, DIF, PEMEX, SEDENA, SEMAR; conjunto DISTINTO de las 9 columnas locales (imss_ord/imss_sol/d_if/sedemar vs IMSS-Prospera/DIF/SEMAR). Sin equivalencia autorizada."
+        },
+        {
+          "ruta": "propuestas/investigacion-post-r6/epidemiologia/evidencia/http_log.json",
+          "sha256": "0f0c01573fe25b4e1a659fc01154b678b8a8956156787f8099f6af7876e706a0",
+          "localizador": "consultas package_show/datastore/manual + 403 xlsx/csv/boletin",
+          "afirmacion_soportada": "Package sin cambios (fuentes_extras vacio, version null); manual fresco byte-identico Last-Modified 2021-08-10 < periodo 2022; descargas bloqueadas 403 sin evadir."
+        }
+      ],
+      "vinculo_fuente_local": "Diccionario data/portal/inspecciones/2334deaa-dd0c-444e-b038-4cc556ad715d.json /definiciones/39 (imss_sol, fila 40, huella citada) + hoja SUIVE data/portal/inspecciones/1689b19c-b0dc-4e39-bf07-e3a2e684ef1a.json pos 40 + edicion package datos.sonora.gob.mx dca16d84 (recurso 1689b19c, 2022-01-01/2022-12-31). Vinculo verificado: columna fisica existe; NO acredita sentido (descripcion pendiente/generica).",
+      "evidencia_faltante": "EPI-R6-01 + EPI-R6-02: diccionario corregido con descripcion para la columna imss_sol pos 40, o nota del publicador que fije su sentido literal citando conjunto+diccionario+fila+huella y vincule edicion-recurso-periodo.",
+      "motivo": "Manual p17: instituciones nacionales SSA, IMSS, ISSSTE, Otras, IMSS-Prospera, DIF, PEMEX, SEDENA, SEMAR; conjunto DISTINTO de las 9 columnas locales (imss_ord/imss_sol/d_if/sedemar vs IMSS-Prospera/DIF/SEMAR). Sin equivalencia autorizada. Sin respaldo explicito vinculado a esta definicion; no se aprueba por nombre, ejemplo aislado ni catalogo nacional generico sin vinculo local. Criterio R6 conservado.",
+      "limites": [
+        "Alcance simultaneo por conjunto, diccionario, definicion, nombre y descripcion; no autoriza cruces, homologaciones ni equivalencias.",
+        "Evidencia negativa acotada a las busquedas 2026-10-24 documentadas en http_log.json, no ausencia universal."
+      ]
+    },
+    {
+      "definicion_iri": "https://example.org/mex-ontologi/definition/2334deaa-dd0c-444e-b038-4cc556ad715d%2F41",
+      "variable": "d_if",
+      "descripcion_original": "Pendiente de especificar",
+      "huella_fila_diccionario": "368c74a3fa6a9b27a4cf2338164ecacee7ff4123af36a85f1c94ca5507ad4817",
+      "estado": "sigue_pendiente",
+      "significado_propuesto": null,
+      "evidencia": [
+        {
+          "ruta": "data/portal/inspecciones/2334deaa-dd0c-444e-b038-4cc556ad715d.json",
+          "sha256": "298786f09028a94004420c08eb28120294b130378a0cf12d609a1bffb950288d",
+          "localizador": "/definiciones/40 (Nombre variable=d_if)",
+          "afirmacion_soportada": "Descripcion='Pendiente de especificar', catalogo de referencia vacio, ejemplo registrado; huella 368c74a3fa6a9b27a4cf2338164ecacee7ff4123af36a85f1c94ca5507ad4817."
+        },
+        {
+          "ruta": "data/portal/inspecciones/1689b19c-b0dc-4e39-bf07-e3a2e684ef1a.json",
+          "sha256": "31861377197a43619d42bf22a49c3b3f34b122f800f0f29d4d2fdf75a03a4c60",
+          "localizador": "hoja=SUIVE posicion_original=41 (id=d_if)",
+          "afirmacion_soportada": "Columna fisica d_if observada en pos 41 del esquema de 59 campos; sin documentar su computo."
+        },
+        {
+          "ruta": "propuestas/investigacion-post-r6/epidemiologia/evidencia/datastore_diccionario_2026-10-24.json",
+          "sha256": "dfe6e73b759a22c5b0a2acc5c9b03573b5d1fed39cd088f5b542c907ca91b348",
+          "localizador": "records[_id=41] Nombre variable=d_if",
+          "afirmacion_soportada": "Live 2026-10-24 confirma desc='Pendiente de especificar' y catalogo vacio; sin cambios vs R6."
+        },
+        {
+          "ruta": "propuestas/investigacion-post-r6/epidemiologia/evidencia/examen_manual_suive32_paginas.txt",
+          "sha256": "9c20cd10f4673483d449551e2a48613e5c030d73ad929aa7ff033f06bf7393cc",
+          "localizador": "paginas del manual: p17",
+          "afirmacion_soportada": "Manual p17: instituciones nacionales SSA, IMSS, ISSSTE, Otras, IMSS-Prospera, DIF, PEMEX, SEDENA, SEMAR; conjunto DISTINTO de las 9 columnas locales (imss_ord/imss_sol/d_if/sedemar vs IMSS-Prospera/DIF/SEMAR). Sin equivalencia autorizada."
+        },
+        {
+          "ruta": "propuestas/investigacion-post-r6/epidemiologia/evidencia/http_log.json",
+          "sha256": "0f0c01573fe25b4e1a659fc01154b678b8a8956156787f8099f6af7876e706a0",
+          "localizador": "consultas package_show/datastore/manual + 403 xlsx/csv/boletin",
+          "afirmacion_soportada": "Package sin cambios (fuentes_extras vacio, version null); manual fresco byte-identico Last-Modified 2021-08-10 < periodo 2022; descargas bloqueadas 403 sin evadir."
+        }
+      ],
+      "vinculo_fuente_local": "Diccionario data/portal/inspecciones/2334deaa-dd0c-444e-b038-4cc556ad715d.json /definiciones/40 (d_if, fila 41, huella citada) + hoja SUIVE data/portal/inspecciones/1689b19c-b0dc-4e39-bf07-e3a2e684ef1a.json pos 41 + edicion package datos.sonora.gob.mx dca16d84 (recurso 1689b19c, 2022-01-01/2022-12-31). Vinculo verificado: columna fisica existe; NO acredita sentido (descripcion pendiente/generica).",
+      "evidencia_faltante": "EPI-R6-01 + EPI-R6-02: diccionario corregido con descripcion para la columna d_if pos 41, o nota del publicador que fije su sentido literal citando conjunto+diccionario+fila+huella y vincule edicion-recurso-periodo.",
+      "motivo": "Manual p17: instituciones nacionales SSA, IMSS, ISSSTE, Otras, IMSS-Prospera, DIF, PEMEX, SEDENA, SEMAR; conjunto DISTINTO de las 9 columnas locales (imss_ord/imss_sol/d_if/sedemar vs IMSS-Prospera/DIF/SEMAR). Sin equivalencia autorizada. Sin respaldo explicito vinculado a esta definicion; no se aprueba por nombre, ejemplo aislado ni catalogo nacional generico sin vinculo local. Criterio R6 conservado.",
+      "limites": [
+        "Alcance simultaneo por conjunto, diccionario, definicion, nombre y descripcion; no autoriza cruces, homologaciones ni equivalencias.",
+        "Evidencia negativa acotada a las busquedas 2026-10-24 documentadas en http_log.json, no ausencia universal."
+      ]
+    },
+    {
+      "definicion_iri": "https://example.org/mex-ontologi/definition/2334deaa-dd0c-444e-b038-4cc556ad715d%2F42",
+      "variable": "pemex",
+      "descripcion_original": "Pendiente de especificar",
+      "huella_fila_diccionario": "d7071b783b11329835e4809e094c3b21af91de498b2e8c80e51f265a23d687cc",
+      "estado": "sigue_pendiente",
+      "significado_propuesto": null,
+      "evidencia": [
+        {
+          "ruta": "data/portal/inspecciones/2334deaa-dd0c-444e-b038-4cc556ad715d.json",
+          "sha256": "298786f09028a94004420c08eb28120294b130378a0cf12d609a1bffb950288d",
+          "localizador": "/definiciones/41 (Nombre variable=pemex)",
+          "afirmacion_soportada": "Descripcion='Pendiente de especificar', catalogo de referencia vacio, ejemplo registrado; huella d7071b783b11329835e4809e094c3b21af91de498b2e8c80e51f265a23d687cc."
+        },
+        {
+          "ruta": "data/portal/inspecciones/1689b19c-b0dc-4e39-bf07-e3a2e684ef1a.json",
+          "sha256": "31861377197a43619d42bf22a49c3b3f34b122f800f0f29d4d2fdf75a03a4c60",
+          "localizador": "hoja=SUIVE posicion_original=42 (id=pemex)",
+          "afirmacion_soportada": "Columna fisica pemex observada en pos 42 del esquema de 59 campos; sin documentar su computo."
+        },
+        {
+          "ruta": "propuestas/investigacion-post-r6/epidemiologia/evidencia/datastore_diccionario_2026-10-24.json",
+          "sha256": "dfe6e73b759a22c5b0a2acc5c9b03573b5d1fed39cd088f5b542c907ca91b348",
+          "localizador": "records[_id=42] Nombre variable=pemex",
+          "afirmacion_soportada": "Live 2026-10-24 confirma desc='Pendiente de especificar' y catalogo vacio; sin cambios vs R6."
+        },
+        {
+          "ruta": "propuestas/investigacion-post-r6/epidemiologia/evidencia/examen_manual_suive32_paginas.txt",
+          "sha256": "9c20cd10f4673483d449551e2a48613e5c030d73ad929aa7ff033f06bf7393cc",
+          "localizador": "paginas del manual: p17",
+          "afirmacion_soportada": "Manual p17: instituciones nacionales SSA, IMSS, ISSSTE, Otras, IMSS-Prospera, DIF, PEMEX, SEDENA, SEMAR; conjunto DISTINTO de las 9 columnas locales (imss_ord/imss_sol/d_if/sedemar vs IMSS-Prospera/DIF/SEMAR). Sin equivalencia autorizada."
+        },
+        {
+          "ruta": "propuestas/investigacion-post-r6/epidemiologia/evidencia/http_log.json",
+          "sha256": "0f0c01573fe25b4e1a659fc01154b678b8a8956156787f8099f6af7876e706a0",
+          "localizador": "consultas package_show/datastore/manual + 403 xlsx/csv/boletin",
+          "afirmacion_soportada": "Package sin cambios (fuentes_extras vacio, version null); manual fresco byte-identico Last-Modified 2021-08-10 < periodo 2022; descargas bloqueadas 403 sin evadir."
+        }
+      ],
+      "vinculo_fuente_local": "Diccionario data/portal/inspecciones/2334deaa-dd0c-444e-b038-4cc556ad715d.json /definiciones/41 (pemex, fila 42, huella citada) + hoja SUIVE data/portal/inspecciones/1689b19c-b0dc-4e39-bf07-e3a2e684ef1a.json pos 42 + edicion package datos.sonora.gob.mx dca16d84 (recurso 1689b19c, 2022-01-01/2022-12-31). Vinculo verificado: columna fisica existe; NO acredita sentido (descripcion pendiente/generica).",
+      "evidencia_faltante": "EPI-R6-01 + EPI-R6-02: diccionario corregido con descripcion para la columna pemex pos 42, o nota del publicador que fije su sentido literal citando conjunto+diccionario+fila+huella y vincule edicion-recurso-periodo.",
+      "motivo": "Manual p17: instituciones nacionales SSA, IMSS, ISSSTE, Otras, IMSS-Prospera, DIF, PEMEX, SEDENA, SEMAR; conjunto DISTINTO de las 9 columnas locales (imss_ord/imss_sol/d_if/sedemar vs IMSS-Prospera/DIF/SEMAR). Sin equivalencia autorizada. Sin respaldo explicito vinculado a esta definicion; no se aprueba por nombre, ejemplo aislado ni catalogo nacional generico sin vinculo local. Criterio R6 conservado.",
+      "limites": [
+        "Alcance simultaneo por conjunto, diccionario, definicion, nombre y descripcion; no autoriza cruces, homologaciones ni equivalencias.",
+        "Evidencia negativa acotada a las busquedas 2026-10-24 documentadas en http_log.json, no ausencia universal."
+      ]
+    },
+    {
+      "definicion_iri": "https://example.org/mex-ontologi/definition/2334deaa-dd0c-444e-b038-4cc556ad715d%2F43",
+      "variable": "sedena",
+      "descripcion_original": "Pendiente de especificar",
+      "huella_fila_diccionario": "b3b91a250af63c5f1370577f3362b969a442d93312e0089d453949aceb7b93a6",
+      "estado": "sigue_pendiente",
+      "significado_propuesto": null,
+      "evidencia": [
+        {
+          "ruta": "data/portal/inspecciones/2334deaa-dd0c-444e-b038-4cc556ad715d.json",
+          "sha256": "298786f09028a94004420c08eb28120294b130378a0cf12d609a1bffb950288d",
+          "localizador": "/definiciones/42 (Nombre variable=sedena)",
+          "afirmacion_soportada": "Descripcion='Pendiente de especificar', catalogo de referencia vacio, ejemplo registrado; huella b3b91a250af63c5f1370577f3362b969a442d93312e0089d453949aceb7b93a6."
+        },
+        {
+          "ruta": "data/portal/inspecciones/1689b19c-b0dc-4e39-bf07-e3a2e684ef1a.json",
+          "sha256": "31861377197a43619d42bf22a49c3b3f34b122f800f0f29d4d2fdf75a03a4c60",
+          "localizador": "hoja=SUIVE posicion_original=43 (id=sedena)",
+          "afirmacion_soportada": "Columna fisica sedena observada en pos 43 del esquema de 59 campos; sin documentar su computo."
+        },
+        {
+          "ruta": "propuestas/investigacion-post-r6/epidemiologia/evidencia/datastore_diccionario_2026-10-24.json",
+          "sha256": "dfe6e73b759a22c5b0a2acc5c9b03573b5d1fed39cd088f5b542c907ca91b348",
+          "localizador": "records[_id=43] Nombre variable=sedena",
+          "afirmacion_soportada": "Live 2026-10-24 confirma desc='Pendiente de especificar' y catalogo vacio; sin cambios vs R6."
+        },
+        {
+          "ruta": "propuestas/investigacion-post-r6/epidemiologia/evidencia/examen_manual_suive32_paginas.txt",
+          "sha256": "9c20cd10f4673483d449551e2a48613e5c030d73ad929aa7ff033f06bf7393cc",
+          "localizador": "paginas del manual: p17",
+          "afirmacion_soportada": "Manual p17: instituciones nacionales SSA, IMSS, ISSSTE, Otras, IMSS-Prospera, DIF, PEMEX, SEDENA, SEMAR; conjunto DISTINTO de las 9 columnas locales (imss_ord/imss_sol/d_if/sedemar vs IMSS-Prospera/DIF/SEMAR). Sin equivalencia autorizada."
+        },
+        {
+          "ruta": "propuestas/investigacion-post-r6/epidemiologia/evidencia/http_log.json",
+          "sha256": "0f0c01573fe25b4e1a659fc01154b678b8a8956156787f8099f6af7876e706a0",
+          "localizador": "consultas package_show/datastore/manual + 403 xlsx/csv/boletin",
+          "afirmacion_soportada": "Package sin cambios (fuentes_extras vacio, version null); manual fresco byte-identico Last-Modified 2021-08-10 < periodo 2022; descargas bloqueadas 403 sin evadir."
+        }
+      ],
+      "vinculo_fuente_local": "Diccionario data/portal/inspecciones/2334deaa-dd0c-444e-b038-4cc556ad715d.json /definiciones/42 (sedena, fila 43, huella citada) + hoja SUIVE data/portal/inspecciones/1689b19c-b0dc-4e39-bf07-e3a2e684ef1a.json pos 43 + edicion package datos.sonora.gob.mx dca16d84 (recurso 1689b19c, 2022-01-01/2022-12-31). Vinculo verificado: columna fisica existe; NO acredita sentido (descripcion pendiente/generica).",
+      "evidencia_faltante": "EPI-R6-01 + EPI-R6-02: diccionario corregido con descripcion para la columna sedena pos 43, o nota del publicador que fije su sentido literal citando conjunto+diccionario+fila+huella y vincule edicion-recurso-periodo.",
+      "motivo": "Manual p17: instituciones nacionales SSA, IMSS, ISSSTE, Otras, IMSS-Prospera, DIF, PEMEX, SEDENA, SEMAR; conjunto DISTINTO de las 9 columnas locales (imss_ord/imss_sol/d_if/sedemar vs IMSS-Prospera/DIF/SEMAR). Sin equivalencia autorizada. Sin respaldo explicito vinculado a esta definicion; no se aprueba por nombre, ejemplo aislado ni catalogo nacional generico sin vinculo local. Criterio R6 conservado.",
+      "limites": [
+        "Alcance simultaneo por conjunto, diccionario, definicion, nombre y descripcion; no autoriza cruces, homologaciones ni equivalencias.",
+        "Evidencia negativa acotada a las busquedas 2026-10-24 documentadas en http_log.json, no ausencia universal."
+      ]
+    },
+    {
+      "definicion_iri": "https://example.org/mex-ontologi/definition/2334deaa-dd0c-444e-b038-4cc556ad715d%2F44",
+      "variable": "sedemar",
+      "descripcion_original": "Pendiente de especificar",
+      "huella_fila_diccionario": "72f0cdc5158a36e2aa5078e46ebfe64979885d3d52c8c7f51c9563c955db731f",
+      "estado": "sigue_pendiente",
+      "significado_propuesto": null,
+      "evidencia": [
+        {
+          "ruta": "data/portal/inspecciones/2334deaa-dd0c-444e-b038-4cc556ad715d.json",
+          "sha256": "298786f09028a94004420c08eb28120294b130378a0cf12d609a1bffb950288d",
+          "localizador": "/definiciones/43 (Nombre variable=sedemar)",
+          "afirmacion_soportada": "Descripcion='Pendiente de especificar', catalogo de referencia vacio, ejemplo registrado; huella 72f0cdc5158a36e2aa5078e46ebfe64979885d3d52c8c7f51c9563c955db731f."
+        },
+        {
+          "ruta": "data/portal/inspecciones/1689b19c-b0dc-4e39-bf07-e3a2e684ef1a.json",
+          "sha256": "31861377197a43619d42bf22a49c3b3f34b122f800f0f29d4d2fdf75a03a4c60",
+          "localizador": "hoja=SUIVE posicion_original=44 (id=sedemar)",
+          "afirmacion_soportada": "Columna fisica sedemar observada en pos 44 del esquema de 59 campos; sin documentar su computo."
+        },
+        {
+          "ruta": "propuestas/investigacion-post-r6/epidemiologia/evidencia/datastore_diccionario_2026-10-24.json",
+          "sha256": "dfe6e73b759a22c5b0a2acc5c9b03573b5d1fed39cd088f5b542c907ca91b348",
+          "localizador": "records[_id=44] Nombre variable=sedemar",
+          "afirmacion_soportada": "Live 2026-10-24 confirma desc='Pendiente de especificar' y catalogo vacio; sin cambios vs R6."
+        },
+        {
+          "ruta": "propuestas/investigacion-post-r6/epidemiologia/evidencia/examen_manual_suive32_paginas.txt",
+          "sha256": "9c20cd10f4673483d449551e2a48613e5c030d73ad929aa7ff033f06bf7393cc",
+          "localizador": "paginas del manual: p17",
+          "afirmacion_soportada": "Manual p17: instituciones nacionales SSA, IMSS, ISSSTE, Otras, IMSS-Prospera, DIF, PEMEX, SEDENA, SEMAR; conjunto DISTINTO de las 9 columnas locales (imss_ord/imss_sol/d_if/sedemar vs IMSS-Prospera/DIF/SEMAR). Sin equivalencia autorizada."
+        },
+        {
+          "ruta": "propuestas/investigacion-post-r6/epidemiologia/evidencia/http_log.json",
+          "sha256": "0f0c01573fe25b4e1a659fc01154b678b8a8956156787f8099f6af7876e706a0",
+          "localizador": "consultas package_show/datastore/manual + 403 xlsx/csv/boletin",
+          "afirmacion_soportada": "Package sin cambios (fuentes_extras vacio, version null); manual fresco byte-identico Last-Modified 2021-08-10 < periodo 2022; descargas bloqueadas 403 sin evadir."
+        }
+      ],
+      "vinculo_fuente_local": "Diccionario data/portal/inspecciones/2334deaa-dd0c-444e-b038-4cc556ad715d.json /definiciones/43 (sedemar, fila 44, huella citada) + hoja SUIVE data/portal/inspecciones/1689b19c-b0dc-4e39-bf07-e3a2e684ef1a.json pos 44 + edicion package datos.sonora.gob.mx dca16d84 (recurso 1689b19c, 2022-01-01/2022-12-31). Vinculo verificado: columna fisica existe; NO acredita sentido (descripcion pendiente/generica).",
+      "evidencia_faltante": "EPI-R6-01 + EPI-R6-02: diccionario corregido con descripcion para la columna sedemar pos 44, o nota del publicador que fije su sentido literal citando conjunto+diccionario+fila+huella y vincule edicion-recurso-periodo.",
+      "motivo": "Manual p17: instituciones nacionales SSA, IMSS, ISSSTE, Otras, IMSS-Prospera, DIF, PEMEX, SEDENA, SEMAR; conjunto DISTINTO de las 9 columnas locales (imss_ord/imss_sol/d_if/sedemar vs IMSS-Prospera/DIF/SEMAR). Sin equivalencia autorizada. Sin respaldo explicito vinculado a esta definicion; no se aprueba por nombre, ejemplo aislado ni catalogo nacional generico sin vinculo local. Criterio R6 conservado.",
+      "limites": [
+        "Alcance simultaneo por conjunto, diccionario, definicion, nombre y descripcion; no autoriza cruces, homologaciones ni equivalencias.",
+        "Evidencia negativa acotada a las busquedas 2026-10-24 documentadas en http_log.json, no ausencia universal."
+      ]
+    }
+  ],
+  "conteo": {
+    "propuesta_respaldada": 0,
+    "sigue_pendiente": 25
+  }
+}

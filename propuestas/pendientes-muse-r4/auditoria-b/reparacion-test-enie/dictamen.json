@@ -1,0 +1,36 @@
+{
+  "alcance": "copia corregida de tests/test_ronda_2.py SOLO en auditoria-b/reparacion-test-enie; central intacto (modificacion preexistente de otro rol en test_162, no tocada)",
+  "archivo": "reparacion-test-enie/tests/test_ronda_2.py",
+  "base_congelada": "ontologia/semantica.json, data/integracion-ronda-2 y data/integracion-ronda-4 no modificados; solo lectura",
+  "cambios_vs_central": [
+    "metodo test_enie_no_se_promueve_como_acento reescrito (6->~32 lineas)",
+    "linea ROOT parents[1]->parents[5] con comentario (misma raiz real)"
+  ],
+  "dictamen": "aceptar",
+  "evidencia_investigada": {
+    "clave_confunde_enie": "clave(Año)==clave(ano)==ano; literales difieren: prohibido aprobar por nombre",
+    "columna": "https://example.org/mex-ontologi/file-column/e52ec9d3-2242-4928-b2a3-06b95800c229%2FHoja1%2F1",
+    "concepto_vigente": "anio-registro (respaldada pre-R4, sin regla nueva)",
+    "criterio": "revision explicita presente",
+    "descripcion": "Año del registro",
+    "diccionario": "a95d2d39-12df-4836-9792-1ce52e05db3c (variable ano, fila 1)",
+    "huella_esquema": "c26ed0087554ffac68be1401450a36bd9f76bbcf37e847165298aa7b8ea065cc",
+    "huella_fila": "e69406fcccb10bb7a8c73e7cbd1e13df965a52e1d5aa34f60fd52e46e2b31f1a",
+    "lote_origen": "lote-1 (vinculo con definicion_iri exacta; concepto vigente)",
+    "pendiente_r2": "etapa vinculo, motivo nombre_difiere:requiere alias tecnico (historia intacta, 1 candidato)"
+  },
+  "garantias": {
+    "criterio_obligatorio": true,
+    "hashes_recomputados_desde_fuentes": true,
+    "mera_existencia_insuficiente": "sin recibo -> falla; hash/concepto alterados -> fallan (3 sondas OK)",
+    "no_debilita": "6 condiciones estrictas donde antes habia 1 ausencia; normalizador exhibido, no usado para aprobar",
+    "recibo_firmado": "aceptadas.json fijada contiene el mismo vinculo byte-identico"
+  },
+  "pruebas_dirigidas": {
+    "copia_corregida_7_de_7": "OK",
+    "falla_central": "1 (test_enie, assertNotIn) - causa confirmada",
+    "sondas_negativas_3_de_3_fallan_OK": true,
+    "sondas_recibo_intacto_pasa": true
+  },
+  "sha_archivo": "c29451be8c9eda6ac91d35ed0d84e522dd63004a1196c2eaef6d0bfef2f0f96f"
+}

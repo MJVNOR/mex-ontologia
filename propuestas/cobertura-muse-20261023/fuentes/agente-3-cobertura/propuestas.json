@@ -1,0 +1,2869 @@
+{
+  "generado_en_utc": "2026-10-23T10:39:01.166582+00:00",
+  "agente": "ronda-3/agente-3-cobertura",
+  "base_iri": "https://example.org/mex-ontologi/",
+  "huellas_entrada": {
+    "pendientes": "9294f997793344ab47ec4f34d9bb7ccef00ad2dd940c9435fff85c62017d76c2",
+    "cobertura": "38d0e7cb3cf37216f48bb54f3a4f773222e379dd8ac659983a409f61c98e6bde",
+    "semantica": "b36ea6c6ea5dbe8f77e93275f9dad2efdfa2f0a1f881a7d5350537541c73ce05",
+    "inventario": "783f12559b81e3c624e601c48d22733158135aa4229aad0feaea712824922faf",
+    "inspeccion": "61861aab5bc2b334699c4d78f611a0e2d650c4649bd791927f9095c2ac785efb"
+  },
+  "familias_revisadas": [
+    {
+      "familia": "censo",
+      "diccionario": "045da7ba-ee72-498a-9b7a-071176e2a4ea",
+      "conjunto": "5a511ff8-6a45-4589-8ef3-22000d5676f4",
+      "titulo_conjunto": "Censo Ganadero de Sonora",
+      "variables_leidas": 18,
+      "reglas": 18,
+      "documentacion": "Lectura completa fila por fila (literal, tipo, unidad, catalogo, nulos, ejemplo). El resto del inventario no esta leido."
+    },
+    {
+      "familia": "agricultura",
+      "diccionario": "94215f51-9c89-414d-8c3d-92792e609a2a",
+      "conjunto": "3e17a7e8-c8d4-49c4-a426-4dec099cd0cd",
+      "titulo_conjunto": "Agricultura Sonora",
+      "variables_leidas": 18,
+      "reglas": 18,
+      "documentacion": "Lectura completa fila por fila (literal, tipo, unidad, catalogo, nulos, ejemplo). El resto del inventario no esta leido."
+    },
+    {
+      "familia": "pesca",
+      "diccionario": "863b9cc8-daeb-4430-b835-6a0ced5abd31",
+      "conjunto": "e093cf34-7da0-4efb-89a3-7b473a5013ab",
+      "titulo_conjunto": "Pesca y Acuacultura",
+      "variables_leidas": 14,
+      "reglas": 12,
+      "documentacion": "Lectura completa fila por fila (literal, tipo, unidad, catalogo, nulos, ejemplo). El resto del inventario no esta leido."
+    },
+    {
+      "familia": "trigo",
+      "diccionario": "a7591bc9-f905-45cb-ba6c-ae3588d87594",
+      "conjunto": "207dc91e-ffef-47a6-891a-1a43dab05ee9",
+      "titulo_conjunto": "Permisos de Siembra de Trigo y sus variedades",
+      "variables_leidas": 16,
+      "reglas": 15,
+      "documentacion": "Lectura completa fila por fila (literal, tipo, unidad, catalogo, nulos, ejemplo). El resto del inventario no esta leido."
+    }
+  ],
+  "conceptos_nuevos": {
+    "ganado-registrado-censo": [
+      "Ganado registrado en el censo",
+      "Ganado registrado en el Censo Ganadero de Sonora. Agrupa conteos por categoría y totales por agrupación; la categoría o agrupación y su población se conservan por concepto.",
+      null
+    ],
+    "productores-ganaderos-censados": [
+      "Productores ganaderos censados",
+      "Número de productores ganaderos censados en el Censo Ganadero de Sonora. Población: productores, no cabezas. Unidad literal de la fila: Productores.",
+      null
+    ],
+    "ddr-registro": [
+      "Distrito de Desarrollo Rural del registro",
+      "Distrito de Desarrollo Rural al que pertenece el registro del Censo Ganadero de Sonora según la fuente. Sin unidad declarada en la fila. No resuelve un catálogo oficial de DDR.",
+      "territorio"
+    ],
+    "region-geografica-estado": [
+      "Región geográfica del estado declarada",
+      "Región geográfica del estado declarada para el registro del Censo Ganadero de Sonora. Sin unidad declarada. No vincula a municipio concreto ni prueba exclusividad territorial.",
+      "territorio"
+    ],
+    "cuenca-referencia-registro": [
+      "Cuenca hidrológica de referencia del registro",
+      "Cuenca hidrológica de referencia del registro del Censo Ganadero de Sonora. Sin unidad declarada. El alcance 'de referencia' se limita al registro; no prueba correspondencia geoespacial.",
+      "territorio"
+    ],
+    "ddr-registro-cultivo": [
+      "Distrito de Desarrollo Rural donde se registra el cultivo",
+      "Clave del DDR donde se registra el cultivo en Agricultura Sonora. Sin catálogo resuelto.",
+      "territorio"
+    ],
+    "ddr-registro-cultivo-nombre": [
+      "Nombre del Distrito de Desarrollo Rural donde se registra el cultivo",
+      "Nombre del DDR en que se registra el cultivo en Agricultura Sonora. Sin unidad declarada; sin catálogo resuelto.",
+      "territorio"
+    ],
+    "municipio-registro-cultivo": [
+      "Municipio donde se registra el cultivo",
+      "Clave del municipio en que se registra el cultivo en Agricultura Sonora. No resuelve CVEGEO ni identidad municipal entre fuentes.",
+      "municipio-registro"
+    ],
+    "municipio-registro-cultivo-nombre": [
+      "Nombre del municipio donde se registra el cultivo",
+      "Nombre del municipio en que se registra el cultivo en Agricultura Sonora. Sin unidad declarada; no resuelve identidad municipal entre fuentes.",
+      "municipio-registro"
+    ],
+    "mes-registro-cultivo": [
+      "Mes en que se registra el cultivo",
+      "Clave del mes en que se registra el cultivo en Agricultura Sonora. Requiere año como contexto.",
+      "mes-registro"
+    ],
+    "mes-registro-cultivo-nombre": [
+      "Nombre del mes en que se registra el cultivo",
+      "Nombre del mes en que se registra el cultivo en Agricultura Sonora. Sin unidad declarada; requiere año como contexto.",
+      "mes-registro"
+    ],
+    "cultivo-registrado": [
+      "Cultivo registrado",
+      "Nombre del cultivo registrado en Agricultura Sonora. Sin unidad declarada. Un nombre no es identidad global entre fuentes.",
+      null
+    ],
+    "cultivo-registrado-clave": [
+      "Clave del cultivo registrado",
+      "Clave identificadora del cultivo en Agricultura Sonora. Sin unidad declarada; sin catálogo resuelto.",
+      null
+    ],
+    "variedad-cultivo": [
+      "Variedad del cultivo",
+      "Nombre de la variedad del cultivo en Agricultura Sonora. Sin unidad declarada; sin catálogo resuelto.",
+      null
+    ],
+    "variedad-cultivo-clave": [
+      "Clave de la variedad del cultivo",
+      "Clave identificadora de la variedad del cultivo en Agricultura Sonora. Sin unidad declarada; sin catálogo resuelto.",
+      null
+    ],
+    "estado-cierre-avance-cultivo": [
+      "Dato de cierre o avance de producción del cultivo",
+      "Indica si el registro del cultivo es dato de cierre o de avance de producción. La unidad literal de la fila usa AAAA como marcador sin año concreto. Avance y cierre no son comparables.",
+      null
+    ],
+    "superficie-cultivo": [
+      "Superficie del cultivo",
+      "Superficie del cultivo en Agricultura Sonora. El estado (sembrada, cosechada, siniestrada) se conserva por concepto; la unidad literal es Hectáreas.",
+      null
+    ],
+    "superficie-sembrada-cultivo": [
+      "Superficie sembrada del cultivo",
+      "Superficie sembrada del cultivo en Agricultura Sonora. Unidad literal de la fila: Hectáreas. No se infiere balance con cosechadas ni siniestradas.",
+      "superficie-cultivo"
+    ],
+    "superficie-cosechada-cultivo": [
+      "Superficie cosechada del cultivo",
+      "Superficie cosechada del cultivo en Agricultura Sonora. Unidad literal de la fila: Hectáreas. No se infiere balance con sembradas ni siniestradas.",
+      "superficie-cultivo"
+    ],
+    "superficie-siniestrada-cultivo": [
+      "Superficie siniestrada del cultivo",
+      "Superficie siniestrada del cultivo en Agricultura Sonora. Unidad literal de la fila: Hectáreas. No se infiere balance con sembradas ni cosechadas.",
+      "superficie-cultivo"
+    ],
+    "produccion-cultivo-toneladas": [
+      "Producción total del cultivo en toneladas",
+      "Producción total obtenida del cultivo en Agricultura Sonora. Unidad literal de la fila: Toneladas.",
+      null
+    ],
+    "rendimiento-cultivo": [
+      "Rendimiento del cultivo por hectárea sembrada",
+      "Rendimiento del cultivo: producción obtenida por hectárea sembrada. Unidad literal de la fila: Toneladas/hectáreas. No verifica el cálculo.",
+      null
+    ],
+    "precio-medio-rural-cultivo": [
+      "Precio Medio Rural del cultivo",
+      "Precio medio del cultivo (PMR) como cociente entre valor de producción total y producción en toneladas, según definición. Unidad literal de la fila: Pesos por tonelada. No verifica el cálculo.",
+      null
+    ],
+    "valor-produccion-cultivo": [
+      "Valor total producido por cultivo",
+      "Valor Total Producido por cultivo en Agricultura Sonora. Unidad literal de la fila: Miles de pesos MXN.",
+      null
+    ],
+    "ddr-registro-pesquero": [
+      "Distrito de Desarrollo Rural donde se registra la producción pesquera",
+      "Clave del DDR donde se registra la producción en Pesca y Acuacultura. Sin catálogo resuelto.",
+      "territorio"
+    ],
+    "ddr-registro-pesquero-nombre": [
+      "Nombre del Distrito de Desarrollo Rural donde se registra la producción pesquera",
+      "Nombre del DDR en que se registra la producción en Pesca y Acuacultura. Sin unidad declarada; sin catálogo resuelto.",
+      "territorio"
+    ],
+    "municipio-registro-pesquero": [
+      "Municipio donde se registra la producción pesquera",
+      "Clave del municipio donde se registra la producción en Pesca y Acuacultura. No resuelve CVEGEO.",
+      "municipio-registro"
+    ],
+    "oficina-pesquera-registro": [
+      "Oficina pesquera donde se registra la producción",
+      "Clave de la oficina pesquera donde se registra la producción. No identifica organización publicadora ni capturadora.",
+      "organizacion"
+    ],
+    "oficina-pesquera-registro-nombre": [
+      "Nombre de la oficina pesquera donde se registra la producción",
+      "Nombre de la oficina pesquera donde se registra la producción. Sin unidad declarada; no identifica organización publicadora ni capturadora.",
+      "organizacion"
+    ],
+    "especie-producida-pesca": [
+      "Especie producida en pesca y acuacultura",
+      "Nombre de la especie producida. Sin unidad declarada; sin catálogo resuelto.",
+      null
+    ],
+    "especie-producida-pesca-clave": [
+      "Clave de la especie producida en pesca y acuacultura",
+      "Clave numérica de la especie producida. Sin unidad declarada; sin catálogo resuelto.",
+      null
+    ],
+    "origen-produccion-pesquera": [
+      "Origen de la producción pesquera",
+      "Nombre del origen de la producción con las etiquetas literales de la fila. El diccionario no publica mapeo código-etiqueta: prohibido mapear por orden.",
+      null
+    ],
+    "origen-produccion-pesquera-clave": [
+      "Clave del origen de la producción pesquera",
+      "Clave numérica del origen de la producción con los valores literales de la fila. Sin mapeo publicado a etiquetas.",
+      null
+    ],
+    "peso-desembarcado-pesca": [
+      "Peso desembarcado del producto pesquero",
+      "Peso que al desembarque conserva el producto en sus modalidades literales. Unidad literal de la fila: Toneladas. Modalidades sin homologar.",
+      null
+    ],
+    "peso-vivo-pesca": [
+      "Peso vivo del producto pesquero en captura",
+      "Peso total del producto en el momento de su captura, estimado por factores de conversión aplicados al peso desembarcado (metodología FAO y factores del Instituto Nacional de la Pesca citados sin verificar). Unidad literal de la fila: Toneladas. No convertir ni equiparar al peso desembarcado.",
+      null
+    ],
+    "valor-produccion-pesquera": [
+      "Valor total de la producción pesquera",
+      "Valor total producido en Pesca y Acuacultura. Unidad literal de la fila: Pesos MXN.",
+      null
+    ],
+    "variedad-trigo-sembrada": [
+      "Variedad de trigo sembrada",
+      "Nombre de la variedad de trigo sembrada. Sin unidad declarada. Un nombre no es identidad global.",
+      null
+    ],
+    "variedad-trigo-sembrada-clave": [
+      "Clave de la variedad de trigo sembrada",
+      "Clave de la variedad del trigo. Sin unidad declarada; sin catálogo resuelto.",
+      null
+    ],
+    "variedad-trigo-sembrada-tipo": [
+      "Tipo de variedad de trigo sembrada",
+      "Tipo de variedad de trigo. Sin unidad declarada; catálogo de tipos no publicado.",
+      null
+    ],
+    "superficie-sembrada-trigo-ddr": [
+      "Superficie sembrada de trigo por DDR",
+      "Superficie sembrada de trigo por Distrito de Desarrollo Rural. Unidad literal de la fila: Hectáreas. El DDR se conserva por calificador formal de la regla, no por el concepto. Sin suma demostrada entre DDR.",
+      null
+    ],
+    "superficie-total-sembrada-trigo-registro": [
+      "Superficie total sembrada de trigo por registro",
+      "Superficie total sembrada por registro. Unidad literal de la fila: Hectáreas. No se demuestra suma de los desagregados por DDR.",
+      null
+    ],
+    "conteo-vacas-censo": [
+      "Conteo de vacas registradas en el censo",
+      "Número de vacas registradas en el Censo Ganadero de Sonora. Categoría: vacas. Población: cabezas de ganado de la categoría. Unidad literal de la fila: Cabezas. No demuestra exhaustividad de categorías ni igualdad con totales.",
+      "ganado-registrado-censo"
+    ],
+    "conteo-toros-censo": [
+      "Conteo de toros registrados en el censo",
+      "Número de toros registrados en el Censo Ganadero de Sonora. Categoría: toros. Población: cabezas de ganado de la categoría. Unidad literal de la fila: Cabezas. No demuestra exhaustividad de categorías ni igualdad con totales.",
+      "ganado-registrado-censo"
+    ],
+    "conteo-vaquillas-censo": [
+      "Conteo de vaquillas registradas en el censo",
+      "Número de vaquillas registradas en el Censo Ganadero de Sonora. Categoría: vaquillas. Población: cabezas de ganado de la categoría. Unidad literal de la fila: Cabezas. No demuestra exhaustividad de categorías ni igualdad con totales.",
+      "ganado-registrado-censo"
+    ],
+    "conteo-novillos-censo": [
+      "Conteo de novillos registrados en el censo",
+      "Número de novillos registrados en el Censo Ganadero de Sonora. Categoría: novillos. Población: cabezas de ganado de la categoría. Unidad literal de la fila: Cabezas. No demuestra exhaustividad de categorías ni igualdad con totales.",
+      "ganado-registrado-censo"
+    ],
+    "conteo-becerras-censo": [
+      "Conteo de becerras registradas en el censo",
+      "Número de becerras registradas en el Censo Ganadero de Sonora. Categoría: becerras. Población: cabezas de ganado de la categoría. Unidad literal de la fila: Cabezas. No demuestra exhaustividad de categorías ni igualdad con totales.",
+      "ganado-registrado-censo"
+    ],
+    "conteo-becerros-censo": [
+      "Conteo de becerros registrados en el censo",
+      "Número de becerros registrados en el Censo Ganadero de Sonora. Categoría: becerros. Población: cabezas de ganado de la categoría. Unidad literal de la fila: Cabezas. No demuestra exhaustividad de categorías ni igualdad con totales.",
+      "ganado-registrado-censo"
+    ],
+    "conteo-porcinos-censo": [
+      "Conteo de porcinos registrados en el censo",
+      "Número de porcinos registrados en el Censo Ganadero de Sonora. Categoría: porcinos. Población: cabezas de ganado de la categoría. Unidad literal de la fila: Cabezas. No demuestra exhaustividad de categorías ni igualdad con totales.",
+      "ganado-registrado-censo"
+    ],
+    "conteo-equinos-censo": [
+      "Conteo de equinos registrados en el censo",
+      "Número de equinos registrados en el Censo Ganadero de Sonora. Categoría: equinos. Población: cabezas de ganado de la categoría. Unidad literal de la fila: Cabezas. No demuestra exhaustividad de categorías ni igualdad con totales.",
+      "ganado-registrado-censo"
+    ],
+    "conteo-caprinos-censo": [
+      "Conteo de caprinos registrados en el censo",
+      "Número de caprinos registrados en el Censo Ganadero de Sonora. Categoría: caprinos. Población: cabezas de ganado de la categoría. Unidad literal de la fila: Cabezas. No demuestra exhaustividad de categorías ni igualdad con totales.",
+      "ganado-registrado-censo"
+    ],
+    "conteo-mulares-censo": [
+      "Conteo de mulares registrados en el censo",
+      "Número de animales mulares registrados en el Censo Ganadero de Sonora. Categoría: mulares. Población: cabezas de ganado de la categoría. Unidad literal de la fila: Cabezas. No demuestra exhaustividad de categorías ni igualdad con totales.",
+      "ganado-registrado-censo"
+    ],
+    "conteo-asnos-censo": [
+      "Conteo de asnos registrados en el censo",
+      "Número de asnos registrados en el Censo Ganadero de Sonora. Categoría: asnos. Población: cabezas de ganado de la categoría. Unidad literal de la fila: Cabezas. No demuestra exhaustividad de categorías ni igualdad con totales.",
+      "ganado-registrado-censo"
+    ],
+    "conteo-ovinos-censo": [
+      "Conteo de ovinos registrados en el censo",
+      "Número de ovinos registrados en el Censo Ganadero de Sonora. Categoría: ovinos. Población: cabezas de ganado de la categoría. Unidad literal de la fila: Cabezas. No demuestra exhaustividad de categorías ni igualdad con totales.",
+      "ganado-registrado-censo"
+    ],
+    "total-ganado-bovino-censo": [
+      "Total de ganado bovino registrado en el censo",
+      "Total de ganado bovino registrado en el Censo Ganadero de Sonora. Población explícita: ganado bovino. Unidad literal de la fila: Cabezas. No demuestra igualdad con la suma de categorías.",
+      "ganado-registrado-censo"
+    ],
+    "total-ganado-menor-censo": [
+      "Total de ganado menor registrado en el censo",
+      "Total de ganado menor registrado en el Censo Ganadero de Sonora. Población explícita: ganado menor. Unidad literal de la fila: Cabezas. No demuestra igualdad con la suma de categorías.",
+      "ganado-registrado-censo"
+    ]
+  },
+  "conceptos_reutilizados": [
+    "organizacion"
+  ],
+  "reglas": [
+    {
+      "id": "r3a3-conteo-vacas-censo-1",
+      "concepto": "conteo-vacas-censo",
+      "representacion": "no_especificada",
+      "descripciones": [
+        "Número de vacas registradas"
+      ],
+      "nombres": [
+        "VACAS"
+      ],
+      "conjuntos": [
+        "5a511ff8-6a45-4589-8ef3-22000d5676f4"
+      ],
+      "diccionarios": [
+        "045da7ba-ee72-498a-9b7a-071176e2a4ea"
+      ],
+      "definiciones": [
+        "https://example.org/mex-ontologi/definition/045da7ba-ee72-498a-9b7a-071176e2a4ea%2F5"
+      ],
+      "criterio": "Revision agente 3 ronda 3; lectura completa del diccionario; alcance fijado a definiciones concretas.",
+      "fuente_revision": "propuestas/ronda-3/agente-3-cobertura/propuestas.json",
+      "alcance": "Solo este diccionario, conjunto, definición y nombre.",
+      "positivo": "Denota el conteo de cabezas de la categoría de la evidencia.",
+      "contraejemplo": "No aplica a otra categoría (cada categoría tiene su concepto) ni a No_PROD_CENSADOS (población productores) ni a totales.",
+      "limite": "Categoría conservada por concepto; no demuestra exhaustividad de categorías ni igualdad con totales.",
+      "evidencia": [
+        {
+          "variable": "VACAS",
+          "descripcion": "Número de vacas registradas",
+          "definicion_iri": "https://example.org/mex-ontologi/definition/045da7ba-ee72-498a-9b7a-071176e2a4ea%2F5",
+          "diccionario": "045da7ba-ee72-498a-9b7a-071176e2a4ea",
+          "conjunto": "5a511ff8-6a45-4589-8ef3-22000d5676f4",
+          "unidad_de_medida": "Cabezas",
+          "tipo_de_dato": "Numérico",
+          "ejemplo_de_dato": "52056",
+          "catalogo_de_referencia": ""
+        }
+      ]
+    },
+    {
+      "id": "r3a3-conteo-toros-censo-1",
+      "concepto": "conteo-toros-censo",
+      "representacion": "no_especificada",
+      "descripciones": [
+        "Número de toros registrados"
+      ],
+      "nombres": [
+        "TOROS"
+      ],
+      "conjuntos": [
+        "5a511ff8-6a45-4589-8ef3-22000d5676f4"
+      ],
+      "diccionarios": [
+        "045da7ba-ee72-498a-9b7a-071176e2a4ea"
+      ],
+      "definiciones": [
+        "https://example.org/mex-ontologi/definition/045da7ba-ee72-498a-9b7a-071176e2a4ea%2F6"
+      ],
+      "criterio": "Revision agente 3 ronda 3; lectura completa del diccionario; alcance fijado a definiciones concretas.",
+      "fuente_revision": "propuestas/ronda-3/agente-3-cobertura/propuestas.json",
+      "alcance": "Solo este diccionario, conjunto, definición y nombre.",
+      "positivo": "Denota el conteo de cabezas de la categoría de la evidencia.",
+      "contraejemplo": "No aplica a otra categoría (cada categoría tiene su concepto) ni a No_PROD_CENSADOS (población productores) ni a totales.",
+      "limite": "Categoría conservada por concepto; no demuestra exhaustividad de categorías ni igualdad con totales.",
+      "evidencia": [
+        {
+          "variable": "TOROS",
+          "descripcion": "Número de toros registrados",
+          "definicion_iri": "https://example.org/mex-ontologi/definition/045da7ba-ee72-498a-9b7a-071176e2a4ea%2F6",
+          "diccionario": "045da7ba-ee72-498a-9b7a-071176e2a4ea",
+          "conjunto": "5a511ff8-6a45-4589-8ef3-22000d5676f4",
+          "unidad_de_medida": "Cabezas",
+          "tipo_de_dato": "Numérico",
+          "ejemplo_de_dato": "2483",
+          "catalogo_de_referencia": ""
+        }
+      ]
+    },
+    {
+      "id": "r3a3-conteo-vaquillas-censo-1",
+      "concepto": "conteo-vaquillas-censo",
+      "representacion": "no_especificada",
+      "descripciones": [
+        "Número de vaquillas registradas"
+      ],
+      "nombres": [
+        "VAQUILLAS"
+      ],
+      "conjuntos": [
+        "5a511ff8-6a45-4589-8ef3-22000d5676f4"
+      ],
+      "diccionarios": [
+        "045da7ba-ee72-498a-9b7a-071176e2a4ea"
+      ],
+      "definiciones": [
+        "https://example.org/mex-ontologi/definition/045da7ba-ee72-498a-9b7a-071176e2a4ea%2F7"
+      ],
+      "criterio": "Revision agente 3 ronda 3; lectura completa del diccionario; alcance fijado a definiciones concretas.",
+      "fuente_revision": "propuestas/ronda-3/agente-3-cobertura/propuestas.json",
+      "alcance": "Solo este diccionario, conjunto, definición y nombre.",
+      "positivo": "Denota el conteo de cabezas de la categoría de la evidencia.",
+      "contraejemplo": "No aplica a otra categoría (cada categoría tiene su concepto) ni a No_PROD_CENSADOS (población productores) ni a totales.",
+      "limite": "Categoría conservada por concepto; no demuestra exhaustividad de categorías ni igualdad con totales.",
+      "evidencia": [
+        {
+          "variable": "VAQUILLAS",
+          "descripcion": "Número de vaquillas registradas",
+          "definicion_iri": "https://example.org/mex-ontologi/definition/045da7ba-ee72-498a-9b7a-071176e2a4ea%2F7",
+          "diccionario": "045da7ba-ee72-498a-9b7a-071176e2a4ea",
+          "conjunto": "5a511ff8-6a45-4589-8ef3-22000d5676f4",
+          "unidad_de_medida": "Cabezas",
+          "tipo_de_dato": "Numérico",
+          "ejemplo_de_dato": "9290",
+          "catalogo_de_referencia": ""
+        }
+      ]
+    },
+    {
+      "id": "r3a3-conteo-novillos-censo-1",
+      "concepto": "conteo-novillos-censo",
+      "representacion": "no_especificada",
+      "descripciones": [
+        "Número de novillos registrados"
+      ],
+      "nombres": [
+        "NOVILLOS"
+      ],
+      "conjuntos": [
+        "5a511ff8-6a45-4589-8ef3-22000d5676f4"
+      ],
+      "diccionarios": [
+        "045da7ba-ee72-498a-9b7a-071176e2a4ea"
+      ],
+      "definiciones": [
+        "https://example.org/mex-ontologi/definition/045da7ba-ee72-498a-9b7a-071176e2a4ea%2F8"
+      ],
+      "criterio": "Revision agente 3 ronda 3; lectura completa del diccionario; alcance fijado a definiciones concretas.",
+      "fuente_revision": "propuestas/ronda-3/agente-3-cobertura/propuestas.json",
+      "alcance": "Solo este diccionario, conjunto, definición y nombre.",
+      "positivo": "Denota el conteo de cabezas de la categoría de la evidencia.",
+      "contraejemplo": "No aplica a otra categoría (cada categoría tiene su concepto) ni a No_PROD_CENSADOS (población productores) ni a totales.",
+      "limite": "Categoría conservada por concepto; no demuestra exhaustividad de categorías ni igualdad con totales.",
+      "evidencia": [
+        {
+          "variable": "NOVILLOS",
+          "descripcion": "Número de novillos registrados",
+          "definicion_iri": "https://example.org/mex-ontologi/definition/045da7ba-ee72-498a-9b7a-071176e2a4ea%2F8",
+          "diccionario": "045da7ba-ee72-498a-9b7a-071176e2a4ea",
+          "conjunto": "5a511ff8-6a45-4589-8ef3-22000d5676f4",
+          "unidad_de_medida": "Cabezas",
+          "tipo_de_dato": "Numérico",
+          "ejemplo_de_dato": "168",
+          "catalogo_de_referencia": ""
+        }
+      ]
+    },
+    {
+      "id": "r3a3-conteo-becerras-censo-1",
+      "concepto": "conteo-becerras-censo",
+      "representacion": "no_especificada",
+      "descripciones": [
+        "Número de becerras registradas"
+      ],
+      "nombres": [
+        "BECERRAS"
+      ],
+      "conjuntos": [
+        "5a511ff8-6a45-4589-8ef3-22000d5676f4"
+      ],
+      "diccionarios": [
+        "045da7ba-ee72-498a-9b7a-071176e2a4ea"
+      ],
+      "definiciones": [
+        "https://example.org/mex-ontologi/definition/045da7ba-ee72-498a-9b7a-071176e2a4ea%2F9"
+      ],
+      "criterio": "Revision agente 3 ronda 3; lectura completa del diccionario; alcance fijado a definiciones concretas.",
+      "fuente_revision": "propuestas/ronda-3/agente-3-cobertura/propuestas.json",
+      "alcance": "Solo este diccionario, conjunto, definición y nombre.",
+      "positivo": "Denota el conteo de cabezas de la categoría de la evidencia.",
+      "contraejemplo": "No aplica a otra categoría (cada categoría tiene su concepto) ni a No_PROD_CENSADOS (población productores) ni a totales.",
+      "limite": "Categoría conservada por concepto; no demuestra exhaustividad de categorías ni igualdad con totales.",
+      "evidencia": [
+        {
+          "variable": "BECERRAS",
+          "descripcion": "Número de becerras registradas",
+          "definicion_iri": "https://example.org/mex-ontologi/definition/045da7ba-ee72-498a-9b7a-071176e2a4ea%2F9",
+          "diccionario": "045da7ba-ee72-498a-9b7a-071176e2a4ea",
+          "conjunto": "5a511ff8-6a45-4589-8ef3-22000d5676f4",
+          "unidad_de_medida": "Cabezas",
+          "tipo_de_dato": "Numérico",
+          "ejemplo_de_dato": "11481",
+          "catalogo_de_referencia": ""
+        }
+      ]
+    },
+    {
+      "id": "r3a3-conteo-becerros-censo-1",
+      "concepto": "conteo-becerros-censo",
+      "representacion": "no_especificada",
+      "descripciones": [
+        "Número de becerros registrados"
+      ],
+      "nombres": [
+        "BECERROS"
+      ],
+      "conjuntos": [
+        "5a511ff8-6a45-4589-8ef3-22000d5676f4"
+      ],
+      "diccionarios": [
+        "045da7ba-ee72-498a-9b7a-071176e2a4ea"
+      ],
+      "definiciones": [
+        "https://example.org/mex-ontologi/definition/045da7ba-ee72-498a-9b7a-071176e2a4ea%2F10"
+      ],
+      "criterio": "Revision agente 3 ronda 3; lectura completa del diccionario; alcance fijado a definiciones concretas.",
+      "fuente_revision": "propuestas/ronda-3/agente-3-cobertura/propuestas.json",
+      "alcance": "Solo este diccionario, conjunto, definición y nombre.",
+      "positivo": "Denota el conteo de cabezas de la categoría de la evidencia.",
+      "contraejemplo": "No aplica a otra categoría (cada categoría tiene su concepto) ni a No_PROD_CENSADOS (población productores) ni a totales.",
+      "limite": "Categoría conservada por concepto; no demuestra exhaustividad de categorías ni igualdad con totales.",
+      "evidencia": [
+        {
+          "variable": "BECERROS",
+          "descripcion": "Número de becerros registrados",
+          "definicion_iri": "https://example.org/mex-ontologi/definition/045da7ba-ee72-498a-9b7a-071176e2a4ea%2F10",
+          "diccionario": "045da7ba-ee72-498a-9b7a-071176e2a4ea",
+          "conjunto": "5a511ff8-6a45-4589-8ef3-22000d5676f4",
+          "unidad_de_medida": "Cabezas",
+          "tipo_de_dato": "Numérico",
+          "ejemplo_de_dato": "7535",
+          "catalogo_de_referencia": ""
+        }
+      ]
+    },
+    {
+      "id": "r3a3-conteo-porcinos-censo-1",
+      "concepto": "conteo-porcinos-censo",
+      "representacion": "no_especificada",
+      "descripciones": [
+        "Número de porcinos registrados"
+      ],
+      "nombres": [
+        "PORCINOS"
+      ],
+      "conjuntos": [
+        "5a511ff8-6a45-4589-8ef3-22000d5676f4"
+      ],
+      "diccionarios": [
+        "045da7ba-ee72-498a-9b7a-071176e2a4ea"
+      ],
+      "definiciones": [
+        "https://example.org/mex-ontologi/definition/045da7ba-ee72-498a-9b7a-071176e2a4ea%2F12"
+      ],
+      "criterio": "Revision agente 3 ronda 3; lectura completa del diccionario; alcance fijado a definiciones concretas.",
+      "fuente_revision": "propuestas/ronda-3/agente-3-cobertura/propuestas.json",
+      "alcance": "Solo este diccionario, conjunto, definición y nombre.",
+      "positivo": "Denota el conteo de cabezas de la categoría de la evidencia.",
+      "contraejemplo": "No aplica a otra categoría (cada categoría tiene su concepto) ni a No_PROD_CENSADOS (población productores) ni a totales.",
+      "limite": "Categoría conservada por concepto; no demuestra exhaustividad de categorías ni igualdad con totales.",
+      "evidencia": [
+        {
+          "variable": "PORCINOS",
+          "descripcion": "Número de porcinos registrados",
+          "definicion_iri": "https://example.org/mex-ontologi/definition/045da7ba-ee72-498a-9b7a-071176e2a4ea%2F12",
+          "diccionario": "045da7ba-ee72-498a-9b7a-071176e2a4ea",
+          "conjunto": "5a511ff8-6a45-4589-8ef3-22000d5676f4",
+          "unidad_de_medida": "Cabezas",
+          "tipo_de_dato": "Numérico",
+          "ejemplo_de_dato": "1250",
+          "catalogo_de_referencia": ""
+        }
+      ]
+    },
+    {
+      "id": "r3a3-conteo-equinos-censo-1",
+      "concepto": "conteo-equinos-censo",
+      "representacion": "no_especificada",
+      "descripciones": [
+        "Número de equinos registrados"
+      ],
+      "nombres": [
+        "EQUINO"
+      ],
+      "conjuntos": [
+        "5a511ff8-6a45-4589-8ef3-22000d5676f4"
+      ],
+      "diccionarios": [
+        "045da7ba-ee72-498a-9b7a-071176e2a4ea"
+      ],
+      "definiciones": [
+        "https://example.org/mex-ontologi/definition/045da7ba-ee72-498a-9b7a-071176e2a4ea%2F13"
+      ],
+      "criterio": "Revision agente 3 ronda 3; lectura completa del diccionario; alcance fijado a definiciones concretas.",
+      "fuente_revision": "propuestas/ronda-3/agente-3-cobertura/propuestas.json",
+      "alcance": "Solo este diccionario, conjunto, definición y nombre.",
+      "positivo": "Denota el conteo de cabezas de la categoría de la evidencia.",
+      "contraejemplo": "No aplica a otra categoría (cada categoría tiene su concepto) ni a No_PROD_CENSADOS (población productores) ni a totales.",
+      "limite": "Categoría conservada por concepto; no demuestra exhaustividad de categorías ni igualdad con totales.",
+      "evidencia": [
+        {
+          "variable": "EQUINO",
+          "descripcion": "Número de equinos registrados",
+          "definicion_iri": "https://example.org/mex-ontologi/definition/045da7ba-ee72-498a-9b7a-071176e2a4ea%2F13",
+          "diccionario": "045da7ba-ee72-498a-9b7a-071176e2a4ea",
+          "conjunto": "5a511ff8-6a45-4589-8ef3-22000d5676f4",
+          "unidad_de_medida": "Cabezas",
+          "tipo_de_dato": "Numérico",
+          "ejemplo_de_dato": "763",
+          "catalogo_de_referencia": ""
+        }
+      ]
+    },
+    {
+      "id": "r3a3-conteo-caprinos-censo-1",
+      "concepto": "conteo-caprinos-censo",
+      "representacion": "no_especificada",
+      "descripciones": [
+        "Número de caprinos registrados"
+      ],
+      "nombres": [
+        "CAPRINO"
+      ],
+      "conjuntos": [
+        "5a511ff8-6a45-4589-8ef3-22000d5676f4"
+      ],
+      "diccionarios": [
+        "045da7ba-ee72-498a-9b7a-071176e2a4ea"
+      ],
+      "definiciones": [
+        "https://example.org/mex-ontologi/definition/045da7ba-ee72-498a-9b7a-071176e2a4ea%2F14"
+      ],
+      "criterio": "Revision agente 3 ronda 3; lectura completa del diccionario; alcance fijado a definiciones concretas.",
+      "fuente_revision": "propuestas/ronda-3/agente-3-cobertura/propuestas.json",
+      "alcance": "Solo este diccionario, conjunto, definición y nombre.",
+      "positivo": "Denota el conteo de cabezas de la categoría de la evidencia.",
+      "contraejemplo": "No aplica a otra categoría (cada categoría tiene su concepto) ni a No_PROD_CENSADOS (población productores) ni a totales.",
+      "limite": "Categoría conservada por concepto; no demuestra exhaustividad de categorías ni igualdad con totales.",
+      "evidencia": [
+        {
+          "variable": "CAPRINO",
+          "descripcion": "Número de caprinos registrados",
+          "definicion_iri": "https://example.org/mex-ontologi/definition/045da7ba-ee72-498a-9b7a-071176e2a4ea%2F14",
+          "diccionario": "045da7ba-ee72-498a-9b7a-071176e2a4ea",
+          "conjunto": "5a511ff8-6a45-4589-8ef3-22000d5676f4",
+          "unidad_de_medida": "Cabezas",
+          "tipo_de_dato": "Numérico",
+          "ejemplo_de_dato": "540",
+          "catalogo_de_referencia": ""
+        }
+      ]
+    },
+    {
+      "id": "r3a3-conteo-mulares-censo-1",
+      "concepto": "conteo-mulares-censo",
+      "representacion": "no_especificada",
+      "descripciones": [
+        "Número de animales mulares registrados"
+      ],
+      "nombres": [
+        "MULAR"
+      ],
+      "conjuntos": [
+        "5a511ff8-6a45-4589-8ef3-22000d5676f4"
+      ],
+      "diccionarios": [
+        "045da7ba-ee72-498a-9b7a-071176e2a4ea"
+      ],
+      "definiciones": [
+        "https://example.org/mex-ontologi/definition/045da7ba-ee72-498a-9b7a-071176e2a4ea%2F15"
+      ],
+      "criterio": "Revision agente 3 ronda 3; lectura completa del diccionario; alcance fijado a definiciones concretas.",
+      "fuente_revision": "propuestas/ronda-3/agente-3-cobertura/propuestas.json",
+      "alcance": "Solo este diccionario, conjunto, definición y nombre.",
+      "positivo": "Denota el conteo de cabezas de la categoría de la evidencia.",
+      "contraejemplo": "No aplica a otra categoría (cada categoría tiene su concepto) ni a No_PROD_CENSADOS (población productores) ni a totales.",
+      "limite": "Categoría conservada por concepto; no demuestra exhaustividad de categorías ni igualdad con totales.",
+      "evidencia": [
+        {
+          "variable": "MULAR",
+          "descripcion": "Número de animales mulares registrados",
+          "definicion_iri": "https://example.org/mex-ontologi/definition/045da7ba-ee72-498a-9b7a-071176e2a4ea%2F15",
+          "diccionario": "045da7ba-ee72-498a-9b7a-071176e2a4ea",
+          "conjunto": "5a511ff8-6a45-4589-8ef3-22000d5676f4",
+          "unidad_de_medida": "Cabezas",
+          "tipo_de_dato": "Numérico",
+          "ejemplo_de_dato": "39",
+          "catalogo_de_referencia": ""
+        }
+      ]
+    },
+    {
+      "id": "r3a3-conteo-asnos-censo-1",
+      "concepto": "conteo-asnos-censo",
+      "representacion": "no_especificada",
+      "descripciones": [
+        "Número de asnos registrados"
+      ],
+      "nombres": [
+        "ASNAL"
+      ],
+      "conjuntos": [
+        "5a511ff8-6a45-4589-8ef3-22000d5676f4"
+      ],
+      "diccionarios": [
+        "045da7ba-ee72-498a-9b7a-071176e2a4ea"
+      ],
+      "definiciones": [
+        "https://example.org/mex-ontologi/definition/045da7ba-ee72-498a-9b7a-071176e2a4ea%2F16"
+      ],
+      "criterio": "Revision agente 3 ronda 3; lectura completa del diccionario; alcance fijado a definiciones concretas.",
+      "fuente_revision": "propuestas/ronda-3/agente-3-cobertura/propuestas.json",
+      "alcance": "Solo este diccionario, conjunto, definición y nombre.",
+      "positivo": "Denota el conteo de cabezas de la categoría de la evidencia.",
+      "contraejemplo": "No aplica a otra categoría (cada categoría tiene su concepto) ni a No_PROD_CENSADOS (población productores) ni a totales.",
+      "limite": "Categoría conservada por concepto; no demuestra exhaustividad de categorías ni igualdad con totales.",
+      "evidencia": [
+        {
+          "variable": "ASNAL",
+          "descripcion": "Número de asnos registrados",
+          "definicion_iri": "https://example.org/mex-ontologi/definition/045da7ba-ee72-498a-9b7a-071176e2a4ea%2F16",
+          "diccionario": "045da7ba-ee72-498a-9b7a-071176e2a4ea",
+          "conjunto": "5a511ff8-6a45-4589-8ef3-22000d5676f4",
+          "unidad_de_medida": "Cabezas",
+          "tipo_de_dato": "Numérico",
+          "ejemplo_de_dato": "140",
+          "catalogo_de_referencia": ""
+        }
+      ]
+    },
+    {
+      "id": "r3a3-conteo-ovinos-censo-1",
+      "concepto": "conteo-ovinos-censo",
+      "representacion": "no_especificada",
+      "descripciones": [
+        "Número de ovinos registrados"
+      ],
+      "nombres": [
+        "OVINOS"
+      ],
+      "conjuntos": [
+        "5a511ff8-6a45-4589-8ef3-22000d5676f4"
+      ],
+      "diccionarios": [
+        "045da7ba-ee72-498a-9b7a-071176e2a4ea"
+      ],
+      "definiciones": [
+        "https://example.org/mex-ontologi/definition/045da7ba-ee72-498a-9b7a-071176e2a4ea%2F17"
+      ],
+      "criterio": "Revision agente 3 ronda 3; lectura completa del diccionario; alcance fijado a definiciones concretas.",
+      "fuente_revision": "propuestas/ronda-3/agente-3-cobertura/propuestas.json",
+      "alcance": "Solo este diccionario, conjunto, definición y nombre.",
+      "positivo": "Denota el conteo de cabezas de la categoría de la evidencia.",
+      "contraejemplo": "No aplica a otra categoría (cada categoría tiene su concepto) ni a No_PROD_CENSADOS (población productores) ni a totales.",
+      "limite": "Categoría conservada por concepto; no demuestra exhaustividad de categorías ni igualdad con totales.",
+      "evidencia": [
+        {
+          "variable": "OVINOS",
+          "descripcion": "Número de ovinos registrados",
+          "definicion_iri": "https://example.org/mex-ontologi/definition/045da7ba-ee72-498a-9b7a-071176e2a4ea%2F17",
+          "diccionario": "045da7ba-ee72-498a-9b7a-071176e2a4ea",
+          "conjunto": "5a511ff8-6a45-4589-8ef3-22000d5676f4",
+          "unidad_de_medida": "Cabezas",
+          "tipo_de_dato": "Numérico",
+          "ejemplo_de_dato": "210",
+          "catalogo_de_referencia": ""
+        }
+      ]
+    },
+    {
+      "id": "r3a3-total-ganado-bovino-censo-1",
+      "concepto": "total-ganado-bovino-censo",
+      "representacion": "no_especificada",
+      "descripciones": [
+        "Total de ganado bovino registrado"
+      ],
+      "nombres": [
+        "TOTAL_GANADO_BOVINO"
+      ],
+      "conjuntos": [
+        "5a511ff8-6a45-4589-8ef3-22000d5676f4"
+      ],
+      "diccionarios": [
+        "045da7ba-ee72-498a-9b7a-071176e2a4ea"
+      ],
+      "definiciones": [
+        "https://example.org/mex-ontologi/definition/045da7ba-ee72-498a-9b7a-071176e2a4ea%2F11"
+      ],
+      "criterio": "Revision agente 3 ronda 3; lectura completa del diccionario; alcance fijado a definiciones concretas.",
+      "fuente_revision": "propuestas/ronda-3/agente-3-cobertura/propuestas.json",
+      "alcance": "Solo este diccionario, conjunto, definición y nombre.",
+      "positivo": "Denota el total de ganado bovino registrado.",
+      "contraejemplo": "No aplica a TOTAL_GANADO_MENOR (población ganado menor, concepto distinto) ni a categorías individuales.",
+      "limite": "Población explícita: ganado bovino. No demuestra igualdad con la suma de categorías.",
+      "evidencia": [
+        {
+          "variable": "TOTAL_GANADO_BOVINO",
+          "descripcion": "Total de ganado bovino registrado",
+          "definicion_iri": "https://example.org/mex-ontologi/definition/045da7ba-ee72-498a-9b7a-071176e2a4ea%2F11",
+          "diccionario": "045da7ba-ee72-498a-9b7a-071176e2a4ea",
+          "conjunto": "5a511ff8-6a45-4589-8ef3-22000d5676f4",
+          "unidad_de_medida": "Cabezas",
+          "tipo_de_dato": "Numérico",
+          "ejemplo_de_dato": "83013",
+          "catalogo_de_referencia": ""
+        }
+      ]
+    },
+    {
+      "id": "r3a3-total-ganado-menor-censo-1",
+      "concepto": "total-ganado-menor-censo",
+      "representacion": "no_especificada",
+      "descripciones": [
+        "Total de ganado menor registrado"
+      ],
+      "nombres": [
+        "TOTAL_GANADO_MENOR"
+      ],
+      "conjuntos": [
+        "5a511ff8-6a45-4589-8ef3-22000d5676f4"
+      ],
+      "diccionarios": [
+        "045da7ba-ee72-498a-9b7a-071176e2a4ea"
+      ],
+      "definiciones": [
+        "https://example.org/mex-ontologi/definition/045da7ba-ee72-498a-9b7a-071176e2a4ea%2F18"
+      ],
+      "criterio": "Revision agente 3 ronda 3; lectura completa del diccionario; alcance fijado a definiciones concretas.",
+      "fuente_revision": "propuestas/ronda-3/agente-3-cobertura/propuestas.json",
+      "alcance": "Solo este diccionario, conjunto, definición y nombre.",
+      "positivo": "Denota el total de ganado menor registrado.",
+      "contraejemplo": "No aplica a TOTAL_GANADO_BOVINO (población ganado bovino, concepto distinto).",
+      "limite": "Población explícita: ganado menor. No demuestra igualdad con la suma de categorías.",
+      "evidencia": [
+        {
+          "variable": "TOTAL_GANADO_MENOR",
+          "descripcion": "Total de ganado menor registrado",
+          "definicion_iri": "https://example.org/mex-ontologi/definition/045da7ba-ee72-498a-9b7a-071176e2a4ea%2F18",
+          "diccionario": "045da7ba-ee72-498a-9b7a-071176e2a4ea",
+          "conjunto": "5a511ff8-6a45-4589-8ef3-22000d5676f4",
+          "unidad_de_medida": "Cabezas",
+          "tipo_de_dato": "Numérico",
+          "ejemplo_de_dato": "942",
+          "catalogo_de_referencia": ""
+        }
+      ]
+    },
+    {
+      "id": "r3a3-productores-ganaderos-censados-1",
+      "concepto": "productores-ganaderos-censados",
+      "representacion": "no_especificada",
+      "descripciones": [
+        "Número de productores ganaderos censados"
+      ],
+      "nombres": [
+        "No_PROD_CENSADOS"
+      ],
+      "conjuntos": [
+        "5a511ff8-6a45-4589-8ef3-22000d5676f4"
+      ],
+      "diccionarios": [
+        "045da7ba-ee72-498a-9b7a-071176e2a4ea"
+      ],
+      "definiciones": [
+        "https://example.org/mex-ontologi/definition/045da7ba-ee72-498a-9b7a-071176e2a4ea%2F4"
+      ],
+      "criterio": "Revision agente 3 ronda 3; lectura completa del diccionario; alcance fijado a definiciones concretas.",
+      "fuente_revision": "propuestas/ronda-3/agente-3-cobertura/propuestas.json",
+      "alcance": "Solo este diccionario, conjunto, definición y nombre.",
+      "positivo": "Denota el conteo de productores ganaderos censados.",
+      "contraejemplo": "No aplica a ningún conteo de cabezas (población distinta).",
+      "limite": "Población productores, no cabezas.",
+      "evidencia": [
+        {
+          "variable": "No_PROD_CENSADOS",
+          "descripcion": "Número de productores ganaderos censados",
+          "definicion_iri": "https://example.org/mex-ontologi/definition/045da7ba-ee72-498a-9b7a-071176e2a4ea%2F4",
+          "diccionario": "045da7ba-ee72-498a-9b7a-071176e2a4ea",
+          "conjunto": "5a511ff8-6a45-4589-8ef3-22000d5676f4",
+          "unidad_de_medida": "Productores",
+          "tipo_de_dato": "Numérico",
+          "ejemplo_de_dato": "2785",
+          "catalogo_de_referencia": ""
+        }
+      ]
+    },
+    {
+      "id": "r3a3-ddr-registro-1",
+      "concepto": "ddr-registro",
+      "representacion": "no_especificada",
+      "descripciones": [
+        "Distrito de Desarrollo Rural al que pertenece el registro"
+      ],
+      "nombres": [
+        "DDR"
+      ],
+      "conjuntos": [
+        "5a511ff8-6a45-4589-8ef3-22000d5676f4"
+      ],
+      "diccionarios": [
+        "045da7ba-ee72-498a-9b7a-071176e2a4ea"
+      ],
+      "definiciones": [
+        "https://example.org/mex-ontologi/definition/045da7ba-ee72-498a-9b7a-071176e2a4ea%2F1"
+      ],
+      "criterio": "Revision agente 3 ronda 3; lectura completa del diccionario; alcance fijado a definiciones concretas.",
+      "fuente_revision": "propuestas/ronda-3/agente-3-cobertura/propuestas.json",
+      "alcance": "Solo este diccionario, conjunto, definición y nombre.",
+      "positivo": "Denota el distrito de desarrollo rural del registro censal.",
+      "contraejemplo": "La regla ddr-municipio no aplica (función municipio no declarada aquí).",
+      "limite": "Sin unidad declarada en la fila; ejemplo combina clave y nombre sin separador documentado; no resuelve catálogo oficial.",
+      "evidencia": [
+        {
+          "variable": "DDR",
+          "descripcion": "Distrito de Desarrollo Rural al que pertenece el registro",
+          "definicion_iri": "https://example.org/mex-ontologi/definition/045da7ba-ee72-498a-9b7a-071176e2a4ea%2F1",
+          "diccionario": "045da7ba-ee72-498a-9b7a-071176e2a4ea",
+          "conjunto": "5a511ff8-6a45-4589-8ef3-22000d5676f4",
+          "unidad_de_medida": "",
+          "tipo_de_dato": "Texto",
+          "ejemplo_de_dato": "DDR 139 CABORCA",
+          "catalogo_de_referencia": ""
+        }
+      ]
+    },
+    {
+      "id": "r3a3-region-geografica-estado-1",
+      "concepto": "region-geografica-estado",
+      "representacion": "no_especificada",
+      "descripciones": [
+        "Región geográfica del estado"
+      ],
+      "nombres": [
+        "REGION"
+      ],
+      "conjuntos": [
+        "5a511ff8-6a45-4589-8ef3-22000d5676f4"
+      ],
+      "diccionarios": [
+        "045da7ba-ee72-498a-9b7a-071176e2a4ea"
+      ],
+      "definiciones": [
+        "https://example.org/mex-ontologi/definition/045da7ba-ee72-498a-9b7a-071176e2a4ea%2F2"
+      ],
+      "criterio": "Revision agente 3 ronda 3; lectura completa del diccionario; alcance fijado a definiciones concretas.",
+      "fuente_revision": "propuestas/ronda-3/agente-3-cobertura/propuestas.json",
+      "alcance": "Solo este diccionario, conjunto, definición y nombre.",
+      "positivo": "Denota la región geográfica del estado declarada para el registro.",
+      "contraejemplo": "La regla region-municipio no aplica (función municipio no declarada aquí).",
+      "limite": "Sin unidad declarada; no vincula a municipio concreto ni prueba exclusividad.",
+      "evidencia": [
+        {
+          "variable": "REGION",
+          "descripcion": "Región geográfica del estado",
+          "definicion_iri": "https://example.org/mex-ontologi/definition/045da7ba-ee72-498a-9b7a-071176e2a4ea%2F2",
+          "diccionario": "045da7ba-ee72-498a-9b7a-071176e2a4ea",
+          "conjunto": "5a511ff8-6a45-4589-8ef3-22000d5676f4",
+          "unidad_de_medida": "",
+          "tipo_de_dato": "Texto",
+          "ejemplo_de_dato": "Gran Desierto",
+          "catalogo_de_referencia": ""
+        }
+      ]
+    },
+    {
+      "id": "r3a3-cuenca-referencia-registro-1",
+      "concepto": "cuenca-referencia-registro",
+      "representacion": "no_especificada",
+      "descripciones": [
+        "Cuenca hidrológica de referencia"
+      ],
+      "nombres": [
+        "CUENCA"
+      ],
+      "conjuntos": [
+        "5a511ff8-6a45-4589-8ef3-22000d5676f4"
+      ],
+      "diccionarios": [
+        "045da7ba-ee72-498a-9b7a-071176e2a4ea"
+      ],
+      "definiciones": [
+        "https://example.org/mex-ontologi/definition/045da7ba-ee72-498a-9b7a-071176e2a4ea%2F3"
+      ],
+      "criterio": "Revision agente 3 ronda 3; lectura completa del diccionario; alcance fijado a definiciones concretas.",
+      "fuente_revision": "propuestas/ronda-3/agente-3-cobertura/propuestas.json",
+      "alcance": "Solo este diccionario, conjunto, definición y nombre.",
+      "positivo": "Denota la cuenca hidrológica de referencia del registro.",
+      "contraejemplo": "La regla cuenca-municipio no aplica (función municipio no declarada aquí).",
+      "limite": "Sin unidad declarada; 'de referencia' limita el alcance al registro; no prueba correspondencia geoespacial.",
+      "evidencia": [
+        {
+          "variable": "CUENCA",
+          "descripcion": "Cuenca hidrológica de referencia",
+          "definicion_iri": "https://example.org/mex-ontologi/definition/045da7ba-ee72-498a-9b7a-071176e2a4ea%2F3",
+          "diccionario": "045da7ba-ee72-498a-9b7a-071176e2a4ea",
+          "conjunto": "5a511ff8-6a45-4589-8ef3-22000d5676f4",
+          "unidad_de_medida": "",
+          "tipo_de_dato": "Texto",
+          "ejemplo_de_dato": "R. YAQUI",
+          "catalogo_de_referencia": ""
+        }
+      ]
+    },
+    {
+      "id": "r3a3-ddr-registro-cultivo-1",
+      "concepto": "ddr-registro-cultivo",
+      "representacion": "codigo",
+      "descripciones": [
+        "Clave numérica del Distrito de Desarrollo Rural (DDR) donde se registra el cultivo."
+      ],
+      "nombres": [
+        "CDDR"
+      ],
+      "conjuntos": [
+        "3e17a7e8-c8d4-49c4-a426-4dec099cd0cd"
+      ],
+      "diccionarios": [
+        "94215f51-9c89-414d-8c3d-92792e609a2a"
+      ],
+      "definiciones": [
+        "https://example.org/mex-ontologi/definition/94215f51-9c89-414d-8c3d-92792e609a2a%2F4"
+      ],
+      "criterio": "Revision agente 3 ronda 3; lectura completa del diccionario; alcance fijado a definiciones concretas.",
+      "fuente_revision": "propuestas/ronda-3/agente-3-cobertura/propuestas.json",
+      "alcance": "Solo este diccionario, conjunto, definición y nombre.",
+      "positivo": "Denota la clave del DDR donde se registra el cultivo.",
+      "contraejemplo": "NDDR no aplica a esta regla (es nombre, otra regla).",
+      "limite": "Clave sin catálogo resuelto.",
+      "evidencia": [
+        {
+          "variable": "CDDR",
+          "descripcion": "Clave numérica del Distrito de Desarrollo Rural (DDR) donde se registra el cultivo.",
+          "definicion_iri": "https://example.org/mex-ontologi/definition/94215f51-9c89-414d-8c3d-92792e609a2a%2F4",
+          "diccionario": "94215f51-9c89-414d-8c3d-92792e609a2a",
+          "conjunto": "3e17a7e8-c8d4-49c4-a426-4dec099cd0cd",
+          "unidad_de_medida": "CCC",
+          "tipo_de_dato": "Texto",
+          "ejemplo_de_dato": "",
+          "catalogo_de_referencia": ""
+        }
+      ]
+    },
+    {
+      "id": "r3a3-ddr-registro-cultivo-nombre-1",
+      "concepto": "ddr-registro-cultivo-nombre",
+      "representacion": "nombre",
+      "descripciones": [
+        "Descripción del Distrito de Desarrollo Rural (DDR) en que se registra el cultivo."
+      ],
+      "nombres": [
+        "NDDR"
+      ],
+      "conjuntos": [
+        "3e17a7e8-c8d4-49c4-a426-4dec099cd0cd"
+      ],
+      "diccionarios": [
+        "94215f51-9c89-414d-8c3d-92792e609a2a"
+      ],
+      "definiciones": [
+        "https://example.org/mex-ontologi/definition/94215f51-9c89-414d-8c3d-92792e609a2a%2F5"
+      ],
+      "criterio": "Revision agente 3 ronda 3; lectura completa del diccionario; alcance fijado a definiciones concretas.",
+      "fuente_revision": "propuestas/ronda-3/agente-3-cobertura/propuestas.json",
+      "alcance": "Solo este diccionario, conjunto, definición y nombre.",
+      "positivo": "Denota el nombre del DDR en que se registra el cultivo.",
+      "contraejemplo": "CDDR no aplica a esta regla (es código, otra regla).",
+      "limite": "Nombre sin catálogo resuelto; sin unidad declarada.",
+      "evidencia": [
+        {
+          "variable": "NDDR",
+          "descripcion": "Descripción del Distrito de Desarrollo Rural (DDR) en que se registra el cultivo.",
+          "definicion_iri": "https://example.org/mex-ontologi/definition/94215f51-9c89-414d-8c3d-92792e609a2a%2F5",
+          "diccionario": "94215f51-9c89-414d-8c3d-92792e609a2a",
+          "conjunto": "3e17a7e8-c8d4-49c4-a426-4dec099cd0cd",
+          "unidad_de_medida": "",
+          "tipo_de_dato": "Numérico",
+          "ejemplo_de_dato": "",
+          "catalogo_de_referencia": ""
+        }
+      ]
+    },
+    {
+      "id": "r3a3-municipio-registro-cultivo-1",
+      "concepto": "municipio-registro-cultivo",
+      "representacion": "codigo",
+      "descripciones": [
+        "Clave numérica del municipio donde se registra el cultivo."
+      ],
+      "nombres": [
+        "CMUN"
+      ],
+      "conjuntos": [
+        "3e17a7e8-c8d4-49c4-a426-4dec099cd0cd"
+      ],
+      "diccionarios": [
+        "94215f51-9c89-414d-8c3d-92792e609a2a"
+      ],
+      "definiciones": [
+        "https://example.org/mex-ontologi/definition/94215f51-9c89-414d-8c3d-92792e609a2a%2F6"
+      ],
+      "criterio": "Revision agente 3 ronda 3; lectura completa del diccionario; alcance fijado a definiciones concretas.",
+      "fuente_revision": "propuestas/ronda-3/agente-3-cobertura/propuestas.json",
+      "alcance": "Solo este diccionario, conjunto, definición y nombre.",
+      "positivo": "Denota la clave del municipio donde se registra el cultivo.",
+      "contraejemplo": "La regla municipio-nombre no aplica (texto y función distintos).",
+      "limite": "No resuelve CVEGEO ni catálogo.",
+      "evidencia": [
+        {
+          "variable": "CMUN",
+          "descripcion": "Clave numérica del municipio donde se registra el cultivo.",
+          "definicion_iri": "https://example.org/mex-ontologi/definition/94215f51-9c89-414d-8c3d-92792e609a2a%2F6",
+          "diccionario": "94215f51-9c89-414d-8c3d-92792e609a2a",
+          "conjunto": "3e17a7e8-c8d4-49c4-a426-4dec099cd0cd",
+          "unidad_de_medida": "CC",
+          "tipo_de_dato": "Texto",
+          "ejemplo_de_dato": "",
+          "catalogo_de_referencia": ""
+        }
+      ]
+    },
+    {
+      "id": "r3a3-municipio-registro-cultivo-nombre-1",
+      "concepto": "municipio-registro-cultivo-nombre",
+      "representacion": "nombre",
+      "descripciones": [
+        "Nombre del municipio en que se registra el cultivo."
+      ],
+      "nombres": [
+        "NMUN"
+      ],
+      "conjuntos": [
+        "3e17a7e8-c8d4-49c4-a426-4dec099cd0cd"
+      ],
+      "diccionarios": [
+        "94215f51-9c89-414d-8c3d-92792e609a2a"
+      ],
+      "definiciones": [
+        "https://example.org/mex-ontologi/definition/94215f51-9c89-414d-8c3d-92792e609a2a%2F7"
+      ],
+      "criterio": "Revision agente 3 ronda 3; lectura completa del diccionario; alcance fijado a definiciones concretas.",
+      "fuente_revision": "propuestas/ronda-3/agente-3-cobertura/propuestas.json",
+      "alcance": "Solo este diccionario, conjunto, definición y nombre.",
+      "positivo": "Denota el nombre del municipio en que se registra el cultivo.",
+      "contraejemplo": "La regla municipio-registro-delito no aplica (evento distinto).",
+      "limite": "Sin unidad declarada; no resuelve identidad municipal entre fuentes.",
+      "evidencia": [
+        {
+          "variable": "NMUN",
+          "descripcion": "Nombre del municipio en que se registra el cultivo.",
+          "definicion_iri": "https://example.org/mex-ontologi/definition/94215f51-9c89-414d-8c3d-92792e609a2a%2F7",
+          "diccionario": "94215f51-9c89-414d-8c3d-92792e609a2a",
+          "conjunto": "3e17a7e8-c8d4-49c4-a426-4dec099cd0cd",
+          "unidad_de_medida": "",
+          "tipo_de_dato": "Numérico",
+          "ejemplo_de_dato": "",
+          "catalogo_de_referencia": ""
+        }
+      ]
+    },
+    {
+      "id": "r3a3-mes-registro-cultivo-1",
+      "concepto": "mes-registro-cultivo",
+      "representacion": "codigo",
+      "descripciones": [
+        "Clave numérica del mes en que se registra el cultivo."
+      ],
+      "nombres": [
+        "CVMES"
+      ],
+      "conjuntos": [
+        "3e17a7e8-c8d4-49c4-a426-4dec099cd0cd"
+      ],
+      "diccionarios": [
+        "94215f51-9c89-414d-8c3d-92792e609a2a"
+      ],
+      "definiciones": [
+        "https://example.org/mex-ontologi/definition/94215f51-9c89-414d-8c3d-92792e609a2a%2F8"
+      ],
+      "criterio": "Revision agente 3 ronda 3; lectura completa del diccionario; alcance fijado a definiciones concretas.",
+      "fuente_revision": "propuestas/ronda-3/agente-3-cobertura/propuestas.json",
+      "alcance": "Solo este diccionario, conjunto, definición y nombre.",
+      "positivo": "Denota la clave del mes en que se registra el cultivo.",
+      "contraejemplo": "La regla mes-registro no aplica (objeto cultivo no declarado allá).",
+      "limite": "Requiere año como contexto.",
+      "evidencia": [
+        {
+          "variable": "CVMES",
+          "descripcion": "Clave numérica del mes en que se registra el cultivo.",
+          "definicion_iri": "https://example.org/mex-ontologi/definition/94215f51-9c89-414d-8c3d-92792e609a2a%2F8",
+          "diccionario": "94215f51-9c89-414d-8c3d-92792e609a2a",
+          "conjunto": "3e17a7e8-c8d4-49c4-a426-4dec099cd0cd",
+          "unidad_de_medida": "CC",
+          "tipo_de_dato": "Texto",
+          "ejemplo_de_dato": "",
+          "catalogo_de_referencia": ""
+        }
+      ]
+    },
+    {
+      "id": "r3a3-mes-registro-cultivo-nombre-1",
+      "concepto": "mes-registro-cultivo-nombre",
+      "representacion": "nombre",
+      "descripciones": [
+        "Nombre del mes en que se registra el cultivo."
+      ],
+      "nombres": [
+        "NMES"
+      ],
+      "conjuntos": [
+        "3e17a7e8-c8d4-49c4-a426-4dec099cd0cd"
+      ],
+      "diccionarios": [
+        "94215f51-9c89-414d-8c3d-92792e609a2a"
+      ],
+      "definiciones": [
+        "https://example.org/mex-ontologi/definition/94215f51-9c89-414d-8c3d-92792e609a2a%2F9"
+      ],
+      "criterio": "Revision agente 3 ronda 3; lectura completa del diccionario; alcance fijado a definiciones concretas.",
+      "fuente_revision": "propuestas/ronda-3/agente-3-cobertura/propuestas.json",
+      "alcance": "Solo este diccionario, conjunto, definición y nombre.",
+      "positivo": "Denota el nombre del mes en que se registra el cultivo.",
+      "contraejemplo": "CVMES no aplica a esta regla (es código, otra regla).",
+      "limite": "Sin unidad declarada; requiere año como contexto.",
+      "evidencia": [
+        {
+          "variable": "NMES",
+          "descripcion": "Nombre del mes en que se registra el cultivo.",
+          "definicion_iri": "https://example.org/mex-ontologi/definition/94215f51-9c89-414d-8c3d-92792e609a2a%2F9",
+          "diccionario": "94215f51-9c89-414d-8c3d-92792e609a2a",
+          "conjunto": "3e17a7e8-c8d4-49c4-a426-4dec099cd0cd",
+          "unidad_de_medida": "",
+          "tipo_de_dato": "Numérico",
+          "ejemplo_de_dato": "",
+          "catalogo_de_referencia": ""
+        }
+      ]
+    },
+    {
+      "id": "r3a3-cultivo-registrado-1",
+      "concepto": "cultivo-registrado",
+      "representacion": "nombre",
+      "descripciones": [
+        "Nombre del cultivo."
+      ],
+      "nombres": [
+        "CULTIVO"
+      ],
+      "conjuntos": [
+        "3e17a7e8-c8d4-49c4-a426-4dec099cd0cd"
+      ],
+      "diccionarios": [
+        "94215f51-9c89-414d-8c3d-92792e609a2a"
+      ],
+      "definiciones": [
+        "https://example.org/mex-ontologi/definition/94215f51-9c89-414d-8c3d-92792e609a2a%2F11"
+      ],
+      "criterio": "Revision agente 3 ronda 3; lectura completa del diccionario; alcance fijado a definiciones concretas.",
+      "fuente_revision": "propuestas/ronda-3/agente-3-cobertura/propuestas.json",
+      "alcance": "Solo este diccionario, conjunto, definición y nombre.",
+      "positivo": "Denota el nombre del cultivo.",
+      "contraejemplo": "DESVAR no aplica (variedad, otra regla).",
+      "limite": "Sin unidad declarada; un nombre no es identidad global entre fuentes.",
+      "evidencia": [
+        {
+          "variable": "CULTIVO",
+          "descripcion": "Nombre del cultivo.",
+          "definicion_iri": "https://example.org/mex-ontologi/definition/94215f51-9c89-414d-8c3d-92792e609a2a%2F11",
+          "diccionario": "94215f51-9c89-414d-8c3d-92792e609a2a",
+          "conjunto": "3e17a7e8-c8d4-49c4-a426-4dec099cd0cd",
+          "unidad_de_medida": "",
+          "tipo_de_dato": "Numérico",
+          "ejemplo_de_dato": "",
+          "catalogo_de_referencia": ""
+        }
+      ]
+    },
+    {
+      "id": "r3a3-cultivo-registrado-clave-1",
+      "concepto": "cultivo-registrado-clave",
+      "representacion": "codigo",
+      "descripciones": [
+        "Clave identificadora del cultivo."
+      ],
+      "nombres": [
+        "CVECUL"
+      ],
+      "conjuntos": [
+        "3e17a7e8-c8d4-49c4-a426-4dec099cd0cd"
+      ],
+      "diccionarios": [
+        "94215f51-9c89-414d-8c3d-92792e609a2a"
+      ],
+      "definiciones": [
+        "https://example.org/mex-ontologi/definition/94215f51-9c89-414d-8c3d-92792e609a2a%2F10"
+      ],
+      "criterio": "Revision agente 3 ronda 3; lectura completa del diccionario; alcance fijado a definiciones concretas.",
+      "fuente_revision": "propuestas/ronda-3/agente-3-cobertura/propuestas.json",
+      "alcance": "Solo este diccionario, conjunto, definición y nombre.",
+      "positivo": "Denota la clave identificadora del cultivo.",
+      "contraejemplo": "CVEVAR no aplica (variedad, otra regla).",
+      "limite": "Sin unidad declarada; clave sin catálogo resuelto.",
+      "evidencia": [
+        {
+          "variable": "CVECUL",
+          "descripcion": "Clave identificadora del cultivo.",
+          "definicion_iri": "https://example.org/mex-ontologi/definition/94215f51-9c89-414d-8c3d-92792e609a2a%2F10",
+          "diccionario": "94215f51-9c89-414d-8c3d-92792e609a2a",
+          "conjunto": "3e17a7e8-c8d4-49c4-a426-4dec099cd0cd",
+          "unidad_de_medida": "",
+          "tipo_de_dato": "Texto",
+          "ejemplo_de_dato": "",
+          "catalogo_de_referencia": ""
+        }
+      ]
+    },
+    {
+      "id": "r3a3-variedad-cultivo-1",
+      "concepto": "variedad-cultivo",
+      "representacion": "nombre",
+      "descripciones": [
+        "Nombre de la variedad del cultivo."
+      ],
+      "nombres": [
+        "DESVAR"
+      ],
+      "conjuntos": [
+        "3e17a7e8-c8d4-49c4-a426-4dec099cd0cd"
+      ],
+      "diccionarios": [
+        "94215f51-9c89-414d-8c3d-92792e609a2a"
+      ],
+      "definiciones": [
+        "https://example.org/mex-ontologi/definition/94215f51-9c89-414d-8c3d-92792e609a2a%2F13"
+      ],
+      "criterio": "Revision agente 3 ronda 3; lectura completa del diccionario; alcance fijado a definiciones concretas.",
+      "fuente_revision": "propuestas/ronda-3/agente-3-cobertura/propuestas.json",
+      "alcance": "Solo este diccionario, conjunto, definición y nombre.",
+      "positivo": "Denota el nombre de la variedad del cultivo.",
+      "contraejemplo": "CULTIVO no aplica (cultivo, otra regla).",
+      "limite": "Sin unidad declarada; sin catálogo resuelto.",
+      "evidencia": [
+        {
+          "variable": "DESVAR",
+          "descripcion": "Nombre de la variedad del cultivo.",
+          "definicion_iri": "https://example.org/mex-ontologi/definition/94215f51-9c89-414d-8c3d-92792e609a2a%2F13",
+          "diccionario": "94215f51-9c89-414d-8c3d-92792e609a2a",
+          "conjunto": "3e17a7e8-c8d4-49c4-a426-4dec099cd0cd",
+          "unidad_de_medida": "",
+          "tipo_de_dato": "Numérico",
+          "ejemplo_de_dato": "",
+          "catalogo_de_referencia": ""
+        }
+      ]
+    },
+    {
+      "id": "r3a3-variedad-cultivo-clave-1",
+      "concepto": "variedad-cultivo-clave",
+      "representacion": "codigo",
+      "descripciones": [
+        "Clave identificadora de la variedad del cultivo."
+      ],
+      "nombres": [
+        "CVEVAR"
+      ],
+      "conjuntos": [
+        "3e17a7e8-c8d4-49c4-a426-4dec099cd0cd"
+      ],
+      "diccionarios": [
+        "94215f51-9c89-414d-8c3d-92792e609a2a"
+      ],
+      "definiciones": [
+        "https://example.org/mex-ontologi/definition/94215f51-9c89-414d-8c3d-92792e609a2a%2F12"
+      ],
+      "criterio": "Revision agente 3 ronda 3; lectura completa del diccionario; alcance fijado a definiciones concretas.",
+      "fuente_revision": "propuestas/ronda-3/agente-3-cobertura/propuestas.json",
+      "alcance": "Solo este diccionario, conjunto, definición y nombre.",
+      "positivo": "Denota la clave identificadora de la variedad del cultivo.",
+      "contraejemplo": "CVECUL no aplica (cultivo, otra regla).",
+      "limite": "Sin unidad declarada; clave sin catálogo resuelto.",
+      "evidencia": [
+        {
+          "variable": "CVEVAR",
+          "descripcion": "Clave identificadora de la variedad del cultivo.",
+          "definicion_iri": "https://example.org/mex-ontologi/definition/94215f51-9c89-414d-8c3d-92792e609a2a%2F12",
+          "diccionario": "94215f51-9c89-414d-8c3d-92792e609a2a",
+          "conjunto": "3e17a7e8-c8d4-49c4-a426-4dec099cd0cd",
+          "unidad_de_medida": "",
+          "tipo_de_dato": "Texto",
+          "ejemplo_de_dato": "",
+          "catalogo_de_referencia": ""
+        }
+      ]
+    },
+    {
+      "id": "r3a3-estado-cierre-avance-cultivo-1",
+      "concepto": "estado-cierre-avance-cultivo",
+      "representacion": "no_especificada",
+      "descripciones": [
+        "Indica si el registro del cultivo se trata de un dato de cierre o de avance de producción del año AAAA."
+      ],
+      "nombres": [
+        "CIERREYAVAN"
+      ],
+      "conjuntos": [
+        "3e17a7e8-c8d4-49c4-a426-4dec099cd0cd"
+      ],
+      "diccionarios": [
+        "94215f51-9c89-414d-8c3d-92792e609a2a"
+      ],
+      "definiciones": [
+        "https://example.org/mex-ontologi/definition/94215f51-9c89-414d-8c3d-92792e609a2a%2F2"
+      ],
+      "criterio": "Revision agente 3 ronda 3; lectura completa del diccionario; alcance fijado a definiciones concretas.",
+      "fuente_revision": "propuestas/ronda-3/agente-3-cobertura/propuestas.json",
+      "alcance": "Solo este diccionario, conjunto, definición y nombre.",
+      "positivo": "Denota si el registro es dato de cierre o de avance de producción.",
+      "contraejemplo": "Un dato de avance no equivale a un dato de cierre.",
+      "limite": "AAAA es marcador sin año concreto en la unidad literal; avance y cierre no comparables.",
+      "evidencia": [
+        {
+          "variable": "CIERREYAVAN",
+          "descripcion": "Indica si el registro del cultivo se trata de un dato de cierre o de avance de producción del año AAAA.",
+          "definicion_iri": "https://example.org/mex-ontologi/definition/94215f51-9c89-414d-8c3d-92792e609a2a%2F2",
+          "diccionario": "94215f51-9c89-414d-8c3d-92792e609a2a",
+          "conjunto": "3e17a7e8-c8d4-49c4-a426-4dec099cd0cd",
+          "unidad_de_medida": "CIERRE DE PRODUCCION AGRICOLA AAAA ; AVANCE DE PRODUCCION AGRICOLA AAAA",
+          "tipo_de_dato": "Numérico",
+          "ejemplo_de_dato": "",
+          "catalogo_de_referencia": ""
+        }
+      ]
+    },
+    {
+      "id": "r3a3-superficie-sembrada-cultivo-1",
+      "concepto": "superficie-sembrada-cultivo",
+      "representacion": "no_especificada",
+      "descripciones": [
+        "Cantidad de hectáreas sembradas."
+      ],
+      "nombres": [
+        "SUPSEM"
+      ],
+      "conjuntos": [
+        "3e17a7e8-c8d4-49c4-a426-4dec099cd0cd"
+      ],
+      "diccionarios": [
+        "94215f51-9c89-414d-8c3d-92792e609a2a"
+      ],
+      "definiciones": [
+        "https://example.org/mex-ontologi/definition/94215f51-9c89-414d-8c3d-92792e609a2a%2F14"
+      ],
+      "criterio": "Revision agente 3 ronda 3; lectura completa del diccionario; alcance fijado a definiciones concretas.",
+      "fuente_revision": "propuestas/ronda-3/agente-3-cobertura/propuestas.json",
+      "alcance": "Solo este diccionario, conjunto, definición y nombre.",
+      "positivo": "Denota superficie sembrada del cultivo.",
+      "contraejemplo": "SUPCOSE y SUPSINI no aplican (estados distintos, conceptos distintos).",
+      "limite": "Estado sembrada conservado por concepto; no se infiere balance con otros estados.",
+      "evidencia": [
+        {
+          "variable": "SUPSEM",
+          "descripcion": "Cantidad de hectáreas sembradas.",
+          "definicion_iri": "https://example.org/mex-ontologi/definition/94215f51-9c89-414d-8c3d-92792e609a2a%2F14",
+          "diccionario": "94215f51-9c89-414d-8c3d-92792e609a2a",
+          "conjunto": "3e17a7e8-c8d4-49c4-a426-4dec099cd0cd",
+          "unidad_de_medida": "Hectáreas",
+          "tipo_de_dato": "Numérico",
+          "ejemplo_de_dato": "",
+          "catalogo_de_referencia": ""
+        }
+      ]
+    },
+    {
+      "id": "r3a3-superficie-cosechada-cultivo-1",
+      "concepto": "superficie-cosechada-cultivo",
+      "representacion": "no_especificada",
+      "descripciones": [
+        "Cantidad de hectáreas cosechadas."
+      ],
+      "nombres": [
+        "SUPCOSE"
+      ],
+      "conjuntos": [
+        "3e17a7e8-c8d4-49c4-a426-4dec099cd0cd"
+      ],
+      "diccionarios": [
+        "94215f51-9c89-414d-8c3d-92792e609a2a"
+      ],
+      "definiciones": [
+        "https://example.org/mex-ontologi/definition/94215f51-9c89-414d-8c3d-92792e609a2a%2F15"
+      ],
+      "criterio": "Revision agente 3 ronda 3; lectura completa del diccionario; alcance fijado a definiciones concretas.",
+      "fuente_revision": "propuestas/ronda-3/agente-3-cobertura/propuestas.json",
+      "alcance": "Solo este diccionario, conjunto, definición y nombre.",
+      "positivo": "Denota superficie cosechada del cultivo.",
+      "contraejemplo": "SUPSEM y SUPSINI no aplican (estados distintos, conceptos distintos).",
+      "limite": "Estado cosechada conservado por concepto; no se infiere balance con otros estados.",
+      "evidencia": [
+        {
+          "variable": "SUPCOSE",
+          "descripcion": "Cantidad de hectáreas cosechadas.",
+          "definicion_iri": "https://example.org/mex-ontologi/definition/94215f51-9c89-414d-8c3d-92792e609a2a%2F15",
+          "diccionario": "94215f51-9c89-414d-8c3d-92792e609a2a",
+          "conjunto": "3e17a7e8-c8d4-49c4-a426-4dec099cd0cd",
+          "unidad_de_medida": "Hectáreas",
+          "tipo_de_dato": "Numérico",
+          "ejemplo_de_dato": "",
+          "catalogo_de_referencia": ""
+        }
+      ]
+    },
+    {
+      "id": "r3a3-superficie-siniestrada-cultivo-1",
+      "concepto": "superficie-siniestrada-cultivo",
+      "representacion": "no_especificada",
+      "descripciones": [
+        "Cantidad de hectáreas siniestradas."
+      ],
+      "nombres": [
+        "SUPSINI"
+      ],
+      "conjuntos": [
+        "3e17a7e8-c8d4-49c4-a426-4dec099cd0cd"
+      ],
+      "diccionarios": [
+        "94215f51-9c89-414d-8c3d-92792e609a2a"
+      ],
+      "definiciones": [
+        "https://example.org/mex-ontologi/definition/94215f51-9c89-414d-8c3d-92792e609a2a%2F16"
+      ],
+      "criterio": "Revision agente 3 ronda 3; lectura completa del diccionario; alcance fijado a definiciones concretas.",
+      "fuente_revision": "propuestas/ronda-3/agente-3-cobertura/propuestas.json",
+      "alcance": "Solo este diccionario, conjunto, definición y nombre.",
+      "positivo": "Denota superficie siniestrada del cultivo.",
+      "contraejemplo": "SUPSEM y SUPCOSE no aplican (estados distintos, conceptos distintos).",
+      "limite": "Estado siniestrada conservado por concepto; no se infiere balance con otros estados.",
+      "evidencia": [
+        {
+          "variable": "SUPSINI",
+          "descripcion": "Cantidad de hectáreas siniestradas.",
+          "definicion_iri": "https://example.org/mex-ontologi/definition/94215f51-9c89-414d-8c3d-92792e609a2a%2F16",
+          "diccionario": "94215f51-9c89-414d-8c3d-92792e609a2a",
+          "conjunto": "3e17a7e8-c8d4-49c4-a426-4dec099cd0cd",
+          "unidad_de_medida": "Hectáreas",
+          "tipo_de_dato": "Numérico",
+          "ejemplo_de_dato": "",
+          "catalogo_de_referencia": ""
+        }
+      ]
+    },
+    {
+      "id": "r3a3-produccion-cultivo-toneladas-1",
+      "concepto": "produccion-cultivo-toneladas",
+      "representacion": "no_especificada",
+      "descripciones": [
+        "Producción total obtenida."
+      ],
+      "nombres": [
+        "PRODTON"
+      ],
+      "conjuntos": [
+        "3e17a7e8-c8d4-49c4-a426-4dec099cd0cd"
+      ],
+      "diccionarios": [
+        "94215f51-9c89-414d-8c3d-92792e609a2a"
+      ],
+      "definiciones": [
+        "https://example.org/mex-ontologi/definition/94215f51-9c89-414d-8c3d-92792e609a2a%2F17"
+      ],
+      "criterio": "Revision agente 3 ronda 3; lectura completa del diccionario; alcance fijado a definiciones concretas.",
+      "fuente_revision": "propuestas/ronda-3/agente-3-cobertura/propuestas.json",
+      "alcance": "Solo este diccionario, conjunto, definición y nombre.",
+      "positivo": "Denota producción total obtenida.",
+      "contraejemplo": "SUPSEM no aplica (superficie, otra regla).",
+      "limite": "Medida en la unidad literal de la fila.",
+      "evidencia": [
+        {
+          "variable": "PRODTON",
+          "descripcion": "Producción total obtenida.",
+          "definicion_iri": "https://example.org/mex-ontologi/definition/94215f51-9c89-414d-8c3d-92792e609a2a%2F17",
+          "diccionario": "94215f51-9c89-414d-8c3d-92792e609a2a",
+          "conjunto": "3e17a7e8-c8d4-49c4-a426-4dec099cd0cd",
+          "unidad_de_medida": "Toneladas",
+          "tipo_de_dato": "Numérico",
+          "ejemplo_de_dato": "",
+          "catalogo_de_referencia": ""
+        }
+      ]
+    },
+    {
+      "id": "r3a3-rendimiento-cultivo-1",
+      "concepto": "rendimiento-cultivo",
+      "representacion": "no_especificada",
+      "descripciones": [
+        "Contiene información sobre el rendimiento: producción obtenida por hectárea sembrada."
+      ],
+      "nombres": [
+        "RENDMNTO"
+      ],
+      "conjuntos": [
+        "3e17a7e8-c8d4-49c4-a426-4dec099cd0cd"
+      ],
+      "diccionarios": [
+        "94215f51-9c89-414d-8c3d-92792e609a2a"
+      ],
+      "definiciones": [
+        "https://example.org/mex-ontologi/definition/94215f51-9c89-414d-8c3d-92792e609a2a%2F18"
+      ],
+      "criterio": "Revision agente 3 ronda 3; lectura completa del diccionario; alcance fijado a definiciones concretas.",
+      "fuente_revision": "propuestas/ronda-3/agente-3-cobertura/propuestas.json",
+      "alcance": "Solo este diccionario, conjunto, definición y nombre.",
+      "positivo": "Denota rendimiento como producción por hectárea sembrada.",
+      "contraejemplo": "PRODTON no aplica (total, no cociente por hectárea).",
+      "limite": "No verifica el cálculo.",
+      "evidencia": [
+        {
+          "variable": "RENDMNTO",
+          "descripcion": "Contiene información sobre el rendimiento: producción obtenida por hectárea sembrada.",
+          "definicion_iri": "https://example.org/mex-ontologi/definition/94215f51-9c89-414d-8c3d-92792e609a2a%2F18",
+          "diccionario": "94215f51-9c89-414d-8c3d-92792e609a2a",
+          "conjunto": "3e17a7e8-c8d4-49c4-a426-4dec099cd0cd",
+          "unidad_de_medida": "Toneladas/hectáreas",
+          "tipo_de_dato": "Numérico",
+          "ejemplo_de_dato": "",
+          "catalogo_de_referencia": ""
+        }
+      ]
+    },
+    {
+      "id": "r3a3-precio-medio-rural-cultivo-1",
+      "concepto": "precio-medio-rural-cultivo",
+      "representacion": "no_especificada",
+      "descripciones": [
+        "Precio Medio Rural (PMR) tiene la información del precio medio del cultivo. Se calcula como un cociente entre el valor de producción total y la producción en toneladas obtenida."
+      ],
+      "nombres": [
+        "PMR"
+      ],
+      "conjuntos": [
+        "3e17a7e8-c8d4-49c4-a426-4dec099cd0cd"
+      ],
+      "diccionarios": [
+        "94215f51-9c89-414d-8c3d-92792e609a2a"
+      ],
+      "definiciones": [
+        "https://example.org/mex-ontologi/definition/94215f51-9c89-414d-8c3d-92792e609a2a%2F19"
+      ],
+      "criterio": "Revision agente 3 ronda 3; lectura completa del diccionario; alcance fijado a definiciones concretas.",
+      "fuente_revision": "propuestas/ronda-3/agente-3-cobertura/propuestas.json",
+      "alcance": "Solo este diccionario, conjunto, definición y nombre.",
+      "positivo": "Denota el precio medio del cultivo como cociente valor/producción.",
+      "contraejemplo": "VALPROD no aplica (valor total, otra regla).",
+      "limite": "No verifica el cálculo del cociente.",
+      "evidencia": [
+        {
+          "variable": "PMR",
+          "descripcion": "Precio Medio Rural (PMR) tiene la información del precio medio del cultivo. Se calcula como un cociente entre el valor de producción total y la producción en toneladas obtenida.",
+          "definicion_iri": "https://example.org/mex-ontologi/definition/94215f51-9c89-414d-8c3d-92792e609a2a%2F19",
+          "diccionario": "94215f51-9c89-414d-8c3d-92792e609a2a",
+          "conjunto": "3e17a7e8-c8d4-49c4-a426-4dec099cd0cd",
+          "unidad_de_medida": "Pesos por tonelada",
+          "tipo_de_dato": "Numérico",
+          "ejemplo_de_dato": "",
+          "catalogo_de_referencia": ""
+        }
+      ]
+    },
+    {
+      "id": "r3a3-valor-produccion-cultivo-1",
+      "concepto": "valor-produccion-cultivo",
+      "representacion": "no_especificada",
+      "descripciones": [
+        "Valor Total Producido por cultivo."
+      ],
+      "nombres": [
+        "VALPROD"
+      ],
+      "conjuntos": [
+        "3e17a7e8-c8d4-49c4-a426-4dec099cd0cd"
+      ],
+      "diccionarios": [
+        "94215f51-9c89-414d-8c3d-92792e609a2a"
+      ],
+      "definiciones": [
+        "https://example.org/mex-ontologi/definition/94215f51-9c89-414d-8c3d-92792e609a2a%2F20"
+      ],
+      "criterio": "Revision agente 3 ronda 3; lectura completa del diccionario; alcance fijado a definiciones concretas.",
+      "fuente_revision": "propuestas/ronda-3/agente-3-cobertura/propuestas.json",
+      "alcance": "Solo este diccionario, conjunto, definición y nombre.",
+      "positivo": "Denota el valor total producido por cultivo.",
+      "contraejemplo": "PMR no aplica (precio por tonelada, otra regla).",
+      "limite": "Medida en la unidad literal de la fila.",
+      "evidencia": [
+        {
+          "variable": "VALPROD",
+          "descripcion": "Valor Total Producido por cultivo.",
+          "definicion_iri": "https://example.org/mex-ontologi/definition/94215f51-9c89-414d-8c3d-92792e609a2a%2F20",
+          "diccionario": "94215f51-9c89-414d-8c3d-92792e609a2a",
+          "conjunto": "3e17a7e8-c8d4-49c4-a426-4dec099cd0cd",
+          "unidad_de_medida": "Miles de pesos MXN",
+          "tipo_de_dato": "",
+          "ejemplo_de_dato": "",
+          "catalogo_de_referencia": ""
+        }
+      ]
+    },
+    {
+      "id": "r3a3-ddr-registro-pesquero-1",
+      "concepto": "ddr-registro-pesquero",
+      "representacion": "codigo",
+      "descripciones": [
+        "Clave numérica del Distrito de Desarrollo Rural (DDR) donde se registra."
+      ],
+      "nombres": [
+        "CDDR"
+      ],
+      "conjuntos": [
+        "e093cf34-7da0-4efb-89a3-7b473a5013ab"
+      ],
+      "diccionarios": [
+        "863b9cc8-daeb-4430-b835-6a0ced5abd31"
+      ],
+      "definiciones": [
+        "https://example.org/mex-ontologi/definition/863b9cc8-daeb-4430-b835-6a0ced5abd31%2F2"
+      ],
+      "criterio": "Revision agente 3 ronda 3; lectura completa del diccionario; alcance fijado a definiciones concretas.",
+      "fuente_revision": "propuestas/ronda-3/agente-3-cobertura/propuestas.json",
+      "alcance": "Solo este diccionario, conjunto, definición y nombre.",
+      "positivo": "Denota la clave del DDR donde se registra la producción pesquera.",
+      "contraejemplo": "La regla ddr-registro-cultivo no aplica (otro conjunto y objeto).",
+      "limite": "Clave sin catálogo resuelto.",
+      "evidencia": [
+        {
+          "variable": "CDDR",
+          "descripcion": "Clave numérica del Distrito de Desarrollo Rural (DDR) donde se registra.",
+          "definicion_iri": "https://example.org/mex-ontologi/definition/863b9cc8-daeb-4430-b835-6a0ced5abd31%2F2",
+          "diccionario": "863b9cc8-daeb-4430-b835-6a0ced5abd31",
+          "conjunto": "e093cf34-7da0-4efb-89a3-7b473a5013ab",
+          "unidad_de_medida": "CCC",
+          "tipo_de_dato": "Numérico",
+          "ejemplo_de_dato": "",
+          "catalogo_de_referencia": ""
+        }
+      ]
+    },
+    {
+      "id": "r3a3-ddr-registro-pesquero-nombre-1",
+      "concepto": "ddr-registro-pesquero-nombre",
+      "representacion": "nombre",
+      "descripciones": [
+        "Descripción del Distrito de Desarrollo Rural (DDR) en que se registra."
+      ],
+      "nombres": [
+        "NDDR"
+      ],
+      "conjuntos": [
+        "e093cf34-7da0-4efb-89a3-7b473a5013ab"
+      ],
+      "diccionarios": [
+        "863b9cc8-daeb-4430-b835-6a0ced5abd31"
+      ],
+      "definiciones": [
+        "https://example.org/mex-ontologi/definition/863b9cc8-daeb-4430-b835-6a0ced5abd31%2F3"
+      ],
+      "criterio": "Revision agente 3 ronda 3; lectura completa del diccionario; alcance fijado a definiciones concretas.",
+      "fuente_revision": "propuestas/ronda-3/agente-3-cobertura/propuestas.json",
+      "alcance": "Solo este diccionario, conjunto, definición y nombre.",
+      "positivo": "Denota el nombre del DDR en que se registra la producción pesquera.",
+      "contraejemplo": "CDDR no aplica a esta regla (es código, otra regla).",
+      "limite": "Sin unidad declarada; nombre sin catálogo resuelto.",
+      "evidencia": [
+        {
+          "variable": "NDDR",
+          "descripcion": "Descripción del Distrito de Desarrollo Rural (DDR) en que se registra.",
+          "definicion_iri": "https://example.org/mex-ontologi/definition/863b9cc8-daeb-4430-b835-6a0ced5abd31%2F3",
+          "diccionario": "863b9cc8-daeb-4430-b835-6a0ced5abd31",
+          "conjunto": "e093cf34-7da0-4efb-89a3-7b473a5013ab",
+          "unidad_de_medida": "",
+          "tipo_de_dato": "Texto",
+          "ejemplo_de_dato": "",
+          "catalogo_de_referencia": ""
+        }
+      ]
+    },
+    {
+      "id": "r3a3-municipio-registro-pesquero-1",
+      "concepto": "municipio-registro-pesquero",
+      "representacion": "codigo",
+      "descripciones": [
+        "Clave numérica del municipio donde se registra la producción."
+      ],
+      "nombres": [
+        "CMUN"
+      ],
+      "conjuntos": [
+        "e093cf34-7da0-4efb-89a3-7b473a5013ab"
+      ],
+      "diccionarios": [
+        "863b9cc8-daeb-4430-b835-6a0ced5abd31"
+      ],
+      "definiciones": [
+        "https://example.org/mex-ontologi/definition/863b9cc8-daeb-4430-b835-6a0ced5abd31%2F4"
+      ],
+      "criterio": "Revision agente 3 ronda 3; lectura completa del diccionario; alcance fijado a definiciones concretas.",
+      "fuente_revision": "propuestas/ronda-3/agente-3-cobertura/propuestas.json",
+      "alcance": "Solo este diccionario, conjunto, definición y nombre.",
+      "positivo": "Denota la clave del municipio donde se registra la producción.",
+      "contraejemplo": "La regla municipio-registro-cultivo no aplica (otro conjunto y objeto).",
+      "limite": "No resuelve CVEGEO.",
+      "evidencia": [
+        {
+          "variable": "CMUN",
+          "descripcion": "Clave numérica del municipio donde se registra la producción.",
+          "definicion_iri": "https://example.org/mex-ontologi/definition/863b9cc8-daeb-4430-b835-6a0ced5abd31%2F4",
+          "diccionario": "863b9cc8-daeb-4430-b835-6a0ced5abd31",
+          "conjunto": "e093cf34-7da0-4efb-89a3-7b473a5013ab",
+          "unidad_de_medida": "CC",
+          "tipo_de_dato": "Numérico",
+          "ejemplo_de_dato": "",
+          "catalogo_de_referencia": ""
+        }
+      ]
+    },
+    {
+      "id": "r3a3-oficina-pesquera-registro-1",
+      "concepto": "oficina-pesquera-registro",
+      "representacion": "codigo",
+      "descripciones": [
+        "Clave numérica de la oficina pesquera donde se registra la producción."
+      ],
+      "nombres": [
+        "CVEOF"
+      ],
+      "conjuntos": [
+        "e093cf34-7da0-4efb-89a3-7b473a5013ab"
+      ],
+      "diccionarios": [
+        "863b9cc8-daeb-4430-b835-6a0ced5abd31"
+      ],
+      "definiciones": [
+        "https://example.org/mex-ontologi/definition/863b9cc8-daeb-4430-b835-6a0ced5abd31%2F5"
+      ],
+      "criterio": "Revision agente 3 ronda 3; lectura completa del diccionario; alcance fijado a definiciones concretas.",
+      "fuente_revision": "propuestas/ronda-3/agente-3-cobertura/propuestas.json",
+      "alcance": "Solo este diccionario, conjunto, definición y nombre.",
+      "positivo": "Denota la clave de la oficina pesquera donde se registra la producción.",
+      "contraejemplo": "NOFICINA no aplica a esta regla (es nombre, otra regla).",
+      "limite": "No identifica publicadora ni capturadora.",
+      "evidencia": [
+        {
+          "variable": "CVEOF",
+          "descripcion": "Clave numérica de la oficina pesquera donde se registra la producción.",
+          "definicion_iri": "https://example.org/mex-ontologi/definition/863b9cc8-daeb-4430-b835-6a0ced5abd31%2F5",
+          "diccionario": "863b9cc8-daeb-4430-b835-6a0ced5abd31",
+          "conjunto": "e093cf34-7da0-4efb-89a3-7b473a5013ab",
+          "unidad_de_medida": "CCCC",
+          "tipo_de_dato": "Numérico",
+          "ejemplo_de_dato": "",
+          "catalogo_de_referencia": ""
+        }
+      ]
+    },
+    {
+      "id": "r3a3-oficina-pesquera-registro-nombre-1",
+      "concepto": "oficina-pesquera-registro-nombre",
+      "representacion": "nombre",
+      "descripciones": [
+        "Nombre de la oficina pesquera donde se registra la producción."
+      ],
+      "nombres": [
+        "NOFICINA"
+      ],
+      "conjuntos": [
+        "e093cf34-7da0-4efb-89a3-7b473a5013ab"
+      ],
+      "diccionarios": [
+        "863b9cc8-daeb-4430-b835-6a0ced5abd31"
+      ],
+      "definiciones": [
+        "https://example.org/mex-ontologi/definition/863b9cc8-daeb-4430-b835-6a0ced5abd31%2F6"
+      ],
+      "criterio": "Revision agente 3 ronda 3; lectura completa del diccionario; alcance fijado a definiciones concretas.",
+      "fuente_revision": "propuestas/ronda-3/agente-3-cobertura/propuestas.json",
+      "alcance": "Solo este diccionario, conjunto, definición y nombre.",
+      "positivo": "Denota el nombre de la oficina pesquera donde se registra la producción.",
+      "contraejemplo": "CVEOF no aplica a esta regla (es código, otra regla).",
+      "limite": "Sin unidad declarada; no identifica publicadora ni capturadora.",
+      "evidencia": [
+        {
+          "variable": "NOFICINA",
+          "descripcion": "Nombre de la oficina pesquera donde se registra la producción.",
+          "definicion_iri": "https://example.org/mex-ontologi/definition/863b9cc8-daeb-4430-b835-6a0ced5abd31%2F6",
+          "diccionario": "863b9cc8-daeb-4430-b835-6a0ced5abd31",
+          "conjunto": "e093cf34-7da0-4efb-89a3-7b473a5013ab",
+          "unidad_de_medida": "",
+          "tipo_de_dato": "Texto",
+          "ejemplo_de_dato": "",
+          "catalogo_de_referencia": ""
+        }
+      ]
+    },
+    {
+      "id": "r3a3-especie-producida-pesca-1",
+      "concepto": "especie-producida-pesca",
+      "representacion": "nombre",
+      "descripciones": [
+        "Nombre de la especie producida."
+      ],
+      "nombres": [
+        "ESPECIE"
+      ],
+      "conjuntos": [
+        "e093cf34-7da0-4efb-89a3-7b473a5013ab"
+      ],
+      "diccionarios": [
+        "863b9cc8-daeb-4430-b835-6a0ced5abd31"
+      ],
+      "definiciones": [
+        "https://example.org/mex-ontologi/definition/863b9cc8-daeb-4430-b835-6a0ced5abd31%2F10"
+      ],
+      "criterio": "Revision agente 3 ronda 3; lectura completa del diccionario; alcance fijado a definiciones concretas.",
+      "fuente_revision": "propuestas/ronda-3/agente-3-cobertura/propuestas.json",
+      "alcance": "Solo este diccionario, conjunto, definición y nombre.",
+      "positivo": "Denota el nombre de la especie producida.",
+      "contraejemplo": "ORIGEN no aplica (origen, otra regla).",
+      "limite": "Sin unidad declarada; sin catálogo resuelto.",
+      "evidencia": [
+        {
+          "variable": "ESPECIE",
+          "descripcion": "Nombre de la especie producida.",
+          "definicion_iri": "https://example.org/mex-ontologi/definition/863b9cc8-daeb-4430-b835-6a0ced5abd31%2F10",
+          "diccionario": "863b9cc8-daeb-4430-b835-6a0ced5abd31",
+          "conjunto": "e093cf34-7da0-4efb-89a3-7b473a5013ab",
+          "unidad_de_medida": "",
+          "tipo_de_dato": "Texto",
+          "ejemplo_de_dato": "",
+          "catalogo_de_referencia": ""
+        }
+      ]
+    },
+    {
+      "id": "r3a3-especie-producida-pesca-clave-1",
+      "concepto": "especie-producida-pesca-clave",
+      "representacion": "codigo",
+      "descripciones": [
+        "Clave numérica de la especie producida."
+      ],
+      "nombres": [
+        "CESPE"
+      ],
+      "conjuntos": [
+        "e093cf34-7da0-4efb-89a3-7b473a5013ab"
+      ],
+      "diccionarios": [
+        "863b9cc8-daeb-4430-b835-6a0ced5abd31"
+      ],
+      "definiciones": [
+        "https://example.org/mex-ontologi/definition/863b9cc8-daeb-4430-b835-6a0ced5abd31%2F9"
+      ],
+      "criterio": "Revision agente 3 ronda 3; lectura completa del diccionario; alcance fijado a definiciones concretas.",
+      "fuente_revision": "propuestas/ronda-3/agente-3-cobertura/propuestas.json",
+      "alcance": "Solo este diccionario, conjunto, definición y nombre.",
+      "positivo": "Denota la clave numérica de la especie producida.",
+      "contraejemplo": "CVEOF no aplica (oficina, otra regla).",
+      "limite": "Sin unidad declarada; clave sin catálogo resuelto.",
+      "evidencia": [
+        {
+          "variable": "CESPE",
+          "descripcion": "Clave numérica de la especie producida.",
+          "definicion_iri": "https://example.org/mex-ontologi/definition/863b9cc8-daeb-4430-b835-6a0ced5abd31%2F9",
+          "diccionario": "863b9cc8-daeb-4430-b835-6a0ced5abd31",
+          "conjunto": "e093cf34-7da0-4efb-89a3-7b473a5013ab",
+          "unidad_de_medida": "",
+          "tipo_de_dato": "Numérico",
+          "ejemplo_de_dato": "",
+          "catalogo_de_referencia": ""
+        }
+      ]
+    },
+    {
+      "id": "r3a3-origen-produccion-pesquera-1",
+      "concepto": "origen-produccion-pesquera",
+      "representacion": "nombre",
+      "descripciones": [
+        "Nombre del origen de la producción."
+      ],
+      "nombres": [
+        "ORIGEN"
+      ],
+      "conjuntos": [
+        "e093cf34-7da0-4efb-89a3-7b473a5013ab"
+      ],
+      "diccionarios": [
+        "863b9cc8-daeb-4430-b835-6a0ced5abd31"
+      ],
+      "definiciones": [
+        "https://example.org/mex-ontologi/definition/863b9cc8-daeb-4430-b835-6a0ced5abd31%2F12"
+      ],
+      "criterio": "Revision agente 3 ronda 3; lectura completa del diccionario; alcance fijado a definiciones concretas.",
+      "fuente_revision": "propuestas/ronda-3/agente-3-cobertura/propuestas.json",
+      "alcance": "Solo este diccionario, conjunto, definición y nombre.",
+      "positivo": "Denota el nombre del origen de la producción con las etiquetas literales de la fila.",
+      "contraejemplo": "ESPECIE no aplica (especie, otra regla).",
+      "limite": "El diccionario no publica mapeo código-etiqueta: prohibido mapear 1, 2, 3 por orden.",
+      "evidencia": [
+        {
+          "variable": "ORIGEN",
+          "descripcion": "Nombre del origen de la producción.",
+          "definicion_iri": "https://example.org/mex-ontologi/definition/863b9cc8-daeb-4430-b835-6a0ced5abd31%2F12",
+          "diccionario": "863b9cc8-daeb-4430-b835-6a0ced5abd31",
+          "conjunto": "e093cf34-7da0-4efb-89a3-7b473a5013ab",
+          "unidad_de_medida": "Captura; Cosecha; Aguas Continentales",
+          "tipo_de_dato": "Texto",
+          "ejemplo_de_dato": "",
+          "catalogo_de_referencia": ""
+        }
+      ]
+    },
+    {
+      "id": "r3a3-origen-produccion-pesquera-clave-1",
+      "concepto": "origen-produccion-pesquera-clave",
+      "representacion": "codigo",
+      "descripciones": [
+        "Clave numérica del origen de la producción."
+      ],
+      "nombres": [
+        "CVORIGEN"
+      ],
+      "conjuntos": [
+        "e093cf34-7da0-4efb-89a3-7b473a5013ab"
+      ],
+      "diccionarios": [
+        "863b9cc8-daeb-4430-b835-6a0ced5abd31"
+      ],
+      "definiciones": [
+        "https://example.org/mex-ontologi/definition/863b9cc8-daeb-4430-b835-6a0ced5abd31%2F11"
+      ],
+      "criterio": "Revision agente 3 ronda 3; lectura completa del diccionario; alcance fijado a definiciones concretas.",
+      "fuente_revision": "propuestas/ronda-3/agente-3-cobertura/propuestas.json",
+      "alcance": "Solo este diccionario, conjunto, definición y nombre.",
+      "positivo": "Denota la clave numérica del origen de la producción.",
+      "contraejemplo": "Asignar 1=Captura por orden no está documentado y queda prohibido.",
+      "limite": "Claves literales sin mapeo publicado a etiquetas.",
+      "evidencia": [
+        {
+          "variable": "CVORIGEN",
+          "descripcion": "Clave numérica del origen de la producción.",
+          "definicion_iri": "https://example.org/mex-ontologi/definition/863b9cc8-daeb-4430-b835-6a0ced5abd31%2F11",
+          "diccionario": "863b9cc8-daeb-4430-b835-6a0ced5abd31",
+          "conjunto": "e093cf34-7da0-4efb-89a3-7b473a5013ab",
+          "unidad_de_medida": "1, 2, 3",
+          "tipo_de_dato": "Numérico",
+          "ejemplo_de_dato": "",
+          "catalogo_de_referencia": ""
+        }
+      ]
+    },
+    {
+      "id": "r3a3-peso-desembarcado-pesca-1",
+      "concepto": "peso-desembarcado-pesca",
+      "representacion": "no_especificada",
+      "descripciones": [
+        "El peso desembarcado es el peso que, al desembarque, conserva el producto en sus distintas modalidades: descabezado, fileteado, eviscerado, en pulpa, rebanado u otras."
+      ],
+      "nombres": [
+        "PESODESEMB"
+      ],
+      "conjuntos": [
+        "e093cf34-7da0-4efb-89a3-7b473a5013ab"
+      ],
+      "diccionarios": [
+        "863b9cc8-daeb-4430-b835-6a0ced5abd31"
+      ],
+      "definiciones": [
+        "https://example.org/mex-ontologi/definition/863b9cc8-daeb-4430-b835-6a0ced5abd31%2F13"
+      ],
+      "criterio": "Revision agente 3 ronda 3; lectura completa del diccionario; alcance fijado a definiciones concretas.",
+      "fuente_revision": "propuestas/ronda-3/agente-3-cobertura/propuestas.json",
+      "alcance": "Solo este diccionario, conjunto, definición y nombre.",
+      "positivo": "Denota el peso al desembarque con las modalidades literales de la definición.",
+      "contraejemplo": "PVIVO no aplica (peso vivo, otra regla).",
+      "limite": "Modalidades conservadas sin homologar.",
+      "evidencia": [
+        {
+          "variable": "PESODESEMB",
+          "descripcion": "El peso desembarcado es el peso que, al desembarque, conserva el producto en sus distintas modalidades: descabezado, fileteado, eviscerado, en pulpa, rebanado u otras.",
+          "definicion_iri": "https://example.org/mex-ontologi/definition/863b9cc8-daeb-4430-b835-6a0ced5abd31%2F13",
+          "diccionario": "863b9cc8-daeb-4430-b835-6a0ced5abd31",
+          "conjunto": "e093cf34-7da0-4efb-89a3-7b473a5013ab",
+          "unidad_de_medida": "Toneladas",
+          "tipo_de_dato": "Numérico",
+          "ejemplo_de_dato": "",
+          "catalogo_de_referencia": ""
+        }
+      ]
+    },
+    {
+      "id": "r3a3-peso-vivo-pesca-1",
+      "concepto": "peso-vivo-pesca",
+      "representacion": "no_especificada",
+      "descripciones": [
+        "El peso vivo es el peso total del producto en el momento de su captura. Se estima mediante factores de conversión aplicados al peso desembarcado, conforme a la metodología empleada por la FAO; tales factores son establecidos por el Instituto Nacional de la Pesca."
+      ],
+      "nombres": [
+        "PVIVO"
+      ],
+      "conjuntos": [
+        "e093cf34-7da0-4efb-89a3-7b473a5013ab"
+      ],
+      "diccionarios": [
+        "863b9cc8-daeb-4430-b835-6a0ced5abd31"
+      ],
+      "definiciones": [
+        "https://example.org/mex-ontologi/definition/863b9cc8-daeb-4430-b835-6a0ced5abd31%2F14"
+      ],
+      "criterio": "Revision agente 3 ronda 3; lectura completa del diccionario; alcance fijado a definiciones concretas.",
+      "fuente_revision": "propuestas/ronda-3/agente-3-cobertura/propuestas.json",
+      "alcance": "Solo este diccionario, conjunto, definición y nombre.",
+      "positivo": "Denota el peso total en captura estimado por factores de conversión.",
+      "contraejemplo": "El peso desembarcado no equivale al peso vivo.",
+      "limite": "Factores FAO/INAPESCA citados sin verificar; no convertir.",
+      "evidencia": [
+        {
+          "variable": "PVIVO",
+          "descripcion": "El peso vivo es el peso total del producto en el momento de su captura. Se estima mediante factores de conversión aplicados al peso desembarcado, conforme a la metodología empleada por la FAO; tales factores son establecidos por el Instituto Nacional de la Pesca.",
+          "definicion_iri": "https://example.org/mex-ontologi/definition/863b9cc8-daeb-4430-b835-6a0ced5abd31%2F14",
+          "diccionario": "863b9cc8-daeb-4430-b835-6a0ced5abd31",
+          "conjunto": "e093cf34-7da0-4efb-89a3-7b473a5013ab",
+          "unidad_de_medida": "Toneladas",
+          "tipo_de_dato": "Numérico",
+          "ejemplo_de_dato": "",
+          "catalogo_de_referencia": ""
+        }
+      ]
+    },
+    {
+      "id": "r3a3-valor-produccion-pesquera-1",
+      "concepto": "valor-produccion-pesquera",
+      "representacion": "no_especificada",
+      "descripciones": [
+        "Valor total producido en pesos MXN"
+      ],
+      "nombres": [
+        "VALOR"
+      ],
+      "conjuntos": [
+        "e093cf34-7da0-4efb-89a3-7b473a5013ab"
+      ],
+      "diccionarios": [
+        "863b9cc8-daeb-4430-b835-6a0ced5abd31"
+      ],
+      "definiciones": [
+        "https://example.org/mex-ontologi/definition/863b9cc8-daeb-4430-b835-6a0ced5abd31%2F15"
+      ],
+      "criterio": "Revision agente 3 ronda 3; lectura completa del diccionario; alcance fijado a definiciones concretas.",
+      "fuente_revision": "propuestas/ronda-3/agente-3-cobertura/propuestas.json",
+      "alcance": "Solo este diccionario, conjunto, definición y nombre.",
+      "positivo": "Denota el valor total producido.",
+      "contraejemplo": "Los pesos físicos no aplican (cantidades, otras reglas).",
+      "limite": "Medida en la unidad literal de la fila.",
+      "evidencia": [
+        {
+          "variable": "VALOR",
+          "descripcion": "Valor total producido en pesos MXN",
+          "definicion_iri": "https://example.org/mex-ontologi/definition/863b9cc8-daeb-4430-b835-6a0ced5abd31%2F15",
+          "diccionario": "863b9cc8-daeb-4430-b835-6a0ced5abd31",
+          "conjunto": "e093cf34-7da0-4efb-89a3-7b473a5013ab",
+          "unidad_de_medida": "Pesos MXN",
+          "tipo_de_dato": "Numérico",
+          "ejemplo_de_dato": "",
+          "catalogo_de_referencia": ""
+        }
+      ]
+    },
+    {
+      "id": "r3a3-superficie-sembrada-trigo-ddr-1",
+      "concepto": "superficie-sembrada-trigo-ddr",
+      "representacion": "no_especificada",
+      "descripciones": [
+        "Superficie sembrada de la variedad Distrito Desarrollo Rural 139 (ha)"
+      ],
+      "nombres": [
+        "SHD139"
+      ],
+      "conjuntos": [
+        "207dc91e-ffef-47a6-891a-1a43dab05ee9"
+      ],
+      "diccionarios": [
+        "a7591bc9-f905-45cb-ba6c-ae3588d87594"
+      ],
+      "definiciones": [
+        "https://example.org/mex-ontologi/definition/a7591bc9-f905-45cb-ba6c-ae3588d87594%2F11"
+      ],
+      "criterio": "Revision agente 3 ronda 3; lectura completa del diccionario; alcance fijado a definiciones concretas.",
+      "fuente_revision": "propuestas/ronda-3/agente-3-cobertura/propuestas.json",
+      "alcance": "Solo este diccionario, conjunto, definición y nombre.",
+      "positivo": "Denota superficie sembrada de trigo en el DDR del calificador.",
+      "contraejemplo": "Otro SHD no aplica (DDR distinto, calificador distinto); SUMTOT no aplica (total, otra regla).",
+      "limite": "DDR conservado por calificador formal; sin suma demostrada entre DDR.",
+      "evidencia": [
+        {
+          "variable": "SHD139",
+          "descripcion": "Superficie sembrada de la variedad Distrito Desarrollo Rural 139 (ha)",
+          "definicion_iri": "https://example.org/mex-ontologi/definition/a7591bc9-f905-45cb-ba6c-ae3588d87594%2F11",
+          "diccionario": "a7591bc9-f905-45cb-ba6c-ae3588d87594",
+          "conjunto": "207dc91e-ffef-47a6-891a-1a43dab05ee9",
+          "unidad_de_medida": "Hectáreas",
+          "tipo_de_dato": "Numérico (decimal)",
+          "ejemplo_de_dato": "120",
+          "catalogo_de_referencia": ""
+        }
+      ],
+      "calificador": {
+        "distrito_desarrollo_rural": "139"
+      },
+      "requisito_integracion": "REQUISITO DE INTEGRACION: interpretacion()/construir() no propagan calificador a la variable documentada ni al grafo (verificado: 0 calificadores en resultados). Antes de aplicar, propagar el calificador y validar DDR distinto por regla; alternativa: 10 conceptos estrechos por DDR."
+    },
+    {
+      "id": "r3a3-superficie-sembrada-trigo-ddr-2",
+      "concepto": "superficie-sembrada-trigo-ddr",
+      "representacion": "no_especificada",
+      "descripciones": [
+        "Superficie sembrada de la variedad Distrito Desarrollo Rural 140 (ha)"
+      ],
+      "nombres": [
+        "SHD140"
+      ],
+      "conjuntos": [
+        "207dc91e-ffef-47a6-891a-1a43dab05ee9"
+      ],
+      "diccionarios": [
+        "a7591bc9-f905-45cb-ba6c-ae3588d87594"
+      ],
+      "definiciones": [
+        "https://example.org/mex-ontologi/definition/a7591bc9-f905-45cb-ba6c-ae3588d87594%2F13"
+      ],
+      "criterio": "Revision agente 3 ronda 3; lectura completa del diccionario; alcance fijado a definiciones concretas.",
+      "fuente_revision": "propuestas/ronda-3/agente-3-cobertura/propuestas.json",
+      "alcance": "Solo este diccionario, conjunto, definición y nombre.",
+      "positivo": "Denota superficie sembrada de trigo en el DDR del calificador.",
+      "contraejemplo": "Otro SHD no aplica (DDR distinto, calificador distinto); SUMTOT no aplica (total, otra regla).",
+      "limite": "DDR conservado por calificador formal; sin suma demostrada entre DDR.",
+      "evidencia": [
+        {
+          "variable": "SHD140",
+          "descripcion": "Superficie sembrada de la variedad Distrito Desarrollo Rural 140 (ha)",
+          "definicion_iri": "https://example.org/mex-ontologi/definition/a7591bc9-f905-45cb-ba6c-ae3588d87594%2F13",
+          "diccionario": "a7591bc9-f905-45cb-ba6c-ae3588d87594",
+          "conjunto": "207dc91e-ffef-47a6-891a-1a43dab05ee9",
+          "unidad_de_medida": "Hectáreas",
+          "tipo_de_dato": "Numérico (decimal)",
+          "ejemplo_de_dato": "300",
+          "catalogo_de_referencia": ""
+        }
+      ],
+      "calificador": {
+        "distrito_desarrollo_rural": "140"
+      },
+      "requisito_integracion": "REQUISITO DE INTEGRACION: interpretacion()/construir() no propagan calificador a la variable documentada ni al grafo (verificado: 0 calificadores en resultados). Antes de aplicar, propagar el calificador y validar DDR distinto por regla; alternativa: 10 conceptos estrechos por DDR."
+    },
+    {
+      "id": "r3a3-superficie-sembrada-trigo-ddr-3",
+      "concepto": "superficie-sembrada-trigo-ddr",
+      "representacion": "no_especificada",
+      "descripciones": [
+        "Superficie sembrada de la variedad Distrito Desarrollo Rural 141 (ha)"
+      ],
+      "nombres": [
+        "SHD141"
+      ],
+      "conjuntos": [
+        "207dc91e-ffef-47a6-891a-1a43dab05ee9"
+      ],
+      "diccionarios": [
+        "a7591bc9-f905-45cb-ba6c-ae3588d87594"
+      ],
+      "definiciones": [
+        "https://example.org/mex-ontologi/definition/a7591bc9-f905-45cb-ba6c-ae3588d87594%2F15"
+      ],
+      "criterio": "Revision agente 3 ronda 3; lectura completa del diccionario; alcance fijado a definiciones concretas.",
+      "fuente_revision": "propuestas/ronda-3/agente-3-cobertura/propuestas.json",
+      "alcance": "Solo este diccionario, conjunto, definición y nombre.",
+      "positivo": "Denota superficie sembrada de trigo en el DDR del calificador.",
+      "contraejemplo": "Otro SHD no aplica (DDR distinto, calificador distinto); SUMTOT no aplica (total, otra regla).",
+      "limite": "DDR conservado por calificador formal; sin suma demostrada entre DDR.",
+      "evidencia": [
+        {
+          "variable": "SHD141",
+          "descripcion": "Superficie sembrada de la variedad Distrito Desarrollo Rural 141 (ha)",
+          "definicion_iri": "https://example.org/mex-ontologi/definition/a7591bc9-f905-45cb-ba6c-ae3588d87594%2F15",
+          "diccionario": "a7591bc9-f905-45cb-ba6c-ae3588d87594",
+          "conjunto": "207dc91e-ffef-47a6-891a-1a43dab05ee9",
+          "unidad_de_medida": "Hectáreas",
+          "tipo_de_dato": "Numérico (decimal)",
+          "ejemplo_de_dato": "90",
+          "catalogo_de_referencia": ""
+        }
+      ],
+      "calificador": {
+        "distrito_desarrollo_rural": "141"
+      },
+      "requisito_integracion": "REQUISITO DE INTEGRACION: interpretacion()/construir() no propagan calificador a la variable documentada ni al grafo (verificado: 0 calificadores en resultados). Antes de aplicar, propagar el calificador y validar DDR distinto por regla; alternativa: 10 conceptos estrechos por DDR."
+    },
+    {
+      "id": "r3a3-superficie-sembrada-trigo-ddr-4",
+      "concepto": "superficie-sembrada-trigo-ddr",
+      "representacion": "no_especificada",
+      "descripciones": [
+        "Superficie sembrada de la variedad Distrito Desarrollo Rural 142 (ha)"
+      ],
+      "nombres": [
+        "SHD142"
+      ],
+      "conjuntos": [
+        "207dc91e-ffef-47a6-891a-1a43dab05ee9"
+      ],
+      "diccionarios": [
+        "a7591bc9-f905-45cb-ba6c-ae3588d87594"
+      ],
+      "definiciones": [
+        "https://example.org/mex-ontologi/definition/a7591bc9-f905-45cb-ba6c-ae3588d87594%2F14"
+      ],
+      "criterio": "Revision agente 3 ronda 3; lectura completa del diccionario; alcance fijado a definiciones concretas.",
+      "fuente_revision": "propuestas/ronda-3/agente-3-cobertura/propuestas.json",
+      "alcance": "Solo este diccionario, conjunto, definición y nombre.",
+      "positivo": "Denota superficie sembrada de trigo en el DDR del calificador.",
+      "contraejemplo": "Otro SHD no aplica (DDR distinto, calificador distinto); SUMTOT no aplica (total, otra regla).",
+      "limite": "DDR conservado por calificador formal; sin suma demostrada entre DDR.",
+      "evidencia": [
+        {
+          "variable": "SHD142",
+          "descripcion": "Superficie sembrada de la variedad Distrito Desarrollo Rural 142 (ha)",
+          "definicion_iri": "https://example.org/mex-ontologi/definition/a7591bc9-f905-45cb-ba6c-ae3588d87594%2F14",
+          "diccionario": "a7591bc9-f905-45cb-ba6c-ae3588d87594",
+          "conjunto": "207dc91e-ffef-47a6-891a-1a43dab05ee9",
+          "unidad_de_medida": "Hectáreas",
+          "tipo_de_dato": "Numérico (decimal)",
+          "ejemplo_de_dato": "150",
+          "catalogo_de_referencia": ""
+        }
+      ],
+      "calificador": {
+        "distrito_desarrollo_rural": "142"
+      },
+      "requisito_integracion": "REQUISITO DE INTEGRACION: interpretacion()/construir() no propagan calificador a la variable documentada ni al grafo (verificado: 0 calificadores en resultados). Antes de aplicar, propagar el calificador y validar DDR distinto por regla; alternativa: 10 conceptos estrechos por DDR."
+    },
+    {
+      "id": "r3a3-superficie-sembrada-trigo-ddr-5",
+      "concepto": "superficie-sembrada-trigo-ddr",
+      "representacion": "no_especificada",
+      "descripciones": [
+        "Superficie sembrada de la variedad Distrito Desarrollo Rural 143 (ha)"
+      ],
+      "nombres": [
+        "SHD143"
+      ],
+      "conjuntos": [
+        "207dc91e-ffef-47a6-891a-1a43dab05ee9"
+      ],
+      "diccionarios": [
+        "a7591bc9-f905-45cb-ba6c-ae3588d87594"
+      ],
+      "definiciones": [
+        "https://example.org/mex-ontologi/definition/a7591bc9-f905-45cb-ba6c-ae3588d87594%2F16"
+      ],
+      "criterio": "Revision agente 3 ronda 3; lectura completa del diccionario; alcance fijado a definiciones concretas.",
+      "fuente_revision": "propuestas/ronda-3/agente-3-cobertura/propuestas.json",
+      "alcance": "Solo este diccionario, conjunto, definición y nombre.",
+      "positivo": "Denota superficie sembrada de trigo en el DDR del calificador.",
+      "contraejemplo": "Otro SHD no aplica (DDR distinto, calificador distinto); SUMTOT no aplica (total, otra regla).",
+      "limite": "DDR conservado por calificador formal; sin suma demostrada entre DDR.",
+      "evidencia": [
+        {
+          "variable": "SHD143",
+          "descripcion": "Superficie sembrada de la variedad Distrito Desarrollo Rural 143 (ha)",
+          "definicion_iri": "https://example.org/mex-ontologi/definition/a7591bc9-f905-45cb-ba6c-ae3588d87594%2F16",
+          "diccionario": "a7591bc9-f905-45cb-ba6c-ae3588d87594",
+          "conjunto": "207dc91e-ffef-47a6-891a-1a43dab05ee9",
+          "unidad_de_medida": "Hectáreas",
+          "tipo_de_dato": "Numérico (decimal)",
+          "ejemplo_de_dato": "75",
+          "catalogo_de_referencia": ""
+        }
+      ],
+      "calificador": {
+        "distrito_desarrollo_rural": "143"
+      },
+      "requisito_integracion": "REQUISITO DE INTEGRACION: interpretacion()/construir() no propagan calificador a la variable documentada ni al grafo (verificado: 0 calificadores en resultados). Antes de aplicar, propagar el calificador y validar DDR distinto por regla; alternativa: 10 conceptos estrechos por DDR."
+    },
+    {
+      "id": "r3a3-superficie-sembrada-trigo-ddr-6",
+      "concepto": "superficie-sembrada-trigo-ddr",
+      "representacion": "no_especificada",
+      "descripciones": [
+        "Superficie sembrada de la variedad Distrito Desarrollo Rural 144 (ha)"
+      ],
+      "nombres": [
+        "SHD144"
+      ],
+      "conjuntos": [
+        "207dc91e-ffef-47a6-891a-1a43dab05ee9"
+      ],
+      "diccionarios": [
+        "a7591bc9-f905-45cb-ba6c-ae3588d87594"
+      ],
+      "definiciones": [
+        "https://example.org/mex-ontologi/definition/a7591bc9-f905-45cb-ba6c-ae3588d87594%2F10"
+      ],
+      "criterio": "Revision agente 3 ronda 3; lectura completa del diccionario; alcance fijado a definiciones concretas.",
+      "fuente_revision": "propuestas/ronda-3/agente-3-cobertura/propuestas.json",
+      "alcance": "Solo este diccionario, conjunto, definición y nombre.",
+      "positivo": "Denota superficie sembrada de trigo en el DDR del calificador.",
+      "contraejemplo": "Otro SHD no aplica (DDR distinto, calificador distinto); SUMTOT no aplica (total, otra regla).",
+      "limite": "DDR conservado por calificador formal; sin suma demostrada entre DDR.",
+      "evidencia": [
+        {
+          "variable": "SHD144",
+          "descripcion": "Superficie sembrada de la variedad Distrito Desarrollo Rural 144 (ha)",
+          "definicion_iri": "https://example.org/mex-ontologi/definition/a7591bc9-f905-45cb-ba6c-ae3588d87594%2F10",
+          "diccionario": "a7591bc9-f905-45cb-ba6c-ae3588d87594",
+          "conjunto": "207dc91e-ffef-47a6-891a-1a43dab05ee9",
+          "unidad_de_medida": "Hectáreas",
+          "tipo_de_dato": "Numérico (decimal)",
+          "ejemplo_de_dato": "215",
+          "catalogo_de_referencia": ""
+        }
+      ],
+      "calificador": {
+        "distrito_desarrollo_rural": "144"
+      },
+      "requisito_integracion": "REQUISITO DE INTEGRACION: interpretacion()/construir() no propagan calificador a la variable documentada ni al grafo (verificado: 0 calificadores en resultados). Antes de aplicar, propagar el calificador y validar DDR distinto por regla; alternativa: 10 conceptos estrechos por DDR."
+    },
+    {
+      "id": "r3a3-superficie-sembrada-trigo-ddr-7",
+      "concepto": "superficie-sembrada-trigo-ddr",
+      "representacion": "no_especificada",
+      "descripciones": [
+        "Superficie sembrada de la variedad Distrito Desarrollo Rural 147 (ha)"
+      ],
+      "nombres": [
+        "SHD147"
+      ],
+      "conjuntos": [
+        "207dc91e-ffef-47a6-891a-1a43dab05ee9"
+      ],
+      "diccionarios": [
+        "a7591bc9-f905-45cb-ba6c-ae3588d87594"
+      ],
+      "definiciones": [
+        "https://example.org/mex-ontologi/definition/a7591bc9-f905-45cb-ba6c-ae3588d87594%2F9"
+      ],
+      "criterio": "Revision agente 3 ronda 3; lectura completa del diccionario; alcance fijado a definiciones concretas.",
+      "fuente_revision": "propuestas/ronda-3/agente-3-cobertura/propuestas.json",
+      "alcance": "Solo este diccionario, conjunto, definición y nombre.",
+      "positivo": "Denota superficie sembrada de trigo en el DDR del calificador.",
+      "contraejemplo": "Otro SHD no aplica (DDR distinto, calificador distinto); SUMTOT no aplica (total, otra regla).",
+      "limite": "DDR conservado por calificador formal; sin suma demostrada entre DDR.",
+      "evidencia": [
+        {
+          "variable": "SHD147",
+          "descripcion": "Superficie sembrada de la variedad Distrito Desarrollo Rural 147 (ha)",
+          "definicion_iri": "https://example.org/mex-ontologi/definition/a7591bc9-f905-45cb-ba6c-ae3588d87594%2F9",
+          "diccionario": "a7591bc9-f905-45cb-ba6c-ae3588d87594",
+          "conjunto": "207dc91e-ffef-47a6-891a-1a43dab05ee9",
+          "unidad_de_medida": "Hectáreas",
+          "tipo_de_dato": "Numérico (decimal)",
+          "ejemplo_de_dato": "430.75",
+          "catalogo_de_referencia": ""
+        }
+      ],
+      "calificador": {
+        "distrito_desarrollo_rural": "147"
+      },
+      "requisito_integracion": "REQUISITO DE INTEGRACION: interpretacion()/construir() no propagan calificador a la variable documentada ni al grafo (verificado: 0 calificadores en resultados). Antes de aplicar, propagar el calificador y validar DDR distinto por regla; alternativa: 10 conceptos estrechos por DDR."
+    },
+    {
+      "id": "r3a3-superficie-sembrada-trigo-ddr-8",
+      "concepto": "superficie-sembrada-trigo-ddr",
+      "representacion": "no_especificada",
+      "descripciones": [
+        "Superficie sembrada de la variedad Distrito Desarrollo Rural 148 (ha)"
+      ],
+      "nombres": [
+        "SHD148"
+      ],
+      "conjuntos": [
+        "207dc91e-ffef-47a6-891a-1a43dab05ee9"
+      ],
+      "diccionarios": [
+        "a7591bc9-f905-45cb-ba6c-ae3588d87594"
+      ],
+      "definiciones": [
+        "https://example.org/mex-ontologi/definition/a7591bc9-f905-45cb-ba6c-ae3588d87594%2F8"
+      ],
+      "criterio": "Revision agente 3 ronda 3; lectura completa del diccionario; alcance fijado a definiciones concretas.",
+      "fuente_revision": "propuestas/ronda-3/agente-3-cobertura/propuestas.json",
+      "alcance": "Solo este diccionario, conjunto, definición y nombre.",
+      "positivo": "Denota superficie sembrada de trigo en el DDR del calificador.",
+      "contraejemplo": "Otro SHD no aplica (DDR distinto, calificador distinto); SUMTOT no aplica (total, otra regla).",
+      "limite": "DDR conservado por calificador formal; sin suma demostrada entre DDR.",
+      "evidencia": [
+        {
+          "variable": "SHD148",
+          "descripcion": "Superficie sembrada de la variedad Distrito Desarrollo Rural 148 (ha)",
+          "definicion_iri": "https://example.org/mex-ontologi/definition/a7591bc9-f905-45cb-ba6c-ae3588d87594%2F8",
+          "diccionario": "a7591bc9-f905-45cb-ba6c-ae3588d87594",
+          "conjunto": "207dc91e-ffef-47a6-891a-1a43dab05ee9",
+          "unidad_de_medida": "Hectáreas",
+          "tipo_de_dato": "Numérico (decimal)",
+          "ejemplo_de_dato": "980",
+          "catalogo_de_referencia": ""
+        }
+      ],
+      "calificador": {
+        "distrito_desarrollo_rural": "148"
+      },
+      "requisito_integracion": "REQUISITO DE INTEGRACION: interpretacion()/construir() no propagan calificador a la variable documentada ni al grafo (verificado: 0 calificadores en resultados). Antes de aplicar, propagar el calificador y validar DDR distinto por regla; alternativa: 10 conceptos estrechos por DDR."
+    },
+    {
+      "id": "r3a3-superficie-sembrada-trigo-ddr-9",
+      "concepto": "superficie-sembrada-trigo-ddr",
+      "representacion": "no_especificada",
+      "descripciones": [
+        "Superficie sembrada de la variedad Distrito Desarrollo Rural 149 (ha)"
+      ],
+      "nombres": [
+        "SHD149"
+      ],
+      "conjuntos": [
+        "207dc91e-ffef-47a6-891a-1a43dab05ee9"
+      ],
+      "diccionarios": [
+        "a7591bc9-f905-45cb-ba6c-ae3588d87594"
+      ],
+      "definiciones": [
+        "https://example.org/mex-ontologi/definition/a7591bc9-f905-45cb-ba6c-ae3588d87594%2F7"
+      ],
+      "criterio": "Revision agente 3 ronda 3; lectura completa del diccionario; alcance fijado a definiciones concretas.",
+      "fuente_revision": "propuestas/ronda-3/agente-3-cobertura/propuestas.json",
+      "alcance": "Solo este diccionario, conjunto, definición y nombre.",
+      "positivo": "Denota superficie sembrada de trigo en el DDR del calificador.",
+      "contraejemplo": "Otro SHD no aplica (DDR distinto, calificador distinto); SUMTOT no aplica (total, otra regla).",
+      "limite": "DDR conservado por calificador formal; sin suma demostrada entre DDR.",
+      "evidencia": [
+        {
+          "variable": "SHD149",
+          "descripcion": "Superficie sembrada de la variedad Distrito Desarrollo Rural 149 (ha)",
+          "definicion_iri": "https://example.org/mex-ontologi/definition/a7591bc9-f905-45cb-ba6c-ae3588d87594%2F7",
+          "diccionario": "a7591bc9-f905-45cb-ba6c-ae3588d87594",
+          "conjunto": "207dc91e-ffef-47a6-891a-1a43dab05ee9",
+          "unidad_de_medida": "Hectáreas",
+          "tipo_de_dato": "Numérico (decimal)",
+          "ejemplo_de_dato": "1250.5",
+          "catalogo_de_referencia": ""
+        }
+      ],
+      "calificador": {
+        "distrito_desarrollo_rural": "149"
+      },
+      "requisito_integracion": "REQUISITO DE INTEGRACION: interpretacion()/construir() no propagan calificador a la variable documentada ni al grafo (verificado: 0 calificadores en resultados). Antes de aplicar, propagar el calificador y validar DDR distinto por regla; alternativa: 10 conceptos estrechos por DDR."
+    },
+    {
+      "id": "r3a3-superficie-sembrada-trigo-ddr-10",
+      "concepto": "superficie-sembrada-trigo-ddr",
+      "representacion": "no_especificada",
+      "descripciones": [
+        "Superficie sembrada de la variedad Distrito Desarrollo Rural 193 (ha)"
+      ],
+      "nombres": [
+        "SHD193"
+      ],
+      "conjuntos": [
+        "207dc91e-ffef-47a6-891a-1a43dab05ee9"
+      ],
+      "diccionarios": [
+        "a7591bc9-f905-45cb-ba6c-ae3588d87594"
+      ],
+      "definiciones": [
+        "https://example.org/mex-ontologi/definition/a7591bc9-f905-45cb-ba6c-ae3588d87594%2F12"
+      ],
+      "criterio": "Revision agente 3 ronda 3; lectura completa del diccionario; alcance fijado a definiciones concretas.",
+      "fuente_revision": "propuestas/ronda-3/agente-3-cobertura/propuestas.json",
+      "alcance": "Solo este diccionario, conjunto, definición y nombre.",
+      "positivo": "Denota superficie sembrada de trigo en el DDR del calificador.",
+      "contraejemplo": "Otro SHD no aplica (DDR distinto, calificador distinto); SUMTOT no aplica (total, otra regla).",
+      "limite": "DDR conservado por calificador formal; sin suma demostrada entre DDR.",
+      "evidencia": [
+        {
+          "variable": "SHD193",
+          "descripcion": "Superficie sembrada de la variedad Distrito Desarrollo Rural 193 (ha)",
+          "definicion_iri": "https://example.org/mex-ontologi/definition/a7591bc9-f905-45cb-ba6c-ae3588d87594%2F12",
+          "diccionario": "a7591bc9-f905-45cb-ba6c-ae3588d87594",
+          "conjunto": "207dc91e-ffef-47a6-891a-1a43dab05ee9",
+          "unidad_de_medida": "Hectáreas",
+          "tipo_de_dato": "Numérico (decimal)",
+          "ejemplo_de_dato": "65",
+          "catalogo_de_referencia": ""
+        }
+      ],
+      "calificador": {
+        "distrito_desarrollo_rural": "193"
+      },
+      "requisito_integracion": "REQUISITO DE INTEGRACION: interpretacion()/construir() no propagan calificador a la variable documentada ni al grafo (verificado: 0 calificadores en resultados). Antes de aplicar, propagar el calificador y validar DDR distinto por regla; alternativa: 10 conceptos estrechos por DDR."
+    },
+    {
+      "id": "r3a3-superficie-total-sembrada-trigo-registro-1",
+      "concepto": "superficie-total-sembrada-trigo-registro",
+      "representacion": "no_especificada",
+      "descripciones": [
+        "Superficie total sembrada por registro (ha)"
+      ],
+      "nombres": [
+        "SUMTOT"
+      ],
+      "conjuntos": [
+        "207dc91e-ffef-47a6-891a-1a43dab05ee9"
+      ],
+      "diccionarios": [
+        "a7591bc9-f905-45cb-ba6c-ae3588d87594"
+      ],
+      "definiciones": [
+        "https://example.org/mex-ontologi/definition/a7591bc9-f905-45cb-ba6c-ae3588d87594%2F17"
+      ],
+      "criterio": "Revision agente 3 ronda 3; lectura completa del diccionario; alcance fijado a definiciones concretas.",
+      "fuente_revision": "propuestas/ronda-3/agente-3-cobertura/propuestas.json",
+      "alcance": "Solo este diccionario, conjunto, definición y nombre.",
+      "positivo": "Denota la superficie total sembrada por registro.",
+      "contraejemplo": "Ningún SHD aplica (desagregados por DDR); el total no se demuestra suma de las SHD.",
+      "limite": "Total por registro sin suma demostrada.",
+      "evidencia": [
+        {
+          "variable": "SUMTOT",
+          "descripcion": "Superficie total sembrada por registro (ha)",
+          "definicion_iri": "https://example.org/mex-ontologi/definition/a7591bc9-f905-45cb-ba6c-ae3588d87594%2F17",
+          "diccionario": "a7591bc9-f905-45cb-ba6c-ae3588d87594",
+          "conjunto": "207dc91e-ffef-47a6-891a-1a43dab05ee9",
+          "unidad_de_medida": "Hectáreas",
+          "tipo_de_dato": "Numérico (decimal)",
+          "ejemplo_de_dato": "3676.25",
+          "catalogo_de_referencia": ""
+        }
+      ]
+    },
+    {
+      "id": "r3a3-variedad-trigo-sembrada-clave-1",
+      "concepto": "variedad-trigo-sembrada-clave",
+      "representacion": "codigo",
+      "descripciones": [
+        "Clave de la variedad del trigo"
+      ],
+      "nombres": [
+        "CVEV"
+      ],
+      "conjuntos": [
+        "207dc91e-ffef-47a6-891a-1a43dab05ee9"
+      ],
+      "diccionarios": [
+        "a7591bc9-f905-45cb-ba6c-ae3588d87594"
+      ],
+      "definiciones": [
+        "https://example.org/mex-ontologi/definition/a7591bc9-f905-45cb-ba6c-ae3588d87594%2F4"
+      ],
+      "criterio": "Revision agente 3 ronda 3; lectura completa del diccionario; alcance fijado a definiciones concretas.",
+      "fuente_revision": "propuestas/ronda-3/agente-3-cobertura/propuestas.json",
+      "alcance": "Solo este diccionario, conjunto, definición y nombre.",
+      "positivo": "Denota la clave de la variedad del trigo.",
+      "contraejemplo": "VARIEDAD no aplica a esta regla (es nombre, otra regla).",
+      "limite": "Sin unidad declarada; clave sin catálogo resuelto.",
+      "evidencia": [
+        {
+          "variable": "CVEV",
+          "descripcion": "Clave de la variedad del trigo",
+          "definicion_iri": "https://example.org/mex-ontologi/definition/a7591bc9-f905-45cb-ba6c-ae3588d87594%2F4",
+          "diccionario": "a7591bc9-f905-45cb-ba6c-ae3588d87594",
+          "conjunto": "207dc91e-ffef-47a6-891a-1a43dab05ee9",
+          "unidad_de_medida": "",
+          "tipo_de_dato": "Numérico",
+          "ejemplo_de_dato": "1",
+          "catalogo_de_referencia": ""
+        }
+      ]
+    },
+    {
+      "id": "r3a3-variedad-trigo-sembrada-1",
+      "concepto": "variedad-trigo-sembrada",
+      "representacion": "nombre",
+      "descripciones": [
+        "Nombre de la variedad sembrada"
+      ],
+      "nombres": [
+        "VARIEDAD"
+      ],
+      "conjuntos": [
+        "207dc91e-ffef-47a6-891a-1a43dab05ee9"
+      ],
+      "diccionarios": [
+        "a7591bc9-f905-45cb-ba6c-ae3588d87594"
+      ],
+      "definiciones": [
+        "https://example.org/mex-ontologi/definition/a7591bc9-f905-45cb-ba6c-ae3588d87594%2F6"
+      ],
+      "criterio": "Revision agente 3 ronda 3; lectura completa del diccionario; alcance fijado a definiciones concretas.",
+      "fuente_revision": "propuestas/ronda-3/agente-3-cobertura/propuestas.json",
+      "alcance": "Solo este diccionario, conjunto, definición y nombre.",
+      "positivo": "Denota el nombre de la variedad sembrada.",
+      "contraejemplo": "TVAR no aplica (tipo, otra regla).",
+      "limite": "Sin unidad declarada; un nombre no es identidad global.",
+      "evidencia": [
+        {
+          "variable": "VARIEDAD",
+          "descripcion": "Nombre de la variedad sembrada",
+          "definicion_iri": "https://example.org/mex-ontologi/definition/a7591bc9-f905-45cb-ba6c-ae3588d87594%2F6",
+          "diccionario": "a7591bc9-f905-45cb-ba6c-ae3588d87594",
+          "conjunto": "207dc91e-ffef-47a6-891a-1a43dab05ee9",
+          "unidad_de_medida": "",
+          "tipo_de_dato": "Texto",
+          "ejemplo_de_dato": "Tacupeto F-2000",
+          "catalogo_de_referencia": ""
+        }
+      ]
+    },
+    {
+      "id": "r3a3-variedad-trigo-sembrada-tipo-1",
+      "concepto": "variedad-trigo-sembrada-tipo",
+      "representacion": "nombre",
+      "descripciones": [
+        "Tipo de variedad de trigo"
+      ],
+      "nombres": [
+        "TVAR"
+      ],
+      "conjuntos": [
+        "207dc91e-ffef-47a6-891a-1a43dab05ee9"
+      ],
+      "diccionarios": [
+        "a7591bc9-f905-45cb-ba6c-ae3588d87594"
+      ],
+      "definiciones": [
+        "https://example.org/mex-ontologi/definition/a7591bc9-f905-45cb-ba6c-ae3588d87594%2F5"
+      ],
+      "criterio": "Revision agente 3 ronda 3; lectura completa del diccionario; alcance fijado a definiciones concretas.",
+      "fuente_revision": "propuestas/ronda-3/agente-3-cobertura/propuestas.json",
+      "alcance": "Solo este diccionario, conjunto, definición y nombre.",
+      "positivo": "Denota el tipo de variedad de trigo.",
+      "contraejemplo": "GRUPO no tiene propuesta (descripción genérica sin leyenda).",
+      "limite": "Sin unidad declarada; catálogo de tipos no publicado.",
+      "evidencia": [
+        {
+          "variable": "TVAR",
+          "descripcion": "Tipo de variedad de trigo",
+          "definicion_iri": "https://example.org/mex-ontologi/definition/a7591bc9-f905-45cb-ba6c-ae3588d87594%2F5",
+          "diccionario": "a7591bc9-f905-45cb-ba6c-ae3588d87594",
+          "conjunto": "207dc91e-ffef-47a6-891a-1a43dab05ee9",
+          "unidad_de_medida": "",
+          "tipo_de_dato": "Texto (catálogo)",
+          "ejemplo_de_dato": "Harinero",
+          "catalogo_de_referencia": ""
+        }
+      ]
+    },
+    {
+      "id": "r3a3-organizacion-1",
+      "concepto": "organizacion",
+      "representacion": "nombre",
+      "descripciones": [
+        "Institución generadora del dato"
+      ],
+      "nombres": [
+        "FUENTE"
+      ],
+      "conjuntos": [
+        "207dc91e-ffef-47a6-891a-1a43dab05ee9"
+      ],
+      "diccionarios": [
+        "a7591bc9-f905-45cb-ba6c-ae3588d87594"
+      ],
+      "definiciones": [
+        "https://example.org/mex-ontologi/definition/a7591bc9-f905-45cb-ba6c-ae3588d87594%2F18"
+      ],
+      "criterio": "Revision agente 3 ronda 3; lectura completa del diccionario; alcance fijado a definiciones concretas.",
+      "fuente_revision": "propuestas/ronda-3/agente-3-cobertura/propuestas.json",
+      "alcance": "Solo este diccionario, conjunto, definición y nombre. Reutiliza el concepto existente organizacion.",
+      "positivo": "Denota la institución generadora del dato con papel generadora.",
+      "contraejemplo": "No identifica a la organización publicadora del catálogo CKAN ni a una capturadora.",
+      "limite": "Sin unidad declarada; papel generadora conservado por separado.",
+      "evidencia": [
+        {
+          "variable": "FUENTE",
+          "descripcion": "Institución generadora del dato",
+          "definicion_iri": "https://example.org/mex-ontologi/definition/a7591bc9-f905-45cb-ba6c-ae3588d87594%2F18",
+          "diccionario": "a7591bc9-f905-45cb-ba6c-ae3588d87594",
+          "conjunto": "207dc91e-ffef-47a6-891a-1a43dab05ee9",
+          "unidad_de_medida": "",
+          "tipo_de_dato": "Texto",
+          "ejemplo_de_dato": "SAGARHPA",
+          "catalogo_de_referencia": ""
+        }
+      ]
+    }
+  ],
+  "sin_propuesta_tras_lectura": [
+    {
+      "diccionario": "863b9cc8-daeb-4430-b835-6a0ced5abd31",
+      "variable": "CVOTRAS",
+      "descripcion": "Clave de otras",
+      "definicion_iri": "https://example.org/mex-ontologi/definition/863b9cc8-daeb-4430-b835-6a0ced5abd31%2F7",
+      "conjunto": "e093cf34-7da0-4efb-89a3-7b473a5013ab",
+      "motivo": "Descripcion generica sin referente: no defendible."
+    },
+    {
+      "diccionario": "863b9cc8-daeb-4430-b835-6a0ced5abd31",
+      "variable": "DOTRAS",
+      "descripcion": "Nombre de otras",
+      "definicion_iri": "https://example.org/mex-ontologi/definition/863b9cc8-daeb-4430-b835-6a0ced5abd31%2F8",
+      "conjunto": "e093cf34-7da0-4efb-89a3-7b473a5013ab",
+      "motivo": "Descripcion generica sin referente: no defendible."
+    },
+    {
+      "diccionario": "a7591bc9-f905-45cb-ba6c-ae3588d87594",
+      "variable": "GRUPO",
+      "descripcion": "Grupo del cultivo",
+      "definicion_iri": "https://example.org/mex-ontologi/definition/a7591bc9-f905-45cb-ba6c-ae3588d87594%2F3",
+      "conjunto": "207dc91e-ffef-47a6-891a-1a43dab05ee9",
+      "motivo": "Descripcion generica sin leyenda publicada: no defendible."
+    }
+  ],
+  "requisitos_integracion": {
+    "calificador_shd": "Las 10 reglas SHD comparten concepto con calificador formal por DDR. interpretacion()/construir() no propagan calificador a la variable documentada ni al grafo (verificado en esta base: 0 calificadores en resultados). Requisito antes de aplicar: propagar el calificador y validar DDR distinto por regla. Alternativa: 10 conceptos estrechos por DDR. El pipeline NO preserva hoy el calificador; no se declara lo contrario.",
+    "aritmetica_simulada": {
+      "respaldadas": 295,
+      "fuera_del_nucleo": 1245,
+      "candidatas_agente4": 23,
+      "conceptos": 158,
+      "revisadas_intactas": 836,
+      "candidatas_columna": 827,
+      "candidatas_nuevas_no_revisadas": 709
+    },
+    "advertencia_candidatas": "Las 709 columnas que matchean las 63 definiciones pasarían a candidata_por_nombre al integrar (cómputo propio verificado: 709 columnas físicas, todas definicion_sin_interpretacion_compartida, nombre único y definición única). Candidata no es revisada: requieren revisión documental del agente 2; esta propuesta no crea correspondencias."
+  },
+  "nota": "Propuestas de significado separadas del inventario. Ninguna crea correspondencia columna-variable ni uso automatico en cruces. Los 23 significados candidatos del agente 4 no se tocan."
+}

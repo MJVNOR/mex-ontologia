@@ -1,0 +1,173 @@
+{
+ "rol": "B-auditoria-tecnica",
+ "version": "v003",
+ "fecha_utc": "2026-10-24T10:28:32.269157+00:00",
+ "artefacto": "revision-I-codigo-provisional",
+ "estado_global": "NO_APTO_para_instalar (bloqueantes D1-D4 demostrados por ejecucion; D5-D10 cobertura incompleta)",
+ "preservacion": {
+  "v001_dictamen": "intacto, solo lectura",
+  "v002_auditoria_codigo": "intacto, sigue BLOQUEADO (I-codigo/v001 sin congelada ni entrega)",
+  "codigo_autor_y_produccion": "sin modificar (solo lectura + ejecucion en tmp)"
+ },
+ "sha_provisionales_no_sello": [
+  {
+   "ruta": "propuestas/plan-tras-r8/ejecucion-20261024/I-codigo/v001/scripts/integrar_ronda_9.py",
+   "sha256": "8bf6fb9bfe7c2fe361654f77838efe2c9f0deeda3782e7173b658133ccf98ac2",
+   "bytes": 17048
+  },
+  {
+   "ruta": "propuestas/plan-tras-r8/ejecucion-20261024/I-codigo/v001/scripts/consolidar_semantica.py",
+   "sha256": "db2d3441ac4f159fc42f035483ad14fe6e13db1eb3586f41416813dc76d789e8",
+   "bytes": 39333
+  },
+  {
+   "ruta": "propuestas/plan-tras-r8/ejecucion-20261024/I-codigo/v001/scripts/ampliar_portal.py",
+   "sha256": "63d2fc8248649a0b5bc3c66d23fcd50e9ac57737c93d36a8563b87d7b538e9c3",
+   "bytes": 17053
+  },
+  {
+   "ruta": "propuestas/plan-tras-r8/ejecucion-20261024/I-codigo/v001/data-integracion-ronda-9/materializar.py",
+   "sha256": "ec2ab62a659ae28bd5c2319294014c4df24d8d341460c65bdeb0a0dcf5d25f30",
+   "bytes": 6069
+  },
+  {
+   "ruta": "propuestas/plan-tras-r8/ejecucion-20261024/I-codigo/v001/data-integracion-ronda-9/aceptadas.json",
+   "sha256": "094e3ebacf8b8d501369b091b443a33905a7f250eba007ee05ad968632b53aea",
+   "bytes": 2673
+  },
+  {
+   "ruta": "propuestas/plan-tras-r8/ejecucion-20261024/I-codigo/v001/data-integracion-ronda-9/datos/propuesta-qudt.ttl",
+   "sha256": "1e97409e648b4d2c19cc84bcead12a38699ecf3f00619acd379c5a1938e3780e",
+   "bytes": 2923
+  },
+  {
+   "ruta": "propuestas/plan-tras-r8/ejecucion-20261024/I-codigo/v001/data-integracion-ronda-9/modelo/vocabulario-minimo.ttl",
+   "sha256": "9dcff9420cb6e31b9efb4b11c21ba39c0a09ad9249b0f44a41a46bc1f9ae75c8",
+   "bytes": 1875
+  },
+  {
+   "ruta": "propuestas/plan-tras-r8/ejecucion-20261024/I-codigo/v001/data-integracion-ronda-9/shapes/shape-exclusion-significado.ttl",
+   "sha256": "fc301d854b6c9175be601282ab4073f054a1736103b92ea634003c7bcc2b148d",
+   "bytes": 1056
+  },
+  {
+   "ruta": "propuestas/plan-tras-r8/ejecucion-20261024/I-codigo/v001/data-integracion-ronda-9/auditorias/auditoria-a.TEMPLATE.json",
+   "sha256": "0b0d3b0cdd9bd9ca6cc05f42f12e5acb91a97dcd5d57dc57199301b7bb839278",
+   "bytes": 490
+  },
+  {
+   "ruta": "propuestas/plan-tras-r8/ejecucion-20261024/I-codigo/v001/data-integracion-ronda-9/auditorias/auditoria-b.TEMPLATE.json",
+   "sha256": "7f9fbe75baa1e407d48f394f317e73595b55c141a98a24c7212ab76473542ff2",
+   "bytes": 490
+  },
+  {
+   "ruta": "propuestas/plan-tras-r8/ejecucion-20261024/I-codigo/v001/plantilla-ontologia-revision-ronda-9.json",
+   "sha256": "7178ca15f36b5965c8eb03404c4e8857a1bd6843aa77de714d0eb38d03d3c664",
+   "bytes": 414
+  },
+  {
+   "ruta": "propuestas/plan-tras-r8/ejecucion-20261024/I-codigo/v001/tests/test_integrar_ronda_9.py",
+   "sha256": "33068f834565943f76c8b05dd49939d157010501920516f5c1424a84496fd5db",
+   "bytes": 16722
+  },
+  {
+   "ruta": "propuestas/plan-tras-r8/ejecucion-20261024/I-codigo/v001/tests/fixtures/declaraciones-ejemplo.json",
+   "sha256": "31b2db7e58f8eb8503cbeb709dfdd738f33dbafb195fad8289116aeab2b48a71",
+   "bytes": 1893
+  }
+ ],
+ "suite_staging": {
+  "archivo": "propuestas/plan-tras-r8/ejecucion-20261024/I-codigo/v001/tests/test_integrar_ronda_9.py",
+  "ejecucion": "unittest stdlib, arboles sinteticos en tmp + 2 tests sobre archivos reales",
+  "resultado": "16/17 OK; test_valido ERROR: ValueError: Shape R9 exige un unico sh:sparql (integrar_ronda_9.py:250, _verificar_shape)",
+  "happy_path": "ROTO"
+ },
+ "problemas": [
+  {
+   "id": "D1",
+   "severidad": "BLOQUEANTE",
+   "donde": "integrar_ronda_9.py:152-154 (cargar, PROHIBIDO por substring)",
+   "hecho": "Rechaza su propio datos/propuesta-qudt.ttl staging: tokens 'QuantityValue' (L7 comentario) y 'https://qudt.org/vocab/unit' (evidenciaNormativa L18/L31). test_conversion_colada solo pasa por TTL sintetico sin comentarios/URLs; con material real la misma regla dispara.",
+   "exigido": "prohibicion estructural por terminos/predicados del grafo, no substring sobre texto"
+  },
+  {
+   "id": "D2",
+   "severidad": "BLOQUEANTE",
+   "donde": "integrar_ronda_9.py:226-229 (_verificar_grafo_minimo, PROHIBIDO por substring)",
+   "hecho": "Rechaza su propio modelo/vocabulario-minimo.ttl: L10 rdfs:comment contiene 'qudt:QuantityValue'. El vocab 'SinQuantityValue' cae por su propio comentario.",
+   "exigido": "whitelist estructural de sujetos/predicados/objetos del modelo; el comentario documental no es un termino"
+  },
+  {
+   "id": "D3",
+   "severidad": "BLOQUEANTE",
+   "donde": "integrar_ronda_9.py:250 (_verificar_shape, txt.count(sh:sparql)!=1)",
+   "hecho": "Rechaza el shape P4 v001 real pinnado por SHA fc301d85: 2 ocurrencias ('anadir este sh:sparql' comentario L9 + predicado L12). test_shape_staging_es_p4_v001 pasa el SHA del mismo archivo: pin y conteo se contradicen.",
+   "exigido": "contar el predicado en el grafo parseado, no en texto"
+  },
+  {
+   "id": "D4",
+   "severidad": "BLOQUEANTE",
+   "donde": "tests/test_integrar_ronda_9.py::test_valido",
+   "hecho": "Happy path en ERROR (D3); lo verificable no es instalable por esta via hoy. Correccion inicial: durante la revision se descarto la hipotesis de codigo muerto en make_root (relectura byte-exacta: sin return prematuro); el fallo real es D3.",
+   "exigido": "suite verde sobre material real antes de sellar"
+  },
+  {
+   "id": "D5",
+   "severidad": "ALTA",
+   "donde": "integrar_ronda_9.py:210-231 (_verificar_grafo_minimo)",
+   "hecho": "Demostrado en RAM con sus reglas: predicado extra en declaracion + triple sobre IRI variable con otro predicado + 3er sujeto de otra clase + unidadLiteral='OTRA' => PASA. Grafo staging: 26 triples/12 predicados; solo se verifican conjunto de sujetos tipados y unidadQudt por sujeto. Sin verificar: label, variableDocumentada, definicionFuente, conjunto/diccionarioFuente, unidadLiteral (valor), evidenciaNormativa, estadoPropuesta, wasDerivedFrom, comments, modelo (cero checks estructurales).",
+   "exigido": "whitelist estructural de TODOS los sujetos/predicados/objetos de datos y modelo + exactitud de cada literal por predicado"
+  },
+  {
+   "id": "D6",
+   "severidad": "ALTA",
+   "donde": "integrar_ronda_9.py:193-195 (cargar, `in datos_txt`)",
+   "hecho": "Sujeto/definicion_IRI/unidad_literal/unidad_qudt solo se exigen como substring del TTL: un literal erróneo en el triple pasa si aparece en un comentario.",
+   "exigido": "igualdad sobre objetos del grafo parseado por predicado"
+  },
+  {
+   "id": "D7",
+   "severidad": "ALTA",
+   "donde": "integrar_ronda_9.py:95-99 (_clave) usada en L184/186",
+   "hecho": "_clave(NFKD+casefold+strip) iguala 'Milimetros'=='Milímetros' y 'Hectareas'=='Hectáreas' (demostrado); tambien colapsa mayusculas y espacios (' Almacenamiento(hm³)' real Q2). DECL_PIN + staging TTL + aceptadas.json + fixture siguen en ASCII v002 mientras P1 v003 exige exactos con tilde; sujetos pinnados .../v002/... vs v003 .../v003/....",
+   "exigido": "nombre de variable y unidad literal EXACTAS de fila, sin _clave"
+  },
+  {
+   "id": "D8",
+   "severidad": "MEDIA",
+   "donde": "data-integracion-ronda-9/materializar.py:66-68",
+   "hecho": "Chequeo bloque-por-substring contra P1 v002 (texto, no grafo) y pinna v002, no v003 corregido.",
+   "exigido": "pin contra P1 v003 + comparacion por grafo"
+  },
+  {
+   "id": "D9",
+   "severidad": "ALTA",
+   "donde": "tests/test_integrar_ronda_9.py + tests/fixtures/declaraciones-ejemplo.json",
+   "hecho": "15/17 tests con TTL/cobertura/auditorias sinteticos en tmp; solo 2 leen archivos reales (sujetos-tipo, SHA shape). declaraciones-ejemplo.json (Q1/Q3 v002 ASCII) existe pero ningun test lo carga. Ningun test ejecuta cargar() sobre el arbol staging real ni inspecciones/cobertura reales; sin tests de triples extra, de literal exacto en TTL, de whitelist de modelo ni de _clave.",
+   "exigido": "pruebas reales con material verdadero, no solo sintetico/vacio"
+  },
+  {
+   "id": "D10",
+   "severidad": "BAJA",
+   "donde": "P1-qudt/build_v003.py:7 y verify_v003.py:7",
+   "hecho": "BASE absoluta de maquina autora (r'C:\\Users\\marti\\...'); no portable a otro entorno staging.",
+   "exigido": "ruta relativa al repo o parametro"
+  }
+ ],
+ "contraste_P1v003": {
+  "nota": "P1 v003 (sellado 22/22 SHA OK, fuera de alcance B salvo referencia) ya aplica lo exigido en su ambito: igualdad exacta Nombre variable, literal exacto de fila con assert no-ASCII, checks sobre terminos URIRef de rdflib (no texto), Q1=2/Q3=4 filas, Q2 fuera del grafo (corrige observacion A v002: nodo hm3-negativa en v002, 3 declaraciones). El integrador I-codigo no lo ha adoptado (D7/D8).",
+  "sello": "propuestas/plan-tras-r8/ejecucion-20261024/P1-qudt/v003/congelada.json 22/22 OK"
+ },
+ "desbloqueo": [
+  "D1/D2/D3: prohibiciones y conteos estructurales sobre grafo parseado",
+  "D5/D6: whitelist total + literales exactos por predicado en TTL",
+  "D7/D8: pin v003 (sujetos y literales con tilde), eliminar _clave en comparaciones de respaldo",
+  "D9: suite verde incl. cargar() sobre staging real + tests de bypass (D5) en rojo-antes/verde-despues",
+  "tras ello: sellar I-codigo/v001 (congelada+entrega) y re-auditar v002"
+ ],
+ "limites": [
+  "Sin modificar codigo autor ni produccion; ejecucion solo en tmp y lectura",
+  "Sin Gemma/produccion/Studio/contactos",
+  "v001/v002 preservados; correcciones en versiones nuevas del autor"
+ ]
+}

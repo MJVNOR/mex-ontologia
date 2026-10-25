@@ -1,0 +1,12 @@
+# Grupo: los 101 conceptos caso-con-* y su broader (si existiera).
+# Resultado esperado hoy: 101 filas con ?broader sin vincular (sin jerarquia integrada).
+PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+PREFIX mex: <https://example.org/mex-ontologi/>
+SELECT ?concept ?prefLabel ?broader WHERE {
+  ?concept a skos:Concept ;
+           skos:inScheme mex:concept-scheme/nucleo-compartido ;
+           skos:prefLabel ?prefLabel .
+  FILTER(STRSTARTS(STR(?concept), "https://example.org/mex-ontologi/concept/caso-con-"))
+  OPTIONAL { ?concept skos:broader ?broader . }
+}
+ORDER BY ?concept

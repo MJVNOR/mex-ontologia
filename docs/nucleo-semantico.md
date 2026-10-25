@@ -2,6 +2,12 @@
 
 El objetivo actual es describir qué significa la información del portal y bajo qué condiciones puede conectarse. El inventario, las evaluaciones de pares y los cruces anteriores permanecen como evidencia y pruebas del modelo. La generación de esta capa reutiliza evidencia local. La actualización territorial consulta solo los catálogos seleccionados, sin ejecutar nuevos análisis sobre filas de personas.
 
+## Cobertura vigente R9
+
+1423 significados respaldados, 1106 conceptos, 4506 correspondencias revisadas, 17 candidatas y cero ambiguas. R8 revisó las 28 correspondencias SINAC; R9 conserva ese núcleo y añade dos declaraciones de unidad sobre definiciones concretas y la exclusión SHACL documentado/candidato. Una declaración de unidad no se atribuye globalmente a otros archivos o periodos. No se integraron intervalos ni jerarquías clínicas sin respaldo.
+
+Quedan 138 significados reales sin respaldo y dos encabezados corruptos. Se conserva el requisito de significado respaldado para una correspondencia revisada. [Evidencia y límites R9](../reports/ronda-9.md). [Formato y lanzamientos](versionado-y-lanzamientos.md).
+
 ## Separar las entidades
 
 | Entidad | Qué representa | Ejemplo |
@@ -31,9 +37,9 @@ Los papeles de población y objetos concretos se conservan en las descripciones 
 
 ## Evidencia y estados
 
-Se examinaron las 1,563 definiciones con nombre ya recuperadas, sin volver a descargar archivos. El núcleo ampliado contiene 103 conceptos y seis condiciones de conexión. **232 variables** tienen una interpretación respaldada por una descripción explícita aceptada en las reglas; **23** conservan un significado candidato. Las otras **1,308** quedan fuera del núcleo inicial de conceptos compartidos. No se ha completado la semántica de todos los dominios.
+Se examinaron las 1,563 definiciones con nombre ya recuperadas. Tras la ampliación de cobertura con Muse 1.3, el núcleo contiene 940 conceptos y seis condiciones de conexión. **1,212 variables** tienen una interpretación respaldada documentalmente; **23** conservan un significado candidato y **328** permanecen fuera del núcleo. Las búsquedas oficiales con Obscura se fijan como evidencia contextual; no confirmaron catálogos para las variables locales examinadas. [Resultado de la ampliación](../reports/cobertura-muse.md).
 
-Se materializaron 266 variables documentadas: las del núcleo y otras con una referencia a catálogo u observación documental que conviene conservar. No son 266 interpretaciones confirmadas. Las referencias a «N/A», «No aplica» y vacías no se inventan como catálogos.
+Se materializaron 1,238 variables documentadas: las respaldadas, las candidatas y otras con una referencia a catálogo u observación que conviene conservar. Materializar una variable no confirma su interpretación. Las referencias a «N/A», «No aplica» y vacías no se inventan como catálogos.
 
 | Estado | Qué permite afirmar |
 | --- | --- |
@@ -43,7 +49,7 @@ Se materializaron 266 variables documentadas: las del núcleo y otras con una re
 | `ambigua_por_nombre` | Hay varias definiciones o encabezados repetidos; no se elige una interpretación silenciosamente |
 | `documental_revisada` | Se revisó explícitamente esa columna y su definición concreta, con regla y procedencia |
 
-Las correspondencias candidatas están materializadas como afirmaciones cualificadas, sin agregar significado confirmado directamente a la columna. Hay 118 correspondencias candidatas, seis ambiguas y 836 con revisión documental explícita. Algunas columnas tienen más de una candidata; por eso se distinguen **960 correspondencias** de **957 columnas**.
+Las correspondencias candidatas están materializadas como afirmaciones cualificadas, sin agregar significado confirmado directamente a la columna. Hay 3,312 candidatas, 12 ambiguas y 836 revisadas: **4,160 correspondencias** sobre **4,154 columnas**. El crecimiento de candidatas refleja las variables recién interpretadas; no una revisión automática de sus vínculos físicos.
 
 Las 62 revisiones iniciales, conservadas íntegramente, corresponden a nueve recursos: Matrimonios, Nacimientos, Defunciones y Divorcios de 2022; marginación municipal de 2020; precipitaciones de 2025; Consulta Externa, Atención de Urgencias y Egresos Hospitalarios. La ronda 1 añade 100 revisiones concretas y la ronda 2 añade otras 674. La lista exacta por columna está en las reglas y la auditoría; no se revisaron todos los años ni todos los campos de esos conjuntos. La revisión comprueba estructura y significado declarado; no confirma todos los valores ni resuelve los problemas de calidad detectados en Nacimientos. La revisión documental fue realizada por el asistente y está expresada en reglas; no se presenta como una aprobación del usuario o de las dependencias.
 
@@ -55,7 +61,7 @@ Un campo CLUES con descripción «Pendiente de especificar» queda candidato. In
 
 Se conservan cinco observaciones pendientes en el grafo mediante `mex:limiteSemantico`: `Total_Egresos` descrito como urgencias; formato municipal `nnn` frente al ejemplo `26048`; fecha `DD/MM/AAAA` frente al ejemplo `45658`; el campo `a–o` de Nacimientos 2024; y `anio_registro` de Divorcios 2023. No se corrigen los textos originales. El alias de Divorcios 2023 está revisado únicamente para su columna física y su diccionario; a–o de Nacimientos 2024 sigue sin confirmar.
 
-Un año o mes genérico documenta solo esa referencia temporal, sin inventar evento. Los 103 conceptos mantienen distintos registro, captura, fallecimiento, inspección, residencia, escuela y atención. No equivalen a 103 claves listas para unir.
+Un año o mes genérico documenta solo esa referencia temporal, sin inventar evento. Los conceptos distinguen registro, captura, fallecimiento, inspección, residencia, escuela y atención. No equivalen a claves listas para unir. Los calificadores documentales de distrito, sede, instrumento o contexto se conservan en el reporte y mediante `mex:tieneCalificadorDocumentado`, `mex:dimensionCalificador` y `mex:valorCalificador`; sus límites se conservan en `mex:limiteSemantico`.
 
 ## Sistemas de identificadores
 
@@ -93,7 +99,7 @@ Son requisitos explícitos del modelo; su existencia no significa que ya estén 
 - `data/semantica/interpretaciones.ttl`: variables, correspondencias y referencia de códigos.
 - `data/semantica/cobertura.json`: cobertura de todas las definiciones examinadas y estados individuales.
 - `reports/pendientes-semanticos.md` y `.json`: cobertura completa de las 5,523 columnas y lista de pendientes con evidencia.
-- `reports/consolidacion-semantica.md`: lectura del resultado y evidencia textual de las 232 variables respaldadas.
+- `reports/consolidacion-semantica.md`: lectura del resultado y evidencia textual de las 1,212 variables respaldadas.
 
 ```powershell
 uv run python scripts/consolidar_semantica.py
@@ -119,7 +125,7 @@ El límite global de 2,000 individuos del árbol se corrigió en la instalación
 
 85 pruebas verifican también diferencias de papeles temporales/territoriales, ausencia de promoción por nombre, CLUES pendiente, referencias sin resolver, definiciones contradictorias y conservación de códigos. SHACL comprueba tipos, estados, cardinalidades y procedencia. Esto valida la estructura del modelo, no la verdad externa de todas las fuentes.
 
-La integración de las cinco entregas incorpora 20 conceptos y reglas, 24 significados y 100 correspondencias revisadas adicionales. El núcleo tiene 103 conceptos, 232 variables respaldadas, 23 candidatas y 836 correspondencias revisadas. Hay 16 referencias a catálogos identificadas y una sin resolver. La referencia derivada IML_2020 conserva 1850 localidades observadas; las 28 comprobaciones territoriales conservan 16 resultados compatibles, 11 con excepciones y una ausencia de columna. Quedan por revisar las 23 interpretaciones candidatas, 118 correspondencias por nombre, 3 columnas ambiguas, la referencia des_mpo_res y las inconsistencias documentales. La vigencia histórica de los catálogos sigue sin acreditarse. La ronda 2 coteja las 1850 localidades IML con ITER Censo 2020 Sonora: claves, nombres y población coinciden. No es una equivalencia con el universo cartográfico ni acredita idéntico corte del estudio IML. Los conceptos particulares de otros dominios y el linaje de tableros siguen pendientes. No es necesario generar más análisis para continuar esa consolidación.
+Antecedente histórico de las rondas 1 y 2: la integración de las cinco entregas incorporó 20 conceptos y reglas, 24 significados y 100 correspondencias adicionales. Al terminar la ronda 2 había 103 conceptos, 232 variables respaldadas, 23 candidatas y 836 correspondencias revisadas. Hay 16 referencias a catálogos identificadas y una sin resolver. La referencia derivada IML_2020 conserva 1850 localidades observadas; las 28 comprobaciones territoriales conservan 16 resultados compatibles, 11 con excepciones y una ausencia de columna. Quedan por revisar las 23 interpretaciones candidatas, 118 correspondencias por nombre, 3 columnas ambiguas, la referencia des_mpo_res y las inconsistencias documentales. La vigencia histórica de los catálogos sigue sin acreditarse. La ronda 2 coteja las 1850 localidades IML con ITER Censo 2020 Sonora: claves, nombres y población coinciden. No es una equivalencia con el universo cartográfico ni acredita idéntico corte del estudio IML. Los conceptos particulares de otros dominios y el linaje de tableros siguen pendientes. No es necesario generar más análisis para continuar esa consolidación.
 
 ## Referencias
 
@@ -139,6 +145,6 @@ Consultas nuevas: `queries/portal/integracion_catalogos.rq`, `integracion_locali
 
 Se incorporan 32 dictámenes y 14 preguntas preparadas sin contactar al publicador. Las 16 revisiones de vigencia documentan falta de evidencia temporal; no significan invalidez. Las 1850 coincidencias con ITER registran clave, nombre, población, filas fuente y fecha censal 2020-03-15, sin asignar identidades a otros conjuntos.
 
-El diagnóstico del chat es histórico y parcial: pipeline fuente, 4 respuestas (2 aciertos y 2 fallos de recuperación), 16 errores HTTP/cuota, UI sin evaluar e identidad con el bundle instalado no demostrada. Sus conteos 162/792 describen el grafo evaluado antes de integrar, frente al estado actual 836/118.
+El diagnóstico del chat es histórico y parcial: pipeline fuente, 4 respuestas (2 aciertos y 2 fallos de recuperación), 16 errores HTTP/cuota, UI sin evaluar e identidad con el bundle instalado no demostrada. Sus conteos 162/792 describen el grafo evaluado antes de integrar, frente al cierre de ronda 2 (836/118); la ampliación posterior está documentada arriba.
 
 Evidencia y decisiones: `reports/integracion-ronda-2.md`, `data/integracion-ronda-2/` y `ontologia/revision-ronda-2.json`. Consultas: `queries/portal/ronda2_pendientes.rq`, `ronda2_localidades.rq`, `ronda2_vigencia.rq`, `ronda2_evaluacion.rq`. La generación normal sigue sin consultar red ni modelos.

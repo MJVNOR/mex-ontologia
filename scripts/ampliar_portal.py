@@ -11,6 +11,7 @@ from urllib.parse import quote, urlsplit
 from rdflib import DCAT, DCTERMS as DCT, FOAF, Graph, Literal, Namespace, OWL, RDF, RDFS, SKOS, URIRef, XSD
 
 from construir_catalogo import ROOT, PROV, motor, url_http
+from guardar_rdf import serializar_atomico, escribir_json_atomico
 
 
 def ampliar(inventario, base):
@@ -166,7 +167,7 @@ def main():
         cross = json.loads(cross_file.read_text(encoding='utf-8'))
         content, content_model, coverage = integrar(inventario, inspection, cross, config['base_iri'])
         extension += content + content_model
-        content.serialize(ROOT / 'data/portal/contenido.ttl', format='turtle', encoding='utf-8')
+        serializar_atomico(content, ROOT / 'data/portal/contenido.ttl')
         documentar(coverage)
     opportunities_file = ROOT / 'data/portal/oportunidades-cruce.json'
     if opportunities_file.exists():
@@ -195,7 +196,7 @@ def main():
     combined += extension
     output = ROOT / "data/portal"
     for name, graph in (("ampliacion.ttl", extension), ("ontologia-portal.ttl", model), ("portal-completo.ttl", combined)):
-        graph.serialize(output / name, format="turtle", encoding="utf-8")
+        serializar_atomico(graph, output / name)
     shapes = Graph().parse(ROOT / "data/catalogo/shapes.ttl", format="turtle")
     portal_shapes = (ROOT / "shapes/portal.ttl").read_text(encoding="utf-8").replace("{{BASE_IRI}}", config["base_iri"])
     shapes.parse(data=portal_shapes, format="turtle")
@@ -213,7 +214,15 @@ def main():
             shapes.parse(data=(ROOT / 'shapes/integracion-agentes.ttl').read_text(encoding='utf-8').replace('{{BASE_IRI}}', config['base_iri']), format='turtle')
         if (ROOT / 'ontologia/revision-ronda-2.json').exists():
             shapes.parse(data=(ROOT / 'shapes/ronda-2.ttl').read_text(encoding='utf-8').replace('{{BASE_IRI}}', config['base_iri']), format='turtle')
-    shapes.serialize(output / "shapes.ttl", format="turtle", encoding="utf-8")
+    if (ROOT / 'ontologia/revision-ronda-3.json').exists():
+        shapes.parse(data=(ROOT / 'shapes/ronda-3.ttl').read_text(encoding='utf-8').replace('{{BASE_IRI}}', config['base_iri']), format='turtle')
+    if (ROOT / 'ontologia/revision-ronda-9.json').exists():
+        from integrar_ronda_9 import cargar_shapes
+        shapes += cargar_shapes(ROOT)
+    if (ROOT / 'ontologia/revision-ronda-10.json').exists():
+        from integrar_ronda_10 import cargar_shapes as cargar_shapes_r10
+        shapes += cargar_shapes_r10(ROOT)
+    serializar_atomico(shapes, output / "shapes.ttl")
     report = {"base_iri": config["base_iri"], "generado_en_utc": datetime.now(timezone.utc).isoformat(),
               "inventario_sha256": hashlib.sha256(source.read_bytes()).hexdigest(), "triples_extension": len(extension), "triples_combinados": len(combined)}
     if content_file.exists() and cross_file.exists():
@@ -237,7 +246,7 @@ def main():
             query = file.read_text(encoding="utf-8").replace("{{BASE_IRI}}", config["base_iri"])
             report.setdefault("consultas", {})[file.stem] = motor(["query", query], store)
         report["stats"] = motor(["stats"], store)
-    (ROOT / "reports/portal-carga.json").write_text(json.dumps(report, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
+    escribir_json_atomico(report, ROOT / "reports/portal-carga.json")
     print(json.dumps({k: v for k, v in report.items() if k != "consultas"}, ensure_ascii=False, indent=2))
 
 

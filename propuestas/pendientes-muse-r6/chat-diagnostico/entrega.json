@@ -1,0 +1,88 @@
+{
+  "decisiones": [
+    {
+      "detalle": "Causa raiz candidata H1: trim de contexto (6500 est, ya instalado en Studio) no aplica si el sidecar arranca sin ONTO_LLM_MODEL (EFFECTIVE_MODEL=''); prompts sin recorte 15k-140k est provocan 500 selectivos en C1/C2/C4/C5/C6; C3 (~9.6k) pasa. Parche de 15 lineas en parche-propuesto.patch, sin cambio de modelo. [CORRECCION R6: refutada como causa de los 500 observados (bundle con Gemma explicita + budget activo fallo igual en C2); queda como robustez para arranque sin env.] [NO APLICAR como arreglo causal: evidencia-bundle-r6.md lo descarta (mismo bundle, trim activo, 500 igual).",
+      "estado": "robustez-no-causa",
+      "id": "D1-trim-condicionado-a-env",
+      "verificacion": [
+        "medicion.json (con vs sin presupuesto)",
+        "sidecar-protocolo.json (Model: default sin env)"
+      ]
+    },
+    {
+      "id": "D2-pacing-retry",
+      "estado": "sustituido-por-D3",
+      "detalle": "pacingMs sin consumidor + rl.on concurrente + cero reintento ante 500/503 (doc Google: reintentar). Parche en parche-pacing-retry.patch; logica probada offline 6/6. [Sustituido: el reintento queda acotado a 1 en D3 por encargo; el analisis pacing/concurrencia sigue valido.]",
+      "verificacion": [
+        "test_retry_pacing.mjs 6/6 (stub, sin red)",
+        "grep pacingMs sin consumidor en src y dist",
+        "docs ai.google.dev api-errors/troubleshooting"
+      ]
+    },
+    {
+      "id": "D3-guardia-qa-reintento-acotado",
+      "estado": "propuesto",
+      "detalle": "QA no cae a runTurn con 114 tools si respuesta vacia (error claro, sin mutacion, sin cachear vacio). Reintento acotado a 1 para 500/502/503 y 429 con RetryInfo piso 65s, solo pre-herramientas, misma Gemma, 500 vs 429 clasificados. Consumo unico.",
+      "verificacion": [
+        "test_acotado.mjs 10/10 (stub + reloj fake, sin red)",
+        "parche-qa-acotado.patch",
+        "qa-guardia.mjs",
+        "correccion-d1.md"
+      ]
+    },
+    {
+      "id": "D4-codigo-ts-vitest",
+      "estado": "propuesto",
+      "detalle": "Fuentes TS completas en codigo/ (types byte-identico; openai con politica acotada Gemma4) + 13 tests Vitest sobre funciones reales (stub+fake clock). Parche index hunks. 500 de R6 clasificado no-cuota (evidencia-bundle-r6.md).",
+      "verificacion": [
+        "codigo/vitest-salida.txt 13/13",
+        "codigo/tests/politica-gemma.test.ts",
+        "codigo/parche-index-qa.patch"
+      ]
+    },
+    {
+      "id": "D5-guardas-mutex-gating",
+      "estado": "propuesto",
+      "detalle": "Gating estricto host google + gemma-4-31b (local/Gemma3/Gemini intactos); mutex por endpoint+modelo (reserva antes del fetch, libera en finally; pacing >=65s dentro); clave sin secretos; minIntervalMs opcional en Provider. 16/16 Vitest + tsc limpio.",
+      "verificacion": [
+        "codigo/vitest-salida.txt 16/16",
+        "tsc --noEmit sin errores",
+        "codigo/tests/politica-gemma.test.ts (mutex con fetch bloqueado)"
+      ]
+    }
+  ],
+  "grafo_sin_cambios": true,
+  "harness": [
+    "corpus.mjs",
+    "sonda_request.mjs",
+    "medir_contextos.mjs",
+    "medir_tools.mjs",
+    "probar_sidecar.mjs",
+    "request-schema.json",
+    "medicion.json",
+    "tools-schema.json",
+    "sidecar-protocolo.json"
+  ],
+  "llamadas_al_modelo": 0,
+  "negativos_verificados": [
+    {
+      "detalle": "0 controles / 0 sustitutos en 6 contextos x2 ramas; no repetir linea de contenido.",
+      "id": "N1-contenido-limpio"
+    },
+    {
+      "detalle": "index.ts solo admite chat/reset; health/model.status/message inexistentes; prueba viva reset OK.",
+      "id": "N2-sin-health-status"
+    }
+  ],
+  "nota_cuotas": "HTTP500 != 429: no culpar cuotas ante 500; el parche conserva el status para distinguirlos.",
+  "pendiente_integrador": [
+    {
+      "detalle": "1 llamada espaciada C6 con trim activo + registro de camino (answerOnce vs runTurn) para H3; linea de arranque Model: en Studio; ONTO_CHAT_CACHE si aplica.",
+      "id": "P1-ensayo-espaciado"
+    },
+    {
+      "id": "P2-viva-serie",
+      "detalle": "root: harness_stdio.mjs --handshake, luego --casos (>=65s, ONTO_ALLOW_CALLS=1). Sin llamadas hasta root."
+    }
+  ]
+}

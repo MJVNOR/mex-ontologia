@@ -1,0 +1,1128 @@
+<!DOCTYPE html>
+<!--[if IE 9]> <html lang="es" class="ie9"> <![endif]-->
+<!--[if gt IE 8]><!--> <html lang="es"> <!--<![endif]-->
+  <head >
+
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-Z360D5Z3YK"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'G-Z360D5Z3YK');
+    </script>  
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/xlsx/0.17.0/xlsx.full.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <meta charset="utf-8" />
+      <meta name="generator" content="ckan 2.9.7" />
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fiebre manchada (Rickettsia) - Catalogo - Portal de Datos Abiertos del Gobierno del Estado de Sonora</title>
+
+
+
+    
+    <link rel="shortcut icon" href="/images/favicon.png" />
+    
+
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;800&family=Roboto:wght@300;400;500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/css/vendor.min.css" />
+    <link rel="stylesheet" href="/css/app.min.css" />
+    <link rel="stylesheet" href="/sonora_theme.css" />
+      
+      
+      
+      
+     
+    
+
+    
+      
+      
+    
+  
+  <meta property="og:title" content="Fiebre manchada (Rickettsia) - Catalogo - Portal de Datos Abiertos del Gobierno del Estado de Sonora">
+  <meta property="og:description" content="Registro anual de Rickettsiosis en el Estado de Sonora">
+
+
+ 
+    
+    
+  </head>
+
+  
+  <body class="app app-public"  data-site-root="https://datos.sonora.gob.mx/" data-locale-root="https://datos.sonora.gob.mx/" >
+
+    
+    <div class="sr-only sr-only-focusable"><a href="#content">Ir al contenido</a></div>
+  
+
+  
+     
+  
+
+<style>
+  .customHeader{
+    height: 96px;
+    width: 100%;
+    display: flex;
+    background-image: url('/images/BG expediente.jpg');
+    background-size: cover;
+    background-position: center;
+  }
+
+  .headerLinks{
+    font-family: 'Montserrat', sans-serif;
+    display: flex;
+    gap: 2rem;
+    color: white;
+    align-items: center;
+    margin-left: auto;
+    margin-right: 16%;
+  }
+
+  .headerLinks a {
+    font-weight: 600;
+    position: relative;
+    font-size: 12.8px;
+    color: rgb(255, 255, 255, 0.85);
+    text-transform: uppercase;
+    letter-spacing: 0.02em;
+    text-decoration: none;
+    padding: 0.25rem 0;
+    transition: color 0.3s ease;
+  }
+
+  .headerLinks a:hover{
+    color: white;
+  }
+
+  /* underline animation */
+  .headerLinks a::after {
+    content: "";
+    position: absolute;
+    left: 50%;
+    bottom: 0;
+    transform: translateX(-50%) scaleX(0);
+    transform-origin: center;
+    width: 100%;
+    height: 2px;
+    background-color: #fff;
+    transition: transform 0.3s ease;
+  }
+
+  .headerLinks a:hover::after {
+    transform: translateX(-50%) scaleX(1);
+  }
+
+  .logoHeaderWrapper{
+    margin-left: 16%;
+  }
+
+  @media (max-width: 900px) {
+    .headerLinks {
+      display: none !important;
+    }
+
+    .logoHeaderWrapper{
+      margin-inline: auto;
+    }
+
+    .navbar-toggler{
+      margin-left: 1rem;
+    }
+  }
+</style>
+
+<div class="customHeader">
+  <a href="/" title="Inicio" style="padding-block: 1rem;" class="logoHeaderWrapper"> 
+    <img style="height: 100%" class="sppb-img-responsive sppb-element-lazy sppb-element-loaded" src="/images/Datos abiertos blanco.svg" alt="Gobierno del Estado de Sonora" title="" loading="lazy">
+  </a>
+
+  <div class="headerLinks">
+    <a href="https://www.sonora.gob.mx/servicios-y-tramites" class="nav-link " target="_blank" rel="noopener noreferrer">Servicios y Trámites</a>
+
+    <a href="https://www.sonora.gob.mx/gobierno" class="nav-link " target="_blank" rel="noopener noreferrer">Gobierno</a>
+
+    <a href="https://datos.sonora.gob.mx" class="nav-link " target="_blank" rel="noopener noreferrer">Datos Abiertos</a>
+
+    <a href="https://cultura.sonora.gob.mx" class="nav-link " target="_blank" rel="noopener noreferrer">Cultura</a>
+
+    <a href="https://expediente.sonora.gob.mx" class="nav-link " target="_blank" rel="noopener noreferrer">Mi Expediente</a>
+  </div>
+</div>
+
+
+
+<div class="tool-bar">
+  <div class="container">
+      <nav class="navbar navbar-expand-sm bg-white navbar-tools mx-0  py-0 py-sm-3 px-0">
+          <div class="container-fluid">
+
+            <style>
+              @media only screen and (max-width: 799px) {
+                .container-fluid{
+                  padding-block: .5rem;
+                  padding-inline: 0;
+                }
+
+                .boxSearchHead{
+                  display: none;
+                }
+
+                span.name{
+                  display: none;
+                }
+
+                .tool-bar .container{
+                  margin-left: 0;
+                  padding-left: 0;
+                }
+
+                .navbar-nav .nav-link{
+                  padding: 1rem 0.9rem;
+                }
+              }
+
+              @media (max-width: 572px){
+                .navbar-toggler{
+                  position: relative; 
+                  margin-left: 1rem; 
+                  display: flex; 
+                  align-items: center; 
+                  border: none !important;
+                  gap: .5rem;
+                }
+              }
+            </style>
+
+              <!-- Quitamos el boton -->
+              <a class="btn btn-outline-secondary d-none" aria-current="page" href="#"><span class="mdi mdi-chevron-left"></span>Regresar a Pagos Directos</a>
+              <!-- el menú se oculta -->
+              <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                  <span class="mdi mdi-menu"></span>
+                  <span style="font-size: 16px;">
+                    Menu
+                  </span>
+              </button>
+
+              <!-- el menú se oculta -->
+              
+                <div class="collapse navbar-collapse menu-tools" id="navbarSupportedContent">
+                    <ul class="navbar-nav me-auto mb-0" style="margin-inline: auto;">
+                      
+
+                      <li class="nav-item">
+                        <a href="/" class="nav-link " title="Inicio">
+                          <span class="text">Inicio</span>
+                        </a>
+                      </li>
+        
+                        <li class="nav-item">
+                          <a href="/dataset/" class="nav-link " title="Conjuntos de datos">
+                            <span class="text">Conjuntos de datos</span>
+                          </a>
+                        </li>
+
+                        <li class="nav-item">
+                          <a href="/organization/" class="nav-link " title="Organizaciones">
+                            <span class="text">Organizaciones</span>
+                          </a>
+                        </li>
+
+                        <li class="nav-item">
+                          <a href="/group/" class="nav-link " title="Grupos">
+                            <span class="text">Grupos</span>
+                          </a>
+                        </li>
+
+                        <!-- <li class="nav-item">
+                          <a href="/about" class="nav-link " title="Acerca de">
+                            <span class="text">Acerca de</span>
+                          </a>
+                        </li> -->
+
+                      
+                  </ul>
+                </div>
+               
+
+
+           
+              
+                <style>
+                  @media only screen and (max-width: 799px) {
+                    .customSearchBox{
+                      display: none;
+                    }
+                  }
+                </style>
+                
+                <div class="searchBox boxSearchHead customSearchBox" >
+                  <form id="contentSearch" class="" action="/dataset/" method="get">
+                    <input type="text" name="q" title="Búsqueda" aria-label="¿Qué dato estás buscando?" placeholder="¿Qué dato estás buscando?" class="input bg-red" id="search-input">
+                    <button type="submit" class="search" id="search-btn"><i class="fa fa-search"></i></button>
+                  </form>
+                </div> 
+                
+              
+
+
+              <!-- se muestran al iniciar sesión -->
+
+              
+               
+                   
+                  
+                  
+                  
+                  <style>
+                    @media only screen and (max-width: 999px) {
+                      .account{
+                        width: 150px;
+                      }
+                    }
+                    @media only screen and (max-width: 799px){
+                      .btnLogin{
+                        margin-left: -3rem;
+                      }
+                    }
+                  </style>
+                  <nav class="account not-authed" aria-label="Cuenta">
+                    <ul class="navbar-nav ms-auto ms-sm-auto flex-row account-tools">
+                      
+
+                      
+                      <li>
+                        <a href="/user/login" class="btn btn-outline-primary btnLogin" style="width: 147px;" title="Iniciar Sesión">
+                          <span class="text">Iniciar Sesión</span>
+                        </a>
+                      </li>
+                      
+
+
+                      
+
+                      
+
+                    </ul>
+                  </nav>
+                   
+                
+              
+
+          </div>
+      </nav>
+  </div>
+</div>
+
+
+
+
+
+
+
+
+
+  
+    <div class="main">
+      <div id="content" class="container">
+        
+          
+            <div class="flash-messages">
+              
+                 
+              
+            </div>
+          
+
+          
+            
+              <div class="toolbar" role="navigation" aria-label="Miga de pan">
+                <style>
+                  @media only screen and (max-width: 799px) {
+                    .toolbar{
+                      display: none;
+                      height: 0;
+                    }
+                  }
+                </style>
+                
+                  
+                    <ol class="breadcrumb">
+                      
+<li class="home"><a href="/" aria-label="Inicio"><i class="fa fa-home"></i><span> Inicio</span></a></li>
+                      
+  
+  
+    
+    
+      
+      
+      <li><a href="/organization/">Organizaciones</a></li>
+      <li><a href="/organization/sp">Secretaría de Salud Pública</a></li>
+    
+    <li><a href="/dataset/Fiebre%20manchada%20%28Rickettsia%29">Fiebre manchada (Rickettsia)</a></li>
+  
+
+  <li class="active"><a href="">Catalogo</a></li>
+
+                    </ol>
+                  
+                
+              </div>
+            
+          
+
+          <div class="row wrapper">
+            
+            
+  
+
+
+
+  <section class="module module-resource" role="complementary">
+
+      
+      <div class="module-content bones">
+        <style>
+          @media only screen and (max-width: 799px) {
+            .bones{
+              padding: 0;
+            }
+          }
+        </style>
+        <div class="actions">
+          
+          <ul>
+            
+            
+            
+              <li>
+                <div class="">
+                <a class="btn btn-primary resource-url-analytics resource-type-None" href="https://datos.sonora.gob.mx/dataset/5494daa1-09ca-4750-aeac-2558553700e1/resource/08d3b1a7-dbc0-4f43-b1d2-3266cebb88f8/download/catalogo.xlsx">
+                  
+                    
+                    <img src="/images/circle-down-solid.svg" alt="" style="margin-right: .5rem; filter: brightness(0) invert(1);" width="18" height="18"> Descargar
+                  
+                </a>
+                
+                  
+                  <a class="btn btn-default"
+                    href="#embed-95b75656-2751-4b95-9160-24449230dc18"
+                    data-module="resource-view-embed"
+                    data-module-id="95b75656-2751-4b95-9160-24449230dc18"
+                    data-module-url="https://datos.sonora.gob.mx/dataset/Fiebre%20manchada%20%28Rickettsia%29/resource/08d3b1a7-dbc0-4f43-b1d2-3266cebb88f8/view/95b75656-2751-4b95-9160-24449230dc18">
+                    <i class="fa fa-code"></i> Incrustar
+                  </a>
+
+                  
+                  <div id="embed-95b75656-2751-4b95-9160-24449230dc18" data-resource-id="95b75656-2751-4b95-9160-24449230dc18" class="modal fade resource-view-embed">
+                    <div class="modal-dialog">
+                      <div class="modal-content">
+                        <div class="modal-header" style="flex-direction: row-reverse;">
+                          <button type="button" class="close" style="background-color: white; border: none;" data-dismiss="modal">&times;</button>
+                          <h3 class="modal-title">Incrustar vista de recurso</h3>
+                        </div>
+                        <div class="modal-body">
+                          <div class="row">
+                            <div class="col-md-6">
+                              
+  
+
+  
+  <div class="form-group control-full">
+  <label class="control-label" for="width">Ancho</label>
+  <div class="controls ">
+  
+    <input id="width" type="text" name="width" value="700" placeholder=""  class="form-control" />
+  
+  
+  
+  </div>
+  </div>
+  
+
+                            </div>
+                            <div class="col-md-6">
+                              
+  
+
+  
+  <div class="form-group control-full">
+  <label class="control-label" for="height">Alto</label>
+  <div class="controls ">
+  
+    <input id="height" type="text" name="height" value="400" placeholder=""  class="form-control" />
+  
+  
+  
+  </div>
+  </div>
+  
+
+                            </div>
+                          </div>
+                          
+  
+  
+  <div class="form-group pre control-full">
+  <label class="control-label" for="code">Código</label>
+  <div class="controls ">
+  
+  <textarea id="code" name="code" cols="20" rows="3" placeholder=""  class="form-control"></textarea>
+  
+  
+  
+  </div>
+  </div>
+  
+  
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                
+                
+                  
+                
+                </div>
+              </li>
+            
+            
+          </ul>
+          
+        </div>
+        
+          
+            
+          
+          <h1 class="page-heading">Catalogo</h1>
+          
+            
+              <p class="text-muted ellipsis">URL: <a class="resource-url-analytics" href="https://datos.sonora.gob.mx/dataset/5494daa1-09ca-4750-aeac-2558553700e1/resource/08d3b1a7-dbc0-4f43-b1d2-3266cebb88f8/download/catalogo.xlsx" title="https://datos.sonora.gob.mx/dataset/5494daa1-09ca-4750-aeac-2558553700e1/resource/08d3b1a7-dbc0-4f43-b1d2-3266cebb88f8/download/catalogo.xlsx">https://datos.sonora.gob.mx/dataset/5494daa1-09ca-4750-aeac-2558553700e1/resource/08d3b1a7-dbc0-4f43-b1d2-3266cebb88f8/download/catalogo.xlsx</a></p>
+            
+          
+          
+        
+      
+      
+      
+        
+          
+          
+
+  <ul class="nav hasBar nav-tabs nav-tabs-plain" >
+    
+
+    
+    
+    
+      
+      
+
+
+  
+
+
+<li class=" active" data-id="95b75656-2751-4b95-9160-24449230dc18">
+
+  <a href="/dataset/Fiebre%20manchada%20%28Rickettsia%29/resource/08d3b1a7-dbc0-4f43-b1d2-3266cebb88f8?view_id=95b75656-2751-4b95-9160-24449230dc18" data-id="95b75656-2751-4b95-9160-24449230dc18">
+    <i class="fa icon fa-table"></i>
+    Explorador de Datos
+  </a>
+</li>
+    
+  </ul>
+
+        
+          
+            <div class="resource-view">
+              
+              
+              
+                
+                  
+                    
+                      
+
+<style>
+  .dividendo{
+    width: 2px;
+    height: 35;
+    background-color: #ccccccc5;
+    content: "";
+  }
+  .actionsSpecial{
+    position: absolute;
+    top: 0;
+    right: 50%;
+    display: flex;
+    flex-direction: row;
+    gap: 1rem;
+  }
+
+  @media only screen and (max-width: 799px) {
+    .dividendo{
+      display: none;
+    }
+  }
+</style>
+
+
+  <div id="view-95b75656-2751-4b95-9160-24449230dc18" class="resource-view" data-id="95b75656-2751-4b95-9160-24449230dc18" data-title="Explorador de Datos" data-description="">
+    <div class="ckanext-datapreview" style="padding-top: 0;">
+      <!-- <div class="actions actionsSpecial">
+        <div class="dividendo"></div>
+        <a class="btn btn-default"
+           href="#embed-95b75656-2751-4b95-9160-24449230dc18"
+           data-module="resource-view-embed"
+           data-module-id="95b75656-2751-4b95-9160-24449230dc18"
+           data-module-url="https://datos.sonora.gob.mx/dataset/Fiebre%20manchada%20%28Rickettsia%29/resource/08d3b1a7-dbc0-4f43-b1d2-3266cebb88f8/view/95b75656-2751-4b95-9160-24449230dc18">
+          <i class="fa fa-code"></i>
+          Incrustar
+        </a>
+      </div> -->
+      
+        
+<div
+  class="resource-view-filters"
+  data-module="resource-view-filters"
+  data-module-resource-id="08d3b1a7-dbc0-4f43-b1d2-3266cebb88f8"
+  data-module-fields="[]"
+  >
+</div>
+      
+      
+        <div class="data-viewer-error js-hide">
+          <p class="text-danger">
+            <i class="fa fa-info-circle"></i>
+            Esta vista de recurso no está disponible en este momento. ¡Sin embargo, puedes descargar el archivo directamente haciendo clic en el enlace a continuación!
+          </p>
+          <p id="data-view-error" class="collapse"></p>
+          <p>
+            <a href="https://datos.sonora.gob.mx/dataset/5494daa1-09ca-4750-aeac-2558553700e1/resource/08d3b1a7-dbc0-4f43-b1d2-3266cebb88f8/download/catalogo.xlsx" class="btn btn-default btn-lg resource-url-analytics" target="_blank">
+              <i class="fa fa-lg fa-arrow-circle-o-down"></i>
+              Descargar recurso
+            </a>
+          </p>
+        </div>
+        
+        
+          
+          
+            
+          
+        
+
+        <iframe src="https://datos.sonora.gob.mx/dataset/Fiebre%20manchada%20%28Rickettsia%29/resource/08d3b1a7-dbc0-4f43-b1d2-3266cebb88f8/view/95b75656-2751-4b95-9160-24449230dc18" frameborder="0" width="100%" data-module="data-viewer" style="height: max-content;">
+          <p>Su navegador no soporta iframes.</p>
+        </iframe>
+      
+    </div>
+    <!-- flaggerino close modal -->
+    <!-- <div id="embed-95b75656-2751-4b95-9160-24449230dc18" data-resource-id="95b75656-2751-4b95-9160-24449230dc18" class="modal fade resource-view-embed">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <button type="button" class="close" style="background-color: white; border: none;" data-dismiss="modal">&times;</button>
+            <h3 class="modal-title">Incrustar vista de recurso</h3>
+          </div>
+          <div class="modal-body">
+            <p class="embed-content">Puede copiar y pegar el código de inserción en un CMS o blog que soporte HTML crudo</p>
+            <div class="row">
+            <div class="col-md-6">
+              
+  
+
+  
+  <div class="form-group control-full">
+  <label class="control-label" for="width">Ancho</label>
+  <div class="controls ">
+  
+    <input id="width" type="text" name="width" value="700" placeholder=""  class="form-control" />
+  
+  
+  
+  </div>
+  </div>
+  
+
+            </div>
+            <div class="col-md-6">
+              
+  
+
+  
+  <div class="form-group control-full">
+  <label class="control-label" for="height">Alto</label>
+  <div class="controls ">
+  
+    <input id="height" type="text" name="height" value="400" placeholder=""  class="form-control" />
+  
+  
+  
+  </div>
+  </div>
+  
+
+            </div>
+          </div>
+            
+  
+  
+  <div class="form-group pre control-full">
+  <label class="control-label" for="code">Código</label>
+  <div class="controls ">
+  
+  <textarea id="code" name="code" cols="20" rows="3" placeholder=""  class="form-control"></textarea>
+  
+  
+  
+  </div>
+  </div>
+  
+  
+          </div>
+        </div>
+      </div>
+    </div> -->
+  </div>
+
+
+
+                    
+                  
+                
+              
+            </div>
+            
+            
+            <div class="diccionario-render">
+            </div>
+        </div>
+      
+      
+      
+      
+    </section>
+  
+
+
+            
+              <aside class="secondary col-sm-3">
+                
+                
+
+  
+    
+
+
+  
+    <section class="module module-narrow resources">
+      
+        
+          <h2 class="module-heading"><i class="fa fa-files-o"></i> Recursos</h2>
+        
+        
+          <ul class="list-unstyled nav nav-simple">
+            
+              
+                <li class="nav-item">
+                  <a href="/dataset/Fiebre%20manchada%20%28Rickettsia%29/resource/33d0a99e-c721-496f-a05e-07646e9ae42a?inner_span=True">Diccionario</a>
+                </li> 
+              
+            
+              
+                <li class="nav-item">
+                  <a href="/dataset/Fiebre%20manchada%20%28Rickettsia%29/resource/4121cf57-1e4a-4fb0-b175-3805edffca2c?inner_span=True">Fiebre manchada 2022</a>
+                </li> 
+              
+            
+              
+                <li class="nav-item">
+                  <a href="/dataset/Fiebre%20manchada%20%28Rickettsia%29/resource/30b18862-f126-41ac-b41f-ce7126f3ac9b?inner_span=True">Fiebre manchada 2023</a>
+                </li> 
+              
+            
+              
+                <li class="nav-item">
+                  <a href="/dataset/Fiebre%20manchada%20%28Rickettsia%29/resource/cc6c566f-3088-41cd-b99f-169c5cf6090c?inner_span=True">Fiebre manchada 2024</a>
+                </li> 
+              
+            
+              
+                <li>
+                  <strong style="padding-inline: 15px;">Catalogo</strong>
+                </li>
+              
+            
+          </ul>
+        
+      
+    </section>
+  
+
+  
+    
+  <!-- <tr>
+            <th style="font-weight: lighter;" scope="row"> Licencia</th>
+            <td>
+
+
+  
+    
+    
+  
+    <a href="http://www.opendefinition.org/licenses/cc-by" rel="dc:rights">Creative Commons Attribution</a>
+  
+
+  
+</td>
+          </tr> -->
+
+              </aside>
+            
+
+            
+              <div class="primary col-sm-9 col-xs-12" role="main">
+                
+                
+  
+    
+      <section class="module">
+
+
+
+
+        
+  <!--  -->
+
+  <div class="module-content metaBone">
+    <style>
+      @media only screen and (max-width: 799px) {
+        .metaBone{
+          padding: 0;
+        }
+      }
+    </style>
+    <h2>Metadatos</h2><!--Footer is being inserted here for some reason-->
+    <table class="table table-bordered table-condensed" data-module="table-toggle-more"><thead>
+          <tr style="background-color:  #F2F2F2;">
+            <th style="font-weight: 500; color: black;" scope="col">Campo</th>
+            <th style="font-weight: 500; color: black;" scope="col">Valor</th>
+          </tr>
+        </thead><tbody><tr>
+          <th style="font-weight: lighter;" scope="row">Última actualización de los datos</th>
+          <td>29 de abril de 2026</td>
+        </tr><tr>
+          <th style="font-weight: lighter;" scope="row">Última actualización de los metadatos</th>
+          <td>29 de abril de 2026</td>
+        </tr><tr>
+          <th style="font-weight: lighter;" scope="row">Creado</th>
+          <td>28 de abril de 2026</td>
+        </tr><tr>
+          <th style="font-weight: lighter;" scope="row">Formato</th>
+          <td>XLSX</td>
+        </tr>
+            </tbody>
+          </table></div>
+
+      </section>
+    
+  
+
+              </div>
+            
+          </div>
+        
+      </div>
+    </div>
+  
+    <div class="site-footer_d d-none">
+  <div class="container">
+    
+    <div class="row">
+      <div class="col-md-8 footer-links">
+        
+          <ul class="list-unstyled">
+            
+              <li><a href="/about">Acerca de Portal de Datos Abiertos del Gobierno del Estado de Sonora</a></li>
+            
+          </ul>
+          <ul class="list-unstyled">
+            
+              
+              <li><a href="http://docs.ckan.org/en/2.9/api/">API CKAN</a></li>
+              <li><a href="http://www.ckan.org/">CKAN Association</a></li>
+              <li><a href="http://www.opendefinition.org/okd/"><img src="/base/images/od_80x15_blue.png" alt="Open Data"></a></li>
+            
+          </ul>
+        
+      </div>
+      <div class="col-md-4 attribution">
+        
+          <p><strong>Gestionado con </strong> <a class="hide-text ckan-footer-logo" href="http://ckan.org">CKAN</a></p>
+        
+
+      </div>
+    </div>
+    
+  </div>
+
+  
+    
+  
+
+  
+    
+<form class="form-inline form-select lang-select" action="/util/redirect" data-module="select-switch" method="POST">
+  <label for="field-lang-select">Idioma</label>
+  <select id="field-lang-select" name="url" data-module="autocomplete" data-module-dropdown-class="lang-dropdown" data-module-container-class="lang-container">
+    
+      <option value="/es/dataset/Fiebre%20manchada%20%28Rickettsia%29/resource/08d3b1a7-dbc0-4f43-b1d2-3266cebb88f8" selected="selected">
+        español
+      </option>
+    
+  </select>
+  <button class="btn btn-default js-hide" type="submit">Ir</button>
+</form>
+  
+
+
+</div>
+
+
+<section id="pre-footer" class="d-none d-sm-block">
+
+  <div class="container">
+      <div class="container-inner">
+
+          <div class="row">
+
+              <div class="col-sm-7">
+
+                  <div class="info">
+                      <h6 class="fw-bold">Gobierno del Estado de Sonora</h6>
+                      <p>
+                        <strong>Dirección:</strong> Comonfort y Dr. Paliza S/N, Colonia Centenario, C.P. 83260. Hermosillo, Sonora, México.
+                        <br><strong>Teléfonos:</strong> Atención Ciudadana (662) 108 4324, Palacio de Gobierno (662) 289 3800
+                        <br><strong>Correo Electrónico:</strong> <a href="/cdn-cgi/l/email-protection#aecfdacbc0cdc7c1c0cdc7dbcacfcacfc0cfeeddc1c0c1dccf80c9c1cc80c3d691dddbccc4cbcdda93e3cbc0ddcfc4cb8b9c9eebc0d8c7cfcac18b9c9ecacbddcacb8b9c9ecbc28b9c9efec1dcdacfc28b9c9ecacbc28b9c9ee9c1ccc7cbdcc0c18b9c9ecacb8b9c9efdc1c0c1dccf"><span class="__cf_email__" data-cfemail="1d7c6978737e7472737e7468797c797c737c5d6e7273726f7c337a727f337065">[email&#160;protected]</span></a>
+                      </p>
+                  </div>
+
+
+              </div>
+
+
+              <div class="col-sm-5 ">
+                  <div class="social-networks">
+                      <div class="d-flex justify-content-center justify-content-sm-end">
+                          <a href="https://www.facebook.com/GobiernoSonora" target="_blank" rel="nofollow noreferrer noopener" class=""><i class="fab fa-facebook" aria-hidden="true"></i> <span>Facebook</span></a>
+                          <style>
+                            #xCustomLogo{
+                              display: flex;
+                              justify-content: center;
+                              align-items:center;
+                            }
+                            
+                            #xCustomLogo img{
+                              object-fit: contain;
+                            }
+
+                            #xCustomLogoOrange{
+                              display: flex !important;
+                              justify-content: center;
+                              align-items:center;
+                            }
+    
+                            #xCustomLogoOrange img{
+                              object-fit: contain;
+                            }
+                          </style>
+                          
+                          <a href="https://www.twitter.com/gobiernosonora" id="xCustomLogoOrange">
+                            <img src="/images/x-orange2.png" alt="" width="33" height="33">
+                          </a>
+                          <!-- <a href="https://www.facebook.com/GobiernoSonora" target="_blank" rel="nofollow noreferrer noopener"  class=""><i class="fab fa-twitter" aria-hidden="true"></i><span>Twitter</span></a> -->
+                          <a href="https://www.instagram.com/gobiernodesonora/" target="_blank" rel="nofollow noreferrer noopener"class=""><i class="fab fa-instagram" aria-hidden="true"></i> <span>Instagram</span></a>
+                          <a href="https://www.tiktok.com/@gobierno.sonora" target="_blank" rel="nofollow noreferrer noopener" class=""><i class="fab fa-tiktok" aria-hidden="true"></i> <span>Tiktok</span></a>
+                          <a href="https://www.youtube.com/@GobiernodeSonoraTV" target="_blank" rel="nofollow noreferrer noopener" class=""><i class="fab fa-youtube" aria-hidden="true"></i> <span>Youtube</span></a>
+                       
+                          <a href="#" target="_blank" rel="nofollow noreferrer noopener" id="btn-16660239335493" class="">@GobiernoSonora</a>
+                      </div>
+                  </div>
+
+                  <div class="privacy">
+                      <div class="text-center text-sm-end mt-2">
+                          <p>
+                              <a href="https://www.sonora.gob.mx/politica-de-uso.html" target="_blank" rel="nofollow noreferrer noopener" id="btn-16660237556920" class="btn btn-link link-dark py-0 px-1">Política de Uso y Privacidad</a>
+                              <a href="https://denunciapp.sonora.gob.mx" target="_blank" rel="nofollow noreferrer noopener" id="btn-16660237556921" class="btn btn-link link-dark py-0 px-1">Denuncia Ciudadana</a>
+                              <a href="https://www.sonora.gob.mx/contacto.html" target="_blank" rel="nofollow noreferrer noopener" id="btn-16660237556922" class="btn btn-link link-dark py-0 px-1">Contacto</a>
+
+                          </p>
+
+
+                          <p>Todos los derechos reservados. Sitio web desarrollado por
+                              <a href="https://oficialiamayor.sonora.gob.mx" target="_blank" rel="noopener">Oficialía Mayor</a>
+                          </p>
+
+
+                      </div>
+                  </div>
+
+
+              </div>
+
+
+          </div>
+
+         
+</div></div></section>
+
+  <style>
+    .old-site{
+      background-color: #dc7f37;
+      padding-block: 8px;
+      display: flex;
+    }
+
+    .newFoot{
+      display: none;
+    }
+
+    @media only screen and (max-width: 799px) {
+      .newFoot{
+        display: block;
+        background-color: #410123;
+        height: max-content;
+        padding-bottom: 1rem;
+      }
+      .innerFoot{
+        display: flex;
+        flex-direction: column;
+        gap: .5rem;
+        justify-content: center;
+        align-items: center;
+      }
+      .socalSpecial{
+        display: flex;
+        flex-direction: row;
+        gap: 1rem;
+        padding: 0;
+      }
+    }
+  </style>
+
+
+<div class="newFoot">
+  <div class="innerFoot">
+    <img class="" src="/images/logo-sonora-white.svg" alt="Gobierno del Estado de Sonora" title="" loading="lazy" style="width: 60%; margin-top: 1rem">
+    <div class="col-sm-3">
+      <div class="mt-3 mb-3">
+    <ul class="socalSpecial d-flex justify-content-center">
+      <a style="color: white; font-size:x-large" href="https://www.facebook.com/gobiernosonora" aria-label="Facebook" target="_blank" rel="nofollow noreferrer noopener"><i class="fab fa-facebook " aria-hidden="true" title="Facebook"></i></a>
+      <!-- <a style="color: white; font-size:x-large" href="https://www.twitter.com/gobiernosonora" aria-label="Twitter" target="_blank" rel="nofollow noreferrer noopener"><i class="fab fa-twitter " aria-hidden="true" title="Twitter"></i></a> -->
+      <a style="color: white; font-size:x-large" href="https://www.instagram.com/gobiernodesonora" aria-label="Instagram" target="_blank" rel="nofollow noreferrer noopener"><i class="fab fa-instagram " aria-hidden="true" title="Instagram"></i></a>
+      <a style="color: white; font-size:x-large" href="https://www.tiktok.com/@gobierno.sonora" aria-label="TikTok" target="_blank" rel="nofollow noreferrer noopener"><i class="fab fa-tiktok " aria-hidden="true" title="TikTok"></i></a>
+      <a style="color: white; font-size:x-large" href="https://www.youtube.com/c/GobiernodeSonoraTV" aria-label="Youtube" target="_blank" rel="nofollow noreferrer noopener"><i class="fab fa-youtube " aria-hidden="true" title="Youtube"></i></a>
+    </ul>
+    </div>
+    </div> 
+    <div class="text-center mb-3" style="color: white;">
+      @GobiernoSonora
+    </div>
+    <a href="tel://911" target="_blank" style="width: 60%; display:flex; align-items:center;"><img class="" src="/images/911.svg" alt="911 Número de Emergencias" title="" loading="lazy" style="width: 100%;"></a>
+  </div>
+</div>
+
+<footer class="d-none d-sm-block">
+  <div class="container">
+      <div class="row">
+
+          <div class="col-sm-2">
+              <div class="logo mb-3">
+                  <img class="" src="/images/logo-sonora-white.svg" alt="Gobierno del Estado de Sonora" title="" loading="lazy">
+              </div>
+          </div>
+
+          <div class="col-sm-4"></div>
+
+          <div class="col-sm-3">
+              <div class="mt-3 mb-3">
+                <ul class="social-networks d-flex justify-content-center">
+                    <a href="https://www.facebook.com/gobiernosonora" aria-label="Facebook" target="_blank" rel="nofollow noreferrer noopener"><i class="fab fa-facebook " aria-hidden="true" title="Facebook"></i></a>
+                    <a href="https://www.twitter.com/gobiernosonora" id="xCustomLogo">
+                      <img src="/images/x-white.png" alt="" width="33" height="33">
+                    </a>
+                    <!-- <a href="https://www.twitter.com/gobiernosonora" aria-label="Twitter" target="_blank" rel="nofollow noreferrer noopener"><i class="fab fa-twitter " aria-hidden="true" title="Twitter"></i></a> -->
+                    <a href="https://www.instagram.com/gobiernodesonora" aria-label="Instagram" target="_blank" rel="nofollow noreferrer noopener"><i class="fab fa-instagram " aria-hidden="true" title="Instagram"></i></a>
+                    <a href="https://www.tiktok.com/@gobierno.sonora" aria-label="TikTok" target="_blank" rel="nofollow noreferrer noopener"><i class="fab fa-tiktok " aria-hidden="true" title="TikTok"></i></a>
+                    <a href="https://www.youtube.com/c/GobiernodeSonoraTV" aria-label="Youtube" target="_blank" rel="nofollow noreferrer noopener"><i class="fab fa-youtube " aria-hidden="true" title="Youtube"></i></a>
+                </ul>
+              </div>
+
+              <div class="text-center mb-3">
+                  @GobiernoSonora
+              </div>
+
+          </div>
+
+          <div class="col-sm-3 text-end">
+              <div class="emergency me-auto">
+                  <a href="tel://911" target="_blank"><img class="" src="/images/911.svg" alt="911 Número de Emergencias" title="" loading="lazy"></a>
+              </div>
+          </div>
+
+      </div>
+  </div>
+</footer>
+  
+  
+  
+  
+  
+    
+
+      
+
+    
+    
+ 
+    <script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script src="/webassets/vendor/d8ae4bed_jquery.js" type="text/javascript"></script>
+<script src="/webassets/vendor/5897614f_qs.js" type="text/javascript"></script>
+<script src="/webassets/base/b2821890_view-filters.js" type="text/javascript"></script>
+<script src="/webassets/vendor/fb6095a0_vendor.js" type="text/javascript"></script>
+<script src="/webassets/vendor/517cca6f_bootstrap.js" type="text/javascript"></script>
+<script src="/webassets/base/15a18f6c_main.js" type="text/javascript"></script>
+<script src="/webassets/base/bff92684_ckan.js" type="text/javascript"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+      // updated 2019
+        //const input = document.getElementById("search-input");
+        //const searchBtn = document.getElementById("search-btn");
+
+        const popoverTriggerList = document.querySelectorAll('[data-bs-toggle="popover"]')
+        const popoverList = [...popoverTriggerList].map(popoverTriggerEl => new bootstrap.Popover(popoverTriggerEl))
+
+
+        /*
+        const expand = () => {
+          searchBtn.classList.toggle("close");
+          input.classList.toggle("square");
+        };*/
+
+        //searchBtn.addEventListener("click", expand);
+
+
+    </script>
+
+  <script type="module" src="https://static.cloudflareinsights.com/beacon.min.js/vce701823e78c4301a35b7e07294d87301792088814092" integrity="sha512-UKNk8GbxkABxKcXYuLkO16EleLGUkcvJWtpSNmExE0Too3ZaFAxTscNWEc1OdAv5/BikHawapSCaiD2XCmp+Bw==" data-cf-beacon='{"version":"2024.11.0","token":"acfb988d291d41f1846540e7c6312446","spa":2}' crossorigin="anonymous"></script>
+</body>
+</html>

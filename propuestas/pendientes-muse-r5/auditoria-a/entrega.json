@@ -1,0 +1,2229 @@
+{
+ "rol": "auditoria-a",
+ "version": "final",
+ "modelo": "Muse 1.3",
+ "sha_entregas": {
+  "tic": "d720e4286fc9cbc4abafebbce508ba951c7c3c96c1e69247a2e54c49b065c172",
+  "nacimientos": "eec89c6c221121d297b26b315548826bc9c968454b6a9203a1697859bcbf0bce",
+  "defunciones": "4f58c5434a000248e104fe6b8fd843df0088afb1c359e8c93a8844880308f979",
+  "epidemiologia": "5145bbe267feb45ce25c19fecf7d343ade421d407203eb635c86fdae165e1c1c",
+  "matriculas": "e8ce4f70c618570aa56ba97adab35c47f31f7ae8478eb541ca724daa5902dc35",
+  "diversos": "231f4d97f902de99b7cee124bb2c49c1f6354d96881c7a8ccd4388b5ad3b7223"
+ },
+ "nota_ambito": "179 decisiones = tic31 + nacimientos54 + defunciones32 + epidemiologia25 + matriculas30 + diversos7. Presas (2 significados ya respaldados, 1 columna pendiente, 0 reglas) y catalogos (17 pendientes) fuera del 179, conteos separados.",
+ "dictamenes": [
+  {
+   "tipo": "reglas",
+   "id": "r5-nac-resideextranjerod-no_especificada",
+   "dictamen": "aceptar",
+   "motivo": "Aceptar: fila /18 exacta (huella OK). Sin contradiccion tipo-sentido en la fila: Tipo Texto coherente con descripcion textual y ejemplo NO; el miembro Numerico es /17, no unificado por limite explicito con referencia a r3a7. no_especificada adecuada (texto declarado sin decodificar, ejemplo sin mapa). Sentido no inventado: literal de la descripcion + sujeto de la descripcion + alcance del titulo publicado. Ambito exacto; limites prohiben cruces, catalogo, vigencia e identidad.",
+   "evidencia": [
+    "data/portal/contenido-inspeccion.json:diccionario=22202305-2d02-4c49-b216-cc98224357f0:fila=18",
+    "huella_fila_diccionario=3c0156d2eaf5b3fbb00c421ae87e96fb5c7211b688f03739b9c73d269c5f68a1 recomputada=OK",
+    "tipo=Texto formato= ejemplo=NO",
+    "r3a7-nac-resideextranjero-codigo verificado en nucleo (par /17 separado)"
+   ]
+  },
+  {
+   "tipo": "reglas",
+   "id": "r5-tic-001",
+   "dictamen": "aceptar",
+   "motivo": "Cotejo original OK (huella, literal Texto, ejemplo conservado, sin Booleano, sin equiparar encuestas: limite verificado). Marker final verificado: listo.json sha256_entrega coincide con entrega auditada.",
+   "evidencia": [
+    "propuestas/pendientes-muse-r5/tic/entrega.json",
+    "diccionario=063058e6-aed3-4a60-b944-5e653c77b14d:fila=2"
+   ]
+  },
+  {
+   "tipo": "reglas",
+   "id": "r5-tic-002",
+   "dictamen": "aceptar",
+   "motivo": "Cotejo original OK (huella, literal Texto, ejemplo conservado, sin Booleano, sin equiparar encuestas: limite verificado). Marker final verificado: listo.json sha256_entrega coincide con entrega auditada.",
+   "evidencia": [
+    "propuestas/pendientes-muse-r5/tic/entrega.json",
+    "diccionario=3851f1c3-5045-4703-ba88-93b3d39e0b70:fila=2"
+   ]
+  },
+  {
+   "tipo": "reglas",
+   "id": "r5-tic-003",
+   "dictamen": "aceptar",
+   "motivo": "Cotejo original OK (huella, literal Texto, ejemplo conservado, sin Booleano, sin equiparar encuestas: limite verificado). Marker final verificado: listo.json sha256_entrega coincide con entrega auditada.",
+   "evidencia": [
+    "propuestas/pendientes-muse-r5/tic/entrega.json",
+    "diccionario=3b314916-24f7-4c48-bcb5-c5fe112a9123:fila=2"
+   ]
+  },
+  {
+   "tipo": "reglas",
+   "id": "r5-tic-004",
+   "dictamen": "aceptar",
+   "motivo": "Cotejo original OK (huella, literal Texto, ejemplo conservado, sin Booleano, sin equiparar encuestas: limite verificado). Marker final verificado: listo.json sha256_entrega coincide con entrega auditada.",
+   "evidencia": [
+    "propuestas/pendientes-muse-r5/tic/entrega.json",
+    "diccionario=8f8e3cfb-e551-4a95-b382-4999351c5f29:fila=2"
+   ]
+  },
+  {
+   "tipo": "reglas",
+   "id": "r5-tic-005",
+   "dictamen": "aceptar",
+   "motivo": "Cotejo original OK (huella, literal Texto, ejemplo conservado, sin Booleano, sin equiparar encuestas: limite verificado). Marker final verificado: listo.json sha256_entrega coincide con entrega auditada.",
+   "evidencia": [
+    "propuestas/pendientes-muse-r5/tic/entrega.json",
+    "diccionario=af14d207-7697-4d52-b99b-46a35a1b76ac:fila=2"
+   ]
+  },
+  {
+   "tipo": "reglas",
+   "id": "r5-tic-006",
+   "dictamen": "aceptar",
+   "motivo": "Cotejo original OK (huella, literal Texto, ejemplo conservado, sin Booleano, sin equiparar encuestas: limite verificado). Marker final verificado: listo.json sha256_entrega coincide con entrega auditada.",
+   "evidencia": [
+    "propuestas/pendientes-muse-r5/tic/entrega.json",
+    "diccionario=063058e6-aed3-4a60-b944-5e653c77b14d:fila=7"
+   ]
+  },
+  {
+   "tipo": "reglas",
+   "id": "r5-tic-007",
+   "dictamen": "aceptar",
+   "motivo": "Cotejo original OK (huella, literal Texto, ejemplo conservado, sin Booleano, sin equiparar encuestas: limite verificado). Marker final verificado: listo.json sha256_entrega coincide con entrega auditada.",
+   "evidencia": [
+    "propuestas/pendientes-muse-r5/tic/entrega.json",
+    "diccionario=063058e6-aed3-4a60-b944-5e653c77b14d:fila=13"
+   ]
+  },
+  {
+   "tipo": "reglas",
+   "id": "r5mat-001",
+   "dictamen": "rechazar",
+   "motivo": "Retiro verificado en version final de matriculas (0 reglas, 0 vinculos, 30/30 pendiente con motivo de bloqueo auditor). Descripcion vacia/tautologica + nombre (+ejemplo) no es respaldo explicito; no_especificada con limites retoricos no suple evidencia.",
+   "evidencia": [
+    "propuestas/pendientes-muse-r5/matriculas/entrega.json (sha e8ce4f70c618570a)"
+   ]
+  },
+  {
+   "tipo": "reglas",
+   "id": "r5mat-002",
+   "dictamen": "rechazar",
+   "motivo": "Retiro verificado en version final de matriculas (0 reglas, 0 vinculos, 30/30 pendiente con motivo de bloqueo auditor). Descripcion vacia/tautologica + nombre (+ejemplo) no es respaldo explicito; no_especificada con limites retoricos no suple evidencia.",
+   "evidencia": [
+    "propuestas/pendientes-muse-r5/matriculas/entrega.json (sha e8ce4f70c618570a)"
+   ]
+  },
+  {
+   "tipo": "reglas",
+   "id": "r5mat-003",
+   "dictamen": "rechazar",
+   "motivo": "Retiro verificado en version final de matriculas (0 reglas, 0 vinculos, 30/30 pendiente con motivo de bloqueo auditor). Descripcion vacia/tautologica + nombre (+ejemplo) no es respaldo explicito; no_especificada con limites retoricos no suple evidencia.",
+   "evidencia": [
+    "propuestas/pendientes-muse-r5/matriculas/entrega.json (sha e8ce4f70c618570a)"
+   ]
+  },
+  {
+   "tipo": "reglas",
+   "id": "r5mat-004",
+   "dictamen": "rechazar",
+   "motivo": "Retiro verificado en version final de matriculas (0 reglas, 0 vinculos, 30/30 pendiente con motivo de bloqueo auditor). Descripcion vacia/tautologica + nombre (+ejemplo) no es respaldo explicito; no_especificada con limites retoricos no suple evidencia.",
+   "evidencia": [
+    "propuestas/pendientes-muse-r5/matriculas/entrega.json (sha e8ce4f70c618570a)"
+   ]
+  },
+  {
+   "tipo": "reglas",
+   "id": "r5mat-005",
+   "dictamen": "rechazar",
+   "motivo": "Retiro verificado en version final de matriculas (0 reglas, 0 vinculos, 30/30 pendiente con motivo de bloqueo auditor). Descripcion vacia/tautologica + nombre (+ejemplo) no es respaldo explicito; no_especificada con limites retoricos no suple evidencia.",
+   "evidencia": [
+    "propuestas/pendientes-muse-r5/matriculas/entrega.json (sha e8ce4f70c618570a)"
+   ]
+  },
+  {
+   "tipo": "reglas",
+   "id": "r5mat-006",
+   "dictamen": "rechazar",
+   "motivo": "Retiro verificado en version final de matriculas (0 reglas, 0 vinculos, 30/30 pendiente con motivo de bloqueo auditor). Descripcion vacia/tautologica + nombre (+ejemplo) no es respaldo explicito; no_especificada con limites retoricos no suple evidencia.",
+   "evidencia": [
+    "propuestas/pendientes-muse-r5/matriculas/entrega.json (sha e8ce4f70c618570a)"
+   ]
+  },
+  {
+   "tipo": "reglas",
+   "id": "r5mat-007",
+   "dictamen": "rechazar",
+   "motivo": "Retiro verificado en version final de matriculas (0 reglas, 0 vinculos, 30/30 pendiente con motivo de bloqueo auditor). Descripcion vacia/tautologica + nombre (+ejemplo) no es respaldo explicito; no_especificada con limites retoricos no suple evidencia.",
+   "evidencia": [
+    "propuestas/pendientes-muse-r5/matriculas/entrega.json (sha e8ce4f70c618570a)"
+   ]
+  },
+  {
+   "tipo": "reglas",
+   "id": "r5mat-008",
+   "dictamen": "rechazar",
+   "motivo": "Retiro verificado en version final de matriculas (0 reglas, 0 vinculos, 30/30 pendiente con motivo de bloqueo auditor). Descripcion vacia/tautologica + nombre (+ejemplo) no es respaldo explicito; no_especificada con limites retoricos no suple evidencia.",
+   "evidencia": [
+    "propuestas/pendientes-muse-r5/matriculas/entrega.json (sha e8ce4f70c618570a)"
+   ]
+  },
+  {
+   "tipo": "reglas",
+   "id": "r5mat-009",
+   "dictamen": "rechazar",
+   "motivo": "Retiro verificado en version final de matriculas (0 reglas, 0 vinculos, 30/30 pendiente con motivo de bloqueo auditor). Descripcion vacia/tautologica + nombre (+ejemplo) no es respaldo explicito; no_especificada con limites retoricos no suple evidencia.",
+   "evidencia": [
+    "propuestas/pendientes-muse-r5/matriculas/entrega.json (sha e8ce4f70c618570a)"
+   ]
+  },
+  {
+   "tipo": "reglas",
+   "id": "r5mat-010",
+   "dictamen": "rechazar",
+   "motivo": "Retiro verificado en version final de matriculas (0 reglas, 0 vinculos, 30/30 pendiente con motivo de bloqueo auditor). Descripcion vacia/tautologica + nombre (+ejemplo) no es respaldo explicito; no_especificada con limites retoricos no suple evidencia.",
+   "evidencia": [
+    "propuestas/pendientes-muse-r5/matriculas/entrega.json (sha e8ce4f70c618570a)"
+   ]
+  },
+  {
+   "tipo": "reglas",
+   "id": "r5mat-011",
+   "dictamen": "rechazar",
+   "motivo": "Retiro verificado en version final de matriculas (0 reglas, 0 vinculos, 30/30 pendiente con motivo de bloqueo auditor). Descripcion vacia/tautologica + nombre (+ejemplo) no es respaldo explicito; no_especificada con limites retoricos no suple evidencia.",
+   "evidencia": [
+    "propuestas/pendientes-muse-r5/matriculas/entrega.json (sha e8ce4f70c618570a)"
+   ]
+  },
+  {
+   "tipo": "reglas",
+   "id": "r5mat-012",
+   "dictamen": "rechazar",
+   "motivo": "Retiro verificado en version final de matriculas (0 reglas, 0 vinculos, 30/30 pendiente con motivo de bloqueo auditor). Descripcion vacia/tautologica + nombre (+ejemplo) no es respaldo explicito; no_especificada con limites retoricos no suple evidencia.",
+   "evidencia": [
+    "propuestas/pendientes-muse-r5/matriculas/entrega.json (sha e8ce4f70c618570a)"
+   ]
+  },
+  {
+   "tipo": "reglas",
+   "id": "r5mat-013",
+   "dictamen": "rechazar",
+   "motivo": "Retiro verificado en version final de matriculas (0 reglas, 0 vinculos, 30/30 pendiente con motivo de bloqueo auditor). Descripcion vacia/tautologica + nombre (+ejemplo) no es respaldo explicito; no_especificada con limites retoricos no suple evidencia.",
+   "evidencia": [
+    "propuestas/pendientes-muse-r5/matriculas/entrega.json (sha e8ce4f70c618570a)"
+   ]
+  },
+  {
+   "tipo": "reglas",
+   "id": "r5mat-014",
+   "dictamen": "rechazar",
+   "motivo": "Retiro verificado en version final de matriculas (0 reglas, 0 vinculos, 30/30 pendiente con motivo de bloqueo auditor). Descripcion vacia/tautologica + nombre (+ejemplo) no es respaldo explicito; no_especificada con limites retoricos no suple evidencia.",
+   "evidencia": [
+    "propuestas/pendientes-muse-r5/matriculas/entrega.json (sha e8ce4f70c618570a)"
+   ]
+  },
+  {
+   "tipo": "reglas",
+   "id": "r5mat-015",
+   "dictamen": "rechazar",
+   "motivo": "Retiro verificado en version final de matriculas (0 reglas, 0 vinculos, 30/30 pendiente con motivo de bloqueo auditor). Descripcion vacia/tautologica + nombre (+ejemplo) no es respaldo explicito; no_especificada con limites retoricos no suple evidencia.",
+   "evidencia": [
+    "propuestas/pendientes-muse-r5/matriculas/entrega.json (sha e8ce4f70c618570a)"
+   ]
+  },
+  {
+   "tipo": "decision_significado",
+   "id": "https://example.org/mex-ontologi/definition/063058e6-aed3-4a60-b944-5e653c77b14d%2F10",
+   "entrega": "tic",
+   "decision_origen": "pendiente",
+   "dictamen": "aceptar",
+   "motivo": "Verificado en entrega final con marker MATCH. pendiente: descripcion truncada a mitad de palabra en la celda fuente ('...que permit\\u2026'); no hay sentido literal completo. Confirma el pendiente r4-lote-5 tras relectura de la fila exacta. Requie",
+   "evidencia": [
+    "propuestas/pendientes-muse-r5/tic/entrega.json"
+   ]
+  },
+  {
+   "tipo": "decision_significado",
+   "id": "https://example.org/mex-ontologi/definition/063058e6-aed3-4a60-b944-5e653c77b14d%2F11",
+   "entrega": "tic",
+   "decision_origen": "pendiente",
+   "dictamen": "aceptar",
+   "motivo": "Verificado en entrega final con marker MATCH. pendiente: referencia anaforica ('lo anterior') cuyo referente es P10, a su vez truncada y pendiente; sin referente fijado no se fija a que aspecto responde el valor. Confirma el pendiente r4-lote-5. ",
+   "evidencia": [
+    "propuestas/pendientes-muse-r5/tic/entrega.json"
+   ]
+  },
+  {
+   "tipo": "decision_significado",
+   "id": "https://example.org/mex-ontologi/definition/063058e6-aed3-4a60-b944-5e653c77b14d%2F13",
+   "entrega": "tic",
+   "decision_origen": "proponer",
+   "dictamen": "aceptar",
+   "motivo": "Verificado en entrega final con marker MATCH. proponer con regla nueva r5-tic-007 y concepto nuevo recursos-anuales-innovacion-declarados: descripcion completa y literal, Tipo Texto, ejemplo conservado. Revisa el pendiente r4-lote-5 (mezcla monto",
+   "evidencia": [
+    "propuestas/pendientes-muse-r5/tic/entrega.json"
+   ]
+  },
+  {
+   "tipo": "decision_significado",
+   "id": "https://example.org/mex-ontologi/definition/063058e6-aed3-4a60-b944-5e653c77b14d%2F16",
+   "entrega": "tic",
+   "decision_origen": "pendiente",
+   "dictamen": "aceptar",
+   "motivo": "Verificado en entrega final con marker MATCH. pendiente: descripcion truncada a mitad de frase en la celda fuente ('...en ma...'); no hay sentido literal completo. Confirma el pendiente r4-lote-5 tras relectura. Requiere texto completo (solicitud",
+   "evidencia": [
+    "propuestas/pendientes-muse-r5/tic/entrega.json"
+   ]
+  },
+  {
+   "tipo": "decision_significado",
+   "id": "https://example.org/mex-ontologi/definition/063058e6-aed3-4a60-b944-5e653c77b14d%2F18",
+   "entrega": "tic",
+   "decision_origen": "pendiente",
+   "dictamen": "aceptar",
+   "motivo": "Verificado en entrega final con marker MATCH. pendiente: descripcion truncada a mitad de frase en la celda fuente ('...materia d...'). Confirma el pendiente r4-lote-5. Requiere texto completo (solicitud tic-web-01).",
+   "evidencia": [
+    "propuestas/pendientes-muse-r5/tic/entrega.json"
+   ]
+  },
+  {
+   "tipo": "decision_significado",
+   "id": "https://example.org/mex-ontologi/definition/063058e6-aed3-4a60-b944-5e653c77b14d%2F2",
+   "entrega": "tic",
+   "decision_origen": "proponer",
+   "dictamen": "aceptar",
+   "motivo": "Verificado en entrega final con marker MATCH. proponer con regla nueva r5-tic-001 y concepto vigente sector-dependencia-diagnostico: descripcion literal 'Sector', Tipo Texto, ejemplo '04 - SECRETARIA DE HACIENDA'. Revisa y revierte el pendiente r",
+   "evidencia": [
+    "propuestas/pendientes-muse-r5/tic/entrega.json"
+   ]
+  },
+  {
+   "tipo": "decision_significado",
+   "id": "https://example.org/mex-ontologi/definition/063058e6-aed3-4a60-b944-5e653c77b14d%2F21",
+   "entrega": "tic",
+   "decision_origen": "pendiente",
+   "dictamen": "aceptar",
+   "motivo": "Verificado en entrega final con marker MATCH. pendiente: descripcion truncada a mitad de frase en la celda fuente ('...materia ...') aunque el ejemplo este completo. Confirma el pendiente r4-lote-5. Requiere texto completo (solicitud tic-web-01).",
+   "evidencia": [
+    "propuestas/pendientes-muse-r5/tic/entrega.json"
+   ]
+  },
+  {
+   "tipo": "decision_significado",
+   "id": "https://example.org/mex-ontologi/definition/063058e6-aed3-4a60-b944-5e653c77b14d%2F7",
+   "entrega": "tic",
+   "decision_origen": "proponer",
+   "dictamen": "aceptar",
+   "motivo": "Verificado en entrega final con marker MATCH. proponer con regla nueva r5-tic-006 y concepto nuevo condiciones-innovacion-tic-declaradas: descripcion completa y literal, Tipo Texto, ejemplo de lista textual. Revisa el pendiente r4-lote-5 (cuales ",
+   "evidencia": [
+    "propuestas/pendientes-muse-r5/tic/entrega.json"
+   ]
+  },
+  {
+   "tipo": "decision_significado",
+   "id": "https://example.org/mex-ontologi/definition/12f684e9-f4d5-4714-933d-aa153a812174%2F17",
+   "entrega": "defunciones",
+   "decision_origen": "pendiente",
+   "dictamen": "aceptar",
+   "motivo": "Verificado en entrega final con marker MATCH. pendiente: descripcion 'Pendiente de especificar', catalogo_declarado='' y sin literal especifico; dictamen previo R4 lote-6 (pendiente) revisado y confirmado con datastore live 2026-10-23. Ejemplo ai",
+   "evidencia": [
+    "propuestas/pendientes-muse-r5/defunciones/entrega.json"
+   ]
+  },
+  {
+   "tipo": "decision_significado",
+   "id": "https://example.org/mex-ontologi/definition/12f684e9-f4d5-4714-933d-aa153a812174%2F30",
+   "entrega": "defunciones",
+   "decision_origen": "pendiente",
+   "dictamen": "aceptar",
+   "motivo": "Verificado en entrega final con marker MATCH. pendiente: descripcion 'Pendiente de especificar', catalogo_declarado='' y sin literal especifico; dictamen previo R4 lote-6 (pendiente) revisado y confirmado con datastore live 2026-10-23. Ejemplo ai",
+   "evidencia": [
+    "propuestas/pendientes-muse-r5/defunciones/entrega.json"
+   ]
+  },
+  {
+   "tipo": "decision_significado",
+   "id": "https://example.org/mex-ontologi/definition/12f684e9-f4d5-4714-933d-aa153a812174%2F31",
+   "entrega": "defunciones",
+   "decision_origen": "pendiente",
+   "dictamen": "aceptar",
+   "motivo": "Verificado en entrega final con marker MATCH. pendiente: descripcion 'Pendiente de especificar', catalogo_declarado='' y sin literal especifico; dictamen previo R4 lote-6 (pendiente) revisado y confirmado con datastore live 2026-10-23. Ejemplo ai",
+   "evidencia": [
+    "propuestas/pendientes-muse-r5/defunciones/entrega.json"
+   ]
+  },
+  {
+   "tipo": "decision_significado",
+   "id": "https://example.org/mex-ontologi/definition/12f684e9-f4d5-4714-933d-aa153a812174%2F32",
+   "entrega": "defunciones",
+   "decision_origen": "pendiente",
+   "dictamen": "aceptar",
+   "motivo": "Verificado en entrega final con marker MATCH. pendiente: descripcion 'Pendiente de especificar', catalogo_declarado='' y sin literal especifico; dictamen previo R4 lote-6 (pendiente) revisado y confirmado con datastore live 2026-10-23. Ejemplo ai",
+   "evidencia": [
+    "propuestas/pendientes-muse-r5/defunciones/entrega.json"
+   ]
+  },
+  {
+   "tipo": "decision_significado",
+   "id": "https://example.org/mex-ontologi/definition/12f684e9-f4d5-4714-933d-aa153a812174%2F33",
+   "entrega": "defunciones",
+   "decision_origen": "pendiente",
+   "dictamen": "aceptar",
+   "motivo": "Verificado en entrega final con marker MATCH. pendiente: descripcion 'Pendiente de especificar', catalogo_declarado='' y sin literal especifico; dictamen previo R4 lote-6 (pendiente) revisado y confirmado con datastore live 2026-10-23. Ejemplo ai",
+   "evidencia": [
+    "propuestas/pendientes-muse-r5/defunciones/entrega.json"
+   ]
+  },
+  {
+   "tipo": "decision_significado",
+   "id": "https://example.org/mex-ontologi/definition/12f684e9-f4d5-4714-933d-aa153a812174%2F34",
+   "entrega": "defunciones",
+   "decision_origen": "pendiente",
+   "dictamen": "aceptar",
+   "motivo": "Verificado en entrega final con marker MATCH. pendiente: descripcion 'Pendiente de especificar', catalogo_declarado='' y sin literal especifico; dictamen previo R4 lote-6 (pendiente) revisado y confirmado con datastore live 2026-10-23. Ejemplo ai",
+   "evidencia": [
+    "propuestas/pendientes-muse-r5/defunciones/entrega.json"
+   ]
+  },
+  {
+   "tipo": "decision_significado",
+   "id": "https://example.org/mex-ontologi/definition/12f684e9-f4d5-4714-933d-aa153a812174%2F35",
+   "entrega": "defunciones",
+   "decision_origen": "pendiente",
+   "dictamen": "aceptar",
+   "motivo": "Verificado en entrega final con marker MATCH. pendiente: descripcion 'Pendiente de especificar', catalogo_declarado='' y sin literal especifico; dictamen previo R4 lote-6 (pendiente) revisado y confirmado con datastore live 2026-10-23. Ejemplo ai",
+   "evidencia": [
+    "propuestas/pendientes-muse-r5/defunciones/entrega.json"
+   ]
+  },
+  {
+   "tipo": "decision_significado",
+   "id": "https://example.org/mex-ontologi/definition/12f684e9-f4d5-4714-933d-aa153a812174%2F36",
+   "entrega": "defunciones",
+   "decision_origen": "pendiente",
+   "dictamen": "aceptar",
+   "motivo": "Verificado en entrega final con marker MATCH. pendiente: descripcion 'Pendiente de especificar', catalogo_declarado='' y sin literal especifico; dictamen previo R4 lote-6 (pendiente) revisado y confirmado con datastore live 2026-10-23. Ejemplo ai",
+   "evidencia": [
+    "propuestas/pendientes-muse-r5/defunciones/entrega.json"
+   ]
+  },
+  {
+   "tipo": "decision_significado",
+   "id": "https://example.org/mex-ontologi/definition/12f684e9-f4d5-4714-933d-aa153a812174%2F37",
+   "entrega": "defunciones",
+   "decision_origen": "pendiente",
+   "dictamen": "aceptar",
+   "motivo": "Verificado en entrega final con marker MATCH. pendiente: descripcion 'Pendiente de especificar', catalogo_declarado='' y sin literal especifico; dictamen previo R4 lote-6 (pendiente) revisado y confirmado con datastore live 2026-10-23. Ejemplo ai",
+   "evidencia": [
+    "propuestas/pendientes-muse-r5/defunciones/entrega.json"
+   ]
+  },
+  {
+   "tipo": "decision_significado",
+   "id": "https://example.org/mex-ontologi/definition/12f684e9-f4d5-4714-933d-aa153a812174%2F38",
+   "entrega": "defunciones",
+   "decision_origen": "pendiente",
+   "dictamen": "aceptar",
+   "motivo": "Verificado en entrega final con marker MATCH. pendiente: descripcion 'Pendiente de especificar' sin vinculo local; no se promueve por nombre. Dictamen previo R4 (pendiente + pista_nombre_o_clasificador_sin_promocion) revisado y confirmado; fuente",
+   "evidencia": [
+    "propuestas/pendientes-muse-r5/defunciones/entrega.json"
+   ]
+  },
+  {
+   "tipo": "decision_significado",
+   "id": "https://example.org/mex-ontologi/definition/12f684e9-f4d5-4714-933d-aa153a812174%2F53",
+   "entrega": "defunciones",
+   "decision_origen": "pendiente",
+   "dictamen": "aceptar",
+   "motivo": "Verificado en entrega final con marker MATCH. pendiente: descripcion 'Pendiente de especificar', catalogo_declarado='' y sin literal especifico; dictamen previo R4 lote-6 (pendiente) revisado y confirmado con datastore live 2026-10-23. Ejemplo ai",
+   "evidencia": [
+    "propuestas/pendientes-muse-r5/defunciones/entrega.json"
+   ]
+  },
+  {
+   "tipo": "decision_significado",
+   "id": "https://example.org/mex-ontologi/definition/12f684e9-f4d5-4714-933d-aa153a812174%2F54",
+   "entrega": "defunciones",
+   "decision_origen": "pendiente",
+   "dictamen": "aceptar",
+   "motivo": "Verificado en entrega final con marker MATCH. pendiente: descripcion 'Pendiente de especificar', catalogo_declarado='' y sin literal especifico; dictamen previo R4 lote-6 (pendiente) revisado y confirmado con datastore live 2026-10-23. Ejemplo ai",
+   "evidencia": [
+    "propuestas/pendientes-muse-r5/defunciones/entrega.json"
+   ]
+  },
+  {
+   "tipo": "decision_significado",
+   "id": "https://example.org/mex-ontologi/definition/12f684e9-f4d5-4714-933d-aa153a812174%2F55",
+   "entrega": "defunciones",
+   "decision_origen": "pendiente",
+   "dictamen": "aceptar",
+   "motivo": "Verificado en entrega final con marker MATCH. pendiente: descripcion 'Pendiente de especificar', catalogo_declarado='' y sin literal especifico; dictamen previo R4 lote-6 (pendiente) revisado y confirmado con datastore live 2026-10-23. Ejemplo ai",
+   "evidencia": [
+    "propuestas/pendientes-muse-r5/defunciones/entrega.json"
+   ]
+  },
+  {
+   "tipo": "decision_significado",
+   "id": "https://example.org/mex-ontologi/definition/12f684e9-f4d5-4714-933d-aa153a812174%2F56",
+   "entrega": "defunciones",
+   "decision_origen": "pendiente",
+   "dictamen": "aceptar",
+   "motivo": "Verificado en entrega final con marker MATCH. pendiente: descripcion 'Pendiente de especificar', catalogo_declarado='' y sin literal especifico; dictamen previo R4 lote-6 (pendiente) revisado y confirmado con datastore live 2026-10-23. Ejemplo ai",
+   "evidencia": [
+    "propuestas/pendientes-muse-r5/defunciones/entrega.json"
+   ]
+  },
+  {
+   "tipo": "decision_significado",
+   "id": "https://example.org/mex-ontologi/definition/12f684e9-f4d5-4714-933d-aa153a812174%2F57",
+   "entrega": "defunciones",
+   "decision_origen": "pendiente",
+   "dictamen": "aceptar",
+   "motivo": "Verificado en entrega final con marker MATCH. pendiente: descripcion 'Pendiente de especificar', catalogo_declarado='' y sin literal especifico; dictamen previo R4 lote-6 (pendiente) revisado y confirmado con datastore live 2026-10-23. Ejemplo ai",
+   "evidencia": [
+    "propuestas/pendientes-muse-r5/defunciones/entrega.json"
+   ]
+  },
+  {
+   "tipo": "decision_significado",
+   "id": "https://example.org/mex-ontologi/definition/12f684e9-f4d5-4714-933d-aa153a812174%2F58",
+   "entrega": "defunciones",
+   "decision_origen": "pendiente",
+   "dictamen": "aceptar",
+   "motivo": "Verificado en entrega final con marker MATCH. pendiente: descripcion 'Pendiente de especificar', catalogo_declarado='' y sin literal especifico; dictamen previo R4 lote-6 (pendiente) revisado y confirmado con datastore live 2026-10-23. Ejemplo ai",
+   "evidencia": [
+    "propuestas/pendientes-muse-r5/defunciones/entrega.json"
+   ]
+  },
+  {
+   "tipo": "decision_significado",
+   "id": "https://example.org/mex-ontologi/definition/12f684e9-f4d5-4714-933d-aa153a812174%2F63",
+   "entrega": "defunciones",
+   "decision_origen": "pendiente",
+   "dictamen": "aceptar",
+   "motivo": "Verificado en entrega final con marker MATCH. pendiente: descripcion 'Pendiente de especificar', catalogo_declarado='' y sin literal especifico; dictamen previo R4 lote-6 (pendiente) revisado y confirmado con datastore live 2026-10-23. Ejemplo ai",
+   "evidencia": [
+    "propuestas/pendientes-muse-r5/defunciones/entrega.json"
+   ]
+  },
+  {
+   "tipo": "decision_significado",
+   "id": "https://example.org/mex-ontologi/definition/12f684e9-f4d5-4714-933d-aa153a812174%2F64",
+   "entrega": "defunciones",
+   "decision_origen": "pendiente",
+   "dictamen": "aceptar",
+   "motivo": "Verificado en entrega final con marker MATCH. pendiente: descripcion 'Pendiente de especificar', catalogo_declarado='' y sin literal especifico; dictamen previo R4 lote-6 (pendiente) revisado y confirmado con datastore live 2026-10-23. Ejemplo ai",
+   "evidencia": [
+    "propuestas/pendientes-muse-r5/defunciones/entrega.json"
+   ]
+  },
+  {
+   "tipo": "decision_significado",
+   "id": "https://example.org/mex-ontologi/definition/12f684e9-f4d5-4714-933d-aa153a812174%2F67",
+   "entrega": "defunciones",
+   "decision_origen": "pendiente",
+   "dictamen": "aceptar",
+   "motivo": "Verificado en entrega final con marker MATCH. pendiente: descripcion 'Pendiente de especificar', catalogo_declarado='' y sin literal especifico; dictamen previo R4 lote-6 (pendiente) revisado y confirmado con datastore live 2026-10-23. Ejemplo ai",
+   "evidencia": [
+    "propuestas/pendientes-muse-r5/defunciones/entrega.json"
+   ]
+  },
+  {
+   "tipo": "decision_significado",
+   "id": "https://example.org/mex-ontologi/definition/12f684e9-f4d5-4714-933d-aa153a812174%2F68",
+   "entrega": "defunciones",
+   "decision_origen": "pendiente",
+   "dictamen": "aceptar",
+   "motivo": "Verificado en entrega final con marker MATCH. pendiente: descripcion 'Pendiente de especificar', catalogo_declarado='' y sin literal especifico; dictamen previo R4 lote-6 (pendiente) revisado y confirmado con datastore live 2026-10-23. Ejemplo ai",
+   "evidencia": [
+    "propuestas/pendientes-muse-r5/defunciones/entrega.json"
+   ]
+  },
+  {
+   "tipo": "decision_significado",
+   "id": "https://example.org/mex-ontologi/definition/12f684e9-f4d5-4714-933d-aa153a812174%2F69",
+   "entrega": "defunciones",
+   "decision_origen": "pendiente",
+   "dictamen": "aceptar",
+   "motivo": "Verificado en entrega final con marker MATCH. pendiente: descripcion 'Pendiente de especificar', catalogo_declarado='' y sin literal especifico; dictamen previo R4 lote-6 (pendiente) revisado y confirmado con datastore live 2026-10-23. Ejemplo ai",
+   "evidencia": [
+    "propuestas/pendientes-muse-r5/defunciones/entrega.json"
+   ]
+  },
+  {
+   "tipo": "decision_significado",
+   "id": "https://example.org/mex-ontologi/definition/12f684e9-f4d5-4714-933d-aa153a812174%2F70",
+   "entrega": "defunciones",
+   "decision_origen": "pendiente",
+   "dictamen": "aceptar",
+   "motivo": "Verificado en entrega final con marker MATCH. pendiente: descripcion 'Pendiente de especificar', catalogo_declarado='' y sin literal especifico; dictamen previo R4 lote-6 (pendiente) revisado y confirmado con datastore live 2026-10-23. Ejemplo ai",
+   "evidencia": [
+    "propuestas/pendientes-muse-r5/defunciones/entrega.json"
+   ]
+  },
+  {
+   "tipo": "decision_significado",
+   "id": "https://example.org/mex-ontologi/definition/12f684e9-f4d5-4714-933d-aa153a812174%2F71",
+   "entrega": "defunciones",
+   "decision_origen": "pendiente",
+   "dictamen": "aceptar",
+   "motivo": "Verificado en entrega final con marker MATCH. pendiente: descripcion 'Pendiente de especificar', catalogo_declarado='' y sin literal especifico; dictamen previo R4 lote-6 (pendiente) revisado y confirmado con datastore live 2026-10-23. Ejemplo ai",
+   "evidencia": [
+    "propuestas/pendientes-muse-r5/defunciones/entrega.json"
+   ]
+  },
+  {
+   "tipo": "decision_significado",
+   "id": "https://example.org/mex-ontologi/definition/12f684e9-f4d5-4714-933d-aa153a812174%2F72",
+   "entrega": "defunciones",
+   "decision_origen": "pendiente",
+   "dictamen": "aceptar",
+   "motivo": "Verificado en entrega final con marker MATCH. pendiente: descripcion 'Pendiente de especificar' sin vinculo local; no se promueve por nombre. Dictamen previo R4 (pendiente + pista_nombre_o_clasificador_sin_promocion) revisado y confirmado; fuente",
+   "evidencia": [
+    "propuestas/pendientes-muse-r5/defunciones/entrega.json"
+   ]
+  },
+  {
+   "tipo": "decision_significado",
+   "id": "https://example.org/mex-ontologi/definition/12f684e9-f4d5-4714-933d-aa153a812174%2F73",
+   "entrega": "defunciones",
+   "decision_origen": "pendiente",
+   "dictamen": "aceptar",
+   "motivo": "Verificado en entrega final con marker MATCH. pendiente: descripcion 'Pendiente de especificar' sin vinculo local; no se promueve por nombre. Dictamen previo R4 (pendiente + pista_nombre_o_clasificador_sin_promocion) revisado y confirmado; fuente",
+   "evidencia": [
+    "propuestas/pendientes-muse-r5/defunciones/entrega.json"
+   ]
+  },
+  {
+   "tipo": "decision_significado",
+   "id": "https://example.org/mex-ontologi/definition/12f684e9-f4d5-4714-933d-aa153a812174%2F74",
+   "entrega": "defunciones",
+   "decision_origen": "pendiente",
+   "dictamen": "aceptar",
+   "motivo": "Verificado en entrega final con marker MATCH. pendiente: descripcion 'Pendiente de especificar' sin vinculo local; no se promueve por nombre. Dictamen previo R4 (pendiente + pista_nombre_o_clasificador_sin_promocion) revisado y confirmado; fuente",
+   "evidencia": [
+    "propuestas/pendientes-muse-r5/defunciones/entrega.json"
+   ]
+  },
+  {
+   "tipo": "decision_significado",
+   "id": "https://example.org/mex-ontologi/definition/12f684e9-f4d5-4714-933d-aa153a812174%2F75",
+   "entrega": "defunciones",
+   "decision_origen": "pendiente",
+   "dictamen": "aceptar",
+   "motivo": "Verificado en entrega final con marker MATCH. pendiente: descripcion 'Pendiente de especificar' sin vinculo local; no se promueve por nombre. Dictamen previo R4 (pendiente + pista_nombre_o_clasificador_sin_promocion) revisado y confirmado; fuente",
+   "evidencia": [
+    "propuestas/pendientes-muse-r5/defunciones/entrega.json"
+   ]
+  },
+  {
+   "tipo": "decision_significado",
+   "id": "https://example.org/mex-ontologi/definition/12f684e9-f4d5-4714-933d-aa153a812174%2F76",
+   "entrega": "defunciones",
+   "decision_origen": "pendiente",
+   "dictamen": "aceptar",
+   "motivo": "Verificado en entrega final con marker MATCH. pendiente: descripcion 'Pendiente de especificar', catalogo_declarado='' y sin literal especifico; dictamen previo R4 lote-6 (pendiente) revisado y confirmado con datastore live 2026-10-23. Ejemplo ai",
+   "evidencia": [
+    "propuestas/pendientes-muse-r5/defunciones/entrega.json"
+   ]
+  },
+  {
+   "tipo": "decision_significado",
+   "id": "https://example.org/mex-ontologi/definition/12f684e9-f4d5-4714-933d-aa153a812174%2F77",
+   "entrega": "defunciones",
+   "decision_origen": "pendiente",
+   "dictamen": "aceptar",
+   "motivo": "Verificado en entrega final con marker MATCH. pendiente: descripcion 'Pendiente de especificar', catalogo_declarado='' y sin literal especifico; dictamen previo R4 lote-6 (pendiente) revisado y confirmado con datastore live 2026-10-23. Ejemplo ai",
+   "evidencia": [
+    "propuestas/pendientes-muse-r5/defunciones/entrega.json"
+   ]
+  },
+  {
+   "tipo": "decision_significado",
+   "id": "https://example.org/mex-ontologi/definition/12f684e9-f4d5-4714-933d-aa153a812174%2F78",
+   "entrega": "defunciones",
+   "decision_origen": "pendiente",
+   "dictamen": "aceptar",
+   "motivo": "Verificado en entrega final con marker MATCH. pendiente: descripcion 'Pendiente de especificar', catalogo_declarado='' y sin literal especifico; dictamen previo R4 lote-6 (pendiente) revisado y confirmado con datastore live 2026-10-23. Ejemplo ai",
+   "evidencia": [
+    "propuestas/pendientes-muse-r5/defunciones/entrega.json"
+   ]
+  },
+  {
+   "tipo": "decision_significado",
+   "id": "https://example.org/mex-ontologi/definition/12f684e9-f4d5-4714-933d-aa153a812174%2F79",
+   "entrega": "defunciones",
+   "decision_origen": "pendiente",
+   "dictamen": "aceptar",
+   "motivo": "Verificado en entrega final con marker MATCH. pendiente: descripcion 'Pendiente de especificar', catalogo_declarado='' y sin literal especifico; dictamen previo R4 lote-6 (pendiente) revisado y confirmado con datastore live 2026-10-23. Ejemplo ai",
+   "evidencia": [
+    "propuestas/pendientes-muse-r5/defunciones/entrega.json"
+   ]
+  },
+  {
+   "tipo": "decision_significado",
+   "id": "https://example.org/mex-ontologi/definition/12f684e9-f4d5-4714-933d-aa153a812174%2F80",
+   "entrega": "defunciones",
+   "decision_origen": "pendiente",
+   "dictamen": "aceptar",
+   "motivo": "Verificado en entrega final con marker MATCH. pendiente: descripcion 'Pendiente de especificar', catalogo_declarado='' y sin literal especifico; dictamen previo R4 lote-6 (pendiente) revisado y confirmado con datastore live 2026-10-23. Ejemplo ai",
+   "evidencia": [
+    "propuestas/pendientes-muse-r5/defunciones/entrega.json"
+   ]
+  },
+  {
+   "tipo": "decision_significado",
+   "id": "https://example.org/mex-ontologi/definition/22202305-2d02-4c49-b216-cc98224357f0%2F100",
+   "entrega": "nacimientos",
+   "decision_origen": "pendiente",
+   "dictamen": "aceptar",
+   "motivo": "Verificado en entrega final con marker MATCH. pendiente: descripcion 'Pendiente de especificar' en la fila del diccionario (huella 0488d75a073d... verificada); tipo y ejemplo no definen el significado; no se aprueba por nombre ni por ejemplo. Rev",
+   "evidencia": [
+    "propuestas/pendientes-muse-r5/nacimientos/entrega.json"
+   ]
+  },
+  {
+   "tipo": "decision_significado",
+   "id": "https://example.org/mex-ontologi/definition/22202305-2d02-4c49-b216-cc98224357f0%2F101",
+   "entrega": "nacimientos",
+   "decision_origen": "pendiente",
+   "dictamen": "aceptar",
+   "motivo": "Verificado en entrega final con marker MATCH. pendiente: descripcion 'Pendiente de especificar' en la fila del diccionario (huella 8c3167a1e501... verificada); tipo y ejemplo no definen el significado; no se aprueba por nombre ni por ejemplo. Rev",
+   "evidencia": [
+    "propuestas/pendientes-muse-r5/nacimientos/entrega.json"
+   ]
+  },
+  {
+   "tipo": "decision_significado",
+   "id": "https://example.org/mex-ontologi/definition/22202305-2d02-4c49-b216-cc98224357f0%2F102",
+   "entrega": "nacimientos",
+   "decision_origen": "pendiente",
+   "dictamen": "aceptar",
+   "motivo": "Verificado en entrega final con marker MATCH. pendiente: descripcion 'Pendiente de especificar' en la fila del diccionario (huella 21c7fce4e834... verificada); tipo y ejemplo no definen el significado; no se aprueba por nombre ni por ejemplo. Rev",
+   "evidencia": [
+    "propuestas/pendientes-muse-r5/nacimientos/entrega.json"
+   ]
+  },
+  {
+   "tipo": "decision_significado",
+   "id": "https://example.org/mex-ontologi/definition/22202305-2d02-4c49-b216-cc98224357f0%2F103",
+   "entrega": "nacimientos",
+   "decision_origen": "pendiente",
+   "dictamen": "aceptar",
+   "motivo": "Verificado en entrega final con marker MATCH. pendiente: descripcion 'Pendiente de especificar' en la fila del diccionario (huella 305e3ccb0161... verificada); tipo y ejemplo no definen el significado; no se aprueba por nombre ni por ejemplo. Rev",
+   "evidencia": [
+    "propuestas/pendientes-muse-r5/nacimientos/entrega.json"
+   ]
+  },
+  {
+   "tipo": "decision_significado",
+   "id": "https://example.org/mex-ontologi/definition/22202305-2d02-4c49-b216-cc98224357f0%2F104",
+   "entrega": "nacimientos",
+   "decision_origen": "pendiente",
+   "dictamen": "aceptar",
+   "motivo": "Verificado en entrega final con marker MATCH. pendiente: descripcion 'Pendiente de especificar' en la fila del diccionario (huella bda091e28231... verificada); tipo y ejemplo no definen el significado; no se aprueba por nombre ni por ejemplo. Rev",
+   "evidencia": [
+    "propuestas/pendientes-muse-r5/nacimientos/entrega.json"
+   ]
+  },
+  {
+   "tipo": "decision_significado",
+   "id": "https://example.org/mex-ontologi/definition/22202305-2d02-4c49-b216-cc98224357f0%2F105",
+   "entrega": "nacimientos",
+   "decision_origen": "pendiente",
+   "dictamen": "aceptar",
+   "motivo": "Verificado en entrega final con marker MATCH. pendiente: descripcion 'Pendiente de especificar' en la fila del diccionario (huella c77a7050ed8a... verificada); tipo y ejemplo no definen el significado; no se aprueba por nombre ni por ejemplo. Rev",
+   "evidencia": [
+    "propuestas/pendientes-muse-r5/nacimientos/entrega.json"
+   ]
+  },
+  {
+   "tipo": "decision_significado",
+   "id": "https://example.org/mex-ontologi/definition/22202305-2d02-4c49-b216-cc98224357f0%2F106",
+   "entrega": "nacimientos",
+   "decision_origen": "pendiente",
+   "dictamen": "aceptar",
+   "motivo": "Verificado en entrega final con marker MATCH. pendiente: descripcion 'Pendiente de especificar' en la fila del diccionario (huella f8189968786a... verificada); tipo y ejemplo no definen el significado; no se aprueba por nombre ni por ejemplo. Rev",
+   "evidencia": [
+    "propuestas/pendientes-muse-r5/nacimientos/entrega.json"
+   ]
+  },
+  {
+   "tipo": "decision_significado",
+   "id": "https://example.org/mex-ontologi/definition/22202305-2d02-4c49-b216-cc98224357f0%2F18",
+   "entrega": "nacimientos",
+   "decision_origen": "proponer",
+   "dictamen": "aceptar",
+   "motivo": "Verificado en entrega final con marker MATCH. Descripcion literal 'Indicador textual de si la madre es residente extranjera' con fila completa verificada (Tipo Texto, ejemplo NO, huella 3c0156d2eaf5...); respalda el sentido limitado del concepto ",
+   "evidencia": [
+    "propuestas/pendientes-muse-r5/nacimientos/entrega.json"
+   ]
+  },
+  {
+   "tipo": "decision_significado",
+   "id": "https://example.org/mex-ontologi/definition/22202305-2d02-4c49-b216-cc98224357f0%2F31",
+   "entrega": "nacimientos",
+   "decision_origen": "pendiente",
+   "dictamen": "aceptar",
+   "motivo": "Verificado en entrega final con marker MATCH. pendiente: descripcion 'Pendiente de especificar' en la fila del diccionario (huella 62c0bf687eac... verificada); tipo y ejemplo no definen el significado; no se aprueba por nombre ni por ejemplo. Rev",
+   "evidencia": [
+    "propuestas/pendientes-muse-r5/nacimientos/entrega.json"
+   ]
+  },
+  {
+   "tipo": "decision_significado",
+   "id": "https://example.org/mex-ontologi/definition/22202305-2d02-4c49-b216-cc98224357f0%2F32",
+   "entrega": "nacimientos",
+   "decision_origen": "pendiente",
+   "dictamen": "aceptar",
+   "motivo": "Verificado en entrega final con marker MATCH. pendiente: descripcion 'Pendiente de especificar' en la fila del diccionario (huella e7c4525ef6cf... verificada); tipo y ejemplo no definen el significado; no se aprueba por nombre ni por ejemplo. Rev",
+   "evidencia": [
+    "propuestas/pendientes-muse-r5/nacimientos/entrega.json"
+   ]
+  },
+  {
+   "tipo": "decision_significado",
+   "id": "https://example.org/mex-ontologi/definition/22202305-2d02-4c49-b216-cc98224357f0%2F33",
+   "entrega": "nacimientos",
+   "decision_origen": "pendiente",
+   "dictamen": "aceptar",
+   "motivo": "Verificado en entrega final con marker MATCH. pendiente: descripcion 'Pendiente de especificar' en la fila del diccionario (huella 9c1e7a74998c... verificada); tipo y ejemplo no definen el significado; no se aprueba por nombre ni por ejemplo. Rev",
+   "evidencia": [
+    "propuestas/pendientes-muse-r5/nacimientos/entrega.json"
+   ]
+  },
+  {
+   "tipo": "decision_significado",
+   "id": "https://example.org/mex-ontologi/definition/22202305-2d02-4c49-b216-cc98224357f0%2F34",
+   "entrega": "nacimientos",
+   "decision_origen": "pendiente",
+   "dictamen": "aceptar",
+   "motivo": "Verificado en entrega final con marker MATCH. pendiente: descripcion 'Pendiente de especificar' en la fila del diccionario (huella d4bd97f89757... verificada); tipo y ejemplo no definen el significado; no se aprueba por nombre ni por ejemplo. Rev",
+   "evidencia": [
+    "propuestas/pendientes-muse-r5/nacimientos/entrega.json"
+   ]
+  },
+  {
+   "tipo": "decision_significado",
+   "id": "https://example.org/mex-ontologi/definition/22202305-2d02-4c49-b216-cc98224357f0%2F35",
+   "entrega": "nacimientos",
+   "decision_origen": "pendiente",
+   "dictamen": "aceptar",
+   "motivo": "Verificado en entrega final con marker MATCH. pendiente: descripcion 'Pendiente de especificar' en la fila del diccionario (huella fd83ec861012... verificada); tipo y ejemplo no definen el significado; no se aprueba por nombre ni por ejemplo. Rev",
+   "evidencia": [
+    "propuestas/pendientes-muse-r5/nacimientos/entrega.json"
+   ]
+  },
+  {
+   "tipo": "decision_significado",
+   "id": "https://example.org/mex-ontologi/definition/22202305-2d02-4c49-b216-cc98224357f0%2F37",
+   "entrega": "nacimientos",
+   "decision_origen": "pendiente",
+   "dictamen": "aceptar",
+   "motivo": "Verificado en entrega final con marker MATCH. pendiente: descripcion 'Pendiente de especificar' en la fila del diccionario (huella 14ac2d127fc5... verificada); tipo y ejemplo no definen el significado; no se aprueba por nombre ni por ejemplo. Rev",
+   "evidencia": [
+    "propuestas/pendientes-muse-r5/nacimientos/entrega.json"
+   ]
+  },
+  {
+   "tipo": "decision_significado",
+   "id": "https://example.org/mex-ontologi/definition/22202305-2d02-4c49-b216-cc98224357f0%2F38",
+   "entrega": "nacimientos",
+   "decision_origen": "pendiente",
+   "dictamen": "aceptar",
+   "motivo": "Verificado en entrega final con marker MATCH. pendiente: descripcion 'Pendiente de especificar' en la fila del diccionario (huella 15bbcb6b1edc... verificada); tipo y ejemplo no definen el significado; no se aprueba por nombre ni por ejemplo. Rev",
+   "evidencia": [
+    "propuestas/pendientes-muse-r5/nacimientos/entrega.json"
+   ]
+  },
+  {
+   "tipo": "decision_significado",
+   "id": "https://example.org/mex-ontologi/definition/22202305-2d02-4c49-b216-cc98224357f0%2F39",
+   "entrega": "nacimientos",
+   "decision_origen": "pendiente",
+   "dictamen": "aceptar",
+   "motivo": "Verificado en entrega final con marker MATCH. pendiente: descripcion 'Pendiente de especificar' en la fila del diccionario (huella 093044228380... verificada); tipo y ejemplo no definen el significado; no se aprueba por nombre ni por ejemplo. Rev",
+   "evidencia": [
+    "propuestas/pendientes-muse-r5/nacimientos/entrega.json"
+   ]
+  },
+  {
+   "tipo": "decision_significado",
+   "id": "https://example.org/mex-ontologi/definition/22202305-2d02-4c49-b216-cc98224357f0%2F40",
+   "entrega": "nacimientos",
+   "decision_origen": "pendiente",
+   "dictamen": "aceptar",
+   "motivo": "Verificado en entrega final con marker MATCH. pendiente: descripcion 'Pendiente de especificar' en la fila del diccionario (huella bdba1b01977e... verificada); tipo y ejemplo no definen el significado; no se aprueba por nombre ni por ejemplo. Rev",
+   "evidencia": [
+    "propuestas/pendientes-muse-r5/nacimientos/entrega.json"
+   ]
+  },
+  {
+   "tipo": "decision_significado",
+   "id": "https://example.org/mex-ontologi/definition/22202305-2d02-4c49-b216-cc98224357f0%2F43",
+   "entrega": "nacimientos",
+   "decision_origen": "pendiente",
+   "dictamen": "aceptar",
+   "motivo": "Verificado en entrega final con marker MATCH. pendiente: descripcion 'Pendiente de especificar' en la fila del diccionario (huella a38193f5f7f9... verificada); tipo y ejemplo no definen el significado; no se aprueba por nombre ni por ejemplo. Rev",
+   "evidencia": [
+    "propuestas/pendientes-muse-r5/nacimientos/entrega.json"
+   ]
+  },
+  {
+   "tipo": "decision_significado",
+   "id": "https://example.org/mex-ontologi/definition/22202305-2d02-4c49-b216-cc98224357f0%2F44",
+   "entrega": "nacimientos",
+   "decision_origen": "pendiente",
+   "dictamen": "aceptar",
+   "motivo": "Verificado en entrega final con marker MATCH. pendiente: descripcion 'Pendiente de especificar' en la fila del diccionario (huella b85ad2ff8e7a... verificada); tipo y ejemplo no definen el significado; no se aprueba por nombre ni por ejemplo. Rev",
+   "evidencia": [
+    "propuestas/pendientes-muse-r5/nacimientos/entrega.json"
+   ]
+  },
+  {
+   "tipo": "decision_significado",
+   "id": "https://example.org/mex-ontologi/definition/22202305-2d02-4c49-b216-cc98224357f0%2F45",
+   "entrega": "nacimientos",
+   "decision_origen": "pendiente",
+   "dictamen": "aceptar",
+   "motivo": "Verificado en entrega final con marker MATCH. pendiente: descripcion 'Pendiente de especificar' en la fila del diccionario (huella b161763fd6f8... verificada); tipo y ejemplo no definen el significado; no se aprueba por nombre ni por ejemplo. Rev",
+   "evidencia": [
+    "propuestas/pendientes-muse-r5/nacimientos/entrega.json"
+   ]
+  },
+  {
+   "tipo": "decision_significado",
+   "id": "https://example.org/mex-ontologi/definition/22202305-2d02-4c49-b216-cc98224357f0%2F46",
+   "entrega": "nacimientos",
+   "decision_origen": "pendiente",
+   "dictamen": "aceptar",
+   "motivo": "Verificado en entrega final con marker MATCH. pendiente: descripcion 'Pendiente de especificar' en la fila del diccionario (huella 4c7482453a69... verificada); tipo y ejemplo no definen el significado; no se aprueba por nombre ni por ejemplo. Rev",
+   "evidencia": [
+    "propuestas/pendientes-muse-r5/nacimientos/entrega.json"
+   ]
+  },
+  {
+   "tipo": "decision_significado",
+   "id": "https://example.org/mex-ontologi/definition/22202305-2d02-4c49-b216-cc98224357f0%2F57",
+   "entrega": "nacimientos",
+   "decision_origen": "pendiente",
+   "dictamen": "aceptar",
+   "motivo": "Verificado en entrega final con marker MATCH. pendiente: descripcion 'Pendiente de especificar' en la fila del diccionario (huella fb648dfc6707... verificada); tipo y ejemplo no definen el significado; no se aprueba por nombre ni por ejemplo. Rev",
+   "evidencia": [
+    "propuestas/pendientes-muse-r5/nacimientos/entrega.json"
+   ]
+  },
+  {
+   "tipo": "decision_significado",
+   "id": "https://example.org/mex-ontologi/definition/22202305-2d02-4c49-b216-cc98224357f0%2F58",
+   "entrega": "nacimientos",
+   "decision_origen": "pendiente",
+   "dictamen": "aceptar",
+   "motivo": "Verificado en entrega final con marker MATCH. pendiente: descripcion 'Pendiente de especificar' en la fila del diccionario (huella 8cca9f0576b6... verificada); tipo y ejemplo no definen el significado; no se aprueba por nombre ni por ejemplo. Rev",
+   "evidencia": [
+    "propuestas/pendientes-muse-r5/nacimientos/entrega.json"
+   ]
+  },
+  {
+   "tipo": "decision_significado",
+   "id": "https://example.org/mex-ontologi/definition/22202305-2d02-4c49-b216-cc98224357f0%2F59",
+   "entrega": "nacimientos",
+   "decision_origen": "pendiente",
+   "dictamen": "aceptar",
+   "motivo": "Verificado en entrega final con marker MATCH. pendiente: descripcion 'Pendiente de especificar' en la fila del diccionario (huella dd61c41708d6... verificada); tipo y ejemplo no definen el significado; no se aprueba por nombre ni por ejemplo. Rev",
+   "evidencia": [
+    "propuestas/pendientes-muse-r5/nacimientos/entrega.json"
+   ]
+  },
+  {
+   "tipo": "decision_significado",
+   "id": "https://example.org/mex-ontologi/definition/22202305-2d02-4c49-b216-cc98224357f0%2F60",
+   "entrega": "nacimientos",
+   "decision_origen": "pendiente",
+   "dictamen": "aceptar",
+   "motivo": "Verificado en entrega final con marker MATCH. pendiente: descripcion 'Pendiente de especificar' en la fila del diccionario (huella bc45d3d55cf9... verificada); tipo y ejemplo no definen el significado; no se aprueba por nombre ni por ejemplo. Rev",
+   "evidencia": [
+    "propuestas/pendientes-muse-r5/nacimientos/entrega.json"
+   ]
+  },
+  {
+   "tipo": "decision_significado",
+   "id": "https://example.org/mex-ontologi/definition/22202305-2d02-4c49-b216-cc98224357f0%2F61",
+   "entrega": "nacimientos",
+   "decision_origen": "pendiente",
+   "dictamen": "aceptar",
+   "motivo": "Verificado en entrega final con marker MATCH. pendiente: descripcion 'Pendiente de especificar' en la fila del diccionario (huella 68a7b66c7d98... verificada); tipo y ejemplo no definen el significado; no se aprueba por nombre ni por ejemplo. Rev",
+   "evidencia": [
+    "propuestas/pendientes-muse-r5/nacimientos/entrega.json"
+   ]
+  },
+  {
+   "tipo": "decision_significado",
+   "id": "https://example.org/mex-ontologi/definition/22202305-2d02-4c49-b216-cc98224357f0%2F62",
+   "entrega": "nacimientos",
+   "decision_origen": "pendiente",
+   "dictamen": "aceptar",
+   "motivo": "Verificado en entrega final con marker MATCH. pendiente: descripcion 'Pendiente de especificar' en la fila del diccionario (huella 8d1404d50e5b... verificada); tipo y ejemplo no definen el significado; no se aprueba por nombre ni por ejemplo. Rev",
+   "evidencia": [
+    "propuestas/pendientes-muse-r5/nacimientos/entrega.json"
+   ]
+  },
+  {
+   "tipo": "decision_significado",
+   "id": "https://example.org/mex-ontologi/definition/22202305-2d02-4c49-b216-cc98224357f0%2F63",
+   "entrega": "nacimientos",
+   "decision_origen": "pendiente",
+   "dictamen": "aceptar",
+   "motivo": "Verificado en entrega final con marker MATCH. pendiente: descripcion 'Pendiente de especificar' en la fila del diccionario (huella 1c1c42a9160b... verificada); tipo y ejemplo no definen el significado; no se aprueba por nombre ni por ejemplo. Rev",
+   "evidencia": [
+    "propuestas/pendientes-muse-r5/nacimientos/entrega.json"
+   ]
+  },
+  {
+   "tipo": "decision_significado",
+   "id": "https://example.org/mex-ontologi/definition/22202305-2d02-4c49-b216-cc98224357f0%2F64",
+   "entrega": "nacimientos",
+   "decision_origen": "pendiente",
+   "dictamen": "aceptar",
+   "motivo": "Verificado en entrega final con marker MATCH. pendiente: descripcion 'Pendiente de especificar' en la fila del diccionario (huella 94eb763aae3f... verificada); tipo y ejemplo no definen el significado; no se aprueba por nombre ni por ejemplo. Rev",
+   "evidencia": [
+    "propuestas/pendientes-muse-r5/nacimientos/entrega.json"
+   ]
+  },
+  {
+   "tipo": "decision_significado",
+   "id": "https://example.org/mex-ontologi/definition/22202305-2d02-4c49-b216-cc98224357f0%2F65",
+   "entrega": "nacimientos",
+   "decision_origen": "pendiente",
+   "dictamen": "aceptar",
+   "motivo": "Verificado en entrega final con marker MATCH. pendiente: descripcion 'Pendiente de especificar' en la fila del diccionario (huella 1cb751023a12... verificada); tipo y ejemplo no definen el significado; no se aprueba por nombre ni por ejemplo. Rev",
+   "evidencia": [
+    "propuestas/pendientes-muse-r5/nacimientos/entrega.json"
+   ]
+  },
+  {
+   "tipo": "decision_significado",
+   "id": "https://example.org/mex-ontologi/definition/22202305-2d02-4c49-b216-cc98224357f0%2F66",
+   "entrega": "nacimientos",
+   "decision_origen": "pendiente",
+   "dictamen": "aceptar",
+   "motivo": "Verificado en entrega final con marker MATCH. pendiente: descripcion 'Pendiente de especificar' en la fila del diccionario (huella 27d2b9db3b29... verificada); tipo y ejemplo no definen el significado; no se aprueba por nombre ni por ejemplo. Rev",
+   "evidencia": [
+    "propuestas/pendientes-muse-r5/nacimientos/entrega.json"
+   ]
+  },
+  {
+   "tipo": "decision_significado",
+   "id": "https://example.org/mex-ontologi/definition/22202305-2d02-4c49-b216-cc98224357f0%2F67",
+   "entrega": "nacimientos",
+   "decision_origen": "pendiente",
+   "dictamen": "aceptar",
+   "motivo": "Verificado en entrega final con marker MATCH. pendiente: descripcion 'Pendiente de especificar' en la fila del diccionario (huella 7180af0ba9ef... verificada); tipo y ejemplo no definen el significado; no se aprueba por nombre ni por ejemplo. Rev",
+   "evidencia": [
+    "propuestas/pendientes-muse-r5/nacimientos/entrega.json"
+   ]
+  },
+  {
+   "tipo": "decision_significado",
+   "id": "https://example.org/mex-ontologi/definition/22202305-2d02-4c49-b216-cc98224357f0%2F68",
+   "entrega": "nacimientos",
+   "decision_origen": "pendiente",
+   "dictamen": "aceptar",
+   "motivo": "Verificado en entrega final con marker MATCH. pendiente: descripcion 'Pendiente de especificar' en la fila del diccionario (huella 77a7e92944de... verificada); tipo y ejemplo no definen el significado; no se aprueba por nombre ni por ejemplo. Rev",
+   "evidencia": [
+    "propuestas/pendientes-muse-r5/nacimientos/entrega.json"
+   ]
+  },
+  {
+   "tipo": "decision_significado",
+   "id": "https://example.org/mex-ontologi/definition/22202305-2d02-4c49-b216-cc98224357f0%2F69",
+   "entrega": "nacimientos",
+   "decision_origen": "pendiente",
+   "dictamen": "aceptar",
+   "motivo": "Verificado en entrega final con marker MATCH. pendiente: descripcion 'Pendiente de especificar' en la fila del diccionario (huella b66a776bd99b... verificada); tipo y ejemplo no definen el significado; no se aprueba por nombre ni por ejemplo. Rev",
+   "evidencia": [
+    "propuestas/pendientes-muse-r5/nacimientos/entrega.json"
+   ]
+  },
+  {
+   "tipo": "decision_significado",
+   "id": "https://example.org/mex-ontologi/definition/22202305-2d02-4c49-b216-cc98224357f0%2F70",
+   "entrega": "nacimientos",
+   "decision_origen": "pendiente",
+   "dictamen": "aceptar",
+   "motivo": "Verificado en entrega final con marker MATCH. pendiente: descripcion 'Pendiente de especificar' en la fila del diccionario (huella 256dc8ca620c... verificada); tipo y ejemplo no definen el significado; no se aprueba por nombre ni por ejemplo. Rev",
+   "evidencia": [
+    "propuestas/pendientes-muse-r5/nacimientos/entrega.json"
+   ]
+  },
+  {
+   "tipo": "decision_significado",
+   "id": "https://example.org/mex-ontologi/definition/22202305-2d02-4c49-b216-cc98224357f0%2F71",
+   "entrega": "nacimientos",
+   "decision_origen": "pendiente",
+   "dictamen": "aceptar",
+   "motivo": "Verificado en entrega final con marker MATCH. pendiente: descripcion 'Pendiente de especificar' en la fila del diccionario (huella abcad05c8850... verificada); tipo y ejemplo no definen el significado; no se aprueba por nombre ni por ejemplo. Rev",
+   "evidencia": [
+    "propuestas/pendientes-muse-r5/nacimientos/entrega.json"
+   ]
+  },
+  {
+   "tipo": "decision_significado",
+   "id": "https://example.org/mex-ontologi/definition/22202305-2d02-4c49-b216-cc98224357f0%2F72",
+   "entrega": "nacimientos",
+   "decision_origen": "pendiente",
+   "dictamen": "aceptar",
+   "motivo": "Verificado en entrega final con marker MATCH. pendiente: descripcion 'Pendiente de especificar' en la fila del diccionario (huella ebfe8f35dcd8... verificada); tipo y ejemplo no definen el significado; no se aprueba por nombre ni por ejemplo. Rev",
+   "evidencia": [
+    "propuestas/pendientes-muse-r5/nacimientos/entrega.json"
+   ]
+  },
+  {
+   "tipo": "decision_significado",
+   "id": "https://example.org/mex-ontologi/definition/22202305-2d02-4c49-b216-cc98224357f0%2F73",
+   "entrega": "nacimientos",
+   "decision_origen": "pendiente",
+   "dictamen": "aceptar",
+   "motivo": "Verificado en entrega final con marker MATCH. pendiente: descripcion 'Pendiente de especificar' en la fila del diccionario (huella df1529b004a8... verificada); tipo y ejemplo no definen el significado; no se aprueba por nombre ni por ejemplo. Rev",
+   "evidencia": [
+    "propuestas/pendientes-muse-r5/nacimientos/entrega.json"
+   ]
+  },
+  {
+   "tipo": "decision_significado",
+   "id": "https://example.org/mex-ontologi/definition/22202305-2d02-4c49-b216-cc98224357f0%2F74",
+   "entrega": "nacimientos",
+   "decision_origen": "pendiente",
+   "dictamen": "aceptar",
+   "motivo": "Verificado en entrega final con marker MATCH. pendiente: descripcion 'Pendiente de especificar' en la fila del diccionario (huella 109d0f8a09c2... verificada); tipo y ejemplo no definen el significado; no se aprueba por nombre ni por ejemplo. Rev",
+   "evidencia": [
+    "propuestas/pendientes-muse-r5/nacimientos/entrega.json"
+   ]
+  },
+  {
+   "tipo": "decision_significado",
+   "id": "https://example.org/mex-ontologi/definition/22202305-2d02-4c49-b216-cc98224357f0%2F75",
+   "entrega": "nacimientos",
+   "decision_origen": "pendiente",
+   "dictamen": "aceptar",
+   "motivo": "Verificado en entrega final con marker MATCH. pendiente: descripcion 'Pendiente de especificar' en la fila del diccionario (huella e8dae3f19613... verificada); tipo y ejemplo no definen el significado; no se aprueba por nombre ni por ejemplo. Rev",
+   "evidencia": [
+    "propuestas/pendientes-muse-r5/nacimientos/entrega.json"
+   ]
+  },
+  {
+   "tipo": "decision_significado",
+   "id": "https://example.org/mex-ontologi/definition/22202305-2d02-4c49-b216-cc98224357f0%2F76",
+   "entrega": "nacimientos",
+   "decision_origen": "pendiente",
+   "dictamen": "aceptar",
+   "motivo": "Verificado en entrega final con marker MATCH. pendiente: descripcion 'Pendiente de especificar' en la fila del diccionario (huella 998a3d29cfa9... verificada); tipo y ejemplo no definen el significado; no se aprueba por nombre ni por ejemplo. Rev",
+   "evidencia": [
+    "propuestas/pendientes-muse-r5/nacimientos/entrega.json"
+   ]
+  },
+  {
+   "tipo": "decision_significado",
+   "id": "https://example.org/mex-ontologi/definition/22202305-2d02-4c49-b216-cc98224357f0%2F77",
+   "entrega": "nacimientos",
+   "decision_origen": "pendiente",
+   "dictamen": "aceptar",
+   "motivo": "Verificado en entrega final con marker MATCH. pendiente: descripcion 'Pendiente de especificar' en la fila del diccionario (huella f4c1bedd6497... verificada); tipo y ejemplo no definen el significado; no se aprueba por nombre ni por ejemplo. Rev",
+   "evidencia": [
+    "propuestas/pendientes-muse-r5/nacimientos/entrega.json"
+   ]
+  },
+  {
+   "tipo": "decision_significado",
+   "id": "https://example.org/mex-ontologi/definition/22202305-2d02-4c49-b216-cc98224357f0%2F78",
+   "entrega": "nacimientos",
+   "decision_origen": "pendiente",
+   "dictamen": "aceptar",
+   "motivo": "Verificado en entrega final con marker MATCH. pendiente: descripcion 'Pendiente de especificar' en la fila del diccionario (huella b7f0279e5088... verificada); tipo y ejemplo no definen el significado; no se aprueba por nombre ni por ejemplo. Rev",
+   "evidencia": [
+    "propuestas/pendientes-muse-r5/nacimientos/entrega.json"
+   ]
+  },
+  {
+   "tipo": "decision_significado",
+   "id": "https://example.org/mex-ontologi/definition/22202305-2d02-4c49-b216-cc98224357f0%2F79",
+   "entrega": "nacimientos",
+   "decision_origen": "pendiente",
+   "dictamen": "aceptar",
+   "motivo": "Verificado en entrega final con marker MATCH. pendiente: descripcion 'Pendiente de especificar' en la fila del diccionario (huella 221fff103485... verificada); tipo y ejemplo no definen el significado; no se aprueba por nombre ni por ejemplo. Rev",
+   "evidencia": [
+    "propuestas/pendientes-muse-r5/nacimientos/entrega.json"
+   ]
+  },
+  {
+   "tipo": "decision_significado",
+   "id": "https://example.org/mex-ontologi/definition/22202305-2d02-4c49-b216-cc98224357f0%2F80",
+   "entrega": "nacimientos",
+   "decision_origen": "pendiente",
+   "dictamen": "aceptar",
+   "motivo": "Verificado en entrega final con marker MATCH. pendiente: descripcion 'Pendiente de especificar' en la fila del diccionario (huella 167ceaf4b233... verificada); tipo y ejemplo no definen el significado; no se aprueba por nombre ni por ejemplo. Rev",
+   "evidencia": [
+    "propuestas/pendientes-muse-r5/nacimientos/entrega.json"
+   ]
+  },
+  {
+   "tipo": "decision_significado",
+   "id": "https://example.org/mex-ontologi/definition/22202305-2d02-4c49-b216-cc98224357f0%2F83",
+   "entrega": "nacimientos",
+   "decision_origen": "pendiente",
+   "dictamen": "aceptar",
+   "motivo": "Verificado en entrega final con marker MATCH. pendiente: descripcion 'Pendiente de especificar' en la fila del diccionario (huella 8acb1135cdd9... verificada); tipo y ejemplo no definen el significado; no se aprueba por nombre ni por ejemplo. Rev",
+   "evidencia": [
+    "propuestas/pendientes-muse-r5/nacimientos/entrega.json"
+   ]
+  },
+  {
+   "tipo": "decision_significado",
+   "id": "https://example.org/mex-ontologi/definition/22202305-2d02-4c49-b216-cc98224357f0%2F84",
+   "entrega": "nacimientos",
+   "decision_origen": "pendiente",
+   "dictamen": "aceptar",
+   "motivo": "Verificado en entrega final con marker MATCH. pendiente: descripcion 'Pendiente de especificar' en la fila del diccionario (huella 1991915d59e2... verificada); tipo y ejemplo no definen el significado; no se aprueba por nombre ni por ejemplo. Rev",
+   "evidencia": [
+    "propuestas/pendientes-muse-r5/nacimientos/entrega.json"
+   ]
+  },
+  {
+   "tipo": "decision_significado",
+   "id": "https://example.org/mex-ontologi/definition/22202305-2d02-4c49-b216-cc98224357f0%2F87",
+   "entrega": "nacimientos",
+   "decision_origen": "pendiente",
+   "dictamen": "aceptar",
+   "motivo": "Verificado en entrega final con marker MATCH. pendiente: descripcion 'Pendiente de especificar' en la fila del diccionario (huella 511637fdd52b... verificada); tipo y ejemplo no definen el significado; no se aprueba por nombre ni por ejemplo. Rev",
+   "evidencia": [
+    "propuestas/pendientes-muse-r5/nacimientos/entrega.json"
+   ]
+  },
+  {
+   "tipo": "decision_significado",
+   "id": "https://example.org/mex-ontologi/definition/22202305-2d02-4c49-b216-cc98224357f0%2F88",
+   "entrega": "nacimientos",
+   "decision_origen": "pendiente",
+   "dictamen": "aceptar",
+   "motivo": "Verificado en entrega final con marker MATCH. pendiente: descripcion 'Pendiente de especificar' en la fila del diccionario (huella fad6728687d3... verificada); tipo y ejemplo no definen el significado; no se aprueba por nombre ni por ejemplo. Rev",
+   "evidencia": [
+    "propuestas/pendientes-muse-r5/nacimientos/entrega.json"
+   ]
+  },
+  {
+   "tipo": "decision_significado",
+   "id": "https://example.org/mex-ontologi/definition/22202305-2d02-4c49-b216-cc98224357f0%2F89",
+   "entrega": "nacimientos",
+   "decision_origen": "pendiente",
+   "dictamen": "aceptar",
+   "motivo": "Verificado en entrega final con marker MATCH. pendiente: descripcion 'Pendiente de especificar' en la fila del diccionario (huella eb4257a20d25... verificada); tipo y ejemplo no definen el significado; no se aprueba por nombre ni por ejemplo. Rev",
+   "evidencia": [
+    "propuestas/pendientes-muse-r5/nacimientos/entrega.json"
+   ]
+  },
+  {
+   "tipo": "decision_significado",
+   "id": "https://example.org/mex-ontologi/definition/22202305-2d02-4c49-b216-cc98224357f0%2F90",
+   "entrega": "nacimientos",
+   "decision_origen": "pendiente",
+   "dictamen": "aceptar",
+   "motivo": "Verificado en entrega final con marker MATCH. pendiente: descripcion 'Pendiente de especificar' en la fila del diccionario (huella 8c3fb03e75a7... verificada); tipo y ejemplo no definen el significado; no se aprueba por nombre ni por ejemplo. Rev",
+   "evidencia": [
+    "propuestas/pendientes-muse-r5/nacimientos/entrega.json"
+   ]
+  },
+  {
+   "tipo": "decision_significado",
+   "id": "https://example.org/mex-ontologi/definition/22202305-2d02-4c49-b216-cc98224357f0%2F97",
+   "entrega": "nacimientos",
+   "decision_origen": "pendiente",
+   "dictamen": "aceptar",
+   "motivo": "Verificado en entrega final con marker MATCH. pendiente: descripcion 'Pendiente de especificar' en la fila del diccionario (huella 64c94f6639e0... verificada); tipo y ejemplo no definen el significado; no se aprueba por nombre ni por ejemplo. Rev",
+   "evidencia": [
+    "propuestas/pendientes-muse-r5/nacimientos/entrega.json"
+   ]
+  },
+  {
+   "tipo": "decision_significado",
+   "id": "https://example.org/mex-ontologi/definition/22202305-2d02-4c49-b216-cc98224357f0%2F98",
+   "entrega": "nacimientos",
+   "decision_origen": "pendiente",
+   "dictamen": "aceptar",
+   "motivo": "Verificado en entrega final con marker MATCH. pendiente: descripcion 'Pendiente de especificar' en la fila del diccionario (huella 37610ad8c1e9... verificada); tipo y ejemplo no definen el significado; no se aprueba por nombre ni por ejemplo. Rev",
+   "evidencia": [
+    "propuestas/pendientes-muse-r5/nacimientos/entrega.json"
+   ]
+  },
+  {
+   "tipo": "decision_significado",
+   "id": "https://example.org/mex-ontologi/definition/22202305-2d02-4c49-b216-cc98224357f0%2F99",
+   "entrega": "nacimientos",
+   "decision_origen": "pendiente",
+   "dictamen": "aceptar",
+   "motivo": "Verificado en entrega final con marker MATCH. pendiente: descripcion 'Pendiente de especificar' en la fila del diccionario (huella dc38e62e8b63... verificada); tipo y ejemplo no definen el significado; no se aprueba por nombre ni por ejemplo. Rev",
+   "evidencia": [
+    "propuestas/pendientes-muse-r5/nacimientos/entrega.json"
+   ]
+  },
+  {
+   "tipo": "decision_significado",
+   "id": "https://example.org/mex-ontologi/definition/2334deaa-dd0c-444e-b038-4cc556ad715d%2F11",
+   "entrega": "epidemiologia",
+   "decision_origen": "pendiente",
+   "dictamen": "aceptar",
+   "motivo": "Verificado en entrega final con marker MATCH. 'Acumulados' no fija objeto ni periodo de acumulacion; columna fisica pos 11 observada en hoja SUIVE sin documentar su computo.",
+   "evidencia": [
+    "propuestas/pendientes-muse-r5/epidemiologia/entrega.json"
+   ]
+  },
+  {
+   "tipo": "decision_significado",
+   "id": "https://example.org/mex-ontologi/definition/2334deaa-dd0c-444e-b038-4cc556ad715d%2F13",
+   "entrega": "epidemiologia",
+   "decision_origen": "pendiente",
+   "dictamen": "aceptar",
+   "motivo": "Verificado en entrega final con marker MATCH. Fila contradictoria: nombre de01_a_04 (1 a 4) frente a descripcion literal 'Total de personas en vigilancia entre 1 y 5 anos', que ademas solapa la edad 5 con de05_a_09 ('entre 5 y 9'). Las reglas her",
+   "evidencia": [
+    "propuestas/pendientes-muse-r5/epidemiologia/entrega.json"
+   ]
+  },
+  {
+   "tipo": "decision_significado",
+   "id": "https://example.org/mex-ontologi/definition/2334deaa-dd0c-444e-b038-4cc556ad715d%2F23",
+   "entrega": "epidemiologia",
+   "decision_origen": "pendiente",
+   "dictamen": "aceptar",
+   "motivo": "Verificado en entrega final con marker MATCH. Descripcion 'Pendiente de especificar': sin respaldo explicito vinculado a esta definicion; no se interpreta el nombre. Columna fisica pos 23 observada.",
+   "evidencia": [
+    "propuestas/pendientes-muse-r5/epidemiologia/entrega.json"
+   ]
+  },
+  {
+   "tipo": "decision_significado",
+   "id": "https://example.org/mex-ontologi/definition/2334deaa-dd0c-444e-b038-4cc556ad715d%2F24",
+   "entrega": "epidemiologia",
+   "decision_origen": "pendiente",
+   "dictamen": "aceptar",
+   "motivo": "Verificado en entrega final con marker MATCH. Descripcion 'Pendiente de especificar': sin respaldo explicito vinculado a esta definicion; no se interpreta el sufijo f por simetria con la serie sin sufijo ni por proximidad a totalf ('Total acumula",
+   "evidencia": [
+    "propuestas/pendientes-muse-r5/epidemiologia/entrega.json"
+   ]
+  },
+  {
+   "tipo": "decision_significado",
+   "id": "https://example.org/mex-ontologi/definition/2334deaa-dd0c-444e-b038-4cc556ad715d%2F25",
+   "entrega": "epidemiologia",
+   "decision_origen": "pendiente",
+   "dictamen": "aceptar",
+   "motivo": "Verificado en entrega final con marker MATCH. Descripcion 'Pendiente de especificar': sin respaldo explicito vinculado a esta definicion; no se interpreta el sufijo f por simetria con la serie sin sufijo ni por proximidad a totalf ('Total acumula",
+   "evidencia": [
+    "propuestas/pendientes-muse-r5/epidemiologia/entrega.json"
+   ]
+  },
+  {
+   "tipo": "decision_significado",
+   "id": "https://example.org/mex-ontologi/definition/2334deaa-dd0c-444e-b038-4cc556ad715d%2F26",
+   "entrega": "epidemiologia",
+   "decision_origen": "pendiente",
+   "dictamen": "aceptar",
+   "motivo": "Verificado en entrega final con marker MATCH. Descripcion 'Pendiente de especificar': sin respaldo explicito vinculado a esta definicion; no se interpreta el sufijo f por simetria con la serie sin sufijo ni por proximidad a totalf ('Total acumula",
+   "evidencia": [
+    "propuestas/pendientes-muse-r5/epidemiologia/entrega.json"
+   ]
+  },
+  {
+   "tipo": "decision_significado",
+   "id": "https://example.org/mex-ontologi/definition/2334deaa-dd0c-444e-b038-4cc556ad715d%2F27",
+   "entrega": "epidemiologia",
+   "decision_origen": "pendiente",
+   "dictamen": "aceptar",
+   "motivo": "Verificado en entrega final con marker MATCH. Descripcion 'Pendiente de especificar': sin respaldo explicito vinculado a esta definicion; no se interpreta el sufijo f por simetria con la serie sin sufijo ni por proximidad a totalf ('Total acumula",
+   "evidencia": [
+    "propuestas/pendientes-muse-r5/epidemiologia/entrega.json"
+   ]
+  },
+  {
+   "tipo": "decision_significado",
+   "id": "https://example.org/mex-ontologi/definition/2334deaa-dd0c-444e-b038-4cc556ad715d%2F28",
+   "entrega": "epidemiologia",
+   "decision_origen": "pendiente",
+   "dictamen": "aceptar",
+   "motivo": "Verificado en entrega final con marker MATCH. Descripcion 'Pendiente de especificar': sin respaldo explicito vinculado a esta definicion; no se interpreta el sufijo f por simetria con la serie sin sufijo ni por proximidad a totalf ('Total acumula",
+   "evidencia": [
+    "propuestas/pendientes-muse-r5/epidemiologia/entrega.json"
+   ]
+  },
+  {
+   "tipo": "decision_significado",
+   "id": "https://example.org/mex-ontologi/definition/2334deaa-dd0c-444e-b038-4cc556ad715d%2F29",
+   "entrega": "epidemiologia",
+   "decision_origen": "pendiente",
+   "dictamen": "aceptar",
+   "motivo": "Verificado en entrega final con marker MATCH. Descripcion 'Pendiente de especificar': sin respaldo explicito vinculado a esta definicion; no se interpreta el sufijo f por simetria con la serie sin sufijo ni por proximidad a totalf ('Total acumula",
+   "evidencia": [
+    "propuestas/pendientes-muse-r5/epidemiologia/entrega.json"
+   ]
+  },
+  {
+   "tipo": "decision_significado",
+   "id": "https://example.org/mex-ontologi/definition/2334deaa-dd0c-444e-b038-4cc556ad715d%2F30",
+   "entrega": "epidemiologia",
+   "decision_origen": "pendiente",
+   "dictamen": "aceptar",
+   "motivo": "Verificado en entrega final con marker MATCH. Descripcion 'Pendiente de especificar': sin respaldo explicito vinculado a esta definicion; no se interpreta el sufijo f por simetria con la serie sin sufijo ni por proximidad a totalf ('Total acumula",
+   "evidencia": [
+    "propuestas/pendientes-muse-r5/epidemiologia/entrega.json"
+   ]
+  },
+  {
+   "tipo": "decision_significado",
+   "id": "https://example.org/mex-ontologi/definition/2334deaa-dd0c-444e-b038-4cc556ad715d%2F31",
+   "entrega": "epidemiologia",
+   "decision_origen": "pendiente",
+   "dictamen": "aceptar",
+   "motivo": "Verificado en entrega final con marker MATCH. Descripcion 'Pendiente de especificar': sin respaldo explicito vinculado a esta definicion; no se interpreta el sufijo f por simetria con la serie sin sufijo ni por proximidad a totalf ('Total acumula",
+   "evidencia": [
+    "propuestas/pendientes-muse-r5/epidemiologia/entrega.json"
+   ]
+  },
+  {
+   "tipo": "decision_significado",
+   "id": "https://example.org/mex-ontologi/definition/2334deaa-dd0c-444e-b038-4cc556ad715d%2F32",
+   "entrega": "epidemiologia",
+   "decision_origen": "pendiente",
+   "dictamen": "aceptar",
+   "motivo": "Verificado en entrega final con marker MATCH. Descripcion 'Pendiente de especificar': sin respaldo explicito vinculado a esta definicion; no se interpreta el sufijo f por simetria con la serie sin sufijo ni por proximidad a totalf ('Total acumula",
+   "evidencia": [
+    "propuestas/pendientes-muse-r5/epidemiologia/entrega.json"
+   ]
+  },
+  {
+   "tipo": "decision_significado",
+   "id": "https://example.org/mex-ontologi/definition/2334deaa-dd0c-444e-b038-4cc556ad715d%2F33",
+   "entrega": "epidemiologia",
+   "decision_origen": "pendiente",
+   "dictamen": "aceptar",
+   "motivo": "Verificado en entrega final con marker MATCH. Descripcion 'Pendiente de especificar': sin respaldo explicito vinculado a esta definicion; no se interpreta el sufijo f por simetria con la serie sin sufijo ni por proximidad a totalf ('Total acumula",
+   "evidencia": [
+    "propuestas/pendientes-muse-r5/epidemiologia/entrega.json"
+   ]
+  },
+  {
+   "tipo": "decision_significado",
+   "id": "https://example.org/mex-ontologi/definition/2334deaa-dd0c-444e-b038-4cc556ad715d%2F34",
+   "entrega": "epidemiologia",
+   "decision_origen": "pendiente",
+   "dictamen": "aceptar",
+   "motivo": "Verificado en entrega final con marker MATCH. Descripcion 'Pendiente de especificar': sin respaldo explicito vinculado a esta definicion; no se interpreta el sufijo f por simetria con la serie sin sufijo ni por proximidad a totalf ('Total acumula",
+   "evidencia": [
+    "propuestas/pendientes-muse-r5/epidemiologia/entrega.json"
+   ]
+  },
+  {
+   "tipo": "decision_significado",
+   "id": "https://example.org/mex-ontologi/definition/2334deaa-dd0c-444e-b038-4cc556ad715d%2F35",
+   "entrega": "epidemiologia",
+   "decision_origen": "pendiente",
+   "dictamen": "aceptar",
+   "motivo": "Verificado en entrega final con marker MATCH. Descripcion 'Pendiente de especificar': sin respaldo explicito vinculado a esta definicion; no se interpreta el sufijo f por simetria con la serie sin sufijo ni por proximidad a totalf ('Total acumula",
+   "evidencia": [
+    "propuestas/pendientes-muse-r5/epidemiologia/entrega.json"
+   ]
+  },
+  {
+   "tipo": "decision_significado",
+   "id": "https://example.org/mex-ontologi/definition/2334deaa-dd0c-444e-b038-4cc556ad715d%2F36",
+   "entrega": "epidemiologia",
+   "decision_origen": "pendiente",
+   "dictamen": "aceptar",
+   "motivo": "Verificado en entrega final con marker MATCH. Descripcion 'Pendiente de especificar': sin respaldo explicito vinculado a esta definicion; no se interpretan las siglas (ssa) como institucion ni como objeto contado. Columna fisica pos 36 observada,",
+   "evidencia": [
+    "propuestas/pendientes-muse-r5/epidemiologia/entrega.json"
+   ]
+  },
+  {
+   "tipo": "decision_significado",
+   "id": "https://example.org/mex-ontologi/definition/2334deaa-dd0c-444e-b038-4cc556ad715d%2F37",
+   "entrega": "epidemiologia",
+   "decision_origen": "pendiente",
+   "dictamen": "aceptar",
+   "motivo": "Verificado en entrega final con marker MATCH. Descripcion 'Pendiente de especificar': sin respaldo explicito vinculado a esta definicion; no se interpretan las siglas (imss_ord) como institucion ni como objeto contado. Columna fisica pos 37 obser",
+   "evidencia": [
+    "propuestas/pendientes-muse-r5/epidemiologia/entrega.json"
+   ]
+  },
+  {
+   "tipo": "decision_significado",
+   "id": "https://example.org/mex-ontologi/definition/2334deaa-dd0c-444e-b038-4cc556ad715d%2F38",
+   "entrega": "epidemiologia",
+   "decision_origen": "pendiente",
+   "dictamen": "aceptar",
+   "motivo": "Verificado en entrega final con marker MATCH. Descripcion 'Pendiente de especificar': sin respaldo explicito vinculado a esta definicion; no se interpretan las siglas (issste) como institucion ni como objeto contado. Columna fisica pos 38 observa",
+   "evidencia": [
+    "propuestas/pendientes-muse-r5/epidemiologia/entrega.json"
+   ]
+  },
+  {
+   "tipo": "decision_significado",
+   "id": "https://example.org/mex-ontologi/definition/2334deaa-dd0c-444e-b038-4cc556ad715d%2F39",
+   "entrega": "epidemiologia",
+   "decision_origen": "pendiente",
+   "dictamen": "aceptar",
+   "motivo": "Verificado en entrega final con marker MATCH. Descripcion 'Pendiente de especificar': sin respaldo explicito vinculado a esta definicion; no se interpretan las siglas (otras) como institucion ni como objeto contado. Columna fisica pos 39 observad",
+   "evidencia": [
+    "propuestas/pendientes-muse-r5/epidemiologia/entrega.json"
+   ]
+  },
+  {
+   "tipo": "decision_significado",
+   "id": "https://example.org/mex-ontologi/definition/2334deaa-dd0c-444e-b038-4cc556ad715d%2F40",
+   "entrega": "epidemiologia",
+   "decision_origen": "pendiente",
+   "dictamen": "aceptar",
+   "motivo": "Verificado en entrega final con marker MATCH. Descripcion 'Pendiente de especificar': sin respaldo explicito vinculado a esta definicion; no se interpretan las siglas (imss_sol) como institucion ni como objeto contado. Columna fisica pos 40 obser",
+   "evidencia": [
+    "propuestas/pendientes-muse-r5/epidemiologia/entrega.json"
+   ]
+  },
+  {
+   "tipo": "decision_significado",
+   "id": "https://example.org/mex-ontologi/definition/2334deaa-dd0c-444e-b038-4cc556ad715d%2F41",
+   "entrega": "epidemiologia",
+   "decision_origen": "pendiente",
+   "dictamen": "aceptar",
+   "motivo": "Verificado en entrega final con marker MATCH. Descripcion 'Pendiente de especificar': sin respaldo explicito vinculado a esta definicion; no se interpretan las siglas (d_if) como institucion ni como objeto contado. Columna fisica pos 41 observada",
+   "evidencia": [
+    "propuestas/pendientes-muse-r5/epidemiologia/entrega.json"
+   ]
+  },
+  {
+   "tipo": "decision_significado",
+   "id": "https://example.org/mex-ontologi/definition/2334deaa-dd0c-444e-b038-4cc556ad715d%2F42",
+   "entrega": "epidemiologia",
+   "decision_origen": "pendiente",
+   "dictamen": "aceptar",
+   "motivo": "Verificado en entrega final con marker MATCH. Descripcion 'Pendiente de especificar': sin respaldo explicito vinculado a esta definicion; no se interpretan las siglas (pemex) como institucion ni como objeto contado. Columna fisica pos 42 observad",
+   "evidencia": [
+    "propuestas/pendientes-muse-r5/epidemiologia/entrega.json"
+   ]
+  },
+  {
+   "tipo": "decision_significado",
+   "id": "https://example.org/mex-ontologi/definition/2334deaa-dd0c-444e-b038-4cc556ad715d%2F43",
+   "entrega": "epidemiologia",
+   "decision_origen": "pendiente",
+   "dictamen": "aceptar",
+   "motivo": "Verificado en entrega final con marker MATCH. Descripcion 'Pendiente de especificar': sin respaldo explicito vinculado a esta definicion; no se interpretan las siglas (sedena) como institucion ni como objeto contado. Columna fisica pos 43 observa",
+   "evidencia": [
+    "propuestas/pendientes-muse-r5/epidemiologia/entrega.json"
+   ]
+  },
+  {
+   "tipo": "decision_significado",
+   "id": "https://example.org/mex-ontologi/definition/2334deaa-dd0c-444e-b038-4cc556ad715d%2F44",
+   "entrega": "epidemiologia",
+   "decision_origen": "pendiente",
+   "dictamen": "aceptar",
+   "motivo": "Verificado en entrega final con marker MATCH. Descripcion 'Pendiente de especificar': sin respaldo explicito vinculado a esta definicion; no se interpretan las siglas (sedemar) como institucion ni como objeto contado. Columna fisica pos 44 observ",
+   "evidencia": [
+    "propuestas/pendientes-muse-r5/epidemiologia/entrega.json"
+   ]
+  },
+  {
+   "tipo": "decision_significado",
+   "id": "https://example.org/mex-ontologi/definition/2334deaa-dd0c-444e-b038-4cc556ad715d%2F9",
+   "entrega": "epidemiologia",
+   "decision_origen": "pendiente",
+   "dictamen": "aceptar",
+   "motivo": "Verificado en entrega final con marker MATCH. Descripcion generica 'Clave' sin objeto fijado; el ejemplo sugiere CIE pero inferirlo seria interpretar nombre y ejemplo, no respaldo explicito. Catalogo declarado vacio en las 59 filas. Regla r3a6-00",
+   "evidencia": [
+    "propuestas/pendientes-muse-r5/epidemiologia/entrega.json"
+   ]
+  },
+  {
+   "tipo": "decision_significado",
+   "id": "https://example.org/mex-ontologi/definition/33d0a99e-c721-496f-a05e-07646e9ae42a%2F177",
+   "entrega": "diversos",
+   "decision_origen": "artefacto_documental",
+   "dictamen": "aceptar",
+   "motivo": "Verificado en entrega final con marker MATCH. fila corrupta: repite la cabecera del diccionario como valores; catalogo_declarado des_mpo_res es posicion de columna, no referencia real. Se conserva como artefacto, sin curar; requiere fe de erratas",
+   "evidencia": [
+    "propuestas/pendientes-muse-r5/diversos/entrega.json"
+   ]
+  },
+  {
+   "tipo": "decision_significado",
+   "id": "https://example.org/mex-ontologi/definition/33d0a99e-c721-496f-a05e-07646e9ae42a%2F178",
+   "entrega": "diversos",
+   "decision_origen": "artefacto_documental",
+   "dictamen": "aceptar",
+   "motivo": "Verificado en entrega final con marker MATCH. fila corrupta gemela de la 177 (encabezados como valores, difiere solo en id_cp); artefacto conservado sin curar; requiere fe de erratas del publicador",
+   "evidencia": [
+    "propuestas/pendientes-muse-r5/diversos/entrega.json"
+   ]
+  },
+  {
+   "tipo": "decision_significado",
+   "id": "https://example.org/mex-ontologi/definition/3851f1c3-5045-4703-ba88-93b3d39e0b70%2F13",
+   "entrega": "tic",
+   "decision_origen": "pendiente",
+   "dictamen": "aceptar",
+   "motivo": "Verificado en entrega final con marker MATCH. pendiente: referencia anaforica ('el perfil') sin referente declarado en la propia fila. Confirma el pendiente r4-lote-5. Requiere documento que fije el referente (solicitud tic-web-02).",
+   "evidencia": [
+    "propuestas/pendientes-muse-r5/tic/entrega.json"
+   ]
+  },
+  {
+   "tipo": "decision_significado",
+   "id": "https://example.org/mex-ontologi/definition/3851f1c3-5045-4703-ba88-93b3d39e0b70%2F2",
+   "entrega": "tic",
+   "decision_origen": "proponer",
+   "dictamen": "aceptar",
+   "motivo": "Verificado en entrega final con marker MATCH. proponer con regla nueva r5-tic-002 y concepto vigente sector-dependencia-diagnostico: misma fila en bytes que la aceptada por auditoria-a (huella identica). Revisa y revierte el pendiente r4-lote-5 c",
+   "evidencia": [
+    "propuestas/pendientes-muse-r5/tic/entrega.json"
+   ]
+  },
+  {
+   "tipo": "decision_significado",
+   "id": "https://example.org/mex-ontologi/definition/3851f1c3-5045-4703-ba88-93b3d39e0b70%2F8",
+   "entrega": "tic",
+   "decision_origen": "pendiente",
+   "dictamen": "aceptar",
+   "motivo": "Verificado en entrega final con marker MATCH. pendiente: descripcion tautologica ('Actividades principales:') cuyo ejemplo repite el nombre sin definir que actividades. Confirma el pendiente r4-lote-5 tras relectura. Requiere documento que defina",
+   "evidencia": [
+    "propuestas/pendientes-muse-r5/tic/entrega.json"
+   ]
+  },
+  {
+   "tipo": "decision_significado",
+   "id": "https://example.org/mex-ontologi/definition/3851f1c3-5045-4703-ba88-93b3d39e0b70%2F9",
+   "entrega": "tic",
+   "decision_origen": "pendiente",
+   "dictamen": "aceptar",
+   "motivo": "Verificado en entrega final con marker MATCH. pendiente: pregunta sin sujeto explicito (quien depende de que area); el ejemplo no fija el papel y el diccionario no declara vinculo con P9. Confirma el pendiente r4-lote-5. Requiere cuestionario que",
+   "evidencia": [
+    "propuestas/pendientes-muse-r5/tic/entrega.json"
+   ]
+  },
+  {
+   "tipo": "decision_significado",
+   "id": "https://example.org/mex-ontologi/definition/3b314916-24f7-4c48-bcb5-c5fe112a9123%2F2",
+   "entrega": "tic",
+   "decision_origen": "proponer",
+   "dictamen": "aceptar",
+   "motivo": "Verificado en entrega final con marker MATCH. proponer con regla nueva r5-tic-003 y concepto vigente sector-dependencia-diagnostico: misma fila en bytes que la aceptada por auditoria-a (huella identica). Revisa y revierte el pendiente r4 con esa ",
+   "evidencia": [
+    "propuestas/pendientes-muse-r5/tic/entrega.json"
+   ]
+  },
+  {
+   "tipo": "decision_significado",
+   "id": "https://example.org/mex-ontologi/definition/3f6942e3-a9c5-42c0-a38b-2c7aad2a6c99%2F2",
+   "entrega": "diversos",
+   "decision_origen": "pendiente",
+   "dictamen": "aceptar",
+   "motivo": "Verificado en entrega final con marker MATCH. descripcion insuficiente: 'Trimestre del estrato' no define si es trimestre calendario de denuncia o estrato muestral/operativo; tipo entero y ejemplo 1 sin mapa; sin metodologia ni catalogo. No se pr",
+   "evidencia": [
+    "propuestas/pendientes-muse-r5/diversos/entrega.json"
+   ]
+  },
+  {
+   "tipo": "decision_significado",
+   "id": "https://example.org/mex-ontologi/definition/67156807-2013-4117-9ca9-394aea647127%2F5",
+   "entrega": "diversos",
+   "decision_origen": "pendiente",
+   "dictamen": "aceptar",
+   "motivo": "Verificado en entrega final con marker MATCH. descripcion generica 'Clasificacion' sin objeto declarado; la lista de unidad sugiere pero no declara que clasifique el asentamiento. Insuficiente para concepto nuevo; ronda 3 la dejo fuera con la mis",
+   "evidencia": [
+    "propuestas/pendientes-muse-r5/diversos/entrega.json"
+   ]
+  },
+  {
+   "tipo": "decision_significado",
+   "id": "https://example.org/mex-ontologi/definition/863b9cc8-daeb-4430-b835-6a0ced5abd31%2F7",
+   "entrega": "diversos",
+   "decision_origen": "pendiente",
+   "dictamen": "aceptar",
+   "motivo": "Verificado en entrega final con marker MATCH. descripcion trunca 'Clave de otras': objeto indeterminado (otras oficinas, especies u origenes). Sin ejemplo, unidad ni catalogo que la resuelva. Requiere diccionario corregido o metodologia de pesca",
+   "evidencia": [
+    "propuestas/pendientes-muse-r5/diversos/entrega.json"
+   ]
+  },
+  {
+   "tipo": "decision_significado",
+   "id": "https://example.org/mex-ontologi/definition/863b9cc8-daeb-4430-b835-6a0ced5abd31%2F8",
+   "entrega": "diversos",
+   "decision_origen": "pendiente",
+   "dictamen": "aceptar",
+   "motivo": "Verificado en entrega final con marker MATCH. descripcion trunca gemela de CVOTRAS; mismo objeto indeterminado. Requiere diccionario corregido o metodologia de pesca",
+   "evidencia": [
+    "propuestas/pendientes-muse-r5/diversos/entrega.json"
+   ]
+  },
+  {
+   "tipo": "decision_significado",
+   "id": "https://example.org/mex-ontologi/definition/8c0e76ff-3a86-4b1d-beee-b04bebe7df8d%2F11",
+   "entrega": "matriculas",
+   "decision_origen": "pendiente",
+   "dictamen": "aceptar",
+   "motivo": "Verificado en entrega final con marker MATCH. Descripción vacía, tipo Texto y ejemplo vacío: sin dominio ni valores no se fija si es código, motivo en texto libre o indicador. Sin regla revisada que respalde el significado; no se aprueba por nomb",
+   "evidencia": [
+    "propuestas/pendientes-muse-r5/matriculas/entrega.json"
+   ]
+  },
+  {
+   "tipo": "decision_significado",
+   "id": "https://example.org/mex-ontologi/definition/8c0e76ff-3a86-4b1d-beee-b04bebe7df8d%2F12",
+   "entrega": "matriculas",
+   "decision_origen": "pendiente",
+   "dictamen": "aceptar",
+   "motivo": "Verificado en entrega final con marker MATCH. Descripción vacía; el ejemplo '222 (Reing)' no define qué denota el valor ni a qué ciclo remite 'señalado'. Sin regla revisada que respalde el significado; no se aprueba por nombre.",
+   "evidencia": [
+    "propuestas/pendientes-muse-r5/matriculas/entrega.json"
+   ]
+  },
+  {
+   "tipo": "decision_significado",
+   "id": "https://example.org/mex-ontologi/definition/8c0e76ff-3a86-4b1d-beee-b04bebe7df8d%2F13",
+   "entrega": "matriculas",
+   "decision_origen": "pendiente",
+   "dictamen": "aceptar",
+   "motivo": "Verificado en entrega final con marker MATCH. Propuesta r5mat-001 RETIRADA (bloqueo auditor r5): Descripción vacía ('Pendiente de especificar'). Nombre, tipo y ejemplo no bastan para fijar concepto; no se aprueba por nombre. Sin regla revisada ni",
+   "evidencia": [
+    "propuestas/pendientes-muse-r5/matriculas/entrega.json"
+   ]
+  },
+  {
+   "tipo": "decision_significado",
+   "id": "https://example.org/mex-ontologi/definition/8c0e76ff-3a86-4b1d-beee-b04bebe7df8d%2F14",
+   "entrega": "matriculas",
+   "decision_origen": "pendiente",
+   "dictamen": "aceptar",
+   "motivo": "Verificado en entrega final con marker MATCH. Propuesta r5mat-002 RETIRADA (bloqueo auditor r5): Descripción vacía ('Pendiente de especificar'). Nombre, tipo y ejemplo no bastan para fijar concepto; no se aprueba por nombre. Sin regla revisada ni",
+   "evidencia": [
+    "propuestas/pendientes-muse-r5/matriculas/entrega.json"
+   ]
+  },
+  {
+   "tipo": "decision_significado",
+   "id": "https://example.org/mex-ontologi/definition/8c0e76ff-3a86-4b1d-beee-b04bebe7df8d%2F17",
+   "entrega": "matriculas",
+   "decision_origen": "pendiente",
+   "dictamen": "aceptar",
+   "motivo": "Verificado en entrega final con marker MATCH. Descripción vacía, tipo Texto y ejemplo vacío: no se fija si es indicador Sí/No, fecha, folio o texto. Sin regla revisada que respalde el significado; no se aprueba por nombre.",
+   "evidencia": [
+    "propuestas/pendientes-muse-r5/matriculas/entrega.json"
+   ]
+  },
+  {
+   "tipo": "decision_significado",
+   "id": "https://example.org/mex-ontologi/definition/8c0e76ff-3a86-4b1d-beee-b04bebe7df8d%2F20",
+   "entrega": "matriculas",
+   "decision_origen": "pendiente",
+   "dictamen": "aceptar",
+   "motivo": "Verificado en entrega final con marker MATCH. Propuesta r5mat-003 RETIRADA (bloqueo auditor r5): Descripción trunca sin verbo ('Municipio donde el alumno': función ausente). Nombre, tipo y ejemplo no bastan para fijar concepto; no se aprueba por ",
+   "evidencia": [
+    "propuestas/pendientes-muse-r5/matriculas/entrega.json"
+   ]
+  },
+  {
+   "tipo": "decision_significado",
+   "id": "https://example.org/mex-ontologi/definition/8c0e76ff-3a86-4b1d-beee-b04bebe7df8d%2F25",
+   "entrega": "matriculas",
+   "decision_origen": "pendiente",
+   "dictamen": "aceptar",
+   "motivo": "Verificado en entrega final con marker MATCH. Descripción vacía, tipo Texto y ejemplo vacío: no se fija si es tipo de estímulo, monto, indicador o programa. Sin regla revisada que respalde el significado; no se aprueba por nombre.",
+   "evidencia": [
+    "propuestas/pendientes-muse-r5/matriculas/entrega.json"
+   ]
+  },
+  {
+   "tipo": "decision_significado",
+   "id": "https://example.org/mex-ontologi/definition/8c0e76ff-3a86-4b1d-beee-b04bebe7df8d%2F26",
+   "entrega": "matriculas",
+   "decision_origen": "pendiente",
+   "dictamen": "aceptar",
+   "motivo": "Verificado en entrega final con marker MATCH. Descripción vacía y ejemplo vacío: la faceta 'pertenece' solo consta en el nombre; representación y dominio sin documentar. Sin regla revisada que respalde el significado; no se aprueba por nombre.",
+   "evidencia": [
+    "propuestas/pendientes-muse-r5/matriculas/entrega.json"
+   ]
+  },
+  {
+   "tipo": "decision_significado",
+   "id": "https://example.org/mex-ontologi/definition/8c0e76ff-3a86-4b1d-beee-b04bebe7df8d%2F27",
+   "entrega": "matriculas",
+   "decision_origen": "pendiente",
+   "dictamen": "aceptar",
+   "motivo": "Verificado en entrega final con marker MATCH. Descripción vacía y ejemplo vacío: la faceta 'habla' solo consta en el nombre; sin valores no se fija indicador ni lengua. Sin regla revisada que respalde el significado; no se aprueba por nombre.",
+   "evidencia": [
+    "propuestas/pendientes-muse-r5/matriculas/entrega.json"
+   ]
+  },
+  {
+   "tipo": "decision_significado",
+   "id": "https://example.org/mex-ontologi/definition/8c0e76ff-3a86-4b1d-beee-b04bebe7df8d%2F28",
+   "entrega": "matriculas",
+   "decision_origen": "pendiente",
+   "dictamen": "aceptar",
+   "motivo": "Verificado en entrega final con marker MATCH. Descripción vacía y ejemplo vacío: la faceta solo consta en el nombre; sin valores no se fija indicador ni comunidad. Sin regla revisada que respalde el significado; no se aprueba por nombre.",
+   "evidencia": [
+    "propuestas/pendientes-muse-r5/matriculas/entrega.json"
+   ]
+  },
+  {
+   "tipo": "decision_significado",
+   "id": "https://example.org/mex-ontologi/definition/8c0e76ff-3a86-4b1d-beee-b04bebe7df8d%2F29",
+   "entrega": "matriculas",
+   "decision_origen": "pendiente",
+   "dictamen": "aceptar",
+   "motivo": "Verificado en entrega final con marker MATCH. Descripción vacía y ejemplo vacío: la faceta solo consta en el nombre; no se fija si refiere a pertenencia, habla o ascendencia de los padres. Sin regla revisada que respalde el significado; no se apr",
+   "evidencia": [
+    "propuestas/pendientes-muse-r5/matriculas/entrega.json"
+   ]
+  },
+  {
+   "tipo": "decision_significado",
+   "id": "https://example.org/mex-ontologi/definition/8c0e76ff-3a86-4b1d-beee-b04bebe7df8d%2F35",
+   "entrega": "matriculas",
+   "decision_origen": "pendiente",
+   "dictamen": "aceptar",
+   "motivo": "Verificado en entrega final con marker MATCH. Descripción vacía y ejemplo en blanco: sin dominio no se fija si es área de conocimiento, plantel o texto libre. Sin regla revisada que respalde el significado; no se aprueba por nombre.",
+   "evidencia": [
+    "propuestas/pendientes-muse-r5/matriculas/entrega.json"
+   ]
+  },
+  {
+   "tipo": "decision_significado",
+   "id": "https://example.org/mex-ontologi/definition/8c0e76ff-3a86-4b1d-beee-b04bebe7df8d%2F47",
+   "entrega": "matriculas",
+   "decision_origen": "pendiente",
+   "dictamen": "aceptar",
+   "motivo": "Verificado en entrega final con marker MATCH. Propuesta r5mat-004 RETIRADA (bloqueo auditor r5): Descripción vacía ('Pendiente de especificar'). Nombre, tipo y ejemplo no bastan para fijar concepto; no se aprueba por nombre. Sin regla revisada ni",
+   "evidencia": [
+    "propuestas/pendientes-muse-r5/matriculas/entrega.json"
+   ]
+  },
+  {
+   "tipo": "decision_significado",
+   "id": "https://example.org/mex-ontologi/definition/8c0e76ff-3a86-4b1d-beee-b04bebe7df8d%2F48",
+   "entrega": "matriculas",
+   "decision_origen": "pendiente",
+   "dictamen": "aceptar",
+   "motivo": "Verificado en entrega final con marker MATCH. Propuesta r5mat-005 RETIRADA (bloqueo auditor r5): Descripción vacía ('Pendiente de especificar'). Nombre, tipo y ejemplo no bastan para fijar concepto; no se aprueba por nombre. Sin regla revisada ni",
+   "evidencia": [
+    "propuestas/pendientes-muse-r5/matriculas/entrega.json"
+   ]
+  },
+  {
+   "tipo": "decision_significado",
+   "id": "https://example.org/mex-ontologi/definition/8c0e76ff-3a86-4b1d-beee-b04bebe7df8d%2F49",
+   "entrega": "matriculas",
+   "decision_origen": "pendiente",
+   "dictamen": "aceptar",
+   "motivo": "Verificado en entrega final con marker MATCH. Propuesta r5mat-006 RETIRADA (bloqueo auditor r5): Descripción vacía ('Pendiente de especificar'). Nombre, tipo y ejemplo no bastan para fijar concepto; no se aprueba por nombre. Sin regla revisada ni",
+   "evidencia": [
+    "propuestas/pendientes-muse-r5/matriculas/entrega.json"
+   ]
+  },
+  {
+   "tipo": "decision_significado",
+   "id": "https://example.org/mex-ontologi/definition/8c0e76ff-3a86-4b1d-beee-b04bebe7df8d%2F52",
+   "entrega": "matriculas",
+   "decision_origen": "pendiente",
+   "dictamen": "aceptar",
+   "motivo": "Verificado en entrega final con marker MATCH. Propuesta r5mat-007 RETIRADA (bloqueo auditor r5): Descripción vacía ('Pendiente de especificar'). Nombre, tipo y ejemplo no bastan para fijar concepto; no se aprueba por nombre. Sin regla revisada ni",
+   "evidencia": [
+    "propuestas/pendientes-muse-r5/matriculas/entrega.json"
+   ]
+  },
+  {
+   "tipo": "decision_significado",
+   "id": "https://example.org/mex-ontologi/definition/8c0e76ff-3a86-4b1d-beee-b04bebe7df8d%2F53",
+   "entrega": "matriculas",
+   "decision_origen": "pendiente",
+   "dictamen": "aceptar",
+   "motivo": "Verificado en entrega final con marker MATCH. Propuesta r5mat-008 RETIRADA (bloqueo auditor r5): Descripción vacía ('Pendiente de especificar'). Nombre, tipo y ejemplo no bastan para fijar concepto; no se aprueba por nombre. Sin regla revisada ni",
+   "evidencia": [
+    "propuestas/pendientes-muse-r5/matriculas/entrega.json"
+   ]
+  },
+  {
+   "tipo": "decision_significado",
+   "id": "https://example.org/mex-ontologi/definition/8c0e76ff-3a86-4b1d-beee-b04bebe7df8d%2F54",
+   "entrega": "matriculas",
+   "decision_origen": "pendiente",
+   "dictamen": "aceptar",
+   "motivo": "Verificado en entrega final con marker MATCH. Descripción vacía y ejemplo en blanco con tipo Numérico entero: no se fija indicador, conteo ni clave. Sin regla revisada que respalde el significado; no se aprueba por nombre.",
+   "evidencia": [
+    "propuestas/pendientes-muse-r5/matriculas/entrega.json"
+   ]
+  },
+  {
+   "tipo": "decision_significado",
+   "id": "https://example.org/mex-ontologi/definition/8c0e76ff-3a86-4b1d-beee-b04bebe7df8d%2F58",
+   "entrega": "matriculas",
+   "decision_origen": "pendiente",
+   "dictamen": "aceptar",
+   "motivo": "Verificado en entrega final con marker MATCH. Descripción vacía y ejemplo vacío con tipo Numérico entero: no se fija si es clave de periodo, año o conteo. Sin regla revisada que respalde el significado; no se aprueba por nombre.",
+   "evidencia": [
+    "propuestas/pendientes-muse-r5/matriculas/entrega.json"
+   ]
+  },
+  {
+   "tipo": "decision_significado",
+   "id": "https://example.org/mex-ontologi/definition/8c0e76ff-3a86-4b1d-beee-b04bebe7df8d%2F61",
+   "entrega": "matriculas",
+   "decision_origen": "pendiente",
+   "dictamen": "aceptar",
+   "motivo": "Verificado en entrega final con marker MATCH. Propuesta r5mat-009 RETIRADA (bloqueo auditor r5): Descripción tautológica ('Tipo de baja' repite el nombre; sin sujeto, dominio ni valores). Nombre, tipo y ejemplo no bastan para fijar concepto; no s",
+   "evidencia": [
+    "propuestas/pendientes-muse-r5/matriculas/entrega.json"
+   ]
+  },
+  {
+   "tipo": "decision_significado",
+   "id": "https://example.org/mex-ontologi/definition/8c0e76ff-3a86-4b1d-beee-b04bebe7df8d%2F62",
+   "entrega": "matriculas",
+   "decision_origen": "pendiente",
+   "dictamen": "aceptar",
+   "motivo": "Verificado en entrega final con marker MATCH. Descripción vacía y ejemplo vacío con tipo Texto: no se fija si es indicador, nombre de unidad destino o fecha. Sin regla revisada que respalde el significado; no se aprueba por nombre.",
+   "evidencia": [
+    "propuestas/pendientes-muse-r5/matriculas/entrega.json"
+   ]
+  },
+  {
+   "tipo": "decision_significado",
+   "id": "https://example.org/mex-ontologi/definition/8c0e76ff-3a86-4b1d-beee-b04bebe7df8d%2F63",
+   "entrega": "matriculas",
+   "decision_origen": "pendiente",
+   "dictamen": "aceptar",
+   "motivo": "Verificado en entrega final con marker MATCH. Descripción vacía y ejemplo vacío: la alternativa solo consta en el nombre; sin norma de titulación no se fija su contenido. Sin regla revisada que respalde el significado; no se aprueba por nombre.",
+   "evidencia": [
+    "propuestas/pendientes-muse-r5/matriculas/entrega.json"
+   ]
+  },
+  {
+   "tipo": "decision_significado",
+   "id": "https://example.org/mex-ontologi/definition/8c0e76ff-3a86-4b1d-beee-b04bebe7df8d%2F64",
+   "entrega": "matriculas",
+   "decision_origen": "pendiente",
+   "dictamen": "aceptar",
+   "motivo": "Verificado en entrega final con marker MATCH. Propuesta r5mat-010 RETIRADA (bloqueo auditor r5): Descripción vacía ('Pendiente de especificar'). Nombre, tipo y ejemplo no bastan para fijar concepto; no se aprueba por nombre. Sin regla revisada ni",
+   "evidencia": [
+    "propuestas/pendientes-muse-r5/matriculas/entrega.json"
+   ]
+  },
+  {
+   "tipo": "decision_significado",
+   "id": "https://example.org/mex-ontologi/definition/8c0e76ff-3a86-4b1d-beee-b04bebe7df8d%2F65",
+   "entrega": "matriculas",
+   "decision_origen": "pendiente",
+   "dictamen": "aceptar",
+   "motivo": "Verificado en entrega final con marker MATCH. Descripción vacía y ejemplo vacío: la alternativa solo consta en el nombre; sin norma no se fija su contenido. Sin regla revisada que respalde el significado; no se aprueba por nombre.",
+   "evidencia": [
+    "propuestas/pendientes-muse-r5/matriculas/entrega.json"
+   ]
+  },
+  {
+   "tipo": "decision_significado",
+   "id": "https://example.org/mex-ontologi/definition/8c0e76ff-3a86-4b1d-beee-b04bebe7df8d%2F66",
+   "entrega": "matriculas",
+   "decision_origen": "pendiente",
+   "dictamen": "aceptar",
+   "motivo": "Verificado en entrega final con marker MATCH. Propuesta r5mat-011 RETIRADA (bloqueo auditor r5): Descripción vacía ('Pendiente de especificar'). Nombre, tipo y ejemplo no bastan para fijar concepto; no se aprueba por nombre. Sin regla revisada ni",
+   "evidencia": [
+    "propuestas/pendientes-muse-r5/matriculas/entrega.json"
+   ]
+  },
+  {
+   "tipo": "decision_significado",
+   "id": "https://example.org/mex-ontologi/definition/8c0e76ff-3a86-4b1d-beee-b04bebe7df8d%2F67",
+   "entrega": "matriculas",
+   "decision_origen": "pendiente",
+   "dictamen": "aceptar",
+   "motivo": "Verificado en entrega final con marker MATCH. Propuesta r5mat-012 RETIRADA (bloqueo auditor r5): Descripción vacía ('Pendiente de especificar'). Nombre, tipo y ejemplo no bastan para fijar concepto; no se aprueba por nombre. Sin regla revisada ni",
+   "evidencia": [
+    "propuestas/pendientes-muse-r5/matriculas/entrega.json"
+   ]
+  },
+  {
+   "tipo": "decision_significado",
+   "id": "https://example.org/mex-ontologi/definition/8c0e76ff-3a86-4b1d-beee-b04bebe7df8d%2F68",
+   "entrega": "matriculas",
+   "decision_origen": "pendiente",
+   "dictamen": "aceptar",
+   "motivo": "Verificado en entrega final con marker MATCH. Propuesta r5mat-013 RETIRADA (bloqueo auditor r5): Descripción vacía ('Pendiente de especificar'). Nombre, tipo y ejemplo no bastan para fijar concepto; no se aprueba por nombre. Sin regla revisada ni",
+   "evidencia": [
+    "propuestas/pendientes-muse-r5/matriculas/entrega.json"
+   ]
+  },
+  {
+   "tipo": "decision_significado",
+   "id": "https://example.org/mex-ontologi/definition/8c0e76ff-3a86-4b1d-beee-b04bebe7df8d%2F69",
+   "entrega": "matriculas",
+   "decision_origen": "pendiente",
+   "dictamen": "aceptar",
+   "motivo": "Verificado en entrega final con marker MATCH. Propuesta r5mat-014 RETIRADA (bloqueo auditor r5): Descripción vacía ('Pendiente de especificar'). Nombre, tipo y ejemplo no bastan para fijar concepto; no se aprueba por nombre. Sin regla revisada ni",
+   "evidencia": [
+    "propuestas/pendientes-muse-r5/matriculas/entrega.json"
+   ]
+  },
+  {
+   "tipo": "decision_significado",
+   "id": "https://example.org/mex-ontologi/definition/8c0e76ff-3a86-4b1d-beee-b04bebe7df8d%2F70",
+   "entrega": "matriculas",
+   "decision_origen": "pendiente",
+   "dictamen": "aceptar",
+   "motivo": "Verificado en entrega final con marker MATCH. Propuesta r5mat-015 RETIRADA (bloqueo auditor r5): Descripción vacía ('Pendiente de especificar'). Nombre, tipo y ejemplo no bastan para fijar concepto; no se aprueba por nombre. Sin regla revisada ni",
+   "evidencia": [
+    "propuestas/pendientes-muse-r5/matriculas/entrega.json"
+   ]
+  },
+  {
+   "tipo": "decision_significado",
+   "id": "https://example.org/mex-ontologi/definition/8c0e76ff-3a86-4b1d-beee-b04bebe7df8d%2F8",
+   "entrega": "matriculas",
+   "decision_origen": "pendiente",
+   "dictamen": "aceptar",
+   "motivo": "Verificado en entrega final con marker MATCH. Descripción vacía; el ejemplo '222 (Reing)' parece clave de ciclo con calificador de reingreso pero ningún documento lo define. Sin regla revisada que respalde el significado; no se aprueba por nombre",
+   "evidencia": [
+    "propuestas/pendientes-muse-r5/matriculas/entrega.json"
+   ]
+  },
+  {
+   "tipo": "decision_significado",
+   "id": "https://example.org/mex-ontologi/definition/8f8e3cfb-e551-4a95-b382-4999351c5f29%2F11",
+   "entrega": "tic",
+   "decision_origen": "pendiente",
+   "dictamen": "aceptar",
+   "motivo": "Verificado en entrega final con marker MATCH. pendiente: el Tipo declarado (Booleano Si/No) contradice el ejemplo (lista 'Tecnologia 1, tecnologia 2'); dominio de valores indeterminado. La remision a 'la pregunta anterior' (P10 respaldada) no res",
+   "evidencia": [
+    "propuestas/pendientes-muse-r5/tic/entrega.json"
+   ]
+  },
+  {
+   "tipo": "decision_significado",
+   "id": "https://example.org/mex-ontologi/definition/8f8e3cfb-e551-4a95-b382-4999351c5f29%2F2",
+   "entrega": "tic",
+   "decision_origen": "proponer",
+   "dictamen": "aceptar",
+   "motivo": "Verificado en entrega final con marker MATCH. proponer con regla nueva r5-tic-004 y concepto vigente sector-dependencia-diagnostico: misma fila en bytes que la aceptada por auditoria-a (huella identica). Revisa y revierte el pendiente r4 con esa ",
+   "evidencia": [
+    "propuestas/pendientes-muse-r5/tic/entrega.json"
+   ]
+  },
+  {
+   "tipo": "decision_significado",
+   "id": "https://example.org/mex-ontologi/definition/a4e8bee0-5493-4dec-bbce-0ba1e2fd4c2d%2F22",
+   "entrega": "tic",
+   "decision_origen": "pendiente",
+   "dictamen": "aceptar",
+   "motivo": "Verificado en entrega final con marker MATCH. pendiente: descripcion truncada a mitad de frase en la celda fuente ('...equipos...'); no se infiere el resto. Confirma el pendiente r4-lote-4 tras relectura de la fila exacta. Requiere texto completo",
+   "evidencia": [
+    "propuestas/pendientes-muse-r5/tic/entrega.json"
+   ]
+  },
+  {
+   "tipo": "decision_significado",
+   "id": "https://example.org/mex-ontologi/definition/a4e8bee0-5493-4dec-bbce-0ba1e2fd4c2d%2F36",
+   "entrega": "tic",
+   "decision_origen": "pendiente",
+   "dictamen": "aceptar",
+   "motivo": "Verificado en entrega final con marker MATCH. pendiente: la pregunta pide un conteo ('Cuántos proyectos') pero el dominio declarado acreditable es Si/No con ejemplo 'Si'; no se distingue conteo de existencia. Confirma el pendiente r4-lote-4 tras ",
+   "evidencia": [
+    "propuestas/pendientes-muse-r5/tic/entrega.json"
+   ]
+  },
+  {
+   "tipo": "decision_significado",
+   "id": "https://example.org/mex-ontologi/definition/a4e8bee0-5493-4dec-bbce-0ba1e2fd4c2d%2F39",
+   "entrega": "tic",
+   "decision_origen": "pendiente",
+   "dictamen": "aceptar",
+   "motivo": "Verificado en entrega final con marker MATCH. pendiente: la pregunta pide una manera ('Cómo atiende...') pero el dominio declarado es Si/No con ejemplo 'Si'; el mecanismo no se fija. Confirma el pendiente r4-lote-4. Requiere muestra de valores o ",
+   "evidencia": [
+    "propuestas/pendientes-muse-r5/tic/entrega.json"
+   ]
+  },
+  {
+   "tipo": "decision_significado",
+   "id": "https://example.org/mex-ontologi/definition/a4e8bee0-5493-4dec-bbce-0ba1e2fd4c2d%2F40",
+   "entrega": "tic",
+   "decision_origen": "pendiente",
+   "dictamen": "aceptar",
+   "motivo": "Verificado en entrega final con marker MATCH. pendiente: la pregunta pide un conteo ('Cuantas personas') pero el dominio declarado es Si/No con ejemplo 'Si'; la fila no acredita conteo. Confirma el pendiente r4-lote-4. Requiere muestra de valores",
+   "evidencia": [
+    "propuestas/pendientes-muse-r5/tic/entrega.json"
+   ]
+  },
+  {
+   "tipo": "decision_significado",
+   "id": "https://example.org/mex-ontologi/definition/af14d207-7697-4d52-b99b-46a35a1b76ac%2F13",
+   "entrega": "tic",
+   "decision_origen": "pendiente",
+   "dictamen": "aceptar",
+   "motivo": "Verificado en entrega final con marker MATCH. pendiente: la pregunta pide un tipo pero el ejemplo ('Si') responde existencia; dominio de valores indeterminado. Confirma el pendiente r4-lote-2. Requiere muestra de valores o cuestionario (solicitud",
+   "evidencia": [
+    "propuestas/pendientes-muse-r5/tic/entrega.json"
+   ]
+  },
+  {
+   "tipo": "decision_significado",
+   "id": "https://example.org/mex-ontologi/definition/af14d207-7697-4d52-b99b-46a35a1b76ac%2F2",
+   "entrega": "tic",
+   "decision_origen": "proponer",
+   "dictamen": "aceptar",
+   "motivo": "Verificado en entrega final con marker MATCH. proponer con regla nueva r5-tic-005 y concepto vigente sector-dependencia-diagnostico: misma fila en bytes que la aceptada por auditoria-a (huella identica). Revisa y revierte el pendiente r4-lote-2 c",
+   "evidencia": [
+    "propuestas/pendientes-muse-r5/tic/entrega.json"
+   ]
+  },
+  {
+   "tipo": "decision_significado",
+   "id": "https://example.org/mex-ontologi/definition/af14d207-7697-4d52-b99b-46a35a1b76ac%2F36",
+   "entrega": "tic",
+   "decision_origen": "pendiente",
+   "dictamen": "aceptar",
+   "motivo": "Verificado en entrega final con marker MATCH. pendiente: conteo pedido ('Cuántos proyectos') frente a dominio Si/No con ejemplo 'Si'. Confirma el pendiente r4-lote-2. Requiere muestra de valores de P36 en el recurso b444876c-8681-4503-98ca-06876a",
+   "evidencia": [
+    "propuestas/pendientes-muse-r5/tic/entrega.json"
+   ]
+  },
+  {
+   "tipo": "decision_significado",
+   "id": "https://example.org/mex-ontologi/definition/af14d207-7697-4d52-b99b-46a35a1b76ac%2F39",
+   "entrega": "tic",
+   "decision_origen": "pendiente",
+   "dictamen": "aceptar",
+   "motivo": "Verificado en entrega final con marker MATCH. pendiente: manera pedida ('Cómo atiende...') frente a dominio Si/No con ejemplo 'Si'. Confirma el pendiente r4-lote-2. Requiere muestra de valores o cuestionario (solicitud tic-web-05).",
+   "evidencia": [
+    "propuestas/pendientes-muse-r5/tic/entrega.json"
+   ]
+  },
+  {
+   "tipo": "decision_significado",
+   "id": "https://example.org/mex-ontologi/definition/af14d207-7697-4d52-b99b-46a35a1b76ac%2F40",
+   "entrega": "tic",
+   "decision_origen": "pendiente",
+   "dictamen": "aceptar",
+   "motivo": "Verificado en entrega final con marker MATCH. pendiente: conteo pedido ('Cuantas personas') frente a dominio Si/No con ejemplo 'Si'. Confirma el pendiente r4-lote-2. Requiere muestra de valores o cuestionario (solicitud tic-web-05).",
+   "evidencia": [
+    "propuestas/pendientes-muse-r5/tic/entrega.json"
+   ]
+  },
+  {
+   "tipo": "decision_significado",
+   "id": "https://example.org/mex-ontologi/definition/af14d207-7697-4d52-b99b-46a35a1b76ac%2F8",
+   "entrega": "tic",
+   "decision_origen": "pendiente",
+   "dictamen": "aceptar",
+   "motivo": "Verificado en entrega final con marker MATCH. pendiente: pregunta doble (metodología Y documentación) en una sola variable; no se fija a qué aspecto responde el valor. Confirma el pendiente r4-lote-2 tras relectura. Requiere cuestionario que sepa",
+   "evidencia": [
+    "propuestas/pendientes-muse-r5/tic/entrega.json"
+   ]
+  },
+  {
+   "tipo": "decision_significado",
+   "id": "https://example.org/mex-ontologi/definition/bdbf043f-5d12-4362-bce0-bd4c8ab1e2a1%2F26",
+   "entrega": "tic",
+   "decision_origen": "pendiente",
+   "dictamen": "aceptar",
+   "motivo": "Verificado en entrega final con marker MATCH. pendiente: descripcion vacua ('¿Cuáles?') sin referente en la propia fila; el vinculo con la pregunta filtro no esta declarado en el diccionario. Confirma el pendiente r4-lote-6 tras relectura de veci",
+   "evidencia": [
+    "propuestas/pendientes-muse-r5/tic/entrega.json"
+   ]
+  },
+  {
+   "tipo": "decision_significado",
+   "id": "https://example.org/mex-ontologi/definition/bdbf043f-5d12-4362-bce0-bd4c8ab1e2a1%2F28",
+   "entrega": "tic",
+   "decision_origen": "pendiente",
+   "dictamen": "aceptar",
+   "motivo": "Verificado en entrega final con marker MATCH. pendiente: descripcion vacua ('¿Cuáles?') sin referente propio. Confirma el pendiente r4-lote-6. Requiere cuestionario que vincule P28-P29 (solicitud tic-web-06).",
+   "evidencia": [
+    "propuestas/pendientes-muse-r5/tic/entrega.json"
+   ]
+  },
+  {
+   "tipo": "decision_significado",
+   "id": "https://example.org/mex-ontologi/definition/bdbf043f-5d12-4362-bce0-bd4c8ab1e2a1%2F30",
+   "entrega": "tic",
+   "decision_origen": "pendiente",
+   "dictamen": "aceptar",
+   "motivo": "Verificado en entrega final con marker MATCH. pendiente: descripcion vacua ('¿Cuáles?') sin referente propio. Confirma el pendiente r4-lote-6. Requiere cuestionario que vincule P30-P31 (solicitud tic-web-06).",
+   "evidencia": [
+    "propuestas/pendientes-muse-r5/tic/entrega.json"
+   ]
+  },
+  {
+   "tipo": "decision_significado",
+   "id": "https://example.org/mex-ontologi/definition/bdbf043f-5d12-4362-bce0-bd4c8ab1e2a1%2F32",
+   "entrega": "tic",
+   "decision_origen": "pendiente",
+   "dictamen": "aceptar",
+   "motivo": "Verificado en entrega final con marker MATCH. pendiente: descripcion vacua ('¿Cuáles?4') sin referente propio y con marca '4' sin nota que la explique. Confirma el pendiente r4-lote-6. Requiere cuestionario que vincule P32-P33 y aclare la marca (",
+   "evidencia": [
+    "propuestas/pendientes-muse-r5/tic/entrega.json"
+   ]
+  },
+  {
+   "tipo": "decision_significado",
+   "id": "https://example.org/mex-ontologi/definition/c65eb4e7-a17d-43c7-b08c-05811505edf1%2F7",
+   "entrega": "tic",
+   "decision_origen": "pendiente",
+   "dictamen": "aceptar",
+   "motivo": "Verificado en entrega final con marker MATCH. pendiente: pregunta sin sujeto ('¿Cómo se generan?') incompleta por si sola. Confirma el pendiente r4-lote-4 tras relectura de vecina y ejemplo. Requiere cuestionario que fije el referente (solicitud ",
+   "evidencia": [
+    "propuestas/pendientes-muse-r5/tic/entrega.json"
+   ]
+  },
+  {
+   "tipo": "decision_significado",
+   "id": "https://example.org/mex-ontologi/definition/f3ecd3d2-2156-4251-82e5-13b079471ee9%2F7",
+   "entrega": "tic",
+   "decision_origen": "pendiente",
+   "dictamen": "aceptar",
+   "motivo": "Verificado en entrega final con marker MATCH. pendiente: pregunta sin sujeto, misma situacion que su gemela de Gobernanza. Confirma el pendiente r4-lote-4. Requiere cuestionario que fije el referente (solicitud tic-web-07).",
+   "evidencia": [
+    "propuestas/pendientes-muse-r5/tic/entrega.json"
+   ]
+  },
+  {
+   "tipo": "decision_significado",
+   "id": "https://example.org/mex-ontologi/definition/f89137ba-d82e-44fe-80c7-cc355f09f9f5%2F15",
+   "entrega": "diversos",
+   "decision_origen": "pendiente",
+   "dictamen": "aceptar",
+   "motivo": "Verificado en entrega final con marker MATCH. contradiccion conservada: el nombre indica egresos y la descripcion urgencias. Dictamen previo vigente; no se cura con suposicion. Requiere aclaracion del publicador",
+   "evidencia": [
+    "propuestas/pendientes-muse-r5/diversos/entrega.json"
+   ]
+  }
+ ],
+ "retiros_matriculas_15_15": [
+  "r5mat-001",
+  "r5mat-002",
+  "r5mat-004",
+  "r5mat-005",
+  "r5mat-006",
+  "r5mat-007",
+  "r5mat-008",
+  "r5mat-009",
+  "r5mat-010",
+  "r5mat-011",
+  "r5mat-012",
+  "r5mat-013",
+  "r5mat-014",
+  "r5mat-015",
+  "r5mat-003"
+ ],
+ "adjudicacion_h1_h10_r5": "H-v5: sin contradicciones internas en las 8 reglas aceptadas; retiros 15/15 verificados en entrega final con markers MATCH.",
+ "fuentes_restantes": "tic 3 + nacimientos 5 + defunciones 5 + epidemiologia 8 + matriculas 7 + diversos 5 fuentes con URL/localizador/sha/aplicabilidad verificadas; solicitudes web especificas; catalogos-web atiende nuevas.",
+ "conteos": {
+  "reglas": 23,
+  "aceptar": 8,
+  "rechazar_retiro": 15,
+  "decisiones_179": 179,
+  "presas_aparte": 2,
+  "catalogos_aparte": 17
+ }
+}

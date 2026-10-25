@@ -1,0 +1,317 @@
+{
+ "alcance": "32/32 IDs del grupo salud-defunciones; sin dar por resuelto ningun vinculo",
+ "conclusion": "La via alternativa es legitima pero NO acredita el vinculo en ningun ID: el prong 1 (sistema+periodo) se sostiene y fija el marco temporal, pero el prong 2 (uso formal inequivoco por codigos/posicion) falla en los 32 por evidencia primaria: el manual no publica codebook numerico para estas variables, usa serie-9 para desconocido frente a serie-8 local, no trae tabla pregunta<->columna, y cubre DOS certificados (fetal+general) por lo que sistema+periodo solo no desambigua. Veredictos tras correccion de auditoria: 1 incompatible formal (n=2, clave numerica sin counterpart), resto entre ambiguo y compatible-tematica por falta de vinculo, incluida edicion CIE no documentada (n=15/16) y literal NO APLICA sin codebook (n=14). Lo que falta es mas preciso que antes: codebook del publicador (o nota de equivalencia formato<->columna) + edicion aplicable por fila. Nada se promueve.",
+ "criterio_probatorio": "Via alternativa: (prong 1) mismo sistema + mismo periodo, y (prong 2) uso formal inequivoco de la variable probado por ID con codigos y/o posicion explicita del manual, nunca alias por parecido de nombre.",
+ "limites": [
+  "Extracto textual (pypdf); pp20-21 y 62-63 (formatos frente/reverso) son imagenes sin texto extraible (86-148 caracteres): si numeran opciones 1-9 de preg 19/9 no es verificable aqui; aun asi faltaria el codebook formato<->columna local.",
+  "Conteos del manual verificados en extracto: 'Sonora' 0 (ya no usado como criterio), '88'/'997'/'9997' 0, preguntas 'jurisdiccion' 0, pregunta titulada 'intencion' 0.",
+  "No se reabren lineas R6/R5 agotadas; solo se somete a prueba la via alternativa con el manual ya preservado (SHA 698ee48a...)."
+ ],
+ "prong1_sistema_periodo": {
+  "conclusion_prong1": "ACREDITADO como marco (necesario, no suficiente).",
+  "hechos": [
+   "Sistema: el manual cubre el SEED en sus dos certificados (Defuncion general pp24-61, Muerte Fetal pp66-98); el conjunto local es el SEED (F7: titulo SEED, 80 variables).",
+   "Periodo: Modelo 2022 con tabla de vigencia 2022-2026 e impresion 2022 = Modelo 2022 (p17); recurso local 2022-01-01 a 2022-09-22 (F7). El periodo del recurso cae dentro de la vigencia del modelo.",
+   "Caveat critico: el manual cubre DOS certificados, asi que sistema+periodo solo NO desambigua fetal vs general (12 IDs ambiguos); sin prong 2 no fija sentido."
+  ]
+ },
+ "prong2_uso_formal_por_id": {
+  "conclusion_prong2": "FALLA en 32/32: ningun ID muestra correspondencia formal de codigos o posicion.",
+  "evidencia_transversal": [
+   "El manual marca con X o captura texto libre; ninguna de las 32 variables tiene codigo numerico publicado (opciones citadas: 10/11/12/99 en preg 19/9; 1-5 en 28.1; 1-4 en 37/36-fetal; Si/No/Se ignora sin numeros).",
+   "Convencion de desconocido del manual = serie-9 ('nueves', 99, 9999, XXXX999999XXXXXX99); ejemplos locales usan serie-8 (8, 88, 997, 9997): incompatibilidad formal, no correspondencia.",
+   "Sin tabla pregunta-manual<->columna-local en el manual ni en el package (version=null, fuentes_extras=''); posiciones inconmensurables (filas locales 17-80 vs preguntas 2-42 en dos certificados de 45+42; orden local por pares codigo+D).",
+   "Ocupacion (preg 14) es texto libre sin claves: CLAVEOCUPACIONHABITUAL no tiene counterpart formal. CIE (preg 26/30): el manual documenta dejar en blanco al certificante y cita ed. 1995, pero no documenta la edicion aplicable a los datos 2022 ni tabla/codebook que vincule U071: falta de documentacion, no incompatibilidad."
+  ]
+ },
+ "tabla_por_id": [
+  {
+   "ambito": "fetal+general",
+   "codigo_manual": "sin codigo (semanas; X/texto)",
+   "ejemplo_local": "(vacio)",
+   "n": 1,
+   "posicion": "fila 17 vs preg 2 / 10.2",
+   "resultado": "sin-codigo-manual + ambito-doble",
+   "variable": "EDADGESTACIONAL"
+  },
+  {
+   "ambito": "general",
+   "codigo_manual": "sin codigo (texto libre, sin claves)",
+   "ejemplo_local": "4",
+   "n": 2,
+   "posicion": "fila 30 vs preg 14",
+   "resultado": "sin-codigo-manual (numerico sin counterpart)",
+   "variable": "CLAVEOCUPACIONHABITUAL"
+  },
+  {
+   "ambito": "general",
+   "codigo_manual": "sin catalogo cerrado de literales",
+   "ejemplo_local": "NO OCUPADO, JUBILADO O PENSIONADO",
+   "n": 3,
+   "posicion": "fila 31 vs preg 14",
+   "resultado": "sin-codigo-manual (alias por nombre: insuficiente)",
+   "variable": "CLAVEOCUPACIONHABITUALD"
+  },
+  {
+   "ambito": "fetal+general",
+   "codigo_manual": "Si/No/Se ignora sin numeros",
+   "ejemplo_local": "2",
+   "n": 4,
+   "posicion": "fila 32 vs 14.1 / 31.1-fetal",
+   "resultado": "sin-codigo-manual + ambito-doble",
+   "variable": "TRABAJAACTUALMENTE"
+  },
+  {
+   "ambito": "fetal+general",
+   "codigo_manual": "opcion 'No' sin codigo",
+   "ejemplo_local": "NO",
+   "n": 5,
+   "posicion": "fila 33 vs 14.1 / 31.1-fetal",
+   "resultado": "sin-codigo-manual + ambito-doble",
+   "variable": "TRABAJAACTUALMENTED"
+  },
+  {
+   "ambito": "fetal+general",
+   "codigo_manual": "opciones sin numeros",
+   "ejemplo_local": "2",
+   "n": 6,
+   "posicion": "fila 34 vs preg 15 / 32-fetal",
+   "resultado": "sin-codigo-manual + ambito-doble",
+   "variable": "AFILIACION"
+  },
+  {
+   "ambito": "fetal+general",
+   "codigo_manual": "instituciones sin catalogo enumerado",
+   "ejemplo_local": "IMSS",
+   "n": 7,
+   "posicion": "fila 35 vs preg 15 / 32-fetal",
+   "resultado": "sin-codigo-manual + ambito-doble",
+   "variable": "AFILIACIOND"
+  },
+  {
+   "ambito": "fetal+general",
+   "codigo_manual": "solo 10/11/12/99 citados; 1-9 fuera de extracto (imagen pp20-21)",
+   "ejemplo_local": "3",
+   "n": 8,
+   "posicion": "fila 36 vs preg 19 / 9-fetal",
+   "resultado": "sin-codigo-verificable + ambito-doble",
+   "variable": "SITIODEFUNCION"
+  },
+  {
+   "ambito": "general (+fetal)",
+   "codigo_manual": "sitio (unidad/via/hogar), no institucion",
+   "ejemplo_local": "IMSS",
+   "n": 9,
+   "posicion": "fila 37 vs preg 19 / 9-fetal",
+   "resultado": "sin-codigo-manual + ambito-doble",
+   "variable": "SITIODEFUNCIOND"
+  },
+  {
+   "ambito": "fetal+general",
+   "codigo_manual": "sin patron de formato publicado",
+   "ejemplo_local": "SRIMS000915",
+   "n": 10,
+   "posicion": "fila 38 vs 19.2 / 9.2-fetal",
+   "resultado": "sin-codigo-manual + ambito-doble",
+   "variable": "CLUES"
+  },
+  {
+   "ambito": "general",
+   "codigo_manual": "Si/No/Se ignora sin numeros",
+   "ejemplo_local": "2",
+   "n": 11,
+   "posicion": "fila 53 vs preg 24",
+   "resultado": "sin-codigo-manual",
+   "variable": "MUERTEACCIDENTALVIOLENTA"
+  },
+  {
+   "ambito": "general",
+   "codigo_manual": "opcion 'No' sin codigo",
+   "ejemplo_local": "NO",
+   "n": 12,
+   "posicion": "fila 54 vs preg 24",
+   "resultado": "sin-codigo-manual",
+   "variable": "MUERTEACCIDENTALVIOLENTAD"
+  },
+  {
+   "ambito": "bloque 31-36",
+   "codigo_manual": "categorias sin numeros ni titulo 'intencion'",
+   "ejemplo_local": "8",
+   "n": 13,
+   "posicion": "fila 55 vs preg 25 o 35",
+   "resultado": "sin-codigo-manual + sin-pregunta-literal",
+   "variable": "INTENCIONEVENTO"
+  },
+  {
+   "ambito": "bloque 31-36",
+   "codigo_manual": "categorias sin numeros; literal sin codebook que lo valide",
+   "ejemplo_local": "NO APLICA",
+   "n": 14,
+   "posicion": "fila 56 vs preg 25 o 35",
+   "resultado": "compatible-tematica (falta-vinculo; ausencia del literal no prueba incompatibilidad)",
+   "variable": "INTENCIONEVENTOD"
+  },
+  {
+   "ambito": "general",
+   "codigo_manual": "blanco normativo al certificante + ed.1995 citada; edicion aplicable a 2022 no documentada",
+   "ejemplo_local": "U071",
+   "n": 15,
+   "posicion": "fila 57 vs preg 26/30",
+   "resultado": "ambiguo-edicion (falta-vinculo; U071 sin tabla/codebook que lo vincule)",
+   "variable": "CIECAUSABASICA"
+  },
+  {
+   "ambito": "general",
+   "codigo_manual": "descripcion de codigo de emergencia 2020; edicion aplicable no declarada",
+   "ejemplo_local": "COVID-19, VIRUS IDENTIFICADO",
+   "n": 16,
+   "posicion": "fila 58 vs preg 26/30",
+   "resultado": "compatible-tematica (falta-vinculo; sin posterioridad como prueba)",
+   "variable": "CIECAUSABASICAD"
+  },
+  {
+   "ambito": "general",
+   "codigo_manual": "opciones 1-5/1-4 sin codigo 8",
+   "ejemplo_local": "8",
+   "n": 17,
+   "posicion": "fila 63 vs preg 28.2/28.3",
+   "resultado": "sin-codigo-manual (8 no figura)",
+   "variable": "CAUSAPROPIAEMBARAZO"
+  },
+  {
+   "ambito": "general",
+   "codigo_manual": "literal ausente (opciones 1-5; Si/No/Se ignora)",
+   "ejemplo_local": "NO APLICA",
+   "n": 18,
+   "posicion": "fila 64 vs preg 28.2/28.3",
+   "resultado": "sin-codigo-manual",
+   "variable": "CAUSAPROPIAEMBARAZOD"
+  },
+  {
+   "ambito": "general (lesion)",
+   "codigo_manual": "sin codigo 88 (serie-8 vs serie-9 manual)",
+   "ejemplo_local": "88",
+   "n": 19,
+   "posicion": "fila 67 vs preg 32",
+   "resultado": "sin-codigo-manual + sentinela-incompatible",
+   "variable": "SITIOOCURRENCIALESION"
+  },
+  {
+   "ambito": "general (lesion)",
+   "codigo_manual": "literal ausente",
+   "ejemplo_local": "NO APLICA",
+   "n": 20,
+   "posicion": "fila 68 vs preg 32",
+   "resultado": "sin-codigo-manual",
+   "variable": "SITIOOCURRENCIALESIOND"
+  },
+  {
+   "ambito": "general (agresor)",
+   "codigo_manual": "texto libre ('ninguno'/'Se ignora', sin codigos)",
+   "ejemplo_local": "NO APLICA",
+   "n": 21,
+   "posicion": "fila 69 vs preg 34",
+   "resultado": "sin-codigo-manual (literal distinto)",
+   "variable": "PARENTESCOAGRESORD"
+  },
+  {
+   "ambito": "general (lesion)",
+   "codigo_manual": "sin codigo 88 (serie-8 vs serie-9)",
+   "ejemplo_local": "88",
+   "n": 22,
+   "posicion": "fila 70 vs preg 36.10",
+   "resultado": "sin-codigo-manual + sentinela-incompatible",
+   "variable": "ENTIDADOCURRENCIA"
+  },
+  {
+   "ambito": "general (lesion)",
+   "codigo_manual": "nombres o 'Se ignora', sin codigo",
+   "ejemplo_local": "NO APLICA",
+   "n": 23,
+   "posicion": "fila 71 vs preg 36.10",
+   "resultado": "sin-codigo-manual",
+   "variable": "ENTIDADOCURRENCIAD"
+  },
+  {
+   "ambito": "general (lesion)",
+   "codigo_manual": "sin codigo 997",
+   "ejemplo_local": "997",
+   "n": 24,
+   "posicion": "fila 72 vs preg 36.9",
+   "resultado": "sin-codigo-manual + sentinela-incompatible",
+   "variable": "MUNICIPIOOCURRENCIA"
+  },
+  {
+   "ambito": "general (lesion)",
+   "codigo_manual": "nombres o 'Se ignora', sin codigo",
+   "ejemplo_local": "NO APLICA",
+   "n": 25,
+   "posicion": "fila 73 vs preg 36.9",
+   "resultado": "sin-codigo-manual",
+   "variable": "MUNICIPIOOCURRENCIAD"
+  },
+  {
+   "ambito": "general (lesion)",
+   "codigo_manual": "sin codigo 9997",
+   "ejemplo_local": "9997",
+   "n": 26,
+   "posicion": "fila 74 vs preg 36.8",
+   "resultado": "sin-codigo-manual + sentinela-incompatible",
+   "variable": "LOCALIDADOCURRENCIA"
+  },
+  {
+   "ambito": "general (lesion)",
+   "codigo_manual": "nombres o 'Se ignora', sin codigo",
+   "ejemplo_local": "NO APLICA",
+   "n": 27,
+   "posicion": "fila 75 vs preg 36.8",
+   "resultado": "sin-codigo-manual",
+   "variable": "LOCALIDADOCURRENCIAD"
+  },
+  {
+   "ambito": "fetal+general",
+   "codigo_manual": "opciones 1-4+ no enumeradas (solo ejemplos + opc 4)",
+   "ejemplo_local": "3",
+   "n": 28,
+   "posicion": "fila 76 vs preg 37 / 36-fetal",
+   "resultado": "sin-codigo-verificable + ambito-doble",
+   "variable": "CERTIFICADOPOR"
+  },
+  {
+   "ambito": "fetal+general",
+   "codigo_manual": "literal ausente",
+   "ejemplo_local": "OTRO MÉDICO",
+   "n": 29,
+   "posicion": "fila 77 vs preg 37 / 36-fetal",
+   "resultado": "sin-codigo-manual + ambito-doble",
+   "variable": "CERTIFICADOPORD"
+  },
+  {
+   "ambito": "fetal+general",
+   "codigo_manual": "solo fecha DD/MM/AAAA (local trae hora)",
+   "ejemplo_local": "1/6/2022 0:00",
+   "n": 30,
+   "posicion": "fila 78 vs preg 42 / 42-fetal",
+   "resultado": "formato-incompatible + ambito-doble",
+   "variable": "FECHACERTIFICACION"
+  },
+  {
+   "ambito": "ninguno",
+   "codigo_manual": "pregunta inexistente",
+   "ejemplo_local": "6",
+   "n": 31,
+   "posicion": "fila 79 vs ninguna",
+   "resultado": "pregunta-ausente",
+   "variable": "JURISDICCION_CLUES"
+  },
+  {
+   "ambito": "ninguno",
+   "codigo_manual": "pregunta inexistente",
+   "ejemplo_local": "SAN LUIS RIO COLORADO",
+   "n": 32,
+   "posicion": "fila 80 vs ninguna",
+   "resultado": "pregunta-ausente",
+   "variable": "JURISDICCION_CLUESD"
+  }
+ ]
+}

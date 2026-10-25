@@ -1,0 +1,8 @@
+PREFIX mex: <https://example.org/mex-ontologi/vocab/>
+# Q3: pares exploratorio_ejecutado (debe ser exactamente 1: Matrimonios-Divorcios)
+SELECT ?e ?a ?b
+WHERE {
+  ?e a mex:EvaluacionCruce ;
+     mex:estadoOportunidad "exploratorio_ejecutado" ;
+     mex:conjuntoA ?a ; mex:conjuntoB ?b .
+}

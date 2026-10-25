@@ -1,0 +1,114 @@
+# Controles negativos: cada nodo ex:n-* debe producir exactamente una violacion,
+# en la forma y con el focus_node declarados en fixtures/esperado.json.
+@prefix mex: <https://example.org/mex-ontologi/vocab/> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+@prefix ex: <https://example.org/mex-ontologi/prueba-s-shacl/v001/> .
+
+# Variables de apoyo que cumplen, para aislar la violacion de R5.
+ex:vr1 a mex:VariableDocumentada ;
+    mex:estadoSemantico "respaldada_por_definicion" ;
+    mex:significadoDocumentado ex:concepto-documentado .
+
+ex:vc1 a mex:VariableDocumentada ;
+    mex:estadoSemantico "candidata_sin_definicion_suficiente" ;
+    mex:significadoCandidato ex:concepto-candidato .
+
+ex:vf1 a mex:VariableDocumentada ;
+    mex:estadoSemantico "fuera_del_nucleo_actual" .
+
+ex:definicion-ok a mex:DefinicionVariable .
+ex:definicion-sin-tipo a <https://example.org/mex-ontologi/definition/sin-tipo> .
+ex:no-es-variable a mex:ConceptoCompartido .
+
+# R1: respaldada sin significadoDocumentado.
+ex:n-r1 a mex:VariableDocumentada ;
+    mex:estadoSemantico "respaldada_por_definicion" .
+
+# R2: respaldada con significadoCandidato.
+ex:n-r2 a mex:VariableDocumentada ;
+    mex:estadoSemantico "respaldada_por_definicion" ;
+    mex:significadoDocumentado ex:concepto-documentado ;
+    mex:significadoCandidato ex:concepto-candidato .
+
+# R3: candidata sin significadoCandidato.
+ex:n-r3 a mex:VariableDocumentada ;
+    mex:estadoSemantico "candidata_sin_definicion_suficiente" .
+
+# R4: candidata con significadoDocumentado.
+ex:n-r4 a mex:VariableDocumentada ;
+    mex:estadoSemantico "candidata_sin_definicion_suficiente" ;
+    mex:significadoCandidato ex:concepto-candidato ;
+    mex:significadoDocumentado ex:concepto-documentado .
+
+# R5: documental_revisada hacia candidata, hacia fuera y sin destino.
+ex:n-r5a a mex:CorrespondenciaSemantica ;
+    mex:estadoCorrespondencia "documental_revisada" ;
+    mex:variableDestino ex:vc1 .
+
+ex:n-r5b a mex:CorrespondenciaSemantica ;
+    mex:estadoCorrespondencia "documental_revisada" ;
+    mex:variableDestino ex:vf1 .
+
+ex:n-r5c a mex:CorrespondenciaSemantica ;
+    mex:estadoCorrespondencia "documental_revisada" .
+
+# R6a: sin variableDocumentada.
+ex:n-r6a a mex:UnidadDeclarada ;
+    mex:definicionFuente ex:definicion-ok ;
+    mex:unidadLiteral "Milímetros" ;
+    prov:wasDerivedFrom ex:evidencia-1 .
+
+# R6b: dos unidadQudt.
+ex:n-r6b a mex:UnidadDeclarada ;
+    mex:variableDocumentada ex:vr1 ;
+    mex:definicionFuente ex:definicion-ok ;
+    mex:unidadLiteral "Milímetros" ;
+    mex:unidadQudt <http://qudt.org/vocab/unit/MilliM> ;
+    mex:unidadQudt <http://qudt.org/vocab/unit/M> ;
+    prov:wasDerivedFrom ex:evidencia-1 .
+
+# R6c: unidadQudt literal.
+ex:n-r6c a mex:UnidadDeclarada ;
+    mex:variableDocumentada ex:vr1 ;
+    mex:definicionFuente ex:definicion-ok ;
+    mex:unidadLiteral "Milímetros" ;
+    mex:unidadQudt "MilliM" ;
+    prov:wasDerivedFrom ex:evidencia-1 .
+
+# R6d: sin unidadLiteral.
+ex:n-r6d a mex:UnidadDeclarada ;
+    mex:variableDocumentada ex:vr1 ;
+    mex:definicionFuente ex:definicion-ok ;
+    mex:unidadQudt <http://qudt.org/vocab/unit/MilliM> ;
+    prov:wasDerivedFrom ex:evidencia-1 .
+
+# R6e: sin procedencia.
+ex:n-r6e a mex:UnidadDeclarada ;
+    mex:variableDocumentada ex:vr1 ;
+    mex:definicionFuente ex:definicion-ok ;
+    mex:unidadLiteral "Milímetros" .
+
+# R6f: variableDocumentada que no es VariableDocumentada.
+ex:n-r6f a mex:UnidadDeclarada ;
+    mex:variableDocumentada ex:no-es-variable ;
+    mex:definicionFuente ex:definicion-ok ;
+    mex:unidadLiteral "Milímetros" ;
+    prov:wasDerivedFrom ex:evidencia-1 .
+
+# R6g: definicionFuente IRI sin clase DefinicionVariable.
+ex:n-r6g a mex:UnidadDeclarada ;
+    mex:variableDocumentada ex:vr1 ;
+    mex:definicionFuente ex:definicion-sin-tipo ;
+    mex:unidadLiteral "Milímetros" ;
+    prov:wasDerivedFrom ex:evidencia-1 .
+
+# R6h: dos variableDocumentada (propiedad funcional).
+ex:n-r6h a mex:UnidadDeclarada ;
+    mex:variableDocumentada ex:vr1 ;
+    mex:variableDocumentada ex:vc1 ;
+    mex:definicionFuente ex:definicion-ok ;
+    mex:unidadLiteral "Milímetros" ;
+    prov:wasDerivedFrom ex:evidencia-1 .
+
+ex:concepto-documentado a mex:ConceptoCompartido .
+ex:concepto-candidato a mex:ConceptoCompartido .

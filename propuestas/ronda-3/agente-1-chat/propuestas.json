@@ -1,0 +1,140 @@
+{
+  "archivos_modificados_upstream": [
+    "studio/src-tauri/sidecars/agent/graphrag.ts",
+    "studio/src-tauri/sidecars/agent/index.ts"
+  ],
+  "base_original": {
+    "graphrag_ts_sha256": "ae43065f04a7ea16aa8409bef3475da0f7ca24b4a607e03de658130d772e0",
+    "graphrag_ts_bytes": 23598,
+    "index_ts_sha256": "5464143f124ce93726e6e113e34d481abbbdd5e7d9f5871e",
+    "index_ts_bytes": 13315,
+    "instalado_dist_index_js_sha256": "50a560cc647a8d8385150296aa86b0c702ad4b30ab58a274ad0fabd7d9f5871e",
+    "instalado_dist_index_js_bytes": 528313,
+    "nota": "Fuente sin cambios desde ronda 2; bundle instalado identico al de ronda 2. Rebuild local no reproduce el bundle: identidad byte a byte no demostrable con el toolchain actual."
+  },
+  "cambios_graphrag_ts": {
+    "correspondenceStatusOverview": "GROUP BY nativo con COUNT(DISTINCT ?mapping) sobre estadoCorrespondencia; predicado por sufijo; texto COMPLETE con total.",
+    "resourceCorrespondenceContext_v2": "Resuelve recursos REALES RecursoCatalogado por titulo (palabras identificadoras con variantes singular/plural) y anio por periodo declarado inicioDeclarado/finDeclarado (etiqueta solo como respaldo). Columnas via recurso->esquema->columna; conteos COUNT(DISTINCT ?mapping) por recurso con desglose; ejemplos paginados completos, revisados primero. AND, luego OR multi-recurso; si nada resuelve devuelve UNRESOLVED con candidatos y SIN conteos ni cero. COMPLETE solo para IRIs resueltos con paginas completas; PARTIAL si falta vocabulario o columnas.",
+    "variableStatusOverview": "GROUP BY nativo sobre estadoSemantico, separado del tallaje de correspondencias.",
+    "intentos": "wantsCorrespondenceOverview/wantsResourceScope/wantsVariableOverview + resourceKeywords/questionYears/keywordVariants deterministicos; sin modelo.",
+    "retrieve": "Los tres contextos se consultan en paralelo al anclaje; preguntas sin variable nombrada o sin anclas ya devuelven conteos COMPLETE.",
+    "asContext_y_prompt": "Secciones GLOBAL/RESOURCE/VARIABLE con alcance; prompt: conteos globales solo del overview, recurso resuelto a IRIs con desglose, separar estadoSemantico de estadoCorrespondencia, no generalizar recurso/anio."
+  },
+  "cambios_index_ts": {
+    "guardia_sin_anclas": "La rama de respuesta vacia exige ademas ausencia de los tres contextos (1 linea). Sin cambios de arquitectura ni proveedores."
+  },
+  "conteos_base_motor_vivo_2026_10_23": {
+    "conceptos": 103,
+    "variables_respaldadas": 232,
+    "variables_candidatas": 23,
+    "variables_fuera_nucleo": 11,
+    "documental_revisada": 836,
+    "candidata_por_nombre": 118,
+    "ambigua_por_nombre": 6,
+    "total_correspondencias": 960,
+    "matrimonios_2022_columnas_via_esquema": 9,
+    "matrimonios_2022_mapeos_revisados": 4
+  },
+  "entregables": {
+    "parche_aplicable": [
+      {
+        "ruta": "parche/graphrag.ts.patch",
+        "bytes": 24810,
+        "sha256": "0df95e83f22bdef1e0718caa89891c19a3f3722741986b5e030ad4c87db39bb9"
+      },
+      {
+        "ruta": "parche/index.ts.patch",
+        "bytes": 645,
+        "sha256": "a6cdd4de6a88c5e4937d9322358374734fb66759af7c15898afd8763a4fa4cc6"
+      }
+    ],
+    "parche_archivos_completos": [
+      {
+        "ruta": "parche/graphrag.ts",
+        "bytes": 43936,
+        "sha256": "b109930519122d8970cd8c3d739a7dfd5659a5aa37d07b03e665cd7c5aa440ef"
+      },
+      {
+        "ruta": "parche/index.ts",
+        "bytes": 13389,
+        "sha256": "dd68d71b85833ef84c4548119b9497064f740fa171ceebe68d711555a337cd66"
+      }
+    ],
+    "pruebas_offline": [
+      {
+        "ruta": "trabajo/recuperacion-r3.test.ts",
+        "bytes": 28180,
+        "sha256": "0ed026defb71edae8b8631b46c4b4e07d5c01ec4acc94db357e750778a0d2c96"
+      }
+    ],
+    "prueba_e2e_real": [
+      {
+        "ruta": "trabajo/recuperacion-e2e.test.ts",
+        "bytes": 4522,
+        "sha256": "ef782ce25a836e75dad13759fd4384c96c44a9b7803c04d29dde80fd32ee7857"
+      }
+    ],
+    "evidencia": [
+      {
+        "ruta": "evidencia/e2e_recuperacion.json",
+        "bytes": 472845,
+        "sha256": "0d47bbe1e3eab82482c203ba8645b6ca936cef7de2a0c7521f513bbb97960199"
+      },
+      {
+        "ruta": "evidencia/evaluacion_C05_C06.json",
+        "bytes": 3211,
+        "sha256": "fabe9851b58b64131d87740bc36f6dca5e6e94bb79ddcbe260ce92d466363b8e"
+      },
+      {
+        "ruta": "evidencia/verificacion-live.log",
+        "bytes": 3812,
+        "sha256": "b12cd4a890874e8bd8dcf34dc0505343cdac3fbafca75f06ce7606b8870f6127"
+      },
+      {
+        "ruta": "evidencia/verificacion.log",
+        "bytes": 1488,
+        "sha256": "219a33bd24434dd2465a67689f3eadfa7b0de1407bd2097764a0ab3784de9745"
+      },
+      {
+        "ruta": "evidencia/resumen_base.json",
+        "bytes": 3607,
+        "sha256": "4aa4e638330aad33d136e85a2dae59a2d6c302b256e14368752d759b4d04077d"
+      }
+    ],
+    "verificadores": [
+      "scripts/verificar_entrega.py",
+      "scripts/evaluar_C05_C06.py",
+      "scripts/verificar_base2.py",
+      "scripts/generar_parche.py",
+      "scripts/registrar_huellas.py",
+      "scripts/build_identidad.py"
+    ]
+  },
+  "verificacion": {
+    "offline": "25 pruebas (24 pasan + 1 e2e omitida sin live) + tsc --strict limpio",
+    "live": "e2e con retrieve()/asContext() reales sobre HTTP 8137: C06 6/118/836 total 960; C05 Matrimonios 2022 resuelto a IRI con 4 revisadas (incluye mapping c92aecbb...); parafrasis natural y singular resuelven sin UNRESOLVED ni falso cero; 0 peticiones a modelos"
+  },
+  "instalacion": {
+    "pasos": [
+      "Respaldar dist/index.js instalado y graphrag.ts/index.ts del repo.",
+      "Aplicar parche/graphrag.ts.patch e index.ts.patch en studio/src-tauri/sidecars/agent/.",
+      "Recompilar con npm run build, comparar y registrar SHA del bundle.",
+      "Reiniciar Studio; comprobar C05/C06 y conteos globales.",
+      "Si algo falla, aplicar reversion."
+    ],
+    "reversion": [
+      "Restaurar respaldos, recompilar, reinstalar bundle anterior, reiniciar Studio."
+    ]
+  },
+  "limites": [
+    "UI de Studio no probada; APIs/fuente no equivalen a UI.",
+    "0 peticiones a modelos: la recuperacion es determinista y la cuota fallo en ronda 2.",
+    "COMPLETE de recurso solo para IRIs resueltos con paginas completas; heuristica incompleta rinde UNRESOLVED/PARTIAL sin ceros.",
+    "Conteos 836/118/6 son verdades del grafo vivo a 2026-10-23; 162/792 historico.",
+    "Rebuild local no reproduce el bundle instalado.",
+    "Sin node_modules ni secretos copiados; sin consolidar/ampliar/sincronizar; sin despliegue."
+  ],
+  "pendientes_para_integrador": [
+    "Revisar y aplicar parche; recompilar e instalar segun plan; comprobar C05/C06 en Studio; decidir si las pruebas entran al repo upstream."
+  ]
+}

@@ -1,0 +1,67 @@
+@prefix mex: <https://example.org/mex-ontologi/vocab/> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+
+# Q-unidades v002 (propuesta, NO instalable tal cual): 6 declaraciones
+# cualificadas. Sin mex:unidadQudt: W no ha sellado Q-W-01..06.
+# Sin QuantityValue, sin factores, sin conversiones.
+
+<https://example.org/mex-ontologi/propuesta/q-unidades/v002/declaracion-produccion-toneladas> a mex:UnidadDeclarada ;
+    rdfs:label "PRODTON: unidad Toneladas"@es ;
+    mex:variableDocumentada <https://example.org/mex-ontologi/documented-variable/94215f51-9c89-414d-8c3d-92792e609a2a%2F17> ;
+    mex:definicionFuente <https://example.org/mex-ontologi/definition/94215f51-9c89-414d-8c3d-92792e609a2a%2F17> ;
+    mex:conjuntoFuente "3e17a7e8-c8d4-49c4-a426-4dec099cd0cd" ;
+    mex:diccionarioFuente "94215f51-9c89-414d-8c3d-92792e609a2a" ;
+    mex:unidadLiteral "Toneladas" ;
+    prov:wasDerivedFrom <https://datos.sonora.gob.mx/api/3/action/datastore_search?resource_id=94215f51-9c89-414d-8c3d-92792e609a2a&limit=1000&offset=0&sort=_id+asc> ;
+    rdfs:comment "Alcance: SOLO variable PRODTON de ESA definicion del diccionario 94215f51-9c89-414d-8c3d-92792e609a2a. Sin atribucion global, sin valores, sin factores ni conversiones. Estado: pendiente por ambiguedad local del literal 'Toneladas': no se asigna variante metrica ni se vincula URI; requiere evidencia local (Q-W-01b documenta variantes, no decide)."@es .
+
+<https://example.org/mex-ontologi/propuesta/q-unidades/v002/declaracion-pesoprom-kilogramos> a mex:UnidadDeclarada ;
+    rdfs:label "pesoprom: unidad Kilogramos"@es ;
+    mex:variableDocumentada <https://example.org/mex-ontologi/documented-variable/a4eb0b8b-d6c6-44b8-b00a-f5f45c1875a5%2F11> ;
+    mex:definicionFuente <https://example.org/mex-ontologi/definition/a4eb0b8b-d6c6-44b8-b00a-f5f45c1875a5%2F11> ;
+    mex:conjuntoFuente "932de35b-e9d4-4acb-bd1e-d54c70f6f45e" ;
+    mex:diccionarioFuente "a4eb0b8b-d6c6-44b8-b00a-f5f45c1875a5" ;
+    mex:unidadLiteral "Kilogramos" ;
+    prov:wasDerivedFrom <https://datos.sonora.gob.mx/dataset/932de35b-e9d4-4acb-bd1e-d54c70f6f45e/resource/a4eb0b8b-d6c6-44b8-b00a-f5f45c1875a5/download/diccionario_subastas_ganado.csv> ;
+    rdfs:comment "Alcance: SOLO variable pesoprom de ESA definicion del diccionario a4eb0b8b-d6c6-44b8-b00a-f5f45c1875a5. Sin atribucion global, sin valores, sin factores ni conversiones. Estado: pendiente de verificacion W (Q-W-02): sin vinculo normativo."@es .
+
+<https://example.org/mex-ontologi/propuesta/q-unidades/v002/declaracion-capacidad-mw> a mex:UnidadDeclarada ;
+    rdfs:label "Unidad de Medida: unidad MW"@es ;
+    mex:variableDocumentada <https://example.org/mex-ontologi/documented-variable/a6cdb7ad-ec32-44aa-851d-684947df4243%2F9> ;
+    mex:definicionFuente <https://example.org/mex-ontologi/definition/a6cdb7ad-ec32-44aa-851d-684947df4243%2F9> ;
+    mex:conjuntoFuente "8f11b2e0-c51d-4719-a7ef-fcf8e8ab70bb" ;
+    mex:diccionarioFuente "a6cdb7ad-ec32-44aa-851d-684947df4243" ;
+    mex:unidadLiteral "MW" ;
+    prov:wasDerivedFrom <https://datos.sonora.gob.mx/dataset/8f11b2e0-c51d-4719-a7ef-fcf8e8ab70bb/resource/a6cdb7ad-ec32-44aa-851d-684947df4243/download/diccionario-plantas-electricas.xlsx> ;
+    rdfs:comment "Alcance: SOLO variable Unidad de Medida de ESA definicion del diccionario a6cdb7ad-ec32-44aa-851d-684947df4243. Sin atribucion global, sin valores, sin factores ni conversiones. Estado: pendiente de verificacion W (Q-W-03): sin vinculo normativo."@es .
+
+<https://example.org/mex-ontologi/propuesta/q-unidades/v002/declaracion-generacion-gwh> a mex:UnidadDeclarada ;
+    rdfs:label "Unidad de Medida: unidad GWh"@es ;
+    mex:variableDocumentada <https://example.org/mex-ontologi/documented-variable/a6cdb7ad-ec32-44aa-851d-684947df4243%2F11> ;
+    mex:definicionFuente <https://example.org/mex-ontologi/definition/a6cdb7ad-ec32-44aa-851d-684947df4243%2F11> ;
+    mex:conjuntoFuente "8f11b2e0-c51d-4719-a7ef-fcf8e8ab70bb" ;
+    mex:diccionarioFuente "a6cdb7ad-ec32-44aa-851d-684947df4243" ;
+    mex:unidadLiteral "GWh" ;
+    prov:wasDerivedFrom <https://datos.sonora.gob.mx/dataset/8f11b2e0-c51d-4719-a7ef-fcf8e8ab70bb/resource/a6cdb7ad-ec32-44aa-851d-684947df4243/download/diccionario-plantas-electricas.xlsx> ;
+    rdfs:comment "Alcance: SOLO variable Unidad de Medida de ESA definicion del diccionario a6cdb7ad-ec32-44aa-851d-684947df4243. Sin atribucion global, sin valores, sin factores ni conversiones. Estado: pendiente de verificacion W (Q-W-04): sin vinculo normativo."@es .
+
+<https://example.org/mex-ontologi/propuesta/q-unidades/v002/declaracion-analf-porcentaje> a mex:UnidadDeclarada ;
+    rdfs:label "ANALF: unidad Porcentaje"@es ;
+    mex:variableDocumentada <https://example.org/mex-ontologi/documented-variable/251309e5-0309-46ed-9711-77a1dd408eeb%2F9> ;
+    mex:definicionFuente <https://example.org/mex-ontologi/definition/251309e5-0309-46ed-9711-77a1dd408eeb%2F9> ;
+    mex:conjuntoFuente "b54f94ee-b5f1-404c-ab41-f19f6dcc8b4f" ;
+    mex:diccionarioFuente "251309e5-0309-46ed-9711-77a1dd408eeb" ;
+    mex:unidadLiteral "Porcentaje" ;
+    prov:wasDerivedFrom <https://datos.sonora.gob.mx/dataset/b54f94ee-b5f1-404c-ab41-f19f6dcc8b4f/resource/251309e5-0309-46ed-9711-77a1dd408eeb/download/diccionario.xlsx> ;
+    rdfs:comment "Alcance: SOLO variable ANALF de ESA definicion del diccionario 251309e5-0309-46ed-9711-77a1dd408eeb. Sin atribucion global, sin valores, sin factores ni conversiones. Estado: pendiente de verificacion W (Q-W-05): sin vinculo normativo."@es .
+
+<https://example.org/mex-ontologi/propuesta/q-unidades/v002/declaracion-temperatura-grados> a mex:UnidadDeclarada ;
+    rdfs:label "temperatura: unidad Grados celcius"@es ;
+    mex:variableDocumentada <https://example.org/mex-ontologi/documented-variable/33d0a99e-c721-496f-a05e-07646e9ae42a%2F27> ;
+    mex:definicionFuente <https://example.org/mex-ontologi/definition/33d0a99e-c721-496f-a05e-07646e9ae42a%2F27> ;
+    mex:conjuntoFuente "5494daa1-09ca-4750-aeac-2558553700e1" ;
+    mex:diccionarioFuente "33d0a99e-c721-496f-a05e-07646e9ae42a" ;
+    mex:unidadLiteral "Grados celcius" ;
+    prov:wasDerivedFrom <https://datos.sonora.gob.mx/api/3/action/datastore_search?resource_id=33d0a99e-c721-496f-a05e-07646e9ae42a&limit=1000&offset=0&sort=_id+asc> ;
+    rdfs:comment "Alcance: SOLO variable temperatura de ESA definicion del diccionario 33d0a99e-c721-496f-a05e-07646e9ae42a. Sin atribucion global, sin valores, sin factores ni conversiones. Estado: pendiente de verificacion W (Q-W-06): sin vinculo normativo."@es .

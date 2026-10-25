@@ -1,0 +1,190 @@
+{
+ "rol": "S1-defunciones",
+ "fecha_utc": "2026-10-24T07:25:35Z",
+ "metodo": "webfetch/websearch independientes + material local; sin Obscura (reservado a W-web)",
+ "comprobaciones": [
+  {
+   "url": "https://datos.sonora.gob.mx/api/3/action/package_show?id=cd3d6e34-3789-479e-9f2b-a717b8419f9c",
+   "fecha_consulta": "2026-10-24",
+   "resultado": "cambio_de_fuente_por_comprobar examinado sin novedad: metadata_modified 2025-08-15, 2 recursos, notes y descriptions identicos a lo ya examinado en R6/ronda-3; sin codebook, sin tabla columna<->campo, sin edicion CIE, sin distincion fetal/general. Re-descargar lo mismo no es pista nueva."
+  },
+  {
+   "url": "http://www.dgis.salud.gob.mx/contenidos/sinais/s_clues.html",
+   "fecha_consulta": "2026-10-24",
+   "archivo": "trabajo/fuentes-nuevas/s_clues_2026-10-24.txt",
+   "resultado": "negativo: pagina administrativa del Subsistema CLUES (ultima modificacion 2025-06-26, post-periodo); enumera informacion captada (entidad/municipio/localidad, tipo, institucion) sin campo 'jurisdiccion', sin codebook campo-codigo, sin edicion aplicable al recurso 2022, sin vinculo al extracto Sonora. No define JURISDICCION_CLUES(D) ni valida ejemplos '6'/'SAN LUIS RIO COLORADO'."
+  },
+  {
+   "url": "https://www.sonora.gob.mx/datos/defunciones",
+   "fecha_consulta": "2026-10-24",
+   "resultado": "sin texto util por lectura simple (solo chrome de navegacion; aplicacion renderizada). No reintentado con genericos: se deriva una peticion acotada a W-web (trabajo/peticiones-web.json S1-WEB-01) sobre ambito general/fetal y fuente/periodo declarados."
+  },
+  {
+   "url": "http://www.dgis.salud.gob.mx/contenidos/intercambio/clues_gobmx.html",
+   "fecha_consulta": null,
+   "resultado": "ya examinado por cobertura-muse 2026-10-23 (plan-cobertura-muse/investigacion-obscura/evidencia.json): sin confirmacion, vigencia no acreditada. No re-examinado."
+  }
+ ],
+ "puerta_por_id": {
+  "https://example.org/mex-ontologi/definition/12f684e9-f4d5-4714-933d-aa153a812174%2F17": {
+   "variable": "EDADGESTACIONAL",
+   "puerta": "sin_pista_nueva",
+   "detalle": "Examen SEED-2022 por ID ya hecho + contraste DGIS DEFUN 2022 ya hecho (antecedente 2026-10-24). Comprobaciones v001 (package_show sin cambios; s_clues.html sin codebook) no aportan codebook/tabla campo-codigo-edicion no examinada. Sin par estructural dependiente."
+  },
+  "https://example.org/mex-ontologi/definition/12f684e9-f4d5-4714-933d-aa153a812174%2F30": {
+   "variable": "CLAVEOCUPACIONHABITUAL",
+   "puerta": "sin_pista_nueva",
+   "detalle": "Examen SEED-2022 por ID ya hecho + contraste DGIS DEFUN 2022 ya hecho (antecedente 2026-10-24). Comprobaciones v001 (package_show sin cambios; s_clues.html sin codebook) no aportan codebook/tabla campo-codigo-edicion no examinada. Sin par estructural dependiente."
+  },
+  "https://example.org/mex-ontologi/definition/12f684e9-f4d5-4714-933d-aa153a812174%2F31": {
+   "variable": "CLAVEOCUPACIONHABITUALD",
+   "puerta": "sin_pista_nueva",
+   "detalle": "Examen SEED-2022 por ID ya hecho + contraste DGIS DEFUN 2022 ya hecho (antecedente 2026-10-24). Comprobaciones v001 (package_show sin cambios; s_clues.html sin codebook) no aportan codebook/tabla campo-codigo-edicion no examinada. Sin par estructural dependiente."
+  },
+  "https://example.org/mex-ontologi/definition/12f684e9-f4d5-4714-933d-aa153a812174%2F32": {
+   "variable": "TRABAJAACTUALMENTE",
+   "puerta": "sin_pista_nueva",
+   "detalle": "Examen SEED-2022 por ID ya hecho + contraste DGIS DEFUN 2022 ya hecho (antecedente 2026-10-24). Comprobaciones v001 (package_show sin cambios; s_clues.html sin codebook) no aportan codebook/tabla campo-codigo-edicion no examinada. Sin par estructural dependiente."
+  },
+  "https://example.org/mex-ontologi/definition/12f684e9-f4d5-4714-933d-aa153a812174%2F33": {
+   "variable": "TRABAJAACTUALMENTED",
+   "puerta": "sin_pista_nueva",
+   "detalle": "Examen SEED-2022 por ID ya hecho + contraste DGIS DEFUN 2022 ya hecho (antecedente 2026-10-24). Comprobaciones v001 (package_show sin cambios; s_clues.html sin codebook) no aportan codebook/tabla campo-codigo-edicion no examinada. Sin par estructural dependiente."
+  },
+  "https://example.org/mex-ontologi/definition/12f684e9-f4d5-4714-933d-aa153a812174%2F34": {
+   "variable": "AFILIACION",
+   "puerta": "sin_pista_nueva",
+   "detalle": "Examen SEED-2022 por ID ya hecho + contraste DGIS DEFUN 2022 ya hecho (antecedente 2026-10-24). Comprobaciones v001 (package_show sin cambios; s_clues.html sin codebook) no aportan codebook/tabla campo-codigo-edicion no examinada. Sin par estructural dependiente."
+  },
+  "https://example.org/mex-ontologi/definition/12f684e9-f4d5-4714-933d-aa153a812174%2F35": {
+   "variable": "AFILIACIOND",
+   "puerta": "sin_pista_nueva",
+   "detalle": "Examen SEED-2022 por ID ya hecho + contraste DGIS DEFUN 2022 ya hecho (antecedente 2026-10-24). Comprobaciones v001 (package_show sin cambios; s_clues.html sin codebook) no aportan codebook/tabla campo-codigo-edicion no examinada. Sin par estructural dependiente."
+  },
+  "https://example.org/mex-ontologi/definition/12f684e9-f4d5-4714-933d-aa153a812174%2F36": {
+   "variable": "SITIODEFUNCION",
+   "puerta": "sin_pista_nueva",
+   "detalle": "Examen SEED-2022 por ID ya hecho + contraste DGIS DEFUN 2022 ya hecho (antecedente 2026-10-24). Comprobaciones v001 (package_show sin cambios; s_clues.html sin codebook) no aportan codebook/tabla campo-codigo-edicion no examinada. Sin par estructural dependiente."
+  },
+  "https://example.org/mex-ontologi/definition/12f684e9-f4d5-4714-933d-aa153a812174%2F37": {
+   "variable": "SITIODEFUNCIOND",
+   "puerta": "sin_pista_nueva",
+   "detalle": "Examen SEED-2022 por ID ya hecho + contraste DGIS DEFUN 2022 ya hecho (antecedente 2026-10-24). Comprobaciones v001 (package_show sin cambios; s_clues.html sin codebook) no aportan codebook/tabla campo-codigo-edicion no examinada. Sin par estructural dependiente."
+  },
+  "https://example.org/mex-ontologi/definition/12f684e9-f4d5-4714-933d-aa153a812174%2F38": {
+   "variable": "CLUES",
+   "puerta": "sin_pista_nueva",
+   "detalle": "Examen SEED-2022 por ID ya hecho + contraste DGIS DEFUN 2022 ya hecho (antecedente 2026-10-24). Comprobaciones v001 (package_show sin cambios; s_clues.html sin codebook) no aportan codebook/tabla campo-codigo-edicion no examinada. ID ligado a par estructural candidato (dependencias-correspondencias.json); sin definicion no hay promocion."
+  },
+  "https://example.org/mex-ontologi/definition/12f684e9-f4d5-4714-933d-aa153a812174%2F53": {
+   "variable": "MUERTEACCIDENTALVIOLENTA",
+   "puerta": "sin_pista_nueva",
+   "detalle": "Examen SEED-2022 por ID ya hecho + contraste DGIS DEFUN 2022 ya hecho (antecedente 2026-10-24). Comprobaciones v001 (package_show sin cambios; s_clues.html sin codebook) no aportan codebook/tabla campo-codigo-edicion no examinada. Sin par estructural dependiente."
+  },
+  "https://example.org/mex-ontologi/definition/12f684e9-f4d5-4714-933d-aa153a812174%2F54": {
+   "variable": "MUERTEACCIDENTALVIOLENTAD",
+   "puerta": "sin_pista_nueva",
+   "detalle": "Examen SEED-2022 por ID ya hecho + contraste DGIS DEFUN 2022 ya hecho (antecedente 2026-10-24). Comprobaciones v001 (package_show sin cambios; s_clues.html sin codebook) no aportan codebook/tabla campo-codigo-edicion no examinada. Sin par estructural dependiente."
+  },
+  "https://example.org/mex-ontologi/definition/12f684e9-f4d5-4714-933d-aa153a812174%2F55": {
+   "variable": "INTENCIONEVENTO",
+   "puerta": "sin_pista_nueva",
+   "detalle": "Examen SEED-2022 por ID ya hecho + contraste DGIS DEFUN 2022 ya hecho (antecedente 2026-10-24). Comprobaciones v001 (package_show sin cambios; s_clues.html sin codebook) no aportan codebook/tabla campo-codigo-edicion no examinada. Sin par estructural dependiente."
+  },
+  "https://example.org/mex-ontologi/definition/12f684e9-f4d5-4714-933d-aa153a812174%2F56": {
+   "variable": "INTENCIONEVENTOD",
+   "puerta": "sin_pista_nueva",
+   "detalle": "Examen SEED-2022 por ID ya hecho + contraste DGIS DEFUN 2022 ya hecho (antecedente 2026-10-24). Comprobaciones v001 (package_show sin cambios; s_clues.html sin codebook) no aportan codebook/tabla campo-codigo-edicion no examinada. Sin par estructural dependiente."
+  },
+  "https://example.org/mex-ontologi/definition/12f684e9-f4d5-4714-933d-aa153a812174%2F57": {
+   "variable": "CIECAUSABASICA",
+   "puerta": "sin_pista_nueva",
+   "detalle": "Examen SEED-2022 por ID ya hecho + contraste DGIS DEFUN 2022 ya hecho (antecedente 2026-10-24). Comprobaciones v001 (package_show sin cambios; s_clues.html sin codebook) no aportan codebook/tabla campo-codigo-edicion no examinada. Sin par estructural dependiente."
+  },
+  "https://example.org/mex-ontologi/definition/12f684e9-f4d5-4714-933d-aa153a812174%2F58": {
+   "variable": "CIECAUSABASICAD",
+   "puerta": "sin_pista_nueva",
+   "detalle": "Examen SEED-2022 por ID ya hecho + contraste DGIS DEFUN 2022 ya hecho (antecedente 2026-10-24). Comprobaciones v001 (package_show sin cambios; s_clues.html sin codebook) no aportan codebook/tabla campo-codigo-edicion no examinada. Sin par estructural dependiente."
+  },
+  "https://example.org/mex-ontologi/definition/12f684e9-f4d5-4714-933d-aa153a812174%2F63": {
+   "variable": "CAUSAPROPIAEMBARAZO",
+   "puerta": "sin_pista_nueva",
+   "detalle": "Examen SEED-2022 por ID ya hecho + contraste DGIS DEFUN 2022 ya hecho (antecedente 2026-10-24). Comprobaciones v001 (package_show sin cambios; s_clues.html sin codebook) no aportan codebook/tabla campo-codigo-edicion no examinada. Sin par estructural dependiente."
+  },
+  "https://example.org/mex-ontologi/definition/12f684e9-f4d5-4714-933d-aa153a812174%2F64": {
+   "variable": "CAUSAPROPIAEMBARAZOD",
+   "puerta": "sin_pista_nueva",
+   "detalle": "Examen SEED-2022 por ID ya hecho + contraste DGIS DEFUN 2022 ya hecho (antecedente 2026-10-24). Comprobaciones v001 (package_show sin cambios; s_clues.html sin codebook) no aportan codebook/tabla campo-codigo-edicion no examinada. Sin par estructural dependiente."
+  },
+  "https://example.org/mex-ontologi/definition/12f684e9-f4d5-4714-933d-aa153a812174%2F67": {
+   "variable": "SITIOOCURRENCIALESION",
+   "puerta": "sin_pista_nueva",
+   "detalle": "Examen SEED-2022 por ID ya hecho + contraste DGIS DEFUN 2022 ya hecho (antecedente 2026-10-24). Comprobaciones v001 (package_show sin cambios; s_clues.html sin codebook) no aportan codebook/tabla campo-codigo-edicion no examinada. Sin par estructural dependiente."
+  },
+  "https://example.org/mex-ontologi/definition/12f684e9-f4d5-4714-933d-aa153a812174%2F68": {
+   "variable": "SITIOOCURRENCIALESIOND",
+   "puerta": "sin_pista_nueva",
+   "detalle": "Examen SEED-2022 por ID ya hecho + contraste DGIS DEFUN 2022 ya hecho (antecedente 2026-10-24). Comprobaciones v001 (package_show sin cambios; s_clues.html sin codebook) no aportan codebook/tabla campo-codigo-edicion no examinada. Sin par estructural dependiente."
+  },
+  "https://example.org/mex-ontologi/definition/12f684e9-f4d5-4714-933d-aa153a812174%2F69": {
+   "variable": "PARENTESCOAGRESORD",
+   "puerta": "sin_pista_nueva",
+   "detalle": "Examen SEED-2022 por ID ya hecho + contraste DGIS DEFUN 2022 ya hecho (antecedente 2026-10-24). Comprobaciones v001 (package_show sin cambios; s_clues.html sin codebook) no aportan codebook/tabla campo-codigo-edicion no examinada. Sin par estructural dependiente."
+  },
+  "https://example.org/mex-ontologi/definition/12f684e9-f4d5-4714-933d-aa153a812174%2F70": {
+   "variable": "ENTIDADOCURRENCIA",
+   "puerta": "sin_pista_nueva",
+   "detalle": "Examen SEED-2022 por ID ya hecho + contraste DGIS DEFUN 2022 ya hecho (antecedente 2026-10-24). Comprobaciones v001 (package_show sin cambios; s_clues.html sin codebook) no aportan codebook/tabla campo-codigo-edicion no examinada. Sin par estructural dependiente."
+  },
+  "https://example.org/mex-ontologi/definition/12f684e9-f4d5-4714-933d-aa153a812174%2F71": {
+   "variable": "ENTIDADOCURRENCIAD",
+   "puerta": "sin_pista_nueva",
+   "detalle": "Examen SEED-2022 por ID ya hecho + contraste DGIS DEFUN 2022 ya hecho (antecedente 2026-10-24). Comprobaciones v001 (package_show sin cambios; s_clues.html sin codebook) no aportan codebook/tabla campo-codigo-edicion no examinada. Sin par estructural dependiente."
+  },
+  "https://example.org/mex-ontologi/definition/12f684e9-f4d5-4714-933d-aa153a812174%2F72": {
+   "variable": "MUNICIPIOOCURRENCIA",
+   "puerta": "sin_pista_nueva",
+   "detalle": "Examen SEED-2022 por ID ya hecho + contraste DGIS DEFUN 2022 ya hecho (antecedente 2026-10-24). Comprobaciones v001 (package_show sin cambios; s_clues.html sin codebook) no aportan codebook/tabla campo-codigo-edicion no examinada. ID ligado a par estructural candidato (dependencias-correspondencias.json); sin definicion no hay promocion."
+  },
+  "https://example.org/mex-ontologi/definition/12f684e9-f4d5-4714-933d-aa153a812174%2F73": {
+   "variable": "MUNICIPIOOCURRENCIAD",
+   "puerta": "sin_pista_nueva",
+   "detalle": "Examen SEED-2022 por ID ya hecho + contraste DGIS DEFUN 2022 ya hecho (antecedente 2026-10-24). Comprobaciones v001 (package_show sin cambios; s_clues.html sin codebook) no aportan codebook/tabla campo-codigo-edicion no examinada. ID ligado a par estructural candidato (dependencias-correspondencias.json); sin definicion no hay promocion."
+  },
+  "https://example.org/mex-ontologi/definition/12f684e9-f4d5-4714-933d-aa153a812174%2F74": {
+   "variable": "LOCALIDADOCURRENCIA",
+   "puerta": "sin_pista_nueva",
+   "detalle": "Examen SEED-2022 por ID ya hecho + contraste DGIS DEFUN 2022 ya hecho (antecedente 2026-10-24). Comprobaciones v001 (package_show sin cambios; s_clues.html sin codebook) no aportan codebook/tabla campo-codigo-edicion no examinada. ID ligado a par estructural candidato (dependencias-correspondencias.json); sin definicion no hay promocion."
+  },
+  "https://example.org/mex-ontologi/definition/12f684e9-f4d5-4714-933d-aa153a812174%2F75": {
+   "variable": "LOCALIDADOCURRENCIAD",
+   "puerta": "sin_pista_nueva",
+   "detalle": "Examen SEED-2022 por ID ya hecho + contraste DGIS DEFUN 2022 ya hecho (antecedente 2026-10-24). Comprobaciones v001 (package_show sin cambios; s_clues.html sin codebook) no aportan codebook/tabla campo-codigo-edicion no examinada. ID ligado a par estructural candidato (dependencias-correspondencias.json); sin definicion no hay promocion."
+  },
+  "https://example.org/mex-ontologi/definition/12f684e9-f4d5-4714-933d-aa153a812174%2F76": {
+   "variable": "CERTIFICADOPOR",
+   "puerta": "sin_pista_nueva",
+   "detalle": "Examen SEED-2022 por ID ya hecho + contraste DGIS DEFUN 2022 ya hecho (antecedente 2026-10-24). Comprobaciones v001 (package_show sin cambios; s_clues.html sin codebook) no aportan codebook/tabla campo-codigo-edicion no examinada. Sin par estructural dependiente."
+  },
+  "https://example.org/mex-ontologi/definition/12f684e9-f4d5-4714-933d-aa153a812174%2F77": {
+   "variable": "CERTIFICADOPORD",
+   "puerta": "sin_pista_nueva",
+   "detalle": "Examen SEED-2022 por ID ya hecho + contraste DGIS DEFUN 2022 ya hecho (antecedente 2026-10-24). Comprobaciones v001 (package_show sin cambios; s_clues.html sin codebook) no aportan codebook/tabla campo-codigo-edicion no examinada. Sin par estructural dependiente."
+  },
+  "https://example.org/mex-ontologi/definition/12f684e9-f4d5-4714-933d-aa153a812174%2F78": {
+   "variable": "FECHACERTIFICACION",
+   "puerta": "sin_pista_nueva",
+   "detalle": "Examen SEED-2022 por ID ya hecho + contraste DGIS DEFUN 2022 ya hecho (antecedente 2026-10-24). Comprobaciones v001 (package_show sin cambios; s_clues.html sin codebook) no aportan codebook/tabla campo-codigo-edicion no examinada. Sin par estructural dependiente."
+  },
+  "https://example.org/mex-ontologi/definition/12f684e9-f4d5-4714-933d-aa153a812174%2F79": {
+   "variable": "JURISDICCION_CLUES",
+   "puerta": "sin_pista_nueva",
+   "detalle": "Examen SEED-2022 por ID ya hecho + contraste DGIS DEFUN 2022 ya hecho (antecedente 2026-10-24). Comprobaciones v001 (package_show sin cambios; s_clues.html sin codebook) no aportan codebook/tabla campo-codigo-edicion no examinada. Sin par estructural dependiente."
+  },
+  "https://example.org/mex-ontologi/definition/12f684e9-f4d5-4714-933d-aa153a812174%2F80": {
+   "variable": "JURISDICCION_CLUESD",
+   "puerta": "sin_pista_nueva",
+   "detalle": "Examen SEED-2022 por ID ya hecho + contraste DGIS DEFUN 2022 ya hecho (antecedente 2026-10-24). Comprobaciones v001 (package_show sin cambios; s_clues.html sin codebook) no aportan codebook/tabla campo-codigo-edicion no examinada. Sin par estructural dependiente."
+  }
+ }
+}

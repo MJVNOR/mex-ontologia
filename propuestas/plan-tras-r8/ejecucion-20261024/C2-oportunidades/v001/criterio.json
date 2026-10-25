@@ -1,0 +1,43 @@
+{
+  "version": "c2-v001-20261024",
+  "formula": "score = suma(pesos_familia) + suma(penalizaciones_bloqueador)",
+  "pesos_familia": {
+    "municipio": 3,
+    "localidad": 3,
+    "division_territorial_declarada": 2,
+    "unidad_salud_clues": 3,
+    "clasificacion_delito": 2,
+    "producto_o_especie": 2,
+    "programa_educativo": 2,
+    "estrato_modalidad": 2,
+    "periodo": 1,
+    "entidad": 1,
+    "anio": 1,
+    "mes": 1,
+    "estrato_nivel": 0.5,
+    "estrato_sexo": 0.5,
+    "estrato_escolaridad": 0.5,
+    "estrato_campo_de_formacion_academica": 0.5
+  },
+  "penalizaciones": {
+    "sentidos_distintos_requieren_pregunta_y_agregacion_explicitas": -4,
+    "sentido_parcialmente_desconocido": -2,
+    "requiere_correspondencia_codigo_nombre": -2,
+    "programa_requiere_institucion_plan_y_homologacion_de_nombres": -2,
+    "localidad_puede_requerir_entidad_y_municipio_como_clave_compuesta": -1,
+    "municipio_puede_requerir_entidad_como_clave_compuesta": -1,
+    "verificar_catalogo_dominio_unicidad_y_contexto_de_clave": -1,
+    "faltan_definiciones_de_algunas_columnas": -1,
+    "dimension_amplia_o_nombre_no_identifica_por_si_solo": -1,
+    "homologar_taxonomia_y_nivel_de_clasificacion": -1,
+    "comprobar_catalogo_clues_y_vigencia_de_unidades": -2
+  },
+  "orden": "score desc, id asc",
+  "notas": [
+    "publicador_comun y anios_en_nombres NO suman: pistas debiles, solo informativas",
+    "programa_educativo pesa 2 pero exige institucion/plan/homologacion (-2)",
+    "sentidos distintos penalizan -4: no comparar poblaciones/roles distintos solo por concepto",
+    "municipio exige entidad como clave compuesta (-1); localidad exige entidad+municipio (-1)",
+    "reproducible: solo mapa local + pendientes; sin unidades/fechas inventadas"
+  ]
+}

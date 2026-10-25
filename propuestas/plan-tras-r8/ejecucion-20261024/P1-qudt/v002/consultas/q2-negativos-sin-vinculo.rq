@@ -1,0 +1,2 @@
+PREFIX mex: <https://example.org/mex-ontologi/vocab/>
+SELECT ?d ?var ?m WHERE { ?d a mex:UnidadDeclarada ; mex:variableDocumentada ?var ; mex:motivoNegativo ?m . FILTER NOT EXISTS { ?d mex:unidadQudt ?u } }

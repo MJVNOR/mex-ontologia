@@ -1,0 +1,68 @@
+--- PROPUESTO, NO APLICADO (root/integrador; recompilar + reinicio Studio) ---
+Base: studio/src-tauri/sidecars/agent/index.ts (380 lineas) + providers/openai.ts.
+Requiere el openai.ts de codigo/providers/openai.ts (misma carpeta): politica
+SOLO host generativelanguage.googleapis.com + gemma-4-31b(-it); mutex por
+endpoint+modelo con pacing >=65s; reintento 1 (429/500/502/503, TimeoutError).
+No toca modelo, claves, grafo, config ni UI. build/sketch (runWorkflow) intactos:
+solo cambian los dos caminos QA (miss y normal) y el arranque (pacing).
+
+--- a/studio/src-tauri/sidecars/agent/index.ts
++++ b/studio/src-tauri/sidecars/agent/index.ts
+@@ import { stripThoughtBlocks } from './providers/openai.js';
+-import { stripThoughtBlocks } from './providers/openai.js';
++import { exigirRespuestaVisible } from './providers/openai.js';
+@@ import { retrieve, asContext, QA_SYSTEM_PROMPT } from './graphrag.js';
+-import { retrieve, asContext, QA_SYSTEM_PROMPT } from './graphrag.js';
++import { retrieve, asContext, QA_SYSTEM_PROMPT, budgetForModel } from './graphrag.js';
+@@ answerOnce: exigir visible, lanzar si vacio
+-    const result = await provider.step([]);
+-    // El razonamiento (<thought>/<think>, cerrado o truncado) nunca llega
+-    // al chat: se oculta y, si no queda respuesta final, no se afirma
+-    // ninguna (los llamantes ya distinguen '' y siguen sin cachear vacio).
+-    return stripThoughtBlocks(result.text.join('\n').trim());
++    const result = await provider.step([]);
++    // Respuesta final visible o error claro: jamas '' (un vacio cacheado
++    // envenena futuras preguntas con la misma clave).
++    return exigirRespuestaVisible(result.text.join('\n'));
+@@ miss branch: sin fallback a runTurn
+-    const miss = await answerOnce(
+-      QA_SYSTEM_PROMPT,
+-      `--- RETRIEVED SUBGRAPH ---\n(empty: no entity matched)\n--- END SUBGRAPH ---\n\nQUESTION: ${question}`,
+-    );
+-    if (miss) {
++    try {
++      const miss = await answerOnce(
++        QA_SYSTEM_PROMPT,
++        `--- RETRIEVED SUBGRAPH ---\n(empty: no entity matched)\n--- END SUBGRAPH ---\n\nQUESTION: ${question}`,
++      );
+       writeChatCache(missKey, miss);
+       await paceTo(startedAt, 3000);
+       send({ type: 'text', content: miss });
+       return false;
++    } catch (e) {
++      send({ type: 'error', error: String((e as Error)?.message ?? e) });
++      return false;
+     }
+-    return runTurn(question);
+@@ normal branch: sin fallback a runTurn
+-    const answer = await answerOnce(QA_SYSTEM_PROMPT, context);
+-    if (answer) {
++    try {
++      const answer = await answerOnce(QA_SYSTEM_PROMPT, context);
+       writeChatCache(key, answer);
+       send({ type: 'text', content: answer });
+       return false;
++    } catch (e) {
++      send({ type: 'error', error: String((e as Error)?.message ?? e) });
++      return false;
+     }
+-    return await runTurn(context);
+@@ main: cablear pacing Gemma una vez (describe no consume cuota de inferencia)
+     send({ type: 'ready' });
++    try {
++      // minIntervalMs es opcional en Provider (tipos intactos para otros).
++      provider.minIntervalMs = budgetForModel(await provider.describe()).pacingMs;
++    } catch { /* sin pacing: el provider sigue con su politica */ }
+
+--- FIN. Pruebas: codigo/tests/*.test.ts (Vitest, importan funciones reales).
+--- Viva (root): harness_stdio.mjs --handshake, luego --casos (6 casos, >=65s).

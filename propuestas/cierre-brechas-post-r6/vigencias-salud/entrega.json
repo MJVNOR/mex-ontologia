@@ -1,0 +1,365 @@
+{
+ "tarea": "vigencias-salud",
+ "tipo": "vigencias",
+ "decisiones": [
+  {
+   "id": "V06",
+   "estado": "sigue_pendiente",
+   "original": {
+    "id": "V06",
+    "tipo": "vigencia",
+    "grupo": "C",
+    "dependencia_publicador": "DEP-CAT-R6-03",
+    "conjunto": {
+     "id": "5494daa1-09ca-4750-aeac-2558553700e1",
+     "titulo": "Fiebre manchada (Rickettsia)"
+    },
+    "catalogo": {
+     "recurso_catalogo": "08d3b1a7-dbc0-4f43-b1d2-3266cebb88f8",
+     "recurso_url": "https://datos.sonora.gob.mx/dataset/5494daa1-09ca-4750-aeac-2558553700e1/resource/08d3b1a7-dbc0-4f43-b1d2-3266cebb88f8/download/catalogo.xlsx",
+     "sha256": "3b8546acad7482825755e46a1a619a4838721f8480b94baaef3c755ba293db9c",
+     "hoja_campo": "Catalogo Servicios / servic_atencion"
+    },
+    "referencia_iri": "https://example.org/mex-ontologi/declared-code-reference/9ff643fe3f91869a5a3aff089018f3913d8510551a6d50a7566123a44969b05f",
+    "periodos_declarados_por_titulo": [
+     "2022 anual",
+     "2023 anual",
+     "2024 anual"
+    ],
+    "nota_periodos": "Periodos declarados por titulos de recursos CKAN y nota del conjunto; NO cobertura observada.",
+    "estado_actual": "pendiente (F3+F4 ausentes)",
+    "motivo": "F3+F4 ausentes: el portal no declara edición/versión de la hoja Catalogo Servicios ni su aplicación a 2022-2024.",
+    "evidencia_revisada": [
+     "W04 (recursos publicados: Diccionario+Catalogo+datos 2022-2024; fuente interna; sin versión)",
+     "Local: package_5494daa1-09ca-4750-aeac-2558553700e1.json (extras nulos) + xlsx 3b8546ac (3 hojas, sin versión)",
+     "R6-C1 (API CKAN package_show 2026-10-23) + R6-C2 (core-properties xlsx)",
+     "R6 novedad: R6-C1: API package 5494daa1: version=null; recurso Catalogo con cobertura 2022-01-01/2026-12-31 (avance de cobertura, NO edicion). R6-C2: catalogo 3b8546ac creator openpyxl, created 2026-04-15 (export posterior a periodos 2022-2024, sin celdas de version). F3+F4 ausentes."
+    ],
+    "campos_minimos": [
+     "emisor: publicador (DEP-CAT-R6-03)",
+     "edicion/version/fecha declarada del catalogo (Catalogo Servicios / servic_atencion, sha 3b8546ac)",
+     "recurso catalogo: 08d3b1a7-dbc0-4f43-b1d2-3266cebb88f8",
+     "periodos de aplicacion: 2022 anual; 2023 anual; 2024 anual",
+     "fecha o firma del documento"
+    ],
+    "criterio_aceptacion": "Se cierra solo si el documento del publicador cita edicion/version/fecha del catalogo (Catalogo Servicios / servic_atencion, sha 3b8546ac) y recurso 08d3b1a7-dbc0-4f43-b1d2-3266cebb88f8 y periodos (2022 anual; 2023 anual; 2024 anual); verificable (URL o copia local con SHA). Las fechas de portal/API (version=null, placeholder 1989-06-04) y core-properties no acreditan F3+F4.",
+    "limites": [
+     "No afirmar vigencia histórica ni extender a otros conjuntos/periodos."
+    ],
+    "documento_requerido_exacto": "Declaracion de edicion/version/fecha del catalogo Rickettsia (sha 3b8546ac) con vinculo 2022-2024 + fe de erratas o diccionario corregido y URL del catalogo de des_mpo_res si existe. Pendiente exacto: Acreditar F3+F4: declaración de edición/versión/fecha del catálogo (Catalogo Servicios/servic_atencion, sha 3b8546ac) y documento que la vincule con 2022, 2023, 2024.",
+    "soporte": [
+     {
+      "ruta": "reports/pendientes-ronda-5.json",
+      "sha256": "46f3b6f8826379be5124fb85cf6128b705fbe90deebf2c99bff64098608c8f11",
+      "localizador": "decisiones_significados id=V06"
+     },
+     {
+      "ruta": "propuestas/pendientes-muse-r6/catalogos/entrega.json",
+      "sha256": "649bbe7e5feca82b7e8d5c5144de78b1d8ceccb1c217ca976347b1c9a05cb74b",
+      "localizador": "decisiones_significados id=V06 + novedad_r6 (C1 API package_show 2026-10-23 + C2 core-properties xlsx)"
+     },
+     {
+      "ruta": "local: xlsx sha 3b8546ac",
+      "sha256": "3b8546acad7482825755e46a1a619a4838721f8480b94baaef3c755ba293db9c",
+      "localizador": "interior xlsx sin celdas de version/periodo (R4 vigente, re-verificado R6: sizes API = locales)"
+     }
+    ]
+   },
+   "motivo": "F3+F4 ausentes tras reverificacion en vivo 2026-10-24: package version=null/extras vacios; hoja Catalogo Servicios (dimension A1:B8, 7 valores servic_atencion) sin celdas de version/periodo; Diccionario cita el catalogo por nombre sin edicion; estrategia FMRR sin mencion al catalogo CKAN. Cobertura 2022-01-01/2026-12-31 y fechas de carga no acreditan edicion.",
+   "evidencia_faltante": "Declaracion de edicion/version/fecha del catalogo Rickettsia (sha 3b8546ac) con vinculo 2022-2024 + fe de erratas o diccionario corregido y URL del catalogo de des_mpo_res si existe. Pendiente exacto: Acreditar F3+F4: declaración de edición/versión/fecha del catálogo (Catalogo Servicios/servic_atencion, sha 3b8546ac) y documento que la vincule con 2022, 2023, 2024.",
+   "evidencia": [
+    {
+     "ruta": "propuestas/cierre-brechas-post-r6/vigencias-salud/evidencia/api_package_show_2026-10-24.json",
+     "sha256": "e751fe481af047f3ffa6facc57c9d04952e5f874186be2d2fb4a6ae20f9a0154",
+     "localizador": "result.version=null; result.extras=[]; recurso 08d3b1a7 size 12702 start 2022-01-01 end 2026-12-31; metadata_modified 2026-05-11",
+     "afirmacion_soportada": "API CKAN en vivo 2026-10-24: package sin version y sin extras; fechas del recurso Catalogo son cobertura, no edicion; byte-identico a captura local previa"
+    },
+    {
+     "ruta": "propuestas/cierre-brechas-post-r6/vigencias-salud/evidencia/catalogo_xlsx_2026-10-24.xlsx",
+     "sha256": "3b8546acad7482825755e46a1a619a4838721f8480b94baaef3c755ba293db9c",
+     "localizador": "descarga en vivo 2026-10-24; sha identico al local; sharedStrings 37 sin version/periodo",
+     "afirmacion_soportada": "El catalogo publicado no cambio (mismo sha) y su interior no declara edicion/version/periodo"
+    },
+    {
+     "ruta": "propuestas/cierre-brechas-post-r6/vigencias-salud/evidencia/diccionario_csv_2026-10-24.csv",
+     "sha256": "2c8ce131bf0e71fe812605f0f95381acaec9c5534e1bed8f05ff1895bf2fcd1c",
+     "localizador": "filas 129/162/168 citan catalogos por nombre sin edicion; fila 7 des_mpo_res con Catalogo de referencia vacio; 17x2022 son fechas de ejemplo",
+     "afirmacion_soportada": "Diccionario en vivo no declara edicion del catalogo ni fe de erratas; sin URL de catalogo para des_mpo_res"
+    },
+    {
+     "ruta": "propuestas/cierre-brechas-post-r6/vigencias-salud/evidencia/estrategia_fmrr_salud_sonora.pdf",
+     "sha256": "9c2aec1236ecdbcdd4fa4fe2a5c87f25bfe606ee80121ba283e00d715c530485",
+     "localizador": "conteo ASCII: 0 menciones a campos catalogo/CKAN/version/edicion/diccionario",
+     "afirmacion_soportada": "Estrategia sectorial FMRR (pista nueva) no es declaracion de edicion del catalogo CKAN: negativa documentada"
+    },
+    {
+     "ruta": "propuestas/cierre-brechas-post-r6/vigencias-salud/evidencia/recurso_catalogo_pagina_2026-10-24.html",
+     "sha256": "ae7e8f383f34308046a830697d2e47e561f33766cd1269fe2ff87d44b824b5a0",
+     "localizador": "Metadatos: Creado 28-04-2026, actualizacion 29-04-2026, formato XLSX; sin version/edicion",
+     "afirmacion_soportada": "Pagina del recurso Catalogo no declara edicion/version (solo fechas de carga)"
+    }
+   ],
+   "limites": [
+    "No afirmar vigencia histórica ni extender a otros conjuntos/periodos.",
+    "No inferir vigencia del nombre del archivo ni de start_date/end_date; no extender a otros conjuntos."
+   ]
+  },
+  {
+   "id": "V07",
+   "estado": "sigue_pendiente",
+   "original": {
+    "id": "V07",
+    "tipo": "vigencia",
+    "grupo": "C",
+    "dependencia_publicador": "DEP-CAT-R6-03",
+    "conjunto": {
+     "id": "5494daa1-09ca-4750-aeac-2558553700e1",
+     "titulo": "Fiebre manchada (Rickettsia)"
+    },
+    "catalogo": {
+     "recurso_catalogo": "08d3b1a7-dbc0-4f43-b1d2-3266cebb88f8",
+     "recurso_url": "https://datos.sonora.gob.mx/dataset/5494daa1-09ca-4750-aeac-2558553700e1/resource/08d3b1a7-dbc0-4f43-b1d2-3266cebb88f8/download/catalogo.xlsx",
+     "sha256": "3b8546acad7482825755e46a1a619a4838721f8480b94baaef3c755ba293db9c",
+     "hoja_campo": "Catalogo rechazo / motiv_rech_ricket_sangre"
+    },
+    "referencia_iri": "https://example.org/mex-ontologi/declared-code-reference/5b1ccbaafec13e5b4e83d513d5817f79d39b709d3a03efc206f2b265dc66fc75",
+    "periodos_declarados_por_titulo": [
+     "2022 anual",
+     "2023 anual",
+     "2024 anual"
+    ],
+    "nota_periodos": "Periodos declarados por titulos de recursos CKAN y nota del conjunto; NO cobertura observada.",
+    "estado_actual": "pendiente (F3+F4 ausentes)",
+    "motivo": "F3+F4 ausentes: sin declaración de edición/versión de la hoja Catalogo rechazo ni su aplicación a 2022-2024.",
+    "evidencia_revisada": [
+     "W04 (igual que V06)",
+     "Local: package_5494daa1 (extras nulos) + xlsx 3b8546ac",
+     "R6-C1 (API CKAN package_show 2026-10-23) + R6-C2 (core-properties xlsx)",
+     "R6 novedad: R6-C1+C2 igual que V06 para hoja Catalogo rechazo (mismo archivo 3b8546ac, export openpyxl 2026). F3+F4 ausentes."
+    ],
+    "campos_minimos": [
+     "emisor: publicador (DEP-CAT-R6-03)",
+     "edicion/version/fecha declarada del catalogo (Catalogo rechazo / motiv_rech_ricket_sangre, sha 3b8546ac)",
+     "recurso catalogo: 08d3b1a7-dbc0-4f43-b1d2-3266cebb88f8",
+     "periodos de aplicacion: 2022 anual; 2023 anual; 2024 anual",
+     "fecha o firma del documento"
+    ],
+    "criterio_aceptacion": "Se cierra solo si el documento del publicador cita edicion/version/fecha del catalogo (Catalogo rechazo / motiv_rech_ricket_sangre, sha 3b8546ac) y recurso 08d3b1a7-dbc0-4f43-b1d2-3266cebb88f8 y periodos (2022 anual; 2023 anual; 2024 anual); verificable (URL o copia local con SHA). Las fechas de portal/API (version=null, placeholder 1989-06-04) y core-properties no acreditan F3+F4.",
+    "limites": [
+     "No afirmar vigencia histórica ni extender a otros conjuntos/periodos."
+    ],
+    "documento_requerido_exacto": "Declaracion de edicion/version/fecha del catalogo Rickettsia (sha 3b8546ac) con vinculo 2022-2024 + fe de erratas o diccionario corregido y URL del catalogo de des_mpo_res si existe. Pendiente exacto: Acreditar F3+F4: declaración de edición/versión/fecha del catálogo (Catalogo rechazo/motiv_rech_ricket_sangre, sha 3b8546ac) y documento que la vincule con 2022, 2023, 2024.",
+    "soporte": [
+     {
+      "ruta": "reports/pendientes-ronda-5.json",
+      "sha256": "46f3b6f8826379be5124fb85cf6128b705fbe90deebf2c99bff64098608c8f11",
+      "localizador": "decisiones_significados id=V07"
+     },
+     {
+      "ruta": "propuestas/pendientes-muse-r6/catalogos/entrega.json",
+      "sha256": "649bbe7e5feca82b7e8d5c5144de78b1d8ceccb1c217ca976347b1c9a05cb74b",
+      "localizador": "decisiones_significados id=V07 + novedad_r6 (C1 API package_show 2026-10-23 + C2 core-properties xlsx)"
+     },
+     {
+      "ruta": "local: xlsx sha 3b8546ac",
+      "sha256": "3b8546acad7482825755e46a1a619a4838721f8480b94baaef3c755ba293db9c",
+      "localizador": "interior xlsx sin celdas de version/periodo (R4 vigente, re-verificado R6: sizes API = locales)"
+     }
+    ]
+   },
+   "motivo": "F3+F4 ausentes tras reverificacion en vivo 2026-10-24: package version=null/extras vacios; hoja Catalogo rechazo (dimension A1:B21, 20 valores motiv_rech_ricket_sangre) sin celdas de version/periodo; Diccionario cita el catalogo por nombre sin edicion; estrategia FMRR sin mencion al catalogo CKAN. Cobertura 2022-01-01/2026-12-31 y fechas de carga no acreditan edicion.",
+   "evidencia_faltante": "Declaracion de edicion/version/fecha del catalogo Rickettsia (sha 3b8546ac) con vinculo 2022-2024 + fe de erratas o diccionario corregido y URL del catalogo de des_mpo_res si existe. Pendiente exacto: Acreditar F3+F4: declaración de edición/versión/fecha del catálogo (Catalogo rechazo/motiv_rech_ricket_sangre, sha 3b8546ac) y documento que la vincule con 2022, 2023, 2024.",
+   "evidencia": [
+    {
+     "ruta": "propuestas/cierre-brechas-post-r6/vigencias-salud/evidencia/api_package_show_2026-10-24.json",
+     "sha256": "e751fe481af047f3ffa6facc57c9d04952e5f874186be2d2fb4a6ae20f9a0154",
+     "localizador": "result.version=null; result.extras=[]; recurso 08d3b1a7 size 12702 start 2022-01-01 end 2026-12-31; metadata_modified 2026-05-11",
+     "afirmacion_soportada": "API CKAN en vivo 2026-10-24: package sin version y sin extras; fechas del recurso Catalogo son cobertura, no edicion; byte-identico a captura local previa"
+    },
+    {
+     "ruta": "propuestas/cierre-brechas-post-r6/vigencias-salud/evidencia/catalogo_xlsx_2026-10-24.xlsx",
+     "sha256": "3b8546acad7482825755e46a1a619a4838721f8480b94baaef3c755ba293db9c",
+     "localizador": "descarga en vivo 2026-10-24; sha identico al local; sharedStrings 37 sin version/periodo",
+     "afirmacion_soportada": "El catalogo publicado no cambio (mismo sha) y su interior no declara edicion/version/periodo"
+    },
+    {
+     "ruta": "propuestas/cierre-brechas-post-r6/vigencias-salud/evidencia/diccionario_csv_2026-10-24.csv",
+     "sha256": "2c8ce131bf0e71fe812605f0f95381acaec9c5534e1bed8f05ff1895bf2fcd1c",
+     "localizador": "filas 129/162/168 citan catalogos por nombre sin edicion; fila 7 des_mpo_res con Catalogo de referencia vacio; 17x2022 son fechas de ejemplo",
+     "afirmacion_soportada": "Diccionario en vivo no declara edicion del catalogo ni fe de erratas; sin URL de catalogo para des_mpo_res"
+    },
+    {
+     "ruta": "propuestas/cierre-brechas-post-r6/vigencias-salud/evidencia/estrategia_fmrr_salud_sonora.pdf",
+     "sha256": "9c2aec1236ecdbcdd4fa4fe2a5c87f25bfe606ee80121ba283e00d715c530485",
+     "localizador": "conteo ASCII: 0 menciones a campos catalogo/CKAN/version/edicion/diccionario",
+     "afirmacion_soportada": "Estrategia sectorial FMRR (pista nueva) no es declaracion de edicion del catalogo CKAN: negativa documentada"
+    },
+    {
+     "ruta": "propuestas/cierre-brechas-post-r6/vigencias-salud/evidencia/recurso_catalogo_pagina_2026-10-24.html",
+     "sha256": "ae7e8f383f34308046a830697d2e47e561f33766cd1269fe2ff87d44b824b5a0",
+     "localizador": "Metadatos: Creado 28-04-2026, actualizacion 29-04-2026, formato XLSX; sin version/edicion",
+     "afirmacion_soportada": "Pagina del recurso Catalogo no declara edicion/version (solo fechas de carga)"
+    }
+   ],
+   "limites": [
+    "No afirmar vigencia histórica ni extender a otros conjuntos/periodos.",
+    "No inferir vigencia del nombre del archivo ni de start_date/end_date; no extender a otros conjuntos."
+   ]
+  },
+  {
+   "id": "V08",
+   "estado": "sigue_pendiente",
+   "original": {
+    "id": "V08",
+    "tipo": "vigencia",
+    "grupo": "C",
+    "dependencia_publicador": "DEP-CAT-R6-03",
+    "conjunto": {
+     "id": "5494daa1-09ca-4750-aeac-2558553700e1",
+     "titulo": "Fiebre manchada (Rickettsia)"
+    },
+    "catalogo": {
+     "recurso_catalogo": "08d3b1a7-dbc0-4f43-b1d2-3266cebb88f8",
+     "recurso_url": "https://datos.sonora.gob.mx/dataset/5494daa1-09ca-4750-aeac-2558553700e1/resource/08d3b1a7-dbc0-4f43-b1d2-3266cebb88f8/download/catalogo.xlsx",
+     "sha256": "3b8546acad7482825755e46a1a619a4838721f8480b94baaef3c755ba293db9c",
+     "hoja_campo": "Catalogo especie / ricket_especie (variable ricket_especie_rtpcr)"
+    },
+    "referencia_iri": "https://example.org/mex-ontologi/declared-code-reference/c8e9eb88050d4c254c2f8e08bee2bac5095eea83f8e07aab0d2e9ce79aca9131",
+    "periodos_declarados_por_titulo": [
+     "2022 anual",
+     "2023 anual",
+     "2024 anual"
+    ],
+    "nota_periodos": "Periodos declarados por titulos de recursos CKAN y nota del conjunto; NO cobertura observada.",
+    "estado_actual": "pendiente (F3+F4 ausentes)",
+    "motivo": "F3+F4 ausentes: sin declaración de edición/versión de la hoja Catalogo especie ni su aplicación a 2022-2024.",
+    "evidencia_revisada": [
+     "W04 (igual que V06)",
+     "Local: package_5494daa1 (extras nulos) + xlsx 3b8546ac",
+     "R6-C1 (API CKAN package_show 2026-10-23) + R6-C2 (core-properties xlsx)",
+     "R6 novedad: R6-C1+C2 igual que V06 para hoja Catalogo especie (mismo archivo 3b8546ac, export openpyxl 2026). F3+F4 ausentes."
+    ],
+    "campos_minimos": [
+     "emisor: publicador (DEP-CAT-R6-03)",
+     "edicion/version/fecha declarada del catalogo (Catalogo especie / ricket_especie (variable ricket_especie_rtpcr), sha 3b8546ac)",
+     "recurso catalogo: 08d3b1a7-dbc0-4f43-b1d2-3266cebb88f8",
+     "periodos de aplicacion: 2022 anual; 2023 anual; 2024 anual",
+     "fecha o firma del documento"
+    ],
+    "criterio_aceptacion": "Se cierra solo si el documento del publicador cita edicion/version/fecha del catalogo (Catalogo especie / ricket_especie (variable ricket_especie_rtpcr), sha 3b8546ac) y recurso 08d3b1a7-dbc0-4f43-b1d2-3266cebb88f8 y periodos (2022 anual; 2023 anual; 2024 anual); verificable (URL o copia local con SHA). Las fechas de portal/API (version=null, placeholder 1989-06-04) y core-properties no acreditan F3+F4.",
+    "limites": [
+     "No afirmar vigencia histórica ni extender a otros conjuntos/periodos."
+    ],
+    "documento_requerido_exacto": "Declaracion de edicion/version/fecha del catalogo Rickettsia (sha 3b8546ac) con vinculo 2022-2024 + fe de erratas o diccionario corregido y URL del catalogo de des_mpo_res si existe. Pendiente exacto: Acreditar F3+F4: declaración de edición/versión/fecha del catálogo (Catalogo especie/ricket_especie, sha 3b8546ac) y documento que la vincule con 2022, 2023, 2024.",
+    "soporte": [
+     {
+      "ruta": "reports/pendientes-ronda-5.json",
+      "sha256": "46f3b6f8826379be5124fb85cf6128b705fbe90deebf2c99bff64098608c8f11",
+      "localizador": "decisiones_significados id=V08"
+     },
+     {
+      "ruta": "propuestas/pendientes-muse-r6/catalogos/entrega.json",
+      "sha256": "649bbe7e5feca82b7e8d5c5144de78b1d8ceccb1c217ca976347b1c9a05cb74b",
+      "localizador": "decisiones_significados id=V08 + novedad_r6 (C1 API package_show 2026-10-23 + C2 core-properties xlsx)"
+     },
+     {
+      "ruta": "local: xlsx sha 3b8546ac",
+      "sha256": "3b8546acad7482825755e46a1a619a4838721f8480b94baaef3c755ba293db9c",
+      "localizador": "interior xlsx sin celdas de version/periodo (R4 vigente, re-verificado R6: sizes API = locales)"
+     }
+    ]
+   },
+   "motivo": "F3+F4 ausentes tras reverificacion en vivo 2026-10-24: package version=null/extras vacios; hoja Catalogo especie (dimension A1:B5, 4 valores ricket_especie) sin celdas de version/periodo; Diccionario cita el catalogo por nombre sin edicion; estrategia FMRR sin mencion al catalogo CKAN. Cobertura 2022-01-01/2026-12-31 y fechas de carga no acreditan edicion.",
+   "evidencia_faltante": "Declaracion de edicion/version/fecha del catalogo Rickettsia (sha 3b8546ac) con vinculo 2022-2024 + fe de erratas o diccionario corregido y URL del catalogo de des_mpo_res si existe. Pendiente exacto: Acreditar F3+F4: declaración de edición/versión/fecha del catálogo (Catalogo especie/ricket_especie, sha 3b8546ac) y documento que la vincule con 2022, 2023, 2024.",
+   "evidencia": [
+    {
+     "ruta": "propuestas/cierre-brechas-post-r6/vigencias-salud/evidencia/api_package_show_2026-10-24.json",
+     "sha256": "e751fe481af047f3ffa6facc57c9d04952e5f874186be2d2fb4a6ae20f9a0154",
+     "localizador": "result.version=null; result.extras=[]; recurso 08d3b1a7 size 12702 start 2022-01-01 end 2026-12-31; metadata_modified 2026-05-11",
+     "afirmacion_soportada": "API CKAN en vivo 2026-10-24: package sin version y sin extras; fechas del recurso Catalogo son cobertura, no edicion; byte-identico a captura local previa"
+    },
+    {
+     "ruta": "propuestas/cierre-brechas-post-r6/vigencias-salud/evidencia/catalogo_xlsx_2026-10-24.xlsx",
+     "sha256": "3b8546acad7482825755e46a1a619a4838721f8480b94baaef3c755ba293db9c",
+     "localizador": "descarga en vivo 2026-10-24; sha identico al local; sharedStrings 37 sin version/periodo",
+     "afirmacion_soportada": "El catalogo publicado no cambio (mismo sha) y su interior no declara edicion/version/periodo"
+    },
+    {
+     "ruta": "propuestas/cierre-brechas-post-r6/vigencias-salud/evidencia/diccionario_csv_2026-10-24.csv",
+     "sha256": "2c8ce131bf0e71fe812605f0f95381acaec9c5534e1bed8f05ff1895bf2fcd1c",
+     "localizador": "filas 129/162/168 citan catalogos por nombre sin edicion; fila 7 des_mpo_res con Catalogo de referencia vacio; 17x2022 son fechas de ejemplo",
+     "afirmacion_soportada": "Diccionario en vivo no declara edicion del catalogo ni fe de erratas; sin URL de catalogo para des_mpo_res"
+    },
+    {
+     "ruta": "propuestas/cierre-brechas-post-r6/vigencias-salud/evidencia/estrategia_fmrr_salud_sonora.pdf",
+     "sha256": "9c2aec1236ecdbcdd4fa4fe2a5c87f25bfe606ee80121ba283e00d715c530485",
+     "localizador": "conteo ASCII: 0 menciones a campos catalogo/CKAN/version/edicion/diccionario",
+     "afirmacion_soportada": "Estrategia sectorial FMRR (pista nueva) no es declaracion de edicion del catalogo CKAN: negativa documentada"
+    },
+    {
+     "ruta": "propuestas/cierre-brechas-post-r6/vigencias-salud/evidencia/recurso_catalogo_pagina_2026-10-24.html",
+     "sha256": "ae7e8f383f34308046a830697d2e47e561f33766cd1269fe2ff87d44b824b5a0",
+     "localizador": "Metadatos: Creado 28-04-2026, actualizacion 29-04-2026, formato XLSX; sin version/edicion",
+     "afirmacion_soportada": "Pagina del recurso Catalogo no declara edicion/version (solo fechas de carga)"
+    }
+   ],
+   "limites": [
+    "No afirmar vigencia histórica ni extender a otros conjuntos/periodos.",
+    "No inferir vigencia del nombre del archivo ni de start_date/end_date; no extender a otros conjuntos."
+   ]
+  }
+ ],
+ "fuentes": [
+  {
+   "ruta": "propuestas/cierre-brechas-post-r6/vigencias-salud/evidencia/api_package_show_2026-10-24.json",
+   "sha256": "e751fe481af047f3ffa6facc57c9d04952e5f874186be2d2fb4a6ae20f9a0154",
+   "url": "https://datos.sonora.gob.mx/api/3/action/package_show?id=5494daa1-09ca-4750-aeac-2558553700e1",
+   "fecha_consulta": "2026-10-24",
+   "localizador": "result.version/extras/resources[4]"
+  },
+  {
+   "ruta": "propuestas/cierre-brechas-post-r6/vigencias-salud/evidencia/catalogo_xlsx_2026-10-24.xlsx",
+   "sha256": "3b8546acad7482825755e46a1a619a4838721f8480b94baaef3c755ba293db9c",
+   "url": "https://datos.sonora.gob.mx/dataset/5494daa1-09ca-4750-aeac-2558553700e1/resource/08d3b1a7-dbc0-4f43-b1d2-3266cebb88f8/download/catalogo.xlsx",
+   "fecha_consulta": "2026-10-24",
+   "localizador": "bytes + sharedStrings + core.xml"
+  },
+  {
+   "ruta": "propuestas/cierre-brechas-post-r6/vigencias-salud/evidencia/diccionario_csv_2026-10-24.csv",
+   "sha256": "2c8ce131bf0e71fe812605f0f95381acaec9c5534e1bed8f05ff1895bf2fcd1c",
+   "url": "https://datos.sonora.gob.mx/dataset/5494daa1-09ca-4750-aeac-2558553700e1/resource/33d0a99e-c721-496f-a05e-07646e9ae42a/download/diccionario_ricket_1.csv",
+   "fecha_consulta": "2026-10-24",
+   "localizador": "filas 7/129/162/168"
+  },
+  {
+   "ruta": "propuestas/cierre-brechas-post-r6/vigencias-salud/evidencia/recurso_catalogo_pagina_2026-10-24.html",
+   "sha256": "ae7e8f383f34308046a830697d2e47e561f33766cd1269fe2ff87d44b824b5a0",
+   "url": "https://datos.sonora.gob.mx/dataset/Fiebre%20manchada%20%28Rickettsia%29/resource/08d3b1a7-dbc0-4f43-b1d2-3266cebb88f8",
+   "fecha_consulta": "2026-10-24",
+   "localizador": "tabla Metadatos"
+  },
+  {
+   "ruta": "propuestas/cierre-brechas-post-r6/vigencias-salud/evidencia/estrategia_fmrr_salud_sonora.pdf",
+   "sha256": "9c2aec1236ecdbcdd4fa4fe2a5c87f25bfe606ee80121ba283e00d715c530485",
+   "url": "https://salud.sonora.gob.mx/images/areas/medica/promocion-a-la-salud/archivos/estrategiadesaludpublicacontrafmrrsonora.pdf",
+   "fecha_consulta": "2026-10-24",
+   "localizador": "conteo terminos catalogo/CKAN/version"
+  },
+  {
+   "ruta": "propuestas/pendientes-muse-r6/catalogos/entrega.json",
+   "sha256": "649bbe7e5feca82b7e8d5c5144de78b1d8ceccb1c217ca976347b1c9a05cb74b",
+   "url": "local: entrega R6 rol catalogos",
+   "fecha_consulta": "2026-10-23",
+   "localizador": "decisiones_significados V06/V07/V08 + novedad_r6 C1/C2"
+  },
+  {
+   "ruta": "reports/pendientes-ronda-5.json",
+   "sha256": "46f3b6f8826379be5124fb85cf6128b705fbe90deebf2c99bff64098608c8f11",
+   "url": "local: ronda 5",
+   "fecha_consulta": "2026-10-23",
+   "localizador": "decisiones_significados V06/V07/V08"
+  }
+ ],
+ "novedades_frente_a_investigacion_previa": "Reverificacion en vivo 2026-10-24: (1) API package_show byte-identica a captura previa (sha e751fe48 en ambas; metadata_modified 2026-05-11 sin cambios; version=null, extras=[]). (2) catalogo.xlsx en vivo conserva sha 3b8546ac (size 12702 = API; sin re-subida). (3) Interior xlsx por hoja: Servicios A1:B8 / rechazo A1:B21 / especie A1:B5, 37 sharedStrings sin version ni periodo; core.xml created 2026-04-15 modified 2026-04-29 por Practicante PowerBi (export posterior a periodos 2022-2024, sin version). (4) Diccionario en vivo: filas 129/162/168 citan catalogos por nombre sin edicion; 17x2022 son ejemplos de fecha, no vigencia; fila des_mpo_res sin catalogo de referencia (sub-pista negativa). (5) Pista nueva salud.sonora.gob.mx (estrategia FMRR + hub Rickettsiosis + informes SE): la estrategia no menciona el catalogo CKAN ni sus campos (negativa documentada). Nada promueve F3/F4; brecha exacta subsiste por ID.",
+ "busquedas_limitadas": "Navegador Obscura compartido no manejado por este agente (reservado al rol web-obscura; peticiones-web.json escrita 2026-10-24; sin resultados web-obscura al cierre). Herramientas web nativas (busqueda + fetch) usadas en paralelo. Sin contacto con publicadores. HTTP != inexistencia: solo se afirma lo observado."
+}

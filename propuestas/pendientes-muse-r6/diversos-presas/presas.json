@@ -1,0 +1,126 @@
+{
+  "alcance": "Columna unica pendiente del rol (cat_estatal/Clave, recurso 4219d141-5084-4308-bda3-d44ca28a4f53): re-verificacion de hojas del xlsx, tablas, diccionario completo, huellas, cobertura y dominio, contra el dictamen r4-ambiguedades. Las otras 5 columnas del contexto (3 fiebre condicionadas, 2 plantas directas) no se tocan. Sin cambios al nucleo.",
+  "conceptos_nuevos": {},
+  "conteos": {
+    "artefacto_documental": 0,
+    "columnas_revisadas": 1,
+    "conceptos_nuevos": 0,
+    "pendiente": 1,
+    "proponer": 0,
+    "reglas_nuevas": 0,
+    "vinculos_nuevos": 0
+  },
+  "contexto_conservado": {
+    "columnas_propuestas_condicionadas": [
+      "30b18862-f126-41ac-b41f-ce7126f3ac9b/Hoja1/1",
+      "4121cf57-1e4a-4fb0-b175-3805edffca2c/Hoja1/1",
+      "cc6c566f-3088-41cd-b99f-169c5cf6090c/Hoja1/1"
+    ],
+    "columnas_propuestas_directas": [
+      "d9a86127-179c-45c9-94ef-8eae89c0148f/Plantas Electricas en Sonora/9",
+      "d9a86127-179c-45c9-94ef-8eae89c0148f/Plantas Electricas en Sonora/11"
+    ],
+    "nota": "Este rol no decide sobre ellas; se listan para no duplicar ni contradecir.",
+    "notas_historicas": [
+      "anio-divorcios-2023"
+    ],
+    "observaciones_pendientes_vigentes": [
+      "egresos-descripcion-urgencias",
+      "fecha-ejemplo-numerico",
+      "municipio-formato-ejemplo",
+      "anio-nacimientos-2024"
+    ]
+  },
+  "decisiones_columnas": [
+    {
+      "campo": "Clave",
+      "columna": "https://example.org/mex-ontologi/file-column/4219d141-5084-4308-bda3-d44ca28a4f53%2Fcat_estatal%2F1",
+      "decision": "pendiente",
+      "definicion_iri": null,
+      "evidencia": [
+        "data/portal/contenido-inspeccion.json recurso 4219d141-5084-4308-bda3-d44ca28a4f53 hoja fisica 'cat_estatal' pos 1 = 'Clave' (17 campos; huella_esquema=29af60e8a6e9e2026623388d9e06cddb2689bfd25de8db395ab97bf7e47eecfd, re-verificada 2026-10-23)",
+        "data/portal/inspecciones/bfb8788b-8ce3-475e-8bbd-dd1c5154c877.json diccionario_completo=true, 2 hojas: 'Historico_presas' (fila 1: Clave, huella_fila=87295257ea33a0a7d02963306433c01568b34189c09aa867351ac9f19faee0e4) y 'Catalogo_estatal' (fila 4: Clave, huella_fila=d120834445f43d0bb67d135c256e73c91984a2fad6ec8ddbc5639c023dd44153)",
+        "cobertura: ambas respaldada_por_definicion, concepto clave-identificadora-presa en ambas; correspondencias de la columna: 2 ambiguas_por_nombre (/1 y /4), sin revision",
+        "Hoja fisica 'cat_estatal' no iguala literalmente a ninguna hoja del diccionario ('Historico_presas', 'Catalogo_estatal'); 'cat' != 'catalogo' aun tras normalizar acentos/caja. Elegir /4 por parecido de nombre seria aprobar por nombre.",
+        "La hoja fisica no es espejo del Catalogo_estatal: trae 'Cuenca hidrologica' (pos 3) sin fila en el diccionario y omite 'Comision' (/5), 'Subdireccion' (/6) y 'Rio' (/14); ademas pos 15 y 16 tienen homonimo exacto en el diccionario (/19, /21) y siguen sin correspondencia. Precedente de que homonimia exacta no basta.",
+        "No existe recurso de datos de Historico_presas en el conjunto 8c1f452e (solo diccionario + cat_estatal_1.xlsx) ni datastore del recurso 4219d141; sin valores no se puede verificar si ambas hojas comparten dominio de clave. Un vinculo a /4 invitaria a joins por compartir Clave, expresamente prohibidos.",
+        "metodo_encabezado=heuristica_requiere_revision en ambas inspecciones (rutina de captura, no bloquea pero exige no forzar)"
+      ],
+      "motivo": "Se confirma el dictamen r4-ambiguedades con evidencia fresca: dos filas Clave con mismo concepto, distinta hoja y descripcion (/1 Historico_presas vs /4 Catalogo_estatal); la hoja fisica 'cat_estatal' no acredita correspondencia exacta con ninguna y el dominio compartido no es verificable localmente (sin recurso Historico_presas publicado, sin datastore, re-descarga bloqueada por WAF). No se fuerza por nombre, vecinos ni bootstrapping de las 14 columnas hermanas ya revisadas.",
+      "recurso": "4219d141-5084-4308-bda3-d44ca28a4f53"
+    }
+  ],
+  "decisiones_significados": [
+    {
+      "decision": "pendiente",
+      "definicion_iri": "https://example.org/mex-ontologi/definition/bfb8788b-8ce3-475e-8bbd-dd1c5154c877%2F1",
+      "evidencia": [
+        "cobertura estado=respaldada_por_definicion concepto=clave-identificadora-presa regla=r3a10-0363",
+        "huella_fila_diccionario=87295257ea33a0a7d02963306433c01568b34189c09aa867351ac9f19faee0e4 (re-verificada)",
+        "limites vigentes: 'Clave declarada sin catalogo publicado; comparte concepto con clave identificadora del mismo diccionario; no acredita identidad'"
+      ],
+      "limite": "Sin cambio al significado respaldado; el pendiente es solo el vinculo columna->definicion. No usar esta fila para habilitar joins con /4.",
+      "motivo": "Variable ya respaldada (r3a10-0363); este rol no propone cambio de significado, solo constata que no hay base para elegirla como destino de la columna fisica."
+    },
+    {
+      "decision": "pendiente",
+      "definicion_iri": "https://example.org/mex-ontologi/definition/bfb8788b-8ce3-475e-8bbd-dd1c5154c877%2F4",
+      "evidencia": [
+        "cobertura estado=respaldada_por_definicion concepto=clave-identificadora-presa regla=r3a10-0365",
+        "huella_fila_diccionario=d120834445f43d0bb67d135c256e73c91984a2fad6ec8ddbc5639c023dd44153 (re-verificada)",
+        "limites vigentes: 'Clave declarada sin catalogo publicado; comparte concepto con clave de presa del mismo diccionario; no acredita identidad'"
+      ],
+      "limite": "Sin cambio al significado respaldado; el pendiente es solo el vinculo columna->definicion. Un futuro vinculo a /4 debera llevar limite 'no acredita dominio compartido con /1; no habilita joins por Clave'.",
+      "motivo": "Variable ya respaldada (r3a10-0365); este rol no propone cambio de significado, solo constata que no hay base para elegirla como destino de la columna fisica."
+    }
+  ],
+  "fuentes": [
+    {
+      "aplicabilidad": "Origen oficial del recurso y del diccionario; tablas y hojas verificadas. Huellas re-computadas 2026-10-23 identicas a las registradas en r4.",
+      "localizador": "data/portal/inspecciones/bfb8788b-8ce3-475e-8bbd-dd1c5154c877.json (hojas, 22 definiciones, diccionario_completo=true)",
+      "sha256": "4a7a46906b2590cf7eba7c40e7e418768f4e6559a2ae7713eb98aed20cc3e61c",
+      "url": "https://datos.sonora.gob.mx/dataset/8c1f452e-7967-4c6b-a7b5-f2279360ad6c/resource/bfb8788b-8ce3-475e-8bbd-dd1c5154c877/download/diccionario.xlsx"
+    },
+    {
+      "aplicabilidad": "Esquema fisico de la columna pendiente (hoja cat_estatal, pos 1 = Clave, 17 campos). Huella re-computada identica a r4.",
+      "localizador": "data/portal/contenido-inspeccion.json (recurso 4219d141-5084-4308-bda3-d44ca28a4f53) + data/portal/inspecciones/4219d141-5084-4308-bda3-d44ca28a4f53.json",
+      "sha256": "61861aab5bc2b334699c4d78f611a0e2d650c4649bd791927f9095c2ac785efb / b86001f4295c95f5bdffef1893e77128fd57afafbe9005bfef6f04831b787933",
+      "url": "https://datos.sonora.gob.mx/dataset/8c1f452e-7967-4c6b-a7b5-f2279360ad6c/resource/4219d141-5084-4308-bda3-d44ca28a4f53/download/cat_estatal_1.xlsx"
+    },
+    {
+      "aplicabilidad": "Estados respaldada_por_definicion de /1 y /4 (reglas r3a10-0363, r3a10-0365), concepto compartido y 2 correspondencias ambiguas_por_nombre de la columna. Huella intacta vs base r5.",
+      "localizador": "data/semantica/cobertura.json",
+      "sha256": "ee3f6a1bff66a5315b73293c7952ef90f2fe601e0d797c6113d5f6129886d5be",
+      "url": null
+    },
+    {
+      "aplicabilidad": "Reglas y limites vigentes de ambas variables Clave; sin cambios.",
+      "localizador": "ontologia/semantica.json (reglas_descripcion_exacta r3a10-0363, r3a10-0365)",
+      "sha256": "0d8ffc7509e4d694dfdb76bb28a6f6eca209bdb6f546b17dd1826171657e4b28",
+      "url": null
+    },
+    {
+      "aplicabilidad": "Evidencia negativa de bloqueo, NO evidencia del diccionario: HEAD 2026-10-23 = HTTP 403 Forbidden, Content-Type text/html, Server cloudflare (CF-RAY a4f2a91f6dfec514-DFW); el GET devuelve pagina WAF (titulo 'Web Application Firewall', 56210 bytes, sin magia PK de zip). Los HTML descargados se eliminaron; en presas/ no queda ningun .xlsx ni .html. La captura original fijada (inspecciones http 200) no se reemplaza. Escaneo 2026-10-23 de todos los .xlsx en data/integracion/fuentes y data/territorio/fuentes por nombre de hoja: ninguno contiene {Historico_presas, Catalogo_estatal} ni {cat_estatal}; el mas proximo (612b2b11192b97ae7328f80c8a5d1c545e117da46dd436a9b077aaf824b1525f.xlsx, conjunto ee8f639f Recursos Hidricos) es otro conjunto y no se usa. Sin valores no hay verificacion de dominio. No se conserva el HTML como fuente.",
+      "localizador": "descarga CLI 2026-10-23 (curl -sSI + curl -sSL) de ambas URL de descarga del conjunto 8c1f452e; cuerpo HTML, no firma PK de zip. Magia verificada: las 4 fuentes locales citadas son JSON UTF-8 (magia '{')",
+      "sha256": "f4836e42f9c9e070f305e76019fb5683d1ba854f2ff8d88a023487d84661cd67",
+      "url": "https://datos.sonora.gob.mx/dataset/8c1f452e-7967-4c6b-a7b5-f2279360ad6c/resource/4219d141-5084-4308-bda3-d44ca28a4f53/download/cat_estatal_1.xlsx"
+    }
+  ],
+  "pendientes": [
+    {
+      "id": "presas-cat_estatal-clave-hoja-y-dominio",
+      "pendiente_exacto": "Acreditar (a) a que hoja del diccionario bfb8788b corresponde la columna fisica cat_estatal/Clave del recurso 4219d141 (/1 Historico_presas vs /4 Catalogo_estatal) y (b) si Historico_presas y Catalogo_estatal comparten dominio de clave, con documento del publicador o valores comparables; en su defecto, constancia de que no existe recurso publicado de Historico_presas.",
+      "testigo": "columna https://example.org/mex-ontologi/file-column/4219d141-5084-4308-bda3-d44ca28a4f53%2Fcat_estatal%2F1 ; definiciones https://example.org/mex-ontologi/definition/bfb8788b-8ce3-475e-8bbd-dd1c5154c877%2F1 y %2F4"
+    }
+  ],
+  "reglas": [],
+  "rol": "presas",
+  "solicitudes_investigacion": [
+    {
+      "definicion_iri": "https://example.org/mex-ontologi/definition/bfb8788b-8ce3-475e-8bbd-dd1c5154c877%2F4",
+      "documento_requerido": "Via catalogos-web/Obscura (ver solicitudes_web.json): confirmacion en el portal de que la hoja cat_estatal del recurso 4219d141 corresponde a la hoja Catalogo_estatal del diccionario, y si existe recurso publicado de Historico_presas para comparar dominios de Clave (o constancia de ausencia). Sin ello la columna queda pendiente; no se recurre a /1 por descarte.",
+      "fuente_probable": "publicador del conjunto 8c1f452e-7967-4c6b-a7b5-f2279360ad6c (pagina del dataset en datos.sonora.gob.mx)"
+    }
+  ],
+  "verificacion_local": "Huellas re-computadas 2026-10-23 desde inspecciones locales (captura http 200): esquema fisico 29af60e8=, fila /1 87295257=, fila /4 d1208344=, cobertura ee3f6a1b=, semantica 0d8ffc75=; todas identicas a r4 y base r5. Mapa de columnas del recurso: 14/17 documental_revisada (todas a filas Catalogo_estatal), 1 ambigua (Clave /1+/4), 3 sin correspondencia (pos 3, 15, 16). Re-descarga CLI bloqueada por WAF (HEAD 403 text/html cloudflare; GET = pagina WAF sha f4836e42, sin PK, eliminada, no usada como evidencia). Sin copia autentica del xlsx en data/integracion/fuentes ni data/territorio/fuentes (escaneo por hojas 2026-10-23); rige la inspeccion fijada http 200."
+}

@@ -1,4 +1,6 @@
-# Integración central — ronda 2
+# Integración central — ronda 2 (antecedente histórico)
+
+Los conteos de las tablas describen el cierre original de ronda 2. La cobertura vigente se registra en reports/consolidacion-semantica.md y data/semantica/cobertura.json.
 
 Las cinco entregas se conservan como copias fijadas por SHA-256. Las carpetas originales no se modifican. La generación es sin red ni modelos.
 
@@ -26,6 +28,6 @@ Las cinco entregas se conservan como copias fijadas por SHA-256. Las carpetas or
 
 ontologia/revision-ronda-2.json fija data/integracion-ronda-2/manifiesto.json. scripts/ampliar_portal.py --load regenera y valida el grafo; scripts/sincronizar_studio_portal.py respalda y conserva las ediciones ajenas a la ampliación.
 
-Las cinco observaciones originales siguen preservadas. Quedan 23 significados candidatos, 118 correspondencias candidatas, 3 columnas ambiguas/6 vínculos, des_mpo_res sin resolver, vigencia histórica no acreditada y pruebas pendientes de UI/16 preguntas sin respuesta. Las 1308 definiciones fuera del núcleo conservan ese estado. No se ejecutaron nuevos cruces ni se crearon owl:sameAs/skos:exactMatch.
+Al cerrar esta ronda quedaron 23 significados candidatos, 118 correspondencias candidatas, 3 columnas ambiguas/6 vínculos, des_mpo_res sin resolver, vigencia histórica no acreditada y pruebas pendientes de UI/16 preguntas sin respuesta. Entonces 1308 definiciones estaban fuera del núcleo; las ampliaciones posteriores se documentan en la cobertura vigente. Esta ronda no ejecutó nuevos cruces ni creó owl:sameAs/skos:exactMatch.
 
 Respaldo central previo: data\backups\integracion-ronda-2-20261023T100302Z.zip

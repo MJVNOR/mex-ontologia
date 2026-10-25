@@ -1,0 +1,2 @@
+PREFIX mex: <https://example.org/mex-ontologi/vocab/>
+SELECT ?d ?cj WHERE { ?d a mex:UnidadDeclarada ; mex:conjuntoFuente ?cj } ORDER BY ?d

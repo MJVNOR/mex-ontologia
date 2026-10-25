@@ -1,0 +1,67 @@
+{
+ "dictamen": "aceptar",
+ "alcance": "Investigación post-R6: diversos (5 IDs) + epidemiología (25 IDs) = 30 IDs. 0 promociones. Se acepta la INVESTIGACIÓN sin promoción; artefactos congelados, autor idle.",
+ "fecha_utc": "2026-10-24",
+ "criterios": "propuestas/investigacion-post-r6/criterios-auditoria.md",
+ "metodo": "Refresco corto sobre artefactos congelados (sin nuevo examen de originales ni fuentes nuevas): contraste ID por ID contra reports/pendientes-depurados.json (5/5 diversos + 25/25 epidemiología: variable, texto y huella OK; 30/30 sigue_pendiente, 0 significado_propuesto); verificación de motivo CLASIF corregido, historial de rechazo preservado, staging rechazada/no_integrar, coherencia 36/36 de listo.json. Sin contactos externos, sin tests; solo carpeta auditoria-otros.",
+ "refresco_corto_r1_r3": {
+  "R1_motivo_clasif": "CORREGIDO: motivo activo = 'Sigue pendiente: identidad documental confirmada pero brecha de significado abierta...' (alinea estado con fundamento; el rechazo de la glosa queda en historial_propuesta_rechazada).",
+  "R2_listo_generador": "CORREGIDO: listo.json 36/36 entradas coinciden en SHA-256 y bytes (incl. gen_diversos.py 785ef3d5... y nuevas evidencias TAR/nota).",
+  "R3_congelado": "Autor idle y congelado: entrega.json 4320e5fd..., 0 propuestas/5 pendientes; TAR nota/script revisados por el autor (NEG-DIV-06/07); sin cambios previstos."
+ },
+ "resolucion_clasif": "NO promovida (conforme con 2 auditorías y decisión del integrador). Rechazo de la glosa 'tipo de asentamiento' + 'dominio acreditable' preservado como historial: sin fuente explícita en material disponible (nota técnica: 1 mención 'clasificación de la colonia' como atributo de capa, 0 'CLASIF', 0 'tipo de asentamiento'). Lectura mínima: observación NO integrada (no resuelve el objeto clasificado). Acreditado como investigación: identidad 2129/2129 x 28, distribución exacta, DBF corrobora, cadena CKAN-conjunto + ed. 2020; sin joins.",
+ "conteos": {
+  "asignados": 30,
+  "propuestas_aceptadas": 0,
+  "siguen_pendientes": 30,
+  "diversos": {
+   "asignados": 5,
+   "propuestas": 0,
+   "pendientes": 5
+  },
+  "epidemiologia": {
+   "asignados": 25,
+   "propuestas": 0,
+   "pendientes": 25
+  }
+ },
+ "referencias": [
+  {
+   "ruta": "propuestas/investigacion-post-r6/diversos/entrega.json",
+   "sha256": "4320e5fd18d27cf9b63da22ca210155bd3d24857c270a31ccd8143839079cbf3"
+  },
+  {
+   "ruta": "propuestas/investigacion-post-r6/diversos/entrega.md",
+   "sha256": "efe4f380a8eb1d9b9d7cdb57ee2ac7ab7360eb5292295d0f3b0e46be98e14e60"
+  },
+  {
+   "ruta": "propuestas/investigacion-post-r6/diversos/listo.json",
+   "sha256": "a660db339c786f2557fe56126a3e9d19219bcc2fba7df58cf9dd4c726aa75187"
+  },
+  {
+   "ruta": "propuestas/investigacion-post-r6/diversos/staging/clasif.json",
+   "sha256": "22001bb96a35a18d94fd5be2c42bd81811cd853cba9ffd632f226a2da9807acf"
+  },
+  {
+   "ruta": "propuestas/investigacion-post-r6/diversos/gen_diversos.py",
+   "sha256": "785ef3d566f10b9cab375b5203c11802a3d669e390ba238c84ee9e2b155223dc"
+  },
+  {
+   "ruta": "propuestas/investigacion-post-r6/epidemiologia/entrega.json",
+   "sha256": "93342e61b29aa0f974e39ff1e3a3f066b18d21e8b3d78dabb25717cc71600816"
+  },
+  {
+   "ruta": "propuestas/investigacion-post-r6/epidemiologia/entrega.md",
+   "sha256": "6d5c88100fab5bd03f0ce0bf1f7d06574ee4c9781ee4f00fd93e6f6c75e7671b"
+  },
+  {
+   "ruta": "propuestas/investigacion-post-r6/epidemiologia/listo.json",
+   "sha256": "0c483ead9978beaaa1a03ceb9daae84d0a227104b2c2c2e8b9ca606e00975355"
+  },
+  {
+   "ruta": "reports/pendientes-depurados.json",
+   "sha256": "50543777998f765c606688b7e53b7b0f8f38ea070287a9e74f6c8566097d5014"
+  }
+ ],
+ "residuales": []
+}

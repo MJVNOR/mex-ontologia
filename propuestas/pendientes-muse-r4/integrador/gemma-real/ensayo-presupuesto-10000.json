@@ -1,0 +1,120 @@
+{
+  "modelo_solicitado": "gemma-4-31b-it",
+  "fuente": "retrieve y proveedor reales del source Studio; no certifica interfaz gráfica",
+  "inicio": "2026-10-23T18:12:22.382Z",
+  "triples_antes": 320869,
+  "intervalo_minimo_ms": 65000,
+  "max_salida_tokens": 1200,
+  "casos": [
+    {
+      "id": "C1-totales",
+      "pregunta": "Cuantas correspondencias documentales revisadas hay? Distingue revisadas, candidatas y ambiguas.",
+      "entrada_tokens_estimados": 9845,
+      "contexto_sha256": "13667ab7ab9940366c2cd4d3bfac8d349679d84191d2a8b0db94ea96d0a152a3",
+      "intentos": [
+        {
+          "inicio": "2026-10-23T18:12:23.092Z",
+          "http": 500,
+          "error": "Model endpoint https://generativelanguage.googleapis.com/v1beta/openai returned HTTP 500: [{\n  \"error\": {\n    \"code\": 500,\n    \"message\": \"Internal error encountered.\",\n    \"status\": \"INTERNAL\"\n  }\n}\n]"
+        }
+      ],
+      "estado": "error_modelo"
+    },
+    {
+      "id": "C2-f2-evidencia",
+      "pregunta": "Explica la evidencia F2 de proyecciones en 2020 y sus condiciones pendientes. No extrapoles a otros anos.",
+      "entrada_tokens_estimados": 9833,
+      "contexto_sha256": "9f1fa21f9029eabbe25d1156c964bc59d6f3560bd608ce0e572e0738f66e2466",
+      "intentos": [
+        {
+          "inicio": "2026-10-23T18:13:28.097Z",
+          "http": 200,
+          "modelo_servidor": "gemma-4-31b-it",
+          "uso": {
+            "completion_tokens": 179,
+            "prompt_tokens": 14072,
+            "prompt_tokens_details": {
+              "cached_tokens": 12276
+            },
+            "total_tokens": 15271
+          }
+        }
+      ],
+      "respuesta": "La evidencia F2 (\"F2 — Proyecciones Grandes grupos vs Indicadores\") para 2020 es una evidencia calificada de cruce de la ronda 3 con estado \"exploratorio_con_condiciones_pendientes\", compuesta por 72 comparaciones y 144 evidencias basadas en los roles \"grandes_grupos\" y \"indicadores\". Sus condiciones pendientes son: la falta de identidad de medida entre constructos (suma de grupos vs mitad de año), la no ejecución del cruce año por año 1990-2040, la ausencia de equivalencia INEGI afirmada y la vigencia de catálogos no acreditada por falta de F3/F4.\n\n---\n- Estado: exploratorio_con_condiciones_pendientes [F2.json].\n- Medidas:",
+      "estado": "respondido",
+      "bloques_internos_filtrados": true
+    },
+    {
+      "id": "C3-f2-igualdad",
+      "pregunta": "Que demuestra la igualdad de los dos valores de 2020 y que queda sin demostrar?",
+      "entrada_tokens_estimados": 9607,
+      "contexto_sha256": "22049846a5e9bf32a8aa67b9dbb6ef4396ab8bc04f75decb88c03beeb8b3d63e",
+      "intentos": [
+        {
+          "inicio": "2026-10-23T18:14:55.598Z",
+          "http": 200,
+          "modelo_servidor": "gemma-4-31b-it",
+          "uso": {
+            "completion_tokens": 0,
+            "prompt_tokens": 14279,
+            "total_tokens": 15479
+          }
+        }
+      ],
+      "respuesta": "",
+      "estado": "sin_respuesta_final",
+      "bloques_internos_filtrados": true
+    },
+    {
+      "id": "C4-definicion-diccionario",
+      "pregunta": "Que significa la variable ano_matrimonio segun su diccionario? Consulta el grafo y muestra la evidencia.",
+      "entrada_tokens_estimados": 1401,
+      "contexto_sha256": "2c274013e00501a574331eb7f0af4c790a72b6430ff1accb0ff93620ef4003bc",
+      "intentos": [
+        {
+          "inicio": "2026-10-23T18:16:15.936Z",
+          "http": 500,
+          "error": "Model endpoint https://generativelanguage.googleapis.com/v1beta/openai returned HTTP 500: [{\n  \"error\": {\n    \"code\": 500,\n    \"message\": \"Internal error encountered.\",\n    \"status\": \"INTERNAL\"\n  }\n}\n]"
+        }
+      ],
+      "estado": "error_modelo"
+    },
+    {
+      "id": "C5-diferencia-variables",
+      "pregunta": "Que diferencia hay entre ano_matrimonio y ano_defuncion? Muestra las definiciones originales y distingue lo documentado de lo candidato.",
+      "entrada_tokens_estimados": 1508,
+      "contexto_sha256": "43bf277b0a7c840af977397f95e80f2c987303b54582eff670cb57aa2aa75b67",
+      "intentos": [
+        {
+          "inicio": "2026-10-23T18:17:20.947Z",
+          "http": 500,
+          "error": "Model endpoint https://generativelanguage.googleapis.com/v1beta/openai returned HTTP 500: [{\n  \"error\": {\n    \"code\": 500,\n    \"message\": \"Internal error encountered.\",\n    \"status\": \"INTERNAL\"\n  }\n}\n]"
+        }
+      ],
+      "estado": "error_modelo"
+    },
+    {
+      "id": "C6-clave-26001",
+      "pregunta": "Para la clave 26001 en las comparaciones de 2020, muestra los dos valores con medida, nombre de origen, archivo y filas. Son codigos INEGI?",
+      "entrada_tokens_estimados": 9899,
+      "contexto_sha256": "f894e4fdbed072568f2cdea0bf4e79b04fd1104f4a38161d09ecae446fc85122",
+      "intentos": [
+        {
+          "inicio": "2026-10-23T18:18:25.949Z",
+          "http": 200,
+          "modelo_servidor": "gemma-4-31b-it",
+          "uso": {
+            "completion_tokens": 225,
+            "prompt_tokens": 13783,
+            "total_tokens": 14979
+          }
+        }
+      ],
+      "respuesta": "Para la clave 26001 en 2020, los valores son 2594 con medida \"suma_grupos_edad_H_M\" (Aconchi, filas 62 y 63, archivo 24301617b6a5d89cf99b34ed4d512324cedde52e0c625de9457238e3d8fa340c.xlsx) y 2594 con medida \"poblacion_mitad_ano\" (Aconchi, fila 32, archivo e0e21aad3a84b4059efaf7525233ac05b08ced300f0f851fbadaab94057c027a.xlsx). No se encuentra información en la evidencia recuperada sobre si son códigos INEGI.\n\n---\n- Fuente \"grandes_gru",
+      "estado": "respondido",
+      "bloques_internos_filtrados": true
+    }
+  ],
+  "fin": "2026-10-23T18:19:36.994Z",
+  "triples_despues": 320869
+}

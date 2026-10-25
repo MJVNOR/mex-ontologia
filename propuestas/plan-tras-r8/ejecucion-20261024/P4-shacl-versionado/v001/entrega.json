@@ -1,0 +1,103 @@
+{
+  "rol": "P4-shacl-versionado",
+  "version": "v001",
+  "fecha_utc": "2026-10-24T10:05:54.493583+00:00",
+  "base": "reports/ronda-8.json",
+  "asignacion_sha256": "aac93950686e164c79351f403d20d73707defdcb2fa75e128af7366ce4610523",
+  "estado": "propuesta_para_auditar",
+  "casos": [],
+  "resultados": [
+    {
+      "fixture": "fixtures/fixture-neither.ttl",
+      "esperado_conforms": true,
+      "conforms": true,
+      "violation_count": 0,
+      "filas_con_ambos": 0,
+      "store_aislado": "tempstore (sin Studio)"
+    },
+    {
+      "fixture": "fixtures/fixture-doc.ttl",
+      "esperado_conforms": true,
+      "conforms": true,
+      "violation_count": 0,
+      "filas_con_ambos": 0,
+      "store_aislado": "tempstore (sin Studio)"
+    },
+    {
+      "fixture": "fixtures/fixture-cand.ttl",
+      "esperado_conforms": true,
+      "conforms": true,
+      "violation_count": 0,
+      "filas_con_ambos": 0,
+      "store_aislado": "tempstore (sin Studio)"
+    },
+    {
+      "fixture": "fixtures/fixture-both.ttl",
+      "esperado_conforms": false,
+      "conforms": false,
+      "violation_count": 1,
+      "filas_con_ambos": 1,
+      "store_aislado": "tempstore (sin Studio)"
+    }
+  ],
+  "motor": {
+    "exe": "tools/open-ontologies.exe",
+    "operador": "sh:sparql (soportado; veredicto determinado, sin skipped_constraints)",
+    "operadores_evitados": "sh:not y sh:xone: no implementados en el evaluador por defecto (conforms null/indeterminado); xone ademas prohibiria NEITHER. Verificador --verified: disponible",
+    "stores": "aislados por fixture (tempstore); sin Studio; sin tocar produccion"
+  },
+  "fuentes": [
+    {
+      "ruta": "shapes/semantica.ttl",
+      "sha256": "a2f32088f1fc9f0b98c15b9bff5acbca19fabbb9986f382d6c6da722e3d8294c",
+      "localizador": "shape:VariableDocumentada (maxCount 1 por significado, sin exclusion; sin sh:not ni Exclusion)",
+      "afirmacion_soportada": "La forma central vigente permite hoy ambos significados; la exclusion solo existe en el TTL separado propuesto"
+    },
+    {
+      "ruta": "reports/ronda-8.json",
+      "sha256": "5ac384bc4c253f5310ae69402c8d9249d2ee85082086c2dca85483f8b4b7eacb",
+      "localizador": "estado + resumen_actual.estados_correspondencias",
+      "afirmacion_soportada": "R8 cerrado/integrado/validado; 17 candidatas por nombre; base congelada del plan"
+    },
+    {
+      "ruta": "docs/plan-actualizado-tras-r8.md",
+      "sha256": "751411a04650c484e97161912aadb23d6800b08d24b39df43c5f92c0b8a6ea59",
+      "localizador": "seccion 3, fila P4",
+      "afirmacion_soportada": "P4: exclusion documentado/candidato + versionado/changelog; preservar PROV min2; separar formato de release"
+    },
+    {
+      "ruta": "docs/plan-actualizado-tras-r8.json",
+      "sha256": "418cda3ae229df4bebb90a43363ba96e64eec4f631034c975ac5dc18af0473c0",
+      "localizador": "piloto P4",
+      "afirmacion_soportada": "Condicion de aceptacion: permite ninguno, impide ambos, preserva rondas; no duplicar PROV"
+    }
+  ],
+  "propuestos_staging": [
+    "propuesta/shape-exclusion-significado.ttl",
+    "propuesta/metadata-formato.json",
+    "propuesta/changelog-R9-propuesto.md",
+    "propuesta/nota-integracion-R9.md",
+    "fixtures/fixture-neither.ttl",
+    "fixtures/fixture-doc.ttl",
+    "fixtures/fixture-cand.ttl",
+    "fixtures/fixture-both.ttl",
+    "consultas/variables-con-ambos-significados.rq"
+  ],
+  "limites": [
+    "Escritura exclusiva en P4-shacl-versionado/v001; no se modifica produccion, ontologia/semantica.json, shapes centrales, manifiestos previos, grafo ni Studio.",
+    "Gemma excluido; sin contactos externos; sin navegador (reservado a W): ninguna URL primaria concreta requerida; sin peticiones-web.json.",
+    "No se repite investigacion R8; sin inventar unidades, fechas ni jerarquias; C1/C4/P3 cubren sus casos (17/19/101), P4 tiene 0 casos asignados.",
+    "No se duplica prov:wasDerivedFrom minCount 2; el TTL propuesto no declara PROV.",
+    "Manifiestos R1-R8 intactos: solo append/snapshots futuros; format_version != release; metadata descriptiva sin migrar el nucleo.",
+    "Verificador --verified no disponible en el exe distribuido; no se simula su veredicto."
+  ],
+  "condiciones_de_aceptacion": [
+    "La forma permite variables pendientes sin ninguno de los dos vinculos.",
+    "La forma impide que una variable tenga ambos (fixture-both conforms=false; otros tres conforms=true con motor real).",
+    "Se preservan las rondas aprobadas y los manifiestos R1-R8.",
+    "PROV minCount 2 de correspondencias intacto y no duplicado.",
+    "Version de formato JSON separada de version de release; changelog descriptivo.",
+    "Integracion R9 solo por las interfaces minimas de nota-integracion-R9.md, con suite + SHACL central conformes."
+  ],
+  "navegador": "no usado (reservado a W); sin peticiones-web.json: diseno y validacion 100% locales con motor real"
+}

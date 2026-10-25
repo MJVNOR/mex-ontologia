@@ -1,0 +1,27 @@
+{
+  "inicio_utc": "2026-10-24T05:26:02Z",
+  "url": "https://generativelanguage.googleapis.com/v1beta/models/gemma-4-31b-it:generateContent",
+  "body_enviado": {
+    "contents": [
+      {
+        "parts": [
+          {
+            "text": "Responde solamente OK"
+          }
+        ]
+      }
+    ],
+    "generationConfig": {
+      "maxOutputTokens": 8
+    }
+  },
+  "status": 200,
+  "duracion_s": 9.97,
+  "headers_diagnostico": {
+    "content-type": "application/json; charset=UTF-8",
+    "date": "Sat, 24 Oct 2026 05:26:12 GMT",
+    "server": "scaffolding on HTTPServer2"
+  },
+  "cuerpo": "{\n  \"candidates\": [\n    {\n      \"content\": {\n        \"parts\": [\n          {\n            \"text\": \"*   Input: \\\"\",\n            \"thought\": true\n          }\n        ],\n        \"role\": \"model\"\n      },\n      \"finishReason\": \"MAX_TOKENS\",\n      \"index\": 0\n    }\n  ],\n  \"usageMetadata\": {\n    \"promptTokenCount\": 4,\n    \"totalTokenCount\": 9,\n    \"promptTokensDetails\": [\n      {\n        \"modality\": \"TEXT\",\n        \"tokenCount\": 4\n      }\n    ],\n    \"thoughtsTokenCount\": 5,\n    \"serviceTier\": \"standard\"\n  },\n  \"modelVersion\": \"gemma-4-31b-it\",\n  \"responseId\": \"akHcauLTLve7qtsPvtKd2AY\"\n}\n",
+  "error": null
+}

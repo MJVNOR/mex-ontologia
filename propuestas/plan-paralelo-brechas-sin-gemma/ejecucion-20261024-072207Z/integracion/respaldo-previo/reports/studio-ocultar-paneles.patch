@@ -1,0 +1,54 @@
+diff --git a/studio/src/components/LiveChrome.tsx b/studio/src/components/LiveChrome.tsx
+index f475e2f..04ffbc8 100644
+--- a/studio/src/components/LiveChrome.tsx
++++ b/studio/src/components/LiveChrome.tsx
+@@ -25,6 +25,7 @@ import * as mcp from '../lib/mcp-client';
+  */
+ export function LiveChrome({ children }: { children: React.ReactNode }) {
+   const [showChat, setShowChat] = useState(true);
++  const [showPanels, setShowPanels] = useState(true);
+   const [graphMode, setGraphMode] = useState<'2d' | '3d'>('2d');
+   const [showInspector, setShowInspector] = useState(false);
+   const [showLineage, setShowLineage] = useState(false);
+@@ -43,6 +44,10 @@ export function LiveChrome({ children }: { children: React.ReactNode }) {
+     connect();
+   }, [connect]);
+ 
++  useEffect(() => {
++    if (status === 'connected') void useDemoStore.getState().load();
++  }, [status]);
++
+   // Chat-driven ontology mutations (onto_load, onto_apply, ...) happen over
+   // the agent sidecar, entirely outside the demo-store. Graph3D no longer
+   // queries the engine itself, so it needs telling when something changed.
+@@ -165,6 +170,15 @@ export function LiveChrome({ children }: { children: React.ReactNode }) {
+               </button>
+             ))}
+           </div>
++          <button onClick={() => setShowPanels(p => !p)}
++                  aria-controls="analysis-panels"
++                  aria-expanded={showPanels}
++                  title="Mostrar u ocultar Findings / Validation"
++                  className="text-xs px-2 py-1 rounded focus-visible:outline-2"
++                  style={{ background: showPanels ? 'var(--accent)' : 'var(--bg-panel)',
++                           color: showPanels ? 'var(--bg-primary)' : 'var(--text-secondary)' }}>
++            Paneles
++          </button>
+           <button onClick={() => setShowChat(!showChat)}
+                   className="text-xs px-2 py-1 rounded"
+                   style={{ background: showChat ? 'var(--accent)' : 'var(--bg-panel)',
+@@ -220,10 +234,10 @@ export function LiveChrome({ children }: { children: React.ReactNode }) {
+           </div>
+         )}
+ 
+-        {/* The shared demonstration body (corpus / findings / resolution /
+-            compare), the same tree the replay build renders. */}
+-        <div className="w-96 border-l overflow-hidden flex flex-col"
+-             style={{ borderColor: 'var(--border)', background: 'var(--bg-secondary)' }}>
++        {/* Keep the panel mounted so toggling preserves the selected tab
++            and any validation result. */}
++        <div id="analysis-panels" className="w-96 border-l overflow-hidden flex-col"
++             style={{ display: showPanels ? 'flex' : 'none', borderColor: 'var(--border)', background: 'var(--bg-secondary)' }}>
+           {children}
+         </div>
+ 

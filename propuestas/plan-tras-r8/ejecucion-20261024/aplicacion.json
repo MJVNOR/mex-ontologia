@@ -1,0 +1,39 @@
+{
+  "fecha_utc": "2026-10-24T10:36:27.084241+00:00",
+  "material": "propuestas/plan-tras-r8/ejecucion-20261024/K-integracion/v001",
+  "aceptadas_sha256": "3f960a47fc6cf1cef84a37e01ff403042fdb2490a9a99d9243a110b366cd4f8e",
+  "auditorias": {
+    "a": {
+      "ruta": "propuestas/plan-tras-r8/ejecucion-20261024/A-auditoria-semantica/v004/auditoria-material.json",
+      "sha256": "bdd1b5ab23be2bbed4673128ed417680d68611967e502f889223fab6500a8e54"
+    },
+    "b": {
+      "ruta": "propuestas/plan-tras-r8/ejecucion-20261024/B-auditoria-tecnica/v003/auditoria-material.json",
+      "sha256": "e3d5dd650cf682df49131cad6fe6b64cfb50ac6acab4ba640767bcfbbc36a8b1"
+    }
+  },
+  "manifiesto_sha256": "033da3d96348eedbcd8d211f8cbbe56cd0722dd12123aa738e9d8bf6f56dabbd",
+  "cambios": [
+    {
+      "ruta": "scripts/integrar_ronda_9.py",
+      "sha256_antes": null,
+      "sha256_despues": "c27365dfd0ffddec1c58a1ecf3c8a5906ef3c216b8efc913b633fa59eff69367"
+    },
+    {
+      "ruta": "scripts/consolidar_semantica.py",
+      "sha256_antes": "2a2e79d1b54ba393c05b913055cff0ec488bb22fcf4554e5ba541707c442d2f8",
+      "sha256_despues": "f56bc91b38912d8d072184b71664a521e6c74a9d16876c0a20b51d5b8d11aef7"
+    },
+    {
+      "ruta": "scripts/ampliar_portal.py",
+      "sha256_antes": "58603b22c277d74ff61c45884cf985710c29addc581ee462a72a28b6d0d361a4",
+      "sha256_despues": "4d3749c94fee27bd97f541dbe634d9c2aa085d412dde7829105dcc3c67ccc381"
+    },
+    {
+      "ruta": "tests/test_ronda_9.py",
+      "sha256_antes": null,
+      "sha256_despues": "e1020c42f42d4ba8b683787f9487ce2b0cb0ad37cb09acd96a55fc13a432ebf3"
+    }
+  ],
+  "nucleo_r8": "sin_cambios"
+}

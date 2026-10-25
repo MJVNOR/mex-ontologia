@@ -1,0 +1,33 @@
+{
+  "fecha_utc": "2026-10-23T18:05:45.356432+00:00",
+  "consultas": {
+    "respaldadas": "PREFIX mex: <https://example.org/mex-ontologi/vocab/> SELECT (COUNT(DISTINCT ?item) AS ?total) WHERE { ?item a mex:VariableDocumentada; mex:estadoSemantico \"respaldada_por_definicion\" . }",
+    "significados_candidatos": "PREFIX mex: <https://example.org/mex-ontologi/vocab/> SELECT (COUNT(DISTINCT ?item) AS ?total) WHERE { ?item a mex:VariableDocumentada; mex:estadoSemantico \"candidata_sin_definicion_suficiente\" . }",
+    "conceptos": "PREFIX mex: <https://example.org/mex-ontologi/vocab/> SELECT (COUNT(DISTINCT ?item) AS ?total) WHERE { ?item a mex:ConceptoCompartido . }",
+    "revisadas": "PREFIX mex: <https://example.org/mex-ontologi/vocab/> SELECT (COUNT(DISTINCT ?item) AS ?total) WHERE { ?item a mex:CorrespondenciaSemantica; mex:estadoCorrespondencia \"documental_revisada\" . }",
+    "candidatas": "PREFIX mex: <https://example.org/mex-ontologi/vocab/> SELECT (COUNT(DISTINCT ?item) AS ?total) WHERE { ?item a mex:CorrespondenciaSemantica; mex:estadoCorrespondencia \"candidata_por_nombre\" . }",
+    "vinculos_ambiguos": "PREFIX mex: <https://example.org/mex-ontologi/vocab/> SELECT (COUNT(DISTINCT ?item) AS ?total) WHERE { ?item a mex:CorrespondenciaSemantica; mex:estadoCorrespondencia \"ambigua_por_nombre\" . }",
+    "variables_calificadas": "PREFIX mex: <https://example.org/mex-ontologi/vocab/> SELECT (COUNT(DISTINCT ?item) AS ?total) WHERE { ?item mex:tieneCalificadorDocumentado ?q . }",
+    "componentes_calificador": "PREFIX mex: <https://example.org/mex-ontologi/vocab/> SELECT (COUNT(DISTINCT ?item) AS ?total) WHERE { ?v mex:tieneCalificadorDocumentado ?item . }",
+    "fichas_cruce_preservadas": "PREFIX mex: <https://example.org/mex-ontologi/vocab/> SELECT (COUNT(DISTINCT ?item) AS ?total) WHERE { ?item a mex:RevisionCruceRonda3 . }",
+    "comparaciones_2020_preservadas": "PREFIX mex: <https://example.org/mex-ontologi/vocab/> SELECT (COUNT(DISTINCT ?item) AS ?total) WHERE { ?item a mex:ComparacionMunicipal2020 . }",
+    "evidencias_fuente_preservadas": "PREFIX mex: <https://example.org/mex-ontologi/vocab/> SELECT (COUNT(DISTINCT ?item) AS ?total) WHERE { ?item a mex:EvidenciaFuenteComparacion . }"
+  },
+  "conteos": {
+    "respaldadas": 1384,
+    "significados_candidatos": 19,
+    "conceptos": 1072,
+    "revisadas": 4466,
+    "candidatas": 20,
+    "vinculos_ambiguos": 2,
+    "variables_calificadas": 149,
+    "componentes_calificador": 195,
+    "fichas_cruce_preservadas": 3,
+    "comparaciones_2020_preservadas": 72,
+    "evidencias_fuente_preservadas": 144
+  },
+  "verificado": true,
+  "manifiesto_sha256": "c9edd8a180b0c79cc4c3eacce3c9e52009ddb63e68951db7181c6a377da046f2",
+  "semantica_sha256": "0d8ffc7509e4d694dfdb76bb28a6f6eca209bdb6f546b17dd1826171657e4b28",
+  "limite": "SELECT valida el grafo vivo; las respuestas del modelo se evalúan por separado."
+}

@@ -1,0 +1,270 @@
+{
+  "fecha_corte_utc": null,
+  "fuentes": [
+    {
+      "consultas": [
+        "CLUES catalogo DGIS formato y vigencia",
+        "SINAC/SEED columnas CLUES correspondencia"
+      ],
+      "fecha_consulta_utc": null,
+      "fragmentos_breves": [
+        "Nombre del Catalogo: Clave Unica de Establecimientos de Salud (CLUES).",
+        "Clave NOM-024-SSA3-2012: CAT_CLUES. Estatus: Definido. Organizacion de Origen: DGIS.",
+        "Criterios Clave: 'Se deben utilizar de manera estandar para la identificacion de unidades medicas en Mexico.'",
+        "Proposito: 'Identificacion de establecimientos. Determinacion de la institucion (caracteres 1 a 5 de la clave CLUES).'",
+        "Ultima Actualizacion: Agosto 2026. Ultima modificacion: Miercoles 23 de septiembre de 2026."
+      ],
+      "hueco_que_ataca": "correspondencias-a (CLUES SINAC 102-105/83: 6914c46b,34e6ca28,d7fe1a1d,555c6a55,1ec12e16) y correspondencias-b (CLUES SEED 38: 68f8868f). Pista de referente nacional vigente, NO cierra: falta tabla pregunta<->columna del publicador y codebook que mapee los literales locales.",
+      "id": "F-CLUES-01",
+      "localizadores": [
+        "Seccion 'Nombre del Catalogo' / 'Clave NOM-024-SSA3-2012' / 'Estatus'",
+        "Seccion 'Proposito(s) del Catalogo'",
+        "Seccion 'Ultima Actualizacion' / pie 'Ultima modificacion'"
+      ],
+      "resultado": "Pista nueva (no estaba en investigaciones previas del expediente): referente nacional DGIS vigente a 2026-08. No acredita sentido local ni vigencia de columnas.",
+      "sha_copia_local": null,
+      "url": "http://www.dgis.salud.gob.mx/contenidos/intercambio/clues_gobmx.html",
+      "fecha_consulta": "2026-10-24",
+      "hora_utc": "no_registrada_originalmente"
+    },
+    {
+      "consultas": [
+        "SESNSP diccionario datos incidencia delictiva corte metodologia 2015-2025",
+        "cat_municipio cat_entidad edicion version corte"
+      ],
+      "fecha_consulta_utc": null,
+      "fragmentos_breves": [
+        "'Aqui podras consultar las bases de datos de las cifras oficiales sobre los delitos y victimas de incidencia delictiva en Mexico.'",
+        "'Se considera incidencia delictiva las averiguaciones previas o carpetas de investigacion iniciadas por las fiscalias estatales (fuero comun)...'",
+        "Tres apartados metodologicos: '1997 a 2017', '2015 a 2025', '2026 a la fecha'.",
+        "Descargables: 'Diccionario de datos incidencia delictiva metodologia (2015-2025)', 'Manual metodologico del RNID', 'Nota Metodologica: Comparacion historica (RNID)'.",
+        "Fecha de pagina: 16 de octubre de 2026."
+      ],
+      "hueco_que_ataca": "vigencias-seguridad V13 (cat_municipio 84bb6fcd) y V14 (cat_entidad 96776ca8): documenta que existe diccionario y manual nacional por corte metodologico. NO cierra F3+F4 locales: falta edicion/version/corte del xlsx local y vinculo a 2015-2025.",
+      "id": "F-SESNSP-01",
+      "localizadores": [
+        "Titulo 'Datos abiertos de incidencia delictiva' + fecha '16 de octubre de 2026'",
+        "Lista 'Descarga aqui los archivos': bloques 2026-, 2015-2025, 1997-2017",
+        "Enlace 'Diccionario de datos incidencia delictiva metodologia (2015-2025)'"
+      ],
+      "resultado": "Pista nueva de ruta documental (diccionario + manual RNID por metodologia). No se descargo nada; el vinculo local sigue ausente.",
+      "sha_copia_local": null,
+      "url": "https://www.gob.mx/sesnsp/acciones-y-programas/datos-abiertos-de-incidencia-delictiva",
+      "fecha_consulta": "2026-10-24",
+      "hora_utc": "no_registrada_originalmente"
+    },
+    {
+      "consultas": [
+        "CONAPO reconstruccion proyecciones municipios 1990-2040 corte metodologia",
+        "COESPO catalogo.xlsx edicion version desfase corte"
+      ],
+      "fecha_consulta_utc": null,
+      "fragmentos_breves": [
+        "'Se presentan cifras de poblacion a mitad de ano de 2 475 municipios de Mexico, de 1990 a 2020 y proyecciones de la poblacion 2021 a 2040.' Fecha: 09 de mayo de 2024.",
+        "'La reconstruccion es un escenario hipotetico de la poblacion y puede tener variaciones con respecto a otras fuentes.'",
+        "Cita: 'SGCONAPO (2024, 31 de mayo). Proyecciones de la poblacion de los municipios de Mexico 2020-2040.'",
+        "Archivos: 'Excel con desagregacion por sexo y grupos de edad quinquenal hasta 85 y mas', 'grandes grupos de edad', 'indicadores demograficos', 'Diccionario de datos'."
+      ],
+      "hueco_que_ataca": "vigencias-coespo V09/V10/V11/V12/V15/V16 (sha ea54aad3): confirma corte nacional 1990-2020 + 2021-2040 y conteo 2475 municipios. El corte local (1990-2019/2020-2040) difiere 1 ano: desfase documentado, NO resuelto. No transfiere vigencia al xlsx local.",
+      "id": "F-CONAPO-01",
+      "localizadores": [
+        "Subtitulo '2 475 municipios ... 1990 a 2020 y proyecciones 2021 a 2040' + fecha '09 de mayo de 2024'",
+        "Apartado 'En caso de emplear esta informacion puede citar como' (2 citas SGCONAPO/ALAP)",
+        "Lista de archivos Excel + Diccionario"
+      ],
+      "resultado": "Pista confirmada y citable (fecha y corte exactos). No cierra F3+F4: falta edicion/version del catalogo.xlsx local y aclaracion del desfase.",
+      "sha_copia_local": null,
+      "url": "https://www.gob.mx/conapo/documentos/reconstruccion-y-proyecciones-de-la-poblacion-de-los-municipios-de-mexico-1990-2040",
+      "fecha_consulta": "2026-10-24",
+      "hora_utc": "no_registrada_originalmente"
+    },
+    {
+      "consultas": [
+        "CMPE adopcion UTH 2022-2026",
+        "SNIEG clasificacion programas estudio estandar"
+      ],
+      "fecha_consulta_utc": null,
+      "fragmentos_breves": [
+        "'La CMPE por Campos de Formacion Academica se ofrece como un instrumento para los usuarios que requieren de un sistema estandar para clasificar los programas de estudio del tipo superior y medio superior...'",
+        "'...presenta la CMPE ... como parte del SNIEG, ... para asegurar un manejo uniforme y comparable de los datos producidos por distintas unidades del Estado...'",
+        "Documento descargable: 'Clasif_Prog_Est_21SEPT2011.pdf' (edicion 2011 en esta pagina SEP, 14 de abril de 2015)."
+      ],
+      "hueco_que_ataca": "vigencias-uth-presas V01-V04: acredita marco nacional SNIEG/SEP para la CMPE (contexto), pero es edicion 2011 y NO menciona a la UTH ni a 2022-2026. F4 sigue ausente.",
+      "id": "F-CMPE-01",
+      "localizadores": [
+        "Parrafo 'La Clasificacion Mexicana de Programas de Estudio (CMPE)...'",
+        "Parrafo 'La CMPE es una herramienta util para las instituciones...'",
+        "Bloque 'Documentos: Descargar Clasif_Prog_Est_21SEPT2011.pdf'"
+      ],
+      "resultado": "Pista de contexto nacional (no cierra). La edicion aplicable a V01-V04 es la 2016 (pdf local sha 66ba2fd2); sigue faltando adopcion UTH.",
+      "sha_copia_local": null,
+      "url": "https://www.gob.mx/sep/documentos/clasificacion-mexicana-de-programas-de-estudio-por-campos-de-formacion-academica",
+      "fecha_consulta": "2026-10-24",
+      "hora_utc": "no_registrada_originalmente"
+    },
+    {
+      "consultas": [
+        "Promedio Academico UTH package_show version fuentes catalogo 2022-2026",
+        "V01 F4 adopcion CMPE 2016"
+      ],
+      "fecha_consulta_utc": null,
+      "fragmentos_breves": [
+        "package 403912fd: version=null, fuentes_extras='', frequency=cuatrimestral, organization=uth.",
+        "Catalogo 6d561451 size=10433 (= sha local 53bd5e97), start/end=1989-06-04 (placeholder).",
+        "15 recursos: Diccionario + Catalogo + 13 datos cuatrimestrales 2022-01-01 a 2026-04-30 (nombres 'Enero-Abril/Mayo-Agosto/Septiembre-Diciembre').",
+        "Responsable datos: Ramon Eduardo Sandoval Ramirez (Profesor de Asignatura, Rectoria)."
+      ],
+      "hueco_que_ataca": "vigencias-uth-presas V01 (y por archivo compartido V02-V04): inventario y cobertura cuatrimestral verificados en vivo; version=null y placeholder 1989 confirman que el portal NO declara edicion. F4 ausente.",
+      "id": "F-CKAN-V01",
+      "localizadores": [
+        "result.version / result.fuentes_extras / result.frequency",
+        "resources[id=6d561451]: size/start_date/end_date/url",
+        "resources[2..14]: name/start_date/end_date (cuatrimestres 2022-2026)"
+      ],
+      "resultado": "Verificacion en vivo (no repetida de R6: metadata_modified 2026-08-05, recurso 2026 agregado). No cierra: sin adopcion CMPE.",
+      "sha_copia_local": null,
+      "url": "https://datos.sonora.gob.mx/api/3/action/package_show?id=403912fd-5853-4e18-8256-f77206f855bd",
+      "fecha_consulta": "2026-10-24",
+      "hora_utc": "no_registrada_originalmente"
+    },
+    {
+      "consultas": [
+        "Proyecciones grupos quinquenales COESPO package_show fuentes_extras CONAPO",
+        "V09-V12 V15-V16 edicion catalogo"
+      ],
+      "fecha_consulta_utc": null,
+      "fragmentos_breves": [
+        "package 0b5f5e16: version=null, fuentes_extras='https://www.gob.mx/conapo/documentos/reconstruccion-y-proyecciones-de-la-poblacion-de-los-municipios-de-mexico-1990-2040'.",
+        "notes: 'Reconstruccion ... desde 1990 a 2019 y proyecciones ... 2020 a 2040 para el estado de Sonora'.",
+        "Catalogo de5c06c7 size=83769 (= sha local ea54aad3), start/end=1989-06-04.",
+        "Datos 81513319: start 1990-01-01 / end 2040-12-31 (cubre ambos periodos en un solo recurso)."
+      ],
+      "hueco_que_ataca": "vigencias-coespo V09/V10 (y hermanos V11/V12/V15/V16, mismo sha): fuentes_extras CONAPO confirmada a nivel conjunto (no por fila). Falta edicion/version del catalogo.xlsx + aclaracion desfase 1990-2019/2020-2040 vs 1990-2020/2021-2040.",
+      "id": "F-CKAN-V09",
+      "localizadores": [
+        "result.fuentes_extras / result.notes / result.version",
+        "resources[id=de5c06c7]: size/start_date/end_date",
+        "resources[id=81513319]: start_date/end_date"
+      ],
+      "resultado": "Verificacion en vivo. Avance de contexto (fuente metodologica citada por el publicador); no acredita F3+F4 locales.",
+      "sha_copia_local": null,
+      "url": "https://datos.sonora.gob.mx/api/3/action/package_show?id=0b5f5e16-2de3-4be1-811f-4b0976ed82d3",
+      "fecha_consulta": "2026-10-24",
+      "hora_utc": "no_registrada_originalmente"
+    },
+    {
+      "consultas": [
+        "Fiebre manchada Rickettsia package_show inventario diccionario catalogo 2022-2024",
+        "des_mpo_res catalogo fe de erratas"
+      ],
+      "fecha_consulta_utc": null,
+      "fragmentos_breves": [
+        "package 5494daa1: version=null, fuentes_extras='', num_resources=5, frequency=anual.",
+        "Diccionario 33d0a99e: CSV, datastore_active=true, start 2022-01-01/end 2026-12-31, size 51040.",
+        "Datos 2022/2023/2024 + Catalogo 08d3b1a7 size 12702, start 2022-01-01/end 2026-12-31.",
+        "Inventario cerrado: Diccionario + 3 datos + Catalogo (3 hojas: Servicios/rechazo/especie). Ningun recurso 'catalogo de municipios de residencia'."
+      ],
+      "hueco_que_ataca": "vigencias-salud V06/V07/V08 (catalogo 3b8546ac: cobertura 2022-2026 declarada en API, NO edicion) y anomalias des_mpo_res + EXC-ENC-177/178: inventario reconfirmado; fe de erratas y edicion siguen pendientes. La cobertura API no acredita F3/F4.",
+      "id": "F-CKAN-RICK",
+      "localizadores": [
+        "result.num_resources / version / fuentes_extras / frequency",
+        "resources[id=33d0a99e]: format/datastore_active/start_date/end_date/size",
+        "resources[id=08d3b1a7]: name/start_date/end_date/size"
+      ],
+      "resultado": "Pista de inventario/cobertura en vivo (metadata_modified 2026-05-11). No cierra nada: catalogo de des_mpo_res no identificado en inventario (no inexistencia universal).",
+      "sha_copia_local": null,
+      "url": "https://datos.sonora.gob.mx/api/3/action/package_show?id=5494daa1-09ca-4750-aeac-2558553700e1",
+      "fecha_consulta": "2026-10-24",
+      "hora_utc": "no_registrada_originalmente"
+    },
+    {
+      "consultas": [
+        "SUIVE formato columnas edad sexo CIE EPI clave acumulado",
+        "epidemiologia cve_cie10 acumulado de01_a_04 se_ignoran"
+      ],
+      "fecha_consulta_utc": null,
+      "fragmentos_breves": [
+        "Manual SUIVE: 'Cada enfermedad incluye el codigo que le ha sido asignado por la CIE 10' + columna EPI CLAVE; tabulacion por grupos de edad con subdivisiones por sexo; columnas de suma total por sexo.",
+        "Formato SUIVE-1 2021: grupos '< de 1 ano, 1-4, 5-9, ..., 65 y >, Ign.'; columna 'Diagnostico y Codigo CIE 10a Revision'; campos CLUES/Unidad/SUAVE.",
+        "Boletin epidemiologico: medio oficial de difusion semanal (142 enfermedades, 68 pp), cumple NOM-017-SSA2-2012.",
+        "Advertencia de uso: formato nacional (30 columnas) vs esquema local de 59 columnas; sufijo f local sin defines; Ign. nacional es pantalla SUAVE, no columna local pos 23."
+      ],
+      "hueco_que_ataca": "significados-educacion-epidemiologia (cve_cie10, acumulado, de01_a_04/de01_a_04f/..., se_ignoran, menores_1f): referente nacional del formato, ya citado en R6 (manual pp.18/26/50). Sin edicion aplicable 2022 ni tabla columna<->formato del publicador: todo sigue pendiente.",
+      "id": "F-SUIVE-01",
+      "localizadores": [
+        "32_ManualSuive.pdf: Formato SUIVE-1 / EPI CLAVE / tabulacion edad-sexo",
+        "Formato_SUIVE_1_Abril_2021.pdf: encabezados de grupos de edad + 'Ign.' + 'Codigo CIE 10a Revision'",
+        "Boletin epidemiologico gob.mx: 'medio oficial de difusion ... NOM-017-SSA2-2012'"
+      ],
+      "resultado": "Pista de contexto reutilizable por fila (citar solo la pagina que corresponda). No cierra ninguna definicion sin vinculo del publicador.",
+      "sha_copia_local": null,
+      "url": "https://epidemiologia.salud.gob.mx/gobmx/salud/documentos/manuales/32_ManualSuive.pdf",
+      "fecha_consulta": "2026-10-24",
+      "hora_utc": "no_registrada_originalmente"
+    },
+    {
+      "consultas": [
+        "CIE-10 U07.1 COVID-19 virus identificado codigo emergencia 2020",
+        "CIECAUSABASIC edicion CIE aplicable 2022"
+      ],
+      "fecha_consulta_utc": null,
+      "fragmentos_breves": [
+        "OMS/WHOFIC: codigo de emergencia CIE-10 'U07.1 COVID-19, virus identificado' creado 31-01-2020 tras emergencia de salud publica 30-01-2020.",
+        "CDC/NCHS: 'change in the effective date of new diagnosis code U07.1, COVID-19, from October 1, 2020 to April 1, 2020 ... unprecedented ... exception'.",
+        "OPS: 'Se asigna el codigo U07.1 a un diagnostico de COVID-19 confirmado por pruebas de laboratorio; U07.2 si no concluyente'."
+      ],
+      "hueco_que_ataca": "significados-salud CIECAUSABASIC (U071) / CIECAUSABASICD ('COVID-19, VIRUS IDENTIFICADO'): explica el codigo como emergencia 2020 posterior a la bibliografia 1995 del manual. No fija edicion aplicable al recurso 2022 ni tabla pregunta<->columna: sigue pendiente.",
+      "id": "F-CIE-U071",
+      "localizadores": [
+        "CDC Announcement-New-ICD-code-for-coronavirus-3-18-2020.pdf: 'effective date ... April 1, 2020'",
+        "OPS presentacion codificacion COVID-19: 'U07.1 ... confirmado por pruebas de laboratorio'"
+      ],
+      "resultado": "Pista de datacion del codigo (2020). No acredita vigencia local ni edicion del publicador.",
+      "sha_copia_local": null,
+      "url": "https://www.cdc.gov/nchs/data/icd/Announcement-New-ICD-code-for-coronavirus-3-18-2020.pdf",
+      "fecha_consulta": "2026-10-24",
+      "hora_utc": "no_registrada_originalmente"
+    },
+    {
+      "consultas": [
+        "INEGI marco geoestadistico claves estado municipio localidad AGEB 2022",
+        "SINAC SEED municipio localidad correspondencia"
+      ],
+      "fecha_consulta_utc": null,
+      "fragmentos_breves": [
+        "INEGI: 'El Marco Geoestadistico es un sistema unico y de caracter nacional ... division geoestadistica del territorio'.",
+        "Diccionario MG 2022: 'CLAVE DEL AGEM ... compuesta por 3 digitos'; 'CLAVE DE LOCALIDAD GEOESTADISTICA ... 4 digitos'; AGEB '3 + digito verificador'.",
+        "Catalogo Unico de Claves (ageeml): AGEE/AGEM/Localidad con fecha de corte y tabla de equivalencia.",
+        "Cobertura citada: 32 estados, 2 470 municipios, 300 390 localidades (nota de difusion)."
+      ],
+      "hueco_que_ataca": "correspondencias-a/b (MUNICIPIOCERTIFICA/D, LOCALIDADCERTIFICA/D, MUNICIPIOOCURRENCIA/D, LOCALIDADOCURRENCIA/D, Municipio UTH) y vigencias-seguridad (cat_municipio/cat_entidad): referente nacional de claves. Sin codebook del publicador que mapee valores locales: candidatas por nombre, no cierres.",
+      "id": "F-INEGI-MG",
+      "localizadores": [
+        "inegi.org.mx/temas/mg: 'sistema unico y de caracter nacional'",
+        "Diccionario MG 2022 (pdf 889463906933): CLAVE AGEM / LOCALIDAD / AGEB",
+        "ageeml: filtros AGEE/AGEM/Localidad + fecha de corte"
+      ],
+      "resultado": "Pista de referente nacional (estructura de claves). No autoriza joins ni identidad de catalogos sin vinculo del publicador.",
+      "sha_copia_local": null,
+      "url": "https://www.inegi.org.mx/temas/mg",
+      "fecha_consulta": "2026-10-24",
+      "hora_utc": "no_registrada_originalmente"
+    }
+  ],
+  "nota_metodo": "Todo lo hallado via Obscura (portal Sonora) o herramientas web nativas (webfetch/websearch) y API CKAN directa. Sin descargas masivas, sin contactos, sin login. Ningun hallazgo cierra casos: son pistas con identificador para que los agentes hermanos las verifiquen contra fila+huella+huella y decidan. Busquedas negativas acotadas a lo revisado el 2026-10-24, no ausencia universal.",
+  "resumen_por_tarea": {
+    "anomalias": "F-CKAN-RICK: inventario reconfirmado (sin recurso catalogo des_mpo_res); fe de erratas pendiente. Sin cambios que cierren EXC-177/178 ni des_mpo_res.",
+    "correspondencias-a": "F-CLUES-01 (CLUES SINAC), F-SUIVE-01 (formato nacional), F-INEGI-MG (claves). 10/10 siguen candidatas_por_nombre.",
+    "correspondencias-b": "F-CLUES-01 (CLUES SEED), F-INEGI-MG, F-CIE-U071 (contexto CIE). 10/10 siguen candidatas (Total_Egresos: ver F-DGIS-EGR en md).",
+    "significados-educacion-epidemiologia": "F-SUIVE-01 por fila + F-INEGI-MG. Ninguna definicion cerrada sin nota del publicador (EPI-R6-01/02/03).",
+    "significados-salud": "F-CLUES-01 (CLUES), F-CIE-U071 (U071/COVID), contexto manual SEED ya en expediente. Todo sigue_pendiente sin tabla pregunta<->columna.",
+    "significados-tic-diversos": "Ver fuentes.md (F-DGIS-EGR, F-CONAPO-CLASIF ya en expediente + F-CKAN-V01/V09 como plantilla de verificacion en vivo).",
+    "vigencias-coespo": "F-CKAN-V09 + F-CONAPO-01: desfase de corte documentado (local 1990-2019/2020-2040 vs nacional 1990-2020/2021-2040). F3+F4 ausentes.",
+    "vigencias-salud": "F-CKAN-RICK: cobertura Catalogo 2022-2026 en API (avance de cobertura, NO edicion). F3+F4 ausentes.",
+    "vigencias-seguridad": "F-SESNSP-01: ruta a diccionario/manual por metodologia. F3+F4 locales ausentes.",
+    "vigencias-uth-presas": "F-CKAN-V01 + F-CMPE-01 + F-CKAN-V09 (plantilla): V01-V04 con cobertura cuatrimestral verificada en vivo; F4 ausente. V05 sin novedad web oltre R6."
+  },
+  "fecha": "2026-10-24",
+  "hora_utc": "no_registrada_originalmente",
+  "fecha_actualizacion_real_utc": "2026-10-24T06:54:21+00:00"
+}

@@ -1,0 +1,1060 @@
+{
+ "rol": "M2-sinac",
+ "version": "v003",
+ "fecha_utc": "2026-10-24T08:57:26.130299+00:00",
+ "modelo": "opencode-go/muse-spark-1.3-contributor",
+ "base": {
+  "asignacion_sha256": "6e45351db797a65d426875a01e17888d7f3cf8969821d58f313b08c687e88184",
+  "ronda7_sha256": "197054973a25496ed30b393c566b689e43d6cf46d012f79e644cb0521a32d787",
+  "cobertura_r7_sha256": "4627c2baaf9a54d99897c93ee76213eea9a27bedf20219cf3cceda3da5e03bfe",
+  "inspeccion_sha256": "61861aab5bc2b334699c4d78f611a0e2d650c4649bd791927f9095c2ac785efb",
+  "s2_v002_sha256": "2432f14513f11016dc9488188516d67e1be55a3f98e960a29c4fcc06e583e0f1"
+ },
+ "resumen": {
+  "casos_asignados": 14,
+  "propuestas_para_auditar": 14,
+  "brechas_externas": 0,
+  "accesos_no_resueltos": 0,
+  "peticiones_web": 0
+ },
+ "decisiones": [
+  {
+   "id": "https://example.org/mex-ontologi/semantic-mapping/8426466191ebd2c7175453ae963c2156f7699993f965236c0df982e9c4034a82",
+   "tipo": "correspondencias",
+   "estado": "propuesta_para_auditar",
+   "afirmacion_propuesta": "La columna fisica pos 65 (VITAMINA_A) de la hoja SINAC 2022 26-09-22 del recurso 46977217-9396-4f9c-bddb-6616e82530b4 corresponde a la variable documentada fila 65 (VITAMINA_A) del diccionario 22202305-2d02-4c49-b216-cc98224357f0 (definicion https://example.org/mex-ontologi/definition/22202305-2d02-4c49-b216-cc98224357f0%2F65), mismo conjunto 940de7d8, descripcion Pendiente de especificar, concepto sinac-vitamina-a (r7-s2-065). Alcance: solo este recurso y esta definicion local; no autoriza otra edicion, adopcion global, totalidad de catalogos, equivalencias, joins ni vigencias.",
+   "motivo": "Correspondencia formal suficiente verificada en inspecciones originales: 1) sistema: recurso y diccionario en el mismo conjunto 940de7d8 del portal; 2) recurso: hoja SINAC 2022 26-09-22 con 106 campos, columna de nombre exacto en ordinal 65 sin duplicados; 3) fila 65 del diccionario con nombre exacto y huella 1cb751023a12f3a604fb3abbe8627293b7ad2cc7cc777faa1b53b116c0982429 coincidente con R7; 4) significado ya respaldado (r7-s2-065, sinac-vitamina-a) con descripcion Pendiente de especificar; no se aprueba por nombre solo sino por esquema+fila+huella+significado. Expediente R7 (cierre, paquetes W v001-v004, S2 v002) revisado; sin busquedas genericas repetidas y sin pista web nueva: no se escribe peticiones-web.json.",
+   "evidencia": [
+    {
+     "ruta": "data/portal/contenido-inspeccion.json",
+     "sha256": "61861aab5bc2b334699c4d78f611a0e2d650c4649bd791927f9095c2ac785efb",
+     "localizador": "recurso 46977217 tablas[0]: hoja SINAC 2022 26-09-22, fila_encabezado 1, 106 campos; campos[posicion_original=65].id=VITAMINA_A (unico)",
+     "afirmacion_soportada": "La columna fisica existe en el esquema del recurso con nombre exacto VITAMINA_A en ordinal 65, sin duplicados."
+    },
+    {
+     "ruta": "data/portal/contenido-inspeccion.json",
+     "sha256": "61861aab5bc2b334699c4d78f611a0e2d650c4649bd791927f9095c2ac785efb",
+     "localizador": "recurso 22202305 definiciones[64] (fila 65): Nombre variable=VITAMINA_A; huella_fila=1cb751023a12f3a604fb3abbe8627293b7ad2cc7cc777faa1b53b116c0982429",
+     "afirmacion_soportada": "La fila del diccionario existe con nombre exacto VITAMINA_A en ordinal 65 y huella coincidente con R7."
+    },
+    {
+     "ruta": "propuestas/ronda-8-paralela/ejecucion-20261024/cobertura-r7.json",
+     "sha256": "4627c2baaf9a54d99897c93ee76213eea9a27bedf20219cf3cceda3da5e03bfe",
+     "localizador": "variables https://example.org/mex-ontologi/documented-variable/22202305-2d02-4c49-b216-cc98224357f0%2F65: estado=respaldada_por_definicion, concepto=sinac-vitamina-a, regla=r7-s2-065; correspondencias https://example.org/mex-ontologi/file-column/46977217-9396-4f9c-bddb-6616e82530b4%2FSINAC%202022%2026-09-22%2F65: estado=candidata_por_nombre, variable=https://example.org/mex-ontologi/documented-variable/22202305-2d02-4c49-b216-cc98224357f0%2F65",
+     "afirmacion_soportada": "El significado esta respaldado en R7 y la correspondencia es candidata sin revision previa; variable y definicion_iri coinciden exactos."
+    },
+    {
+     "ruta": "propuestas/plan-paralelo-brechas-sin-gemma/ejecucion-20261024-072207Z/S2-nacimientos/v002/entrega.json",
+     "sha256": "2432f14513f11016dc9488188516d67e1be55a3f98e960a29c4fcc06e583e0f1",
+     "localizador": "decision r7-s2-065: estado propuesta_para_auditar; fuente_revision de la definicion local",
+     "afirmacion_soportada": "El significado del caso esta fijado por S2-nacimientos v002 (auditoria A/B pendiente); este vinculo no crea regla ni concepto nuevo."
+    }
+   ],
+   "evidencia_faltante": null,
+   "condicion_reapertura": "Si la auditoria rechaza el vinculo, revierte a brecha_externa con el motivo del dictamen; reapertura con fe de erratas del publicador o instrumento que corrija ordinal/nombre.",
+   "limites": [
+    "Solo código 0 verificado con ejemplo+D locales; no lista completa SI_NO; no tabla determinada; no identidad global de catálogos; vigencia acotada al recurso 2022-01-01 a 2022-09-26. Código nacional '0' = 'NO ESPECIFICADO'.",
+    "Significado solo para el recurso SINAC 2022 (46977217, 2022-01-01 a 2022-09-26) y la definición local fijada; no autoriza otra edición, adopción global, totalidad del catálogo, equivalencias ni vigencias."
+   ],
+   "vinculo_propuesto": {
+    "campo": "VITAMINA_A",
+    "columna": "https://example.org/mex-ontologi/file-column/46977217-9396-4f9c-bddb-6616e82530b4%2FSINAC%202022%2026-09-22%2F65",
+    "concepto": "sinac-vitamina-a",
+    "criterio": "Revision explicita de la columna fisica pos 65 (VITAMINA_A) de la hoja SINAC 2022 26-09-22 del recurso 46977217-9396-4f9c-bddb-6616e82530b4 y de su fila 65 del diccionario 22202305-2d02-4c49-b216-cc98224357f0 en el mismo conjunto 940de7d8-73ec-4a08-8d26-b7cc97ff17bd: nombre exacto, ordinal coincidente, descripcion Pendiente de especificar y huella de fila 1cb751023a12f3a604fb3abbe8627293b7ad2cc7cc777faa1b53b116c0982429.",
+    "definicion_iri": "https://example.org/mex-ontologi/definition/22202305-2d02-4c49-b216-cc98224357f0%2F65",
+    "descripcion": "Pendiente de especificar",
+    "diccionario": "22202305-2d02-4c49-b216-cc98224357f0",
+    "huella_esquema": "9b46e1c0e32acd903780264f0ebbc538a835eb1bf92a70faa36ba7e839a1ec95",
+    "huella_fila_diccionario": "1cb751023a12f3a604fb3abbe8627293b7ad2cc7cc777faa1b53b116c0982429",
+    "recurso": "46977217-9396-4f9c-bddb-6616e82530b4"
+   },
+   "origenes": [
+    "data/portal/contenido-inspeccion.json",
+    "propuestas/ronda-8-paralela/ejecucion-20261024/cobertura-r7.json",
+    "propuestas/plan-paralelo-brechas-sin-gemma/ejecucion-20261024-072207Z/S2-nacimientos/v002/entrega.json"
+   ]
+  },
+  {
+   "id": "https://example.org/mex-ontologi/semantic-mapping/979dbc5a7c74c6308a9e9a13cb4a52c680919fbe3deddca7c2b72121bec25617",
+   "tipo": "correspondencias",
+   "estado": "propuesta_para_auditar",
+   "afirmacion_propuesta": "La columna fisica pos 67 (VITAMINA_K) de la hoja SINAC 2022 26-09-22 del recurso 46977217-9396-4f9c-bddb-6616e82530b4 corresponde a la variable documentada fila 67 (VITAMINA_K) del diccionario 22202305-2d02-4c49-b216-cc98224357f0 (definicion https://example.org/mex-ontologi/definition/22202305-2d02-4c49-b216-cc98224357f0%2F67), mismo conjunto 940de7d8, descripcion Pendiente de especificar, concepto sinac-vitamina-k (r7-s2-067). Alcance: solo este recurso y esta definicion local; no autoriza otra edicion, adopcion global, totalidad de catalogos, equivalencias, joins ni vigencias.",
+   "motivo": "Correspondencia formal suficiente verificada en inspecciones originales: 1) sistema: recurso y diccionario en el mismo conjunto 940de7d8 del portal; 2) recurso: hoja SINAC 2022 26-09-22 con 106 campos, columna de nombre exacto en ordinal 67 sin duplicados; 3) fila 67 del diccionario con nombre exacto y huella 7180af0ba9ef0fa427fa288465c55f66c5d15a0b62f0e769d950f7c72049ff23 coincidente con R7; 4) significado ya respaldado (r7-s2-067, sinac-vitamina-k) con descripcion Pendiente de especificar; no se aprueba por nombre solo sino por esquema+fila+huella+significado. Expediente R7 (cierre, paquetes W v001-v004, S2 v002) revisado; sin busquedas genericas repetidas y sin pista web nueva: no se escribe peticiones-web.json.",
+   "evidencia": [
+    {
+     "ruta": "data/portal/contenido-inspeccion.json",
+     "sha256": "61861aab5bc2b334699c4d78f611a0e2d650c4649bd791927f9095c2ac785efb",
+     "localizador": "recurso 46977217 tablas[0]: hoja SINAC 2022 26-09-22, fila_encabezado 1, 106 campos; campos[posicion_original=67].id=VITAMINA_K (unico)",
+     "afirmacion_soportada": "La columna fisica existe en el esquema del recurso con nombre exacto VITAMINA_K en ordinal 67, sin duplicados."
+    },
+    {
+     "ruta": "data/portal/contenido-inspeccion.json",
+     "sha256": "61861aab5bc2b334699c4d78f611a0e2d650c4649bd791927f9095c2ac785efb",
+     "localizador": "recurso 22202305 definiciones[66] (fila 67): Nombre variable=VITAMINA_K; huella_fila=7180af0ba9ef0fa427fa288465c55f66c5d15a0b62f0e769d950f7c72049ff23",
+     "afirmacion_soportada": "La fila del diccionario existe con nombre exacto VITAMINA_K en ordinal 67 y huella coincidente con R7."
+    },
+    {
+     "ruta": "propuestas/ronda-8-paralela/ejecucion-20261024/cobertura-r7.json",
+     "sha256": "4627c2baaf9a54d99897c93ee76213eea9a27bedf20219cf3cceda3da5e03bfe",
+     "localizador": "variables https://example.org/mex-ontologi/documented-variable/22202305-2d02-4c49-b216-cc98224357f0%2F67: estado=respaldada_por_definicion, concepto=sinac-vitamina-k, regla=r7-s2-067; correspondencias https://example.org/mex-ontologi/file-column/46977217-9396-4f9c-bddb-6616e82530b4%2FSINAC%202022%2026-09-22%2F67: estado=candidata_por_nombre, variable=https://example.org/mex-ontologi/documented-variable/22202305-2d02-4c49-b216-cc98224357f0%2F67",
+     "afirmacion_soportada": "El significado esta respaldado en R7 y la correspondencia es candidata sin revision previa; variable y definicion_iri coinciden exactos."
+    },
+    {
+     "ruta": "propuestas/plan-paralelo-brechas-sin-gemma/ejecucion-20261024-072207Z/S2-nacimientos/v002/entrega.json",
+     "sha256": "2432f14513f11016dc9488188516d67e1be55a3f98e960a29c4fcc06e583e0f1",
+     "localizador": "decision r7-s2-067: estado propuesta_para_auditar; fuente_revision de la definicion local",
+     "afirmacion_soportada": "El significado del caso esta fijado por S2-nacimientos v002 (auditoria A/B pendiente); este vinculo no crea regla ni concepto nuevo."
+    }
+   ],
+   "evidencia_faltante": null,
+   "condicion_reapertura": "Si la auditoria rechaza el vinculo, revierte a brecha_externa con el motivo del dictamen; reapertura con fe de erratas del publicador o instrumento que corrija ordinal/nombre.",
+   "limites": [
+    "Solo código 1 verificado con ejemplo+D locales; no lista completa SI_NO; no tabla determinada; no identidad global de catálogos; vigencia acotada al recurso 2022-01-01 a 2022-09-26.",
+    "Significado solo para el recurso SINAC 2022 (46977217, 2022-01-01 a 2022-09-26) y la definición local fijada; no autoriza otra edición, adopción global, totalidad del catálogo, equivalencias ni vigencias."
+   ],
+   "vinculo_propuesto": {
+    "campo": "VITAMINA_K",
+    "columna": "https://example.org/mex-ontologi/file-column/46977217-9396-4f9c-bddb-6616e82530b4%2FSINAC%202022%2026-09-22%2F67",
+    "concepto": "sinac-vitamina-k",
+    "criterio": "Revision explicita de la columna fisica pos 67 (VITAMINA_K) de la hoja SINAC 2022 26-09-22 del recurso 46977217-9396-4f9c-bddb-6616e82530b4 y de su fila 67 del diccionario 22202305-2d02-4c49-b216-cc98224357f0 en el mismo conjunto 940de7d8-73ec-4a08-8d26-b7cc97ff17bd: nombre exacto, ordinal coincidente, descripcion Pendiente de especificar y huella de fila 7180af0ba9ef0fa427fa288465c55f66c5d15a0b62f0e769d950f7c72049ff23.",
+    "definicion_iri": "https://example.org/mex-ontologi/definition/22202305-2d02-4c49-b216-cc98224357f0%2F67",
+    "descripcion": "Pendiente de especificar",
+    "diccionario": "22202305-2d02-4c49-b216-cc98224357f0",
+    "huella_esquema": "9b46e1c0e32acd903780264f0ebbc538a835eb1bf92a70faa36ba7e839a1ec95",
+    "huella_fila_diccionario": "7180af0ba9ef0fa427fa288465c55f66c5d15a0b62f0e769d950f7c72049ff23",
+    "recurso": "46977217-9396-4f9c-bddb-6616e82530b4"
+   },
+   "origenes": [
+    "data/portal/contenido-inspeccion.json",
+    "propuestas/ronda-8-paralela/ejecucion-20261024/cobertura-r7.json",
+    "propuestas/plan-paralelo-brechas-sin-gemma/ejecucion-20261024-072207Z/S2-nacimientos/v002/entrega.json"
+   ]
+  },
+  {
+   "id": "https://example.org/mex-ontologi/semantic-mapping/768c291066592161f0b0e844a43f4688f56f6564d9755615b074c467bf9ec626",
+   "tipo": "correspondencias",
+   "estado": "propuesta_para_auditar",
+   "afirmacion_propuesta": "La columna fisica pos 69 (PRODUCTOEMBARAZO) de la hoja SINAC 2022 26-09-22 del recurso 46977217-9396-4f9c-bddb-6616e82530b4 corresponde a la variable documentada fila 69 (PRODUCTOEMBARAZO) del diccionario 22202305-2d02-4c49-b216-cc98224357f0 (definicion https://example.org/mex-ontologi/definition/22202305-2d02-4c49-b216-cc98224357f0%2F69), mismo conjunto 940de7d8, descripcion Pendiente de especificar, concepto sinac-productoembarazo (r7-s2-069). Alcance: solo este recurso y esta definicion local; no autoriza otra edicion, adopcion global, totalidad de catalogos, equivalencias, joins ni vigencias.",
+   "motivo": "Correspondencia formal suficiente verificada en inspecciones originales: 1) sistema: recurso y diccionario en el mismo conjunto 940de7d8 del portal; 2) recurso: hoja SINAC 2022 26-09-22 con 106 campos, columna de nombre exacto en ordinal 69 sin duplicados; 3) fila 69 del diccionario con nombre exacto y huella b66a776bd99ba4884bd6df9804696b53ef6b6de5a0fd9c8a22d70c78fac07881 coincidente con R7; 4) significado ya respaldado (r7-s2-069, sinac-productoembarazo) con descripcion Pendiente de especificar; no se aprueba por nombre solo sino por esquema+fila+huella+significado. Expediente R7 (cierre, paquetes W v001-v004, S2 v002) revisado; sin busquedas genericas repetidas y sin pista web nueva: no se escribe peticiones-web.json.",
+   "evidencia": [
+    {
+     "ruta": "data/portal/contenido-inspeccion.json",
+     "sha256": "61861aab5bc2b334699c4d78f611a0e2d650c4649bd791927f9095c2ac785efb",
+     "localizador": "recurso 46977217 tablas[0]: hoja SINAC 2022 26-09-22, fila_encabezado 1, 106 campos; campos[posicion_original=69].id=PRODUCTOEMBARAZO (unico)",
+     "afirmacion_soportada": "La columna fisica existe en el esquema del recurso con nombre exacto PRODUCTOEMBARAZO en ordinal 69, sin duplicados."
+    },
+    {
+     "ruta": "data/portal/contenido-inspeccion.json",
+     "sha256": "61861aab5bc2b334699c4d78f611a0e2d650c4649bd791927f9095c2ac785efb",
+     "localizador": "recurso 22202305 definiciones[68] (fila 69): Nombre variable=PRODUCTOEMBARAZO; huella_fila=b66a776bd99ba4884bd6df9804696b53ef6b6de5a0fd9c8a22d70c78fac07881",
+     "afirmacion_soportada": "La fila del diccionario existe con nombre exacto PRODUCTOEMBARAZO en ordinal 69 y huella coincidente con R7."
+    },
+    {
+     "ruta": "propuestas/ronda-8-paralela/ejecucion-20261024/cobertura-r7.json",
+     "sha256": "4627c2baaf9a54d99897c93ee76213eea9a27bedf20219cf3cceda3da5e03bfe",
+     "localizador": "variables https://example.org/mex-ontologi/documented-variable/22202305-2d02-4c49-b216-cc98224357f0%2F69: estado=respaldada_por_definicion, concepto=sinac-productoembarazo, regla=r7-s2-069; correspondencias https://example.org/mex-ontologi/file-column/46977217-9396-4f9c-bddb-6616e82530b4%2FSINAC%202022%2026-09-22%2F69: estado=candidata_por_nombre, variable=https://example.org/mex-ontologi/documented-variable/22202305-2d02-4c49-b216-cc98224357f0%2F69",
+     "afirmacion_soportada": "El significado esta respaldado en R7 y la correspondencia es candidata sin revision previa; variable y definicion_iri coinciden exactos."
+    },
+    {
+     "ruta": "propuestas/plan-paralelo-brechas-sin-gemma/ejecucion-20261024-072207Z/S2-nacimientos/v002/entrega.json",
+     "sha256": "2432f14513f11016dc9488188516d67e1be55a3f98e960a29c4fcc06e583e0f1",
+     "localizador": "decision r7-s2-069: estado propuesta_para_auditar; fuente_revision de la definicion local",
+     "afirmacion_soportada": "El significado del caso esta fijado por S2-nacimientos v002 (auditoria A/B pendiente); este vinculo no crea regla ni concepto nuevo."
+    }
+   ],
+   "evidencia_faltante": null,
+   "condicion_reapertura": "Si la auditoria rechaza el vinculo, revierte a brecha_externa con el motivo del dictamen; reapertura con fe de erratas del publicador o instrumento que corrija ordinal/nombre.",
+   "limites": [
+    "Solo código 1 verificado con ejemplo+D locales; no lista completa PRODUCTO_EMBARAZO; no tabla determinada; no identidad global de catálogos; vigencia acotada al recurso 2022-01-01 a 2022-09-26. Código nacional '1' = 'UNICO'.",
+    "Significado solo para el recurso SINAC 2022 (46977217, 2022-01-01 a 2022-09-26) y la definición local fijada; no autoriza otra edición, adopción global, totalidad del catálogo, equivalencias ni vigencias."
+   ],
+   "vinculo_propuesto": {
+    "campo": "PRODUCTOEMBARAZO",
+    "columna": "https://example.org/mex-ontologi/file-column/46977217-9396-4f9c-bddb-6616e82530b4%2FSINAC%202022%2026-09-22%2F69",
+    "concepto": "sinac-productoembarazo",
+    "criterio": "Revision explicita de la columna fisica pos 69 (PRODUCTOEMBARAZO) de la hoja SINAC 2022 26-09-22 del recurso 46977217-9396-4f9c-bddb-6616e82530b4 y de su fila 69 del diccionario 22202305-2d02-4c49-b216-cc98224357f0 en el mismo conjunto 940de7d8-73ec-4a08-8d26-b7cc97ff17bd: nombre exacto, ordinal coincidente, descripcion Pendiente de especificar y huella de fila b66a776bd99ba4884bd6df9804696b53ef6b6de5a0fd9c8a22d70c78fac07881.",
+    "definicion_iri": "https://example.org/mex-ontologi/definition/22202305-2d02-4c49-b216-cc98224357f0%2F69",
+    "descripcion": "Pendiente de especificar",
+    "diccionario": "22202305-2d02-4c49-b216-cc98224357f0",
+    "huella_esquema": "9b46e1c0e32acd903780264f0ebbc538a835eb1bf92a70faa36ba7e839a1ec95",
+    "huella_fila_diccionario": "b66a776bd99ba4884bd6df9804696b53ef6b6de5a0fd9c8a22d70c78fac07881",
+    "recurso": "46977217-9396-4f9c-bddb-6616e82530b4"
+   },
+   "origenes": [
+    "data/portal/contenido-inspeccion.json",
+    "propuestas/ronda-8-paralela/ejecucion-20261024/cobertura-r7.json",
+    "propuestas/plan-paralelo-brechas-sin-gemma/ejecucion-20261024-072207Z/S2-nacimientos/v002/entrega.json"
+   ]
+  },
+  {
+   "id": "https://example.org/mex-ontologi/semantic-mapping/2add7f25cbcc776a95e6f98daac7a1eba865ff8c9a050aea6d7a889a62b4c434",
+   "tipo": "correspondencias",
+   "estado": "propuesta_para_auditar",
+   "afirmacion_propuesta": "La columna fisica pos 71 (ORDENPRODUCTO) de la hoja SINAC 2022 26-09-22 del recurso 46977217-9396-4f9c-bddb-6616e82530b4 corresponde a la variable documentada fila 71 (ORDENPRODUCTO) del diccionario 22202305-2d02-4c49-b216-cc98224357f0 (definicion https://example.org/mex-ontologi/definition/22202305-2d02-4c49-b216-cc98224357f0%2F71), mismo conjunto 940de7d8, descripcion Pendiente de especificar, concepto sinac-ordenproducto (r7-s2-071). Alcance: solo este recurso y esta definicion local; no autoriza otra edicion, adopcion global, totalidad de catalogos, equivalencias, joins ni vigencias.",
+   "motivo": "Correspondencia formal suficiente verificada en inspecciones originales: 1) sistema: recurso y diccionario en el mismo conjunto 940de7d8 del portal; 2) recurso: hoja SINAC 2022 26-09-22 con 106 campos, columna de nombre exacto en ordinal 71 sin duplicados; 3) fila 71 del diccionario con nombre exacto y huella abcad05c885063318a672bd488a1a7d5afe1f258dea83e0fdf5c10fbac4c455c coincidente con R7; 4) significado ya respaldado (r7-s2-071, sinac-ordenproducto) con descripcion Pendiente de especificar; no se aprueba por nombre solo sino por esquema+fila+huella+significado. Expediente R7 (cierre, paquetes W v001-v004, S2 v002) revisado; sin busquedas genericas repetidas y sin pista web nueva: no se escribe peticiones-web.json.",
+   "evidencia": [
+    {
+     "ruta": "data/portal/contenido-inspeccion.json",
+     "sha256": "61861aab5bc2b334699c4d78f611a0e2d650c4649bd791927f9095c2ac785efb",
+     "localizador": "recurso 46977217 tablas[0]: hoja SINAC 2022 26-09-22, fila_encabezado 1, 106 campos; campos[posicion_original=71].id=ORDENPRODUCTO (unico)",
+     "afirmacion_soportada": "La columna fisica existe en el esquema del recurso con nombre exacto ORDENPRODUCTO en ordinal 71, sin duplicados."
+    },
+    {
+     "ruta": "data/portal/contenido-inspeccion.json",
+     "sha256": "61861aab5bc2b334699c4d78f611a0e2d650c4649bd791927f9095c2ac785efb",
+     "localizador": "recurso 22202305 definiciones[70] (fila 71): Nombre variable=ORDENPRODUCTO; huella_fila=abcad05c885063318a672bd488a1a7d5afe1f258dea83e0fdf5c10fbac4c455c",
+     "afirmacion_soportada": "La fila del diccionario existe con nombre exacto ORDENPRODUCTO en ordinal 71 y huella coincidente con R7."
+    },
+    {
+     "ruta": "propuestas/ronda-8-paralela/ejecucion-20261024/cobertura-r7.json",
+     "sha256": "4627c2baaf9a54d99897c93ee76213eea9a27bedf20219cf3cceda3da5e03bfe",
+     "localizador": "variables https://example.org/mex-ontologi/documented-variable/22202305-2d02-4c49-b216-cc98224357f0%2F71: estado=respaldada_por_definicion, concepto=sinac-ordenproducto, regla=r7-s2-071; correspondencias https://example.org/mex-ontologi/file-column/46977217-9396-4f9c-bddb-6616e82530b4%2FSINAC%202022%2026-09-22%2F71: estado=candidata_por_nombre, variable=https://example.org/mex-ontologi/documented-variable/22202305-2d02-4c49-b216-cc98224357f0%2F71",
+     "afirmacion_soportada": "El significado esta respaldado en R7 y la correspondencia es candidata sin revision previa; variable y definicion_iri coinciden exactos."
+    },
+    {
+     "ruta": "propuestas/plan-paralelo-brechas-sin-gemma/ejecucion-20261024-072207Z/S2-nacimientos/v002/entrega.json",
+     "sha256": "2432f14513f11016dc9488188516d67e1be55a3f98e960a29c4fcc06e583e0f1",
+     "localizador": "decision r7-s2-071: estado propuesta_para_auditar; fuente_revision de la definicion local",
+     "afirmacion_soportada": "El significado del caso esta fijado por S2-nacimientos v002 (auditoria A/B pendiente); este vinculo no crea regla ni concepto nuevo."
+    }
+   ],
+   "evidencia_faltante": null,
+   "condicion_reapertura": "Si la auditoria rechaza el vinculo, revierte a brecha_externa con el motivo del dictamen; reapertura con fe de erratas del publicador o instrumento que corrija ordinal/nombre.",
+   "limites": [
+    "Sin catalogo nacional; ejemplo local vacio declarado.",
+    "Significado solo para el recurso SINAC 2022 (46977217, 2022-01-01 a 2022-09-26) y la definición local fijada; no autoriza otra edición, adopción global, totalidad del catálogo, equivalencias ni vigencias."
+   ],
+   "vinculo_propuesto": {
+    "campo": "ORDENPRODUCTO",
+    "columna": "https://example.org/mex-ontologi/file-column/46977217-9396-4f9c-bddb-6616e82530b4%2FSINAC%202022%2026-09-22%2F71",
+    "concepto": "sinac-ordenproducto",
+    "criterio": "Revision explicita de la columna fisica pos 71 (ORDENPRODUCTO) de la hoja SINAC 2022 26-09-22 del recurso 46977217-9396-4f9c-bddb-6616e82530b4 y de su fila 71 del diccionario 22202305-2d02-4c49-b216-cc98224357f0 en el mismo conjunto 940de7d8-73ec-4a08-8d26-b7cc97ff17bd: nombre exacto, ordinal coincidente, descripcion Pendiente de especificar y huella de fila abcad05c885063318a672bd488a1a7d5afe1f258dea83e0fdf5c10fbac4c455c.",
+    "definicion_iri": "https://example.org/mex-ontologi/definition/22202305-2d02-4c49-b216-cc98224357f0%2F71",
+    "descripcion": "Pendiente de especificar",
+    "diccionario": "22202305-2d02-4c49-b216-cc98224357f0",
+    "huella_esquema": "9b46e1c0e32acd903780264f0ebbc538a835eb1bf92a70faa36ba7e839a1ec95",
+    "huella_fila_diccionario": "abcad05c885063318a672bd488a1a7d5afe1f258dea83e0fdf5c10fbac4c455c",
+    "recurso": "46977217-9396-4f9c-bddb-6616e82530b4"
+   },
+   "origenes": [
+    "data/portal/contenido-inspeccion.json",
+    "propuestas/ronda-8-paralela/ejecucion-20261024/cobertura-r7.json",
+    "propuestas/plan-paralelo-brechas-sin-gemma/ejecucion-20261024-072207Z/S2-nacimientos/v002/entrega.json"
+   ]
+  },
+  {
+   "id": "https://example.org/mex-ontologi/semantic-mapping/c4ecee86f22fc10c28d1cba6c3ee606016b77584a86069898d2aeca4fea83a39",
+   "tipo": "correspondencias",
+   "estado": "propuesta_para_auditar",
+   "afirmacion_propuesta": "La columna fisica pos 72 (TOTALPRODUCTOS) de la hoja SINAC 2022 26-09-22 del recurso 46977217-9396-4f9c-bddb-6616e82530b4 corresponde a la variable documentada fila 72 (TOTALPRODUCTOS) del diccionario 22202305-2d02-4c49-b216-cc98224357f0 (definicion https://example.org/mex-ontologi/definition/22202305-2d02-4c49-b216-cc98224357f0%2F72), mismo conjunto 940de7d8, descripcion Pendiente de especificar, concepto sinac-totalproductos (r7-s2-072). Alcance: solo este recurso y esta definicion local; no autoriza otra edicion, adopcion global, totalidad de catalogos, equivalencias, joins ni vigencias.",
+   "motivo": "Correspondencia formal suficiente verificada en inspecciones originales: 1) sistema: recurso y diccionario en el mismo conjunto 940de7d8 del portal; 2) recurso: hoja SINAC 2022 26-09-22 con 106 campos, columna de nombre exacto en ordinal 72 sin duplicados; 3) fila 72 del diccionario con nombre exacto y huella ebfe8f35dcd87b903edd93c23e54950db3e88042f03c98afff7c55b5735fb5b0 coincidente con R7; 4) significado ya respaldado (r7-s2-072, sinac-totalproductos) con descripcion Pendiente de especificar; no se aprueba por nombre solo sino por esquema+fila+huella+significado. Expediente R7 (cierre, paquetes W v001-v004, S2 v002) revisado; sin busquedas genericas repetidas y sin pista web nueva: no se escribe peticiones-web.json.",
+   "evidencia": [
+    {
+     "ruta": "data/portal/contenido-inspeccion.json",
+     "sha256": "61861aab5bc2b334699c4d78f611a0e2d650c4649bd791927f9095c2ac785efb",
+     "localizador": "recurso 46977217 tablas[0]: hoja SINAC 2022 26-09-22, fila_encabezado 1, 106 campos; campos[posicion_original=72].id=TOTALPRODUCTOS (unico)",
+     "afirmacion_soportada": "La columna fisica existe en el esquema del recurso con nombre exacto TOTALPRODUCTOS en ordinal 72, sin duplicados."
+    },
+    {
+     "ruta": "data/portal/contenido-inspeccion.json",
+     "sha256": "61861aab5bc2b334699c4d78f611a0e2d650c4649bd791927f9095c2ac785efb",
+     "localizador": "recurso 22202305 definiciones[71] (fila 72): Nombre variable=TOTALPRODUCTOS; huella_fila=ebfe8f35dcd87b903edd93c23e54950db3e88042f03c98afff7c55b5735fb5b0",
+     "afirmacion_soportada": "La fila del diccionario existe con nombre exacto TOTALPRODUCTOS en ordinal 72 y huella coincidente con R7."
+    },
+    {
+     "ruta": "propuestas/ronda-8-paralela/ejecucion-20261024/cobertura-r7.json",
+     "sha256": "4627c2baaf9a54d99897c93ee76213eea9a27bedf20219cf3cceda3da5e03bfe",
+     "localizador": "variables https://example.org/mex-ontologi/documented-variable/22202305-2d02-4c49-b216-cc98224357f0%2F72: estado=respaldada_por_definicion, concepto=sinac-totalproductos, regla=r7-s2-072; correspondencias https://example.org/mex-ontologi/file-column/46977217-9396-4f9c-bddb-6616e82530b4%2FSINAC%202022%2026-09-22%2F72: estado=candidata_por_nombre, variable=https://example.org/mex-ontologi/documented-variable/22202305-2d02-4c49-b216-cc98224357f0%2F72",
+     "afirmacion_soportada": "El significado esta respaldado en R7 y la correspondencia es candidata sin revision previa; variable y definicion_iri coinciden exactos."
+    },
+    {
+     "ruta": "propuestas/plan-paralelo-brechas-sin-gemma/ejecucion-20261024-072207Z/S2-nacimientos/v002/entrega.json",
+     "sha256": "2432f14513f11016dc9488188516d67e1be55a3f98e960a29c4fcc06e583e0f1",
+     "localizador": "decision r7-s2-072: estado propuesta_para_auditar; fuente_revision de la definicion local",
+     "afirmacion_soportada": "El significado del caso esta fijado por S2-nacimientos v002 (auditoria A/B pendiente); este vinculo no crea regla ni concepto nuevo."
+    }
+   ],
+   "evidencia_faltante": null,
+   "condicion_reapertura": "Si la auditoria rechaza el vinculo, revierte a brecha_externa con el motivo del dictamen; reapertura con fe de erratas del publicador o instrumento que corrija ordinal/nombre.",
+   "limites": [
+    "Sin catalogo nacional; ejemplo local vacio declarado.",
+    "Significado solo para el recurso SINAC 2022 (46977217, 2022-01-01 a 2022-09-26) y la definición local fijada; no autoriza otra edición, adopción global, totalidad del catálogo, equivalencias ni vigencias."
+   ],
+   "vinculo_propuesto": {
+    "campo": "TOTALPRODUCTOS",
+    "columna": "https://example.org/mex-ontologi/file-column/46977217-9396-4f9c-bddb-6616e82530b4%2FSINAC%202022%2026-09-22%2F72",
+    "concepto": "sinac-totalproductos",
+    "criterio": "Revision explicita de la columna fisica pos 72 (TOTALPRODUCTOS) de la hoja SINAC 2022 26-09-22 del recurso 46977217-9396-4f9c-bddb-6616e82530b4 y de su fila 72 del diccionario 22202305-2d02-4c49-b216-cc98224357f0 en el mismo conjunto 940de7d8-73ec-4a08-8d26-b7cc97ff17bd: nombre exacto, ordinal coincidente, descripcion Pendiente de especificar y huella de fila ebfe8f35dcd87b903edd93c23e54950db3e88042f03c98afff7c55b5735fb5b0.",
+    "definicion_iri": "https://example.org/mex-ontologi/definition/22202305-2d02-4c49-b216-cc98224357f0%2F72",
+    "descripcion": "Pendiente de especificar",
+    "diccionario": "22202305-2d02-4c49-b216-cc98224357f0",
+    "huella_esquema": "9b46e1c0e32acd903780264f0ebbc538a835eb1bf92a70faa36ba7e839a1ec95",
+    "huella_fila_diccionario": "ebfe8f35dcd87b903edd93c23e54950db3e88042f03c98afff7c55b5735fb5b0",
+    "recurso": "46977217-9396-4f9c-bddb-6616e82530b4"
+   },
+   "origenes": [
+    "data/portal/contenido-inspeccion.json",
+    "propuestas/ronda-8-paralela/ejecucion-20261024/cobertura-r7.json",
+    "propuestas/plan-paralelo-brechas-sin-gemma/ejecucion-20261024-072207Z/S2-nacimientos/v002/entrega.json"
+   ]
+  },
+  {
+   "id": "https://example.org/mex-ontologi/semantic-mapping/e7a61f51eb23aefc9fc53ff1090477fcaea64b51396e09c29d2856268647dc1d",
+   "tipo": "correspondencias",
+   "estado": "propuesta_para_auditar",
+   "afirmacion_propuesta": "La columna fisica pos 74 (CODIGOCIEANOMALIA1) de la hoja SINAC 2022 26-09-22 del recurso 46977217-9396-4f9c-bddb-6616e82530b4 corresponde a la variable documentada fila 74 (CODIGOCIEANOMALIA1) del diccionario 22202305-2d02-4c49-b216-cc98224357f0 (definicion https://example.org/mex-ontologi/definition/22202305-2d02-4c49-b216-cc98224357f0%2F74), mismo conjunto 940de7d8, descripcion Pendiente de especificar, concepto sinac-codigocieanomalia1 (r7-s2-074). Alcance: solo este recurso y esta definicion local; no autoriza otra edicion, adopcion global, totalidad de catalogos, equivalencias, joins ni vigencias.",
+   "motivo": "Correspondencia formal suficiente verificada en inspecciones originales: 1) sistema: recurso y diccionario en el mismo conjunto 940de7d8 del portal; 2) recurso: hoja SINAC 2022 26-09-22 con 106 campos, columna de nombre exacto en ordinal 74 sin duplicados; 3) fila 74 del diccionario con nombre exacto y huella 109d0f8a09c2f065e43b67ee1231d75db5b444e2cfac5b515708f543922cc9cb coincidente con R7; 4) significado ya respaldado (r7-s2-074, sinac-codigocieanomalia1) con descripcion Pendiente de especificar; no se aprueba por nombre solo sino por esquema+fila+huella+significado. Expediente R7 (cierre, paquetes W v001-v004, S2 v002) revisado; sin busquedas genericas repetidas y sin pista web nueva: no se escribe peticiones-web.json.",
+   "evidencia": [
+    {
+     "ruta": "data/portal/contenido-inspeccion.json",
+     "sha256": "61861aab5bc2b334699c4d78f611a0e2d650c4649bd791927f9095c2ac785efb",
+     "localizador": "recurso 46977217 tablas[0]: hoja SINAC 2022 26-09-22, fila_encabezado 1, 106 campos; campos[posicion_original=74].id=CODIGOCIEANOMALIA1 (unico)",
+     "afirmacion_soportada": "La columna fisica existe en el esquema del recurso con nombre exacto CODIGOCIEANOMALIA1 en ordinal 74, sin duplicados."
+    },
+    {
+     "ruta": "data/portal/contenido-inspeccion.json",
+     "sha256": "61861aab5bc2b334699c4d78f611a0e2d650c4649bd791927f9095c2ac785efb",
+     "localizador": "recurso 22202305 definiciones[73] (fila 74): Nombre variable=CODIGOCIEANOMALIA1; huella_fila=109d0f8a09c2f065e43b67ee1231d75db5b444e2cfac5b515708f543922cc9cb",
+     "afirmacion_soportada": "La fila del diccionario existe con nombre exacto CODIGOCIEANOMALIA1 en ordinal 74 y huella coincidente con R7."
+    },
+    {
+     "ruta": "propuestas/ronda-8-paralela/ejecucion-20261024/cobertura-r7.json",
+     "sha256": "4627c2baaf9a54d99897c93ee76213eea9a27bedf20219cf3cceda3da5e03bfe",
+     "localizador": "variables https://example.org/mex-ontologi/documented-variable/22202305-2d02-4c49-b216-cc98224357f0%2F74: estado=respaldada_por_definicion, concepto=sinac-codigocieanomalia1, regla=r7-s2-074; correspondencias https://example.org/mex-ontologi/file-column/46977217-9396-4f9c-bddb-6616e82530b4%2FSINAC%202022%2026-09-22%2F74: estado=candidata_por_nombre, variable=https://example.org/mex-ontologi/documented-variable/22202305-2d02-4c49-b216-cc98224357f0%2F74",
+     "afirmacion_soportada": "El significado esta respaldado en R7 y la correspondencia es candidata sin revision previa; variable y definicion_iri coinciden exactos."
+    },
+    {
+     "ruta": "propuestas/plan-paralelo-brechas-sin-gemma/ejecucion-20261024-072207Z/S2-nacimientos/v002/entrega.json",
+     "sha256": "2432f14513f11016dc9488188516d67e1be55a3f98e960a29c4fcc06e583e0f1",
+     "localizador": "decision r7-s2-074: estado propuesta_para_auditar; fuente_revision de la definicion local",
+     "afirmacion_soportada": "El significado del caso esta fijado por S2-nacimientos v002 (auditoria A/B pendiente); este vinculo no crea regla ni concepto nuevo."
+    }
+   ],
+   "evidencia_faltante": null,
+   "condicion_reapertura": "Si la auditoria rechaza el vinculo, revierte a brecha_externa con el motivo del dictamen; reapertura con fe de erratas del publicador o instrumento que corrija ordinal/nombre.",
+   "limites": [
+    "Excluidos: '0000 = NINGUNA APARENTE' (corroborado solo por columna hermana ANOMALIACIE1, ella misma en brecha 73) y equivalencia 'DIAGNOSTICOS = CIE-10' (DIAGNOSTICOS ausente del zip; DOF CEN citado sin localizador en esta entrega).",
+    "Equivalencia total del catálogo no verificada (DIAGNOSTICOS ausente del zip).",
+    "Excluido por falta de ruta+sha en la entrega el paréntesis sobre lineamientos DOF/CEN; ejemplo local '0000' sin lectura aprobada; equivalencia total del catálogo no verificada (DIAGNOSTICOS ausente del zip).",
+    "Significado solo para el recurso SINAC 2022 (46977217, 2022-01-01 a 2022-09-26) y la definición local fijada; no autoriza otra edición, adopción global, totalidad del catálogo, equivalencias ni vigencias."
+   ],
+   "vinculo_propuesto": {
+    "campo": "CODIGOCIEANOMALIA1",
+    "columna": "https://example.org/mex-ontologi/file-column/46977217-9396-4f9c-bddb-6616e82530b4%2FSINAC%202022%2026-09-22%2F74",
+    "concepto": "sinac-codigocieanomalia1",
+    "criterio": "Revision explicita de la columna fisica pos 74 (CODIGOCIEANOMALIA1) de la hoja SINAC 2022 26-09-22 del recurso 46977217-9396-4f9c-bddb-6616e82530b4 y de su fila 74 del diccionario 22202305-2d02-4c49-b216-cc98224357f0 en el mismo conjunto 940de7d8-73ec-4a08-8d26-b7cc97ff17bd: nombre exacto, ordinal coincidente, descripcion Pendiente de especificar y huella de fila 109d0f8a09c2f065e43b67ee1231d75db5b444e2cfac5b515708f543922cc9cb.",
+    "definicion_iri": "https://example.org/mex-ontologi/definition/22202305-2d02-4c49-b216-cc98224357f0%2F74",
+    "descripcion": "Pendiente de especificar",
+    "diccionario": "22202305-2d02-4c49-b216-cc98224357f0",
+    "huella_esquema": "9b46e1c0e32acd903780264f0ebbc538a835eb1bf92a70faa36ba7e839a1ec95",
+    "huella_fila_diccionario": "109d0f8a09c2f065e43b67ee1231d75db5b444e2cfac5b515708f543922cc9cb",
+    "recurso": "46977217-9396-4f9c-bddb-6616e82530b4"
+   },
+   "origenes": [
+    "data/portal/contenido-inspeccion.json",
+    "propuestas/ronda-8-paralela/ejecucion-20261024/cobertura-r7.json",
+    "propuestas/plan-paralelo-brechas-sin-gemma/ejecucion-20261024-072207Z/S2-nacimientos/v002/entrega.json"
+   ]
+  },
+  {
+   "id": "https://example.org/mex-ontologi/semantic-mapping/1abf8eefad9d949a19d70e09b097403317c332033dcc0013e276cc4308f4f152",
+   "tipo": "correspondencias",
+   "estado": "propuesta_para_auditar",
+   "afirmacion_propuesta": "La columna fisica pos 76 (CODIGOCIEANOMALIA2) de la hoja SINAC 2022 26-09-22 del recurso 46977217-9396-4f9c-bddb-6616e82530b4 corresponde a la variable documentada fila 76 (CODIGOCIEANOMALIA2) del diccionario 22202305-2d02-4c49-b216-cc98224357f0 (definicion https://example.org/mex-ontologi/definition/22202305-2d02-4c49-b216-cc98224357f0%2F76), mismo conjunto 940de7d8, descripcion Pendiente de especificar, concepto sinac-codigocieanomalia2 (r7-s2-076). Alcance: solo este recurso y esta definicion local; no autoriza otra edicion, adopcion global, totalidad de catalogos, equivalencias, joins ni vigencias.",
+   "motivo": "Correspondencia formal suficiente verificada en inspecciones originales: 1) sistema: recurso y diccionario en el mismo conjunto 940de7d8 del portal; 2) recurso: hoja SINAC 2022 26-09-22 con 106 campos, columna de nombre exacto en ordinal 76 sin duplicados; 3) fila 76 del diccionario con nombre exacto y huella 998a3d29cfa98c49c38767c027ea4f7795876b5a2c98b3e47b2e17ed489f1c44 coincidente con R7; 4) significado ya respaldado (r7-s2-076, sinac-codigocieanomalia2) con descripcion Pendiente de especificar; no se aprueba por nombre solo sino por esquema+fila+huella+significado. Expediente R7 (cierre, paquetes W v001-v004, S2 v002) revisado; sin busquedas genericas repetidas y sin pista web nueva: no se escribe peticiones-web.json.",
+   "evidencia": [
+    {
+     "ruta": "data/portal/contenido-inspeccion.json",
+     "sha256": "61861aab5bc2b334699c4d78f611a0e2d650c4649bd791927f9095c2ac785efb",
+     "localizador": "recurso 46977217 tablas[0]: hoja SINAC 2022 26-09-22, fila_encabezado 1, 106 campos; campos[posicion_original=76].id=CODIGOCIEANOMALIA2 (unico)",
+     "afirmacion_soportada": "La columna fisica existe en el esquema del recurso con nombre exacto CODIGOCIEANOMALIA2 en ordinal 76, sin duplicados."
+    },
+    {
+     "ruta": "data/portal/contenido-inspeccion.json",
+     "sha256": "61861aab5bc2b334699c4d78f611a0e2d650c4649bd791927f9095c2ac785efb",
+     "localizador": "recurso 22202305 definiciones[75] (fila 76): Nombre variable=CODIGOCIEANOMALIA2; huella_fila=998a3d29cfa98c49c38767c027ea4f7795876b5a2c98b3e47b2e17ed489f1c44",
+     "afirmacion_soportada": "La fila del diccionario existe con nombre exacto CODIGOCIEANOMALIA2 en ordinal 76 y huella coincidente con R7."
+    },
+    {
+     "ruta": "propuestas/ronda-8-paralela/ejecucion-20261024/cobertura-r7.json",
+     "sha256": "4627c2baaf9a54d99897c93ee76213eea9a27bedf20219cf3cceda3da5e03bfe",
+     "localizador": "variables https://example.org/mex-ontologi/documented-variable/22202305-2d02-4c49-b216-cc98224357f0%2F76: estado=respaldada_por_definicion, concepto=sinac-codigocieanomalia2, regla=r7-s2-076; correspondencias https://example.org/mex-ontologi/file-column/46977217-9396-4f9c-bddb-6616e82530b4%2FSINAC%202022%2026-09-22%2F76: estado=candidata_por_nombre, variable=https://example.org/mex-ontologi/documented-variable/22202305-2d02-4c49-b216-cc98224357f0%2F76",
+     "afirmacion_soportada": "El significado esta respaldado en R7 y la correspondencia es candidata sin revision previa; variable y definicion_iri coinciden exactos."
+    },
+    {
+     "ruta": "propuestas/plan-paralelo-brechas-sin-gemma/ejecucion-20261024-072207Z/S2-nacimientos/v002/entrega.json",
+     "sha256": "2432f14513f11016dc9488188516d67e1be55a3f98e960a29c4fcc06e583e0f1",
+     "localizador": "decision r7-s2-076: estado propuesta_para_auditar; fuente_revision de la definicion local",
+     "afirmacion_soportada": "El significado del caso esta fijado por S2-nacimientos v002 (auditoria A/B pendiente); este vinculo no crea regla ni concepto nuevo."
+    }
+   ],
+   "evidencia_faltante": null,
+   "condicion_reapertura": "Si la auditoria rechaza el vinculo, revierte a brecha_externa con el motivo del dictamen; reapertura con fe de erratas del publicador o instrumento que corrija ordinal/nombre.",
+   "limites": [
+    "Igual que 74 (hermana ANOMALIACIE2 en brecha 75; DIAGNOSTICOS ausente del zip).",
+    "Equivalencia total del catálogo no verificada (DIAGNOSTICOS ausente del zip).",
+    "Excluido por falta de ruta+sha en la entrega el paréntesis sobre lineamientos DOF/CEN; ejemplo local '0000' sin lectura aprobada; equivalencia total del catálogo no verificada (DIAGNOSTICOS ausente del zip).",
+    "Significado solo para el recurso SINAC 2022 (46977217, 2022-01-01 a 2022-09-26) y la definición local fijada; no autoriza otra edición, adopción global, totalidad del catálogo, equivalencias ni vigencias."
+   ],
+   "vinculo_propuesto": {
+    "campo": "CODIGOCIEANOMALIA2",
+    "columna": "https://example.org/mex-ontologi/file-column/46977217-9396-4f9c-bddb-6616e82530b4%2FSINAC%202022%2026-09-22%2F76",
+    "concepto": "sinac-codigocieanomalia2",
+    "criterio": "Revision explicita de la columna fisica pos 76 (CODIGOCIEANOMALIA2) de la hoja SINAC 2022 26-09-22 del recurso 46977217-9396-4f9c-bddb-6616e82530b4 y de su fila 76 del diccionario 22202305-2d02-4c49-b216-cc98224357f0 en el mismo conjunto 940de7d8-73ec-4a08-8d26-b7cc97ff17bd: nombre exacto, ordinal coincidente, descripcion Pendiente de especificar y huella de fila 998a3d29cfa98c49c38767c027ea4f7795876b5a2c98b3e47b2e17ed489f1c44.",
+    "definicion_iri": "https://example.org/mex-ontologi/definition/22202305-2d02-4c49-b216-cc98224357f0%2F76",
+    "descripcion": "Pendiente de especificar",
+    "diccionario": "22202305-2d02-4c49-b216-cc98224357f0",
+    "huella_esquema": "9b46e1c0e32acd903780264f0ebbc538a835eb1bf92a70faa36ba7e839a1ec95",
+    "huella_fila_diccionario": "998a3d29cfa98c49c38767c027ea4f7795876b5a2c98b3e47b2e17ed489f1c44",
+    "recurso": "46977217-9396-4f9c-bddb-6616e82530b4"
+   },
+   "origenes": [
+    "data/portal/contenido-inspeccion.json",
+    "propuestas/ronda-8-paralela/ejecucion-20261024/cobertura-r7.json",
+    "propuestas/plan-paralelo-brechas-sin-gemma/ejecucion-20261024-072207Z/S2-nacimientos/v002/entrega.json"
+   ]
+  },
+  {
+   "id": "https://example.org/mex-ontologi/semantic-mapping/c7cb24a799698509c936acd8b654cfb1c02ad51d473612443ea87bd1c47f98f9",
+   "tipo": "correspondencias",
+   "estado": "propuesta_para_auditar",
+   "afirmacion_propuesta": "La columna fisica pos 77 (RESOLUCIONEMBARAZO) de la hoja SINAC 2022 26-09-22 del recurso 46977217-9396-4f9c-bddb-6616e82530b4 corresponde a la variable documentada fila 77 (RESOLUCIONEMBARAZO) del diccionario 22202305-2d02-4c49-b216-cc98224357f0 (definicion https://example.org/mex-ontologi/definition/22202305-2d02-4c49-b216-cc98224357f0%2F77), mismo conjunto 940de7d8, descripcion Pendiente de especificar, concepto sinac-resolucionembarazo (r7-s2-077). Alcance: solo este recurso y esta definicion local; no autoriza otra edicion, adopcion global, totalidad de catalogos, equivalencias, joins ni vigencias.",
+   "motivo": "Correspondencia formal suficiente verificada en inspecciones originales: 1) sistema: recurso y diccionario en el mismo conjunto 940de7d8 del portal; 2) recurso: hoja SINAC 2022 26-09-22 con 106 campos, columna de nombre exacto en ordinal 77 sin duplicados; 3) fila 77 del diccionario con nombre exacto y huella f4c1bedd6497fb849c4715849b63333ecc867d51d09312f371ac8c75af64759c coincidente con R7; 4) significado ya respaldado (r7-s2-077, sinac-resolucionembarazo) con descripcion Pendiente de especificar; no se aprueba por nombre solo sino por esquema+fila+huella+significado. Expediente R7 (cierre, paquetes W v001-v004, S2 v002) revisado; sin busquedas genericas repetidas y sin pista web nueva: no se escribe peticiones-web.json.",
+   "evidencia": [
+    {
+     "ruta": "data/portal/contenido-inspeccion.json",
+     "sha256": "61861aab5bc2b334699c4d78f611a0e2d650c4649bd791927f9095c2ac785efb",
+     "localizador": "recurso 46977217 tablas[0]: hoja SINAC 2022 26-09-22, fila_encabezado 1, 106 campos; campos[posicion_original=77].id=RESOLUCIONEMBARAZO (unico)",
+     "afirmacion_soportada": "La columna fisica existe en el esquema del recurso con nombre exacto RESOLUCIONEMBARAZO en ordinal 77, sin duplicados."
+    },
+    {
+     "ruta": "data/portal/contenido-inspeccion.json",
+     "sha256": "61861aab5bc2b334699c4d78f611a0e2d650c4649bd791927f9095c2ac785efb",
+     "localizador": "recurso 22202305 definiciones[76] (fila 77): Nombre variable=RESOLUCIONEMBARAZO; huella_fila=f4c1bedd6497fb849c4715849b63333ecc867d51d09312f371ac8c75af64759c",
+     "afirmacion_soportada": "La fila del diccionario existe con nombre exacto RESOLUCIONEMBARAZO en ordinal 77 y huella coincidente con R7."
+    },
+    {
+     "ruta": "propuestas/ronda-8-paralela/ejecucion-20261024/cobertura-r7.json",
+     "sha256": "4627c2baaf9a54d99897c93ee76213eea9a27bedf20219cf3cceda3da5e03bfe",
+     "localizador": "variables https://example.org/mex-ontologi/documented-variable/22202305-2d02-4c49-b216-cc98224357f0%2F77: estado=respaldada_por_definicion, concepto=sinac-resolucionembarazo, regla=r7-s2-077; correspondencias https://example.org/mex-ontologi/file-column/46977217-9396-4f9c-bddb-6616e82530b4%2FSINAC%202022%2026-09-22%2F77: estado=candidata_por_nombre, variable=https://example.org/mex-ontologi/documented-variable/22202305-2d02-4c49-b216-cc98224357f0%2F77",
+     "afirmacion_soportada": "El significado esta respaldado en R7 y la correspondencia es candidata sin revision previa; variable y definicion_iri coinciden exactos."
+    },
+    {
+     "ruta": "propuestas/plan-paralelo-brechas-sin-gemma/ejecucion-20261024-072207Z/S2-nacimientos/v002/entrega.json",
+     "sha256": "2432f14513f11016dc9488188516d67e1be55a3f98e960a29c4fcc06e583e0f1",
+     "localizador": "decision r7-s2-077: estado propuesta_para_auditar; fuente_revision de la definicion local",
+     "afirmacion_soportada": "El significado del caso esta fijado por S2-nacimientos v002 (auditoria A/B pendiente); este vinculo no crea regla ni concepto nuevo."
+    }
+   ],
+   "evidencia_faltante": null,
+   "condicion_reapertura": "Si la auditoria rechaza el vinculo, revierte a brecha_externa con el motivo del dictamen; reapertura con fe de erratas del publicador o instrumento que corrija ordinal/nombre.",
+   "limites": [
+    "Solo código 3 verificado con ejemplo+D locales; no lista completa RESOLUCION_EMBARAZO; no tabla determinada; no identidad global de catálogos; vigencia acotada al recurso 2022-01-01 a 2022-09-26. Código nacional '3' = 'CESAREA'.",
+    "Significado solo para el recurso SINAC 2022 (46977217, 2022-01-01 a 2022-09-26) y la definición local fijada; no autoriza otra edición, adopción global, totalidad del catálogo, equivalencias ni vigencias."
+   ],
+   "vinculo_propuesto": {
+    "campo": "RESOLUCIONEMBARAZO",
+    "columna": "https://example.org/mex-ontologi/file-column/46977217-9396-4f9c-bddb-6616e82530b4%2FSINAC%202022%2026-09-22%2F77",
+    "concepto": "sinac-resolucionembarazo",
+    "criterio": "Revision explicita de la columna fisica pos 77 (RESOLUCIONEMBARAZO) de la hoja SINAC 2022 26-09-22 del recurso 46977217-9396-4f9c-bddb-6616e82530b4 y de su fila 77 del diccionario 22202305-2d02-4c49-b216-cc98224357f0 en el mismo conjunto 940de7d8-73ec-4a08-8d26-b7cc97ff17bd: nombre exacto, ordinal coincidente, descripcion Pendiente de especificar y huella de fila f4c1bedd6497fb849c4715849b63333ecc867d51d09312f371ac8c75af64759c.",
+    "definicion_iri": "https://example.org/mex-ontologi/definition/22202305-2d02-4c49-b216-cc98224357f0%2F77",
+    "descripcion": "Pendiente de especificar",
+    "diccionario": "22202305-2d02-4c49-b216-cc98224357f0",
+    "huella_esquema": "9b46e1c0e32acd903780264f0ebbc538a835eb1bf92a70faa36ba7e839a1ec95",
+    "huella_fila_diccionario": "f4c1bedd6497fb849c4715849b63333ecc867d51d09312f371ac8c75af64759c",
+    "recurso": "46977217-9396-4f9c-bddb-6616e82530b4"
+   },
+   "origenes": [
+    "data/portal/contenido-inspeccion.json",
+    "propuestas/ronda-8-paralela/ejecucion-20261024/cobertura-r7.json",
+    "propuestas/plan-paralelo-brechas-sin-gemma/ejecucion-20261024-072207Z/S2-nacimientos/v002/entrega.json"
+   ]
+  },
+  {
+   "id": "https://example.org/mex-ontologi/semantic-mapping/25a8c2809c1c8653f68487d60aad17390c8a5e30b8f0ca6c0ec2c87b089c6ca1",
+   "tipo": "correspondencias",
+   "estado": "propuesta_para_auditar",
+   "afirmacion_propuesta": "La columna fisica pos 79 (UTILIZOFORCEPS) de la hoja SINAC 2022 26-09-22 del recurso 46977217-9396-4f9c-bddb-6616e82530b4 corresponde a la variable documentada fila 79 (UTILIZOFORCEPS) del diccionario 22202305-2d02-4c49-b216-cc98224357f0 (definicion https://example.org/mex-ontologi/definition/22202305-2d02-4c49-b216-cc98224357f0%2F79), mismo conjunto 940de7d8, descripcion Pendiente de especificar, concepto sinac-utilizoforceps (r7-s2-079). Alcance: solo este recurso y esta definicion local; no autoriza otra edicion, adopcion global, totalidad de catalogos, equivalencias, joins ni vigencias.",
+   "motivo": "Correspondencia formal suficiente verificada en inspecciones originales: 1) sistema: recurso y diccionario en el mismo conjunto 940de7d8 del portal; 2) recurso: hoja SINAC 2022 26-09-22 con 106 campos, columna de nombre exacto en ordinal 79 sin duplicados; 3) fila 79 del diccionario con nombre exacto y huella 221fff1034855415f2178988e1d14dce40c3a601a3698d286bc14cc365f19018 coincidente con R7; 4) significado ya respaldado (r7-s2-079, sinac-utilizoforceps) con descripcion Pendiente de especificar; no se aprueba por nombre solo sino por esquema+fila+huella+significado. Expediente R7 (cierre, paquetes W v001-v004, S2 v002) revisado; sin busquedas genericas repetidas y sin pista web nueva: no se escribe peticiones-web.json.",
+   "evidencia": [
+    {
+     "ruta": "data/portal/contenido-inspeccion.json",
+     "sha256": "61861aab5bc2b334699c4d78f611a0e2d650c4649bd791927f9095c2ac785efb",
+     "localizador": "recurso 46977217 tablas[0]: hoja SINAC 2022 26-09-22, fila_encabezado 1, 106 campos; campos[posicion_original=79].id=UTILIZOFORCEPS (unico)",
+     "afirmacion_soportada": "La columna fisica existe en el esquema del recurso con nombre exacto UTILIZOFORCEPS en ordinal 79, sin duplicados."
+    },
+    {
+     "ruta": "data/portal/contenido-inspeccion.json",
+     "sha256": "61861aab5bc2b334699c4d78f611a0e2d650c4649bd791927f9095c2ac785efb",
+     "localizador": "recurso 22202305 definiciones[78] (fila 79): Nombre variable=UTILIZOFORCEPS; huella_fila=221fff1034855415f2178988e1d14dce40c3a601a3698d286bc14cc365f19018",
+     "afirmacion_soportada": "La fila del diccionario existe con nombre exacto UTILIZOFORCEPS en ordinal 79 y huella coincidente con R7."
+    },
+    {
+     "ruta": "propuestas/ronda-8-paralela/ejecucion-20261024/cobertura-r7.json",
+     "sha256": "4627c2baaf9a54d99897c93ee76213eea9a27bedf20219cf3cceda3da5e03bfe",
+     "localizador": "variables https://example.org/mex-ontologi/documented-variable/22202305-2d02-4c49-b216-cc98224357f0%2F79: estado=respaldada_por_definicion, concepto=sinac-utilizoforceps, regla=r7-s2-079; correspondencias https://example.org/mex-ontologi/file-column/46977217-9396-4f9c-bddb-6616e82530b4%2FSINAC%202022%2026-09-22%2F79: estado=candidata_por_nombre, variable=https://example.org/mex-ontologi/documented-variable/22202305-2d02-4c49-b216-cc98224357f0%2F79",
+     "afirmacion_soportada": "El significado esta respaldado en R7 y la correspondencia es candidata sin revision previa; variable y definicion_iri coinciden exactos."
+    },
+    {
+     "ruta": "propuestas/plan-paralelo-brechas-sin-gemma/ejecucion-20261024-072207Z/S2-nacimientos/v002/entrega.json",
+     "sha256": "2432f14513f11016dc9488188516d67e1be55a3f98e960a29c4fcc06e583e0f1",
+     "localizador": "decision r7-s2-079: estado propuesta_para_auditar; fuente_revision de la definicion local",
+     "afirmacion_soportada": "El significado del caso esta fijado por S2-nacimientos v002 (auditoria A/B pendiente); este vinculo no crea regla ni concepto nuevo."
+    }
+   ],
+   "evidencia_faltante": null,
+   "condicion_reapertura": "Si la auditoria rechaza el vinculo, revierte a brecha_externa con el motivo del dictamen; reapertura con fe de erratas del publicador o instrumento que corrija ordinal/nombre.",
+   "limites": [
+    "Solo código 8 verificado con ejemplo+D locales; no lista completa UTILIZO_FORCEPS; no tabla determinada; no identidad global de catálogos; vigencia acotada al recurso 2022-01-01 a 2022-09-26. Código nacional '8' = 'NO APLICA'.",
+    "Significado solo para el recurso SINAC 2022 (46977217, 2022-01-01 a 2022-09-26) y la definición local fijada; no autoriza otra edición, adopción global, totalidad del catálogo, equivalencias ni vigencias."
+   ],
+   "vinculo_propuesto": {
+    "campo": "UTILIZOFORCEPS",
+    "columna": "https://example.org/mex-ontologi/file-column/46977217-9396-4f9c-bddb-6616e82530b4%2FSINAC%202022%2026-09-22%2F79",
+    "concepto": "sinac-utilizoforceps",
+    "criterio": "Revision explicita de la columna fisica pos 79 (UTILIZOFORCEPS) de la hoja SINAC 2022 26-09-22 del recurso 46977217-9396-4f9c-bddb-6616e82530b4 y de su fila 79 del diccionario 22202305-2d02-4c49-b216-cc98224357f0 en el mismo conjunto 940de7d8-73ec-4a08-8d26-b7cc97ff17bd: nombre exacto, ordinal coincidente, descripcion Pendiente de especificar y huella de fila 221fff1034855415f2178988e1d14dce40c3a601a3698d286bc14cc365f19018.",
+    "definicion_iri": "https://example.org/mex-ontologi/definition/22202305-2d02-4c49-b216-cc98224357f0%2F79",
+    "descripcion": "Pendiente de especificar",
+    "diccionario": "22202305-2d02-4c49-b216-cc98224357f0",
+    "huella_esquema": "9b46e1c0e32acd903780264f0ebbc538a835eb1bf92a70faa36ba7e839a1ec95",
+    "huella_fila_diccionario": "221fff1034855415f2178988e1d14dce40c3a601a3698d286bc14cc365f19018",
+    "recurso": "46977217-9396-4f9c-bddb-6616e82530b4"
+   },
+   "origenes": [
+    "data/portal/contenido-inspeccion.json",
+    "propuestas/ronda-8-paralela/ejecucion-20261024/cobertura-r7.json",
+    "propuestas/plan-paralelo-brechas-sin-gemma/ejecucion-20261024-072207Z/S2-nacimientos/v002/entrega.json"
+   ]
+  },
+  {
+   "id": "https://example.org/mex-ontologi/semantic-mapping/a5d023cac3d89cbeb35cda0203035b9d94360d84e4b6f5e446e2d53d56b2e02a",
+   "tipo": "correspondencias",
+   "estado": "propuesta_para_auditar",
+   "afirmacion_propuesta": "La columna fisica pos 84 (TIEMPOTRASLADO) de la hoja SINAC 2022 26-09-22 del recurso 46977217-9396-4f9c-bddb-6616e82530b4 corresponde a la variable documentada fila 84 (TIEMPOTRASLADO) del diccionario 22202305-2d02-4c49-b216-cc98224357f0 (definicion https://example.org/mex-ontologi/definition/22202305-2d02-4c49-b216-cc98224357f0%2F84), mismo conjunto 940de7d8, descripcion Pendiente de especificar, concepto sinac-tiempotraslado (r7-s2-084). Alcance: solo este recurso y esta definicion local; no autoriza otra edicion, adopcion global, totalidad de catalogos, equivalencias, joins ni vigencias.",
+   "motivo": "Correspondencia formal suficiente verificada en inspecciones originales: 1) sistema: recurso y diccionario en el mismo conjunto 940de7d8 del portal; 2) recurso: hoja SINAC 2022 26-09-22 con 106 campos, columna de nombre exacto en ordinal 84 sin duplicados; 3) fila 84 del diccionario con nombre exacto y huella 1991915d59e2db4cb7632a3ace696000c61a579578a3115399103ac11e2f4404 coincidente con R7; 4) significado ya respaldado (r7-s2-084, sinac-tiempotraslado) con descripcion Pendiente de especificar; no se aprueba por nombre solo sino por esquema+fila+huella+significado. Expediente R7 (cierre, paquetes W v001-v004, S2 v002) revisado; sin busquedas genericas repetidas y sin pista web nueva: no se escribe peticiones-web.json.",
+   "evidencia": [
+    {
+     "ruta": "data/portal/contenido-inspeccion.json",
+     "sha256": "61861aab5bc2b334699c4d78f611a0e2d650c4649bd791927f9095c2ac785efb",
+     "localizador": "recurso 46977217 tablas[0]: hoja SINAC 2022 26-09-22, fila_encabezado 1, 106 campos; campos[posicion_original=84].id=TIEMPOTRASLADO (unico)",
+     "afirmacion_soportada": "La columna fisica existe en el esquema del recurso con nombre exacto TIEMPOTRASLADO en ordinal 84, sin duplicados."
+    },
+    {
+     "ruta": "data/portal/contenido-inspeccion.json",
+     "sha256": "61861aab5bc2b334699c4d78f611a0e2d650c4649bd791927f9095c2ac785efb",
+     "localizador": "recurso 22202305 definiciones[83] (fila 84): Nombre variable=TIEMPOTRASLADO; huella_fila=1991915d59e2db4cb7632a3ace696000c61a579578a3115399103ac11e2f4404",
+     "afirmacion_soportada": "La fila del diccionario existe con nombre exacto TIEMPOTRASLADO en ordinal 84 y huella coincidente con R7."
+    },
+    {
+     "ruta": "propuestas/ronda-8-paralela/ejecucion-20261024/cobertura-r7.json",
+     "sha256": "4627c2baaf9a54d99897c93ee76213eea9a27bedf20219cf3cceda3da5e03bfe",
+     "localizador": "variables https://example.org/mex-ontologi/documented-variable/22202305-2d02-4c49-b216-cc98224357f0%2F84: estado=respaldada_por_definicion, concepto=sinac-tiempotraslado, regla=r7-s2-084; correspondencias https://example.org/mex-ontologi/file-column/46977217-9396-4f9c-bddb-6616e82530b4%2FSINAC%202022%2026-09-22%2F84: estado=candidata_por_nombre, variable=https://example.org/mex-ontologi/documented-variable/22202305-2d02-4c49-b216-cc98224357f0%2F84",
+     "afirmacion_soportada": "El significado esta respaldado en R7 y la correspondencia es candidata sin revision previa; variable y definicion_iri coinciden exactos."
+    },
+    {
+     "ruta": "propuestas/plan-paralelo-brechas-sin-gemma/ejecucion-20261024-072207Z/S2-nacimientos/v002/entrega.json",
+     "sha256": "2432f14513f11016dc9488188516d67e1be55a3f98e960a29c4fcc06e583e0f1",
+     "localizador": "decision r7-s2-084: estado propuesta_para_auditar; fuente_revision de la definicion local",
+     "afirmacion_soportada": "El significado del caso esta fijado por S2-nacimientos v002 (auditoria A/B pendiente); este vinculo no crea regla ni concepto nuevo."
+    }
+   ],
+   "evidencia_faltante": null,
+   "condicion_reapertura": "Si la auditoria rechaza el vinculo, revierte a brecha_externa con el motivo del dictamen; reapertura con fe de erratas del publicador o instrumento que corrija ordinal/nombre.",
+   "limites": [
+    "Representacion como Hora ('12:15:00 AM') para una duracion: formato/unidad no especificados en el descriptor; no se aprueba lectura de duracion.",
+    "Excluida la glosa autoral entre parentesis: unidad y codificacion duracion->hora no acreditadas por el descriptor (IDnac=50 sin catalogo ni unidad). Lo aprobado: variable + texto descriptor + tipo Hora + ejemplo '12:15:00 AM' como instancia de formato, sin afirmar unidad.",
+    "Significado solo para el recurso SINAC 2022 (46977217, 2022-01-01 a 2022-09-26) y la definición local fijada; no autoriza otra edición, adopción global, totalidad del catálogo, equivalencias ni vigencias."
+   ],
+   "vinculo_propuesto": {
+    "campo": "TIEMPOTRASLADO",
+    "columna": "https://example.org/mex-ontologi/file-column/46977217-9396-4f9c-bddb-6616e82530b4%2FSINAC%202022%2026-09-22%2F84",
+    "concepto": "sinac-tiempotraslado",
+    "criterio": "Revision explicita de la columna fisica pos 84 (TIEMPOTRASLADO) de la hoja SINAC 2022 26-09-22 del recurso 46977217-9396-4f9c-bddb-6616e82530b4 y de su fila 84 del diccionario 22202305-2d02-4c49-b216-cc98224357f0 en el mismo conjunto 940de7d8-73ec-4a08-8d26-b7cc97ff17bd: nombre exacto, ordinal coincidente, descripcion Pendiente de especificar y huella de fila 1991915d59e2db4cb7632a3ace696000c61a579578a3115399103ac11e2f4404.",
+    "definicion_iri": "https://example.org/mex-ontologi/definition/22202305-2d02-4c49-b216-cc98224357f0%2F84",
+    "descripcion": "Pendiente de especificar",
+    "diccionario": "22202305-2d02-4c49-b216-cc98224357f0",
+    "huella_esquema": "9b46e1c0e32acd903780264f0ebbc538a835eb1bf92a70faa36ba7e839a1ec95",
+    "huella_fila_diccionario": "1991915d59e2db4cb7632a3ace696000c61a579578a3115399103ac11e2f4404",
+    "recurso": "46977217-9396-4f9c-bddb-6616e82530b4"
+   },
+   "origenes": [
+    "data/portal/contenido-inspeccion.json",
+    "propuestas/ronda-8-paralela/ejecucion-20261024/cobertura-r7.json",
+    "propuestas/plan-paralelo-brechas-sin-gemma/ejecucion-20261024-072207Z/S2-nacimientos/v002/entrega.json"
+   ]
+  },
+  {
+   "id": "https://example.org/mex-ontologi/semantic-mapping/fe89984c9387b8e8b98eb93473a10f1dc9604610074306f70203d16208d5a7cc",
+   "tipo": "correspondencias",
+   "estado": "propuesta_para_auditar",
+   "afirmacion_propuesta": "La columna fisica pos 87 (PERSONALATENDIO) de la hoja SINAC 2022 26-09-22 del recurso 46977217-9396-4f9c-bddb-6616e82530b4 corresponde a la variable documentada fila 87 (PERSONALATENDIO) del diccionario 22202305-2d02-4c49-b216-cc98224357f0 (definicion https://example.org/mex-ontologi/definition/22202305-2d02-4c49-b216-cc98224357f0%2F87), mismo conjunto 940de7d8, descripcion Pendiente de especificar, concepto sinac-personalatendio (r7-s2-087). Alcance: solo este recurso y esta definicion local; no autoriza otra edicion, adopcion global, totalidad de catalogos, equivalencias, joins ni vigencias.",
+   "motivo": "Correspondencia formal suficiente verificada en inspecciones originales: 1) sistema: recurso y diccionario en el mismo conjunto 940de7d8 del portal; 2) recurso: hoja SINAC 2022 26-09-22 con 106 campos, columna de nombre exacto en ordinal 87 sin duplicados; 3) fila 87 del diccionario con nombre exacto y huella 511637fdd52b46d22a91e644babc50e06be4c5723f1e2783337b591ffe1a79fc coincidente con R7; 4) significado ya respaldado (r7-s2-087, sinac-personalatendio) con descripcion Pendiente de especificar; no se aprueba por nombre solo sino por esquema+fila+huella+significado. Expediente R7 (cierre, paquetes W v001-v004, S2 v002) revisado; sin busquedas genericas repetidas y sin pista web nueva: no se escribe peticiones-web.json.",
+   "evidencia": [
+    {
+     "ruta": "data/portal/contenido-inspeccion.json",
+     "sha256": "61861aab5bc2b334699c4d78f611a0e2d650c4649bd791927f9095c2ac785efb",
+     "localizador": "recurso 46977217 tablas[0]: hoja SINAC 2022 26-09-22, fila_encabezado 1, 106 campos; campos[posicion_original=87].id=PERSONALATENDIO (unico)",
+     "afirmacion_soportada": "La columna fisica existe en el esquema del recurso con nombre exacto PERSONALATENDIO en ordinal 87, sin duplicados."
+    },
+    {
+     "ruta": "data/portal/contenido-inspeccion.json",
+     "sha256": "61861aab5bc2b334699c4d78f611a0e2d650c4649bd791927f9095c2ac785efb",
+     "localizador": "recurso 22202305 definiciones[86] (fila 87): Nombre variable=PERSONALATENDIO; huella_fila=511637fdd52b46d22a91e644babc50e06be4c5723f1e2783337b591ffe1a79fc",
+     "afirmacion_soportada": "La fila del diccionario existe con nombre exacto PERSONALATENDIO en ordinal 87 y huella coincidente con R7."
+    },
+    {
+     "ruta": "propuestas/ronda-8-paralela/ejecucion-20261024/cobertura-r7.json",
+     "sha256": "4627c2baaf9a54d99897c93ee76213eea9a27bedf20219cf3cceda3da5e03bfe",
+     "localizador": "variables https://example.org/mex-ontologi/documented-variable/22202305-2d02-4c49-b216-cc98224357f0%2F87: estado=respaldada_por_definicion, concepto=sinac-personalatendio, regla=r7-s2-087; correspondencias https://example.org/mex-ontologi/file-column/46977217-9396-4f9c-bddb-6616e82530b4%2FSINAC%202022%2026-09-22%2F87: estado=candidata_por_nombre, variable=https://example.org/mex-ontologi/documented-variable/22202305-2d02-4c49-b216-cc98224357f0%2F87",
+     "afirmacion_soportada": "El significado esta respaldado en R7 y la correspondencia es candidata sin revision previa; variable y definicion_iri coinciden exactos."
+    },
+    {
+     "ruta": "propuestas/plan-paralelo-brechas-sin-gemma/ejecucion-20261024-072207Z/S2-nacimientos/v002/entrega.json",
+     "sha256": "2432f14513f11016dc9488188516d67e1be55a3f98e960a29c4fcc06e583e0f1",
+     "localizador": "decision r7-s2-087: estado propuesta_para_auditar; fuente_revision de la definicion local",
+     "afirmacion_soportada": "El significado del caso esta fijado por S2-nacimientos v002 (auditoria A/B pendiente); este vinculo no crea regla ni concepto nuevo."
+    }
+   ],
+   "evidencia_faltante": null,
+   "condicion_reapertura": "Si la auditoria rechaza el vinculo, revierte a brecha_externa con el motivo del dictamen; reapertura con fe de erratas del publicador o instrumento que corrija ordinal/nombre.",
+   "limites": [
+    "Solo código 1 verificado con ejemplo+D locales; no lista completa PERSONA_ATENDIO_PARTO; no tabla determinada; no identidad global de catálogos; vigencia acotada al recurso 2022-01-01 a 2022-09-26.",
+    "Significado solo para el recurso SINAC 2022 (46977217, 2022-01-01 a 2022-09-26) y la definición local fijada; no autoriza otra edición, adopción global, totalidad del catálogo, equivalencias ni vigencias."
+   ],
+   "vinculo_propuesto": {
+    "campo": "PERSONALATENDIO",
+    "columna": "https://example.org/mex-ontologi/file-column/46977217-9396-4f9c-bddb-6616e82530b4%2FSINAC%202022%2026-09-22%2F87",
+    "concepto": "sinac-personalatendio",
+    "criterio": "Revision explicita de la columna fisica pos 87 (PERSONALATENDIO) de la hoja SINAC 2022 26-09-22 del recurso 46977217-9396-4f9c-bddb-6616e82530b4 y de su fila 87 del diccionario 22202305-2d02-4c49-b216-cc98224357f0 en el mismo conjunto 940de7d8-73ec-4a08-8d26-b7cc97ff17bd: nombre exacto, ordinal coincidente, descripcion Pendiente de especificar y huella de fila 511637fdd52b46d22a91e644babc50e06be4c5723f1e2783337b591ffe1a79fc.",
+    "definicion_iri": "https://example.org/mex-ontologi/definition/22202305-2d02-4c49-b216-cc98224357f0%2F87",
+    "descripcion": "Pendiente de especificar",
+    "diccionario": "22202305-2d02-4c49-b216-cc98224357f0",
+    "huella_esquema": "9b46e1c0e32acd903780264f0ebbc538a835eb1bf92a70faa36ba7e839a1ec95",
+    "huella_fila_diccionario": "511637fdd52b46d22a91e644babc50e06be4c5723f1e2783337b591ffe1a79fc",
+    "recurso": "46977217-9396-4f9c-bddb-6616e82530b4"
+   },
+   "origenes": [
+    "data/portal/contenido-inspeccion.json",
+    "propuestas/ronda-8-paralela/ejecucion-20261024/cobertura-r7.json",
+    "propuestas/plan-paralelo-brechas-sin-gemma/ejecucion-20261024-072207Z/S2-nacimientos/v002/entrega.json"
+   ]
+  },
+  {
+   "id": "https://example.org/mex-ontologi/semantic-mapping/500d674f028a94a1169f1d4d828f7304a4c8044d0673a50c8502e757f5cc5c28",
+   "tipo": "correspondencias",
+   "estado": "propuesta_para_auditar",
+   "afirmacion_propuesta": "La columna fisica pos 89 (TIPOMEDICOATENDIO) de la hoja SINAC 2022 26-09-22 del recurso 46977217-9396-4f9c-bddb-6616e82530b4 corresponde a la variable documentada fila 89 (TIPOMEDICOATENDIO) del diccionario 22202305-2d02-4c49-b216-cc98224357f0 (definicion https://example.org/mex-ontologi/definition/22202305-2d02-4c49-b216-cc98224357f0%2F89), mismo conjunto 940de7d8, descripcion Pendiente de especificar, concepto sinac-tipomedicoatendio (r7-s2-089). Alcance: solo este recurso y esta definicion local; no autoriza otra edicion, adopcion global, totalidad de catalogos, equivalencias, joins ni vigencias.",
+   "motivo": "Correspondencia formal suficiente verificada en inspecciones originales: 1) sistema: recurso y diccionario en el mismo conjunto 940de7d8 del portal; 2) recurso: hoja SINAC 2022 26-09-22 con 106 campos, columna de nombre exacto en ordinal 89 sin duplicados; 3) fila 89 del diccionario con nombre exacto y huella eb4257a20d25073d0b7ba5bb875a53c333163438cc3dfa8cd2f1a1ee3bf80a3c coincidente con R7; 4) significado ya respaldado (r7-s2-089, sinac-tipomedicoatendio) con descripcion Pendiente de especificar; no se aprueba por nombre solo sino por esquema+fila+huella+significado. Expediente R7 (cierre, paquetes W v001-v004, S2 v002) revisado; sin busquedas genericas repetidas y sin pista web nueva: no se escribe peticiones-web.json.",
+   "evidencia": [
+    {
+     "ruta": "data/portal/contenido-inspeccion.json",
+     "sha256": "61861aab5bc2b334699c4d78f611a0e2d650c4649bd791927f9095c2ac785efb",
+     "localizador": "recurso 46977217 tablas[0]: hoja SINAC 2022 26-09-22, fila_encabezado 1, 106 campos; campos[posicion_original=89].id=TIPOMEDICOATENDIO (unico)",
+     "afirmacion_soportada": "La columna fisica existe en el esquema del recurso con nombre exacto TIPOMEDICOATENDIO en ordinal 89, sin duplicados."
+    },
+    {
+     "ruta": "data/portal/contenido-inspeccion.json",
+     "sha256": "61861aab5bc2b334699c4d78f611a0e2d650c4649bd791927f9095c2ac785efb",
+     "localizador": "recurso 22202305 definiciones[88] (fila 89): Nombre variable=TIPOMEDICOATENDIO; huella_fila=eb4257a20d25073d0b7ba5bb875a53c333163438cc3dfa8cd2f1a1ee3bf80a3c",
+     "afirmacion_soportada": "La fila del diccionario existe con nombre exacto TIPOMEDICOATENDIO en ordinal 89 y huella coincidente con R7."
+    },
+    {
+     "ruta": "propuestas/ronda-8-paralela/ejecucion-20261024/cobertura-r7.json",
+     "sha256": "4627c2baaf9a54d99897c93ee76213eea9a27bedf20219cf3cceda3da5e03bfe",
+     "localizador": "variables https://example.org/mex-ontologi/documented-variable/22202305-2d02-4c49-b216-cc98224357f0%2F89: estado=respaldada_por_definicion, concepto=sinac-tipomedicoatendio, regla=r7-s2-089; correspondencias https://example.org/mex-ontologi/file-column/46977217-9396-4f9c-bddb-6616e82530b4%2FSINAC%202022%2026-09-22%2F89: estado=candidata_por_nombre, variable=https://example.org/mex-ontologi/documented-variable/22202305-2d02-4c49-b216-cc98224357f0%2F89",
+     "afirmacion_soportada": "El significado esta respaldado en R7 y la correspondencia es candidata sin revision previa; variable y definicion_iri coinciden exactos."
+    },
+    {
+     "ruta": "propuestas/plan-paralelo-brechas-sin-gemma/ejecucion-20261024-072207Z/S2-nacimientos/v002/entrega.json",
+     "sha256": "2432f14513f11016dc9488188516d67e1be55a3f98e960a29c4fcc06e583e0f1",
+     "localizador": "decision r7-s2-089: estado propuesta_para_auditar; fuente_revision de la definicion local",
+     "afirmacion_soportada": "El significado del caso esta fijado por S2-nacimientos v002 (auditoria A/B pendiente); este vinculo no crea regla ni concepto nuevo."
+    }
+   ],
+   "evidencia_faltante": null,
+   "condicion_reapertura": "Si la auditoria rechaza el vinculo, revierte a brecha_externa con el motivo del dictamen; reapertura con fe de erratas del publicador o instrumento que corrija ordinal/nombre.",
+   "limites": [
+    "Solo código 11 verificado con ejemplo+D locales; no lista completa TIPO_MEDICO; no tabla determinada; no identidad global de catálogos; vigencia acotada al recurso 2022-01-01 a 2022-09-26.",
+    "Significado solo para el recurso SINAC 2022 (46977217, 2022-01-01 a 2022-09-26) y la definición local fijada; no autoriza otra edición, adopción global, totalidad del catálogo, equivalencias ni vigencias."
+   ],
+   "vinculo_propuesto": {
+    "campo": "TIPOMEDICOATENDIO",
+    "columna": "https://example.org/mex-ontologi/file-column/46977217-9396-4f9c-bddb-6616e82530b4%2FSINAC%202022%2026-09-22%2F89",
+    "concepto": "sinac-tipomedicoatendio",
+    "criterio": "Revision explicita de la columna fisica pos 89 (TIPOMEDICOATENDIO) de la hoja SINAC 2022 26-09-22 del recurso 46977217-9396-4f9c-bddb-6616e82530b4 y de su fila 89 del diccionario 22202305-2d02-4c49-b216-cc98224357f0 en el mismo conjunto 940de7d8-73ec-4a08-8d26-b7cc97ff17bd: nombre exacto, ordinal coincidente, descripcion Pendiente de especificar y huella de fila eb4257a20d25073d0b7ba5bb875a53c333163438cc3dfa8cd2f1a1ee3bf80a3c.",
+    "definicion_iri": "https://example.org/mex-ontologi/definition/22202305-2d02-4c49-b216-cc98224357f0%2F89",
+    "descripcion": "Pendiente de especificar",
+    "diccionario": "22202305-2d02-4c49-b216-cc98224357f0",
+    "huella_esquema": "9b46e1c0e32acd903780264f0ebbc538a835eb1bf92a70faa36ba7e839a1ec95",
+    "huella_fila_diccionario": "eb4257a20d25073d0b7ba5bb875a53c333163438cc3dfa8cd2f1a1ee3bf80a3c",
+    "recurso": "46977217-9396-4f9c-bddb-6616e82530b4"
+   },
+   "origenes": [
+    "data/portal/contenido-inspeccion.json",
+    "propuestas/ronda-8-paralela/ejecucion-20261024/cobertura-r7.json",
+    "propuestas/plan-paralelo-brechas-sin-gemma/ejecucion-20261024-072207Z/S2-nacimientos/v002/entrega.json"
+   ]
+  },
+  {
+   "id": "https://example.org/mex-ontologi/semantic-mapping/047b9def036c4e28f8ff37f70245c50d4958fff521b8346a382ee38a386de6ae",
+   "tipo": "correspondencias",
+   "estado": "propuesta_para_auditar",
+   "afirmacion_propuesta": "La columna fisica pos 97 (CERTIFICADOPOR) de la hoja SINAC 2022 26-09-22 del recurso 46977217-9396-4f9c-bddb-6616e82530b4 corresponde a la variable documentada fila 97 (CERTIFICADOPOR) del diccionario 22202305-2d02-4c49-b216-cc98224357f0 (definicion https://example.org/mex-ontologi/definition/22202305-2d02-4c49-b216-cc98224357f0%2F97), mismo conjunto 940de7d8, descripcion Pendiente de especificar, concepto sinac-certificadopor (r7-s2-097). Alcance: solo este recurso y esta definicion local; no autoriza otra edicion, adopcion global, totalidad de catalogos, equivalencias, joins ni vigencias.",
+   "motivo": "Correspondencia formal suficiente verificada en inspecciones originales: 1) sistema: recurso y diccionario en el mismo conjunto 940de7d8 del portal; 2) recurso: hoja SINAC 2022 26-09-22 con 106 campos, columna de nombre exacto en ordinal 97 sin duplicados; 3) fila 97 del diccionario con nombre exacto y huella 64c94f6639e0ec20742adc78b3a8d1bf1b69a59d2a83467134958b0739ec0b99 coincidente con R7; 4) significado ya respaldado (r7-s2-097, sinac-certificadopor) con descripcion Pendiente de especificar; no se aprueba por nombre solo sino por esquema+fila+huella+significado. Expediente R7 (cierre, paquetes W v001-v004, S2 v002) revisado; sin busquedas genericas repetidas y sin pista web nueva: no se escribe peticiones-web.json.",
+   "evidencia": [
+    {
+     "ruta": "data/portal/contenido-inspeccion.json",
+     "sha256": "61861aab5bc2b334699c4d78f611a0e2d650c4649bd791927f9095c2ac785efb",
+     "localizador": "recurso 46977217 tablas[0]: hoja SINAC 2022 26-09-22, fila_encabezado 1, 106 campos; campos[posicion_original=97].id=CERTIFICADOPOR (unico)",
+     "afirmacion_soportada": "La columna fisica existe en el esquema del recurso con nombre exacto CERTIFICADOPOR en ordinal 97, sin duplicados."
+    },
+    {
+     "ruta": "data/portal/contenido-inspeccion.json",
+     "sha256": "61861aab5bc2b334699c4d78f611a0e2d650c4649bd791927f9095c2ac785efb",
+     "localizador": "recurso 22202305 definiciones[96] (fila 97): Nombre variable=CERTIFICADOPOR; huella_fila=64c94f6639e0ec20742adc78b3a8d1bf1b69a59d2a83467134958b0739ec0b99",
+     "afirmacion_soportada": "La fila del diccionario existe con nombre exacto CERTIFICADOPOR en ordinal 97 y huella coincidente con R7."
+    },
+    {
+     "ruta": "propuestas/ronda-8-paralela/ejecucion-20261024/cobertura-r7.json",
+     "sha256": "4627c2baaf9a54d99897c93ee76213eea9a27bedf20219cf3cceda3da5e03bfe",
+     "localizador": "variables https://example.org/mex-ontologi/documented-variable/22202305-2d02-4c49-b216-cc98224357f0%2F97: estado=respaldada_por_definicion, concepto=sinac-certificadopor, regla=r7-s2-097; correspondencias https://example.org/mex-ontologi/file-column/46977217-9396-4f9c-bddb-6616e82530b4%2FSINAC%202022%2026-09-22%2F97: estado=candidata_por_nombre, variable=https://example.org/mex-ontologi/documented-variable/22202305-2d02-4c49-b216-cc98224357f0%2F97",
+     "afirmacion_soportada": "El significado esta respaldado en R7 y la correspondencia es candidata sin revision previa; variable y definicion_iri coinciden exactos."
+    },
+    {
+     "ruta": "propuestas/plan-paralelo-brechas-sin-gemma/ejecucion-20261024-072207Z/S2-nacimientos/v002/entrega.json",
+     "sha256": "2432f14513f11016dc9488188516d67e1be55a3f98e960a29c4fcc06e583e0f1",
+     "localizador": "decision r7-s2-097: estado propuesta_para_auditar; fuente_revision de la definicion local",
+     "afirmacion_soportada": "El significado del caso esta fijado por S2-nacimientos v002 (auditoria A/B pendiente); este vinculo no crea regla ni concepto nuevo."
+    }
+   ],
+   "evidencia_faltante": null,
+   "condicion_reapertura": "Si la auditoria rechaza el vinculo, revierte a brecha_externa con el motivo del dictamen; reapertura con fe de erratas del publicador o instrumento que corrija ordinal/nombre.",
+   "limites": [
+    "Solo código 7 verificado con ejemplo+D locales; no lista completa NACIMIENTO_CERTIFICADO_POR; no tabla determinada; no identidad global de catálogos; vigencia acotada al recurso 2022-01-01 a 2022-09-26.",
+    "Significado solo para el recurso SINAC 2022 (46977217, 2022-01-01 a 2022-09-26) y la definición local fijada; no autoriza otra edición, adopción global, totalidad del catálogo, equivalencias ni vigencias."
+   ],
+   "vinculo_propuesto": {
+    "campo": "CERTIFICADOPOR",
+    "columna": "https://example.org/mex-ontologi/file-column/46977217-9396-4f9c-bddb-6616e82530b4%2FSINAC%202022%2026-09-22%2F97",
+    "concepto": "sinac-certificadopor",
+    "criterio": "Revision explicita de la columna fisica pos 97 (CERTIFICADOPOR) de la hoja SINAC 2022 26-09-22 del recurso 46977217-9396-4f9c-bddb-6616e82530b4 y de su fila 97 del diccionario 22202305-2d02-4c49-b216-cc98224357f0 en el mismo conjunto 940de7d8-73ec-4a08-8d26-b7cc97ff17bd: nombre exacto, ordinal coincidente, descripcion Pendiente de especificar y huella de fila 64c94f6639e0ec20742adc78b3a8d1bf1b69a59d2a83467134958b0739ec0b99.",
+    "definicion_iri": "https://example.org/mex-ontologi/definition/22202305-2d02-4c49-b216-cc98224357f0%2F97",
+    "descripcion": "Pendiente de especificar",
+    "diccionario": "22202305-2d02-4c49-b216-cc98224357f0",
+    "huella_esquema": "9b46e1c0e32acd903780264f0ebbc538a835eb1bf92a70faa36ba7e839a1ec95",
+    "huella_fila_diccionario": "64c94f6639e0ec20742adc78b3a8d1bf1b69a59d2a83467134958b0739ec0b99",
+    "recurso": "46977217-9396-4f9c-bddb-6616e82530b4"
+   },
+   "origenes": [
+    "data/portal/contenido-inspeccion.json",
+    "propuestas/ronda-8-paralela/ejecucion-20261024/cobertura-r7.json",
+    "propuestas/plan-paralelo-brechas-sin-gemma/ejecucion-20261024-072207Z/S2-nacimientos/v002/entrega.json"
+   ]
+  },
+  {
+   "id": "https://example.org/mex-ontologi/semantic-mapping/a5328c1e86e7a355bade45ffbcc5651ff1eb5af356af4ed4d0745f5e90171a17",
+   "tipo": "correspondencias",
+   "estado": "propuesta_para_auditar",
+   "afirmacion_propuesta": "La columna fisica pos 99 (CLUESCERTIFICA) de la hoja SINAC 2022 26-09-22 del recurso 46977217-9396-4f9c-bddb-6616e82530b4 corresponde a la variable documentada fila 99 (CLUESCERTIFICA) del diccionario 22202305-2d02-4c49-b216-cc98224357f0 (definicion https://example.org/mex-ontologi/definition/22202305-2d02-4c49-b216-cc98224357f0%2F99), mismo conjunto 940de7d8, descripcion Pendiente de especificar, concepto sinac-cluescertifica (r7-s2-099). Alcance: solo este recurso y esta definicion local; no autoriza otra edicion, adopcion global, totalidad de catalogos, equivalencias, joins ni vigencias.",
+   "motivo": "Correspondencia formal suficiente verificada en inspecciones originales: 1) sistema: recurso y diccionario en el mismo conjunto 940de7d8 del portal; 2) recurso: hoja SINAC 2022 26-09-22 con 106 campos, columna de nombre exacto en ordinal 99 sin duplicados; 3) fila 99 del diccionario con nombre exacto y huella dc38e62e8b63f4b1bddac667f4a73aa803a86e3ac106b8ffe9f93c88f8f6608a coincidente con R7; 4) significado ya respaldado (r7-s2-099, sinac-cluescertifica) con descripcion Pendiente de especificar; no se aprueba por nombre solo sino por esquema+fila+huella+significado. Expediente R7 (cierre, paquetes W v001-v004, S2 v002) revisado; sin busquedas genericas repetidas y sin pista web nueva: no se escribe peticiones-web.json.",
+   "evidencia": [
+    {
+     "ruta": "data/portal/contenido-inspeccion.json",
+     "sha256": "61861aab5bc2b334699c4d78f611a0e2d650c4649bd791927f9095c2ac785efb",
+     "localizador": "recurso 46977217 tablas[0]: hoja SINAC 2022 26-09-22, fila_encabezado 1, 106 campos; campos[posicion_original=99].id=CLUESCERTIFICA (unico)",
+     "afirmacion_soportada": "La columna fisica existe en el esquema del recurso con nombre exacto CLUESCERTIFICA en ordinal 99, sin duplicados."
+    },
+    {
+     "ruta": "data/portal/contenido-inspeccion.json",
+     "sha256": "61861aab5bc2b334699c4d78f611a0e2d650c4649bd791927f9095c2ac785efb",
+     "localizador": "recurso 22202305 definiciones[98] (fila 99): Nombre variable=CLUESCERTIFICA; huella_fila=dc38e62e8b63f4b1bddac667f4a73aa803a86e3ac106b8ffe9f93c88f8f6608a",
+     "afirmacion_soportada": "La fila del diccionario existe con nombre exacto CLUESCERTIFICA en ordinal 99 y huella coincidente con R7."
+    },
+    {
+     "ruta": "propuestas/ronda-8-paralela/ejecucion-20261024/cobertura-r7.json",
+     "sha256": "4627c2baaf9a54d99897c93ee76213eea9a27bedf20219cf3cceda3da5e03bfe",
+     "localizador": "variables https://example.org/mex-ontologi/documented-variable/22202305-2d02-4c49-b216-cc98224357f0%2F99: estado=respaldada_por_definicion, concepto=sinac-cluescertifica, regla=r7-s2-099; correspondencias https://example.org/mex-ontologi/file-column/46977217-9396-4f9c-bddb-6616e82530b4%2FSINAC%202022%2026-09-22%2F99: estado=candidata_por_nombre, variable=https://example.org/mex-ontologi/documented-variable/22202305-2d02-4c49-b216-cc98224357f0%2F99",
+     "afirmacion_soportada": "El significado esta respaldado en R7 y la correspondencia es candidata sin revision previa; variable y definicion_iri coinciden exactos."
+    },
+    {
+     "ruta": "propuestas/plan-paralelo-brechas-sin-gemma/ejecucion-20261024-072207Z/S2-nacimientos/v002/entrega.json",
+     "sha256": "2432f14513f11016dc9488188516d67e1be55a3f98e960a29c4fcc06e583e0f1",
+     "localizador": "decision r7-s2-099: estado propuesta_para_auditar; fuente_revision de la definicion local",
+     "afirmacion_soportada": "El significado del caso esta fijado por S2-nacimientos v002 (auditoria A/B pendiente); este vinculo no crea regla ni concepto nuevo."
+    }
+   ],
+   "evidencia_faltante": null,
+   "condicion_reapertura": "Si la auditoria rechaza el vinculo, revierte a brecha_externa con el motivo del dictamen; reapertura con fe de erratas del publicador o instrumento que corrija ordinal/nombre.",
+   "limites": [
+    "Significado acreditado sin verificacion de valor local (ejemplo vacio declarado); no autoriza equivalencias.",
+    "Ejemplo local vacio: sin verificacion de instancia; lo aprobado es el significado de la variable (mnemonico exacto + descriptor IDnac=60 + catalogo ESTABLECIMIENTO_SALUD_202204 + edicion/ambito), no un valor local concreto.",
+    "Significado solo para el recurso SINAC 2022 (46977217, 2022-01-01 a 2022-09-26) y la definición local fijada; no autoriza otra edición, adopción global, totalidad del catálogo, equivalencias ni vigencias."
+   ],
+   "vinculo_propuesto": {
+    "campo": "CLUESCERTIFICA",
+    "columna": "https://example.org/mex-ontologi/file-column/46977217-9396-4f9c-bddb-6616e82530b4%2FSINAC%202022%2026-09-22%2F99",
+    "concepto": "sinac-cluescertifica",
+    "criterio": "Revision explicita de la columna fisica pos 99 (CLUESCERTIFICA) de la hoja SINAC 2022 26-09-22 del recurso 46977217-9396-4f9c-bddb-6616e82530b4 y de su fila 99 del diccionario 22202305-2d02-4c49-b216-cc98224357f0 en el mismo conjunto 940de7d8-73ec-4a08-8d26-b7cc97ff17bd: nombre exacto, ordinal coincidente, descripcion Pendiente de especificar y huella de fila dc38e62e8b63f4b1bddac667f4a73aa803a86e3ac106b8ffe9f93c88f8f6608a.",
+    "definicion_iri": "https://example.org/mex-ontologi/definition/22202305-2d02-4c49-b216-cc98224357f0%2F99",
+    "descripcion": "Pendiente de especificar",
+    "diccionario": "22202305-2d02-4c49-b216-cc98224357f0",
+    "huella_esquema": "9b46e1c0e32acd903780264f0ebbc538a835eb1bf92a70faa36ba7e839a1ec95",
+    "huella_fila_diccionario": "dc38e62e8b63f4b1bddac667f4a73aa803a86e3ac106b8ffe9f93c88f8f6608a",
+    "recurso": "46977217-9396-4f9c-bddb-6616e82530b4"
+   },
+   "origenes": [
+    "data/portal/contenido-inspeccion.json",
+    "propuestas/ronda-8-paralela/ejecucion-20261024/cobertura-r7.json",
+    "propuestas/plan-paralelo-brechas-sin-gemma/ejecucion-20261024-072207Z/S2-nacimientos/v002/entrega.json"
+   ]
+  }
+ ],
+ "vinculos_propuestos": [
+  {
+   "campo": "VITAMINA_A",
+   "columna": "https://example.org/mex-ontologi/file-column/46977217-9396-4f9c-bddb-6616e82530b4%2FSINAC%202022%2026-09-22%2F65",
+   "concepto": "sinac-vitamina-a",
+   "criterio": "Revision explicita de la columna fisica pos 65 (VITAMINA_A) de la hoja SINAC 2022 26-09-22 del recurso 46977217-9396-4f9c-bddb-6616e82530b4 y de su fila 65 del diccionario 22202305-2d02-4c49-b216-cc98224357f0 en el mismo conjunto 940de7d8-73ec-4a08-8d26-b7cc97ff17bd: nombre exacto, ordinal coincidente, descripcion Pendiente de especificar y huella de fila 1cb751023a12f3a604fb3abbe8627293b7ad2cc7cc777faa1b53b116c0982429.",
+   "definicion_iri": "https://example.org/mex-ontologi/definition/22202305-2d02-4c49-b216-cc98224357f0%2F65",
+   "descripcion": "Pendiente de especificar",
+   "diccionario": "22202305-2d02-4c49-b216-cc98224357f0",
+   "huella_esquema": "9b46e1c0e32acd903780264f0ebbc538a835eb1bf92a70faa36ba7e839a1ec95",
+   "huella_fila_diccionario": "1cb751023a12f3a604fb3abbe8627293b7ad2cc7cc777faa1b53b116c0982429",
+   "recurso": "46977217-9396-4f9c-bddb-6616e82530b4"
+  },
+  {
+   "campo": "VITAMINA_K",
+   "columna": "https://example.org/mex-ontologi/file-column/46977217-9396-4f9c-bddb-6616e82530b4%2FSINAC%202022%2026-09-22%2F67",
+   "concepto": "sinac-vitamina-k",
+   "criterio": "Revision explicita de la columna fisica pos 67 (VITAMINA_K) de la hoja SINAC 2022 26-09-22 del recurso 46977217-9396-4f9c-bddb-6616e82530b4 y de su fila 67 del diccionario 22202305-2d02-4c49-b216-cc98224357f0 en el mismo conjunto 940de7d8-73ec-4a08-8d26-b7cc97ff17bd: nombre exacto, ordinal coincidente, descripcion Pendiente de especificar y huella de fila 7180af0ba9ef0fa427fa288465c55f66c5d15a0b62f0e769d950f7c72049ff23.",
+   "definicion_iri": "https://example.org/mex-ontologi/definition/22202305-2d02-4c49-b216-cc98224357f0%2F67",
+   "descripcion": "Pendiente de especificar",
+   "diccionario": "22202305-2d02-4c49-b216-cc98224357f0",
+   "huella_esquema": "9b46e1c0e32acd903780264f0ebbc538a835eb1bf92a70faa36ba7e839a1ec95",
+   "huella_fila_diccionario": "7180af0ba9ef0fa427fa288465c55f66c5d15a0b62f0e769d950f7c72049ff23",
+   "recurso": "46977217-9396-4f9c-bddb-6616e82530b4"
+  },
+  {
+   "campo": "PRODUCTOEMBARAZO",
+   "columna": "https://example.org/mex-ontologi/file-column/46977217-9396-4f9c-bddb-6616e82530b4%2FSINAC%202022%2026-09-22%2F69",
+   "concepto": "sinac-productoembarazo",
+   "criterio": "Revision explicita de la columna fisica pos 69 (PRODUCTOEMBARAZO) de la hoja SINAC 2022 26-09-22 del recurso 46977217-9396-4f9c-bddb-6616e82530b4 y de su fila 69 del diccionario 22202305-2d02-4c49-b216-cc98224357f0 en el mismo conjunto 940de7d8-73ec-4a08-8d26-b7cc97ff17bd: nombre exacto, ordinal coincidente, descripcion Pendiente de especificar y huella de fila b66a776bd99ba4884bd6df9804696b53ef6b6de5a0fd9c8a22d70c78fac07881.",
+   "definicion_iri": "https://example.org/mex-ontologi/definition/22202305-2d02-4c49-b216-cc98224357f0%2F69",
+   "descripcion": "Pendiente de especificar",
+   "diccionario": "22202305-2d02-4c49-b216-cc98224357f0",
+   "huella_esquema": "9b46e1c0e32acd903780264f0ebbc538a835eb1bf92a70faa36ba7e839a1ec95",
+   "huella_fila_diccionario": "b66a776bd99ba4884bd6df9804696b53ef6b6de5a0fd9c8a22d70c78fac07881",
+   "recurso": "46977217-9396-4f9c-bddb-6616e82530b4"
+  },
+  {
+   "campo": "ORDENPRODUCTO",
+   "columna": "https://example.org/mex-ontologi/file-column/46977217-9396-4f9c-bddb-6616e82530b4%2FSINAC%202022%2026-09-22%2F71",
+   "concepto": "sinac-ordenproducto",
+   "criterio": "Revision explicita de la columna fisica pos 71 (ORDENPRODUCTO) de la hoja SINAC 2022 26-09-22 del recurso 46977217-9396-4f9c-bddb-6616e82530b4 y de su fila 71 del diccionario 22202305-2d02-4c49-b216-cc98224357f0 en el mismo conjunto 940de7d8-73ec-4a08-8d26-b7cc97ff17bd: nombre exacto, ordinal coincidente, descripcion Pendiente de especificar y huella de fila abcad05c885063318a672bd488a1a7d5afe1f258dea83e0fdf5c10fbac4c455c.",
+   "definicion_iri": "https://example.org/mex-ontologi/definition/22202305-2d02-4c49-b216-cc98224357f0%2F71",
+   "descripcion": "Pendiente de especificar",
+   "diccionario": "22202305-2d02-4c49-b216-cc98224357f0",
+   "huella_esquema": "9b46e1c0e32acd903780264f0ebbc538a835eb1bf92a70faa36ba7e839a1ec95",
+   "huella_fila_diccionario": "abcad05c885063318a672bd488a1a7d5afe1f258dea83e0fdf5c10fbac4c455c",
+   "recurso": "46977217-9396-4f9c-bddb-6616e82530b4"
+  },
+  {
+   "campo": "TOTALPRODUCTOS",
+   "columna": "https://example.org/mex-ontologi/file-column/46977217-9396-4f9c-bddb-6616e82530b4%2FSINAC%202022%2026-09-22%2F72",
+   "concepto": "sinac-totalproductos",
+   "criterio": "Revision explicita de la columna fisica pos 72 (TOTALPRODUCTOS) de la hoja SINAC 2022 26-09-22 del recurso 46977217-9396-4f9c-bddb-6616e82530b4 y de su fila 72 del diccionario 22202305-2d02-4c49-b216-cc98224357f0 en el mismo conjunto 940de7d8-73ec-4a08-8d26-b7cc97ff17bd: nombre exacto, ordinal coincidente, descripcion Pendiente de especificar y huella de fila ebfe8f35dcd87b903edd93c23e54950db3e88042f03c98afff7c55b5735fb5b0.",
+   "definicion_iri": "https://example.org/mex-ontologi/definition/22202305-2d02-4c49-b216-cc98224357f0%2F72",
+   "descripcion": "Pendiente de especificar",
+   "diccionario": "22202305-2d02-4c49-b216-cc98224357f0",
+   "huella_esquema": "9b46e1c0e32acd903780264f0ebbc538a835eb1bf92a70faa36ba7e839a1ec95",
+   "huella_fila_diccionario": "ebfe8f35dcd87b903edd93c23e54950db3e88042f03c98afff7c55b5735fb5b0",
+   "recurso": "46977217-9396-4f9c-bddb-6616e82530b4"
+  },
+  {
+   "campo": "CODIGOCIEANOMALIA1",
+   "columna": "https://example.org/mex-ontologi/file-column/46977217-9396-4f9c-bddb-6616e82530b4%2FSINAC%202022%2026-09-22%2F74",
+   "concepto": "sinac-codigocieanomalia1",
+   "criterio": "Revision explicita de la columna fisica pos 74 (CODIGOCIEANOMALIA1) de la hoja SINAC 2022 26-09-22 del recurso 46977217-9396-4f9c-bddb-6616e82530b4 y de su fila 74 del diccionario 22202305-2d02-4c49-b216-cc98224357f0 en el mismo conjunto 940de7d8-73ec-4a08-8d26-b7cc97ff17bd: nombre exacto, ordinal coincidente, descripcion Pendiente de especificar y huella de fila 109d0f8a09c2f065e43b67ee1231d75db5b444e2cfac5b515708f543922cc9cb.",
+   "definicion_iri": "https://example.org/mex-ontologi/definition/22202305-2d02-4c49-b216-cc98224357f0%2F74",
+   "descripcion": "Pendiente de especificar",
+   "diccionario": "22202305-2d02-4c49-b216-cc98224357f0",
+   "huella_esquema": "9b46e1c0e32acd903780264f0ebbc538a835eb1bf92a70faa36ba7e839a1ec95",
+   "huella_fila_diccionario": "109d0f8a09c2f065e43b67ee1231d75db5b444e2cfac5b515708f543922cc9cb",
+   "recurso": "46977217-9396-4f9c-bddb-6616e82530b4"
+  },
+  {
+   "campo": "CODIGOCIEANOMALIA2",
+   "columna": "https://example.org/mex-ontologi/file-column/46977217-9396-4f9c-bddb-6616e82530b4%2FSINAC%202022%2026-09-22%2F76",
+   "concepto": "sinac-codigocieanomalia2",
+   "criterio": "Revision explicita de la columna fisica pos 76 (CODIGOCIEANOMALIA2) de la hoja SINAC 2022 26-09-22 del recurso 46977217-9396-4f9c-bddb-6616e82530b4 y de su fila 76 del diccionario 22202305-2d02-4c49-b216-cc98224357f0 en el mismo conjunto 940de7d8-73ec-4a08-8d26-b7cc97ff17bd: nombre exacto, ordinal coincidente, descripcion Pendiente de especificar y huella de fila 998a3d29cfa98c49c38767c027ea4f7795876b5a2c98b3e47b2e17ed489f1c44.",
+   "definicion_iri": "https://example.org/mex-ontologi/definition/22202305-2d02-4c49-b216-cc98224357f0%2F76",
+   "descripcion": "Pendiente de especificar",
+   "diccionario": "22202305-2d02-4c49-b216-cc98224357f0",
+   "huella_esquema": "9b46e1c0e32acd903780264f0ebbc538a835eb1bf92a70faa36ba7e839a1ec95",
+   "huella_fila_diccionario": "998a3d29cfa98c49c38767c027ea4f7795876b5a2c98b3e47b2e17ed489f1c44",
+   "recurso": "46977217-9396-4f9c-bddb-6616e82530b4"
+  },
+  {
+   "campo": "RESOLUCIONEMBARAZO",
+   "columna": "https://example.org/mex-ontologi/file-column/46977217-9396-4f9c-bddb-6616e82530b4%2FSINAC%202022%2026-09-22%2F77",
+   "concepto": "sinac-resolucionembarazo",
+   "criterio": "Revision explicita de la columna fisica pos 77 (RESOLUCIONEMBARAZO) de la hoja SINAC 2022 26-09-22 del recurso 46977217-9396-4f9c-bddb-6616e82530b4 y de su fila 77 del diccionario 22202305-2d02-4c49-b216-cc98224357f0 en el mismo conjunto 940de7d8-73ec-4a08-8d26-b7cc97ff17bd: nombre exacto, ordinal coincidente, descripcion Pendiente de especificar y huella de fila f4c1bedd6497fb849c4715849b63333ecc867d51d09312f371ac8c75af64759c.",
+   "definicion_iri": "https://example.org/mex-ontologi/definition/22202305-2d02-4c49-b216-cc98224357f0%2F77",
+   "descripcion": "Pendiente de especificar",
+   "diccionario": "22202305-2d02-4c49-b216-cc98224357f0",
+   "huella_esquema": "9b46e1c0e32acd903780264f0ebbc538a835eb1bf92a70faa36ba7e839a1ec95",
+   "huella_fila_diccionario": "f4c1bedd6497fb849c4715849b63333ecc867d51d09312f371ac8c75af64759c",
+   "recurso": "46977217-9396-4f9c-bddb-6616e82530b4"
+  },
+  {
+   "campo": "UTILIZOFORCEPS",
+   "columna": "https://example.org/mex-ontologi/file-column/46977217-9396-4f9c-bddb-6616e82530b4%2FSINAC%202022%2026-09-22%2F79",
+   "concepto": "sinac-utilizoforceps",
+   "criterio": "Revision explicita de la columna fisica pos 79 (UTILIZOFORCEPS) de la hoja SINAC 2022 26-09-22 del recurso 46977217-9396-4f9c-bddb-6616e82530b4 y de su fila 79 del diccionario 22202305-2d02-4c49-b216-cc98224357f0 en el mismo conjunto 940de7d8-73ec-4a08-8d26-b7cc97ff17bd: nombre exacto, ordinal coincidente, descripcion Pendiente de especificar y huella de fila 221fff1034855415f2178988e1d14dce40c3a601a3698d286bc14cc365f19018.",
+   "definicion_iri": "https://example.org/mex-ontologi/definition/22202305-2d02-4c49-b216-cc98224357f0%2F79",
+   "descripcion": "Pendiente de especificar",
+   "diccionario": "22202305-2d02-4c49-b216-cc98224357f0",
+   "huella_esquema": "9b46e1c0e32acd903780264f0ebbc538a835eb1bf92a70faa36ba7e839a1ec95",
+   "huella_fila_diccionario": "221fff1034855415f2178988e1d14dce40c3a601a3698d286bc14cc365f19018",
+   "recurso": "46977217-9396-4f9c-bddb-6616e82530b4"
+  },
+  {
+   "campo": "TIEMPOTRASLADO",
+   "columna": "https://example.org/mex-ontologi/file-column/46977217-9396-4f9c-bddb-6616e82530b4%2FSINAC%202022%2026-09-22%2F84",
+   "concepto": "sinac-tiempotraslado",
+   "criterio": "Revision explicita de la columna fisica pos 84 (TIEMPOTRASLADO) de la hoja SINAC 2022 26-09-22 del recurso 46977217-9396-4f9c-bddb-6616e82530b4 y de su fila 84 del diccionario 22202305-2d02-4c49-b216-cc98224357f0 en el mismo conjunto 940de7d8-73ec-4a08-8d26-b7cc97ff17bd: nombre exacto, ordinal coincidente, descripcion Pendiente de especificar y huella de fila 1991915d59e2db4cb7632a3ace696000c61a579578a3115399103ac11e2f4404.",
+   "definicion_iri": "https://example.org/mex-ontologi/definition/22202305-2d02-4c49-b216-cc98224357f0%2F84",
+   "descripcion": "Pendiente de especificar",
+   "diccionario": "22202305-2d02-4c49-b216-cc98224357f0",
+   "huella_esquema": "9b46e1c0e32acd903780264f0ebbc538a835eb1bf92a70faa36ba7e839a1ec95",
+   "huella_fila_diccionario": "1991915d59e2db4cb7632a3ace696000c61a579578a3115399103ac11e2f4404",
+   "recurso": "46977217-9396-4f9c-bddb-6616e82530b4"
+  },
+  {
+   "campo": "PERSONALATENDIO",
+   "columna": "https://example.org/mex-ontologi/file-column/46977217-9396-4f9c-bddb-6616e82530b4%2FSINAC%202022%2026-09-22%2F87",
+   "concepto": "sinac-personalatendio",
+   "criterio": "Revision explicita de la columna fisica pos 87 (PERSONALATENDIO) de la hoja SINAC 2022 26-09-22 del recurso 46977217-9396-4f9c-bddb-6616e82530b4 y de su fila 87 del diccionario 22202305-2d02-4c49-b216-cc98224357f0 en el mismo conjunto 940de7d8-73ec-4a08-8d26-b7cc97ff17bd: nombre exacto, ordinal coincidente, descripcion Pendiente de especificar y huella de fila 511637fdd52b46d22a91e644babc50e06be4c5723f1e2783337b591ffe1a79fc.",
+   "definicion_iri": "https://example.org/mex-ontologi/definition/22202305-2d02-4c49-b216-cc98224357f0%2F87",
+   "descripcion": "Pendiente de especificar",
+   "diccionario": "22202305-2d02-4c49-b216-cc98224357f0",
+   "huella_esquema": "9b46e1c0e32acd903780264f0ebbc538a835eb1bf92a70faa36ba7e839a1ec95",
+   "huella_fila_diccionario": "511637fdd52b46d22a91e644babc50e06be4c5723f1e2783337b591ffe1a79fc",
+   "recurso": "46977217-9396-4f9c-bddb-6616e82530b4"
+  },
+  {
+   "campo": "TIPOMEDICOATENDIO",
+   "columna": "https://example.org/mex-ontologi/file-column/46977217-9396-4f9c-bddb-6616e82530b4%2FSINAC%202022%2026-09-22%2F89",
+   "concepto": "sinac-tipomedicoatendio",
+   "criterio": "Revision explicita de la columna fisica pos 89 (TIPOMEDICOATENDIO) de la hoja SINAC 2022 26-09-22 del recurso 46977217-9396-4f9c-bddb-6616e82530b4 y de su fila 89 del diccionario 22202305-2d02-4c49-b216-cc98224357f0 en el mismo conjunto 940de7d8-73ec-4a08-8d26-b7cc97ff17bd: nombre exacto, ordinal coincidente, descripcion Pendiente de especificar y huella de fila eb4257a20d25073d0b7ba5bb875a53c333163438cc3dfa8cd2f1a1ee3bf80a3c.",
+   "definicion_iri": "https://example.org/mex-ontologi/definition/22202305-2d02-4c49-b216-cc98224357f0%2F89",
+   "descripcion": "Pendiente de especificar",
+   "diccionario": "22202305-2d02-4c49-b216-cc98224357f0",
+   "huella_esquema": "9b46e1c0e32acd903780264f0ebbc538a835eb1bf92a70faa36ba7e839a1ec95",
+   "huella_fila_diccionario": "eb4257a20d25073d0b7ba5bb875a53c333163438cc3dfa8cd2f1a1ee3bf80a3c",
+   "recurso": "46977217-9396-4f9c-bddb-6616e82530b4"
+  },
+  {
+   "campo": "CERTIFICADOPOR",
+   "columna": "https://example.org/mex-ontologi/file-column/46977217-9396-4f9c-bddb-6616e82530b4%2FSINAC%202022%2026-09-22%2F97",
+   "concepto": "sinac-certificadopor",
+   "criterio": "Revision explicita de la columna fisica pos 97 (CERTIFICADOPOR) de la hoja SINAC 2022 26-09-22 del recurso 46977217-9396-4f9c-bddb-6616e82530b4 y de su fila 97 del diccionario 22202305-2d02-4c49-b216-cc98224357f0 en el mismo conjunto 940de7d8-73ec-4a08-8d26-b7cc97ff17bd: nombre exacto, ordinal coincidente, descripcion Pendiente de especificar y huella de fila 64c94f6639e0ec20742adc78b3a8d1bf1b69a59d2a83467134958b0739ec0b99.",
+   "definicion_iri": "https://example.org/mex-ontologi/definition/22202305-2d02-4c49-b216-cc98224357f0%2F97",
+   "descripcion": "Pendiente de especificar",
+   "diccionario": "22202305-2d02-4c49-b216-cc98224357f0",
+   "huella_esquema": "9b46e1c0e32acd903780264f0ebbc538a835eb1bf92a70faa36ba7e839a1ec95",
+   "huella_fila_diccionario": "64c94f6639e0ec20742adc78b3a8d1bf1b69a59d2a83467134958b0739ec0b99",
+   "recurso": "46977217-9396-4f9c-bddb-6616e82530b4"
+  },
+  {
+   "campo": "CLUESCERTIFICA",
+   "columna": "https://example.org/mex-ontologi/file-column/46977217-9396-4f9c-bddb-6616e82530b4%2FSINAC%202022%2026-09-22%2F99",
+   "concepto": "sinac-cluescertifica",
+   "criterio": "Revision explicita de la columna fisica pos 99 (CLUESCERTIFICA) de la hoja SINAC 2022 26-09-22 del recurso 46977217-9396-4f9c-bddb-6616e82530b4 y de su fila 99 del diccionario 22202305-2d02-4c49-b216-cc98224357f0 en el mismo conjunto 940de7d8-73ec-4a08-8d26-b7cc97ff17bd: nombre exacto, ordinal coincidente, descripcion Pendiente de especificar y huella de fila dc38e62e8b63f4b1bddac667f4a73aa803a86e3ac106b8ffe9f93c88f8f6608a.",
+   "definicion_iri": "https://example.org/mex-ontologi/definition/22202305-2d02-4c49-b216-cc98224357f0%2F99",
+   "descripcion": "Pendiente de especificar",
+   "diccionario": "22202305-2d02-4c49-b216-cc98224357f0",
+   "huella_esquema": "9b46e1c0e32acd903780264f0ebbc538a835eb1bf92a70faa36ba7e839a1ec95",
+   "huella_fila_diccionario": "dc38e62e8b63f4b1bddac667f4a73aa803a86e3ac106b8ffe9f93c88f8f6608a",
+   "recurso": "46977217-9396-4f9c-bddb-6616e82530b4"
+  }
+ ],
+ "origenes": {
+  "https://example.org/mex-ontologi/file-column/46977217-9396-4f9c-bddb-6616e82530b4%2FSINAC%202022%2026-09-22%2F65": [
+   "data/portal/contenido-inspeccion.json",
+   "propuestas/ronda-8-paralela/ejecucion-20261024/cobertura-r7.json",
+   "propuestas/plan-paralelo-brechas-sin-gemma/ejecucion-20261024-072207Z/S2-nacimientos/v002/entrega.json"
+  ],
+  "https://example.org/mex-ontologi/file-column/46977217-9396-4f9c-bddb-6616e82530b4%2FSINAC%202022%2026-09-22%2F67": [
+   "data/portal/contenido-inspeccion.json",
+   "propuestas/ronda-8-paralela/ejecucion-20261024/cobertura-r7.json",
+   "propuestas/plan-paralelo-brechas-sin-gemma/ejecucion-20261024-072207Z/S2-nacimientos/v002/entrega.json"
+  ],
+  "https://example.org/mex-ontologi/file-column/46977217-9396-4f9c-bddb-6616e82530b4%2FSINAC%202022%2026-09-22%2F69": [
+   "data/portal/contenido-inspeccion.json",
+   "propuestas/ronda-8-paralela/ejecucion-20261024/cobertura-r7.json",
+   "propuestas/plan-paralelo-brechas-sin-gemma/ejecucion-20261024-072207Z/S2-nacimientos/v002/entrega.json"
+  ],
+  "https://example.org/mex-ontologi/file-column/46977217-9396-4f9c-bddb-6616e82530b4%2FSINAC%202022%2026-09-22%2F71": [
+   "data/portal/contenido-inspeccion.json",
+   "propuestas/ronda-8-paralela/ejecucion-20261024/cobertura-r7.json",
+   "propuestas/plan-paralelo-brechas-sin-gemma/ejecucion-20261024-072207Z/S2-nacimientos/v002/entrega.json"
+  ],
+  "https://example.org/mex-ontologi/file-column/46977217-9396-4f9c-bddb-6616e82530b4%2FSINAC%202022%2026-09-22%2F72": [
+   "data/portal/contenido-inspeccion.json",
+   "propuestas/ronda-8-paralela/ejecucion-20261024/cobertura-r7.json",
+   "propuestas/plan-paralelo-brechas-sin-gemma/ejecucion-20261024-072207Z/S2-nacimientos/v002/entrega.json"
+  ],
+  "https://example.org/mex-ontologi/file-column/46977217-9396-4f9c-bddb-6616e82530b4%2FSINAC%202022%2026-09-22%2F74": [
+   "data/portal/contenido-inspeccion.json",
+   "propuestas/ronda-8-paralela/ejecucion-20261024/cobertura-r7.json",
+   "propuestas/plan-paralelo-brechas-sin-gemma/ejecucion-20261024-072207Z/S2-nacimientos/v002/entrega.json"
+  ],
+  "https://example.org/mex-ontologi/file-column/46977217-9396-4f9c-bddb-6616e82530b4%2FSINAC%202022%2026-09-22%2F76": [
+   "data/portal/contenido-inspeccion.json",
+   "propuestas/ronda-8-paralela/ejecucion-20261024/cobertura-r7.json",
+   "propuestas/plan-paralelo-brechas-sin-gemma/ejecucion-20261024-072207Z/S2-nacimientos/v002/entrega.json"
+  ],
+  "https://example.org/mex-ontologi/file-column/46977217-9396-4f9c-bddb-6616e82530b4%2FSINAC%202022%2026-09-22%2F77": [
+   "data/portal/contenido-inspeccion.json",
+   "propuestas/ronda-8-paralela/ejecucion-20261024/cobertura-r7.json",
+   "propuestas/plan-paralelo-brechas-sin-gemma/ejecucion-20261024-072207Z/S2-nacimientos/v002/entrega.json"
+  ],
+  "https://example.org/mex-ontologi/file-column/46977217-9396-4f9c-bddb-6616e82530b4%2FSINAC%202022%2026-09-22%2F79": [
+   "data/portal/contenido-inspeccion.json",
+   "propuestas/ronda-8-paralela/ejecucion-20261024/cobertura-r7.json",
+   "propuestas/plan-paralelo-brechas-sin-gemma/ejecucion-20261024-072207Z/S2-nacimientos/v002/entrega.json"
+  ],
+  "https://example.org/mex-ontologi/file-column/46977217-9396-4f9c-bddb-6616e82530b4%2FSINAC%202022%2026-09-22%2F84": [
+   "data/portal/contenido-inspeccion.json",
+   "propuestas/ronda-8-paralela/ejecucion-20261024/cobertura-r7.json",
+   "propuestas/plan-paralelo-brechas-sin-gemma/ejecucion-20261024-072207Z/S2-nacimientos/v002/entrega.json"
+  ],
+  "https://example.org/mex-ontologi/file-column/46977217-9396-4f9c-bddb-6616e82530b4%2FSINAC%202022%2026-09-22%2F87": [
+   "data/portal/contenido-inspeccion.json",
+   "propuestas/ronda-8-paralela/ejecucion-20261024/cobertura-r7.json",
+   "propuestas/plan-paralelo-brechas-sin-gemma/ejecucion-20261024-072207Z/S2-nacimientos/v002/entrega.json"
+  ],
+  "https://example.org/mex-ontologi/file-column/46977217-9396-4f9c-bddb-6616e82530b4%2FSINAC%202022%2026-09-22%2F89": [
+   "data/portal/contenido-inspeccion.json",
+   "propuestas/ronda-8-paralela/ejecucion-20261024/cobertura-r7.json",
+   "propuestas/plan-paralelo-brechas-sin-gemma/ejecucion-20261024-072207Z/S2-nacimientos/v002/entrega.json"
+  ],
+  "https://example.org/mex-ontologi/file-column/46977217-9396-4f9c-bddb-6616e82530b4%2FSINAC%202022%2026-09-22%2F97": [
+   "data/portal/contenido-inspeccion.json",
+   "propuestas/ronda-8-paralela/ejecucion-20261024/cobertura-r7.json",
+   "propuestas/plan-paralelo-brechas-sin-gemma/ejecucion-20261024-072207Z/S2-nacimientos/v002/entrega.json"
+  ],
+  "https://example.org/mex-ontologi/file-column/46977217-9396-4f9c-bddb-6616e82530b4%2FSINAC%202022%2026-09-22%2F99": [
+   "data/portal/contenido-inspeccion.json",
+   "propuestas/ronda-8-paralela/ejecucion-20261024/cobertura-r7.json",
+   "propuestas/plan-paralelo-brechas-sin-gemma/ejecucion-20261024-072207Z/S2-nacimientos/v002/entrega.json"
+  ]
+ },
+ "origenes_sha256": {
+  "data/portal/contenido-inspeccion.json": "61861aab5bc2b334699c4d78f611a0e2d650c4649bd791927f9095c2ac785efb",
+  "propuestas/ronda-8-paralela/ejecucion-20261024/cobertura-r7.json": "4627c2baaf9a54d99897c93ee76213eea9a27bedf20219cf3cceda3da5e03bfe",
+  "propuestas/plan-paralelo-brechas-sin-gemma/ejecucion-20261024-072207Z/S2-nacimientos/v002/entrega.json": "2432f14513f11016dc9488188516d67e1be55a3f98e960a29c4fcc06e583e0f1"
+ },
+ "pruebas_verificables": "Para cada caso: unicidad del nombre en los 106 campos del recurso y en las 106 filas del diccionario; igualdad de ordinales columna-posicion_original y fila-indice; huella_esquema=9b46e1c0e32acd903780264f0ebbc538a835eb1bf92a70faa36ba7e839a1ec95 y huella_fila recomputadas por codigo (hashlib.sha256, json sort_keys) coincidentes con R7; estado respaldada_por_definicion con mismo concepto, regla, definicion_iri, descripcion y huella en cobertura-r7.json; correspondencia candidata_por_nombre con variable exacta. Descriptor y catalogos nacionales no se invocan como vinculo fisico."
+}

@@ -1,0 +1,108 @@
+{
+  "bundle_anterior_sha256": "5b190f2c982239779233478a41ae15d78ecc857e67605c2b9f23c403e863050b",
+  "bundle_instalado_sha256": "3c54dcb4de032fe33d43de2cbbf4b71a289bc15e64a2874fac0e2b8187e6b08a",
+  "bundle_verificado_en_sonda": "3c54dcb4...",
+  "c6_bundle_instalado": {
+    "bundle_sha256": "3c54dcb4de032fe33d43de2cbbf4b71a289bc15e64a2874fac0e2b8187e6b08a",
+    "duracion_total_s": 114.7,
+    "duracion_nota": "total incluye retrieval/pacing/posible retry; NO tiempo de un fetch; sin traza de intentos",
+    "errores": [],
+    "estado": "respondido",
+    "fin_utc": "2026-10-24T05:45:12.779Z",
+    "grafo_antes": 321210,
+    "grafo_conservado": true,
+    "grafo_despues": 321210,
+    "inicio_utc": "2026-10-24T05:43:18.042Z",
+    "mutado": false,
+    "hechos": "2594/2594; suma_grupos_edad_H_M filas 62/63 (24301617...xlsx), poblacion_mitad_ano fila 32 (e0e21aad...xlsx), origen Aconchi; sin afirmacion INEGI",
+    "no_confudir_con": "B externo 51.56s: solicitud HTTP directa con los mismos mensajes capturados; no ejecucion del bundle."
+  },
+  "conteo_requests": {
+    "diagnostico_pre_instalacion": 6,
+    "detalle": "req1/req2/req3/A-timeout/B-perdido/B-recuperacion",
+    "sonda_instalada": "1 caso, retry maximo 1 de codigo",
+    "http_real_no_instrumentado": true,
+    "fiabilidad_global": "no declarada por 1 caso"
+  },
+  "cambio": "QA-only por turno: provider.step(tools, options?: TurnOptions); answerOnce solicita {minimalThinking:true}; triple puerta (opcion && tools vacias && usaPoliticaGemma4) agrega extra_body.google.thinking_config={minimal, include_thoughts:false}; sin estado compartido; retry lo conserva por parametro; otros providers intactos",
+  "comparacion_ayb_externa": {
+    "A": {
+      "duracion_s": 90.09,
+      "error": "TimeoutError local fetch (corte 90s)",
+      "status": null
+    },
+    "B": {
+      "duracion_s": 51.56,
+      "error": null,
+      "finish_reason": "stop",
+      "status": 200,
+      "texto_visible": "Para la clave 26001 en 2020, los valores son 2594 para la medida \"suma_grupos_edad_H_M\" (nombre de origen \"Aconchi\", archivo `24301617b6a5d89cf99b34ed4d512324cedde52e0c625de9457238e3d8fa340c.xlsx`, filas 62 y 63) y 2594 para la medida \"poblacion_mitad_ano\" (nombre de origen \"Aconchi\", archivo `e0e21aad3a84b4059efaf7525233ac05b08ced300f0f851fbadaab94057c027a.xlsx`, fila 32). No se menciona si son códigos INEGI.\n\n---\n- Fuente \"grandes_grupos\": valor 2594, medida \"suma_grupos_edad_H_M\", nombre \"Aconchi\", archivo `24301617b6a5d89cf99b34ed4d512324cedde52e0c625de9457238e3d8fa340c.xlsx`, filas 62 (Hombres) y 63 (Mujeres) [https://example.org/mex-ontologi/cruce-r3-2020-evidencia/26001%2Fgrandes_grupos].\n- Fuente \"indicadores\": valor 2594, medida \"poblacion_mitad_ano\", nombre \"Aconchi\", nombre de origen \"Aconchi\", archivo `e0e21aad3a84b4059efaf7525233ac05b08ced300f0f851fbadaab94057c027a.xlsx`, fila 32 [https://example.org/mex-ontologi/cruce-r3-2020-evidencia/26001%2Findicadores].\n- La entidad \"26001 — Aconchi\" está asociada al sistema de identificadores \"CVEGEO municipal según GeoJSON del portal\" [https://example.org/mex-ontologi/code-entry/d20d36c4-6406-4054-845c-43308b380b95%2F26001].",
+      "usage": {
+        "completion_tokens": 606,
+        "prompt_tokens": 9054,
+        "prompt_tokens_details": {
+          "cached_tokens": 8181
+        },
+        "total_tokens": 9660
+      }
+    },
+    "advertencia": "n=1 por brazo; B con 8181 prompt tokens cacheados (confusor); NO causalidad probada"
+  },
+  "correccion_informes_aplicacion_chat_previos": "Se corrigieron reports/aplicacion-chat.md y .json tras respaldarlos en propuestas/diagnostico-gemma/aplicacion-chat.md.respaldo-20261024 y aplicacion-chat.json.respaldo-20261024. La evidencia original de las sondas se conserva. 360s era el cap de la sonda por caso, no el timeout observado; AbortSignal del proveedor limita cada fetch a 90s. C6 original duro 266.6s en total y devolvio TimeoutError sin contador de intentos.",
+  "diagnostico_minimo": {
+    "req1_openai_compatible": {
+      "duracion_s": 12.76,
+      "finish": "length (thinking consumio limite)",
+      "status": 200
+    },
+    "req2_nativo_generateContent": {
+      "duracion_s": 9.97,
+      "finish": "MAX_TOKENS (thinking consumio limite)",
+      "status": 200
+    },
+    "req3_openai_thinking_minimal": {
+      "duracion_s": 23.75,
+      "finish": "stop",
+      "status": 200,
+      "texto_visible": "OK"
+    }
+  },
+  "fecha_utc": "2026-10-24",
+  "fuentes_oficiales": [
+    "https://ai.google.dev/gemma/docs/core/gemma_on_gemini_api",
+    "https://ai.google.dev/gemini-api/docs/openai"
+  ],
+  "grafo": {
+    "antes": 321210,
+    "despues": 321210
+  },
+  "hallazgos": [
+    "Ambos endpoints responden 200 al mismo modelo gemma-4-31b-it (req1 OpenAI-compatible y req2 generateContent nativo).",
+    "Reasoning activo por defecto: con limites de 8 tokens el thinking consume todo el presupuesto (finish length/MAX_TOKENS, solo thought visible).",
+    "C6 real (22126 chars input) con codigo original: TimeoutError local fetch a los 90s por intento (A, 90.09s).",
+    "Mismo C6 + thinking minimal externo: 200/stop en 51.56s, 9054 input/606 output.",
+    "El primer resultado B se perdio por un fallo local de guardado cp1252; A se conservo. Se realizo y registro una unica recuperacion B.",
+    "n=1 + 8181 tokens cacheados en B: NO hay causalidad probada; tampoco 500/503 con causa establecida ni cuota agotada demostrada.",
+    "Sonda instalada (bundle 3c54dcb4, handshake gemma-4-31b-it): C6-clave-26001 respondido en ~115s, 1005 chars, sin errores, sin mutacion, grafo 321210 intacto."
+  ],
+  "instalacion": {
+    "metodo": "copia byte-exacta del build dictaminado; respaldo del instalado en instalacion/",
+    "modelo": ".env/prompts/manifests intactos; gemma-4-31b-it",
+    "respaldo_grafo": "data/backups/studio-antes-activar-gemma-20261024T054209Z.ttl (sha c065fdfd..., 41039253 bytes)",
+    "rinicio": "reiniciar-studio.ps1 fallo en Get-FileHash (no reconocido); mismo procedimiento completado con hash python; Studio relanzado, handshake gemma-4-31b-it, grafo 321210"
+  },
+  "pruebas_y_revision": {
+    "build": "esbuild 556.7kb (repo dist/)",
+    "dictamen": "propuestas/diagnostico-gemma/ajuste-qa-minimal-20261024/dictamen-qa-minimal.json (aceptar-instalacion-con-respaldo)",
+    "raiz": "49 passed/1 skipped",
+    "respaldo": "respaldo/ + manifiesto (SHAs == dictamen aplicar); bundle instalado previo 5b190f2c",
+    "tsc": "exit 0 limpio",
+    "vitest_qa_gemma": "26/26 (21+5 nuevas)"
+  },
+  "evidencia": {
+    "minimos": "propuestas/diagnostico-gemma/20261024T052413Z/",
+    "captura_c6": "propuestas/diagnostico-gemma/c6-captura-20261024T052828Z/payload.json",
+    "comparacion_c6": "propuestas/diagnostico-gemma/c6-comparacion-20261024T053040Z/",
+    "sonda_instalada": "propuestas/diagnostico-gemma/ajuste-qa-minimal-20261024/sonda-instalada-c6/resultado.json"
+  }
+}

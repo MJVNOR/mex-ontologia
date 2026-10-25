@@ -1,0 +1,18 @@
+@prefix sh: <http://www.w3.org/ns/shacl#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+@prefix mex: <{{BASE_IRI}}vocab/> .
+@prefix shape: <{{BASE_IRI}}shapes/> .
+
+# Fragmento propuesto por agente-13 (ronda 3): ajuste final sobre la shape ya
+# integrada en shapes/semantica.ttl. Ver patch/semantica_ttl.patch y docs/como_aplicar.md.
+# ampliar_portal.py ya carga shapes/semantica.ttl; no requiere patch de loader.
+# El patrón \S (algún carácter no blanco) refleja en SHACL la misma regla del
+# validador: se rechaza texto vacío o solo-blancos, sin modificar el valor.
+shape:CalificadorDocumental a sh:NodeShape ; sh:targetClass mex:CalificadorDocumental ;
+    sh:property [ sh:path mex:dimensionCalificador ; sh:minCount 1 ; sh:maxCount 1 ; sh:datatype xsd:string ; sh:minLength 1 ; sh:pattern "\\S" ] ;
+    sh:property [ sh:path mex:valorCalificador ; sh:minCount 1 ; sh:maxCount 1 ; sh:datatype xsd:string ; sh:minLength 1 ; sh:pattern "\\S" ] ;
+    sh:property [ sh:path prov:wasDerivedFrom ; sh:minCount 2 ; sh:nodeKind sh:IRI ] .
+
+# Enlace desde la variable (nodos estables con IRI):
+# shape:VariableDocumentada ... sh:property [ sh:path mex:tieneCalificadorDocumentado ; sh:class mex:CalificadorDocumental ; sh:nodeKind sh:IRI ] .

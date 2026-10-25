@@ -1,0 +1,52 @@
+{
+ "caso": "F2",
+ "alcance": "Validacion NUEVA 2020 sobre originales fijados (7344 + 3672 filas reales leidas). No reutiliza la inspeccion heuristica anterior como prueba (quedo refutada).",
+ "fuentes": {
+  "grandes_grupos": {
+   "sha256": "24301617b6a5d89cf99b34ed4d512324cedde52e0c625de9457238e3d8fa340c",
+   "filas": 7344,
+   "grano": "(CLAVE,SEXO,ANO)",
+   "anos_observados": "1990-2040"
+  },
+  "indicadores": {
+   "sha256": "e0e21aad3a84b4059efaf7525233ac05b08ced300f0f851fbadaab94057c027a",
+   "filas": 3672,
+   "grano": "(CLAVE,ANO)",
+   "anos_observados": "1990-2040"
+  }
+ },
+ "cruce_2020": {
+  "claves": 72,
+  "nombres_exactos": "72/72",
+  "pob_coherente": "72/72",
+  "detalle": "fichas/claves-2020.json"
+ },
+ "serie": {
+  "cobertura_observada_ambos": "1990-2040",
+  "cruce_ano_por_ano": "NO ejecutado",
+  "anos_cruzados": [
+   "2020"
+  ]
+ },
+ "condiciones_verificadas": [
+  "SHAs de originales == manifiesto ronda 1",
+  "headers reales resueltos (CLAVE,CLAVE_ENT,NOM_ENT,NOM_MUN,SEXO/ANO,medidas)",
+  "filas con 11 columnas ordenadas por coordenada; 0 huecos, 0 formulas en el original",
+  "unicidad (CLAVE,SEXO,ANO) y (CLAVE,ANO); 72 claves identicas",
+  "suma de grupos == POB_TOTAL en 7344/7344",
+  "cruce 2020: cobertura 72/72, nombres 72/72, coherencia POB 72/72"
+ ],
+ "condiciones_que_impiden_uso_interpretativo": [
+  "vigencia de catalogos no_acreditada (F3/F4 ausentes): edition/aplicabilidad no demostrada",
+  "cruce ano por ano 1990-2040 NO ejecutado; solo 2020 cruzado",
+  "constructos distintos (suma de grupos vs mitad de ano): yuxtaposicion, no identidad de medida",
+  "sin equivalencia INEGI afirmada; codigos literales coincidentes"
+ ],
+ "decision": "exploratorio_con_condiciones_pendientes",
+ "no_concluye": [
+  "cruce ano por ano 1990-2040",
+  "identidad de medida entre fuentes",
+  "equivalencia INEGI",
+  "causalidad"
+ ]
+}

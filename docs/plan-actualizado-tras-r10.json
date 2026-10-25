@@ -1,0 +1,109 @@
+{
+  "fecha_local": "2026-10-24",
+  "release": "R10",
+  "estado": "cerrado_integrado_validado_y_sincronizado",
+  "plan_anterior": {
+    "ruta": "docs/plan-actualizado-tras-r9.md",
+    "estado": "conservado_como_historial"
+  },
+  "base_actual": {
+    "significados_respaldados": 1423,
+    "conceptos": 1106,
+    "correspondencias_revisadas": 4506,
+    "candidatas": 17,
+    "ambiguas": 0,
+    "columnas_examinadas": 5523,
+    "pares": 3916,
+    "pares_candidatos_estructurales": 1191,
+    "filas_top50": 50,
+    "estado_filas_top50": "NO_JOIN_APROBADO",
+    "analisis_pares": ["911", "registro-civil", "itama"],
+    "analisis_bloqueados": true
+  },
+  "delta_r10": {
+    "significados": 0,
+    "conceptos": 0,
+    "correspondencias_revisadas": 0,
+    "joins": 0,
+    "declaraciones_unidad": 5,
+    "declaraciones_unidad_total": 7,
+    "formas_shacl": 6,
+    "triples_agregados": 90,
+    "triples_retirados": 0,
+    "unidades": [
+      {"literal_fuente": "Kilogramos", "iri_qudt": "http://qudt.org/vocab/unit/KiloGM", "variable": "pesoprom"},
+      {"literal_fuente": "MW", "iri_qudt": "http://qudt.org/vocab/unit/MegaW", "variable": "Unidad de Medida", "alcance": "sólo filas Unidad de Medida con evidencia"},
+      {"literal_fuente": "GWh", "iri_qudt": "http://qudt.org/vocab/unit/GigaW-HR", "variable": "Unidad de Medida", "alcance": "sólo filas Unidad de Medida con evidencia"},
+      {"literal_fuente": "Porcentaje", "iri_qudt": "http://qudt.org/vocab/unit/PERCENT", "variable": "ANALF"},
+      {"literal_fuente": "Grados celcius", "iri_qudt": "http://qudt.org/vocab/unit/DEG_C", "variable": "temperatura"}
+    ],
+    "conversiones_o_valores_inferidos": false,
+    "sh_closed_global": false
+  },
+  "validacion": {
+    "hashes_cotejados": 71,
+    "hashes_discrepantes": 0,
+    "incluye": ["41 historicos", "28 evidencias", "respaldo de base", "respaldo Studio"],
+    "hashes_adicionales_comprobados": ["manifiesto R10", "config.toml", "ontologia/semantica.json"],
+    "suite_python": 233,
+    "omitidas": 0,
+    "consultas_portal": 30,
+    "portal_triples": 322495,
+    "studio_triples": 323104,
+    "portal_shacl": true,
+    "studio_shacl": true,
+    "violaciones": 0,
+    "studio_regenerado_durante_revision": false,
+    "resultado_municipal_lote_unmatched_por_falta_de_instancias": true
+  },
+  "fases": [
+    {"id": "top50-r9", "estado": "completada", "resultado": "50 filas reconciliadas; todas NO_JOIN_APROBADO"},
+    {"id": "analisis-pares", "estado": "completada_bloqueado_por_evidencia", "resultado": "911, Registro Civil e ITAMA; sin comparaciones ni joins"},
+    {"id": "QUDT", "estado": "completada_en_casos_respaldados", "resultado": "cinco vínculos nuevos; siete en total; Toneladas y hm3 permanecen sin resolver"},
+    {"id": "SHACL", "estado": "completada", "resultado": "seis NodeShapes acotadas; sin cierre global"},
+    {"id": "auditoria-integracion", "estado": "completada", "resultado": "dos auditorías independientes sobre once casos"},
+    {"id": "validacion-sync", "estado": "completada", "resultado": "233 pruebas; RDF/SHACL conformes; Studio sincronizado +90/-0"}
+  ],
+  "pendientes_condicionados": {
+    "significados_reales": 138,
+    "vigencias": 16,
+    "acceso_vigencias": ["V13", "V14"],
+    "candidatas_semanticas": 17,
+    "referencia_catalogo": "des_mpo_res",
+    "encabezados_corruptos": 2,
+    "unidades": ["Toneladas: variante local sin acreditar", "hm3: término QUDT exacto no verificado"],
+    "analisis": [
+      {"caso": "911", "bloqueadores": ["Q1 improcedentes duplicado/mal etiquetado", "Q2 improcedentes sin MUNICIPIO", "archivos/periodo/agrupación insuficientes"]},
+      {"caso": "Registro Civil", "bloqueadores": ["totales incompatibles con hombres+mujeres", "meses ausentes", "agregación/cobertura sin validar"]},
+      {"caso": "ITAMA", "bloqueadores": ["faltan recursos completos", "periodo/escolaridad/grano/cobertura sin acreditar"]}
+    ],
+    "condicion": "reabrir sólo con fuente primaria, cambio verificable o archivos/documentación concretos que resuelvan los bloqueadores"
+  },
+  "plan_siguiente_ronda_opencode": {
+    "modelo_proveedor": "opencode-go",
+    "modelo_id": "muse-spark-1.3-contributor",
+    "nota_modelo": "reanudación explícita del usuario con Muse 1.3; sustituye la instrucción temporal de DeepSeek Free agotado; consultar catálogo y crear sesiones nuevas cuando cambie el modelo; no cambiar automáticamente ante falta de cuota",
+    "carriles": [
+      "coordinación y congelamiento de R10",
+      "evidencia documental sólo para casos reabiertos por material nuevo",
+      "QUDT sólo para unidades respaldadas sin vínculo exacto",
+      "análisis de pares sólo al resolver bloqueadores y fijar una pregunta/universo/método",
+      "SHACL sólo para restricciones observadas, con fixtures positivos y negativos"
+    ],
+    "integración": "un solo integrador/escritor, entregas aisladas por carril, auditorías A/B del payload exacto y validación final antes de cualquier sincronización",
+    "contacto_publicadores": false,
+    "modificar_manifiestos_R1_R10": false,
+    "cambiar_base_iri": false
+  },
+  "alcance_excluido_por_usuario": ["Gemma", "decidir o cambiar la base IRI", "contactar publicadores sin autorización"],
+  "fuentes": [
+    "reports/ronda-10.md",
+    "reports/ronda-10.json",
+    "reports/top50-oportunidades-r9.md",
+    "reports/top50-oportunidades-r9.json",
+    "reports/analisis-pares-post-r9.md",
+    "reports/analisis-pares-post-r9.json",
+    "propuestas/ampliacion-post-r9/ejecucion-20261024/",
+    "docs/plan-actualizado-tras-r9.md"
+  ]
+}

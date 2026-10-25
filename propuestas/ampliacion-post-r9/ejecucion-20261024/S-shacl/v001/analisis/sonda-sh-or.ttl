@@ -1,0 +1,13 @@
+# Sonda: forma con sh:or que el fixture S1-negativo incumple por ambas ramas.
+# Si el motor evalúa sh:or, debe reportar violación.
+@prefix sh: <http://www.w3.org/ns/shacl#> .
+@prefix mex: <https://example.org/mex-ontologi/vocab/> .
+@prefix shape: <https://example.org/mex-ontologi/shapes/> .
+
+shape:SondaShOr a sh:NodeShape ;
+    sh:targetClass mex:VariableDocumentada ;
+    sh:or (
+        [ sh:path mex:estadoSemantico ;
+          sh:in ("candidata_sin_definicion_suficiente" "fuera_del_nucleo_actual") ]
+        [ sh:path mex:significadoDocumentado ; sh:minCount 1 ]
+    ) .

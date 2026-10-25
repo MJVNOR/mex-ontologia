@@ -1,0 +1,248 @@
+{
+  "format_version": 1,
+  "release_base": "R9",
+  "corte_documental": "2026-10-24",
+  "analisis": [
+    {
+      "id": "911",
+      "titulo": "Llamadas procedentes e improcedentes",
+      "par": {
+        "conjunto_a": "19e5036d-dbe3-4e1d-b021-df5d47b6fb1f",
+        "conjunto_b": "923b485b-515e-4fb9-a4ac-cccbeb88cc92",
+        "id": "19e5036d-dbe3-4e1d-b021-df5d47b6fb1f--923b485b-515e-4fb9-a4ac-cccbeb88cc92",
+        "titulo_a": "Llamadas Improcedentes 911",
+        "titulo_b": "Llamadas Procedentes 911"
+      },
+      "pregunta": "¿Se pueden comparar los volumenes clasificados como procedentes e improcedentes por municipio y mes? Solo calcular una proporcion si consta que las categorias forman una particion del mismo universo.",
+      "estado": "bloqueado_por_evidencia_y_validacion_pendiente",
+      "volumenes_comparados": null,
+      "join_grafo": false,
+      "conclusion": "El Q1 etiquetado como improcedentes es un duplicado de procedentes; el Q2 de improcedentes carece de MUNICIPIO. Las muestras disponibles no permiten calcular la comparación municipal y mensual ni una proporción del universo.",
+      "ficha_8_ejes": {
+        "cardinalidad": {
+          "comprobado": [
+            "lote",
+            "duplicado entre conjuntos"
+          ],
+          "estado": "no_acreditada",
+          "evidencia": "Sin clave primaria declarada no hay cardinalidad 1:1 ni N:M demostrable. El lote queda en 'requiere_revision' con ejecuciones=[] y pendiente 'comprobar_cardinalidad_y_evitar_multiplicacion_de_filas'. Ademas el recurso etiquetado como improcedentes Q1 comparte SHA con procedentes Q1, de modo que una union ingenua duplicaria filas y ningun total es fiable.",
+          "pendiente": [
+            "conteo de filas por recurso",
+            "clave y cardinalidad declaradas"
+          ]
+        },
+        "claves": {
+          "comprobado": [
+            "esquemas",
+            "diccionario.Identificadores",
+            "oportunidad.pendientes"
+          ],
+          "estado": "no_acreditada",
+          "evidencia": "Ninguno de los 6 recursos declara columna identificadora: las 7 variables del diccionario 1a95d734 (sha fcd73b159fdf, identico en ambos conjuntos) no aportan identificador (6 con 'Identificadores' vacio y 'hora' solo con texto residual). 6 de 6 esquemas usan metodo_encabezado=heuristica_requiere_revision. El cruce R9 exige clave compuesta entidad+municipio y entidad+municipio+localidad.",
+          "pendiente": [
+            "catalogo de municipios con unicidad",
+            "contexto de clave documentado"
+          ]
+        },
+        "cobertura_datos": {
+          "comprobado": [
+            "inventario",
+            "esquemas",
+            "duplicado",
+            "lote.diagnostico_muestras"
+          ],
+          "estado": "parcial_y_asimetrica",
+          "evidencia": "Improcedentes reales: solo Q2 (0df8592f, 3 columnas FECHA/HORA/MOTIVO, sin MUNICIPIO). Procedentes: Q1 (6ce17dd1) y Q2 (943e2919), 7 columnas. El Q1 de improcedentes es un duplicado byte a byte de procedentes Q1. No hay conteos de filas: solo bytes leidos. Las dos muestras n=29 son de archivos procedentes (incluido el duplicado); no hay muestra de 0df8592f.",
+          "pendiente": [
+            "copia local de improcedentes Q2 con MUNICIPIO",
+            "conteos por municipio y mes"
+          ]
+        },
+        "grano": {
+          "comprobado": [
+            "esquemas",
+            "lote.decision",
+            "lote.ejecuciones"
+          ],
+          "estado": "fila_evento_llamada_sin_agregacion_validada",
+          "evidencia": "Los cuatro XLSX tienen grano de llamada individual (FECHA/HORA + atributos), sin columnas de total ni de resumen. El lote de cruces rechaza ejecutar por falta de estrategia de agregacion: Sin estrategia automática de agregación validada para las medidas y el grano de estos recursos.",
+          "pendiente": [
+            "regla de agregacion por municipio y mes"
+          ]
+        },
+        "periodo": {
+          "comprobado": [
+            "nombres/URL",
+            "lote.campos_solicitados"
+          ],
+          "estado": "nominal_2026_sin_verificar_contenido",
+          "evidencia": "Trimestres solo en nombres/URL: Q1 y Q2 de 2026 en los cuatro XLSX; el cruce solo coincide en el anio y 'solo en nombres'. Las muestras n=29 pidieron ['COLONIA', 'LOCALIDAD', 'MUNICIPIO'] y no FECHA, asi que no hay ningun valor de fecha leido localmente. Un recurso de improcedentes Q1 no existe: ese lugar lo ocupa el duplicado de procedentes Q1.",
+          "pendiente": [
+            "copias locales para verificar FECHA y cobertura mensual"
+          ]
+        },
+        "poblacion": {
+          "comprobado": [
+            "inventario",
+            "esquemas",
+            "duplicado"
+          ],
+          "estado": "sin_particion_acreditada",
+          "evidencia": "Procedentes e improcedentes viven en conjuntos separados y ningun recurso del par es un documento de particion: los 6 son XLSX/CSV de datos o diccionario, sin descripcion, y no aportan total del universo. El recurso de improcedentes Q1 (54285a13) contiene en realidad la hoja LLAMADAS PROCEDENTES 911 con sha 9d710cb868c3, identico a procedentes Q1 (6ce17dd1). Sin particion declarada no se calcula proporcion.",
+          "pendiente": [
+            "fe de erratas o diccionario que declare la particion y su total"
+          ]
+        },
+        "unicidad": {
+          "comprobado": [
+            "lote.diagnostico_muestras",
+            "lote.alcance"
+          ],
+          "estado": "no_acreditada",
+          "evidencia": "Solo hay diagnosticos de muestra n=29 con alcance literal 'no demuestra unicidad ni cobertura integral'. Repeticiones en la muestra: MUNICIPIO 20/29 (Q1) y 20/29 (Q2); LOCALIDAD 18/29 y 10/29; COLONIA 1/29 y 4/29. Una muestra no acredita unicidad del recurso completo.",
+          "pendiente": [
+            "copia local de filas y conteo de duplicados por clave"
+          ]
+        },
+        "unidades": {
+          "comprobado": [
+            "diccionario.Unidad de medida"
+          ],
+          "estado": "conteo_de_llamadas_sin_unidad_fisica",
+          "evidencia": "Las 7 variables del diccionario tienen 'Unidad de medida' vacia. La medida implicita es conteo de filas (llamadas), no una magnitud con unidad; no hay termino QUDT aplicable ni peticion a W que hacer por este par.",
+          "pendiente": []
+        }
+      },
+      "condiciones_reapertura": [
+        "Recurso correcto de improcedentes Q1 y esquema territorial aplicable a Q2.",
+        "Archivos completos, periodos verificados y estrategia de agregación validada.",
+        "Para proporciones, documento que acredite partición del mismo universo."
+      ],
+      "fuente": {
+        "ruta": "propuestas/ampliacion-post-r9/ejecucion-20261024/A1-911/v002/resultados.json",
+        "sha256": "8c8c3ea96f31e57aa25033f4b5d4b264e3ea5c672b3d44787a2ff19f6afab5f1"
+      }
+    },
+    {
+      "id": "registro-civil",
+      "titulo": "Matrimonios y nacimientos registrados",
+      "par": "1cf9c8e2-e7e4-43d8-a9fd-6da790e64c98--df2d60f5-2243-4bb0-885a-941aa8a657f5",
+      "pregunta": "Que volumenes de matrimonios y nacimientos se registran en un periodo y ambito territorial documentalmente comparables?",
+      "estado": "bloqueado_por_evidencia_y_validacion_pendiente",
+      "volumenes_comparados": null,
+      "join_grafo": false,
+      "conclusion": "Los datos disponibles tienen distinto grano y las validaciones detectan totales incompatibles con hombres + mujeres y meses ausentes. Una comparación de agregados requiere validar su preparación y cobertura; la diferencia de grano por sí sola no la impide. No se interpretan tasas poblacionales ni causalidad.",
+      "ficha_8_ejes": {
+        "claves": {
+          "veredicto": "no_acreditada",
+          "evidencia": "oportunidades: estado candidata_por_validar, familia municipio con pendientes verificar_catalogo_dominio_unicidad_y_contexto_de_clave y municipio_puede_requerir_entidad_como_clave_compuesta; nombres_campos_coincidentes_sin_garantia_semantica=[municipio]"
+        },
+        "grano": {
+          "veredicto": "distinto_bloquea_join",
+          "evidencia": "diccionario Matrimonios vars=['año_matrimonio', 'dia_matrimonio', 'edad_cty1', 'edad_cty2', 'mes_matrimonio', 'municipio', 'sexo_cty1', 'sexo_cty2'] (evento con dia_matrimonio, edad/sexo contrayentes); diccionario Nacimientos vars=['año', 'hombres', 'mes', 'mujeres', 'municipio', 'total'] (conteo agregado hombres/mujeres/total por municipio-anio-mes)"
+        },
+        "unicidad": {
+          "veredicto": "no_acreditada",
+          "evidencia": "validacion-lote diagnostico_muestras alcance en a y b: 'Diagnóstico de muestra; no demuestra unicidad ni cobertura integral'"
+        },
+        "cardinalidad": {
+          "veredicto": "no_acreditada",
+          "evidencia": "decision=fallo_validacion_integral; errores_b=['ValueError: Total no coincide con hombres + mujeres: _id=187, municipio=19, mes=3, hombres=33, mujeres=27, total=61. Revisar fuente o definición antes de sumar.', 'ValueError: Faltan meses por municipio; ausencia no equivale a cero. Ejemplos: {\"5\": [1, 10], \"7\": [1, 2, 6, 8], \"8\": [2, 4, 6, 7, 12], \"9\": [3, 5, 7, 9, 10, 11], \"10\": [3, 4, 5, 6, 7, 9, 10, 11, 12]}', 'ValueError: Total no coincide con hombres + mujeres: _id=325, municipio=33, mes=3, hombres=41, mujeres=51, total=93. Revisar fuente o definición antes de sumar.', 'ValueError: Total no coincide con hombres + mujeres: _id=286, municipio=29, mes=7, hombres=67, mujeres=63, total=131. Revisar fuente o definición antes de sumar.', 'ValueError: Total no coincide con hombres + mujeres: _id=34, municipio=3, mes=12, hombres=10, mujeres=10, total=21. Revisar fuente o definición antes de sumar.', 'ValueError: Total no coincide con hombres + mujeres: _id=40, municipio=4, mes=7, hombres=6, mujeres=7, total=14. Revisar fuente o definición antes de sumar.']"
+        },
+        "poblacion": {
+          "veredicto": "distinta",
+          "evidencia": "matrimonios=actos (2 contrayentes por fila, sin id persona); nacimientos=conteos agregados por sexo; poblaciones distintas explicitas, sin join de personas"
+        },
+        "periodo_ambito": {
+          "veredicto": "comparable_solo_en_registro_no_acreditado_para_join",
+          "evidencia": "anios_coincidentes_solo_en_nombres 2015-2024; ambos diccionarios: 'Municipio de registro', 'Año de registro' y 'Mes de registro' (Matrimonios incluye 'Dia de registro'); ningun campo de residencia en definiciones locales; municipio sin catalogo de correspondencia"
+        },
+        "unidades": {
+          "veredicto": "no_homologables_sin_regla",
+          "evidencia": "matrimonios: fila=1 evento; nacimientos: fila=agregado con total; pendiente validar_unidades_de_medidas_seleccionadas; sin tasas poblacionales"
+        },
+        "cobertura": {
+          "veredicto": "no_acreditada",
+          "evidencia": "prueba 2016: 'Faltan meses por municipio; ausencia no equivale a cero'; muestras n=100 con total_declarado (Mat2023=14685, Nac2024=627) de recursos/anios distintos"
+        }
+      },
+      "condiciones_reapertura": [
+        "Archivos completos y cobertura por municipio y mes.",
+        "Aclaración o corrección de totales y meses ausentes.",
+        "Regla documentada para agregar matrimonios y comparar periodos de registro."
+      ],
+      "fuente": {
+        "ruta": "propuestas/ampliacion-post-r9/ejecucion-20261024/A2-registro-civil/v002/resultados.json",
+        "sha256": "c9ff005dad8e77524a8eb4f8525939c1436d951535cb8e4e6fbbd9012823edb8"
+      }
+    },
+    {
+      "id": "itama",
+      "titulo": "Internamiento y externamiento ITAMA",
+      "par": {
+        "id": "27a5c80c-514a-4170-a2e5-7ef40d818641--4d27a1c4-381d-4ce0-a663-0d3e23a93848",
+        "conjunto_a": "27a5c80c-514a-4170-a2e5-7ef40d818641",
+        "conjunto_b": "4d27a1c4-381d-4ce0-a663-0d3e23a93848",
+        "titulo_a": "Población ITAMA Internamiento",
+        "titulo_b": "Población ITAMA Externamiento",
+        "estado": "candidata_por_validar",
+        "prioridad": "revisar_primero",
+        "decision_lote": "requiere_transformacion_o_catalogo"
+      },
+      "pregunta": "¿Cómo se distribuyen los registros de internamiento y externamiento por sexo/escolaridad en un periodo común?",
+      "estado": "bloqueado_por_evidencia_y_validacion_pendiente",
+      "volumenes_comparados": null,
+      "join_grafo": false,
+      "conclusion": "Faltan copias locales completas de los recursos ITAMA y respaldo del periodo observado y de escolaridad. Los trimestres son metadatos; las muestras de 29 y 16 registros no acreditan el universo completo. Comparar distribuciones agregadas será posible si se documentan grano, categorías, periodo y cobertura; aquí no se suman universos ni se vinculan personas.",
+      "ficha_8_ejes": {
+        "claves": {
+          "estado": "sin_clave_documentada",
+          "evidencia": "Los diccionarios de ambos conjuntos dejan vacío el campo 'Identificadores' en las 5/6 variables declaradas; las hojas de población sólo publican atributos (sexo, edad, municipio de nacimiento, delito, localidad del delito). Ninguna columna identificadora permite seguimiento de registro ni unión entre trimestres."
+        },
+        "grano": {
+          "estado": "no_definido",
+          "evidencia": "Las notas del publicador describen 'relación de menores recluidos' / 'internos que salieron de reclusión', lo que sugiere fila=persona, pero ningún diccionario ni metadato define el grano. Los libros mezclan hojas de población con hojas operativas (TIEMPO LIBRE, DIVERSO PROCESO, SENTENCIAS, ORAL) y una heredada (FEBRERO 2016) con 38 campos."
+        },
+        "unicidad": {
+          "estado": "no_acreditada",
+          "evidencia": "Sin columna identificadora y sin copia local completa de los libros, no hay forma de comprobar duplicados. Las muestras (29 y 16 filas) no acreditan unicidad del archivo entero."
+        },
+        "cardinalidad": {
+          "estado": "no_acreditada",
+          "evidencia": "Ninguno de los 6 recursos aparece en lote.agregados_recursos, por lo que no existe total_filas documentado. Se conocen 29 y 16 filas de dos muestras; la consulta de externamiento usó límite 29 y devolvió 16, dato compatible con hoja agotada pero que no cuenta el resto del libro."
+        },
+        "poblacion": {
+          "estado": "distinta_y_no_sumable",
+          "evidencia": "Internamiento = personas recluidas; externamiento = personas que salieron de reclusión (notas del publicador y conceptos separados en núcleo). Una misma persona puede aparecer en ambos universos; sin person matching —prohibido— no se unen ni se suman."
+        },
+        "periodo": {
+          "estado": "documental_2026_filas_no_verificado",
+          "evidencia": "Metadatos: frecuencia trimestral, tres recursos por conjunto con T1/T2/T3 2026; intersección 2026-01-01 a 2026-09-30. Filas: las hojas de población no tienen columnas de fecha; las hojas operativas y la heredada 'FEBRERO 2016' conservan fechas y fórmulas =HOY(). El periodo 2026 no se puede atribuir a los registros."
+        },
+        "unidades": {
+          "estado": "no_declaradas",
+          "evidencia": "Los diccionarios dejan 'Unidad de medida' vacía en todas las variables. 'edad actual' es numérica sin unidad; 'sentencia' está tipada como número pero su ejemplo es texto ('1 año 8 meses'), de modo que ni siquiera el tipo es consistente. No hay medida agregable."
+        },
+        "cobertura_datos": {
+          "estado": "insuficiente_para_distribucion",
+          "evidencia": "SEXO no tiene catálogo de valores: la muestra A (29 filas) sólo contiene HOMBRE y la B (16) HOMBRE/MUJER; COLONIA, ESTADO y JURISDICCION salen 100% nulas en la muestra A. ESCOLARIDAD no se publica en las hojas de población, no está en los diccionarios y no tiene concepto ITAMA en núcleo."
+        }
+      },
+      "condiciones_reapertura": [
+        "Copias completas de los recursos del par y alcance de cada hoja.",
+        "Grano y periodo documentados; catálogo de sexo y definición de escolaridad aplicables.",
+        "Comprobaciones de cobertura y recuentos reproducibles por población."
+      ],
+      "fuente": {
+        "ruta": "propuestas/ampliacion-post-r9/ejecucion-20261024/A3-itama/v002/resultados/analisis-a3-itama-v002.json",
+        "sha256": "526ef2d52bbbfe0608811587b4d549b266644ec2ab93e5c954331a2cc555861d"
+      }
+    }
+  ],
+  "limites": [
+    "No se ejecutaron joins ni se añadieron relaciones analíticas al grafo.",
+    "Una muestra no demuestra unicidad ni cobertura integral; ausencia no equivale a cero.",
+    "El ranking prioriza revisiones; no aprueba comparabilidad."
+  ],
+  "nota_editorial": "Las fichas fuente se conservan íntegras. Las conclusiones publicadas precisan el bloqueo actual; no expresan imposibilidades universales de comparación agregada."
+}

@@ -1,0 +1,343 @@
+{
+  "tarea": "vigencias-uth-presas",
+  "tipo": "vigencias",
+  "clave_id": "id",
+  "conteo": 5,
+  "casos": [
+    {
+      "id": "V01",
+      "tipo": "vigencia",
+      "grupo": "A",
+      "dependencia_publicador": "DEP-CAT-R6-01",
+      "conjunto": {
+        "id": "403912fd-5853-4e18-8256-f77206f855bd",
+        "titulo": "Promedio Académico"
+      },
+      "catalogo": {
+        "recurso_catalogo": "6d561451-ff08-45d6-b1af-285ff5f417b1",
+        "recurso_url": "https://datos.sonora.gob.mx/dataset/403912fd-5853-4e18-8256-f77206f855bd/resource/6d561451-ff08-45d6-b1af-285ff5f417b1/download/catalogo.xlsx",
+        "sha256": "53bd5e971a033998ed8a72317b6ad1e69314d82463220d8cfd156dfad9034259",
+        "hoja_campo": "Hoja1 / Campo de Formación Académica"
+      },
+      "referencia_iri": "https://example.org/mex-ontologi/declared-code-reference/1eb8b1a583f52b32f256fb5643ffa7402dfb5ecf27d2df1d7114e71403a262a9",
+      "periodos_declarados_por_titulo": [
+        "2022 cuatrimestres 1-3",
+        "2023 cuatrimestres 1-3",
+        "2024 cuatrimestres 1-3",
+        "2025 cuatrimestres 1-3",
+        "2026 cuatrimestre 1"
+      ],
+      "nota_periodos": "Periodos declarados por titulos de recursos CKAN y nota del conjunto; NO cobertura observada.",
+      "estado_actual": "pendiente (F3 acreditada, F4 ausente)",
+      "motivo": "F3 acreditada (CMPE 2016, evidencia primaria). F4 ausente: el publicador (UTH) no declara adopción de la CMPE y la búsqueda web de adopción es negativa; SNIEG solo acredita marco nacional.",
+      "evidencia_revisada": [
+        "W01 (portal UTH, sin CMPE) + W08 (búsqueda UTH negativa) + W09 (SNIEG nacional, sin vínculo UTH)",
+        "Local: package_403912fd-5853-4e18-8256-f77206f855bd.json (extras nulos) + xlsx 53bd5e97 (Hoja1, sin versión) + cmpe2016_inegi.pdf (F3)",
+        "R6-C1 (API CKAN package_show 2026-10-23) + R6-C2 (core-properties xlsx)",
+        "R6 novedad: R6-C1: API CKAN package 403912fd: version=null, extras vacios; Catalogo size 10433 = sha local 53bd5e97; fechas Catalogo/Diccionario 1989-06-04 (placeholder). R6-C2: xlsx creator Ramon Eduardo Sandoval = publisher API. Sin CMPE en ningun campo. F4 sigue ausente."
+      ],
+      "campos_minimos": [
+        "emisor: publicador (DEP-CAT-R6-01)",
+        "edicion citada: CMPE 2016 vinculada a este publicador",
+        "recurso catalogo: 6d561451-ff08-45d6-b1af-285ff5f417b1",
+        "periodos de aplicacion: 2022 cuatrimestres 1-3; 2023 cuatrimestres 1-3; 2024 cuatrimestres 1-3; 2025 cuatrimestres 1-3; 2026 cuatrimestre 1",
+        "fecha o firma del documento"
+      ],
+      "criterio_aceptacion": "Se cierra solo si el documento del publicador cita la adopcion de la CMPE 2016 por este publicador y recurso 6d561451-ff08-45d6-b1af-285ff5f417b1 y periodos (2022 cuatrimestres 1-3; 2023 cuatrimestres 1-3; 2024 cuatrimestres 1-3; 2025 cuatrimestres 1-3; 2026 cuatrimestre 1); verificable (URL o copia local con SHA). Las fechas de portal/API (version=null, placeholder 1989-06-04) y core-properties no acreditan F4 (F3 ya acreditada por CMPE 2016, pdf sha 66ba2fd24aa01d82684df52677b792e17fe55d38273d6325ff4f6f66a3ef714b).",
+      "limites": [
+        "No afirmar vigencia histórica ni extender a otros conjuntos/periodos."
+      ],
+      "documento_requerido_exacto": "Nota de adopcion UTH de la CMPE 2016 con rango de aplicacion por cuatrimestres/anuales 2022-2026 (oficio, lineamiento o nota de version del conjunto). Pendiente exacto: Acreditar F4: documento del publicador (UTH) que vincule la CMPE 2016 con los periodos 2022 cuatrimestres 1-3, 2023 cuatrimestres 1-3, 2024 cuatrimestres 1-3, 2025 cuatrimestres 1-3, 2026 cuatrimestre 1.",
+      "soporte": [
+        {
+          "ruta": "reports/pendientes-ronda-5.json",
+          "sha256": "46f3b6f8826379be5124fb85cf6128b705fbe90deebf2c99bff64098608c8f11",
+          "localizador": "decisiones_significados id=V01"
+        },
+        {
+          "ruta": "propuestas/pendientes-muse-r6/catalogos/entrega.json",
+          "sha256": "649bbe7e5feca82b7e8d5c5144de78b1d8ceccb1c217ca976347b1c9a05cb74b",
+          "localizador": "decisiones_significados id=V01 + novedad_r6 (C1 API package_show 2026-10-23 + C2 core-properties xlsx)"
+        },
+        {
+          "ruta": "local: xlsx sha 53bd5e97",
+          "sha256": "53bd5e971a033998ed8a72317b6ad1e69314d82463220d8cfd156dfad9034259",
+          "localizador": "interior xlsx sin celdas de version/periodo (R4 vigente, re-verificado R6: sizes API = locales)"
+        },
+        {
+          "ruta": "local: data/integracion-ronda-2/entregas/agente-4-vigencia/evidencia/externa/cmpe2016_inegi.pdf",
+          "sha256": "66ba2fd24aa01d82684df52677b792e17fe55d38273d6325ff4f6f66a3ef714b",
+          "localizador": "p.2 catalogacion INEGI c2016; p.8 segunda edicion (F3; no acredita F4)"
+        }
+      ]
+    },
+    {
+      "id": "V02",
+      "tipo": "vigencia",
+      "grupo": "A",
+      "dependencia_publicador": "DEP-CAT-R6-01",
+      "conjunto": {
+        "id": "e5aad52d-5760-481c-ba65-db0ba4a5315e",
+        "titulo": "Matriculas"
+      },
+      "catalogo": {
+        "recurso_catalogo": "aaf0c6c1-76a7-40ac-b542-1319d1bb2a5a",
+        "recurso_url": "https://datos.sonora.gob.mx/dataset/e5aad52d-5760-481c-ba65-db0ba4a5315e/resource/aaf0c6c1-76a7-40ac-b542-1319d1bb2a5a/download/catalogo.xlsx",
+        "sha256": "53bd5e971a033998ed8a72317b6ad1e69314d82463220d8cfd156dfad9034259",
+        "hoja_campo": "Hoja1 / Campo de Formación Académica"
+      },
+      "referencia_iri": "https://example.org/mex-ontologi/declared-code-reference/4c28a0a21e5753bd01eb1cb39615ff939b13c949af50741af5c405bf575619f0",
+      "periodos_declarados_por_titulo": [
+        "2022 cuatrimestres 1-3",
+        "2023 cuatrimestres 1-3",
+        "2024 cuatrimestres 1-3",
+        "2025 cuatrimestres 1-3",
+        "2026 cuatrimestres 1-2"
+      ],
+      "nota_periodos": "Periodos declarados por titulos de recursos CKAN y nota del conjunto; NO cobertura observada.",
+      "estado_actual": "pendiente (F3 acreditada, F4 ausente)",
+      "motivo": "F3 acreditada. F4 ausente: nota del conjunto describe el campo pero no declara edición ni adopción de la CMPE para 2022-2026.",
+      "evidencia_revisada": [
+        "W02 (nota Matrículas confirma campo de formación académica, fuente interna, sin CMPE) + W08 + W09",
+        "Local: package_e5aad52d-5760-481c-ba65-db0ba4a5315e.json (extras nulos) + xlsx 53bd5e97 + cmpe2016_inegi.pdf (F3)",
+        "R6-C1 (API CKAN package_show 2026-10-23) + R6-C2 (core-properties xlsx)",
+        "R6 novedad: R6-C1: API CKAN package e5aad52d: version=null; Catalogo size 10433 (mismo archivo que V01/V03/V04); fechas 1989-06-04. R6-C2: mismo creator. F4 sigue ausente."
+      ],
+      "campos_minimos": [
+        "emisor: publicador (DEP-CAT-R6-01)",
+        "edicion citada: CMPE 2016 vinculada a este publicador",
+        "recurso catalogo: aaf0c6c1-76a7-40ac-b542-1319d1bb2a5a",
+        "periodos de aplicacion: 2022 cuatrimestres 1-3; 2023 cuatrimestres 1-3; 2024 cuatrimestres 1-3; 2025 cuatrimestres 1-3; 2026 cuatrimestres 1-2",
+        "fecha o firma del documento"
+      ],
+      "criterio_aceptacion": "Se cierra solo si el documento del publicador cita la adopcion de la CMPE 2016 por este publicador y recurso aaf0c6c1-76a7-40ac-b542-1319d1bb2a5a y periodos (2022 cuatrimestres 1-3; 2023 cuatrimestres 1-3; 2024 cuatrimestres 1-3; 2025 cuatrimestres 1-3; 2026 cuatrimestres 1-2); verificable (URL o copia local con SHA). Las fechas de portal/API (version=null, placeholder 1989-06-04) y core-properties no acreditan F4 (F3 ya acreditada por CMPE 2016, pdf sha 66ba2fd24aa01d82684df52677b792e17fe55d38273d6325ff4f6f66a3ef714b).",
+      "limites": [
+        "No afirmar vigencia histórica ni extender a otros conjuntos/periodos."
+      ],
+      "documento_requerido_exacto": "Nota de adopcion UTH de la CMPE 2016 con rango de aplicacion por cuatrimestres/anuales 2022-2026 (oficio, lineamiento o nota de version del conjunto). Pendiente exacto: Acreditar F4: documento del publicador (UTH) que vincule la CMPE 2016 con los periodos 2022 cuatrimestres 1-3, 2023 cuatrimestres 1-3, 2024 cuatrimestres 1-3, 2025 cuatrimestres 1-3, 2026 cuatrimestres 1-2.",
+      "soporte": [
+        {
+          "ruta": "reports/pendientes-ronda-5.json",
+          "sha256": "46f3b6f8826379be5124fb85cf6128b705fbe90deebf2c99bff64098608c8f11",
+          "localizador": "decisiones_significados id=V02"
+        },
+        {
+          "ruta": "propuestas/pendientes-muse-r6/catalogos/entrega.json",
+          "sha256": "649bbe7e5feca82b7e8d5c5144de78b1d8ceccb1c217ca976347b1c9a05cb74b",
+          "localizador": "decisiones_significados id=V02 + novedad_r6 (C1 API package_show 2026-10-23 + C2 core-properties xlsx)"
+        },
+        {
+          "ruta": "local: xlsx sha 53bd5e97",
+          "sha256": "53bd5e971a033998ed8a72317b6ad1e69314d82463220d8cfd156dfad9034259",
+          "localizador": "interior xlsx sin celdas de version/periodo (R4 vigente, re-verificado R6: sizes API = locales)"
+        },
+        {
+          "ruta": "local: data/integracion-ronda-2/entregas/agente-4-vigencia/evidencia/externa/cmpe2016_inegi.pdf",
+          "sha256": "66ba2fd24aa01d82684df52677b792e17fe55d38273d6325ff4f6f66a3ef714b",
+          "localizador": "p.2 catalogacion INEGI c2016; p.8 segunda edicion (F3; no acredita F4)"
+        }
+      ]
+    },
+    {
+      "id": "V03",
+      "tipo": "vigencia",
+      "grupo": "A",
+      "dependencia_publicador": "DEP-CAT-R6-01",
+      "conjunto": {
+        "id": "e7a3d62f-4ace-479c-aa52-1c9e384dc429",
+        "titulo": "Estudiantes Titulados"
+      },
+      "catalogo": {
+        "recurso_catalogo": "0e69d911-6ed3-4268-841b-0c4989e7cb45",
+        "recurso_url": "https://datos.sonora.gob.mx/dataset/e7a3d62f-4ace-479c-aa52-1c9e384dc429/resource/0e69d911-6ed3-4268-841b-0c4989e7cb45/download/catalogo.xlsx",
+        "sha256": "53bd5e971a033998ed8a72317b6ad1e69314d82463220d8cfd156dfad9034259",
+        "hoja_campo": "Hoja1 / Campo de Formación Académica"
+      },
+      "referencia_iri": "https://example.org/mex-ontologi/declared-code-reference/4c67f244bf4078ad48133d122b3d7df031a00b7a266145d111ff78622ebecfc4",
+      "periodos_declarados_por_titulo": [
+        "2022 anual",
+        "2023 anual",
+        "2024 anual",
+        "2025 anual"
+      ],
+      "nota_periodos": "Periodos declarados por titulos de recursos CKAN y nota del conjunto; NO cobertura observada.",
+      "estado_actual": "pendiente (F3 acreditada, F4 ausente)",
+      "motivo": "F3 acreditada. F4 ausente: sin declaración del publicador que vincule la CMPE 2016 con los periodos anuales 2022-2025.",
+      "evidencia_revisada": [
+        "W01 (patrón UTH: fuente interna, sin CMPE) + W08 + W09",
+        "Local: package_e7a3d62f-4ace-479c-aa52-1c9e384dc429.json (extras nulos) + xlsx 53bd5e97 + cmpe2016_inegi.pdf (F3)",
+        "R6-C1 (API CKAN package_show 2026-10-23) + R6-C2 (core-properties xlsx)",
+        "R6 novedad: R6-C1: API CKAN package e7a3d62f: version=null; Catalogo size 10433 (archivo compartido UTH); fechas 1989-06-04. F4 sigue ausente."
+      ],
+      "campos_minimos": [
+        "emisor: publicador (DEP-CAT-R6-01)",
+        "edicion citada: CMPE 2016 vinculada a este publicador",
+        "recurso catalogo: 0e69d911-6ed3-4268-841b-0c4989e7cb45",
+        "periodos de aplicacion: 2022 anual; 2023 anual; 2024 anual; 2025 anual",
+        "fecha o firma del documento"
+      ],
+      "criterio_aceptacion": "Se cierra solo si el documento del publicador cita la adopcion de la CMPE 2016 por este publicador y recurso 0e69d911-6ed3-4268-841b-0c4989e7cb45 y periodos (2022 anual; 2023 anual; 2024 anual; 2025 anual); verificable (URL o copia local con SHA). Las fechas de portal/API (version=null, placeholder 1989-06-04) y core-properties no acreditan F4 (F3 ya acreditada por CMPE 2016, pdf sha 66ba2fd24aa01d82684df52677b792e17fe55d38273d6325ff4f6f66a3ef714b).",
+      "limites": [
+        "No afirmar vigencia histórica ni extender a otros conjuntos/periodos."
+      ],
+      "documento_requerido_exacto": "Nota de adopcion UTH de la CMPE 2016 con rango de aplicacion por cuatrimestres/anuales 2022-2026 (oficio, lineamiento o nota de version del conjunto). Pendiente exacto: Acreditar F4: documento del publicador (UTH) que vincule la CMPE 2016 con los periodos 2022 anual, 2023 anual, 2024 anual, 2025 anual.",
+      "soporte": [
+        {
+          "ruta": "reports/pendientes-ronda-5.json",
+          "sha256": "46f3b6f8826379be5124fb85cf6128b705fbe90deebf2c99bff64098608c8f11",
+          "localizador": "decisiones_significados id=V03"
+        },
+        {
+          "ruta": "propuestas/pendientes-muse-r6/catalogos/entrega.json",
+          "sha256": "649bbe7e5feca82b7e8d5c5144de78b1d8ceccb1c217ca976347b1c9a05cb74b",
+          "localizador": "decisiones_significados id=V03 + novedad_r6 (C1 API package_show 2026-10-23 + C2 core-properties xlsx)"
+        },
+        {
+          "ruta": "local: xlsx sha 53bd5e97",
+          "sha256": "53bd5e971a033998ed8a72317b6ad1e69314d82463220d8cfd156dfad9034259",
+          "localizador": "interior xlsx sin celdas de version/periodo (R4 vigente, re-verificado R6: sizes API = locales)"
+        },
+        {
+          "ruta": "local: data/integracion-ronda-2/entregas/agente-4-vigencia/evidencia/externa/cmpe2016_inegi.pdf",
+          "sha256": "66ba2fd24aa01d82684df52677b792e17fe55d38273d6325ff4f6f66a3ef714b",
+          "localizador": "p.2 catalogacion INEGI c2016; p.8 segunda edicion (F3; no acredita F4)"
+        }
+      ]
+    },
+    {
+      "id": "V04",
+      "tipo": "vigencia",
+      "grupo": "A",
+      "dependencia_publicador": "DEP-CAT-R6-01",
+      "conjunto": {
+        "id": "85ee0e2b-ba05-4d9a-8177-cdbf0cb42f8f",
+        "titulo": "Estudiantes egresados"
+      },
+      "catalogo": {
+        "recurso_catalogo": "af7a9aba-5a0e-4cf0-9b7d-5a3550e7907e",
+        "recurso_url": "https://datos.sonora.gob.mx/dataset/85ee0e2b-ba05-4d9a-8177-cdbf0cb42f8f/resource/af7a9aba-5a0e-4cf0-9b7d-5a3550e7907e/download/catalogo.xlsx",
+        "sha256": "53bd5e971a033998ed8a72317b6ad1e69314d82463220d8cfd156dfad9034259",
+        "hoja_campo": "Hoja1 / Campo de Formación Académica"
+      },
+      "referencia_iri": "https://example.org/mex-ontologi/declared-code-reference/7c2e51a0134a25e1c5636921b27ba896e4eb8978108c1b79d238b10548a021bb",
+      "periodos_declarados_por_titulo": [
+        "2022 anual",
+        "2023 anual",
+        "2024 anual",
+        "2025 anual"
+      ],
+      "nota_periodos": "Periodos declarados por titulos de recursos CKAN y nota del conjunto; NO cobertura observada.",
+      "estado_actual": "pendiente (F3 acreditada, F4 ausente)",
+      "motivo": "F3 acreditada. F4 ausente: sin declaración del publicador que vincule la CMPE 2016 con los periodos anuales 2022-2025.",
+      "evidencia_revisada": [
+        "W01 (patrón UTH: fuente interna, sin CMPE) + W08 + W09",
+        "Local: package_85ee0e2b-ba05-4d9a-8177-cdbf0cb42f8f.json (extras nulos) + xlsx 53bd5e97 + cmpe2016_inegi.pdf (F3)",
+        "R6-C1 (API CKAN package_show 2026-10-23) + R6-C2 (core-properties xlsx)",
+        "R6 novedad: R6-C1: API CKAN package 85ee0e2b: version=null; Catalogo size 10433 pero con start 2016-01-01/end 2025-01-01 (NEUTRO: cobertura manual, no declaracion de adopcion CMPE 2016; no aprobar por coincidencia numerica). F4 sigue ausente."
+      ],
+      "campos_minimos": [
+        "emisor: publicador (DEP-CAT-R6-01)",
+        "edicion citada: CMPE 2016 vinculada a este publicador",
+        "recurso catalogo: af7a9aba-5a0e-4cf0-9b7d-5a3550e7907e",
+        "periodos de aplicacion: 2022 anual; 2023 anual; 2024 anual; 2025 anual",
+        "fecha o firma del documento"
+      ],
+      "criterio_aceptacion": "Se cierra solo si el documento del publicador cita la adopcion de la CMPE 2016 por este publicador y recurso af7a9aba-5a0e-4cf0-9b7d-5a3550e7907e y periodos (2022 anual; 2023 anual; 2024 anual; 2025 anual); verificable (URL o copia local con SHA). Las fechas de portal/API (version=null, placeholder 1989-06-04) y core-properties no acreditan F4 (F3 ya acreditada por CMPE 2016, pdf sha 66ba2fd24aa01d82684df52677b792e17fe55d38273d6325ff4f6f66a3ef714b).",
+      "limites": [
+        "No afirmar vigencia histórica ni extender a otros conjuntos/periodos.",
+        "Cobertura 2016-01-01/2025-01-01 en API es cobertura manual, no declaracion de adopcion CMPE"
+      ],
+      "documento_requerido_exacto": "Nota de adopcion UTH de la CMPE 2016 con rango de aplicacion por cuatrimestres/anuales 2022-2026 (oficio, lineamiento o nota de version del conjunto). Pendiente exacto: Acreditar F4: documento del publicador (UTH) que vincule la CMPE 2016 con los periodos 2022 anual, 2023 anual, 2024 anual, 2025 anual.",
+      "soporte": [
+        {
+          "ruta": "reports/pendientes-ronda-5.json",
+          "sha256": "46f3b6f8826379be5124fb85cf6128b705fbe90deebf2c99bff64098608c8f11",
+          "localizador": "decisiones_significados id=V04"
+        },
+        {
+          "ruta": "propuestas/pendientes-muse-r6/catalogos/entrega.json",
+          "sha256": "649bbe7e5feca82b7e8d5c5144de78b1d8ceccb1c217ca976347b1c9a05cb74b",
+          "localizador": "decisiones_significados id=V04 + novedad_r6 (C1 API package_show 2026-10-23 + C2 core-properties xlsx)"
+        },
+        {
+          "ruta": "local: xlsx sha 53bd5e97",
+          "sha256": "53bd5e971a033998ed8a72317b6ad1e69314d82463220d8cfd156dfad9034259",
+          "localizador": "interior xlsx sin celdas de version/periodo (R4 vigente, re-verificado R6: sizes API = locales)"
+        },
+        {
+          "ruta": "local: data/integracion-ronda-2/entregas/agente-4-vigencia/evidencia/externa/cmpe2016_inegi.pdf",
+          "sha256": "66ba2fd24aa01d82684df52677b792e17fe55d38273d6325ff4f6f66a3ef714b",
+          "localizador": "p.2 catalogacion INEGI c2016; p.8 segunda edicion (F3; no acredita F4)"
+        }
+      ]
+    },
+    {
+      "id": "V05",
+      "tipo": "vigencia",
+      "grupo": "B",
+      "dependencia_publicador": "DEP-CAT-R6-02",
+      "conjunto": {
+        "id": "ee8f639f-5e89-46ae-93b9-934b05fc6233",
+        "titulo": "Recursos Hídricos"
+      },
+      "catalogo": {
+        "recurso_catalogo": "f5060479-ee16-49b5-99d4-09aabef8042e",
+        "recurso_url": "https://datos.sonora.gob.mx/dataset/ee8f639f-5e89-46ae-93b9-934b05fc6233/resource/f5060479-ee16-49b5-99d4-09aabef8042e/download/catalogo.xlsx",
+        "sha256": "612b2b11192b97ae7328f80c8a5d1c545e117da46dd436a9b077aaf824b1525f",
+        "hoja_campo": "Catálogo_estatal / Clave"
+      },
+      "referencia_iri": "https://example.org/mex-ontologi/declared-code-reference/3b45c474da5b2dc83e061ed7c26d470eaff0cd4935c626ac4cfa11e64a0e16e8",
+      "periodos_declarados_por_titulo": [
+        "1941-1949",
+        "1950-1959",
+        "1960-1969 (sin URL)",
+        "1970-1979",
+        "1980-1989",
+        "1990-1999",
+        "2000-2009",
+        "2010-2019",
+        "2020-2024"
+      ],
+      "nota_periodos": "Periodos declarados por titulos de recursos CKAN y nota del conjunto; NO cobertura observada.",
+      "estado_actual": "pendiente (F3+F4 ausentes)",
+      "motivo": "F3+F4 ausentes: el portal confirma el hueco 1960-1969 (recurso listado sin descarga) y no declara edición/versión/fecha del Catálogo_estatal ni su rango de aplicación.",
+      "evidencia_revisada": [
+        "W03 (nota 1941-actualidad, fuente monitoreo/sensores, 1960-1969 sin descarga, sin edición declarada)",
+        "Local: package_ee8f639f-5e89-46ae-93b9-934b05fc6233.json (extras nulos) + xlsx 612b2b11 (Catálogo_estatal/Municipios/Regiones, sin versión)",
+        "R6-C1 (API CKAN package_show 2026-10-23) + R6-C2 (core-properties xlsx)",
+        "R6 novedad: R6-C1: API package ee8f639f confirma recurso 1960-1969 id 4d1bb645-19da-407f-8182-b0be2d7b7485, state active, size 541916, url VACIA (constancia API del hueco de descarga, mas precisa que W03). Catalogo size 15123 = local; fechas 1989-06-04. R6-C2: creator Admin 2023-06-29, sin version. F3+F4 ausentes."
+      ],
+      "campos_minimos": [
+        "emisor: publicador (DEP-CAT-R6-02)",
+        "edicion/version/fecha declarada del catalogo (Catálogo_estatal / Clave, sha 612b2b11)",
+        "recurso catalogo: f5060479-ee16-49b5-99d4-09aabef8042e",
+        "periodos de aplicacion: 1941-1949; 1950-1959; 1960-1969 (sin URL); 1970-1979; 1980-1989; 1990-1999; 2000-2009; 2010-2019; 2020-2024",
+        "fecha o firma del documento"
+      ],
+      "criterio_aceptacion": "Se cierra solo si el documento del publicador cita edicion/version/fecha del catalogo (Catálogo_estatal / Clave, sha 612b2b11) y recurso f5060479-ee16-49b5-99d4-09aabef8042e y periodos (1941-1949; 1950-1959; 1960-1969 (sin URL); 1970-1979; 1980-1989; 1990-1999; 2000-2009; 2010-2019; 2020-2024); verificable (URL o copia local con SHA). Las fechas de portal/API (version=null, placeholder 1989-06-04) y core-properties no acreditan F3+F4.",
+      "limites": [
+        "No afirmar vigencia histórica ni extender a otros conjuntos/periodos.",
+        "No habilitar joins por compartir Clave",
+        "Constancia del recurso 1960-1969 (id 4d1bb645, state active, size 541916, url vacia en API)"
+      ],
+      "documento_requerido_exacto": "Declaracion de edicion/version/fecha del Catalogo_estatal (sha 612b2b11) con rango 1941-2024 + URL de descarga del recurso 1960-1969 (id 4d1bb645, hoy con url vacia en API). Pendiente exacto: Acreditar F3+F4: declaración de edición/versión/fecha del catálogo (Catálogo_estatal/Clave, sha 612b2b11) y documento que la vincule con 1941-1949, 1950-1959, 1960-1969, 1970-1979, 1980-1989, 1990-1999, 2000-2009, 2010-2019, 2020-2024; constancia del recurso 1960-1969.",
+      "soporte": [
+        {
+          "ruta": "reports/pendientes-ronda-5.json",
+          "sha256": "46f3b6f8826379be5124fb85cf6128b705fbe90deebf2c99bff64098608c8f11",
+          "localizador": "decisiones_significados id=V05"
+        },
+        {
+          "ruta": "propuestas/pendientes-muse-r6/catalogos/entrega.json",
+          "sha256": "649bbe7e5feca82b7e8d5c5144de78b1d8ceccb1c217ca976347b1c9a05cb74b",
+          "localizador": "decisiones_significados id=V05 + novedad_r6 (C1 API package_show 2026-10-23 + C2 core-properties xlsx)"
+        },
+        {
+          "ruta": "local: xlsx sha 612b2b11",
+          "sha256": "612b2b11192b97ae7328f80c8a5d1c545e117da46dd436a9b077aaf824b1525f",
+          "localizador": "interior xlsx sin celdas de version/periodo (R4 vigente, re-verificado R6: sizes API = locales)"
+        }
+      ]
+    }
+  ]
+}

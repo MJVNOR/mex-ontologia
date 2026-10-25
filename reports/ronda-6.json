@@ -1,0 +1,121 @@
+{
+  "agentes": 1,
+  "ambigua_por_nombre": 0,
+  "archivos_cambiados": [
+    "scripts/integrar_ronda_5.py",
+    "scripts/integrar_ronda_6.py (nuevo)",
+    "scripts/consolidar_semantica.py",
+    "scripts/integrar_entregas.py",
+    "scripts/integrar_ronda_2.py",
+    "tests/test_ronda_6.py (nuevo)",
+    "tests/test_ronda_2.py",
+    "tests/test_ronda_3_integrada.py",
+    "tests/test_integracion_agentes.py",
+    "ontologia/semantica.json (+1 vinculo)",
+    "ontologia/revision-ronda-6.json (nuevo)",
+    "data/integracion-ronda-6/ (nuevo)",
+    "data/semantica/cobertura.json + interpretaciones.ttl + nucleo.ttl (regenerados)",
+    "data/portal/ampliacion.ttl + portal-completo.ttl + shapes.ttl (regenerados)",
+    "reports/consolidacion-semantica.md + portal-carga.json + studio-portal-sync.json (regenerados)",
+    "reports/ronda-6.json + reports/ronda-6.md (nuevos)"
+  ],
+  "brechas_documentales_externas_abiertas": {
+    "catalogos_vigencia_historica": "17 referencias V01-V16 + des_mpo_res siguen pendiente (sin F4/F3 faltante; solo el publicador puede acreditar edicion-recurso-periodo). R6-C1/C2 aportaron evidencia negativa estructurada nueva sin revertir ningun pendiente.",
+    "presupuesto_significados": "171 significados restantes (171 iniciales R5 - 0 resueltos R6).",
+    "presas": "RESUELTA con limites: vinculo documental unico cat_estatal/Clave -> /4. Sin joins por Clave, sin identidad de dominios, sin vigencia/edicion."
+  },
+  "candidata_por_nombre": 20,
+  "columna_ambigua": 0,
+  "conceptos_compartidos": 1075,
+  "contactos_externos_enviados": 0,
+  "desviaciones_dictamen_staging": {
+    "nota": "El staging aprobado dejaba `if rules!=expected` incondicional antes de delegar, lo que rechaza la extension R6 valida (verificado por ejecucion: ValueError 'Ronda 5 permite solo la base...'). Se completo el arreglo moviendo la exactitud a la ruta sin-R6; duplicados/aprobaciones siempre antes de delegar. Ningun test aprobado cambia de resultado.",
+    "scripts_integrar_entregas_py": "8ef4d4b0bb3cb9cad84d8d8a35bd87a7a7f5582caa8c6c34f0417f30d38738bd: esperado de correspondencias_revisadas se lee de revision-ronda-6 cuando existe; manifiesto previo intacto.",
+    "scripts_integrar_ronda_2_py": "dd74ed14bf695a3209670f8631bf8a2a952cfc2aca6b8224678bb013ed122a90: mismo ajuste R6-aware.",
+    "scripts_integrar_ronda_5_py": "926054f892e335f593306334874b59c5d5ec1bb9c94f32d698ea31ecd506cde1 (staging era 52c4d6cf).",
+    "tests_compat_historicos": [
+      "tests/test_ronda_3_integrada.py bf6dbbe4 (sigue el patron R5-existente: suma aceptadas R6 via cargar_r6 con manifiesto validado)",
+      "tests/test_ronda_2.py 9bbb5869",
+      "tests/test_integracion_agentes.py cdc2bddb"
+    ],
+    "tests_test_ronda_6_py": "7117ff1bc9693b09552a8c5ca399208295d1ff6f75fac8fb87a186842ce702a0 (staging era 2e08f17e; guarda de ruta 'catalogos' -> guarda funcional 'revision-ronda-6' en el archivo instalado). Los 12 tests pasan contra staging y central."
+  },
+  "documental_revisada": 4475,
+  "estado": "integracion R6 Presas validada de extremo a extremo; metricas sin fabricar",
+  "fecha_utc": "2026-10-24T04:45:00+00:00",
+  "hashes": {
+    "data_integracion_ronda_6_aceptadas_json": "85bd2fb15e6950492718c893b3c70c5b5574b985d983b3cdaf5e5787d0a77557",
+    "data_integracion_ronda_6_base_semantica_json": "0dd6f0f7dfdb057a57c47d5dbec690b41f564f07690c7551e3f1a6c4421407bd (= semantica R5 vigente)",
+    "data_integracion_ronda_6_manifiesto_json": "2b618252e4198e8e4a8c992d65ed288b4766c59d049e96dfc004c4a28206f5f2",
+    "ontologia_revision_ronda_6_json": "fc3cdf0b1ef6b5a9981bd0fcc29439a8290ddc4a044430ede540424dfd7dc8cc",
+    "ontologia_semantica_json": "a30a2842d10699a1a78ddeae6121dad42b2166af1cd9aac6a5ed52f047fc68ca (4475 vinculos, 1276 reglas)",
+    "respaldo_pre_r6": "ebb782d67311c4b872e40da65928a6a654f435b1a4775d127470c5f138624bf8",
+    "scripts_consolidar_semantica_py": "f8044afce9b4f8d4af12d197624228cf49bb7e86fdad94668457dbd615726191 (= staging aprobado)",
+    "scripts_integrar_ronda_6_py": "a87bdf8a3a372a2fe714f83c9fe5bee9a3320c4454636265133efd36fba392b6 (= staging aprobado)",
+    "web_evidencia_cat_estatal_1_xlsx": "b7a398a0128af709ffed44a0db4ccb5a6c9ffcfebd295dc010f6b5e90d2b10b8 (11981 B, PK)",
+    "x_adenda_presas_json": "186896992d38129df4b8d6347c174663cdf3ca87e082d2ce60730a35537574a6 (= marker y dictamen-presas)"
+  },
+  "manifiesto_nucleo_sha256": "2b618252e4198e8e4a8c992d65ed288b4766c59d049e96dfc004c4a28206f5f2",
+  "manifiestos_previos_modificados": 0,
+  "modelo_agentes": "opencode-go/muse-spark-1.3-contributor",
+  "pruebas": {
+    "detalle": "142/142 OK (130 previos + 12 R6). Incluye Ronda5ConConfigR6Test (delegacion sin saltar chequeos R5) y Ronda6GuardTest (extension exacta +1 presas; rechazos de 2o vinculo, duplicados, base, evidencia, aprobacion, ruta, origen). Compatibilizados 3 conteos historicos al +1 auditado via cargar_r6 con manifiesto validado.",
+    "log": "suite unittest discover -s tests",
+    "resultado": "OK",
+    "total": 142
+  },
+  "respaldo": "data/backups/antes-r6-presas-20261024T042259Z.zip",
+  "resumen": {
+    "candidata_sin_definicion_suficiente": 19,
+    "columnas_con_correspondencia": 4495,
+    "columnas_totales_examinadas": 5523,
+    "conceptos_compartidos": 1075,
+    "definiciones_con_nombre_examinadas": 1563,
+    "documental_revisada": 4475,
+    "filas_sin_nombre": 7,
+    "fuera_del_nucleo_actual": 152,
+    "materializadas": 1414,
+    "referencias_catalogo_con_recurso_identificado": 16,
+    "referencias_catalogo_sin_resolver": 1,
+    "respaldada_por_definicion": 1392
+  },
+  "shacl_generado": {
+    "conforms": true,
+    "focus_nodes": 32410,
+    "scope": "whole-store",
+    "unmatched_shapes": [
+      "ResultadoMunicipalLote (sin instancias)"
+    ],
+    "violation_count": 0,
+    "violations": []
+  },
+  "shacl_studio": {
+    "conforms": true,
+    "focus_nodes": 32410,
+    "violation_count": 0,
+    "violations": []
+  },
+  "significados_nuevos": 0,
+  "significados_pendientes": 171,
+  "studio": {
+    "candidatas": 20,
+    "chat_gemma_4_31b": "sin cambios; sin reinicio de interfaz; datos del chat intactos",
+    "conceptos": 1075,
+    "consultas": "mismos SELECT que ronda-5.json",
+    "respaldo": "data\\backups\\studio-antes-portal-20261024T043421628103Z.ttl",
+    "respaldadas": 1392,
+    "revisadas": 4475,
+    "significados_candidatos": 19,
+    "triples_gestionados": 312359,
+    "triples_insertados": 10,
+    "triples_retirados_gestionados": 9,
+    "triples_studio": 321210,
+    "triples_studio_delta_exacto": "+1 = 321209 + 10 insertados - 9 retirados (verificado por diff respaldo-vs-observado). Retirados: los 2 triples estadoCorrespondencia ambigua_por_nombre de Clave + 7 del mapeo ambiguo asociado (tipo, etiqueta, columnaOrigen, variableDestino, evidenciaTextual, 2 wasDerivedFrom). Insertados: estadoCorrespondencia documental_revisada, criterioRevision, limiteSemantico, huellaEsquemaRevisado, huellaFilaDiccionario, tipo, significadoDocumentado en la columna, 2 wasDerivedFrom (regla + adenda) y sha256Evidencia de la adenda. 321209 es inalcanzable con el delta aplicado; 321210 es el estado correcto verificado por SELECT en vivo.",
+    "verificado": true,
+    "vinculos_ambiguos": 0
+  },
+  "triples_portal_combinados": 320601,
+  "triples_portal_extension": 312402,
+  "vinculos_ambiguos": 0,
+  "vinculos_nuevos": 1
+}

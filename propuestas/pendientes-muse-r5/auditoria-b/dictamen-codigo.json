@@ -1,0 +1,50 @@
+{
+ "alcance": "codigo de integracion R5 en propuestas/pendientes-muse-r5/integrador/codigo (no aplicado a central)",
+ "archivos": {
+  "scripts/consolidar_semantica.py": {
+   "dictamen": "aceptar",
+   "nota": "bloque r5 aditivo tras r4, con guarda revision-ronda-5.json; huellas_entrada se computa despues; no rehashea historicos",
+   "sha256": "8ef7b80c40d1db03b7afe1b698e2023de6404ee39a4eb986e6b59fc93f0ca490"
+  },
+  "scripts/integrar_ronda_4.py": {
+   "dictamen": "aceptar",
+   "nota": "delega a validar_sobre_base solo si existe revision-ronda-5.json; elif preserva comportamiento exacto previo; checks de duplicados y auditorias R4 siguen corriendo sobre aceptadas R4",
+   "sha256": "b0f208f5545ba7905934915f8f7896d4a716ae8f5eb2b9ca89794492842265ac"
+  },
+  "scripts/integrar_ronda_5.py": {
+   "sha256": "daa3ed01558971d89b5a0586509d4516bec698087c7b249f31af2d93161c3e8c",
+   "dictamen": "aceptar",
+   "nota": "H1 corregida: exige archivos/insumos dict + 4 entradas obligatorias, acceso por [], origenes aceptados fijados en manifiesto; 9/9 tests OK (manifiesto incompleto + origen no fijado)"
+  },
+  "tests/test_ronda_5.py": {
+   "dictamen": "aceptar",
+   "nota": "7/7 OK en staging (temp dirs, sin tocar core); ROOT autodetecta repo y usa live o staging; cubre exacta, intrusa, base, evidencia, aprobacion, concepto y traversal",
+   "sha256": "29e0c2d3da1d5df3b27d12810a9cd2e0bf18aed28865f64a59a675c5eb2838a0"
+  }
+ },
+ "diseno": {
+  "auditorias": "dictamen aceptar por ID exacto en ambas auditorias para cada adicion; sin eso ValueError",
+  "base": "validar_sobre_base exige baseline == resultado exacto R4 validado (no una base cualquiera)",
+  "cadena": "construir invoca validar R4 (con hook R5) antes de materializar; sin reemplazo de manifiestos",
+  "materializacion": "regla: regla+concepto+huella contra reporte vivo; vinculo: revision byte-identica; mas PROV wasDerivedFrom + sha256Evidencia por origen con dentro() anti-traversal",
+  "significado_no_por_estructura": "el ancla semantica son checks de materializacion + auditorias duales, no la forma; checks literales de propuesta viven fuera de este codigo (futuro comprobar R5); resumen no se valida (cosmetico, fijado por manifiesto)"
+ },
+ "ejecucion_staging": {
+  "fail_open_demostrado": "manifiesto sellado sin claves archivos/insumos pasa cargar() sin verificar ningun archivo",
+  "live_sin_hook": "scripts/integrar_ronda_4.py live no tiene hook R5 (correcto pre-instalacion); full gen con R5 fallaria cerrado hasta que el instalador actualice scripts (precondicion, no bug)",
+  "tests_7_de_7": "OK"
+ },
+ "hallazgos": [
+  {
+   "id": "H1-cerrado",
+   "texto": "Corregido y verificado en staging: codigo exige dicts + entradas obligatorias + [] + origenes fijados; 2 tests nuevos pasan; total 9/9. Sin edicion de copias ni central.",
+   "evidencia": "9 tests OK; SHA daa3ed01",
+   "gravedad": "resuelto"
+  }
+ ],
+ "metodo": "diff contra central, lectura completa de los 4 archivos, 7 tests en staging, sondas fail-open y de orden de imports, verificacion de ROOT y de hook live; sin editar copias ni central",
+ "precondiciones_instalador": [
+  "actualizar scripts/ live con las copias (integrar_ronda_4 con hook, consolidar con bloque r5, integrar_ronda_5) antes de generar; si no, validar R4 live rechaza cerrado (correcto pero bloquea)"
+ ],
+ "cierre": "H1 resuelto; codigo aceptado con SHA selladas"
+}

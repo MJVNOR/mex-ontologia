@@ -4,21 +4,45 @@
 
 Mapear progresivamente todo el portal https://datos.sonora.gob.mx/: primero su catálogo, después las secciones y visualizaciones enlazadas, las estructuras de sus recursos y las entidades compartidas entre contenidos. El objetivo es cruzar información entre fuentes, sin exigir copiar todas las filas al grafo.
 
-Open Ontologies será el motor para cargar RDF, validar, inferir relaciones y consultar el grafo con SPARQL.
+Open Ontologies es el motor para cargar RDF, validar, inferir relaciones y consultar el grafo con SPARQL.
 
-## Prioridad actual acordada: consolidación semántica
+## Estado vigente: R10 y siguiente trabajo documental
+
+**Trabajo local del plan completado y revisado.** La revisión independiente del otro chat no encontró discrepancias y quedó reflejada en el [plan actualizado tras R10](docs/plan-actualizado-tras-r10.md). No hay otra integración semántica justificada con la evidencia disponible. Los pendientes documentales permanecen abiertos; se retomarán cuando llegue una fuente verificable o una pregunta analítica concreta con datos suficientes. Gemma continúa excluido de este plan.
+
+R10 incorpora **cinco declaraciones de unidad cualificadas** y **seis formas SHACL**. Conserva **1423 significados, 1106 conceptos, 4506 correspondencias revisadas, 17 candidatas y cero ambiguas**. **233 pruebas pasan**; RDF y SHACL conformes. Portal: **322495 triples**. Studio: **323104**, con respaldo, 90 inserciones y cero retiradas. [Informe R10](reports/ronda-10.md).
+
+Se publicaron el [top 50 de oportunidades](reports/top50-oportunidades-r9.html) y [tres análisis de pares](reports/analisis-pares-post-r9.md), bloqueados con evidencia. El ranking no autoriza joins. Quedan 138 significados reales, 16 vigencias, 17 candidatas, `des_mpo_res` y dos encabezados corruptos; requieren evidencia adicional. Toneladas y hm³ mantienen sus límites. Gemma y la decisión de IRI siguen fuera de alcance.
+
+## Antecedente R9
+
+R9 ejecuta el plan devuelto tras la revisión independiente de R8: incorpora **dos declaraciones de unidad cualificadas** (milímetros y hectáreas) y una regla SHACL de exclusión entre significado documentado y candidato. Conserva **1423 significados respaldados, 1106 conceptos, 4506 correspondencias revisadas, 17 candidatas y cero ambiguas**. El cierre R9 pasó **204 pruebas**; RDF y SHACL conformes, Studio sincronizado y verificado. [Informe y evidencia R9](reports/ronda-9.md).
+
+Quedan **138 significados reales**, 16 vigencias y `des_mpo_res`; dos encabezados corruptos siguen separados del conteo de significados. V13/V14 mantienen acceso no resuelto. Las 17 candidatas dependen del respaldo faltante. Los pilotos de intervalos temporales y jerarquía clínica dieron resultados negativos documentados. Gemma quedó excluido y no se contactó a publicadores.
+
+Se ejecutó el [plan posterior a R8](docs/plan-actualizado-tras-r8.md); su [recibo de ejecución R9](docs/plan-paralelo-ronda-9-sin-gemma.md) distingue lo integrado de las brechas que requieren documentación primaria nueva.
+
+## Ejecución paralela completada
+
+El [plan R8](docs/plan-paralelo-ronda-8-sin-gemma.md) revisó 202 casos: 28 correspondencias integradas y 174 decisiones pendientes conservadas (138 significados, 17 correspondencias, 16 vigencias y tres registros de anomalía/encabezados). Se preservaron los manifiestos anteriores y los respaldos. [Recibo final](reports/ronda-8.json).
+
+Por instrucción del usuario, el chat «Identifica pendientes de la ontolog» revisará este cierre y actualizará su plan a partir de los resultados para continuar la ejecución. Las brechas externas requieren evidencia primaria nueva; los nombres de campos no acreditan significados, vigencias ni equivalencias de códigos.
+
+## Antecedentes: consolidación semántica inicial
 
 El proyecto vuelve a centrarse en la ontología del portal. Los inventarios y análisis ya realizados se conservan como evidencia; no se prioriza acumular triples ni ejecutar todos los pares. Se consolida la separación entre publicaciones, columnas, definiciones, variables locales, conceptos compartidos, catálogos y entidades de referencia.
 
-El núcleo ampliado incluye 83 conceptos, 208 significados de variables respaldados documentalmente, 47 interpretaciones candidatas y seis condiciones de conexión. 62 correspondencias columna/variable tienen revisión documental explícita; las otras siguen candidatas o ambiguas. Un sistema de códigos se asocia exclusivamente a su columna fuente y ocho referencias declaradas tienen un recurso de catálogo identificado y nueve quedan sin resolver. No se afirma haber completado la semántica de las 1,563 variables.
+La ampliación de cobertura incorpora 980 significados tras la revisión de ocho roles con Muse 1.3: 940 conceptos, 1,212 variables respaldadas, 23 candidatas y 328 definiciones fuera del núcleo, sobre 1,563 definiciones. Conserva seis condiciones de conexión y las 836 correspondencias revisadas. Hay ahora 3,312 candidatas y 12 vínculos ambiguos sobre 6 columnas: el crecimiento de significados no revisa automáticamente columnas. Un sistema de códigos se asocia exclusivamente a su fuente; 16 referencias declaradas tienen un recurso de catálogo identificado y una queda sin resolver: `des_mpo_res`.
 
-Reglas y evidencia en `ontologia/semantica.json`, `data/semantica/`, `reports/consolidacion-semantica.md` y `docs/nucleo-semantico.md`. Se aprobaron 73 pruebas. El siguiente trabajo es extender significados y correspondencias sustentadas en documentación, manteniendo explícita la incertidumbre, sin necesidad de análisis nuevos. La auditoría de las 5,523 columnas y las cinco observaciones documentales están en `reports/pendientes-semanticos.md`.
+Reglas y evidencia fijada en `ontologia/semantica.json`, `ontologia/revision-cobertura.json`, `data/integracion-cobertura/` y [resultado de cobertura](reports/cobertura-muse.md). La [ronda 2](reports/integracion-ronda-2.md) queda como antecedente histórico. La suite actual se ejecuta con `uv run python -m unittest discover -s tests -v`; las pruebas de la ampliación verifican también los calificadores en RDF, la procedencia y la preservación de interpretaciones anteriores. El siguiente trabajo es revisar las nuevas correspondencias candidatas y obtener documentación de los significados pendientes. La auditoría de las 5,523 columnas y las cinco observaciones originales están en [pendientes semánticos](reports/pendientes-semanticos.md).
 
-La capa quedó cargada y sincronizada en Studio con respaldo, conservación del estado previo y SHACL sin infracciones. El estado vigente está en `reports/portal-carga.json` y `reports/studio-portal-sync.json`. La referencia CVEGEO de su columna original es adicional a los 62 vínculos documentales revisados; no se generaliza a otros códigos.
+La capa quedó cargada y sincronizada en Studio con respaldo, conservación del estado previo y SHACL sin infracciones. El estado vigente está en `reports/portal-carga.json` y `reports/studio-portal-sync.json`. La referencia CVEGEO se limita a su columna original; no se generaliza a otros códigos.
+
+Se incorporaron 32 dictámenes de pendientes y 14 preguntas al publicador preparadas sin enviar; estos dictámenes no promueven significados candidatos. Las 16 revisiones de vigencia histórica siguen sin acreditarla. La evaluación histórica del pipeline fuente del chat fue parcial: 20 intentos, 4 respuestas (2 aciertos y 2 fallos de recuperación) y 16 errores HTTP/cuota. Quedan pendientes la evaluación de la interfaz de Studio y la comprobación de identidad con el backend instalado.
 
 ## Revisión territorial incorporada
 
-Se leyeron 15 archivos de catálogos con 23 hojas territoriales; las copias idénticas comparten referencia por SHA-256 y hoja conservando todas sus fuentes. Hay nueve referencias distintas y 570 entradas. Se registran 504 correspondencias calificadas con el GeoJSON, dos categorías no municipales; el alias Magdalena de Kino / Magdalena queda revisado por el usuario para las entradas de Sonora. No se transfieren estas correspondencias automáticamente a columnas de datos ni a otros años. Los códigos de localidad y la vigencia histórica siguen pendientes. Evidencia: `reports/catalogos-territoriales.md`, `data/territorio/` y `ontologia/territorio.json`.
+Se leyeron 15 archivos de catálogos con 23 hojas territoriales; las copias idénticas comparten referencia por SHA-256 y hoja conservando todas sus fuentes. Hay nueve referencias distintas y 570 entradas. Se registran 504 correspondencias calificadas con el GeoJSON, dos categorías no municipales; el alias Magdalena de Kino / Magdalena queda revisado por el usuario para las entradas de Sonora. No se transfieren estas correspondencias automáticamente a columnas de datos ni a otros años. La segunda ronda cotejó las 1,850 localidades observadas IML con ITER 2020: coinciden clave, nombre y población. Quedan sin acreditar el motivo de las 5,450 localidades presentes solo en ITER, la equivalencia con el universo del Marco Geoestadístico y la vigencia histórica. Evidencia: [catálogos territoriales](reports/catalogos-territoriales.md), [ronda 2](reports/integracion-ronda-2.md), `data/territorio/` y `ontologia/territorio.json`.
 
 ## Enfoque acordado
 
@@ -116,7 +140,9 @@ No inferir relaciones que las fuentes no sostienen. Por ejemplo, la ubicación d
 
 **Entregable incremental:** contenidos de cada módulo consultables y con procedencia trazable. El primer cruce valida el proceso; el objetivo continúa siendo la cobertura del portal completo.
 
-## Estado actual
+## Antecedentes: catálogo, estructuras y primer cruce
+
+Los resultados y conteos de esta sección y de las etapas siguientes describen sus respectivas integraciones históricas. El resumen inicial y reports/cobertura-muse.md recogen el estado de la ampliación semántica.
 
 - Ejecutable de Open Ontologies en `tools/open-ontologies.exe`.
 - Carpeta `tools` agregada al PATH del usuario.
@@ -168,7 +194,7 @@ No inferir relaciones que las fuentes no sostienen. Por ejemplo, la ubicación d
 - DCAT 3: https://www.w3.org/TR/vocab-dcat-3/
 - API de CKAN: https://docs.ckan.org/en/2.11/api/index.html
 
-## Integración central de las cinco entregas
+## Antecedente: integración central de las cinco entregas
 
 - Incorporadas las cinco entregas revisadas, con respaldo previo y copias de evidencia fijadas por SHA-256.
 - 103 conceptos, 232 variables respaldadas y 162 correspondencias revisadas (62 anteriores preservadas + 100 nuevas).
@@ -186,3 +212,23 @@ No inferir relaciones que las fuentes no sostienen. Por ejemplo, la ubicación d
 - 1850 coincidencias de clave, nombre y población entre IML 2020 e ITER 2020; sin identidad oficial ni asignación a otras fuentes.
 - Evaluación histórica parcial del pipeline fuente: 20 intentos, 4 respuestas, 2 aciertos, 2 fallos de recuperación, 16 errores HTTP/cuota; UI no evaluada.
 - Evidencia: data/integracion-ronda-2; informe: reports/integracion-ronda-2.md. Validación y sincronización: reports/portal-carga.json y reports/studio-portal-sync.json.
+
+## Ronda 3 coordinada entre chats
+
+- «Revisar errores de la antología» integró la semántica: 1,212 definiciones respaldadas, 940 conceptos, 328 fuera del núcleo y 23 candidatas. Su evidencia fijada se conserva en data/integracion-cobertura.
+- Después del relevo, este chat añadió 29 correspondencias: 865 revisadas, 3,283 candidatas y 12 vínculos ambiguos. Las 836 revisiones anteriores y el resto del núcleo semántico se conservaron exactamente.
+- Incorporadas tres fichas de cruces; la nueva comprobación de 2020 conserva 72 comparaciones y 144 evidencias separadas por fuente, sin afirmar identidad de medida ni vigencia.
+- Corrección de recuperación del chat instalada con respaldo; seis casos de recuperación por API pasan contra el grafo final. No se certifica una respuesta del modelo desde la interfaz.
+- Grafo final en Studio: 284,810 triples, sincronización verificada y SHACL conforme. 108 pruebas centrales aprobadas.
+- Procedimiento, comprobantes y límites: docs/orquestacion-ronda-3.md, reports/integracion-ronda-3.md y docs/correspondencias-y-cruces-ronda-3.md.
+
+## Seguimiento operativo posterior a R9
+
+Se publicó el [reporte operativo de cobertura](reports/cobertura-operativa-r9.md),
+con los estados R9 y condiciones de reapertura para todos los frentes pendientes.
+Las siete preguntas documentales se conservan [en el expediente](propuestas/cobertura-operativa-post-r9/ejecucion-20261024/C-preguntas/preguntas-documentales.md), sin enviar.
+La revisión de Presas no aportó evidencia nueva: su correspondencia está resuelta
+desde R6 y la vigencia histórica sigue pendiente.
+
+La [validación de este seguimiento](reports/seguimiento-operativo-post-r9.md)
+conserva los recibos de pruebas y comprobación del grafo. No abre una nueva ronda semántica.

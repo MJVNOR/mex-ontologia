@@ -1,0 +1,85 @@
+{
+ "rol": "C3-cobertura",
+ "version": "v001",
+ "estado": "auditoria_derivada",
+ "alcance": "Reconciliar 5523 columnas, cinco estados y cinco observaciones; distinguir columnas de significados. Sin promociones ni cambios centrales.",
+ "casos_asignados": 0,
+ "resultados": {
+  "reconciliacion_columnas": {
+   "ecuacion": "5523=4506+17+833+154+13",
+   "verificado": true,
+   "columnas_con_correspondencia_4523=4506+17": true
+  },
+  "variables": {
+   "ecuacion_definiciones": "1563=1423+124+16",
+   "materializadas_con_iri_1442=1423+16+3": true,
+   "sin_iri_121=124-3": true,
+   "diferencia_3_explicada": "2 filas corruptas de encabezado 177/178 (huellas 4b17625c/b5dbcdf5, fuera_del_nucleo con iri preservado) + Total_Egresos (huella 98c73e56, observacion egresos-descripcion-urgencias, fuera_del_nucleo con iri preservado). Regla: variables_materializadas=sum('iri' in v); el iri documenta existencia, el estado fuera_del_nucleo impide uso en nucleo."
+  },
+  "unidad_distinta": {
+   "154_columnas_con_def_sin_interpretacion": "nivel columna (pendientes-semanticos.columnas)",
+   "138_significados_reales_mas_2_headers": "nivel definicion (ronda-8.pendientes/casos significados=138 + anomalias=2); variables_pendientes 140 = 124 fuera + 16 candidatas; motivos 104+34+2",
+   "advertencia": "no sumar ni restar columnas como definiciones"
+  },
+  "observaciones_5": "egresos-descripcion-urgencias, municipio-formato-ejemplo, fecha-ejemplo-numerico, anio-nacimientos-2024, anio-divorcios-2023; cada una con recurso/campo/columna_iri/fuente_esquema en totales-cruces-observaciones.json y fila ligada en matriz CSV",
+  "archivos": {
+   "matriz-columnas-5523.csv": "5523 filas, sin prosa repetida (solo ids/estados/conteos/urls)",
+   "totales-cruces-observaciones.json": "totales, cruces y 5 observaciones con localizadores"
+  }
+ },
+ "fuentes": [
+  {
+   "ruta": "reports/pendientes-semanticos.json",
+   "sha256": "a3f04d9c88d38f60d9ca9bf8fa8b155b27e6ed5f9a4ad11431933b7f87e16c69",
+   "localizador": "columnas[5523] + resumen.estados_columnas + variables_pendientes[140] + observaciones_revision[5]"
+  },
+  {
+   "ruta": "data/semantica/cobertura.json",
+   "sha256": "683f58b24d23b9c97b569ae19dd14ed43b722a08857519766c435e447e9c3638",
+   "localizador": "resumen + variables[1563] (con iri=1442) + correspondencias[4523] + observaciones_revision[5] + auditoria_cobertura"
+  },
+  {
+   "ruta": "reports/ronda-8.json",
+   "sha256": "5ac384bc4c253f5310ae69402c8d9249d2ee85082086c2dca85483f8b4b7eacb",
+   "localizador": "resumen_actual + pendientes{138,16,17,2} + casos[202] (tipo significados=138, anomalias=3) + portal/studio"
+  },
+  {
+   "ruta": "ontologia/semantica.json",
+   "sha256": "dba467b63286171bb68f5b1400a1ed51bfb99d5663e5b34a36f31fb94953cebd",
+   "localizador": "vinculos_documentales_revisados[4506] + conceptos[1106] + condiciones[6] + observaciones_revision[5]"
+  },
+  {
+   "ruta": "ontologia/revision-ronda-8.json",
+   "sha256": "d8e5871df5ed3dddc9f6d22062ac497969410406d9adad52fceeea324ef27ea3",
+   "localizador": "alcance: 28 correspondencias SINAC, sin reglas/conceptos nuevos"
+  },
+  {
+   "ruta": "docs/plan-actualizado-tras-r8.json",
+   "sha256": "418cda3ae229df4bebb90a43363ba96e64eec4f631034c975ac5dc18af0473c0",
+   "localizador": "base.columnas{5523,...} + base.significados_reales_pendientes=138"
+  },
+  {
+   "ruta": "docs/plan-actualizado-tras-r8.md",
+   "sha256": "751411a04650c484e97161912aadb23d6800b08d24b39df43c5f92c0b8a6ea59",
+   "localizador": "seccion Estado R8 + cobertura de columnas (cinco estados) + 5 observaciones + 138 vs 2 headers"
+  }
+ ],
+ "limites": [
+  "Gemma excluido",
+  "Sin contactos externos",
+  "Sin promocion por nombre; Puerta 1 vigente",
+  "No se modifican produccion/semantica/shapes/manifiestos/grafo/Studio",
+  "No se repiten busquedas genericas agotadas; sin peticiones web (auditoria local)",
+  "Cinco estados y 138+2 se conservan visibles como pendientes"
+ ],
+ "condiciones_de_aceptacion": [
+  "5523=4506+17+833+154+13 verificable en pendientes-semanticos.columnas y cobertura.auditoria_cobertura",
+  "4523=4506+17 igual a len(correspondencias)",
+  "1442=1423+16+3 con los 3 fuera_con_iri identificados por huella",
+  "154 columnas no presentadas como 154 definiciones; 140=138+2 documentado",
+  "5 observaciones cada una con recurso/columna/localizador",
+  "congelada.json con SHA256 calculados por codigo"
+ ],
+ "peticiones_web": [],
+ "nota_web": "Sin peticion a W/Obscura: auditoria derivada de fuentes R8 cerradas; URLs de fuente_esquema quedan registradas por columna sin navegacion."
+}

@@ -1,0 +1,1857 @@
+{
+ "auditor": "agente-12-auditoria-salud",
+ "version": "v2-203",
+ "superseed": "auditoria-v1-204.json (historica; outcome actual: 203)",
+ "fecha_utc": "2026-10-23T10:56:29.085934+00:00",
+ "sha_propuestas_auditada": "2b12af0c61044ef5c059be0db1d0a641b64a72121b4254e37034bb685b4bcc73",
+ "totales": {
+  "decisiones": 242,
+  "proponer_significado": 203,
+  "pendientes": 39,
+  "aceptar": 203,
+  "condicionado": 0,
+  "rechazar": 0
+ },
+ "condiciones_v1": {
+  "resueltas_verificadas": [
+   "r3a6-008/v1 slug (a04 pendiente)",
+   "lcr conserva aspecto agua de roca",
+   "inmuno solo Si/No",
+   "servicios catalogo sin vigencia",
+   "norm literal publicador",
+   "CIE sin expandir x2",
+   "7 RAW/huella intacta"
+  ],
+  "no_resueltas": []
+ },
+ "dictamenes": [
+  {
+   "regla": "r3a6-001",
+   "iri": "https://example.org/mex-ontologi/definition/2334deaa-dd0c-444e-b038-4cc556ad715d%2F1",
+   "variable": "cve_estado",
+   "literal": "Clave del estado",
+   "concepto": "entidad",
+   "dictamen": "aceptar",
+   "razon": "v2: literal/RAW/huella/regla/concepto verificados por IRI; correctivos v1 resueltos."
+  },
+  {
+   "regla": "r3a6-002",
+   "iri": "https://example.org/mex-ontologi/definition/2334deaa-dd0c-444e-b038-4cc556ad715d%2F2",
+   "variable": "des_estado",
+   "literal": "Nombre del Estado",
+   "concepto": "entidad",
+   "dictamen": "aceptar",
+   "razon": "v2: literal/RAW/huella/regla/concepto verificados por IRI; correctivos v1 resueltos."
+  },
+  {
+   "regla": "r3a6-003",
+   "iri": "https://example.org/mex-ontologi/definition/2334deaa-dd0c-444e-b038-4cc556ad715d%2F3",
+   "variable": "cve_jurisd",
+   "literal": "Clave de la Jurisdiccion",
+   "concepto": "jurisdiccion-sanitaria",
+   "dictamen": "aceptar",
+   "razon": "v2: literal/RAW/huella/regla/concepto verificados por IRI; correctivos v1 resueltos."
+  },
+  {
+   "regla": "r3a6-004",
+   "iri": "https://example.org/mex-ontologi/definition/2334deaa-dd0c-444e-b038-4cc556ad715d%2F4",
+   "variable": "des_jurisd",
+   "literal": "Nombre de la Jurisdiccion",
+   "concepto": "jurisdiccion-sanitaria",
+   "dictamen": "aceptar",
+   "razon": "v2: literal/RAW/huella/regla/concepto verificados por IRI; correctivos v1 resueltos."
+  },
+  {
+   "regla": "r3a6-005",
+   "iri": "https://example.org/mex-ontologi/definition/2334deaa-dd0c-444e-b038-4cc556ad715d%2F7",
+   "variable": "cve_diagno",
+   "literal": "Clave del diagnostico",
+   "concepto": "diagnostico-vigilancia",
+   "dictamen": "aceptar",
+   "razon": "v2: literal/RAW/huella/regla/concepto verificados por IRI; correctivos v1 resueltos."
+  },
+  {
+   "regla": "r3a6-006",
+   "iri": "https://example.org/mex-ontologi/definition/2334deaa-dd0c-444e-b038-4cc556ad715d%2F8",
+   "variable": "des_diagno",
+   "literal": "Descripción del diagnostico",
+   "concepto": "diagnostico-vigilancia",
+   "dictamen": "aceptar",
+   "razon": "v2: literal/RAW/huella/regla/concepto verificados por IRI; correctivos v1 resueltos."
+  },
+  {
+   "regla": "r3a6-007",
+   "iri": "https://example.org/mex-ontologi/definition/2334deaa-dd0c-444e-b038-4cc556ad715d%2F12",
+   "variable": "menores_1",
+   "literal": "Total de personas en vigilancia que son menores de 1 año",
+   "concepto": "vigilancia-personas-menores-1-ano",
+   "dictamen": "aceptar",
+   "razon": "v2: literal/RAW/huella/regla/concepto verificados por IRI; correctivos v1 resueltos."
+  },
+  {
+   "regla": "r3a6-008",
+   "iri": "https://example.org/mex-ontologi/definition/2334deaa-dd0c-444e-b038-4cc556ad715d%2F14",
+   "variable": "de05_a_09",
+   "literal": "Total de personas en vigilancia entre 5 y 9 años",
+   "concepto": "vigilancia-personas-de-5-a-9-anos",
+   "dictamen": "aceptar",
+   "razon": "v2: literal/RAW/huella/regla/concepto verificados por IRI; correctivos v1 resueltos."
+  },
+  {
+   "regla": "r3a6-009",
+   "iri": "https://example.org/mex-ontologi/definition/2334deaa-dd0c-444e-b038-4cc556ad715d%2F15",
+   "variable": "de10_a_14",
+   "literal": "Total de personas en vigilancia entre 10 y 14 años",
+   "concepto": "vigilancia-personas-de-10-a-14-anos",
+   "dictamen": "aceptar",
+   "razon": "v2: literal/RAW/huella/regla/concepto verificados por IRI; correctivos v1 resueltos."
+  },
+  {
+   "regla": "r3a6-010",
+   "iri": "https://example.org/mex-ontologi/definition/2334deaa-dd0c-444e-b038-4cc556ad715d%2F16",
+   "variable": "de15_a_19",
+   "literal": "Total de personas en vigilancia entre 15 y 19 años",
+   "concepto": "vigilancia-personas-de-15-a-19-anos",
+   "dictamen": "aceptar",
+   "razon": "v2: literal/RAW/huella/regla/concepto verificados por IRI; correctivos v1 resueltos."
+  },
+  {
+   "regla": "r3a6-011",
+   "iri": "https://example.org/mex-ontologi/definition/2334deaa-dd0c-444e-b038-4cc556ad715d%2F17",
+   "variable": "de20_a_24",
+   "literal": "Total de personas en vigilancia entre 20 y 24 años",
+   "concepto": "vigilancia-personas-de-20-a-24-anos",
+   "dictamen": "aceptar",
+   "razon": "v2: literal/RAW/huella/regla/concepto verificados por IRI; correctivos v1 resueltos."
+  },
+  {
+   "regla": "r3a6-012",
+   "iri": "https://example.org/mex-ontologi/definition/2334deaa-dd0c-444e-b038-4cc556ad715d%2F18",
+   "variable": "de25_a_44",
+   "literal": "Total de personas en vigilancia entre 25 y 44 años",
+   "concepto": "vigilancia-personas-de-25-a-44-anos",
+   "dictamen": "aceptar",
+   "razon": "v2: literal/RAW/huella/regla/concepto verificados por IRI; correctivos v1 resueltos."
+  },
+  {
+   "regla": "r3a6-013",
+   "iri": "https://example.org/mex-ontologi/definition/2334deaa-dd0c-444e-b038-4cc556ad715d%2F19",
+   "variable": "de45_a_49",
+   "literal": "Total de personas en vigilancia entre 45 y 49 años",
+   "concepto": "vigilancia-personas-de-45-a-49-anos",
+   "dictamen": "aceptar",
+   "razon": "v2: literal/RAW/huella/regla/concepto verificados por IRI; correctivos v1 resueltos."
+  },
+  {
+   "regla": "r3a6-014",
+   "iri": "https://example.org/mex-ontologi/definition/2334deaa-dd0c-444e-b038-4cc556ad715d%2F20",
+   "variable": "de50_a_59",
+   "literal": "Total de personas en vigilancia entre 50 y 59 años",
+   "concepto": "vigilancia-personas-de-50-a-59-anos",
+   "dictamen": "aceptar",
+   "razon": "v2: literal/RAW/huella/regla/concepto verificados por IRI; correctivos v1 resueltos."
+  },
+  {
+   "regla": "r3a6-015",
+   "iri": "https://example.org/mex-ontologi/definition/2334deaa-dd0c-444e-b038-4cc556ad715d%2F21",
+   "variable": "de60_a_64",
+   "literal": "Total de personas en vigilancia entre 60 y 64 años",
+   "concepto": "vigilancia-personas-de-60-a-64-anos",
+   "dictamen": "aceptar",
+   "razon": "v2: literal/RAW/huella/regla/concepto verificados por IRI; correctivos v1 resueltos."
+  },
+  {
+   "regla": "r3a6-016",
+   "iri": "https://example.org/mex-ontologi/definition/2334deaa-dd0c-444e-b038-4cc556ad715d%2F22",
+   "variable": "de65_y_mas",
+   "literal": "Total de personas en vigilanciade 65 años o más",
+   "concepto": "vigilancia-personas-de-65-y-mas-anos",
+   "dictamen": "aceptar",
+   "razon": "v2: literal/RAW/huella/regla/concepto verificados por IRI; correctivos v1 resueltos."
+  },
+  {
+   "regla": "r3a6-017",
+   "iri": "https://example.org/mex-ontologi/definition/2334deaa-dd0c-444e-b038-4cc556ad715d%2F45",
+   "variable": "enero",
+   "literal": "Vigilancias totales en enero",
+   "concepto": "vigilancia-total-enero",
+   "dictamen": "aceptar",
+   "razon": "v2: literal/RAW/huella/regla/concepto verificados por IRI; correctivos v1 resueltos."
+  },
+  {
+   "regla": "r3a6-018",
+   "iri": "https://example.org/mex-ontologi/definition/2334deaa-dd0c-444e-b038-4cc556ad715d%2F46",
+   "variable": "febrero",
+   "literal": "Vigilancias totales en febrero",
+   "concepto": "vigilancia-total-febrero",
+   "dictamen": "aceptar",
+   "razon": "v2: literal/RAW/huella/regla/concepto verificados por IRI; correctivos v1 resueltos."
+  },
+  {
+   "regla": "r3a6-019",
+   "iri": "https://example.org/mex-ontologi/definition/2334deaa-dd0c-444e-b038-4cc556ad715d%2F47",
+   "variable": "marzo",
+   "literal": "Vigilancias totales en marzo",
+   "concepto": "vigilancia-total-marzo",
+   "dictamen": "aceptar",
+   "razon": "v2: literal/RAW/huella/regla/concepto verificados por IRI; correctivos v1 resueltos."
+  },
+  {
+   "regla": "r3a6-020",
+   "iri": "https://example.org/mex-ontologi/definition/2334deaa-dd0c-444e-b038-4cc556ad715d%2F48",
+   "variable": "abril",
+   "literal": "Vigilancias totales en abril",
+   "concepto": "vigilancia-total-abril",
+   "dictamen": "aceptar",
+   "razon": "v2: literal/RAW/huella/regla/concepto verificados por IRI; correctivos v1 resueltos."
+  },
+  {
+   "regla": "r3a6-021",
+   "iri": "https://example.org/mex-ontologi/definition/2334deaa-dd0c-444e-b038-4cc556ad715d%2F49",
+   "variable": "mayo",
+   "literal": "Vigilancias totales en mayo",
+   "concepto": "vigilancia-total-mayo",
+   "dictamen": "aceptar",
+   "razon": "v2: literal/RAW/huella/regla/concepto verificados por IRI; correctivos v1 resueltos."
+  },
+  {
+   "regla": "r3a6-022",
+   "iri": "https://example.org/mex-ontologi/definition/2334deaa-dd0c-444e-b038-4cc556ad715d%2F50",
+   "variable": "junio",
+   "literal": "Vigilancias totales en junio",
+   "concepto": "vigilancia-total-junio",
+   "dictamen": "aceptar",
+   "razon": "v2: literal/RAW/huella/regla/concepto verificados por IRI; correctivos v1 resueltos."
+  },
+  {
+   "regla": "r3a6-023",
+   "iri": "https://example.org/mex-ontologi/definition/2334deaa-dd0c-444e-b038-4cc556ad715d%2F51",
+   "variable": "julio",
+   "literal": "Vigilancias totales en julio",
+   "concepto": "vigilancia-total-julio",
+   "dictamen": "aceptar",
+   "razon": "v2: literal/RAW/huella/regla/concepto verificados por IRI; correctivos v1 resueltos."
+  },
+  {
+   "regla": "r3a6-024",
+   "iri": "https://example.org/mex-ontologi/definition/2334deaa-dd0c-444e-b038-4cc556ad715d%2F52",
+   "variable": "agosto",
+   "literal": "Vigilancias totales en agosto",
+   "concepto": "vigilancia-total-agosto",
+   "dictamen": "aceptar",
+   "razon": "v2: literal/RAW/huella/regla/concepto verificados por IRI; correctivos v1 resueltos."
+  },
+  {
+   "regla": "r3a6-025",
+   "iri": "https://example.org/mex-ontologi/definition/2334deaa-dd0c-444e-b038-4cc556ad715d%2F53",
+   "variable": "septiembre",
+   "literal": "Vigilancias totales en septiembre",
+   "concepto": "vigilancia-total-septiembre",
+   "dictamen": "aceptar",
+   "razon": "v2: literal/RAW/huella/regla/concepto verificados por IRI; correctivos v1 resueltos."
+  },
+  {
+   "regla": "r3a6-026",
+   "iri": "https://example.org/mex-ontologi/definition/2334deaa-dd0c-444e-b038-4cc556ad715d%2F54",
+   "variable": "octubre",
+   "literal": "Vigilancias totales en octubre",
+   "concepto": "vigilancia-total-octubre",
+   "dictamen": "aceptar",
+   "razon": "v2: literal/RAW/huella/regla/concepto verificados por IRI; correctivos v1 resueltos."
+  },
+  {
+   "regla": "r3a6-027",
+   "iri": "https://example.org/mex-ontologi/definition/2334deaa-dd0c-444e-b038-4cc556ad715d%2F55",
+   "variable": "noviembre",
+   "literal": "Vigilancias totales en noviembre",
+   "concepto": "vigilancia-total-noviembre",
+   "dictamen": "aceptar",
+   "razon": "v2: literal/RAW/huella/regla/concepto verificados por IRI; correctivos v1 resueltos."
+  },
+  {
+   "regla": "r3a6-028",
+   "iri": "https://example.org/mex-ontologi/definition/2334deaa-dd0c-444e-b038-4cc556ad715d%2F56",
+   "variable": "diciembre",
+   "literal": "Vigilancias totales en diciembre",
+   "concepto": "vigilancia-total-diciembre",
+   "dictamen": "aceptar",
+   "razon": "v2: literal/RAW/huella/regla/concepto verificados por IRI; correctivos v1 resueltos."
+  },
+  {
+   "regla": "r3a6-029",
+   "iri": "https://example.org/mex-ontologi/definition/2334deaa-dd0c-444e-b038-4cc556ad715d%2F58",
+   "variable": "totalm",
+   "literal": "Total acumulado de Hombres",
+   "concepto": "vigilancia-total-hombres",
+   "dictamen": "aceptar",
+   "razon": "v2: literal/RAW/huella/regla/concepto verificados por IRI; correctivos v1 resueltos."
+  },
+  {
+   "regla": "r3a6-030",
+   "iri": "https://example.org/mex-ontologi/definition/2334deaa-dd0c-444e-b038-4cc556ad715d%2F59",
+   "variable": "totalf",
+   "literal": "Total acumulado de Mujeres",
+   "concepto": "vigilancia-total-mujeres",
+   "dictamen": "aceptar",
+   "razon": "v2: literal/RAW/huella/regla/concepto verificados por IRI; correctivos v1 resueltos."
+  },
+  {
+   "regla": "r3a6-031",
+   "iri": "https://example.org/mex-ontologi/definition/33d0a99e-c721-496f-a05e-07646e9ae42a%2F2",
+   "variable": "ide_sex",
+   "literal": "Sexo del caso 1=Masculino 2= Femenino",
+   "concepto": "sexo-declarado",
+   "dictamen": "aceptar",
+   "razon": "v2: literal/RAW/huella/regla/concepto verificados por IRI; correctivos v1 resueltos."
+  },
+  {
+   "regla": "r3a6-032",
+   "iri": "https://example.org/mex-ontologi/definition/33d0a99e-c721-496f-a05e-07646e9ae42a%2F3",
+   "variable": "ide_eda_ano",
+   "literal": "Edad en años del paciente",
+   "concepto": "edad-paciente-anos",
+   "dictamen": "aceptar",
+   "razon": "v2: literal/RAW/huella/regla/concepto verificados por IRI; correctivos v1 resueltos."
+  },
+  {
+   "regla": "r3a6-033",
+   "iri": "https://example.org/mex-ontologi/definition/33d0a99e-c721-496f-a05e-07646e9ae42a%2F4",
+   "variable": "des_cal",
+   "literal": "Tipo de calle donde reside el caso",
+   "concepto": "tipo-calle-residencia-caso",
+   "dictamen": "aceptar",
+   "razon": "v2: literal/RAW/huella/regla/concepto verificados por IRI; correctivos v1 resueltos."
+  },
+  {
+   "regla": "r3a6-034",
+   "iri": "https://example.org/mex-ontologi/definition/33d0a99e-c721-496f-a05e-07646e9ae42a%2F5",
+   "variable": "ide_col",
+   "literal": "Colonia donde reside el caso",
+   "concepto": "colonia-residencia-caso",
+   "dictamen": "aceptar",
+   "razon": "v2: literal/RAW/huella/regla/concepto verificados por IRI; correctivos v1 resueltos."
+  },
+  {
+   "regla": "r3a6-035",
+   "iri": "https://example.org/mex-ontologi/definition/33d0a99e-c721-496f-a05e-07646e9ae42a%2F6",
+   "variable": "des_jur_res",
+   "literal": "Jurisdicción donde reside el caso",
+   "concepto": "jurisdiccion-sanitaria",
+   "dictamen": "aceptar",
+   "razon": "v2: literal/RAW/huella/regla/concepto verificados por IRI; correctivos v1 resueltos."
+  },
+  {
+   "regla": "r3a6-036",
+   "iri": "https://example.org/mex-ontologi/definition/33d0a99e-c721-496f-a05e-07646e9ae42a%2F7",
+   "variable": "des_mpo_res",
+   "literal": "Municipio donde reside el caso",
+   "concepto": "municipio-residencia",
+   "dictamen": "aceptar",
+   "razon": "v2: literal/RAW/huella/regla/concepto verificados por IRI; correctivos v1 resueltos."
+  },
+  {
+   "regla": "r3a6-037",
+   "iri": "https://example.org/mex-ontologi/definition/33d0a99e-c721-496f-a05e-07646e9ae42a%2F8",
+   "variable": "cve_loc_res",
+   "literal": "Clave de localidad de residencia",
+   "concepto": "localidad-residencia-caso",
+   "dictamen": "aceptar",
+   "razon": "v2: literal/RAW/huella/regla/concepto verificados por IRI; correctivos v1 resueltos."
+  },
+  {
+   "regla": "r3a6-038",
+   "iri": "https://example.org/mex-ontologi/definition/33d0a99e-c721-496f-a05e-07646e9ae42a%2F9",
+   "variable": "des_loc_res",
+   "literal": "Localidad donde reside el caso",
+   "concepto": "localidad-residencia-caso",
+   "dictamen": "aceptar",
+   "razon": "v2: literal/RAW/huella/regla/concepto verificados por IRI; correctivos v1 resueltos."
+  },
+  {
+   "regla": "r3a6-039",
+   "iri": "https://example.org/mex-ontologi/definition/33d0a99e-c721-496f-a05e-07646e9ae42a%2F10",
+   "variable": "id_cp",
+   "literal": "Código postal donde reside el caso",
+   "concepto": "codigo-postal-residencia-caso",
+   "dictamen": "aceptar",
+   "razon": "v2: literal/RAW/huella/regla/concepto verificados por IRI; correctivos v1 resueltos."
+  },
+  {
+   "regla": "r3a6-040",
+   "iri": "https://example.org/mex-ontologi/definition/33d0a99e-c721-496f-a05e-07646e9ae42a%2F11",
+   "variable": "es_indigena",
+   "literal": "El paciente es indígena 1=Si 2=No",
+   "concepto": "condicion-indigena-caso",
+   "dictamen": "aceptar",
+   "razon": "v2: literal/RAW/huella/regla/concepto verificados por IRI; correctivos v1 resueltos."
+  },
+  {
+   "regla": "r3a6-041",
+   "iri": "https://example.org/mex-ontologi/definition/33d0a99e-c721-496f-a05e-07646e9ae42a%2F12",
+   "variable": "lengua_indigena",
+   "literal": "El paciente habla lengua indígena 1=Si 2=No",
+   "concepto": "habla-lengua-indigena-caso",
+   "dictamen": "aceptar",
+   "razon": "v2: literal/RAW/huella/regla/concepto verificados por IRI; correctivos v1 resueltos."
+  },
+  {
+   "regla": "r3a6-042",
+   "iri": "https://example.org/mex-ontologi/definition/33d0a99e-c721-496f-a05e-07646e9ae42a%2F13",
+   "variable": "des_cual_lengua",
+   "literal": "Lengua que habla el paciente",
+   "concepto": "lengua-hablada-caso",
+   "dictamen": "aceptar",
+   "razon": "v2: literal/RAW/huella/regla/concepto verificados por IRI; correctivos v1 resueltos."
+  },
+  {
+   "regla": "r3a6-043",
+   "iri": "https://example.org/mex-ontologi/definition/33d0a99e-c721-496f-a05e-07646e9ae42a%2F14",
+   "variable": "des_ocupacion",
+   "literal": "Ocupación del paciente",
+   "concepto": "ocupacion-caso",
+   "dictamen": "aceptar",
+   "razon": "v2: literal/RAW/huella/regla/concepto verificados por IRI; correctivos v1 resueltos."
+  },
+  {
+   "regla": "r3a6-044",
+   "iri": "https://example.org/mex-ontologi/definition/33d0a99e-c721-496f-a05e-07646e9ae42a%2F15",
+   "variable": "estatus_caso",
+   "literal": "Estatus del caso del paciente 1=Probable 2=Confirmado 3=Descartado",
+   "concepto": "estatus-caso-rickettsia",
+   "dictamen": "aceptar",
+   "razon": "v2: literal/RAW/huella/regla/concepto verificados por IRI; correctivos v1 resueltos."
+  },
+  {
+   "regla": "r3a6-045",
+   "iri": "https://example.org/mex-ontologi/definition/33d0a99e-c721-496f-a05e-07646e9ae42a%2F16",
+   "variable": "fec_sol_aten",
+   "literal": "Fecha de la solicitud de atención del paciente",
+   "concepto": "fecha-solicitud-atencion-caso",
+   "dictamen": "aceptar",
+   "razon": "v2: literal/RAW/huella/regla/concepto verificados por IRI; correctivos v1 resueltos."
+  },
+  {
+   "regla": "r3a6-046",
+   "iri": "https://example.org/mex-ontologi/definition/33d0a99e-c721-496f-a05e-07646e9ae42a%2F17",
+   "variable": "fec_ini_estudio",
+   "literal": "Fecha de inicio de estudios del paciente",
+   "concepto": "fecha-inicio-estudio-caso",
+   "dictamen": "aceptar",
+   "razon": "v2: literal/RAW/huella/regla/concepto verificados por IRI; correctivos v1 resueltos."
+  },
+  {
+   "regla": "r3a6-047",
+   "iri": "https://example.org/mex-ontologi/definition/33d0a99e-c721-496f-a05e-07646e9ae42a%2F18",
+   "variable": "fec_fin_estudio",
+   "literal": "Fecha fin de estudios del paciente",
+   "concepto": "fecha-fin-estudio-caso",
+   "dictamen": "aceptar",
+   "razon": "v2: literal/RAW/huella/regla/concepto verificados por IRI; correctivos v1 resueltos."
+  },
+  {
+   "regla": "r3a6-048",
+   "iri": "https://example.org/mex-ontologi/definition/33d0a99e-c721-496f-a05e-07646e9ae42a%2F19",
+   "variable": "des_diag_probable",
+   "literal": "Diagnóstico probable del paciente",
+   "concepto": "diagnostico-probable-rickettsia",
+   "dictamen": "aceptar",
+   "razon": "v2: literal/RAW/huella/regla/concepto verificados por IRI; correctivos v1 resueltos."
+  },
+  {
+   "regla": "r3a6-049",
+   "iri": "https://example.org/mex-ontologi/definition/33d0a99e-c721-496f-a05e-07646e9ae42a%2F20",
+   "variable": "des_diag_final",
+   "literal": "Diagnóstico final del paciente",
+   "concepto": "diagnostico-final-rickettsia",
+   "dictamen": "aceptar",
+   "razon": "v2: literal/RAW/huella/regla/concepto verificados por IRI; correctivos v1 resueltos."
+  },
+  {
+   "regla": "r3a6-050",
+   "iri": "https://example.org/mex-ontologi/definition/33d0a99e-c721-496f-a05e-07646e9ae42a%2F21",
+   "variable": "contacto_garrapata",
+   "literal": "El paciente tuvo contacto con garrapatas 1=Si 0=No",
+   "concepto": "contacto-garrapatas-caso",
+   "dictamen": "aceptar",
+   "razon": "v2: literal/RAW/huella/regla/concepto verificados por IRI; correctivos v1 resueltos."
+  },
+  {
+   "regla": "r3a6-051",
+   "iri": "https://example.org/mex-ontologi/definition/33d0a99e-c721-496f-a05e-07646e9ae42a%2F22",
+   "variable": "contacto_otr",
+   "literal": "El paciente tuvo contacto con otro animal",
+   "concepto": "contacto-otro-animal-caso",
+   "dictamen": "aceptar",
+   "razon": "v2: literal/RAW/huella/regla/concepto verificados por IRI; correctivos v1 resueltos."
+  },
+  {
+   "regla": "r3a6-052",
+   "iri": "https://example.org/mex-ontologi/definition/33d0a99e-c721-496f-a05e-07646e9ae42a%2F23",
+   "variable": "agua_potable",
+   "literal": "Tiene acceso a agua potable 1=Si 2=No",
+   "concepto": "acceso-agua-potable-caso",
+   "dictamen": "aceptar",
+   "razon": "v2: literal/RAW/huella/regla/concepto verificados por IRI; correctivos v1 resueltos."
+  },
+  {
+   "regla": "r3a6-053",
+   "iri": "https://example.org/mex-ontologi/definition/33d0a99e-c721-496f-a05e-07646e9ae42a%2F24",
+   "variable": "eliminacion_basura",
+   "literal": "Tiene cobertura de eliminación de basura (al menos un día a la semana) 1=Si 2=No",
+   "concepto": "cobertura-eliminacion-basura-caso",
+   "dictamen": "aceptar",
+   "razon": "v2: literal/RAW/huella/regla/concepto verificados por IRI; correctivos v1 resueltos."
+  },
+  {
+   "regla": "r3a6-054",
+   "iri": "https://example.org/mex-ontologi/definition/33d0a99e-c721-496f-a05e-07646e9ae42a%2F25",
+   "variable": "fec_ini_signos_sint",
+   "literal": "Fecha de inicio de signos y síntomas del cuadro clínico actual",
+   "concepto": "fecha-inicio-signos-sintomas-caso",
+   "dictamen": "aceptar",
+   "razon": "v2: literal/RAW/huella/regla/concepto verificados por IRI; correctivos v1 resueltos."
+  },
+  {
+   "regla": "r3a6-055",
+   "iri": "https://example.org/mex-ontologi/definition/33d0a99e-c721-496f-a05e-07646e9ae42a%2F26",
+   "variable": "fec_ini_fiebre",
+   "literal": "Fecha de incio de fiebre",
+   "concepto": "fecha-inicio-fiebre-caso",
+   "dictamen": "aceptar",
+   "razon": "v2: literal/RAW/huella/regla/concepto verificados por IRI; correctivos v1 resueltos."
+  },
+  {
+   "regla": "r3a6-056",
+   "iri": "https://example.org/mex-ontologi/definition/33d0a99e-c721-496f-a05e-07646e9ae42a%2F27",
+   "variable": "temperatura",
+   "literal": "Temperatura del paciente",
+   "concepto": "temperatura-caso",
+   "dictamen": "aceptar",
+   "razon": "v2: literal/RAW/huella/regla/concepto verificados por IRI; correctivos v1 resueltos."
+  },
+  {
+   "regla": "r3a6-057",
+   "iri": "https://example.org/mex-ontologi/definition/33d0a99e-c721-496f-a05e-07646e9ae42a%2F28",
+   "variable": "cefalea",
+   "literal": "El paciente presenta Cefalea 1=Si 2=No",
+   "concepto": "caso-con-cefalea",
+   "dictamen": "aceptar",
+   "razon": "v2: literal/RAW/huella/regla/concepto verificados por IRI; correctivos v1 resueltos."
+  },
+  {
+   "regla": "r3a6-058",
+   "iri": "https://example.org/mex-ontologi/definition/33d0a99e-c721-496f-a05e-07646e9ae42a%2F29",
+   "variable": "mialgias",
+   "literal": "El paciente presenta Mialgias 1=Si 2=No",
+   "concepto": "caso-con-mialgias",
+   "dictamen": "aceptar",
+   "razon": "v2: literal/RAW/huella/regla/concepto verificados por IRI; correctivos v1 resueltos."
+  },
+  {
+   "regla": "r3a6-059",
+   "iri": "https://example.org/mex-ontologi/definition/33d0a99e-c721-496f-a05e-07646e9ae42a%2F30",
+   "variable": "artralgias",
+   "literal": "El paciente presenta Artralgias 1=Si 2=No",
+   "concepto": "caso-con-artralgias",
+   "dictamen": "aceptar",
+   "razon": "v2: literal/RAW/huella/regla/concepto verificados por IRI; correctivos v1 resueltos."
+  },
+  {
+   "regla": "r3a6-060",
+   "iri": "https://example.org/mex-ontologi/definition/33d0a99e-c721-496f-a05e-07646e9ae42a%2F31",
+   "variable": "poliartralgias",
+   "literal": "El paciente presenta Poliartralgias 1=Si 2=No",
+   "concepto": "caso-con-poliartralgias",
+   "dictamen": "aceptar",
+   "razon": "v2: literal/RAW/huella/regla/concepto verificados por IRI; correctivos v1 resueltos."
+  },
+  {
+   "regla": "r3a6-061",
+   "iri": "https://example.org/mex-ontologi/definition/33d0a99e-c721-496f-a05e-07646e9ae42a%2F32",
+   "variable": "artritis",
+   "literal": "El paciente presenta Artritis 1=Si 2=No",
+   "concepto": "caso-con-artritis",
+   "dictamen": "aceptar",
+   "razon": "v2: literal/RAW/huella/regla/concepto verificados por IRI; correctivos v1 resueltos."
+  },
+  {
+   "regla": "r3a6-062",
+   "iri": "https://example.org/mex-ontologi/definition/33d0a99e-c721-496f-a05e-07646e9ae42a%2F33",
+   "variable": "dolor_retroocular",
+   "literal": "El paciente presenta Dolor retroocular 1=Si 2=No",
+   "concepto": "caso-con-dolor-retroocular",
+   "dictamen": "aceptar",
+   "razon": "v2: literal/RAW/huella/regla/concepto verificados por IRI; correctivos v1 resueltos."
+  },
+  {
+   "regla": "r3a6-063",
+   "iri": "https://example.org/mex-ontologi/definition/33d0a99e-c721-496f-a05e-07646e9ae42a%2F34",
+   "variable": "exantema",
+   "literal": "El paciente presenta Exantema 1=Si 2=No",
+   "concepto": "caso-con-exantema",
+   "dictamen": "aceptar",
+   "razon": "v2: literal/RAW/huella/regla/concepto verificados por IRI; correctivos v1 resueltos."
+  },
+  {
+   "regla": "r3a6-064",
+   "iri": "https://example.org/mex-ontologi/definition/33d0a99e-c721-496f-a05e-07646e9ae42a%2F35",
+   "variable": "nauseas",
+   "literal": "El paciente presenta Nauseas 1=Si 2=No",
+   "concepto": "caso-con-nauseas",
+   "dictamen": "aceptar",
+   "razon": "v2: literal/RAW/huella/regla/concepto verificados por IRI; correctivos v1 resueltos."
+  },
+  {
+   "regla": "r3a6-065",
+   "iri": "https://example.org/mex-ontologi/definition/33d0a99e-c721-496f-a05e-07646e9ae42a%2F36",
+   "variable": "vomito",
+   "literal": "El paciente presenta Vómito 1=Si 2=No",
+   "concepto": "caso-con-vomito",
+   "dictamen": "aceptar",
+   "razon": "v2: literal/RAW/huella/regla/concepto verificados por IRI; correctivos v1 resueltos."
+  },
+  {
+   "regla": "r3a6-066",
+   "iri": "https://example.org/mex-ontologi/definition/33d0a99e-c721-496f-a05e-07646e9ae42a%2F37",
+   "variable": "petequias",
+   "literal": "El paciente presenta Petequias 1=Si 2=No",
+   "concepto": "caso-con-petequias",
+   "dictamen": "aceptar",
+   "razon": "v2: literal/RAW/huella/regla/concepto verificados por IRI; correctivos v1 resueltos."
+  },
+  {
+   "regla": "r3a6-067",
+   "iri": "https://example.org/mex-ontologi/definition/33d0a99e-c721-496f-a05e-07646e9ae42a%2F38",
+   "variable": "torniquete_positivo",
+   "literal": "El paciente presenta un torniquete positivo 1=Si 2=No",
+   "concepto": "caso-con-un-torniquete-positivo",
+   "dictamen": "aceptar",
+   "razon": "v2: literal/RAW/huella/regla/concepto verificados por IRI; correctivos v1 resueltos."
+  },
+  {
+   "regla": "r3a6-068",
+   "iri": "https://example.org/mex-ontologi/definition/33d0a99e-c721-496f-a05e-07646e9ae42a%2F40",
+   "variable": "fec_ini_signos_alarma",
+   "literal": "Fecha inicio signos de alarma",
+   "concepto": "fecha-inicio-signos-alarma-caso",
+   "dictamen": "aceptar",
+   "razon": "v2: literal/RAW/huella/regla/concepto verificados por IRI; correctivos v1 resueltos."
+  },
+  {
+   "regla": "r3a6-069",
+   "iri": "https://example.org/mex-ontologi/definition/33d0a99e-c721-496f-a05e-07646e9ae42a%2F41",
+   "variable": "vomito_persistente",
+   "literal": "El paciente presenta Vómito persistente 1=Si 2=No",
+   "concepto": "caso-con-vomito-persistente",
+   "dictamen": "aceptar",
+   "razon": "v2: literal/RAW/huella/regla/concepto verificados por IRI; correctivos v1 resueltos."
+  },
+  {
+   "regla": "r3a6-070",
+   "iri": "https://example.org/mex-ontologi/definition/33d0a99e-c721-496f-a05e-07646e9ae42a%2F42",
+   "variable": "dolor_abdominal",
+   "literal": "El paciente presenta Dolor abdominal 1=Si 2=No",
+   "concepto": "caso-con-dolor-abdominal",
+   "dictamen": "aceptar",
+   "razon": "v2: literal/RAW/huella/regla/concepto verificados por IRI; correctivos v1 resueltos."
+  },
+  {
+   "regla": "r3a6-071",
+   "iri": "https://example.org/mex-ontologi/definition/33d0a99e-c721-496f-a05e-07646e9ae42a%2F43",
+   "variable": "acumulacion_liquidos",
+   "literal": "El paciente presenta acumulación de líquidos 1=Si 2=No",
+   "concepto": "caso-con-acumulacion-de-liquidos",
+   "dictamen": "aceptar",
+   "razon": "v2: literal/RAW/huella/regla/concepto verificados por IRI; correctivos v1 resueltos."
+  },
+  {
+   "regla": "r3a6-072",
+   "iri": "https://example.org/mex-ontologi/definition/33d0a99e-c721-496f-a05e-07646e9ae42a%2F44",
+   "variable": "sangrado_mucosas",
+   "literal": "El paciente presenta Sangrado en mucosa 1=Si 2=No",
+   "concepto": "caso-con-sangrado-en-mucosa",
+   "dictamen": "aceptar",
+   "razon": "v2: literal/RAW/huella/regla/concepto verificados por IRI; correctivos v1 resueltos."
+  },
+  {
+   "regla": "r3a6-073",
+   "iri": "https://example.org/mex-ontologi/definition/33d0a99e-c721-496f-a05e-07646e9ae42a%2F45",
+   "variable": "letargo",
+   "literal": "El paciente presenta Letargo 1=Si 2=No",
+   "concepto": "caso-con-letargo",
+   "dictamen": "aceptar",
+   "razon": "v2: literal/RAW/huella/regla/concepto verificados por IRI; correctivos v1 resueltos."
+  },
+  {
+   "regla": "r3a6-074",
+   "iri": "https://example.org/mex-ontologi/definition/33d0a99e-c721-496f-a05e-07646e9ae42a%2F46",
+   "variable": "irritabilidad",
+   "literal": "El paciente presenta Irritabilidad 1=Si 2=No",
+   "concepto": "caso-con-irritabilidad",
+   "dictamen": "aceptar",
+   "razon": "v2: literal/RAW/huella/regla/concepto verificados por IRI; correctivos v1 resueltos."
+  },
+  {
+   "regla": "r3a6-075",
+   "iri": "https://example.org/mex-ontologi/definition/33d0a99e-c721-496f-a05e-07646e9ae42a%2F47",
+   "variable": "hipotension_postural",
+   "literal": "El paciente presenta Hipotensión postural 1=Si 2=No",
+   "concepto": "caso-con-hipotension-postural",
+   "dictamen": "aceptar",
+   "razon": "v2: literal/RAW/huella/regla/concepto verificados por IRI; correctivos v1 resueltos."
+  },
+  {
+   "regla": "r3a6-076",
+   "iri": "https://example.org/mex-ontologi/definition/33d0a99e-c721-496f-a05e-07646e9ae42a%2F48",
+   "variable": "hepatomegalia",
+   "literal": "El paciente presenta Hepatomegalia 1=Si 2=No",
+   "concepto": "caso-con-hepatomegalia",
+   "dictamen": "aceptar",
+   "razon": "v2: literal/RAW/huella/regla/concepto verificados por IRI; correctivos v1 resueltos."
+  },
+  {
+   "regla": "r3a6-077",
+   "iri": "https://example.org/mex-ontologi/definition/33d0a99e-c721-496f-a05e-07646e9ae42a%2F49",
+   "variable": "aumento_hematocrito",
+   "literal": "El paciente presenta aumento en hematocrito 1=Si 2=No",
+   "concepto": "caso-con-aumento-en-hematocrito",
+   "dictamen": "aceptar",
+   "razon": "v2: literal/RAW/huella/regla/concepto verificados por IRI; correctivos v1 resueltos."
+  },
+  {
+   "regla": "r3a6-078",
+   "iri": "https://example.org/mex-ontologi/definition/33d0a99e-c721-496f-a05e-07646e9ae42a%2F50",
+   "variable": "escape_plasma",
+   "literal": "El paciente presenta escape importante de plasma o pulso débil o indetectable 1=Si 2=No",
+   "concepto": "caso-con-escape-importante-de-plasma-o-pulso-debil-o-indetectable",
+   "dictamen": "aceptar",
+   "razon": "v2: literal/RAW/huella/regla/concepto verificados por IRI; correctivos v1 resueltos."
+  },
+  {
+   "regla": "r3a6-079",
+   "iri": "https://example.org/mex-ontologi/definition/33d0a99e-c721-496f-a05e-07646e9ae42a%2F51",
+   "variable": "taquicardia",
+   "literal": "El paciente presenta Taquicardia 1=Si 2=No",
+   "concepto": "caso-con-taquicardia",
+   "dictamen": "aceptar",
+   "razon": "v2: literal/RAW/huella/regla/concepto verificados por IRI; correctivos v1 resueltos."
+  },
+  {
+   "regla": "r3a6-080",
+   "iri": "https://example.org/mex-ontologi/definition/33d0a99e-c721-496f-a05e-07646e9ae42a%2F52",
+   "variable": "extremidades_frias",
+   "literal": "El paciente presenta Extremidades frías 1=Si 2=No",
+   "concepto": "caso-con-extremidades-frias",
+   "dictamen": "aceptar",
+   "razon": "v2: literal/RAW/huella/regla/concepto verificados por IRI; correctivos v1 resueltos."
+  },
+  {
+   "regla": "r3a6-081",
+   "iri": "https://example.org/mex-ontologi/definition/33d0a99e-c721-496f-a05e-07646e9ae42a%2F53",
+   "variable": "llenado_capilar",
+   "literal": "El paciente presenta llenado capilar ≥3 seg. 1=Si 2=No",
+   "concepto": "caso-con-llenado-capilar-3-seg",
+   "dictamen": "aceptar",
+   "razon": "v2: literal/RAW/huella/regla/concepto verificados por IRI; correctivos v1 resueltos."
+  },
+  {
+   "regla": "r3a6-082",
+   "iri": "https://example.org/mex-ontologi/definition/33d0a99e-c721-496f-a05e-07646e9ae42a%2F54",
+   "variable": "presion_convergente",
+   "literal": "El paciente presenta  presión arterial convergente <20 mmhg 1=Si 2=No",
+   "concepto": "caso-con-presion-arterial-convergente-20-mmhg",
+   "dictamen": "aceptar",
+   "razon": "v2: literal/RAW/huella/regla/concepto verificados por IRI; correctivos v1 resueltos."
+  },
+  {
+   "regla": "r3a6-083",
+   "iri": "https://example.org/mex-ontologi/definition/33d0a99e-c721-496f-a05e-07646e9ae42a%2F55",
+   "variable": "hipotension_arterial",
+   "literal": "El paciente presenta hipotensión arterial en fase tardía 1=Si 2=No",
+   "concepto": "caso-con-hipotension-arterial-en-fase-tardia",
+   "dictamen": "aceptar",
+   "razon": "v2: literal/RAW/huella/regla/concepto verificados por IRI; correctivos v1 resueltos."
+  },
+  {
+   "regla": "r3a6-084",
+   "iri": "https://example.org/mex-ontologi/definition/33d0a99e-c721-496f-a05e-07646e9ae42a%2F56",
+   "variable": "insuficiencia_respiratoria",
+   "literal": "El paciente presenta insuficiencia respiratoria 1=Si 2=No",
+   "concepto": "caso-con-insuficiencia-respiratoria",
+   "dictamen": "aceptar",
+   "razon": "v2: literal/RAW/huella/regla/concepto verificados por IRI; correctivos v1 resueltos."
+  },
+  {
+   "regla": "r3a6-085",
+   "iri": "https://example.org/mex-ontologi/definition/33d0a99e-c721-496f-a05e-07646e9ae42a%2F57",
+   "variable": "hematemesis",
+   "literal": "El paciente presenta hematémisis 1=Si 2=No",
+   "concepto": "caso-con-hematemisis",
+   "dictamen": "aceptar",
+   "razon": "v2: literal/RAW/huella/regla/concepto verificados por IRI; correctivos v1 resueltos."
+  },
+  {
+   "regla": "r3a6-086",
+   "iri": "https://example.org/mex-ontologi/definition/33d0a99e-c721-496f-a05e-07646e9ae42a%2F58",
+   "variable": "melena",
+   "literal": "El paciente presenta melena 1=Si 2=No",
+   "concepto": "caso-con-melena",
+   "dictamen": "aceptar",
+   "razon": "v2: literal/RAW/huella/regla/concepto verificados por IRI; correctivos v1 resueltos."
+  },
+  {
+   "regla": "r3a6-087",
+   "iri": "https://example.org/mex-ontologi/definition/33d0a99e-c721-496f-a05e-07646e9ae42a%2F59",
+   "variable": "metrorrragia_voluminosa",
+   "literal": "El paciente presenta metrorragia voluminosa 1=Si 2=No",
+   "concepto": "caso-con-metrorragia-voluminosa",
+   "dictamen": "aceptar",
+   "razon": "v2: literal/RAW/huella/regla/concepto verificados por IRI; correctivos v1 resueltos."
+  },
+  {
+   "regla": "r3a6-088",
+   "iri": "https://example.org/mex-ontologi/definition/33d0a99e-c721-496f-a05e-07646e9ae42a%2F61",
+   "variable": "ast_alt",
+   "literal": "El paciente presenta AST o ALT ≥1000UI 1=Si 2=No",
+   "concepto": "caso-con-ast-o-alt-1000ui",
+   "dictamen": "aceptar",
+   "razon": "v2: literal/RAW/huella/regla/concepto verificados por IRI; correctivos v1 resueltos."
+  },
+  {
+   "regla": "r3a6-089",
+   "iri": "https://example.org/mex-ontologi/definition/33d0a99e-c721-496f-a05e-07646e9ae42a%2F62",
+   "variable": "alteraciones_conciencias",
+   "literal": "El paciente presenta alteraciones de conciencia 1=Si 2=No",
+   "concepto": "caso-con-alteraciones-de-conciencia",
+   "dictamen": "aceptar",
+   "razon": "v2: literal/RAW/huella/regla/concepto verificados por IRI; correctivos v1 resueltos."
+  },
+  {
+   "regla": "r3a6-090",
+   "iri": "https://example.org/mex-ontologi/definition/33d0a99e-c721-496f-a05e-07646e9ae42a%2F63",
+   "variable": "miocarditis",
+   "literal": "El paciente presenta miocarditis 1=Si 2=No",
+   "concepto": "caso-con-miocarditis",
+   "dictamen": "aceptar",
+   "razon": "v2: literal/RAW/huella/regla/concepto verificados por IRI; correctivos v1 resueltos."
+  },
+  {
+   "regla": "r3a6-091",
+   "iri": "https://example.org/mex-ontologi/definition/33d0a99e-c721-496f-a05e-07646e9ae42a%2F64",
+   "variable": "compromiso_organos",
+   "literal": "El paciente presenta compromiso grave de otros órganos 1=Si 2=No",
+   "concepto": "caso-con-compromiso-grave-de-otros-organos",
+   "dictamen": "aceptar",
+   "razon": "v2: literal/RAW/huella/regla/concepto verificados por IRI; correctivos v1 resueltos."
+  },
+  {
+   "regla": "r3a6-092",
+   "iri": "https://example.org/mex-ontologi/definition/33d0a99e-c721-496f-a05e-07646e9ae42a%2F65",
+   "variable": "dolor_espalda",
+   "literal": "El paciente presenta dolor de espalda 1=Si 2=No",
+   "concepto": "caso-con-dolor-de-espalda",
+   "dictamen": "aceptar",
+   "razon": "v2: literal/RAW/huella/regla/concepto verificados por IRI; correctivos v1 resueltos."
+  },
+  {
+   "regla": "r3a6-093",
+   "iri": "https://example.org/mex-ontologi/definition/33d0a99e-c721-496f-a05e-07646e9ae42a%2F66",
+   "variable": "prurito",
+   "literal": "El paciente presenta prurito 1=Si 2=No",
+   "concepto": "caso-con-prurito",
+   "dictamen": "aceptar",
+   "razon": "v2: literal/RAW/huella/regla/concepto verificados por IRI; correctivos v1 resueltos."
+  },
+  {
+   "regla": "r3a6-094",
+   "iri": "https://example.org/mex-ontologi/definition/33d0a99e-c721-496f-a05e-07646e9ae42a%2F67",
+   "variable": "diaforesis",
+   "literal": "El paciente presenta diaforesis 1=Si 2=No",
+   "concepto": "caso-con-diaforesis",
+   "dictamen": "aceptar",
+   "razon": "v2: literal/RAW/huella/regla/concepto verificados por IRI; correctivos v1 resueltos."
+  },
+  {
+   "regla": "r3a6-095",
+   "iri": "https://example.org/mex-ontologi/definition/33d0a99e-c721-496f-a05e-07646e9ae42a%2F68",
+   "variable": "escalofríos",
+   "literal": "El paciente presenta escalofríos 1=Si 2=No",
+   "concepto": "caso-con-escalofrios",
+   "dictamen": "aceptar",
+   "razon": "v2: literal/RAW/huella/regla/concepto verificados por IRI; correctivos v1 resueltos."
+  },
+  {
+   "regla": "r3a6-096",
+   "iri": "https://example.org/mex-ontologi/definition/33d0a99e-c721-496f-a05e-07646e9ae42a%2F69",
+   "variable": "fotofobia",
+   "literal": "El paciente presenta fotofobia 1=Si 2=No",
+   "concepto": "caso-con-fotofobia",
+   "dictamen": "aceptar",
+   "razon": "v2: literal/RAW/huella/regla/concepto verificados por IRI; correctivos v1 resueltos."
+  },
+  {
+   "regla": "r3a6-097",
+   "iri": "https://example.org/mex-ontologi/definition/33d0a99e-c721-496f-a05e-07646e9ae42a%2F70",
+   "variable": "lipotimia",
+   "literal": "El paciente presenta lipotimia 1=Si 2=No",
+   "concepto": "caso-con-lipotimia",
+   "dictamen": "aceptar",
+   "razon": "v2: literal/RAW/huella/regla/concepto verificados por IRI; correctivos v1 resueltos."
+  },
+  {
+   "regla": "r3a6-098",
+   "iri": "https://example.org/mex-ontologi/definition/33d0a99e-c721-496f-a05e-07646e9ae42a%2F71",
+   "variable": "diarrea",
+   "literal": "El paciente presenta diarrea 1=Si 2=No",
+   "concepto": "caso-con-diarrea",
+   "dictamen": "aceptar",
+   "razon": "v2: literal/RAW/huella/regla/concepto verificados por IRI; correctivos v1 resueltos."
+  },
+  {
+   "regla": "r3a6-099",
+   "iri": "https://example.org/mex-ontologi/definition/33d0a99e-c721-496f-a05e-07646e9ae42a%2F72",
+   "variable": "conjuntivitis",
+   "literal": "El paciente presenta conjuntivitis 1=Si 2=No",
+   "concepto": "caso-con-conjuntivitis",
+   "dictamen": "aceptar",
+   "razon": "v2: literal/RAW/huella/regla/concepto verificados por IRI; correctivos v1 resueltos."
+  },
+  {
+   "regla": "r3a6-100",
+   "iri": "https://example.org/mex-ontologi/definition/33d0a99e-c721-496f-a05e-07646e9ae42a%2F73",
+   "variable": "congestion_nasal",
+   "literal": "El paciente presenta congestión nasal 1=Si 2=No",
+   "concepto": "caso-con-congestion-nasal",
+   "dictamen": "aceptar",
+   "razon": "v2: literal/RAW/huella/regla/concepto verificados por IRI; correctivos v1 resueltos."
+  },
+  {
+   "regla": "r3a6-101",
+   "iri": "https://example.org/mex-ontologi/definition/33d0a99e-c721-496f-a05e-07646e9ae42a%2F74",
+   "variable": "tos",
+   "literal": "El paciente presenta tos 1=Si 2=No",
+   "concepto": "caso-con-tos",
+   "dictamen": "aceptar",
+   "razon": "v2: literal/RAW/huella/regla/concepto verificados por IRI; correctivos v1 resueltos."
+  },
+  {
+   "regla": "r3a6-102",
+   "iri": "https://example.org/mex-ontologi/definition/33d0a99e-c721-496f-a05e-07646e9ae42a%2F75",
+   "variable": "faringitis",
+   "literal": "El paciente presenta faringitis 1=Si 2=No",
+   "concepto": "caso-con-faringitis",
+   "dictamen": "aceptar",
+   "razon": "v2: literal/RAW/huella/regla/concepto verificados por IRI; correctivos v1 resueltos."
+  },
+  {
+   "regla": "r3a6-103",
+   "iri": "https://example.org/mex-ontologi/definition/33d0a99e-c721-496f-a05e-07646e9ae42a%2F76",
+   "variable": "esplenomegalia",
+   "literal": "El paciente presenta esplenomegalia 1=Si 2=No",
+   "concepto": "caso-con-esplenomegalia",
+   "dictamen": "aceptar",
+   "razon": "v2: literal/RAW/huella/regla/concepto verificados por IRI; correctivos v1 resueltos."
+  },
+  {
+   "regla": "r3a6-104",
+   "iri": "https://example.org/mex-ontologi/definition/33d0a99e-c721-496f-a05e-07646e9ae42a%2F77",
+   "variable": "alteraciones_gusto",
+   "literal": "El paciente presenta alteraciones del gusto 1=Si 2=No",
+   "concepto": "caso-con-alteraciones-del-gusto",
+   "dictamen": "aceptar",
+   "razon": "v2: literal/RAW/huella/regla/concepto verificados por IRI; correctivos v1 resueltos."
+  },
+  {
+   "regla": "r3a6-105",
+   "iri": "https://example.org/mex-ontologi/definition/33d0a99e-c721-496f-a05e-07646e9ae42a%2F78",
+   "variable": "adenomegalias",
+   "literal": "El paciente presenta adenomegalias 1=Si 2=No",
+   "concepto": "caso-con-adenomegalias",
+   "dictamen": "aceptar",
+   "razon": "v2: literal/RAW/huella/regla/concepto verificados por IRI; correctivos v1 resueltos."
+  },
+  {
+   "regla": "r3a6-106",
+   "iri": "https://example.org/mex-ontologi/definition/33d0a99e-c721-496f-a05e-07646e9ae42a%2F79",
+   "variable": "disnea",
+   "literal": "El paciente presenta disnea 1=Si 2=No",
+   "concepto": "caso-con-disnea",
+   "dictamen": "aceptar",
+   "razon": "v2: literal/RAW/huella/regla/concepto verificados por IRI; correctivos v1 resueltos."
+  },
+  {
+   "regla": "r3a6-107",
+   "iri": "https://example.org/mex-ontologi/definition/33d0a99e-c721-496f-a05e-07646e9ae42a%2F80",
+   "variable": "alteraciones_cardiacas",
+   "literal": "El paciente presenta alteraciones cardiacas 1=Si 2=No",
+   "concepto": "caso-con-alteraciones-cardiacas",
+   "dictamen": "aceptar",
+   "razon": "v2: literal/RAW/huella/regla/concepto verificados por IRI; correctivos v1 resueltos."
+  },
+  {
+   "regla": "r3a6-108",
+   "iri": "https://example.org/mex-ontologi/definition/33d0a99e-c721-496f-a05e-07646e9ae42a%2F81",
+   "variable": "nodulos",
+   "literal": "El paciente presenta lesiones nodulares 1=Si 2=No",
+   "concepto": "caso-con-lesiones-nodulares",
+   "dictamen": "aceptar",
+   "razon": "v2: literal/RAW/huella/regla/concepto verificados por IRI; correctivos v1 resueltos."
+  },
+  {
+   "regla": "r3a6-109",
+   "iri": "https://example.org/mex-ontologi/definition/33d0a99e-c721-496f-a05e-07646e9ae42a%2F82",
+   "variable": "ulceras",
+   "literal": "El paciente presenta ulceras 1=Si 2=No",
+   "concepto": "caso-con-ulceras",
+   "dictamen": "aceptar",
+   "razon": "v2: literal/RAW/huella/regla/concepto verificados por IRI; correctivos v1 resueltos."
+  },
+  {
+   "regla": "r3a6-110",
+   "iri": "https://example.org/mex-ontologi/definition/33d0a99e-c721-496f-a05e-07646e9ae42a%2F83",
+   "variable": "lesion_membranas",
+   "literal": "El paciente presenta lesión en membranas o mucosas 1=Si 2=No",
+   "concepto": "caso-con-lesion-en-membranas-o-mucosas",
+   "dictamen": "aceptar",
+   "razon": "v2: literal/RAW/huella/regla/concepto verificados por IRI; correctivos v1 resueltos."
+  },
+  {
+   "regla": "r3a6-111",
+   "iri": "https://example.org/mex-ontologi/definition/33d0a99e-c721-496f-a05e-07646e9ae42a%2F84",
+   "variable": "ictericia",
+   "literal": "El paciente presenta ictericia 1=Si 2=No",
+   "concepto": "caso-con-ictericia",
+   "dictamen": "aceptar",
+   "razon": "v2: literal/RAW/huella/regla/concepto verificados por IRI; correctivos v1 resueltos."
+  },
+  {
+   "regla": "r3a6-112",
+   "iri": "https://example.org/mex-ontologi/definition/33d0a99e-c721-496f-a05e-07646e9ae42a%2F85",
+   "variable": "desorientacion",
+   "literal": "El paciente presenta desorientación 1=Si 2=No",
+   "concepto": "caso-con-desorientacion",
+   "dictamen": "aceptar",
+   "razon": "v2: literal/RAW/huella/regla/concepto verificados por IRI; correctivos v1 resueltos."
+  },
+  {
+   "regla": "r3a6-113",
+   "iri": "https://example.org/mex-ontologi/definition/33d0a99e-c721-496f-a05e-07646e9ae42a%2F86",
+   "variable": "convulsiones",
+   "literal": "El paciente presenta convulsiones 1=Si 2=No",
+   "concepto": "caso-con-convulsiones",
+   "dictamen": "aceptar",
+   "razon": "v2: literal/RAW/huella/regla/concepto verificados por IRI; correctivos v1 resueltos."
+  },
+  {
+   "regla": "r3a6-114",
+   "iri": "https://example.org/mex-ontologi/definition/33d0a99e-c721-496f-a05e-07646e9ae42a%2F87",
+   "variable": "debilidad_muscular",
+   "literal": "El paciente presenta debilidad muscular 1=Si 2=No",
+   "concepto": "caso-con-debilidad-muscular",
+   "dictamen": "aceptar",
+   "razon": "v2: literal/RAW/huella/regla/concepto verificados por IRI; correctivos v1 resueltos."
+  },
+  {
+   "regla": "r3a6-115",
+   "iri": "https://example.org/mex-ontologi/definition/33d0a99e-c721-496f-a05e-07646e9ae42a%2F88",
+   "variable": "paralisis",
+   "literal": "El paciente presenta parálisis 1=Si 2=No",
+   "concepto": "caso-con-paralisis",
+   "dictamen": "aceptar",
+   "razon": "v2: literal/RAW/huella/regla/concepto verificados por IRI; correctivos v1 resueltos."
+  },
+  {
+   "regla": "r3a6-116",
+   "iri": "https://example.org/mex-ontologi/definition/33d0a99e-c721-496f-a05e-07646e9ae42a%2F89",
+   "variable": "otitis",
+   "literal": "El paciente presenta otitis 1=Si 2=No",
+   "concepto": "caso-con-otitis",
+   "dictamen": "aceptar",
+   "razon": "v2: literal/RAW/huella/regla/concepto verificados por IRI; correctivos v1 resueltos."
+  },
+  {
+   "regla": "r3a6-117",
+   "iri": "https://example.org/mex-ontologi/definition/33d0a99e-c721-496f-a05e-07646e9ae42a%2F90",
+   "variable": "choque",
+   "literal": "El paciente presenta choque 1=Si 2=No",
+   "concepto": "caso-con-choque",
+   "dictamen": "aceptar",
+   "razon": "v2: literal/RAW/huella/regla/concepto verificados por IRI; correctivos v1 resueltos."
+  },
+  {
+   "regla": "r3a6-118",
+   "iri": "https://example.org/mex-ontologi/definition/33d0a99e-c721-496f-a05e-07646e9ae42a%2F91",
+   "variable": "equimosis",
+   "literal": "El paciente presenta equimosis 1=Si 2=No",
+   "concepto": "caso-con-equimosis",
+   "dictamen": "aceptar",
+   "razon": "v2: literal/RAW/huella/regla/concepto verificados por IRI; correctivos v1 resueltos."
+  },
+  {
+   "regla": "r3a6-119",
+   "iri": "https://example.org/mex-ontologi/definition/33d0a99e-c721-496f-a05e-07646e9ae42a%2F92",
+   "variable": "hematomas",
+   "literal": "El paciente presenta hematomas 1=Si 2=No",
+   "concepto": "caso-con-hematomas",
+   "dictamen": "aceptar",
+   "razon": "v2: literal/RAW/huella/regla/concepto verificados por IRI; correctivos v1 resueltos."
+  },
+  {
+   "regla": "r3a6-120",
+   "iri": "https://example.org/mex-ontologi/definition/33d0a99e-c721-496f-a05e-07646e9ae42a%2F93",
+   "variable": "ascitis",
+   "literal": "El paciente presenta ascitis 1=Si 2=No",
+   "concepto": "caso-con-ascitis",
+   "dictamen": "aceptar",
+   "razon": "v2: literal/RAW/huella/regla/concepto verificados por IRI; correctivos v1 resueltos."
+  },
+  {
+   "regla": "r3a6-121",
+   "iri": "https://example.org/mex-ontologi/definition/33d0a99e-c721-496f-a05e-07646e9ae42a%2F94",
+   "variable": "derrame_pleural",
+   "literal": "El paciente presenta derrame pleural 1=Si 2=No",
+   "concepto": "caso-con-derrame-pleural",
+   "dictamen": "aceptar",
+   "razon": "v2: literal/RAW/huella/regla/concepto verificados por IRI; correctivos v1 resueltos."
+  },
+  {
+   "regla": "r3a6-122",
+   "iri": "https://example.org/mex-ontologi/definition/33d0a99e-c721-496f-a05e-07646e9ae42a%2F95",
+   "variable": "edema",
+   "literal": "El paciente presenta edema 1=Si 2=No",
+   "concepto": "caso-con-edema",
+   "dictamen": "aceptar",
+   "razon": "v2: literal/RAW/huella/regla/concepto verificados por IRI; correctivos v1 resueltos."
+  },
+  {
+   "regla": "r3a6-123",
+   "iri": "https://example.org/mex-ontologi/definition/33d0a99e-c721-496f-a05e-07646e9ae42a%2F96",
+   "variable": "gingivorragia",
+   "literal": "El paciente presenta gingivorragia 1=Si 2=No",
+   "concepto": "caso-con-gingivorragia",
+   "dictamen": "aceptar",
+   "razon": "v2: literal/RAW/huella/regla/concepto verificados por IRI; correctivos v1 resueltos."
+  },
+  {
+   "regla": "r3a6-124",
+   "iri": "https://example.org/mex-ontologi/definition/33d0a99e-c721-496f-a05e-07646e9ae42a%2F97",
+   "variable": "epistaxis",
+   "literal": "El paciente presenta epistaxis 1=Si 2=No",
+   "concepto": "caso-con-epistaxis",
+   "dictamen": "aceptar",
+   "razon": "v2: literal/RAW/huella/regla/concepto verificados por IRI; correctivos v1 resueltos."
+  },
+  {
+   "regla": "r3a6-125",
+   "iri": "https://example.org/mex-ontologi/definition/33d0a99e-c721-496f-a05e-07646e9ae42a%2F98",
+   "variable": "edema_articular",
+   "literal": "El paciente presenta edema articular 1=Si 2=No",
+   "concepto": "caso-con-edema-articular",
+   "dictamen": "aceptar",
+   "razon": "v2: literal/RAW/huella/regla/concepto verificados por IRI; correctivos v1 resueltos."
+  },
+  {
+   "regla": "r3a6-126",
+   "iri": "https://example.org/mex-ontologi/definition/33d0a99e-c721-496f-a05e-07646e9ae42a%2F99",
+   "variable": "anorexia",
+   "literal": "El paciente presenta anorexia 1=Si 2=No",
+   "concepto": "caso-con-anorexia",
+   "dictamen": "aceptar",
+   "razon": "v2: literal/RAW/huella/regla/concepto verificados por IRI; correctivos v1 resueltos."
+  },
+  {
+   "regla": "r3a6-127",
+   "iri": "https://example.org/mex-ontologi/definition/33d0a99e-c721-496f-a05e-07646e9ae42a%2F100",
+   "variable": "cardiopatia_dilatada",
+   "literal": "El paciente presenta cardiopatia dilatada 1=Si 2=No",
+   "concepto": "caso-con-cardiopatia-dilatada",
+   "dictamen": "aceptar",
+   "razon": "v2: literal/RAW/huella/regla/concepto verificados por IRI; correctivos v1 resueltos."
+  },
+  {
+   "regla": "r3a6-128",
+   "iri": "https://example.org/mex-ontologi/definition/33d0a99e-c721-496f-a05e-07646e9ae42a%2F101",
+   "variable": "changoma",
+   "literal": "El paciente presenta chagoma de inoculación 1=Si 2=No",
+   "concepto": "caso-con-chagoma-de-inoculacion",
+   "dictamen": "aceptar",
+   "razon": "v2: literal/RAW/huella/regla/concepto verificados por IRI; correctivos v1 resueltos."
+  },
+  {
+   "regla": "r3a6-129",
+   "iri": "https://example.org/mex-ontologi/definition/33d0a99e-c721-496f-a05e-07646e9ae42a%2F102",
+   "variable": "fatiga",
+   "literal": "El paciente presenta fatiga 1=Si 2=No",
+   "concepto": "caso-con-fatiga",
+   "dictamen": "aceptar",
+   "razon": "v2: literal/RAW/huella/regla/concepto verificados por IRI; correctivos v1 resueltos."
+  },
+  {
+   "regla": "r3a6-130",
+   "iri": "https://example.org/mex-ontologi/definition/33d0a99e-c721-496f-a05e-07646e9ae42a%2F103",
+   "variable": "mmegacolon",
+   "literal": "El paciente presenta megacolon 1=Si 2=No",
+   "concepto": "caso-con-megacolon",
+   "dictamen": "aceptar",
+   "razon": "v2: literal/RAW/huella/regla/concepto verificados por IRI; correctivos v1 resueltos."
+  },
+  {
+   "regla": "r3a6-131",
+   "iri": "https://example.org/mex-ontologi/definition/33d0a99e-c721-496f-a05e-07646e9ae42a%2F104",
+   "variable": "alteraciones_neurologicas",
+   "literal": "El paciente presenta alteraciones neurológicas 1=Si 2=No",
+   "concepto": "caso-con-alteraciones-neurologicas",
+   "dictamen": "aceptar",
+   "razon": "v2: literal/RAW/huella/regla/concepto verificados por IRI; correctivos v1 resueltos."
+  },
+  {
+   "regla": "r3a6-132",
+   "iri": "https://example.org/mex-ontologi/definition/33d0a99e-c721-496f-a05e-07646e9ae42a%2F105",
+   "variable": "mmegaesofago",
+   "literal": "El paciente presenta megaesófago 1=Si 2=No",
+   "concepto": "caso-con-megaesofago",
+   "dictamen": "aceptar",
+   "razon": "v2: literal/RAW/huella/regla/concepto verificados por IRI; correctivos v1 resueltos."
+  },
+  {
+   "regla": "r3a6-133",
+   "iri": "https://example.org/mex-ontologi/definition/33d0a99e-c721-496f-a05e-07646e9ae42a%2F106",
+   "variable": "miocardiopatia",
+   "literal": "El paciente presenta miocardiopatía 1=Si 2=No",
+   "concepto": "caso-con-miocardiopatia",
+   "dictamen": "aceptar",
+   "razon": "v2: literal/RAW/huella/regla/concepto verificados por IRI; correctivos v1 resueltos."
+  },
+  {
+   "regla": "r3a6-134",
+   "iri": "https://example.org/mex-ontologi/definition/33d0a99e-c721-496f-a05e-07646e9ae42a%2F107",
+   "variable": "signo_romana",
+   "literal": "El paciente presenta signo de romaña 1=Si 2=No",
+   "concepto": "caso-con-signo-de-romana",
+   "dictamen": "aceptar",
+   "razon": "v2: literal/RAW/huella/regla/concepto verificados por IRI; correctivos v1 resueltos."
+  },
+  {
+   "regla": "r3a6-135",
+   "iri": "https://example.org/mex-ontologi/definition/33d0a99e-c721-496f-a05e-07646e9ae42a%2F108",
+   "variable": "adinamia",
+   "literal": "El paciente presenta adinamia 1=Si 2=No",
+   "concepto": "caso-con-adinamia",
+   "dictamen": "aceptar",
+   "razon": "v2: literal/RAW/huella/regla/concepto verificados por IRI; correctivos v1 resueltos."
+  },
+  {
+   "regla": "r3a6-136",
+   "iri": "https://example.org/mex-ontologi/definition/33d0a99e-c721-496f-a05e-07646e9ae42a%2F109",
+   "variable": "hiperemia_faringea",
+   "literal": "El paciente presenta hiperemia faringea 1=Si 2=No",
+   "concepto": "caso-con-hiperemia-faringea",
+   "dictamen": "aceptar",
+   "razon": "v2: literal/RAW/huella/regla/concepto verificados por IRI; correctivos v1 resueltos."
+  },
+  {
+   "regla": "r3a6-137",
+   "iri": "https://example.org/mex-ontologi/definition/33d0a99e-c721-496f-a05e-07646e9ae42a%2F110",
+   "variable": "astenia",
+   "literal": "El paciente presenta astenia 1=Si 2=No",
+   "concepto": "caso-con-astenia",
+   "dictamen": "aceptar",
+   "razon": "v2: literal/RAW/huella/regla/concepto verificados por IRI; correctivos v1 resueltos."
+  },
+  {
+   "regla": "r3a6-138",
+   "iri": "https://example.org/mex-ontologi/definition/33d0a99e-c721-496f-a05e-07646e9ae42a%2F111",
+   "variable": "signos_meningeos",
+   "literal": "El paciente presenta signos meningeos 1=Si 2=No",
+   "concepto": "caso-con-signos-meningeos",
+   "dictamen": "aceptar",
+   "razon": "v2: literal/RAW/huella/regla/concepto verificados por IRI; correctivos v1 resueltos."
+  },
+  {
+   "regla": "r3a6-139",
+   "iri": "https://example.org/mex-ontologi/definition/33d0a99e-c721-496f-a05e-07646e9ae42a%2F112",
+   "variable": "encefalitis",
+   "literal": "El paciente presenta encefalitis 1=Si 2=No",
+   "concepto": "caso-con-encefalitis",
+   "dictamen": "aceptar",
+   "razon": "v2: literal/RAW/huella/regla/concepto verificados por IRI; correctivos v1 resueltos."
+  },
+  {
+   "regla": "r3a6-140",
+   "iri": "https://example.org/mex-ontologi/definition/33d0a99e-c721-496f-a05e-07646e9ae42a%2F113",
+   "variable": "meningitis",
+   "literal": "El paciente presenta meningitis 1=Si 2=No",
+   "concepto": "caso-con-meningitis",
+   "dictamen": "aceptar",
+   "razon": "v2: literal/RAW/huella/regla/concepto verificados por IRI; correctivos v1 resueltos."
+  },
+  {
+   "regla": "r3a6-141",
+   "iri": "https://example.org/mex-ontologi/definition/33d0a99e-c721-496f-a05e-07646e9ae42a%2F114",
+   "variable": "cefalea_frontal",
+   "literal": "El paciente presenta cefalea frontal 1=Si 2=No",
+   "concepto": "caso-con-cefalea-frontal",
+   "dictamen": "aceptar",
+   "razon": "v2: literal/RAW/huella/regla/concepto verificados por IRI; correctivos v1 resueltos."
+  },
+  {
+   "regla": "r3a6-142",
+   "iri": "https://example.org/mex-ontologi/definition/33d0a99e-c721-496f-a05e-07646e9ae42a%2F115",
+   "variable": "perdida_peso",
+   "literal": "El paciente presenta pérdida de peso 1=Si 2=No",
+   "concepto": "caso-con-perdida-de-peso",
+   "dictamen": "aceptar",
+   "razon": "v2: literal/RAW/huella/regla/concepto verificados por IRI; correctivos v1 resueltos."
+  },
+  {
+   "regla": "r3a6-143",
+   "iri": "https://example.org/mex-ontologi/definition/33d0a99e-c721-496f-a05e-07646e9ae42a%2F116",
+   "variable": "hiperacusia",
+   "literal": "El paciente presenta hipercusia 1=Si 2=No",
+   "concepto": "caso-con-hipercusia",
+   "dictamen": "aceptar",
+   "razon": "v2: literal/RAW/huella/regla/concepto verificados por IRI; correctivos v1 resueltos."
+  },
+  {
+   "regla": "r3a6-144",
+   "iri": "https://example.org/mex-ontologi/definition/33d0a99e-c721-496f-a05e-07646e9ae42a%2F117",
+   "variable": "somolencia",
+   "literal": "El paciente presenta sonmnolencia 1=Si 2=No",
+   "concepto": "caso-con-sonmnolencia",
+   "dictamen": "aceptar",
+   "razon": "v2: literal/RAW/huella/regla/concepto verificados por IRI; correctivos v1 resueltos."
+  },
+  {
+   "regla": "r3a6-145",
+   "iri": "https://example.org/mex-ontologi/definition/33d0a99e-c721-496f-a05e-07646e9ae42a%2F118",
+   "variable": "dismin_plaquetas",
+   "literal": "El paciente presenta disminunción de plaquetas 1=Si 2=No",
+   "concepto": "caso-con-disminuncion-de-plaquetas",
+   "dictamen": "aceptar",
+   "razon": "v2: literal/RAW/huella/regla/concepto verificados por IRI; correctivos v1 resueltos."
+  },
+  {
+   "regla": "r3a6-146",
+   "iri": "https://example.org/mex-ontologi/definition/33d0a99e-c721-496f-a05e-07646e9ae42a%2F119",
+   "variable": "dismin_hemoglob",
+   "literal": "El paciente presenta disminunción de hemoglobina 1=Si 2=No",
+   "concepto": "caso-con-disminuncion-de-hemoglobina",
+   "dictamen": "aceptar",
+   "razon": "v2: literal/RAW/huella/regla/concepto verificados por IRI; correctivos v1 resueltos."
+  },
+  {
+   "regla": "r3a6-147",
+   "iri": "https://example.org/mex-ontologi/definition/33d0a99e-c721-496f-a05e-07646e9ae42a%2F120",
+   "variable": "linfadenopatia",
+   "literal": "El paciente presenta linfadenopatía 1=Si 2=No",
+   "concepto": "caso-con-linfadenopatia",
+   "dictamen": "aceptar",
+   "razon": "v2: literal/RAW/huella/regla/concepto verificados por IRI; correctivos v1 resueltos."
+  },
+  {
+   "regla": "r3a6-148",
+   "iri": "https://example.org/mex-ontologi/definition/33d0a99e-c721-496f-a05e-07646e9ae42a%2F121",
+   "variable": "manejo",
+   "literal": "El manejo del paciente es 1=Hospitalario 2=Ambulatorio",
+   "concepto": "manejo-caso-rickettsia",
+   "dictamen": "aceptar",
+   "razon": "v2: literal/RAW/huella/regla/concepto verificados por IRI; correctivos v1 resueltos."
+  },
+  {
+   "regla": "r3a6-149",
+   "iri": "https://example.org/mex-ontologi/definition/33d0a99e-c721-496f-a05e-07646e9ae42a%2F123",
+   "variable": "cve_uni_med_trat",
+   "literal": "Clave de la unidad médica tratante",
+   "concepto": "unidad-salud",
+   "dictamen": "aceptar",
+   "razon": "v2: literal/RAW/huella/regla/concepto verificados por IRI; correctivos v1 resueltos."
+  },
+  {
+   "regla": "r3a6-150",
+   "iri": "https://example.org/mex-ontologi/definition/33d0a99e-c721-496f-a05e-07646e9ae42a%2F124",
+   "variable": "des_uni_med_trat",
+   "literal": "Nombre de la unidad médica tratante",
+   "concepto": "unidad-salud",
+   "dictamen": "aceptar",
+   "razon": "v2: literal/RAW/huella/regla/concepto verificados por IRI; correctivos v1 resueltos."
+  },
+  {
+   "regla": "r3a6-151",
+   "iri": "https://example.org/mex-ontologi/definition/33d0a99e-c721-496f-a05e-07646e9ae42a%2F125",
+   "variable": "des_jur_uni_trat",
+   "literal": "Jurisdicción de la unidad médica tratante",
+   "concepto": "jurisdiccion-sanitaria",
+   "dictamen": "aceptar",
+   "razon": "v2: literal/RAW/huella/regla/concepto verificados por IRI; correctivos v1 resueltos."
+  },
+  {
+   "regla": "r3a6-152",
+   "iri": "https://example.org/mex-ontologi/definition/33d0a99e-c721-496f-a05e-07646e9ae42a%2F126",
+   "variable": "des_mpo_uni_trat",
+   "literal": "Municipio donde pertenece la unidad médica tratante",
+   "concepto": "municipio-ubicacion",
+   "dictamen": "aceptar",
+   "razon": "v2: literal/RAW/huella/regla/concepto verificados por IRI; correctivos v1 resueltos."
+  },
+  {
+   "regla": "r3a6-153",
+   "iri": "https://example.org/mex-ontologi/definition/33d0a99e-c721-496f-a05e-07646e9ae42a%2F127",
+   "variable": "des_ins_uni_trat",
+   "literal": "Institución de la unidad tratante",
+   "concepto": "organizacion",
+   "dictamen": "aceptar",
+   "razon": "v2: literal/RAW/huella/regla/concepto verificados por IRI; correctivos v1 resueltos."
+  },
+  {
+   "regla": "r3a6-154",
+   "iri": "https://example.org/mex-ontologi/definition/33d0a99e-c721-496f-a05e-07646e9ae42a%2F128",
+   "variable": "cve_diag_hospit",
+   "literal": "Diagnóstico emitido por el hospital",
+   "concepto": "diagnostico-hospital-rickettsia",
+   "dictamen": "aceptar",
+   "razon": "v2: literal/RAW/huella/regla/concepto verificados por IRI; correctivos v1 resueltos."
+  },
+  {
+   "regla": "r3a6-155",
+   "iri": "https://example.org/mex-ontologi/definition/33d0a99e-c721-496f-a05e-07646e9ae42a%2F129",
+   "variable": "servic_atencion",
+   "literal": "Tipo de servicio de atención",
+   "concepto": "tipo-servicio-atencion",
+   "dictamen": "aceptar",
+   "razon": "v2: literal/RAW/huella/regla/concepto verificados por IRI; correctivos v1 resueltos."
+  },
+  {
+   "regla": "r3a6-156",
+   "iri": "https://example.org/mex-ontologi/definition/33d0a99e-c721-496f-a05e-07646e9ae42a%2F131",
+   "variable": "trans_hemorr",
+   "literal": "El paciente presenta transtornos hemorrágicos 1=Si 2=No",
+   "concepto": "caso-con-transtornos-hemorragicos",
+   "dictamen": "aceptar",
+   "razon": "v2: literal/RAW/huella/regla/concepto verificados por IRI; correctivos v1 resueltos."
+  },
+  {
+   "regla": "r3a6-157",
+   "iri": "https://example.org/mex-ontologi/definition/33d0a99e-c721-496f-a05e-07646e9ae42a%2F132",
+   "variable": "diabetes",
+   "literal": "El paciente presenta diabetes 1=Si 2=No",
+   "concepto": "caso-con-diabetes",
+   "dictamen": "aceptar",
+   "razon": "v2: literal/RAW/huella/regla/concepto verificados por IRI; correctivos v1 resueltos."
+  },
+  {
+   "regla": "r3a6-158",
+   "iri": "https://example.org/mex-ontologi/definition/33d0a99e-c721-496f-a05e-07646e9ae42a%2F133",
+   "variable": "hipertensión",
+   "literal": "El paciente presenta hipertensión 1=Si 2=No",
+   "concepto": "caso-con-hipertension",
+   "dictamen": "aceptar",
+   "razon": "v2: literal/RAW/huella/regla/concepto verificados por IRI; correctivos v1 resueltos."
+  },
+  {
+   "regla": "r3a6-159",
+   "iri": "https://example.org/mex-ontologi/definition/33d0a99e-c721-496f-a05e-07646e9ae42a%2F134",
+   "variable": "enf_ulcero_peptica",
+   "literal": "El paciente presenta enfermedad ulcero péptica 1=Si 2=No",
+   "concepto": "caso-con-enfermedad-ulcero-peptica",
+   "dictamen": "aceptar",
+   "razon": "v2: literal/RAW/huella/regla/concepto verificados por IRI; correctivos v1 resueltos."
+  },
+  {
+   "regla": "r3a6-160",
+   "iri": "https://example.org/mex-ontologi/definition/33d0a99e-c721-496f-a05e-07646e9ae42a%2F135",
+   "variable": "enf_renal",
+   "literal": "El paciente presenta enfermedad renal 1=Si 2=No",
+   "concepto": "caso-con-enfermedad-renal",
+   "dictamen": "aceptar",
+   "razon": "v2: literal/RAW/huella/regla/concepto verificados por IRI; correctivos v1 resueltos."
+  },
+  {
+   "regla": "r3a6-161",
+   "iri": "https://example.org/mex-ontologi/definition/33d0a99e-c721-496f-a05e-07646e9ae42a%2F136",
+   "variable": "inmunosupresión",
+   "literal": "El paciente presenta inmunosupresión 1=Si 2=No",
+   "concepto": "caso-con-inmunosupresion",
+   "dictamen": "aceptar",
+   "razon": "v2: literal/RAW/huella/regla/concepto verificados por IRI; correctivos v1 resueltos."
+  },
+  {
+   "regla": "r3a6-162",
+   "iri": "https://example.org/mex-ontologi/definition/33d0a99e-c721-496f-a05e-07646e9ae42a%2F137",
+   "variable": "cirrosis_hepática",
+   "literal": "El paciente presenta cirrosis hepática 1=Si 2=No",
+   "concepto": "caso-con-cirrosis-hepatica",
+   "dictamen": "aceptar",
+   "razon": "v2: literal/RAW/huella/regla/concepto verificados por IRI; correctivos v1 resueltos."
+  },
+  {
+   "regla": "r3a6-163",
+   "iri": "https://example.org/mex-ontologi/definition/33d0a99e-c721-496f-a05e-07646e9ae42a%2F138",
+   "variable": "embarazo",
+   "literal": "El paciente presenta embarazo 1=Si 2=No",
+   "concepto": "caso-con-embarazo",
+   "dictamen": "aceptar",
+   "razon": "v2: literal/RAW/huella/regla/concepto verificados por IRI; correctivos v1 resueltos."
+  },
+  {
+   "regla": "r3a6-164",
+   "iri": "https://example.org/mex-ontologi/definition/33d0a99e-c721-496f-a05e-07646e9ae42a%2F139",
+   "variable": "sem_gest",
+   "literal": "Semanas de gestación del paciente (Si aplica)",
+   "concepto": "semanas-gestacion-caso",
+   "dictamen": "aceptar",
+   "razon": "v2: literal/RAW/huella/regla/concepto verificados por IRI; correctivos v1 resueltos."
+  },
+  {
+   "regla": "r3a6-165",
+   "iri": "https://example.org/mex-ontologi/definition/33d0a99e-c721-496f-a05e-07646e9ae42a%2F141",
+   "variable": "evolucion",
+   "literal": "Evolución del caso 1=Estable 2=Grave 3=Mejoría",
+   "concepto": "evolucion-caso-rickettsia",
+   "dictamen": "aceptar",
+   "razon": "v2: literal/RAW/huella/regla/concepto verificados por IRI; correctivos v1 resueltos."
+  },
+  {
+   "regla": "r3a6-166",
+   "iri": "https://example.org/mex-ontologi/definition/33d0a99e-c721-496f-a05e-07646e9ae42a%2F142",
+   "variable": "lcr",
+   "literal": "Se tomó muestra del liquído cefalorraquideo con aspecto de agua de roca 1=Si 2=No",
+   "concepto": "muestra-lcr-caso",
+   "dictamen": "aceptar",
+   "razon": "v2: literal/RAW/huella/regla/concepto verificados por IRI; correctivos v1 resueltos."
+  },
+  {
+   "regla": "r3a6-167",
+   "iri": "https://example.org/mex-ontologi/definition/33d0a99e-c721-496f-a05e-07646e9ae42a%2F143",
+   "variable": "bilirrubina_directa",
+   "literal": "Resultado de bilirrubina directa",
+   "concepto": "resultado-bilirrubina-directa-caso",
+   "dictamen": "aceptar",
+   "razon": "v2: literal/RAW/huella/regla/concepto verificados por IRI; correctivos v1 resueltos."
+  },
+  {
+   "regla": "r3a6-168",
+   "iri": "https://example.org/mex-ontologi/definition/33d0a99e-c721-496f-a05e-07646e9ae42a%2F144",
+   "variable": "bilirrubina_total",
+   "literal": "Resultado total de bilirrubina",
+   "concepto": "resultado-bilirrubina-total-caso",
+   "dictamen": "aceptar",
+   "razon": "v2: literal/RAW/huella/regla/concepto verificados por IRI; correctivos v1 resueltos."
+  },
+  {
+   "regla": "r3a6-169",
+   "iri": "https://example.org/mex-ontologi/definition/33d0a99e-c721-496f-a05e-07646e9ae42a%2F145",
+   "variable": "dhl",
+   "literal": "Resultados de Deshidrogenasa Láctica",
+   "concepto": "resultado-dhl-caso",
+   "dictamen": "aceptar",
+   "razon": "v2: literal/RAW/huella/regla/concepto verificados por IRI; correctivos v1 resueltos."
+  },
+  {
+   "regla": "r3a6-170",
+   "iri": "https://example.org/mex-ontologi/definition/33d0a99e-c721-496f-a05e-07646e9ae42a%2F146",
+   "variable": "alt",
+   "literal": "Resultados de Alanina aminotransferasa",
+   "concepto": "resultado-alt-caso",
+   "dictamen": "aceptar",
+   "razon": "v2: literal/RAW/huella/regla/concepto verificados por IRI; correctivos v1 resueltos."
+  },
+  {
+   "regla": "r3a6-171",
+   "iri": "https://example.org/mex-ontologi/definition/33d0a99e-c721-496f-a05e-07646e9ae42a%2F147",
+   "variable": "ast",
+   "literal": "Resultados de Aspartato aminotransferasa",
+   "concepto": "resultado-ast-caso",
+   "dictamen": "aceptar",
+   "razon": "v2: literal/RAW/huella/regla/concepto verificados por IRI; correctivos v1 resueltos."
+  },
+  {
+   "regla": "r3a6-172",
+   "iri": "https://example.org/mex-ontologi/definition/33d0a99e-c721-496f-a05e-07646e9ae42a%2F148",
+   "variable": "liquido_cavidad_abdominal",
+   "literal": "El paciente presenta líquido periviceral y/o en cavidad abdominal",
+   "concepto": "caso-con-liquido-periviceral-y-o-en-cavidad-abdominal",
+   "dictamen": "aceptar",
+   "razon": "v2: literal/RAW/huella/regla/concepto verificados por IRI; correctivos v1 resueltos."
+  },
+  {
+   "regla": "r3a6-173",
+   "iri": "https://example.org/mex-ontologi/definition/33d0a99e-c721-496f-a05e-07646e9ae42a%2F149",
+   "variable": "liquido_cavidad_toracica",
+   "literal": "El paciente presenta líquido en cavidad torácica",
+   "concepto": "caso-con-liquido-en-cavidad-toracica",
+   "dictamen": "aceptar",
+   "razon": "v2: literal/RAW/huella/regla/concepto verificados por IRI; correctivos v1 resueltos."
+  },
+  {
+   "regla": "r3a6-174",
+   "iri": "https://example.org/mex-ontologi/definition/33d0a99e-c721-496f-a05e-07646e9ae42a%2F150",
+   "variable": "fec_egreso",
+   "literal": "Fecha de egreso del paciente",
+   "concepto": "fecha-egreso-caso",
+   "dictamen": "aceptar",
+   "razon": "v2: literal/RAW/huella/regla/concepto verificados por IRI; correctivos v1 resueltos."
+  },
+  {
+   "regla": "r3a6-175",
+   "iri": "https://example.org/mex-ontologi/definition/33d0a99e-c721-496f-a05e-07646e9ae42a%2F151",
+   "variable": "cve_egreso",
+   "literal": "Motivo de egreso 1=Alta por mejoría 2=Alta voluntaria 3=Defunción",
+   "concepto": "motivo-egreso-caso",
+   "dictamen": "aceptar",
+   "razon": "v2: literal/RAW/huella/regla/concepto verificados por IRI; correctivos v1 resueltos."
+  },
+  {
+   "regla": "r3a6-176",
+   "iri": "https://example.org/mex-ontologi/definition/33d0a99e-c721-496f-a05e-07646e9ae42a%2F152",
+   "variable": "fec_defuncion",
+   "literal": "Fecha de defunción del paciente",
+   "concepto": "fecha-defuncion-caso",
+   "dictamen": "aceptar",
+   "razon": "v2: literal/RAW/huella/regla/concepto verificados por IRI; correctivos v1 resueltos."
+  },
+  {
+   "regla": "r3a6-177",
+   "iri": "https://example.org/mex-ontologi/definition/33d0a99e-c721-496f-a05e-07646e9ae42a%2F153",
+   "variable": "cve_defunción",
+   "literal": "Indica defunción 1=Si 2=No",
+   "concepto": "defuncion-caso",
+   "dictamen": "aceptar",
+   "razon": "v2: literal/RAW/huella/regla/concepto verificados por IRI; correctivos v1 resueltos."
+  },
+  {
+   "regla": "r3a6-178",
+   "iri": "https://example.org/mex-ontologi/definition/33d0a99e-c721-496f-a05e-07646e9ae42a%2F154",
+   "variable": "muestra_lab",
+   "literal": "Se tomó muestra en laboratorio 1=Si 2=No",
+   "concepto": "muestra-laboratorio-caso",
+   "dictamen": "aceptar",
+   "razon": "v2: literal/RAW/huella/regla/concepto verificados por IRI; correctivos v1 resueltos."
+  },
+  {
+   "regla": "r3a6-179",
+   "iri": "https://example.org/mex-ontologi/definition/33d0a99e-c721-496f-a05e-07646e9ae42a%2F158",
+   "variable": "rickett_resultado_ser1",
+   "literal": "Resultado de la primera muestra de suero para rickettsiosis 1=Positivo 2=Negativo",
+   "concepto": "resultado-suero-ser1-rickettsia",
+   "dictamen": "aceptar",
+   "razon": "v2: literal/RAW/huella/regla/concepto verificados por IRI; correctivos v1 resueltos."
+  },
+  {
+   "regla": "r3a6-180",
+   "iri": "https://example.org/mex-ontologi/definition/33d0a99e-c721-496f-a05e-07646e9ae42a%2F161",
+   "variable": "muestra_rech_ricket_sangre",
+   "literal": "Rechazo de muestra de sangre del paciente 1=Si 2=No",
+   "concepto": "rechazo-muestra-sangre-rickettsia",
+   "dictamen": "aceptar",
+   "razon": "v2: literal/RAW/huella/regla/concepto verificados por IRI; correctivos v1 resueltos."
+  },
+  {
+   "regla": "r3a6-181",
+   "iri": "https://example.org/mex-ontologi/definition/33d0a99e-c721-496f-a05e-07646e9ae42a%2F162",
+   "variable": "motiv_rech_ricket_sangre",
+   "literal": "Motivo de rechazo de la muestra de sangre del paciente",
+   "concepto": "motivo-rechazo-muestra-sangre",
+   "dictamen": "aceptar",
+   "razon": "v2: literal/RAW/huella/regla/concepto verificados por IRI; correctivos v1 resueltos."
+  },
+  {
+   "regla": "r3a6-182",
+   "iri": "https://example.org/mex-ontologi/definition/33d0a99e-c721-496f-a05e-07646e9ae42a%2F165",
+   "variable": "res_final_ricket_inmuno",
+   "literal": "Resultado de inmunoflourecencia indirecta 1=Si 2=No",
+   "concepto": "resultado-inmunofluorescencia-rickettsia",
+   "dictamen": "aceptar",
+   "razon": "v2: literal/RAW/huella/regla/concepto verificados por IRI; correctivos v1 resueltos."
+  },
+  {
+   "regla": "r3a6-183",
+   "iri": "https://example.org/mex-ontologi/definition/33d0a99e-c721-496f-a05e-07646e9ae42a%2F166",
+   "variable": "res_final_ricket_rtpcr",
+   "literal": "Resultado tiempo real para ricketsiosis 1=Positivo 2=Negativo 3=Indeterminado",
+   "concepto": "resultado-rtpcr-rickettsia",
+   "dictamen": "aceptar",
+   "razon": "v2: literal/RAW/huella/regla/concepto verificados por IRI; correctivos v1 resueltos."
+  },
+  {
+   "regla": "r3a6-184",
+   "iri": "https://example.org/mex-ontologi/definition/33d0a99e-c721-496f-a05e-07646e9ae42a%2F168",
+   "variable": "ricket_especie_rtpcr",
+   "literal": "Resultado especie PCR tiempo real al INDRE para rickettsiosis",
+   "concepto": "especie-rickettsia-rtpcr",
+   "dictamen": "aceptar",
+   "razon": "v2: literal/RAW/huella/regla/concepto verificados por IRI; correctivos v1 resueltos."
+  },
+  {
+   "regla": "r3a6-185",
+   "iri": "https://example.org/mex-ontologi/definition/33d0a99e-c721-496f-a05e-07646e9ae42a%2F169",
+   "variable": "tratamiento_rickettsiosis",
+   "literal": "Recibe tratamiento para rickettsiosis 1=Si 2=No",
+   "concepto": "tratamiento-rickettsiosis-caso",
+   "dictamen": "aceptar",
+   "razon": "v2: literal/RAW/huella/regla/concepto verificados por IRI; correctivos v1 resueltos."
+  },
+  {
+   "regla": "r3a6-186",
+   "iri": "https://example.org/mex-ontologi/definition/33d0a99e-c721-496f-a05e-07646e9ae42a%2F172",
+   "variable": "med_trat_ricket",
+   "literal": "Medicamento para el tratamiento para rickettsiosis 1=Doxiciclina 2=Cloramfenicol",
+   "concepto": "medicamento-tratamiento-rickettsia",
+   "dictamen": "aceptar",
+   "razon": "v2: literal/RAW/huella/regla/concepto verificados por IRI; correctivos v1 resueltos."
+  },
+  {
+   "regla": "r3a6-187",
+   "iri": "https://example.org/mex-ontologi/definition/33d0a99e-c721-496f-a05e-07646e9ae42a%2F173",
+   "variable": "des_ins_uni_trat_norm",
+   "literal": "Nombre de la institución tratante normalizado",
+   "concepto": "organizacion",
+   "dictamen": "aceptar",
+   "razon": "v2: literal/RAW/huella/regla/concepto verificados por IRI; correctivos v1 resueltos."
+  },
+  {
+   "regla": "r3a6-188",
+   "iri": "https://example.org/mex-ontologi/definition/355da8aa-8544-4f32-b942-f54e007dd49b%2F2",
+   "variable": "Nombre_Establecimiento",
+   "literal": "Nombre del establecimiento",
+   "concepto": "unidad-salud",
+   "dictamen": "aceptar",
+   "razon": "v2: literal/RAW/huella/regla/concepto verificados por IRI; correctivos v1 resueltos."
+  },
+  {
+   "regla": "r3a6-189",
+   "iri": "https://example.org/mex-ontologi/definition/355da8aa-8544-4f32-b942-f54e007dd49b%2F3",
+   "variable": "JS_Cve",
+   "literal": "Clave de Jurisdiccion",
+   "concepto": "jurisdiccion-sanitaria",
+   "dictamen": "aceptar",
+   "razon": "v2: literal/RAW/huella/regla/concepto verificados por IRI; correctivos v1 resueltos."
+  },
+  {
+   "regla": "r3a6-190",
+   "iri": "https://example.org/mex-ontologi/definition/355da8aa-8544-4f32-b942-f54e007dd49b%2F4",
+   "variable": "JS_Nombre",
+   "literal": "Nombre de Jurisdiccion",
+   "concepto": "jurisdiccion-sanitaria",
+   "dictamen": "aceptar",
+   "razon": "v2: literal/RAW/huella/regla/concepto verificados por IRI; correctivos v1 resueltos."
+  },
+  {
+   "regla": "r3a6-191",
+   "iri": "https://example.org/mex-ontologi/definition/355da8aa-8544-4f32-b942-f54e007dd49b%2F13",
+   "variable": "CIE10_Descrip",
+   "literal": "Descripcion de diagnostico",
+   "concepto": "diagnostico-declarado-atencion",
+   "dictamen": "aceptar",
+   "razon": "v2: literal/RAW/huella/regla/concepto verificados por IRI; correctivos v1 resueltos."
+  },
+  {
+   "regla": "r3a6-192",
+   "iri": "https://example.org/mex-ontologi/definition/355da8aa-8544-4f32-b942-f54e007dd49b%2F15",
+   "variable": "Total_Urgencias",
+   "literal": "Total de urgencias atendidas",
+   "concepto": "total-urgencias-atendidas",
+   "dictamen": "aceptar",
+   "razon": "v2: literal/RAW/huella/regla/concepto verificados por IRI; correctivos v1 resueltos."
+  },
+  {
+   "regla": "r3a6-193",
+   "iri": "https://example.org/mex-ontologi/definition/52fbcaaa-765b-4c92-8418-ccebc3fcfdcd%2F3",
+   "variable": "Sexo",
+   "literal": "Sexo de la persona",
+   "concepto": "sexo-declarado",
+   "dictamen": "aceptar",
+   "razon": "v2: literal/RAW/huella/regla/concepto verificados por IRI; correctivos v1 resueltos."
+  },
+  {
+   "regla": "r3a6-194",
+   "iri": "https://example.org/mex-ontologi/definition/52fbcaaa-765b-4c92-8418-ccebc3fcfdcd%2F5",
+   "variable": "Tipo de Muerte",
+   "literal": "Tipo de muerte",
+   "concepto": "tipo-muerte-donante",
+   "dictamen": "aceptar",
+   "razon": "v2: literal/RAW/huella/regla/concepto verificados por IRI; correctivos v1 resueltos."
+  },
+  {
+   "regla": "r3a6-195",
+   "iri": "https://example.org/mex-ontologi/definition/52fbcaaa-765b-4c92-8418-ccebc3fcfdcd%2F6",
+   "variable": "Donacion",
+   "literal": "Organos donados",
+   "concepto": "organos-donados",
+   "dictamen": "aceptar",
+   "razon": "v2: literal/RAW/huella/regla/concepto verificados por IRI; correctivos v1 resueltos."
+  },
+  {
+   "regla": "r3a6-196",
+   "iri": "https://example.org/mex-ontologi/definition/52fbcaaa-765b-4c92-8418-ccebc3fcfdcd%2F7",
+   "variable": "Cantidad donada",
+   "literal": "Cantidad de organos donados",
+   "concepto": "cantidad-organos-donados",
+   "dictamen": "aceptar",
+   "razon": "v2: literal/RAW/huella/regla/concepto verificados por IRI; correctivos v1 resueltos."
+  },
+  {
+   "regla": "r3a6-197",
+   "iri": "https://example.org/mex-ontologi/definition/c1bd5fd4-69d0-426c-afd7-47766b10708b%2F2",
+   "variable": "Nombre_Establecimiento",
+   "literal": "Nombre del establecimiento",
+   "concepto": "unidad-salud",
+   "dictamen": "aceptar",
+   "razon": "v2: literal/RAW/huella/regla/concepto verificados por IRI; correctivos v1 resueltos."
+  },
+  {
+   "regla": "r3a6-198",
+   "iri": "https://example.org/mex-ontologi/definition/c1bd5fd4-69d0-426c-afd7-47766b10708b%2F3",
+   "variable": "Cve_JS",
+   "literal": "Clave de Jurisdiccion",
+   "concepto": "jurisdiccion-sanitaria",
+   "dictamen": "aceptar",
+   "razon": "v2: literal/RAW/huella/regla/concepto verificados por IRI; correctivos v1 resueltos."
+  },
+  {
+   "regla": "r3a6-199",
+   "iri": "https://example.org/mex-ontologi/definition/c1bd5fd4-69d0-426c-afd7-47766b10708b%2F4",
+   "variable": "Nomb_JS",
+   "literal": "Nombre de Jurisdiccion",
+   "concepto": "jurisdiccion-sanitaria",
+   "dictamen": "aceptar",
+   "razon": "v2: literal/RAW/huella/regla/concepto verificados por IRI; correctivos v1 resueltos."
+  },
+  {
+   "regla": "r3a6-200",
+   "iri": "https://example.org/mex-ontologi/definition/f89137ba-d82e-44fe-80c7-cc355f09f9f5%2F2",
+   "variable": "Nombre_Establecimiento",
+   "literal": "Nombre del establecimiento",
+   "concepto": "unidad-salud",
+   "dictamen": "aceptar",
+   "razon": "v2: literal/RAW/huella/regla/concepto verificados por IRI; correctivos v1 resueltos."
+  },
+  {
+   "regla": "r3a6-201",
+   "iri": "https://example.org/mex-ontologi/definition/f89137ba-d82e-44fe-80c7-cc355f09f9f5%2F3",
+   "variable": "JS_Cve",
+   "literal": "Clave de Jurisdiccion",
+   "concepto": "jurisdiccion-sanitaria",
+   "dictamen": "aceptar",
+   "razon": "v2: literal/RAW/huella/regla/concepto verificados por IRI; correctivos v1 resueltos."
+  },
+  {
+   "regla": "r3a6-202",
+   "iri": "https://example.org/mex-ontologi/definition/f89137ba-d82e-44fe-80c7-cc355f09f9f5%2F4",
+   "variable": "JS_Nombre",
+   "literal": "Nombre de Jurisdiccion",
+   "concepto": "jurisdiccion-sanitaria",
+   "dictamen": "aceptar",
+   "razon": "v2: literal/RAW/huella/regla/concepto verificados por IRI; correctivos v1 resueltos."
+  },
+  {
+   "regla": "r3a6-203",
+   "iri": "https://example.org/mex-ontologi/definition/f89137ba-d82e-44fe-80c7-cc355f09f9f5%2F13",
+   "variable": "CIE10_Descrip",
+   "literal": "Descripcion de diagnostico",
+   "concepto": "diagnostico-declarado-atencion",
+   "dictamen": "aceptar",
+   "razon": "v2: literal/RAW/huella/regla/concepto verificados por IRI; correctivos v1 resueltos."
+  }
+ ],
+ "comprobaciones": 2076
+}

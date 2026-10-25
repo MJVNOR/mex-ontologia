@@ -1,0 +1,1104 @@
+{
+  "rol": "V2-salud-anomalias",
+  "conteo": 6,
+  "casos": [
+    {
+      "id": "V06",
+      "tipo": "vigencias",
+      "original": {
+        "id": "V06",
+        "tipo": "vigencia",
+        "grupo": "C",
+        "dependencia_publicador": "DEP-CAT-R6-03",
+        "conjunto": {
+          "id": "5494daa1-09ca-4750-aeac-2558553700e1",
+          "titulo": "Fiebre manchada (Rickettsia)"
+        },
+        "catalogo": {
+          "recurso_catalogo": "08d3b1a7-dbc0-4f43-b1d2-3266cebb88f8",
+          "recurso_url": "https://datos.sonora.gob.mx/dataset/5494daa1-09ca-4750-aeac-2558553700e1/resource/08d3b1a7-dbc0-4f43-b1d2-3266cebb88f8/download/catalogo.xlsx",
+          "sha256": "3b8546acad7482825755e46a1a619a4838721f8480b94baaef3c755ba293db9c",
+          "hoja_campo": "Catalogo Servicios / servic_atencion"
+        },
+        "referencia_iri": "https://example.org/mex-ontologi/declared-code-reference/9ff643fe3f91869a5a3aff089018f3913d8510551a6d50a7566123a44969b05f",
+        "periodos_declarados_por_titulo": [
+          "2022 anual",
+          "2023 anual",
+          "2024 anual"
+        ],
+        "nota_periodos": "Periodos declarados por titulos de recursos CKAN y nota del conjunto; NO cobertura observada.",
+        "estado_actual": "pendiente (F3+F4 ausentes)",
+        "motivo": "F3+F4 ausentes: el portal no declara edición/versión de la hoja Catalogo Servicios ni su aplicación a 2022-2024.",
+        "evidencia_revisada": [
+          "W04 (recursos publicados: Diccionario+Catalogo+datos 2022-2024; fuente interna; sin versión)",
+          "Local: package_5494daa1-09ca-4750-aeac-2558553700e1.json (extras nulos) + xlsx 3b8546ac (3 hojas, sin versión)",
+          "R6-C1 (API CKAN package_show 2026-10-23) + R6-C2 (core-properties xlsx)",
+          "R6 novedad: R6-C1: API package 5494daa1: version=null; recurso Catalogo con cobertura 2022-01-01/2026-12-31 (avance de cobertura, NO edicion). R6-C2: catalogo 3b8546ac creator openpyxl, created 2026-04-15 (export posterior a periodos 2022-2024, sin celdas de version). F3+F4 ausentes."
+        ],
+        "campos_minimos": [
+          "emisor: publicador (DEP-CAT-R6-03)",
+          "edicion/version/fecha declarada del catalogo (Catalogo Servicios / servic_atencion, sha 3b8546ac)",
+          "recurso catalogo: 08d3b1a7-dbc0-4f43-b1d2-3266cebb88f8",
+          "periodos de aplicacion: 2022 anual; 2023 anual; 2024 anual",
+          "fecha o firma del documento"
+        ],
+        "criterio_aceptacion": "Se cierra solo si el documento del publicador cita edicion/version/fecha del catalogo (Catalogo Servicios / servic_atencion, sha 3b8546ac) y recurso 08d3b1a7-dbc0-4f43-b1d2-3266cebb88f8 y periodos (2022 anual; 2023 anual; 2024 anual); verificable (URL o copia local con SHA). Las fechas de portal/API (version=null, placeholder 1989-06-04) y core-properties no acreditan F3+F4.",
+        "limites": [
+          "No afirmar vigencia histórica ni extender a otros conjuntos/periodos."
+        ],
+        "documento_requerido_exacto": "Declaracion de edicion/version/fecha del catalogo Rickettsia (sha 3b8546ac) con vinculo 2022-2024 + fe de erratas o diccionario corregido y URL del catalogo de des_mpo_res si existe. Pendiente exacto: Acreditar F3+F4: declaración de edición/versión/fecha del catálogo (Catalogo Servicios/servic_atencion, sha 3b8546ac) y documento que la vincule con 2022, 2023, 2024.",
+        "soporte": [
+          {
+            "ruta": "reports/pendientes-ronda-5.json",
+            "sha256": "46f3b6f8826379be5124fb85cf6128b705fbe90deebf2c99bff64098608c8f11",
+            "localizador": "decisiones_significados id=V06"
+          },
+          {
+            "ruta": "propuestas/pendientes-muse-r6/catalogos/entrega.json",
+            "sha256": "649bbe7e5feca82b7e8d5c5144de78b1d8ceccb1c217ca976347b1c9a05cb74b",
+            "localizador": "decisiones_significados id=V06 + novedad_r6 (C1 API package_show 2026-10-23 + C2 core-properties xlsx)"
+          },
+          {
+            "ruta": "local: xlsx sha 3b8546ac",
+            "sha256": "3b8546acad7482825755e46a1a619a4838721f8480b94baaef3c755ba293db9c",
+            "localizador": "interior xlsx sin celdas de version/periodo (R4 vigente, re-verificado R6: sizes API = locales)"
+          }
+        ]
+      },
+      "antecedente": {
+        "id": "V06",
+        "estado": "sigue_pendiente",
+        "original": {
+          "id": "V06",
+          "tipo": "vigencia",
+          "grupo": "C",
+          "dependencia_publicador": "DEP-CAT-R6-03",
+          "conjunto": {
+            "id": "5494daa1-09ca-4750-aeac-2558553700e1",
+            "titulo": "Fiebre manchada (Rickettsia)"
+          },
+          "catalogo": {
+            "recurso_catalogo": "08d3b1a7-dbc0-4f43-b1d2-3266cebb88f8",
+            "recurso_url": "https://datos.sonora.gob.mx/dataset/5494daa1-09ca-4750-aeac-2558553700e1/resource/08d3b1a7-dbc0-4f43-b1d2-3266cebb88f8/download/catalogo.xlsx",
+            "sha256": "3b8546acad7482825755e46a1a619a4838721f8480b94baaef3c755ba293db9c",
+            "hoja_campo": "Catalogo Servicios / servic_atencion"
+          },
+          "referencia_iri": "https://example.org/mex-ontologi/declared-code-reference/9ff643fe3f91869a5a3aff089018f3913d8510551a6d50a7566123a44969b05f",
+          "periodos_declarados_por_titulo": [
+            "2022 anual",
+            "2023 anual",
+            "2024 anual"
+          ],
+          "nota_periodos": "Periodos declarados por titulos de recursos CKAN y nota del conjunto; NO cobertura observada.",
+          "estado_actual": "pendiente (F3+F4 ausentes)",
+          "motivo": "F3+F4 ausentes: el portal no declara edición/versión de la hoja Catalogo Servicios ni su aplicación a 2022-2024.",
+          "evidencia_revisada": [
+            "W04 (recursos publicados: Diccionario+Catalogo+datos 2022-2024; fuente interna; sin versión)",
+            "Local: package_5494daa1-09ca-4750-aeac-2558553700e1.json (extras nulos) + xlsx 3b8546ac (3 hojas, sin versión)",
+            "R6-C1 (API CKAN package_show 2026-10-23) + R6-C2 (core-properties xlsx)",
+            "R6 novedad: R6-C1: API package 5494daa1: version=null; recurso Catalogo con cobertura 2022-01-01/2026-12-31 (avance de cobertura, NO edicion). R6-C2: catalogo 3b8546ac creator openpyxl, created 2026-04-15 (export posterior a periodos 2022-2024, sin celdas de version). F3+F4 ausentes."
+          ],
+          "campos_minimos": [
+            "emisor: publicador (DEP-CAT-R6-03)",
+            "edicion/version/fecha declarada del catalogo (Catalogo Servicios / servic_atencion, sha 3b8546ac)",
+            "recurso catalogo: 08d3b1a7-dbc0-4f43-b1d2-3266cebb88f8",
+            "periodos de aplicacion: 2022 anual; 2023 anual; 2024 anual",
+            "fecha o firma del documento"
+          ],
+          "criterio_aceptacion": "Se cierra solo si el documento del publicador cita edicion/version/fecha del catalogo (Catalogo Servicios / servic_atencion, sha 3b8546ac) y recurso 08d3b1a7-dbc0-4f43-b1d2-3266cebb88f8 y periodos (2022 anual; 2023 anual; 2024 anual); verificable (URL o copia local con SHA). Las fechas de portal/API (version=null, placeholder 1989-06-04) y core-properties no acreditan F3+F4.",
+          "limites": [
+            "No afirmar vigencia histórica ni extender a otros conjuntos/periodos."
+          ],
+          "documento_requerido_exacto": "Declaracion de edicion/version/fecha del catalogo Rickettsia (sha 3b8546ac) con vinculo 2022-2024 + fe de erratas o diccionario corregido y URL del catalogo de des_mpo_res si existe. Pendiente exacto: Acreditar F3+F4: declaración de edición/versión/fecha del catálogo (Catalogo Servicios/servic_atencion, sha 3b8546ac) y documento que la vincule con 2022, 2023, 2024.",
+          "soporte": [
+            {
+              "ruta": "reports/pendientes-ronda-5.json",
+              "sha256": "46f3b6f8826379be5124fb85cf6128b705fbe90deebf2c99bff64098608c8f11",
+              "localizador": "decisiones_significados id=V06"
+            },
+            {
+              "ruta": "propuestas/pendientes-muse-r6/catalogos/entrega.json",
+              "sha256": "649bbe7e5feca82b7e8d5c5144de78b1d8ceccb1c217ca976347b1c9a05cb74b",
+              "localizador": "decisiones_significados id=V06 + novedad_r6 (C1 API package_show 2026-10-23 + C2 core-properties xlsx)"
+            },
+            {
+              "ruta": "local: xlsx sha 3b8546ac",
+              "sha256": "3b8546acad7482825755e46a1a619a4838721f8480b94baaef3c755ba293db9c",
+              "localizador": "interior xlsx sin celdas de version/periodo (R4 vigente, re-verificado R6: sizes API = locales)"
+            }
+          ]
+        },
+        "motivo": "F3+F4 ausentes tras reverificacion en vivo 2026-10-24: package version=null/extras vacios; hoja Catalogo Servicios (dimension A1:B8, 7 valores servic_atencion) sin celdas de version/periodo; Diccionario cita el catalogo por nombre sin edicion; estrategia FMRR sin mencion al catalogo CKAN. Cobertura 2022-01-01/2026-12-31 y fechas de carga no acreditan edicion.",
+        "evidencia_faltante": "Declaracion de edicion/version/fecha del catalogo Rickettsia (sha 3b8546ac) con vinculo 2022-2024 + fe de erratas o diccionario corregido y URL del catalogo de des_mpo_res si existe. Pendiente exacto: Acreditar F3+F4: declaración de edición/versión/fecha del catálogo (Catalogo Servicios/servic_atencion, sha 3b8546ac) y documento que la vincule con 2022, 2023, 2024.",
+        "evidencia": [
+          {
+            "ruta": "propuestas/cierre-brechas-post-r6/vigencias-salud/evidencia/api_package_show_2026-10-24.json",
+            "sha256": "e751fe481af047f3ffa6facc57c9d04952e5f874186be2d2fb4a6ae20f9a0154",
+            "localizador": "result.version=null; result.extras=[]; recurso 08d3b1a7 size 12702 start 2022-01-01 end 2026-12-31; metadata_modified 2026-05-11",
+            "afirmacion_soportada": "API CKAN en vivo 2026-10-24: package sin version y sin extras; fechas del recurso Catalogo son cobertura, no edicion; byte-identico a captura local previa"
+          },
+          {
+            "ruta": "propuestas/cierre-brechas-post-r6/vigencias-salud/evidencia/catalogo_xlsx_2026-10-24.xlsx",
+            "sha256": "3b8546acad7482825755e46a1a619a4838721f8480b94baaef3c755ba293db9c",
+            "localizador": "descarga en vivo 2026-10-24; sha identico al local; sharedStrings 37 sin version/periodo",
+            "afirmacion_soportada": "El catalogo publicado no cambio (mismo sha) y su interior no declara edicion/version/periodo"
+          },
+          {
+            "ruta": "propuestas/cierre-brechas-post-r6/vigencias-salud/evidencia/diccionario_csv_2026-10-24.csv",
+            "sha256": "2c8ce131bf0e71fe812605f0f95381acaec9c5534e1bed8f05ff1895bf2fcd1c",
+            "localizador": "filas 129/162/168 citan catalogos por nombre sin edicion; fila 7 des_mpo_res con Catalogo de referencia vacio; 17x2022 son fechas de ejemplo",
+            "afirmacion_soportada": "Diccionario en vivo no declara edicion del catalogo ni fe de erratas; sin URL de catalogo para des_mpo_res"
+          },
+          {
+            "ruta": "propuestas/cierre-brechas-post-r6/vigencias-salud/evidencia/estrategia_fmrr_salud_sonora.pdf",
+            "sha256": "9c2aec1236ecdbcdd4fa4fe2a5c87f25bfe606ee80121ba283e00d715c530485",
+            "localizador": "conteo ASCII: 0 menciones a campos catalogo/CKAN/version/edicion/diccionario",
+            "afirmacion_soportada": "Estrategia sectorial FMRR (pista nueva) no es declaracion de edicion del catalogo CKAN: negativa documentada"
+          },
+          {
+            "ruta": "propuestas/cierre-brechas-post-r6/vigencias-salud/evidencia/recurso_catalogo_pagina_2026-10-24.html",
+            "sha256": "ae7e8f383f34308046a830697d2e47e561f33766cd1269fe2ff87d44b824b5a0",
+            "localizador": "Metadatos: Creado 28-04-2026, actualizacion 29-04-2026, formato XLSX; sin version/edicion",
+            "afirmacion_soportada": "Pagina del recurso Catalogo no declara edicion/version (solo fechas de carga)"
+          }
+        ],
+        "limites": [
+          "No afirmar vigencia histórica ni extender a otros conjuntos/periodos.",
+          "No inferir vigencia del nombre del archivo ni de start_date/end_date; no extender a otros conjuntos."
+        ],
+        "tarea": "vigencias-salud",
+        "tipo": "vigencias"
+      }
+    },
+    {
+      "id": "V07",
+      "tipo": "vigencias",
+      "original": {
+        "id": "V07",
+        "tipo": "vigencia",
+        "grupo": "C",
+        "dependencia_publicador": "DEP-CAT-R6-03",
+        "conjunto": {
+          "id": "5494daa1-09ca-4750-aeac-2558553700e1",
+          "titulo": "Fiebre manchada (Rickettsia)"
+        },
+        "catalogo": {
+          "recurso_catalogo": "08d3b1a7-dbc0-4f43-b1d2-3266cebb88f8",
+          "recurso_url": "https://datos.sonora.gob.mx/dataset/5494daa1-09ca-4750-aeac-2558553700e1/resource/08d3b1a7-dbc0-4f43-b1d2-3266cebb88f8/download/catalogo.xlsx",
+          "sha256": "3b8546acad7482825755e46a1a619a4838721f8480b94baaef3c755ba293db9c",
+          "hoja_campo": "Catalogo rechazo / motiv_rech_ricket_sangre"
+        },
+        "referencia_iri": "https://example.org/mex-ontologi/declared-code-reference/5b1ccbaafec13e5b4e83d513d5817f79d39b709d3a03efc206f2b265dc66fc75",
+        "periodos_declarados_por_titulo": [
+          "2022 anual",
+          "2023 anual",
+          "2024 anual"
+        ],
+        "nota_periodos": "Periodos declarados por titulos de recursos CKAN y nota del conjunto; NO cobertura observada.",
+        "estado_actual": "pendiente (F3+F4 ausentes)",
+        "motivo": "F3+F4 ausentes: sin declaración de edición/versión de la hoja Catalogo rechazo ni su aplicación a 2022-2024.",
+        "evidencia_revisada": [
+          "W04 (igual que V06)",
+          "Local: package_5494daa1 (extras nulos) + xlsx 3b8546ac",
+          "R6-C1 (API CKAN package_show 2026-10-23) + R6-C2 (core-properties xlsx)",
+          "R6 novedad: R6-C1+C2 igual que V06 para hoja Catalogo rechazo (mismo archivo 3b8546ac, export openpyxl 2026). F3+F4 ausentes."
+        ],
+        "campos_minimos": [
+          "emisor: publicador (DEP-CAT-R6-03)",
+          "edicion/version/fecha declarada del catalogo (Catalogo rechazo / motiv_rech_ricket_sangre, sha 3b8546ac)",
+          "recurso catalogo: 08d3b1a7-dbc0-4f43-b1d2-3266cebb88f8",
+          "periodos de aplicacion: 2022 anual; 2023 anual; 2024 anual",
+          "fecha o firma del documento"
+        ],
+        "criterio_aceptacion": "Se cierra solo si el documento del publicador cita edicion/version/fecha del catalogo (Catalogo rechazo / motiv_rech_ricket_sangre, sha 3b8546ac) y recurso 08d3b1a7-dbc0-4f43-b1d2-3266cebb88f8 y periodos (2022 anual; 2023 anual; 2024 anual); verificable (URL o copia local con SHA). Las fechas de portal/API (version=null, placeholder 1989-06-04) y core-properties no acreditan F3+F4.",
+        "limites": [
+          "No afirmar vigencia histórica ni extender a otros conjuntos/periodos."
+        ],
+        "documento_requerido_exacto": "Declaracion de edicion/version/fecha del catalogo Rickettsia (sha 3b8546ac) con vinculo 2022-2024 + fe de erratas o diccionario corregido y URL del catalogo de des_mpo_res si existe. Pendiente exacto: Acreditar F3+F4: declaración de edición/versión/fecha del catálogo (Catalogo rechazo/motiv_rech_ricket_sangre, sha 3b8546ac) y documento que la vincule con 2022, 2023, 2024.",
+        "soporte": [
+          {
+            "ruta": "reports/pendientes-ronda-5.json",
+            "sha256": "46f3b6f8826379be5124fb85cf6128b705fbe90deebf2c99bff64098608c8f11",
+            "localizador": "decisiones_significados id=V07"
+          },
+          {
+            "ruta": "propuestas/pendientes-muse-r6/catalogos/entrega.json",
+            "sha256": "649bbe7e5feca82b7e8d5c5144de78b1d8ceccb1c217ca976347b1c9a05cb74b",
+            "localizador": "decisiones_significados id=V07 + novedad_r6 (C1 API package_show 2026-10-23 + C2 core-properties xlsx)"
+          },
+          {
+            "ruta": "local: xlsx sha 3b8546ac",
+            "sha256": "3b8546acad7482825755e46a1a619a4838721f8480b94baaef3c755ba293db9c",
+            "localizador": "interior xlsx sin celdas de version/periodo (R4 vigente, re-verificado R6: sizes API = locales)"
+          }
+        ]
+      },
+      "antecedente": {
+        "id": "V07",
+        "estado": "sigue_pendiente",
+        "original": {
+          "id": "V07",
+          "tipo": "vigencia",
+          "grupo": "C",
+          "dependencia_publicador": "DEP-CAT-R6-03",
+          "conjunto": {
+            "id": "5494daa1-09ca-4750-aeac-2558553700e1",
+            "titulo": "Fiebre manchada (Rickettsia)"
+          },
+          "catalogo": {
+            "recurso_catalogo": "08d3b1a7-dbc0-4f43-b1d2-3266cebb88f8",
+            "recurso_url": "https://datos.sonora.gob.mx/dataset/5494daa1-09ca-4750-aeac-2558553700e1/resource/08d3b1a7-dbc0-4f43-b1d2-3266cebb88f8/download/catalogo.xlsx",
+            "sha256": "3b8546acad7482825755e46a1a619a4838721f8480b94baaef3c755ba293db9c",
+            "hoja_campo": "Catalogo rechazo / motiv_rech_ricket_sangre"
+          },
+          "referencia_iri": "https://example.org/mex-ontologi/declared-code-reference/5b1ccbaafec13e5b4e83d513d5817f79d39b709d3a03efc206f2b265dc66fc75",
+          "periodos_declarados_por_titulo": [
+            "2022 anual",
+            "2023 anual",
+            "2024 anual"
+          ],
+          "nota_periodos": "Periodos declarados por titulos de recursos CKAN y nota del conjunto; NO cobertura observada.",
+          "estado_actual": "pendiente (F3+F4 ausentes)",
+          "motivo": "F3+F4 ausentes: sin declaración de edición/versión de la hoja Catalogo rechazo ni su aplicación a 2022-2024.",
+          "evidencia_revisada": [
+            "W04 (igual que V06)",
+            "Local: package_5494daa1 (extras nulos) + xlsx 3b8546ac",
+            "R6-C1 (API CKAN package_show 2026-10-23) + R6-C2 (core-properties xlsx)",
+            "R6 novedad: R6-C1+C2 igual que V06 para hoja Catalogo rechazo (mismo archivo 3b8546ac, export openpyxl 2026). F3+F4 ausentes."
+          ],
+          "campos_minimos": [
+            "emisor: publicador (DEP-CAT-R6-03)",
+            "edicion/version/fecha declarada del catalogo (Catalogo rechazo / motiv_rech_ricket_sangre, sha 3b8546ac)",
+            "recurso catalogo: 08d3b1a7-dbc0-4f43-b1d2-3266cebb88f8",
+            "periodos de aplicacion: 2022 anual; 2023 anual; 2024 anual",
+            "fecha o firma del documento"
+          ],
+          "criterio_aceptacion": "Se cierra solo si el documento del publicador cita edicion/version/fecha del catalogo (Catalogo rechazo / motiv_rech_ricket_sangre, sha 3b8546ac) y recurso 08d3b1a7-dbc0-4f43-b1d2-3266cebb88f8 y periodos (2022 anual; 2023 anual; 2024 anual); verificable (URL o copia local con SHA). Las fechas de portal/API (version=null, placeholder 1989-06-04) y core-properties no acreditan F3+F4.",
+          "limites": [
+            "No afirmar vigencia histórica ni extender a otros conjuntos/periodos."
+          ],
+          "documento_requerido_exacto": "Declaracion de edicion/version/fecha del catalogo Rickettsia (sha 3b8546ac) con vinculo 2022-2024 + fe de erratas o diccionario corregido y URL del catalogo de des_mpo_res si existe. Pendiente exacto: Acreditar F3+F4: declaración de edición/versión/fecha del catálogo (Catalogo rechazo/motiv_rech_ricket_sangre, sha 3b8546ac) y documento que la vincule con 2022, 2023, 2024.",
+          "soporte": [
+            {
+              "ruta": "reports/pendientes-ronda-5.json",
+              "sha256": "46f3b6f8826379be5124fb85cf6128b705fbe90deebf2c99bff64098608c8f11",
+              "localizador": "decisiones_significados id=V07"
+            },
+            {
+              "ruta": "propuestas/pendientes-muse-r6/catalogos/entrega.json",
+              "sha256": "649bbe7e5feca82b7e8d5c5144de78b1d8ceccb1c217ca976347b1c9a05cb74b",
+              "localizador": "decisiones_significados id=V07 + novedad_r6 (C1 API package_show 2026-10-23 + C2 core-properties xlsx)"
+            },
+            {
+              "ruta": "local: xlsx sha 3b8546ac",
+              "sha256": "3b8546acad7482825755e46a1a619a4838721f8480b94baaef3c755ba293db9c",
+              "localizador": "interior xlsx sin celdas de version/periodo (R4 vigente, re-verificado R6: sizes API = locales)"
+            }
+          ]
+        },
+        "motivo": "F3+F4 ausentes tras reverificacion en vivo 2026-10-24: package version=null/extras vacios; hoja Catalogo rechazo (dimension A1:B21, 20 valores motiv_rech_ricket_sangre) sin celdas de version/periodo; Diccionario cita el catalogo por nombre sin edicion; estrategia FMRR sin mencion al catalogo CKAN. Cobertura 2022-01-01/2026-12-31 y fechas de carga no acreditan edicion.",
+        "evidencia_faltante": "Declaracion de edicion/version/fecha del catalogo Rickettsia (sha 3b8546ac) con vinculo 2022-2024 + fe de erratas o diccionario corregido y URL del catalogo de des_mpo_res si existe. Pendiente exacto: Acreditar F3+F4: declaración de edición/versión/fecha del catálogo (Catalogo rechazo/motiv_rech_ricket_sangre, sha 3b8546ac) y documento que la vincule con 2022, 2023, 2024.",
+        "evidencia": [
+          {
+            "ruta": "propuestas/cierre-brechas-post-r6/vigencias-salud/evidencia/api_package_show_2026-10-24.json",
+            "sha256": "e751fe481af047f3ffa6facc57c9d04952e5f874186be2d2fb4a6ae20f9a0154",
+            "localizador": "result.version=null; result.extras=[]; recurso 08d3b1a7 size 12702 start 2022-01-01 end 2026-12-31; metadata_modified 2026-05-11",
+            "afirmacion_soportada": "API CKAN en vivo 2026-10-24: package sin version y sin extras; fechas del recurso Catalogo son cobertura, no edicion; byte-identico a captura local previa"
+          },
+          {
+            "ruta": "propuestas/cierre-brechas-post-r6/vigencias-salud/evidencia/catalogo_xlsx_2026-10-24.xlsx",
+            "sha256": "3b8546acad7482825755e46a1a619a4838721f8480b94baaef3c755ba293db9c",
+            "localizador": "descarga en vivo 2026-10-24; sha identico al local; sharedStrings 37 sin version/periodo",
+            "afirmacion_soportada": "El catalogo publicado no cambio (mismo sha) y su interior no declara edicion/version/periodo"
+          },
+          {
+            "ruta": "propuestas/cierre-brechas-post-r6/vigencias-salud/evidencia/diccionario_csv_2026-10-24.csv",
+            "sha256": "2c8ce131bf0e71fe812605f0f95381acaec9c5534e1bed8f05ff1895bf2fcd1c",
+            "localizador": "filas 129/162/168 citan catalogos por nombre sin edicion; fila 7 des_mpo_res con Catalogo de referencia vacio; 17x2022 son fechas de ejemplo",
+            "afirmacion_soportada": "Diccionario en vivo no declara edicion del catalogo ni fe de erratas; sin URL de catalogo para des_mpo_res"
+          },
+          {
+            "ruta": "propuestas/cierre-brechas-post-r6/vigencias-salud/evidencia/estrategia_fmrr_salud_sonora.pdf",
+            "sha256": "9c2aec1236ecdbcdd4fa4fe2a5c87f25bfe606ee80121ba283e00d715c530485",
+            "localizador": "conteo ASCII: 0 menciones a campos catalogo/CKAN/version/edicion/diccionario",
+            "afirmacion_soportada": "Estrategia sectorial FMRR (pista nueva) no es declaracion de edicion del catalogo CKAN: negativa documentada"
+          },
+          {
+            "ruta": "propuestas/cierre-brechas-post-r6/vigencias-salud/evidencia/recurso_catalogo_pagina_2026-10-24.html",
+            "sha256": "ae7e8f383f34308046a830697d2e47e561f33766cd1269fe2ff87d44b824b5a0",
+            "localizador": "Metadatos: Creado 28-04-2026, actualizacion 29-04-2026, formato XLSX; sin version/edicion",
+            "afirmacion_soportada": "Pagina del recurso Catalogo no declara edicion/version (solo fechas de carga)"
+          }
+        ],
+        "limites": [
+          "No afirmar vigencia histórica ni extender a otros conjuntos/periodos.",
+          "No inferir vigencia del nombre del archivo ni de start_date/end_date; no extender a otros conjuntos."
+        ],
+        "tarea": "vigencias-salud",
+        "tipo": "vigencias"
+      }
+    },
+    {
+      "id": "V08",
+      "tipo": "vigencias",
+      "original": {
+        "id": "V08",
+        "tipo": "vigencia",
+        "grupo": "C",
+        "dependencia_publicador": "DEP-CAT-R6-03",
+        "conjunto": {
+          "id": "5494daa1-09ca-4750-aeac-2558553700e1",
+          "titulo": "Fiebre manchada (Rickettsia)"
+        },
+        "catalogo": {
+          "recurso_catalogo": "08d3b1a7-dbc0-4f43-b1d2-3266cebb88f8",
+          "recurso_url": "https://datos.sonora.gob.mx/dataset/5494daa1-09ca-4750-aeac-2558553700e1/resource/08d3b1a7-dbc0-4f43-b1d2-3266cebb88f8/download/catalogo.xlsx",
+          "sha256": "3b8546acad7482825755e46a1a619a4838721f8480b94baaef3c755ba293db9c",
+          "hoja_campo": "Catalogo especie / ricket_especie (variable ricket_especie_rtpcr)"
+        },
+        "referencia_iri": "https://example.org/mex-ontologi/declared-code-reference/c8e9eb88050d4c254c2f8e08bee2bac5095eea83f8e07aab0d2e9ce79aca9131",
+        "periodos_declarados_por_titulo": [
+          "2022 anual",
+          "2023 anual",
+          "2024 anual"
+        ],
+        "nota_periodos": "Periodos declarados por titulos de recursos CKAN y nota del conjunto; NO cobertura observada.",
+        "estado_actual": "pendiente (F3+F4 ausentes)",
+        "motivo": "F3+F4 ausentes: sin declaración de edición/versión de la hoja Catalogo especie ni su aplicación a 2022-2024.",
+        "evidencia_revisada": [
+          "W04 (igual que V06)",
+          "Local: package_5494daa1 (extras nulos) + xlsx 3b8546ac",
+          "R6-C1 (API CKAN package_show 2026-10-23) + R6-C2 (core-properties xlsx)",
+          "R6 novedad: R6-C1+C2 igual que V06 para hoja Catalogo especie (mismo archivo 3b8546ac, export openpyxl 2026). F3+F4 ausentes."
+        ],
+        "campos_minimos": [
+          "emisor: publicador (DEP-CAT-R6-03)",
+          "edicion/version/fecha declarada del catalogo (Catalogo especie / ricket_especie (variable ricket_especie_rtpcr), sha 3b8546ac)",
+          "recurso catalogo: 08d3b1a7-dbc0-4f43-b1d2-3266cebb88f8",
+          "periodos de aplicacion: 2022 anual; 2023 anual; 2024 anual",
+          "fecha o firma del documento"
+        ],
+        "criterio_aceptacion": "Se cierra solo si el documento del publicador cita edicion/version/fecha del catalogo (Catalogo especie / ricket_especie (variable ricket_especie_rtpcr), sha 3b8546ac) y recurso 08d3b1a7-dbc0-4f43-b1d2-3266cebb88f8 y periodos (2022 anual; 2023 anual; 2024 anual); verificable (URL o copia local con SHA). Las fechas de portal/API (version=null, placeholder 1989-06-04) y core-properties no acreditan F3+F4.",
+        "limites": [
+          "No afirmar vigencia histórica ni extender a otros conjuntos/periodos."
+        ],
+        "documento_requerido_exacto": "Declaracion de edicion/version/fecha del catalogo Rickettsia (sha 3b8546ac) con vinculo 2022-2024 + fe de erratas o diccionario corregido y URL del catalogo de des_mpo_res si existe. Pendiente exacto: Acreditar F3+F4: declaración de edición/versión/fecha del catálogo (Catalogo especie/ricket_especie, sha 3b8546ac) y documento que la vincule con 2022, 2023, 2024.",
+        "soporte": [
+          {
+            "ruta": "reports/pendientes-ronda-5.json",
+            "sha256": "46f3b6f8826379be5124fb85cf6128b705fbe90deebf2c99bff64098608c8f11",
+            "localizador": "decisiones_significados id=V08"
+          },
+          {
+            "ruta": "propuestas/pendientes-muse-r6/catalogos/entrega.json",
+            "sha256": "649bbe7e5feca82b7e8d5c5144de78b1d8ceccb1c217ca976347b1c9a05cb74b",
+            "localizador": "decisiones_significados id=V08 + novedad_r6 (C1 API package_show 2026-10-23 + C2 core-properties xlsx)"
+          },
+          {
+            "ruta": "local: xlsx sha 3b8546ac",
+            "sha256": "3b8546acad7482825755e46a1a619a4838721f8480b94baaef3c755ba293db9c",
+            "localizador": "interior xlsx sin celdas de version/periodo (R4 vigente, re-verificado R6: sizes API = locales)"
+          }
+        ]
+      },
+      "antecedente": {
+        "id": "V08",
+        "estado": "sigue_pendiente",
+        "original": {
+          "id": "V08",
+          "tipo": "vigencia",
+          "grupo": "C",
+          "dependencia_publicador": "DEP-CAT-R6-03",
+          "conjunto": {
+            "id": "5494daa1-09ca-4750-aeac-2558553700e1",
+            "titulo": "Fiebre manchada (Rickettsia)"
+          },
+          "catalogo": {
+            "recurso_catalogo": "08d3b1a7-dbc0-4f43-b1d2-3266cebb88f8",
+            "recurso_url": "https://datos.sonora.gob.mx/dataset/5494daa1-09ca-4750-aeac-2558553700e1/resource/08d3b1a7-dbc0-4f43-b1d2-3266cebb88f8/download/catalogo.xlsx",
+            "sha256": "3b8546acad7482825755e46a1a619a4838721f8480b94baaef3c755ba293db9c",
+            "hoja_campo": "Catalogo especie / ricket_especie (variable ricket_especie_rtpcr)"
+          },
+          "referencia_iri": "https://example.org/mex-ontologi/declared-code-reference/c8e9eb88050d4c254c2f8e08bee2bac5095eea83f8e07aab0d2e9ce79aca9131",
+          "periodos_declarados_por_titulo": [
+            "2022 anual",
+            "2023 anual",
+            "2024 anual"
+          ],
+          "nota_periodos": "Periodos declarados por titulos de recursos CKAN y nota del conjunto; NO cobertura observada.",
+          "estado_actual": "pendiente (F3+F4 ausentes)",
+          "motivo": "F3+F4 ausentes: sin declaración de edición/versión de la hoja Catalogo especie ni su aplicación a 2022-2024.",
+          "evidencia_revisada": [
+            "W04 (igual que V06)",
+            "Local: package_5494daa1 (extras nulos) + xlsx 3b8546ac",
+            "R6-C1 (API CKAN package_show 2026-10-23) + R6-C2 (core-properties xlsx)",
+            "R6 novedad: R6-C1+C2 igual que V06 para hoja Catalogo especie (mismo archivo 3b8546ac, export openpyxl 2026). F3+F4 ausentes."
+          ],
+          "campos_minimos": [
+            "emisor: publicador (DEP-CAT-R6-03)",
+            "edicion/version/fecha declarada del catalogo (Catalogo especie / ricket_especie (variable ricket_especie_rtpcr), sha 3b8546ac)",
+            "recurso catalogo: 08d3b1a7-dbc0-4f43-b1d2-3266cebb88f8",
+            "periodos de aplicacion: 2022 anual; 2023 anual; 2024 anual",
+            "fecha o firma del documento"
+          ],
+          "criterio_aceptacion": "Se cierra solo si el documento del publicador cita edicion/version/fecha del catalogo (Catalogo especie / ricket_especie (variable ricket_especie_rtpcr), sha 3b8546ac) y recurso 08d3b1a7-dbc0-4f43-b1d2-3266cebb88f8 y periodos (2022 anual; 2023 anual; 2024 anual); verificable (URL o copia local con SHA). Las fechas de portal/API (version=null, placeholder 1989-06-04) y core-properties no acreditan F3+F4.",
+          "limites": [
+            "No afirmar vigencia histórica ni extender a otros conjuntos/periodos."
+          ],
+          "documento_requerido_exacto": "Declaracion de edicion/version/fecha del catalogo Rickettsia (sha 3b8546ac) con vinculo 2022-2024 + fe de erratas o diccionario corregido y URL del catalogo de des_mpo_res si existe. Pendiente exacto: Acreditar F3+F4: declaración de edición/versión/fecha del catálogo (Catalogo especie/ricket_especie, sha 3b8546ac) y documento que la vincule con 2022, 2023, 2024.",
+          "soporte": [
+            {
+              "ruta": "reports/pendientes-ronda-5.json",
+              "sha256": "46f3b6f8826379be5124fb85cf6128b705fbe90deebf2c99bff64098608c8f11",
+              "localizador": "decisiones_significados id=V08"
+            },
+            {
+              "ruta": "propuestas/pendientes-muse-r6/catalogos/entrega.json",
+              "sha256": "649bbe7e5feca82b7e8d5c5144de78b1d8ceccb1c217ca976347b1c9a05cb74b",
+              "localizador": "decisiones_significados id=V08 + novedad_r6 (C1 API package_show 2026-10-23 + C2 core-properties xlsx)"
+            },
+            {
+              "ruta": "local: xlsx sha 3b8546ac",
+              "sha256": "3b8546acad7482825755e46a1a619a4838721f8480b94baaef3c755ba293db9c",
+              "localizador": "interior xlsx sin celdas de version/periodo (R4 vigente, re-verificado R6: sizes API = locales)"
+            }
+          ]
+        },
+        "motivo": "F3+F4 ausentes tras reverificacion en vivo 2026-10-24: package version=null/extras vacios; hoja Catalogo especie (dimension A1:B5, 4 valores ricket_especie) sin celdas de version/periodo; Diccionario cita el catalogo por nombre sin edicion; estrategia FMRR sin mencion al catalogo CKAN. Cobertura 2022-01-01/2026-12-31 y fechas de carga no acreditan edicion.",
+        "evidencia_faltante": "Declaracion de edicion/version/fecha del catalogo Rickettsia (sha 3b8546ac) con vinculo 2022-2024 + fe de erratas o diccionario corregido y URL del catalogo de des_mpo_res si existe. Pendiente exacto: Acreditar F3+F4: declaración de edición/versión/fecha del catálogo (Catalogo especie/ricket_especie, sha 3b8546ac) y documento que la vincule con 2022, 2023, 2024.",
+        "evidencia": [
+          {
+            "ruta": "propuestas/cierre-brechas-post-r6/vigencias-salud/evidencia/api_package_show_2026-10-24.json",
+            "sha256": "e751fe481af047f3ffa6facc57c9d04952e5f874186be2d2fb4a6ae20f9a0154",
+            "localizador": "result.version=null; result.extras=[]; recurso 08d3b1a7 size 12702 start 2022-01-01 end 2026-12-31; metadata_modified 2026-05-11",
+            "afirmacion_soportada": "API CKAN en vivo 2026-10-24: package sin version y sin extras; fechas del recurso Catalogo son cobertura, no edicion; byte-identico a captura local previa"
+          },
+          {
+            "ruta": "propuestas/cierre-brechas-post-r6/vigencias-salud/evidencia/catalogo_xlsx_2026-10-24.xlsx",
+            "sha256": "3b8546acad7482825755e46a1a619a4838721f8480b94baaef3c755ba293db9c",
+            "localizador": "descarga en vivo 2026-10-24; sha identico al local; sharedStrings 37 sin version/periodo",
+            "afirmacion_soportada": "El catalogo publicado no cambio (mismo sha) y su interior no declara edicion/version/periodo"
+          },
+          {
+            "ruta": "propuestas/cierre-brechas-post-r6/vigencias-salud/evidencia/diccionario_csv_2026-10-24.csv",
+            "sha256": "2c8ce131bf0e71fe812605f0f95381acaec9c5534e1bed8f05ff1895bf2fcd1c",
+            "localizador": "filas 129/162/168 citan catalogos por nombre sin edicion; fila 7 des_mpo_res con Catalogo de referencia vacio; 17x2022 son fechas de ejemplo",
+            "afirmacion_soportada": "Diccionario en vivo no declara edicion del catalogo ni fe de erratas; sin URL de catalogo para des_mpo_res"
+          },
+          {
+            "ruta": "propuestas/cierre-brechas-post-r6/vigencias-salud/evidencia/estrategia_fmrr_salud_sonora.pdf",
+            "sha256": "9c2aec1236ecdbcdd4fa4fe2a5c87f25bfe606ee80121ba283e00d715c530485",
+            "localizador": "conteo ASCII: 0 menciones a campos catalogo/CKAN/version/edicion/diccionario",
+            "afirmacion_soportada": "Estrategia sectorial FMRR (pista nueva) no es declaracion de edicion del catalogo CKAN: negativa documentada"
+          },
+          {
+            "ruta": "propuestas/cierre-brechas-post-r6/vigencias-salud/evidencia/recurso_catalogo_pagina_2026-10-24.html",
+            "sha256": "ae7e8f383f34308046a830697d2e47e561f33766cd1269fe2ff87d44b824b5a0",
+            "localizador": "Metadatos: Creado 28-04-2026, actualizacion 29-04-2026, formato XLSX; sin version/edicion",
+            "afirmacion_soportada": "Pagina del recurso Catalogo no declara edicion/version (solo fechas de carga)"
+          }
+        ],
+        "limites": [
+          "No afirmar vigencia histórica ni extender a otros conjuntos/periodos.",
+          "No inferir vigencia del nombre del archivo ni de start_date/end_date; no extender a otros conjuntos."
+        ],
+        "tarea": "vigencias-salud",
+        "tipo": "vigencias"
+      }
+    },
+    {
+      "id": "https://example.org/mex-ontologi/definition/33d0a99e-c721-496f-a05e-07646e9ae42a%2F177",
+      "tipo": "anomalias",
+      "original": {
+        "clasificacion": "encabezado_corrupto/no_significado_interpretable",
+        "conjunto": "5494daa1-09ca-4750-aeac-2558553700e1",
+        "definicion_iri": "https://example.org/mex-ontologi/definition/33d0a99e-c721-496f-a05e-07646e9ae42a%2F177",
+        "descripcion_original": "ide_col",
+        "diccionario": "33d0a99e-c721-496f-a05e-07646e9ae42a",
+        "efecto": "excluir SOLO de vista accionable; conservar origen, evidencia y conteos historicos; no autoriza concepto, codigo, catalogo ni conteo de variable",
+        "evidencia_corrupcion": [
+          "data/portal/contenido-inspeccion.json recurso 33d0a99e-c721-496f-a05e-07646e9ae42a definiciones[176] (fila 177 1-based): Nombre variable=ide_id, Tipo=ide_sex, Formato=ide_eda_ano, Descripcion=ide_col, Catalogo=des_mpo_res, Ejemplo=ide_cp (encabezados repetidos como valores)",
+          "Fila 7 genuina del mismo diccionario (definiciones[6]): des_mpo_res = texto libre 'Municipio donde reside el caso', ejemplo 'Hermosillo'; el supuesto catalogo ni siquiera aportaria dominio de codigos (matiz nuevo R6, diversos-presas/resultado.md)",
+          "R6 diversos-presas/asignacion.json + entrega.json: decision artefacto_documental, motivo 'fila corrupta: repite la cabecera del diccionario como valores; catalogo_declarado des_mpo_res es posicion de columna, no referencia real. Se conserva como artefacto, sin curar'",
+          "R6 auditoria-documental/entrega-final.json: dictamen resolucion verificado con marker exacto sobre diversos-presas/entrega.json; diferenciacion '2 artefactos (filas 177/178) vs 169 carencias'"
+        ],
+        "fuentes": [
+          {
+            "ruta": "reports/pendientes-ronda-5.json",
+            "sha256": "46f3b6f8826379be5124fb85cf6128b705fbe90deebf2c99bff64098608c8f11"
+          },
+          {
+            "ruta": "data/semantica/cobertura.json",
+            "sha256": "7ef11b0a4ad9ee3aa3d3512ab2a431cee29b9295db9da76daae2e054378a39a9"
+          },
+          {
+            "ruta": "data/portal/contenido-inspeccion.json",
+            "sha256": "61861aab5bc2b334699c4d78f611a0e2d650c4649bd791927f9095c2ac785efb"
+          },
+          {
+            "ruta": "propuestas/pendientes-muse-r6/diversos-presas/asignacion.json",
+            "sha256": "f5270ccfa3a551203b743f8f245fcdac59b8044d76e7a7312b1bfa269e678fd5"
+          },
+          {
+            "ruta": "propuestas/pendientes-muse-r6/diversos-presas/entrega.json",
+            "sha256": "aae9211f86f9411a1c90c131226dc26a7f44d394908dad50d477e82465491b67"
+          },
+          {
+            "ruta": "propuestas/pendientes-muse-r6/diversos-presas/resultado.md",
+            "sha256": "202874283768f29f6efb4252fec61863f9bba47fd80ef3fa53c32660f71065b7"
+          },
+          {
+            "ruta": "propuestas/pendientes-muse-r6/auditoria-documental/entrega-final.json",
+            "sha256": "4afa516b5d68c0393d4c58a91eae324c075828ee91797b3515d0de3e6b8d42a8"
+          },
+          {
+            "ruta": "propuestas/pendientes-muse-r5/diversos/evidencia/extractos.json",
+            "sha256": "5e2d575b34c7511813b05e98d5bea765b39635c4151c69c8b4ba5df3b2338a25"
+          }
+        ],
+        "huella_fila_diccionario": "4b17625c8fea607228fe4f2a790744687a6e8bc45a712f66d4833d6ac541da79",
+        "id_estable": "EXC-ENC-177",
+        "localizador_original": {
+          "ejemplo_original": "ide_cp",
+          "fila_1based": 177,
+          "indice_0based_en_contenido_inspeccion_definiciones": 176,
+          "jsonpointer_pendientes_r5": "/significados/115",
+          "recurso_inspeccion": "data/portal/contenido-inspeccion.json#recursos[id=33d0a99e-c721-496f-a05e-07646e9ae42a]/definiciones[176]"
+        },
+        "motivo": "Fila corrupta: repite la cabecera del diccionario como valores (Tipo=ide_sex, Formato=ide_eda_ano, Descripcion=ide_col); catalogo_declarado des_mpo_res es nombre de la fila 7 genuina (texto libre), no referencia real. Artefacto conservado sin curar; requiere fe de erratas del publicador.",
+        "texto_original_completo": {
+          "catalogo_referencia": "des_mpo_res",
+          "descripcion": "ide_col",
+          "ejemplo": "ide_cp",
+          "formato": "ide_eda_ano",
+          "nombre_variable": "ide_id",
+          "tipo": "ide_sex"
+        },
+        "titulo_conjunto": "Fiebre manchada (Rickettsia)",
+        "variable": "ide_id",
+        "id": "https://example.org/mex-ontologi/definition/33d0a99e-c721-496f-a05e-07646e9ae42a%2F177"
+      },
+      "antecedente": {
+        "id": "https://example.org/mex-ontologi/definition/33d0a99e-c721-496f-a05e-07646e9ae42a%2F177",
+        "estado": "sigue_pendiente",
+        "original": {
+          "clasificacion": "encabezado_corrupto/no_significado_interpretable",
+          "conjunto": "5494daa1-09ca-4750-aeac-2558553700e1",
+          "definicion_iri": "https://example.org/mex-ontologi/definition/33d0a99e-c721-496f-a05e-07646e9ae42a%2F177",
+          "descripcion_original": "ide_col",
+          "diccionario": "33d0a99e-c721-496f-a05e-07646e9ae42a",
+          "efecto": "excluir SOLO de vista accionable; conservar origen, evidencia y conteos historicos; no autoriza concepto, codigo, catalogo ni conteo de variable",
+          "evidencia_corrupcion": [
+            "data/portal/contenido-inspeccion.json recurso 33d0a99e-c721-496f-a05e-07646e9ae42a definiciones[176] (fila 177 1-based): Nombre variable=ide_id, Tipo=ide_sex, Formato=ide_eda_ano, Descripcion=ide_col, Catalogo=des_mpo_res, Ejemplo=ide_cp (encabezados repetidos como valores)",
+            "Fila 7 genuina del mismo diccionario (definiciones[6]): des_mpo_res = texto libre 'Municipio donde reside el caso', ejemplo 'Hermosillo'; el supuesto catalogo ni siquiera aportaria dominio de codigos (matiz nuevo R6, diversos-presas/resultado.md)",
+            "R6 diversos-presas/asignacion.json + entrega.json: decision artefacto_documental, motivo 'fila corrupta: repite la cabecera del diccionario como valores; catalogo_declarado des_mpo_res es posicion de columna, no referencia real. Se conserva como artefacto, sin curar'",
+            "R6 auditoria-documental/entrega-final.json: dictamen resolucion verificado con marker exacto sobre diversos-presas/entrega.json; diferenciacion '2 artefactos (filas 177/178) vs 169 carencias'"
+          ],
+          "fuentes": [
+            {
+              "ruta": "reports/pendientes-ronda-5.json",
+              "sha256": "46f3b6f8826379be5124fb85cf6128b705fbe90deebf2c99bff64098608c8f11"
+            },
+            {
+              "ruta": "data/semantica/cobertura.json",
+              "sha256": "7ef11b0a4ad9ee3aa3d3512ab2a431cee29b9295db9da76daae2e054378a39a9"
+            },
+            {
+              "ruta": "data/portal/contenido-inspeccion.json",
+              "sha256": "61861aab5bc2b334699c4d78f611a0e2d650c4649bd791927f9095c2ac785efb"
+            },
+            {
+              "ruta": "propuestas/pendientes-muse-r6/diversos-presas/asignacion.json",
+              "sha256": "f5270ccfa3a551203b743f8f245fcdac59b8044d76e7a7312b1bfa269e678fd5"
+            },
+            {
+              "ruta": "propuestas/pendientes-muse-r6/diversos-presas/entrega.json",
+              "sha256": "aae9211f86f9411a1c90c131226dc26a7f44d394908dad50d477e82465491b67"
+            },
+            {
+              "ruta": "propuestas/pendientes-muse-r6/diversos-presas/resultado.md",
+              "sha256": "202874283768f29f6efb4252fec61863f9bba47fd80ef3fa53c32660f71065b7"
+            },
+            {
+              "ruta": "propuestas/pendientes-muse-r6/auditoria-documental/entrega-final.json",
+              "sha256": "4afa516b5d68c0393d4c58a91eae324c075828ee91797b3515d0de3e6b8d42a8"
+            },
+            {
+              "ruta": "propuestas/pendientes-muse-r5/diversos/evidencia/extractos.json",
+              "sha256": "5e2d575b34c7511813b05e98d5bea765b39635c4151c69c8b4ba5df3b2338a25"
+            }
+          ],
+          "huella_fila_diccionario": "4b17625c8fea607228fe4f2a790744687a6e8bc45a712f66d4833d6ac541da79",
+          "id_estable": "EXC-ENC-177",
+          "localizador_original": {
+            "ejemplo_original": "ide_cp",
+            "fila_1based": 177,
+            "indice_0based_en_contenido_inspeccion_definiciones": 176,
+            "jsonpointer_pendientes_r5": "/significados/115",
+            "recurso_inspeccion": "data/portal/contenido-inspeccion.json#recursos[id=33d0a99e-c721-496f-a05e-07646e9ae42a]/definiciones[176]"
+          },
+          "motivo": "Fila corrupta: repite la cabecera del diccionario como valores (Tipo=ide_sex, Formato=ide_eda_ano, Descripcion=ide_col); catalogo_declarado des_mpo_res es nombre de la fila 7 genuina (texto libre), no referencia real. Artefacto conservado sin curar; requiere fe de erratas del publicador.",
+          "texto_original_completo": {
+            "catalogo_referencia": "des_mpo_res",
+            "descripcion": "ide_col",
+            "ejemplo": "ide_cp",
+            "formato": "ide_eda_ano",
+            "nombre_variable": "ide_id",
+            "tipo": "ide_sex"
+          },
+          "titulo_conjunto": "Fiebre manchada (Rickettsia)",
+          "variable": "ide_id",
+          "id": "https://example.org/mex-ontologi/definition/33d0a99e-c721-496f-a05e-07646e9ae42a%2F177"
+        },
+        "motivo": "Artefacto documental confirmado y SIN CAMBIOS el 2026-10-24: el CSV autentico en vivo (recurso 33d0a99e, last_modified 2026-04-28, size 51040 = API) trae 178 filas de datos y sus ultimas 2 filas repiten la cabecera como valores (fila 177: .../ide_cp/...); la busqueda acotada de fe de erratas/diccionario corregido solo devuelve clinica sin vinculo al conjunto. Se conserva como artefacto sin curar; no acredita concepto, codigo, catalogo ni conteo.",
+        "evidencia_faltante": "Fe de erratas o diccionario corregido del publicador (conjunto 5494daa1, recurso 33d0a99e) que aclare la fila 177 (huella 4b17625c). No localizada en fuentes examinadas.",
+        "evidencia": [
+          {
+            "ruta": "propuestas/cierre-brechas-post-r6/anomalias/evidencia/diccionario_ricket_1_2026-10-24.csv",
+            "sha256": "2c8ce131bf0e71fe812605f0f95381acaec9c5534e1bed8f05ff1895bf2fcd1c",
+            "localizador": "filas de datos 177-178 (csv rows 178-179): 177 = ide_id,ide_sex,ide_eda_ano,des_cal,ide_col,des_jur_res,des_mpo_res,cve_loc_res,des_loc_res,ide_cp,...",
+            "afirmacion_soportada": "CSV autentico en vivo aun contiene la fila corrupta 177 con encabezados como valores y ejemplo ide_cp; sin correccion del publicador."
+          },
+          {
+            "ruta": "propuestas/cierre-brechas-post-r6/anomalias/evidencia/ckan-package_5494daa1_2026-10-24.json",
+            "sha256": "e751fe481af047f3ffa6facc57c9d04952e5f874186be2d2fb4a6ae20f9a0154",
+            "localizador": "resources[id=33d0a99e]: last_modified 2026-04-28T20:44:26, size 51040; metadata_modified 2026-05-11; version null; fuentes_extras vacias",
+            "afirmacion_soportada": "Inventario API 2026-10-24: diccionario sin version ni fe de erratas; tamano API = CSV vivo (51040 B), recurso sin cambios."
+          },
+          {
+            "ruta": "data/portal/contenido-inspeccion.json",
+            "sha256": "61861aab5bc2b334699c4d78f611a0e2d650c4649bd791927f9095c2ac785efb",
+            "localizador": "recursos[id=33d0a99e]/definiciones[176] (fila 177 1-based)",
+            "afirmacion_soportada": "Inspeccion preservada con la misma fila corrupta (huella 4b17625c citada en asignacion); el vivo la confirma byte a byte en patron."
+          }
+        ],
+        "propuesta": null,
+        "limites": [
+          "Excluir SOLO de vista accionable; conservar origen, evidencia y conteos historicos.",
+          "No autoriza concepto, codigo, catalogo ni conteo de variable.",
+          "No contar como significado nuevo: artefacto ya clasificado, no resolucion nueva."
+        ],
+        "tarea": "anomalias",
+        "tipo": "anomalias"
+      }
+    },
+    {
+      "id": "https://example.org/mex-ontologi/definition/33d0a99e-c721-496f-a05e-07646e9ae42a%2F178",
+      "tipo": "anomalias",
+      "original": {
+        "clasificacion": "encabezado_corrupto/no_significado_interpretable",
+        "conjunto": "5494daa1-09ca-4750-aeac-2558553700e1",
+        "definicion_iri": "https://example.org/mex-ontologi/definition/33d0a99e-c721-496f-a05e-07646e9ae42a%2F178",
+        "descripcion_original": "ide_col",
+        "diccionario": "33d0a99e-c721-496f-a05e-07646e9ae42a",
+        "efecto": "excluir SOLO de vista accionable; conservar origen, evidencia y conteos historicos; no autoriza concepto, codigo, catalogo ni conteo de variable",
+        "evidencia_corrupcion": [
+          "data/portal/contenido-inspeccion.json recurso 33d0a99e-c721-496f-a05e-07646e9ae42a definiciones[177] (fila 178 1-based): mismo patron de encabezados repetidos, variante Ejemplo=id_cp (sin e) vs ide_cp de la 177",
+          "R6 diversos-presas/asignacion.json + entrega.json: decision artefacto_documental, motivo 'fila corrupta gemela de la 177 (encabezados como valores, difiere solo en id_cp); artefacto conservado sin curar'",
+          "R6 auditoria-documental/entrega-final.json: dictamen resolucion verificado con marker exacto sobre diversos-presas/entrega.json; diferenciacion '2 artefactos vs 169 carencias'"
+        ],
+        "fuentes": [
+          {
+            "ruta": "reports/pendientes-ronda-5.json",
+            "sha256": "46f3b6f8826379be5124fb85cf6128b705fbe90deebf2c99bff64098608c8f11"
+          },
+          {
+            "ruta": "data/semantica/cobertura.json",
+            "sha256": "7ef11b0a4ad9ee3aa3d3512ab2a431cee29b9295db9da76daae2e054378a39a9"
+          },
+          {
+            "ruta": "data/portal/contenido-inspeccion.json",
+            "sha256": "61861aab5bc2b334699c4d78f611a0e2d650c4649bd791927f9095c2ac785efb"
+          },
+          {
+            "ruta": "propuestas/pendientes-muse-r6/diversos-presas/asignacion.json",
+            "sha256": "f5270ccfa3a551203b743f8f245fcdac59b8044d76e7a7312b1bfa269e678fd5"
+          },
+          {
+            "ruta": "propuestas/pendientes-muse-r6/diversos-presas/entrega.json",
+            "sha256": "aae9211f86f9411a1c90c131226dc26a7f44d394908dad50d477e82465491b67"
+          },
+          {
+            "ruta": "propuestas/pendientes-muse-r6/diversos-presas/resultado.md",
+            "sha256": "202874283768f29f6efb4252fec61863f9bba47fd80ef3fa53c32660f71065b7"
+          },
+          {
+            "ruta": "propuestas/pendientes-muse-r6/auditoria-documental/entrega-final.json",
+            "sha256": "4afa516b5d68c0393d4c58a91eae324c075828ee91797b3515d0de3e6b8d42a8"
+          },
+          {
+            "ruta": "propuestas/pendientes-muse-r5/diversos/evidencia/extractos.json",
+            "sha256": "5e2d575b34c7511813b05e98d5bea765b39635c4151c69c8b4ba5df3b2338a25"
+          }
+        ],
+        "huella_fila_diccionario": "b5dbcdf58fd1b6e4d87f2396986629d2aa2350d35f1c1291e59d3d79515a0f60",
+        "id_estable": "EXC-ENC-178",
+        "localizador_original": {
+          "ejemplo_original": "id_cp",
+          "fila_1based": 178,
+          "indice_0based_en_contenido_inspeccion_definiciones": 177,
+          "jsonpointer_pendientes_r5": "/significados/116",
+          "recurso_inspeccion": "data/portal/contenido-inspeccion.json#recursos[id=33d0a99e-c721-496f-a05e-07646e9ae42a]/definiciones[177]"
+        },
+        "motivo": "Fila corrupta gemela de la 177: mismos encabezados como valores, difiere solo en Ejemplo id_cp (variante sin e, prueba de registro unico). Artefacto conservado sin curar; requiere fe de erratas del publicador.",
+        "texto_original_completo": {
+          "catalogo_referencia": "des_mpo_res",
+          "descripcion": "ide_col",
+          "ejemplo": "id_cp",
+          "formato": "ide_eda_ano",
+          "nombre_variable": "ide_id",
+          "tipo": "ide_sex"
+        },
+        "titulo_conjunto": "Fiebre manchada (Rickettsia)",
+        "variable": "ide_id",
+        "id": "https://example.org/mex-ontologi/definition/33d0a99e-c721-496f-a05e-07646e9ae42a%2F178"
+      },
+      "antecedente": {
+        "id": "https://example.org/mex-ontologi/definition/33d0a99e-c721-496f-a05e-07646e9ae42a%2F178",
+        "estado": "sigue_pendiente",
+        "original": {
+          "clasificacion": "encabezado_corrupto/no_significado_interpretable",
+          "conjunto": "5494daa1-09ca-4750-aeac-2558553700e1",
+          "definicion_iri": "https://example.org/mex-ontologi/definition/33d0a99e-c721-496f-a05e-07646e9ae42a%2F178",
+          "descripcion_original": "ide_col",
+          "diccionario": "33d0a99e-c721-496f-a05e-07646e9ae42a",
+          "efecto": "excluir SOLO de vista accionable; conservar origen, evidencia y conteos historicos; no autoriza concepto, codigo, catalogo ni conteo de variable",
+          "evidencia_corrupcion": [
+            "data/portal/contenido-inspeccion.json recurso 33d0a99e-c721-496f-a05e-07646e9ae42a definiciones[177] (fila 178 1-based): mismo patron de encabezados repetidos, variante Ejemplo=id_cp (sin e) vs ide_cp de la 177",
+            "R6 diversos-presas/asignacion.json + entrega.json: decision artefacto_documental, motivo 'fila corrupta gemela de la 177 (encabezados como valores, difiere solo en id_cp); artefacto conservado sin curar'",
+            "R6 auditoria-documental/entrega-final.json: dictamen resolucion verificado con marker exacto sobre diversos-presas/entrega.json; diferenciacion '2 artefactos vs 169 carencias'"
+          ],
+          "fuentes": [
+            {
+              "ruta": "reports/pendientes-ronda-5.json",
+              "sha256": "46f3b6f8826379be5124fb85cf6128b705fbe90deebf2c99bff64098608c8f11"
+            },
+            {
+              "ruta": "data/semantica/cobertura.json",
+              "sha256": "7ef11b0a4ad9ee3aa3d3512ab2a431cee29b9295db9da76daae2e054378a39a9"
+            },
+            {
+              "ruta": "data/portal/contenido-inspeccion.json",
+              "sha256": "61861aab5bc2b334699c4d78f611a0e2d650c4649bd791927f9095c2ac785efb"
+            },
+            {
+              "ruta": "propuestas/pendientes-muse-r6/diversos-presas/asignacion.json",
+              "sha256": "f5270ccfa3a551203b743f8f245fcdac59b8044d76e7a7312b1bfa269e678fd5"
+            },
+            {
+              "ruta": "propuestas/pendientes-muse-r6/diversos-presas/entrega.json",
+              "sha256": "aae9211f86f9411a1c90c131226dc26a7f44d394908dad50d477e82465491b67"
+            },
+            {
+              "ruta": "propuestas/pendientes-muse-r6/diversos-presas/resultado.md",
+              "sha256": "202874283768f29f6efb4252fec61863f9bba47fd80ef3fa53c32660f71065b7"
+            },
+            {
+              "ruta": "propuestas/pendientes-muse-r6/auditoria-documental/entrega-final.json",
+              "sha256": "4afa516b5d68c0393d4c58a91eae324c075828ee91797b3515d0de3e6b8d42a8"
+            },
+            {
+              "ruta": "propuestas/pendientes-muse-r5/diversos/evidencia/extractos.json",
+              "sha256": "5e2d575b34c7511813b05e98d5bea765b39635c4151c69c8b4ba5df3b2338a25"
+            }
+          ],
+          "huella_fila_diccionario": "b5dbcdf58fd1b6e4d87f2396986629d2aa2350d35f1c1291e59d3d79515a0f60",
+          "id_estable": "EXC-ENC-178",
+          "localizador_original": {
+            "ejemplo_original": "id_cp",
+            "fila_1based": 178,
+            "indice_0based_en_contenido_inspeccion_definiciones": 177,
+            "jsonpointer_pendientes_r5": "/significados/116",
+            "recurso_inspeccion": "data/portal/contenido-inspeccion.json#recursos[id=33d0a99e-c721-496f-a05e-07646e9ae42a]/definiciones[177]"
+          },
+          "motivo": "Fila corrupta gemela de la 177: mismos encabezados como valores, difiere solo en Ejemplo id_cp (variante sin e, prueba de registro unico). Artefacto conservado sin curar; requiere fe de erratas del publicador.",
+          "texto_original_completo": {
+            "catalogo_referencia": "des_mpo_res",
+            "descripcion": "ide_col",
+            "ejemplo": "id_cp",
+            "formato": "ide_eda_ano",
+            "nombre_variable": "ide_id",
+            "tipo": "ide_sex"
+          },
+          "titulo_conjunto": "Fiebre manchada (Rickettsia)",
+          "variable": "ide_id",
+          "id": "https://example.org/mex-ontologi/definition/33d0a99e-c721-496f-a05e-07646e9ae42a%2F178"
+        },
+        "motivo": "Artefacto gemelo confirmado y SIN CAMBIOS el 2026-10-24: el CSV vivo trae la fila 178 identica a la 177 salvo ejemplo id_cp (variante sin e); misma ausencia de fe de erratas. Se conserva sin curar; no acredita nada.",
+        "evidencia_faltante": "Fe de erratas o diccionario corregido del publicador que aclare la fila 178 (huella b5dbcdf5). No localizada.",
+        "evidencia": [
+          {
+            "ruta": "propuestas/cierre-brechas-post-r6/anomalias/evidencia/diccionario_ricket_1_2026-10-24.csv",
+            "sha256": "2c8ce131bf0e71fe812605f0f95381acaec9c5534e1bed8f05ff1895bf2fcd1c",
+            "localizador": "fila de datos 178 (csv row 179): mismos encabezados como valores, ejemplo id_cp",
+            "afirmacion_soportada": "CSV vivo aun contiene la fila gemela corrupta 178 (difiere solo en id_cp); sin correccion."
+          },
+          {
+            "ruta": "propuestas/cierre-brechas-post-r6/anomalias/evidencia/ckan-package_5494daa1_2026-10-24.json",
+            "sha256": "e751fe481af047f3ffa6facc57c9d04952e5f874186be2d2fb4a6ae20f9a0154",
+            "localizador": "resources[id=33d0a99e]: last_modified 2026-04-28, size 51040; version null",
+            "afirmacion_soportada": "Diccionario sin version ni errata publicada; recurso sin cambios."
+          },
+          {
+            "ruta": "data/portal/contenido-inspeccion.json",
+            "sha256": "61861aab5bc2b334699c4d78f611a0e2d650c4649bd791927f9095c2ac785efb",
+            "localizador": "recursos[id=33d0a99e]/definiciones[177] (fila 178 1-based)",
+            "afirmacion_soportada": "Inspeccion preservada con la misma fila gemela (huella b5dbcdf5); el vivo la confirma."
+          }
+        ],
+        "propuesta": null,
+        "limites": [
+          "Excluir SOLO de vista accionable; conservar origen, evidencia y conteos historicos.",
+          "No autoriza concepto, codigo, catalogo ni conteo.",
+          "No contar como significado nuevo."
+        ],
+        "tarea": "anomalias",
+        "tipo": "anomalias"
+      }
+    },
+    {
+      "id": "des_mpo_res",
+      "tipo": "anomalias",
+      "original": {
+        "id": "des_mpo_res",
+        "tipo": "anomalia_referencia_heredada",
+        "grupo": "C",
+        "dependencia_publicador": "DEP-CAT-R6-03",
+        "conjunto": {
+          "id": "5494daa1-09ca-4750-aeac-2558553700e1",
+          "titulo": "Fiebre manchada (Rickettsia)"
+        },
+        "catalogo": {
+          "nota": "Catalogo no identificado en inventario revisado: API package_show del conjunto 5494daa1 (2026-10-23) lista solo Diccionario + Catalogo (3 hojas: Servicios, rechazo, especie; sha 3b8546ac) + 3 datos 2022-2024; busqueda de texto completo negativa para des_mpo_res/ide_id/ide_col/des_jur_res/cve_loc_res en el xlsx. No se afirma existencia ni vigencia de catalogo alguno."
+        },
+        "referencia_iri": "https://example.org/mex-ontologi/declared-code-reference/a2902c1feb2fa4b8349946c2ae418a11bf0f465032c5c62adaf33fb053373cf2",
+        "periodos_declarados_por_titulo": [
+          "2022",
+          "2023",
+          "2024"
+        ],
+        "nota_periodos": "Rango de datos del conjunto (ficha/API); NO vigencia del catalogo (no existe recurso).",
+        "estado_actual": "pendiente (anomalia heredada: la supuesta referencia nace de las filas 177/178 corruptas; la variable genuina fila 7 es texto libre sin catalogo)",
+        "motivo": "Filas 177/178 degeneradas confirmadas (encabezados repetidos como valores); catalogo_declarado des_mpo_res es posicion de columna, no referencia real (dictamen R6 diversos: artefacto_documental). La variable genuina des_mpo_res (fila 7, Municipio donde reside el caso, ejemplo Hermosillo, catalogo vacio) es texto libre. Catalogo no identificado en inventario revisado (API 2026-10-23 + xlsx 3b8546ac). Solo el publicador puede aclararlo.",
+        "evidencia_revisada": [
+          "R5: diccionario 33d0a99e filas 177/178 degeneradas (huellas 64 hex supra, copia programatica) + fila 7 sin catalogo + xlsx 3b8546ac sin ocurrencias",
+          "R6-C1: inventario API cerrado (Diccionario + Catalogo + 3 datos 2022-2024); catalogo no identificado en inventario revisado",
+          "R6-C2: xlsx 3b8546ac creator openpyxl created 2026-04-15, sin version",
+          "R6 diversos: artefacto_documental sin curar; auditoria registra 2 artefactos (177/178) vs 169 carencias"
+        ],
+        "campos_minimos": [
+          "emisor: publicador del conjunto 5494daa1",
+          "que significan o como se corrigen las filas 177/178",
+          "si existe catalogo: URL del recurso + edicion/fecha + aplicabilidad a des_mpo_res 2022-2024; si no existe: declaracion de que no existe",
+          "sin catalogo confirmado no hay vigencia que acreditar"
+        ],
+        "criterio_aceptacion": "Se cierra solo si el publicador entrega fe de erratas o diccionario corregido que aclare 177/178 y, SOLO si confirma que existe catalogo, su URL con edicion/fecha verificable contra inventario API; si declara que no existe, se archiva como anomalia aclarada sin catalogo. Mientras tanto sigue pendiente; la coincidencia de nombre con la fila 7 no acredita nada.",
+        "limites": [
+          "No usar la coincidencia de nombre con la variable de la fila 7; no crear vinculo catalogoRecuperado",
+          "No presentar la existencia de catalogo ni su vigencia como hecho: catalogo no identificado en inventario revisado (2026-10-23), no inexistencia universal",
+          "Las 2 exclusiones EXC-ENC-177/178 no cuentan como significados nuevos"
+        ],
+        "documento_requerido_exacto": "Fe de erratas o diccionario corregido del publicador que aclare que significan las filas 177/178 (huellas 4b17625c / b5dbcdf5); URL del recurso catalogo SOLO si el publicador confirma que existe un catalogo aplicable a des_mpo_res 2022-2024. Si confirma que no existe, basta la fe de erratas.",
+        "soporte": [
+          {
+            "ruta": "reports/pendientes-ronda-5.json",
+            "sha256": "46f3b6f8826379be5124fb85cf6128b705fbe90deebf2c99bff64098608c8f11",
+            "localizador": "huellas 177/178 64 hex (copia programatica)"
+          },
+          {
+            "ruta": "propuestas/pendientes-muse-r6/catalogos/entrega.json",
+            "sha256": "649bbe7e5feca82b7e8d5c5144de78b1d8ceccb1c217ca976347b1c9a05cb74b",
+            "localizador": "decision des_mpo_res + novedad_r6"
+          },
+          {
+            "ruta": "propuestas/depuracion-post-r6/encabezados/exclusiones.json",
+            "sha256": "d4d72cb5f5f971afbec424f491f55300435c7bf7580e35d69906d0dad018f000",
+            "localizador": "EXC-ENC-177/178 (solo lectura; no cuentan como significados)"
+          }
+        ],
+        "variable_genuina_fila7": {
+          "definicion_iri": "https://example.org/mex-ontologi/definition/33d0a99e-c721-496f-a05e-07646e9ae42a%2F7",
+          "variable": "des_mpo_res",
+          "descripcion_literal": "Municipio donde reside el caso",
+          "tipo_dato": "Texto",
+          "catalogo_declarado": "",
+          "ejemplo": "Hermosillo",
+          "uso_observado": "texto libre (muestra 2022: HERMOSILLO, PUERTO PENASCO, CAJEME...)",
+          "fuente": "data/portal/inspecciones/33d0a99e-c721-496f-a05e-07646e9ae42a.json definiciones[6] (178 definiciones)"
+        },
+        "filas_origen_anomalia": [
+          {
+            "definicion_iri": "https://example.org/mex-ontologi/definition/33d0a99e-c721-496f-a05e-07646e9ae42a%2F177",
+            "huella_fila_diccionario": "4b17625c8fea607228fe4f2a790744687a6e8bc45a712f66d4833d6ac541da79",
+            "fuente_huella": "reports/pendientes-ronda-5.json (copia programatica, 64 hex)"
+          },
+          {
+            "definicion_iri": "https://example.org/mex-ontologi/definition/33d0a99e-c721-496f-a05e-07646e9ae42a%2F178",
+            "huella_fila_diccionario": "b5dbcdf58fd1b6e4d87f2396986629d2aa2350d35f1c1291e59d3d79515a0f60",
+            "fuente_huella": "reports/pendientes-ronda-5.json (copia programatica, 64 hex)"
+          }
+        ],
+        "exclusiones_vinculadas": [
+          {
+            "id": "EXC-ENC-177",
+            "huella_fila_diccionario": "4b17625c8fea607228fe4f2a790744687a6e8bc45a712f66d4833d6ac541da79"
+          },
+          {
+            "id": "EXC-ENC-178",
+            "huella_fila_diccionario": "b5dbcdf58fd1b6e4d87f2396986629d2aa2350d35f1c1291e59d3d79515a0f60"
+          }
+        ],
+        "exclusiones_referencia": {
+          "ruta": "propuestas/depuracion-post-r6/encabezados/exclusiones.json",
+          "sha256": "d4d72cb5f5f971afbec424f491f55300435c7bf7580e35d69906d0dad018f000",
+          "nota": "agente hermano; solo lectura. Las 2 exclusiones comparten filas/huellas con este caso y no cuentan como significados nuevos: el total sigue en 17."
+        },
+        "dictamen_r6_diversos": {
+          "ruta": "propuestas/pendientes-muse-r6/diversos-presas/entrega.json",
+          "decision": "artefacto_documental",
+          "motivo": "fila corrupta: repite la cabecera del diccionario como valores; catalogo_declarado des_mpo_res es posicion de columna, no referencia real. Se conserva como artefacto, sin curar"
+        }
+      },
+      "antecedente": {
+        "id": "des_mpo_res",
+        "estado": "sigue_pendiente",
+        "original": {
+          "id": "des_mpo_res",
+          "tipo": "anomalia_referencia_heredada",
+          "grupo": "C",
+          "dependencia_publicador": "DEP-CAT-R6-03",
+          "conjunto": {
+            "id": "5494daa1-09ca-4750-aeac-2558553700e1",
+            "titulo": "Fiebre manchada (Rickettsia)"
+          },
+          "catalogo": {
+            "nota": "Catalogo no identificado en inventario revisado: API package_show del conjunto 5494daa1 (2026-10-23) lista solo Diccionario + Catalogo (3 hojas: Servicios, rechazo, especie; sha 3b8546ac) + 3 datos 2022-2024; busqueda de texto completo negativa para des_mpo_res/ide_id/ide_col/des_jur_res/cve_loc_res en el xlsx. No se afirma existencia ni vigencia de catalogo alguno."
+          },
+          "referencia_iri": "https://example.org/mex-ontologi/declared-code-reference/a2902c1feb2fa4b8349946c2ae418a11bf0f465032c5c62adaf33fb053373cf2",
+          "periodos_declarados_por_titulo": [
+            "2022",
+            "2023",
+            "2024"
+          ],
+          "nota_periodos": "Rango de datos del conjunto (ficha/API); NO vigencia del catalogo (no existe recurso).",
+          "estado_actual": "pendiente (anomalia heredada: la supuesta referencia nace de las filas 177/178 corruptas; la variable genuina fila 7 es texto libre sin catalogo)",
+          "motivo": "Filas 177/178 degeneradas confirmadas (encabezados repetidos como valores); catalogo_declarado des_mpo_res es posicion de columna, no referencia real (dictamen R6 diversos: artefacto_documental). La variable genuina des_mpo_res (fila 7, Municipio donde reside el caso, ejemplo Hermosillo, catalogo vacio) es texto libre. Catalogo no identificado en inventario revisado (API 2026-10-23 + xlsx 3b8546ac). Solo el publicador puede aclararlo.",
+          "evidencia_revisada": [
+            "R5: diccionario 33d0a99e filas 177/178 degeneradas (huellas 64 hex supra, copia programatica) + fila 7 sin catalogo + xlsx 3b8546ac sin ocurrencias",
+            "R6-C1: inventario API cerrado (Diccionario + Catalogo + 3 datos 2022-2024); catalogo no identificado en inventario revisado",
+            "R6-C2: xlsx 3b8546ac creator openpyxl created 2026-04-15, sin version",
+            "R6 diversos: artefacto_documental sin curar; auditoria registra 2 artefactos (177/178) vs 169 carencias"
+          ],
+          "campos_minimos": [
+            "emisor: publicador del conjunto 5494daa1",
+            "que significan o como se corrigen las filas 177/178",
+            "si existe catalogo: URL del recurso + edicion/fecha + aplicabilidad a des_mpo_res 2022-2024; si no existe: declaracion de que no existe",
+            "sin catalogo confirmado no hay vigencia que acreditar"
+          ],
+          "criterio_aceptacion": "Se cierra solo si el publicador entrega fe de erratas o diccionario corregido que aclare 177/178 y, SOLO si confirma que existe catalogo, su URL con edicion/fecha verificable contra inventario API; si declara que no existe, se archiva como anomalia aclarada sin catalogo. Mientras tanto sigue pendiente; la coincidencia de nombre con la fila 7 no acredita nada.",
+          "limites": [
+            "No usar la coincidencia de nombre con la variable de la fila 7; no crear vinculo catalogoRecuperado",
+            "No presentar la existencia de catalogo ni su vigencia como hecho: catalogo no identificado en inventario revisado (2026-10-23), no inexistencia universal",
+            "Las 2 exclusiones EXC-ENC-177/178 no cuentan como significados nuevos"
+          ],
+          "documento_requerido_exacto": "Fe de erratas o diccionario corregido del publicador que aclare que significan las filas 177/178 (huellas 4b17625c / b5dbcdf5); URL del recurso catalogo SOLO si el publicador confirma que existe un catalogo aplicable a des_mpo_res 2022-2024. Si confirma que no existe, basta la fe de erratas.",
+          "soporte": [
+            {
+              "ruta": "reports/pendientes-ronda-5.json",
+              "sha256": "46f3b6f8826379be5124fb85cf6128b705fbe90deebf2c99bff64098608c8f11",
+              "localizador": "huellas 177/178 64 hex (copia programatica)"
+            },
+            {
+              "ruta": "propuestas/pendientes-muse-r6/catalogos/entrega.json",
+              "sha256": "649bbe7e5feca82b7e8d5c5144de78b1d8ceccb1c217ca976347b1c9a05cb74b",
+              "localizador": "decision des_mpo_res + novedad_r6"
+            },
+            {
+              "ruta": "propuestas/depuracion-post-r6/encabezados/exclusiones.json",
+              "sha256": "d4d72cb5f5f971afbec424f491f55300435c7bf7580e35d69906d0dad018f000",
+              "localizador": "EXC-ENC-177/178 (solo lectura; no cuentan como significados)"
+            }
+          ],
+          "variable_genuina_fila7": {
+            "definicion_iri": "https://example.org/mex-ontologi/definition/33d0a99e-c721-496f-a05e-07646e9ae42a%2F7",
+            "variable": "des_mpo_res",
+            "descripcion_literal": "Municipio donde reside el caso",
+            "tipo_dato": "Texto",
+            "catalogo_declarado": "",
+            "ejemplo": "Hermosillo",
+            "uso_observado": "texto libre (muestra 2022: HERMOSILLO, PUERTO PENASCO, CAJEME...)",
+            "fuente": "data/portal/inspecciones/33d0a99e-c721-496f-a05e-07646e9ae42a.json definiciones[6] (178 definiciones)"
+          },
+          "filas_origen_anomalia": [
+            {
+              "definicion_iri": "https://example.org/mex-ontologi/definition/33d0a99e-c721-496f-a05e-07646e9ae42a%2F177",
+              "huella_fila_diccionario": "4b17625c8fea607228fe4f2a790744687a6e8bc45a712f66d4833d6ac541da79",
+              "fuente_huella": "reports/pendientes-ronda-5.json (copia programatica, 64 hex)"
+            },
+            {
+              "definicion_iri": "https://example.org/mex-ontologi/definition/33d0a99e-c721-496f-a05e-07646e9ae42a%2F178",
+              "huella_fila_diccionario": "b5dbcdf58fd1b6e4d87f2396986629d2aa2350d35f1c1291e59d3d79515a0f60",
+              "fuente_huella": "reports/pendientes-ronda-5.json (copia programatica, 64 hex)"
+            }
+          ],
+          "exclusiones_vinculadas": [
+            {
+              "id": "EXC-ENC-177",
+              "huella_fila_diccionario": "4b17625c8fea607228fe4f2a790744687a6e8bc45a712f66d4833d6ac541da79"
+            },
+            {
+              "id": "EXC-ENC-178",
+              "huella_fila_diccionario": "b5dbcdf58fd1b6e4d87f2396986629d2aa2350d35f1c1291e59d3d79515a0f60"
+            }
+          ],
+          "exclusiones_referencia": {
+            "ruta": "propuestas/depuracion-post-r6/encabezados/exclusiones.json",
+            "sha256": "d4d72cb5f5f971afbec424f491f55300435c7bf7580e35d69906d0dad018f000",
+            "nota": "agente hermano; solo lectura. Las 2 exclusiones comparten filas/huellas con este caso y no cuentan como significados nuevos: el total sigue en 17."
+          },
+          "dictamen_r6_diversos": {
+            "ruta": "propuestas/pendientes-muse-r6/diversos-presas/entrega.json",
+            "decision": "artefacto_documental",
+            "motivo": "fila corrupta: repite la cabecera del diccionario como valores; catalogo_declarado des_mpo_res es posicion de columna, no referencia real. Se conserva como artefacto, sin curar"
+          }
+        },
+        "motivo": "Anomalia heredada ABIERTA y sin cambios el 2026-10-24: el inventario API vivo confirma inventario cerrado (Diccionario + Catalogo 08d3b1a7 size 12702 = xlsx preservado 3b8546ac + 3 datos 2022-2024), version null, sin recurso de municipios de residencia; el Catalogo vivo no cambio de tamano; la fila 7 genuina sigue texto libre (ejemplo Hermosillo). La unica coincidencia externa (denhotspots: des_mpo_res = municipio en mayusculas) es homonimia de otro sistema sin vinculo campo/recurso/edicion/periodo y no acredita. Solo el publicador puede aclararlo.",
+        "evidencia_faltante": "Fe de erratas o diccionario corregido del publicador que aclare filas 177/178 (huellas 4b17625c/b5dbcdf5) y, SOLO si confirma que existe catalogo aplicable a des_mpo_res 2022-2024, su URL con edicion/fecha; si confirma que no existe, basta la fe de erratas.",
+        "evidencia": [
+          {
+            "ruta": "propuestas/cierre-brechas-post-r6/anomalias/evidencia/ckan-package_5494daa1_2026-10-24.json",
+            "sha256": "e751fe481af047f3ffa6facc57c9d04952e5f874186be2d2fb4a6ae20f9a0154",
+            "localizador": "resources: 5 (Diccionario 51040 + 2022/2023/2024 + Catalogo 08d3b1a7 size 12702, start 2022-01-01 end 2026-12-31); version null; fuentes_extras vacias",
+            "afirmacion_soportada": "Inventario API 2026-10-24 cerrado y sin cambios: ningun recurso de catalogo de municipios de residencia; Catalogo size identico al xlsx preservado."
+          },
+          {
+            "ruta": "propuestas/cierre-brechas-post-r6/anomalias/evidencia/diccionario_ricket_1_2026-10-24.csv",
+            "sha256": "2c8ce131bf0e71fe812605f0f95381acaec9c5534e1bed8f05ff1895bf2fcd1c",
+            "localizador": "fila de datos 7: des_mpo_res,Texto,Municipio donde reside el caso,ejemplo Hermosillo,catalogo vacio",
+            "afirmacion_soportada": "La variable genuina fila 7 sigue siendo texto libre sin catalogo en el CSV autentico vivo."
+          },
+          {
+            "ruta": "propuestas/cierre-brechas-post-r6/anomalias/evidencia/busquedas_2026-10-24.json",
+            "sha256": "62a94db34f34f5d47f39a385352060deeae3fd90aa74883617407f3f3009fa6d",
+            "localizador": "consultas des_mpo_res + fe de erratas",
+            "afirmacion_soportada": "Busqueda acotada negativa: unico hallazgo externo es homonimo denhotspots sin vinculo al conjunto; ninguna fe de erratas del publicador."
+          },
+          {
+            "ruta": "data/integracion/fuentes/3b8546acad7482825755e46a1a619a4838721f8480b94baaef3c755ba293db9c.xlsx",
+            "sha256": "3b8546acad7482825755e46a1a619a4838721f8480b94baaef3c755ba293db9c",
+            "localizador": "size 12702 = Catalogo API; 3 hojas (Servicios, rechazo, especie) sin des_mpo_res",
+            "afirmacion_soportada": "Catalogo preservado byte-identico al vivo en tamano; sin hoja ni dominio de municipios de residencia (negativo R6 revalidado por tamano)."
+          }
+        ],
+        "propuesta": null,
+        "limites": [
+          "No usar la coincidencia de nombre con la fila 7; no crear vinculo catalogoRecuperado.",
+          "No presentar existencia ni vigencia de catalogo como hecho: no identificado en inventario revisado, no inexistencia universal.",
+          "Las 2 exclusiones EXC-ENC-177/178 no cuentan como significados nuevos."
+        ],
+        "tarea": "anomalias",
+        "tipo": "anomalias"
+      }
+    }
+  ]
+}

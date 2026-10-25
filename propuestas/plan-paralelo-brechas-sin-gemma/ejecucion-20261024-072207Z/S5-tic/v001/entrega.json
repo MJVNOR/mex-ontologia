@@ -1,0 +1,1497 @@
+{
+  "rol": "S5-tic",
+  "version": "v001",
+  "decisiones": [
+    {
+      "id": "https://example.org/mex-ontologi/definition/3851f1c3-5045-4703-ba88-93b3d39e0b70%2F8",
+      "tipo": "significados",
+      "original_sha256": "0724d3782830d24554a5c1bc52f592ef65d25d854c167c974d0223826274d008",
+      "puerta": "sin_pista_nueva",
+      "pista": null,
+      "estado": "brecha_externa",
+      "afirmacion_propuesta": null,
+      "motivo": "contradiccion entre lo que pregunta la descripcion y el dominio declarado (Tipo/Formato/Ejemplo). Nueva investigacion 2026-10-24 (no repetida de R6): (1) relectura byte-exacta + huella OK; (2) metadatos CKAN oficiales del conjunto (instrumento 'Resultados del ejercicio \"Diagnostico del Entorno Digital\", ', sin cuestionario/codebook/unidad/periodo por campo); (3) paginas oficiales del Programa Especial y del Diagnostico revisadas (sin cuestionario extraible; Diagnostico = cascaron JS + PowerBI); (4) PDFs locales revisados: ninguno cubre TIC; (5) datastore inactivo en los 16 recursos (sin muestra de valores). Nada de lo hallado fija el sentido literal de esta fila ni acredita dominio/catalogo/vigencia; no se propone significado (derivar del nombre violaria el criterio). | Puerta S5-tic 2026-10-24: sin_pista_nueva. Verificacion SHA-256 OK de la evidencia previa; la URL https://www.sonora.gob.mx/datos/diagnostico-entorno-digital ya fue examinada por webfetch y por Obscura con DOM renderizado el mismo dia sin cuestionario extraible; barrido local sin instrumento inedito. Se cierra como brecha externa conservando la evidencia previa; no se propone significado.",
+      "evidencia_faltante": "Documento faltante: Documento que defina que actividades cubre P10 (\"Actividades principales:\"). Cita historica R5/R6 (texto heredado, no afirmacion propia): \"Documento que defina que actividades cubre P10 ('Actividades principales:'). En manos del publicador.\" Conclusion actual 2026-10-24: no localizado en 8 metadatos CKAN package_show + paginas oficiales del Programa Especial y del Diagnostico + PDFs locales preservados + datastore CKAN (inactivo en 16/16 recursos); no se atribuye exclusividad a ninguna parte.",
+      "evidencia": [
+        {
+          "ruta": "data/portal/inspecciones/3851f1c3-5045-4703-ba88-93b3d39e0b70.json",
+          "sha256": "e3d0e66563f7525a638a5a5d353d843af598a9910e3721dbddc5b39ba22e07f5",
+          "localizador": "/definiciones/7",
+          "afirmacion_soportada": "Fila 8 (P10): Tipo=Texto, Formato=, Ejemplo='Actividades Principales', Unidad de medida vacia, Catalogo vacio; contradiccion entre lo que pregunta la descripcion y el dominio declarado (Tipo/Formato/Ejemplo)."
+        },
+        {
+          "ruta": "propuestas/investigacion-post-r6/tic/evidencia/verificacion_filas.json",
+          "sha256": "67d252df2f99b620fa29fecf4879f65b0e1e4cec730452ad1d32cd59be3cdc12",
+          "localizador": "/filas[definicion_iri=b3d39e0b70%2F8]",
+          "afirmacion_soportada": "Huella recomputada 2026-10-24 = 4f9fb5b377dfbe33... coincide con la historica; fila byte-identica a R5/R6."
+        },
+        {
+          "ruta": "propuestas/investigacion-post-r6/tic/evidencia/ckan-package-0ec245ba.bin",
+          "sha256": "3bb9dbcd40851dd058153eb38ca9698825774b4d0b447f60af3818b20712a34e",
+          "localizador": "/result[notes|frequency|fuentes_extras|version|resources]",
+          "afirmacion_soportada": "CKAN oficial: notes='Resultados del ejercicio \"Diagnostico del Entorno Digital\", en el tema'; frequency=sin_programacion; fuentes_extras vacias; version=null; datastore_active=false en ambos recursos; sin cuestionario, codebook, unidad ni periodo vinculados a esta fila."
+        },
+        {
+          "ruta": "data/semantica/cobertura.json",
+          "sha256": "7ef11b0a4ad9ee3aa3d3512ab2a431cee29b9295db9da76daae2e054378a39a9",
+          "localizador": "/variables[definicion_iri=b3d39e0b70%2F8]",
+          "afirmacion_soportada": "Estado fuera_del_nucleo_actual y 0 correspondencias hacia esta definicion (verificado por conteo exacto del IRI en /correspondencias)."
+        },
+        {
+          "ruta": "propuestas/cierre-brechas-post-r6/significados-tic-diversos/evidencia/nueva-tic-sonora-2026-10-24.md",
+          "sha256": "963eac956a9fe527a2fe8e8abef5ae8c70f8e1ade16ab915eafa3b51d8257807",
+          "localizador": "fetch página Diagnóstico nav-only + websearch sin cuestionario 2026-10-24",
+          "afirmacion_soportada": "Página Diagnóstico-Entorno-Digital fetch nav-only sin cuestionario/codebook; sin fuente vinculada a fila: brecha intacta."
+        },
+        {
+          "ruta": "propuestas/cierre-brechas-post-r6/web-obscura/obs-diagnostico-2026-10-24.json",
+          "sha256": "e4d80cf40a3cbeaf0084a7ca32d059a9c82c63e6637b43fb737c5090dbf76eeb",
+          "localizador": "/observacion/veredicto + /observacion/iframe_powerbi_src",
+          "afirmacion_soportada": "Inspeccion Obscura con DOM renderizado 2026-10-24T06:51:28Z de https://www.sonora.gob.mx/datos/diagnostico-entorno-digital: cascaron JS confirmado (main vacio, body 340 chars solo menu), sin cuestionario/codebook/tabla de variables extraible; contenido sustantivo en iframe PowerBI que requiere interaccion y no se afirma; sin fuente vinculada a fila/campo/recurso/edicion."
+        }
+      ],
+      "condicion_reapertura": "Reabrir solo si aparece fuente primaria vinculada a fila/recurso/edicion que aporte el documento faltante citado en evidencia_faltante (cuestionario o instrumento del Diagnostico del Entorno Digital, o muestra de valores del recurso para el campo, con edicion y periodo acreditados). No reabre: distribuciones, nombres parecidos, ejemplos del diccionario, metadatos CKAN sin vinculo a fila, ni contenido PowerBI sin trazabilidad a campo.",
+      "limites": [
+        "El ejemplo repite el nombre del campo; no fija actividades.",
+        "No se infiere poblacion, periodo ni objeto de las actividades.",
+        "Busquedas negativas acotadas a lo revisado el 2026-10-24 (8 CKAN API, 2 paginas oficiales, PDFs locales, datastore); no es ausencia universal.",
+        "La pagina del Diagnostico y el embed PowerBI requieren interaccion; no se afirma contenido no extraible."
+      ]
+    },
+    {
+      "id": "https://example.org/mex-ontologi/definition/3851f1c3-5045-4703-ba88-93b3d39e0b70%2F9",
+      "tipo": "significados",
+      "original_sha256": "58d71dac38dadaae1462a362f96a91661966cd15c234bc0fffd2aa497d49a972",
+      "puerta": "sin_pista_nueva",
+      "pista": null,
+      "estado": "brecha_externa",
+      "afirmacion_propuesta": null,
+      "motivo": "descripcion vacua o anaforica sin referente declarado en la propia fila (el vinculo filtro/detalle no consta en el diccionario). Nueva investigacion 2026-10-24 (no repetida de R6): (1) relectura byte-exacta + huella OK; (2) metadatos CKAN oficiales del conjunto (instrumento 'Resultados del ejercicio \"Diagnostico del Entorno Digital\", ', sin cuestionario/codebook/unidad/periodo por campo); (3) paginas oficiales del Programa Especial y del Diagnostico revisadas (sin cuestionario extraible; Diagnostico = cascaron JS + PowerBI); (4) PDFs locales revisados: ninguno cubre TIC; (5) datastore inactivo en los 16 recursos (sin muestra de valores). Nada de lo hallado fija el sentido literal de esta fila ni acredita dominio/catalogo/vigencia; no se propone significado (derivar del nombre violaria el criterio). | Puerta S5-tic 2026-10-24: sin_pista_nueva. Verificacion SHA-256 OK de la evidencia previa; la URL https://www.sonora.gob.mx/datos/diagnostico-entorno-digital ya fue examinada por webfetch y por Obscura con DOM renderizado el mismo dia sin cuestionario extraible; barrido local sin instrumento inedito. Se cierra como brecha externa conservando la evidencia previa; no se propone significado.",
+      "evidencia_faltante": "Documento faltante: Cuestionario que fije el sujeto de P11 (\"De que area depende?\"). Cita historica R5/R6 (texto heredado, no afirmacion propia): \"Cuestionario que fije el sujeto de P11 ('De que area depende?'). En manos del publicador.\" Conclusion actual 2026-10-24: no localizado en 8 metadatos CKAN package_show + paginas oficiales del Programa Especial y del Diagnostico + PDFs locales preservados + datastore CKAN (inactivo en 16/16 recursos); no se atribuye exclusividad a ninguna parte.",
+      "evidencia": [
+        {
+          "ruta": "data/portal/inspecciones/3851f1c3-5045-4703-ba88-93b3d39e0b70.json",
+          "sha256": "e3d0e66563f7525a638a5a5d353d843af598a9910e3721dbddc5b39ba22e07f5",
+          "localizador": "/definiciones/8",
+          "afirmacion_soportada": "Fila 9 (P11): Tipo=Texto, Formato=, Ejemplo='Area 1', Unidad de medida vacia, Catalogo vacio; descripcion vacua o anaforica sin referente declarado en la propia fila (el vinculo filtro/detalle no consta en el diccionario)."
+        },
+        {
+          "ruta": "propuestas/investigacion-post-r6/tic/evidencia/verificacion_filas.json",
+          "sha256": "67d252df2f99b620fa29fecf4879f65b0e1e4cec730452ad1d32cd59be3cdc12",
+          "localizador": "/filas[definicion_iri=b3d39e0b70%2F9]",
+          "afirmacion_soportada": "Huella recomputada 2026-10-24 = 4b88cf48467cccd8... coincide con la historica; fila byte-identica a R5/R6."
+        },
+        {
+          "ruta": "propuestas/investigacion-post-r6/tic/evidencia/ckan-package-0ec245ba.bin",
+          "sha256": "3bb9dbcd40851dd058153eb38ca9698825774b4d0b447f60af3818b20712a34e",
+          "localizador": "/result[notes|frequency|fuentes_extras|version|resources]",
+          "afirmacion_soportada": "CKAN oficial: notes='Resultados del ejercicio \"Diagnostico del Entorno Digital\", en el tema'; frequency=sin_programacion; fuentes_extras vacias; version=null; datastore_active=false en ambos recursos; sin cuestionario, codebook, unidad ni periodo vinculados a esta fila."
+        },
+        {
+          "ruta": "data/semantica/cobertura.json",
+          "sha256": "7ef11b0a4ad9ee3aa3d3512ab2a431cee29b9295db9da76daae2e054378a39a9",
+          "localizador": "/variables[definicion_iri=b3d39e0b70%2F9]",
+          "afirmacion_soportada": "Estado fuera_del_nucleo_actual y 0 correspondencias hacia esta definicion (verificado por conteo exacto del IRI en /correspondencias)."
+        },
+        {
+          "ruta": "propuestas/cierre-brechas-post-r6/significados-tic-diversos/evidencia/nueva-tic-sonora-2026-10-24.md",
+          "sha256": "963eac956a9fe527a2fe8e8abef5ae8c70f8e1ade16ab915eafa3b51d8257807",
+          "localizador": "fetch página Diagnóstico nav-only + websearch sin cuestionario 2026-10-24",
+          "afirmacion_soportada": "Página Diagnóstico-Entorno-Digital fetch nav-only sin cuestionario/codebook; sin fuente vinculada a fila: brecha intacta."
+        },
+        {
+          "ruta": "propuestas/cierre-brechas-post-r6/web-obscura/obs-diagnostico-2026-10-24.json",
+          "sha256": "e4d80cf40a3cbeaf0084a7ca32d059a9c82c63e6637b43fb737c5090dbf76eeb",
+          "localizador": "/observacion/veredicto + /observacion/iframe_powerbi_src",
+          "afirmacion_soportada": "Inspeccion Obscura con DOM renderizado 2026-10-24T06:51:28Z de https://www.sonora.gob.mx/datos/diagnostico-entorno-digital: cascaron JS confirmado (main vacio, body 340 chars solo menu), sin cuestionario/codebook/tabla de variables extraible; contenido sustantivo en iframe PowerBI que requiere interaccion y no se afirma; sin fuente vinculada a fila/campo/recurso/edicion."
+        }
+      ],
+      "condicion_reapertura": "Reabrir solo si aparece fuente primaria vinculada a fila/recurso/edicion que aporte el documento faltante citado en evidencia_faltante (cuestionario o instrumento del Diagnostico del Entorno Digital, o muestra de valores del recurso para el campo, con edicion y periodo acreditados). No reabre: distribuciones, nombres parecidos, ejemplos del diccionario, metadatos CKAN sin vinculo a fila, ni contenido PowerBI sin trazabilidad a campo.",
+      "limites": [
+        "No se transfiere el sujeto de P9 por proximidad.",
+        "El ejemplo 'Area 1' no fija el papel.",
+        "Busquedas negativas acotadas a lo revisado el 2026-10-24 (8 CKAN API, 2 paginas oficiales, PDFs locales, datastore); no es ausencia universal.",
+        "La pagina del Diagnostico y el embed PowerBI requieren interaccion; no se afirma contenido no extraible."
+      ]
+    },
+    {
+      "id": "https://example.org/mex-ontologi/definition/3851f1c3-5045-4703-ba88-93b3d39e0b70%2F13",
+      "tipo": "significados",
+      "original_sha256": "61a158264365ba0d295677b318c489695961e7f308d95ff72e3d8f8b161d81db",
+      "puerta": "sin_pista_nueva",
+      "pista": null,
+      "estado": "brecha_externa",
+      "afirmacion_propuesta": null,
+      "motivo": "descripcion vacua o anaforica sin referente declarado en la propia fila (el vinculo filtro/detalle no consta en el diccionario). Nueva investigacion 2026-10-24 (no repetida de R6): (1) relectura byte-exacta + huella OK; (2) metadatos CKAN oficiales del conjunto (instrumento 'Resultados del ejercicio \"Diagnostico del Entorno Digital\", ', sin cuestionario/codebook/unidad/periodo por campo); (3) paginas oficiales del Programa Especial y del Diagnostico revisadas (sin cuestionario extraible; Diagnostico = cascaron JS + PowerBI); (4) PDFs locales revisados: ninguno cubre TIC; (5) datastore inactivo en los 16 recursos (sin muestra de valores). Nada de lo hallado fija el sentido literal de esta fila ni acredita dominio/catalogo/vigencia; no se propone significado (derivar del nombre violaria el criterio). | Puerta S5-tic 2026-10-24: sin_pista_nueva. Verificacion SHA-256 OK de la evidencia previa; la URL https://www.sonora.gob.mx/datos/diagnostico-entorno-digital ya fue examinada por webfetch y por Obscura con DOM renderizado el mismo dia sin cuestionario extraible; barrido local sin instrumento inedito. Se cierra como brecha externa conservando la evidencia previa; no se propone significado.",
+      "evidencia_faltante": "Documento faltante: Documento que fije el referente de \"el perfil\" en P15 (vinculo P14-P15). Cita historica R5/R6 (texto heredado, no afirmacion propia): \"Documento que fije el referente de 'el perfil' en P15 (vinculo P14-P15). En manos del publicador.\" Conclusion actual 2026-10-24: no localizado en 8 metadatos CKAN package_show + paginas oficiales del Programa Especial y del Diagnostico + PDFs locales preservados + datastore CKAN (inactivo en 16/16 recursos); no se atribuye exclusividad a ninguna parte.",
+      "evidencia": [
+        {
+          "ruta": "data/portal/inspecciones/3851f1c3-5045-4703-ba88-93b3d39e0b70.json",
+          "sha256": "e3d0e66563f7525a638a5a5d353d843af598a9910e3721dbddc5b39ba22e07f5",
+          "localizador": "/definiciones/12",
+          "afirmacion_soportada": "Fila 13 (P15): Tipo=Texto, Formato=, Ejemplo='Computologo', Unidad de medida vacia, Catalogo vacio; descripcion vacua o anaforica sin referente declarado en la propia fila (el vinculo filtro/detalle no consta en el diccionario)."
+        },
+        {
+          "ruta": "propuestas/investigacion-post-r6/tic/evidencia/verificacion_filas.json",
+          "sha256": "67d252df2f99b620fa29fecf4879f65b0e1e4cec730452ad1d32cd59be3cdc12",
+          "localizador": "/filas[definicion_iri=3d39e0b70%2F13]",
+          "afirmacion_soportada": "Huella recomputada 2026-10-24 = db97f09dc3371524... coincide con la historica; fila byte-identica a R5/R6."
+        },
+        {
+          "ruta": "propuestas/investigacion-post-r6/tic/evidencia/ckan-package-0ec245ba.bin",
+          "sha256": "3bb9dbcd40851dd058153eb38ca9698825774b4d0b447f60af3818b20712a34e",
+          "localizador": "/result[notes|frequency|fuentes_extras|version|resources]",
+          "afirmacion_soportada": "CKAN oficial: notes='Resultados del ejercicio \"Diagnostico del Entorno Digital\", en el tema'; frequency=sin_programacion; fuentes_extras vacias; version=null; datastore_active=false en ambos recursos; sin cuestionario, codebook, unidad ni periodo vinculados a esta fila."
+        },
+        {
+          "ruta": "data/semantica/cobertura.json",
+          "sha256": "7ef11b0a4ad9ee3aa3d3512ab2a431cee29b9295db9da76daae2e054378a39a9",
+          "localizador": "/variables[definicion_iri=3d39e0b70%2F13]",
+          "afirmacion_soportada": "Estado fuera_del_nucleo_actual y 0 correspondencias hacia esta definicion (verificado por conteo exacto del IRI en /correspondencias)."
+        },
+        {
+          "ruta": "propuestas/cierre-brechas-post-r6/significados-tic-diversos/evidencia/nueva-tic-sonora-2026-10-24.md",
+          "sha256": "963eac956a9fe527a2fe8e8abef5ae8c70f8e1ade16ab915eafa3b51d8257807",
+          "localizador": "fetch página Diagnóstico nav-only + websearch sin cuestionario 2026-10-24",
+          "afirmacion_soportada": "Página Diagnóstico-Entorno-Digital fetch nav-only sin cuestionario/codebook; sin fuente vinculada a fila: brecha intacta."
+        },
+        {
+          "ruta": "propuestas/cierre-brechas-post-r6/web-obscura/obs-diagnostico-2026-10-24.json",
+          "sha256": "e4d80cf40a3cbeaf0084a7ca32d059a9c82c63e6637b43fb737c5090dbf76eeb",
+          "localizador": "/observacion/veredicto + /observacion/iframe_powerbi_src",
+          "afirmacion_soportada": "Inspeccion Obscura con DOM renderizado 2026-10-24T06:51:28Z de https://www.sonora.gob.mx/datos/diagnostico-entorno-digital: cascaron JS confirmado (main vacio, body 340 chars solo menu), sin cuestionario/codebook/tabla de variables extraible; contenido sustantivo en iframe PowerBI que requiere interaccion y no se afirma; sin fuente vinculada a fila/campo/recurso/edicion."
+        }
+      ],
+      "condicion_reapertura": "Reabrir solo si aparece fuente primaria vinculada a fila/recurso/edicion que aporte el documento faltante citado en evidencia_faltante (cuestionario o instrumento del Diagnostico del Entorno Digital, o muestra de valores del recurso para el campo, con edicion y periodo acreditados). No reabre: distribuciones, nombres parecidos, ejemplos del diccionario, metadatos CKAN sin vinculo a fila, ni contenido PowerBI sin trazabilidad a campo.",
+      "limites": [
+        "No se transfiere el referente de P14 por proximidad.",
+        "El ejemplo 'Computologo' no fija de quien es el perfil.",
+        "Busquedas negativas acotadas a lo revisado el 2026-10-24 (8 CKAN API, 2 paginas oficiales, PDFs locales, datastore); no es ausencia universal.",
+        "La pagina del Diagnostico y el embed PowerBI requieren interaccion; no se afirma contenido no extraible."
+      ]
+    },
+    {
+      "id": "https://example.org/mex-ontologi/definition/bdbf043f-5d12-4362-bce0-bd4c8ab1e2a1%2F26",
+      "tipo": "significados",
+      "original_sha256": "13bc7721b9dd02cafa94b64cde09c24cd9383472b32502455f8dfd3e13d4bd2f",
+      "puerta": "sin_pista_nueva",
+      "pista": null,
+      "estado": "brecha_externa",
+      "afirmacion_propuesta": null,
+      "motivo": "descripcion vacua o anaforica sin referente declarado en la propia fila (el vinculo filtro/detalle no consta en el diccionario). Nueva investigacion 2026-10-24 (no repetida de R6): (1) relectura byte-exacta + huella OK; (2) metadatos CKAN oficiales del conjunto (instrumento 'Resultados del ejercicio \"Diagnostico del Entorno Digital\", ', sin cuestionario/codebook/unidad/periodo por campo); (3) paginas oficiales del Programa Especial y del Diagnostico revisadas (sin cuestionario extraible; Diagnostico = cascaron JS + PowerBI); (4) PDFs locales revisados: ninguno cubre TIC; (5) datastore inactivo en los 16 recursos (sin muestra de valores). Nada de lo hallado fija el sentido literal de esta fila ni acredita dominio/catalogo/vigencia; no se propone significado (derivar del nombre violaria el criterio). | Puerta S5-tic 2026-10-24: sin_pista_nueva. Verificacion SHA-256 OK de la evidencia previa; la URL https://www.sonora.gob.mx/datos/diagnostico-entorno-digital ya fue examinada por webfetch y por Obscura con DOM renderizado el mismo dia sin cuestionario extraible; barrido local sin instrumento inedito. Se cierra como brecha externa conservando la evidencia previa; no se propone significado.",
+      "evidencia_faltante": "Documento faltante: Cuestionario que vincule P26-P27 y fije el referente de \"Cuales?\". Cita historica R5/R6 (texto heredado, no afirmacion propia): \"Cuestionario que vincule P26-P27 y fije el referente de 'Cuales?'. En manos del publicador.\" Conclusion actual 2026-10-24: no localizado en 8 metadatos CKAN package_show + paginas oficiales del Programa Especial y del Diagnostico + PDFs locales preservados + datastore CKAN (inactivo en 16/16 recursos); no se atribuye exclusividad a ninguna parte.",
+      "evidencia": [
+        {
+          "ruta": "data/portal/inspecciones/bdbf043f-5d12-4362-bce0-bd4c8ab1e2a1.json",
+          "sha256": "1b4660882f2c1d165dc3b4deb9e19b8e1f61f09b1bd9dbcfdead4bd09e8f741a",
+          "localizador": "/definiciones/25",
+          "afirmacion_soportada": "Fila 26 (P27): Tipo=Texto, Formato=, Ejemplo='Normatividad 1, normatividad 2', Unidad de medida vacia, Catalogo vacio; descripcion vacua o anaforica sin referente declarado en la propia fila (el vinculo filtro/detalle no consta en el diccionario)."
+        },
+        {
+          "ruta": "propuestas/investigacion-post-r6/tic/evidencia/verificacion_filas.json",
+          "sha256": "67d252df2f99b620fa29fecf4879f65b0e1e4cec730452ad1d32cd59be3cdc12",
+          "localizador": "/filas[definicion_iri=c8ab1e2a1%2F26]",
+          "afirmacion_soportada": "Huella recomputada 2026-10-24 = a0e8068c621f1f58... coincide con la historica; fila byte-identica a R5/R6."
+        },
+        {
+          "ruta": "propuestas/investigacion-post-r6/tic/evidencia/ckan-package-37ab8134.bin",
+          "sha256": "caa5b5fa1200e63d006e3ad8b585799e8d2854436aef4c2bc7b00bf6c11269ee",
+          "localizador": "/result[notes|frequency|fuentes_extras|version|resources]",
+          "afirmacion_soportada": "CKAN oficial: notes='Resultados del ejercicio \"Diagnostico del Entorno Digital\", en el tema'; frequency=sin_programacion; fuentes_extras vacias; version=null; datastore_active=false en ambos recursos; sin cuestionario, codebook, unidad ni periodo vinculados a esta fila."
+        },
+        {
+          "ruta": "data/semantica/cobertura.json",
+          "sha256": "7ef11b0a4ad9ee3aa3d3512ab2a431cee29b9295db9da76daae2e054378a39a9",
+          "localizador": "/variables[definicion_iri=c8ab1e2a1%2F26]",
+          "afirmacion_soportada": "Estado fuera_del_nucleo_actual y 0 correspondencias hacia esta definicion (verificado por conteo exacto del IRI en /correspondencias)."
+        },
+        {
+          "ruta": "propuestas/cierre-brechas-post-r6/significados-tic-diversos/evidencia/nueva-tic-sonora-2026-10-24.md",
+          "sha256": "963eac956a9fe527a2fe8e8abef5ae8c70f8e1ade16ab915eafa3b51d8257807",
+          "localizador": "fetch página Diagnóstico nav-only + websearch sin cuestionario 2026-10-24",
+          "afirmacion_soportada": "Página Diagnóstico-Entorno-Digital fetch nav-only sin cuestionario/codebook; sin fuente vinculada a fila: brecha intacta."
+        },
+        {
+          "ruta": "propuestas/cierre-brechas-post-r6/web-obscura/obs-diagnostico-2026-10-24.json",
+          "sha256": "e4d80cf40a3cbeaf0084a7ca32d059a9c82c63e6637b43fb737c5090dbf76eeb",
+          "localizador": "/observacion/veredicto + /observacion/iframe_powerbi_src",
+          "afirmacion_soportada": "Inspeccion Obscura con DOM renderizado 2026-10-24T06:51:28Z de https://www.sonora.gob.mx/datos/diagnostico-entorno-digital: cascaron JS confirmado (main vacio, body 340 chars solo menu), sin cuestionario/codebook/tabla de variables extraible; contenido sustantivo en iframe PowerBI que requiere interaccion y no se afirma; sin fuente vinculada a fila/campo/recurso/edicion."
+        }
+      ],
+      "condicion_reapertura": "Reabrir solo si aparece fuente primaria vinculada a fila/recurso/edicion que aporte el documento faltante citado en evidencia_faltante (cuestionario o instrumento del Diagnostico del Entorno Digital, o muestra de valores del recurso para el campo, con edicion y periodo acreditados). No reabre: distribuciones, nombres parecidos, ejemplos del diccionario, metadatos CKAN sin vinculo a fila, ni contenido PowerBI sin trazabilidad a campo.",
+      "limites": [
+        "No se transfiere el referente de P26 por proximidad.",
+        "El ejemplo no fija de que norma se trata.",
+        "Busquedas negativas acotadas a lo revisado el 2026-10-24 (8 CKAN API, 2 paginas oficiales, PDFs locales, datastore); no es ausencia universal.",
+        "La pagina del Diagnostico y el embed PowerBI requieren interaccion; no se afirma contenido no extraible."
+      ]
+    },
+    {
+      "id": "https://example.org/mex-ontologi/definition/bdbf043f-5d12-4362-bce0-bd4c8ab1e2a1%2F28",
+      "tipo": "significados",
+      "original_sha256": "7ad0d30a00dfc626ba489234167540b18a9f7494c778def308003953fb6ab7bd",
+      "puerta": "sin_pista_nueva",
+      "pista": null,
+      "estado": "brecha_externa",
+      "afirmacion_propuesta": null,
+      "motivo": "descripcion vacua o anaforica sin referente declarado en la propia fila (el vinculo filtro/detalle no consta en el diccionario). Nueva investigacion 2026-10-24 (no repetida de R6): (1) relectura byte-exacta + huella OK; (2) metadatos CKAN oficiales del conjunto (instrumento 'Resultados del ejercicio \"Diagnostico del Entorno Digital\", ', sin cuestionario/codebook/unidad/periodo por campo); (3) paginas oficiales del Programa Especial y del Diagnostico revisadas (sin cuestionario extraible; Diagnostico = cascaron JS + PowerBI); (4) PDFs locales revisados: ninguno cubre TIC; (5) datastore inactivo en los 16 recursos (sin muestra de valores). Nada de lo hallado fija el sentido literal de esta fila ni acredita dominio/catalogo/vigencia; no se propone significado (derivar del nombre violaria el criterio). | Puerta S5-tic 2026-10-24: sin_pista_nueva. Verificacion SHA-256 OK de la evidencia previa; la URL https://www.sonora.gob.mx/datos/diagnostico-entorno-digital ya fue examinada por webfetch y por Obscura con DOM renderizado el mismo dia sin cuestionario extraible; barrido local sin instrumento inedito. Se cierra como brecha externa conservando la evidencia previa; no se propone significado.",
+      "evidencia_faltante": "Documento faltante: Cuestionario que vincule P28-P29. Cita historica R5/R6 (texto heredado, no afirmacion propia): \"Cuestionario que vincule P28-P29. En manos del publicador.\" Conclusion actual 2026-10-24: no localizado en 8 metadatos CKAN package_show + paginas oficiales del Programa Especial y del Diagnostico + PDFs locales preservados + datastore CKAN (inactivo en 16/16 recursos); no se atribuye exclusividad a ninguna parte.",
+      "evidencia": [
+        {
+          "ruta": "data/portal/inspecciones/bdbf043f-5d12-4362-bce0-bd4c8ab1e2a1.json",
+          "sha256": "1b4660882f2c1d165dc3b4deb9e19b8e1f61f09b1bd9dbcfdead4bd09e8f741a",
+          "localizador": "/definiciones/27",
+          "afirmacion_soportada": "Fila 28 (P29): Tipo=Texto, Formato=, Ejemplo='Normas especificas', Unidad de medida vacia, Catalogo vacio; descripcion vacua o anaforica sin referente declarado en la propia fila (el vinculo filtro/detalle no consta en el diccionario)."
+        },
+        {
+          "ruta": "propuestas/investigacion-post-r6/tic/evidencia/verificacion_filas.json",
+          "sha256": "67d252df2f99b620fa29fecf4879f65b0e1e4cec730452ad1d32cd59be3cdc12",
+          "localizador": "/filas[definicion_iri=c8ab1e2a1%2F28]",
+          "afirmacion_soportada": "Huella recomputada 2026-10-24 = ac2c83b54d1ed131... coincide con la historica; fila byte-identica a R5/R6."
+        },
+        {
+          "ruta": "propuestas/investigacion-post-r6/tic/evidencia/ckan-package-37ab8134.bin",
+          "sha256": "caa5b5fa1200e63d006e3ad8b585799e8d2854436aef4c2bc7b00bf6c11269ee",
+          "localizador": "/result[notes|frequency|fuentes_extras|version|resources]",
+          "afirmacion_soportada": "CKAN oficial: notes='Resultados del ejercicio \"Diagnostico del Entorno Digital\", en el tema'; frequency=sin_programacion; fuentes_extras vacias; version=null; datastore_active=false en ambos recursos; sin cuestionario, codebook, unidad ni periodo vinculados a esta fila."
+        },
+        {
+          "ruta": "data/semantica/cobertura.json",
+          "sha256": "7ef11b0a4ad9ee3aa3d3512ab2a431cee29b9295db9da76daae2e054378a39a9",
+          "localizador": "/variables[definicion_iri=c8ab1e2a1%2F28]",
+          "afirmacion_soportada": "Estado fuera_del_nucleo_actual y 0 correspondencias hacia esta definicion (verificado por conteo exacto del IRI en /correspondencias)."
+        },
+        {
+          "ruta": "propuestas/cierre-brechas-post-r6/significados-tic-diversos/evidencia/nueva-tic-sonora-2026-10-24.md",
+          "sha256": "963eac956a9fe527a2fe8e8abef5ae8c70f8e1ade16ab915eafa3b51d8257807",
+          "localizador": "fetch página Diagnóstico nav-only + websearch sin cuestionario 2026-10-24",
+          "afirmacion_soportada": "Página Diagnóstico-Entorno-Digital fetch nav-only sin cuestionario/codebook; sin fuente vinculada a fila: brecha intacta."
+        },
+        {
+          "ruta": "propuestas/cierre-brechas-post-r6/web-obscura/obs-diagnostico-2026-10-24.json",
+          "sha256": "e4d80cf40a3cbeaf0084a7ca32d059a9c82c63e6637b43fb737c5090dbf76eeb",
+          "localizador": "/observacion/veredicto + /observacion/iframe_powerbi_src",
+          "afirmacion_soportada": "Inspeccion Obscura con DOM renderizado 2026-10-24T06:51:28Z de https://www.sonora.gob.mx/datos/diagnostico-entorno-digital: cascaron JS confirmado (main vacio, body 340 chars solo menu), sin cuestionario/codebook/tabla de variables extraible; contenido sustantivo en iframe PowerBI que requiere interaccion y no se afirma; sin fuente vinculada a fila/campo/recurso/edicion."
+        }
+      ],
+      "condicion_reapertura": "Reabrir solo si aparece fuente primaria vinculada a fila/recurso/edicion que aporte el documento faltante citado en evidencia_faltante (cuestionario o instrumento del Diagnostico del Entorno Digital, o muestra de valores del recurso para el campo, con edicion y periodo acreditados). No reabre: distribuciones, nombres parecidos, ejemplos del diccionario, metadatos CKAN sin vinculo a fila, ni contenido PowerBI sin trazabilidad a campo.",
+      "limites": [
+        "No se transfiere el referente de P28 por proximidad.",
+        "Busquedas negativas acotadas a lo revisado el 2026-10-24 (8 CKAN API, 2 paginas oficiales, PDFs locales, datastore); no es ausencia universal.",
+        "La pagina del Diagnostico y el embed PowerBI requieren interaccion; no se afirma contenido no extraible."
+      ]
+    },
+    {
+      "id": "https://example.org/mex-ontologi/definition/bdbf043f-5d12-4362-bce0-bd4c8ab1e2a1%2F30",
+      "tipo": "significados",
+      "original_sha256": "faf4eee015b3bb91c8f265565f326199d55c39158d4b63369aabce0cf259499d",
+      "puerta": "sin_pista_nueva",
+      "pista": null,
+      "estado": "brecha_externa",
+      "afirmacion_propuesta": null,
+      "motivo": "descripcion vacua o anaforica sin referente declarado en la propia fila (el vinculo filtro/detalle no consta en el diccionario). Nueva investigacion 2026-10-24 (no repetida de R6): (1) relectura byte-exacta + huella OK; (2) metadatos CKAN oficiales del conjunto (instrumento 'Resultados del ejercicio \"Diagnostico del Entorno Digital\", ', sin cuestionario/codebook/unidad/periodo por campo); (3) paginas oficiales del Programa Especial y del Diagnostico revisadas (sin cuestionario extraible; Diagnostico = cascaron JS + PowerBI); (4) PDFs locales revisados: ninguno cubre TIC; (5) datastore inactivo en los 16 recursos (sin muestra de valores). Nada de lo hallado fija el sentido literal de esta fila ni acredita dominio/catalogo/vigencia; no se propone significado (derivar del nombre violaria el criterio). | Puerta S5-tic 2026-10-24: sin_pista_nueva. Verificacion SHA-256 OK de la evidencia previa; la URL https://www.sonora.gob.mx/datos/diagnostico-entorno-digital ya fue examinada por webfetch y por Obscura con DOM renderizado el mismo dia sin cuestionario extraible; barrido local sin instrumento inedito. Se cierra como brecha externa conservando la evidencia previa; no se propone significado.",
+      "evidencia_faltante": "Documento faltante: Cuestionario que vincule P30-P31. Cita historica R5/R6 (texto heredado, no afirmacion propia): \"Cuestionario que vincule P30-P31. En manos del publicador.\" Conclusion actual 2026-10-24: no localizado en 8 metadatos CKAN package_show + paginas oficiales del Programa Especial y del Diagnostico + PDFs locales preservados + datastore CKAN (inactivo en 16/16 recursos); no se atribuye exclusividad a ninguna parte.",
+      "evidencia": [
+        {
+          "ruta": "data/portal/inspecciones/bdbf043f-5d12-4362-bce0-bd4c8ab1e2a1.json",
+          "sha256": "1b4660882f2c1d165dc3b4deb9e19b8e1f61f09b1bd9dbcfdead4bd09e8f741a",
+          "localizador": "/definiciones/29",
+          "afirmacion_soportada": "Fila 30 (P31): Tipo=Texto, Formato=, Ejemplo='Normas especificas', Unidad de medida vacia, Catalogo vacio; descripcion vacua o anaforica sin referente declarado en la propia fila (el vinculo filtro/detalle no consta en el diccionario)."
+        },
+        {
+          "ruta": "propuestas/investigacion-post-r6/tic/evidencia/verificacion_filas.json",
+          "sha256": "67d252df2f99b620fa29fecf4879f65b0e1e4cec730452ad1d32cd59be3cdc12",
+          "localizador": "/filas[definicion_iri=c8ab1e2a1%2F30]",
+          "afirmacion_soportada": "Huella recomputada 2026-10-24 = 4f9b41ed2ebc8bb4... coincide con la historica; fila byte-identica a R5/R6."
+        },
+        {
+          "ruta": "propuestas/investigacion-post-r6/tic/evidencia/ckan-package-37ab8134.bin",
+          "sha256": "caa5b5fa1200e63d006e3ad8b585799e8d2854436aef4c2bc7b00bf6c11269ee",
+          "localizador": "/result[notes|frequency|fuentes_extras|version|resources]",
+          "afirmacion_soportada": "CKAN oficial: notes='Resultados del ejercicio \"Diagnostico del Entorno Digital\", en el tema'; frequency=sin_programacion; fuentes_extras vacias; version=null; datastore_active=false en ambos recursos; sin cuestionario, codebook, unidad ni periodo vinculados a esta fila."
+        },
+        {
+          "ruta": "data/semantica/cobertura.json",
+          "sha256": "7ef11b0a4ad9ee3aa3d3512ab2a431cee29b9295db9da76daae2e054378a39a9",
+          "localizador": "/variables[definicion_iri=c8ab1e2a1%2F30]",
+          "afirmacion_soportada": "Estado fuera_del_nucleo_actual y 0 correspondencias hacia esta definicion (verificado por conteo exacto del IRI en /correspondencias)."
+        },
+        {
+          "ruta": "propuestas/cierre-brechas-post-r6/significados-tic-diversos/evidencia/nueva-tic-sonora-2026-10-24.md",
+          "sha256": "963eac956a9fe527a2fe8e8abef5ae8c70f8e1ade16ab915eafa3b51d8257807",
+          "localizador": "fetch página Diagnóstico nav-only + websearch sin cuestionario 2026-10-24",
+          "afirmacion_soportada": "Página Diagnóstico-Entorno-Digital fetch nav-only sin cuestionario/codebook; sin fuente vinculada a fila: brecha intacta."
+        },
+        {
+          "ruta": "propuestas/cierre-brechas-post-r6/web-obscura/obs-diagnostico-2026-10-24.json",
+          "sha256": "e4d80cf40a3cbeaf0084a7ca32d059a9c82c63e6637b43fb737c5090dbf76eeb",
+          "localizador": "/observacion/veredicto + /observacion/iframe_powerbi_src",
+          "afirmacion_soportada": "Inspeccion Obscura con DOM renderizado 2026-10-24T06:51:28Z de https://www.sonora.gob.mx/datos/diagnostico-entorno-digital: cascaron JS confirmado (main vacio, body 340 chars solo menu), sin cuestionario/codebook/tabla de variables extraible; contenido sustantivo en iframe PowerBI que requiere interaccion y no se afirma; sin fuente vinculada a fila/campo/recurso/edicion."
+        }
+      ],
+      "condicion_reapertura": "Reabrir solo si aparece fuente primaria vinculada a fila/recurso/edicion que aporte el documento faltante citado en evidencia_faltante (cuestionario o instrumento del Diagnostico del Entorno Digital, o muestra de valores del recurso para el campo, con edicion y periodo acreditados). No reabre: distribuciones, nombres parecidos, ejemplos del diccionario, metadatos CKAN sin vinculo a fila, ni contenido PowerBI sin trazabilidad a campo.",
+      "limites": [
+        "No se transfiere el referente de P30 por proximidad.",
+        "Busquedas negativas acotadas a lo revisado el 2026-10-24 (8 CKAN API, 2 paginas oficiales, PDFs locales, datastore); no es ausencia universal.",
+        "La pagina del Diagnostico y el embed PowerBI requieren interaccion; no se afirma contenido no extraible."
+      ]
+    },
+    {
+      "id": "https://example.org/mex-ontologi/definition/bdbf043f-5d12-4362-bce0-bd4c8ab1e2a1%2F32",
+      "tipo": "significados",
+      "original_sha256": "b43041b76f6c8da3947644bb81c22f7e66c7ec5a6c7b58a41ce4dccb2e8a4beb",
+      "puerta": "sin_pista_nueva",
+      "pista": null,
+      "estado": "brecha_externa",
+      "afirmacion_propuesta": null,
+      "motivo": "descripcion vacua o anaforica sin referente declarado en la propia fila (el vinculo filtro/detalle no consta en el diccionario). Nueva investigacion 2026-10-24 (no repetida de R6): (1) relectura byte-exacta + huella OK; (2) metadatos CKAN oficiales del conjunto (instrumento 'Resultados del ejercicio \"Diagnostico del Entorno Digital\", ', sin cuestionario/codebook/unidad/periodo por campo); (3) paginas oficiales del Programa Especial y del Diagnostico revisadas (sin cuestionario extraible; Diagnostico = cascaron JS + PowerBI); (4) PDFs locales revisados: ninguno cubre TIC; (5) datastore inactivo en los 16 recursos (sin muestra de valores). Nada de lo hallado fija el sentido literal de esta fila ni acredita dominio/catalogo/vigencia; no se propone significado (derivar del nombre violaria el criterio). | Puerta S5-tic 2026-10-24: sin_pista_nueva. Verificacion SHA-256 OK de la evidencia previa; la URL https://www.sonora.gob.mx/datos/diagnostico-entorno-digital ya fue examinada por webfetch y por Obscura con DOM renderizado el mismo dia sin cuestionario extraible; barrido local sin instrumento inedito. Se cierra como brecha externa conservando la evidencia previa; no se propone significado.",
+      "evidencia_faltante": "Documento faltante: Cuestionario que vincule P32-P33 y aclare la marca \"4\". Cita historica R5/R6 (texto heredado, no afirmacion propia): \"Cuestionario que vincule P32-P33 y aclare la marca '4'. En manos del publicador.\" Conclusion actual 2026-10-24: no localizado en 8 metadatos CKAN package_show + paginas oficiales del Programa Especial y del Diagnostico + PDFs locales preservados + datastore CKAN (inactivo en 16/16 recursos); no se atribuye exclusividad a ninguna parte.",
+      "evidencia": [
+        {
+          "ruta": "data/portal/inspecciones/bdbf043f-5d12-4362-bce0-bd4c8ab1e2a1.json",
+          "sha256": "1b4660882f2c1d165dc3b4deb9e19b8e1f61f09b1bd9dbcfdead4bd09e8f741a",
+          "localizador": "/definiciones/31",
+          "afirmacion_soportada": "Fila 32 (P33): Tipo=Texto, Formato=, Ejemplo='Normas especificas', Unidad de medida vacia, Catalogo vacio; descripcion vacua o anaforica sin referente declarado en la propia fila (el vinculo filtro/detalle no consta en el diccionario)."
+        },
+        {
+          "ruta": "propuestas/investigacion-post-r6/tic/evidencia/verificacion_filas.json",
+          "sha256": "67d252df2f99b620fa29fecf4879f65b0e1e4cec730452ad1d32cd59be3cdc12",
+          "localizador": "/filas[definicion_iri=c8ab1e2a1%2F32]",
+          "afirmacion_soportada": "Huella recomputada 2026-10-24 = ddf4237e2b6938bd... coincide con la historica; fila byte-identica a R5/R6."
+        },
+        {
+          "ruta": "propuestas/investigacion-post-r6/tic/evidencia/ckan-package-37ab8134.bin",
+          "sha256": "caa5b5fa1200e63d006e3ad8b585799e8d2854436aef4c2bc7b00bf6c11269ee",
+          "localizador": "/result[notes|frequency|fuentes_extras|version|resources]",
+          "afirmacion_soportada": "CKAN oficial: notes='Resultados del ejercicio \"Diagnostico del Entorno Digital\", en el tema'; frequency=sin_programacion; fuentes_extras vacias; version=null; datastore_active=false en ambos recursos; sin cuestionario, codebook, unidad ni periodo vinculados a esta fila."
+        },
+        {
+          "ruta": "data/semantica/cobertura.json",
+          "sha256": "7ef11b0a4ad9ee3aa3d3512ab2a431cee29b9295db9da76daae2e054378a39a9",
+          "localizador": "/variables[definicion_iri=c8ab1e2a1%2F32]",
+          "afirmacion_soportada": "Estado fuera_del_nucleo_actual y 0 correspondencias hacia esta definicion (verificado por conteo exacto del IRI en /correspondencias)."
+        },
+        {
+          "ruta": "propuestas/cierre-brechas-post-r6/significados-tic-diversos/evidencia/nueva-tic-sonora-2026-10-24.md",
+          "sha256": "963eac956a9fe527a2fe8e8abef5ae8c70f8e1ade16ab915eafa3b51d8257807",
+          "localizador": "fetch página Diagnóstico nav-only + websearch sin cuestionario 2026-10-24",
+          "afirmacion_soportada": "Página Diagnóstico-Entorno-Digital fetch nav-only sin cuestionario/codebook; sin fuente vinculada a fila: brecha intacta."
+        },
+        {
+          "ruta": "propuestas/cierre-brechas-post-r6/web-obscura/obs-diagnostico-2026-10-24.json",
+          "sha256": "e4d80cf40a3cbeaf0084a7ca32d059a9c82c63e6637b43fb737c5090dbf76eeb",
+          "localizador": "/observacion/veredicto + /observacion/iframe_powerbi_src",
+          "afirmacion_soportada": "Inspeccion Obscura con DOM renderizado 2026-10-24T06:51:28Z de https://www.sonora.gob.mx/datos/diagnostico-entorno-digital: cascaron JS confirmado (main vacio, body 340 chars solo menu), sin cuestionario/codebook/tabla de variables extraible; contenido sustantivo en iframe PowerBI que requiere interaccion y no se afirma; sin fuente vinculada a fila/campo/recurso/edicion."
+        }
+      ],
+      "condicion_reapertura": "Reabrir solo si aparece fuente primaria vinculada a fila/recurso/edicion que aporte el documento faltante citado en evidencia_faltante (cuestionario o instrumento del Diagnostico del Entorno Digital, o muestra de valores del recurso para el campo, con edicion y periodo acreditados). No reabre: distribuciones, nombres parecidos, ejemplos del diccionario, metadatos CKAN sin vinculo a fila, ni contenido PowerBI sin trazabilidad a campo.",
+      "limites": [
+        "No se transfiere el referente de P32 por proximidad.",
+        "El '4' se conserva tal cual; no se interpreta como nota ni se corrige.",
+        "Busquedas negativas acotadas a lo revisado el 2026-10-24 (8 CKAN API, 2 paginas oficiales, PDFs locales, datastore); no es ausencia universal.",
+        "La pagina del Diagnostico y el embed PowerBI requieren interaccion; no se afirma contenido no extraible."
+      ]
+    },
+    {
+      "id": "https://example.org/mex-ontologi/definition/f3ecd3d2-2156-4251-82e5-13b079471ee9%2F7",
+      "tipo": "significados",
+      "original_sha256": "50a3e54e59c0d6270a35872beb2979263e6da612b5769a03a17e17e29c2a3ee9",
+      "puerta": "sin_pista_nueva",
+      "pista": null,
+      "estado": "brecha_externa",
+      "afirmacion_propuesta": null,
+      "motivo": "descripcion vacua o anaforica sin referente declarado en la propia fila (el vinculo filtro/detalle no consta en el diccionario). Nueva investigacion 2026-10-24 (no repetida de R6): (1) relectura byte-exacta + huella OK; (2) metadatos CKAN oficiales del conjunto (instrumento 'Resultados del ejercicio \"Diagnostico del Entorno Digital\", ', sin cuestionario/codebook/unidad/periodo por campo); (3) paginas oficiales del Programa Especial y del Diagnostico revisadas (sin cuestionario extraible; Diagnostico = cascaron JS + PowerBI); (4) PDFs locales revisados: ninguno cubre TIC; (5) datastore inactivo en los 16 recursos (sin muestra de valores). Nada de lo hallado fija el sentido literal de esta fila ni acredita dominio/catalogo/vigencia; no se propone significado (derivar del nombre violaria el criterio). | Puerta S5-tic 2026-10-24: sin_pista_nueva. Verificacion SHA-256 OK de la evidencia previa; la URL https://www.sonora.gob.mx/datos/diagnostico-entorno-digital ya fue examinada por webfetch y por Obscura con DOM renderizado el mismo dia sin cuestionario extraible; barrido local sin instrumento inedito. Se cierra como brecha externa conservando la evidencia previa; no se propone significado.",
+      "evidencia_faltante": "Documento faltante: Cuestionario que fije el referente de \"Como se generan?\" (Fortalezas). Cita historica R5/R6 (texto heredado, no afirmacion propia): \"Cuestionario que fije el referente de 'Como se generan?' (Fortalezas). En manos del publicador.\" Conclusion actual 2026-10-24: no localizado en 8 metadatos CKAN package_show + paginas oficiales del Programa Especial y del Diagnostico + PDFs locales preservados + datastore CKAN (inactivo en 16/16 recursos); no se atribuye exclusividad a ninguna parte.",
+      "evidencia": [
+        {
+          "ruta": "data/portal/inspecciones/f3ecd3d2-2156-4251-82e5-13b079471ee9.json",
+          "sha256": "7f0fe9071a5c3cf4b94e9f8a3330447a4ec6ab8263521cb426606a59f6388106",
+          "localizador": "/definiciones/6",
+          "afirmacion_soportada": "Fila 7 (P7): Tipo=Texto, Formato=, Ejemplo='Se generan realizando proyectos', Unidad de medida vacia, Catalogo vacio; descripcion vacua o anaforica sin referente declarado en la propia fila (el vinculo filtro/detalle no consta en el diccionario)."
+        },
+        {
+          "ruta": "propuestas/investigacion-post-r6/tic/evidencia/verificacion_filas.json",
+          "sha256": "67d252df2f99b620fa29fecf4879f65b0e1e4cec730452ad1d32cd59be3cdc12",
+          "localizador": "/filas[definicion_iri=b079471ee9%2F7]",
+          "afirmacion_soportada": "Huella recomputada 2026-10-24 = bcdbc5b839080631... coincide con la historica; fila byte-identica a R5/R6."
+        },
+        {
+          "ruta": "propuestas/investigacion-post-r6/tic/evidencia/ckan-package-7c6183e5.bin",
+          "sha256": "1e7c629dbbf6b5c2a35942f064377970d6af5af8aeb661ae681c2165661b8679",
+          "localizador": "/result[notes|frequency|fuentes_extras|version|resources]",
+          "afirmacion_soportada": "CKAN oficial: notes='Resultados del ejercicio \"Diagnostico del Entorno Digital\", en el tema'; frequency=sin_programacion; fuentes_extras vacias; version=null; datastore_active=false en ambos recursos; sin cuestionario, codebook, unidad ni periodo vinculados a esta fila."
+        },
+        {
+          "ruta": "data/semantica/cobertura.json",
+          "sha256": "7ef11b0a4ad9ee3aa3d3512ab2a431cee29b9295db9da76daae2e054378a39a9",
+          "localizador": "/variables[definicion_iri=b079471ee9%2F7]",
+          "afirmacion_soportada": "Estado fuera_del_nucleo_actual y 0 correspondencias hacia esta definicion (verificado por conteo exacto del IRI en /correspondencias)."
+        },
+        {
+          "ruta": "propuestas/cierre-brechas-post-r6/significados-tic-diversos/evidencia/nueva-tic-sonora-2026-10-24.md",
+          "sha256": "963eac956a9fe527a2fe8e8abef5ae8c70f8e1ade16ab915eafa3b51d8257807",
+          "localizador": "fetch página Diagnóstico nav-only + websearch sin cuestionario 2026-10-24",
+          "afirmacion_soportada": "Página Diagnóstico-Entorno-Digital fetch nav-only sin cuestionario/codebook; sin fuente vinculada a fila: brecha intacta."
+        },
+        {
+          "ruta": "propuestas/cierre-brechas-post-r6/web-obscura/obs-diagnostico-2026-10-24.json",
+          "sha256": "e4d80cf40a3cbeaf0084a7ca32d059a9c82c63e6637b43fb737c5090dbf76eeb",
+          "localizador": "/observacion/veredicto + /observacion/iframe_powerbi_src",
+          "afirmacion_soportada": "Inspeccion Obscura con DOM renderizado 2026-10-24T06:51:28Z de https://www.sonora.gob.mx/datos/diagnostico-entorno-digital: cascaron JS confirmado (main vacio, body 340 chars solo menu), sin cuestionario/codebook/tabla de variables extraible; contenido sustantivo en iframe PowerBI que requiere interaccion y no se afirma; sin fuente vinculada a fila/campo/recurso/edicion."
+        }
+      ],
+      "condicion_reapertura": "Reabrir solo si aparece fuente primaria vinculada a fila/recurso/edicion que aporte el documento faltante citado en evidencia_faltante (cuestionario o instrumento del Diagnostico del Entorno Digital, o muestra de valores del recurso para el campo, con edicion y periodo acreditados). No reabre: distribuciones, nombres parecidos, ejemplos del diccionario, metadatos CKAN sin vinculo a fila, ni contenido PowerBI sin trazabilidad a campo.",
+      "limites": [
+        "No se transfiere el sujeto de P6 por proximidad.",
+        "No se equipara a la P7 de Gobernanza aunque el contenido sea identico: cada regla queda restringida a su definicion.",
+        "Busquedas negativas acotadas a lo revisado el 2026-10-24 (8 CKAN API, 2 paginas oficiales, PDFs locales, datastore); no es ausencia universal.",
+        "La pagina del Diagnostico y el embed PowerBI requieren interaccion; no se afirma contenido no extraible."
+      ]
+    },
+    {
+      "id": "https://example.org/mex-ontologi/definition/8f8e3cfb-e551-4a95-b382-4999351c5f29%2F11",
+      "tipo": "significados",
+      "original_sha256": "af7203f6b390ead25bc63d8dd05486de1dfeae34f49a4bf33b2b654429b178e2",
+      "puerta": "sin_pista_nueva",
+      "pista": null,
+      "estado": "brecha_externa",
+      "afirmacion_propuesta": null,
+      "motivo": "contradiccion entre lo que pregunta la descripcion y el dominio declarado (Tipo/Formato/Ejemplo). Nueva investigacion 2026-10-24 (no repetida de R6): (1) relectura byte-exacta + huella OK; (2) metadatos CKAN oficiales del conjunto (instrumento 'Resultados del ejercicio \"Diagnostico del Entorno Digital\", ', sin cuestionario/codebook/unidad/periodo por campo); (3) paginas oficiales del Programa Especial y del Diagnostico revisadas (sin cuestionario extraible; Diagnostico = cascaron JS + PowerBI); (4) PDFs locales revisados: ninguno cubre TIC; (5) datastore inactivo en los 16 recursos (sin muestra de valores). Nada de lo hallado fija el sentido literal de esta fila ni acredita dominio/catalogo/vigencia; no se propone significado (derivar del nombre violaria el criterio). | Puerta S5-tic 2026-10-24: sin_pista_nueva. Verificacion SHA-256 OK de la evidencia previa; la URL https://www.sonora.gob.mx/datos/diagnostico-entorno-digital ya fue examinada por webfetch y por Obscura con DOM renderizado el mismo dia sin cuestionario extraible; barrido local sin instrumento inedito. Se cierra como brecha externa conservando la evidencia previa; no se propone significado.",
+      "evidencia_faltante": "Documento faltante: Muestra de valores de P11 en el recurso c6d42e45-2193-4e22-a5b1-aa2770e9acf1 o cuestionario que fije el dominio. Cita historica R5/R6 (texto heredado, no afirmacion propia): \"Muestra de valores de P11 en el recurso c6d42e45-2193-4e22-a5b1-aa2770e9acf1 o cuestionario que fije el dominio. En manos del publicador.\" Conclusion actual 2026-10-24: no localizado en 8 metadatos CKAN package_show + paginas oficiales del Programa Especial y del Diagnostico + PDFs locales preservados + datastore CKAN (inactivo en 16/16 recursos); no se atribuye exclusividad a ninguna parte.",
+      "evidencia": [
+        {
+          "ruta": "data/portal/inspecciones/8f8e3cfb-e551-4a95-b382-4999351c5f29.json",
+          "sha256": "e474f039c7b0a4b6cbd9a2f70744891c3eb71249b1ab02bf3d3cce4ecc6f4b5e",
+          "localizador": "/definiciones/10",
+          "afirmacion_soportada": "Fila 11 (P11): Tipo=Booleano, Formato=Si/No, Ejemplo='Tecnologia 1, tecnologia 2', Unidad de medida vacia, Catalogo vacio; contradiccion entre lo que pregunta la descripcion y el dominio declarado (Tipo/Formato/Ejemplo)."
+        },
+        {
+          "ruta": "propuestas/investigacion-post-r6/tic/evidencia/verificacion_filas.json",
+          "sha256": "67d252df2f99b620fa29fecf4879f65b0e1e4cec730452ad1d32cd59be3cdc12",
+          "localizador": "/filas[definicion_iri=9351c5f29%2F11]",
+          "afirmacion_soportada": "Huella recomputada 2026-10-24 = 0fda5e0941a806b4... coincide con la historica; fila byte-identica a R5/R6."
+        },
+        {
+          "ruta": "propuestas/investigacion-post-r6/tic/evidencia/ckan-package-9208a313.bin",
+          "sha256": "da20faaa090dab46db7f9b60ff774f83291d31803c917606fe698a7e89c84f75",
+          "localizador": "/result[notes|frequency|fuentes_extras|version|resources]",
+          "afirmacion_soportada": "CKAN oficial: notes='Resultados del ejercicio \"Diagnostico del Entorno Digital\", en el tema'; frequency=sin_programacion; fuentes_extras vacias; version=null; datastore_active=false en ambos recursos; sin cuestionario, codebook, unidad ni periodo vinculados a esta fila."
+        },
+        {
+          "ruta": "data/semantica/cobertura.json",
+          "sha256": "7ef11b0a4ad9ee3aa3d3512ab2a431cee29b9295db9da76daae2e054378a39a9",
+          "localizador": "/variables[definicion_iri=9351c5f29%2F11]",
+          "afirmacion_soportada": "Estado fuera_del_nucleo_actual y 0 correspondencias hacia esta definicion (verificado por conteo exacto del IRI en /correspondencias)."
+        },
+        {
+          "ruta": "propuestas/cierre-brechas-post-r6/significados-tic-diversos/evidencia/nueva-tic-sonora-2026-10-24.md",
+          "sha256": "963eac956a9fe527a2fe8e8abef5ae8c70f8e1ade16ab915eafa3b51d8257807",
+          "localizador": "fetch página Diagnóstico nav-only + websearch sin cuestionario 2026-10-24",
+          "afirmacion_soportada": "Página Diagnóstico-Entorno-Digital fetch nav-only sin cuestionario/codebook; sin fuente vinculada a fila: brecha intacta."
+        },
+        {
+          "ruta": "propuestas/cierre-brechas-post-r6/web-obscura/obs-diagnostico-2026-10-24.json",
+          "sha256": "e4d80cf40a3cbeaf0084a7ca32d059a9c82c63e6637b43fb737c5090dbf76eeb",
+          "localizador": "/observacion/veredicto + /observacion/iframe_powerbi_src",
+          "afirmacion_soportada": "Inspeccion Obscura con DOM renderizado 2026-10-24T06:51:28Z de https://www.sonora.gob.mx/datos/diagnostico-entorno-digital: cascaron JS confirmado (main vacio, body 340 chars solo menu), sin cuestionario/codebook/tabla de variables extraible; contenido sustantivo en iframe PowerBI que requiere interaccion y no se afirma; sin fuente vinculada a fila/campo/recurso/edicion."
+        }
+      ],
+      "condicion_reapertura": "Reabrir solo si aparece fuente primaria vinculada a fila/recurso/edicion que aporte el documento faltante citado en evidencia_faltante (cuestionario o instrumento del Diagnostico del Entorno Digital, o muestra de valores del recurso para el campo, con edicion y periodo acreditados). No reabre: distribuciones, nombres parecidos, ejemplos del diccionario, metadatos CKAN sin vinculo a fila, ni contenido PowerBI sin trazabilidad a campo.",
+      "limites": [
+        "La contradiccion tipo-vs-ejemplo se conserva; no se cura con una suposicion.",
+        "No se inventa significado alternativo de existencia ni de lista.",
+        "Busquedas negativas acotadas a lo revisado el 2026-10-24 (8 CKAN API, 2 paginas oficiales, PDFs locales, datastore); no es ausencia universal.",
+        "La pagina del Diagnostico y el embed PowerBI requieren interaccion; no se afirma contenido no extraible."
+      ]
+    },
+    {
+      "id": "https://example.org/mex-ontologi/definition/c65eb4e7-a17d-43c7-b08c-05811505edf1%2F7",
+      "tipo": "significados",
+      "original_sha256": "9fa47e45c645b1c7a5595be6565ec210465a95f95d2ce8cc8bd8b9de28676993",
+      "puerta": "sin_pista_nueva",
+      "pista": null,
+      "estado": "brecha_externa",
+      "afirmacion_propuesta": null,
+      "motivo": "descripcion vacua o anaforica sin referente declarado en la propia fila (el vinculo filtro/detalle no consta en el diccionario). Nueva investigacion 2026-10-24 (no repetida de R6): (1) relectura byte-exacta + huella OK; (2) metadatos CKAN oficiales del conjunto (instrumento 'Resultados del ejercicio \"Diagnostico del Entorno Digital\", ', sin cuestionario/codebook/unidad/periodo por campo); (3) paginas oficiales del Programa Especial y del Diagnostico revisadas (sin cuestionario extraible; Diagnostico = cascaron JS + PowerBI); (4) PDFs locales revisados: ninguno cubre TIC; (5) datastore inactivo en los 16 recursos (sin muestra de valores). Nada de lo hallado fija el sentido literal de esta fila ni acredita dominio/catalogo/vigencia; no se propone significado (derivar del nombre violaria el criterio). | Puerta S5-tic 2026-10-24: sin_pista_nueva. Verificacion SHA-256 OK de la evidencia previa; la URL https://www.sonora.gob.mx/datos/diagnostico-entorno-digital ya fue examinada por webfetch y por Obscura con DOM renderizado el mismo dia sin cuestionario extraible; barrido local sin instrumento inedito. Se cierra como brecha externa conservando la evidencia previa; no se propone significado.",
+      "evidencia_faltante": "Documento faltante: Cuestionario que fije el referente de \"Como se generan?\" (Gobernanza). Cita historica R5/R6 (texto heredado, no afirmacion propia): \"Cuestionario que fije el referente de 'Como se generan?' (Gobernanza). En manos del publicador.\" Conclusion actual 2026-10-24: no localizado en 8 metadatos CKAN package_show + paginas oficiales del Programa Especial y del Diagnostico + PDFs locales preservados + datastore CKAN (inactivo en 16/16 recursos); no se atribuye exclusividad a ninguna parte.",
+      "evidencia": [
+        {
+          "ruta": "data/portal/inspecciones/c65eb4e7-a17d-43c7-b08c-05811505edf1.json",
+          "sha256": "90116c242b20debee37a0002c763602f57a578a7350a616d89aae4233ad0f9bf",
+          "localizador": "/definiciones/6",
+          "afirmacion_soportada": "Fila 7 (P7): Tipo=Texto, Formato=, Ejemplo='Se generan realizando proyectos', Unidad de medida vacia, Catalogo vacio; descripcion vacua o anaforica sin referente declarado en la propia fila (el vinculo filtro/detalle no consta en el diccionario)."
+        },
+        {
+          "ruta": "propuestas/investigacion-post-r6/tic/evidencia/verificacion_filas.json",
+          "sha256": "67d252df2f99b620fa29fecf4879f65b0e1e4cec730452ad1d32cd59be3cdc12",
+          "localizador": "/filas[definicion_iri=811505edf1%2F7]",
+          "afirmacion_soportada": "Huella recomputada 2026-10-24 = bcdbc5b839080631... coincide con la historica; fila byte-identica a R5/R6."
+        },
+        {
+          "ruta": "propuestas/investigacion-post-r6/tic/evidencia/ckan-package-a3ea3c02.bin",
+          "sha256": "d166dc5a88031dbe1851f1d66142735335f4114f6436fa73e234ac7878965430",
+          "localizador": "/result[notes|frequency|fuentes_extras|version|resources]",
+          "afirmacion_soportada": "CKAN oficial: notes='Resultados del ejercicio \"Diagnostico del Entorno Digital\", en el tema'; frequency=sin_programacion; fuentes_extras vacias; version=null; datastore_active=false en ambos recursos; sin cuestionario, codebook, unidad ni periodo vinculados a esta fila."
+        },
+        {
+          "ruta": "data/semantica/cobertura.json",
+          "sha256": "7ef11b0a4ad9ee3aa3d3512ab2a431cee29b9295db9da76daae2e054378a39a9",
+          "localizador": "/variables[definicion_iri=811505edf1%2F7]",
+          "afirmacion_soportada": "Estado fuera_del_nucleo_actual y 0 correspondencias hacia esta definicion (verificado por conteo exacto del IRI en /correspondencias)."
+        },
+        {
+          "ruta": "propuestas/cierre-brechas-post-r6/significados-tic-diversos/evidencia/nueva-tic-sonora-2026-10-24.md",
+          "sha256": "963eac956a9fe527a2fe8e8abef5ae8c70f8e1ade16ab915eafa3b51d8257807",
+          "localizador": "fetch página Diagnóstico nav-only + websearch sin cuestionario 2026-10-24",
+          "afirmacion_soportada": "Página Diagnóstico-Entorno-Digital fetch nav-only sin cuestionario/codebook; sin fuente vinculada a fila: brecha intacta."
+        },
+        {
+          "ruta": "propuestas/cierre-brechas-post-r6/web-obscura/obs-diagnostico-2026-10-24.json",
+          "sha256": "e4d80cf40a3cbeaf0084a7ca32d059a9c82c63e6637b43fb737c5090dbf76eeb",
+          "localizador": "/observacion/veredicto + /observacion/iframe_powerbi_src",
+          "afirmacion_soportada": "Inspeccion Obscura con DOM renderizado 2026-10-24T06:51:28Z de https://www.sonora.gob.mx/datos/diagnostico-entorno-digital: cascaron JS confirmado (main vacio, body 340 chars solo menu), sin cuestionario/codebook/tabla de variables extraible; contenido sustantivo en iframe PowerBI que requiere interaccion y no se afirma; sin fuente vinculada a fila/campo/recurso/edicion."
+        }
+      ],
+      "condicion_reapertura": "Reabrir solo si aparece fuente primaria vinculada a fila/recurso/edicion que aporte el documento faltante citado en evidencia_faltante (cuestionario o instrumento del Diagnostico del Entorno Digital, o muestra de valores del recurso para el campo, con edicion y periodo acreditados). No reabre: distribuciones, nombres parecidos, ejemplos del diccionario, metadatos CKAN sin vinculo a fila, ni contenido PowerBI sin trazabilidad a campo.",
+      "limites": [
+        "No se transfiere el sujeto de P6 por proximidad ni por el eco del ejemplo.",
+        "El ejemplo no fija objeto, sujeto ni mecanismo.",
+        "Busquedas negativas acotadas a lo revisado el 2026-10-24 (8 CKAN API, 2 paginas oficiales, PDFs locales, datastore); no es ausencia universal.",
+        "La pagina del Diagnostico y el embed PowerBI requieren interaccion; no se afirma contenido no extraible."
+      ]
+    },
+    {
+      "id": "https://example.org/mex-ontologi/definition/063058e6-aed3-4a60-b944-5e653c77b14d%2F10",
+      "tipo": "significados",
+      "original_sha256": "c0bb9ed288aacd74d318459d84d0e8537300b9d6460357ae262347d4ad1b406b",
+      "puerta": "sin_pista_nueva",
+      "pista": null,
+      "estado": "brecha_externa",
+      "afirmacion_propuesta": null,
+      "motivo": "descripcion truncada a mitad de palabra/frase en la celda fuente; sin sentido literal completo. Nueva investigacion 2026-10-24 (no repetida de R6): (1) relectura byte-exacta + huella OK; (2) metadatos CKAN oficiales del conjunto (instrumento 'Resultados del ejercicio \"Diagnostico del Entorno Digital\", ', sin cuestionario/codebook/unidad/periodo por campo); (3) paginas oficiales del Programa Especial y del Diagnostico revisadas (sin cuestionario extraible; Diagnostico = cascaron JS + PowerBI); (4) PDFs locales revisados: ninguno cubre TIC; (5) datastore inactivo en los 16 recursos (sin muestra de valores). Nada de lo hallado fija el sentido literal de esta fila ni acredita dominio/catalogo/vigencia; no se propone significado (derivar del nombre violaria el criterio). | Puerta S5-tic 2026-10-24: sin_pista_nueva. Verificacion SHA-256 OK de la evidencia previa; la URL https://www.sonora.gob.mx/datos/diagnostico-entorno-digital ya fue examinada por webfetch y por Obscura con DOM renderizado el mismo dia sin cuestionario extraible; barrido local sin instrumento inedito. Se cierra como brecha externa conservando la evidencia previa; no se propone significado.",
+      "evidencia_faltante": "Documento faltante: Texto literal completo de P10 (termina en \"...que permit...\"). Cuestionario original de Politica Digital. Cita historica R5/R6 (texto heredado, no afirmacion propia): \"Texto literal completo de P10 (termina en '...que permit...'). Solo el publicador lo tiene: cuestionario original de Politica Digital.\" Conclusion actual 2026-10-24: no localizado en 8 metadatos CKAN package_show + paginas oficiales del Programa Especial y del Diagnostico + PDFs locales preservados + datastore CKAN (inactivo en 16/16 recursos); no se atribuye exclusividad a ninguna parte.",
+      "evidencia": [
+        {
+          "ruta": "data/portal/inspecciones/063058e6-aed3-4a60-b944-5e653c77b14d.json",
+          "sha256": "0ea3dfe7bd13b50aa647d976a6dd59ac9dd33c102eee2c6bc88b301d9f810be0",
+          "localizador": "/definiciones/9",
+          "afirmacion_soportada": "Fila 10 (P10): Tipo=Booleano, Formato=Si/No, Ejemplo='Si', Unidad de medida vacia, Catalogo vacio; descripcion truncada a mitad de palabra/frase en la celda fuente; sin sentido literal completo."
+        },
+        {
+          "ruta": "propuestas/investigacion-post-r6/tic/evidencia/verificacion_filas.json",
+          "sha256": "67d252df2f99b620fa29fecf4879f65b0e1e4cec730452ad1d32cd59be3cdc12",
+          "localizador": "/filas[definicion_iri=53c77b14d%2F10]",
+          "afirmacion_soportada": "Huella recomputada 2026-10-24 = f12d0cae51621dc2... coincide con la historica; fila byte-identica a R5/R6."
+        },
+        {
+          "ruta": "propuestas/investigacion-post-r6/tic/evidencia/ckan-package-aa353273.bin",
+          "sha256": "be192d575a2fdb8789cf462fa53a1c3f300cc616c769e672a3236588dfb520ac",
+          "localizador": "/result[notes|frequency|fuentes_extras|version|resources]",
+          "afirmacion_soportada": "CKAN oficial: notes='Resultados del ejercicio \"Diagnostico del Entorno Digital\", en el tema'; frequency=sin_programacion; fuentes_extras vacias; version=null; datastore_active=false en ambos recursos; sin cuestionario, codebook, unidad ni periodo vinculados a esta fila."
+        },
+        {
+          "ruta": "data/semantica/cobertura.json",
+          "sha256": "7ef11b0a4ad9ee3aa3d3512ab2a431cee29b9295db9da76daae2e054378a39a9",
+          "localizador": "/variables[definicion_iri=53c77b14d%2F10]",
+          "afirmacion_soportada": "Estado fuera_del_nucleo_actual y 0 correspondencias hacia esta definicion (verificado por conteo exacto del IRI en /correspondencias)."
+        },
+        {
+          "ruta": "propuestas/cierre-brechas-post-r6/significados-tic-diversos/evidencia/nueva-tic-sonora-2026-10-24.md",
+          "sha256": "963eac956a9fe527a2fe8e8abef5ae8c70f8e1ade16ab915eafa3b51d8257807",
+          "localizador": "fetch página Diagnóstico nav-only + websearch sin cuestionario 2026-10-24",
+          "afirmacion_soportada": "Página Diagnóstico-Entorno-Digital fetch nav-only sin cuestionario/codebook; sin fuente vinculada a fila: brecha intacta."
+        },
+        {
+          "ruta": "propuestas/cierre-brechas-post-r6/web-obscura/obs-diagnostico-2026-10-24.json",
+          "sha256": "e4d80cf40a3cbeaf0084a7ca32d059a9c82c63e6637b43fb737c5090dbf76eeb",
+          "localizador": "/observacion/veredicto + /observacion/iframe_powerbi_src",
+          "afirmacion_soportada": "Inspeccion Obscura con DOM renderizado 2026-10-24T06:51:28Z de https://www.sonora.gob.mx/datos/diagnostico-entorno-digital: cascaron JS confirmado (main vacio, body 340 chars solo menu), sin cuestionario/codebook/tabla de variables extraible; contenido sustantivo en iframe PowerBI que requiere interaccion y no se afirma; sin fuente vinculada a fila/campo/recurso/edicion."
+        }
+      ],
+      "condicion_reapertura": "Reabrir solo si aparece fuente primaria vinculada a fila/recurso/edicion que aporte el documento faltante citado en evidencia_faltante (cuestionario o instrumento del Diagnostico del Entorno Digital, o muestra de valores del recurso para el campo, con edicion y periodo acreditados). No reabre: distribuciones, nombres parecidos, ejemplos del diccionario, metadatos CKAN sin vinculo a fila, ni contenido PowerBI sin trazabilidad a campo.",
+      "limites": [
+        "No se infiere el final de la pregunta ni el objeto de 'permit...'.",
+        "No se propone significado parcial sobre el fragmento.",
+        "Busquedas negativas acotadas a lo revisado el 2026-10-24 (8 CKAN API, 2 paginas oficiales, PDFs locales, datastore); no es ausencia universal.",
+        "La pagina del Diagnostico y el embed PowerBI requieren interaccion; no se afirma contenido no extraible."
+      ]
+    },
+    {
+      "id": "https://example.org/mex-ontologi/definition/063058e6-aed3-4a60-b944-5e653c77b14d%2F11",
+      "tipo": "significados",
+      "original_sha256": "6106983b4afba9e30d0f23772b4b7903b8fa15dac4235f5e2066d1486169e755",
+      "puerta": "sin_pista_nueva",
+      "pista": null,
+      "estado": "brecha_externa",
+      "afirmacion_propuesta": null,
+      "motivo": "descripcion truncada a mitad de palabra/frase en la celda fuente; sin sentido literal completo. Nueva investigacion 2026-10-24 (no repetida de R6): (1) relectura byte-exacta + huella OK; (2) metadatos CKAN oficiales del conjunto (instrumento 'Resultados del ejercicio \"Diagnostico del Entorno Digital\", ', sin cuestionario/codebook/unidad/periodo por campo); (3) paginas oficiales del Programa Especial y del Diagnostico revisadas (sin cuestionario extraible; Diagnostico = cascaron JS + PowerBI); (4) PDFs locales revisados: ninguno cubre TIC; (5) datastore inactivo en los 16 recursos (sin muestra de valores). Nada de lo hallado fija el sentido literal de esta fila ni acredita dominio/catalogo/vigencia; no se propone significado (derivar del nombre violaria el criterio). | Puerta S5-tic 2026-10-24: sin_pista_nueva. Verificacion SHA-256 OK de la evidencia previa; la URL https://www.sonora.gob.mx/datos/diagnostico-entorno-digital ya fue examinada por webfetch y por Obscura con DOM renderizado el mismo dia sin cuestionario extraible; barrido local sin instrumento inedito. Se cierra como brecha externa conservando la evidencia previa; no se propone significado.",
+      "evidencia_faltante": "Documento faltante: Cuestionario que fije el referente de \"lo anterior\" (P10 truncada). Cita historica R5/R6 (texto heredado, no afirmacion propia): \"Cuestionario que fije el referente de 'lo anterior' (P10 truncada). En manos del publicador.\" Conclusion actual 2026-10-24: no localizado en 8 metadatos CKAN package_show + paginas oficiales del Programa Especial y del Diagnostico + PDFs locales preservados + datastore CKAN (inactivo en 16/16 recursos); no se atribuye exclusividad a ninguna parte.",
+      "evidencia": [
+        {
+          "ruta": "data/portal/inspecciones/063058e6-aed3-4a60-b944-5e653c77b14d.json",
+          "sha256": "0ea3dfe7bd13b50aa647d976a6dd59ac9dd33c102eee2c6bc88b301d9f810be0",
+          "localizador": "/definiciones/10",
+          "afirmacion_soportada": "Fila 11 (P11): Tipo=Texto, Formato=, Ejemplo='Tecnologia 1, tecnologia 2', Unidad de medida vacia, Catalogo vacio; descripcion truncada a mitad de palabra/frase en la celda fuente; sin sentido literal completo."
+        },
+        {
+          "ruta": "propuestas/investigacion-post-r6/tic/evidencia/verificacion_filas.json",
+          "sha256": "67d252df2f99b620fa29fecf4879f65b0e1e4cec730452ad1d32cd59be3cdc12",
+          "localizador": "/filas[definicion_iri=53c77b14d%2F11]",
+          "afirmacion_soportada": "Huella recomputada 2026-10-24 = 3754e039074ac352... coincide con la historica; fila byte-identica a R5/R6."
+        },
+        {
+          "ruta": "propuestas/investigacion-post-r6/tic/evidencia/ckan-package-aa353273.bin",
+          "sha256": "be192d575a2fdb8789cf462fa53a1c3f300cc616c769e672a3236588dfb520ac",
+          "localizador": "/result[notes|frequency|fuentes_extras|version|resources]",
+          "afirmacion_soportada": "CKAN oficial: notes='Resultados del ejercicio \"Diagnostico del Entorno Digital\", en el tema'; frequency=sin_programacion; fuentes_extras vacias; version=null; datastore_active=false en ambos recursos; sin cuestionario, codebook, unidad ni periodo vinculados a esta fila."
+        },
+        {
+          "ruta": "data/semantica/cobertura.json",
+          "sha256": "7ef11b0a4ad9ee3aa3d3512ab2a431cee29b9295db9da76daae2e054378a39a9",
+          "localizador": "/variables[definicion_iri=53c77b14d%2F11]",
+          "afirmacion_soportada": "Estado fuera_del_nucleo_actual y 0 correspondencias hacia esta definicion (verificado por conteo exacto del IRI en /correspondencias)."
+        },
+        {
+          "ruta": "propuestas/cierre-brechas-post-r6/significados-tic-diversos/evidencia/nueva-tic-sonora-2026-10-24.md",
+          "sha256": "963eac956a9fe527a2fe8e8abef5ae8c70f8e1ade16ab915eafa3b51d8257807",
+          "localizador": "fetch página Diagnóstico nav-only + websearch sin cuestionario 2026-10-24",
+          "afirmacion_soportada": "Página Diagnóstico-Entorno-Digital fetch nav-only sin cuestionario/codebook; sin fuente vinculada a fila: brecha intacta."
+        },
+        {
+          "ruta": "propuestas/cierre-brechas-post-r6/web-obscura/obs-diagnostico-2026-10-24.json",
+          "sha256": "e4d80cf40a3cbeaf0084a7ca32d059a9c82c63e6637b43fb737c5090dbf76eeb",
+          "localizador": "/observacion/veredicto + /observacion/iframe_powerbi_src",
+          "afirmacion_soportada": "Inspeccion Obscura con DOM renderizado 2026-10-24T06:51:28Z de https://www.sonora.gob.mx/datos/diagnostico-entorno-digital: cascaron JS confirmado (main vacio, body 340 chars solo menu), sin cuestionario/codebook/tabla de variables extraible; contenido sustantivo en iframe PowerBI que requiere interaccion y no se afirma; sin fuente vinculada a fila/campo/recurso/edicion."
+        }
+      ],
+      "condicion_reapertura": "Reabrir solo si aparece fuente primaria vinculada a fila/recurso/edicion que aporte el documento faltante citado en evidencia_faltante (cuestionario o instrumento del Diagnostico del Entorno Digital, o muestra de valores del recurso para el campo, con edicion y periodo acreditados). No reabre: distribuciones, nombres parecidos, ejemplos del diccionario, metadatos CKAN sin vinculo a fila, ni contenido PowerBI sin trazabilidad a campo.",
+      "limites": [
+        "No se transfiere referente de P10 por proximidad.",
+        "No se fija a que aspecto responde el valor.",
+        "Busquedas negativas acotadas a lo revisado el 2026-10-24 (8 CKAN API, 2 paginas oficiales, PDFs locales, datastore); no es ausencia universal.",
+        "La pagina del Diagnostico y el embed PowerBI requieren interaccion; no se afirma contenido no extraible."
+      ]
+    },
+    {
+      "id": "https://example.org/mex-ontologi/definition/063058e6-aed3-4a60-b944-5e653c77b14d%2F16",
+      "tipo": "significados",
+      "original_sha256": "1781211063c103aad0014225b799c3ea0755e1ecb4c61477bb862696aff6e215",
+      "puerta": "sin_pista_nueva",
+      "pista": null,
+      "estado": "brecha_externa",
+      "afirmacion_propuesta": null,
+      "motivo": "descripcion truncada a mitad de palabra/frase en la celda fuente; sin sentido literal completo. Nueva investigacion 2026-10-24 (no repetida de R6): (1) relectura byte-exacta + huella OK; (2) metadatos CKAN oficiales del conjunto (instrumento 'Resultados del ejercicio \"Diagnostico del Entorno Digital\", ', sin cuestionario/codebook/unidad/periodo por campo); (3) paginas oficiales del Programa Especial y del Diagnostico revisadas (sin cuestionario extraible; Diagnostico = cascaron JS + PowerBI); (4) PDFs locales revisados: ninguno cubre TIC; (5) datastore inactivo en los 16 recursos (sin muestra de valores). Nada de lo hallado fija el sentido literal de esta fila ni acredita dominio/catalogo/vigencia; no se propone significado (derivar del nombre violaria el criterio). | Puerta S5-tic 2026-10-24: sin_pista_nueva. Verificacion SHA-256 OK de la evidencia previa; la URL https://www.sonora.gob.mx/datos/diagnostico-entorno-digital ya fue examinada por webfetch y por Obscura con DOM renderizado el mismo dia sin cuestionario extraible; barrido local sin instrumento inedito. Se cierra como brecha externa conservando la evidencia previa; no se propone significado.",
+      "evidencia_faltante": "Documento faltante: Texto literal completo de P16 (\"...en ma...\"). Cita historica R5/R6 (texto heredado, no afirmacion propia): \"Texto literal completo de P16 ('...en ma...'). En manos del publicador.\" Conclusion actual 2026-10-24: no localizado en 8 metadatos CKAN package_show + paginas oficiales del Programa Especial y del Diagnostico + PDFs locales preservados + datastore CKAN (inactivo en 16/16 recursos); no se atribuye exclusividad a ninguna parte.",
+      "evidencia": [
+        {
+          "ruta": "data/portal/inspecciones/063058e6-aed3-4a60-b944-5e653c77b14d.json",
+          "sha256": "0ea3dfe7bd13b50aa647d976a6dd59ac9dd33c102eee2c6bc88b301d9f810be0",
+          "localizador": "/definiciones/15",
+          "afirmacion_soportada": "Fila 16 (P16): Tipo=Booleano, Formato=Si/No, Ejemplo='Si', Unidad de medida vacia, Catalogo vacio; descripcion truncada a mitad de palabra/frase en la celda fuente; sin sentido literal completo."
+        },
+        {
+          "ruta": "propuestas/investigacion-post-r6/tic/evidencia/verificacion_filas.json",
+          "sha256": "67d252df2f99b620fa29fecf4879f65b0e1e4cec730452ad1d32cd59be3cdc12",
+          "localizador": "/filas[definicion_iri=53c77b14d%2F16]",
+          "afirmacion_soportada": "Huella recomputada 2026-10-24 = b9c90f66d430431c... coincide con la historica; fila byte-identica a R5/R6."
+        },
+        {
+          "ruta": "propuestas/investigacion-post-r6/tic/evidencia/ckan-package-aa353273.bin",
+          "sha256": "be192d575a2fdb8789cf462fa53a1c3f300cc616c769e672a3236588dfb520ac",
+          "localizador": "/result[notes|frequency|fuentes_extras|version|resources]",
+          "afirmacion_soportada": "CKAN oficial: notes='Resultados del ejercicio \"Diagnostico del Entorno Digital\", en el tema'; frequency=sin_programacion; fuentes_extras vacias; version=null; datastore_active=false en ambos recursos; sin cuestionario, codebook, unidad ni periodo vinculados a esta fila."
+        },
+        {
+          "ruta": "data/semantica/cobertura.json",
+          "sha256": "7ef11b0a4ad9ee3aa3d3512ab2a431cee29b9295db9da76daae2e054378a39a9",
+          "localizador": "/variables[definicion_iri=53c77b14d%2F16]",
+          "afirmacion_soportada": "Estado fuera_del_nucleo_actual y 0 correspondencias hacia esta definicion (verificado por conteo exacto del IRI en /correspondencias)."
+        },
+        {
+          "ruta": "propuestas/cierre-brechas-post-r6/significados-tic-diversos/evidencia/nueva-tic-sonora-2026-10-24.md",
+          "sha256": "963eac956a9fe527a2fe8e8abef5ae8c70f8e1ade16ab915eafa3b51d8257807",
+          "localizador": "fetch página Diagnóstico nav-only + websearch sin cuestionario 2026-10-24",
+          "afirmacion_soportada": "Página Diagnóstico-Entorno-Digital fetch nav-only sin cuestionario/codebook; sin fuente vinculada a fila: brecha intacta."
+        },
+        {
+          "ruta": "propuestas/cierre-brechas-post-r6/web-obscura/obs-diagnostico-2026-10-24.json",
+          "sha256": "e4d80cf40a3cbeaf0084a7ca32d059a9c82c63e6637b43fb737c5090dbf76eeb",
+          "localizador": "/observacion/veredicto + /observacion/iframe_powerbi_src",
+          "afirmacion_soportada": "Inspeccion Obscura con DOM renderizado 2026-10-24T06:51:28Z de https://www.sonora.gob.mx/datos/diagnostico-entorno-digital: cascaron JS confirmado (main vacio, body 340 chars solo menu), sin cuestionario/codebook/tabla de variables extraible; contenido sustantivo en iframe PowerBI que requiere interaccion y no se afirma; sin fuente vinculada a fila/campo/recurso/edicion."
+        }
+      ],
+      "condicion_reapertura": "Reabrir solo si aparece fuente primaria vinculada a fila/recurso/edicion que aporte el documento faltante citado en evidencia_faltante (cuestionario o instrumento del Diagnostico del Entorno Digital, o muestra de valores del recurso para el campo, con edicion y periodo acreditados). No reabre: distribuciones, nombres parecidos, ejemplos del diccionario, metadatos CKAN sin vinculo a fila, ni contenido PowerBI sin trazabilidad a campo.",
+      "limites": [
+        "No se infiere el final del objeto ('en materia de ...').",
+        "Se distingue de P14 respaldada (sector, texto completo): no se equiparan.",
+        "Busquedas negativas acotadas a lo revisado el 2026-10-24 (8 CKAN API, 2 paginas oficiales, PDFs locales, datastore); no es ausencia universal.",
+        "La pagina del Diagnostico y el embed PowerBI requieren interaccion; no se afirma contenido no extraible."
+      ]
+    },
+    {
+      "id": "https://example.org/mex-ontologi/definition/063058e6-aed3-4a60-b944-5e653c77b14d%2F18",
+      "tipo": "significados",
+      "original_sha256": "d76f2c9e8ded52eef961d689433e46370594aab18af36ac3d9b1150b6fedf448",
+      "puerta": "sin_pista_nueva",
+      "pista": null,
+      "estado": "brecha_externa",
+      "afirmacion_propuesta": null,
+      "motivo": "descripcion truncada a mitad de palabra/frase en la celda fuente; sin sentido literal completo. Nueva investigacion 2026-10-24 (no repetida de R6): (1) relectura byte-exacta + huella OK; (2) metadatos CKAN oficiales del conjunto (instrumento 'Resultados del ejercicio \"Diagnostico del Entorno Digital\", ', sin cuestionario/codebook/unidad/periodo por campo); (3) paginas oficiales del Programa Especial y del Diagnostico revisadas (sin cuestionario extraible; Diagnostico = cascaron JS + PowerBI); (4) PDFs locales revisados: ninguno cubre TIC; (5) datastore inactivo en los 16 recursos (sin muestra de valores). Nada de lo hallado fija el sentido literal de esta fila ni acredita dominio/catalogo/vigencia; no se propone significado (derivar del nombre violaria el criterio). | Puerta S5-tic 2026-10-24: sin_pista_nueva. Verificacion SHA-256 OK de la evidencia previa; la URL https://www.sonora.gob.mx/datos/diagnostico-entorno-digital ya fue examinada por webfetch y por Obscura con DOM renderizado el mismo dia sin cuestionario extraible; barrido local sin instrumento inedito. Se cierra como brecha externa conservando la evidencia previa; no se propone significado.",
+      "evidencia_faltante": "Documento faltante: Texto literal completo de P18 (\"...materia d...\"). Cita historica R5/R6 (texto heredado, no afirmacion propia): \"Texto literal completo de P18 ('...materia d...'). En manos del publicador.\" Conclusion actual 2026-10-24: no localizado en 8 metadatos CKAN package_show + paginas oficiales del Programa Especial y del Diagnostico + PDFs locales preservados + datastore CKAN (inactivo en 16/16 recursos); no se atribuye exclusividad a ninguna parte.",
+      "evidencia": [
+        {
+          "ruta": "data/portal/inspecciones/063058e6-aed3-4a60-b944-5e653c77b14d.json",
+          "sha256": "0ea3dfe7bd13b50aa647d976a6dd59ac9dd33c102eee2c6bc88b301d9f810be0",
+          "localizador": "/definiciones/17",
+          "afirmacion_soportada": "Fila 18 (P18): Tipo=Booleano, Formato=Si/No, Ejemplo='No', Unidad de medida vacia, Catalogo vacio; descripcion truncada a mitad de palabra/frase en la celda fuente; sin sentido literal completo."
+        },
+        {
+          "ruta": "propuestas/investigacion-post-r6/tic/evidencia/verificacion_filas.json",
+          "sha256": "67d252df2f99b620fa29fecf4879f65b0e1e4cec730452ad1d32cd59be3cdc12",
+          "localizador": "/filas[definicion_iri=53c77b14d%2F18]",
+          "afirmacion_soportada": "Huella recomputada 2026-10-24 = 600e59e30fdb8f07... coincide con la historica; fila byte-identica a R5/R6."
+        },
+        {
+          "ruta": "propuestas/investigacion-post-r6/tic/evidencia/ckan-package-aa353273.bin",
+          "sha256": "be192d575a2fdb8789cf462fa53a1c3f300cc616c769e672a3236588dfb520ac",
+          "localizador": "/result[notes|frequency|fuentes_extras|version|resources]",
+          "afirmacion_soportada": "CKAN oficial: notes='Resultados del ejercicio \"Diagnostico del Entorno Digital\", en el tema'; frequency=sin_programacion; fuentes_extras vacias; version=null; datastore_active=false en ambos recursos; sin cuestionario, codebook, unidad ni periodo vinculados a esta fila."
+        },
+        {
+          "ruta": "data/semantica/cobertura.json",
+          "sha256": "7ef11b0a4ad9ee3aa3d3512ab2a431cee29b9295db9da76daae2e054378a39a9",
+          "localizador": "/variables[definicion_iri=53c77b14d%2F18]",
+          "afirmacion_soportada": "Estado fuera_del_nucleo_actual y 0 correspondencias hacia esta definicion (verificado por conteo exacto del IRI en /correspondencias)."
+        },
+        {
+          "ruta": "propuestas/cierre-brechas-post-r6/significados-tic-diversos/evidencia/nueva-tic-sonora-2026-10-24.md",
+          "sha256": "963eac956a9fe527a2fe8e8abef5ae8c70f8e1ade16ab915eafa3b51d8257807",
+          "localizador": "fetch página Diagnóstico nav-only + websearch sin cuestionario 2026-10-24",
+          "afirmacion_soportada": "Página Diagnóstico-Entorno-Digital fetch nav-only sin cuestionario/codebook; sin fuente vinculada a fila: brecha intacta."
+        },
+        {
+          "ruta": "propuestas/cierre-brechas-post-r6/web-obscura/obs-diagnostico-2026-10-24.json",
+          "sha256": "e4d80cf40a3cbeaf0084a7ca32d059a9c82c63e6637b43fb737c5090dbf76eeb",
+          "localizador": "/observacion/veredicto + /observacion/iframe_powerbi_src",
+          "afirmacion_soportada": "Inspeccion Obscura con DOM renderizado 2026-10-24T06:51:28Z de https://www.sonora.gob.mx/datos/diagnostico-entorno-digital: cascaron JS confirmado (main vacio, body 340 chars solo menu), sin cuestionario/codebook/tabla de variables extraible; contenido sustantivo en iframe PowerBI que requiere interaccion y no se afirma; sin fuente vinculada a fila/campo/recurso/edicion."
+        }
+      ],
+      "condicion_reapertura": "Reabrir solo si aparece fuente primaria vinculada a fila/recurso/edicion que aporte el documento faltante citado en evidencia_faltante (cuestionario o instrumento del Diagnostico del Entorno Digital, o muestra de valores del recurso para el campo, con edicion y periodo acreditados). No reabre: distribuciones, nombres parecidos, ejemplos del diccionario, metadatos CKAN sin vinculo a fila, ni contenido PowerBI sin trazabilidad a campo.",
+      "limites": [
+        "No se infiere el final del objeto ni el alcance temporal exacto.",
+        "Busquedas negativas acotadas a lo revisado el 2026-10-24 (8 CKAN API, 2 paginas oficiales, PDFs locales, datastore); no es ausencia universal.",
+        "La pagina del Diagnostico y el embed PowerBI requieren interaccion; no se afirma contenido no extraible."
+      ]
+    },
+    {
+      "id": "https://example.org/mex-ontologi/definition/063058e6-aed3-4a60-b944-5e653c77b14d%2F21",
+      "tipo": "significados",
+      "original_sha256": "9ca083389b862b0111f4688aa4f50daaa68979c549fa7f9e7513dbeee92b9c69",
+      "puerta": "sin_pista_nueva",
+      "pista": null,
+      "estado": "brecha_externa",
+      "afirmacion_propuesta": null,
+      "motivo": "descripcion truncada a mitad de palabra/frase en la celda fuente; sin sentido literal completo. Nueva investigacion 2026-10-24 (no repetida de R6): (1) relectura byte-exacta + huella OK; (2) metadatos CKAN oficiales del conjunto (instrumento 'Resultados del ejercicio \"Diagnostico del Entorno Digital\", ', sin cuestionario/codebook/unidad/periodo por campo); (3) paginas oficiales del Programa Especial y del Diagnostico revisadas (sin cuestionario extraible; Diagnostico = cascaron JS + PowerBI); (4) PDFs locales revisados: ninguno cubre TIC; (5) datastore inactivo en los 16 recursos (sin muestra de valores). Nada de lo hallado fija el sentido literal de esta fila ni acredita dominio/catalogo/vigencia; no se propone significado (derivar del nombre violaria el criterio). | Puerta S5-tic 2026-10-24: sin_pista_nueva. Verificacion SHA-256 OK de la evidencia previa; la URL https://www.sonora.gob.mx/datos/diagnostico-entorno-digital ya fue examinada por webfetch y por Obscura con DOM renderizado el mismo dia sin cuestionario extraible; barrido local sin instrumento inedito. Se cierra como brecha externa conservando la evidencia previa; no se propone significado.",
+      "evidencia_faltante": "Documento faltante: Texto literal completo de P21 (\"...materia ...\"). Cita historica R5/R6 (texto heredado, no afirmacion propia): \"Texto literal completo de P21 ('...materia ...'). En manos del publicador.\" Conclusion actual 2026-10-24: no localizado en 8 metadatos CKAN package_show + paginas oficiales del Programa Especial y del Diagnostico + PDFs locales preservados + datastore CKAN (inactivo en 16/16 recursos); no se atribuye exclusividad a ninguna parte.",
+      "evidencia": [
+        {
+          "ruta": "data/portal/inspecciones/063058e6-aed3-4a60-b944-5e653c77b14d.json",
+          "sha256": "0ea3dfe7bd13b50aa647d976a6dd59ac9dd33c102eee2c6bc88b301d9f810be0",
+          "localizador": "/definiciones/20",
+          "afirmacion_soportada": "Fila 21 (P21): Tipo=Texto, Formato=, Ejemplo='El reglamento 120 y el 159', Unidad de medida vacia, Catalogo vacio; descripcion truncada a mitad de palabra/frase en la celda fuente; sin sentido literal completo."
+        },
+        {
+          "ruta": "propuestas/investigacion-post-r6/tic/evidencia/verificacion_filas.json",
+          "sha256": "67d252df2f99b620fa29fecf4879f65b0e1e4cec730452ad1d32cd59be3cdc12",
+          "localizador": "/filas[definicion_iri=53c77b14d%2F21]",
+          "afirmacion_soportada": "Huella recomputada 2026-10-24 = 475c015e01c163e5... coincide con la historica; fila byte-identica a R5/R6."
+        },
+        {
+          "ruta": "propuestas/investigacion-post-r6/tic/evidencia/ckan-package-aa353273.bin",
+          "sha256": "be192d575a2fdb8789cf462fa53a1c3f300cc616c769e672a3236588dfb520ac",
+          "localizador": "/result[notes|frequency|fuentes_extras|version|resources]",
+          "afirmacion_soportada": "CKAN oficial: notes='Resultados del ejercicio \"Diagnostico del Entorno Digital\", en el tema'; frequency=sin_programacion; fuentes_extras vacias; version=null; datastore_active=false en ambos recursos; sin cuestionario, codebook, unidad ni periodo vinculados a esta fila."
+        },
+        {
+          "ruta": "data/semantica/cobertura.json",
+          "sha256": "7ef11b0a4ad9ee3aa3d3512ab2a431cee29b9295db9da76daae2e054378a39a9",
+          "localizador": "/variables[definicion_iri=53c77b14d%2F21]",
+          "afirmacion_soportada": "Estado fuera_del_nucleo_actual y 0 correspondencias hacia esta definicion (verificado por conteo exacto del IRI en /correspondencias)."
+        },
+        {
+          "ruta": "propuestas/cierre-brechas-post-r6/significados-tic-diversos/evidencia/nueva-tic-sonora-2026-10-24.md",
+          "sha256": "963eac956a9fe527a2fe8e8abef5ae8c70f8e1ade16ab915eafa3b51d8257807",
+          "localizador": "fetch página Diagnóstico nav-only + websearch sin cuestionario 2026-10-24",
+          "afirmacion_soportada": "Página Diagnóstico-Entorno-Digital fetch nav-only sin cuestionario/codebook; sin fuente vinculada a fila: brecha intacta."
+        },
+        {
+          "ruta": "propuestas/cierre-brechas-post-r6/web-obscura/obs-diagnostico-2026-10-24.json",
+          "sha256": "e4d80cf40a3cbeaf0084a7ca32d059a9c82c63e6637b43fb737c5090dbf76eeb",
+          "localizador": "/observacion/veredicto + /observacion/iframe_powerbi_src",
+          "afirmacion_soportada": "Inspeccion Obscura con DOM renderizado 2026-10-24T06:51:28Z de https://www.sonora.gob.mx/datos/diagnostico-entorno-digital: cascaron JS confirmado (main vacio, body 340 chars solo menu), sin cuestionario/codebook/tabla de variables extraible; contenido sustantivo en iframe PowerBI que requiere interaccion y no se afirma; sin fuente vinculada a fila/campo/recurso/edicion."
+        }
+      ],
+      "condicion_reapertura": "Reabrir solo si aparece fuente primaria vinculada a fila/recurso/edicion que aporte el documento faltante citado en evidencia_faltante (cuestionario o instrumento del Diagnostico del Entorno Digital, o muestra de valores del recurso para el campo, con edicion y periodo acreditados). No reabre: distribuciones, nombres parecidos, ejemplos del diccionario, metadatos CKAN sin vinculo a fila, ni contenido PowerBI sin trazabilidad a campo.",
+      "limites": [
+        "El ejemplo no suple la descripcion truncada.",
+        "No se equipara a P17/P20 respaldadas.",
+        "Busquedas negativas acotadas a lo revisado el 2026-10-24 (8 CKAN API, 2 paginas oficiales, PDFs locales, datastore); no es ausencia universal.",
+        "La pagina del Diagnostico y el embed PowerBI requieren interaccion; no se afirma contenido no extraible."
+      ]
+    },
+    {
+      "id": "https://example.org/mex-ontologi/definition/a4e8bee0-5493-4dec-bbce-0ba1e2fd4c2d%2F22",
+      "tipo": "significados",
+      "original_sha256": "9426924bab25d61c7db6bf1b4755d85d3342b2c1d4f1352bc8ba19294b02fd54",
+      "puerta": "sin_pista_nueva",
+      "pista": null,
+      "estado": "brecha_externa",
+      "afirmacion_propuesta": null,
+      "motivo": "descripcion truncada a mitad de palabra/frase en la celda fuente; sin sentido literal completo. Nueva investigacion 2026-10-24 (no repetida de R6): (1) relectura byte-exacta + huella OK; (2) metadatos CKAN oficiales del conjunto (instrumento 'Resultados del ejercicio \"Diagnostico del Entorno Digital\", ', sin cuestionario/codebook/unidad/periodo por campo); (3) paginas oficiales del Programa Especial y del Diagnostico revisadas (sin cuestionario extraible; Diagnostico = cascaron JS + PowerBI); (4) PDFs locales revisados: ninguno cubre TIC; (5) datastore inactivo en los 16 recursos (sin muestra de valores). Nada de lo hallado fija el sentido literal de esta fila ni acredita dominio/catalogo/vigencia; no se propone significado (derivar del nombre violaria el criterio). | Puerta S5-tic 2026-10-24: sin_pista_nueva. Verificacion SHA-256 OK de la evidencia previa; la URL https://www.sonora.gob.mx/datos/diagnostico-entorno-digital ya fue examinada por webfetch y por Obscura con DOM renderizado el mismo dia sin cuestionario extraible; barrido local sin instrumento inedito. Se cierra como brecha externa conservando la evidencia previa; no se propone significado.",
+      "evidencia_faltante": "Documento faltante: Texto literal completo de P22 (\"...equipos...\"). Cita historica R5/R6 (texto heredado, no afirmacion propia): \"Texto literal completo de P22 ('...equipos...'). En manos del publicador.\" Conclusion actual 2026-10-24: no localizado en 8 metadatos CKAN package_show + paginas oficiales del Programa Especial y del Diagnostico + PDFs locales preservados + datastore CKAN (inactivo en 16/16 recursos); no se atribuye exclusividad a ninguna parte.",
+      "evidencia": [
+        {
+          "ruta": "data/portal/inspecciones/a4e8bee0-5493-4dec-bbce-0ba1e2fd4c2d.json",
+          "sha256": "1c2f73fbeee284d10be656eee951558ff8ddc14ac25305829e793579bd71ad85",
+          "localizador": "/definiciones/21",
+          "afirmacion_soportada": "Fila 22 (P22): Tipo=Booleano, Formato=Si/No, Ejemplo='Si', Unidad de medida vacia, Catalogo vacio; descripcion truncada a mitad de palabra/frase en la celda fuente; sin sentido literal completo."
+        },
+        {
+          "ruta": "propuestas/investigacion-post-r6/tic/evidencia/verificacion_filas.json",
+          "sha256": "67d252df2f99b620fa29fecf4879f65b0e1e4cec730452ad1d32cd59be3cdc12",
+          "localizador": "/filas[definicion_iri=1e2fd4c2d%2F22]",
+          "afirmacion_soportada": "Huella recomputada 2026-10-24 = 2cdcdd7b89970796... coincide con la historica; fila byte-identica a R5/R6."
+        },
+        {
+          "ruta": "propuestas/investigacion-post-r6/tic/evidencia/ckan-package-c9a63b8b.bin",
+          "sha256": "39712fb63bf8c8a65226f72f182aecb547e12c0bad98af9993c55090be0c8af3",
+          "localizador": "/result[notes|frequency|fuentes_extras|version|resources]",
+          "afirmacion_soportada": "CKAN oficial: notes='Resultados del ejercicio \"Diagnostico del Entorno Digital\", en el tema'; frequency=sin_programacion; fuentes_extras vacias; version=null; datastore_active=false en ambos recursos; sin cuestionario, codebook, unidad ni periodo vinculados a esta fila."
+        },
+        {
+          "ruta": "data/semantica/cobertura.json",
+          "sha256": "7ef11b0a4ad9ee3aa3d3512ab2a431cee29b9295db9da76daae2e054378a39a9",
+          "localizador": "/variables[definicion_iri=1e2fd4c2d%2F22]",
+          "afirmacion_soportada": "Estado fuera_del_nucleo_actual y 0 correspondencias hacia esta definicion (verificado por conteo exacto del IRI en /correspondencias)."
+        },
+        {
+          "ruta": "propuestas/cierre-brechas-post-r6/significados-tic-diversos/evidencia/nueva-tic-sonora-2026-10-24.md",
+          "sha256": "963eac956a9fe527a2fe8e8abef5ae8c70f8e1ade16ab915eafa3b51d8257807",
+          "localizador": "fetch página Diagnóstico nav-only + websearch sin cuestionario 2026-10-24",
+          "afirmacion_soportada": "Página Diagnóstico-Entorno-Digital fetch nav-only sin cuestionario/codebook; sin fuente vinculada a fila: brecha intacta."
+        },
+        {
+          "ruta": "propuestas/cierre-brechas-post-r6/web-obscura/obs-diagnostico-2026-10-24.json",
+          "sha256": "e4d80cf40a3cbeaf0084a7ca32d059a9c82c63e6637b43fb737c5090dbf76eeb",
+          "localizador": "/observacion/veredicto + /observacion/iframe_powerbi_src",
+          "afirmacion_soportada": "Inspeccion Obscura con DOM renderizado 2026-10-24T06:51:28Z de https://www.sonora.gob.mx/datos/diagnostico-entorno-digital: cascaron JS confirmado (main vacio, body 340 chars solo menu), sin cuestionario/codebook/tabla de variables extraible; contenido sustantivo en iframe PowerBI que requiere interaccion y no se afirma; sin fuente vinculada a fila/campo/recurso/edicion."
+        }
+      ],
+      "condicion_reapertura": "Reabrir solo si aparece fuente primaria vinculada a fila/recurso/edicion que aporte el documento faltante citado en evidencia_faltante (cuestionario o instrumento del Diagnostico del Entorno Digital, o muestra de valores del recurso para el campo, con edicion y periodo acreditados). No reabre: distribuciones, nombres parecidos, ejemplos del diccionario, metadatos CKAN sin vinculo a fila, ni contenido PowerBI sin trazabilidad a campo.",
+      "limites": [
+        "No se infiere el resto de la enumeracion ni el cierre de la pregunta.",
+        "No se propone significado parcial sobre el fragmento.",
+        "Busquedas negativas acotadas a lo revisado el 2026-10-24 (8 CKAN API, 2 paginas oficiales, PDFs locales, datastore); no es ausencia universal.",
+        "La pagina del Diagnostico y el embed PowerBI requieren interaccion; no se afirma contenido no extraible."
+      ]
+    },
+    {
+      "id": "https://example.org/mex-ontologi/definition/a4e8bee0-5493-4dec-bbce-0ba1e2fd4c2d%2F36",
+      "tipo": "significados",
+      "original_sha256": "5ab7b181ad553f79175dea8c46ab386777c09f5e9865db6562188fedad12dc74",
+      "puerta": "sin_pista_nueva",
+      "pista": null,
+      "estado": "brecha_externa",
+      "afirmacion_propuesta": null,
+      "motivo": "contradiccion entre lo que pregunta la descripcion y el dominio declarado (Tipo/Formato/Ejemplo). Nueva investigacion 2026-10-24 (no repetida de R6): (1) relectura byte-exacta + huella OK; (2) metadatos CKAN oficiales del conjunto (instrumento 'Resultados del ejercicio \"Diagnostico del Entorno Digital\", ', sin cuestionario/codebook/unidad/periodo por campo); (3) paginas oficiales del Programa Especial y del Diagnostico revisadas (sin cuestionario extraible; Diagnostico = cascaron JS + PowerBI); (4) PDFs locales revisados: ninguno cubre TIC; (5) datastore inactivo en los 16 recursos (sin muestra de valores). Nada de lo hallado fija el sentido literal de esta fila ni acredita dominio/catalogo/vigencia; no se propone significado (derivar del nombre violaria el criterio). | Puerta S5-tic 2026-10-24: sin_pista_nueva. Verificacion SHA-256 OK de la evidencia previa; la URL https://www.sonora.gob.mx/datos/diagnostico-entorno-digital ya fue examinada por webfetch y por Obscura con DOM renderizado el mismo dia sin cuestionario extraible; barrido local sin instrumento inedito. Se cierra como brecha externa conservando la evidencia previa; no se propone significado.",
+      "evidencia_faltante": "Documento faltante: Muestra de valores de P36 en el recurso 91c95c1b-969e-414a-8f70-83576e881281 o cuestionario. Cita historica R5/R6 (texto heredado, no afirmacion propia): \"Muestra de valores de P36 en el recurso 91c95c1b-969e-414a-8f70-83576e881281 o cuestionario. En manos del publicador.\" Conclusion actual 2026-10-24: no localizado en 8 metadatos CKAN package_show + paginas oficiales del Programa Especial y del Diagnostico + PDFs locales preservados + datastore CKAN (inactivo en 16/16 recursos); no se atribuye exclusividad a ninguna parte.",
+      "evidencia": [
+        {
+          "ruta": "data/portal/inspecciones/a4e8bee0-5493-4dec-bbce-0ba1e2fd4c2d.json",
+          "sha256": "1c2f73fbeee284d10be656eee951558ff8ddc14ac25305829e793579bd71ad85",
+          "localizador": "/definiciones/35",
+          "afirmacion_soportada": "Fila 36 (P36): Tipo=Booleano, Formato=Si/No, Ejemplo='Si', Unidad de medida vacia, Catalogo vacio; contradiccion entre lo que pregunta la descripcion y el dominio declarado (Tipo/Formato/Ejemplo)."
+        },
+        {
+          "ruta": "propuestas/investigacion-post-r6/tic/evidencia/verificacion_filas.json",
+          "sha256": "67d252df2f99b620fa29fecf4879f65b0e1e4cec730452ad1d32cd59be3cdc12",
+          "localizador": "/filas[definicion_iri=1e2fd4c2d%2F36]",
+          "afirmacion_soportada": "Huella recomputada 2026-10-24 = a622c78b00fec5c4... coincide con la historica; fila byte-identica a R5/R6."
+        },
+        {
+          "ruta": "propuestas/investigacion-post-r6/tic/evidencia/ckan-package-c9a63b8b.bin",
+          "sha256": "39712fb63bf8c8a65226f72f182aecb547e12c0bad98af9993c55090be0c8af3",
+          "localizador": "/result[notes|frequency|fuentes_extras|version|resources]",
+          "afirmacion_soportada": "CKAN oficial: notes='Resultados del ejercicio \"Diagnostico del Entorno Digital\", en el tema'; frequency=sin_programacion; fuentes_extras vacias; version=null; datastore_active=false en ambos recursos; sin cuestionario, codebook, unidad ni periodo vinculados a esta fila."
+        },
+        {
+          "ruta": "data/semantica/cobertura.json",
+          "sha256": "7ef11b0a4ad9ee3aa3d3512ab2a431cee29b9295db9da76daae2e054378a39a9",
+          "localizador": "/variables[definicion_iri=1e2fd4c2d%2F36]",
+          "afirmacion_soportada": "Estado fuera_del_nucleo_actual y 0 correspondencias hacia esta definicion (verificado por conteo exacto del IRI en /correspondencias)."
+        },
+        {
+          "ruta": "propuestas/cierre-brechas-post-r6/significados-tic-diversos/evidencia/nueva-tic-sonora-2026-10-24.md",
+          "sha256": "963eac956a9fe527a2fe8e8abef5ae8c70f8e1ade16ab915eafa3b51d8257807",
+          "localizador": "fetch página Diagnóstico nav-only + websearch sin cuestionario 2026-10-24",
+          "afirmacion_soportada": "Página Diagnóstico-Entorno-Digital fetch nav-only sin cuestionario/codebook; sin fuente vinculada a fila: brecha intacta."
+        },
+        {
+          "ruta": "propuestas/cierre-brechas-post-r6/web-obscura/obs-diagnostico-2026-10-24.json",
+          "sha256": "e4d80cf40a3cbeaf0084a7ca32d059a9c82c63e6637b43fb737c5090dbf76eeb",
+          "localizador": "/observacion/veredicto + /observacion/iframe_powerbi_src",
+          "afirmacion_soportada": "Inspeccion Obscura con DOM renderizado 2026-10-24T06:51:28Z de https://www.sonora.gob.mx/datos/diagnostico-entorno-digital: cascaron JS confirmado (main vacio, body 340 chars solo menu), sin cuestionario/codebook/tabla de variables extraible; contenido sustantivo en iframe PowerBI que requiere interaccion y no se afirma; sin fuente vinculada a fila/campo/recurso/edicion."
+        }
+      ],
+      "condicion_reapertura": "Reabrir solo si aparece fuente primaria vinculada a fila/recurso/edicion que aporte el documento faltante citado en evidencia_faltante (cuestionario o instrumento del Diagnostico del Entorno Digital, o muestra de valores del recurso para el campo, con edicion y periodo acreditados). No reabre: distribuciones, nombres parecidos, ejemplos del diccionario, metadatos CKAN sin vinculo a fila, ni contenido PowerBI sin trazabilidad a campo.",
+      "limites": [
+        "La contradiccion descripcion-vs-dominio se conserva como tal.",
+        "No se inventa significado alternativo de existencia Si/No ni conteo.",
+        "Busquedas negativas acotadas a lo revisado el 2026-10-24 (8 CKAN API, 2 paginas oficiales, PDFs locales, datastore); no es ausencia universal.",
+        "La pagina del Diagnostico y el embed PowerBI requieren interaccion; no se afirma contenido no extraible."
+      ]
+    },
+    {
+      "id": "https://example.org/mex-ontologi/definition/a4e8bee0-5493-4dec-bbce-0ba1e2fd4c2d%2F39",
+      "tipo": "significados",
+      "original_sha256": "bebdb00c5d52fc92cd813f7bf9458cea381ca666f541a0d4ae028d15ee086a41",
+      "puerta": "sin_pista_nueva",
+      "pista": null,
+      "estado": "brecha_externa",
+      "afirmacion_propuesta": null,
+      "motivo": "contradiccion entre lo que pregunta la descripcion y el dominio declarado (Tipo/Formato/Ejemplo). Nueva investigacion 2026-10-24 (no repetida de R6): (1) relectura byte-exacta + huella OK; (2) metadatos CKAN oficiales del conjunto (instrumento 'Resultados del ejercicio \"Diagnostico del Entorno Digital\", ', sin cuestionario/codebook/unidad/periodo por campo); (3) paginas oficiales del Programa Especial y del Diagnostico revisadas (sin cuestionario extraible; Diagnostico = cascaron JS + PowerBI); (4) PDFs locales revisados: ninguno cubre TIC; (5) datastore inactivo en los 16 recursos (sin muestra de valores). Nada de lo hallado fija el sentido literal de esta fila ni acredita dominio/catalogo/vigencia; no se propone significado (derivar del nombre violaria el criterio). | Puerta S5-tic 2026-10-24: sin_pista_nueva. Verificacion SHA-256 OK de la evidencia previa; la URL https://www.sonora.gob.mx/datos/diagnostico-entorno-digital ya fue examinada por webfetch y por Obscura con DOM renderizado el mismo dia sin cuestionario extraible; barrido local sin instrumento inedito. Se cierra como brecha externa conservando la evidencia previa; no se propone significado.",
+      "evidencia_faltante": "Documento faltante: Muestra de valores de P39 en el recurso 91c95c1b-969e-414a-8f70-83576e881281 o cuestionario. Cita historica R5/R6 (texto heredado, no afirmacion propia): \"Muestra de valores de P39 en el recurso 91c95c1b-969e-414a-8f70-83576e881281 o cuestionario. En manos del publicador.\" Conclusion actual 2026-10-24: no localizado en 8 metadatos CKAN package_show + paginas oficiales del Programa Especial y del Diagnostico + PDFs locales preservados + datastore CKAN (inactivo en 16/16 recursos); no se atribuye exclusividad a ninguna parte.",
+      "evidencia": [
+        {
+          "ruta": "data/portal/inspecciones/a4e8bee0-5493-4dec-bbce-0ba1e2fd4c2d.json",
+          "sha256": "1c2f73fbeee284d10be656eee951558ff8ddc14ac25305829e793579bd71ad85",
+          "localizador": "/definiciones/38",
+          "afirmacion_soportada": "Fila 39 (P39): Tipo=Booleano, Formato=Si/No, Ejemplo='Si', Unidad de medida vacia, Catalogo vacio; contradiccion entre lo que pregunta la descripcion y el dominio declarado (Tipo/Formato/Ejemplo)."
+        },
+        {
+          "ruta": "propuestas/investigacion-post-r6/tic/evidencia/verificacion_filas.json",
+          "sha256": "67d252df2f99b620fa29fecf4879f65b0e1e4cec730452ad1d32cd59be3cdc12",
+          "localizador": "/filas[definicion_iri=1e2fd4c2d%2F39]",
+          "afirmacion_soportada": "Huella recomputada 2026-10-24 = 97b808090a361a57... coincide con la historica; fila byte-identica a R5/R6."
+        },
+        {
+          "ruta": "propuestas/investigacion-post-r6/tic/evidencia/ckan-package-c9a63b8b.bin",
+          "sha256": "39712fb63bf8c8a65226f72f182aecb547e12c0bad98af9993c55090be0c8af3",
+          "localizador": "/result[notes|frequency|fuentes_extras|version|resources]",
+          "afirmacion_soportada": "CKAN oficial: notes='Resultados del ejercicio \"Diagnostico del Entorno Digital\", en el tema'; frequency=sin_programacion; fuentes_extras vacias; version=null; datastore_active=false en ambos recursos; sin cuestionario, codebook, unidad ni periodo vinculados a esta fila."
+        },
+        {
+          "ruta": "data/semantica/cobertura.json",
+          "sha256": "7ef11b0a4ad9ee3aa3d3512ab2a431cee29b9295db9da76daae2e054378a39a9",
+          "localizador": "/variables[definicion_iri=1e2fd4c2d%2F39]",
+          "afirmacion_soportada": "Estado fuera_del_nucleo_actual y 0 correspondencias hacia esta definicion (verificado por conteo exacto del IRI en /correspondencias)."
+        },
+        {
+          "ruta": "propuestas/cierre-brechas-post-r6/significados-tic-diversos/evidencia/nueva-tic-sonora-2026-10-24.md",
+          "sha256": "963eac956a9fe527a2fe8e8abef5ae8c70f8e1ade16ab915eafa3b51d8257807",
+          "localizador": "fetch página Diagnóstico nav-only + websearch sin cuestionario 2026-10-24",
+          "afirmacion_soportada": "Página Diagnóstico-Entorno-Digital fetch nav-only sin cuestionario/codebook; sin fuente vinculada a fila: brecha intacta."
+        },
+        {
+          "ruta": "propuestas/cierre-brechas-post-r6/web-obscura/obs-diagnostico-2026-10-24.json",
+          "sha256": "e4d80cf40a3cbeaf0084a7ca32d059a9c82c63e6637b43fb737c5090dbf76eeb",
+          "localizador": "/observacion/veredicto + /observacion/iframe_powerbi_src",
+          "afirmacion_soportada": "Inspeccion Obscura con DOM renderizado 2026-10-24T06:51:28Z de https://www.sonora.gob.mx/datos/diagnostico-entorno-digital: cascaron JS confirmado (main vacio, body 340 chars solo menu), sin cuestionario/codebook/tabla de variables extraible; contenido sustantivo en iframe PowerBI que requiere interaccion y no se afirma; sin fuente vinculada a fila/campo/recurso/edicion."
+        }
+      ],
+      "condicion_reapertura": "Reabrir solo si aparece fuente primaria vinculada a fila/recurso/edicion que aporte el documento faltante citado en evidencia_faltante (cuestionario o instrumento del Diagnostico del Entorno Digital, o muestra de valores del recurso para el campo, con edicion y periodo acreditados). No reabre: distribuciones, nombres parecidos, ejemplos del diccionario, metadatos CKAN sin vinculo a fila, ni contenido PowerBI sin trazabilidad a campo.",
+      "limites": [
+        "La contradiccion descripcion-vs-dominio se conserva como tal.",
+        "El valor acreditable Si/No no describe procedimiento; no se inventa mecanismo.",
+        "Busquedas negativas acotadas a lo revisado el 2026-10-24 (8 CKAN API, 2 paginas oficiales, PDFs locales, datastore); no es ausencia universal.",
+        "La pagina del Diagnostico y el embed PowerBI requieren interaccion; no se afirma contenido no extraible."
+      ]
+    },
+    {
+      "id": "https://example.org/mex-ontologi/definition/a4e8bee0-5493-4dec-bbce-0ba1e2fd4c2d%2F40",
+      "tipo": "significados",
+      "original_sha256": "c5400487d16400f9fb867b0c708ec0679050e5045c1b80c4329390ca7a09a458",
+      "puerta": "sin_pista_nueva",
+      "pista": null,
+      "estado": "brecha_externa",
+      "afirmacion_propuesta": null,
+      "motivo": "contradiccion entre lo que pregunta la descripcion y el dominio declarado (Tipo/Formato/Ejemplo). Nueva investigacion 2026-10-24 (no repetida de R6): (1) relectura byte-exacta + huella OK; (2) metadatos CKAN oficiales del conjunto (instrumento 'Resultados del ejercicio \"Diagnostico del Entorno Digital\", ', sin cuestionario/codebook/unidad/periodo por campo); (3) paginas oficiales del Programa Especial y del Diagnostico revisadas (sin cuestionario extraible; Diagnostico = cascaron JS + PowerBI); (4) PDFs locales revisados: ninguno cubre TIC; (5) datastore inactivo en los 16 recursos (sin muestra de valores). Nada de lo hallado fija el sentido literal de esta fila ni acredita dominio/catalogo/vigencia; no se propone significado (derivar del nombre violaria el criterio). | Puerta S5-tic 2026-10-24: sin_pista_nueva. Verificacion SHA-256 OK de la evidencia previa; la URL https://www.sonora.gob.mx/datos/diagnostico-entorno-digital ya fue examinada por webfetch y por Obscura con DOM renderizado el mismo dia sin cuestionario extraible; barrido local sin instrumento inedito. Se cierra como brecha externa conservando la evidencia previa; no se propone significado.",
+      "evidencia_faltante": "Documento faltante: Muestra de valores de P40 en el recurso 91c95c1b-969e-414a-8f70-83576e881281 o cuestionario. Cita historica R5/R6 (texto heredado, no afirmacion propia): \"Muestra de valores de P40 en el recurso 91c95c1b-969e-414a-8f70-83576e881281 o cuestionario. En manos del publicador.\" Conclusion actual 2026-10-24: no localizado en 8 metadatos CKAN package_show + paginas oficiales del Programa Especial y del Diagnostico + PDFs locales preservados + datastore CKAN (inactivo en 16/16 recursos); no se atribuye exclusividad a ninguna parte.",
+      "evidencia": [
+        {
+          "ruta": "data/portal/inspecciones/a4e8bee0-5493-4dec-bbce-0ba1e2fd4c2d.json",
+          "sha256": "1c2f73fbeee284d10be656eee951558ff8ddc14ac25305829e793579bd71ad85",
+          "localizador": "/definiciones/39",
+          "afirmacion_soportada": "Fila 40 (P40): Tipo=Booleano, Formato=Si/No, Ejemplo='Si', Unidad de medida vacia, Catalogo vacio; contradiccion entre lo que pregunta la descripcion y el dominio declarado (Tipo/Formato/Ejemplo)."
+        },
+        {
+          "ruta": "propuestas/investigacion-post-r6/tic/evidencia/verificacion_filas.json",
+          "sha256": "67d252df2f99b620fa29fecf4879f65b0e1e4cec730452ad1d32cd59be3cdc12",
+          "localizador": "/filas[definicion_iri=1e2fd4c2d%2F40]",
+          "afirmacion_soportada": "Huella recomputada 2026-10-24 = 7ce240ae95790d91... coincide con la historica; fila byte-identica a R5/R6."
+        },
+        {
+          "ruta": "propuestas/investigacion-post-r6/tic/evidencia/ckan-package-c9a63b8b.bin",
+          "sha256": "39712fb63bf8c8a65226f72f182aecb547e12c0bad98af9993c55090be0c8af3",
+          "localizador": "/result[notes|frequency|fuentes_extras|version|resources]",
+          "afirmacion_soportada": "CKAN oficial: notes='Resultados del ejercicio \"Diagnostico del Entorno Digital\", en el tema'; frequency=sin_programacion; fuentes_extras vacias; version=null; datastore_active=false en ambos recursos; sin cuestionario, codebook, unidad ni periodo vinculados a esta fila."
+        },
+        {
+          "ruta": "data/semantica/cobertura.json",
+          "sha256": "7ef11b0a4ad9ee3aa3d3512ab2a431cee29b9295db9da76daae2e054378a39a9",
+          "localizador": "/variables[definicion_iri=1e2fd4c2d%2F40]",
+          "afirmacion_soportada": "Estado fuera_del_nucleo_actual y 0 correspondencias hacia esta definicion (verificado por conteo exacto del IRI en /correspondencias)."
+        },
+        {
+          "ruta": "propuestas/cierre-brechas-post-r6/significados-tic-diversos/evidencia/nueva-tic-sonora-2026-10-24.md",
+          "sha256": "963eac956a9fe527a2fe8e8abef5ae8c70f8e1ade16ab915eafa3b51d8257807",
+          "localizador": "fetch página Diagnóstico nav-only + websearch sin cuestionario 2026-10-24",
+          "afirmacion_soportada": "Página Diagnóstico-Entorno-Digital fetch nav-only sin cuestionario/codebook; sin fuente vinculada a fila: brecha intacta."
+        },
+        {
+          "ruta": "propuestas/cierre-brechas-post-r6/web-obscura/obs-diagnostico-2026-10-24.json",
+          "sha256": "e4d80cf40a3cbeaf0084a7ca32d059a9c82c63e6637b43fb737c5090dbf76eeb",
+          "localizador": "/observacion/veredicto + /observacion/iframe_powerbi_src",
+          "afirmacion_soportada": "Inspeccion Obscura con DOM renderizado 2026-10-24T06:51:28Z de https://www.sonora.gob.mx/datos/diagnostico-entorno-digital: cascaron JS confirmado (main vacio, body 340 chars solo menu), sin cuestionario/codebook/tabla de variables extraible; contenido sustantivo en iframe PowerBI que requiere interaccion y no se afirma; sin fuente vinculada a fila/campo/recurso/edicion."
+        }
+      ],
+      "condicion_reapertura": "Reabrir solo si aparece fuente primaria vinculada a fila/recurso/edicion que aporte el documento faltante citado en evidencia_faltante (cuestionario o instrumento del Diagnostico del Entorno Digital, o muestra de valores del recurso para el campo, con edicion y periodo acreditados). No reabre: distribuciones, nombres parecidos, ejemplos del diccionario, metadatos CKAN sin vinculo a fila, ni contenido PowerBI sin trazabilidad a campo.",
+      "limites": [
+        "La contradiccion descripcion-vs-dominio se conserva como tal.",
+        "No se duplica la regla de conteo de personal respaldada en P7 (Numérico, ejemplo 15) ni se inventa existencia.",
+        "Busquedas negativas acotadas a lo revisado el 2026-10-24 (8 CKAN API, 2 paginas oficiales, PDFs locales, datastore); no es ausencia universal.",
+        "La pagina del Diagnostico y el embed PowerBI requieren interaccion; no se afirma contenido no extraible."
+      ]
+    },
+    {
+      "id": "https://example.org/mex-ontologi/definition/af14d207-7697-4d52-b99b-46a35a1b76ac%2F8",
+      "tipo": "significados",
+      "original_sha256": "7fb039d59a9dfd68f137fb822a7ab729ca5bc413868d047ad89cffd18e0dc20b",
+      "puerta": "sin_pista_nueva",
+      "pista": null,
+      "estado": "brecha_externa",
+      "afirmacion_propuesta": null,
+      "motivo": "pregunta doble (metodologia Y documentacion) en una sola variable; no se fija a que aspecto responde el valor. Nueva investigacion 2026-10-24 (no repetida de R6): (1) relectura byte-exacta + huella OK; (2) metadatos CKAN oficiales del conjunto (instrumento 'Resultados del ejercicio \"Diagnostico del Entorno Digital\", ', sin cuestionario/codebook/unidad/periodo por campo); (3) paginas oficiales del Programa Especial y del Diagnostico revisadas (sin cuestionario extraible; Diagnostico = cascaron JS + PowerBI); (4) PDFs locales revisados: ninguno cubre TIC; (5) datastore inactivo en los 16 recursos (sin muestra de valores). Nada de lo hallado fija el sentido literal de esta fila ni acredita dominio/catalogo/vigencia; no se propone significado (derivar del nombre violaria el criterio). | Puerta S5-tic 2026-10-24: sin_pista_nueva. Verificacion SHA-256 OK de la evidencia previa; la URL https://www.sonora.gob.mx/datos/diagnostico-entorno-digital ya fue examinada por webfetch y por Obscura con DOM renderizado el mismo dia sin cuestionario extraible; barrido local sin instrumento inedito. Se cierra como brecha externa conservando la evidencia previa; no se propone significado.",
+      "evidencia_faltante": "Documento faltante: Cuestionario que separe metodologia y documentacion en P8, o muestra de valores. Cita historica R5/R6 (texto heredado, no afirmacion propia): \"Cuestionario que separe metodologia y documentacion en P8, o muestra de valores. En manos del publicador.\" Conclusion actual 2026-10-24: no localizado en 8 metadatos CKAN package_show + paginas oficiales del Programa Especial y del Diagnostico + PDFs locales preservados + datastore CKAN (inactivo en 16/16 recursos); no se atribuye exclusividad a ninguna parte.",
+      "evidencia": [
+        {
+          "ruta": "data/portal/inspecciones/af14d207-7697-4d52-b99b-46a35a1b76ac.json",
+          "sha256": "2950f37c23c5c11ad941bf1bf5845e87b973e5c38fea652cbc023e31c276022e",
+          "localizador": "/definiciones/7",
+          "afirmacion_soportada": "Fila 8 (P8): Tipo=Texto, Formato=, Ejemplo='Metodologia 0.5', Unidad de medida vacia, Catalogo vacio; pregunta doble (metodologia Y documentacion) en una sola variable; no se fija a que aspecto responde el valor."
+        },
+        {
+          "ruta": "propuestas/investigacion-post-r6/tic/evidencia/verificacion_filas.json",
+          "sha256": "67d252df2f99b620fa29fecf4879f65b0e1e4cec730452ad1d32cd59be3cdc12",
+          "localizador": "/filas[definicion_iri=a35a1b76ac%2F8]",
+          "afirmacion_soportada": "Huella recomputada 2026-10-24 = 49268969a6e55b1a... coincide con la historica; fila byte-identica a R5/R6."
+        },
+        {
+          "ruta": "propuestas/investigacion-post-r6/tic/evidencia/ckan-package-d175b134.bin",
+          "sha256": "29c28f3279461edc0ed8d188a39014dddc92364d3c42d2096771effe62332798",
+          "localizador": "/result[notes|frequency|fuentes_extras|version|resources]",
+          "afirmacion_soportada": "CKAN oficial: notes='Resultados del ejercicio \"Diagnostico del Entorno Digital\", en el tema'; frequency=sin_programacion; fuentes_extras vacias; version=null; datastore_active=false en ambos recursos; sin cuestionario, codebook, unidad ni periodo vinculados a esta fila."
+        },
+        {
+          "ruta": "data/semantica/cobertura.json",
+          "sha256": "7ef11b0a4ad9ee3aa3d3512ab2a431cee29b9295db9da76daae2e054378a39a9",
+          "localizador": "/variables[definicion_iri=a35a1b76ac%2F8]",
+          "afirmacion_soportada": "Estado fuera_del_nucleo_actual y 0 correspondencias hacia esta definicion (verificado por conteo exacto del IRI en /correspondencias)."
+        },
+        {
+          "ruta": "propuestas/cierre-brechas-post-r6/significados-tic-diversos/evidencia/nueva-tic-sonora-2026-10-24.md",
+          "sha256": "963eac956a9fe527a2fe8e8abef5ae8c70f8e1ade16ab915eafa3b51d8257807",
+          "localizador": "fetch página Diagnóstico nav-only + websearch sin cuestionario 2026-10-24",
+          "afirmacion_soportada": "Página Diagnóstico-Entorno-Digital fetch nav-only sin cuestionario/codebook; sin fuente vinculada a fila: brecha intacta."
+        },
+        {
+          "ruta": "propuestas/cierre-brechas-post-r6/web-obscura/obs-diagnostico-2026-10-24.json",
+          "sha256": "e4d80cf40a3cbeaf0084a7ca32d059a9c82c63e6637b43fb737c5090dbf76eeb",
+          "localizador": "/observacion/veredicto + /observacion/iframe_powerbi_src",
+          "afirmacion_soportada": "Inspeccion Obscura con DOM renderizado 2026-10-24T06:51:28Z de https://www.sonora.gob.mx/datos/diagnostico-entorno-digital: cascaron JS confirmado (main vacio, body 340 chars solo menu), sin cuestionario/codebook/tabla de variables extraible; contenido sustantivo en iframe PowerBI que requiere interaccion y no se afirma; sin fuente vinculada a fila/campo/recurso/edicion."
+        }
+      ],
+      "condicion_reapertura": "Reabrir solo si aparece fuente primaria vinculada a fila/recurso/edicion que aporte el documento faltante citado en evidencia_faltante (cuestionario o instrumento del Diagnostico del Entorno Digital, o muestra de valores del recurso para el campo, con edicion y periodo acreditados). No reabre: distribuciones, nombres parecidos, ejemplos del diccionario, metadatos CKAN sin vinculo a fila, ni contenido PowerBI sin trazabilidad a campo.",
+      "limites": [
+        "No se desagrega la pregunta compuesta ni se atribuye el valor a un aspecto.",
+        "El ejemplo 'Metodologia 0.5' no fija codigo, version ni texto.",
+        "Busquedas negativas acotadas a lo revisado el 2026-10-24 (8 CKAN API, 2 paginas oficiales, PDFs locales, datastore); no es ausencia universal.",
+        "La pagina del Diagnostico y el embed PowerBI requieren interaccion; no se afirma contenido no extraible."
+      ]
+    },
+    {
+      "id": "https://example.org/mex-ontologi/definition/af14d207-7697-4d52-b99b-46a35a1b76ac%2F13",
+      "tipo": "significados",
+      "original_sha256": "466ad6c917924a459beb534ff78bfd09b40954b8d49c9ca1ece50fe00b400022",
+      "puerta": "sin_pista_nueva",
+      "pista": null,
+      "estado": "brecha_externa",
+      "afirmacion_propuesta": null,
+      "motivo": "contradiccion entre lo que pregunta la descripcion y el dominio declarado (Tipo/Formato/Ejemplo). Nueva investigacion 2026-10-24 (no repetida de R6): (1) relectura byte-exacta + huella OK; (2) metadatos CKAN oficiales del conjunto (instrumento 'Resultados del ejercicio \"Diagnostico del Entorno Digital\", ', sin cuestionario/codebook/unidad/periodo por campo); (3) paginas oficiales del Programa Especial y del Diagnostico revisadas (sin cuestionario extraible; Diagnostico = cascaron JS + PowerBI); (4) PDFs locales revisados: ninguno cubre TIC; (5) datastore inactivo en los 16 recursos (sin muestra de valores). Nada de lo hallado fija el sentido literal de esta fila ni acredita dominio/catalogo/vigencia; no se propone significado (derivar del nombre violaria el criterio). | Puerta S5-tic 2026-10-24: sin_pista_nueva. Verificacion SHA-256 OK de la evidencia previa; la URL https://www.sonora.gob.mx/datos/diagnostico-entorno-digital ya fue examinada por webfetch y por Obscura con DOM renderizado el mismo dia sin cuestionario extraible; barrido local sin instrumento inedito. Se cierra como brecha externa conservando la evidencia previa; no se propone significado.",
+      "evidencia_faltante": "Documento faltante: Muestra de valores de P13 o cuestionario que fije el dominio. Cita historica R5/R6 (texto heredado, no afirmacion propia): \"Muestra de valores de P13 o cuestionario que fije el dominio. En manos del publicador.\" Conclusion actual 2026-10-24: no localizado en 8 metadatos CKAN package_show + paginas oficiales del Programa Especial y del Diagnostico + PDFs locales preservados + datastore CKAN (inactivo en 16/16 recursos); no se atribuye exclusividad a ninguna parte.",
+      "evidencia": [
+        {
+          "ruta": "data/portal/inspecciones/af14d207-7697-4d52-b99b-46a35a1b76ac.json",
+          "sha256": "2950f37c23c5c11ad941bf1bf5845e87b973e5c38fea652cbc023e31c276022e",
+          "localizador": "/definiciones/12",
+          "afirmacion_soportada": "Fila 13 (P13): Tipo=Texto, Formato=, Ejemplo='Si', Unidad de medida vacia, Catalogo vacio; contradiccion entre lo que pregunta la descripcion y el dominio declarado (Tipo/Formato/Ejemplo)."
+        },
+        {
+          "ruta": "propuestas/investigacion-post-r6/tic/evidencia/verificacion_filas.json",
+          "sha256": "67d252df2f99b620fa29fecf4879f65b0e1e4cec730452ad1d32cd59be3cdc12",
+          "localizador": "/filas[definicion_iri=35a1b76ac%2F13]",
+          "afirmacion_soportada": "Huella recomputada 2026-10-24 = 348163c8632f1c6c... coincide con la historica; fila byte-identica a R5/R6."
+        },
+        {
+          "ruta": "propuestas/investigacion-post-r6/tic/evidencia/ckan-package-d175b134.bin",
+          "sha256": "29c28f3279461edc0ed8d188a39014dddc92364d3c42d2096771effe62332798",
+          "localizador": "/result[notes|frequency|fuentes_extras|version|resources]",
+          "afirmacion_soportada": "CKAN oficial: notes='Resultados del ejercicio \"Diagnostico del Entorno Digital\", en el tema'; frequency=sin_programacion; fuentes_extras vacias; version=null; datastore_active=false en ambos recursos; sin cuestionario, codebook, unidad ni periodo vinculados a esta fila."
+        },
+        {
+          "ruta": "data/semantica/cobertura.json",
+          "sha256": "7ef11b0a4ad9ee3aa3d3512ab2a431cee29b9295db9da76daae2e054378a39a9",
+          "localizador": "/variables[definicion_iri=35a1b76ac%2F13]",
+          "afirmacion_soportada": "Estado fuera_del_nucleo_actual y 0 correspondencias hacia esta definicion (verificado por conteo exacto del IRI en /correspondencias)."
+        },
+        {
+          "ruta": "propuestas/cierre-brechas-post-r6/significados-tic-diversos/evidencia/nueva-tic-sonora-2026-10-24.md",
+          "sha256": "963eac956a9fe527a2fe8e8abef5ae8c70f8e1ade16ab915eafa3b51d8257807",
+          "localizador": "fetch página Diagnóstico nav-only + websearch sin cuestionario 2026-10-24",
+          "afirmacion_soportada": "Página Diagnóstico-Entorno-Digital fetch nav-only sin cuestionario/codebook; sin fuente vinculada a fila: brecha intacta."
+        },
+        {
+          "ruta": "propuestas/cierre-brechas-post-r6/web-obscura/obs-diagnostico-2026-10-24.json",
+          "sha256": "e4d80cf40a3cbeaf0084a7ca32d059a9c82c63e6637b43fb737c5090dbf76eeb",
+          "localizador": "/observacion/veredicto + /observacion/iframe_powerbi_src",
+          "afirmacion_soportada": "Inspeccion Obscura con DOM renderizado 2026-10-24T06:51:28Z de https://www.sonora.gob.mx/datos/diagnostico-entorno-digital: cascaron JS confirmado (main vacio, body 340 chars solo menu), sin cuestionario/codebook/tabla de variables extraible; contenido sustantivo en iframe PowerBI que requiere interaccion y no se afirma; sin fuente vinculada a fila/campo/recurso/edicion."
+        }
+      ],
+      "condicion_reapertura": "Reabrir solo si aparece fuente primaria vinculada a fila/recurso/edicion que aporte el documento faltante citado en evidencia_faltante (cuestionario o instrumento del Diagnostico del Entorno Digital, o muestra de valores del recurso para el campo, con edicion y periodo acreditados). No reabre: distribuciones, nombres parecidos, ejemplos del diccionario, metadatos CKAN sin vinculo a fila, ni contenido PowerBI sin trazabilidad a campo.",
+      "limites": [
+        "La contradiccion pregunta-vs-ejemplo se conserva como tal.",
+        "No se infiere catalogo de tipos de prueba.",
+        "Busquedas negativas acotadas a lo revisado el 2026-10-24 (8 CKAN API, 2 paginas oficiales, PDFs locales, datastore); no es ausencia universal.",
+        "La pagina del Diagnostico y el embed PowerBI requieren interaccion; no se afirma contenido no extraible."
+      ]
+    },
+    {
+      "id": "https://example.org/mex-ontologi/definition/af14d207-7697-4d52-b99b-46a35a1b76ac%2F36",
+      "tipo": "significados",
+      "original_sha256": "1afd642d935255d575dc6ca6efcd565e891f67277d889b5788abf3e418a3212a",
+      "puerta": "sin_pista_nueva",
+      "pista": null,
+      "estado": "brecha_externa",
+      "afirmacion_propuesta": null,
+      "motivo": "contradiccion entre lo que pregunta la descripcion y el dominio declarado (Tipo/Formato/Ejemplo). Nueva investigacion 2026-10-24 (no repetida de R6): (1) relectura byte-exacta + huella OK; (2) metadatos CKAN oficiales del conjunto (instrumento 'Resultados del ejercicio \"Diagnostico del Entorno Digital\", ', sin cuestionario/codebook/unidad/periodo por campo); (3) paginas oficiales del Programa Especial y del Diagnostico revisadas (sin cuestionario extraible; Diagnostico = cascaron JS + PowerBI); (4) PDFs locales revisados: ninguno cubre TIC; (5) datastore inactivo en los 16 recursos (sin muestra de valores). Nada de lo hallado fija el sentido literal de esta fila ni acredita dominio/catalogo/vigencia; no se propone significado (derivar del nombre violaria el criterio). | Puerta S5-tic 2026-10-24: sin_pista_nueva. Verificacion SHA-256 OK de la evidencia previa; la URL https://www.sonora.gob.mx/datos/diagnostico-entorno-digital ya fue examinada por webfetch y por Obscura con DOM renderizado el mismo dia sin cuestionario extraible; barrido local sin instrumento inedito. Se cierra como brecha externa conservando la evidencia previa; no se propone significado.",
+      "evidencia_faltante": "Documento faltante: Muestra de valores de P36 en el recurso b444876c-8681-4503-98ca-06876a62faae o cuestionario. Cita historica R5/R6 (texto heredado, no afirmacion propia): \"Muestra de valores de P36 en el recurso b444876c-8681-4503-98ca-06876a62faae o cuestionario. En manos del publicador.\" Conclusion actual 2026-10-24: no localizado en 8 metadatos CKAN package_show + paginas oficiales del Programa Especial y del Diagnostico + PDFs locales preservados + datastore CKAN (inactivo en 16/16 recursos); no se atribuye exclusividad a ninguna parte.",
+      "evidencia": [
+        {
+          "ruta": "data/portal/inspecciones/af14d207-7697-4d52-b99b-46a35a1b76ac.json",
+          "sha256": "2950f37c23c5c11ad941bf1bf5845e87b973e5c38fea652cbc023e31c276022e",
+          "localizador": "/definiciones/35",
+          "afirmacion_soportada": "Fila 36 (P36): Tipo=Booleano, Formato=Si/No, Ejemplo='Si', Unidad de medida vacia, Catalogo vacio; contradiccion entre lo que pregunta la descripcion y el dominio declarado (Tipo/Formato/Ejemplo)."
+        },
+        {
+          "ruta": "propuestas/investigacion-post-r6/tic/evidencia/verificacion_filas.json",
+          "sha256": "67d252df2f99b620fa29fecf4879f65b0e1e4cec730452ad1d32cd59be3cdc12",
+          "localizador": "/filas[definicion_iri=35a1b76ac%2F36]",
+          "afirmacion_soportada": "Huella recomputada 2026-10-24 = a622c78b00fec5c4... coincide con la historica; fila byte-identica a R5/R6."
+        },
+        {
+          "ruta": "propuestas/investigacion-post-r6/tic/evidencia/ckan-package-d175b134.bin",
+          "sha256": "29c28f3279461edc0ed8d188a39014dddc92364d3c42d2096771effe62332798",
+          "localizador": "/result[notes|frequency|fuentes_extras|version|resources]",
+          "afirmacion_soportada": "CKAN oficial: notes='Resultados del ejercicio \"Diagnostico del Entorno Digital\", en el tema'; frequency=sin_programacion; fuentes_extras vacias; version=null; datastore_active=false en ambos recursos; sin cuestionario, codebook, unidad ni periodo vinculados a esta fila."
+        },
+        {
+          "ruta": "data/semantica/cobertura.json",
+          "sha256": "7ef11b0a4ad9ee3aa3d3512ab2a431cee29b9295db9da76daae2e054378a39a9",
+          "localizador": "/variables[definicion_iri=35a1b76ac%2F36]",
+          "afirmacion_soportada": "Estado fuera_del_nucleo_actual y 0 correspondencias hacia esta definicion (verificado por conteo exacto del IRI en /correspondencias)."
+        },
+        {
+          "ruta": "propuestas/cierre-brechas-post-r6/significados-tic-diversos/evidencia/nueva-tic-sonora-2026-10-24.md",
+          "sha256": "963eac956a9fe527a2fe8e8abef5ae8c70f8e1ade16ab915eafa3b51d8257807",
+          "localizador": "fetch página Diagnóstico nav-only + websearch sin cuestionario 2026-10-24",
+          "afirmacion_soportada": "Página Diagnóstico-Entorno-Digital fetch nav-only sin cuestionario/codebook; sin fuente vinculada a fila: brecha intacta."
+        },
+        {
+          "ruta": "propuestas/cierre-brechas-post-r6/web-obscura/obs-diagnostico-2026-10-24.json",
+          "sha256": "e4d80cf40a3cbeaf0084a7ca32d059a9c82c63e6637b43fb737c5090dbf76eeb",
+          "localizador": "/observacion/veredicto + /observacion/iframe_powerbi_src",
+          "afirmacion_soportada": "Inspeccion Obscura con DOM renderizado 2026-10-24T06:51:28Z de https://www.sonora.gob.mx/datos/diagnostico-entorno-digital: cascaron JS confirmado (main vacio, body 340 chars solo menu), sin cuestionario/codebook/tabla de variables extraible; contenido sustantivo en iframe PowerBI que requiere interaccion y no se afirma; sin fuente vinculada a fila/campo/recurso/edicion."
+        }
+      ],
+      "condicion_reapertura": "Reabrir solo si aparece fuente primaria vinculada a fila/recurso/edicion que aporte el documento faltante citado en evidencia_faltante (cuestionario o instrumento del Diagnostico del Entorno Digital, o muestra de valores del recurso para el campo, con edicion y periodo acreditados). No reabre: distribuciones, nombres parecidos, ejemplos del diccionario, metadatos CKAN sin vinculo a fila, ni contenido PowerBI sin trazabilidad a campo.",
+      "limites": [
+        "La contradiccion descripcion-vs-dominio se conserva como tal.",
+        "No se inventa significado alternativo de existencia ni conteo.",
+        "Busquedas negativas acotadas a lo revisado el 2026-10-24 (8 CKAN API, 2 paginas oficiales, PDFs locales, datastore); no es ausencia universal.",
+        "La pagina del Diagnostico y el embed PowerBI requieren interaccion; no se afirma contenido no extraible."
+      ]
+    },
+    {
+      "id": "https://example.org/mex-ontologi/definition/af14d207-7697-4d52-b99b-46a35a1b76ac%2F39",
+      "tipo": "significados",
+      "original_sha256": "a8881208ecc91d5da775653ae5f7f01aaa769e417be15c7137aa54a458c42523",
+      "puerta": "sin_pista_nueva",
+      "pista": null,
+      "estado": "brecha_externa",
+      "afirmacion_propuesta": null,
+      "motivo": "contradiccion entre lo que pregunta la descripcion y el dominio declarado (Tipo/Formato/Ejemplo). Nueva investigacion 2026-10-24 (no repetida de R6): (1) relectura byte-exacta + huella OK; (2) metadatos CKAN oficiales del conjunto (instrumento 'Resultados del ejercicio \"Diagnostico del Entorno Digital\", ', sin cuestionario/codebook/unidad/periodo por campo); (3) paginas oficiales del Programa Especial y del Diagnostico revisadas (sin cuestionario extraible; Diagnostico = cascaron JS + PowerBI); (4) PDFs locales revisados: ninguno cubre TIC; (5) datastore inactivo en los 16 recursos (sin muestra de valores). Nada de lo hallado fija el sentido literal de esta fila ni acredita dominio/catalogo/vigencia; no se propone significado (derivar del nombre violaria el criterio). | Puerta S5-tic 2026-10-24: sin_pista_nueva. Verificacion SHA-256 OK de la evidencia previa; la URL https://www.sonora.gob.mx/datos/diagnostico-entorno-digital ya fue examinada por webfetch y por Obscura con DOM renderizado el mismo dia sin cuestionario extraible; barrido local sin instrumento inedito. Se cierra como brecha externa conservando la evidencia previa; no se propone significado.",
+      "evidencia_faltante": "Documento faltante: Muestra de valores de P39 en el recurso b444876c-8681-4503-98ca-06876a62faae o cuestionario. Cita historica R5/R6 (texto heredado, no afirmacion propia): \"Muestra de valores de P39 en el recurso b444876c-8681-4503-98ca-06876a62faae o cuestionario. En manos del publicador.\" Conclusion actual 2026-10-24: no localizado en 8 metadatos CKAN package_show + paginas oficiales del Programa Especial y del Diagnostico + PDFs locales preservados + datastore CKAN (inactivo en 16/16 recursos); no se atribuye exclusividad a ninguna parte.",
+      "evidencia": [
+        {
+          "ruta": "data/portal/inspecciones/af14d207-7697-4d52-b99b-46a35a1b76ac.json",
+          "sha256": "2950f37c23c5c11ad941bf1bf5845e87b973e5c38fea652cbc023e31c276022e",
+          "localizador": "/definiciones/38",
+          "afirmacion_soportada": "Fila 39 (P39): Tipo=Booleano, Formato=Si/No, Ejemplo='Si', Unidad de medida vacia, Catalogo vacio; contradiccion entre lo que pregunta la descripcion y el dominio declarado (Tipo/Formato/Ejemplo)."
+        },
+        {
+          "ruta": "propuestas/investigacion-post-r6/tic/evidencia/verificacion_filas.json",
+          "sha256": "67d252df2f99b620fa29fecf4879f65b0e1e4cec730452ad1d32cd59be3cdc12",
+          "localizador": "/filas[definicion_iri=35a1b76ac%2F39]",
+          "afirmacion_soportada": "Huella recomputada 2026-10-24 = 97b808090a361a57... coincide con la historica; fila byte-identica a R5/R6."
+        },
+        {
+          "ruta": "propuestas/investigacion-post-r6/tic/evidencia/ckan-package-d175b134.bin",
+          "sha256": "29c28f3279461edc0ed8d188a39014dddc92364d3c42d2096771effe62332798",
+          "localizador": "/result[notes|frequency|fuentes_extras|version|resources]",
+          "afirmacion_soportada": "CKAN oficial: notes='Resultados del ejercicio \"Diagnostico del Entorno Digital\", en el tema'; frequency=sin_programacion; fuentes_extras vacias; version=null; datastore_active=false en ambos recursos; sin cuestionario, codebook, unidad ni periodo vinculados a esta fila."
+        },
+        {
+          "ruta": "data/semantica/cobertura.json",
+          "sha256": "7ef11b0a4ad9ee3aa3d3512ab2a431cee29b9295db9da76daae2e054378a39a9",
+          "localizador": "/variables[definicion_iri=35a1b76ac%2F39]",
+          "afirmacion_soportada": "Estado fuera_del_nucleo_actual y 0 correspondencias hacia esta definicion (verificado por conteo exacto del IRI en /correspondencias)."
+        },
+        {
+          "ruta": "propuestas/cierre-brechas-post-r6/significados-tic-diversos/evidencia/nueva-tic-sonora-2026-10-24.md",
+          "sha256": "963eac956a9fe527a2fe8e8abef5ae8c70f8e1ade16ab915eafa3b51d8257807",
+          "localizador": "fetch página Diagnóstico nav-only + websearch sin cuestionario 2026-10-24",
+          "afirmacion_soportada": "Página Diagnóstico-Entorno-Digital fetch nav-only sin cuestionario/codebook; sin fuente vinculada a fila: brecha intacta."
+        },
+        {
+          "ruta": "propuestas/cierre-brechas-post-r6/web-obscura/obs-diagnostico-2026-10-24.json",
+          "sha256": "e4d80cf40a3cbeaf0084a7ca32d059a9c82c63e6637b43fb737c5090dbf76eeb",
+          "localizador": "/observacion/veredicto + /observacion/iframe_powerbi_src",
+          "afirmacion_soportada": "Inspeccion Obscura con DOM renderizado 2026-10-24T06:51:28Z de https://www.sonora.gob.mx/datos/diagnostico-entorno-digital: cascaron JS confirmado (main vacio, body 340 chars solo menu), sin cuestionario/codebook/tabla de variables extraible; contenido sustantivo en iframe PowerBI que requiere interaccion y no se afirma; sin fuente vinculada a fila/campo/recurso/edicion."
+        }
+      ],
+      "condicion_reapertura": "Reabrir solo si aparece fuente primaria vinculada a fila/recurso/edicion que aporte el documento faltante citado en evidencia_faltante (cuestionario o instrumento del Diagnostico del Entorno Digital, o muestra de valores del recurso para el campo, con edicion y periodo acreditados). No reabre: distribuciones, nombres parecidos, ejemplos del diccionario, metadatos CKAN sin vinculo a fila, ni contenido PowerBI sin trazabilidad a campo.",
+      "limites": [
+        "La contradiccion descripcion-vs-dominio se conserva como tal.",
+        "El valor Si/No no describe procedimiento.",
+        "Busquedas negativas acotadas a lo revisado el 2026-10-24 (8 CKAN API, 2 paginas oficiales, PDFs locales, datastore); no es ausencia universal.",
+        "La pagina del Diagnostico y el embed PowerBI requieren interaccion; no se afirma contenido no extraible."
+      ]
+    },
+    {
+      "id": "https://example.org/mex-ontologi/definition/af14d207-7697-4d52-b99b-46a35a1b76ac%2F40",
+      "tipo": "significados",
+      "original_sha256": "c6b58b8a8bdcab01270b8786b84567703c4b9d9879774d6ef79eb1725ba86a33",
+      "puerta": "sin_pista_nueva",
+      "pista": null,
+      "estado": "brecha_externa",
+      "afirmacion_propuesta": null,
+      "motivo": "contradiccion entre lo que pregunta la descripcion y el dominio declarado (Tipo/Formato/Ejemplo). Nueva investigacion 2026-10-24 (no repetida de R6): (1) relectura byte-exacta + huella OK; (2) metadatos CKAN oficiales del conjunto (instrumento 'Resultados del ejercicio \"Diagnostico del Entorno Digital\", ', sin cuestionario/codebook/unidad/periodo por campo); (3) paginas oficiales del Programa Especial y del Diagnostico revisadas (sin cuestionario extraible; Diagnostico = cascaron JS + PowerBI); (4) PDFs locales revisados: ninguno cubre TIC; (5) datastore inactivo en los 16 recursos (sin muestra de valores). Nada de lo hallado fija el sentido literal de esta fila ni acredita dominio/catalogo/vigencia; no se propone significado (derivar del nombre violaria el criterio). | Puerta S5-tic 2026-10-24: sin_pista_nueva. Verificacion SHA-256 OK de la evidencia previa; la URL https://www.sonora.gob.mx/datos/diagnostico-entorno-digital ya fue examinada por webfetch y por Obscura con DOM renderizado el mismo dia sin cuestionario extraible; barrido local sin instrumento inedito. Se cierra como brecha externa conservando la evidencia previa; no se propone significado.",
+      "evidencia_faltante": "Documento faltante: Muestra de valores de P40 en el recurso b444876c-8681-4503-98ca-06876a62faae o cuestionario. Cita historica R5/R6 (texto heredado, no afirmacion propia): \"Muestra de valores de P40 en el recurso b444876c-8681-4503-98ca-06876a62faae o cuestionario. En manos del publicador.\" Conclusion actual 2026-10-24: no localizado en 8 metadatos CKAN package_show + paginas oficiales del Programa Especial y del Diagnostico + PDFs locales preservados + datastore CKAN (inactivo en 16/16 recursos); no se atribuye exclusividad a ninguna parte.",
+      "evidencia": [
+        {
+          "ruta": "data/portal/inspecciones/af14d207-7697-4d52-b99b-46a35a1b76ac.json",
+          "sha256": "2950f37c23c5c11ad941bf1bf5845e87b973e5c38fea652cbc023e31c276022e",
+          "localizador": "/definiciones/39",
+          "afirmacion_soportada": "Fila 40 (P40): Tipo=Booleano, Formato=Si/No, Ejemplo='Si', Unidad de medida vacia, Catalogo vacio; contradiccion entre lo que pregunta la descripcion y el dominio declarado (Tipo/Formato/Ejemplo)."
+        },
+        {
+          "ruta": "propuestas/investigacion-post-r6/tic/evidencia/verificacion_filas.json",
+          "sha256": "67d252df2f99b620fa29fecf4879f65b0e1e4cec730452ad1d32cd59be3cdc12",
+          "localizador": "/filas[definicion_iri=35a1b76ac%2F40]",
+          "afirmacion_soportada": "Huella recomputada 2026-10-24 = 7ce240ae95790d91... coincide con la historica; fila byte-identica a R5/R6."
+        },
+        {
+          "ruta": "propuestas/investigacion-post-r6/tic/evidencia/ckan-package-d175b134.bin",
+          "sha256": "29c28f3279461edc0ed8d188a39014dddc92364d3c42d2096771effe62332798",
+          "localizador": "/result[notes|frequency|fuentes_extras|version|resources]",
+          "afirmacion_soportada": "CKAN oficial: notes='Resultados del ejercicio \"Diagnostico del Entorno Digital\", en el tema'; frequency=sin_programacion; fuentes_extras vacias; version=null; datastore_active=false en ambos recursos; sin cuestionario, codebook, unidad ni periodo vinculados a esta fila."
+        },
+        {
+          "ruta": "data/semantica/cobertura.json",
+          "sha256": "7ef11b0a4ad9ee3aa3d3512ab2a431cee29b9295db9da76daae2e054378a39a9",
+          "localizador": "/variables[definicion_iri=35a1b76ac%2F40]",
+          "afirmacion_soportada": "Estado fuera_del_nucleo_actual y 0 correspondencias hacia esta definicion (verificado por conteo exacto del IRI en /correspondencias)."
+        },
+        {
+          "ruta": "propuestas/cierre-brechas-post-r6/significados-tic-diversos/evidencia/nueva-tic-sonora-2026-10-24.md",
+          "sha256": "963eac956a9fe527a2fe8e8abef5ae8c70f8e1ade16ab915eafa3b51d8257807",
+          "localizador": "fetch página Diagnóstico nav-only + websearch sin cuestionario 2026-10-24",
+          "afirmacion_soportada": "Página Diagnóstico-Entorno-Digital fetch nav-only sin cuestionario/codebook; sin fuente vinculada a fila: brecha intacta."
+        },
+        {
+          "ruta": "propuestas/cierre-brechas-post-r6/web-obscura/obs-diagnostico-2026-10-24.json",
+          "sha256": "e4d80cf40a3cbeaf0084a7ca32d059a9c82c63e6637b43fb737c5090dbf76eeb",
+          "localizador": "/observacion/veredicto + /observacion/iframe_powerbi_src",
+          "afirmacion_soportada": "Inspeccion Obscura con DOM renderizado 2026-10-24T06:51:28Z de https://www.sonora.gob.mx/datos/diagnostico-entorno-digital: cascaron JS confirmado (main vacio, body 340 chars solo menu), sin cuestionario/codebook/tabla de variables extraible; contenido sustantivo en iframe PowerBI que requiere interaccion y no se afirma; sin fuente vinculada a fila/campo/recurso/edicion."
+        }
+      ],
+      "condicion_reapertura": "Reabrir solo si aparece fuente primaria vinculada a fila/recurso/edicion que aporte el documento faltante citado en evidencia_faltante (cuestionario o instrumento del Diagnostico del Entorno Digital, o muestra de valores del recurso para el campo, con edicion y periodo acreditados). No reabre: distribuciones, nombres parecidos, ejemplos del diccionario, metadatos CKAN sin vinculo a fila, ni contenido PowerBI sin trazabilidad a campo.",
+      "limites": [
+        "La contradiccion descripcion-vs-dominio se conserva como tal.",
+        "No se duplica la regla de conteo de personal respaldada en P7 (Numérico, ejemplo 15).",
+        "Busquedas negativas acotadas a lo revisado el 2026-10-24 (8 CKAN API, 2 paginas oficiales, PDFs locales, datastore); no es ausencia universal.",
+        "La pagina del Diagnostico y el embed PowerBI requieren interaccion; no se afirma contenido no extraible."
+      ]
+    }
+  ],
+  "fuentes": [
+    {
+      "ruta": "data/portal/inspecciones/063058e6-aed3-4a60-b944-5e653c77b14d.json",
+      "sha256": "0ea3dfe7bd13b50aa647d976a6dd59ac9dd33c102eee2c6bc88b301d9f810be0",
+      "url": null,
+      "fecha_consulta": "2026-10-24",
+      "localizador": "verificacion de integridad SHA-256 S5-tic 2026-10-24 (bytes identicos a lo citado; contenido examinado en rondas previas)"
+    },
+    {
+      "ruta": "data/portal/inspecciones/3851f1c3-5045-4703-ba88-93b3d39e0b70.json",
+      "sha256": "e3d0e66563f7525a638a5a5d353d843af598a9910e3721dbddc5b39ba22e07f5",
+      "url": null,
+      "fecha_consulta": "2026-10-24",
+      "localizador": "verificacion de integridad SHA-256 S5-tic 2026-10-24 (bytes identicos a lo citado; contenido examinado en rondas previas)"
+    },
+    {
+      "ruta": "data/portal/inspecciones/8f8e3cfb-e551-4a95-b382-4999351c5f29.json",
+      "sha256": "e474f039c7b0a4b6cbd9a2f70744891c3eb71249b1ab02bf3d3cce4ecc6f4b5e",
+      "url": null,
+      "fecha_consulta": "2026-10-24",
+      "localizador": "verificacion de integridad SHA-256 S5-tic 2026-10-24 (bytes identicos a lo citado; contenido examinado en rondas previas)"
+    },
+    {
+      "ruta": "data/portal/inspecciones/a4e8bee0-5493-4dec-bbce-0ba1e2fd4c2d.json",
+      "sha256": "1c2f73fbeee284d10be656eee951558ff8ddc14ac25305829e793579bd71ad85",
+      "url": null,
+      "fecha_consulta": "2026-10-24",
+      "localizador": "verificacion de integridad SHA-256 S5-tic 2026-10-24 (bytes identicos a lo citado; contenido examinado en rondas previas)"
+    },
+    {
+      "ruta": "data/portal/inspecciones/af14d207-7697-4d52-b99b-46a35a1b76ac.json",
+      "sha256": "2950f37c23c5c11ad941bf1bf5845e87b973e5c38fea652cbc023e31c276022e",
+      "url": null,
+      "fecha_consulta": "2026-10-24",
+      "localizador": "verificacion de integridad SHA-256 S5-tic 2026-10-24 (bytes identicos a lo citado; contenido examinado en rondas previas)"
+    },
+    {
+      "ruta": "data/portal/inspecciones/bdbf043f-5d12-4362-bce0-bd4c8ab1e2a1.json",
+      "sha256": "1b4660882f2c1d165dc3b4deb9e19b8e1f61f09b1bd9dbcfdead4bd09e8f741a",
+      "url": null,
+      "fecha_consulta": "2026-10-24",
+      "localizador": "verificacion de integridad SHA-256 S5-tic 2026-10-24 (bytes identicos a lo citado; contenido examinado en rondas previas)"
+    },
+    {
+      "ruta": "data/portal/inspecciones/c65eb4e7-a17d-43c7-b08c-05811505edf1.json",
+      "sha256": "90116c242b20debee37a0002c763602f57a578a7350a616d89aae4233ad0f9bf",
+      "url": null,
+      "fecha_consulta": "2026-10-24",
+      "localizador": "verificacion de integridad SHA-256 S5-tic 2026-10-24 (bytes identicos a lo citado; contenido examinado en rondas previas)"
+    },
+    {
+      "ruta": "data/portal/inspecciones/f3ecd3d2-2156-4251-82e5-13b079471ee9.json",
+      "sha256": "7f0fe9071a5c3cf4b94e9f8a3330447a4ec6ab8263521cb426606a59f6388106",
+      "url": null,
+      "fecha_consulta": "2026-10-24",
+      "localizador": "verificacion de integridad SHA-256 S5-tic 2026-10-24 (bytes identicos a lo citado; contenido examinado en rondas previas)"
+    },
+    {
+      "ruta": "data/semantica/cobertura.json",
+      "sha256": "7ef11b0a4ad9ee3aa3d3512ab2a431cee29b9295db9da76daae2e054378a39a9",
+      "url": null,
+      "fecha_consulta": "2026-10-24",
+      "localizador": "verificacion de integridad SHA-256 S5-tic 2026-10-24 (bytes identicos a lo citado; contenido examinado en rondas previas)"
+    },
+    {
+      "ruta": "propuestas/cierre-brechas-post-r6/significados-tic-diversos/evidencia/nueva-tic-sonora-2026-10-24.md",
+      "sha256": "963eac956a9fe527a2fe8e8abef5ae8c70f8e1ade16ab915eafa3b51d8257807",
+      "url": null,
+      "fecha_consulta": "2026-10-24",
+      "localizador": "lectura integra S5-tic 2026-10-24 (busqueda negativa acotada del dia)"
+    },
+    {
+      "ruta": "propuestas/cierre-brechas-post-r6/web-obscura/obs-diagnostico-2026-10-24.json",
+      "sha256": "e4d80cf40a3cbeaf0084a7ca32d059a9c82c63e6637b43fb737c5090dbf76eeb",
+      "url": null,
+      "fecha_consulta": "2026-10-24",
+      "localizador": "lectura integra S5-tic 2026-10-24 (veredicto + iframe PowerBI)"
+    },
+    {
+      "ruta": "propuestas/investigacion-post-r6/tic/evidencia/ckan-package-0ec245ba.bin",
+      "sha256": "3bb9dbcd40851dd058153eb38ca9698825774b4d0b447f60af3818b20712a34e",
+      "url": null,
+      "fecha_consulta": "2026-10-24",
+      "localizador": "verificacion de integridad SHA-256 S5-tic 2026-10-24 (bytes identicos a lo citado; contenido examinado en rondas previas)"
+    },
+    {
+      "ruta": "propuestas/investigacion-post-r6/tic/evidencia/ckan-package-37ab8134.bin",
+      "sha256": "caa5b5fa1200e63d006e3ad8b585799e8d2854436aef4c2bc7b00bf6c11269ee",
+      "url": null,
+      "fecha_consulta": "2026-10-24",
+      "localizador": "verificacion de integridad SHA-256 S5-tic 2026-10-24 (bytes identicos a lo citado; contenido examinado en rondas previas)"
+    },
+    {
+      "ruta": "propuestas/investigacion-post-r6/tic/evidencia/ckan-package-7c6183e5.bin",
+      "sha256": "1e7c629dbbf6b5c2a35942f064377970d6af5af8aeb661ae681c2165661b8679",
+      "url": null,
+      "fecha_consulta": "2026-10-24",
+      "localizador": "verificacion de integridad SHA-256 S5-tic 2026-10-24 (bytes identicos a lo citado; contenido examinado en rondas previas)"
+    },
+    {
+      "ruta": "propuestas/investigacion-post-r6/tic/evidencia/ckan-package-9208a313.bin",
+      "sha256": "da20faaa090dab46db7f9b60ff774f83291d31803c917606fe698a7e89c84f75",
+      "url": null,
+      "fecha_consulta": "2026-10-24",
+      "localizador": "verificacion de integridad SHA-256 S5-tic 2026-10-24 (bytes identicos a lo citado; contenido examinado en rondas previas)"
+    },
+    {
+      "ruta": "propuestas/investigacion-post-r6/tic/evidencia/ckan-package-a3ea3c02.bin",
+      "sha256": "d166dc5a88031dbe1851f1d66142735335f4114f6436fa73e234ac7878965430",
+      "url": null,
+      "fecha_consulta": "2026-10-24",
+      "localizador": "verificacion de integridad SHA-256 S5-tic 2026-10-24 (bytes identicos a lo citado; contenido examinado en rondas previas)"
+    },
+    {
+      "ruta": "propuestas/investigacion-post-r6/tic/evidencia/ckan-package-aa353273.bin",
+      "sha256": "be192d575a2fdb8789cf462fa53a1c3f300cc616c769e672a3236588dfb520ac",
+      "url": null,
+      "fecha_consulta": "2026-10-24",
+      "localizador": "verificacion de integridad SHA-256 S5-tic 2026-10-24 (bytes identicos a lo citado; contenido examinado en rondas previas)"
+    },
+    {
+      "ruta": "propuestas/investigacion-post-r6/tic/evidencia/ckan-package-c9a63b8b.bin",
+      "sha256": "39712fb63bf8c8a65226f72f182aecb547e12c0bad98af9993c55090be0c8af3",
+      "url": null,
+      "fecha_consulta": "2026-10-24",
+      "localizador": "verificacion de integridad SHA-256 S5-tic 2026-10-24 (bytes identicos a lo citado; contenido examinado en rondas previas)"
+    },
+    {
+      "ruta": "propuestas/investigacion-post-r6/tic/evidencia/ckan-package-d175b134.bin",
+      "sha256": "29c28f3279461edc0ed8d188a39014dddc92364d3c42d2096771effe62332798",
+      "url": null,
+      "fecha_consulta": "2026-10-24",
+      "localizador": "verificacion de integridad SHA-256 S5-tic 2026-10-24 (bytes identicos a lo citado; contenido examinado en rondas previas)"
+    },
+    {
+      "ruta": "propuestas/investigacion-post-r6/tic/evidencia/diagnostico-entorno-digital.bin",
+      "sha256": "27ad6aee42e9c11eb526b669371b2aa33b553bc0c5a37e711a5f788f9c3bab9b",
+      "url": null,
+      "fecha_consulta": "2026-10-24",
+      "localizador": "lectura parcial S5-tic 2026-10-24 (cabecera 600 bytes: HTML cascaron JS preservado)"
+    },
+    {
+      "ruta": "propuestas/investigacion-post-r6/tic/evidencia/verificacion_filas.json",
+      "sha256": "67d252df2f99b620fa29fecf4879f65b0e1e4cec730452ad1d32cd59be3cdc12",
+      "url": null,
+      "fecha_consulta": "2026-10-24",
+      "localizador": "verificacion de integridad SHA-256 S5-tic 2026-10-24 (bytes identicos a lo citado; contenido examinado en rondas previas)"
+    }
+  ],
+  "novedades": "Sin novedades: ninguna pista nueva (URL/documento/anexo concreto no examinado antes) para los 24 IDs. La unica URL candidata del dia (https://www.sonora.gob.mx/datos/diagnostico-entorno-digital) ya fue examinada por webfetch y por Obscura con DOM renderizado el 2026-10-24 sin cuestionario extraible. No se repitieron busquedas genericas agotadas ni se reinspecciono la pagina sin pista. No se emitio peticion a W-web: el navegador compartido ya cubrio la pagina interactiva el mismo dia; sin URL nueva no hay nada que pedir. Paquete W-web ausente al cierre local."
+}

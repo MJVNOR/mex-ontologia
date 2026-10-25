@@ -1,0 +1,163 @@
+diff --git a/studio/src-tauri/sidecars/agent/providers/openai.ts b/studio/src-tauri/sidecars/agent/providers/openai.ts
+index 42e4e31..3d2c5b9 100644
+--- a/studio/src-tauri/sidecars/agent/providers/openai.ts
++++ b/studio/src-tauri/sidecars/agent/providers/openai.ts
+@@ -81,6 +81,7 @@ export class OpenAICompatibleProvider implements Provider {
+ 
+     const resp = await fetch(`${this.baseURL}/chat/completions`, {
+       method: 'POST',
++      signal: AbortSignal.timeout(90_000),
+       headers: {
+         'Content-Type': 'application/json',
+         Authorization: `Bearer ${this.apiKey}`,
+@@ -88,7 +89,7 @@ export class OpenAICompatibleProvider implements Provider {
+       body: JSON.stringify({
+         model,
+         messages: this.messages,
+-        tools: tools.map(t => ({
++        ...(tools.length ? { tools: tools.map(t => ({
+           type: 'function' as const,
+           function: {
+             name: t.name,
+@@ -96,13 +97,13 @@ export class OpenAICompatibleProvider implements Provider {
+             parameters: t.inputSchema,
+           },
+         })),
+-        tool_choice: 'auto',
++        tool_choice: 'auto' } : {}),
+         temperature: 0.7,
+         top_p: 0.8,
+         max_tokens: this.maxTokens,
+-        // Qwen-family servers only honour thinking suppression through this
+-        // key. Ignored by other providers.
+-        chat_template_kwargs: { enable_thinking: false },
++        // Gemini rejects this Qwen extension as an unknown JSON field.
++        ...(new URL(this.baseURL).hostname === 'generativelanguage.googleapis.com'
++          ? {} : { chat_template_kwargs: { enable_thinking: false } }),
+       }),
+     });
+ 
+diff --git a/studio/src-tauri/src/chat.rs b/studio/src-tauri/src/chat.rs
+index 53f22ca..8d128d7 100644
+--- a/studio/src-tauri/src/chat.rs
++++ b/studio/src-tauri/src/chat.rs
+@@ -4,6 +4,8 @@ use std::path::{Path, PathBuf};
+ use std::process::{Child, Command, Stdio};
+ use std::sync::Mutex;
+ use tauri::{Emitter, Manager};
++#[cfg(target_os = "windows")]
++use std::os::windows::process::CommandExt;
+ 
+ use crate::engine;
+ 
+@@ -12,6 +14,13 @@ pub struct ChatState {
+ }
+ 
+ fn resolve_node_binary() -> PathBuf {
++    // Version managers may expose a shim that exits when used with piped
++    // stdin. Let a desktop launcher select the actual runtime explicitly.
++    if let Some(path) = std::env::var_os("ONTO_NODE_BINARY") {
++        if !path.is_empty() {
++            return PathBuf::from(path);
++        }
++    }
+     #[cfg(target_os = "windows")]
+     {
+         let candidates = [
+@@ -116,8 +125,21 @@ fn sidecar_entry(app: &tauri::AppHandle) -> Result<PathBuf, String> {
+     )
+ }
+ 
++fn node_entry_path(path: PathBuf) -> PathBuf {
++    // Tauri returns Windows verbatim paths. Node 22 fails with EISDIR at
++    // "C:" when realpathSync receives a \\?\-prefixed entry point.
++    let text = path.to_string_lossy();
++    if let Some(unc) = text.strip_prefix(r"\\?\UNC\") {
++        return PathBuf::from(format!(r"\\{}", unc));
++    }
++    if let Some(disk) = text.strip_prefix(r"\\?\") {
++        return PathBuf::from(disk);
++    }
++    path
++}
++
+ pub fn spawn_agent_sidecar(app: &tauri::AppHandle) -> Result<(), String> {
+-    let entry = sidecar_entry(app)?;
++    let entry = node_entry_path(sidecar_entry(app)?);
+     let node = resolve_node_binary();
+ 
+     // Same port the engine itself was spawned with (see engine::engine_port,
+@@ -125,8 +147,10 @@ pub fn spawn_agent_sidecar(app: &tauri::AppHandle) -> Result<(), String> {
+     // rather than re-resolved here so the sidecar can't drift from it.
+     let port = engine::engine_port();
+ 
+-    let mut child = Command::new(&node)
+-        .arg(&entry)
++    let mut command = Command::new(&node);
++    #[cfg(target_os = "windows")]
++    command.creation_flags(0x08000000); // CREATE_NO_WINDOW for the Node sidecar.
++    let mut child = command.arg(&entry)
+         .stdin(Stdio::piped())
+         .stdout(Stdio::piped())
+         .stderr(Stdio::piped())
+@@ -198,6 +222,13 @@ mod tests {
+     use super::*;
+     use std::fs;
+ 
++    #[test]
++    fn node_accepts_regular_disk_and_unc_entry_paths() {
++        assert_eq!(node_entry_path(PathBuf::from(r"\\?\C:\Studio\index.js")), PathBuf::from(r"C:\Studio\index.js"));
++        assert_eq!(node_entry_path(PathBuf::from(r"\\?\UNC\server\Studio\index.js")), PathBuf::from(r"\\server\Studio\index.js"));
++        assert_eq!(node_entry_path(PathBuf::from("/opt/studio/index.js")), PathBuf::from("/opt/studio/index.js"));
++    }
++
+     #[test]
+     fn dev_fallback_points_at_the_source_sidecar() {
+         let path = dev_sidecar_entry();
+diff --git a/studio/src/AppShell.tsx b/studio/src/AppShell.tsx
+index 1fdec8a..20f8dd2 100644
+--- a/studio/src/AppShell.tsx
++++ b/studio/src/AppShell.tsx
+@@ -26,6 +26,12 @@ const isLive =
+ 
+ type Tab = 'findings' | 'corpus' | 'compare' | 'validation' | 'chat'
+ 
++// LiveChrome supplies the live agent chat. The scripted chat only has
++// answers in replay mode; exposing it in live mode calls an unsupported source.
++const panelTabs: Tab[] = isLive
++  ? ['findings', 'corpus', 'compare', 'validation']
++  : ['findings', 'corpus', 'compare', 'validation', 'chat']
++
+ /**
+  * The tabbed sidebar: findings + resolution, corpus, and the grounded-vs-
+  * baseline comparison. This is the one demonstration surface both build
+@@ -65,9 +71,8 @@ function DemoPanels() {
+   // demo-source.ts streams chunks for one question), so this reads the same
+   // precomputed bundle replay mode's sources read internally, purely to
+   // populate the pickers. Live mode has no scripted set for either (a live
+-  // compare throws, and live ask() throws -- see compare-source.ts and
+-  // live-source.ts), so both pickers stay empty there and each panel
+-  // explains why on ask.
++  // compare throws -- see compare-source.ts), so the comparison picker
++  // stays empty there. Scripted chat is only available in replay mode.
+   useEffect(() => {
+     let cancelled = false
+     if (!isLive) {
+@@ -136,7 +141,7 @@ function DemoPanels() {
+   return (
+     <div className="flex flex-col h-full overflow-hidden">
+       <div className="flex border-b text-xs shrink-0" style={{ borderColor: 'var(--border)' }}>
+-        {(['findings', 'corpus', 'compare', 'validation', 'chat'] as Tab[]).map((t) => (
++        {panelTabs.map((t) => (
+           <button
+             key={t}
+             onClick={() => setTab(t)}
+@@ -182,7 +187,7 @@ function DemoPanels() {
+         {tab === 'validation' && (
+           <ValidationPanel fixtures={validationFixtures} error={validationError} pending={validationPending} />
+         )}
+-        {tab === 'chat' && (
++        {!isLive && tab === 'chat' && (
+           <ScriptedChatPanel chat={chat} pending={chatPending} onAsk={ask} questions={chatQuestions} />
+         )}
+       </div>

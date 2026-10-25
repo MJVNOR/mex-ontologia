@@ -1,0 +1,202 @@
+{
+  "dictamen": "aceptar",
+  "checks": [
+    {
+      "nombre": "(a) UNIVERSO_28<=candset",
+      "ok": true,
+      "detalle": ""
+    },
+    {
+      "nombre": "(a) sin < estricto",
+      "ok": true,
+      "detalle": ""
+    },
+    {
+      "nombre": "(b) PREFIX_DEFINICION",
+      "ok": true,
+      "detalle": ""
+    },
+    {
+      "nombre": "(b) resp7.get(row.get(\"definicion_iri\"))",
+      "ok": true,
+      "detalle": ""
+    },
+    {
+      "nombre": "(b) mr.get(\"variable\") != base.get(\"iri\")",
+      "ok": true,
+      "detalle": ""
+    },
+    {
+      "nombre": "(b) row.get(\"campo\") != mr.get(\"campo\")",
+      "ok": true,
+      "detalle": ""
+    },
+    {
+      "nombre": "(b) row.get(\"descripcion\") != base.get(\"descripcion\"",
+      "ok": true,
+      "detalle": ""
+    },
+    {
+      "nombre": "(b) row.get(\"huella_fila_diccionario\") != base.get(\"",
+      "ok": true,
+      "detalle": ""
+    },
+    {
+      "nombre": "(b) DICCIONARIO_SINAC",
+      "ok": true,
+      "detalle": ""
+    },
+    {
+      "nombre": "(b) HUELLA_ESQUEMA_SINAC",
+      "ok": true,
+      "detalle": ""
+    },
+    {
+      "nombre": "(b) len(accepted[\"vinculos\"]) != 28",
+      "ok": true,
+      "detalle": ""
+    },
+    {
+      "nombre": "(b) accepted.get(\"reglas\") != []",
+      "ok": true,
+      "detalle": ""
+    },
+    {
+      "nombre": "(b) accepted.get(\"conceptos\") != {}",
+      "ok": true,
+      "detalle": ""
+    },
+    {
+      "nombre": "(c) audit.get(\"dictamen\") != \"aceptar\"",
+      "ok": true,
+      "detalle": ""
+    },
+    {
+      "nombre": "(c) aceptadas_sha256",
+      "ok": true,
+      "detalle": ""
+    },
+    {
+      "nombre": "(c) not in ok",
+      "ok": true,
+      "detalle": ""
+    },
+    {
+      "nombre": "(d) R7 delega R8 condicional",
+      "ok": true,
+      "detalle": ""
+    },
+    {
+      "nombre": "(d) import R8 condicional ronda_2",
+      "ok": true,
+      "detalle": ""
+    },
+    {
+      "nombre": "(d) import R8 condicional entregas",
+      "ok": true,
+      "detalle": ""
+    },
+    {
+      "nombre": "(d) import R8 condicional consolidar",
+      "ok": true,
+      "detalle": ""
+    },
+    {
+      "nombre": "(d) proyeccion solo-28",
+      "ok": true,
+      "detalle": ""
+    },
+    {
+      "nombre": "(d) proyeccion igualdad fuera delta",
+      "ok": true,
+      "detalle": ""
+    },
+    {
+      "nombre": "(d) R7 checks antes delegar",
+      "ok": true,
+      "detalle": ""
+    },
+    {
+      "nombre": "(e) fixture tmp",
+      "ok": true,
+      "detalle": ""
+    },
+    {
+      "nombre": "(e) staging scripts primero en path",
+      "ok": true,
+      "detalle": ""
+    },
+    {
+      "nombre": "(e) sin write fuera tmp",
+      "ok": true,
+      "detalle": ""
+    },
+    {
+      "nombre": "seal congelada 19/19 + aceptadas_sha",
+      "ok": true,
+      "detalle": ""
+    },
+    {
+      "nombre": "payload v003 db3167 en staging",
+      "ok": true,
+      "detalle": ""
+    }
+  ],
+  "referencias": [
+    {
+      "ruta": "propuestas/ronda-8-paralela/ejecucion-20261024/I-codigo/v003/scripts/consolidar_semantica.py",
+      "sha256": "d3ce61a3a1351810195ad0078c8cf91928da798ac6a3d4d4cbb2b92e233800c6"
+    },
+    {
+      "ruta": "propuestas/ronda-8-paralela/ejecucion-20261024/I-codigo/v003/scripts/integrar_entregas.py",
+      "sha256": "ecfc4087f5e70ec5b3284551178af88eb9d467d8b9892b2b200a22bf6726de0d"
+    },
+    {
+      "ruta": "propuestas/ronda-8-paralela/ejecucion-20261024/I-codigo/v003/scripts/integrar_ronda_2.py",
+      "sha256": "72b3c3b7aa7db26787feca92f0c16e1e1ff8d0d1d4194ae0888e5b6bf3b5e012"
+    },
+    {
+      "ruta": "propuestas/ronda-8-paralela/ejecucion-20261024/I-codigo/v003/scripts/integrar_ronda_7.py",
+      "sha256": "12c32dd6bda35d5a49bc88c9fe47ec3a632020dc3453453c5e37193a0e5acc96"
+    },
+    {
+      "ruta": "propuestas/ronda-8-paralela/ejecucion-20261024/I-codigo/v003/scripts/integrar_ronda_8.py",
+      "sha256": "65e631e35f4cf2c55003d8e69921af06919d965509ff670c1fe6ed0e17bae827"
+    },
+    {
+      "ruta": "propuestas/ronda-8-paralela/ejecucion-20261024/I-codigo/v003/scripts/r8_proyeccion.py",
+      "sha256": "34f9cf4679a7cec19e205ba3eadd7e31850d1fe3bade3d661db0fd1b6857bb3e"
+    },
+    {
+      "ruta": "propuestas/ronda-8-paralela/ejecucion-20261024/I-codigo/v003/tests/test_cargar_r8.py",
+      "sha256": "c642d47b8d2a1c88aace1e5b488a2e57ee5b2212f6729ef06745eab06210e5ba"
+    },
+    {
+      "ruta": "propuestas/ronda-8-paralela/ejecucion-20261024/I-codigo/v003/tests/test_proyeccion_r8.py",
+      "sha256": "a365b5b7ebd41d77109c5a47a7c0ad17a1223d9e81d17e38505392bd12a2d2cd"
+    },
+    {
+      "ruta": "propuestas/ronda-8-paralela/ejecucion-20261024/I-codigo/v003/congelada.json",
+      "sha256": "2d13a57cc212cf4e7b53b0a73ce320b4f7555cfb4269d0898951b286a042f41c"
+    },
+    {
+      "ruta": "propuestas/ronda-8-paralela/ejecucion-20261024/I-codigo/v003/entrega.json",
+      "sha256": "e36bae28e8f149a1b10ec3d8d234c288a52bd57ab9243172750632528fef3d1d"
+    }
+  ],
+  "archivos_aplicables": [
+    "scripts/consolidar_semantica.py",
+    "scripts/integrar_entregas.py",
+    "scripts/integrar_ronda_2.py",
+    "scripts/integrar_ronda_7.py",
+    "scripts/integrar_ronda_8.py",
+    "scripts/r8_proyeccion.py",
+    "tests/test_cargar_r8.py",
+    "tests/test_proyeccion_r8.py"
+  ],
+  "notas": [
+    "v002 congelada no aplicar; solo v003 auditada aqui.",
+    "Suite R7 produccion 154 OK tras T2 (ver md).",
+    "Sin instalar; solo lectura fuera de B-tecnica/. Sin Gemma."
+  ]
+}

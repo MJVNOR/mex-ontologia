@@ -1,0 +1,7 @@
+# P4 v001: variables con AMBOS significados (debe dar vacio tras integrar).
+PREFIX mex: <https://example.org/mex-ontologi/vocab/>
+SELECT ?v ?d ?c WHERE {
+  ?v a mex:VariableDocumentada ;
+     mex:significadoDocumentado ?d ;
+     mex:significadoCandidato ?c .
+} ORDER BY ?v

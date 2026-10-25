@@ -1,0 +1,34 @@
+--- a/scripts/integrar_ronda_7.py
++++ b/scripts/integrar_ronda_7.py
+@@ -240,8 +240,15 @@
+         for row in accepted["vinculos"]:
+             if row["columna"] not in ok_vinc:
+                 raise ValueError("Ronda 7 sin aprobación en " + audit_name + ": " + row["columna"])
+-    if rules != expected:
+-        raise ValueError("Ronda 7 permite solo la base y las adiciones auditadas exactas")
++    if (root / "ontologia/revision-ronda-8.json").exists():
++        import sys as _sys
++        _here = str(Path(__file__).resolve().parent)
++        if _here not in _sys.path:
++            _sys.path.insert(0, _here)
++        from integrar_ronda_8 import validar_sobre_base as validar_ronda_8
++        return validar_ronda_8(rules, expected, root)
++    if rules != expected:
++        raise ValueError("Ronda 7 permite solo la base y las adiciones auditadas exactas")
+     return config, folder, baseline, accepted, sources
+ 
+ 
+@@ -246,9 +246,10 @@
+ 
+ 
+ def construir(report, rules, base):
+-    # Valida además toda la cadena histórica R4→R5→R6→R7. R4 invoca
+-    # validar_sobre_base (R5 delega a R6; R6 delega a R7 si existe su config);
+-    # no se reemplazan manifiestos anteriores.
++    # Valida además toda la cadena histórica R4→R5→R6→R7→R8. R4 invoca
++    # validar_sobre_base (R5 delega a R6; R6 delega a R7; R7 delega a R8 si
++    # existe su config);
++    # no se reemplazan manifiestos anteriores.
+     from integrar_ronda_4 import validar
+     validar(rules)
+     config, folder, baseline, accepted, sources = cargar()

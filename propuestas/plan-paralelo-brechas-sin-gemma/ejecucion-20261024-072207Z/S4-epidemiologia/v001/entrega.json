@@ -1,0 +1,1269 @@
+{
+  "rol": "S4-epidemiologia",
+  "version": "v001",
+  "decisiones": [
+    {
+      "id": "https://example.org/mex-ontologi/definition/2334deaa-dd0c-444e-b038-4cc556ad715d%2F9",
+      "tipo": "significados",
+      "original_sha256": "815b5a515c2f790686913ea5a1a0ad89ea7c895d81dfa7fbb65700d5f85c597b",
+      "puerta": "sin_pista_nueva",
+      "pista": null,
+      "estado": "brecha_externa",
+      "afirmacion_propuesta": null,
+      "motivo": "Manual p18: cada enfermedad incluye codigo CIE 10 (generico nacional, sin version/edicion); ejemplo local A04/A08-A09 no aparece en el manual. Sin respaldo explicito vinculado a esta definicion; no se aprueba por nombre, ejemplo aislado ni catalogo nacional generico sin vinculo local. Criterio R6 conservado. Puerta primera 2026-10-24: package_show en vivo sin cambios (metadata_modified 2025-08-19, version null, fuentes_extras vacia); revision_list API devuelve 400; indice web del CSV reproduce las mismas descripciones ya documentadas sin instrumento nuevo; Definiciones Operacionales DGE mar-2021 es referente nacional generico sin vinculo campo/recurso/edicion y no se descarga como novedad. Sin pista real; se conserva la evidencia previa con SHAs re-verificados.",
+      "evidencia_faltante": "EPI-R6-01 + EPI-R6-03: instrumento SUIVE edicion aplicable 2022 que fije objeto de cve_cie10 y version de catalogo CIE vinculada al recurso 1689b19c; o diccionario corregido/nota del publicador.",
+      "evidencia": [
+        {
+          "ruta": "data/portal/inspecciones/2334deaa-dd0c-444e-b038-4cc556ad715d.json",
+          "sha256": "298786f09028a94004420c08eb28120294b130378a0cf12d609a1bffb950288d",
+          "localizador": "/definiciones/8 (Nombre variable=cve_cie10)",
+          "afirmacion_soportada": "Descripcion='Clave', catalogo de referencia vacio, ejemplo registrado; huella 681e909fd28c2155e3b0b4396e185e481355919e4d65c2888506c08869374114."
+        },
+        {
+          "ruta": "data/portal/inspecciones/1689b19c-b0dc-4e39-bf07-e3a2e684ef1a.json",
+          "sha256": "31861377197a43619d42bf22a49c3b3f34b122f800f0f29d4d2fdf75a03a4c60",
+          "localizador": "hoja=SUIVE posicion_original=9 (id=cve_cie10)",
+          "afirmacion_soportada": "Columna fisica cve_cie10 observada en pos 9 del esquema de 59 campos; sin documentar su computo."
+        },
+        {
+          "ruta": "propuestas/investigacion-post-r6/epidemiologia/evidencia/datastore_diccionario_2026-10-24.json",
+          "sha256": "dfe6e73b759a22c5b0a2acc5c9b03573b5d1fed39cd088f5b542c907ca91b348",
+          "localizador": "records[_id=9] Nombre variable=cve_cie10",
+          "afirmacion_soportada": "Live 2026-10-24 confirma desc='Clave' y catalogo vacio; sin cambios vs R6."
+        },
+        {
+          "ruta": "propuestas/investigacion-post-r6/epidemiologia/evidencia/examen_manual_suive32_paginas.txt",
+          "sha256": "9c20cd10f4673483d449551e2a48613e5c030d73ad929aa7ff033f06bf7393cc",
+          "localizador": "paginas del manual: p18",
+          "afirmacion_soportada": "Manual p18: cada enfermedad incluye codigo CIE 10 (generico nacional, sin version/edicion); ejemplo local A04/A08-A09 no aparece en el manual."
+        },
+        {
+          "ruta": "propuestas/investigacion-post-r6/epidemiologia/evidencia/http_log.json",
+          "sha256": "0f0c01573fe25b4e1a659fc01154b678b8a8956156787f8099f6af7876e706a0",
+          "localizador": "consultas package_show/datastore/manual + 403 xlsx/csv/boletin",
+          "afirmacion_soportada": "Package sin cambios (fuentes_extras vacio, version null); manual fresco byte-identico Last-Modified 2021-08-10 < periodo 2022; descargas bloqueadas 403 sin evadir."
+        }
+      ],
+      "condicion_reapertura": "Reabrir si aparece: EPI-R6-01 + EPI-R6-03: instrumento SUIVE edicion aplicable 2022 que fije objeto de cve_cie10 y version de catalogo CIE vinculada al recurso 1689b19c; o diccionario corregido/nota del publicador.; o si W-web (WEB-S4-01) aporta revision del diccionario posterior a 2024-10-31 o nota del publicador que lo resuelva.",
+      "limites": [
+        "Alcance simultaneo por conjunto, diccionario, definicion, nombre y descripcion; no autoriza cruces, homologaciones ni equivalencias.",
+        "Evidencia negativa acotada a las busquedas 2026-10-24 documentadas en http_log.json, no ausencia universal.",
+        "Peticion WEB-S4-01 a W-web pendiente (trabajo/peticiones-web.json): activity stream del conjunto y reintento de descarga por navegacion normal. Si aporta diccionario corregido o nota del publicador, reapertura por adenda/v002."
+      ]
+    },
+    {
+      "id": "https://example.org/mex-ontologi/definition/2334deaa-dd0c-444e-b038-4cc556ad715d%2F11",
+      "tipo": "significados",
+      "original_sha256": "37567ba9e9833acbb79b2c2a1d82bb4ba6c1e273a9933d9152999ce39cbd4d3f",
+      "puerta": "sin_pista_nueva",
+      "pista": null,
+      "estado": "brecha_externa",
+      "afirmacion_propuesta": null,
+      "motivo": "Manual p26: acumulado = total de casos acumulados hasta la semana epidemiologica del ano actual (concepto analitico nacional, no regla de computo de la columna local pos 11). Sin respaldo explicito vinculado a esta definicion; no se aprueba por nombre, ejemplo aislado ni catalogo nacional generico sin vinculo local. Criterio R6 conservado. Puerta primera 2026-10-24: package_show en vivo sin cambios (metadata_modified 2025-08-19, version null, fuentes_extras vacia); revision_list API devuelve 400; indice web del CSV reproduce las mismas descripciones ya documentadas sin instrumento nuevo; Definiciones Operacionales DGE mar-2021 es referente nacional generico sin vinculo campo/recurso/edicion y no se descarga como novedad. Sin pista real; se conserva la evidencia previa con SHAs re-verificados.",
+      "evidencia_faltante": "EPI-R6-01 + EPI-R6-02: documento del publicador que fije objeto y periodo/regla de acumulacion de la columna pos 11; o diccionario corregido con regla de computo (totalm/totalf no la definen).",
+      "evidencia": [
+        {
+          "ruta": "data/portal/inspecciones/2334deaa-dd0c-444e-b038-4cc556ad715d.json",
+          "sha256": "298786f09028a94004420c08eb28120294b130378a0cf12d609a1bffb950288d",
+          "localizador": "/definiciones/10 (Nombre variable=acumulado)",
+          "afirmacion_soportada": "Descripcion='Acumulados', catalogo de referencia vacio, ejemplo registrado; huella f0d809e61ada2173fcef197ce73afddb2e8016b5e60becac65adb4622c52c4d6."
+        },
+        {
+          "ruta": "data/portal/inspecciones/1689b19c-b0dc-4e39-bf07-e3a2e684ef1a.json",
+          "sha256": "31861377197a43619d42bf22a49c3b3f34b122f800f0f29d4d2fdf75a03a4c60",
+          "localizador": "hoja=SUIVE posicion_original=11 (id=acumulado)",
+          "afirmacion_soportada": "Columna fisica acumulado observada en pos 11 del esquema de 59 campos; sin documentar su computo."
+        },
+        {
+          "ruta": "propuestas/investigacion-post-r6/epidemiologia/evidencia/datastore_diccionario_2026-10-24.json",
+          "sha256": "dfe6e73b759a22c5b0a2acc5c9b03573b5d1fed39cd088f5b542c907ca91b348",
+          "localizador": "records[_id=11] Nombre variable=acumulado",
+          "afirmacion_soportada": "Live 2026-10-24 confirma desc='Acumulados' y catalogo vacio; sin cambios vs R6."
+        },
+        {
+          "ruta": "propuestas/investigacion-post-r6/epidemiologia/evidencia/examen_manual_suive32_paginas.txt",
+          "sha256": "9c20cd10f4673483d449551e2a48613e5c030d73ad929aa7ff033f06bf7393cc",
+          "localizador": "paginas del manual: p26",
+          "afirmacion_soportada": "Manual p26: acumulado = total de casos acumulados hasta la semana epidemiologica del ano actual (concepto analitico nacional, no regla de computo de la columna local pos 11)."
+        },
+        {
+          "ruta": "propuestas/investigacion-post-r6/epidemiologia/evidencia/http_log.json",
+          "sha256": "0f0c01573fe25b4e1a659fc01154b678b8a8956156787f8099f6af7876e706a0",
+          "localizador": "consultas package_show/datastore/manual + 403 xlsx/csv/boletin",
+          "afirmacion_soportada": "Package sin cambios (fuentes_extras vacio, version null); manual fresco byte-identico Last-Modified 2021-08-10 < periodo 2022; descargas bloqueadas 403 sin evadir."
+        }
+      ],
+      "condicion_reapertura": "Reabrir si aparece: EPI-R6-01 + EPI-R6-02: documento del publicador que fije objeto y periodo/regla de acumulacion de la columna pos 11; o diccionario corregido con regla de computo (totalm/totalf no la definen).; o si W-web (WEB-S4-01) aporta revision del diccionario posterior a 2024-10-31 o nota del publicador que lo resuelva.",
+      "limites": [
+        "Alcance simultaneo por conjunto, diccionario, definicion, nombre y descripcion; no autoriza cruces, homologaciones ni equivalencias.",
+        "Evidencia negativa acotada a las busquedas 2026-10-24 documentadas en http_log.json, no ausencia universal.",
+        "Peticion WEB-S4-01 a W-web pendiente (trabajo/peticiones-web.json): activity stream del conjunto y reintento de descarga por navegacion normal. Si aporta diccionario corregido o nota del publicador, reapertura por adenda/v002."
+      ]
+    },
+    {
+      "id": "https://example.org/mex-ontologi/definition/2334deaa-dd0c-444e-b038-4cc556ad715d%2F13",
+      "tipo": "significados",
+      "original_sha256": "4aae96c71aa85774d337f9fab46d921726b437d75680b505ce7399962f14b2f8",
+      "puerta": "sin_pista_nueva",
+      "pista": null,
+      "estado": "brecha_externa",
+      "afirmacion_propuesta": null,
+      "motivo": "Manual p18: formato nacional de 30 columnas con tabulacion por edad (layout distinto de las 59 locales); no fija intervalo 01-04 ni resuelve contradiccion nombre/descripcion ni solape edad 5. Sin respaldo explicito vinculado a esta definicion; no se aprueba por nombre, ejemplo aislado ni catalogo nacional generico sin vinculo local. Criterio R6 conservado. Puerta primera 2026-10-24: package_show en vivo sin cambios (metadata_modified 2025-08-19, version null, fuentes_extras vacia); revision_list API devuelve 400; indice web del CSV reproduce las mismas descripciones ya documentadas sin instrumento nuevo; Definiciones Operacionales DGE mar-2021 es referente nacional generico sin vinculo campo/recurso/edicion y no se descarga como novedad. Sin pista real; se conserva la evidencia previa con SHAs re-verificados.",
+      "evidencia_faltante": "EPI-R6-01 + EPI-R6-03: nota del publicador que fije el intervalo real (nombre 01-04 vs descripcion entre 1 y 5) y el tratamiento de la edad 5 frente a de05_a_09.",
+      "evidencia": [
+        {
+          "ruta": "data/portal/inspecciones/2334deaa-dd0c-444e-b038-4cc556ad715d.json",
+          "sha256": "298786f09028a94004420c08eb28120294b130378a0cf12d609a1bffb950288d",
+          "localizador": "/definiciones/12 (Nombre variable=de01_a_04)",
+          "afirmacion_soportada": "Descripcion='Total de personas en vigilancia entre 1 y 5 años', catalogo de referencia vacio, ejemplo registrado; huella 71e70bde79d363823ea85bc4003883140edd8c635069c12e4772ce021b6909dd."
+        },
+        {
+          "ruta": "data/portal/inspecciones/1689b19c-b0dc-4e39-bf07-e3a2e684ef1a.json",
+          "sha256": "31861377197a43619d42bf22a49c3b3f34b122f800f0f29d4d2fdf75a03a4c60",
+          "localizador": "hoja=SUIVE posicion_original=13 (id=de01_a_04)",
+          "afirmacion_soportada": "Columna fisica de01_a_04 observada en pos 13 del esquema de 59 campos; sin documentar su computo."
+        },
+        {
+          "ruta": "propuestas/investigacion-post-r6/epidemiologia/evidencia/datastore_diccionario_2026-10-24.json",
+          "sha256": "dfe6e73b759a22c5b0a2acc5c9b03573b5d1fed39cd088f5b542c907ca91b348",
+          "localizador": "records[_id=13] Nombre variable=de01_a_04",
+          "afirmacion_soportada": "Live 2026-10-24 confirma desc='Total de personas en vigilancia entre 1 y 5 años' y catalogo vacio; sin cambios vs R6."
+        },
+        {
+          "ruta": "propuestas/investigacion-post-r6/epidemiologia/evidencia/examen_manual_suive32_paginas.txt",
+          "sha256": "9c20cd10f4673483d449551e2a48613e5c030d73ad929aa7ff033f06bf7393cc",
+          "localizador": "paginas del manual: p18",
+          "afirmacion_soportada": "Manual p18: formato nacional de 30 columnas con tabulacion por edad (layout distinto de las 59 locales); no fija intervalo 01-04 ni resuelve contradiccion nombre/descripcion ni solape edad 5."
+        },
+        {
+          "ruta": "propuestas/investigacion-post-r6/epidemiologia/evidencia/http_log.json",
+          "sha256": "0f0c01573fe25b4e1a659fc01154b678b8a8956156787f8099f6af7876e706a0",
+          "localizador": "consultas package_show/datastore/manual + 403 xlsx/csv/boletin",
+          "afirmacion_soportada": "Package sin cambios (fuentes_extras vacio, version null); manual fresco byte-identico Last-Modified 2021-08-10 < periodo 2022; descargas bloqueadas 403 sin evadir."
+        }
+      ],
+      "condicion_reapertura": "Reabrir si aparece: EPI-R6-01 + EPI-R6-03: nota del publicador que fije el intervalo real (nombre 01-04 vs descripcion entre 1 y 5) y el tratamiento de la edad 5 frente a de05_a_09.; o si W-web (WEB-S4-01) aporta revision del diccionario posterior a 2024-10-31 o nota del publicador que lo resuelva.",
+      "limites": [
+        "Alcance simultaneo por conjunto, diccionario, definicion, nombre y descripcion; no autoriza cruces, homologaciones ni equivalencias.",
+        "Evidencia negativa acotada a las busquedas 2026-10-24 documentadas en http_log.json, no ausencia universal.",
+        "Peticion WEB-S4-01 a W-web pendiente (trabajo/peticiones-web.json): activity stream del conjunto y reintento de descarga por navegacion normal. Si aporta diccionario corregido o nota del publicador, reapertura por adenda/v002."
+      ]
+    },
+    {
+      "id": "https://example.org/mex-ontologi/definition/2334deaa-dd0c-444e-b038-4cc556ad715d%2F23",
+      "tipo": "significados",
+      "original_sha256": "1f0c3940af1991c6145573486551e07041a3e641b0eba1eb9d2443bd0847b333",
+      "puerta": "sin_pista_nueva",
+      "pista": null,
+      "estado": "brecha_externa",
+      "afirmacion_propuesta": null,
+      "motivo": "Manual p50: recuadro Ign. = casos de edad ignorada en pantalla SUAVE nacional; no es definicion de la columna local pos 23 ni vinculo edicion-recurso-periodo. Sin respaldo explicito vinculado a esta definicion; no se aprueba por nombre, ejemplo aislado ni catalogo nacional generico sin vinculo local. Criterio R6 conservado. Puerta primera 2026-10-24: package_show en vivo sin cambios (metadata_modified 2025-08-19, version null, fuentes_extras vacia); revision_list API devuelve 400; indice web del CSV reproduce las mismas descripciones ya documentadas sin instrumento nuevo; Definiciones Operacionales DGE mar-2021 es referente nacional generico sin vinculo campo/recurso/edicion y no se descarga como novedad. Sin pista real; se conserva la evidencia previa con SHAs re-verificados.",
+      "evidencia_faltante": "EPI-R6-01 + EPI-R6-02: diccionario corregido con descripcion para la columna se_ignoran pos 23, o nota del publicador que fije su sentido literal citando conjunto+diccionario+fila+huella y vincule edicion-recurso-periodo.",
+      "evidencia": [
+        {
+          "ruta": "data/portal/inspecciones/2334deaa-dd0c-444e-b038-4cc556ad715d.json",
+          "sha256": "298786f09028a94004420c08eb28120294b130378a0cf12d609a1bffb950288d",
+          "localizador": "/definiciones/22 (Nombre variable=se_ignoran)",
+          "afirmacion_soportada": "Descripcion='Pendiente de especificar', catalogo de referencia vacio, ejemplo registrado; huella 712a4678ea6443e9f58a98c49834483e2c2821fc6c09ff79afffed6d5b5e4d0c."
+        },
+        {
+          "ruta": "data/portal/inspecciones/1689b19c-b0dc-4e39-bf07-e3a2e684ef1a.json",
+          "sha256": "31861377197a43619d42bf22a49c3b3f34b122f800f0f29d4d2fdf75a03a4c60",
+          "localizador": "hoja=SUIVE posicion_original=23 (id=se_ignoran)",
+          "afirmacion_soportada": "Columna fisica se_ignoran observada en pos 23 del esquema de 59 campos; sin documentar su computo."
+        },
+        {
+          "ruta": "propuestas/investigacion-post-r6/epidemiologia/evidencia/datastore_diccionario_2026-10-24.json",
+          "sha256": "dfe6e73b759a22c5b0a2acc5c9b03573b5d1fed39cd088f5b542c907ca91b348",
+          "localizador": "records[_id=23] Nombre variable=se_ignoran",
+          "afirmacion_soportada": "Live 2026-10-24 confirma desc='Pendiente de especificar' y catalogo vacio; sin cambios vs R6."
+        },
+        {
+          "ruta": "propuestas/investigacion-post-r6/epidemiologia/evidencia/examen_manual_suive32_paginas.txt",
+          "sha256": "9c20cd10f4673483d449551e2a48613e5c030d73ad929aa7ff033f06bf7393cc",
+          "localizador": "paginas del manual: p50",
+          "afirmacion_soportada": "Manual p50: recuadro Ign. = casos de edad ignorada en pantalla SUAVE nacional; no es definicion de la columna local pos 23 ni vinculo edicion-recurso-periodo."
+        },
+        {
+          "ruta": "propuestas/investigacion-post-r6/epidemiologia/evidencia/http_log.json",
+          "sha256": "0f0c01573fe25b4e1a659fc01154b678b8a8956156787f8099f6af7876e706a0",
+          "localizador": "consultas package_show/datastore/manual + 403 xlsx/csv/boletin",
+          "afirmacion_soportada": "Package sin cambios (fuentes_extras vacio, version null); manual fresco byte-identico Last-Modified 2021-08-10 < periodo 2022; descargas bloqueadas 403 sin evadir."
+        }
+      ],
+      "condicion_reapertura": "Reabrir si aparece: EPI-R6-01 + EPI-R6-02: diccionario corregido con descripcion para la columna se_ignoran pos 23, o nota del publicador que fije su sentido literal citando conjunto+diccionario+fila+huella y vincule edicion-recurso-periodo.; o si W-web (WEB-S4-01) aporta revision del diccionario posterior a 2024-10-31 o nota del publicador que lo resuelva.",
+      "limites": [
+        "Alcance simultaneo por conjunto, diccionario, definicion, nombre y descripcion; no autoriza cruces, homologaciones ni equivalencias.",
+        "Evidencia negativa acotada a las busquedas 2026-10-24 documentadas en http_log.json, no ausencia universal.",
+        "Peticion WEB-S4-01 a W-web pendiente (trabajo/peticiones-web.json): activity stream del conjunto y reintento de descarga por navegacion normal. Si aporta diccionario corregido o nota del publicador, reapertura por adenda/v002."
+      ]
+    },
+    {
+      "id": "https://example.org/mex-ontologi/definition/2334deaa-dd0c-444e-b038-4cc556ad715d%2F24",
+      "tipo": "significados",
+      "original_sha256": "e24b5a17fe955469999278d060f0551392a6292107b9d355b43591e40be42d8d",
+      "puerta": "sin_pista_nueva",
+      "pista": null,
+      "estado": "brecha_externa",
+      "afirmacion_propuesta": null,
+      "motivo": "Manual p18: subdivision por sexo del formato nacional; no define la convencion de sufijo f local. Inferir f=femenino por totalf esta prohibido sin respaldo explicito. Sin respaldo explicito vinculado a esta definicion; no se aprueba por nombre, ejemplo aislado ni catalogo nacional generico sin vinculo local. Criterio R6 conservado. Puerta primera 2026-10-24: package_show en vivo sin cambios (metadata_modified 2025-08-19, version null, fuentes_extras vacia); revision_list API devuelve 400; indice web del CSV reproduce las mismas descripciones ya documentadas sin instrumento nuevo; Definiciones Operacionales DGE mar-2021 es referente nacional generico sin vinculo campo/recurso/edicion y no se descarga como novedad. Sin pista real; se conserva la evidencia previa con SHAs re-verificados.",
+      "evidencia_faltante": "EPI-R6-01 + EPI-R6-02: diccionario corregido con descripcion para la columna menores_1f pos 24, o nota del publicador que fije su sentido literal citando conjunto+diccionario+fila+huella y vincule edicion-recurso-periodo.",
+      "evidencia": [
+        {
+          "ruta": "data/portal/inspecciones/2334deaa-dd0c-444e-b038-4cc556ad715d.json",
+          "sha256": "298786f09028a94004420c08eb28120294b130378a0cf12d609a1bffb950288d",
+          "localizador": "/definiciones/23 (Nombre variable=menores_1f)",
+          "afirmacion_soportada": "Descripcion='Pendiente de especificar', catalogo de referencia vacio, ejemplo registrado; huella 9c235bec64ee84ac6be73f13281fb34ccfd77466e273cf25a2b893ed8b15694b."
+        },
+        {
+          "ruta": "data/portal/inspecciones/1689b19c-b0dc-4e39-bf07-e3a2e684ef1a.json",
+          "sha256": "31861377197a43619d42bf22a49c3b3f34b122f800f0f29d4d2fdf75a03a4c60",
+          "localizador": "hoja=SUIVE posicion_original=24 (id=menores_1f)",
+          "afirmacion_soportada": "Columna fisica menores_1f observada en pos 24 del esquema de 59 campos; sin documentar su computo."
+        },
+        {
+          "ruta": "propuestas/investigacion-post-r6/epidemiologia/evidencia/datastore_diccionario_2026-10-24.json",
+          "sha256": "dfe6e73b759a22c5b0a2acc5c9b03573b5d1fed39cd088f5b542c907ca91b348",
+          "localizador": "records[_id=24] Nombre variable=menores_1f",
+          "afirmacion_soportada": "Live 2026-10-24 confirma desc='Pendiente de especificar' y catalogo vacio; sin cambios vs R6."
+        },
+        {
+          "ruta": "propuestas/investigacion-post-r6/epidemiologia/evidencia/examen_manual_suive32_paginas.txt",
+          "sha256": "9c20cd10f4673483d449551e2a48613e5c030d73ad929aa7ff033f06bf7393cc",
+          "localizador": "paginas del manual: p18",
+          "afirmacion_soportada": "Manual p18: subdivision por sexo del formato nacional; no define la convencion de sufijo f local. Inferir f=femenino por totalf esta prohibido sin respaldo explicito."
+        },
+        {
+          "ruta": "propuestas/investigacion-post-r6/epidemiologia/evidencia/http_log.json",
+          "sha256": "0f0c01573fe25b4e1a659fc01154b678b8a8956156787f8099f6af7876e706a0",
+          "localizador": "consultas package_show/datastore/manual + 403 xlsx/csv/boletin",
+          "afirmacion_soportada": "Package sin cambios (fuentes_extras vacio, version null); manual fresco byte-identico Last-Modified 2021-08-10 < periodo 2022; descargas bloqueadas 403 sin evadir."
+        }
+      ],
+      "condicion_reapertura": "Reabrir si aparece: EPI-R6-01 + EPI-R6-02: diccionario corregido con descripcion para la columna menores_1f pos 24, o nota del publicador que fije su sentido literal citando conjunto+diccionario+fila+huella y vincule edicion-recurso-periodo.; o si W-web (WEB-S4-01) aporta revision del diccionario posterior a 2024-10-31 o nota del publicador que lo resuelva.",
+      "limites": [
+        "Alcance simultaneo por conjunto, diccionario, definicion, nombre y descripcion; no autoriza cruces, homologaciones ni equivalencias.",
+        "Evidencia negativa acotada a las busquedas 2026-10-24 documentadas en http_log.json, no ausencia universal.",
+        "Peticion WEB-S4-01 a W-web pendiente (trabajo/peticiones-web.json): activity stream del conjunto y reintento de descarga por navegacion normal. Si aporta diccionario corregido o nota del publicador, reapertura por adenda/v002."
+      ]
+    },
+    {
+      "id": "https://example.org/mex-ontologi/definition/2334deaa-dd0c-444e-b038-4cc556ad715d%2F25",
+      "tipo": "significados",
+      "original_sha256": "e437e4ea9f147f4232174f848c3db4008ef29c4fbd4200db426471b899381eb3",
+      "puerta": "sin_pista_nueva",
+      "pista": null,
+      "estado": "brecha_externa",
+      "afirmacion_propuesta": null,
+      "motivo": "Manual p18: subdivision por sexo del formato nacional; no define la convencion de sufijo f local. Inferir f=femenino por totalf esta prohibido sin respaldo explicito. Sin respaldo explicito vinculado a esta definicion; no se aprueba por nombre, ejemplo aislado ni catalogo nacional generico sin vinculo local. Criterio R6 conservado. Puerta primera 2026-10-24: package_show en vivo sin cambios (metadata_modified 2025-08-19, version null, fuentes_extras vacia); revision_list API devuelve 400; indice web del CSV reproduce las mismas descripciones ya documentadas sin instrumento nuevo; Definiciones Operacionales DGE mar-2021 es referente nacional generico sin vinculo campo/recurso/edicion y no se descarga como novedad. Sin pista real; se conserva la evidencia previa con SHAs re-verificados.",
+      "evidencia_faltante": "EPI-R6-01 + EPI-R6-02: diccionario corregido con descripcion para la columna de01_a_04f pos 25, o nota del publicador que fije su sentido literal citando conjunto+diccionario+fila+huella y vincule edicion-recurso-periodo.",
+      "evidencia": [
+        {
+          "ruta": "data/portal/inspecciones/2334deaa-dd0c-444e-b038-4cc556ad715d.json",
+          "sha256": "298786f09028a94004420c08eb28120294b130378a0cf12d609a1bffb950288d",
+          "localizador": "/definiciones/24 (Nombre variable=de01_a_04f)",
+          "afirmacion_soportada": "Descripcion='Pendiente de especificar', catalogo de referencia vacio, ejemplo registrado; huella 96785af1d47c13ccbdd90e122e3686aac5af1b7574f41d22f10ebe0f4fcaf744."
+        },
+        {
+          "ruta": "data/portal/inspecciones/1689b19c-b0dc-4e39-bf07-e3a2e684ef1a.json",
+          "sha256": "31861377197a43619d42bf22a49c3b3f34b122f800f0f29d4d2fdf75a03a4c60",
+          "localizador": "hoja=SUIVE posicion_original=25 (id=de01_a_04f)",
+          "afirmacion_soportada": "Columna fisica de01_a_04f observada en pos 25 del esquema de 59 campos; sin documentar su computo."
+        },
+        {
+          "ruta": "propuestas/investigacion-post-r6/epidemiologia/evidencia/datastore_diccionario_2026-10-24.json",
+          "sha256": "dfe6e73b759a22c5b0a2acc5c9b03573b5d1fed39cd088f5b542c907ca91b348",
+          "localizador": "records[_id=25] Nombre variable=de01_a_04f",
+          "afirmacion_soportada": "Live 2026-10-24 confirma desc='Pendiente de especificar' y catalogo vacio; sin cambios vs R6."
+        },
+        {
+          "ruta": "propuestas/investigacion-post-r6/epidemiologia/evidencia/examen_manual_suive32_paginas.txt",
+          "sha256": "9c20cd10f4673483d449551e2a48613e5c030d73ad929aa7ff033f06bf7393cc",
+          "localizador": "paginas del manual: p18",
+          "afirmacion_soportada": "Manual p18: subdivision por sexo del formato nacional; no define la convencion de sufijo f local. Inferir f=femenino por totalf esta prohibido sin respaldo explicito."
+        },
+        {
+          "ruta": "propuestas/investigacion-post-r6/epidemiologia/evidencia/http_log.json",
+          "sha256": "0f0c01573fe25b4e1a659fc01154b678b8a8956156787f8099f6af7876e706a0",
+          "localizador": "consultas package_show/datastore/manual + 403 xlsx/csv/boletin",
+          "afirmacion_soportada": "Package sin cambios (fuentes_extras vacio, version null); manual fresco byte-identico Last-Modified 2021-08-10 < periodo 2022; descargas bloqueadas 403 sin evadir."
+        }
+      ],
+      "condicion_reapertura": "Reabrir si aparece: EPI-R6-01 + EPI-R6-02: diccionario corregido con descripcion para la columna de01_a_04f pos 25, o nota del publicador que fije su sentido literal citando conjunto+diccionario+fila+huella y vincule edicion-recurso-periodo.; o si W-web (WEB-S4-01) aporta revision del diccionario posterior a 2024-10-31 o nota del publicador que lo resuelva.",
+      "limites": [
+        "Alcance simultaneo por conjunto, diccionario, definicion, nombre y descripcion; no autoriza cruces, homologaciones ni equivalencias.",
+        "Evidencia negativa acotada a las busquedas 2026-10-24 documentadas en http_log.json, no ausencia universal.",
+        "Peticion WEB-S4-01 a W-web pendiente (trabajo/peticiones-web.json): activity stream del conjunto y reintento de descarga por navegacion normal. Si aporta diccionario corregido o nota del publicador, reapertura por adenda/v002."
+      ]
+    },
+    {
+      "id": "https://example.org/mex-ontologi/definition/2334deaa-dd0c-444e-b038-4cc556ad715d%2F26",
+      "tipo": "significados",
+      "original_sha256": "742bf3c6bfb6fb982e3db898c5f5afd2d800f4c9da51a55212e3618af0580f8a",
+      "puerta": "sin_pista_nueva",
+      "pista": null,
+      "estado": "brecha_externa",
+      "afirmacion_propuesta": null,
+      "motivo": "Manual p18: subdivision por sexo del formato nacional; no define la convencion de sufijo f local. Inferir f=femenino por totalf esta prohibido sin respaldo explicito. Sin respaldo explicito vinculado a esta definicion; no se aprueba por nombre, ejemplo aislado ni catalogo nacional generico sin vinculo local. Criterio R6 conservado. Puerta primera 2026-10-24: package_show en vivo sin cambios (metadata_modified 2025-08-19, version null, fuentes_extras vacia); revision_list API devuelve 400; indice web del CSV reproduce las mismas descripciones ya documentadas sin instrumento nuevo; Definiciones Operacionales DGE mar-2021 es referente nacional generico sin vinculo campo/recurso/edicion y no se descarga como novedad. Sin pista real; se conserva la evidencia previa con SHAs re-verificados.",
+      "evidencia_faltante": "EPI-R6-01 + EPI-R6-02: diccionario corregido con descripcion para la columna de05_a_09f pos 26, o nota del publicador que fije su sentido literal citando conjunto+diccionario+fila+huella y vincule edicion-recurso-periodo.",
+      "evidencia": [
+        {
+          "ruta": "data/portal/inspecciones/2334deaa-dd0c-444e-b038-4cc556ad715d.json",
+          "sha256": "298786f09028a94004420c08eb28120294b130378a0cf12d609a1bffb950288d",
+          "localizador": "/definiciones/25 (Nombre variable=de05_a_09f)",
+          "afirmacion_soportada": "Descripcion='Pendiente de especificar', catalogo de referencia vacio, ejemplo registrado; huella 971f30fab7a6a0948bcd4189a83f840ee1752c0668591c84c02a56b312e65893."
+        },
+        {
+          "ruta": "data/portal/inspecciones/1689b19c-b0dc-4e39-bf07-e3a2e684ef1a.json",
+          "sha256": "31861377197a43619d42bf22a49c3b3f34b122f800f0f29d4d2fdf75a03a4c60",
+          "localizador": "hoja=SUIVE posicion_original=26 (id=de05_a_09f)",
+          "afirmacion_soportada": "Columna fisica de05_a_09f observada en pos 26 del esquema de 59 campos; sin documentar su computo."
+        },
+        {
+          "ruta": "propuestas/investigacion-post-r6/epidemiologia/evidencia/datastore_diccionario_2026-10-24.json",
+          "sha256": "dfe6e73b759a22c5b0a2acc5c9b03573b5d1fed39cd088f5b542c907ca91b348",
+          "localizador": "records[_id=26] Nombre variable=de05_a_09f",
+          "afirmacion_soportada": "Live 2026-10-24 confirma desc='Pendiente de especificar' y catalogo vacio; sin cambios vs R6."
+        },
+        {
+          "ruta": "propuestas/investigacion-post-r6/epidemiologia/evidencia/examen_manual_suive32_paginas.txt",
+          "sha256": "9c20cd10f4673483d449551e2a48613e5c030d73ad929aa7ff033f06bf7393cc",
+          "localizador": "paginas del manual: p18",
+          "afirmacion_soportada": "Manual p18: subdivision por sexo del formato nacional; no define la convencion de sufijo f local. Inferir f=femenino por totalf esta prohibido sin respaldo explicito."
+        },
+        {
+          "ruta": "propuestas/investigacion-post-r6/epidemiologia/evidencia/http_log.json",
+          "sha256": "0f0c01573fe25b4e1a659fc01154b678b8a8956156787f8099f6af7876e706a0",
+          "localizador": "consultas package_show/datastore/manual + 403 xlsx/csv/boletin",
+          "afirmacion_soportada": "Package sin cambios (fuentes_extras vacio, version null); manual fresco byte-identico Last-Modified 2021-08-10 < periodo 2022; descargas bloqueadas 403 sin evadir."
+        }
+      ],
+      "condicion_reapertura": "Reabrir si aparece: EPI-R6-01 + EPI-R6-02: diccionario corregido con descripcion para la columna de05_a_09f pos 26, o nota del publicador que fije su sentido literal citando conjunto+diccionario+fila+huella y vincule edicion-recurso-periodo.; o si W-web (WEB-S4-01) aporta revision del diccionario posterior a 2024-10-31 o nota del publicador que lo resuelva.",
+      "limites": [
+        "Alcance simultaneo por conjunto, diccionario, definicion, nombre y descripcion; no autoriza cruces, homologaciones ni equivalencias.",
+        "Evidencia negativa acotada a las busquedas 2026-10-24 documentadas en http_log.json, no ausencia universal.",
+        "Peticion WEB-S4-01 a W-web pendiente (trabajo/peticiones-web.json): activity stream del conjunto y reintento de descarga por navegacion normal. Si aporta diccionario corregido o nota del publicador, reapertura por adenda/v002."
+      ]
+    },
+    {
+      "id": "https://example.org/mex-ontologi/definition/2334deaa-dd0c-444e-b038-4cc556ad715d%2F27",
+      "tipo": "significados",
+      "original_sha256": "3681cf2dd4c7adcac4d554261ca1d2332820b7ad293c9e072b2816faa702e114",
+      "puerta": "sin_pista_nueva",
+      "pista": null,
+      "estado": "brecha_externa",
+      "afirmacion_propuesta": null,
+      "motivo": "Manual p18: subdivision por sexo del formato nacional; no define la convencion de sufijo f local. Inferir f=femenino por totalf esta prohibido sin respaldo explicito. Sin respaldo explicito vinculado a esta definicion; no se aprueba por nombre, ejemplo aislado ni catalogo nacional generico sin vinculo local. Criterio R6 conservado. Puerta primera 2026-10-24: package_show en vivo sin cambios (metadata_modified 2025-08-19, version null, fuentes_extras vacia); revision_list API devuelve 400; indice web del CSV reproduce las mismas descripciones ya documentadas sin instrumento nuevo; Definiciones Operacionales DGE mar-2021 es referente nacional generico sin vinculo campo/recurso/edicion y no se descarga como novedad. Sin pista real; se conserva la evidencia previa con SHAs re-verificados.",
+      "evidencia_faltante": "EPI-R6-01 + EPI-R6-02: diccionario corregido con descripcion para la columna de10_a_14f pos 27, o nota del publicador que fije su sentido literal citando conjunto+diccionario+fila+huella y vincule edicion-recurso-periodo.",
+      "evidencia": [
+        {
+          "ruta": "data/portal/inspecciones/2334deaa-dd0c-444e-b038-4cc556ad715d.json",
+          "sha256": "298786f09028a94004420c08eb28120294b130378a0cf12d609a1bffb950288d",
+          "localizador": "/definiciones/26 (Nombre variable=de10_a_14f)",
+          "afirmacion_soportada": "Descripcion='Pendiente de especificar', catalogo de referencia vacio, ejemplo registrado; huella 37d126eb7fdbc381aba67bb453c6af51c79b342e69a2ceff8428980bfdb1495d."
+        },
+        {
+          "ruta": "data/portal/inspecciones/1689b19c-b0dc-4e39-bf07-e3a2e684ef1a.json",
+          "sha256": "31861377197a43619d42bf22a49c3b3f34b122f800f0f29d4d2fdf75a03a4c60",
+          "localizador": "hoja=SUIVE posicion_original=27 (id=de10_a_14f)",
+          "afirmacion_soportada": "Columna fisica de10_a_14f observada en pos 27 del esquema de 59 campos; sin documentar su computo."
+        },
+        {
+          "ruta": "propuestas/investigacion-post-r6/epidemiologia/evidencia/datastore_diccionario_2026-10-24.json",
+          "sha256": "dfe6e73b759a22c5b0a2acc5c9b03573b5d1fed39cd088f5b542c907ca91b348",
+          "localizador": "records[_id=27] Nombre variable=de10_a_14f",
+          "afirmacion_soportada": "Live 2026-10-24 confirma desc='Pendiente de especificar' y catalogo vacio; sin cambios vs R6."
+        },
+        {
+          "ruta": "propuestas/investigacion-post-r6/epidemiologia/evidencia/examen_manual_suive32_paginas.txt",
+          "sha256": "9c20cd10f4673483d449551e2a48613e5c030d73ad929aa7ff033f06bf7393cc",
+          "localizador": "paginas del manual: p18",
+          "afirmacion_soportada": "Manual p18: subdivision por sexo del formato nacional; no define la convencion de sufijo f local. Inferir f=femenino por totalf esta prohibido sin respaldo explicito."
+        },
+        {
+          "ruta": "propuestas/investigacion-post-r6/epidemiologia/evidencia/http_log.json",
+          "sha256": "0f0c01573fe25b4e1a659fc01154b678b8a8956156787f8099f6af7876e706a0",
+          "localizador": "consultas package_show/datastore/manual + 403 xlsx/csv/boletin",
+          "afirmacion_soportada": "Package sin cambios (fuentes_extras vacio, version null); manual fresco byte-identico Last-Modified 2021-08-10 < periodo 2022; descargas bloqueadas 403 sin evadir."
+        }
+      ],
+      "condicion_reapertura": "Reabrir si aparece: EPI-R6-01 + EPI-R6-02: diccionario corregido con descripcion para la columna de10_a_14f pos 27, o nota del publicador que fije su sentido literal citando conjunto+diccionario+fila+huella y vincule edicion-recurso-periodo.; o si W-web (WEB-S4-01) aporta revision del diccionario posterior a 2024-10-31 o nota del publicador que lo resuelva.",
+      "limites": [
+        "Alcance simultaneo por conjunto, diccionario, definicion, nombre y descripcion; no autoriza cruces, homologaciones ni equivalencias.",
+        "Evidencia negativa acotada a las busquedas 2026-10-24 documentadas en http_log.json, no ausencia universal.",
+        "Peticion WEB-S4-01 a W-web pendiente (trabajo/peticiones-web.json): activity stream del conjunto y reintento de descarga por navegacion normal. Si aporta diccionario corregido o nota del publicador, reapertura por adenda/v002."
+      ]
+    },
+    {
+      "id": "https://example.org/mex-ontologi/definition/2334deaa-dd0c-444e-b038-4cc556ad715d%2F28",
+      "tipo": "significados",
+      "original_sha256": "c51961483e9d513d35e98d2fdbd81122fa1ec0265a2304debc235bef94c83c45",
+      "puerta": "sin_pista_nueva",
+      "pista": null,
+      "estado": "brecha_externa",
+      "afirmacion_propuesta": null,
+      "motivo": "Manual p18: subdivision por sexo del formato nacional; no define la convencion de sufijo f local. Inferir f=femenino por totalf esta prohibido sin respaldo explicito. Sin respaldo explicito vinculado a esta definicion; no se aprueba por nombre, ejemplo aislado ni catalogo nacional generico sin vinculo local. Criterio R6 conservado. Puerta primera 2026-10-24: package_show en vivo sin cambios (metadata_modified 2025-08-19, version null, fuentes_extras vacia); revision_list API devuelve 400; indice web del CSV reproduce las mismas descripciones ya documentadas sin instrumento nuevo; Definiciones Operacionales DGE mar-2021 es referente nacional generico sin vinculo campo/recurso/edicion y no se descarga como novedad. Sin pista real; se conserva la evidencia previa con SHAs re-verificados.",
+      "evidencia_faltante": "EPI-R6-01 + EPI-R6-02: diccionario corregido con descripcion para la columna de15_a_19f pos 28, o nota del publicador que fije su sentido literal citando conjunto+diccionario+fila+huella y vincule edicion-recurso-periodo.",
+      "evidencia": [
+        {
+          "ruta": "data/portal/inspecciones/2334deaa-dd0c-444e-b038-4cc556ad715d.json",
+          "sha256": "298786f09028a94004420c08eb28120294b130378a0cf12d609a1bffb950288d",
+          "localizador": "/definiciones/27 (Nombre variable=de15_a_19f)",
+          "afirmacion_soportada": "Descripcion='Pendiente de especificar', catalogo de referencia vacio, ejemplo registrado; huella a42fd90e2204759a31ee32e07cdfd56b4d77ff5eb4620463bae4efebc57514c7."
+        },
+        {
+          "ruta": "data/portal/inspecciones/1689b19c-b0dc-4e39-bf07-e3a2e684ef1a.json",
+          "sha256": "31861377197a43619d42bf22a49c3b3f34b122f800f0f29d4d2fdf75a03a4c60",
+          "localizador": "hoja=SUIVE posicion_original=28 (id=de15_a_19f)",
+          "afirmacion_soportada": "Columna fisica de15_a_19f observada en pos 28 del esquema de 59 campos; sin documentar su computo."
+        },
+        {
+          "ruta": "propuestas/investigacion-post-r6/epidemiologia/evidencia/datastore_diccionario_2026-10-24.json",
+          "sha256": "dfe6e73b759a22c5b0a2acc5c9b03573b5d1fed39cd088f5b542c907ca91b348",
+          "localizador": "records[_id=28] Nombre variable=de15_a_19f",
+          "afirmacion_soportada": "Live 2026-10-24 confirma desc='Pendiente de especificar' y catalogo vacio; sin cambios vs R6."
+        },
+        {
+          "ruta": "propuestas/investigacion-post-r6/epidemiologia/evidencia/examen_manual_suive32_paginas.txt",
+          "sha256": "9c20cd10f4673483d449551e2a48613e5c030d73ad929aa7ff033f06bf7393cc",
+          "localizador": "paginas del manual: p18",
+          "afirmacion_soportada": "Manual p18: subdivision por sexo del formato nacional; no define la convencion de sufijo f local. Inferir f=femenino por totalf esta prohibido sin respaldo explicito."
+        },
+        {
+          "ruta": "propuestas/investigacion-post-r6/epidemiologia/evidencia/http_log.json",
+          "sha256": "0f0c01573fe25b4e1a659fc01154b678b8a8956156787f8099f6af7876e706a0",
+          "localizador": "consultas package_show/datastore/manual + 403 xlsx/csv/boletin",
+          "afirmacion_soportada": "Package sin cambios (fuentes_extras vacio, version null); manual fresco byte-identico Last-Modified 2021-08-10 < periodo 2022; descargas bloqueadas 403 sin evadir."
+        }
+      ],
+      "condicion_reapertura": "Reabrir si aparece: EPI-R6-01 + EPI-R6-02: diccionario corregido con descripcion para la columna de15_a_19f pos 28, o nota del publicador que fije su sentido literal citando conjunto+diccionario+fila+huella y vincule edicion-recurso-periodo.; o si W-web (WEB-S4-01) aporta revision del diccionario posterior a 2024-10-31 o nota del publicador que lo resuelva.",
+      "limites": [
+        "Alcance simultaneo por conjunto, diccionario, definicion, nombre y descripcion; no autoriza cruces, homologaciones ni equivalencias.",
+        "Evidencia negativa acotada a las busquedas 2026-10-24 documentadas en http_log.json, no ausencia universal.",
+        "Peticion WEB-S4-01 a W-web pendiente (trabajo/peticiones-web.json): activity stream del conjunto y reintento de descarga por navegacion normal. Si aporta diccionario corregido o nota del publicador, reapertura por adenda/v002."
+      ]
+    },
+    {
+      "id": "https://example.org/mex-ontologi/definition/2334deaa-dd0c-444e-b038-4cc556ad715d%2F29",
+      "tipo": "significados",
+      "original_sha256": "d20dbfbea09971d47fb384fa256a5e4c633e8a9dd3bd4cddebe39730a7e2cd64",
+      "puerta": "sin_pista_nueva",
+      "pista": null,
+      "estado": "brecha_externa",
+      "afirmacion_propuesta": null,
+      "motivo": "Manual p18: subdivision por sexo del formato nacional; no define la convencion de sufijo f local. Inferir f=femenino por totalf esta prohibido sin respaldo explicito. Sin respaldo explicito vinculado a esta definicion; no se aprueba por nombre, ejemplo aislado ni catalogo nacional generico sin vinculo local. Criterio R6 conservado. Puerta primera 2026-10-24: package_show en vivo sin cambios (metadata_modified 2025-08-19, version null, fuentes_extras vacia); revision_list API devuelve 400; indice web del CSV reproduce las mismas descripciones ya documentadas sin instrumento nuevo; Definiciones Operacionales DGE mar-2021 es referente nacional generico sin vinculo campo/recurso/edicion y no se descarga como novedad. Sin pista real; se conserva la evidencia previa con SHAs re-verificados.",
+      "evidencia_faltante": "EPI-R6-01 + EPI-R6-02: diccionario corregido con descripcion para la columna de20_a_24f pos 29, o nota del publicador que fije su sentido literal citando conjunto+diccionario+fila+huella y vincule edicion-recurso-periodo.",
+      "evidencia": [
+        {
+          "ruta": "data/portal/inspecciones/2334deaa-dd0c-444e-b038-4cc556ad715d.json",
+          "sha256": "298786f09028a94004420c08eb28120294b130378a0cf12d609a1bffb950288d",
+          "localizador": "/definiciones/28 (Nombre variable=de20_a_24f)",
+          "afirmacion_soportada": "Descripcion='Pendiente de especificar', catalogo de referencia vacio, ejemplo registrado; huella 0cc4157c95452c748982b1c0667684c551a6bdff52e795e20b71f7b7c2b52e14."
+        },
+        {
+          "ruta": "data/portal/inspecciones/1689b19c-b0dc-4e39-bf07-e3a2e684ef1a.json",
+          "sha256": "31861377197a43619d42bf22a49c3b3f34b122f800f0f29d4d2fdf75a03a4c60",
+          "localizador": "hoja=SUIVE posicion_original=29 (id=de20_a_24f)",
+          "afirmacion_soportada": "Columna fisica de20_a_24f observada en pos 29 del esquema de 59 campos; sin documentar su computo."
+        },
+        {
+          "ruta": "propuestas/investigacion-post-r6/epidemiologia/evidencia/datastore_diccionario_2026-10-24.json",
+          "sha256": "dfe6e73b759a22c5b0a2acc5c9b03573b5d1fed39cd088f5b542c907ca91b348",
+          "localizador": "records[_id=29] Nombre variable=de20_a_24f",
+          "afirmacion_soportada": "Live 2026-10-24 confirma desc='Pendiente de especificar' y catalogo vacio; sin cambios vs R6."
+        },
+        {
+          "ruta": "propuestas/investigacion-post-r6/epidemiologia/evidencia/examen_manual_suive32_paginas.txt",
+          "sha256": "9c20cd10f4673483d449551e2a48613e5c030d73ad929aa7ff033f06bf7393cc",
+          "localizador": "paginas del manual: p18",
+          "afirmacion_soportada": "Manual p18: subdivision por sexo del formato nacional; no define la convencion de sufijo f local. Inferir f=femenino por totalf esta prohibido sin respaldo explicito."
+        },
+        {
+          "ruta": "propuestas/investigacion-post-r6/epidemiologia/evidencia/http_log.json",
+          "sha256": "0f0c01573fe25b4e1a659fc01154b678b8a8956156787f8099f6af7876e706a0",
+          "localizador": "consultas package_show/datastore/manual + 403 xlsx/csv/boletin",
+          "afirmacion_soportada": "Package sin cambios (fuentes_extras vacio, version null); manual fresco byte-identico Last-Modified 2021-08-10 < periodo 2022; descargas bloqueadas 403 sin evadir."
+        }
+      ],
+      "condicion_reapertura": "Reabrir si aparece: EPI-R6-01 + EPI-R6-02: diccionario corregido con descripcion para la columna de20_a_24f pos 29, o nota del publicador que fije su sentido literal citando conjunto+diccionario+fila+huella y vincule edicion-recurso-periodo.; o si W-web (WEB-S4-01) aporta revision del diccionario posterior a 2024-10-31 o nota del publicador que lo resuelva.",
+      "limites": [
+        "Alcance simultaneo por conjunto, diccionario, definicion, nombre y descripcion; no autoriza cruces, homologaciones ni equivalencias.",
+        "Evidencia negativa acotada a las busquedas 2026-10-24 documentadas en http_log.json, no ausencia universal.",
+        "Peticion WEB-S4-01 a W-web pendiente (trabajo/peticiones-web.json): activity stream del conjunto y reintento de descarga por navegacion normal. Si aporta diccionario corregido o nota del publicador, reapertura por adenda/v002."
+      ]
+    },
+    {
+      "id": "https://example.org/mex-ontologi/definition/2334deaa-dd0c-444e-b038-4cc556ad715d%2F30",
+      "tipo": "significados",
+      "original_sha256": "74c1fcb2425f9c66d7f7d6e6c98464172b7bee53e78f3d673f294a1dc2a547b0",
+      "puerta": "sin_pista_nueva",
+      "pista": null,
+      "estado": "brecha_externa",
+      "afirmacion_propuesta": null,
+      "motivo": "Manual p18: subdivision por sexo del formato nacional; no define la convencion de sufijo f local. Inferir f=femenino por totalf esta prohibido sin respaldo explicito. Sin respaldo explicito vinculado a esta definicion; no se aprueba por nombre, ejemplo aislado ni catalogo nacional generico sin vinculo local. Criterio R6 conservado. Puerta primera 2026-10-24: package_show en vivo sin cambios (metadata_modified 2025-08-19, version null, fuentes_extras vacia); revision_list API devuelve 400; indice web del CSV reproduce las mismas descripciones ya documentadas sin instrumento nuevo; Definiciones Operacionales DGE mar-2021 es referente nacional generico sin vinculo campo/recurso/edicion y no se descarga como novedad. Sin pista real; se conserva la evidencia previa con SHAs re-verificados.",
+      "evidencia_faltante": "EPI-R6-01 + EPI-R6-02: diccionario corregido con descripcion para la columna de25_a_44f pos 30, o nota del publicador que fije su sentido literal citando conjunto+diccionario+fila+huella y vincule edicion-recurso-periodo.",
+      "evidencia": [
+        {
+          "ruta": "data/portal/inspecciones/2334deaa-dd0c-444e-b038-4cc556ad715d.json",
+          "sha256": "298786f09028a94004420c08eb28120294b130378a0cf12d609a1bffb950288d",
+          "localizador": "/definiciones/29 (Nombre variable=de25_a_44f)",
+          "afirmacion_soportada": "Descripcion='Pendiente de especificar', catalogo de referencia vacio, ejemplo registrado; huella bfc6c152db70092a5c576d67ffcc541dee1af624ca1e1b0d95f1a6c6f8349b5a."
+        },
+        {
+          "ruta": "data/portal/inspecciones/1689b19c-b0dc-4e39-bf07-e3a2e684ef1a.json",
+          "sha256": "31861377197a43619d42bf22a49c3b3f34b122f800f0f29d4d2fdf75a03a4c60",
+          "localizador": "hoja=SUIVE posicion_original=30 (id=de25_a_44f)",
+          "afirmacion_soportada": "Columna fisica de25_a_44f observada en pos 30 del esquema de 59 campos; sin documentar su computo."
+        },
+        {
+          "ruta": "propuestas/investigacion-post-r6/epidemiologia/evidencia/datastore_diccionario_2026-10-24.json",
+          "sha256": "dfe6e73b759a22c5b0a2acc5c9b03573b5d1fed39cd088f5b542c907ca91b348",
+          "localizador": "records[_id=30] Nombre variable=de25_a_44f",
+          "afirmacion_soportada": "Live 2026-10-24 confirma desc='Pendiente de especificar' y catalogo vacio; sin cambios vs R6."
+        },
+        {
+          "ruta": "propuestas/investigacion-post-r6/epidemiologia/evidencia/examen_manual_suive32_paginas.txt",
+          "sha256": "9c20cd10f4673483d449551e2a48613e5c030d73ad929aa7ff033f06bf7393cc",
+          "localizador": "paginas del manual: p18",
+          "afirmacion_soportada": "Manual p18: subdivision por sexo del formato nacional; no define la convencion de sufijo f local. Inferir f=femenino por totalf esta prohibido sin respaldo explicito."
+        },
+        {
+          "ruta": "propuestas/investigacion-post-r6/epidemiologia/evidencia/http_log.json",
+          "sha256": "0f0c01573fe25b4e1a659fc01154b678b8a8956156787f8099f6af7876e706a0",
+          "localizador": "consultas package_show/datastore/manual + 403 xlsx/csv/boletin",
+          "afirmacion_soportada": "Package sin cambios (fuentes_extras vacio, version null); manual fresco byte-identico Last-Modified 2021-08-10 < periodo 2022; descargas bloqueadas 403 sin evadir."
+        }
+      ],
+      "condicion_reapertura": "Reabrir si aparece: EPI-R6-01 + EPI-R6-02: diccionario corregido con descripcion para la columna de25_a_44f pos 30, o nota del publicador que fije su sentido literal citando conjunto+diccionario+fila+huella y vincule edicion-recurso-periodo.; o si W-web (WEB-S4-01) aporta revision del diccionario posterior a 2024-10-31 o nota del publicador que lo resuelva.",
+      "limites": [
+        "Alcance simultaneo por conjunto, diccionario, definicion, nombre y descripcion; no autoriza cruces, homologaciones ni equivalencias.",
+        "Evidencia negativa acotada a las busquedas 2026-10-24 documentadas en http_log.json, no ausencia universal.",
+        "Peticion WEB-S4-01 a W-web pendiente (trabajo/peticiones-web.json): activity stream del conjunto y reintento de descarga por navegacion normal. Si aporta diccionario corregido o nota del publicador, reapertura por adenda/v002."
+      ]
+    },
+    {
+      "id": "https://example.org/mex-ontologi/definition/2334deaa-dd0c-444e-b038-4cc556ad715d%2F31",
+      "tipo": "significados",
+      "original_sha256": "281918b5d144da41ee4d611e91d59ffb4f8edd17e373ea37976f0ccbb6b98be1",
+      "puerta": "sin_pista_nueva",
+      "pista": null,
+      "estado": "brecha_externa",
+      "afirmacion_propuesta": null,
+      "motivo": "Manual p18: subdivision por sexo del formato nacional; no define la convencion de sufijo f local. Inferir f=femenino por totalf esta prohibido sin respaldo explicito. Sin respaldo explicito vinculado a esta definicion; no se aprueba por nombre, ejemplo aislado ni catalogo nacional generico sin vinculo local. Criterio R6 conservado. Puerta primera 2026-10-24: package_show en vivo sin cambios (metadata_modified 2025-08-19, version null, fuentes_extras vacia); revision_list API devuelve 400; indice web del CSV reproduce las mismas descripciones ya documentadas sin instrumento nuevo; Definiciones Operacionales DGE mar-2021 es referente nacional generico sin vinculo campo/recurso/edicion y no se descarga como novedad. Sin pista real; se conserva la evidencia previa con SHAs re-verificados.",
+      "evidencia_faltante": "EPI-R6-01 + EPI-R6-02: diccionario corregido con descripcion para la columna de45_a_49f pos 31, o nota del publicador que fije su sentido literal citando conjunto+diccionario+fila+huella y vincule edicion-recurso-periodo.",
+      "evidencia": [
+        {
+          "ruta": "data/portal/inspecciones/2334deaa-dd0c-444e-b038-4cc556ad715d.json",
+          "sha256": "298786f09028a94004420c08eb28120294b130378a0cf12d609a1bffb950288d",
+          "localizador": "/definiciones/30 (Nombre variable=de45_a_49f)",
+          "afirmacion_soportada": "Descripcion='Pendiente de especificar', catalogo de referencia vacio, ejemplo registrado; huella 91c1f556eee3a0e4d124a37770bc921d895d4e3640fdcf669f6190d9c3ea6435."
+        },
+        {
+          "ruta": "data/portal/inspecciones/1689b19c-b0dc-4e39-bf07-e3a2e684ef1a.json",
+          "sha256": "31861377197a43619d42bf22a49c3b3f34b122f800f0f29d4d2fdf75a03a4c60",
+          "localizador": "hoja=SUIVE posicion_original=31 (id=de45_a_49f)",
+          "afirmacion_soportada": "Columna fisica de45_a_49f observada en pos 31 del esquema de 59 campos; sin documentar su computo."
+        },
+        {
+          "ruta": "propuestas/investigacion-post-r6/epidemiologia/evidencia/datastore_diccionario_2026-10-24.json",
+          "sha256": "dfe6e73b759a22c5b0a2acc5c9b03573b5d1fed39cd088f5b542c907ca91b348",
+          "localizador": "records[_id=31] Nombre variable=de45_a_49f",
+          "afirmacion_soportada": "Live 2026-10-24 confirma desc='Pendiente de especificar' y catalogo vacio; sin cambios vs R6."
+        },
+        {
+          "ruta": "propuestas/investigacion-post-r6/epidemiologia/evidencia/examen_manual_suive32_paginas.txt",
+          "sha256": "9c20cd10f4673483d449551e2a48613e5c030d73ad929aa7ff033f06bf7393cc",
+          "localizador": "paginas del manual: p18",
+          "afirmacion_soportada": "Manual p18: subdivision por sexo del formato nacional; no define la convencion de sufijo f local. Inferir f=femenino por totalf esta prohibido sin respaldo explicito."
+        },
+        {
+          "ruta": "propuestas/investigacion-post-r6/epidemiologia/evidencia/http_log.json",
+          "sha256": "0f0c01573fe25b4e1a659fc01154b678b8a8956156787f8099f6af7876e706a0",
+          "localizador": "consultas package_show/datastore/manual + 403 xlsx/csv/boletin",
+          "afirmacion_soportada": "Package sin cambios (fuentes_extras vacio, version null); manual fresco byte-identico Last-Modified 2021-08-10 < periodo 2022; descargas bloqueadas 403 sin evadir."
+        }
+      ],
+      "condicion_reapertura": "Reabrir si aparece: EPI-R6-01 + EPI-R6-02: diccionario corregido con descripcion para la columna de45_a_49f pos 31, o nota del publicador que fije su sentido literal citando conjunto+diccionario+fila+huella y vincule edicion-recurso-periodo.; o si W-web (WEB-S4-01) aporta revision del diccionario posterior a 2024-10-31 o nota del publicador que lo resuelva.",
+      "limites": [
+        "Alcance simultaneo por conjunto, diccionario, definicion, nombre y descripcion; no autoriza cruces, homologaciones ni equivalencias.",
+        "Evidencia negativa acotada a las busquedas 2026-10-24 documentadas en http_log.json, no ausencia universal.",
+        "Peticion WEB-S4-01 a W-web pendiente (trabajo/peticiones-web.json): activity stream del conjunto y reintento de descarga por navegacion normal. Si aporta diccionario corregido o nota del publicador, reapertura por adenda/v002."
+      ]
+    },
+    {
+      "id": "https://example.org/mex-ontologi/definition/2334deaa-dd0c-444e-b038-4cc556ad715d%2F32",
+      "tipo": "significados",
+      "original_sha256": "952f2231c90bfb3c9a3b6e1d5e4f906effd082ea7f109a99758713ee9d668513",
+      "puerta": "sin_pista_nueva",
+      "pista": null,
+      "estado": "brecha_externa",
+      "afirmacion_propuesta": null,
+      "motivo": "Manual p18: subdivision por sexo del formato nacional; no define la convencion de sufijo f local. Inferir f=femenino por totalf esta prohibido sin respaldo explicito. Sin respaldo explicito vinculado a esta definicion; no se aprueba por nombre, ejemplo aislado ni catalogo nacional generico sin vinculo local. Criterio R6 conservado. Puerta primera 2026-10-24: package_show en vivo sin cambios (metadata_modified 2025-08-19, version null, fuentes_extras vacia); revision_list API devuelve 400; indice web del CSV reproduce las mismas descripciones ya documentadas sin instrumento nuevo; Definiciones Operacionales DGE mar-2021 es referente nacional generico sin vinculo campo/recurso/edicion y no se descarga como novedad. Sin pista real; se conserva la evidencia previa con SHAs re-verificados.",
+      "evidencia_faltante": "EPI-R6-01 + EPI-R6-02: diccionario corregido con descripcion para la columna de50_a_59f pos 32, o nota del publicador que fije su sentido literal citando conjunto+diccionario+fila+huella y vincule edicion-recurso-periodo.",
+      "evidencia": [
+        {
+          "ruta": "data/portal/inspecciones/2334deaa-dd0c-444e-b038-4cc556ad715d.json",
+          "sha256": "298786f09028a94004420c08eb28120294b130378a0cf12d609a1bffb950288d",
+          "localizador": "/definiciones/31 (Nombre variable=de50_a_59f)",
+          "afirmacion_soportada": "Descripcion='Pendiente de especificar', catalogo de referencia vacio, ejemplo registrado; huella 0b783d062a8c4d6dc664997cbe2c2f62aac91a0a616b409f953f0c3d9e3f9988."
+        },
+        {
+          "ruta": "data/portal/inspecciones/1689b19c-b0dc-4e39-bf07-e3a2e684ef1a.json",
+          "sha256": "31861377197a43619d42bf22a49c3b3f34b122f800f0f29d4d2fdf75a03a4c60",
+          "localizador": "hoja=SUIVE posicion_original=32 (id=de50_a_59f)",
+          "afirmacion_soportada": "Columna fisica de50_a_59f observada en pos 32 del esquema de 59 campos; sin documentar su computo."
+        },
+        {
+          "ruta": "propuestas/investigacion-post-r6/epidemiologia/evidencia/datastore_diccionario_2026-10-24.json",
+          "sha256": "dfe6e73b759a22c5b0a2acc5c9b03573b5d1fed39cd088f5b542c907ca91b348",
+          "localizador": "records[_id=32] Nombre variable=de50_a_59f",
+          "afirmacion_soportada": "Live 2026-10-24 confirma desc='Pendiente de especificar' y catalogo vacio; sin cambios vs R6."
+        },
+        {
+          "ruta": "propuestas/investigacion-post-r6/epidemiologia/evidencia/examen_manual_suive32_paginas.txt",
+          "sha256": "9c20cd10f4673483d449551e2a48613e5c030d73ad929aa7ff033f06bf7393cc",
+          "localizador": "paginas del manual: p18",
+          "afirmacion_soportada": "Manual p18: subdivision por sexo del formato nacional; no define la convencion de sufijo f local. Inferir f=femenino por totalf esta prohibido sin respaldo explicito."
+        },
+        {
+          "ruta": "propuestas/investigacion-post-r6/epidemiologia/evidencia/http_log.json",
+          "sha256": "0f0c01573fe25b4e1a659fc01154b678b8a8956156787f8099f6af7876e706a0",
+          "localizador": "consultas package_show/datastore/manual + 403 xlsx/csv/boletin",
+          "afirmacion_soportada": "Package sin cambios (fuentes_extras vacio, version null); manual fresco byte-identico Last-Modified 2021-08-10 < periodo 2022; descargas bloqueadas 403 sin evadir."
+        }
+      ],
+      "condicion_reapertura": "Reabrir si aparece: EPI-R6-01 + EPI-R6-02: diccionario corregido con descripcion para la columna de50_a_59f pos 32, o nota del publicador que fije su sentido literal citando conjunto+diccionario+fila+huella y vincule edicion-recurso-periodo.; o si W-web (WEB-S4-01) aporta revision del diccionario posterior a 2024-10-31 o nota del publicador que lo resuelva.",
+      "limites": [
+        "Alcance simultaneo por conjunto, diccionario, definicion, nombre y descripcion; no autoriza cruces, homologaciones ni equivalencias.",
+        "Evidencia negativa acotada a las busquedas 2026-10-24 documentadas en http_log.json, no ausencia universal.",
+        "Peticion WEB-S4-01 a W-web pendiente (trabajo/peticiones-web.json): activity stream del conjunto y reintento de descarga por navegacion normal. Si aporta diccionario corregido o nota del publicador, reapertura por adenda/v002."
+      ]
+    },
+    {
+      "id": "https://example.org/mex-ontologi/definition/2334deaa-dd0c-444e-b038-4cc556ad715d%2F33",
+      "tipo": "significados",
+      "original_sha256": "2937bb4f73fc63622c50e4cc89d963798f5f56376edb651ea46ac8271d487307",
+      "puerta": "sin_pista_nueva",
+      "pista": null,
+      "estado": "brecha_externa",
+      "afirmacion_propuesta": null,
+      "motivo": "Manual p18: subdivision por sexo del formato nacional; no define la convencion de sufijo f local. Inferir f=femenino por totalf esta prohibido sin respaldo explicito. Sin respaldo explicito vinculado a esta definicion; no se aprueba por nombre, ejemplo aislado ni catalogo nacional generico sin vinculo local. Criterio R6 conservado. Puerta primera 2026-10-24: package_show en vivo sin cambios (metadata_modified 2025-08-19, version null, fuentes_extras vacia); revision_list API devuelve 400; indice web del CSV reproduce las mismas descripciones ya documentadas sin instrumento nuevo; Definiciones Operacionales DGE mar-2021 es referente nacional generico sin vinculo campo/recurso/edicion y no se descarga como novedad. Sin pista real; se conserva la evidencia previa con SHAs re-verificados.",
+      "evidencia_faltante": "EPI-R6-01 + EPI-R6-02: diccionario corregido con descripcion para la columna de60_a_64f pos 33, o nota del publicador que fije su sentido literal citando conjunto+diccionario+fila+huella y vincule edicion-recurso-periodo.",
+      "evidencia": [
+        {
+          "ruta": "data/portal/inspecciones/2334deaa-dd0c-444e-b038-4cc556ad715d.json",
+          "sha256": "298786f09028a94004420c08eb28120294b130378a0cf12d609a1bffb950288d",
+          "localizador": "/definiciones/32 (Nombre variable=de60_a_64f)",
+          "afirmacion_soportada": "Descripcion='Pendiente de especificar', catalogo de referencia vacio, ejemplo registrado; huella 413000668b1a98f5b920a81d0ef2d809ec4245323b769e2cea0b2d9f793f3cf9."
+        },
+        {
+          "ruta": "data/portal/inspecciones/1689b19c-b0dc-4e39-bf07-e3a2e684ef1a.json",
+          "sha256": "31861377197a43619d42bf22a49c3b3f34b122f800f0f29d4d2fdf75a03a4c60",
+          "localizador": "hoja=SUIVE posicion_original=33 (id=de60_a_64f)",
+          "afirmacion_soportada": "Columna fisica de60_a_64f observada en pos 33 del esquema de 59 campos; sin documentar su computo."
+        },
+        {
+          "ruta": "propuestas/investigacion-post-r6/epidemiologia/evidencia/datastore_diccionario_2026-10-24.json",
+          "sha256": "dfe6e73b759a22c5b0a2acc5c9b03573b5d1fed39cd088f5b542c907ca91b348",
+          "localizador": "records[_id=33] Nombre variable=de60_a_64f",
+          "afirmacion_soportada": "Live 2026-10-24 confirma desc='Pendiente de especificar' y catalogo vacio; sin cambios vs R6."
+        },
+        {
+          "ruta": "propuestas/investigacion-post-r6/epidemiologia/evidencia/examen_manual_suive32_paginas.txt",
+          "sha256": "9c20cd10f4673483d449551e2a48613e5c030d73ad929aa7ff033f06bf7393cc",
+          "localizador": "paginas del manual: p18",
+          "afirmacion_soportada": "Manual p18: subdivision por sexo del formato nacional; no define la convencion de sufijo f local. Inferir f=femenino por totalf esta prohibido sin respaldo explicito."
+        },
+        {
+          "ruta": "propuestas/investigacion-post-r6/epidemiologia/evidencia/http_log.json",
+          "sha256": "0f0c01573fe25b4e1a659fc01154b678b8a8956156787f8099f6af7876e706a0",
+          "localizador": "consultas package_show/datastore/manual + 403 xlsx/csv/boletin",
+          "afirmacion_soportada": "Package sin cambios (fuentes_extras vacio, version null); manual fresco byte-identico Last-Modified 2021-08-10 < periodo 2022; descargas bloqueadas 403 sin evadir."
+        }
+      ],
+      "condicion_reapertura": "Reabrir si aparece: EPI-R6-01 + EPI-R6-02: diccionario corregido con descripcion para la columna de60_a_64f pos 33, o nota del publicador que fije su sentido literal citando conjunto+diccionario+fila+huella y vincule edicion-recurso-periodo.; o si W-web (WEB-S4-01) aporta revision del diccionario posterior a 2024-10-31 o nota del publicador que lo resuelva.",
+      "limites": [
+        "Alcance simultaneo por conjunto, diccionario, definicion, nombre y descripcion; no autoriza cruces, homologaciones ni equivalencias.",
+        "Evidencia negativa acotada a las busquedas 2026-10-24 documentadas en http_log.json, no ausencia universal.",
+        "Peticion WEB-S4-01 a W-web pendiente (trabajo/peticiones-web.json): activity stream del conjunto y reintento de descarga por navegacion normal. Si aporta diccionario corregido o nota del publicador, reapertura por adenda/v002."
+      ]
+    },
+    {
+      "id": "https://example.org/mex-ontologi/definition/2334deaa-dd0c-444e-b038-4cc556ad715d%2F34",
+      "tipo": "significados",
+      "original_sha256": "1916efe320551b77554d5b303989594a8430cf2b9008f2577815b120fd7c6711",
+      "puerta": "sin_pista_nueva",
+      "pista": null,
+      "estado": "brecha_externa",
+      "afirmacion_propuesta": null,
+      "motivo": "Manual p18: subdivision por sexo del formato nacional; no define la convencion de sufijo f local. Inferir f=femenino por totalf esta prohibido sin respaldo explicito. Sin respaldo explicito vinculado a esta definicion; no se aprueba por nombre, ejemplo aislado ni catalogo nacional generico sin vinculo local. Criterio R6 conservado. Puerta primera 2026-10-24: package_show en vivo sin cambios (metadata_modified 2025-08-19, version null, fuentes_extras vacia); revision_list API devuelve 400; indice web del CSV reproduce las mismas descripciones ya documentadas sin instrumento nuevo; Definiciones Operacionales DGE mar-2021 es referente nacional generico sin vinculo campo/recurso/edicion y no se descarga como novedad. Sin pista real; se conserva la evidencia previa con SHAs re-verificados.",
+      "evidencia_faltante": "EPI-R6-01 + EPI-R6-02: diccionario corregido con descripcion para la columna de65_y_maf pos 34, o nota del publicador que fije su sentido literal citando conjunto+diccionario+fila+huella y vincule edicion-recurso-periodo.",
+      "evidencia": [
+        {
+          "ruta": "data/portal/inspecciones/2334deaa-dd0c-444e-b038-4cc556ad715d.json",
+          "sha256": "298786f09028a94004420c08eb28120294b130378a0cf12d609a1bffb950288d",
+          "localizador": "/definiciones/33 (Nombre variable=de65_y_maf)",
+          "afirmacion_soportada": "Descripcion='Pendiente de especificar', catalogo de referencia vacio, ejemplo registrado; huella dbf3d9f670449df35da5f8973d3e4491e8dd5ba5d334b1f87f0c0c1ab0ad88a6."
+        },
+        {
+          "ruta": "data/portal/inspecciones/1689b19c-b0dc-4e39-bf07-e3a2e684ef1a.json",
+          "sha256": "31861377197a43619d42bf22a49c3b3f34b122f800f0f29d4d2fdf75a03a4c60",
+          "localizador": "hoja=SUIVE posicion_original=34 (id=de65_y_maf)",
+          "afirmacion_soportada": "Columna fisica de65_y_maf observada en pos 34 del esquema de 59 campos; sin documentar su computo."
+        },
+        {
+          "ruta": "propuestas/investigacion-post-r6/epidemiologia/evidencia/datastore_diccionario_2026-10-24.json",
+          "sha256": "dfe6e73b759a22c5b0a2acc5c9b03573b5d1fed39cd088f5b542c907ca91b348",
+          "localizador": "records[_id=34] Nombre variable=de65_y_maf",
+          "afirmacion_soportada": "Live 2026-10-24 confirma desc='Pendiente de especificar' y catalogo vacio; sin cambios vs R6."
+        },
+        {
+          "ruta": "propuestas/investigacion-post-r6/epidemiologia/evidencia/examen_manual_suive32_paginas.txt",
+          "sha256": "9c20cd10f4673483d449551e2a48613e5c030d73ad929aa7ff033f06bf7393cc",
+          "localizador": "paginas del manual: p18",
+          "afirmacion_soportada": "Manual p18: subdivision por sexo del formato nacional; no define la convencion de sufijo f local. Inferir f=femenino por totalf esta prohibido sin respaldo explicito."
+        },
+        {
+          "ruta": "propuestas/investigacion-post-r6/epidemiologia/evidencia/http_log.json",
+          "sha256": "0f0c01573fe25b4e1a659fc01154b678b8a8956156787f8099f6af7876e706a0",
+          "localizador": "consultas package_show/datastore/manual + 403 xlsx/csv/boletin",
+          "afirmacion_soportada": "Package sin cambios (fuentes_extras vacio, version null); manual fresco byte-identico Last-Modified 2021-08-10 < periodo 2022; descargas bloqueadas 403 sin evadir."
+        }
+      ],
+      "condicion_reapertura": "Reabrir si aparece: EPI-R6-01 + EPI-R6-02: diccionario corregido con descripcion para la columna de65_y_maf pos 34, o nota del publicador que fije su sentido literal citando conjunto+diccionario+fila+huella y vincule edicion-recurso-periodo.; o si W-web (WEB-S4-01) aporta revision del diccionario posterior a 2024-10-31 o nota del publicador que lo resuelva.",
+      "limites": [
+        "Alcance simultaneo por conjunto, diccionario, definicion, nombre y descripcion; no autoriza cruces, homologaciones ni equivalencias.",
+        "Evidencia negativa acotada a las busquedas 2026-10-24 documentadas en http_log.json, no ausencia universal.",
+        "Peticion WEB-S4-01 a W-web pendiente (trabajo/peticiones-web.json): activity stream del conjunto y reintento de descarga por navegacion normal. Si aporta diccionario corregido o nota del publicador, reapertura por adenda/v002."
+      ]
+    },
+    {
+      "id": "https://example.org/mex-ontologi/definition/2334deaa-dd0c-444e-b038-4cc556ad715d%2F35",
+      "tipo": "significados",
+      "original_sha256": "328a14d0c2ae5eda8ce142fc1e1900f03d6b0b5f0c0a693213bf1cf5acc15361",
+      "puerta": "sin_pista_nueva",
+      "pista": null,
+      "estado": "brecha_externa",
+      "afirmacion_propuesta": null,
+      "motivo": "Manual p18: subdivision por sexo del formato nacional; no define la convencion de sufijo f local. Inferir f=femenino por totalf esta prohibido sin respaldo explicito. Sin respaldo explicito vinculado a esta definicion; no se aprueba por nombre, ejemplo aislado ni catalogo nacional generico sin vinculo local. Criterio R6 conservado. Puerta primera 2026-10-24: package_show en vivo sin cambios (metadata_modified 2025-08-19, version null, fuentes_extras vacia); revision_list API devuelve 400; indice web del CSV reproduce las mismas descripciones ya documentadas sin instrumento nuevo; Definiciones Operacionales DGE mar-2021 es referente nacional generico sin vinculo campo/recurso/edicion y no se descarga como novedad. Sin pista real; se conserva la evidencia previa con SHAs re-verificados.",
+      "evidencia_faltante": "EPI-R6-01 + EPI-R6-02: diccionario corregido con descripcion para la columna se_ignoraf pos 35, o nota del publicador que fije su sentido literal citando conjunto+diccionario+fila+huella y vincule edicion-recurso-periodo.",
+      "evidencia": [
+        {
+          "ruta": "data/portal/inspecciones/2334deaa-dd0c-444e-b038-4cc556ad715d.json",
+          "sha256": "298786f09028a94004420c08eb28120294b130378a0cf12d609a1bffb950288d",
+          "localizador": "/definiciones/34 (Nombre variable=se_ignoraf)",
+          "afirmacion_soportada": "Descripcion='Pendiente de especificar', catalogo de referencia vacio, ejemplo registrado; huella 2ca9f9926c9a1888648ca555419346e0d0d7c0340fa2f3883e4bec38eaa11ea3."
+        },
+        {
+          "ruta": "data/portal/inspecciones/1689b19c-b0dc-4e39-bf07-e3a2e684ef1a.json",
+          "sha256": "31861377197a43619d42bf22a49c3b3f34b122f800f0f29d4d2fdf75a03a4c60",
+          "localizador": "hoja=SUIVE posicion_original=35 (id=se_ignoraf)",
+          "afirmacion_soportada": "Columna fisica se_ignoraf observada en pos 35 del esquema de 59 campos; sin documentar su computo."
+        },
+        {
+          "ruta": "propuestas/investigacion-post-r6/epidemiologia/evidencia/datastore_diccionario_2026-10-24.json",
+          "sha256": "dfe6e73b759a22c5b0a2acc5c9b03573b5d1fed39cd088f5b542c907ca91b348",
+          "localizador": "records[_id=35] Nombre variable=se_ignoraf",
+          "afirmacion_soportada": "Live 2026-10-24 confirma desc='Pendiente de especificar' y catalogo vacio; sin cambios vs R6."
+        },
+        {
+          "ruta": "propuestas/investigacion-post-r6/epidemiologia/evidencia/examen_manual_suive32_paginas.txt",
+          "sha256": "9c20cd10f4673483d449551e2a48613e5c030d73ad929aa7ff033f06bf7393cc",
+          "localizador": "paginas del manual: p18",
+          "afirmacion_soportada": "Manual p18: subdivision por sexo del formato nacional; no define la convencion de sufijo f local. Inferir f=femenino por totalf esta prohibido sin respaldo explicito."
+        },
+        {
+          "ruta": "propuestas/investigacion-post-r6/epidemiologia/evidencia/http_log.json",
+          "sha256": "0f0c01573fe25b4e1a659fc01154b678b8a8956156787f8099f6af7876e706a0",
+          "localizador": "consultas package_show/datastore/manual + 403 xlsx/csv/boletin",
+          "afirmacion_soportada": "Package sin cambios (fuentes_extras vacio, version null); manual fresco byte-identico Last-Modified 2021-08-10 < periodo 2022; descargas bloqueadas 403 sin evadir."
+        }
+      ],
+      "condicion_reapertura": "Reabrir si aparece: EPI-R6-01 + EPI-R6-02: diccionario corregido con descripcion para la columna se_ignoraf pos 35, o nota del publicador que fije su sentido literal citando conjunto+diccionario+fila+huella y vincule edicion-recurso-periodo.; o si W-web (WEB-S4-01) aporta revision del diccionario posterior a 2024-10-31 o nota del publicador que lo resuelva.",
+      "limites": [
+        "Alcance simultaneo por conjunto, diccionario, definicion, nombre y descripcion; no autoriza cruces, homologaciones ni equivalencias.",
+        "Evidencia negativa acotada a las busquedas 2026-10-24 documentadas en http_log.json, no ausencia universal.",
+        "Peticion WEB-S4-01 a W-web pendiente (trabajo/peticiones-web.json): activity stream del conjunto y reintento de descarga por navegacion normal. Si aporta diccionario corregido o nota del publicador, reapertura por adenda/v002."
+      ]
+    },
+    {
+      "id": "https://example.org/mex-ontologi/definition/2334deaa-dd0c-444e-b038-4cc556ad715d%2F36",
+      "tipo": "significados",
+      "original_sha256": "273102ef55e2e433fe0fe95d5b4c19070d33d13102851897a0d42265d3b53d86",
+      "puerta": "sin_pista_nueva",
+      "pista": null,
+      "estado": "brecha_externa",
+      "afirmacion_propuesta": null,
+      "motivo": "Manual p17: instituciones nacionales SSA, IMSS, ISSSTE, Otras, IMSS-Prospera, DIF, PEMEX, SEDENA, SEMAR; conjunto DISTINTO de las 9 columnas locales (imss_ord/imss_sol/d_if/sedemar vs IMSS-Prospera/DIF/SEMAR). Sin equivalencia autorizada. Sin respaldo explicito vinculado a esta definicion; no se aprueba por nombre, ejemplo aislado ni catalogo nacional generico sin vinculo local. Criterio R6 conservado. Puerta primera 2026-10-24: package_show en vivo sin cambios (metadata_modified 2025-08-19, version null, fuentes_extras vacia); revision_list API devuelve 400; indice web del CSV reproduce las mismas descripciones ya documentadas sin instrumento nuevo; Definiciones Operacionales DGE mar-2021 es referente nacional generico sin vinculo campo/recurso/edicion y no se descarga como novedad. Sin pista real; se conserva la evidencia previa con SHAs re-verificados.",
+      "evidencia_faltante": "EPI-R6-01 + EPI-R6-02: diccionario corregido con descripcion para la columna ssa pos 36, o nota del publicador que fije su sentido literal citando conjunto+diccionario+fila+huella y vincule edicion-recurso-periodo.",
+      "evidencia": [
+        {
+          "ruta": "data/portal/inspecciones/2334deaa-dd0c-444e-b038-4cc556ad715d.json",
+          "sha256": "298786f09028a94004420c08eb28120294b130378a0cf12d609a1bffb950288d",
+          "localizador": "/definiciones/35 (Nombre variable=ssa)",
+          "afirmacion_soportada": "Descripcion='Pendiente de especificar', catalogo de referencia vacio, ejemplo registrado; huella 892a850ba9bee2014e8ea5157ed208a1b7285937ec068a7600f3ced39786d710."
+        },
+        {
+          "ruta": "data/portal/inspecciones/1689b19c-b0dc-4e39-bf07-e3a2e684ef1a.json",
+          "sha256": "31861377197a43619d42bf22a49c3b3f34b122f800f0f29d4d2fdf75a03a4c60",
+          "localizador": "hoja=SUIVE posicion_original=36 (id=ssa)",
+          "afirmacion_soportada": "Columna fisica ssa observada en pos 36 del esquema de 59 campos; sin documentar su computo."
+        },
+        {
+          "ruta": "propuestas/investigacion-post-r6/epidemiologia/evidencia/datastore_diccionario_2026-10-24.json",
+          "sha256": "dfe6e73b759a22c5b0a2acc5c9b03573b5d1fed39cd088f5b542c907ca91b348",
+          "localizador": "records[_id=36] Nombre variable=ssa",
+          "afirmacion_soportada": "Live 2026-10-24 confirma desc='Pendiente de especificar' y catalogo vacio; sin cambios vs R6."
+        },
+        {
+          "ruta": "propuestas/investigacion-post-r6/epidemiologia/evidencia/examen_manual_suive32_paginas.txt",
+          "sha256": "9c20cd10f4673483d449551e2a48613e5c030d73ad929aa7ff033f06bf7393cc",
+          "localizador": "paginas del manual: p17",
+          "afirmacion_soportada": "Manual p17: instituciones nacionales SSA, IMSS, ISSSTE, Otras, IMSS-Prospera, DIF, PEMEX, SEDENA, SEMAR; conjunto DISTINTO de las 9 columnas locales (imss_ord/imss_sol/d_if/sedemar vs IMSS-Prospera/DIF/SEMAR). Sin equivalencia autorizada."
+        },
+        {
+          "ruta": "propuestas/investigacion-post-r6/epidemiologia/evidencia/http_log.json",
+          "sha256": "0f0c01573fe25b4e1a659fc01154b678b8a8956156787f8099f6af7876e706a0",
+          "localizador": "consultas package_show/datastore/manual + 403 xlsx/csv/boletin",
+          "afirmacion_soportada": "Package sin cambios (fuentes_extras vacio, version null); manual fresco byte-identico Last-Modified 2021-08-10 < periodo 2022; descargas bloqueadas 403 sin evadir."
+        }
+      ],
+      "condicion_reapertura": "Reabrir si aparece: EPI-R6-01 + EPI-R6-02: diccionario corregido con descripcion para la columna ssa pos 36, o nota del publicador que fije su sentido literal citando conjunto+diccionario+fila+huella y vincule edicion-recurso-periodo.; o si W-web (WEB-S4-01) aporta revision del diccionario posterior a 2024-10-31 o nota del publicador que lo resuelva.",
+      "limites": [
+        "Alcance simultaneo por conjunto, diccionario, definicion, nombre y descripcion; no autoriza cruces, homologaciones ni equivalencias.",
+        "Evidencia negativa acotada a las busquedas 2026-10-24 documentadas en http_log.json, no ausencia universal.",
+        "Peticion WEB-S4-01 a W-web pendiente (trabajo/peticiones-web.json): activity stream del conjunto y reintento de descarga por navegacion normal. Si aporta diccionario corregido o nota del publicador, reapertura por adenda/v002."
+      ]
+    },
+    {
+      "id": "https://example.org/mex-ontologi/definition/2334deaa-dd0c-444e-b038-4cc556ad715d%2F37",
+      "tipo": "significados",
+      "original_sha256": "01657fb7553092a4f0f9cbacbfda50e13acc009cd5f7bac272530884ed35fa64",
+      "puerta": "sin_pista_nueva",
+      "pista": null,
+      "estado": "brecha_externa",
+      "afirmacion_propuesta": null,
+      "motivo": "Manual p17: instituciones nacionales SSA, IMSS, ISSSTE, Otras, IMSS-Prospera, DIF, PEMEX, SEDENA, SEMAR; conjunto DISTINTO de las 9 columnas locales (imss_ord/imss_sol/d_if/sedemar vs IMSS-Prospera/DIF/SEMAR). Sin equivalencia autorizada. Sin respaldo explicito vinculado a esta definicion; no se aprueba por nombre, ejemplo aislado ni catalogo nacional generico sin vinculo local. Criterio R6 conservado. Puerta primera 2026-10-24: package_show en vivo sin cambios (metadata_modified 2025-08-19, version null, fuentes_extras vacia); revision_list API devuelve 400; indice web del CSV reproduce las mismas descripciones ya documentadas sin instrumento nuevo; Definiciones Operacionales DGE mar-2021 es referente nacional generico sin vinculo campo/recurso/edicion y no se descarga como novedad. Sin pista real; se conserva la evidencia previa con SHAs re-verificados.",
+      "evidencia_faltante": "EPI-R6-01 + EPI-R6-02: diccionario corregido con descripcion para la columna imss_ord pos 37, o nota del publicador que fije su sentido literal citando conjunto+diccionario+fila+huella y vincule edicion-recurso-periodo.",
+      "evidencia": [
+        {
+          "ruta": "data/portal/inspecciones/2334deaa-dd0c-444e-b038-4cc556ad715d.json",
+          "sha256": "298786f09028a94004420c08eb28120294b130378a0cf12d609a1bffb950288d",
+          "localizador": "/definiciones/36 (Nombre variable=imss_ord)",
+          "afirmacion_soportada": "Descripcion='Pendiente de especificar', catalogo de referencia vacio, ejemplo registrado; huella fed770c9cb25fcea694559f6ed09bb92b1338ec7499cd04ff202607d616af1a1."
+        },
+        {
+          "ruta": "data/portal/inspecciones/1689b19c-b0dc-4e39-bf07-e3a2e684ef1a.json",
+          "sha256": "31861377197a43619d42bf22a49c3b3f34b122f800f0f29d4d2fdf75a03a4c60",
+          "localizador": "hoja=SUIVE posicion_original=37 (id=imss_ord)",
+          "afirmacion_soportada": "Columna fisica imss_ord observada en pos 37 del esquema de 59 campos; sin documentar su computo."
+        },
+        {
+          "ruta": "propuestas/investigacion-post-r6/epidemiologia/evidencia/datastore_diccionario_2026-10-24.json",
+          "sha256": "dfe6e73b759a22c5b0a2acc5c9b03573b5d1fed39cd088f5b542c907ca91b348",
+          "localizador": "records[_id=37] Nombre variable=imss_ord",
+          "afirmacion_soportada": "Live 2026-10-24 confirma desc='Pendiente de especificar' y catalogo vacio; sin cambios vs R6."
+        },
+        {
+          "ruta": "propuestas/investigacion-post-r6/epidemiologia/evidencia/examen_manual_suive32_paginas.txt",
+          "sha256": "9c20cd10f4673483d449551e2a48613e5c030d73ad929aa7ff033f06bf7393cc",
+          "localizador": "paginas del manual: p17",
+          "afirmacion_soportada": "Manual p17: instituciones nacionales SSA, IMSS, ISSSTE, Otras, IMSS-Prospera, DIF, PEMEX, SEDENA, SEMAR; conjunto DISTINTO de las 9 columnas locales (imss_ord/imss_sol/d_if/sedemar vs IMSS-Prospera/DIF/SEMAR). Sin equivalencia autorizada."
+        },
+        {
+          "ruta": "propuestas/investigacion-post-r6/epidemiologia/evidencia/http_log.json",
+          "sha256": "0f0c01573fe25b4e1a659fc01154b678b8a8956156787f8099f6af7876e706a0",
+          "localizador": "consultas package_show/datastore/manual + 403 xlsx/csv/boletin",
+          "afirmacion_soportada": "Package sin cambios (fuentes_extras vacio, version null); manual fresco byte-identico Last-Modified 2021-08-10 < periodo 2022; descargas bloqueadas 403 sin evadir."
+        }
+      ],
+      "condicion_reapertura": "Reabrir si aparece: EPI-R6-01 + EPI-R6-02: diccionario corregido con descripcion para la columna imss_ord pos 37, o nota del publicador que fije su sentido literal citando conjunto+diccionario+fila+huella y vincule edicion-recurso-periodo.; o si W-web (WEB-S4-01) aporta revision del diccionario posterior a 2024-10-31 o nota del publicador que lo resuelva.",
+      "limites": [
+        "Alcance simultaneo por conjunto, diccionario, definicion, nombre y descripcion; no autoriza cruces, homologaciones ni equivalencias.",
+        "Evidencia negativa acotada a las busquedas 2026-10-24 documentadas en http_log.json, no ausencia universal.",
+        "Peticion WEB-S4-01 a W-web pendiente (trabajo/peticiones-web.json): activity stream del conjunto y reintento de descarga por navegacion normal. Si aporta diccionario corregido o nota del publicador, reapertura por adenda/v002."
+      ]
+    },
+    {
+      "id": "https://example.org/mex-ontologi/definition/2334deaa-dd0c-444e-b038-4cc556ad715d%2F38",
+      "tipo": "significados",
+      "original_sha256": "f111a9259c1e1de7601987307f0dfe74461e184274503484c045c6aebdb58cb4",
+      "puerta": "sin_pista_nueva",
+      "pista": null,
+      "estado": "brecha_externa",
+      "afirmacion_propuesta": null,
+      "motivo": "Manual p17: instituciones nacionales SSA, IMSS, ISSSTE, Otras, IMSS-Prospera, DIF, PEMEX, SEDENA, SEMAR; conjunto DISTINTO de las 9 columnas locales (imss_ord/imss_sol/d_if/sedemar vs IMSS-Prospera/DIF/SEMAR). Sin equivalencia autorizada. Sin respaldo explicito vinculado a esta definicion; no se aprueba por nombre, ejemplo aislado ni catalogo nacional generico sin vinculo local. Criterio R6 conservado. Puerta primera 2026-10-24: package_show en vivo sin cambios (metadata_modified 2025-08-19, version null, fuentes_extras vacia); revision_list API devuelve 400; indice web del CSV reproduce las mismas descripciones ya documentadas sin instrumento nuevo; Definiciones Operacionales DGE mar-2021 es referente nacional generico sin vinculo campo/recurso/edicion y no se descarga como novedad. Sin pista real; se conserva la evidencia previa con SHAs re-verificados.",
+      "evidencia_faltante": "EPI-R6-01 + EPI-R6-02: diccionario corregido con descripcion para la columna issste pos 38, o nota del publicador que fije su sentido literal citando conjunto+diccionario+fila+huella y vincule edicion-recurso-periodo.",
+      "evidencia": [
+        {
+          "ruta": "data/portal/inspecciones/2334deaa-dd0c-444e-b038-4cc556ad715d.json",
+          "sha256": "298786f09028a94004420c08eb28120294b130378a0cf12d609a1bffb950288d",
+          "localizador": "/definiciones/37 (Nombre variable=issste)",
+          "afirmacion_soportada": "Descripcion='Pendiente de especificar', catalogo de referencia vacio, ejemplo registrado; huella eefa0119b32476dfc5c023afb1776ab4b3660f5c8c770c13bdfe549f7ea5e5cd."
+        },
+        {
+          "ruta": "data/portal/inspecciones/1689b19c-b0dc-4e39-bf07-e3a2e684ef1a.json",
+          "sha256": "31861377197a43619d42bf22a49c3b3f34b122f800f0f29d4d2fdf75a03a4c60",
+          "localizador": "hoja=SUIVE posicion_original=38 (id=issste)",
+          "afirmacion_soportada": "Columna fisica issste observada en pos 38 del esquema de 59 campos; sin documentar su computo."
+        },
+        {
+          "ruta": "propuestas/investigacion-post-r6/epidemiologia/evidencia/datastore_diccionario_2026-10-24.json",
+          "sha256": "dfe6e73b759a22c5b0a2acc5c9b03573b5d1fed39cd088f5b542c907ca91b348",
+          "localizador": "records[_id=38] Nombre variable=issste",
+          "afirmacion_soportada": "Live 2026-10-24 confirma desc='Pendiente de especificar' y catalogo vacio; sin cambios vs R6."
+        },
+        {
+          "ruta": "propuestas/investigacion-post-r6/epidemiologia/evidencia/examen_manual_suive32_paginas.txt",
+          "sha256": "9c20cd10f4673483d449551e2a48613e5c030d73ad929aa7ff033f06bf7393cc",
+          "localizador": "paginas del manual: p17",
+          "afirmacion_soportada": "Manual p17: instituciones nacionales SSA, IMSS, ISSSTE, Otras, IMSS-Prospera, DIF, PEMEX, SEDENA, SEMAR; conjunto DISTINTO de las 9 columnas locales (imss_ord/imss_sol/d_if/sedemar vs IMSS-Prospera/DIF/SEMAR). Sin equivalencia autorizada."
+        },
+        {
+          "ruta": "propuestas/investigacion-post-r6/epidemiologia/evidencia/http_log.json",
+          "sha256": "0f0c01573fe25b4e1a659fc01154b678b8a8956156787f8099f6af7876e706a0",
+          "localizador": "consultas package_show/datastore/manual + 403 xlsx/csv/boletin",
+          "afirmacion_soportada": "Package sin cambios (fuentes_extras vacio, version null); manual fresco byte-identico Last-Modified 2021-08-10 < periodo 2022; descargas bloqueadas 403 sin evadir."
+        }
+      ],
+      "condicion_reapertura": "Reabrir si aparece: EPI-R6-01 + EPI-R6-02: diccionario corregido con descripcion para la columna issste pos 38, o nota del publicador que fije su sentido literal citando conjunto+diccionario+fila+huella y vincule edicion-recurso-periodo.; o si W-web (WEB-S4-01) aporta revision del diccionario posterior a 2024-10-31 o nota del publicador que lo resuelva.",
+      "limites": [
+        "Alcance simultaneo por conjunto, diccionario, definicion, nombre y descripcion; no autoriza cruces, homologaciones ni equivalencias.",
+        "Evidencia negativa acotada a las busquedas 2026-10-24 documentadas en http_log.json, no ausencia universal.",
+        "Peticion WEB-S4-01 a W-web pendiente (trabajo/peticiones-web.json): activity stream del conjunto y reintento de descarga por navegacion normal. Si aporta diccionario corregido o nota del publicador, reapertura por adenda/v002."
+      ]
+    },
+    {
+      "id": "https://example.org/mex-ontologi/definition/2334deaa-dd0c-444e-b038-4cc556ad715d%2F39",
+      "tipo": "significados",
+      "original_sha256": "6b441829662de42990850ed996511fa211e8e9ca5cd7c05a1ab46faa3ce932a7",
+      "puerta": "sin_pista_nueva",
+      "pista": null,
+      "estado": "brecha_externa",
+      "afirmacion_propuesta": null,
+      "motivo": "Manual p17: instituciones nacionales SSA, IMSS, ISSSTE, Otras, IMSS-Prospera, DIF, PEMEX, SEDENA, SEMAR; conjunto DISTINTO de las 9 columnas locales (imss_ord/imss_sol/d_if/sedemar vs IMSS-Prospera/DIF/SEMAR). Sin equivalencia autorizada. Sin respaldo explicito vinculado a esta definicion; no se aprueba por nombre, ejemplo aislado ni catalogo nacional generico sin vinculo local. Criterio R6 conservado. Puerta primera 2026-10-24: package_show en vivo sin cambios (metadata_modified 2025-08-19, version null, fuentes_extras vacia); revision_list API devuelve 400; indice web del CSV reproduce las mismas descripciones ya documentadas sin instrumento nuevo; Definiciones Operacionales DGE mar-2021 es referente nacional generico sin vinculo campo/recurso/edicion y no se descarga como novedad. Sin pista real; se conserva la evidencia previa con SHAs re-verificados.",
+      "evidencia_faltante": "EPI-R6-01 + EPI-R6-02: diccionario corregido con descripcion para la columna otras pos 39, o nota del publicador que fije su sentido literal citando conjunto+diccionario+fila+huella y vincule edicion-recurso-periodo.",
+      "evidencia": [
+        {
+          "ruta": "data/portal/inspecciones/2334deaa-dd0c-444e-b038-4cc556ad715d.json",
+          "sha256": "298786f09028a94004420c08eb28120294b130378a0cf12d609a1bffb950288d",
+          "localizador": "/definiciones/38 (Nombre variable=otras)",
+          "afirmacion_soportada": "Descripcion='Pendiente de especificar', catalogo de referencia vacio, ejemplo registrado; huella 97798bd230f5554b464902d95c2a219314baa597c0011897a29bfbd786833877."
+        },
+        {
+          "ruta": "data/portal/inspecciones/1689b19c-b0dc-4e39-bf07-e3a2e684ef1a.json",
+          "sha256": "31861377197a43619d42bf22a49c3b3f34b122f800f0f29d4d2fdf75a03a4c60",
+          "localizador": "hoja=SUIVE posicion_original=39 (id=otras)",
+          "afirmacion_soportada": "Columna fisica otras observada en pos 39 del esquema de 59 campos; sin documentar su computo."
+        },
+        {
+          "ruta": "propuestas/investigacion-post-r6/epidemiologia/evidencia/datastore_diccionario_2026-10-24.json",
+          "sha256": "dfe6e73b759a22c5b0a2acc5c9b03573b5d1fed39cd088f5b542c907ca91b348",
+          "localizador": "records[_id=39] Nombre variable=otras",
+          "afirmacion_soportada": "Live 2026-10-24 confirma desc='Pendiente de especificar' y catalogo vacio; sin cambios vs R6."
+        },
+        {
+          "ruta": "propuestas/investigacion-post-r6/epidemiologia/evidencia/examen_manual_suive32_paginas.txt",
+          "sha256": "9c20cd10f4673483d449551e2a48613e5c030d73ad929aa7ff033f06bf7393cc",
+          "localizador": "paginas del manual: p17",
+          "afirmacion_soportada": "Manual p17: instituciones nacionales SSA, IMSS, ISSSTE, Otras, IMSS-Prospera, DIF, PEMEX, SEDENA, SEMAR; conjunto DISTINTO de las 9 columnas locales (imss_ord/imss_sol/d_if/sedemar vs IMSS-Prospera/DIF/SEMAR). Sin equivalencia autorizada."
+        },
+        {
+          "ruta": "propuestas/investigacion-post-r6/epidemiologia/evidencia/http_log.json",
+          "sha256": "0f0c01573fe25b4e1a659fc01154b678b8a8956156787f8099f6af7876e706a0",
+          "localizador": "consultas package_show/datastore/manual + 403 xlsx/csv/boletin",
+          "afirmacion_soportada": "Package sin cambios (fuentes_extras vacio, version null); manual fresco byte-identico Last-Modified 2021-08-10 < periodo 2022; descargas bloqueadas 403 sin evadir."
+        }
+      ],
+      "condicion_reapertura": "Reabrir si aparece: EPI-R6-01 + EPI-R6-02: diccionario corregido con descripcion para la columna otras pos 39, o nota del publicador que fije su sentido literal citando conjunto+diccionario+fila+huella y vincule edicion-recurso-periodo.; o si W-web (WEB-S4-01) aporta revision del diccionario posterior a 2024-10-31 o nota del publicador que lo resuelva.",
+      "limites": [
+        "Alcance simultaneo por conjunto, diccionario, definicion, nombre y descripcion; no autoriza cruces, homologaciones ni equivalencias.",
+        "Evidencia negativa acotada a las busquedas 2026-10-24 documentadas en http_log.json, no ausencia universal.",
+        "Peticion WEB-S4-01 a W-web pendiente (trabajo/peticiones-web.json): activity stream del conjunto y reintento de descarga por navegacion normal. Si aporta diccionario corregido o nota del publicador, reapertura por adenda/v002."
+      ]
+    },
+    {
+      "id": "https://example.org/mex-ontologi/definition/2334deaa-dd0c-444e-b038-4cc556ad715d%2F40",
+      "tipo": "significados",
+      "original_sha256": "85e4a102d22b409c11de556d7d344d8ac525f961a16a1f734616620d71860419",
+      "puerta": "sin_pista_nueva",
+      "pista": null,
+      "estado": "brecha_externa",
+      "afirmacion_propuesta": null,
+      "motivo": "Manual p17: instituciones nacionales SSA, IMSS, ISSSTE, Otras, IMSS-Prospera, DIF, PEMEX, SEDENA, SEMAR; conjunto DISTINTO de las 9 columnas locales (imss_ord/imss_sol/d_if/sedemar vs IMSS-Prospera/DIF/SEMAR). Sin equivalencia autorizada. Sin respaldo explicito vinculado a esta definicion; no se aprueba por nombre, ejemplo aislado ni catalogo nacional generico sin vinculo local. Criterio R6 conservado. Puerta primera 2026-10-24: package_show en vivo sin cambios (metadata_modified 2025-08-19, version null, fuentes_extras vacia); revision_list API devuelve 400; indice web del CSV reproduce las mismas descripciones ya documentadas sin instrumento nuevo; Definiciones Operacionales DGE mar-2021 es referente nacional generico sin vinculo campo/recurso/edicion y no se descarga como novedad. Sin pista real; se conserva la evidencia previa con SHAs re-verificados.",
+      "evidencia_faltante": "EPI-R6-01 + EPI-R6-02: diccionario corregido con descripcion para la columna imss_sol pos 40, o nota del publicador que fije su sentido literal citando conjunto+diccionario+fila+huella y vincule edicion-recurso-periodo.",
+      "evidencia": [
+        {
+          "ruta": "data/portal/inspecciones/2334deaa-dd0c-444e-b038-4cc556ad715d.json",
+          "sha256": "298786f09028a94004420c08eb28120294b130378a0cf12d609a1bffb950288d",
+          "localizador": "/definiciones/39 (Nombre variable=imss_sol)",
+          "afirmacion_soportada": "Descripcion='Pendiente de especificar', catalogo de referencia vacio, ejemplo registrado; huella ad7ad174a63ee88d244261373816f5c944ba444d1a8308d73d86d36d9bab61e4."
+        },
+        {
+          "ruta": "data/portal/inspecciones/1689b19c-b0dc-4e39-bf07-e3a2e684ef1a.json",
+          "sha256": "31861377197a43619d42bf22a49c3b3f34b122f800f0f29d4d2fdf75a03a4c60",
+          "localizador": "hoja=SUIVE posicion_original=40 (id=imss_sol)",
+          "afirmacion_soportada": "Columna fisica imss_sol observada en pos 40 del esquema de 59 campos; sin documentar su computo."
+        },
+        {
+          "ruta": "propuestas/investigacion-post-r6/epidemiologia/evidencia/datastore_diccionario_2026-10-24.json",
+          "sha256": "dfe6e73b759a22c5b0a2acc5c9b03573b5d1fed39cd088f5b542c907ca91b348",
+          "localizador": "records[_id=40] Nombre variable=imss_sol",
+          "afirmacion_soportada": "Live 2026-10-24 confirma desc='Pendiente de especificar' y catalogo vacio; sin cambios vs R6."
+        },
+        {
+          "ruta": "propuestas/investigacion-post-r6/epidemiologia/evidencia/examen_manual_suive32_paginas.txt",
+          "sha256": "9c20cd10f4673483d449551e2a48613e5c030d73ad929aa7ff033f06bf7393cc",
+          "localizador": "paginas del manual: p17",
+          "afirmacion_soportada": "Manual p17: instituciones nacionales SSA, IMSS, ISSSTE, Otras, IMSS-Prospera, DIF, PEMEX, SEDENA, SEMAR; conjunto DISTINTO de las 9 columnas locales (imss_ord/imss_sol/d_if/sedemar vs IMSS-Prospera/DIF/SEMAR). Sin equivalencia autorizada."
+        },
+        {
+          "ruta": "propuestas/investigacion-post-r6/epidemiologia/evidencia/http_log.json",
+          "sha256": "0f0c01573fe25b4e1a659fc01154b678b8a8956156787f8099f6af7876e706a0",
+          "localizador": "consultas package_show/datastore/manual + 403 xlsx/csv/boletin",
+          "afirmacion_soportada": "Package sin cambios (fuentes_extras vacio, version null); manual fresco byte-identico Last-Modified 2021-08-10 < periodo 2022; descargas bloqueadas 403 sin evadir."
+        }
+      ],
+      "condicion_reapertura": "Reabrir si aparece: EPI-R6-01 + EPI-R6-02: diccionario corregido con descripcion para la columna imss_sol pos 40, o nota del publicador que fije su sentido literal citando conjunto+diccionario+fila+huella y vincule edicion-recurso-periodo.; o si W-web (WEB-S4-01) aporta revision del diccionario posterior a 2024-10-31 o nota del publicador que lo resuelva.",
+      "limites": [
+        "Alcance simultaneo por conjunto, diccionario, definicion, nombre y descripcion; no autoriza cruces, homologaciones ni equivalencias.",
+        "Evidencia negativa acotada a las busquedas 2026-10-24 documentadas en http_log.json, no ausencia universal.",
+        "Peticion WEB-S4-01 a W-web pendiente (trabajo/peticiones-web.json): activity stream del conjunto y reintento de descarga por navegacion normal. Si aporta diccionario corregido o nota del publicador, reapertura por adenda/v002."
+      ]
+    },
+    {
+      "id": "https://example.org/mex-ontologi/definition/2334deaa-dd0c-444e-b038-4cc556ad715d%2F41",
+      "tipo": "significados",
+      "original_sha256": "f716fcc691b4254d1caf916d92e3502d2adb40e36281692315cd7338abccc33d",
+      "puerta": "sin_pista_nueva",
+      "pista": null,
+      "estado": "brecha_externa",
+      "afirmacion_propuesta": null,
+      "motivo": "Manual p17: instituciones nacionales SSA, IMSS, ISSSTE, Otras, IMSS-Prospera, DIF, PEMEX, SEDENA, SEMAR; conjunto DISTINTO de las 9 columnas locales (imss_ord/imss_sol/d_if/sedemar vs IMSS-Prospera/DIF/SEMAR). Sin equivalencia autorizada. Sin respaldo explicito vinculado a esta definicion; no se aprueba por nombre, ejemplo aislado ni catalogo nacional generico sin vinculo local. Criterio R6 conservado. Puerta primera 2026-10-24: package_show en vivo sin cambios (metadata_modified 2025-08-19, version null, fuentes_extras vacia); revision_list API devuelve 400; indice web del CSV reproduce las mismas descripciones ya documentadas sin instrumento nuevo; Definiciones Operacionales DGE mar-2021 es referente nacional generico sin vinculo campo/recurso/edicion y no se descarga como novedad. Sin pista real; se conserva la evidencia previa con SHAs re-verificados.",
+      "evidencia_faltante": "EPI-R6-01 + EPI-R6-02: diccionario corregido con descripcion para la columna d_if pos 41, o nota del publicador que fije su sentido literal citando conjunto+diccionario+fila+huella y vincule edicion-recurso-periodo.",
+      "evidencia": [
+        {
+          "ruta": "data/portal/inspecciones/2334deaa-dd0c-444e-b038-4cc556ad715d.json",
+          "sha256": "298786f09028a94004420c08eb28120294b130378a0cf12d609a1bffb950288d",
+          "localizador": "/definiciones/40 (Nombre variable=d_if)",
+          "afirmacion_soportada": "Descripcion='Pendiente de especificar', catalogo de referencia vacio, ejemplo registrado; huella 368c74a3fa6a9b27a4cf2338164ecacee7ff4123af36a85f1c94ca5507ad4817."
+        },
+        {
+          "ruta": "data/portal/inspecciones/1689b19c-b0dc-4e39-bf07-e3a2e684ef1a.json",
+          "sha256": "31861377197a43619d42bf22a49c3b3f34b122f800f0f29d4d2fdf75a03a4c60",
+          "localizador": "hoja=SUIVE posicion_original=41 (id=d_if)",
+          "afirmacion_soportada": "Columna fisica d_if observada en pos 41 del esquema de 59 campos; sin documentar su computo."
+        },
+        {
+          "ruta": "propuestas/investigacion-post-r6/epidemiologia/evidencia/datastore_diccionario_2026-10-24.json",
+          "sha256": "dfe6e73b759a22c5b0a2acc5c9b03573b5d1fed39cd088f5b542c907ca91b348",
+          "localizador": "records[_id=41] Nombre variable=d_if",
+          "afirmacion_soportada": "Live 2026-10-24 confirma desc='Pendiente de especificar' y catalogo vacio; sin cambios vs R6."
+        },
+        {
+          "ruta": "propuestas/investigacion-post-r6/epidemiologia/evidencia/examen_manual_suive32_paginas.txt",
+          "sha256": "9c20cd10f4673483d449551e2a48613e5c030d73ad929aa7ff033f06bf7393cc",
+          "localizador": "paginas del manual: p17",
+          "afirmacion_soportada": "Manual p17: instituciones nacionales SSA, IMSS, ISSSTE, Otras, IMSS-Prospera, DIF, PEMEX, SEDENA, SEMAR; conjunto DISTINTO de las 9 columnas locales (imss_ord/imss_sol/d_if/sedemar vs IMSS-Prospera/DIF/SEMAR). Sin equivalencia autorizada."
+        },
+        {
+          "ruta": "propuestas/investigacion-post-r6/epidemiologia/evidencia/http_log.json",
+          "sha256": "0f0c01573fe25b4e1a659fc01154b678b8a8956156787f8099f6af7876e706a0",
+          "localizador": "consultas package_show/datastore/manual + 403 xlsx/csv/boletin",
+          "afirmacion_soportada": "Package sin cambios (fuentes_extras vacio, version null); manual fresco byte-identico Last-Modified 2021-08-10 < periodo 2022; descargas bloqueadas 403 sin evadir."
+        }
+      ],
+      "condicion_reapertura": "Reabrir si aparece: EPI-R6-01 + EPI-R6-02: diccionario corregido con descripcion para la columna d_if pos 41, o nota del publicador que fije su sentido literal citando conjunto+diccionario+fila+huella y vincule edicion-recurso-periodo.; o si W-web (WEB-S4-01) aporta revision del diccionario posterior a 2024-10-31 o nota del publicador que lo resuelva.",
+      "limites": [
+        "Alcance simultaneo por conjunto, diccionario, definicion, nombre y descripcion; no autoriza cruces, homologaciones ni equivalencias.",
+        "Evidencia negativa acotada a las busquedas 2026-10-24 documentadas en http_log.json, no ausencia universal.",
+        "Peticion WEB-S4-01 a W-web pendiente (trabajo/peticiones-web.json): activity stream del conjunto y reintento de descarga por navegacion normal. Si aporta diccionario corregido o nota del publicador, reapertura por adenda/v002."
+      ]
+    },
+    {
+      "id": "https://example.org/mex-ontologi/definition/2334deaa-dd0c-444e-b038-4cc556ad715d%2F42",
+      "tipo": "significados",
+      "original_sha256": "02410c7b1327ae9c928cdad4dbcb638e2a8fb21b006273b331004ee575a7f9ea",
+      "puerta": "sin_pista_nueva",
+      "pista": null,
+      "estado": "brecha_externa",
+      "afirmacion_propuesta": null,
+      "motivo": "Manual p17: instituciones nacionales SSA, IMSS, ISSSTE, Otras, IMSS-Prospera, DIF, PEMEX, SEDENA, SEMAR; conjunto DISTINTO de las 9 columnas locales (imss_ord/imss_sol/d_if/sedemar vs IMSS-Prospera/DIF/SEMAR). Sin equivalencia autorizada. Sin respaldo explicito vinculado a esta definicion; no se aprueba por nombre, ejemplo aislado ni catalogo nacional generico sin vinculo local. Criterio R6 conservado. Puerta primera 2026-10-24: package_show en vivo sin cambios (metadata_modified 2025-08-19, version null, fuentes_extras vacia); revision_list API devuelve 400; indice web del CSV reproduce las mismas descripciones ya documentadas sin instrumento nuevo; Definiciones Operacionales DGE mar-2021 es referente nacional generico sin vinculo campo/recurso/edicion y no se descarga como novedad. Sin pista real; se conserva la evidencia previa con SHAs re-verificados.",
+      "evidencia_faltante": "EPI-R6-01 + EPI-R6-02: diccionario corregido con descripcion para la columna pemex pos 42, o nota del publicador que fije su sentido literal citando conjunto+diccionario+fila+huella y vincule edicion-recurso-periodo.",
+      "evidencia": [
+        {
+          "ruta": "data/portal/inspecciones/2334deaa-dd0c-444e-b038-4cc556ad715d.json",
+          "sha256": "298786f09028a94004420c08eb28120294b130378a0cf12d609a1bffb950288d",
+          "localizador": "/definiciones/41 (Nombre variable=pemex)",
+          "afirmacion_soportada": "Descripcion='Pendiente de especificar', catalogo de referencia vacio, ejemplo registrado; huella d7071b783b11329835e4809e094c3b21af91de498b2e8c80e51f265a23d687cc."
+        },
+        {
+          "ruta": "data/portal/inspecciones/1689b19c-b0dc-4e39-bf07-e3a2e684ef1a.json",
+          "sha256": "31861377197a43619d42bf22a49c3b3f34b122f800f0f29d4d2fdf75a03a4c60",
+          "localizador": "hoja=SUIVE posicion_original=42 (id=pemex)",
+          "afirmacion_soportada": "Columna fisica pemex observada en pos 42 del esquema de 59 campos; sin documentar su computo."
+        },
+        {
+          "ruta": "propuestas/investigacion-post-r6/epidemiologia/evidencia/datastore_diccionario_2026-10-24.json",
+          "sha256": "dfe6e73b759a22c5b0a2acc5c9b03573b5d1fed39cd088f5b542c907ca91b348",
+          "localizador": "records[_id=42] Nombre variable=pemex",
+          "afirmacion_soportada": "Live 2026-10-24 confirma desc='Pendiente de especificar' y catalogo vacio; sin cambios vs R6."
+        },
+        {
+          "ruta": "propuestas/investigacion-post-r6/epidemiologia/evidencia/examen_manual_suive32_paginas.txt",
+          "sha256": "9c20cd10f4673483d449551e2a48613e5c030d73ad929aa7ff033f06bf7393cc",
+          "localizador": "paginas del manual: p17",
+          "afirmacion_soportada": "Manual p17: instituciones nacionales SSA, IMSS, ISSSTE, Otras, IMSS-Prospera, DIF, PEMEX, SEDENA, SEMAR; conjunto DISTINTO de las 9 columnas locales (imss_ord/imss_sol/d_if/sedemar vs IMSS-Prospera/DIF/SEMAR). Sin equivalencia autorizada."
+        },
+        {
+          "ruta": "propuestas/investigacion-post-r6/epidemiologia/evidencia/http_log.json",
+          "sha256": "0f0c01573fe25b4e1a659fc01154b678b8a8956156787f8099f6af7876e706a0",
+          "localizador": "consultas package_show/datastore/manual + 403 xlsx/csv/boletin",
+          "afirmacion_soportada": "Package sin cambios (fuentes_extras vacio, version null); manual fresco byte-identico Last-Modified 2021-08-10 < periodo 2022; descargas bloqueadas 403 sin evadir."
+        }
+      ],
+      "condicion_reapertura": "Reabrir si aparece: EPI-R6-01 + EPI-R6-02: diccionario corregido con descripcion para la columna pemex pos 42, o nota del publicador que fije su sentido literal citando conjunto+diccionario+fila+huella y vincule edicion-recurso-periodo.; o si W-web (WEB-S4-01) aporta revision del diccionario posterior a 2024-10-31 o nota del publicador que lo resuelva.",
+      "limites": [
+        "Alcance simultaneo por conjunto, diccionario, definicion, nombre y descripcion; no autoriza cruces, homologaciones ni equivalencias.",
+        "Evidencia negativa acotada a las busquedas 2026-10-24 documentadas en http_log.json, no ausencia universal.",
+        "Peticion WEB-S4-01 a W-web pendiente (trabajo/peticiones-web.json): activity stream del conjunto y reintento de descarga por navegacion normal. Si aporta diccionario corregido o nota del publicador, reapertura por adenda/v002."
+      ]
+    },
+    {
+      "id": "https://example.org/mex-ontologi/definition/2334deaa-dd0c-444e-b038-4cc556ad715d%2F43",
+      "tipo": "significados",
+      "original_sha256": "6d29b8df950f4ea6e817e402dcfe22c18a3e4e49f1f3ed42954e971f2aa9a7d9",
+      "puerta": "sin_pista_nueva",
+      "pista": null,
+      "estado": "brecha_externa",
+      "afirmacion_propuesta": null,
+      "motivo": "Manual p17: instituciones nacionales SSA, IMSS, ISSSTE, Otras, IMSS-Prospera, DIF, PEMEX, SEDENA, SEMAR; conjunto DISTINTO de las 9 columnas locales (imss_ord/imss_sol/d_if/sedemar vs IMSS-Prospera/DIF/SEMAR). Sin equivalencia autorizada. Sin respaldo explicito vinculado a esta definicion; no se aprueba por nombre, ejemplo aislado ni catalogo nacional generico sin vinculo local. Criterio R6 conservado. Puerta primera 2026-10-24: package_show en vivo sin cambios (metadata_modified 2025-08-19, version null, fuentes_extras vacia); revision_list API devuelve 400; indice web del CSV reproduce las mismas descripciones ya documentadas sin instrumento nuevo; Definiciones Operacionales DGE mar-2021 es referente nacional generico sin vinculo campo/recurso/edicion y no se descarga como novedad. Sin pista real; se conserva la evidencia previa con SHAs re-verificados.",
+      "evidencia_faltante": "EPI-R6-01 + EPI-R6-02: diccionario corregido con descripcion para la columna sedena pos 43, o nota del publicador que fije su sentido literal citando conjunto+diccionario+fila+huella y vincule edicion-recurso-periodo.",
+      "evidencia": [
+        {
+          "ruta": "data/portal/inspecciones/2334deaa-dd0c-444e-b038-4cc556ad715d.json",
+          "sha256": "298786f09028a94004420c08eb28120294b130378a0cf12d609a1bffb950288d",
+          "localizador": "/definiciones/42 (Nombre variable=sedena)",
+          "afirmacion_soportada": "Descripcion='Pendiente de especificar', catalogo de referencia vacio, ejemplo registrado; huella b3b91a250af63c5f1370577f3362b969a442d93312e0089d453949aceb7b93a6."
+        },
+        {
+          "ruta": "data/portal/inspecciones/1689b19c-b0dc-4e39-bf07-e3a2e684ef1a.json",
+          "sha256": "31861377197a43619d42bf22a49c3b3f34b122f800f0f29d4d2fdf75a03a4c60",
+          "localizador": "hoja=SUIVE posicion_original=43 (id=sedena)",
+          "afirmacion_soportada": "Columna fisica sedena observada en pos 43 del esquema de 59 campos; sin documentar su computo."
+        },
+        {
+          "ruta": "propuestas/investigacion-post-r6/epidemiologia/evidencia/datastore_diccionario_2026-10-24.json",
+          "sha256": "dfe6e73b759a22c5b0a2acc5c9b03573b5d1fed39cd088f5b542c907ca91b348",
+          "localizador": "records[_id=43] Nombre variable=sedena",
+          "afirmacion_soportada": "Live 2026-10-24 confirma desc='Pendiente de especificar' y catalogo vacio; sin cambios vs R6."
+        },
+        {
+          "ruta": "propuestas/investigacion-post-r6/epidemiologia/evidencia/examen_manual_suive32_paginas.txt",
+          "sha256": "9c20cd10f4673483d449551e2a48613e5c030d73ad929aa7ff033f06bf7393cc",
+          "localizador": "paginas del manual: p17",
+          "afirmacion_soportada": "Manual p17: instituciones nacionales SSA, IMSS, ISSSTE, Otras, IMSS-Prospera, DIF, PEMEX, SEDENA, SEMAR; conjunto DISTINTO de las 9 columnas locales (imss_ord/imss_sol/d_if/sedemar vs IMSS-Prospera/DIF/SEMAR). Sin equivalencia autorizada."
+        },
+        {
+          "ruta": "propuestas/investigacion-post-r6/epidemiologia/evidencia/http_log.json",
+          "sha256": "0f0c01573fe25b4e1a659fc01154b678b8a8956156787f8099f6af7876e706a0",
+          "localizador": "consultas package_show/datastore/manual + 403 xlsx/csv/boletin",
+          "afirmacion_soportada": "Package sin cambios (fuentes_extras vacio, version null); manual fresco byte-identico Last-Modified 2021-08-10 < periodo 2022; descargas bloqueadas 403 sin evadir."
+        }
+      ],
+      "condicion_reapertura": "Reabrir si aparece: EPI-R6-01 + EPI-R6-02: diccionario corregido con descripcion para la columna sedena pos 43, o nota del publicador que fije su sentido literal citando conjunto+diccionario+fila+huella y vincule edicion-recurso-periodo.; o si W-web (WEB-S4-01) aporta revision del diccionario posterior a 2024-10-31 o nota del publicador que lo resuelva.",
+      "limites": [
+        "Alcance simultaneo por conjunto, diccionario, definicion, nombre y descripcion; no autoriza cruces, homologaciones ni equivalencias.",
+        "Evidencia negativa acotada a las busquedas 2026-10-24 documentadas en http_log.json, no ausencia universal.",
+        "Peticion WEB-S4-01 a W-web pendiente (trabajo/peticiones-web.json): activity stream del conjunto y reintento de descarga por navegacion normal. Si aporta diccionario corregido o nota del publicador, reapertura por adenda/v002."
+      ]
+    },
+    {
+      "id": "https://example.org/mex-ontologi/definition/2334deaa-dd0c-444e-b038-4cc556ad715d%2F44",
+      "tipo": "significados",
+      "original_sha256": "db886255a369fd79adefdbee6b3a5592eff9dd1ae7b1569132fa155a0373d405",
+      "puerta": "sin_pista_nueva",
+      "pista": null,
+      "estado": "brecha_externa",
+      "afirmacion_propuesta": null,
+      "motivo": "Manual p17: instituciones nacionales SSA, IMSS, ISSSTE, Otras, IMSS-Prospera, DIF, PEMEX, SEDENA, SEMAR; conjunto DISTINTO de las 9 columnas locales (imss_ord/imss_sol/d_if/sedemar vs IMSS-Prospera/DIF/SEMAR). Sin equivalencia autorizada. Sin respaldo explicito vinculado a esta definicion; no se aprueba por nombre, ejemplo aislado ni catalogo nacional generico sin vinculo local. Criterio R6 conservado. Puerta primera 2026-10-24: package_show en vivo sin cambios (metadata_modified 2025-08-19, version null, fuentes_extras vacia); revision_list API devuelve 400; indice web del CSV reproduce las mismas descripciones ya documentadas sin instrumento nuevo; Definiciones Operacionales DGE mar-2021 es referente nacional generico sin vinculo campo/recurso/edicion y no se descarga como novedad. Sin pista real; se conserva la evidencia previa con SHAs re-verificados.",
+      "evidencia_faltante": "EPI-R6-01 + EPI-R6-02: diccionario corregido con descripcion para la columna sedemar pos 44, o nota del publicador que fije su sentido literal citando conjunto+diccionario+fila+huella y vincule edicion-recurso-periodo.",
+      "evidencia": [
+        {
+          "ruta": "data/portal/inspecciones/2334deaa-dd0c-444e-b038-4cc556ad715d.json",
+          "sha256": "298786f09028a94004420c08eb28120294b130378a0cf12d609a1bffb950288d",
+          "localizador": "/definiciones/43 (Nombre variable=sedemar)",
+          "afirmacion_soportada": "Descripcion='Pendiente de especificar', catalogo de referencia vacio, ejemplo registrado; huella 72f0cdc5158a36e2aa5078e46ebfe64979885d3d52c8c7f51c9563c955db731f."
+        },
+        {
+          "ruta": "data/portal/inspecciones/1689b19c-b0dc-4e39-bf07-e3a2e684ef1a.json",
+          "sha256": "31861377197a43619d42bf22a49c3b3f34b122f800f0f29d4d2fdf75a03a4c60",
+          "localizador": "hoja=SUIVE posicion_original=44 (id=sedemar)",
+          "afirmacion_soportada": "Columna fisica sedemar observada en pos 44 del esquema de 59 campos; sin documentar su computo."
+        },
+        {
+          "ruta": "propuestas/investigacion-post-r6/epidemiologia/evidencia/datastore_diccionario_2026-10-24.json",
+          "sha256": "dfe6e73b759a22c5b0a2acc5c9b03573b5d1fed39cd088f5b542c907ca91b348",
+          "localizador": "records[_id=44] Nombre variable=sedemar",
+          "afirmacion_soportada": "Live 2026-10-24 confirma desc='Pendiente de especificar' y catalogo vacio; sin cambios vs R6."
+        },
+        {
+          "ruta": "propuestas/investigacion-post-r6/epidemiologia/evidencia/examen_manual_suive32_paginas.txt",
+          "sha256": "9c20cd10f4673483d449551e2a48613e5c030d73ad929aa7ff033f06bf7393cc",
+          "localizador": "paginas del manual: p17",
+          "afirmacion_soportada": "Manual p17: instituciones nacionales SSA, IMSS, ISSSTE, Otras, IMSS-Prospera, DIF, PEMEX, SEDENA, SEMAR; conjunto DISTINTO de las 9 columnas locales (imss_ord/imss_sol/d_if/sedemar vs IMSS-Prospera/DIF/SEMAR). Sin equivalencia autorizada."
+        },
+        {
+          "ruta": "propuestas/investigacion-post-r6/epidemiologia/evidencia/http_log.json",
+          "sha256": "0f0c01573fe25b4e1a659fc01154b678b8a8956156787f8099f6af7876e706a0",
+          "localizador": "consultas package_show/datastore/manual + 403 xlsx/csv/boletin",
+          "afirmacion_soportada": "Package sin cambios (fuentes_extras vacio, version null); manual fresco byte-identico Last-Modified 2021-08-10 < periodo 2022; descargas bloqueadas 403 sin evadir."
+        }
+      ],
+      "condicion_reapertura": "Reabrir si aparece: EPI-R6-01 + EPI-R6-02: diccionario corregido con descripcion para la columna sedemar pos 44, o nota del publicador que fije su sentido literal citando conjunto+diccionario+fila+huella y vincule edicion-recurso-periodo.; o si W-web (WEB-S4-01) aporta revision del diccionario posterior a 2024-10-31 o nota del publicador que lo resuelva.",
+      "limites": [
+        "Alcance simultaneo por conjunto, diccionario, definicion, nombre y descripcion; no autoriza cruces, homologaciones ni equivalencias.",
+        "Evidencia negativa acotada a las busquedas 2026-10-24 documentadas en http_log.json, no ausencia universal.",
+        "Peticion WEB-S4-01 a W-web pendiente (trabajo/peticiones-web.json): activity stream del conjunto y reintento de descarga por navegacion normal. Si aporta diccionario corregido o nota del publicador, reapertura por adenda/v002."
+      ]
+    }
+  ],
+  "fuentes": [
+    {
+      "ruta": "data/portal/inspecciones/2334deaa-dd0c-444e-b038-4cc556ad715d.json",
+      "sha256": "298786f09028a94004420c08eb28120294b130378a0cf12d609a1bffb950288d",
+      "url": null,
+      "fecha_consulta": null,
+      "localizador": "Diccionario del conjunto (59 definiciones); filas citadas por ID."
+    },
+    {
+      "ruta": "data/portal/inspecciones/1689b19c-b0dc-4e39-bf07-e3a2e684ef1a.json",
+      "sha256": "31861377197a43619d42bf22a49c3b3f34b122f800f0f29d4d2fdf75a03a4c60",
+      "url": null,
+      "fecha_consulta": null,
+      "localizador": "Hoja SUIVE del recurso 1689b19c (esquema de 59 campos)."
+    },
+    {
+      "ruta": "propuestas/investigacion-post-r6/epidemiologia/evidencia/datastore_diccionario_2026-10-24.json",
+      "sha256": "dfe6e73b759a22c5b0a2acc5c9b03573b5d1fed39cd088f5b542c907ca91b348",
+      "url": "https://datos.sonora.gob.mx/api/3/action/datastore_search?resource_id=2334deaa-dd0c-444e-b038-4cc556ad715d&limit=60&offset=0",
+      "fecha_consulta": "2026-10-24",
+      "localizador": "records[_id=9/11/13/23-44]: descripciones en vivo, catalogo vacio."
+    },
+    {
+      "ruta": "propuestas/investigacion-post-r6/epidemiologia/evidencia/examen_manual_suive32_paginas.txt",
+      "sha256": "9c20cd10f4673483d449551e2a48613e5c030d73ad929aa7ff033f06bf7393cc",
+      "url": "https://epidemiologia.salud.gob.mx/gobmx/salud/documentos/manuales/32_ManualSuive.pdf",
+      "fecha_consulta": "2026-10-24",
+      "localizador": "Paginas p17/p18/p26/p50: referentes nacionales sin vinculo local."
+    },
+    {
+      "ruta": "propuestas/investigacion-post-r6/epidemiologia/evidencia/http_log.json",
+      "sha256": "0f0c01573fe25b4e1a659fc01154b678b8a8956156787f8099f6af7876e706a0",
+      "url": "https://datos.sonora.gob.mx/api/3/action/package_show?id=dca16d84-dbf0-4501-b702-dc6372a480ea",
+      "fecha_consulta": "2026-10-24",
+      "localizador": "Consultas package_show/datastore/manual + 403 xlsx/csv/boletin."
+    }
+  ],
+  "novedades": "Puerta primera 2026-10-24 sobre 25 IDs: sin pista nueva en ninguno; package_show en vivo sin cambios; 0 propuestas, 25 brechas externas. Peticion WEB-S4-01 a W-web pendiente; el trabajo local queda cerrado y solo se reabre por adenda/v002 si W aporta evidencia resolutiva."
+}

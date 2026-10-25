@@ -1,0 +1,1055 @@
+{
+  "grupo_fuente": "salud-defunciones",
+  "generado_en_utc": "2026-10-24T23:30:00+00:00",
+  "alcance": "32/32 IDs asignados examinados por ID contra el PDF autentico SEED Modelo 2022 (ADV-SALUD-MANUAL). 0 propuestas: ninguna fila satisface el criterio de aceptacion R6.",
+  "fuentes": [
+    {
+      "id": "F1",
+      "ruta": "propuestas/pendientes-muse-r6/salud/evidencia/Manual_Llenado_CD_CMF_2022_20220930.pdf",
+      "url": "http://www.dgis.salud.gob.mx/descargas/seed/pdf/Manual_Llenado_CD_CMF_2022_20220930.pdf",
+      "sha256": "698ee48a45f0f34eaf604be9e4290a2191953c9d0460d43600ccc6d6f29b74f4",
+      "fecha_consulta": "2026-10-24",
+      "localizador": "portada p1 (Modelo 2022); vigencia p17; preguntas por ID en decisiones",
+      "descripcion": "Manual SEED Modelo 2022 autentico preservado; re-descarga 2026-10-24 byte-identica (HTTP 200, 11717771 B)"
+    },
+    {
+      "id": "F2",
+      "ruta": "data/portal/inspecciones/12f684e9-f4d5-4714-933d-aa153a812174.json",
+      "url": null,
+      "sha256": "2094c24f84a07d1a7e9e7f3c9e663b6923e51508a71678eea74860232f2c1179",
+      "fecha_consulta": "2026-10-24",
+      "localizador": "/definiciones/<fila-1> (0-based)",
+      "descripcion": "Inspeccion local del diccionario: tipo/ejemplo/descripcion por fila"
+    },
+    {
+      "id": "F3",
+      "ruta": "propuestas/depuracion-post-r6/significados/pendientes.json",
+      "url": null,
+      "sha256": "6aa4ec5d63faaeb8d1c96ad84f235e0899350ee37a0dae7595197d66aba7e17a",
+      "fecha_consulta": "2026-10-24",
+      "localizador": "significados n=1..32 de salud-defunciones",
+      "descripcion": "Asignacion del grupo (32 IDs) con huellas y criterio de aceptacion R6"
+    },
+    {
+      "id": "F4",
+      "ruta": "propuestas/investigacion-post-r6/salud-defunciones/evidencia/http_log.json",
+      "url": null,
+      "sha256": "3e5fb718750f1d6fe1d8a5a35b27d2c5833614e0773c87cb65bbb5a11f360fe9",
+      "fecha_consulta": "2026-10-24",
+      "localizador": "consultas_http + busquedas_negativas_acotadas",
+      "descripcion": "Log HTTP propio: HEAD/GET manual + pagina SEED-DGIS + negativas acotadas"
+    },
+    {
+      "id": "F5",
+      "ruta": "propuestas/investigacion-post-r6/salud-defunciones/evidencia/examen_por_id.json",
+      "url": null,
+      "sha256": "0b0b297d79d23449702cc543e4809af1c62e773aaee85cdb07e1052175c1bff7",
+      "fecha_consulta": "2026-10-24",
+      "localizador": "entradas n=1..32 (pregunta/pagina/cita/ambito/veredicto/bloqueo)",
+      "descripcion": "Examen por ID del manual (ADV-SALUD-MANUAL), propio de esta entrega"
+    },
+    {
+      "id": "F6",
+      "ruta": "propuestas/investigacion-post-r6/salud-defunciones/evidencia/manual_seed2022_paginas.txt",
+      "url": null,
+      "sha256": "8be3ac577ad2621788ad8e86ff23407c1cf2ff1a5e3fa94d335561dfbd88a5b2",
+      "fecha_consulta": "2026-10-24",
+      "localizador": "===== PAGINA <1..103> =====",
+      "descripcion": "Extraccion textual propia del PDF (pypdf) con marcadores de pagina"
+    },
+    {
+      "id": "F7",
+      "ruta": "propuestas/pendientes-muse-r6/salud/evidencia/package_defunciones.json",
+      "url": null,
+      "sha256": "bb24d75155ade8d973c411ed972a0a2ad593016e3dab2c87f9e203e3ca99ccec",
+      "fecha_consulta": "2026-10-24",
+      "localizador": "result.resources[] (Diccionario 12f684e9; Defunciones 2022 6f39fc5d)",
+      "descripcion": "package_show R6: sistema SEED, periodo 2022-01-01 a 2022-09-22, version=null, recurso XLSX datastore_active=false"
+    },
+    {
+      "id": "F8",
+      "ruta": "propuestas/investigacion-post-r6/salud-defunciones/evidencia/revision_vinculo_formal.json",
+      "url": null,
+      "sha256": "39ebdc3a879a51e48bfde25eb18b3f8e6f2b8454091fd6149518f267ddb653f7",
+      "fecha_consulta": "2026-10-24",
+      "localizador": "criterio + prong1 + prong2 + tabla_por_id (32) + conclusion",
+      "descripcion": "Revision critica de la via alternativa (sistema+periodo+uso formal por codigos/posicion), propia de esta entrega"
+    }
+  ],
+  "decisiones": [
+    {
+      "definicion_iri": "https://example.org/mex-ontologi/definition/12f684e9-f4d5-4714-933d-aa153a812174%2F17",
+      "variable": "EDADGESTACIONAL",
+      "descripcion_original": "Pendiente de especificar",
+      "huella_fila_diccionario": "ebf425bc2303aca08a47cb9288db80db817f9dc08cce88172cb8fbb6da0162bb",
+      "estado": "sigue_pendiente",
+      "evidencia": [
+        {
+          "ruta": "propuestas/pendientes-muse-r6/salud/evidencia/Manual_Llenado_CD_CMF_2022_20220930.pdf",
+          "sha256": "698ee48a45f0f34eaf604be9e4290a2191953c9d0460d43600ccc6d6f29b74f4",
+          "localizador": "pp.30,66 (preg 2 (fetal) / 10.2 (general))",
+          "afirmacion_soportada": "Veredicto ambiguo: Fetal p66 preg 2 EDAD GESTACIONAL: 'duracion del embarazo, expresado en semanas completas, contando a partir de la fecha de la ultima menstruacion'. General p30 preg 10.2 Semanas de Gestacion: 'Obligatorio para menores d"
+        },
+        {
+          "ruta": "data/portal/inspecciones/12f684e9-f4d5-4714-933d-aa153a812174.json",
+          "sha256": "2094c24f84a07d1a7e9e7f3c9e663b6923e51508a71678eea74860232f2c1179",
+          "localizador": "/definiciones/16",
+          "afirmacion_soportada": "Fila local: tipo=Numerico entero, ejemplo='', descripcion='Pendiente de especificar', catalogo=''"
+        }
+      ],
+      "vinculo_fuente_local": "Vinculo solo tematico a preg 2 (fetal) / 10.2 (general) del Manual Modelo 2022 (ambito general+fetal (ambiguo)), sin tabla pregunta<->columna del publicador ni codebook/edicion: insuficiente para promocion. Recurso de datos citado sin vinculo (XLSX, datastore_active=false).",
+      "evidencia_faltante": "Nota del publicador que vincule el recurso 6f39fc5d (2022-01-01 a 2022-09-22) con la preg 2 (fetal) / 10.2 (general) del Manual SEED Modelo 2022 para esta fila (huella ebf425bc2303...), con tabla pregunta<->columna y codebook/edicion aplicable (para CIE: edicion que contenga el codigo local).",
+      "motivo": "sigue_pendiente: examen por ID del manual autentico da veredicto ambiguo (general+fetal (ambiguo)). Ambiguedad fetal-vs-general + sin unidad ni codebook ni vinculo publicador. Fetal preg 2 exige semanas completas desde FUM sin admitir desconocido (p66); general preg 10.2 solo obligatorio en <28 dias y admite 99 si se desconoce (p30). El tipo local (Numerico entero, ejemplo vacio) no indica unidad ni a cual de las dos preguntas corresponde.",
+      "limites": [
+        "Alcance simultaneo por conjunto+diccionario+fila+huella; no autoriza cruces, joins ni identidad de catalogos.",
+        "Extracto textual (pypdf) sin layout/imagenes; paginas citadas verificables en el PDF.",
+        "Negativas acotadas a lo revisado (F4), no ausencia universal."
+      ]
+    },
+    {
+      "definicion_iri": "https://example.org/mex-ontologi/definition/12f684e9-f4d5-4714-933d-aa153a812174%2F30",
+      "variable": "CLAVEOCUPACIONHABITUAL",
+      "descripcion_original": "Pendiente de especificar",
+      "huella_fila_diccionario": "0c60283efbd7a350ed4b9d718903c3f0960c18af33485b7b9a017ca67f719bb5",
+      "estado": "sigue_pendiente",
+      "evidencia": [
+        {
+          "ruta": "propuestas/pendientes-muse-r6/salud/evidencia/Manual_Llenado_CD_CMF_2022_20220930.pdf",
+          "sha256": "698ee48a45f0f34eaf604be9e4290a2191953c9d0460d43600ccc6d6f29b74f4",
+          "localizador": "pp.35 (preg 14)",
+          "afirmacion_soportada": "Veredicto incompatible: General p35 preg 14 OCUPACION HABITUAL: 'Anotar el oficio o trabajo que tenia la(el) fallecida/o... Ejemplo: maestra(o), secretaria, mesera(o), enfermera(o), etc.... Anotar la ocupacion habitual sin abreviaturas'. Sin cl"
+        },
+        {
+          "ruta": "data/portal/inspecciones/12f684e9-f4d5-4714-933d-aa153a812174.json",
+          "sha256": "2094c24f84a07d1a7e9e7f3c9e663b6923e51508a71678eea74860232f2c1179",
+          "localizador": "/definiciones/29",
+          "afirmacion_soportada": "Fila local: tipo=Numerico entero, ejemplo='4', descripcion='Pendiente de especificar', catalogo=''"
+        },
+        {
+          "ruta": "propuestas/investigacion-post-r6/salud-defunciones/evidencia/http_log.json",
+          "sha256": "3e5fb718750f1d6fe1d8a5a35b27d2c5833614e0773c87cb65bbb5a11f360fe9",
+          "localizador": "busquedas_negativas_acotadas",
+          "afirmacion_soportada": "Negativas acotadas que sostienen el veredicto (jurisdiccion/intencion-literal/codebook/edicion)"
+        }
+      ],
+      "vinculo_fuente_local": "Vinculo solo tematico a preg 14 del Manual Modelo 2022 (ambito general), sin tabla pregunta<->columna del publicador ni codebook/edicion: insuficiente para promocion. Recurso de datos citado sin vinculo (XLSX, datastore_active=false).",
+      "evidencia_faltante": "Nota del publicador que vincule el recurso 6f39fc5d (2022-01-01 a 2022-09-22) con la preg 14 del Manual SEED Modelo 2022 para esta fila (huella 0c60283efbd7...), con tabla pregunta<->columna y codebook/edicion aplicable (para CIE: edicion que contenga el codigo local).",
+      "motivo": "sigue_pendiente: examen por ID del manual autentico da veredicto incompatible (general). Incompatibilidad de naturaleza: la columna es numerica ('CLAVE...', ej 4) pero el manual captura TEXTO LIBRE sin claves ni catalogo. El 4 no es mapeable a nada del manual. Sin codebook del publicador ni vinculo, no acredita.",
+      "limites": [
+        "Alcance simultaneo por conjunto+diccionario+fila+huella; no autoriza cruces, joins ni identidad de catalogos.",
+        "Extracto textual (pypdf) sin layout/imagenes; paginas citadas verificables en el PDF.",
+        "Negativas acotadas a lo revisado (F4), no ausencia universal."
+      ]
+    },
+    {
+      "definicion_iri": "https://example.org/mex-ontologi/definition/12f684e9-f4d5-4714-933d-aa153a812174%2F31",
+      "variable": "CLAVEOCUPACIONHABITUALD",
+      "descripcion_original": "Pendiente de especificar",
+      "huella_fila_diccionario": "64ea2487a9a3fe6434910ae40db1981ef4d3d2408375db63b2b5b922ab78e73a",
+      "estado": "sigue_pendiente",
+      "evidencia": [
+        {
+          "ruta": "propuestas/pendientes-muse-r6/salud/evidencia/Manual_Llenado_CD_CMF_2022_20220930.pdf",
+          "sha256": "698ee48a45f0f34eaf604be9e4290a2191953c9d0460d43600ccc6d6f29b74f4",
+          "localizador": "pp.35 (preg 14)",
+          "afirmacion_soportada": "Veredicto compatible-tematica: General p35 preg 14: 'Si el fallecido no trabajaba, mencionar a que se dedicaba... Ejemplo: estudiante, ama de casa, jubilado, etc.' Familia compatible con 'NO OCUPADO, JUBILADO O PENSIONADO'; sin catalogo cerrado."
+        },
+        {
+          "ruta": "data/portal/inspecciones/12f684e9-f4d5-4714-933d-aa153a812174.json",
+          "sha256": "2094c24f84a07d1a7e9e7f3c9e663b6923e51508a71678eea74860232f2c1179",
+          "localizador": "/definiciones/30",
+          "afirmacion_soportada": "Fila local: tipo=Texto, ejemplo='NO OCUPADO, JUBILADO O PENSIONADO', descripcion='Pendiente de especificar', catalogo=''"
+        }
+      ],
+      "vinculo_fuente_local": "Vinculo solo tematico a preg 14 del Manual Modelo 2022 (ambito general), sin tabla pregunta<->columna del publicador ni codebook/edicion: insuficiente para promocion. Recurso de datos citado sin vinculo (XLSX, datastore_active=false).",
+      "evidencia_faltante": "Nota del publicador que vincule el recurso 6f39fc5d (2022-01-01 a 2022-09-22) con la preg 14 del Manual SEED Modelo 2022 para esta fila (huella 64ea2487a9a3...), con tabla pregunta<->columna y codebook/edicion aplicable (para CIE: edicion que contenga el codigo local).",
+      "motivo": "sigue_pendiente: examen por ID del manual autentico da veredicto compatible-tematica (general). Compatibilidad solo tematica: el ejemplo local figura en la familia de ejemplos del manual, pero el manual no fija catalogo cerrado de literales ni el publicador vincula esta fila. Un parecido de ejemplo no acredita codigo/vigencia (criterio R6).",
+      "limites": [
+        "Alcance simultaneo por conjunto+diccionario+fila+huella; no autoriza cruces, joins ni identidad de catalogos.",
+        "Extracto textual (pypdf) sin layout/imagenes; paginas citadas verificables en el PDF.",
+        "Negativas acotadas a lo revisado (F4), no ausencia universal."
+      ]
+    },
+    {
+      "definicion_iri": "https://example.org/mex-ontologi/definition/12f684e9-f4d5-4714-933d-aa153a812174%2F32",
+      "variable": "TRABAJAACTUALMENTE",
+      "descripcion_original": "Pendiente de especificar",
+      "huella_fila_diccionario": "68e0eb0630333a74377ee1a914e01b7bd2159a442cac88c128e1ad915b5b9314",
+      "estado": "sigue_pendiente",
+      "evidencia": [
+        {
+          "ruta": "propuestas/pendientes-muse-r6/salud/evidencia/Manual_Llenado_CD_CMF_2022_20220930.pdf",
+          "sha256": "698ee48a45f0f34eaf604be9e4290a2191953c9d0460d43600ccc6d6f29b74f4",
+          "localizador": "pp.36,86,87 (preg 14.1 / 31.1 (fetal, madre))",
+          "afirmacion_soportada": "Veredicto ambiguo: General p36 '14.1 Trabajaba: Marque Si cuando la(el) fallecida/o contaba con un trabajo... No aplica para menores de 5 anos'. Fetal pp86-87 '31.1 Trabaja actualmente... cuando la madre cuenta con un trabajo remunerado'."
+        },
+        {
+          "ruta": "data/portal/inspecciones/12f684e9-f4d5-4714-933d-aa153a812174.json",
+          "sha256": "2094c24f84a07d1a7e9e7f3c9e663b6923e51508a71678eea74860232f2c1179",
+          "localizador": "/definiciones/31",
+          "afirmacion_soportada": "Fila local: tipo=Numerico entero, ejemplo='2', descripcion='Pendiente de especificar', catalogo=''"
+        }
+      ],
+      "vinculo_fuente_local": "Vinculo solo tematico a preg 14.1 / 31.1 (fetal, madre) del Manual Modelo 2022 (ambito general+fetal (ambiguo)), sin tabla pregunta<->columna del publicador ni codebook/edicion: insuficiente para promocion. Recurso de datos citado sin vinculo (XLSX, datastore_active=false).",
+      "evidencia_faltante": "Nota del publicador que vincule el recurso 6f39fc5d (2022-01-01 a 2022-09-22) con la preg 14.1 / 31.1 (fetal, madre) del Manual SEED Modelo 2022 para esta fila (huella 68e0eb063033...), con tabla pregunta<->columna y codebook/edicion aplicable (para CIE: edicion que contenga el codigo local).",
+      "motivo": "sigue_pendiente: examen por ID del manual autentico da veredicto ambiguo (general+fetal (ambiguo)). Ambiguedad de ambito + sin mapa numerico: general 14.1 'Trabajaba' (fallecido, no aplica <5 anos, p36) vs fetal 31.1 'Trabaja actualmente' (madre, p86-87). El manual usa Si/No/Se ignora sin codigos; el 2 no es mapeable. Sin vinculo del publicador.",
+      "limites": [
+        "Alcance simultaneo por conjunto+diccionario+fila+huella; no autoriza cruces, joins ni identidad de catalogos.",
+        "Extracto textual (pypdf) sin layout/imagenes; paginas citadas verificables en el PDF.",
+        "Negativas acotadas a lo revisado (F4), no ausencia universal."
+      ]
+    },
+    {
+      "definicion_iri": "https://example.org/mex-ontologi/definition/12f684e9-f4d5-4714-933d-aa153a812174%2F33",
+      "variable": "TRABAJAACTUALMENTED",
+      "descripcion_original": "Pendiente de especificar",
+      "huella_fila_diccionario": "7c0c9f6aff97ac480fcb4961dad53c23a648fbc86d083d082966bc9f37becf3c",
+      "estado": "sigue_pendiente",
+      "evidencia": [
+        {
+          "ruta": "propuestas/pendientes-muse-r6/salud/evidencia/Manual_Llenado_CD_CMF_2022_20220930.pdf",
+          "sha256": "698ee48a45f0f34eaf604be9e4290a2191953c9d0460d43600ccc6d6f29b74f4",
+          "localizador": "pp.36,86,87 (preg 14.1 / 31.1 (fetal, madre))",
+          "afirmacion_soportada": "Veredicto ambiguo: Mismas preguntas que n=4 (14.1 p36 / 31.1 pp86-87); opcion 'No' existe en ambas."
+        },
+        {
+          "ruta": "data/portal/inspecciones/12f684e9-f4d5-4714-933d-aa153a812174.json",
+          "sha256": "2094c24f84a07d1a7e9e7f3c9e663b6923e51508a71678eea74860232f2c1179",
+          "localizador": "/definiciones/32",
+          "afirmacion_soportada": "Fila local: tipo=Texto, ejemplo='NO', descripcion='Pendiente de especificar', catalogo=''"
+        }
+      ],
+      "vinculo_fuente_local": "Vinculo solo tematico a preg 14.1 / 31.1 (fetal, madre) del Manual Modelo 2022 (ambito general+fetal (ambiguo)), sin tabla pregunta<->columna del publicador ni codebook/edicion: insuficiente para promocion. Recurso de datos citado sin vinculo (XLSX, datastore_active=false).",
+      "evidencia_faltante": "Nota del publicador que vincule el recurso 6f39fc5d (2022-01-01 a 2022-09-22) con la preg 14.1 / 31.1 (fetal, madre) del Manual SEED Modelo 2022 para esta fila (huella 7c0c9f6aff97...), con tabla pregunta<->columna y codebook/edicion aplicable (para CIE: edicion que contenga el codigo local).",
+      "motivo": "sigue_pendiente: examen por ID del manual autentico da veredicto ambiguo (general+fetal (ambiguo)). Literal 'NO' compatible con la opcion 'No' de ambas preguntas candidatas, pero sin codebook ni vinculo no se puede fijar a cual pregunta (fallecido vs madre) ni acreditar vigencia.",
+      "limites": [
+        "Alcance simultaneo por conjunto+diccionario+fila+huella; no autoriza cruces, joins ni identidad de catalogos.",
+        "Extracto textual (pypdf) sin layout/imagenes; paginas citadas verificables en el PDF.",
+        "Negativas acotadas a lo revisado (F4), no ausencia universal."
+      ]
+    },
+    {
+      "definicion_iri": "https://example.org/mex-ontologi/definition/12f684e9-f4d5-4714-933d-aa153a812174%2F34",
+      "variable": "AFILIACION",
+      "descripcion_original": "Pendiente de especificar",
+      "huella_fila_diccionario": "ee0d30d660400fc36a12bc9831d65d3a6304da573b574e2014e33bfed04162af",
+      "estado": "sigue_pendiente",
+      "evidencia": [
+        {
+          "ruta": "propuestas/pendientes-muse-r6/salud/evidencia/Manual_Llenado_CD_CMF_2022_20220930.pdf",
+          "sha256": "698ee48a45f0f34eaf604be9e4290a2191953c9d0460d43600ccc6d6f29b74f4",
+          "localizador": "pp.37,87 (preg 15 / 32 (fetal, madre))",
+          "afirmacion_soportada": "Veredicto ambiguo: General p37 preg 15 AFILIACION A LOS SERVICIOS DE SALUD: 'Marque la opcion que corresponda a la institucion donde estaba afiliada/o la(el) fallecida/o'. Fetal p87 preg 32: misma definicion para 'la madre'. Sin codigos nu"
+        },
+        {
+          "ruta": "data/portal/inspecciones/12f684e9-f4d5-4714-933d-aa153a812174.json",
+          "sha256": "2094c24f84a07d1a7e9e7f3c9e663b6923e51508a71678eea74860232f2c1179",
+          "localizador": "/definiciones/33",
+          "afirmacion_soportada": "Fila local: tipo=Numerico entero, ejemplo='2', descripcion='Pendiente de especificar', catalogo=''"
+        }
+      ],
+      "vinculo_fuente_local": "Vinculo solo tematico a preg 15 / 32 (fetal, madre) del Manual Modelo 2022 (ambito general+fetal (ambiguo)), sin tabla pregunta<->columna del publicador ni codebook/edicion: insuficiente para promocion. Recurso de datos citado sin vinculo (XLSX, datastore_active=false).",
+      "evidencia_faltante": "Nota del publicador que vincule el recurso 6f39fc5d (2022-01-01 a 2022-09-22) con la preg 15 / 32 (fetal, madre) del Manual SEED Modelo 2022 para esta fila (huella ee0d30d66040...), con tabla pregunta<->columna y codebook/edicion aplicable (para CIE: edicion que contenga el codigo local).",
+      "motivo": "sigue_pendiente: examen por ID del manual autentico da veredicto ambiguo (general+fetal (ambiguo)). Ambiguedad de ambito (fallecido preg 15 vs madre preg 32 fetal) + sin mapa numerico (manual: opciones leidas del expediente, sin codigos). El 2 no es mapeable.",
+      "limites": [
+        "Alcance simultaneo por conjunto+diccionario+fila+huella; no autoriza cruces, joins ni identidad de catalogos.",
+        "Extracto textual (pypdf) sin layout/imagenes; paginas citadas verificables en el PDF.",
+        "Negativas acotadas a lo revisado (F4), no ausencia universal."
+      ]
+    },
+    {
+      "definicion_iri": "https://example.org/mex-ontologi/definition/12f684e9-f4d5-4714-933d-aa153a812174%2F35",
+      "variable": "AFILIACIOND",
+      "descripcion_original": "Pendiente de especificar",
+      "huella_fila_diccionario": "079133f48a66d47887ac95a49b702aa77ffd04c113cabd18585025065710fedf",
+      "estado": "sigue_pendiente",
+      "evidencia": [
+        {
+          "ruta": "propuestas/pendientes-muse-r6/salud/evidencia/Manual_Llenado_CD_CMF_2022_20220930.pdf",
+          "sha256": "698ee48a45f0f34eaf604be9e4290a2191953c9d0460d43600ccc6d6f29b74f4",
+          "localizador": "pp.37,87 (preg 15 / 32 (fetal, madre))",
+          "afirmacion_soportada": "Veredicto ambiguo: General p37 preg 15 (institucion de afiliacion/derechohabiencia); p39 cita IMSS entre unidades (SSA, IMSS, ISSSTE, PEMEX, SEDENA, SEMAR, IMSS BIENESTAR...). Fetal p87 preg 32 (madre)."
+        },
+        {
+          "ruta": "data/portal/inspecciones/12f684e9-f4d5-4714-933d-aa153a812174.json",
+          "sha256": "2094c24f84a07d1a7e9e7f3c9e663b6923e51508a71678eea74860232f2c1179",
+          "localizador": "/definiciones/34",
+          "afirmacion_soportada": "Fila local: tipo=Texto, ejemplo='IMSS', descripcion='Pendiente de especificar', catalogo=''"
+        }
+      ],
+      "vinculo_fuente_local": "Vinculo solo tematico a preg 15 / 32 (fetal, madre) del Manual Modelo 2022 (ambito general+fetal (ambiguo)), sin tabla pregunta<->columna del publicador ni codebook/edicion: insuficiente para promocion. Recurso de datos citado sin vinculo (XLSX, datastore_active=false).",
+      "evidencia_faltante": "Nota del publicador que vincule el recurso 6f39fc5d (2022-01-01 a 2022-09-22) con la preg 15 / 32 (fetal, madre) del Manual SEED Modelo 2022 para esta fila (huella 079133f48a66...), con tabla pregunta<->columna y codebook/edicion aplicable (para CIE: edicion que contenga el codigo local).",
+      "motivo": "sigue_pendiente: examen por ID del manual autentico da veredicto ambiguo (general+fetal (ambiguo)). 'IMSS' figura entre las instituciones del manual, pero el extracto no enumera el catalogo de opciones de la preg 15 y no se puede fijar si es afiliacion del fallecido (preg 15) o de la madre (preg 32 fetal). Sin vinculo del publicador.",
+      "limites": [
+        "Alcance simultaneo por conjunto+diccionario+fila+huella; no autoriza cruces, joins ni identidad de catalogos.",
+        "Extracto textual (pypdf) sin layout/imagenes; paginas citadas verificables en el PDF.",
+        "Negativas acotadas a lo revisado (F4), no ausencia universal."
+      ]
+    },
+    {
+      "definicion_iri": "https://example.org/mex-ontologi/definition/12f684e9-f4d5-4714-933d-aa153a812174%2F36",
+      "variable": "SITIODEFUNCION",
+      "descripcion_original": "Pendiente de especificar",
+      "huella_fila_diccionario": "abceafa503e04466cb8ef79aeaebabee4b23d406f15d6537b5a2f2af2524109f",
+      "estado": "sigue_pendiente",
+      "evidencia": [
+        {
+          "ruta": "propuestas/pendientes-muse-r6/salud/evidencia/Manual_Llenado_CD_CMF_2022_20220930.pdf",
+          "sha256": "698ee48a45f0f34eaf604be9e4290a2191953c9d0460d43600ccc6d6f29b74f4",
+          "localizador": "pp.39,70 (preg 19 / 9 (fetal))",
+          "afirmacion_soportada": "Veredicto ambiguo: General p39 preg 19 SITIO DONDE SUCEDIO LA DEFUNCION (Unidad Medica Publica/Privada, via publica, hogar u otro; 'opcion 10, 11, 12 o 99' fuera de unidad). Fetal p70 preg 9 SITIO DE LA EXPULSION O EXTRACCION. Catalogo 1-9"
+        },
+        {
+          "ruta": "data/portal/inspecciones/12f684e9-f4d5-4714-933d-aa153a812174.json",
+          "sha256": "2094c24f84a07d1a7e9e7f3c9e663b6923e51508a71678eea74860232f2c1179",
+          "localizador": "/definiciones/35",
+          "afirmacion_soportada": "Fila local: tipo=Numerico entero, ejemplo='3', descripcion='Pendiente de especificar', catalogo=''"
+        }
+      ],
+      "vinculo_fuente_local": "Vinculo solo tematico a preg 19 / 9 (fetal) del Manual Modelo 2022 (ambito general+fetal (ambiguo)), sin tabla pregunta<->columna del publicador ni codebook/edicion: insuficiente para promocion. Recurso de datos citado sin vinculo (XLSX, datastore_active=false).",
+      "evidencia_faltante": "Nota del publicador que vincule el recurso 6f39fc5d (2022-01-01 a 2022-09-22) con la preg 19 / 9 (fetal) del Manual SEED Modelo 2022 para esta fila (huella abceafa503e0...), con tabla pregunta<->columna y codebook/edicion aplicable (para CIE: edicion que contenga el codigo local).",
+      "motivo": "sigue_pendiente: examen por ID del manual autentico da veredicto ambiguo (general+fetal (ambiguo)). Ambiguedad de ambito (sitio de defuncion preg 19 vs sitio de expulsion fetal preg 9) + codebook ausente: el extracto solo cita opciones 10/11/12/99 (via publica/hogar/otro/se ignora); el catalogo de opciones 1-9 no consta, el 3 no es mapeable.",
+      "limites": [
+        "Alcance simultaneo por conjunto+diccionario+fila+huella; no autoriza cruces, joins ni identidad de catalogos.",
+        "Extracto textual (pypdf) sin layout/imagenes; paginas citadas verificables en el PDF.",
+        "Negativas acotadas a lo revisado (F4), no ausencia universal."
+      ]
+    },
+    {
+      "definicion_iri": "https://example.org/mex-ontologi/definition/12f684e9-f4d5-4714-933d-aa153a812174%2F37",
+      "variable": "SITIODEFUNCIOND",
+      "descripcion_original": "Pendiente de especificar",
+      "huella_fila_diccionario": "1a74eb5a4d09d849b4eece5a9d5c07cf36fbcddf88f71fe3ce0373337c32f91e",
+      "estado": "sigue_pendiente",
+      "evidencia": [
+        {
+          "ruta": "propuestas/pendientes-muse-r6/salud/evidencia/Manual_Llenado_CD_CMF_2022_20220930.pdf",
+          "sha256": "698ee48a45f0f34eaf604be9e4290a2191953c9d0460d43600ccc6d6f29b74f4",
+          "localizador": "pp.39,70 (preg 19 / 9 (fetal))",
+          "afirmacion_soportada": "Veredicto ambiguo: General p39 preg 19 (+19.1 nombre unidad, 19.2 CLUES). Instituciones listadas (IMSS...) califican la unidad, no el sitio. Fetal p70 preg 9."
+        },
+        {
+          "ruta": "data/portal/inspecciones/12f684e9-f4d5-4714-933d-aa153a812174.json",
+          "sha256": "2094c24f84a07d1a7e9e7f3c9e663b6923e51508a71678eea74860232f2c1179",
+          "localizador": "/definiciones/36",
+          "afirmacion_soportada": "Fila local: tipo=Texto, ejemplo='IMSS', descripcion='Pendiente de especificar', catalogo=''"
+        }
+      ],
+      "vinculo_fuente_local": "Vinculo solo tematico a preg 19 / 9 (fetal) del Manual Modelo 2022 (ambito general (+posible confusion sitio-vs-institucion)), sin tabla pregunta<->columna del publicador ni codebook/edicion: insuficiente para promocion. Recurso de datos citado sin vinculo (XLSX, datastore_active=false).",
+      "evidencia_faltante": "Nota del publicador que vincule el recurso 6f39fc5d (2022-01-01 a 2022-09-22) con la preg 19 / 9 (fetal) del Manual SEED Modelo 2022 para esta fila (huella 1a74eb5a4d09...), con tabla pregunta<->columna y codebook/edicion aplicable (para CIE: edicion que contenga el codigo local).",
+      "motivo": "sigue_pendiente: examen por ID del manual autentico da veredicto ambiguo (general (+posible confusion sitio-vs-institucion)). 'IMSS' es INSTITUCION, no sitio: la preg 19 pide sitio (unidad/via/hogar) y la institucion va en 19.1/19.2; el literal sugiere posible captura cruzada sitio-vs-institucion. Mas ambiguedad fetal (preg 9). Sin vinculo ni codebook no se puede fijar sentido.",
+      "limites": [
+        "Alcance simultaneo por conjunto+diccionario+fila+huella; no autoriza cruces, joins ni identidad de catalogos.",
+        "Extracto textual (pypdf) sin layout/imagenes; paginas citadas verificables en el PDF.",
+        "Negativas acotadas a lo revisado (F4), no ausencia universal."
+      ]
+    },
+    {
+      "definicion_iri": "https://example.org/mex-ontologi/definition/12f684e9-f4d5-4714-933d-aa153a812174%2F38",
+      "variable": "CLUES",
+      "descripcion_original": "Pendiente de especificar",
+      "huella_fila_diccionario": "1b32ad8dbecd8c74b4f0bfd3497c88a32c8b2f8590a4a9f42f2b10717804423b",
+      "estado": "sigue_pendiente",
+      "evidencia": [
+        {
+          "ruta": "propuestas/pendientes-muse-r6/salud/evidencia/Manual_Llenado_CD_CMF_2022_20220930.pdf",
+          "sha256": "698ee48a45f0f34eaf604be9e4290a2191953c9d0460d43600ccc6d6f29b74f4",
+          "localizador": "pp.39,70,99 (preg 19.2 / 9.2 (fetal))",
+          "afirmacion_soportada": "Veredicto ambiguo: General p39 preg 19.2 CLUES 'correspondiente a la Unidad Medica donde ocurrio el fallecimiento'. Fetal p70 preg 9.2 CLUES 'donde ocurrio la expulsion o extraccion'. Glosario p99 define CLUES."
+        },
+        {
+          "ruta": "data/portal/inspecciones/12f684e9-f4d5-4714-933d-aa153a812174.json",
+          "sha256": "2094c24f84a07d1a7e9e7f3c9e663b6923e51508a71678eea74860232f2c1179",
+          "localizador": "/definiciones/37",
+          "afirmacion_soportada": "Fila local: tipo=Alfanumerico, ejemplo='SRIMS000915', descripcion='Pendiente de especificar', catalogo=''"
+        }
+      ],
+      "vinculo_fuente_local": "Vinculo solo tematico a preg 19.2 / 9.2 (fetal) del Manual Modelo 2022 (ambito general+fetal (ambiguo)), sin tabla pregunta<->columna del publicador ni codebook/edicion: insuficiente para promocion. Recurso de datos citado sin vinculo (XLSX, datastore_active=false).",
+      "evidencia_faltante": "Nota del publicador que vincule el recurso 6f39fc5d (2022-01-01 a 2022-09-22) con la preg 19.2 / 9.2 (fetal) del Manual SEED Modelo 2022 para esta fila (huella 1b32ad8dbecd...), con tabla pregunta<->columna y codebook/edicion aplicable (para CIE: edicion que contenga el codigo local).",
+      "motivo": "sigue_pendiente: examen por ID del manual autentico da veredicto ambiguo (general+fetal (ambiguo)). Dos preguntas CLUES candidatas (19.2 defuncion p39 vs 9.2 expulsion fetal p70); el manual no da patron de formato verificable ('un solo caracter por espacio'; consultar estadistica si se desconoce). Sin vinculo no se fija a cual corresponde ni se valida el ejemplar.",
+      "limites": [
+        "Alcance simultaneo por conjunto+diccionario+fila+huella; no autoriza cruces, joins ni identidad de catalogos.",
+        "Extracto textual (pypdf) sin layout/imagenes; paginas citadas verificables en el PDF.",
+        "Negativas acotadas a lo revisado (F4), no ausencia universal."
+      ]
+    },
+    {
+      "definicion_iri": "https://example.org/mex-ontologi/definition/12f684e9-f4d5-4714-933d-aa153a812174%2F53",
+      "variable": "MUERTEACCIDENTALVIOLENTA",
+      "descripcion_original": "Pendiente de especificar",
+      "huella_fila_diccionario": "850bee51801949c2b817587fc192ef3781c98061d02f3e3e3ea968d674a4e73b",
+      "estado": "sigue_pendiente",
+      "evidencia": [
+        {
+          "ruta": "propuestas/pendientes-muse-r6/salud/evidencia/Manual_Llenado_CD_CMF_2022_20220930.pdf",
+          "sha256": "698ee48a45f0f34eaf604be9e4290a2191953c9d0460d43600ccc6d6f29b74f4",
+          "localizador": "pp.45 (preg 24)",
+          "afirmacion_soportada": "Veredicto compatible-tematica: General p45 preg 24 '¿Fue defuncion accidental o violenta? Marque con una X la opcion Si... En caso de no contar con esta informacion, marcar Se ignora'. Sin codigos."
+        },
+        {
+          "ruta": "data/portal/inspecciones/12f684e9-f4d5-4714-933d-aa153a812174.json",
+          "sha256": "2094c24f84a07d1a7e9e7f3c9e663b6923e51508a71678eea74860232f2c1179",
+          "localizador": "/definiciones/52",
+          "afirmacion_soportada": "Fila local: tipo=Numerico entero, ejemplo='2', descripcion='Pendiente de especificar', catalogo=''"
+        }
+      ],
+      "vinculo_fuente_local": "Vinculo solo tematico a preg 24 del Manual Modelo 2022 (ambito general), sin tabla pregunta<->columna del publicador ni codebook/edicion: insuficiente para promocion. Recurso de datos citado sin vinculo (XLSX, datastore_active=false).",
+      "evidencia_faltante": "Nota del publicador que vincule el recurso 6f39fc5d (2022-01-01 a 2022-09-22) con la preg 24 del Manual SEED Modelo 2022 para esta fila (huella 850bee518019...), con tabla pregunta<->columna y codebook/edicion aplicable (para CIE: edicion que contenga el codigo local).",
+      "motivo": "sigue_pendiente: examen por ID del manual autentico da veredicto compatible-tematica (general). Pregunta candidata clara (preg 24) pero el manual usa Si/No/Se ignora sin codigos numericos; el 2 no es mapeable. Sin codebook del publicador ni vinculo.",
+      "limites": [
+        "Alcance simultaneo por conjunto+diccionario+fila+huella; no autoriza cruces, joins ni identidad de catalogos.",
+        "Extracto textual (pypdf) sin layout/imagenes; paginas citadas verificables en el PDF.",
+        "Negativas acotadas a lo revisado (F4), no ausencia universal."
+      ]
+    },
+    {
+      "definicion_iri": "https://example.org/mex-ontologi/definition/12f684e9-f4d5-4714-933d-aa153a812174%2F54",
+      "variable": "MUERTEACCIDENTALVIOLENTAD",
+      "descripcion_original": "Pendiente de especificar",
+      "huella_fila_diccionario": "4b5b2bc9bbd2800951da01eab22ee5b93cfd35cc7c89fe3ef995b8c196dd9575",
+      "estado": "sigue_pendiente",
+      "evidencia": [
+        {
+          "ruta": "propuestas/pendientes-muse-r6/salud/evidencia/Manual_Llenado_CD_CMF_2022_20220930.pdf",
+          "sha256": "698ee48a45f0f34eaf604be9e4290a2191953c9d0460d43600ccc6d6f29b74f4",
+          "localizador": "pp.45 (preg 24)",
+          "afirmacion_soportada": "Veredicto compatible-tematica: General p45 preg 24 (Si/No/Se ignora)."
+        },
+        {
+          "ruta": "data/portal/inspecciones/12f684e9-f4d5-4714-933d-aa153a812174.json",
+          "sha256": "2094c24f84a07d1a7e9e7f3c9e663b6923e51508a71678eea74860232f2c1179",
+          "localizador": "/definiciones/53",
+          "afirmacion_soportada": "Fila local: tipo=Texto, ejemplo='NO', descripcion='Pendiente de especificar', catalogo=''"
+        }
+      ],
+      "vinculo_fuente_local": "Vinculo solo tematico a preg 24 del Manual Modelo 2022 (ambito general), sin tabla pregunta<->columna del publicador ni codebook/edicion: insuficiente para promocion. Recurso de datos citado sin vinculo (XLSX, datastore_active=false).",
+      "evidencia_faltante": "Nota del publicador que vincule el recurso 6f39fc5d (2022-01-01 a 2022-09-22) con la preg 24 del Manual SEED Modelo 2022 para esta fila (huella 4b5b2bc9bbd2...), con tabla pregunta<->columna y codebook/edicion aplicable (para CIE: edicion que contenga el codigo local).",
+      "motivo": "sigue_pendiente: examen por ID del manual autentico da veredicto compatible-tematica (general). Literal 'NO' compatible con la opcion 'No' implicita de la preg 24, pero sin codebook/vinculo no acredita vigencia ni sentido fijado por el publicador.",
+      "limites": [
+        "Alcance simultaneo por conjunto+diccionario+fila+huella; no autoriza cruces, joins ni identidad de catalogos.",
+        "Extracto textual (pypdf) sin layout/imagenes; paginas citadas verificables en el PDF.",
+        "Negativas acotadas a lo revisado (F4), no ausencia universal."
+      ]
+    },
+    {
+      "definicion_iri": "https://example.org/mex-ontologi/definition/12f684e9-f4d5-4714-933d-aa153a812174%2F55",
+      "variable": "INTENCIONEVENTO",
+      "descripcion_original": "Pendiente de especificar",
+      "huella_fila_diccionario": "b87cc102c25d27cf6df27536027b6d6646efdd5039f47c0cfb3f58e4164047a7",
+      "estado": "sigue_pendiente",
+      "evidencia": [
+        {
+          "ruta": "propuestas/pendientes-muse-r6/salud/evidencia/Manual_Llenado_CD_CMF_2022_20220930.pdf",
+          "sha256": "698ee48a45f0f34eaf604be9e4290a2191953c9d0460d43600ccc6d6f29b74f4",
+          "localizador": "pp.12,22,45,46,53 (preg 25 o 35 (sin titulo literal 'intencion'))",
+          "afirmacion_soportada": "Veredicto ambiguo: p22: bloque 31-36 'obtener informacion sobre la presunta intencionalidad del evento; si fue un presunto: accidente, homicidio o suicidio'. p12 (12.2.7.5.2): 'asentar... la presunta intencionalidad del evento'. p45-46 pre"
+        },
+        {
+          "ruta": "data/portal/inspecciones/12f684e9-f4d5-4714-933d-aa153a812174.json",
+          "sha256": "2094c24f84a07d1a7e9e7f3c9e663b6923e51508a71678eea74860232f2c1179",
+          "localizador": "/definiciones/54",
+          "afirmacion_soportada": "Fila local: tipo=Numerico entero, ejemplo='8', descripcion='Pendiente de especificar', catalogo=''"
+        }
+      ],
+      "vinculo_fuente_local": "Vinculo solo tematico a preg 25 o 35 (sin titulo literal 'intencion') del Manual Modelo 2022 (ambito general (bloque 31-36, sin pregunta literal unica)), sin tabla pregunta<->columna del publicador ni codebook/edicion: insuficiente para promocion. Recurso de datos citado sin vinculo (XLSX, datastore_active=false).",
+      "evidencia_faltante": "Nota del publicador que vincule el recurso 6f39fc5d (2022-01-01 a 2022-09-22) con la preg 25 o 35 (sin titulo literal 'intencion') del Manual SEED Modelo 2022 para esta fila (huella b87cc102c25d...), con tabla pregunta<->columna y codebook/edicion aplicable (para CIE: edicion que contenga el codigo local).",
+      "motivo": "sigue_pendiente: examen por ID del manual autentico da veredicto ambiguo (general (bloque 31-36, sin pregunta literal unica)). Ninguna pregunta se titula 'intencion'. Candidatas: preg 25 Tipo de defuncion (p45-46: enfermedad/accidente/agresion/autoinfligidas/intervencion/se ignora) y preg 35 descripcion con categorias 1-2 (investigacion pendiente/no determinable, p53). El concepto 'presunta intencionalidad' cubre el bloque 31-36 (p22; 12.2.7.5.2 p12). Sin mapa del 8 y sin vinculo, no fijable.",
+      "limites": [
+        "Alcance simultaneo por conjunto+diccionario+fila+huella; no autoriza cruces, joins ni identidad de catalogos.",
+        "Extracto textual (pypdf) sin layout/imagenes; paginas citadas verificables en el PDF.",
+        "Negativas acotadas a lo revisado (F4), no ausencia universal."
+      ]
+    },
+    {
+      "definicion_iri": "https://example.org/mex-ontologi/definition/12f684e9-f4d5-4714-933d-aa153a812174%2F56",
+      "variable": "INTENCIONEVENTOD",
+      "descripcion_original": "Pendiente de especificar",
+      "huella_fila_diccionario": "4131826cf3a9dc83326558466a832f676c04266acdab9f5608d4d8928e6ba26f",
+      "estado": "sigue_pendiente",
+      "evidencia": [
+        {
+          "ruta": "propuestas/pendientes-muse-r6/salud/evidencia/Manual_Llenado_CD_CMF_2022_20220930.pdf",
+          "sha256": "698ee48a45f0f34eaf604be9e4290a2191953c9d0460d43600ccc6d6f29b74f4",
+          "localizador": "pp.45,46,53,98,100 (preg 25 o 35)",
+          "afirmacion_soportada": "Veredicto compatible-tematica: p53 preg 35: 'Accidente, Agresion, Lesiones autoinfligidas intencionalmente, Intervencion legal' + '1. Investigacion pendiente' + '2. No puede determinarse'. p45-46 preg 25: enfermedad/accidente/agresion/autoinfligidas/i"
+        },
+        {
+          "ruta": "data/portal/inspecciones/12f684e9-f4d5-4714-933d-aa153a812174.json",
+          "sha256": "2094c24f84a07d1a7e9e7f3c9e663b6923e51508a71678eea74860232f2c1179",
+          "localizador": "/definiciones/55",
+          "afirmacion_soportada": "Fila local: tipo=Texto, ejemplo='NO APLICA', descripcion='Pendiente de especificar', catalogo=''"
+        }
+      ],
+      "vinculo_fuente_local": "Vinculo solo tematico a preg 25 o 35 del Manual Modelo 2022 (ambito general (bloque 31-36)), sin tabla pregunta<->columna del publicador ni codebook/edicion: insuficiente para promocion. Recurso de datos citado sin vinculo (XLSX, datastore_active=false).",
+      "evidencia_faltante": "Nota del publicador que vincule el recurso 6f39fc5d (2022-01-01 a 2022-09-22) con la preg 25 o 35 del Manual SEED Modelo 2022 para esta fila (huella 4131826cf3a9...), con tabla pregunta<->columna y codebook/edicion aplicable (para CIE: edicion que contenga el codigo local).",
+      "motivo": "sigue_pendiente: examen por ID del manual autentico da veredicto compatible-tematica (general (bloque 31-36)). Sin codebook del publicador que defina NO APLICA como valor valido para preg 25/35; la ausencia del literal en el manual no prueba incompatibilidad. Sin codebook/vinculo no acredita; se mantiene pendiente por falta de vinculo.",
+      "limites": [
+        "Alcance simultaneo por conjunto+diccionario+fila+huella; no autoriza cruces, joins ni identidad de catalogos.",
+        "Extracto textual (pypdf) sin layout/imagenes; paginas citadas verificables en el PDF.",
+        "Negativas acotadas a lo revisado (F4), no ausencia universal."
+      ]
+    },
+    {
+      "definicion_iri": "https://example.org/mex-ontologi/definition/12f684e9-f4d5-4714-933d-aa153a812174%2F57",
+      "variable": "CIECAUSABASICA",
+      "descripcion_original": "Pendiente de especificar",
+      "huella_fila_diccionario": "81e3f9ef3c87b147379617e9e5be83166d67fbd0aed3a852ed7dbfe66696261f",
+      "estado": "sigue_pendiente",
+      "evidencia": [
+        {
+          "ruta": "propuestas/pendientes-muse-r6/salud/evidencia/Manual_Llenado_CD_CMF_2022_20220930.pdf",
+          "sha256": "698ee48a45f0f34eaf604be9e4290a2191953c9d0460d43600ccc6d6f29b74f4",
+          "localizador": "pp.47,51,102 (preg 26 / 30 (uso codificador))",
+          "afirmacion_soportada": "Veredicto compatible-tematica: p47 preg 26: 'Deje en blanco los espacios reservados para los codigos de la CIE-10'. p51 preg 30 CAUSA BASICA: 'uso exclusivo de personal codificador, favor de dejarlo en blanco'. p102 biblio: 'CIE-10, 10a revision, OPS "
+        },
+        {
+          "ruta": "data/portal/inspecciones/12f684e9-f4d5-4714-933d-aa153a812174.json",
+          "sha256": "2094c24f84a07d1a7e9e7f3c9e663b6923e51508a71678eea74860232f2c1179",
+          "localizador": "/definiciones/56",
+          "afirmacion_soportada": "Fila local: tipo=Alfanumerico, ejemplo='U071', descripcion='Pendiente de especificar', catalogo=''"
+        }
+      ],
+      "vinculo_fuente_local": "Vinculo solo tematico a preg 26 / 30 (uso codificador) del Manual Modelo 2022 (ambito general), sin tabla pregunta<->columna del publicador ni codebook/edicion: insuficiente para promocion. Recurso de datos citado sin vinculo (XLSX, datastore_active=false).",
+      "evidencia_faltante": "Nota del publicador que vincule el recurso 6f39fc5d (2022-01-01 a 2022-09-22) con la preg 26 / 30 (uso codificador) del Manual SEED Modelo 2022 para esta fila (huella 81e3f9ef3c87...), con tabla pregunta<->columna y codebook/edicion aplicable (para CIE: edicion que contenga el codigo local).",
+      "motivo": "sigue_pendiente: examen por ID del manual autentico da veredicto compatible-tematica (general). El manual documenta dejar en blanco al certificante (preg 26 p47; preg 30 p51, uso exclusivo del codificador) y cita CIE-10 OPS 1995 (p102); pero no documenta la edicion aplicable a los datos 2022 ni tabla pregunta<->columna ni codebook que vincule U071. Falta de documentacion de vinculo/edicion, no incompatibilidad acreditada; se mantiene pendiente.",
+      "limites": [
+        "Alcance simultaneo por conjunto+diccionario+fila+huella; no autoriza cruces, joins ni identidad de catalogos.",
+        "Extracto textual (pypdf) sin layout/imagenes; paginas citadas verificables en el PDF.",
+        "Negativas acotadas a lo revisado (F4), no ausencia universal."
+      ]
+    },
+    {
+      "definicion_iri": "https://example.org/mex-ontologi/definition/12f684e9-f4d5-4714-933d-aa153a812174%2F58",
+      "variable": "CIECAUSABASICAD",
+      "descripcion_original": "Pendiente de especificar",
+      "huella_fila_diccionario": "db8f6d2371614ea06fc66dc615ed3e5752e6e29cc4c3df720f5e6fbd10333524",
+      "estado": "sigue_pendiente",
+      "evidencia": [
+        {
+          "ruta": "propuestas/pendientes-muse-r6/salud/evidencia/Manual_Llenado_CD_CMF_2022_20220930.pdf",
+          "sha256": "698ee48a45f0f34eaf604be9e4290a2191953c9d0460d43600ccc6d6f29b74f4",
+          "localizador": "pp.47,51,102 (preg 26 / 30 (uso codificador))",
+          "afirmacion_soportada": "Veredicto compatible-tematica: Mismas que n=15 (pp47,51,102). 'COVID-19, VIRUS IDENTIFICADO' = descripcion del codigo U07.1 de uso de emergencia."
+        },
+        {
+          "ruta": "data/portal/inspecciones/12f684e9-f4d5-4714-933d-aa153a812174.json",
+          "sha256": "2094c24f84a07d1a7e9e7f3c9e663b6923e51508a71678eea74860232f2c1179",
+          "localizador": "/definiciones/57",
+          "afirmacion_soportada": "Fila local: tipo=Texto, ejemplo='COVID-19, VIRUS IDENTIFICADO', descripcion='Pendiente de especificar', catalogo=''"
+        }
+      ],
+      "vinculo_fuente_local": "Vinculo solo tematico a preg 26 / 30 (uso codificador) del Manual Modelo 2022 (ambito general), sin tabla pregunta<->columna del publicador ni codebook/edicion: insuficiente para promocion. Recurso de datos citado sin vinculo (XLSX, datastore_active=false).",
+      "evidencia_faltante": "Nota del publicador que vincule el recurso 6f39fc5d (2022-01-01 a 2022-09-22) con la preg 26 / 30 (uso codificador) del Manual SEED Modelo 2022 para esta fila (huella db8f6d237161...), con tabla pregunta<->columna y codebook/edicion aplicable (para CIE: edicion que contenga el codigo local).",
+      "motivo": "sigue_pendiente: examen por ID del manual autentico da veredicto compatible-tematica (general). El literal describe un codigo de emergencia 2020; ninguna fuente del publicador declara la edicion CIE aplicable al recurso 2022 ni vincula esta fila. Falta de documentacion; no se afirma incompatibilidad por posterioridad a 1995. Se mantiene pendiente.",
+      "limites": [
+        "Alcance simultaneo por conjunto+diccionario+fila+huella; no autoriza cruces, joins ni identidad de catalogos.",
+        "Extracto textual (pypdf) sin layout/imagenes; paginas citadas verificables en el PDF.",
+        "Negativas acotadas a lo revisado (F4), no ausencia universal."
+      ]
+    },
+    {
+      "definicion_iri": "https://example.org/mex-ontologi/definition/12f684e9-f4d5-4714-933d-aa153a812174%2F63",
+      "variable": "CAUSAPROPIAEMBARAZO",
+      "descripcion_original": "Pendiente de especificar",
+      "huella_fila_diccionario": "56db546aff8f909eeca13cff3b2cfd9be1fd79d26117c4230b55ff006aaf7113",
+      "estado": "sigue_pendiente",
+      "evidencia": [
+        {
+          "ruta": "propuestas/pendientes-muse-r6/salud/evidencia/Manual_Llenado_CD_CMF_2022_20220930.pdf",
+          "sha256": "698ee48a45f0f34eaf604be9e4290a2191953c9d0460d43600ccc6d6f29b74f4",
+          "localizador": "pp.49 (preg 28.2 / 28.3)",
+          "afirmacion_soportada": "Veredicto compatible-tematica: General p49 preg 28 'SI LA DEFUNCION CORRESPONDE A UNA MUJER DE 10 A 54 ANOS': 28.1 'Si la muerte ocurrio durante: embarazo, parto, puerperio...' (opciones 1-5); 28.2 'Las causas anotadas fueron complicaciones del embara"
+        },
+        {
+          "ruta": "data/portal/inspecciones/12f684e9-f4d5-4714-933d-aa153a812174.json",
+          "sha256": "2094c24f84a07d1a7e9e7f3c9e663b6923e51508a71678eea74860232f2c1179",
+          "localizador": "/definiciones/62",
+          "afirmacion_soportada": "Fila local: tipo=Numerico entero, ejemplo='8', descripcion='Pendiente de especificar', catalogo=''"
+        }
+      ],
+      "vinculo_fuente_local": "Vinculo solo tematico a preg 28.2 / 28.3 del Manual Modelo 2022 (ambito general), sin tabla pregunta<->columna del publicador ni codebook/edicion: insuficiente para promocion. Recurso de datos citado sin vinculo (XLSX, datastore_active=false).",
+      "evidencia_faltante": "Nota del publicador que vincule el recurso 6f39fc5d (2022-01-01 a 2022-09-22) con la preg 28.2 / 28.3 del Manual SEED Modelo 2022 para esta fila (huella 56db546aff8f...), con tabla pregunta<->columna y codebook/edicion aplicable (para CIE: edicion que contenga el codigo local).",
+      "motivo": "sigue_pendiente: examen por ID del manual autentico da veredicto compatible-tematica (general). Compatibilidad tematica (mujer 10-54, embarazo) pero sin mapa del 8: la preg 28.1 usa opciones 1-5 y 28.2/28.3 son Si/No implicitos sin codigos publicados. Vecino OCURRIODURANTEEMBARAZO documentado no transfiere sentido (prohibidos los joins).",
+      "limites": [
+        "Alcance simultaneo por conjunto+diccionario+fila+huella; no autoriza cruces, joins ni identidad de catalogos.",
+        "Extracto textual (pypdf) sin layout/imagenes; paginas citadas verificables en el PDF.",
+        "Negativas acotadas a lo revisado (F4), no ausencia universal."
+      ]
+    },
+    {
+      "definicion_iri": "https://example.org/mex-ontologi/definition/12f684e9-f4d5-4714-933d-aa153a812174%2F64",
+      "variable": "CAUSAPROPIAEMBARAZOD",
+      "descripcion_original": "Pendiente de especificar",
+      "huella_fila_diccionario": "f6c8aaa315795f03ce605c8756e3966010f8129eee3b92b62bb5da3645168600",
+      "estado": "sigue_pendiente",
+      "evidencia": [
+        {
+          "ruta": "propuestas/pendientes-muse-r6/salud/evidencia/Manual_Llenado_CD_CMF_2022_20220930.pdf",
+          "sha256": "698ee48a45f0f34eaf604be9e4290a2191953c9d0460d43600ccc6d6f29b74f4",
+          "localizador": "pp.49,50 (preg 28.2 / 28.3)",
+          "afirmacion_soportada": "Veredicto compatible-tematica: General pp49-50 preg 28 y ejemplos ('La mujer no estuvo embarazada' / 'La mujer estuvo embarazada')."
+        },
+        {
+          "ruta": "data/portal/inspecciones/12f684e9-f4d5-4714-933d-aa153a812174.json",
+          "sha256": "2094c24f84a07d1a7e9e7f3c9e663b6923e51508a71678eea74860232f2c1179",
+          "localizador": "/definiciones/63",
+          "afirmacion_soportada": "Fila local: tipo=Texto, ejemplo='NO APLICA', descripcion='Pendiente de especificar', catalogo=''"
+        }
+      ],
+      "vinculo_fuente_local": "Vinculo solo tematico a preg 28.2 / 28.3 del Manual Modelo 2022 (ambito general), sin tabla pregunta<->columna del publicador ni codebook/edicion: insuficiente para promocion. Recurso de datos citado sin vinculo (XLSX, datastore_active=false).",
+      "evidencia_faltante": "Nota del publicador que vincule el recurso 6f39fc5d (2022-01-01 a 2022-09-22) con la preg 28.2 / 28.3 del Manual SEED Modelo 2022 para esta fila (huella f6c8aaa31579...), con tabla pregunta<->columna y codebook/edicion aplicable (para CIE: edicion que contenga el codigo local).",
+      "motivo": "sigue_pendiente: examen por ID del manual autentico da veredicto compatible-tematica (general). 'NO APLICA' no es literal del manual (opciones 1-5 en 28.1; Si/No/Se ignora en 28.2-28.3). Sin codebook/vinculo.",
+      "limites": [
+        "Alcance simultaneo por conjunto+diccionario+fila+huella; no autoriza cruces, joins ni identidad de catalogos.",
+        "Extracto textual (pypdf) sin layout/imagenes; paginas citadas verificables en el PDF.",
+        "Negativas acotadas a lo revisado (F4), no ausencia universal."
+      ]
+    },
+    {
+      "definicion_iri": "https://example.org/mex-ontologi/definition/12f684e9-f4d5-4714-933d-aa153a812174%2F67",
+      "variable": "SITIOOCURRENCIALESION",
+      "descripcion_original": "Pendiente de especificar",
+      "huella_fila_diccionario": "ece78b819635fc19c837c1159d9d7f26cb08be18ff31821e610ab7c5c19f4f45",
+      "estado": "sigue_pendiente",
+      "evidencia": [
+        {
+          "ruta": "propuestas/pendientes-muse-r6/salud/evidencia/Manual_Llenado_CD_CMF_2022_20220930.pdf",
+          "sha256": "698ee48a45f0f34eaf604be9e4290a2191953c9d0460d43600ccc6d6f29b74f4",
+          "localizador": "pp.52 (preg 32)",
+          "afirmacion_soportada": "Veredicto compatible-tematica: General p52 preg 32 'Lugar donde ocurrio la lesion (Accidental o Violenta). Especifique el lugar donde ocurrio la lesion o agresion, este puede ser diferente al lugar donde ocurrio la defuncion'."
+        },
+        {
+          "ruta": "data/portal/inspecciones/12f684e9-f4d5-4714-933d-aa153a812174.json",
+          "sha256": "2094c24f84a07d1a7e9e7f3c9e663b6923e51508a71678eea74860232f2c1179",
+          "localizador": "/definiciones/66",
+          "afirmacion_soportada": "Fila local: tipo=Numerico entero, ejemplo='88', descripcion='Pendiente de especificar', catalogo=''"
+        }
+      ],
+      "vinculo_fuente_local": "Vinculo solo tematico a preg 32 del Manual Modelo 2022 (ambito general (lesion, distinto de defuncion)), sin tabla pregunta<->columna del publicador ni codebook/edicion: insuficiente para promocion. Recurso de datos citado sin vinculo (XLSX, datastore_active=false).",
+      "evidencia_faltante": "Nota del publicador que vincule el recurso 6f39fc5d (2022-01-01 a 2022-09-22) con la preg 32 del Manual SEED Modelo 2022 para esta fila (huella ece78b819635...), con tabla pregunta<->columna y codebook/edicion aplicable (para CIE: edicion que contenga el codigo local).",
+      "motivo": "sigue_pendiente: examen por ID del manual autentico da veredicto compatible-tematica (general (lesion, distinto de defuncion)). Alcance aclarado (lesion, preg 32; distinto de SITIODEFUNCION preg 19 y de OCURRIOENTRABAJO preg 31 documentado), pero sin mapa del 88 (probable sentinela 'se ignora/no aplica' no documentado en el manual). Sin codebook/vinculo.",
+      "limites": [
+        "Alcance simultaneo por conjunto+diccionario+fila+huella; no autoriza cruces, joins ni identidad de catalogos.",
+        "Extracto textual (pypdf) sin layout/imagenes; paginas citadas verificables en el PDF.",
+        "Negativas acotadas a lo revisado (F4), no ausencia universal."
+      ]
+    },
+    {
+      "definicion_iri": "https://example.org/mex-ontologi/definition/12f684e9-f4d5-4714-933d-aa153a812174%2F68",
+      "variable": "SITIOOCURRENCIALESIOND",
+      "descripcion_original": "Pendiente de especificar",
+      "huella_fila_diccionario": "aa8199d031d2d4cd9334137d566dd3521c716b49eabfac04e7beaf324a09952e",
+      "estado": "sigue_pendiente",
+      "evidencia": [
+        {
+          "ruta": "propuestas/pendientes-muse-r6/salud/evidencia/Manual_Llenado_CD_CMF_2022_20220930.pdf",
+          "sha256": "698ee48a45f0f34eaf604be9e4290a2191953c9d0460d43600ccc6d6f29b74f4",
+          "localizador": "pp.52 (preg 32)",
+          "afirmacion_soportada": "Veredicto compatible-tematica: General p52 preg 32 y ejemplos ('Lugar donde ocurrio la lesion' / 'Se desconoce o se ignora...')."
+        },
+        {
+          "ruta": "data/portal/inspecciones/12f684e9-f4d5-4714-933d-aa153a812174.json",
+          "sha256": "2094c24f84a07d1a7e9e7f3c9e663b6923e51508a71678eea74860232f2c1179",
+          "localizador": "/definiciones/67",
+          "afirmacion_soportada": "Fila local: tipo=Texto, ejemplo='NO APLICA', descripcion='Pendiente de especificar', catalogo=''"
+        }
+      ],
+      "vinculo_fuente_local": "Vinculo solo tematico a preg 32 del Manual Modelo 2022 (ambito general (lesion)), sin tabla pregunta<->columna del publicador ni codebook/edicion: insuficiente para promocion. Recurso de datos citado sin vinculo (XLSX, datastore_active=false).",
+      "evidencia_faltante": "Nota del publicador que vincule el recurso 6f39fc5d (2022-01-01 a 2022-09-22) con la preg 32 del Manual SEED Modelo 2022 para esta fila (huella aa8199d031d2...), con tabla pregunta<->columna y codebook/edicion aplicable (para CIE: edicion que contenga el codigo local).",
+      "motivo": "sigue_pendiente: examen por ID del manual autentico da veredicto compatible-tematica (general (lesion)). 'NO APLICA' no figura entre los literales del manual para la preg 32. Sin codebook/vinculo.",
+      "limites": [
+        "Alcance simultaneo por conjunto+diccionario+fila+huella; no autoriza cruces, joins ni identidad de catalogos.",
+        "Extracto textual (pypdf) sin layout/imagenes; paginas citadas verificables en el PDF.",
+        "Negativas acotadas a lo revisado (F4), no ausencia universal."
+      ]
+    },
+    {
+      "definicion_iri": "https://example.org/mex-ontologi/definition/12f684e9-f4d5-4714-933d-aa153a812174%2F69",
+      "variable": "PARENTESCOAGRESORD",
+      "descripcion_original": "Pendiente de especificar",
+      "huella_fila_diccionario": "eea42314404fd23e4a20c14f935c013e96331a047aee3335d349e5a568425af2",
+      "estado": "sigue_pendiente",
+      "evidencia": [
+        {
+          "ruta": "propuestas/pendientes-muse-r6/salud/evidencia/Manual_Llenado_CD_CMF_2022_20220930.pdf",
+          "sha256": "698ee48a45f0f34eaf604be9e4290a2191953c9d0460d43600ccc6d6f29b74f4",
+          "localizador": "pp.53,38 (preg 34)",
+          "afirmacion_soportada": "Veredicto compatible-tematica: General p53 preg 34 'Relacion que tenia el presunto agresor con el(la) fallecido(a)... padre, madre, madrastra, concubina, esposo, etc.... En caso de no existir un parentesco anote ninguno'. Distinto de p38 preg 17 (pare"
+        },
+        {
+          "ruta": "data/portal/inspecciones/12f684e9-f4d5-4714-933d-aa153a812174.json",
+          "sha256": "2094c24f84a07d1a7e9e7f3c9e663b6923e51508a71678eea74860232f2c1179",
+          "localizador": "/definiciones/68",
+          "afirmacion_soportada": "Fila local: tipo=Texto, ejemplo='NO APLICA', descripcion='Pendiente de especificar', catalogo=''"
+        }
+      ],
+      "vinculo_fuente_local": "Vinculo solo tematico a preg 34 del Manual Modelo 2022 (ambito general (agresor; no confundir con informante)), sin tabla pregunta<->columna del publicador ni codebook/edicion: insuficiente para promocion. Recurso de datos citado sin vinculo (XLSX, datastore_active=false).",
+      "evidencia_faltante": "Nota del publicador que vincule el recurso 6f39fc5d (2022-01-01 a 2022-09-22) con la preg 34 del Manual SEED Modelo 2022 para esta fila (huella eea42314404f...), con tabla pregunta<->columna y codebook/edicion aplicable (para CIE: edicion que contenga el codigo local).",
+      "motivo": "sigue_pendiente: examen por ID del manual autentico da veredicto compatible-tematica (general (agresor; no confundir con informante)). La correspondencia tematica es la mas fuerte del grupo (unica D sin par numerico; manual en texto libre), pero el ejemplo 'NO APLICA' no es literal admitido ('ninguno' si no hay parentesco; 'Se ignora' si se desconoce) y no debe confundirse con la preg 17 (parentesco del INFORMANTE, p38). Sin codebook/vinculo no acredita.",
+      "limites": [
+        "Alcance simultaneo por conjunto+diccionario+fila+huella; no autoriza cruces, joins ni identidad de catalogos.",
+        "Extracto textual (pypdf) sin layout/imagenes; paginas citadas verificables en el PDF.",
+        "Negativas acotadas a lo revisado (F4), no ausencia universal."
+      ]
+    },
+    {
+      "definicion_iri": "https://example.org/mex-ontologi/definition/12f684e9-f4d5-4714-933d-aa153a812174%2F70",
+      "variable": "ENTIDADOCURRENCIA",
+      "descripcion_original": "Pendiente de especificar",
+      "huella_fila_diccionario": "fbfa197761cf2332d4e78aa66a5fc4fdab7f0b9088c7bd0eeb7075eda4aec6f3",
+      "estado": "sigue_pendiente",
+      "evidencia": [
+        {
+          "ruta": "propuestas/pendientes-muse-r6/salud/evidencia/Manual_Llenado_CD_CMF_2022_20220930.pdf",
+          "sha256": "698ee48a45f0f34eaf604be9e4290a2191953c9d0460d43600ccc6d6f29b74f4",
+          "localizador": "pp.56,40,73 (preg 36.10)",
+          "afirmacion_soportada": "Veredicto compatible-tematica: General p56 preg 36.10 'Entidad Federativa: Anotar el nombre de la entidad federativa que corresponde al lugar donde sucedio la lesion'. Distinto de p40 preg 20 (domicilio defuncion) y p73 preg 10.10 (fetal)."
+        },
+        {
+          "ruta": "data/portal/inspecciones/12f684e9-f4d5-4714-933d-aa153a812174.json",
+          "sha256": "2094c24f84a07d1a7e9e7f3c9e663b6923e51508a71678eea74860232f2c1179",
+          "localizador": "/definiciones/69",
+          "afirmacion_soportada": "Fila local: tipo=Numerico entero, ejemplo='88', descripcion='Pendiente de especificar', catalogo=''"
+        }
+      ],
+      "vinculo_fuente_local": "Vinculo solo tematico a preg 36.10 del Manual Modelo 2022 (ambito general (lesion; distinto de defuncion y de expulsion fetal)), sin tabla pregunta<->columna del publicador ni codebook/edicion: insuficiente para promocion. Recurso de datos citado sin vinculo (XLSX, datastore_active=false).",
+      "evidencia_faltante": "Nota del publicador que vincule el recurso 6f39fc5d (2022-01-01 a 2022-09-22) con la preg 36.10 del Manual SEED Modelo 2022 para esta fila (huella fbfa197761cf...), con tabla pregunta<->columna y codebook/edicion aplicable (para CIE: edicion que contenga el codigo local).",
+      "motivo": "sigue_pendiente: examen por ID del manual autentico da veredicto compatible-tematica (general (lesion; distinto de defuncion y de expulsion fetal)). Alcance = lesion por vecinos documentados (ENTIDADDEFUNCION/MUNICIPIODEFUNCION/LOCALIDADDEFUNCION cubren la defuncion; OCURRIOENTRABAJO la preg 31), pero sin mapa del 88 y con triple ambiguedad residual (36.10 lesion vs 20.x domicilio defuncion vs 10.10 fetal). Sin vinculo del publicador.",
+      "limites": [
+        "Alcance simultaneo por conjunto+diccionario+fila+huella; no autoriza cruces, joins ni identidad de catalogos.",
+        "Extracto textual (pypdf) sin layout/imagenes; paginas citadas verificables en el PDF.",
+        "Negativas acotadas a lo revisado (F4), no ausencia universal."
+      ]
+    },
+    {
+      "definicion_iri": "https://example.org/mex-ontologi/definition/12f684e9-f4d5-4714-933d-aa153a812174%2F71",
+      "variable": "ENTIDADOCURRENCIAD",
+      "descripcion_original": "Pendiente de especificar",
+      "huella_fila_diccionario": "3ca265bc2d1d622526135e122abaa60f3b47b1a468401f1cb0a4fa398b326f57",
+      "estado": "sigue_pendiente",
+      "evidencia": [
+        {
+          "ruta": "propuestas/pendientes-muse-r6/salud/evidencia/Manual_Llenado_CD_CMF_2022_20220930.pdf",
+          "sha256": "698ee48a45f0f34eaf604be9e4290a2191953c9d0460d43600ccc6d6f29b74f4",
+          "localizador": "pp.56 (preg 36.10)",
+          "afirmacion_soportada": "Veredicto compatible-tematica: General p56 preg 36.10 ('Morelos, Baja California Sur, Colima...'; 'Si se desconoce... Se ignora')."
+        },
+        {
+          "ruta": "data/portal/inspecciones/12f684e9-f4d5-4714-933d-aa153a812174.json",
+          "sha256": "2094c24f84a07d1a7e9e7f3c9e663b6923e51508a71678eea74860232f2c1179",
+          "localizador": "/definiciones/70",
+          "afirmacion_soportada": "Fila local: tipo=Texto, ejemplo='NO APLICA', descripcion='Pendiente de especificar', catalogo=''"
+        }
+      ],
+      "vinculo_fuente_local": "Vinculo solo tematico a preg 36.10 del Manual Modelo 2022 (ambito general (lesion)), sin tabla pregunta<->columna del publicador ni codebook/edicion: insuficiente para promocion. Recurso de datos citado sin vinculo (XLSX, datastore_active=false).",
+      "evidencia_faltante": "Nota del publicador que vincule el recurso 6f39fc5d (2022-01-01 a 2022-09-22) con la preg 36.10 del Manual SEED Modelo 2022 para esta fila (huella 3ca265bc2d1d...), con tabla pregunta<->columna y codebook/edicion aplicable (para CIE: edicion que contenga el codigo local).",
+      "motivo": "sigue_pendiente: examen por ID del manual autentico da veredicto compatible-tematica (general (lesion)). 'NO APLICA' no es literal del manual (nombres de entidad o 'Se ignora'). Sin codebook/vinculo.",
+      "limites": [
+        "Alcance simultaneo por conjunto+diccionario+fila+huella; no autoriza cruces, joins ni identidad de catalogos.",
+        "Extracto textual (pypdf) sin layout/imagenes; paginas citadas verificables en el PDF.",
+        "Negativas acotadas a lo revisado (F4), no ausencia universal."
+      ]
+    },
+    {
+      "definicion_iri": "https://example.org/mex-ontologi/definition/12f684e9-f4d5-4714-933d-aa153a812174%2F72",
+      "variable": "MUNICIPIOOCURRENCIA",
+      "descripcion_original": "Pendiente de especificar",
+      "huella_fila_diccionario": "da9a0fcd2979fbcca215523a090a0332d76bfb531c9f92fecae3bd347819febf",
+      "estado": "sigue_pendiente",
+      "evidencia": [
+        {
+          "ruta": "propuestas/pendientes-muse-r6/salud/evidencia/Manual_Llenado_CD_CMF_2022_20220930.pdf",
+          "sha256": "698ee48a45f0f34eaf604be9e4290a2191953c9d0460d43600ccc6d6f29b74f4",
+          "localizador": "pp.55 (preg 36.9)",
+          "afirmacion_soportada": "Veredicto compatible-tematica: General p55 preg 36.9 'Municipio o alcaldia... correspondiente del lugar donde sucedio la lesion. Ejemplo: Calvillo, Jerez, Acuna... Si se desconoce... Se ignora'."
+        },
+        {
+          "ruta": "data/portal/inspecciones/12f684e9-f4d5-4714-933d-aa153a812174.json",
+          "sha256": "2094c24f84a07d1a7e9e7f3c9e663b6923e51508a71678eea74860232f2c1179",
+          "localizador": "/definiciones/71",
+          "afirmacion_soportada": "Fila local: tipo=Numerico entero, ejemplo='997', descripcion='Pendiente de especificar', catalogo=''"
+        }
+      ],
+      "vinculo_fuente_local": "Vinculo solo tematico a preg 36.9 del Manual Modelo 2022 (ambito general (lesion)), sin tabla pregunta<->columna del publicador ni codebook/edicion: insuficiente para promocion. Recurso de datos citado sin vinculo (XLSX, datastore_active=false).",
+      "evidencia_faltante": "Nota del publicador que vincule el recurso 6f39fc5d (2022-01-01 a 2022-09-22) con la preg 36.9 del Manual SEED Modelo 2022 para esta fila (huella da9a0fcd2979...), con tabla pregunta<->columna y codebook/edicion aplicable (para CIE: edicion que contenga el codigo local).",
+      "motivo": "sigue_pendiente: examen por ID del manual autentico da veredicto compatible-tematica (general (lesion)). Sin mapa del 997 (sentinela aparente de 3 digitos para municipio). Sin codebook/vinculo.",
+      "limites": [
+        "Alcance simultaneo por conjunto+diccionario+fila+huella; no autoriza cruces, joins ni identidad de catalogos.",
+        "Extracto textual (pypdf) sin layout/imagenes; paginas citadas verificables en el PDF.",
+        "Negativas acotadas a lo revisado (F4), no ausencia universal."
+      ]
+    },
+    {
+      "definicion_iri": "https://example.org/mex-ontologi/definition/12f684e9-f4d5-4714-933d-aa153a812174%2F73",
+      "variable": "MUNICIPIOOCURRENCIAD",
+      "descripcion_original": "Pendiente de especificar",
+      "huella_fila_diccionario": "45f58439a5c544c88713e5f5ba62c1a0ddf40f9aa6181a506e30f6d50a6e1b85",
+      "estado": "sigue_pendiente",
+      "evidencia": [
+        {
+          "ruta": "propuestas/pendientes-muse-r6/salud/evidencia/Manual_Llenado_CD_CMF_2022_20220930.pdf",
+          "sha256": "698ee48a45f0f34eaf604be9e4290a2191953c9d0460d43600ccc6d6f29b74f4",
+          "localizador": "pp.55 (preg 36.9)",
+          "afirmacion_soportada": "Veredicto compatible-tematica: General p55 preg 36.9."
+        },
+        {
+          "ruta": "data/portal/inspecciones/12f684e9-f4d5-4714-933d-aa153a812174.json",
+          "sha256": "2094c24f84a07d1a7e9e7f3c9e663b6923e51508a71678eea74860232f2c1179",
+          "localizador": "/definiciones/72",
+          "afirmacion_soportada": "Fila local: tipo=Texto, ejemplo='NO APLICA', descripcion='Pendiente de especificar', catalogo=''"
+        }
+      ],
+      "vinculo_fuente_local": "Vinculo solo tematico a preg 36.9 del Manual Modelo 2022 (ambito general (lesion)), sin tabla pregunta<->columna del publicador ni codebook/edicion: insuficiente para promocion. Recurso de datos citado sin vinculo (XLSX, datastore_active=false).",
+      "evidencia_faltante": "Nota del publicador que vincule el recurso 6f39fc5d (2022-01-01 a 2022-09-22) con la preg 36.9 del Manual SEED Modelo 2022 para esta fila (huella 45f58439a5c5...), con tabla pregunta<->columna y codebook/edicion aplicable (para CIE: edicion que contenga el codigo local).",
+      "motivo": "sigue_pendiente: examen por ID del manual autentico da veredicto compatible-tematica (general (lesion)). 'NO APLICA' no es literal del manual. Sin codebook/vinculo.",
+      "limites": [
+        "Alcance simultaneo por conjunto+diccionario+fila+huella; no autoriza cruces, joins ni identidad de catalogos.",
+        "Extracto textual (pypdf) sin layout/imagenes; paginas citadas verificables en el PDF.",
+        "Negativas acotadas a lo revisado (F4), no ausencia universal."
+      ]
+    },
+    {
+      "definicion_iri": "https://example.org/mex-ontologi/definition/12f684e9-f4d5-4714-933d-aa153a812174%2F74",
+      "variable": "LOCALIDADOCURRENCIA",
+      "descripcion_original": "Pendiente de especificar",
+      "huella_fila_diccionario": "0485c56408609aa3a1cab7e67e8e7b1f0b4ee7cd6607fbe8c97de194423cac9d",
+      "estado": "sigue_pendiente",
+      "evidencia": [
+        {
+          "ruta": "propuestas/pendientes-muse-r6/salud/evidencia/Manual_Llenado_CD_CMF_2022_20220930.pdf",
+          "sha256": "698ee48a45f0f34eaf604be9e4290a2191953c9d0460d43600ccc6d6f29b74f4",
+          "localizador": "pp.55 (preg 36.8)",
+          "afirmacion_soportada": "Veredicto compatible-tematica: General p55 preg 36.8 'Localidad: Registrar el nombre de la localidad correspondiente del lugar donde sucedio la lesion. Ejemplo: Ensenada, Santa Monica... Si se desconoce... Se ignora'."
+        },
+        {
+          "ruta": "data/portal/inspecciones/12f684e9-f4d5-4714-933d-aa153a812174.json",
+          "sha256": "2094c24f84a07d1a7e9e7f3c9e663b6923e51508a71678eea74860232f2c1179",
+          "localizador": "/definiciones/73",
+          "afirmacion_soportada": "Fila local: tipo=Numerico entero, ejemplo='9997', descripcion='Pendiente de especificar', catalogo=''"
+        }
+      ],
+      "vinculo_fuente_local": "Vinculo solo tematico a preg 36.8 del Manual Modelo 2022 (ambito general (lesion)), sin tabla pregunta<->columna del publicador ni codebook/edicion: insuficiente para promocion. Recurso de datos citado sin vinculo (XLSX, datastore_active=false).",
+      "evidencia_faltante": "Nota del publicador que vincule el recurso 6f39fc5d (2022-01-01 a 2022-09-22) con la preg 36.8 del Manual SEED Modelo 2022 para esta fila (huella 0485c5640860...), con tabla pregunta<->columna y codebook/edicion aplicable (para CIE: edicion que contenga el codigo local).",
+      "motivo": "sigue_pendiente: examen por ID del manual autentico da veredicto compatible-tematica (general (lesion)). Sin mapa del 9997 (sentinela aparente de 4 digitos para localidad). Sin codebook/vinculo.",
+      "limites": [
+        "Alcance simultaneo por conjunto+diccionario+fila+huella; no autoriza cruces, joins ni identidad de catalogos.",
+        "Extracto textual (pypdf) sin layout/imagenes; paginas citadas verificables en el PDF.",
+        "Negativas acotadas a lo revisado (F4), no ausencia universal."
+      ]
+    },
+    {
+      "definicion_iri": "https://example.org/mex-ontologi/definition/12f684e9-f4d5-4714-933d-aa153a812174%2F75",
+      "variable": "LOCALIDADOCURRENCIAD",
+      "descripcion_original": "Pendiente de especificar",
+      "huella_fila_diccionario": "6f76513d06bf1de37df4a91e3103ac0e3782913df200633ca0673e907e345bd4",
+      "estado": "sigue_pendiente",
+      "evidencia": [
+        {
+          "ruta": "propuestas/pendientes-muse-r6/salud/evidencia/Manual_Llenado_CD_CMF_2022_20220930.pdf",
+          "sha256": "698ee48a45f0f34eaf604be9e4290a2191953c9d0460d43600ccc6d6f29b74f4",
+          "localizador": "pp.55 (preg 36.8)",
+          "afirmacion_soportada": "Veredicto compatible-tematica: General p55 preg 36.8."
+        },
+        {
+          "ruta": "data/portal/inspecciones/12f684e9-f4d5-4714-933d-aa153a812174.json",
+          "sha256": "2094c24f84a07d1a7e9e7f3c9e663b6923e51508a71678eea74860232f2c1179",
+          "localizador": "/definiciones/74",
+          "afirmacion_soportada": "Fila local: tipo=Texto, ejemplo='NO APLICA', descripcion='Pendiente de especificar', catalogo=''"
+        }
+      ],
+      "vinculo_fuente_local": "Vinculo solo tematico a preg 36.8 del Manual Modelo 2022 (ambito general (lesion)), sin tabla pregunta<->columna del publicador ni codebook/edicion: insuficiente para promocion. Recurso de datos citado sin vinculo (XLSX, datastore_active=false).",
+      "evidencia_faltante": "Nota del publicador que vincule el recurso 6f39fc5d (2022-01-01 a 2022-09-22) con la preg 36.8 del Manual SEED Modelo 2022 para esta fila (huella 6f76513d06bf...), con tabla pregunta<->columna y codebook/edicion aplicable (para CIE: edicion que contenga el codigo local).",
+      "motivo": "sigue_pendiente: examen por ID del manual autentico da veredicto compatible-tematica (general (lesion)). 'NO APLICA' no es literal del manual. Sin codebook/vinculo.",
+      "limites": [
+        "Alcance simultaneo por conjunto+diccionario+fila+huella; no autoriza cruces, joins ni identidad de catalogos.",
+        "Extracto textual (pypdf) sin layout/imagenes; paginas citadas verificables en el PDF.",
+        "Negativas acotadas a lo revisado (F4), no ausencia universal."
+      ]
+    },
+    {
+      "definicion_iri": "https://example.org/mex-ontologi/definition/12f684e9-f4d5-4714-933d-aa153a812174%2F76",
+      "variable": "CERTIFICADOPOR",
+      "descripcion_original": "Pendiente de especificar",
+      "huella_fila_diccionario": "07e2bf0f7eb99cfe51edd3e0925dad52e77f11e359e6cfe81f1353c3d5cae30b",
+      "estado": "sigue_pendiente",
+      "evidencia": [
+        {
+          "ruta": "propuestas/pendientes-muse-r6/salud/evidencia/Manual_Llenado_CD_CMF_2022_20220930.pdf",
+          "sha256": "698ee48a45f0f34eaf604be9e4290a2191953c9d0460d43600ccc6d6f29b74f4",
+          "localizador": "pp.56,92 (preg 37 / 36 (fetal))",
+          "afirmacion_soportada": "Veredicto ambiguo: General p56 preg 37 CERTIFICADA POR: 'Elegir la opcion que identifique a la persona que certifica la defuncion... opcion 4 Personas autorizadas por la Secretaria de Salud'. Fetal p92 preg 36 CERTIFICADA POR (muerte fetal"
+        },
+        {
+          "ruta": "data/portal/inspecciones/12f684e9-f4d5-4714-933d-aa153a812174.json",
+          "sha256": "2094c24f84a07d1a7e9e7f3c9e663b6923e51508a71678eea74860232f2c1179",
+          "localizador": "/definiciones/75",
+          "afirmacion_soportada": "Fila local: tipo=Numerico entero, ejemplo='3', descripcion='Pendiente de especificar', catalogo=''"
+        }
+      ],
+      "vinculo_fuente_local": "Vinculo solo tematico a preg 37 / 36 (fetal) del Manual Modelo 2022 (ambito general+fetal (ambiguo)), sin tabla pregunta<->columna del publicador ni codebook/edicion: insuficiente para promocion. Recurso de datos citado sin vinculo (XLSX, datastore_active=false).",
+      "evidencia_faltante": "Nota del publicador que vincule el recurso 6f39fc5d (2022-01-01 a 2022-09-22) con la preg 37 / 36 (fetal) del Manual SEED Modelo 2022 para esta fila (huella 07e2bf0f7eb9...), con tabla pregunta<->columna y codebook/edicion aplicable (para CIE: edicion que contenga el codigo local).",
+      "motivo": "sigue_pendiente: examen por ID del manual autentico da veredicto ambiguo (general+fetal (ambiguo)). Ambiguedad de ambito (preg 37 general p56 vs preg 36 fetal p92) + sin catalogo de opciones numeradas en el extracto (solo ejemplos y opcion 4 para pasantes). El 3 no es mapeable.",
+      "limites": [
+        "Alcance simultaneo por conjunto+diccionario+fila+huella; no autoriza cruces, joins ni identidad de catalogos.",
+        "Extracto textual (pypdf) sin layout/imagenes; paginas citadas verificables en el PDF.",
+        "Negativas acotadas a lo revisado (F4), no ausencia universal."
+      ]
+    },
+    {
+      "definicion_iri": "https://example.org/mex-ontologi/definition/12f684e9-f4d5-4714-933d-aa153a812174%2F77",
+      "variable": "CERTIFICADOPORD",
+      "descripcion_original": "Pendiente de especificar",
+      "huella_fila_diccionario": "3914b430da43fdb8d84bbe502ef1177b055fb7bd251f980511412795339b0e27",
+      "estado": "sigue_pendiente",
+      "evidencia": [
+        {
+          "ruta": "propuestas/pendientes-muse-r6/salud/evidencia/Manual_Llenado_CD_CMF_2022_20220930.pdf",
+          "sha256": "698ee48a45f0f34eaf604be9e4290a2191953c9d0460d43600ccc6d6f29b74f4",
+          "localizador": "pp.56,57,92 (preg 37 / 36 (fetal))",
+          "afirmacion_soportada": "Veredicto ambiguo: General p56 preg 37 (ejemplos) + p57 preg 39 'SI EL CERTIFICANTE ES MEDICO (opciones 1, 2 y 3 de la pregunta 25...)'. Fetal p92 preg 36."
+        },
+        {
+          "ruta": "data/portal/inspecciones/12f684e9-f4d5-4714-933d-aa153a812174.json",
+          "sha256": "2094c24f84a07d1a7e9e7f3c9e663b6923e51508a71678eea74860232f2c1179",
+          "localizador": "/definiciones/76",
+          "afirmacion_soportada": "Fila local: tipo=Texto, ejemplo='OTRO MÉDICO', descripcion='Pendiente de especificar', catalogo=''"
+        }
+      ],
+      "vinculo_fuente_local": "Vinculo solo tematico a preg 37 / 36 (fetal) del Manual Modelo 2022 (ambito general+fetal (ambiguo)), sin tabla pregunta<->columna del publicador ni codebook/edicion: insuficiente para promocion. Recurso de datos citado sin vinculo (XLSX, datastore_active=false).",
+      "evidencia_faltante": "Nota del publicador que vincule el recurso 6f39fc5d (2022-01-01 a 2022-09-22) con la preg 37 / 36 (fetal) del Manual SEED Modelo 2022 para esta fila (huella 3914b430da43...), con tabla pregunta<->columna y codebook/edicion aplicable (para CIE: edicion que contenga el codigo local).",
+      "motivo": "sigue_pendiente: examen por ID del manual autentico da veredicto ambiguo (general+fetal (ambiguo)). 'OTRO MEDICO' no aparece como literal (ejemplos: 'certificada por un medico / medico pasante'). Ambiguedad de ambito igual que n=28. Sin codebook/vinculo.",
+      "limites": [
+        "Alcance simultaneo por conjunto+diccionario+fila+huella; no autoriza cruces, joins ni identidad de catalogos.",
+        "Extracto textual (pypdf) sin layout/imagenes; paginas citadas verificables en el PDF.",
+        "Negativas acotadas a lo revisado (F4), no ausencia universal."
+      ]
+    },
+    {
+      "definicion_iri": "https://example.org/mex-ontologi/definition/12f684e9-f4d5-4714-933d-aa153a812174%2F78",
+      "variable": "FECHACERTIFICACION",
+      "descripcion_original": "Pendiente de especificar",
+      "huella_fila_diccionario": "e9548fa45ee68e370b7d48001c4847ded6deb8d8c5b9571a64e00d9bc6f4078c",
+      "estado": "sigue_pendiente",
+      "evidencia": [
+        {
+          "ruta": "propuestas/pendientes-muse-r6/salud/evidencia/Manual_Llenado_CD_CMF_2022_20220930.pdf",
+          "sha256": "698ee48a45f0f34eaf604be9e4290a2191953c9d0460d43600ccc6d6f29b74f4",
+          "localizador": "pp.60,97 (preg 42 / 42 (fetal))",
+          "afirmacion_soportada": "Veredicto ambiguo: General p60 preg 42 FECHA DE CERTIFICACION: 'Anotar el dia, mes y ano... formato DD/MM/AAAA... Esta informacion no puede desconocerse'. Fetal p97 preg 42 (mismo titulo, ejemplo 23/06/2022)."
+        },
+        {
+          "ruta": "data/portal/inspecciones/12f684e9-f4d5-4714-933d-aa153a812174.json",
+          "sha256": "2094c24f84a07d1a7e9e7f3c9e663b6923e51508a71678eea74860232f2c1179",
+          "localizador": "/definiciones/77",
+          "afirmacion_soportada": "Fila local: tipo=Fecha, ejemplo='1/6/2022 0:00', descripcion='Pendiente de especificar', catalogo=''"
+        }
+      ],
+      "vinculo_fuente_local": "Vinculo solo tematico a preg 42 / 42 (fetal) del Manual Modelo 2022 (ambito general+fetal (ambiguo)), sin tabla pregunta<->columna del publicador ni codebook/edicion: insuficiente para promocion. Recurso de datos citado sin vinculo (XLSX, datastore_active=false).",
+      "evidencia_faltante": "Nota del publicador que vincule el recurso 6f39fc5d (2022-01-01 a 2022-09-22) con la preg 42 / 42 (fetal) del Manual SEED Modelo 2022 para esta fila (huella e9548fa45ee6...), con tabla pregunta<->columna y codebook/edicion aplicable (para CIE: edicion que contenga el codigo local).",
+      "motivo": "sigue_pendiente: examen por ID del manual autentico da veredicto ambiguo (general+fetal (ambiguo)). Ambiguedad de ambito (preg 42 general p60 vs preg 42 fetal p97) + incompatibilidad de formato: el manual solo admite fecha DD/MM/AAAA ('no puede desconocerse... ni llenarse con nueves'), mientras el ejemplo local incluye hora ('0:00'). Sin vinculo.",
+      "limites": [
+        "Alcance simultaneo por conjunto+diccionario+fila+huella; no autoriza cruces, joins ni identidad de catalogos.",
+        "Extracto textual (pypdf) sin layout/imagenes; paginas citadas verificables en el PDF.",
+        "Negativas acotadas a lo revisado (F4), no ausencia universal."
+      ]
+    },
+    {
+      "definicion_iri": "https://example.org/mex-ontologi/definition/12f684e9-f4d5-4714-933d-aa153a812174%2F79",
+      "variable": "JURISDICCION_CLUES",
+      "descripcion_original": "Pendiente de especificar",
+      "huella_fila_diccionario": "3d8489ce6c278e749bff0500b4cf2d7980c07857523c335bd5a139edd2ba2c2b",
+      "estado": "sigue_pendiente",
+      "evidencia": [
+        {
+          "ruta": "propuestas/pendientes-muse-r6/salud/evidencia/Manual_Llenado_CD_CMF_2022_20220930.pdf",
+          "sha256": "698ee48a45f0f34eaf604be9e4290a2191953c9d0460d43600ccc6d6f29b74f4",
+          "localizador": "busqueda acotada pp1-103 (0 preguntas)",
+          "afirmacion_soportada": "Veredicto sin-pregunta: Busqueda acotada: 0 preguntas tituladas 'jurisdiccion'; menciones solo administrativas (p13: 'expedidos bajo su jurisdiccion'; p19: 'jurisdiccion sanitaria o SESA'). Vecino local documentado JURISDICCIONDEFUNCION ('Clave"
+        },
+        {
+          "ruta": "data/portal/inspecciones/12f684e9-f4d5-4714-933d-aa153a812174.json",
+          "sha256": "2094c24f84a07d1a7e9e7f3c9e663b6923e51508a71678eea74860232f2c1179",
+          "localizador": "/definiciones/78",
+          "afirmacion_soportada": "Fila local: tipo=Numerico entero, ejemplo='6', descripcion='Pendiente de especificar', catalogo=''"
+        },
+        {
+          "ruta": "propuestas/investigacion-post-r6/salud-defunciones/evidencia/http_log.json",
+          "sha256": "3e5fb718750f1d6fe1d8a5a35b27d2c5833614e0773c87cb65bbb5a11f360fe9",
+          "localizador": "busquedas_negativas_acotadas",
+          "afirmacion_soportada": "Negativas acotadas que sostienen el veredicto (jurisdiccion/intencion-literal/codebook/edicion)"
+        }
+      ],
+      "vinculo_fuente_local": "Sin vinculo apto para promocion: ninguna pregunta-manual corresponde; Recurso de datos citado sin vinculo (XLSX, datastore_active=false).",
+      "evidencia_faltante": "Nota del publicador que vincule el recurso 6f39fc5d (2022-01-01 a 2022-09-22) con la preg None del Manual SEED Modelo 2022 para esta fila (huella 3d8489ce6c27...), con tabla pregunta<->columna y codebook/edicion aplicable (para CIE: edicion que contenga el codigo local).",
+      "motivo": "sigue_pendiente: examen por ID del manual autentico da veredicto sin-pregunta (ninguno (sin pregunta-manual; aparente derivacion por catalogo)). Sin pregunta: 'jurisdiccion' en el manual es solo ambito administrativo (pp13-14,19), nunca pregunta del certificado. El nombre JURISDICCION_CLUES sugiere valor DERIVADO del catalogo CLUES (jurisdiccion sanitaria de la unidad), no captura del certificado; el vecino JURISDICCIONDEFUNCION (documentado, mismo ej 6) sugiere join, prohibido por criterio. Sin catalogo declarado ni vinculo.",
+      "limites": [
+        "Alcance simultaneo por conjunto+diccionario+fila+huella; no autoriza cruces, joins ni identidad de catalogos.",
+        "Extracto textual (pypdf) sin layout/imagenes; paginas citadas verificables en el PDF.",
+        "Negativas acotadas a lo revisado (F4), no ausencia universal."
+      ]
+    },
+    {
+      "definicion_iri": "https://example.org/mex-ontologi/definition/12f684e9-f4d5-4714-933d-aa153a812174%2F80",
+      "variable": "JURISDICCION_CLUESD",
+      "descripcion_original": "Pendiente de especificar",
+      "huella_fila_diccionario": "8ab02175cd04ccd00ab0c97be6b5b24ad069b254c5b1e3daaaa8f10c580e5d54",
+      "estado": "sigue_pendiente",
+      "evidencia": [
+        {
+          "ruta": "propuestas/pendientes-muse-r6/salud/evidencia/Manual_Llenado_CD_CMF_2022_20220930.pdf",
+          "sha256": "698ee48a45f0f34eaf604be9e4290a2191953c9d0460d43600ccc6d6f29b74f4",
+          "localizador": "busqueda acotada pp1-103 (0 preguntas)",
+          "afirmacion_soportada": "Veredicto sin-pregunta: Mismas que n=31 (pp13,14,19). Vecino local documentado JURISDICCIONDEFUNCIOND ('Nombre de la Jurisdiccion...', ej 'SAN LUIS RIO COLORADO')."
+        },
+        {
+          "ruta": "data/portal/inspecciones/12f684e9-f4d5-4714-933d-aa153a812174.json",
+          "sha256": "2094c24f84a07d1a7e9e7f3c9e663b6923e51508a71678eea74860232f2c1179",
+          "localizador": "/definiciones/79",
+          "afirmacion_soportada": "Fila local: tipo=Texto, ejemplo='SAN LUIS RIO COLORADO', descripcion='Pendiente de especificar', catalogo=''"
+        },
+        {
+          "ruta": "propuestas/investigacion-post-r6/salud-defunciones/evidencia/http_log.json",
+          "sha256": "3e5fb718750f1d6fe1d8a5a35b27d2c5833614e0773c87cb65bbb5a11f360fe9",
+          "localizador": "busquedas_negativas_acotadas",
+          "afirmacion_soportada": "Negativas acotadas que sostienen el veredicto (jurisdiccion/intencion-literal/codebook/edicion)"
+        }
+      ],
+      "vinculo_fuente_local": "Sin vinculo apto para promocion: ninguna pregunta-manual corresponde; Recurso de datos citado sin vinculo (XLSX, datastore_active=false).",
+      "evidencia_faltante": "Nota del publicador que vincule el recurso 6f39fc5d (2022-01-01 a 2022-09-22) con la preg None del Manual SEED Modelo 2022 para esta fila (huella 8ab02175cd04...), con tabla pregunta<->columna y codebook/edicion aplicable (para CIE: edicion que contenga el codigo local).",
+      "motivo": "sigue_pendiente: examen por ID del manual autentico da veredicto sin-pregunta (ninguno (sin pregunta-manual; aparente derivacion por catalogo)). Igual que n=31: sin pregunta-manual; coincide con JURISDICCIONDEFUNCIOND ('SAN LUIS RIO COLORADO') pero la coincidencia no acredita sentido (prohibidos joins/identidad de catalogos). Sin vinculo del publicador.",
+      "limites": [
+        "Alcance simultaneo por conjunto+diccionario+fila+huella; no autoriza cruces, joins ni identidad de catalogos.",
+        "Extracto textual (pypdf) sin layout/imagenes; paginas citadas verificables en el PDF.",
+        "Negativas acotadas a lo revisado (F4), no ausencia universal."
+      ]
+    }
+  ],
+  "resumen_investigacion": {
+    "metodo": "Re-descarga byte-identica del PDF + confirmacion de listado en pagina SEED-DGIS + extraccion 103 pp + examen por ID 32/32 con pregunta/pagina/cita/ambito (fetal vs general).",
+    "veredictos": {
+      "ambiguo": 12,
+      "compatible-tematica": 17,
+      "incompatible": 1,
+      "sin-pregunta": 2
+    },
+    "nuevo_frente_a_r6": [
+      "Re-descarga 2026-10-24 byte-identica (SHA coincide; Last-Modified 2022-10-19)",
+      "Pagina SEED-DGIS confirma listado vigente del Manual Modelo 2022 (modif. 2024-12-02)",
+      "Examen por ID 32/32 (R6: 0/85; correccion de auditoria aplicada): 12 ambiguos, 17 compatibles-tematicos por falta de vinculo (incluidos n=14 NO APLICA sin codebook y n=15/16 con edicion CIE no documentada), 1 incompatible formal (n=2, clave numerica sin counterpart), 2 sin pregunta (JURISDICCION_CLUES[D])",
+      "Recurso de datos XLSX con datastore_active=false: sin mapeo fisico verificable",
+      "Vigencia Modelo 2022 p17 (2022-2026) acredita modelo, no vinculo publicador-recurso"
+    ],
+    "staging": "Nada que estadificar: 0 propuestas_respaldadas; sin cambios al nucleo.",
+    "bloqueo_general": "Falta el vinculo explicito del publicador (recurso 6f39fc5d <-> Manual Modelo 2022, tabla pregunta<->columna, codebook/edicion por fila). En manos del publicador."
+  },
+  "revision_vinculo_formal": {
+    "criterio": "Via alternativa: (prong 1) mismo sistema + mismo periodo, y (prong 2) uso formal inequivoco de la variable probado por ID con codigos y/o posicion explicita del manual, nunca alias por parecido de nombre.",
+    "prong1_sistema_periodo": "ACREDITADO como marco necesario no suficiente: SEED en dos certificados + Modelo 2022 vigente 2022-2026 (p17) cubriendo el periodo del recurso 2022-01-01 a 2022-09-22. No exige mencion a Sonora.",
+    "prong2_uso_formal": "FALLA en 32/32: sin codebook numerico publicado, serie-9 manual vs serie-8 local, sin tabla pregunta<->columna, posiciones inconmensurables. Veredicto por ID en F8.",
+    "conclusion": "La via alternativa es legitima pero NO acredita el vinculo en ningun ID: el prong 1 (sistema+periodo) se sostiene y fija el marco temporal, pero el prong 2 (uso formal inequivoco por codigos/posicion) falla en los 32 por evidencia primaria: el manual no publica codebook numerico para estas variables, usa serie-9 para desconocido frente a serie-8 local, no trae tabla pregunta<->columna, y cubre DOS certificados (fetal+general) por lo que sistema+periodo solo no desambigua. Veredictos tras correccion de auditoria: 1 incompatible formal (n=2, clave numerica sin counterpart), resto entre ambiguo y compatible-tematica por falta de vinculo, incluida edicion CIE no documentada (n=15/16) y literal NO APLICA sin codebook (n=14). Lo que falta es mas preciso que antes: codebook del publicador (o nota de equivalencia formato<->columna) + edicion aplicable por fila. Nada se promueve.",
+    "detalle_en": {
+      "ruta": "propuestas/investigacion-post-r6/salud-defunciones/evidencia/revision_vinculo_formal.json",
+      "sha256": "39ebdc3a879a51e48bfde25eb18b3f8e6f2b8454091fd6149518f267ddb653f7"
+    }
+  }
+}

@@ -1,0 +1,269 @@
+{
+ "agente": "A3-itama",
+ "version": "v002",
+ "reemplaza_a": "v001 (se conserva intacta y sellada por hash en este archivo)",
+ "modelo": "opencode/deepseek-v4.1-flash-free",
+ "base": "R9",
+ "base_iri": "https://example.org/mex-ontologi/",
+ "carril": "A3 — ITAMA Internamiento/Externamiento",
+ "fecha_utc": "2026-10-24",
+ "decision": "BLOQUEADO",
+ "cifras_verificadas": {
+  "xlsx_en_repo": 138,
+  "csv_en_repo": 96,
+  "copias_exactas_itama": 0,
+  "recursos_xlsx": 6,
+  "periodo_metadatos": {"inicio": "2026-01-01", "fin": "2026-09-30"},
+  "muestras": {"a": 29, "b": 16},
+  "escolaridad_nulos_muestra_a": 29
+ },
+ "resultados": {
+  "analisis": "resultados/analisis-a3-itama-v002.json",
+  "inventario": "resultados/inventario-archivos-repo.json",
+  "pruebas": "pruebas/test_a3_itama_v002.py",
+  "correcciones": ["C1:falso", "C2:impreciso", "C3:no_reproducible", "C4:precision"],
+  "nota": "El analisis y el inventario conservan el barrido documental consolidado en esta version; scripts/analisis_a3_itama_v002.py re-verifica sus cifras contra los archivos fuente y falla si derivan."
+ },
+ "pregunta": "¿Cómo se distribuyen los registros de internamiento y externamiento por sexo/escolaridad en un periodo común?",
+ "par": {
+  "id": "27a5c80c-514a-4170-a2e5-7ef40d818641--4d27a1c4-381d-4ce0-a663-0d3e23a93848",
+  "conjunto_a": "27a5c80c-514a-4170-a2e5-7ef40d818641",
+  "conjunto_b": "4d27a1c4-381d-4ce0-a663-0d3e23a93848",
+  "titulo_a": "Población ITAMA Internamiento",
+  "titulo_b": "Población ITAMA Externamiento",
+  "estado": "candidata_por_validar",
+  "prioridad": "revisar_primero",
+  "decision_lote": "requiere_transformacion_o_catalogo"
+ },
+ "correccion_v001": {
+  "afirmacion_retirada": "Repo: 0 copias locales *.xlsx (excluidos node_modules/.venv)",
+  "motivo": "Es falsa si se refiere a todo el repo. El barrido de v002 encuentra 138 XLSX y 96 CSV locales (territorio/presas, catálogos, salud, nacimientos), ajenos a ITAMA. v001 generalizó a todo el repo un barrido que solo podía ser ITAMA-acotado.",
+  "causa_tecnica": "El script de v001 usaba ROOT=parents[3], que apunta a ejecucion-20261024: no era ejecutable desde su ruta. Además invertía min/max al calcular el periodo común. Su assert repo-wide nunca se evaluó.",
+  "alcance_corregido": "v002 solo se pronuncia sobre los 6 recursos XLSX y los 2 diccionarios CSV de ITAMA, identificados por ID. No se niega ni se evalúa la existencia de hojas de cálculo de otros conjuntos.",
+  "otras_correcciones": {
+   "C2_escolaridad": "La hoja POBLACION INTERNAMIENTO no publica la columna ESCOLARIDAD: el 29/29 nulo de la muestra A es ausencia de columna, no una medición. ESCOLARIDAD solo aparece en la hoja heredada FEBRERO 2016 y no está en los diccionarios.",
+   "C3_reproducibilidad": "v001 citaba pruebas y congelada inexistentes; v002 incluye pruebas ejecutables y sello SHA-256.",
+   "C4_periodo": "Las hojas de población no tienen columnas de fecha: el periodo 2026-01-01/2026-09-30 es documental (metadatos), no observado fila a fila.",
+   "detalle": "resultados/analisis-a3-itama-v002.json:correcciones_v001"
+  },
+  "v001_no_se_toca": true
+ },
+ "busqueda_copias_itama": {
+  "registro": "evidencia-busqueda.json",
+  "script": "scripts/registrar_busqueda_itama.py",
+  "consultas": [
+   {
+    "id": "P1",
+    "patron": "**/*.{xlsx,xls,xlsm} y **/*.csv",
+    "exclusiones": [".git", ".venv", "__pycache__", "node_modules"],
+    "xlsx_encontrados": 138,
+    "csv_encontrados": 96,
+    "coincidencias_itama": 0,
+    "resultado": "El repo sí contiene 138 XLSX y 96 CSV locales; ninguno es una copia ITAMA por nombre, token, ID o SHA-256. No se afirma que el repo carezca de hojas de cálculo."
+   },
+   {
+    "id": "P2",
+    "patron": "nombre de archivo (XLSX/CSV) contiene alguno de los 8 IDs ITAMA",
+    "encontrados": 0,
+    "json_inspeccion": 16,
+    "resultado": "0 XLSX y 0 CSV con esos nombres. Los IDs aparecen solo en 16 JSON de inspección (8 IDs × original + respaldo)."
+   },
+   {
+    "id": "P3",
+    "patron": "contenido XML de cada libro: token \\bITAMA\\b y subcadenas de los 8 IDs",
+    "libros_inspeccionados": 138,
+    "coincidencias_token": 0,
+    "coincidencias_ids": 0,
+    "subcadenas_no_token": ["CHITAMA", "ITAMAR", "IXCATITAMAN"],
+    "resultado": "Las 4 coincidencias de subcadena son nombres de localidades en catálogos LOCALIDADES: falsos positivos, no datos del instituto."
+   },
+   {
+    "id": "P4",
+    "patron": "SHA-256 de cada XLSX/CSV local contra los 8 SHA-256 publicados en las inspecciones",
+    "archivos_hasheados": 234,
+    "coincidencias_exactas": 0,
+    "resultado": "0 copias exactas: ningún XLSX ni CSV local coincide con los SHA-256 de los 6 recursos y 2 diccionarios ITAMA."
+   }
+  ],
+  "resumen": {
+   "xlsx_repo_total": 138,
+   "csv_repo_total": 96,
+   "xlsx_itama": 0,
+   "xlsx_con_token_itama": 0,
+   "xlsx_con_subcadena_no_token": 4,
+   "copias_exactas_itama": 0,
+   "json_inspeccion": 16,
+   "ids_con_inspeccion_json": 8
+  },
+  "afirmacion_permitida": "No hay copias locales de los 6 XLSX ni de los 2 CSV de ITAMA (0 de 8 IDs, por nombre, contenido y SHA-256).",
+  "afirmacion_prohibida": "El repositorio no contiene archivos XLSX ni CSV."
+ },
+ "nucleo_itama": {
+  "fuente": "data/semantica/nucleo.ttl",
+  "sha256_fuente": "e570e590004ede2d20a925890e550977f4c28a1561c8621a1ff4c31ad821ac79",
+  "extracto": "nucleo.ttl",
+  "conceptos_itama": [
+   "delito-persona-externada-itama",
+   "delito-persona-internada-itama",
+   "edad-persona-externada-itama",
+   "edad-persona-internada-itama",
+   "sexo-persona-externada-itama",
+   "sexo-persona-internada-itama"
+  ],
+  "sexo": {
+   "conceptos": [
+    "sexo-persona-externada-itama",
+    "sexo-persona-internada-itama"
+   ],
+   "ids_respaldo": [
+    "07781b38-8a53-42eb-b3b7-3c1ebc6a4415",
+    "a7ee5717-b14d-439b-9508-bada58d0d185"
+   ],
+   "respaldo": "Ambos diccionarios definen la variable sexo en inspección local completa (ok=true, completo=true); las muestras registran HOMBRE (A, n=29) y HOMBRE+MUJER (B, n=16)."
+  },
+  "escolaridad": {
+   "conceptos_itama": [],
+   "definida_en_diccionarios_itama": false,
+   "conceptos_en_otros_universos": [
+    "escolaridad-beneficiado-mano",
+    "escolaridad-difunto",
+    "escolaridad-madre"
+   ],
+   "nota": "0 conceptos ITAMA y 0 definiciones en diccionarios ITAMA. La columna no se publica en las hojas POBLACION INTERNAMIENTO/EXTERNAMIENTO: el 29/29 nulo de la muestra A es ausencia de columna, no medición. Solo aparece en la hoja heredada FEBRERO 2016 (4 de 6 libros) y no hay catálogo aplicable. Los 3 conceptos de escolaridad del núcleo pertenecen a Mano con Mano, difunto y madre."
+  }
+ },
+ "ficha_8_ejes": {
+  "claves": {
+   "estado": "sin_clave_detectada",
+   "nota": "Familias heurísticas con pendientes: revisar_encabezados_heuristicos, verificar_catalogo_dominio_unicidad_y_contexto_de_clave. Ninguna columna identificadora documentada en diccionarios."
+  },
+  "grano": {
+   "estado": "indefinido",
+   "nota": "Libros con hojas POBLACION INTERNAMIENTO/EXTERNAMIENTO, TIEMPO LIBRE, DIVERSO PROCESO, SENTENCIAS, ORAL, FEBRERO 2016. DELITO casi-único por fila en muestras, pero el grano (fila=persona? fila=registro?) no está definido en diccionario ni documentación."
+  },
+  "unicidad": {
+   "estado": "no_acreditada",
+   "nota": "Alcance declarado en lote: diagnóstico de muestra; no demuestra unicidad ni cobertura integral. Decisión: requiere_transformacion_o_catalogo."
+  },
+  "cardinalidad": {
+   "estado": "no_acreditada",
+   "nota": "Sin conteo total de filas por recurso en documentación local; muestras n=29/n=16 acotadas. Comparación muestral: delito 0 coincidencias exactas; sexo 1 (HOMBRE); localidad 1; municipio 3 — declarado sin equivalencia ni cobertura demostradas."
+  },
+  "poblacion": {
+   "estado": "distinta_y_no_sumable",
+   "nota": "Internamiento: menores recluidos (personas internadas). Externamiento: internos que salieron de reclusión (personas externadas). Conceptos sexo separados en núcleo. Una persona puede transitar entre universos; sin person matching (prohibido) no se deduce ni suma."
+  },
+  "periodo": {
+   "estado": "comun_solo_a_nivel_metadatos",
+   "nota": "Metadatos: T1 2026-01-01→03-31, T2 04-01→06-30, T3 07-01→09-30 en ambos conjuntos (frecuencia trimestral): periodo común documental 2026-01-01 a 2026-09-30. Las hojas POBLACION no tienen columnas de fecha (0 en los 6 libros), de modo que el trimestre no es verificable fila a fila; hay hojas heredadas de 2016 y fórmulas =HOY()."
+  },
+  "unidades": {
+   "estado": "no_declaradas",
+   "nota": "sexo/escolaridad con representación no_especificada y límite 'Sin valores publicados'; edad/sentencia sin unidad (no se asumen años). Sin medida agregable validada; familia periodo con sentido ocurrencia pero sin estrategia de agregación."
+  },
+  "cobertura_datos": {
+   "estado": "insuficiente_para_distribucion",
+   "nota": "SEXO: 2 conceptos ITAMA con IRI y 2 diccionarios que definen sexo; muestra A solo HOMBRE (n=29), B HOMBRE+MUJER (n=16). ESCOLARIDAD: 0 conceptos ITAMA, ausente de los diccionarios y de las hojas POBLACION; el 29/29 nulo de A es ausencia de columna, no medición; solo aparece en la hoja heredada FEBRERO 2016. Sin copias locales completas no hay distribución computable."
+  }
+ },
+ "evidencia": {
+  "archivos_locales": [
+   {
+    "ruta": "data/catalogo/metadatos.json",
+    "sha256": "5bd36098dbbce8c3aa51edb02b18a7d7b2ffdd21c864e93e8d4942b5986c4d19"
+   },
+   {
+    "ruta": "data/portal/lote-cruces/validacion-lote.json",
+    "sha256": "9031b875b1bf7873722f74847abbbce9b87201415f43788f60be1a75b50ede19"
+   },
+   {
+    "ruta": "data/portal/oportunidades-cruce.json",
+    "sha256": "40f107d5cf9c11ce937073ac2f7b5b0e3c9db8c342f7414cecb0f0744e0d0c14"
+   },
+   {
+    "ruta": "data/semantica/cobertura.json",
+    "sha256": "1486fcae52a210c803e1173aa0ecbfddd40d1e66a3147aebb1c64fdfa39dfb31"
+   },
+   {
+    "ruta": "data/semantica/nucleo.ttl",
+    "sha256": "e570e590004ede2d20a925890e550977f4c28a1561c8621a1ff4c31ad821ac79"
+   },
+   {
+    "ruta": "data/portal/inspecciones/07781b38-8a53-42eb-b3b7-3c1ebc6a4415.json",
+    "sha256": "c7d0fd55b30181abd74d4bd18d2ab6342fa331d1e7c65071bad449be782486da"
+   },
+   {
+    "ruta": "data/portal/inspecciones/a7ee5717-b14d-439b-9508-bada58d0d185.json",
+    "sha256": "f5c11fba0ad4e82cb37b25d9d8eaf6c9aa418fdcf221167d3262d5e98aa2d53f"
+   }
+  ],
+  "recursos": {
+   "internamiento": [
+    {"id": "56dbfc19-0e71-45dc-bf50-6b5a5a92bd7c", "inicio": "2026-01-01", "fin": "2026-03-31", "nombre": "Población ITAMA Internamiento primer trimestre 2026"},
+    {"id": "59f89fe2-1999-47c5-b464-5f303377fc04", "inicio": "2026-04-01", "fin": "2026-06-30", "nombre": "Población ITAMA Internamiento segundo trimestre 2026"},
+    {"id": "525d84db-d4aa-480d-9c1a-a3d4e7524ac2", "inicio": "2026-07-01", "fin": "2026-09-30", "nombre": "Población ITAMA Internamiento tercer trimestre 2026"}
+   ],
+   "externamiento": [
+    {"id": "cf589b78-2fee-4fb6-b7c8-434e050a058e", "inicio": "2026-01-01", "fin": "2026-03-31", "nombre": "Población ITAMA Externamiento primer trimestre 2026"},
+    {"id": "71defd43-bee9-45fa-9463-ce2cac2b9ab8", "inicio": "2026-04-01", "fin": "2026-06-30", "nombre": "Población ITAMA Externamiento segundo trimestre 2026"},
+    {"id": "7f95e924-57cc-4f3a-8b5a-e254e7b97993", "inicio": "2026-07-01", "fin": "2026-09-30", "nombre": "Población ITAMA Externamiento tercer trimestre 2026"}
+   ]
+  },
+  "muestras": {
+   "a_internamiento_t2": {
+    "recurso_id": "59f89fe2-1999-47c5-b464-5f303377fc04",
+    "hoja": "POBLACION INTERNAMIENTO",
+    "filas": 29,
+    "sha_historico_reportado": "fcba1d02f9c6a3468d1e10bbcdabbf1919c7a5ec415e3292e0d005fb79e95149",
+    "sexo": {"distintos": 1, "nulos": 0, "valores": ["HOMBRE"]},
+    "escolaridad": {"distintos": 0, "nulos": 29}
+   },
+   "b_externamiento_t1": {
+    "recurso_id": "cf589b78-2fee-4fb6-b7c8-434e050a058e",
+    "hoja": "POBLACION EXTERNAMIENTO",
+    "filas": 16,
+    "sha_historico_reportado": "d83143384cb1883f486faf02db667f4292a9ab094dbe2251cfa01c708ab3e59e",
+    "sexo": {"distintos": 2, "nulos": 0, "valores": ["HOMBRE", "MUJER"]},
+    "escolaridad_medida": false
+   }
+  },
+  "variables_documentadas_cobertura": {
+   "internamiento": ["delito", "edad actual", "localidad del delito", "municipio de nacimiento", "sexo"],
+   "externamiento": ["delito", "edad actual", "localidad del delito", "municipio de nacimiento", "sentencia", "sexo"]
+  }
+ },
+ "v001_intacta": {
+  "entrega.json": "754bae47487e6424a3dda2484229073a46311c42f92627f34acd26763f2fe9f1",
+  "entrega.md": "f10261d2201223e7087bebe8bd6262e9a62b6ff826f7a58430a40e9a8a15116c",
+  "scripts/analisis_a3_itama.py": "7438d8c17080387d90d7dd835469618bdfa383b51d62b19ef127b5bccfef0f4f",
+  "nota": "v001 no contiene congelada.json ni pruebas/test_a3_itama.py pese a citarlos; v002 sí incluye sello y pruebas."
+ },
+ "limites": [
+  "Sin person matching: no unir personas ni deduplicar entre universos.",
+  "No sumar universos (internadas vs externadas son poblaciones distintas).",
+  "No completar periodos/sujetos por título.",
+  "Las muestras no validan el archivo entero.",
+  "Sin joins al grafo ni promociones de candidatas.",
+  "Sin Gemma, sin contactos y sin búsqueda web; solo archivos locales/documentación.",
+  "No modifica base IRI, manifiestos R1-R9, núcleo ni escritores centrales; solo escribe A3-itama/v002."
+ ],
+ "resultado": "BLOQUEADO: no es computable una distribución agregada por sexo/escolaridad en periodo común. Causas: (1) no hay copias locales de los 6 XLSX ITAMA (0 de 6; el repo sí contiene 138 XLSX y 96 CSV de otros conjuntos, fuera de alcance), solo muestras históricas n=29/n=16 que no validan el archivo entero; (2) ESCOLARIDAD no se publica en las hojas POBLACION, carece de concepto ITAMA y de definición en ambos diccionarios; el 29/29 nulo de la muestra A es ausencia de columna, y solo aparece en la hoja heredada FEBRERO 2016; (3) unicidad, cardinalidad, grano, unidades y periodo por fila no están acreditados (requiere_transformacion_o_catalogo); (4) las poblaciones son distintas y no sumables. SEXO sí tiene 2 conceptos con IRI y 2 diccionarios que lo definen, pero eso no habilita una distribución sin archivos completos. Desbloqueo: copias locales completas de los 6 recursos + catálogo de valores de sexo/escolaridad + definición de grano y unidad.",
+ "reproducible_con": "scripts/analisis_a3_itama_v002.py (verifica premisas y resultados, escribe nucleo.ttl y evidencia-busqueda.json). Búsqueda sola: scripts/registrar_busqueda_itama.py. Pruebas: pruebas/test_a3_itama_v002.py y tests/test_a3_itama_v002.py. Sello: congelada.json + congelada.sha256.",
+ "archivos": [
+  "entrega.json",
+  "entrega.md",
+  "nucleo.ttl",
+  "evidencia-busqueda.json",
+  "congelada.json",
+  "congelada.sha256",
+  "resultados/analisis-a3-itama-v002.json",
+  "resultados/inventario-archivos-repo.json",
+  "resultados/ejecucion-analisis.out",
+  "resultados/ejecucion-pruebas.out",
+  "pruebas/test_a3_itama_v002.py",
+  "scripts/analisis_a3_itama_v002.py",
+  "scripts/registrar_busqueda_itama.py",
+  "scripts/sellar_v002.py",
+  "tests/test_a3_itama_v002.py"
+ ]
+}

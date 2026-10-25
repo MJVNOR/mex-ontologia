@@ -1,0 +1,70 @@
+{
+  "dictamen": "rechaza_M2v002_observado_sin_aceptar_antes_v003",
+  "payload_v003_pendiente": true,
+  "no_aplicar_material_v001": true,
+  "descripcion_literal_local": "Pendiente de especificar",
+  "M1_desc_exacta": "14/14",
+  "M2v002_desc_distinta": "14/14",
+  "casos_74_76_vetados": {
+    "CODIGOCIEANOMALIA1_afirma": "La columna CODIGOCIEANOMALIA1 (posicion 74 de 106, hoja 'SINAC 2022 26-09-22', recurso 46977217, 2022-01-01 a 2022-09-26) es la materializacion fisica de la variable CODIGOCIEANOMALIA1 (fila 74 de 106 del diccionario 22202305, conjunto 940de7d8): nombre exacto coincidente y ordinal identico. CODIGOC",
+    "CODIGOCIEANOMALIA2_afirma": "La columna CODIGOCIEANOMALIA2 (posicion 76 de 106, hoja 'SINAC 2022 26-09-22', recurso 46977217, 2022-01-01 a 2022-09-26) es la materializacion fisica de la variable CODIGOCIEANOMALIA2 (fila 76 de 106 del diccionario 22202305, conjunto 940de7d8): nombre exacto coincidente y ordinal identico. CODIGOC",
+    "motivo_veto": "R7 solo acredita alcance fisico columna<->fila; no valida valores ni confirma pertenencia a catalogos (criterio M1). Afirmar 0000=CIE-10 NINGUNA APARENTE excede el alcance."
+  },
+  "gate_core_auditado": {
+    "integrar_ronda_7_desc": "solo truthy (lineas 180-183), no igualdad exacta al literal local: descriptor nacional pasa.",
+    "interpretacion_clave": "clave()=lower+NFD-sin-Mn+strip/colapsa: normaliza antes de comparar; alias oculta errores de literal/tipo.",
+    "I_codigo_v002_scripts": "copias exactas de produccion (mismo SHA); heredan el mismo hueco; sin integrar_ronda_8.",
+    "T_v002_gate": "no chequea descripcion ni IRI-namespace exacto; solo columnas/reglas/conceptos vacios.",
+    "exigencia": "comparacion byte-exacta (==, sin lower/strip/NFD) para descripcion, campo, definicion_iri, concepto, huellas; IRI con regex ^.../definition/...%2F\\d+$; rechazar /documented-variable/ sin alias."
+  },
+  "solicitud_a_I_codigo": {
+    "destinatario": "I-codigo (via coordinador)",
+    "pieza": "closed guard integrar_ronda_8: 0 reglas, 0 conceptos, 28 vinculos backed R7",
+    "condiciones": [
+      "0 reglas nuevas, 0 conceptos nuevos; 28 columnas = 14 M1 + 14 M2 exactas.",
+      "Por vinculo: campo == nombre columna ordinal exacto; definicion_iri regex /definition/ exacto; variable en cobertura R7 respaldada + mismo concepto + misma huella_fila (== exacto).",
+      "descripcion == literal local exacto de la fila (Pendiente de especificar), byte-exacto sin normalizar.",
+      "huella_esquema y huella_fila recomputadas == declaradas; recurso/diccionario exactos.",
+      "criterio solo alcance fisico; prohibido afirmar valores (0000), CIE-10, catalogos, vigencias, joins, identidad.",
+      "Rechazar /documented-variable/, descriptor nacional en descripcion, y cualquier normalizacion (lower/strip/acentos) en la comparacion."
+    ]
+  },
+  "referencias": [
+    {
+      "ruta": "propuestas/ronda-8-paralela/ejecucion-20261024/M1-sinac/v001/entrega.json",
+      "sha256": "daee9beb38cfeb8228784dfe93887dfb5fd49788afa007a0caf6fe489cf638ed"
+    },
+    {
+      "ruta": "propuestas/ronda-8-paralela/ejecucion-20261024/M2-sinac/v002/entrega.json",
+      "sha256": "0c3c8a5877696335f960a2334115b2171b3b4d51f69b9ade2296899b9c6eb92e"
+    },
+    {
+      "ruta": "propuestas/ronda-8-paralela/ejecucion-20261024/M2-sinac/v002/construir_v002.py",
+      "sha256": "5964524c0316cb21c93374fa11ff52f418fafe743dc9bb70e068192fb353bdb9"
+    },
+    {
+      "ruta": "propuestas/ronda-8-paralela/ejecucion-20261024/M2-sinac/asignacion.json",
+      "sha256": "6e45351db797a65d426875a01e17888d7f3cf8969821d58f313b08c687e88184"
+    },
+    {
+      "ruta": "propuestas/ronda-8-paralela/ejecucion-20261024/materializacion/v001/aceptadas.json",
+      "sha256": "555c35697c86fd026d84d09a4bc02cc549237c5170c70d93c94ed5056d913fdf"
+    },
+    {
+      "ruta": "scripts/integrar_ronda_7.py",
+      "sha256": "89b65d24846fd6afa8441a680e4499e0c7db6ae73af475ba8df873b055d1bfc4"
+    },
+    {
+      "ruta": "scripts/consolidar_semantica.py",
+      "sha256": "f8e7b590856a426e538e25d665e1b40945a8333299900d61fbc9154269d4639e"
+    },
+    {
+      "ruta": "scripts/integrar_contenido.py",
+      "sha256": "dff376ef9d9313cd51fd5ba87d79452ed6e161849b6020d77ba5fa162af40a95"
+    },
+    {
+      "ruta": "data/portal/inspecciones/22202305-2d02-4c49-b216-cc98224357f0.json",
+      "sha256": "76fe68223bc861fcdf62cb33f5b9a207503b192c2ef531a4aad31d52e7a7513b"
+    }
+  ]
+}

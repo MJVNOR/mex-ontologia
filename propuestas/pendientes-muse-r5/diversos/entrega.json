@@ -1,0 +1,222 @@
+{
+  "base_huellas": {
+    "data/semantica/cobertura.json": "ee3f6a1bff66a5315b7982ef90f2fe601d0d797c11c3d5be8f6121f11299581d",
+    "ontologia/revision-ronda-4.json": "2fd56229f82dd64f1dbd1c0727c5fae629075cbed2eb3f02ff5621c16ce386b",
+    "ontologia/semantica.json": "0d8ffc7509e4d694dfdb76bb28a6feca209bdb76b28d17dd1826171657e4b28"
+  },
+  "conceptos_nuevos": {},
+  "decisiones_columnas": [
+    {
+      "campo": "TRIMESTRE",
+      "columna": "https://example.org/mex-ontologi/file-column/5772b8ec-e272-4265-a757-f7ddd179fe04%2F2020%2F2",
+      "decision": "pendiente",
+      "definicion_iri": null,
+      "evidencia": [
+        "data/portal/contenido-inspeccion.json recurso 5772b8ec-e272-4265-a757-f7ddd179fe04 hoja 2020 campo pos 2 = TRIMESTRE",
+        "huella_esquema=a3e22cfd60c2cd6d971473b98a55244e4a4313b4915da180ca52ac0a8eccfba1 (capturada, metodo heuristica_requiere_revision)",
+        "definicion https://example.org/mex-ontologi/definition/3f6942e3-a9c5-42c0-a38b-2c7aad2a6c99%2F2 pendiente (descripcion insuficiente)",
+        "propuestas/pendientes-muse-r5/diversos/evidencia/extractos.json"
+      ],
+      "motivo": "candidata por nombre sin revision: la definicion sigue pendiente (trimestre del estrato sin evento/calendario), no se propone vinculo",
+      "recurso": "5772b8ec-e272-4265-a757-f7ddd179fe04"
+    },
+    {
+      "campo": "Total_Egresos",
+      "columna": "https://example.org/mex-ontologi/file-column/ad6f77b8-569d-4826-8ce0-3c6efddcb098%2FEgresos%20Hospitalarios%202018-2022%2F15",
+      "decision": "pendiente",
+      "definicion_iri": null,
+      "evidencia": [
+        "data/portal/contenido-inspeccion.json recurso ad6f77b8-569d-4826-8ce0-3c6efddcb098 hoja Egresos Hospitalarios 2018-2022 campo pos 15 = Total_Egresos",
+        "huella fragmento=3f9a4c40fdf8ce67f728ee1302e227fa3623f741538b2bd92a98cc51f90e501d (xlsx_rangos_http, archivo incompleto acotado)",
+        "definicion https://example.org/mex-ontologi/definition/f89137ba-d82e-44fe-80c7-cc355f09f9f5%2F15 pendiente por contradiccion vigente egresos-descripcion-urgencias",
+        "propuestas/pendientes-muse-r5/diversos/evidencia/extractos.json"
+      ],
+      "motivo": "contradiccion nombre/descripcion conservada (observacion vigente); no se propone vinculo ni interpretacion",
+      "recurso": "ad6f77b8-569d-4826-8ce0-3c6efddcb098"
+    }
+  ],
+  "decisiones_significados": [
+    {
+      "decision": "artefacto_documental",
+      "definicion_iri": "https://example.org/mex-ontologi/definition/33d0a99e-c721-496f-a05e-07646e9ae42a%2F177",
+      "evidencia": [
+        "data/portal/contenido-inspeccion.json diccionario 33d0a99e-c721-496f-a05e-07646e9ae42a fila 177: Nombre variable=ide_id, Tipo=ide_sex, Formato=ide_eda_ano, Descripcion=ide_col, Catalogo=des_mpo_res (encabezados repetidos como valores)",
+        "huella_fila_diccionario=4b17625c8fea607228fe4f2a790744687a6e8bc45a712f66d4833d6ac541da79",
+        "dictamen previo INV-R4C-06 (investigacion ronda 4): catalogo local sin esas claves, negativo-traslado, fe de erratas requerida",
+        "propuestas/pendientes-muse-r5/diversos/evidencia/extractos.json:fiebre_177"
+      ],
+      "limites": [
+        "no es una definicion; no autoriza concepto, codigo, catalogo ni conteo de variable"
+      ],
+      "motivo": "fila corrupta: repite la cabecera del diccionario como valores; catalogo_declarado des_mpo_res es posicion de columna, no referencia real. Se conserva como artefacto, sin curar; requiere fe de erratas del publicador (no contactar)"
+    },
+    {
+      "decision": "artefacto_documental",
+      "definicion_iri": "https://example.org/mex-ontologi/definition/33d0a99e-c721-496f-a05e-07646e9ae42a%2F178",
+      "evidencia": [
+        "data/portal/contenido-inspeccion.json diccionario 33d0a99e-c721-496f-a05e-07646e9ae42a fila 178: mismo patron de encabezados repetidos (variante id_cp vs ide_cp)",
+        "huella_fila_diccionario=b5dbcdf58fd1b6e4d87f2396986629d2aa2350d35f1c1291e59d3d79515a0f60",
+        "dictamen previo INV-R4C-06: negativo-traslado",
+        "propuestas/pendientes-muse-r5/diversos/evidencia/extractos.json:fiebre_178"
+      ],
+      "limites": [
+        "no es una definicion; no autoriza concepto, codigo, catalogo ni conteo de variable"
+      ],
+      "motivo": "fila corrupta gemela de la 177 (encabezados como valores, difiere solo en id_cp); artefacto conservado sin curar; requiere fe de erratas del publicador"
+    },
+    {
+      "decision": "pendiente",
+      "definicion_iri": "https://example.org/mex-ontologi/definition/3f6942e3-a9c5-42c0-a38b-2c7aad2a6c99%2F2",
+      "evidencia": [
+        "data/portal/contenido-inspeccion.json diccionario 3f6942e3-a9c5-42c0-a38b-2c7aad2a6c99 fila 2: variable TRIMESTRE, Tipo Numerico entero, Descripcion 'Trimestre del estrato', ejemplo 1, sin catalogo",
+        "huella_fila_diccionario=799f924f8f10e3831cebdb4fbbc233cb6965caae8902f799881277d12f24320d",
+        "recurso unico 5772b8ec-e272-4265-a757-f7ddd179fe04 (1er-trim-2022) hoja '2020', campo TRIMESTRE pos 2",
+        "concepto tiempo solo candidato por nombre; no promovido"
+      ],
+      "limites": [
+        "no se interpreta evento, calendario ni cobertura; no se homologa a trimestre calendario"
+      ],
+      "motivo": "descripcion insuficiente: 'Trimestre del estrato' no define si es trimestre calendario de denuncia o estrato muestral/operativo; tipo entero y ejemplo 1 sin mapa; sin metodologia ni catalogo. No se propone concepto"
+    },
+    {
+      "decision": "pendiente",
+      "definicion_iri": "https://example.org/mex-ontologi/definition/67156807-2013-4117-9ca9-394aea647127%2F5",
+      "evidencia": [
+        "data/portal/contenido-inspeccion.json diccionario 67156807-2013-4117-9ca9-394aea647127 fila 5: variable CLASIF, Tipo Categorico, Descripcion 'Clasificacion', Unidad 'Barrio; Colonia; Ejido; Fraccionamiento; Privada; Residencial; Unidad habitacional', ejemplo Colonia, sin catalogo",
+        "huella_fila_diccionario=c16feb711c8027da46df863668671e9f35e699129da382b494d45039abe1f232",
+        "vecinas CVE_COL/COLONIA/CP aceptadas en ronda 3 no transfieren significado a esta fila generica"
+      ],
+      "limites": [
+        "no se afirma que clasifique tipo de asentamiento; no se codifica ni se vincula a INEGI"
+      ],
+      "motivo": "descripcion generica 'Clasificacion' sin objeto declarado; la lista de unidad sugiere pero no declara que clasifique el asentamiento. Insuficiente para concepto nuevo; ronda 3 la dejo fuera con la misma evidencia. Requiere metodologia del indice que defina CLASIF"
+    },
+    {
+      "decision": "pendiente",
+      "definicion_iri": "https://example.org/mex-ontologi/definition/863b9cc8-daeb-4430-b835-6a0ced5abd31%2F7",
+      "evidencia": [
+        "data/portal/contenido-inspeccion.json diccionario 863b9cc8-daeb-4430-b835-6a0ced5abd31 fila 7: variable CVOTRAS, Tipo Numerico Int, Descripcion 'Clave de otras', sin catalogo ni ejemplo",
+        "huella_fila_diccionario=7b43908359031edee596dab23b179df402c2da718dff957ef86902d8127c49c4",
+        "catalogo.xlsx b38645a9 (Especie_Pesca, Distritos, Municipios, Regiones) sin hoja 'otras'; columna fisica CVOTRAS pos 7 verificada en pesca_sonora_2011"
+      ],
+      "limites": [
+        "no se interpreta objeto, codigo ni catalogo; no se vincula a hojas del catalogo local"
+      ],
+      "motivo": "descripcion trunca 'Clave de otras': objeto indeterminado (otras oficinas, especies u origenes). Sin ejemplo, unidad ni catalogo que la resuelva. Requiere diccionario corregido o metodologia de pesca"
+    },
+    {
+      "decision": "pendiente",
+      "definicion_iri": "https://example.org/mex-ontologi/definition/863b9cc8-daeb-4430-b835-6a0ced5abd31%2F8",
+      "evidencia": [
+        "data/portal/contenido-inspeccion.json diccionario 863b9cc8-daeb-4430-b835-6a0ced5abd31 fila 8: variable DOTRAS, Tipo Texto, Descripcion 'Nombre de otras', sin catalogo ni ejemplo",
+        "huella_fila_diccionario=738de0329c2d2e19f50d85dc13b3e6a05c4d79fda579701c400d01e4ebc806b3",
+        "pareja CVOTRAS/DOTRAS con el mismo truncamiento; columna fisica DOTRAS pos 8 verificada"
+      ],
+      "limites": [
+        "no se interpreta objeto ni se asume pareja codigo-nombre mas alla de la posicion contigua"
+      ],
+      "motivo": "descripcion trunca gemela de CVOTRAS; mismo objeto indeterminado. Requiere diccionario corregido o metodologia de pesca"
+    },
+    {
+      "decision": "pendiente",
+      "definicion_iri": "https://example.org/mex-ontologi/definition/f89137ba-d82e-44fe-80c7-cc355f09f9f5%2F15",
+      "evidencia": [
+        "data/portal/contenido-inspeccion.json diccionario f89137ba-d82e-44fe-80c7-cc355f09f9f5 fila 15: variable Total_Egresos, Tipo Numerico entero, Descripcion 'Total de urgencias atendidas', ejemplo 2",
+        "huella_fila_diccionario=98c73e56ff407766447b52e08850d0b8669f6979145b4c66fac1f1f83aec9f05",
+        "observacion vigente egresos-descripcion-urgencias en ontologia/semantica.json (pendiente_aclaracion_o_revision)",
+        "columna fisica pos 15 verificada en ad6f77b8; correspondencia candidata_por_nombre sin revision"
+      ],
+      "limites": [
+        "no se interpreta como egresos ni como urgencias; no se usa para tasas ni agregaciones"
+      ],
+      "motivo": "contradiccion conservada: el nombre indica egresos y la descripcion urgencias. Dictamen previo vigente; no se cura con suposicion. Requiere aclaracion del publicador"
+    }
+  ],
+  "fecha_utc": "2026-10-23",
+  "fuentes": [
+    {
+      "aplicabilidad": "filas 177/178 corruptas (encabezados como valores); acredita artefacto, no concepto ni catalogo",
+      "localizador": "data/portal/contenido-inspeccion.json recurso 33d0a99e-c721-496f-a05e-07646e9ae42a definiciones[176,177]; evidencia/extractos.json (sha 5e2d575b34c7511813b05e98d5bea765b39635c4151c69c8b4ba5df3b2338a25)",
+      "sha256": "api_diccionario sin hash de archivo en inspeccion; extracto local 5e2d575b34c7511813b05e98d5bea765b39635c4151c69c8b4ba5df3b2338a25",
+      "url": "https://datos.sonora.gob.mx/api/3/action/datastore_search?resource_id=33d0a99e-c721-496f-a05e-07646e9ae42a&limit=1000&offset=0&sort=_id+asc"
+    },
+    {
+      "aplicabilidad": "fila TRIMESTRE y columna fisica; acredita descripcion insuficiente y existencia de columna, no calendario",
+      "localizador": "data/portal/contenido-inspeccion.json recursos 3f6942e3-a9c5-42c0-a38b-2c7aad2a6c99 y 5772b8ec-e272-4265-a757-f7ddd179fe04; evidencia/extractos.json",
+      "sha256": "extracto local 5e2d575b34c7511813b05e98d5bea765b39635c4151c69c8b4ba5df3b2338a25; esquema a3e22cfd60c2cd6d971473b98a55244e4a4313b4915da180ca52ac0a8eccfba1",
+      "url": "https://datos.sonora.gob.mx/dataset/c589afac-79f1-4aac-9ade-e949301bcca3/resource/5772b8ec-e272-4265-a757-f7ddd179fe04/download/conjunto-de-datos-denuncias-1er-trim-2022.xlsx"
+    },
+    {
+      "aplicabilidad": "fila CLASIF con unidad de 7 valores; acredita insuficiencia de descripcion generica",
+      "localizador": "data/portal/contenido-inspeccion.json recurso 67156807-2013-4117-9ca9-394aea647127 definiciones[4]; evidencia/extractos.json",
+      "sha256": "ceece0d28e850abff212ee4ff19fa3f26a71e6bef904e934608f26136dd4b936; extracto local 5e2d575b34c7511813b05e98d5bea765b39635c4151c69c8b4ba5df3b2338a25",
+      "url": "https://datos.sonora.gob.mx/dataset/a3320cad-afd3-4840-8c3b-36236df26099/resource/67156807-2013-4117-9ca9-394aea647127/download/diccionario.xlsx"
+    },
+    {
+      "aplicabilidad": "filas CVOTRAS/DOTRAS truncas y ausencia de hoja 'otras' en catalogo; acredita objeto indeterminado",
+      "localizador": "data/portal/contenido-inspeccion.json recursos 863b9cc8-daeb-4430-b835-6a0ced5abd31, 0403d99f-1925-49d4-9540-b4941aa2ad32, b38645a9-bf15-4366-a1e0-63f5cfbd91c1; evidencia/extractos.json",
+      "sha256": "extracto local 5e2d575b34c7511813b05e98d5bea765b39635c4151c69c8b4ba5df3b2338a25; esquema pesca 2864c5578008c40c5463c1db6b86424fb97fc0ac1f9cf06e37588bae7ddfd810; catalogo 08d345e0b03b54b390fc011ef0390b1c7eb7bdc5f2a61e2bb3251d5806aebcb3",
+      "url": "https://datos.sonora.gob.mx/dataset/e093cf34-7da0-4efb-89a3-7b473a5013ab"
+    },
+    {
+      "aplicabilidad": "fila y columna Total_Egresos; acredita contradiccion vigente, no medida utilizable",
+      "localizador": "data/portal/contenido-inspeccion.json recursos f89137ba-d82e-44fe-80c7-cc355f09f9f5 y ad6f77b8-569d-4826-8ce0-3c6efddcb098; ontologia/semantica.json observaciones_revision[egresos-descripcion-urgencias]; evidencia/extractos.json",
+      "sha256": "extracto local 5e2d575b34c7511813b05e98d5bea765b39635c4151c69c8b4ba5df3b2338a25; fragmento egresos 3f9a4c40fdf8ce67f728ee1302e227fa3623f741538b2bd92a98cc51f90e501d",
+      "url": "https://datos.sonora.gob.mx/dataset/8993c917-47d8-4304-8141-5f481fe04301/resource/ad6f77b8-569d-4826-8ce0-3c6efddcb098/download/202209261836370-file.xlsx"
+    }
+  ],
+  "pendientes": [
+    {
+      "detalle": "Fe de erratas del diccionario de Fiebre manchada (filas 177/178) o diccionario corregido que elimine encabezados repetidos; confirma catalogo de des_mpo_res si existe. Solo publicador, no contactar.",
+      "id": "DIV-P-01",
+      "iris": [
+        "https://example.org/mex-ontologi/definition/33d0a99e-c721-496f-a05e-07646e9ae42a%2F177",
+        "https://example.org/mex-ontologi/definition/33d0a99e-c721-496f-a05e-07646e9ae42a%2F178"
+      ]
+    },
+    {
+      "detalle": "Metodologia o cuestionario de Denuncias Ambientales que defina 'estrato' y a que trimestre se refiere TRIMESTRE (calendario de denuncia vs estrato operativo). Ver solicitud SW-DIV-01 a catalogos-web.",
+      "id": "DIV-P-02",
+      "iris": [
+        "https://example.org/mex-ontologi/definition/3f6942e3-a9c5-42c0-a38b-2c7aad2a6c99%2F2"
+      ]
+    },
+    {
+      "detalle": "Documento metodologico del Indice de marginacion urbana por colonia 2020 que defina la variable CLASIF (objeto clasificado y lista cerrada de 7 valores). Ver SW-DIV-02.",
+      "id": "DIV-P-03",
+      "iris": [
+        "https://example.org/mex-ontologi/definition/67156807-2013-4117-9ca9-394aea647127%2F5"
+      ]
+    },
+    {
+      "detalle": "Diccionario corregido o metodologia de Pesca y Acuacultura que complete 'Clave/Nombre de otras' (objeto de CVOTRAS/DOTRAS) y su catalogo. Ver SW-DIV-03.",
+      "id": "DIV-P-04",
+      "iris": [
+        "https://example.org/mex-ontologi/definition/863b9cc8-daeb-4430-b835-6a0ced5abd31%2F7",
+        "https://example.org/mex-ontologi/definition/863b9cc8-daeb-4430-b835-6a0ced5abd31%2F8"
+      ]
+    },
+    {
+      "detalle": "Aclaracion del publicador sobre Total_Egresos (egresos vs urgencias); observacion vigente conservada. Solo publicador, no contactar.",
+      "id": "DIV-P-05",
+      "iris": [
+        "https://example.org/mex-ontologi/definition/f89137ba-d82e-44fe-80c7-cc355f09f9f5%2F15"
+      ]
+    }
+  ],
+  "reglas": [],
+  "rol": "diversos",
+  "solicitudes_web": "solicitudes_web.json",
+  "verificacion": {
+    "artefacto_documental": 2,
+    "conceptos_nuevos": 0,
+    "correspondencias_candidatas_revisadas": 2,
+    "decisiones_columnas": 2,
+    "pendientes": 5,
+    "propuestas": 0,
+    "reglas": 0,
+    "significados_asignados": 7,
+    "vinculos": 0
+  },
+  "vinculos": []
+}

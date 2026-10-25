@@ -1,0 +1,29 @@
+@prefix mex: <https://example.org/mex-ontologi/vocab/> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+
+# P1-QUDT v003 instalable (Q1+Q3). Literales exactos de fila. Q2 en informe aparte.
+
+<https://example.org/mex-ontologi/propuesta/p1-qudt/v003/declaracion-precipitacion-mm> a mex:UnidadDeclarada ;
+    rdfs:label "Precipitacion_mm: unidad Milímetros"@es ;
+    mex:variableDocumentada <https://example.org/mex-ontologi/documented-variable/6713de4e-1e2b-447d-8000-f6ceaabd8473%2F6> ;
+    mex:definicionFuente <https://example.org/mex-ontologi/definition/6713de4e-1e2b-447d-8000-f6ceaabd8473%2F6> ;
+    mex:conjuntoFuente "8b4edefe-cb1a-401c-90c6-05548779defd" ;
+    mex:diccionarioFuente "6713de4e-1e2b-447d-8000-f6ceaabd8473" ;
+    mex:unidadLiteral "Milímetros" ;
+    mex:unidadQudt <http://qudt.org/vocab/unit/MilliM> ;
+    mex:evidenciaNormativa "P1-W-01: propuestas/plan-tras-r8/ejecucion-20261024/W-estandares/v002/normativa/unit-MilliM-evidencia.txt sha256=5e63691124e69c162ddfa65bde77fb1ad3e9a2173ffd33b9910100880a9ea9a7 ; sello W v003 propuestas/plan-tras-r8/ejecucion-20261024/W-estandares/v003/congelada.json sha256=6876a312956e110fff535df9aea8eeee27e25ce5a11f58b10c280f52126b3190" ;
+    prov:wasDerivedFrom <https://datos.sonora.gob.mx/api/3/action/datastore_search?resource_id=6713de4e-1e2b-447d-8000-f6ceaabd8473&limit=1000&offset=0&sort=_id+asc> , <http://qudt.org/vocab/unit/MilliM> ;
+    rdfs:comment "Alcance: SOLO variable Precipitacion_mm de ESA definicion del diccionario 6713de4e-1e2b-447d-8000-f6ceaabd8473. Sin atribucion global. Sin valores, sin conversiones."@es .
+
+<https://example.org/mex-ontologi/propuesta/p1-qudt/v003/declaracion-superficie-ha> a mex:UnidadDeclarada ;
+    rdfs:label "SUPSEM: unidad Hectáreas"@es ;
+    mex:variableDocumentada <https://example.org/mex-ontologi/documented-variable/94215f51-9c89-414d-8c3d-92792e609a2a%2F14> ;
+    mex:definicionFuente <https://example.org/mex-ontologi/definition/94215f51-9c89-414d-8c3d-92792e609a2a%2F14> ;
+    mex:conjuntoFuente "3e17a7e8-c8d4-49c4-a426-4dec099cd0cd" ;
+    mex:diccionarioFuente "94215f51-9c89-414d-8c3d-92792e609a2a" ;
+    mex:unidadLiteral "Hectáreas" ;
+    mex:unidadQudt <http://qudt.org/vocab/unit/HA> ;
+    mex:evidenciaNormativa "P1-W-03: propuestas/plan-tras-r8/ejecucion-20261024/W-estandares/v002/normativa/unit-HA-evidencia.txt sha256=9095968323f72af577b4a94684a78e2f806595ca118529b5e47cb0b2acd1ee3e ; sello W v003 propuestas/plan-tras-r8/ejecucion-20261024/W-estandares/v003/congelada.json sha256=6876a312956e110fff535df9aea8eeee27e25ce5a11f58b10c280f52126b3190" ;
+    prov:wasDerivedFrom <https://datos.sonora.gob.mx/api/3/action/datastore_search?resource_id=94215f51-9c89-414d-8c3d-92792e609a2a&limit=1000&offset=0&sort=_id+asc> , <http://qudt.org/vocab/unit/HA> ;
+    rdfs:comment "Alcance: SOLO variable SUPSEM de ESA definicion del diccionario 94215f51-9c89-414d-8c3d-92792e609a2a. Sin atribucion global. Sin valores, sin conversiones."@es .

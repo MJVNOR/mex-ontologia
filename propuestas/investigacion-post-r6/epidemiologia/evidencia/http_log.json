@@ -1,0 +1,59 @@
+{
+  "grupo_fuente": "epidemiologia",
+  "generado_en_utc": "2026-10-24T06:20:00+00:00",
+  "metodo": "GET directo sin Obscura; sin evadir controles; 403 no reintentado por otra via",
+  "consultas": [
+    {
+      "url": "https://datos.sonora.gob.mx/api/3/action/package_show?id=dca16d84-dbf0-4501-b702-dc6372a480ea",
+      "fecha_consulta": "2026-10-24",
+      "http_status": 200,
+      "archivo_respuesta": "evidencia/package_show_2026-10-24.json",
+      "archivo_cabeceras": "evidencia/hdr_package_show.txt",
+      "resultado": "success=true; version=null; fuentes_extras=''; frequency=trimestral; metadata_modified=2025-08-19T16:50:42.517487; recurso datos 1689b19c edicion 2022-01-01/2022-12-31 size 3475599; diccionario 2334deaa last_modified 2024-10-31. Sin cambios vs R6."
+    },
+    {
+      "url": "https://datos.sonora.gob.mx/api/3/action/datastore_search?resource_id=2334deaa-dd0c-444e-b038-4cc556ad715d&limit=60&offset=0",
+      "fecha_consulta": "2026-10-24",
+      "http_status": 200,
+      "archivo_respuesta": "evidencia/datastore_diccionario_2026-10-24.json",
+      "archivo_cabeceras": "evidencia/hdr_datastore.txt",
+      "resultado": "total=59; filas 9/11/13 con desc 'Clave'/'Acumulados'/'Total de personas en vigilancia entre 1 y 5 años'; filas 23-44 con desc 'Pendiente de especificar'; catalogo de referencia vacio en las 59. Sin cambios vs R6."
+    },
+    {
+      "url": "https://epidemiologia.salud.gob.mx/gobmx/salud/documentos/manuales/32_ManualSuive.pdf",
+      "fecha_consulta": "2026-10-24",
+      "http_status": 200,
+      "sha256_descargado": "f35746a0353c902b03d8ae01f703d1dfafdf3ad4bbf01777b648353d1b833757",
+      "tamano_bytes": 10017716,
+      "last_modified": "Tue, 10 Aug 2021 00:28:00 GMT",
+      "coincide_preservado_local": true,
+      "resultado": "Byte-identico al preservado propuestas/pendientes-muse-r5/catalogos-web/evidencia/manual_suive_32.pdf. Last-Modified 2021-08-10 precede al periodo local 2022; sin vinculo edicion-recurso-periodo."
+    },
+    {
+      "url": "https://datos.sonora.gob.mx/dataset/dca16d84-dbf0-4501-b702-dc6372a480ea/resource/1689b19c-b0dc-4e39-bf07-e3a2e684ef1a/download/202209281339190-file.xlsx",
+      "fecha_consulta": "2026-10-24",
+      "http_status": 403,
+      "servidor": "cloudflare",
+      "resultado": "Bloqueo Cloudflare, igual que R6 (2026-10-23). Sin evadir WAF. Se reutiliza inspeccion local previa 2026-10-23 como contexto, no como descarga nueva."
+    },
+    {
+      "url": "https://datos.sonora.gob.mx/dataset/dca16d84-dbf0-4501-b702-dc6372a480ea/resource/2334deaa-dd0c-444e-b038-4cc556ad715d/download/diccionario-vigilancia-epidemiologica.csv",
+      "fecha_consulta": "2026-10-24",
+      "http_status": 403,
+      "servidor": "cloudflare",
+      "resultado": "Bloqueo Cloudflare (cuerpo HTML de error, sin filas). Verificacion supletoria por datastore_search (200) el mismo dia."
+    },
+    {
+      "url": "https://salud.sonora.gob.mx/images/BOLETIN%20SONORA%202025/Boletin%20Sonora%202025%20SE%2037.pdf",
+      "fecha_consulta": "2026-10-24",
+      "http_status": 403,
+      "servidor": "cloudflare",
+      "resultado": "Boletin Sonora SE 37 (2025) no descargable (403 Cloudflare); pista nueva no acreditada: solo snippet de busqueda ('147 enfermedades establecidas en el formato SUIVE-1 y adicionales de interes local'), periodo 2025 distinto de 2022, sin definiciones por columna. No acredita ningun ID."
+    }
+  ],
+  "busquedas_web_limitadas": [
+    "SUIVE manual vigilancia epidemiologica convencional casos nuevos 2022 DGE Mexico -> hallado unico instrumento oficial vigente: 32_ManualSuive.pdf (enero 2021), ya preservado y revalidado; sin edicion 2022 del instrumento localizada.",
+    "datos.sonora.gob.mx Vigilancia Epidemiologica diccionario codebook SUIVE -> sin codebook ni nota metodologica del publicador; package_show confirma fuentes_extras vacio.",
+    "Evidencia negativa acotada a estas busquedas del 2026-10-24; no ausencia universal."
+  ]
+}

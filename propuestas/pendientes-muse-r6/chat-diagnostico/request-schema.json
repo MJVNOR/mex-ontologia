@@ -1,0 +1,34 @@
+{
+  "sonda": "request-schema (cero red, fetch stub; responde minimo local)",
+  "archivo_fuente": "studio/src-tauri/sidecars/agent/providers/openai.ts :: step()",
+  "url": "https://generativelanguage.googleapis.com/v1beta/openai/chat/completions",
+  "method": "POST",
+  "body_keys": [
+    "model",
+    "messages",
+    "temperature",
+    "top_p",
+    "max_tokens"
+  ],
+  "body_tipos": {
+    "model": "string",
+    "messages": "array[2]",
+    "temperature": "number",
+    "top_p": "number",
+    "max_tokens": "number"
+  },
+  "messages_roles": [
+    "system",
+    "user"
+  ],
+  "system_chars": 4453,
+  "max_tokens": 4096,
+  "temperature": 0.7,
+  "top_p": 0.8,
+  "tools_incluidas": 0,
+  "tool_choice": null,
+  "chat_template_kwargs": null,
+  "body_bytes": 4712,
+  "auth_en_header_no_en_body": true,
+  "clave_en_body": false
+}

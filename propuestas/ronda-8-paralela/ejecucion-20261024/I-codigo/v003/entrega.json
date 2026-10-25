@@ -1,0 +1,41 @@
+{
+  "ronda": 8,
+  "version": "v003",
+  "alcance": "Solo 28 vinculos SINAC con significado ya respaldado en R7; 0 reglas, 0 conceptos. Sin joins, vigencias, equivalencias, codigos ni identidad de catalogos.",
+  "corrige_v002": "Guarda UNIVERSO_28<=candset (el `<` estricto dejaba pasar faltantes); fila coteja definicion local exacta + mapping.variable==variable.iri + campo==mapping.campo + descripcion==descripcion local (rechaza URI wrong M2 v001 y descriptor amplio v002); auditoria exige dictamen global aceptar ademas de pin SHA y 28 aprobaciones.",
+  "aceptadas_material_v003_sha256": "db3167f98a308cc4219202cfa5ce8587923dd05bc4664d30d83375872309f0d9",
+  "archivos": [
+    "propuestas/ronda-8-paralela/ejecucion-20261024/I-codigo/v003/data/integracion-ronda-8/aceptadas.json",
+    "propuestas/ronda-8-paralela/ejecucion-20261024/I-codigo/v003/data/integracion-ronda-8/auditorias/auditoria-a.json",
+    "propuestas/ronda-8-paralela/ejecucion-20261024/I-codigo/v003/data/integracion-ronda-8/auditorias/auditoria-b.json",
+    "propuestas/ronda-8-paralela/ejecucion-20261024/I-codigo/v003/data/integracion-ronda-8/base-semantica.json",
+    "propuestas/ronda-8-paralela/ejecucion-20261024/I-codigo/v003/data/integracion-ronda-8/cobertura-r7.json",
+    "propuestas/ronda-8-paralela/ejecucion-20261024/I-codigo/v003/data/integracion-ronda-8/fuentes/M1-sinac-entrega.json",
+    "propuestas/ronda-8-paralela/ejecucion-20261024/I-codigo/v003/data/integracion-ronda-8/fuentes/M2-sinac-entrega.json",
+    "propuestas/ronda-8-paralela/ejecucion-20261024/I-codigo/v003/data/integracion-ronda-8/fuentes/aceptadas-r7.json",
+    "propuestas/ronda-8-paralela/ejecucion-20261024/I-codigo/v003/data/integracion-ronda-8/fuentes/cobertura-r7.json",
+    "propuestas/ronda-8-paralela/ejecucion-20261024/I-codigo/v003/data/integracion-ronda-8/fuentes/inspeccion-contenido.json",
+    "propuestas/ronda-8-paralela/ejecucion-20261024/I-codigo/v003/data/integracion-ronda-8/manifiesto.json",
+    "propuestas/ronda-8-paralela/ejecucion-20261024/I-codigo/v003/ontologia/revision-ronda-8.json",
+    "propuestas/ronda-8-paralela/ejecucion-20261024/I-codigo/v003/scripts/consolidar_semantica.py",
+    "propuestas/ronda-8-paralela/ejecucion-20261024/I-codigo/v003/scripts/integrar_entregas.py",
+    "propuestas/ronda-8-paralela/ejecucion-20261024/I-codigo/v003/scripts/integrar_ronda_2.py",
+    "propuestas/ronda-8-paralela/ejecucion-20261024/I-codigo/v003/scripts/integrar_ronda_7.py",
+    "propuestas/ronda-8-paralela/ejecucion-20261024/I-codigo/v003/scripts/integrar_ronda_8.py",
+    "propuestas/ronda-8-paralela/ejecucion-20261024/I-codigo/v003/scripts/r8_proyeccion.py",
+    "propuestas/ronda-8-paralela/ejecucion-20261024/I-codigo/v003/tests/test_cargar_r8.py",
+    "propuestas/ronda-8-paralela/ejecucion-20261024/I-codigo/v003/tests/test_proyeccion_r8.py"
+  ],
+  "gates": [
+    "SHA manifiesto + SHAs de evidencia",
+    "aceptadas dual A/B con pin + dictamen global aceptar",
+    "IRI definition exacta + UNIVERSO_28 contenido en candidatas",
+    "fila exacta: definicion/variable/campo/descripcion local + huella + scope SINAC",
+    "igualdad base R7",
+    "expected = base + 28 vinculos exactos",
+    "proyeccion 28 revisadas->candidatas solo si existe config R8; sin config, R7 intacto"
+  ],
+  "verificacion": "py_compile 8 archivos OK; test_proyeccion_r8 4/4 OK; test_cargar_r8 9/9 OK; gates reales valid+invalid OK (v002 rechazado); sin instalar, sin red",
+  "congelada_sha256": "2d13a57cc212cf4e7b53b0a73ce320b4f7555cfb4269d0898951b286a042f41c",
+  "aceptadas_sha256": "db3167f98a308cc4219202cfa5ce8587923dd05bc4664d30d83375872309f0d9"
+}

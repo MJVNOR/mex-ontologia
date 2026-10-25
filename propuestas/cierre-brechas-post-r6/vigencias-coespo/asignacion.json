@@ -1,0 +1,366 @@
+{
+  "tarea": "vigencias-coespo",
+  "tipo": "vigencias",
+  "clave_id": "id",
+  "conteo": 6,
+  "casos": [
+    {
+      "id": "V09",
+      "tipo": "vigencia",
+      "grupo": "D",
+      "dependencia_publicador": "DEP-CAT-R6-04",
+      "conjunto": {
+        "id": "0b5f5e16-2de3-4be1-811f-4b0976ed82d3",
+        "titulo": "Proyecciones de población - Grupos quinquenales de edad"
+      },
+      "catalogo": {
+        "recurso_catalogo": "de5c06c7-03d7-4ed4-a9fc-ec7d10b024f0",
+        "recurso_url": "https://datos.sonora.gob.mx/dataset/0b5f5e16-2de3-4be1-811f-4b0976ed82d3/resource/de5c06c7-03d7-4ed4-a9fc-ec7d10b024f0/download/catalogo.xlsx",
+        "sha256": "ea54aad30b7342ce678d1d66157325a5cbaa492380ee4d807b20918198c5b0f5",
+        "hoja_campo": "Catalogo_Municipios / CLAVE"
+      },
+      "referencia_iri": "https://example.org/mex-ontologi/declared-code-reference/a5ef433dd9439bbb04d230f9282143f4a0dd2991ad05371fb6f2f6cd430e9d08",
+      "periodos_declarados_por_titulo": [
+        "1990-2019 reconstruccion",
+        "2020-2040 proyecciones"
+      ],
+      "nota_periodos": "Periodos declarados por titulos de recursos CKAN y nota del conjunto; NO cobertura observada.",
+      "estado_actual": "pendiente (F3 parcial, F4 ausente)",
+      "motivo": "Avance F3 parcial (fuente metodológica CONAPO citada por el publicador, conteo 2475 consistente) pero sin declaración de edición/versión del catalogo.xlsx y con desfase de corte (local 1990-2019/2020-2040 vs CONAPO 1990-2020/2021-2040). F4 ausente.",
+      "evidencia_revisada": [
+        "W05 (Fuentes extras CONAPO 1990-2040 declaradas por el publicador) + W06 (CONAPO 09-05-2024: 2475 municipios, 1990-2020 + 2021-2040; desfase de 1 año vs periodos locales)",
+        "Local: package_0b5f5e16 (extras nulos) + xlsx ea54aad3 (Catalogo_Estado + Catalogo_Municipios, sin versión)",
+        "R6-C1 (API CKAN package_show 2026-10-23) + R6-C2 (core-properties xlsx)",
+        "R6 novedad: R6-C1: API package 0b5f5e16: version=null; fuentes_extras CONAPO 1990-2040 confirmada en API; Catalogo size 83769 = local ea54aad3; fechas Catalogo 1989-06-04; datos 1990-2040. Desfase de corte vs CONAPO 2024 intacto. R6-C2: creator Estephania Pivac Alcaraz 2024-09-02, sin version. F3+F4 ausentes."
+      ],
+      "campos_minimos": [
+        "emisor: publicador (DEP-CAT-R6-04)",
+        "edicion/version/fecha declarada del catalogo (Catalogo_Municipios / CLAVE, sha ea54aad3)",
+        "recurso catalogo: de5c06c7-03d7-4ed4-a9fc-ec7d10b024f0",
+        "periodos de aplicacion: 1990-2019 reconstruccion; 2020-2040 proyecciones",
+        "fecha o firma del documento"
+      ],
+      "criterio_aceptacion": "Se cierra solo si el documento del publicador cita edicion/version/fecha del catalogo (Catalogo_Municipios / CLAVE, sha ea54aad3) y recurso de5c06c7-03d7-4ed4-a9fc-ec7d10b024f0 y periodos (1990-2019 reconstruccion; 2020-2040 proyecciones); verificable (URL o copia local con SHA). Las fechas de portal/API (version=null, placeholder 1989-06-04) y core-properties no acreditan F3+F4.",
+      "limites": [
+        "No afirmar vigencia histórica ni extender a otros conjuntos/periodos; no transferir vigencia del documento CONAPO al catálogo local.",
+        "No transferir vigencia del documento CONAPO 09-05-2024 al catalogo local; aclarar desfase de corte (local 1990-2019/2020-2040 vs CONAPO 1990-2020/2021-2040)"
+      ],
+      "documento_requerido_exacto": "Declaracion de edicion/version/fecha de catalogo.xlsx (sha ea54aad3) con vinculo a reconstruccion 1990-2019 y proyecciones 2020-2040 + aclaracion del desfase de corte vs CONAPO 09-05-2024. Pendiente exacto: Acreditar F3+F4: declaración de edición/versión/fecha del catálogo (Catalogo_Municipios/CLAVE, sha ea54aad3) y documento que la vincule con reconstrucción 1990-2019 y proyecciones 2020-2040; aclarar desfase de corte vs CONAPO 2024.",
+      "soporte": [
+        {
+          "ruta": "reports/pendientes-ronda-5.json",
+          "sha256": "46f3b6f8826379be5124fb85cf6128b705fbe90deebf2c99bff64098608c8f11",
+          "localizador": "decisiones_significados id=V09"
+        },
+        {
+          "ruta": "propuestas/pendientes-muse-r6/catalogos/entrega.json",
+          "sha256": "649bbe7e5feca82b7e8d5c5144de78b1d8ceccb1c217ca976347b1c9a05cb74b",
+          "localizador": "decisiones_significados id=V09 + novedad_r6 (C1 API package_show 2026-10-23 + C2 core-properties xlsx)"
+        },
+        {
+          "ruta": "local: xlsx sha ea54aad3",
+          "sha256": "ea54aad30b7342ce678d1d66157325a5cbaa492380ee4d807b20918198c5b0f5",
+          "localizador": "interior xlsx sin celdas de version/periodo (R4 vigente, re-verificado R6: sizes API = locales)"
+        }
+      ]
+    },
+    {
+      "id": "V10",
+      "tipo": "vigencia",
+      "grupo": "D",
+      "dependencia_publicador": "DEP-CAT-R6-04",
+      "conjunto": {
+        "id": "0b5f5e16-2de3-4be1-811f-4b0976ed82d3",
+        "titulo": "Proyecciones de población - Grupos quinquenales de edad"
+      },
+      "catalogo": {
+        "recurso_catalogo": "de5c06c7-03d7-4ed4-a9fc-ec7d10b024f0",
+        "recurso_url": "https://datos.sonora.gob.mx/dataset/0b5f5e16-2de3-4be1-811f-4b0976ed82d3/resource/de5c06c7-03d7-4ed4-a9fc-ec7d10b024f0/download/catalogo.xlsx",
+        "sha256": "ea54aad30b7342ce678d1d66157325a5cbaa492380ee4d807b20918198c5b0f5",
+        "hoja_campo": "Catalogo_Estado / CLAVE_ENT"
+      },
+      "referencia_iri": "https://example.org/mex-ontologi/declared-code-reference/6626e7c684aa6ea50eaa529bdefe9f74f2c784f5991e08a73b4de188ec31e56c",
+      "periodos_declarados_por_titulo": [
+        "1990-2019 reconstruccion",
+        "2020-2040 proyecciones"
+      ],
+      "nota_periodos": "Periodos declarados por titulos de recursos CKAN y nota del conjunto; NO cobertura observada.",
+      "estado_actual": "pendiente (F3 parcial, F4 ausente)",
+      "motivo": "Igual que V09 para la hoja Catalogo_Estado/CLAVE_ENT: fuente CONAPO citada sin declaración de edición del catálogo ni vínculo de aplicación.",
+      "evidencia_revisada": [
+        "W05 + W06 (igual que V09)",
+        "Local: package_0b5f5e16 (extras nulos) + xlsx ea54aad3",
+        "R6-C1 (API CKAN package_show 2026-10-23) + R6-C2 (core-properties xlsx)",
+        "R6 novedad: R6-C1+C2 igual que V09 para hoja Catalogo_Estado (mismo archivo). F3+F4 ausentes."
+      ],
+      "campos_minimos": [
+        "emisor: publicador (DEP-CAT-R6-04)",
+        "edicion/version/fecha declarada del catalogo (Catalogo_Estado / CLAVE_ENT, sha ea54aad3)",
+        "recurso catalogo: de5c06c7-03d7-4ed4-a9fc-ec7d10b024f0",
+        "periodos de aplicacion: 1990-2019 reconstruccion; 2020-2040 proyecciones",
+        "fecha o firma del documento"
+      ],
+      "criterio_aceptacion": "Se cierra solo si el documento del publicador cita edicion/version/fecha del catalogo (Catalogo_Estado / CLAVE_ENT, sha ea54aad3) y recurso de5c06c7-03d7-4ed4-a9fc-ec7d10b024f0 y periodos (1990-2019 reconstruccion; 2020-2040 proyecciones); verificable (URL o copia local con SHA). Las fechas de portal/API (version=null, placeholder 1989-06-04) y core-properties no acreditan F3+F4.",
+      "limites": [
+        "No afirmar vigencia histórica ni extender a otros conjuntos/periodos.",
+        "No transferir vigencia del documento CONAPO 09-05-2024 al catalogo local; aclarar desfase de corte (local 1990-2019/2020-2040 vs CONAPO 1990-2020/2021-2040)"
+      ],
+      "documento_requerido_exacto": "Declaracion de edicion/version/fecha de catalogo.xlsx (sha ea54aad3) con vinculo a reconstruccion 1990-2019 y proyecciones 2020-2040 + aclaracion del desfase de corte vs CONAPO 09-05-2024. Pendiente exacto: Acreditar F3+F4: declaración de edición/versión/fecha del catálogo (Catalogo_Estado/CLAVE_ENT, sha ea54aad3) y documento que la vincule con reconstrucción 1990-2019 y proyecciones 2020-2040.",
+      "soporte": [
+        {
+          "ruta": "reports/pendientes-ronda-5.json",
+          "sha256": "46f3b6f8826379be5124fb85cf6128b705fbe90deebf2c99bff64098608c8f11",
+          "localizador": "decisiones_significados id=V10"
+        },
+        {
+          "ruta": "propuestas/pendientes-muse-r6/catalogos/entrega.json",
+          "sha256": "649bbe7e5feca82b7e8d5c5144de78b1d8ceccb1c217ca976347b1c9a05cb74b",
+          "localizador": "decisiones_significados id=V10 + novedad_r6 (C1 API package_show 2026-10-23 + C2 core-properties xlsx)"
+        },
+        {
+          "ruta": "local: xlsx sha ea54aad3",
+          "sha256": "ea54aad30b7342ce678d1d66157325a5cbaa492380ee4d807b20918198c5b0f5",
+          "localizador": "interior xlsx sin celdas de version/periodo (R4 vigente, re-verificado R6: sizes API = locales)"
+        }
+      ]
+    },
+    {
+      "id": "V11",
+      "tipo": "vigencia",
+      "grupo": "D",
+      "dependencia_publicador": "DEP-CAT-R6-04",
+      "conjunto": {
+        "id": "943d0723-afbb-470a-8fe8-d62e8671de84",
+        "titulo": "Proyecciones de población - Grandes grupos de edad"
+      },
+      "catalogo": {
+        "recurso_catalogo": "d7c4b8b2-568f-4349-a1ed-23fa93189e83",
+        "recurso_url": "https://datos.sonora.gob.mx/dataset/943d0723-afbb-470a-8fe8-d62e8671de84/resource/d7c4b8b2-568f-4349-a1ed-23fa93189e83/download/catalogo.xlsx",
+        "sha256": "ea54aad30b7342ce678d1d66157325a5cbaa492380ee4d807b20918198c5b0f5",
+        "hoja_campo": "Catalogo_Municipios / CLAVE"
+      },
+      "referencia_iri": "https://example.org/mex-ontologi/declared-code-reference/6b313f08b4fb06fa474536bb04ddea0b113d0ea610840aaf2a36bc9fd9bb5acf",
+      "periodos_declarados_por_titulo": [
+        "1990-2019 reconstruccion",
+        "2020-2040 proyecciones"
+      ],
+      "nota_periodos": "Periodos declarados por titulos de recursos CKAN y nota del conjunto; NO cobertura observada.",
+      "estado_actual": "pendiente (F3 parcial-candidata, F4 ausente)",
+      "motivo": "F3 parcial (misma fuente CONAPO candidata) sin declaración de edición del catálogo; F4 ausente.",
+      "evidencia_revisada": [
+        "W05 (mismo Fuentes extras CONAPO en conjunto hermano; verificar en 943d0723) + W06",
+        "Local: package_943d0723-afbb-470a-8fe8-d62e8671de84.json (extras nulos) + xlsx ea54aad3",
+        "R6-C1 (API CKAN package_show 2026-10-23) + R6-C2 (core-properties xlsx)",
+        "R6 novedad: R6-C1: API package 943d0723: version=null; misma fuentes_extras CONAPO; Catalogo size 83769 (archivo compartido); fechas 1989-06-04. F3+F4 ausentes."
+      ],
+      "campos_minimos": [
+        "emisor: publicador (DEP-CAT-R6-04)",
+        "edicion/version/fecha declarada del catalogo (Catalogo_Municipios / CLAVE, sha ea54aad3)",
+        "recurso catalogo: d7c4b8b2-568f-4349-a1ed-23fa93189e83",
+        "periodos de aplicacion: 1990-2019 reconstruccion; 2020-2040 proyecciones",
+        "fecha o firma del documento"
+      ],
+      "criterio_aceptacion": "Se cierra solo si el documento del publicador cita edicion/version/fecha del catalogo (Catalogo_Municipios / CLAVE, sha ea54aad3) y recurso d7c4b8b2-568f-4349-a1ed-23fa93189e83 y periodos (1990-2019 reconstruccion; 2020-2040 proyecciones); verificable (URL o copia local con SHA). Las fechas de portal/API (version=null, placeholder 1989-06-04) y core-properties no acreditan F3+F4.",
+      "limites": [
+        "No afirmar vigencia histórica ni extender a otros conjuntos/periodos.",
+        "No transferir vigencia del documento CONAPO 09-05-2024 al catalogo local; aclarar desfase de corte (local 1990-2019/2020-2040 vs CONAPO 1990-2020/2021-2040)"
+      ],
+      "documento_requerido_exacto": "Declaracion de edicion/version/fecha de catalogo.xlsx (sha ea54aad3) con vinculo a reconstruccion 1990-2019 y proyecciones 2020-2040 + aclaracion del desfase de corte vs CONAPO 09-05-2024. Pendiente exacto: Acreditar F3+F4: declaración de edición/versión/fecha del catálogo (Catalogo_Municipios/CLAVE, sha ea54aad3) y documento que la vincule con reconstrucción 1990-2019 y proyecciones 2020-2040 (conjunto 943d0723).",
+      "soporte": [
+        {
+          "ruta": "reports/pendientes-ronda-5.json",
+          "sha256": "46f3b6f8826379be5124fb85cf6128b705fbe90deebf2c99bff64098608c8f11",
+          "localizador": "decisiones_significados id=V11"
+        },
+        {
+          "ruta": "propuestas/pendientes-muse-r6/catalogos/entrega.json",
+          "sha256": "649bbe7e5feca82b7e8d5c5144de78b1d8ceccb1c217ca976347b1c9a05cb74b",
+          "localizador": "decisiones_significados id=V11 + novedad_r6 (C1 API package_show 2026-10-23 + C2 core-properties xlsx)"
+        },
+        {
+          "ruta": "local: xlsx sha ea54aad3",
+          "sha256": "ea54aad30b7342ce678d1d66157325a5cbaa492380ee4d807b20918198c5b0f5",
+          "localizador": "interior xlsx sin celdas de version/periodo (R4 vigente, re-verificado R6: sizes API = locales)"
+        }
+      ]
+    },
+    {
+      "id": "V12",
+      "tipo": "vigencia",
+      "grupo": "D",
+      "dependencia_publicador": "DEP-CAT-R6-04",
+      "conjunto": {
+        "id": "943d0723-afbb-470a-8fe8-d62e8671de84",
+        "titulo": "Proyecciones de población - Grandes grupos de edad"
+      },
+      "catalogo": {
+        "recurso_catalogo": "d7c4b8b2-568f-4349-a1ed-23fa93189e83",
+        "recurso_url": "https://datos.sonora.gob.mx/dataset/943d0723-afbb-470a-8fe8-d62e8671de84/resource/d7c4b8b2-568f-4349-a1ed-23fa93189e83/download/catalogo.xlsx",
+        "sha256": "ea54aad30b7342ce678d1d66157325a5cbaa492380ee4d807b20918198c5b0f5",
+        "hoja_campo": "Catalogo_Estado / CLAVE_ENT"
+      },
+      "referencia_iri": "https://example.org/mex-ontologi/declared-code-reference/9bd0b46a6382ebb7dc701f0d101880649222ce8bff9ac541aa7d347ee2f0681b",
+      "periodos_declarados_por_titulo": [
+        "1990-2019 reconstruccion",
+        "2020-2040 proyecciones"
+      ],
+      "nota_periodos": "Periodos declarados por titulos de recursos CKAN y nota del conjunto; NO cobertura observada.",
+      "estado_actual": "pendiente (F3 parcial-candidata, F4 ausente)",
+      "motivo": "Igual que V11 para la hoja Catalogo_Estado/CLAVE_ENT.",
+      "evidencia_revisada": [
+        "W05 + W06 (igual que V11)",
+        "Local: package_943d0723 (extras nulos) + xlsx ea54aad3",
+        "R6-C1 (API CKAN package_show 2026-10-23) + R6-C2 (core-properties xlsx)",
+        "R6 novedad: R6-C1+C2 igual que V11 para hoja Catalogo_Estado (mismo archivo). F3+F4 ausentes."
+      ],
+      "campos_minimos": [
+        "emisor: publicador (DEP-CAT-R6-04)",
+        "edicion/version/fecha declarada del catalogo (Catalogo_Estado / CLAVE_ENT, sha ea54aad3)",
+        "recurso catalogo: d7c4b8b2-568f-4349-a1ed-23fa93189e83",
+        "periodos de aplicacion: 1990-2019 reconstruccion; 2020-2040 proyecciones",
+        "fecha o firma del documento"
+      ],
+      "criterio_aceptacion": "Se cierra solo si el documento del publicador cita edicion/version/fecha del catalogo (Catalogo_Estado / CLAVE_ENT, sha ea54aad3) y recurso d7c4b8b2-568f-4349-a1ed-23fa93189e83 y periodos (1990-2019 reconstruccion; 2020-2040 proyecciones); verificable (URL o copia local con SHA). Las fechas de portal/API (version=null, placeholder 1989-06-04) y core-properties no acreditan F3+F4.",
+      "limites": [
+        "No afirmar vigencia histórica ni extender a otros conjuntos/periodos.",
+        "No transferir vigencia del documento CONAPO 09-05-2024 al catalogo local; aclarar desfase de corte (local 1990-2019/2020-2040 vs CONAPO 1990-2020/2021-2040)"
+      ],
+      "documento_requerido_exacto": "Declaracion de edicion/version/fecha de catalogo.xlsx (sha ea54aad3) con vinculo a reconstruccion 1990-2019 y proyecciones 2020-2040 + aclaracion del desfase de corte vs CONAPO 09-05-2024. Pendiente exacto: Acreditar F3+F4: declaración de edición/versión/fecha del catálogo (Catalogo_Estado/CLAVE_ENT, sha ea54aad3) y documento que la vincule con reconstrucción 1990-2019 y proyecciones 2020-2040 (conjunto 943d0723).",
+      "soporte": [
+        {
+          "ruta": "reports/pendientes-ronda-5.json",
+          "sha256": "46f3b6f8826379be5124fb85cf6128b705fbe90deebf2c99bff64098608c8f11",
+          "localizador": "decisiones_significados id=V12"
+        },
+        {
+          "ruta": "propuestas/pendientes-muse-r6/catalogos/entrega.json",
+          "sha256": "649bbe7e5feca82b7e8d5c5144de78b1d8ceccb1c217ca976347b1c9a05cb74b",
+          "localizador": "decisiones_significados id=V12 + novedad_r6 (C1 API package_show 2026-10-23 + C2 core-properties xlsx)"
+        },
+        {
+          "ruta": "local: xlsx sha ea54aad3",
+          "sha256": "ea54aad30b7342ce678d1d66157325a5cbaa492380ee4d807b20918198c5b0f5",
+          "localizador": "interior xlsx sin celdas de version/periodo (R4 vigente, re-verificado R6: sizes API = locales)"
+        }
+      ]
+    },
+    {
+      "id": "V15",
+      "tipo": "vigencia",
+      "grupo": "D",
+      "dependencia_publicador": "DEP-CAT-R6-04",
+      "conjunto": {
+        "id": "960ef0a9-73ed-4191-ae0b-b868d7e48292",
+        "titulo": "Proyecciones de población - Indicadores demográficos"
+      },
+      "catalogo": {
+        "recurso_catalogo": "e0d2acc2-9841-4f6d-baea-88ba86710a7d",
+        "recurso_url": "https://datos.sonora.gob.mx/dataset/960ef0a9-73ed-4191-ae0b-b868d7e48292/resource/e0d2acc2-9841-4f6d-baea-88ba86710a7d/download/catalogo.xlsx",
+        "sha256": "ea54aad30b7342ce678d1d66157325a5cbaa492380ee4d807b20918198c5b0f5",
+        "hoja_campo": "Catalogo_Municipios / CLAVE"
+      },
+      "referencia_iri": "https://example.org/mex-ontologi/declared-code-reference/bae61ad38ac1e3df9f75026f39187d0a0b6edcd29ef51769e4c3be5714acc37d",
+      "periodos_declarados_por_titulo": [
+        "1990-2040"
+      ],
+      "nota_periodos": "Periodos declarados por titulos de recursos CKAN y nota del conjunto; NO cobertura observada.",
+      "estado_actual": "pendiente (F3 parcial, F4 ausente)",
+      "motivo": "F3 parcial (fuente CONAPO 1990-2040 citada) sin declaración de edición del catálogo; F4 ausente para el rango 1990-2040.",
+      "evidencia_revisada": [
+        "W05 (mismo Fuentes extras CONAPO en conjunto hermano 960ef0a9: Indicadores 1990-2040) + W06",
+        "Local: package_960ef0a9-73ed-4191-ae0b-b868d7e48292.json (extras nulos) + xlsx ea54aad3",
+        "R6-C1 (API CKAN package_show 2026-10-23) + R6-C2 (core-properties xlsx)",
+        "R6 novedad: R6-C1: API package 960ef0a9: version=null; misma fuentes_extras CONAPO; Catalogo size 83769 (archivo compartido); fechas 1989-06-04; datos 1990-2040. F3+F4 ausentes."
+      ],
+      "campos_minimos": [
+        "emisor: publicador (DEP-CAT-R6-04)",
+        "edicion/version/fecha declarada del catalogo (Catalogo_Municipios / CLAVE, sha ea54aad3)",
+        "recurso catalogo: e0d2acc2-9841-4f6d-baea-88ba86710a7d",
+        "periodos de aplicacion: 1990-2040",
+        "fecha o firma del documento"
+      ],
+      "criterio_aceptacion": "Se cierra solo si el documento del publicador cita edicion/version/fecha del catalogo (Catalogo_Municipios / CLAVE, sha ea54aad3) y recurso e0d2acc2-9841-4f6d-baea-88ba86710a7d y periodos (1990-2040); verificable (URL o copia local con SHA). Las fechas de portal/API (version=null, placeholder 1989-06-04) y core-properties no acreditan F3+F4.",
+      "limites": [
+        "No afirmar vigencia histórica ni extender a otros conjuntos/periodos.",
+        "No transferir vigencia del documento CONAPO 09-05-2024 al catalogo local; aclarar desfase de corte (local 1990-2019/2020-2040 vs CONAPO 1990-2020/2021-2040)"
+      ],
+      "documento_requerido_exacto": "Declaracion de edicion/version/fecha de catalogo.xlsx (sha ea54aad3) con vinculo a reconstruccion 1990-2019 y proyecciones 2020-2040 + aclaracion del desfase de corte vs CONAPO 09-05-2024. Pendiente exacto: Acreditar F3+F4: declaración de edición/versión/fecha del catálogo (Catalogo_Municipios/CLAVE, sha ea54aad3) y documento que la vincule con 1990-2040 (conjunto 960ef0a9).",
+      "soporte": [
+        {
+          "ruta": "reports/pendientes-ronda-5.json",
+          "sha256": "46f3b6f8826379be5124fb85cf6128b705fbe90deebf2c99bff64098608c8f11",
+          "localizador": "decisiones_significados id=V15"
+        },
+        {
+          "ruta": "propuestas/pendientes-muse-r6/catalogos/entrega.json",
+          "sha256": "649bbe7e5feca82b7e8d5c5144de78b1d8ceccb1c217ca976347b1c9a05cb74b",
+          "localizador": "decisiones_significados id=V15 + novedad_r6 (C1 API package_show 2026-10-23 + C2 core-properties xlsx)"
+        },
+        {
+          "ruta": "local: xlsx sha ea54aad3",
+          "sha256": "ea54aad30b7342ce678d1d66157325a5cbaa492380ee4d807b20918198c5b0f5",
+          "localizador": "interior xlsx sin celdas de version/periodo (R4 vigente, re-verificado R6: sizes API = locales)"
+        }
+      ]
+    },
+    {
+      "id": "V16",
+      "tipo": "vigencia",
+      "grupo": "D",
+      "dependencia_publicador": "DEP-CAT-R6-04",
+      "conjunto": {
+        "id": "960ef0a9-73ed-4191-ae0b-b868d7e48292",
+        "titulo": "Proyecciones de población - Indicadores demográficos"
+      },
+      "catalogo": {
+        "recurso_catalogo": "e0d2acc2-9841-4f6d-baea-88ba86710a7d",
+        "recurso_url": "https://datos.sonora.gob.mx/dataset/960ef0a9-73ed-4191-ae0b-b868d7e48292/resource/e0d2acc2-9841-4f6d-baea-88ba86710a7d/download/catalogo.xlsx",
+        "sha256": "ea54aad30b7342ce678d1d66157325a5cbaa492380ee4d807b20918198c5b0f5",
+        "hoja_campo": "Catalogo_Estado / CLAVE_ENT"
+      },
+      "referencia_iri": "https://example.org/mex-ontologi/declared-code-reference/c2094a26d8939996516ffb7c725ea36c6da339a3a61466cb926ff24d92f000b5",
+      "periodos_declarados_por_titulo": [
+        "1990-2040"
+      ],
+      "nota_periodos": "Periodos declarados por titulos de recursos CKAN y nota del conjunto; NO cobertura observada.",
+      "estado_actual": "pendiente (F3 parcial, F4 ausente)",
+      "motivo": "Igual que V15 para la hoja Catalogo_Estado/CLAVE_ENT.",
+      "evidencia_revisada": [
+        "W05 + W06 (igual que V15)",
+        "Local: package_960ef0a9 (extras nulos) + xlsx ea54aad3",
+        "R6-C1 (API CKAN package_show 2026-10-23) + R6-C2 (core-properties xlsx)",
+        "R6 novedad: R6-C1+C2 igual que V15 para hoja Catalogo_Estado (mismo archivo). F3+F4 ausentes."
+      ],
+      "campos_minimos": [
+        "emisor: publicador (DEP-CAT-R6-04)",
+        "edicion/version/fecha declarada del catalogo (Catalogo_Estado / CLAVE_ENT, sha ea54aad3)",
+        "recurso catalogo: e0d2acc2-9841-4f6d-baea-88ba86710a7d",
+        "periodos de aplicacion: 1990-2040",
+        "fecha o firma del documento"
+      ],
+      "criterio_aceptacion": "Se cierra solo si el documento del publicador cita edicion/version/fecha del catalogo (Catalogo_Estado / CLAVE_ENT, sha ea54aad3) y recurso e0d2acc2-9841-4f6d-baea-88ba86710a7d y periodos (1990-2040); verificable (URL o copia local con SHA). Las fechas de portal/API (version=null, placeholder 1989-06-04) y core-properties no acreditan F3+F4.",
+      "limites": [
+        "No afirmar vigencia histórica ni extender a otros conjuntos/periodos.",
+        "No transferir vigencia del documento CONAPO 09-05-2024 al catalogo local; aclarar desfase de corte (local 1990-2019/2020-2040 vs CONAPO 1990-2020/2021-2040)"
+      ],
+      "documento_requerido_exacto": "Declaracion de edicion/version/fecha de catalogo.xlsx (sha ea54aad3) con vinculo a reconstruccion 1990-2019 y proyecciones 2020-2040 + aclaracion del desfase de corte vs CONAPO 09-05-2024. Pendiente exacto: Acreditar F3+F4: declaración de edición/versión/fecha del catálogo (Catalogo_Estado/CLAVE_ENT, sha ea54aad3) y documento que la vincule con 1990-2040 (conjunto 960ef0a9).",
+      "soporte": [
+        {
+          "ruta": "reports/pendientes-ronda-5.json",
+          "sha256": "46f3b6f8826379be5124fb85cf6128b705fbe90deebf2c99bff64098608c8f11",
+          "localizador": "decisiones_significados id=V16"
+        },
+        {
+          "ruta": "propuestas/pendientes-muse-r6/catalogos/entrega.json",
+          "sha256": "649bbe7e5feca82b7e8d5c5144de78b1d8ceccb1c217ca976347b1c9a05cb74b",
+          "localizador": "decisiones_significados id=V16 + novedad_r6 (C1 API package_show 2026-10-23 + C2 core-properties xlsx)"
+        },
+        {
+          "ruta": "local: xlsx sha ea54aad3",
+          "sha256": "ea54aad30b7342ce678d1d66157325a5cbaa492380ee4d807b20918198c5b0f5",
+          "localizador": "interior xlsx sin celdas de version/periodo (R4 vigente, re-verificado R6: sizes API = locales)"
+        }
+      ]
+    }
+  ]
+}

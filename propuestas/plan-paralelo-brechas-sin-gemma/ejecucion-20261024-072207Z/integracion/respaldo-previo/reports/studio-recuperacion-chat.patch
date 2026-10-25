@@ -1,0 +1,252 @@
+diff --git a/studio/src-tauri/sidecars/agent/graphrag.ts b/studio/src-tauri/sidecars/agent/graphrag.ts
+index 9ae9e07..1b6c64a 100644
+--- a/studio/src-tauri/sidecars/agent/graphrag.ts
++++ b/studio/src-tauri/sidecars/agent/graphrag.ts
+@@ -48,39 +48,47 @@ export interface Retrieved {
+   conflicts: string[];
+ }
+ 
+-function shorten(v: string): string {
+-  if (!v) return v;
+-  if (v.startsWith('<') && v.endsWith('>')) return v.slice(1, -1).split('#').pop() ?? v;
+-  if (v.startsWith('"')) {
+-    const body = v.slice(1);
+-    for (const cut of ['"^^', '"@', '"']) {
+-      const i = body.indexOf(cut);
+-      if (i >= 0) return body.slice(0, i);
+-    }
+-    return body;
+-  }
+-  return v;
++function termValue(term: unknown): string {
++  if (typeof term === 'object' && term !== null && 'value' in term && typeof term.value === 'string') return term.value;
++  if (typeof term !== 'string') throw new Error('Invalid RDF term returned by onto_query');
++  if (term.startsWith('<') && term.endsWith('>')) return term.slice(1, -1);
++  const literal = term.match(/^("(?:[^"\\]|\\.)*")(?:@[\w-]+|\^\^<[^>]*>)?$/s);
++  return literal ? JSON.parse(literal[1]) : term;
++}
++
++export function queryRows(raw: string): Array<Record<string, string>> {
++  const parsed = JSON.parse(raw);
++  if (parsed.error) throw new Error(`Graph query failed: ${typeof parsed.error === 'string' ? parsed.error : JSON.stringify(parsed.error)}`);
++  const rows = Array.isArray(parsed.results) ? parsed.results : parsed.results?.bindings;
++  if (!Array.isArray(rows)) throw new Error('onto_query returned no SPARQL result rows');
++  return rows.map((row: Record<string, unknown>) => Object.fromEntries(
++    Object.entries(row).filter(([, value]) => value != null).map(([key, value]) => [key, termValue(value)]),
++  ));
+ }
+ 
+ async function select(mcp: McpClient, sparql: string): Promise<Array<Record<string, string>>> {
+-  try {
+-    const raw = await mcp.callTool('onto_query', { query: sparql.replace(/\s+/g, ' ') });
+-    const rows = JSON.parse(raw)?.results ?? [];
+-    return rows.map((r: Record<string, string>) => {
+-      const out: Record<string, string> = {};
+-      for (const [k, v] of Object.entries(r)) out[k] = shorten(v);
+-      return out;
+-    });
+-  } catch {
+-    return [];
+-  }
++  // Query errors must reach the chat, not masquerade as an empty graph.
++  return queryRows(await mcp.callTool('onto_query', { query: sparql }));
++}
++
++function isIri(value: string): boolean {
++  return /^[a-z][a-z0-9+.-]*:/i.test(value) && !/[<>"{}|^`\\\s\u0000-\u001f]/u.test(value);
++}
++
++function iriValues(iris: string[]): string {
++  if (iris.some(iri => !isIri(iri))) throw new Error('Graph query returned an invalid entity IRI');
++  return [...new Set(iris)].map(iri => `<${iri}>`).join(' ');
+ }
+ 
+ /** Terms worth anchoring on: long enough to be discriminating, not stopwords. */
+-function terms(question: string): string[] {
+-  const words = question.toLowerCase().match(/[a-z0-9][a-z0-9\-_]{2,}/g) ?? [];
+-  const uniq = [...new Set(words.filter(w => !STOP.has(w) && w.length >= 4))];
+-  return uniq.slice(0, 8);
++const SPANISH_STOP = new Set(('qué que cuál cual cuáles cuales cómo como dónde donde quién quien cuándo cuando por para del los las una unos unas este esta estos estas eso esa esos esas sobre según segun significa significado consulta consultar grafo muestra mostrar evidencia favor puede puedes podría podria información informacion brevemente responde saluda español modifiques datos variable').split(' '));
++
++export function terms(question: string): string[] {
++  const words = question.normalize('NFC').toLowerCase().match(/[\p{L}\p{N}][\p{L}\p{N}_-]{2,}/gu) ?? [];
++  const unique = [...new Set(words.filter(word => !STOP.has(word) && !SPANISH_STOP.has(word) && word.length >= 4))];
++  // A named identifier is more specific than generic words such as diccionario.
++  const identifiers = unique.filter(word => /[_-]/.test(word));
++  return (identifiers.length ? identifiers : unique).slice(0, 8);
+ }
+ 
+ /**
+@@ -97,7 +105,8 @@ export async function retrieve(mcp: McpClient, question: string, hops = 2): Prom
+   }
+ 
+   // 1. ANCHORS. Entities whose label or local name matches a question term.
+-  const filter = ts.map(t => `CONTAINS(LCASE(?l), "${t}") || CONTAINS(LCASE(STR(?e)), "${t}")`).join(' || ');
++  const filter = ts.map(t => `CONTAINS(LCASE(STR(?l)), ${JSON.stringify(t)}) || CONTAINS(LCASE(STR(?e)), ${JSON.stringify(encodeURIComponent(t).toLowerCase())})`).join(' || ');
++  const score = ts.map(t => `IF(LCASE(STR(?l)) = ${JSON.stringify(t)}, 100, IF(STRSTARTS(LCASE(STR(?l)), ${JSON.stringify(t + ' ')}), 50, 0))`).join(' + ');
+   // Ordered by label length, shortest first, and this is load-bearing rather
+   // than cosmetic. A corpus about a specific dataset contains many entities
+   // whose names merely CONTAIN it (e.g. DISTRIBUTION_COVERAGE_RATIO_FOR_THAT_
+@@ -107,10 +116,11 @@ export async function retrieve(mcp: McpClient, question: string, hops = 2): Prom
+   // report that the graph knew nothing. Shortest-label-first puts the exact
+   // match at the front.
+   const anchorRows = await select(mcp, `${P}
+-    SELECT DISTINCT ?e ?l WHERE {
++    SELECT DISTINCT ?e ?l ?score WHERE {
+       ?e rdfs:label ?l .
+       FILTER(${filter})
+-    } ORDER BY STRLEN(?l) LIMIT 16`);
++      BIND((${score}) AS ?score)
++    } ORDER BY DESC(?score) STRLEN(STR(?l)) STR(?e) LIMIT 16`);
+   const anchors = anchorRows.map(r => ({ iri: r.e, label: r.l }));
+   if (anchors.length === 0) {
+     return { anchors: [], facts: [], claims: [], provenance: [], conflicts: [] };
+@@ -120,7 +130,7 @@ export async function retrieve(mcp: McpClient, question: string, hops = 2): Prom
+   // node, which carries a label and nothing else: the facts live on its
+   // instances. Expand class anchors to their instances so the neighbourhood
+   // walk starts where the claims are.
+-  const classValues = anchors.map(a => `dcus:${a.iri}`).join(' ');
++  const classValues = iriValues(anchors.map(a => a.iri));
+   const instanceRows = await select(mcp, `${P}
+     SELECT DISTINCT ?i ?il WHERE {
+       VALUES ?c { ${classValues} }
+@@ -133,31 +143,40 @@ export async function retrieve(mcp: McpClient, question: string, hops = 2): Prom
+     }
+   }
+ 
+-  const values = anchors.map(a => `dcus:${a.iri}`).join(' ');
++  const values = iriValues(anchors.map(a => a.iri));
+ 
+   // 2. NEIGHBOURHOOD. Traverse outward and inward. This is the topology doing
+   //    the selection: relevance is adjacency in the model, not cosine distance.
+   const depth = Math.max(1, Math.min(hops, 3));
+   const facts: string[] = [];
++  const visited = new Set(anchors.map(a => a.iri));
++  let frontier = anchors.map(a => a.iri);
+   for (let hop = 1; hop <= depth; hop++) {
+-    const path = hop === 1 ? '?p' : `?p1/?p${hop === 2 ? '2' : '2/?p3'}`;
++    const neighbourhood = hop === 1
++      ? `VALUES ?anchor { ${iriValues(frontier)} }
++         { ?anchor ?p ?o . BIND(?anchor AS ?s) }
++         UNION { ?s ?p ?anchor . BIND(?anchor AS ?o) }`
++      : `VALUES ?s { ${iriValues(frontier)} } ?s ?p ?o .`;
+     const rows = await select(mcp, `${P}
+       SELECT DISTINCT ?s ?sl ?p ?o ?ol WHERE {
+-        VALUES ?anchor { ${values} }
+-        { ?anchor ?p ?o . BIND(?anchor AS ?s) }
+-        UNION
+-        { ?s ?p ?anchor . BIND(?anchor AS ?o) }
++        ${neighbourhood}
+         OPTIONAL { ?s rdfs:label ?sl }
+         OPTIONAL { ?o rdfs:label ?ol }
+         FILTER(!isBlank(?o) && !isBlank(?s))
+-      } LIMIT 120`);
++      } ORDER BY ?s ?p ?o LIMIT 120`);
++    const next = new Set<string>();
+     for (const r of rows) {
+-      const s = r.sl || r.s;
+-      const o = r.ol || r.o;
+-      if (s && o && r.p) facts.push(`${s} --[${r.p}]--> ${o}`);
++      const s = r.sl ? `${JSON.stringify(r.sl)} <${r.s}>` : `<${r.s}>`;
++      const o = isIri(r.o) ? (r.ol ? `${JSON.stringify(r.ol)} <${r.o}>` : `<${r.o}>`) : JSON.stringify(r.o);
++      if (r.s && r.o && r.p) facts.push(`${s} --[<${r.p}>]--> ${o}`);
++      // Do not walk through rdf:type into every other instance of a class.
++      if (!['http://www.w3.org/1999/02/22-rdf-syntax-ns#type', 'http://www.w3.org/2000/01/rdf-schema#subClassOf'].includes(r.p)) {
++        if (isIri(r.o) && !visited.has(r.o)) next.add(r.o);
++      }
+     }
+-    if (hop >= 1) break; // one expansion is enough at this graph size
+-    void path;
++    frontier = [...next].slice(0, 24);
++    for (const iri of frontier) visited.add(iri);
++    if (!frontier.length) break;
+   }
+ 
+   // 3. CLAIMS. The document passages attached to the anchors, with their
+@@ -200,7 +219,7 @@ export async function retrieve(mcp: McpClient, question: string, hops = 2): Prom
+   for (const r of provRows) {
+     if (!byThing.has(r.thing)) byThing.set(r.thing, new Map());
+     // Prefer the document id; fall back to a label only when there is no id.
+-    const name = r.doc || r.src || r.s;
++    const name = r.doc || r.src ? `${r.doc || r.src} (${r.s})` : r.s;
+     byThing.get(r.thing)!.set(r.s, name);
+   }
+   const provenance = [...byThing.entries()].map(([thing, sources]) => ({
+@@ -238,7 +257,7 @@ export async function retrieve(mcp: McpClient, question: string, hops = 2): Prom
+ 
+   return {
+     anchors,
+-    facts: [...new Set(facts)].slice(0, 80),
++    facts: [...new Set(facts)].slice(0, 240),
+     claims,
+     provenance,
+     conflicts: [...new Set(conflicts)],
+@@ -291,7 +310,7 @@ export function asContext(r: Retrieved): string {
+     parts.push(
+       `\nPROVENANCE\n` +
+         r.provenance
+-          .map(p => `- ${p.thing}: ${p.sources.join(', ')}${p.sources.length > 1 ? '  <-- DISPUTED, two sources' : ''}`)
++          .map(p => `- ${p.thing}: ${p.sources.join(', ')}`)
+           .join('\n'),
+     );
+   }
+@@ -309,7 +328,10 @@ Rules:
+ - Answer ONLY from the supplied subgraph. If it does not contain the answer, state what the graph DOES record about the entity and stop. Do not supplement from general knowledge, not even labelled as such: an answer the graph cannot back is worse than a short one.
+ - Values like TOK_KIND_hex are tokens standing in for protected values. Repeat them verbatim; never guess what they hide.
+ - Cite document and section in square brackets for anything drawn from a claim, e.g. [DCAT-001 S3].
+-- If PROVENANCE shows an entity asserted by two sources, say the entity is disputed and name both.
++- Multiple provenance sources alone do not imply a dispute. Only report a contradiction when the evidence or REASONER CONFLICTS supports it.
++- Anchor labels are names, not class membership. Never call a node an instance of a class without an explicit rdf:type fact.
++- For a variable's meaning, use the original dictionary description, even when its name suggests a different meaning. Do not infer definitions from variable names.
++- Cite graph facts using the full definition/entity URI and original source URL present in the subgraph. Preserve exact descriptions and evidence identifiers. When present, include datatype, format and requiredness from the dictionary row.
+ - If REASONER CONFLICTS is non-empty, lead with it. A contradiction in the model outranks any other finding.
+ - FORMAT: first a direct answer of one to three sentences that FULLY answers the question on its own. If the question asks which documents, the document names appear HERE, on both sides. If it asks for a value, the value appears here. The reader may never expand further.
+ - Then a line containing only --- . Then supporting detail: per-document claims, section citations, counts. Nothing before the answer.
+diff --git a/studio/src-tauri/sidecars/agent/index.ts b/studio/src-tauri/sidecars/agent/index.ts
+index 77f6ad9..a1db234 100644
+--- a/studio/src-tauri/sidecars/agent/index.ts
++++ b/studio/src-tauri/sidecars/agent/index.ts
+@@ -22,6 +22,7 @@ import * as fs from 'fs';
+ import * as path from 'path';
+ import { McpClient } from './mcp.js';
+ import { retrieve, asContext, QA_SYSTEM_PROMPT } from './graphrag.js';
++import { graphAnswerCacheKey } from './cache-key.js';
+ import type { Provider, ToolSpec, ToolOutcome } from './providers/types.js';
+ import { selectProvider } from './providers/alias.js';
+ import { tokeniseInbound } from './tokenise.js';
+@@ -183,10 +184,6 @@ function writeChatCache(key: string, answer: string): void {
+   }
+ }
+ 
+-function cacheKey(question: string): string {
+-  return question.trim().toLowerCase();
+-}
+-
+ /**
+  * Answer a self-contained prompt in one turn, with no tools and no history.
+  */
+@@ -216,6 +213,7 @@ async function answerOnce(system: string, prompt: string): Promise<string> {
+ async function answerFromGraph(question: string): Promise<boolean> {
+   const startedAt = Date.now();
+   const r = await retrieve(mcp, question, 2);
++  const key = graphAnswerCacheKey(question, asContext(r), `${provider.name}:${await provider.describe()}`, QA_SYSTEM_PROMPT);
+ 
+   if (r.anchors.length === 0) {
+     // Nothing in the graph matched. Say so, and answer from the empty result
+@@ -224,7 +222,7 @@ async function answerFromGraph(question: string): Promise<boolean> {
+       type: 'text',
+       content: '_No entity in the graph matched that question, so nothing was retrieved to answer from._\n',
+     });
+-    const missKey = cacheKey(question);
++    const missKey = key;
+     const missCached = readChatCache()[missKey];
+     if (missCached) {
+       await paceTo(startedAt, 3000);
+@@ -266,7 +264,6 @@ ${asContext(r)}
+ 
+ QUESTION: ${question}`;
+ 
+-  const key = cacheKey(question);
+   const cached = readChatCache()[key];
+   if (cached) {
+     await paceTo(startedAt, 3000);

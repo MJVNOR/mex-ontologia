@@ -1,0 +1,55 @@
+{
+ "caso": "F1",
+ "par": "Matrimonios-Divorcios 2022",
+ "alcance": "Recomputo desde agregados por fuente con huella + unicidad/dominio/periodo/catalogo. NO es validacion completa de filas fuente (sin relectura cruda).",
+ "fuentes": {
+  "matrimonios_2022": {
+   "resource": "7b8638e8-d0d5-4311-b43f-51e2d343efb1",
+   "sha_campos": "579e5b085980f8c0ce91d5e1ea465a73790a1a7cc8f66c50e9e7770fee7fe70a",
+   "consultado_utc": "2026-10-23T06:59:57.889624+00:00",
+   "medida": "conteo_filas_matrimonios"
+  },
+  "divorcios_2022": {
+   "resource": "63940761-d099-4a39-bb92-e81e4a6d31e1",
+   "sha_campos": "ed15e192cf3fb4cc1fa8a0a53bc08e4a815169dd13b873d02feacf4c8576c8e5",
+   "consultado_utc": "2026-10-23T06:59:57.433224+00:00",
+   "medida": "conteo_filas_divorcios"
+  }
+ },
+ "resultado": {
+  "codigos": 67,
+  "ambas": 62,
+  "solo_matrimonios": [
+   24,
+   31,
+   60,
+   62,
+   63
+  ],
+  "total_matrimonios": 13881,
+  "total_divorcios": 6064
+ },
+ "condiciones_verificadas": [
+  "mismo publicador Registro Civil en ambas",
+  "municipio con sentido registro y misma descripcion en ambas (literales, no identidad)",
+  "unicidad (municipio,anio) en cada fuente 2022: 67 y 62 claves",
+  "suma de agregados == total publicado en cada fuente",
+  "dominio 2022 sin 26998/26999; huecos 07/39/44/54 ausentes en ambas",
+  "agregacion previa al join; union externa con ausencia NULL (62 observados, no 67)",
+  "derivado cruce-registro-civil.json consistente con el recomputo"
+ ],
+ "condiciones_que_impiden_uso_interpretativo": [
+  "sin catalogo de codigos locales del Registro Civil: <=72 no identifica municipios ni equivale a INEGI",
+  "campo ano de divorcios sin respaldo de diccionario (solo columna de archivo)",
+  "grano fila publicada sin deduplicacion de eventos; API sin instantanea transaccional",
+  "cobertura de meses no verificada en estas dos fuentes; solo ano 2022",
+  "extension a otros anios exige revalidar recurso y diccionario por ano"
+ ],
+ "decision": "exploratorio_con_condiciones_pendientes",
+ "no_concluye": [
+  "tasa de divorcio",
+  "vinculo persona/cohorte",
+  "nombres o codigos INEGI",
+  "extension a otros anios sin revisar diccionarios"
+ ]
+}

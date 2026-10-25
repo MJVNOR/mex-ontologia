@@ -1,0 +1,237 @@
+{
+  "rol": "W-estandares",
+  "version": "v002",
+  "fecha_utc": "2026-10-24T20:20:38.953908+00:00",
+  "estado": "propuesta_para_auditar",
+  "modelo": "opencode/deepseek-v4.1-flash-free",
+  "mcp": "nativo OpenCode tools.obscura.*, sin puentes CLI",
+  "navegador": "Obscura exclusivo para W",
+  "base": {
+    "release": "R9",
+    "congelada": "propuestas/ampliacion-post-r9/ejecucion-20261024/base.json",
+    "sha256": "cf6423cce495c6bb566cdb03f79e520774fab4ebc9c3281e02c44101bc2d730b"
+  },
+  "solicitud": {
+    "ruta": "propuestas/ampliacion-post-r9/ejecucion-20261024/Q-unidades/peticiones-web.json",
+    "sha256": "00921b383e537dda8cbbeea1d31aef9bb2ff6d3ab0e57ab644536bfb17643452",
+    "peticiones": 6
+  },
+  "norma": {
+    "estandar": "QUDT",
+    "version": "3.5.3",
+    "namespace_unidades": "http://qudt.org/3.5.3/vocab/unit",
+    "vocabulario_generado": "2026-10-20T17:45:20.378+00:00",
+    "regla_sujeto": "sujeto RDF en http://qudt.org/vocab/unit/<TERMINO>; la URL https navegable no sustituye la IRI"
+  },
+  "resultados": [
+    {
+      "id": "Q-W-01",
+      "caso": "Q-U01",
+      "estado": "verificado",
+      "sujeto_rdf": "http://qudt.org/vocab/unit/TON_Metric",
+      "url": "https://qudt.org/vocab/unit/TON_Metric",
+      "version": "3.5.3",
+      "simbolo": "t",
+      "etiqueta_es": null,
+      "etiqueta_en": "Metric Ton",
+      "definicion_predicado": "dcterms:description",
+      "evidencia": {
+        "ruta": "propuestas/ampliacion-post-r9/ejecucion-20261024/W-estandares/v002/normativa/unit-TON_Metric-evidencia.txt",
+        "sha256": "a08067812650ff7b34ae4c9ce4dc310e4014701a56ab3d73ad285bafc2b6e5e8",
+        "bytes": 2445
+      },
+      "conclusion": "IRI exacta http://qudt.org/vocab/unit/TON_Metric en QUDT 3.5.3.",
+      "nota": "Sujeto verificado. QUDT no publica etiqueta @es para este termino: solo @en. El literal local 'Toneladas' no elige variante por si mismo; la variante aplicable requiere evidencia local. Sin alias ni factores."
+    },
+    {
+      "id": "Q-W-02",
+      "caso": "Q-U02",
+      "estado": "verificado",
+      "sujeto_rdf": "http://qudt.org/vocab/unit/KiloGM",
+      "url": "https://qudt.org/vocab/unit/KiloGM",
+      "version": "3.5.3",
+      "simbolo": "kg",
+      "etiqueta_es": "Kilogramo",
+      "etiqueta_en": "Kilogram",
+      "definicion_predicado": "dcterms:description",
+      "evidencia": {
+        "ruta": "propuestas/ampliacion-post-r9/ejecucion-20261024/W-estandares/v002/normativa/unit-KiloGM-evidencia.txt",
+        "sha256": "ab3c8ae8fa049d75be882612ccf1c1d27807c639d529fdb9527a9ad9704e51e4",
+        "bytes": 3479
+      },
+      "conclusion": "IRI exacta http://qudt.org/vocab/unit/KiloGM en QUDT 3.5.3.",
+      "nota": "Sujeto verificado con etiqueta @es y simbolo kg. Sin alias ni factores."
+    },
+    {
+      "id": "Q-W-03",
+      "caso": "Q-U03",
+      "estado": "verificado",
+      "sujeto_rdf": "http://qudt.org/vocab/unit/MegaW",
+      "url": "https://qudt.org/vocab/unit/MegaW",
+      "version": "3.5.3",
+      "simbolo": "MW",
+      "etiqueta_es": "Megavatio",
+      "etiqueta_en": "Megawatt",
+      "definicion_predicado": "dcterms:description",
+      "evidencia": {
+        "ruta": "propuestas/ampliacion-post-r9/ejecucion-20261024/W-estandares/v002/normativa/unit-MegaW-evidencia.txt",
+        "sha256": "f0d5f914722c5655eb53904ddf2be17b802cd5d96d50eef161c5b2d185105fa8",
+        "bytes": 1951
+      },
+      "conclusion": "IRI exacta http://qudt.org/vocab/unit/MegaW en QUDT 3.5.3.",
+      "nota": "Sujeto verificado con etiqueta @es y simbolo MW. Sin alias ni factores."
+    },
+    {
+      "id": "Q-W-04",
+      "caso": "Q-U04",
+      "estado": "verificado",
+      "sujeto_rdf": "http://qudt.org/vocab/unit/GigaW-HR",
+      "url": "https://qudt.org/vocab/unit/GigaW-HR",
+      "version": "3.5.3",
+      "simbolo": "GW·h",
+      "etiqueta_es": null,
+      "etiqueta_en": "Gigawatt Hour",
+      "definicion_predicado": "dcterms:description",
+      "evidencia": {
+        "ruta": "propuestas/ampliacion-post-r9/ejecucion-20261024/W-estandares/v002/normativa/unit-GigaW-HR-evidencia.txt",
+        "sha256": "00809624170176019188b89a8110701777e5002d609eeba40ca476396dd73f5c",
+        "bytes": 2190
+      },
+      "conclusion": "IRI exacta http://qudt.org/vocab/unit/GigaW-HR en QUDT 3.5.3.",
+      "nota": "Sujeto verificado. El simbolo QUDT es GW·h, no 'GWh'; ucumCode GW.h y uneceCommonCode GWH. No hay etiqueta @es. La diferencia se conserva y no se declara alias."
+    },
+    {
+      "id": "Q-W-05",
+      "caso": "Q-U05",
+      "estado": "verificado",
+      "sujeto_rdf": "http://qudt.org/vocab/unit/PERCENT",
+      "url": "https://qudt.org/vocab/unit/PERCENT",
+      "version": "3.5.3",
+      "simbolo": "%",
+      "etiqueta_es": null,
+      "etiqueta_en": "Percent",
+      "definicion_predicado": "dcterms:description",
+      "evidencia": {
+        "ruta": "propuestas/ampliacion-post-r9/ejecucion-20261024/W-estandares/v002/normativa/unit-PERCENT-evidencia.txt",
+        "sha256": "2c7b1c0736793ab93a714091faab440d53cd81f047fc0f2c8bf3123c03785b74",
+        "bytes": 4410
+      },
+      "conclusion": "IRI exacta http://qudt.org/vocab/unit/PERCENT en QUDT 3.5.3.",
+      "nota": "Sujeto verificado. QUDT no publica etiqueta @es (solo @en). conversionMultiplier 0.01 pertenece al termino normativo; no se aplica a datos locales."
+    },
+    {
+      "id": "Q-W-06",
+      "caso": "Q-U06",
+      "estado": "verificado",
+      "sujeto_rdf": "http://qudt.org/vocab/unit/DEG_C",
+      "url": "https://qudt.org/vocab/unit/DEG_C",
+      "version": "3.5.3",
+      "simbolo": "°C",
+      "etiqueta_es": "Grado Celsius",
+      "etiqueta_en": "Degree Celsius",
+      "definicion_predicado": "dcterms:description",
+      "evidencia": {
+        "ruta": "propuestas/ampliacion-post-r9/ejecucion-20261024/W-estandares/v002/normativa/unit-DEG_C-evidencia.txt",
+        "sha256": "7462a4c17a9949c3426833bec0dd2aa4a793c78ea5e13c3164d68eb26b1e035c",
+        "bytes": 4121
+      },
+      "conclusion": "IRI exacta http://qudt.org/vocab/unit/DEG_C en QUDT 3.5.3.",
+      "nota": "Sujeto verificado con etiqueta @es 'Grado Celsius' y simbolo °C. El literal local con error ortografico no se normaliza en W; la asignacion queda para Q."
+    }
+  ],
+  "resumen": {
+    "peticiones_recibidas": 6,
+    "peticiones_atendidas": 6,
+    "unidades_verificadas": 6,
+    "negativos_normativos": 0,
+    "alias_inventados": 0,
+    "casos_locales_promovidos": 0,
+    "evidencias_nuevas_para_integrar": 0
+  },
+  "fuentes": [
+    {
+      "localizador": "Q-W-01 sujeto http://qudt.org/vocab/unit/TON_Metric; QUDT 3.5.3; symbol t",
+      "ruta": "propuestas/ampliacion-post-r9/ejecucion-20261024/W-estandares/v002/normativa/unit-TON_Metric-evidencia.txt",
+      "sha256": "a08067812650ff7b34ae4c9ce4dc310e4014701a56ab3d73ad285bafc2b6e5e8",
+      "url": "https://qudt.org/vocab/unit/TON_Metric"
+    },
+    {
+      "localizador": "Q-W-02 sujeto http://qudt.org/vocab/unit/KiloGM; QUDT 3.5.3; symbol kg",
+      "ruta": "propuestas/ampliacion-post-r9/ejecucion-20261024/W-estandares/v002/normativa/unit-KiloGM-evidencia.txt",
+      "sha256": "ab3c8ae8fa049d75be882612ccf1c1d27807c639d529fdb9527a9ad9704e51e4",
+      "url": "https://qudt.org/vocab/unit/KiloGM"
+    },
+    {
+      "localizador": "Q-W-03 sujeto http://qudt.org/vocab/unit/MegaW; QUDT 3.5.3; symbol MW",
+      "ruta": "propuestas/ampliacion-post-r9/ejecucion-20261024/W-estandares/v002/normativa/unit-MegaW-evidencia.txt",
+      "sha256": "f0d5f914722c5655eb53904ddf2be17b802cd5d96d50eef161c5b2d185105fa8",
+      "url": "https://qudt.org/vocab/unit/MegaW"
+    },
+    {
+      "localizador": "Q-W-04 sujeto http://qudt.org/vocab/unit/GigaW-HR; QUDT 3.5.3; symbol GW·h",
+      "ruta": "propuestas/ampliacion-post-r9/ejecucion-20261024/W-estandares/v002/normativa/unit-GigaW-HR-evidencia.txt",
+      "sha256": "00809624170176019188b89a8110701777e5002d609eeba40ca476396dd73f5c",
+      "url": "https://qudt.org/vocab/unit/GigaW-HR"
+    },
+    {
+      "localizador": "Q-W-05 sujeto http://qudt.org/vocab/unit/PERCENT; QUDT 3.5.3; symbol %",
+      "ruta": "propuestas/ampliacion-post-r9/ejecucion-20261024/W-estandares/v002/normativa/unit-PERCENT-evidencia.txt",
+      "sha256": "2c7b1c0736793ab93a714091faab440d53cd81f047fc0f2c8bf3123c03785b74",
+      "url": "https://qudt.org/vocab/unit/PERCENT"
+    },
+    {
+      "localizador": "Q-W-06 sujeto http://qudt.org/vocab/unit/DEG_C; QUDT 3.5.3; symbol °C",
+      "ruta": "propuestas/ampliacion-post-r9/ejecucion-20261024/W-estandares/v002/normativa/unit-DEG_C-evidencia.txt",
+      "sha256": "7462a4c17a9949c3426833bec0dd2aa4a793c78ea5e13c3164d68eb26b1e035c",
+      "url": "https://qudt.org/vocab/unit/DEG_C"
+    },
+    {
+      "localizador": "Capas normativas por termino extraidas de las capturas",
+      "ruta": "propuestas/ampliacion-post-r9/ejecucion-20261024/W-estandares/v002/normativa/capas-normativas.json",
+      "sha256": "a6edaf573cf5523b7f98c3c4b4344cea60edd36a77188d4c9b6ae37b775d9ba3"
+    },
+    {
+      "localizador": "Trazas de navegacion Obscura y diferencias literal/termino",
+      "ruta": "propuestas/ampliacion-post-r9/ejecucion-20261024/W-estandares/v002/normativa/trazas-consulta-v002.md",
+      "sha256": "acf2ba8ffdfd23bd98dadf229bb0a547f15e563d9636a60ff6748207ef8b5071"
+    },
+    {
+      "localizador": "Peticiones Q-W-01..06 origen",
+      "ruta": "propuestas/ampliacion-post-r9/ejecucion-20261024/Q-unidades/peticiones-web.json",
+      "sha256": "00921b383e537dda8cbbeea1d31aef9bb2ff6d3ab0e57ab644536bfb17643452"
+    },
+    {
+      "localizador": "Base congelada R9 de la ejecucion",
+      "ruta": "propuestas/ampliacion-post-r9/ejecucion-20261024/base.json",
+      "sha256": "cf6423cce495c6bb566cdb03f79e520774fab4ebc9c3281e02c44101bc2d730b"
+    }
+  ],
+  "condiciones_de_aceptacion": [
+    "Solo se aceptan como normativos los sujetos http://qudt.org/vocab/unit/... capturados y sellados aqui.",
+    "La verificacion acredita existencia, version, simbolo, etiqueta y definicion del termino; no acredita que el literal local use ese termino.",
+    "Las diferencias de simbolo (GW·h vs GWh) y la ausencia de etiqueta @es se conservan; no se declaran alias.",
+    "Ningun factor de conversion se aplica ni se propone en esta entrega.",
+    "Sin evidencia local adicional, cada asignacion literal->termino sigue pendiente en Q."
+  ],
+  "limites": [
+    "Escritura exclusiva en propuestas/ampliacion-post-r9/ejecucion-20261024/W-estandares/v002/.",
+    "config.toml, IRI base example.org, manifiestos R1-R9, ontologia, shapes, datos, grafo y Studio intactos.",
+    "Gemma excluido; sin contactos a publicadores; sin busquedas agotadas repetidas (hm3/HectoM3 no se sondeo).",
+    "Fuente normativa != evidencia local; no se promueve ningun caso local."
+  ],
+  "entregables": [
+    "v002/entrega.json",
+    "v002/entrega.md",
+    "v002/normativa/capas-normativas.json",
+    "v002/normativa/trazas-consulta-v002.md",
+    "v002/normativa/unit-TON_Metric-evidencia.txt",
+    "v002/normativa/unit-KiloGM-evidencia.txt",
+    "v002/normativa/unit-MegaW-evidencia.txt",
+    "v002/normativa/unit-GigaW-HR-evidencia.txt",
+    "v002/normativa/unit-PERCENT-evidencia.txt",
+    "v002/normativa/unit-DEG_C-evidencia.txt",
+    "v002/peticiones/atencion-peticiones-v002.json",
+    "v002/scripts/generar_y_sellar.py",
+    "v002/congelada.json"
+  ]
+}

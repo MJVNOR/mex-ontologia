@@ -1,0 +1,115 @@
+{
+  "alcance": "Reconciliacion reproducible del ranking C2 v001 (prioridades_top50.csv, matriz 1191) contra data/portal/oportunidades-cruce.json (3916 pares), criterio de pesos/penalizaciones y cobertura R9. Vista legible top50 en staging. Ningun join ni rate se deriva del ranking.",
+  "casos_analiticos_identificados": {
+    "A1-911": {
+      "id": "19e5036d-dbe3-4e1d-b021-df5d47b6fb1f--923b485b-515e-4fb9-a4ac-cccbeb88cc92",
+      "rango": 2,
+      "score": 3.0,
+      "titulo": "Llamadas Improcedentes 911 <> Llamadas Procedentes 911"
+    },
+    "A2-matrimonios-nacimientos": {
+      "id": "1cf9c8e2-e7e4-43d8-a9fd-6da790e64c98--df2d60f5-2243-4bb0-885a-941aa8a657f5",
+      "rango": 4,
+      "score": 3.0,
+      "titulo": "Matrimonios <> Nacimientos"
+    },
+    "A3-itama": {
+      "id": "27a5c80c-514a-4170-a2e5-7ef40d818641--4d27a1c4-381d-4ce0-a663-0d3e23a93848",
+      "rango": 1,
+      "score": 5.0,
+      "titulo": "Poblacion ITAMA Internamiento <> Poblacion ITAMA Externamiento"
+    }
+  },
+  "condiciones_aceptacion": [
+    "Mapa 3916 pares con 1191 candidatas, verificado por codigo.",
+    "1191 scores de matriz recomputados iguales; 50/50 ids, rangos y orden iguales al top50.",
+    "50 ids unicos; 1191 ids unicos.",
+    "A1-A3 presentes por ID exacto.",
+    "Todas las filas en estado NO_JOIN_APROBADO.",
+    "congelada.json generada por codigo con SHA256 de todos los archivos de la entrega.",
+    "Mapa original no modificado."
+  ],
+  "estado": "reconciliacion_verificada_sin_join",
+  "estado_filas": "NO_JOIN_APROBADO",
+  "fecha_utc": "2026-10-24",
+  "fuentes": [
+    {
+      "localizador": "generado_en_utc=2026-10-23T06:47:52.505004+00:00; pares=3916; candidatas=1191; huellas inventario/inspeccion/cruce/catalogo",
+      "ruta": "data/portal/oportunidades-cruce.json",
+      "sha256": "40f107d5cf9c11ce937073ac2f7b5b0e3c9db8c342f7414cecb0f0744e0d0c14"
+    },
+    {
+      "localizador": "formula score=suma(pesos_familia)+suma(penalizaciones); orden score desc, id asc",
+      "ruta": "propuestas/plan-tras-r8/ejecucion-20261024/C2-oportunidades/v001/criterio.json",
+      "sha256": "2296486dc646b7b2fce1e5fafe56e81e34a290bbd341a771b9404d5583111306"
+    },
+    {
+      "localizador": "50 filas, rango 1 ITAMA score 5.0",
+      "ruta": "propuestas/plan-tras-r8/ejecucion-20261024/C2-oportunidades/v001/prioridades_top50.csv",
+      "sha256": "db1182cda8be4686b4335ed443f3bf22480f04dccaa62f9b71358994c5d6174a"
+    },
+    {
+      "localizador": "1191 filas con score, pendientes, publicador_n, anios",
+      "ruta": "propuestas/plan-tras-r8/ejecucion-20261024/C2-oportunidades/v001/matriz_pares_relevantes.csv",
+      "sha256": "2f5fec408edf6dd216f93abcdd962f4163e4b7e070761f7ea57dd5dc5203db58"
+    },
+    {
+      "localizador": "estado=cobertura_operativa_validada_sin_cambios_al_grafo; 1423 significados, 1106 conceptos, 138 pendientes, 16 vigencias",
+      "ruta": "reports/cobertura-operativa-r9.json",
+      "sha256": "fd64a9aeb622255f98c3bdcd2ebf311757113982ac9ff62770615a73a4175ab8"
+    },
+    {
+      "localizador": "vista operativa R9; 213 pruebas OK; manifiestos R1-R9 intactos",
+      "ruta": "reports/seguimiento-operativo-post-r9.json",
+      "sha256": "73103b1d2ff6daa7fdc2665e42c68802a98169005c5144129048e2f7a0c4698b"
+    },
+    {
+      "localizador": "carriles T/A1-A3; limites: sin joins, sin Gemma, sin contactos",
+      "ruta": "docs/plan-paralelo-ampliacion-post-r9.md",
+      "sha256": "807a05e4473597ced2e1d708fb2069884d9a669cc0ec823d6a1aca316a680e9c"
+    }
+  ],
+  "limites": [
+    "Base IRI / example.org fuera de alcance; no se decide ni sustituye.",
+    "Gemma excluido; sin contactos a publicadores; sin busquedas agotadas repetidas.",
+    "Manifiestos R1-R9 intactos; escritores centrales no tocados.",
+    "Mapa original no modificado; solo lectura.",
+    "Oportunidad != join aprobado; ningun join ni rate se deriva del ranking.",
+    "Solo escritura en propuestas/ampliacion-post-r9/ejecucion-20261024/T-top50/v001/.",
+    "Sin instalar, sin regenerar grafo, sin Studio."
+  ],
+  "resultados": {
+    "cobertura_r9": "cobertura_operativa_validada_sin_cambios_al_grafo; 1423 significados respaldados, 1106 conceptos; 138 significados pendientes, 16 vigencias, 17 candidatas; toda fila sigue candidata_por_validar hasta respaldo documental.",
+    "matriz_1191": "1191/1191 ids unicos; 1191/1191 scores recomputados iguales al CSV.",
+    "orden_top50": "50/50 ids, scores y rangos iguales al CSV en orden score desc, id asc.",
+    "recomputo": "score(p)=suma(pesos_familia)+suma(penalizaciones_bloqueador), redondeo 2; familias desconocidas peso 1 (replica reproducir.py C2).",
+    "top1": {
+      "familias": [
+        "clasificacion_delito",
+        "division_territorial_declarada",
+        "entidad",
+        "estrato_escolaridad",
+        "estrato_sexo",
+        "localidad",
+        "municipio",
+        "periodo"
+      ],
+      "id": "27a5c80c-514a-4170-a2e5-7ef40d818641--4d27a1c4-381d-4ce0-a663-0d3e23a93848",
+      "pesos_suma": 13.0,
+      "penalizaciones_suma": -8.0,
+      "score": 5.0
+    },
+    "top50_csv": "50/50 ids unicos; rangos 1-50; max 5.0, min 1.0.",
+    "verificacion_mapa": "3916 pares; estados sin_clave_detectada=2328, candidata_por_validar=1191, solo_dimensiones_amplias_o_tiempo=396, exploratorio_ejecutado=1."
+  },
+  "rol": "T-top50",
+  "salidas": {
+    "congelada": "propuestas/ampliacion-post-r9/ejecucion-20261024/T-top50/v001/congelada.json",
+    "entrega": "propuestas/ampliacion-post-r9/ejecucion-20261024/T-top50/v001/entrega.json",
+    "pruebas": "propuestas/ampliacion-post-r9/ejecucion-20261024/T-top50/v001/tests/test_top50_r9.py",
+    "reproductor": "propuestas/ampliacion-post-r9/ejecucion-20261024/T-top50/v001/scripts/reproducir_top50_r9.py",
+    "staging_json": "propuestas/ampliacion-post-r9/ejecucion-20261024/T-top50/v001/top50-oportunidades-r9.json",
+    "staging_md": "propuestas/ampliacion-post-r9/ejecucion-20261024/T-top50/v001/top50-oportunidades-r9.md",
+    "vista": "propuestas/ampliacion-post-r9/ejecucion-20261024/T-top50/v001/vista-top50-r9.html"
+  }
+}

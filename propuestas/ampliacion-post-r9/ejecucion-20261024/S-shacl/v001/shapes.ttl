@@ -1,0 +1,105 @@
+# Formas SHACL adicionales - carril S, version v001 (2026-10-24)
+# Base IRI: se conserva la vigente en config.toml; no se decide ni sustituye.
+# Sin sh:closed global. Solo coherencia de estado/clase justificada por los datos R9.
+@prefix sh: <http://www.w3.org/ns/shacl#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+@prefix mex: <https://example.org/mex-ontologi/vocab/> .
+@prefix shape: <https://example.org/mex-ontologi/shapes/> .
+
+shape:VariableRespaldadaConSignificadoDocumentado a sh:NodeShape ;
+    sh:targetClass mex:VariableDocumentada ;
+    sh:description "R1. Una VariableDocumentada con estadoSemantico respaldada_por_definicion debe tener al menos un significadoDocumentado. Los 1423 casos respaldados de R9 lo cumplen y los 3 casos fuera_del_nucleo_actual quedan excluidos por el filtro de estado."@es ;
+    sh:sparql [
+        a sh:SPARQLConstraint ;
+        sh:severity sh:Violation ;
+        sh:message "R1: VariableDocumentada respaldada_por_definicion sin mex:significadoDocumentado"@es ;
+        sh:select """SELECT $this WHERE {
+  $this <https://example.org/mex-ontologi/vocab/estadoSemantico> "respaldada_por_definicion" .
+  FILTER NOT EXISTS { $this <https://example.org/mex-ontologi/vocab/significadoDocumentado> ?significado }
+}""" ;
+    ] .
+
+shape:VariableRespaldadaSinSignificadoCandidato a sh:NodeShape ;
+    sh:targetClass mex:VariableDocumentada ;
+    sh:description "R2. Una VariableDocumentada respaldada_por_definicion no puede declarar significadoCandidato: el estado respaldado exige significado documentado y excluye el candidato."@es ;
+    sh:sparql [
+        a sh:SPARQLConstraint ;
+        sh:severity sh:Violation ;
+        sh:message "R2: VariableDocumentada respaldada_por_definicion con mex:significadoCandidato"@es ;
+        sh:select """SELECT $this WHERE {
+  $this <https://example.org/mex-ontologi/vocab/estadoSemantico> "respaldada_por_definicion" .
+  $this <https://example.org/mex-ontologi/vocab/significadoCandidato> ?candidato .
+}""" ;
+    ] .
+
+shape:VariableCandidataConSignificadoCandidato a sh:NodeShape ;
+    sh:targetClass mex:VariableDocumentada ;
+    sh:description "R3. Una VariableDocumentada con estadoSemantico candidata_sin_definicion_suficiente debe conservar al menos un significadoCandidato; las 16 candidatas de R9 lo cumplen."@es ;
+    sh:sparql [
+        a sh:SPARQLConstraint ;
+        sh:severity sh:Violation ;
+        sh:message "R3: VariableDocumentada candidata_sin_definicion_suficiente sin mex:significadoCandidato"@es ;
+        sh:select """SELECT $this WHERE {
+  $this <https://example.org/mex-ontologi/vocab/estadoSemantico> "candidata_sin_definicion_suficiente" .
+  FILTER NOT EXISTS { $this <https://example.org/mex-ontologi/vocab/significadoCandidato> ?candidato }
+}""" ;
+    ] .
+
+shape:VariableCandidataSinSignificadoDocumentado a sh:NodeShape ;
+    sh:targetClass mex:VariableDocumentada ;
+    sh:description "R4. Una VariableDocumentada candidata_sin_definicion_suficiente no puede declarar significadoDocumentado: seria promocion encubierta sin respaldo documental."@es ;
+    sh:sparql [
+        a sh:SPARQLConstraint ;
+        sh:severity sh:Violation ;
+        sh:message "R4: VariableDocumentada candidata_sin_definicion_suficiente con mex:significadoDocumentado"@es ;
+        sh:select """SELECT $this WHERE {
+  $this <https://example.org/mex-ontologi/vocab/estadoSemantico> "candidata_sin_definicion_suficiente" .
+  $this <https://example.org/mex-ontologi/vocab/significadoDocumentado> ?significado .
+}""" ;
+    ] .
+
+shape:CorrespondenciaRevisadaVariableRespaldada a sh:NodeShape ;
+    sh:targetClass mex:CorrespondenciaSemantica ;
+    sh:description "R5. Una CorrespondenciaSemantica con estadoCorrespondencia documental_revisada debe apuntar a una VariableDocumentada con estadoSemantico respaldada_por_definicion. No se aplica a candidata_por_nombre ni a ambigua_por_nombre, de modo que las 17 candidatas de R9 (16 candidata_sin_definicion_suficiente y Total_Egresos fuera_del_nucleo_actual) no se rechazan por esta regla."@es ;
+    sh:sparql [
+        a sh:SPARQLConstraint ;
+        sh:severity sh:Violation ;
+        sh:message "R5: correspondencia documental_revisada sin variableDestino respaldada_por_definicion"@es ;
+        sh:select """SELECT $this WHERE {
+  $this <https://example.org/mex-ontologi/vocab/estadoCorrespondencia> "documental_revisada" .
+  FILTER NOT EXISTS {
+    $this <https://example.org/mex-ontologi/vocab/variableDestino> ?variable .
+    ?variable <https://example.org/mex-ontologi/vocab/estadoSemantico> "respaldada_por_definicion" .
+  }
+}""" ;
+    ] .
+
+shape:UnidadDeclaradaContrato a sh:NodeShape ;
+    sh:targetClass mex:UnidadDeclarada ;
+    sh:description "R6. Contrato de UnidadDeclarada: enlaces funcionales y con clase, unidad literal preservada, unidadQudt opcional como IRI (sin lista cerrada de terminos, para admitir ampliaciones de Q), y procedencia. No exige ni prohibe propiedades adicionales: no hay sh:closed."@es ;
+    sh:property [
+        sh:path mex:variableDocumentada ;
+        sh:minCount 1 ; sh:maxCount 1 ; sh:nodeKind sh:IRI ; sh:class mex:VariableDocumentada ;
+        sh:message "R6a: UnidadDeclarada requiere exactamente un mex:variableDocumentada IRI de clase VariableDocumentada"@es ;
+    ] ;
+    sh:property [
+        sh:path mex:definicionFuente ;
+        sh:minCount 1 ; sh:maxCount 1 ; sh:nodeKind sh:IRI ; sh:class mex:DefinicionVariable ;
+        sh:message "R6b: UnidadDeclarada requiere exactamente un mex:definicionFuente IRI de clase DefinicionVariable"@es ;
+    ] ;
+    sh:property [
+        sh:path mex:unidadLiteral ;
+        sh:minCount 1 ; sh:maxCount 1 ; sh:datatype xsd:string ;
+        sh:message "R6c: UnidadDeclarada requiere exactamente una unidad literal (xsd:string) sin sustituirla por el termino normalizado"@es ;
+    ] ;
+    sh:property [
+        sh:path mex:unidadQudt ;
+        sh:maxCount 1 ; sh:nodeKind sh:IRI ;
+        sh:message "R6d: UnidadDeclarada admite como maximo un mex:unidadQudt y debe ser IRI; no se impone una lista cerrada de terminos"@es ;
+    ] ;
+    sh:property [
+        sh:path prov:wasDerivedFrom ;
+        sh:minCount 1 ; sh:nodeKind sh:IRI ;
+        sh:message "R6e: UnidadDeclarada requiere procedencia prov:wasDerivedFrom IRI"@es ;
+    ] .

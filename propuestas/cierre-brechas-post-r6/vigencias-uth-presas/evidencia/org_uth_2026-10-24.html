@@ -1,0 +1,1832 @@
+<!DOCTYPE html>
+<!--[if IE 9]> <html lang="es" class="ie9"> <![endif]-->
+<!--[if gt IE 8]><!--> <html lang="es"> <!--<![endif]-->
+  <head >
+
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-Z360D5Z3YK"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'G-Z360D5Z3YK');
+    </script>  
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/xlsx/0.17.0/xlsx.full.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <meta charset="utf-8" />
+      <meta name="generator" content="ckan 2.9.7" />
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Universidad Tecnológica de Hermosillo - Organizaciones - Portal de Datos Abiertos del Gobierno del Estado de Sonora</title>
+
+
+
+    
+    
+  <link rel="shortcut icon" href="/images/favicon.png" />
+    
+  <link rel="alternate" type="application/atom+xml" title="Portal de Datos Abiertos del Gobierno del Estado de Sonora - Conjuntos de datos en organización: Universidad Tecnológica de Hermosillo" href="/feeds/organization/uth.atom" />
+
+
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;800&family=Roboto:wght@300;400;500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/css/vendor.min.css" />
+    <link rel="stylesheet" href="/css/app.min.css" />
+    <link rel="stylesheet" href="/sonora_theme.css" />
+      
+      
+      
+      
+     
+    
+
+    
+      
+      
+    
+
+ 
+    
+    
+  </head>
+
+  
+  <body class="app app-public"  data-site-root="https://datos.sonora.gob.mx/" data-locale-root="https://datos.sonora.gob.mx/" >
+
+    
+    <div class="sr-only sr-only-focusable"><a href="#content">Ir al contenido</a></div>
+  
+
+  
+     
+  
+
+<style>
+  .customHeader{
+    height: 96px;
+    width: 100%;
+    display: flex;
+    background-image: url('/images/BG expediente.jpg');
+    background-size: cover;
+    background-position: center;
+  }
+
+  .headerLinks{
+    font-family: 'Montserrat', sans-serif;
+    display: flex;
+    gap: 2rem;
+    color: white;
+    align-items: center;
+    margin-left: auto;
+    margin-right: 16%;
+  }
+
+  .headerLinks a {
+    font-weight: 600;
+    position: relative;
+    font-size: 12.8px;
+    color: rgb(255, 255, 255, 0.85);
+    text-transform: uppercase;
+    letter-spacing: 0.02em;
+    text-decoration: none;
+    padding: 0.25rem 0;
+    transition: color 0.3s ease;
+  }
+
+  .headerLinks a:hover{
+    color: white;
+  }
+
+  /* underline animation */
+  .headerLinks a::after {
+    content: "";
+    position: absolute;
+    left: 50%;
+    bottom: 0;
+    transform: translateX(-50%) scaleX(0);
+    transform-origin: center;
+    width: 100%;
+    height: 2px;
+    background-color: #fff;
+    transition: transform 0.3s ease;
+  }
+
+  .headerLinks a:hover::after {
+    transform: translateX(-50%) scaleX(1);
+  }
+
+  .logoHeaderWrapper{
+    margin-left: 16%;
+  }
+
+  @media (max-width: 900px) {
+    .headerLinks {
+      display: none !important;
+    }
+
+    .logoHeaderWrapper{
+      margin-inline: auto;
+    }
+
+    .navbar-toggler{
+      margin-left: 1rem;
+    }
+  }
+</style>
+
+<div class="customHeader">
+  <a href="/" title="Inicio" style="padding-block: 1rem;" class="logoHeaderWrapper"> 
+    <img style="height: 100%" class="sppb-img-responsive sppb-element-lazy sppb-element-loaded" src="/images/Datos abiertos blanco.svg" alt="Gobierno del Estado de Sonora" title="" loading="lazy">
+  </a>
+
+  <div class="headerLinks">
+    <a href="https://www.sonora.gob.mx/servicios-y-tramites" class="nav-link " target="_blank" rel="noopener noreferrer">Servicios y Trámites</a>
+
+    <a href="https://www.sonora.gob.mx/gobierno" class="nav-link " target="_blank" rel="noopener noreferrer">Gobierno</a>
+
+    <a href="https://datos.sonora.gob.mx" class="nav-link " target="_blank" rel="noopener noreferrer">Datos Abiertos</a>
+
+    <a href="https://cultura.sonora.gob.mx" class="nav-link " target="_blank" rel="noopener noreferrer">Cultura</a>
+
+    <a href="https://expediente.sonora.gob.mx" class="nav-link " target="_blank" rel="noopener noreferrer">Mi Expediente</a>
+  </div>
+</div>
+
+
+
+<div class="tool-bar">
+  <div class="container">
+      <nav class="navbar navbar-expand-sm bg-white navbar-tools mx-0  py-0 py-sm-3 px-0">
+          <div class="container-fluid">
+
+            <style>
+              @media only screen and (max-width: 799px) {
+                .container-fluid{
+                  padding-block: .5rem;
+                  padding-inline: 0;
+                }
+
+                .boxSearchHead{
+                  display: none;
+                }
+
+                span.name{
+                  display: none;
+                }
+
+                .tool-bar .container{
+                  margin-left: 0;
+                  padding-left: 0;
+                }
+
+                .navbar-nav .nav-link{
+                  padding: 1rem 0.9rem;
+                }
+              }
+
+              @media (max-width: 572px){
+                .navbar-toggler{
+                  position: relative; 
+                  margin-left: 1rem; 
+                  display: flex; 
+                  align-items: center; 
+                  border: none !important;
+                  gap: .5rem;
+                }
+              }
+            </style>
+
+              <!-- Quitamos el boton -->
+              <a class="btn btn-outline-secondary d-none" aria-current="page" href="#"><span class="mdi mdi-chevron-left"></span>Regresar a Pagos Directos</a>
+              <!-- el menú se oculta -->
+              <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                  <span class="mdi mdi-menu"></span>
+                  <span style="font-size: 16px;">
+                    Menu
+                  </span>
+              </button>
+
+              <!-- el menú se oculta -->
+              
+                <div class="collapse navbar-collapse menu-tools" id="navbarSupportedContent">
+                    <ul class="navbar-nav me-auto mb-0" style="margin-inline: auto;">
+                      
+
+                      <li class="nav-item">
+                        <a href="/" class="nav-link " title="Inicio">
+                          <span class="text">Inicio</span>
+                        </a>
+                      </li>
+        
+                        <li class="nav-item">
+                          <a href="/dataset/" class="nav-link " title="Conjuntos de datos">
+                            <span class="text">Conjuntos de datos</span>
+                          </a>
+                        </li>
+
+                        <li class="nav-item">
+                          <a href="/organization/" class="nav-link " title="Organizaciones">
+                            <span class="text">Organizaciones</span>
+                          </a>
+                        </li>
+
+                        <li class="nav-item">
+                          <a href="/group/" class="nav-link " title="Grupos">
+                            <span class="text">Grupos</span>
+                          </a>
+                        </li>
+
+                        <!-- <li class="nav-item">
+                          <a href="/about" class="nav-link " title="Acerca de">
+                            <span class="text">Acerca de</span>
+                          </a>
+                        </li> -->
+
+                      
+                  </ul>
+                </div>
+               
+
+
+           
+              
+                <style>
+                  @media only screen and (max-width: 799px) {
+                    .customSearchBox{
+                      display: none;
+                    }
+                  }
+                </style>
+                
+                <div class="searchBox boxSearchHead customSearchBox" >
+                  <form id="contentSearch" class="" action="/dataset/" method="get">
+                    <input type="text" name="q" title="Búsqueda" aria-label="¿Qué dato estás buscando?" placeholder="¿Qué dato estás buscando?" class="input bg-red" id="search-input">
+                    <button type="submit" class="search" id="search-btn"><i class="fa fa-search"></i></button>
+                  </form>
+                </div> 
+                
+              
+
+
+              <!-- se muestran al iniciar sesión -->
+
+              
+               
+                   
+                  
+                  
+                  
+                  <style>
+                    @media only screen and (max-width: 999px) {
+                      .account{
+                        width: 150px;
+                      }
+                    }
+                    @media only screen and (max-width: 799px){
+                      .btnLogin{
+                        margin-left: -3rem;
+                      }
+                    }
+                  </style>
+                  <nav class="account not-authed" aria-label="Cuenta">
+                    <ul class="navbar-nav ms-auto ms-sm-auto flex-row account-tools">
+                      
+
+                      
+                      <li>
+                        <a href="/user/login" class="btn btn-outline-primary btnLogin" style="width: 147px;" title="Iniciar Sesión">
+                          <span class="text">Iniciar Sesión</span>
+                        </a>
+                      </li>
+                      
+
+
+                      
+
+                      
+
+                    </ul>
+                  </nav>
+                   
+                
+              
+
+          </div>
+      </nav>
+  </div>
+</div>
+
+
+
+
+
+
+
+
+
+  
+    <div class="main">
+      <div id="content" class="container">
+        
+          
+            <div class="flash-messages">
+              
+                 
+              
+            </div>
+          
+
+          
+            
+              <div class="toolbar" role="navigation" aria-label="Miga de pan">
+                <style>
+                  @media only screen and (max-width: 799px) {
+                    .toolbar{
+                      display: none;
+                      height: 0;
+                    }
+                  }
+                </style>
+                
+                  
+                    <ol class="breadcrumb">
+                      
+<li class="home"><a href="/" aria-label="Inicio"><i class="fa fa-home"></i><span> Inicio</span></a></li>
+                      
+  <li><a href="/organization/">Organizaciones</a></li>
+  <li class="active"><a href="/organization/uth">Universidad Tecnológica de Hermosillo</a></li>
+
+                    </ol>
+                  
+                
+              </div>
+            
+          
+
+          <div class="row wrapper">
+            
+            
+            
+
+            
+              <aside class="secondary col-sm-3">
+                
+                
+  
+
+
+
+
+
+  
+  <div class="module module-narrow module-shallow context-info">
+    
+    <section class="module-content">
+      
+      
+        <div class="image">
+          <a href="/organization/uth">
+            <img src="https://datos.sonora.gob.mx/uploads/group/2025-01-29-195816.234065image2025-01-29125759916.png" width="200" alt="uth" />
+          </a>
+        </div>
+      
+      
+      <h1 class="heading">Universidad Tecnológica de Hermosillo
+        
+      </h1>
+      
+      
+      
+        
+          <p class="description">
+            Nuestra misión es formar profesionales con un alto sentido de internalización, comprometidos con el desarrollo económico, social, político y cultural del entorno y con una...
+          </p>
+          <p class="read-more">
+            <a href="/organization/about/uth">leer más</a>
+          </p>
+        
+      
+      
+        
+          
+          
+          <a href="https://uth.sonora.gob.mx" target="_blank">Página oficial</a>
+        
+      
+      
+      
+        
+        <div class="nums">
+          <!-- <dl>
+            <dt>Seguidores</dt>
+            <dd data-module="followers-counter" data-module-id="f353bb81-d268-40cd-aa74-d3f53402189a" data-module-num_followers="0"><span>0</span></dd>
+          </dl> -->
+          <dl>
+            <dt>Conjuntos de datos</dt>
+            <dd><span>7</span></dd>
+          </dl>
+        </div>
+        
+        
+        <!-- <div class="follow_button">
+          
+        </div> -->
+        
+      
+      
+
+    </section>
+  </div>
+  
+  
+  <div class="filters">
+    <div>
+      
+        
+
+    
+    
+	
+	    
+	    
+		<section class="module module-narrow module-shallow">
+		    
+			<h2 class="module-heading">
+			    <i class="fa fa-filter"></i>
+			    
+			    Organizaciones
+			</h2>
+		    
+		    
+			
+			    
+				<nav aria-label="Organizaciones">
+				    <ul class="list-unstyled nav nav-simple nav-facet">
+					
+					    
+					    
+					    
+					    
+					    <style>
+							/* kill underline on the whole link in every state */
+							li.nav-item a,
+							li.nav-item a:hover,
+							li.nav-item a:focus,
+							li.nav-item a:active {
+								text-decoration: none !important;
+							}
+
+							/* show underline only on the label when hovering/focusing the link */
+							li.nav-item a:hover .item-label,
+							li.nav-item a:focus .item-label {
+								text-decoration: underline !important;
+							}
+
+							/* keep the count clean */
+							li.nav-item .item-count {
+								text-decoration: none !important;
+							}
+						</style>
+					    <li class="nav-item" style="padding: 7px 11px;">
+							<a href="/organization/f353bb81-d268-40cd-aa74-d3f53402189a?organization=uth" title="Universidad Tecnológica de Hermosillo" style="display: flex; width: 100%;">
+								<span class="item-label" style="width: 80%; font-size: 13px;">Universidad Tecnológica de Hermo...</span>
+								<span class="hidden separator"> - </span>
+								<span class="item-count badge" style="margin-left: auto;">7</span>
+							</a>
+						</li>
+					
+				    </ul>
+				</nav>
+
+				<p class="module-footer" style="text-align: right;">
+				    
+					
+				    
+				</p>
+			    
+			
+		    
+		</section>
+	    
+	
+    
+
+      
+        
+
+    
+    
+	
+	    
+	    
+		<section class="module module-narrow module-shallow">
+		    
+			<h2 class="module-heading">
+			    <i class="fa fa-filter"></i>
+			    
+			    Grupos
+			</h2>
+		    
+		    
+			
+			    
+				<nav aria-label="Grupos">
+				    <ul class="list-unstyled nav nav-simple nav-facet">
+					
+					    
+					    
+					    
+					    
+					    <style>
+							/* kill underline on the whole link in every state */
+							li.nav-item a,
+							li.nav-item a:hover,
+							li.nav-item a:focus,
+							li.nav-item a:active {
+								text-decoration: none !important;
+							}
+
+							/* show underline only on the label when hovering/focusing the link */
+							li.nav-item a:hover .item-label,
+							li.nav-item a:focus .item-label {
+								text-decoration: underline !important;
+							}
+
+							/* keep the count clean */
+							li.nav-item .item-count {
+								text-decoration: none !important;
+							}
+						</style>
+					    <li class="nav-item" style="padding: 7px 11px;">
+							<a href="/organization/f353bb81-d268-40cd-aa74-d3f53402189a?groups=educacion" title="" style="display: flex; width: 100%;">
+								<span class="item-label" style="width: 80%; font-size: 13px;">Educación </span>
+								<span class="hidden separator"> - </span>
+								<span class="item-count badge" style="margin-left: auto;">7</span>
+							</a>
+						</li>
+					
+				    </ul>
+				</nav>
+
+				<p class="module-footer" style="text-align: right;">
+				    
+					
+				    
+				</p>
+			    
+			
+		    
+		</section>
+	    
+	
+    
+
+      
+        
+
+    
+    
+	
+	    
+	    
+		<section class="module module-narrow module-shallow">
+		    
+			<h2 class="module-heading">
+			    <i class="fa fa-filter"></i>
+			    
+			    Etiquetas
+			</h2>
+		    
+		    
+			
+			    
+				<nav aria-label="Etiquetas">
+				    <ul class="list-unstyled nav nav-simple nav-facet">
+					
+					    
+					    
+					    
+					    
+					    <style>
+							/* kill underline on the whole link in every state */
+							li.nav-item a,
+							li.nav-item a:hover,
+							li.nav-item a:focus,
+							li.nav-item a:active {
+								text-decoration: none !important;
+							}
+
+							/* show underline only on the label when hovering/focusing the link */
+							li.nav-item a:hover .item-label,
+							li.nav-item a:focus .item-label {
+								text-decoration: underline !important;
+							}
+
+							/* keep the count clean */
+							li.nav-item .item-count {
+								text-decoration: none !important;
+							}
+						</style>
+					    <li class="nav-item" style="padding: 7px 11px;">
+							<a href="/organization/f353bb81-d268-40cd-aa74-d3f53402189a?tags=alumnos" title="" style="display: flex; width: 100%;">
+								<span class="item-label" style="width: 80%; font-size: 13px;">alumnos</span>
+								<span class="hidden separator"> - </span>
+								<span class="item-count badge" style="margin-left: auto;">5</span>
+							</a>
+						</li>
+					
+					    
+					    
+					    
+					    
+					    <style>
+							/* kill underline on the whole link in every state */
+							li.nav-item a,
+							li.nav-item a:hover,
+							li.nav-item a:focus,
+							li.nav-item a:active {
+								text-decoration: none !important;
+							}
+
+							/* show underline only on the label when hovering/focusing the link */
+							li.nav-item a:hover .item-label,
+							li.nav-item a:focus .item-label {
+								text-decoration: underline !important;
+							}
+
+							/* keep the count clean */
+							li.nav-item .item-count {
+								text-decoration: none !important;
+							}
+						</style>
+					    <li class="nav-item" style="padding: 7px 11px;">
+							<a href="/organization/f353bb81-d268-40cd-aa74-d3f53402189a?tags=uth" title="" style="display: flex; width: 100%;">
+								<span class="item-label" style="width: 80%; font-size: 13px;">uth</span>
+								<span class="hidden separator"> - </span>
+								<span class="item-count badge" style="margin-left: auto;">4</span>
+							</a>
+						</li>
+					
+					    
+					    
+					    
+					    
+					    <style>
+							/* kill underline on the whole link in every state */
+							li.nav-item a,
+							li.nav-item a:hover,
+							li.nav-item a:focus,
+							li.nav-item a:active {
+								text-decoration: none !important;
+							}
+
+							/* show underline only on the label when hovering/focusing the link */
+							li.nav-item a:hover .item-label,
+							li.nav-item a:focus .item-label {
+								text-decoration: underline !important;
+							}
+
+							/* keep the count clean */
+							li.nav-item .item-count {
+								text-decoration: none !important;
+							}
+						</style>
+					    <li class="nav-item" style="padding: 7px 11px;">
+							<a href="/organization/f353bb81-d268-40cd-aa74-d3f53402189a?tags=discapacidad" title="" style="display: flex; width: 100%;">
+								<span class="item-label" style="width: 80%; font-size: 13px;">discapacidad</span>
+								<span class="hidden separator"> - </span>
+								<span class="item-count badge" style="margin-left: auto;">1</span>
+							</a>
+						</li>
+					
+					    
+					    
+					    
+					    
+					    <style>
+							/* kill underline on the whole link in every state */
+							li.nav-item a,
+							li.nav-item a:hover,
+							li.nav-item a:focus,
+							li.nav-item a:active {
+								text-decoration: none !important;
+							}
+
+							/* show underline only on the label when hovering/focusing the link */
+							li.nav-item a:hover .item-label,
+							li.nav-item a:focus .item-label {
+								text-decoration: underline !important;
+							}
+
+							/* keep the count clean */
+							li.nav-item .item-count {
+								text-decoration: none !important;
+							}
+						</style>
+					    <li class="nav-item" style="padding: 7px 11px;">
+							<a href="/organization/f353bb81-d268-40cd-aa74-d3f53402189a?tags=egresados" title="" style="display: flex; width: 100%;">
+								<span class="item-label" style="width: 80%; font-size: 13px;">egresados</span>
+								<span class="hidden separator"> - </span>
+								<span class="item-count badge" style="margin-left: auto;">1</span>
+							</a>
+						</li>
+					
+					    
+					    
+					    
+					    
+					    <style>
+							/* kill underline on the whole link in every state */
+							li.nav-item a,
+							li.nav-item a:hover,
+							li.nav-item a:focus,
+							li.nav-item a:active {
+								text-decoration: none !important;
+							}
+
+							/* show underline only on the label when hovering/focusing the link */
+							li.nav-item a:hover .item-label,
+							li.nav-item a:focus .item-label {
+								text-decoration: underline !important;
+							}
+
+							/* keep the count clean */
+							li.nav-item .item-count {
+								text-decoration: none !important;
+							}
+						</style>
+					    <li class="nav-item" style="padding: 7px 11px;">
+							<a href="/organization/f353bb81-d268-40cd-aa74-d3f53402189a?tags=grupo+etnico" title="" style="display: flex; width: 100%;">
+								<span class="item-label" style="width: 80%; font-size: 13px;">grupo etnico</span>
+								<span class="hidden separator"> - </span>
+								<span class="item-count badge" style="margin-left: auto;">1</span>
+							</a>
+						</li>
+					
+					    
+					    
+					    
+					    
+					    <style>
+							/* kill underline on the whole link in every state */
+							li.nav-item a,
+							li.nav-item a:hover,
+							li.nav-item a:focus,
+							li.nav-item a:active {
+								text-decoration: none !important;
+							}
+
+							/* show underline only on the label when hovering/focusing the link */
+							li.nav-item a:hover .item-label,
+							li.nav-item a:focus .item-label {
+								text-decoration: underline !important;
+							}
+
+							/* keep the count clean */
+							li.nav-item .item-count {
+								text-decoration: none !important;
+							}
+						</style>
+					    <li class="nav-item" style="padding: 7px 11px;">
+							<a href="/organization/f353bb81-d268-40cd-aa74-d3f53402189a?tags=matriculas" title="" style="display: flex; width: 100%;">
+								<span class="item-label" style="width: 80%; font-size: 13px;">matriculas</span>
+								<span class="hidden separator"> - </span>
+								<span class="item-count badge" style="margin-left: auto;">1</span>
+							</a>
+						</li>
+					
+					    
+					    
+					    
+					    
+					    <style>
+							/* kill underline on the whole link in every state */
+							li.nav-item a,
+							li.nav-item a:hover,
+							li.nav-item a:focus,
+							li.nav-item a:active {
+								text-decoration: none !important;
+							}
+
+							/* show underline only on the label when hovering/focusing the link */
+							li.nav-item a:hover .item-label,
+							li.nav-item a:focus .item-label {
+								text-decoration: underline !important;
+							}
+
+							/* keep the count clean */
+							li.nav-item .item-count {
+								text-decoration: none !important;
+							}
+						</style>
+					    <li class="nav-item" style="padding: 7px 11px;">
+							<a href="/organization/f353bb81-d268-40cd-aa74-d3f53402189a?tags=nuevo+ingreso" title="" style="display: flex; width: 100%;">
+								<span class="item-label" style="width: 80%; font-size: 13px;">nuevo ingreso</span>
+								<span class="hidden separator"> - </span>
+								<span class="item-count badge" style="margin-left: auto;">1</span>
+							</a>
+						</li>
+					
+					    
+					    
+					    
+					    
+					    <style>
+							/* kill underline on the whole link in every state */
+							li.nav-item a,
+							li.nav-item a:hover,
+							li.nav-item a:focus,
+							li.nav-item a:active {
+								text-decoration: none !important;
+							}
+
+							/* show underline only on the label when hovering/focusing the link */
+							li.nav-item a:hover .item-label,
+							li.nav-item a:focus .item-label {
+								text-decoration: underline !important;
+							}
+
+							/* keep the count clean */
+							li.nav-item .item-count {
+								text-decoration: none !important;
+							}
+						</style>
+					    <li class="nav-item" style="padding: 7px 11px;">
+							<a href="/organization/f353bb81-d268-40cd-aa74-d3f53402189a?tags=promedio" title="" style="display: flex; width: 100%;">
+								<span class="item-label" style="width: 80%; font-size: 13px;">promedio</span>
+								<span class="hidden separator"> - </span>
+								<span class="item-count badge" style="margin-left: auto;">1</span>
+							</a>
+						</li>
+					
+				    </ul>
+				</nav>
+
+				<p class="module-footer" style="text-align: right;">
+				    
+					
+				    
+				</p>
+			    
+			
+		    
+		</section>
+	    
+	
+    
+
+      
+        
+
+    
+    
+	
+	    
+	    
+		<section class="module module-narrow module-shallow">
+		    
+			<h2 class="module-heading">
+			    <i class="fa fa-filter"></i>
+			    
+			    Formatos
+			</h2>
+		    
+		    
+			
+			    
+				<nav aria-label="Formatos">
+				    <ul class="list-unstyled nav nav-simple nav-facet">
+					
+					    
+					    
+					    
+					    
+					    <style>
+							/* kill underline on the whole link in every state */
+							li.nav-item a,
+							li.nav-item a:hover,
+							li.nav-item a:focus,
+							li.nav-item a:active {
+								text-decoration: none !important;
+							}
+
+							/* show underline only on the label when hovering/focusing the link */
+							li.nav-item a:hover .item-label,
+							li.nav-item a:focus .item-label {
+								text-decoration: underline !important;
+							}
+
+							/* keep the count clean */
+							li.nav-item .item-count {
+								text-decoration: none !important;
+							}
+						</style>
+					    <li class="nav-item" style="padding: 7px 11px;">
+							<a href="/organization/f353bb81-d268-40cd-aa74-d3f53402189a?res_format=XLSX" title="" style="display: flex; width: 100%;">
+								<span class="item-label" style="width: 80%; font-size: 13px;">XLSX</span>
+								<span class="hidden separator"> - </span>
+								<span class="item-count badge" style="margin-left: auto;">7</span>
+							</a>
+						</li>
+					
+				    </ul>
+				</nav>
+
+				<p class="module-footer" style="text-align: right;">
+				    
+					
+				    
+				</p>
+			    
+			
+		    
+		</section>
+	    
+	
+    
+
+      
+        
+
+    
+    
+	
+	    
+	    
+		<section class="module module-narrow module-shallow">
+		    
+			<h2 class="module-heading">
+			    <i class="fa fa-filter"></i>
+			    
+			    Licencias
+			</h2>
+		    
+		    
+			
+			    
+				<nav aria-label="Licencias">
+				    <ul class="list-unstyled nav nav-simple nav-facet">
+					
+					    
+					    
+					    
+					    
+					    <style>
+							/* kill underline on the whole link in every state */
+							li.nav-item a,
+							li.nav-item a:hover,
+							li.nav-item a:focus,
+							li.nav-item a:active {
+								text-decoration: none !important;
+							}
+
+							/* show underline only on the label when hovering/focusing the link */
+							li.nav-item a:hover .item-label,
+							li.nav-item a:focus .item-label {
+								text-decoration: underline !important;
+							}
+
+							/* keep the count clean */
+							li.nav-item .item-count {
+								text-decoration: none !important;
+							}
+						</style>
+					    <li class="nav-item" style="padding: 7px 11px;">
+							<a href="/organization/f353bb81-d268-40cd-aa74-d3f53402189a?license_id=cc-by" title="" style="display: flex; width: 100%;">
+								<span class="item-label" style="width: 80%; font-size: 13px;">Creative Commons Attribution</span>
+								<span class="hidden separator"> - </span>
+								<span class="item-count badge" style="margin-left: auto;">7</span>
+							</a>
+						</li>
+					
+				    </ul>
+				</nav>
+
+				<p class="module-footer" style="text-align: right;">
+				    
+					
+				    
+				</p>
+			    
+			
+		    
+		</section>
+	    
+	
+    
+
+      
+    </div>
+    <a class="close no-text hide-filters"><i class="fa fa-times-circle"></i><span class="text">close</span></a>
+  </div>
+
+
+              </aside>
+            
+
+            
+              <div class="primary col-sm-9 col-xs-12" role="main">
+                
+                
+                  <article class="module">
+                    
+                      <header class="module-content page-header">
+                        
+                        <ul class="nav nav-tabs">
+                          
+  <li class="active"><a href="/organization/uth"><i class="fa fa-sitemap"></i> Conjuntos de datos</a></li>
+  <li><a href="/organization/activity/uth/0"><i class="fa fa-clock-o"></i> Flujo de Actividad</a></li>
+  <li><a href="/organization/about/uth"><i class="fa fa-info-circle"></i> Acerca de</a></li>
+
+                        </ul>
+                      </header>
+                    
+                    <div class="module-content">
+                      
+                      
+    
+      
+      
+      
+
+
+
+
+
+
+
+<script>
+  document.addEventListener('DOMContentLoaded', function () {
+    var inputField = document.getElementById('field-giant-search');
+    
+    inputField.addEventListener('keypress', function (e) {
+      if (e.key === '<') {
+        e.preventDefault();
+      }
+    });
+  });
+</script>
+
+<form id="organization-datasets-search-form" class="search-form" method="get" data-module="select-switch">
+
+  
+
+
+
+  <div class="search-input form-group search-giant">
+    <input aria-label="Buscar conjuntos de datos..." id="field-giant-search" type="text" class="form-control" name="q" value=""  autocomplete="off" placeholder="¿Qué datos estás buscando?"  />
+    <button type="submit" value="search" aria-label="Enviar"  aria-labelledby="search-label">
+      <i class="fa fa-search"></i>
+      <span class="sr-only" id="search-label">Búsqueda</span>
+    </button>
+  </div>
+
+  
+
+  
+    
+  
+
+  
+    
+      <div class="control-order-by">
+        <label for="field-order-by">Ordenar por</label>
+        <select id="field-order-by" name="sort" class="form-select">
+          
+            
+              <option value="score desc, metadata_modified desc">Relevancia</option>
+            
+          
+            
+              <option value="title_string asc">Nombre ascendente</option>
+            
+          
+            
+              <option value="title_string desc">Nombre descendente</option>
+            
+          
+            
+              <option value="metadata_modified desc">Última modificación</option>
+            
+          
+            
+          
+        </select>
+        
+        <button class="btn btn-default js-hide" type="submit">Ir</button>
+        
+      </div>
+    
+  
+
+  
+    
+      <h1 style="font-size: 22px; color: #410324;">
+
+  
+  
+  
+  
+
+7 conjuntos de datos encontrados</h1>
+    
+  
+
+  
+    
+      <p class="filter-list">
+        
+      </p>
+      <a class="show-filters btn btn-default">Filtrar Resultados</a>
+    
+  
+
+</form>
+
+
+
+
+    
+  
+    
+      
+
+  
+    <ul class="dataset-list list-unstyled">
+    	
+	      
+	        
+
+
+
+
+
+
+
+  <li class="dataset-item">
+    
+      <div class="dataset-content">
+        
+          <h2 class="dataset-heading">
+            
+              
+            
+            
+		          <a href="/dataset/Estudiantes%20de%20reingreso">Estudiantes de reingreso</a>
+            
+            
+              
+              
+            
+          </h2>
+        
+        
+          
+        
+        
+          
+            <div style="overflow-wrap: break-word; word-wrap: break-word; word-break:break-all">Resumen cuatrimestral por programa educativo del total de estudiantes de reingreso a la institución (incluye reingreso a primer cuatrimestre de nivel T.S.U).</div>
+          
+        
+      </div>
+      
+        
+          
+            <ul class="dataset-resources list-unstyled">
+              
+                
+                <li>
+                  <div style="cursor: default;" class="badge badge-default XLSX" data-format="xlsx">XLSX</div>
+                </li>
+                
+              
+            </ul>
+          
+        
+      
+    
+  </li>
+
+	      
+	        
+
+
+
+
+
+
+
+  <li class="dataset-item">
+    
+      <div class="dataset-content">
+        
+          <h2 class="dataset-heading">
+            
+              
+            
+            
+		          <a href="/dataset/Matriculas">Matriculas</a>
+            
+            
+              
+              
+            
+          </h2>
+        
+        
+          
+        
+        
+          
+            <div style="overflow-wrap: break-word; word-wrap: break-word; word-break:break-all">Base de datos de la matrícula inscrita durante el cuatrimestre a consultar. Información clasificada por:  nivel, modalidad, programa educativo, campo de formación académica,...</div>
+          
+        
+      </div>
+      
+        
+          
+            <ul class="dataset-resources list-unstyled">
+              
+                
+                <li>
+                  <div style="cursor: default;" class="badge badge-default XLSX" data-format="xlsx">XLSX</div>
+                </li>
+                
+              
+            </ul>
+          
+        
+      
+    
+  </li>
+
+	      
+	        
+
+
+
+
+
+
+
+  <li class="dataset-item">
+    
+      <div class="dataset-content">
+        
+          <h2 class="dataset-heading">
+            
+              
+            
+            
+		          <a href="/dataset/Discapacidad%20y%20grupo%20%C3%A9tnico">Discapacidad y grupo étnico</a>
+            
+            
+              
+              
+            
+          </h2>
+        
+        
+          
+        
+        
+          
+            <div style="overflow-wrap: break-word; word-wrap: break-word; word-break:break-all">Concentrado cuatrimestral por programa educativo, del total de estudiantes inscritos que reportan pertenecer a un grupo étnico, ser hablantes de alguna lengua indígena, o bien...</div>
+          
+        
+      </div>
+      
+        
+          
+            <ul class="dataset-resources list-unstyled">
+              
+                
+                <li>
+                  <div style="cursor: default;" class="badge badge-default XLSX" data-format="xlsx">XLSX</div>
+                </li>
+                
+              
+            </ul>
+          
+        
+      
+    
+  </li>
+
+	      
+	        
+
+
+
+
+
+
+
+  <li class="dataset-item">
+    
+      <div class="dataset-content">
+        
+          <h2 class="dataset-heading">
+            
+              
+            
+            
+		          <a href="/dataset/Promedio%20Acad%C3%A9mico">Promedio Académico</a>
+            
+            
+              
+              
+            
+          </h2>
+        
+        
+          
+        
+        
+          
+            <div style="overflow-wrap: break-word; word-wrap: break-word; word-break:break-all">Resumen cuatrimestral por programa educativo e institucional del promedio de aprovechamiento académico obtenido por los estudiantes en el periodo a consultar.</div>
+          
+        
+      </div>
+      
+        
+          
+            <ul class="dataset-resources list-unstyled">
+              
+                
+                <li>
+                  <div style="cursor: default;" class="badge badge-default XLSX" data-format="xlsx">XLSX</div>
+                </li>
+                
+              
+            </ul>
+          
+        
+      
+    
+  </li>
+
+	      
+	        
+
+
+
+
+
+
+
+  <li class="dataset-item">
+    
+      <div class="dataset-content">
+        
+          <h2 class="dataset-heading">
+            
+              
+            
+            
+		          <a href="/dataset/Estudiantes%20Titulados">Estudiantes Titulados</a>
+            
+            
+              
+              
+            
+          </h2>
+        
+        
+          
+        
+        
+          
+            <div style="overflow-wrap: break-word; word-wrap: break-word; word-break:break-all">Resumen anual del total de estudiantes por programa educativo, que durante el periodo a reportar obtuvieron su título de culminación del nivel ya sea T.S.U. o Licenciatura.</div>
+          
+        
+      </div>
+      
+        
+          
+            <ul class="dataset-resources list-unstyled">
+              
+                
+                <li>
+                  <div style="cursor: default;" class="badge badge-default XLSX" data-format="xlsx">XLSX</div>
+                </li>
+                
+              
+            </ul>
+          
+        
+      
+    
+  </li>
+
+	      
+	        
+
+
+
+
+
+
+
+  <li class="dataset-item">
+    
+      <div class="dataset-content">
+        
+          <h2 class="dataset-heading">
+            
+              
+            
+            
+		          <a href="/dataset/Estudiantes%20egresados">Estudiantes egresados</a>
+            
+            
+              
+              
+            
+          </h2>
+        
+        
+          
+        
+        
+          
+            <div style="overflow-wrap: break-word; word-wrap: break-word; word-break:break-all">Resumen anual del total de estudiantes por programa educativo, que durante el periodo a reportar culminaron sus estudios de nivel T.S.U. o Licenciatura.</div>
+          
+        
+      </div>
+      
+        
+          
+            <ul class="dataset-resources list-unstyled">
+              
+                
+                <li>
+                  <div style="cursor: default;" class="badge badge-default XLSX" data-format="xlsx">XLSX</div>
+                </li>
+                
+              
+            </ul>
+          
+        
+      
+    
+  </li>
+
+	      
+	        
+
+
+
+
+
+
+
+  <li class="dataset-item">
+    
+      <div class="dataset-content">
+        
+          <h2 class="dataset-heading">
+            
+              
+            
+            
+		          <a href="/dataset/Estudiantes%20de%20nuevo%20ingreso">Estudiantes de nuevo ingreso</a>
+            
+            
+              
+              
+            
+          </h2>
+        
+        
+          
+        
+        
+          
+            <div style="overflow-wrap: break-word; word-wrap: break-word; word-break:break-all">Resumen cuatrimestral por programa educativo del total de estudiantes de nuevo ingreso a la institución. Aplica solamente a nuevo ingreso a primer cuatrimestre.</div>
+          
+        
+      </div>
+      
+        
+          
+            <ul class="dataset-resources list-unstyled">
+              
+                
+                <li>
+                  <div style="cursor: default;" class="badge badge-default XLSX" data-format="xlsx">XLSX</div>
+                </li>
+                
+              
+            </ul>
+          
+        
+      
+    
+  </li>
+
+	      
+	    
+    </ul>
+  
+
+    
+  
+  
+    
+  
+
+                    </div>
+                  </article>
+                
+              </div>
+            
+          </div>
+        
+      </div>
+    </div>
+  
+    <div class="site-footer_d d-none">
+  <div class="container">
+    
+    <div class="row">
+      <div class="col-md-8 footer-links">
+        
+          <ul class="list-unstyled">
+            
+              <li><a href="/about">Acerca de Portal de Datos Abiertos del Gobierno del Estado de Sonora</a></li>
+            
+          </ul>
+          <ul class="list-unstyled">
+            
+              
+              <li><a href="http://docs.ckan.org/en/2.9/api/">API CKAN</a></li>
+              <li><a href="http://www.ckan.org/">CKAN Association</a></li>
+              <li><a href="http://www.opendefinition.org/okd/"><img src="/base/images/od_80x15_blue.png" alt="Open Data"></a></li>
+            
+          </ul>
+        
+      </div>
+      <div class="col-md-4 attribution">
+        
+          <p><strong>Gestionado con </strong> <a class="hide-text ckan-footer-logo" href="http://ckan.org">CKAN</a></p>
+        
+
+      </div>
+    </div>
+    
+  </div>
+
+  
+    
+  
+
+  
+    
+<form class="form-inline form-select lang-select" action="/util/redirect" data-module="select-switch" method="POST">
+  <label for="field-lang-select">Idioma</label>
+  <select id="field-lang-select" name="url" data-module="autocomplete" data-module-dropdown-class="lang-dropdown" data-module-container-class="lang-container">
+    
+      <option value="/es/organization/uth" selected="selected">
+        español
+      </option>
+    
+  </select>
+  <button class="btn btn-default js-hide" type="submit">Ir</button>
+</form>
+  
+
+
+</div>
+
+
+<section id="pre-footer" class="d-none d-sm-block">
+
+  <div class="container">
+      <div class="container-inner">
+
+          <div class="row">
+
+              <div class="col-sm-7">
+
+                  <div class="info">
+                      <h6 class="fw-bold">Gobierno del Estado de Sonora</h6>
+                      <p>
+                        <strong>Dirección:</strong> Comonfort y Dr. Paliza S/N, Colonia Centenario, C.P. 83260. Hermosillo, Sonora, México.
+                        <br><strong>Teléfonos:</strong> Atención Ciudadana (662) 108 4324, Palacio de Gobierno (662) 289 3800
+                        <br><strong>Correo Electrónico:</strong> <a href="/cdn-cgi/l/email-protection#1a7b6e7f747973757479736f7e7b7e7b747b5a69757475687b347d757834776225696f78707f796e27577f74697b707f3f282a5f746c737b7e753f282a7e7f697e7f3f282a7f763f282a4a75686e7b763f282a7e7f763f282a5d7578737f6874753f282a7e7f3f282a49757475687b"><span class="__cf_email__" data-cfemail="afcedbcac1ccc6c0c1ccc6dacbcecbcec1ceefdcc0c1c0ddce81c8c0cd81c2d7">[email&#160;protected]</span></a>
+                      </p>
+                  </div>
+
+
+              </div>
+
+
+              <div class="col-sm-5 ">
+                  <div class="social-networks">
+                      <div class="d-flex justify-content-center justify-content-sm-end">
+                          <a href="https://www.facebook.com/GobiernoSonora" target="_blank" rel="nofollow noreferrer noopener" class=""><i class="fab fa-facebook" aria-hidden="true"></i> <span>Facebook</span></a>
+                          <style>
+                            #xCustomLogo{
+                              display: flex;
+                              justify-content: center;
+                              align-items:center;
+                            }
+                            
+                            #xCustomLogo img{
+                              object-fit: contain;
+                            }
+
+                            #xCustomLogoOrange{
+                              display: flex !important;
+                              justify-content: center;
+                              align-items:center;
+                            }
+    
+                            #xCustomLogoOrange img{
+                              object-fit: contain;
+                            }
+                          </style>
+                          
+                          <a href="https://www.twitter.com/gobiernosonora" id="xCustomLogoOrange">
+                            <img src="/images/x-orange2.png" alt="" width="33" height="33">
+                          </a>
+                          <!-- <a href="https://www.facebook.com/GobiernoSonora" target="_blank" rel="nofollow noreferrer noopener"  class=""><i class="fab fa-twitter" aria-hidden="true"></i><span>Twitter</span></a> -->
+                          <a href="https://www.instagram.com/gobiernodesonora/" target="_blank" rel="nofollow noreferrer noopener"class=""><i class="fab fa-instagram" aria-hidden="true"></i> <span>Instagram</span></a>
+                          <a href="https://www.tiktok.com/@gobierno.sonora" target="_blank" rel="nofollow noreferrer noopener" class=""><i class="fab fa-tiktok" aria-hidden="true"></i> <span>Tiktok</span></a>
+                          <a href="https://www.youtube.com/@GobiernodeSonoraTV" target="_blank" rel="nofollow noreferrer noopener" class=""><i class="fab fa-youtube" aria-hidden="true"></i> <span>Youtube</span></a>
+                       
+                          <a href="#" target="_blank" rel="nofollow noreferrer noopener" id="btn-16660239335493" class="">@GobiernoSonora</a>
+                      </div>
+                  </div>
+
+                  <div class="privacy">
+                      <div class="text-center text-sm-end mt-2">
+                          <p>
+                              <a href="https://www.sonora.gob.mx/politica-de-uso.html" target="_blank" rel="nofollow noreferrer noopener" id="btn-16660237556920" class="btn btn-link link-dark py-0 px-1">Política de Uso y Privacidad</a>
+                              <a href="https://denunciapp.sonora.gob.mx" target="_blank" rel="nofollow noreferrer noopener" id="btn-16660237556921" class="btn btn-link link-dark py-0 px-1">Denuncia Ciudadana</a>
+                              <a href="https://www.sonora.gob.mx/contacto.html" target="_blank" rel="nofollow noreferrer noopener" id="btn-16660237556922" class="btn btn-link link-dark py-0 px-1">Contacto</a>
+
+                          </p>
+
+
+                          <p>Todos los derechos reservados. Sitio web desarrollado por
+                              <a href="https://oficialiamayor.sonora.gob.mx" target="_blank" rel="noopener">Oficialía Mayor</a>
+                          </p>
+
+
+                      </div>
+                  </div>
+
+
+              </div>
+
+
+          </div>
+
+         
+</div></div></section>
+
+  <style>
+    .old-site{
+      background-color: #dc7f37;
+      padding-block: 8px;
+      display: flex;
+    }
+
+    .newFoot{
+      display: none;
+    }
+
+    @media only screen and (max-width: 799px) {
+      .newFoot{
+        display: block;
+        background-color: #410123;
+        height: max-content;
+        padding-bottom: 1rem;
+      }
+      .innerFoot{
+        display: flex;
+        flex-direction: column;
+        gap: .5rem;
+        justify-content: center;
+        align-items: center;
+      }
+      .socalSpecial{
+        display: flex;
+        flex-direction: row;
+        gap: 1rem;
+        padding: 0;
+      }
+    }
+  </style>
+
+
+<div class="newFoot">
+  <div class="innerFoot">
+    <img class="" src="/images/logo-sonora-white.svg" alt="Gobierno del Estado de Sonora" title="" loading="lazy" style="width: 60%; margin-top: 1rem">
+    <div class="col-sm-3">
+      <div class="mt-3 mb-3">
+    <ul class="socalSpecial d-flex justify-content-center">
+      <a style="color: white; font-size:x-large" href="https://www.facebook.com/gobiernosonora" aria-label="Facebook" target="_blank" rel="nofollow noreferrer noopener"><i class="fab fa-facebook " aria-hidden="true" title="Facebook"></i></a>
+      <!-- <a style="color: white; font-size:x-large" href="https://www.twitter.com/gobiernosonora" aria-label="Twitter" target="_blank" rel="nofollow noreferrer noopener"><i class="fab fa-twitter " aria-hidden="true" title="Twitter"></i></a> -->
+      <a style="color: white; font-size:x-large" href="https://www.instagram.com/gobiernodesonora" aria-label="Instagram" target="_blank" rel="nofollow noreferrer noopener"><i class="fab fa-instagram " aria-hidden="true" title="Instagram"></i></a>
+      <a style="color: white; font-size:x-large" href="https://www.tiktok.com/@gobierno.sonora" aria-label="TikTok" target="_blank" rel="nofollow noreferrer noopener"><i class="fab fa-tiktok " aria-hidden="true" title="TikTok"></i></a>
+      <a style="color: white; font-size:x-large" href="https://www.youtube.com/c/GobiernodeSonoraTV" aria-label="Youtube" target="_blank" rel="nofollow noreferrer noopener"><i class="fab fa-youtube " aria-hidden="true" title="Youtube"></i></a>
+    </ul>
+    </div>
+    </div> 
+    <div class="text-center mb-3" style="color: white;">
+      @GobiernoSonora
+    </div>
+    <a href="tel://911" target="_blank" style="width: 60%; display:flex; align-items:center;"><img class="" src="/images/911.svg" alt="911 Número de Emergencias" title="" loading="lazy" style="width: 100%;"></a>
+  </div>
+</div>
+
+<footer class="d-none d-sm-block">
+  <div class="container">
+      <div class="row">
+
+          <div class="col-sm-2">
+              <div class="logo mb-3">
+                  <img class="" src="/images/logo-sonora-white.svg" alt="Gobierno del Estado de Sonora" title="" loading="lazy">
+              </div>
+          </div>
+
+          <div class="col-sm-4"></div>
+
+          <div class="col-sm-3">
+              <div class="mt-3 mb-3">
+                <ul class="social-networks d-flex justify-content-center">
+                    <a href="https://www.facebook.com/gobiernosonora" aria-label="Facebook" target="_blank" rel="nofollow noreferrer noopener"><i class="fab fa-facebook " aria-hidden="true" title="Facebook"></i></a>
+                    <a href="https://www.twitter.com/gobiernosonora" id="xCustomLogo">
+                      <img src="/images/x-white.png" alt="" width="33" height="33">
+                    </a>
+                    <!-- <a href="https://www.twitter.com/gobiernosonora" aria-label="Twitter" target="_blank" rel="nofollow noreferrer noopener"><i class="fab fa-twitter " aria-hidden="true" title="Twitter"></i></a> -->
+                    <a href="https://www.instagram.com/gobiernodesonora" aria-label="Instagram" target="_blank" rel="nofollow noreferrer noopener"><i class="fab fa-instagram " aria-hidden="true" title="Instagram"></i></a>
+                    <a href="https://www.tiktok.com/@gobierno.sonora" aria-label="TikTok" target="_blank" rel="nofollow noreferrer noopener"><i class="fab fa-tiktok " aria-hidden="true" title="TikTok"></i></a>
+                    <a href="https://www.youtube.com/c/GobiernodeSonoraTV" aria-label="Youtube" target="_blank" rel="nofollow noreferrer noopener"><i class="fab fa-youtube " aria-hidden="true" title="Youtube"></i></a>
+                </ul>
+              </div>
+
+              <div class="text-center mb-3">
+                  @GobiernoSonora
+              </div>
+
+          </div>
+
+          <div class="col-sm-3 text-end">
+              <div class="emergency me-auto">
+                  <a href="tel://911" target="_blank"><img class="" src="/images/911.svg" alt="911 Número de Emergencias" title="" loading="lazy"></a>
+              </div>
+          </div>
+
+      </div>
+  </div>
+</footer>
+  
+  
+  
+  
+  
+    
+
+      
+
+    
+    
+ 
+    <script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script src="/webassets/vendor/d8ae4bed_jquery.js" type="text/javascript"></script>
+<script src="/webassets/vendor/fb6095a0_vendor.js" type="text/javascript"></script>
+<script src="/webassets/vendor/517cca6f_bootstrap.js" type="text/javascript"></script>
+<script src="/webassets/base/15a18f6c_main.js" type="text/javascript"></script>
+<script src="/webassets/base/bff92684_ckan.js" type="text/javascript"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+      // updated 2019
+        //const input = document.getElementById("search-input");
+        //const searchBtn = document.getElementById("search-btn");
+
+        const popoverTriggerList = document.querySelectorAll('[data-bs-toggle="popover"]')
+        const popoverList = [...popoverTriggerList].map(popoverTriggerEl => new bootstrap.Popover(popoverTriggerEl))
+
+
+        /*
+        const expand = () => {
+          searchBtn.classList.toggle("close");
+          input.classList.toggle("square");
+        };*/
+
+        //searchBtn.addEventListener("click", expand);
+
+
+    </script>
+
+  <script type="module" src="https://static.cloudflareinsights.com/beacon.min.js/vce701823e78c4301a35b7e07294d87301792088814092" integrity="sha512-UKNk8GbxkABxKcXYuLkO16EleLGUkcvJWtpSNmExE0Too3ZaFAxTscNWEc1OdAv5/BikHawapSCaiD2XCmp+Bw==" data-cf-beacon='{"version":"2024.11.0","token":"acfb988d291d41f1846540e7c6312446","spa":2}' crossorigin="anonymous"></script>
+</body>
+</html>

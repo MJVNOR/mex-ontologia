@@ -1,0 +1,10 @@
+{
+  "antes_sha256": "cb7cdb83190a0ebc381562f6513ba96d1563cf5d4ff540548af607a6360a8d9c",
+  "despues_sha256": "1bccefb8f05656864417540bd8f7f0cbc896295f4f373a443b3d06300f51b0bc",
+  "cambios": [
+    "import { stripThoughtBlocks } from './providers/openai.js';",
+    "return stripThoughtBlocks(result.text.join('\\n').trim());",
+    "return runTurn(question);",
+    "return await runTurn(context);"
+  ]
+}

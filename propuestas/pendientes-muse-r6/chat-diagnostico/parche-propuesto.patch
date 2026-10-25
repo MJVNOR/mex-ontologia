@@ -1,0 +1,41 @@
+--- PROPUESTO, NO APLICADO (lo aplica root/integrador; exige recompilar sidecar + reinicio Studio) ---
+Base: studio/src-tauri/sidecars/agent/index.ts (@EFFECTIVE_MODEL) y providers/openai.ts (step).
+Objetivo: que el presupuesto de contexto ya instalado (budgetForModel/maybeFit,
+MODEL_CONTEXT_BUDGETS gemma-4-31b -> 6500 est) aplique SIEMPRE, y que un HTTP500
+llegue al chat recortado y clasificable. Cero cambios de modelo, claves o grafo.
+
+--- a/studio/src-tauri/sidecars/agent/index.ts
++++ b/studio/src-tauri/sidecars/agent/index.ts
+@@
+ const EFFECTIVE_MODEL = process.env.ONTO_LLM_MODEL ?? '';
++
++// El presupuesto de contexto solo entra si retrieve() recibe el modelo. Si el
++// sidecar arranco sin ONTO_LLM_MODEL en su entorno, EFFECTIVE_MODEL es '' y el
++// trim NUNCA aplica (budgetForModel(undefined) -> Infinity): los prompts viajan
++// sin recorte (medido: C6 ~488KB/~140k est) y el gateway devuelve 500 solo en
++// los casos grandes. Se resuelve el id real una vez via describe() (usa /models
++// como fallback ya existente) y se reutiliza. Sin red adicional por pregunta.
++let budgetModel: string | undefined = EFFECTIVE_MODEL || undefined;
++async function getBudgetModel(): Promise<string | undefined> {
++  if (budgetModel) return budgetModel;
++  try { budgetModel = await provider.describe(); } catch { /* como antes: sin presupuesto */ }
++  return budgetModel;
++}
+@@
+-    const r = await retrieve(mcp, question, 2, EFFECTIVE_MODEL ? { model: EFFECTIVE_MODEL } : undefined);
++    const r = await retrieve(mcp, question, 2, { model: await getBudgetModel() });
+
+--- a/studio/src-tauri/sidecars/agent/providers/openai.ts
++++ b/studio/src-tauri/sidecars/agent/providers/openai.ts
+@@
+     if (!resp.ok) {
+-      throw new Error(`Model endpoint ${this.baseURL} returned HTTP ${resp.status}: ${await resp.text()}`);
++      // Recorte: un 500 con cuerpo HTML gigante contaminaba el chat y el siguiente
++      // turno. El status queda intacto para distinguir 500 (servidor) de 429 (cuota).
++      throw new Error(`Model endpoint ${this.baseURL} returned HTTP ${resp.status}: ${(await resp.text()).slice(0, 2000)}`);
+     }
+
+--- FIN. Verificacion prevista (integrador, espaciada, >=65s entre llamadas):
+--- 1) tras aplicar+recompilar+reinicio: linea de arranque "_Connected: 114 ... Model: gemma-4-31b-it"
+--- 2) repetir C3 (pequeno) y C6 (grande) con el harness de esta carpeta + ONTO_ALLOW_MODEL_CALLS=1
+--- 3) 500 persistente en C6 con trim activo => causa en el gateway/contenido: escalar con status+cuerpo recortado

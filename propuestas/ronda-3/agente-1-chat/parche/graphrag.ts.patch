@@ -1,0 +1,429 @@
+--- studio/src-tauri/sidecars/agent/graphrag.ts (original)
++++ studio/src-tauri/sidecars/agent/graphrag.ts (parchado)
+@@ -47,6 +47,9 @@
+   provenance: Array<{ thing: string; sources: string[] }>;
+   conflicts: string[];
+   correspondenceContext?: string;
++  correspondenceOverview?: string;
++  resourceContext?: string;
++  variableOverview?: string;
+ }
+ 
+ /** Read every result page; page size is not a cap on the answer set. */
+@@ -126,6 +129,354 @@
+   return sections.join('\n');
+ }
+ 
++/** Questions about counts, states or listings need COMPLETE scoped queries,
++ * not the bounded neighbourhood. Intent is keyword-based and deterministic;
++ * generic questions without a named variable still trigger the overview.
++ */
++const OVERVIEW_HINTS = /correspondencia|mapeo|estado|conteo|conteos|total|totales|cuánt|cuant|lista|listado|revisad|candidat|ambigu|distribu/i;
++const YEAR_HINT = /\b(19|20)\d{2}\b/;
++/** Generic correspondence words never identify a resource on their own. */
++const RESOURCE_GENERIC = new Set([
++  'correspondencia', 'correspondencias', 'mapeo', 'mapeos', 'mapping',
++  'estado', 'estados', 'conteo', 'conteos', 'total', 'totales', 'lista',
++  'listado', 'columna', 'columnas', 'variable', 'variables', 'grafo',
++  'evidencia', 'procedencia', 'registra', 'registro', 'semantica',
++  'semanticas', 'semántica', 'semánticas', 'recurso', 'recursos',
++  'revisada', 'revisadas', 'revisado', 'revisados',
++  'candidata', 'candidatas', 'candidato', 'candidatos',
++  'ambigua', 'ambiguas', 'ambiguo', 'ambiguos',
++  'tiene', 'tienen', 'cuantas', 'cuántas', 'cuantos', 'cuántos',
++  'cuales', 'cuáles', 'donde', 'dónde', 'dime', 'significa',
++  'estan', 'están', 'consulta', 'consultar', 'corregir', 'editar',
++  'describir', 'detallar', 'indicar', 'explicar', 'comparar', 'compara',
++]);
++
++export function wantsCorrespondenceOverview(question: string): boolean {
++  return OVERVIEW_HINTS.test(question.normalize('NFC'));
++}
++
++export function wantsResourceScope(question: string): boolean {
++  const q = question.normalize('NFC');
++  return wantsCorrespondenceOverview(q) && (YEAR_HINT.test(q) || /\brecurso\b/i.test(q));
++}
++
++export function wantsVariableOverview(question: string): boolean {
++  const q = question.normalize('NFC').toLowerCase();
++  return q.includes('variable') && (q.includes('estado') || q.includes('conteo') || q.includes('total') || q.includes('cuánt') || q.includes('cuant'));
++}
++
++/** Global state counts via native aggregation: one row per state, no paging
++ * cap on the answer. Predicate-agnostic (discovers estadoCorrespondencia by
++ * suffix) so vocabulary moves do not silently zero the counts.
++ */
++export async function correspondenceStatusOverview(mcp: McpClient): Promise<string> {
++  const rows = await selectAll(mcp, `${P}
++    # correspondence-status-overview
++    SELECT ?status (COUNT(DISTINCT ?mapping) AS ?n) WHERE {
++      ?mapping ?p ?status .
++      FILTER(REGEX(STR(?p), "[/#]estadoCorrespondencia$"))
++    } GROUP BY ?status ORDER BY ?status`);
++  if (!rows.length) return 'COMPLETE global correspondence state counts: {} (no mappings carry estadoCorrespondencia; scoped zero, not a claim about other predicates).';
++  const counts = Object.fromEntries(rows.map(r => [r.status, Number(r.n)]));
++  const total = Object.values(counts).reduce((a, b) => a + b, 0);
++  return `COMPLETE global correspondence state counts (native aggregation over every mapping): ${JSON.stringify(counts)}. Total ${total}. Scoped to estadoCorrespondencia across the whole graph; per-variable or neighbourhood counts never substitute for these.`;
++}
++
++/** Variable-level states are a different tally from mapping states. */
++export async function variableStatusOverview(mcp: McpClient): Promise<string> {
++  const rows = await selectAll(mcp, `${P}
++    # variable-status-overview
++    SELECT ?status (COUNT(DISTINCT ?variable) AS ?n) WHERE {
++      ?variable ?p ?status .
++      FILTER(REGEX(STR(?p), "[/#]estadoSemantico$"))
++    } GROUP BY ?status ORDER BY ?status`);
++  if (!rows.length) return 'COMPLETE variable state counts: {} (no variables carry estadoSemantico; scoped zero).';
++  const counts = Object.fromEntries(rows.map(r => [r.status, Number(r.n)]));
++  const total = Object.values(counts).reduce((a, b) => a + b, 0);
++  return `COMPLETE variable state counts (native aggregation over every variable): ${JSON.stringify(counts)}. Total ${total}. This is the variable's estadoSemantico, not the mapping's estadoCorrespondencia; the two tallies must never be merged.`;
++}
++
++/** Vocabulary predicates discovered by local-name suffix, never hardcoded. */
++async function discoverVocab(mcp: McpClient, names: string[]): Promise<Map<string, string>> {
++  const alt = names.join('|');
++  const rows = await selectAll(mcp, `${P}
++    # correspondence-vocab
++    SELECT DISTINCT ?pred WHERE {
++      ?s ?pred ?o .
++      FILTER(REGEX(STR(?pred), "[/#](${alt})$"))
++    }`);
++  const map = new Map<string, string>();
++  for (const r of rows) {
++    for (const n of names) {
++      if (r.pred.endsWith('/' + n) || r.pred.endsWith('#' + n)) map.set(n, r.pred);
++    }
++  }
++  return map;
++}
++
++/** Singular/plural variants so «matrimonio» matches «Matrimonios» and back. */
++export function keywordVariants(kw: string): string[] {
++  const out = [kw];
++  if (kw.endsWith('es') && kw.length > 5) out.push(kw.slice(0, -2));
++  else if (kw.endsWith('s') && kw.length > 4) out.push(kw.slice(0, -1));
++  return [...new Set(out)];
++}
++
++/** Identifying keywords: long, non-generic, non-numeric question terms. */
++export function resourceKeywords(question: string): string[] {
++  return terms(question.normalize('NFC'))
++    .filter(t => t.length >= 5 && !RESOURCE_GENERIC.has(t.toLowerCase()) && !/^\d+$/.test(t))
++    .slice(0, 3);
++}
++
++/** Years are filters on the resource's declared period, never mere substrings. */
++export function questionYears(question: string): string[] {
++  return [...new Set([...question.normalize('NFC').matchAll(/\b((?:19|20)\d{2})\b/g)].map(m => m[1]))].slice(0, 4);
++}
++
++/** An explicit year interval in the question (1990–2040, entre 1990 y 2040). */
++export function questionRange(question: string): { from: number; to: number } | null {
++  const q = question.normalize('NFC');
++  const between = q.match(/entre\s+((?:19|20)\d{2})\s+y\s+((?:19|20)\d{2})/i);
++  const dash = q.match(/((?:19|20)\d{2})\s*[–—-]\s*((?:19|20)\d{2})/);
++  const m = between ?? dash;
++  if (!m) return null;
++  const a = Number(m[1]), b = Number(m[2]);
++  return { from: Math.min(a, b), to: Math.max(a, b) };
++}
++
++function delimitedYearPattern(y: string): string {
++  return `(^|[^0-9])${y}`;
++}
++
++/** Coarse SPARQL pre-filter (recall side only): a delimited year in the label
++ * or after a non-digit in the declared period. The strict decision happens in
++ * TypeScript below, so "20220" can pass the pre-filter but never match 2022.
++ */
++function yearPrefilter(years: string[]): string {
++  if (!years.length) return '';
++  const ors = years.flatMap(y => [
++    `REGEX(STR(?label), ${JSON.stringify(delimitedYearPattern(y))})`,
++    `REGEX(STR(?ini), ${JSON.stringify(delimitedYearPattern(y))})`,
++    `REGEX(STR(?fin), ${JSON.stringify(delimitedYearPattern(y))})`,
++  ]);
++  return ` && (${ors.join(' || ')})`;
++}
++
++function keywordFilter(variants: string[][]): string {
++  return variants
++    .map(vs => `(${vs.map(k => `CONTAINS(LCASE(STR(?label)), ${JSON.stringify(k.toLowerCase())})`).join(' || ')})`)
++    .join(' && ');
++}
++
++function parseYearPrefix(value: string | undefined): number | null {
++  const m = value?.match(/^((?:19|20)\d{2})/);
++  return m ? Number(m[1]) : null;
++}
++
++function labelYears(label: string): number[] {
++  return [...label.matchAll(/(?:^|[^0-9])((?:19|20)\d{2})(?![0-9])/g)].map(m => Number(m[1]));
++}
++
++export interface ResourceYearVerdict {
++  match: boolean;
++  rule: 'declared-period' | 'label-fallback';
++  matchedYears: number[];
++  note?: string;
++}
++
++/**
++ * Strict year decision in TypeScript: the declared period wins whenever it is
++ * interpretable; the label is only a bounded fallback. A label year outside
++ * the declared period is reported as a contradiction, never as a match.
++ * Intervals match by declared-range overlap and never assert observed
++ * coverage of any single year inside the range.
++ */
++export function strictYearVerdict(
++  label: string,
++  ini: string | undefined,
++  fin: string | undefined,
++  years: string[],
++  range: { from: number; to: number } | null,
++): ResourceYearVerdict {
++  const iniY = parseYearPrefix(ini);
++  const finY = parseYearPrefix(fin);
++  const ly = labelYears(label);
++  if (iniY != null || finY != null) {
++    const start = iniY ?? finY as number;
++    const end = finY ?? iniY as number;
++    const contradicted = ly.filter(y => y < start || y > end);
++    const contraNote = contradicted.length
++      ? ` Label year(s) ${contradicted.join(', ')} outside declared period ${start}–${end}; period takes precedence.`
++      : '';
++    if (range) {
++      const overlap = start <= range.to && end >= range.from;
++      return {
++        match: overlap,
++        rule: 'declared-period',
++        matchedYears: overlap ? [Math.max(start, range.from), Math.min(end, range.to)] : [],
++        note: `Question asks declared range ${range.from}–${range.to}: matched by declared-period overlap, not observed coverage of any single year.${contraNote}`,
++      };
++    }
++    const matched = years.map(Number).filter(y => y >= start && y <= end);
++    return {
++      match: matched.length > 0,
++      rule: 'declared-period',
++      matchedYears: matched,
++      note: contraNote ? contraNote.trim() : undefined,
++    };
++  }
++  if (range) {
++    const matched = [range.from, range.to].filter(y => ly.includes(y));
++    return {
++      match: matched.length > 0,
++      rule: 'label-fallback',
++      matchedYears: matched,
++      note: `No interpretable declared period; label fallback for range endpoints only, not observed coverage.`,
++    };
++  }
++  const wanted = years.map(Number);
++  const matched = wanted.filter(y => ly.includes(y));
++  return { match: matched.length > 0, rule: 'label-fallback', matchedYears: matched };
++}
++
++/**
++ * Resource-scoped listing over REAL resolved resources, never over bare
++ * label substrings. Resolution: RecursoCatalogado nodes whose label matches
++ * the identifying keywords, narrowed by year through the declared period
++ * (inicioDeclarado/finDeclarado, label match only as fallback). Columns come
++ * from the resource→esquema→columna path; mappings aggregate with
++ * COUNT(DISTINCT ?mapping) so predicate aliases cannot double-count.
++ *
++ * COMPLETE is claimed only for an explicit resolved-IRI set with all pages
++ * read. Anything else is UNRESOLVED (candidates listed, no counts) or PARTIAL
++ * (missing vocabulary path), and never a zero claim about the graph.
++ */
++export async function resourceCorrespondenceContext(mcp: McpClient, question: string): Promise<string> {
++  const keywords = resourceKeywords(question);
++  const years = questionYears(question);
++  if (!keywords.length && !years.length) return '';
++  const vocab = await discoverVocab(mcp, ['estadoCorrespondencia', 'columnaOrigen', 'esquema', 'columna', 'inicioDeclarado', 'finDeclarado']);
++  for (const need of ['estadoCorrespondencia', 'columnaOrigen', 'esquema', 'columna']) {
++    if (!vocab.get(need)) return `Resource listing PARTIAL: vocabulary predicate ${need} not found; no resource scope computed and no absence claimed.`;
++  }
++  const ini = vocab.get('inicioDeclarado'), fin = vocab.get('finDeclarado');
++  const period = (ini && fin)
++    ? `OPTIONAL { ?resource <${ini}> ?ini } OPTIONAL { ?resource <${fin}> ?fin }`
++    : `OPTIONAL { BIND("" AS ?ini) } OPTIONAL { BIND("" AS ?fin) }`;
++  const variants = keywords.map(keywordVariants);
++  const range = questionRange(question);
++  const preYears = [...years, ...(range ? [String(range.from), String(range.to)] : [])];
++  interface Candidate { iri: string; label: string; ini?: string; fin?: string }
++  const fetchCandidates = async (andAll: boolean): Promise<Candidate[]> => {
++    const parts = andAll ? [keywordFilter(variants)] : variants.map(vs => `(${keywordFilter([vs])})`);
++    const kwFilter = parts.length ? `FILTER(${andAll ? parts[0] : `(${parts.join(' || ')})`}${yearPrefilter(preYears)})` : (preYears.length ? `FILTER(${yearPrefilter(preYears).slice(4)})` : '');
++    const rows = await selectAll(mcp, `${P}
++    # resource-resolve
++    SELECT DISTINCT ?resource ?label ?ini ?fin WHERE {
++      ?resource a ?rtype ; rdfs:label ?label .
++      FILTER(REGEX(STR(?rtype), "[/#]RecursoCatalogado$"))
++      ${period}
++      ${kwFilter}
++    } ORDER BY ?resource ?label ?ini ?fin`);
++    return rows.map(r => ({ iri: r.resource, label: r.label, ini: r.ini, fin: r.fin }));
++  };
++  interface Decided { iri: string; labels: string[]; ini?: string; fin?: string; verdict: ResourceYearVerdict }
++  const decide = (cands: Candidate[]): Decided[] => {
++    const byIri = new Map<string, Decided>();
++    for (const c of cands) {
++      const verdict = strictYearVerdict(c.label, c.ini, c.fin, years, range);
++      if (!verdict.match) continue;
++      const known = byIri.get(c.iri);
++      if (known) {
++        if (!known.labels.includes(c.label)) known.labels.push(c.label);
++      } else {
++        byIri.set(c.iri, { iri: c.iri, labels: [c.label], ini: c.ini, fin: c.fin, verdict });
++      }
++    }
++    return [...byIri.values()];
++  };
++  let decided = decide(await fetchCandidates(true));
++  let multi = false;
++  if (!decided.length && variants.length > 1) {
++    decided = decide(await fetchCandidates(false));
++    multi = decided.length > 0;
++  }
++  if (!decided.length) {
++    const cands = await selectAll(mcp, `${P}
++    # resource-candidates
++    SELECT DISTINCT ?label WHERE {
++      ?resource a ?rtype ; rdfs:label ?label .
++      FILTER(REGEX(STR(?rtype), "[/#]RecursoCatalogado$"))
++      ${keywords.length ? `FILTER(${keywordFilter(variants)})` : ''}
++    } ORDER BY ?label LIMIT 10`);
++    const shown = cands.map(c => JSON.stringify(c.label)).join(', ') || 'none';
++    return `Resource scope UNRESOLVED for keywords ${JSON.stringify(keywords)}${years.length ? ` and years ${JSON.stringify(years)}` : ''}${range ? ` and range ${range.from}–${range.to}` : ''}: no catalogued resource matched under the strict year rule (delimited years; declared period first, so a label like 20220 never matches 2022). Similar labels: ${shown}. No counts computed and no zero claimed for any unresolved resource.`;
++  }
++  const scopeName = decided.map(r => r.labels.map(l => JSON.stringify(l)).join('/')).join(', ');
++  const rids = iriValues(decided.map(r => r.iri));
++  const columns = await selectAll(mcp, `${P}
++    # resource-columns
++    SELECT DISTINCT ?resource ?column WHERE {
++      VALUES ?resource { ${rids} }
++      ?resource <${vocab.get('esquema')}>/<${vocab.get('columna')}> ?column .
++    } ORDER BY ?resource ?column`);
++  if (!columns.length) {
++    return `Resource scope PARTIAL for resolved ${scopeName}: no esquema/columna triples observed; the source files may contain columns not observed in the graph. Mapping counts not computed and no absence of mappings claimed.`;
++  }
++  const path = `VALUES ?resource { ${rids} } ?resource <${vocab.get('esquema')}>/<${vocab.get('columna')}> ?column .`;
++  const counts = await selectAll(mcp, `${P}
++    # resource-status-counts
++    SELECT ?resource ?status (COUNT(DISTINCT ?mapping) AS ?num) WHERE {
++      ${path}
++      ?mapping <${vocab.get('columnaOrigen')}> ?column ; <${vocab.get('estadoCorrespondencia')}> ?status .
++    } GROUP BY ?resource ?status ORDER BY ?resource ?status`);
++  const labels = await selectAll(mcp, `${P}
++    # resource-labels
++    SELECT DISTINCT ?resource ?label WHERE {
++      VALUES ?resource { ${rids} }
++      ?resource rdfs:label ?label .
++    } ORDER BY ?resource ?label`);
++  const labelByIri = new Map<string, string[]>();
++  for (const r of labels) {
++    const known = labelByIri.get(r.resource) ?? [];
++    if (!known.includes(r.label)) known.push(r.label);
++    labelByIri.set(r.resource, known);
++  }
++  const byIri = new Map<string, { states: Record<string, number> }>();
++  for (const r of counts) {
++    if (!byIri.has(r.resource)) byIri.set(r.resource, { states: {} });
++    byIri.get(r.resource)!.states[r.status] = Number(r.num);
++  }
++  const grandRows = await selectAll(mcp, `${P}
++    # resource-grand-total
++    SELECT (COUNT(DISTINCT ?mapping) AS ?num) WHERE {
++      ${path}
++      ?mapping <${vocab.get('columnaOrigen')}> ?column .
++    }`);
++  const grandTotal = Number(grandRows[0]?.num ?? 0);
++  const detail = await selectAll(mcp, `${P}
++    # resource-mapping-rows
++    SELECT DISTINCT ?resource ?mapping ?column ?label ?status WHERE {
++      ${path}
++      ?mapping <${vocab.get('columnaOrigen')}> ?column ; <${vocab.get('estadoCorrespondencia')}> ?status .
++      OPTIONAL { ?column rdfs:label ?label }
++    } ORDER BY ?resource ?mapping ?column ?label ?status`);
++  const perResource = [...byIri.entries()].map(([iri, e]) => {
++    const lbs = (labelByIri.get(iri) ?? []).map(l => JSON.stringify(l)).join('/');
++    return `Resource <${iri}> ${lbs || '(label missing)'}: ${JSON.stringify(e.states)}`;
++  }).join(' | ');
++  const notes = decided.map(d => d.verdict.note ? `Note for <${d.iri}>: ${d.verdict.note}` : '').filter(Boolean);
++  const shown = [...detail].sort((a, b) => Number(b.status === 'documental_revisada') - Number(a.status === 'documental_revisada') || a.mapping.localeCompare(b.mapping)).slice(0, 80);
++  const out = [
++    `COMPLETE correspondence counts for resolved resource${decided.length > 1 ? 's' : ''} (${scopeName})${multi ? '; multi-resource OR fallback' : ''}: ${perResource || '{}'}. Grand total ${grandTotal} distinct mappings across ${columns.length} observed columns and ${decided.length} resolved resources; all result pages were read. Observed columns triangulated via resource→esquema→columna only; not a claim about the full content of the original source files.`,
++    `Correspondence examples shown: ${shown.length}/${detail.length}; examples are ${shown.length === detail.length ? 'complete' : 'PARTIAL'}. Counts above include every status, including records not shown.`,
++    ...notes,
++    ...shown.map(r => `Mapping <${r.mapping}>: column <${r.column}>${r.label ? ` ${JSON.stringify(r.label)}` : ''}; estadoCorrespondencia=${JSON.stringify(r.status)}; resource <${r.resource}>.`),
++  ];
++  return out.join('\n');
++}
++
+ function termValue(term: unknown): string {
+   if (typeof term === 'object' && term !== null && 'value' in term && typeof term.value === 'string') return term.value;
+   if (typeof term !== 'string') throw new Error('Invalid RDF term returned by onto_query');
+@@ -178,8 +529,21 @@
+  */
+ export async function retrieve(mcp: McpClient, question: string, hops = 2): Promise<Retrieved> {
+   const ts = terms(question);
++  // Scoped COMPLETE queries start alongside anchoring: generic count/state
++  // questions must not depend on the bounded neighbourhood.
++  const scoped = (async () => {
++    const out: Pick<Retrieved, 'correspondenceOverview' | 'resourceContext' | 'variableOverview'> = {};
++    if (wantsCorrespondenceOverview(question)) out.correspondenceOverview = await correspondenceStatusOverview(mcp);
++    if (wantsResourceScope(question)) out.resourceContext = await resourceCorrespondenceContext(mcp, question);
++    if (wantsVariableOverview(question)) out.variableOverview = await variableStatusOverview(mcp);
++    return out;
++  })();
+   if (ts.length === 0) {
+-    return { anchors: [], facts: [], claims: [], provenance: [], conflicts: [] };
++    const s = await scoped;
++    if (!s.correspondenceOverview && !s.resourceContext && !s.variableOverview) {
++      return { anchors: [], facts: [], claims: [], provenance: [], conflicts: [] };
++    }
++    return { anchors: [], facts: [], claims: [], provenance: [], conflicts: [], ...s };
+   }
+ 
+   // 1. ANCHORS. Entities whose label or local name matches a question term.
+@@ -201,8 +565,9 @@
+     } ORDER BY DESC(?score) STRLEN(STR(?l)) STR(?e) LIMIT 16`);
+   const anchors = anchorRows.map(r => ({ iri: r.e, label: r.l }));
+   const mappingContext = await correspondenceContext(mcp, ts);
++  const extra = await scoped;
+   if (anchors.length === 0) {
+-    return { anchors: [], facts: [], claims: [], provenance: [], conflicts: [], correspondenceContext: mappingContext };
++    return { anchors: [], facts: [], claims: [], provenance: [], conflicts: [], correspondenceContext: mappingContext, ...extra };
+   }
+ 
+   // A question naming a CLASS ("dataset conformance") anchors on the class
+@@ -341,6 +706,7 @@
+     provenance,
+     conflicts: [...new Set(conflicts)],
+     correspondenceContext: mappingContext,
++    ...extra,
+   };
+ }
+ 
+@@ -380,6 +746,9 @@
+   const parts: string[] = [];
+   parts.push('RETRIEVAL SCOPE: The general neighbourhood is a bounded, PARTIAL subgraph. Missing facts here do not establish absence in the graph. Only explicitly COMPLETE scoped queries below support absence/count claims for their stated scope. Zero document claims does not mean no dictionary or graph evidence.');
+   if (r.correspondenceContext) parts.push(`QUALIFIED SEMANTIC CORRESPONDENCES\n${r.correspondenceContext}`);
++  if (r.correspondenceOverview) parts.push(`GLOBAL CORRESPONDENCE COUNTS (COMPLETE)\n${r.correspondenceOverview}`);
++  if (r.resourceContext) parts.push(`RESOURCE-SCOPED CORRESPONDENCES (COMPLETE FOR THE STATED FILTER)\n${r.resourceContext}`);
++  if (r.variableOverview) parts.push(`VARIABLE STATES (COMPLETE)\n${r.variableOverview}`);
+   parts.push(`ANCHOR ENTITIES\n${r.anchors.map(a => `- ${a.label} (${a.iri})`).join('\n')}`);
+   if (r.facts.length) parts.push(`\nGRAPH NEIGHBOURHOOD\n${r.facts.map(f => `- ${f}`).join('\n')}`);
+   if (r.claims.length) {
+@@ -409,6 +778,9 @@
+ Rules:
+ - The general neighbourhood is PARTIAL. Never turn "not retrieved" into "does not exist in the graph". State "not found in the retrieved evidence" when coverage is partial. Absence claims require an explicitly COMPLETE query for that exact scope.
+ - For semantic correspondences, use COMPLETE correspondence status counts and the qualified mapping records, including incoming variableDestino links. Distinguish the variable's estadoSemantico from each column mapping's estadoCorrespondencia. Report documental_revisada alongside candidata_por_nombre when both occur; do not generalize one resource/year's state to all resources. Counts cover all pages even when displayed examples are partial.
++- Global correspondence counts come ONLY from the COMPLETE global overview (native aggregation over every mapping). Per-variable counts and neighbourhood facts never substitute for them.
++- A resource/year scope (for example Matrimonios 2022) is resolved to explicit catalogued resource IRIs first; counts cover exactly those resources via their esquema/columna path, with per-resource tallies. The declared period takes precedence over label years; the grand total counts distinct mappings; observed triangulated columns only, never the full source file. Report the resolved resource labels and, when UNRESOLVED, the candidate labels without any zero claim. Never generalize one resource or year to others.
++- estadoSemantico belongs to the variable; estadoCorrespondencia belongs to each column/variable mapping. When asked about states, report both tallies separately and never merge them into one.
+ - A column may retain an older definicionCandidata link alongside a newer qualified documental_revisada mapping. The candidate link alone does not negate the explicitly reviewed mapping. Cite the mapping URI and its state for the specific column/resource.
+ - When reporting reviewed correspondences, identify their column's resource/year from the supplied column label (for example Matrimonios 2022). A variable-level status count alone is not the evidence for a specific resource. Include the reviewed mapping URI and distinguish other candidate resources.
+ - Answer ONLY from the supplied subgraph. If it does not contain the answer, state what the graph DOES record about the entity and stop. Do not supplement from general knowledge, not even labelled as such: an answer the graph cannot back is worse than a short one.

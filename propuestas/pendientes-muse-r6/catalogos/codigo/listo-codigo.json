@@ -1,0 +1,21 @@
+{
+ "estado": "preparado-sin-integracion",
+ "alcance": "Extension R6 encadenada R4->R5->R6: sin reglas ni conceptos nuevos; como maximo la correspondencia unica de presas (payload exacto vinculo_propuesto de adenda-presas.json, SHA aprobado 186896992d38129df4b8d6347c174663cdf3ca87e082d2ce60730a35537574a6 verificado desde bytes, sin campos agregados). Procedencia en aceptadas.origenes[columna] -> adenda copiada + SHA de manifiesto. Sin instalador; sin generacion ni sincronizacion ejecutadas. Root fijara adiciones segun 2 auditores.",
+ "archivos_sha256": {
+  "scripts/integrar_ronda_5.py": "52c4d6cfad0a33532ce24c50ffae12360a358ebabd5850a35742a485e0ccff14",
+  "scripts/integrar_ronda_6.py": "a87bdf8a3a372a2fe714f83c9fe5bee9a3320c4454636265133efd36fba392b6",
+  "scripts/consolidar_semantica.py": "f8044afce9b4f8d4af12d197624228cf49bb7e86fdad94668457dbd615726191",
+  "tests/test_ronda_6.py": "2e08f17e75ae729d79a1de59c9718170ad9bd2d71862b133339a948a5faa90a6"
+ },
+ "adenda_presas_sha256": "186896992d38129df4b8d6347c174663cdf3ca87e082d2ce60730a35537574a6",
+ "pruebas": {
+  "test_ronda_6": "12/12 OK offline (9 previos + 3 Ronda5ConConfigR6Test con config R6 presente)",
+  "auditoria_r5_rechazada_con_configR6": "OK (duplicados y sin-aprobacion fallan antes de delegar)"
+ },
+ "manifiestos_previos_modificados": 0,
+ "central_modificado": false,
+ "fecha_utc": "2026-10-23",
+ "revisiones": {
+  "auditoria-documental": "defecto R5-delegacion confirmado y corregido en staging; dictamen-codigo-r6.json"
+ }
+}

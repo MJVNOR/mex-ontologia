@@ -1,0 +1,155 @@
+{
+  "agente": "significados-educacion-epidemiologia",
+  "destinatario": "agente web-obscura",
+  "fecha": "2026-10-24",
+  "nota": "NO manejar navegador Obscura desde otro agente; estas peticiones son para el agente web-obscura. Casos siempre como listas IRI completas de asignacion.json.",
+  "peticiones": [
+    {
+      "id": "WEB-EPI-01",
+      "casos": [
+        "https://example.org/mex-ontologi/definition/2334deaa-dd0c-444e-b038-4cc556ad715d%2F9",
+        "https://example.org/mex-ontologi/definition/2334deaa-dd0c-444e-b038-4cc556ad715d%2F11"
+      ],
+      "conteo": 2,
+      "alcance": "completa",
+      "consulta": "Manual SUIVE/SUAVE edicion 2022 (DGE/Sonora) que fije objeto de cve_cie10 + version CIE vinculada al recurso 1689b19c y regla de computo de columna acumulado pos 11",
+      "urls_sugeridas": [
+        "https://datos.sonora.gob.mx/dataset/dca16d84-dbf0-4501-b702-dc6372a480ea",
+        "https://www.gob.mx/salud/acciones-y-programas/sistema-unico-de-informacion-para-la-vigilancia-epidemiologica-suive"
+      ],
+      "brecha": "EPI-R6-01 + EPI-R6-03: sin instrumento edicion 2022 ni version CIE vinculada; manual preservado es 2021-08-10 (anterior al periodo 2022).",
+      "estado": "atendida_parcial_negativa",
+      "resultado_web_obscura": {
+        "ruta": "propuestas/cierre-brechas-post-r6/web-obscura/cobertura-peticiones.json",
+        "sha256": "84c3e958b6af6c5a5faf09a2b3b8fb717081c00dab03eb875c5f39292fef5551",
+        "nota": "Entrada de esta carpeta: atendida parcial via webfetch-nativa (F-SUIVE-01: manual SUIVE-32 + formato SUIVE-1 2021 + boletin; referente nacional sin vinculo del publicador). Negativo acotado, no resuelve."
+      }
+    },
+    {
+      "id": "WEB-EPI-02",
+      "casos": [
+        "https://example.org/mex-ontologi/definition/2334deaa-dd0c-444e-b038-4cc556ad715d%2F13",
+        "https://example.org/mex-ontologi/definition/2334deaa-dd0c-444e-b038-4cc556ad715d%2F23",
+        "https://example.org/mex-ontologi/definition/2334deaa-dd0c-444e-b038-4cc556ad715d%2F24",
+        "https://example.org/mex-ontologi/definition/2334deaa-dd0c-444e-b038-4cc556ad715d%2F25",
+        "https://example.org/mex-ontologi/definition/2334deaa-dd0c-444e-b038-4cc556ad715d%2F26",
+        "https://example.org/mex-ontologi/definition/2334deaa-dd0c-444e-b038-4cc556ad715d%2F27",
+        "https://example.org/mex-ontologi/definition/2334deaa-dd0c-444e-b038-4cc556ad715d%2F28",
+        "https://example.org/mex-ontologi/definition/2334deaa-dd0c-444e-b038-4cc556ad715d%2F29",
+        "https://example.org/mex-ontologi/definition/2334deaa-dd0c-444e-b038-4cc556ad715d%2F30",
+        "https://example.org/mex-ontologi/definition/2334deaa-dd0c-444e-b038-4cc556ad715d%2F31",
+        "https://example.org/mex-ontologi/definition/2334deaa-dd0c-444e-b038-4cc556ad715d%2F32",
+        "https://example.org/mex-ontologi/definition/2334deaa-dd0c-444e-b038-4cc556ad715d%2F33",
+        "https://example.org/mex-ontologi/definition/2334deaa-dd0c-444e-b038-4cc556ad715d%2F34",
+        "https://example.org/mex-ontologi/definition/2334deaa-dd0c-444e-b038-4cc556ad715d%2F35",
+        "https://example.org/mex-ontologi/definition/2334deaa-dd0c-444e-b038-4cc556ad715d%2F36",
+        "https://example.org/mex-ontologi/definition/2334deaa-dd0c-444e-b038-4cc556ad715d%2F37",
+        "https://example.org/mex-ontologi/definition/2334deaa-dd0c-444e-b038-4cc556ad715d%2F38",
+        "https://example.org/mex-ontologi/definition/2334deaa-dd0c-444e-b038-4cc556ad715d%2F39",
+        "https://example.org/mex-ontologi/definition/2334deaa-dd0c-444e-b038-4cc556ad715d%2F40",
+        "https://example.org/mex-ontologi/definition/2334deaa-dd0c-444e-b038-4cc556ad715d%2F41",
+        "https://example.org/mex-ontologi/definition/2334deaa-dd0c-444e-b038-4cc556ad715d%2F42",
+        "https://example.org/mex-ontologi/definition/2334deaa-dd0c-444e-b038-4cc556ad715d%2F43",
+        "https://example.org/mex-ontologi/definition/2334deaa-dd0c-444e-b038-4cc556ad715d%2F44"
+      ],
+      "conteo": 23,
+      "alcance": "completa",
+      "consulta": "Nota/diccionario corregido del publicador Sonora que fije intervalo 01-04 vs 'entre 1 y 5', solape edad 5, convencion sufijo f (serie 24-35 y se_ignoraf), sentido de se_ignoran y objeto contado de columnas institucionales (ssa/imss_ord/issste/otras/imss_sol/d_if/pemex/sedena/sedemar)",
+      "urls_sugeridas": [
+        "https://datos.sonora.gob.mx/dataset/dca16d84-dbf0-4501-b702-dc6372a480ea"
+      ],
+      "brecha": "EPI-R6-01 + EPI-R6-02: 22 filas 'Pendiente de especificar'; manual nacional (30 cols, otra lista institucional) no resuelve layout local de 59 cols.",
+      "estado": "atendida_parcial_negativa",
+      "resultado_web_obscura": {
+        "ruta": "propuestas/cierre-brechas-post-r6/web-obscura/cobertura-peticiones.json",
+        "sha256": "84c3e958b6af6c5a5faf09a2b3b8fb717081c00dab03eb875c5f39292fef5551",
+        "nota": "Entrada de esta carpeta: atendida parcial via webfetch-nativa (F-SUIVE-01: manual SUIVE-32 + formato SUIVE-1 2021 + boletin; referente nacional sin vinculo del publicador). Negativo acotado, no resuelve."
+      }
+    },
+    {
+      "id": "WEB-MAT-01",
+      "casos": [
+        "https://example.org/mex-ontologi/definition/8c0e76ff-3a86-4b1d-beee-b04bebe7df8d%2F8",
+        "https://example.org/mex-ontologi/definition/8c0e76ff-3a86-4b1d-beee-b04bebe7df8d%2F12",
+        "https://example.org/mex-ontologi/definition/8c0e76ff-3a86-4b1d-beee-b04bebe7df8d%2F54",
+        "https://example.org/mex-ontologi/definition/8c0e76ff-3a86-4b1d-beee-b04bebe7df8d%2F58"
+      ],
+      "conteo": 4,
+      "alcance": "muestra",
+      "consulta": "Documento UES/COESPO 2022 (guia, calendario 2022-2, diccionario o muestra de valores) que defina la clave '222 (Reing)'/'222 (NI)' y el ciclo actual/senalado de referencia del recurso Matriculas-2022-2",
+      "urls_sugeridas": [
+        "https://datos.sonora.gob.mx/ (conjunto matriculas UES, recurso 58f2d5a6)"
+      ],
+      "brecha": "Sin definicion de la clave 222/221/223 ni del ciclo de referencia; dominio empirico no fija sentido.",
+      "estado": "atendida_parcial_negativa",
+      "resultado_web_obscura": {
+        "ruta": "propuestas/cierre-brechas-post-r6/web-obscura/cobertura-peticiones.json",
+        "sha256": "84c3e958b6af6c5a5faf09a2b3b8fb717081c00dab03eb875c5f39292fef5551",
+        "nota": "Entrada de esta carpeta: atendida parcial via webfetch-nativa (F-SUIVE-01: manual SUIVE-32 + formato SUIVE-1 2021 + boletin; referente nacional sin vinculo del publicador). Negativo acotado, no resuelve."
+      }
+    },
+    {
+      "id": "WEB-MAT-02",
+      "casos": [
+        "https://example.org/mex-ontologi/definition/8c0e76ff-3a86-4b1d-beee-b04bebe7df8d%2F63",
+        "https://example.org/mex-ontologi/definition/8c0e76ff-3a86-4b1d-beee-b04bebe7df8d%2F64",
+        "https://example.org/mex-ontologi/definition/8c0e76ff-3a86-4b1d-beee-b04bebe7df8d%2F65",
+        "https://example.org/mex-ontologi/definition/8c0e76ff-3a86-4b1d-beee-b04bebe7df8d%2F66"
+      ],
+      "conteo": 4,
+      "alcance": "muestra",
+      "consulta": "Norma UES era-2022 que contenga 'no exigibilidad' o 'examen profesional' como alternativa de titulacion (Guia feb2023 solo trae 'Constancia de No Exigibilidad' como tramite, posterior al periodo 2022-2 y sin vinculo a fila+huella)",
+      "urls_sugeridas": [
+        "https://ues.mx/archivos/conocenos/normatividad",
+        "https://ues.sonora.edu.mx/proyectos/titulacion"
+      ],
+      "brecha": "Terminos sin norma vinculada a edicion-recurso-periodo 2022-2.",
+      "estado": "pendiente",
+      "resultado_web_obscura": null,
+      "nota_revision_local": "Guia UES feb2023 examinada localmente (PDF+TXT con SHA en esta carpeta): 'No Exigibilidad' solo como constancia de tramite, no resolutoria; ver entrega.json."
+    },
+    {
+      "id": "WEB-MAT-00",
+      "casos": [
+        "https://example.org/mex-ontologi/definition/8c0e76ff-3a86-4b1d-beee-b04bebe7df8d%2F11",
+        "https://example.org/mex-ontologi/definition/8c0e76ff-3a86-4b1d-beee-b04bebe7df8d%2F13",
+        "https://example.org/mex-ontologi/definition/8c0e76ff-3a86-4b1d-beee-b04bebe7df8d%2F14",
+        "https://example.org/mex-ontologi/definition/8c0e76ff-3a86-4b1d-beee-b04bebe7df8d%2F17",
+        "https://example.org/mex-ontologi/definition/8c0e76ff-3a86-4b1d-beee-b04bebe7df8d%2F20",
+        "https://example.org/mex-ontologi/definition/8c0e76ff-3a86-4b1d-beee-b04bebe7df8d%2F25",
+        "https://example.org/mex-ontologi/definition/8c0e76ff-3a86-4b1d-beee-b04bebe7df8d%2F26",
+        "https://example.org/mex-ontologi/definition/8c0e76ff-3a86-4b1d-beee-b04bebe7df8d%2F27",
+        "https://example.org/mex-ontologi/definition/8c0e76ff-3a86-4b1d-beee-b04bebe7df8d%2F28",
+        "https://example.org/mex-ontologi/definition/8c0e76ff-3a86-4b1d-beee-b04bebe7df8d%2F29",
+        "https://example.org/mex-ontologi/definition/8c0e76ff-3a86-4b1d-beee-b04bebe7df8d%2F35",
+        "https://example.org/mex-ontologi/definition/8c0e76ff-3a86-4b1d-beee-b04bebe7df8d%2F47",
+        "https://example.org/mex-ontologi/definition/8c0e76ff-3a86-4b1d-beee-b04bebe7df8d%2F48",
+        "https://example.org/mex-ontologi/definition/8c0e76ff-3a86-4b1d-beee-b04bebe7df8d%2F49",
+        "https://example.org/mex-ontologi/definition/8c0e76ff-3a86-4b1d-beee-b04bebe7df8d%2F52",
+        "https://example.org/mex-ontologi/definition/8c0e76ff-3a86-4b1d-beee-b04bebe7df8d%2F53",
+        "https://example.org/mex-ontologi/definition/8c0e76ff-3a86-4b1d-beee-b04bebe7df8d%2F61",
+        "https://example.org/mex-ontologi/definition/8c0e76ff-3a86-4b1d-beee-b04bebe7df8d%2F62",
+        "https://example.org/mex-ontologi/definition/8c0e76ff-3a86-4b1d-beee-b04bebe7df8d%2F67",
+        "https://example.org/mex-ontologi/definition/8c0e76ff-3a86-4b1d-beee-b04bebe7df8d%2F68",
+        "https://example.org/mex-ontologi/definition/8c0e76ff-3a86-4b1d-beee-b04bebe7df8d%2F69",
+        "https://example.org/mex-ontologi/definition/8c0e76ff-3a86-4b1d-beee-b04bebe7df8d%2F70"
+      ],
+      "conteo": 22,
+      "alcance": "revision_local",
+      "consulta": "Sin nueva busqueda: 22 IDs de matriculas cubiertos por revision local (datastore live 2026-10-24 sin cambios + distribuciones empiricas del recurso 58f2d5a6 + normativa UES 2019/2021/2022_01/2023/2026 ya examinada).",
+      "urls_sugeridas": [],
+      "brecha": "Investigacion agotada para estos IDs; forzar busqueda repetiria lineas cerradas.",
+      "estado": "cubierta_revision_local",
+      "resultado_web_obscura": null,
+      "referencia_local": "entrega.json (decisiones y fuentes con SHA re-verificado) en esta carpeta."
+    }
+  ],
+  "conteos": {
+    "peticiones": 5,
+    "ids_epidemiologia": 25,
+    "ids_matriculas": 30,
+    "ids_cubiertos_web": 33,
+    "ids_cubiertos_revision_local": 22,
+    "ids_total": 55
+  }
+}

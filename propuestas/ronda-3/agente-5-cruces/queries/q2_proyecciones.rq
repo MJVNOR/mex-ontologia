@@ -1,0 +1,10 @@
+PREFIX mex: <https://example.org/mex-ontologi/vocab/>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+# Q2: par Proyecciones (grandes grupos vs indicadores): familias y estado
+SELECT ?e ?estado ?fam
+WHERE {
+  ?e a mex:EvaluacionCruce ;
+     mex:conjuntoA ?a ; mex:conjuntoB ?b ;
+     mex:estadoOportunidad ?estado ; mex:familiaClave ?fam .
+  FILTER(CONTAINS(STR(?a), "943d0723") || CONTAINS(STR(?b), "943d0723"))
+}

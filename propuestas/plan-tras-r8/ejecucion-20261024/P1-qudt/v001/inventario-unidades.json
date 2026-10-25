@@ -1,0 +1,110 @@
+{
+ "nota_metodo": "Unidad EXPLICITA = columna 'Unidad de medida'/'Unidades de medida' no vacia en la inspeccion local del diccionario, o unidad en nombre/descripcion de la fila. Conteos y codigos no son unidades.",
+ "unidades_explicitas_verificadas": [
+  {
+   "variable": "Precipitacion_mm",
+   "unidad": "Milimetros",
+   "diccionario": "6713de4e-1e2b-447d-8000-f6ceaabd8473"
+  },
+  {
+   "variable": "Almacenamiento(hm3)",
+   "unidad": "Hectometros cubicos",
+   "diccionario": "ca5574f0-d59d-4fc1-a52f-5c533b2abf82"
+  },
+  {
+   "variable": "cap_name/cap_namo/vol_muerto",
+   "unidad": "Hectometros cubicos",
+   "diccionario": "bfb8788b-8ce3-475e-8bbd-dd1c5154c877"
+  },
+  {
+   "variable": "SUPSEM/SUPCOSE/SUPSINI + 11 trigo (ha)",
+   "unidad": "Hectareas",
+   "diccionario": "94215f51-9c89-414d-8c3d-92792e609a2a + a7591bc9 (trigo)"
+  },
+  {
+   "variable": "PRODTON/PESODESEMB/PVIVO",
+   "unidad": "Toneladas",
+   "diccionario": "94215f51 / 863b9cc8"
+  },
+  {
+   "variable": "RENDMNTO",
+   "unidad": "Toneladas/hectareas (compuesta, sin proponer)",
+   "diccionario": "94215f51-9c89-414d-8c3d-92792e609a2a"
+  },
+  {
+   "variable": "premin/premax/preprom",
+   "unidad": "Pesos/kilogramo",
+   "diccionario": "a4eb0b8b-d6c6-44b8-b00a-f5f45c1875a5"
+  },
+  {
+   "variable": "pesoprom",
+   "unidad": "Kilogramos",
+   "diccionario": "a4eb0b8b-d6c6-44b8-b00a-f5f45c1875a5"
+  },
+  {
+   "variable": "VALOR/VALPROD",
+   "unidad": "Pesos MXN / Miles de pesos MXN",
+   "diccionario": "863b9cc8 / 94215f51 / 53b157b9"
+  },
+  {
+   "variable": "Unidad de Medida (plantas)",
+   "unidad": "MW / GWh segun fila",
+   "diccionario": "a6cdb7ad-ec32-44aa-851d-684947df4243"
+  },
+  {
+   "variable": "Latitud/Longitud",
+   "unidad": "Grados (angular, sin proponer aun)",
+   "diccionario": "bfb8788b / a6cdb7ad / 2154135f / b37f6cd2"
+  },
+  {
+   "variable": "P11/P13 gobierno-digital",
+   "unidad": "GB (encuesta, ejemplo no numerico: no proponer valor)",
+   "diccionario": "bdbf043f-5d12-4362-bce0-bd4c8ab1e2a1"
+  }
+ ],
+ "excluidas_con_motivo": [
+  {
+   "variable": "Altitud (presas, bfb8788b)",
+   "motivo": "Unidad literal 'Grados' fisicamente inverosimil para altitud; se conserva literal sin reinterpretar ni proponer. Posible error de captura: no integrar."
+  },
+  {
+   "variable": "temperatura (Rickettsia)",
+   "motivo": "Sin unidad declarada en la fila (solo 'Temperatura del paciente'): no proponer."
+  },
+  {
+   "variable": "TALLA/PESO (nacimientos), PESO (difunto)",
+   "motivo": "Sin unidad declarada en la fila: no proponer."
+  },
+  {
+   "variable": "CLAVEEDADD 'Unidad de edad'",
+   "motivo": "Es descriptor de codificacion (clave), no unidad fisica: no proponer como QUDT."
+  },
+  {
+   "variable": "CIERREYAVAN/CICLO/CDDR/CMUN/CVMES (agricultura)",
+   "motivo": "Columna 'Unidad de medida' usada para listas de codigos, no unidades: no proponer."
+  },
+  {
+   "variable": "RENDMNTO Toneladas/hectareas",
+   "motivo": "Unidad compuesta: solo proponer cuando W verifique modelado (fuera de v001)."
+  }
+ ],
+ "descriptores_nacionales_no_codificacion_adoptada": {
+  "nota": "En la base R8 no existe ninguna agrupacion verificable de exactamente 31 descriptores nacionales; no se inventa el conteo. Se separan los descriptores de metodologia nacional encontrados (73 variables / 72 conceptos porc-*/indice-*/grado-marginacion en 8 conjuntos CONAPO/educacion, mas 13 menciones INEGI/FAO/INAPESCA/CONAGUA/SUN): son descriptores, no unidades; no se adopta codificacion ni se propone QUDT para ellos.",
+  "conjuntos": [
+   "Indice de marginacion por localidad",
+   "Indice de marginacion urbana en AGEB",
+   "Indice de marginacion urbana por colonia",
+   "Indice de marginacion por municipio",
+   "Indices de marginacion por Entidad Federativa",
+   "Proyecciones de poblacion - Indicadores demograficos",
+   "Indices de Reprobacion",
+   "Indices de Reprobacion Modalidad Remota"
+  ],
+  "variables_ejemplo": [
+   "GM_2020",
+   "ANALF/SBASC/OVSDE/OVSEE/OVSAE/OVPT/OVSREF/OVHAC",
+   "posicion-nacional-marginacion-municipio/entidad",
+   "clave-ciudad-sun-2018"
+  ]
+ }
+}

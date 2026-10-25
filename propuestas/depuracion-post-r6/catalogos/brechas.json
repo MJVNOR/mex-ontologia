@@ -1,0 +1,1187 @@
+{
+ "alcance": "17 casos heredados de R5 (16 vigencias V01-V16 + 1 referencia des_mpo_res), estado R6. Matriz local de documentos faltantes; borrador local, sin envio, sin contactos externos. No propone cambios al nucleo: 0 vinculos, 0 reglas, 0 conceptos, 0 joins.",
+ "conteos": {
+  "total": 17,
+  "vigencias": 16,
+  "anomalia_referencia_heredada": 1,
+  "pendiente": 17
+ },
+ "dependencias_publicador": {
+  "DEP-CAT-R6-01": "UTH (V01-V04: adopcion CMPE 2016 por periodos)",
+  "DEP-CAT-R6-02": "CEA/responsable Recursos Hidricos (V05: edicion Catalogo_estatal + constancia 1960-1969)",
+  "DEP-CAT-R6-03": "Secretaria de Salud Sonora (V06-V08: version catalogo Rickettsia; des_mpo_res: fe de erratas)",
+  "DEP-CAT-R6-04": "COESPO (V09-V12, V15-V16: version catalogo.xlsx + vinculo 1990-2040 + desfase CONAPO)",
+  "DEP-CAT-R6-05": "SESNSP/Seguridad Sonora (V13-V14: edicion y corte de catalogos delictivos)"
+ },
+ "encoding": "UTF-8",
+ "fecha_utc": "2026-10-24",
+ "fuentes_consultadas": [
+  {
+   "path": "reports/solicitudes-publicador-ronda-5.json",
+   "sha256": "2a160ee9d5981348c42e5cc355b68b36a12a01711a980fd765e4133864fb8ace"
+  },
+  {
+   "path": "reports/solicitudes-publicador-ronda-5.md",
+   "sha256": "81333e5192d33051fe7ca2352bb9a6bdb632a1438dcb2e7043c54e58e898565e"
+  },
+  {
+   "path": "reports/pendientes-ronda-5.json",
+   "sha256": "46f3b6f8826379be5124fb85cf6128b705fbe90deebf2c99bff64098608c8f11"
+  },
+  {
+   "path": "reports/ronda-6.json",
+   "sha256": "52b6abc5dd2632e9c33d27f13016f01e85e63fb4284f43a1fcc481ee770d1a47"
+  },
+  {
+   "path": "reports/ronda-6.md",
+   "sha256": "74981fe76bb09b00478b5f10ab20bf9406e7bfb5c64b851149ec35b90f22167a"
+  },
+  {
+   "path": "propuestas/pendientes-muse-r4/catalogos/entrega.json",
+   "sha256": "e00f8ccfeb28ed00399fb12caff6f21b3afb6dbe38883439aca6807d59d261b6"
+  },
+  {
+   "path": "propuestas/pendientes-muse-r4/catalogos/pendientes.json",
+   "sha256": "5f02fd330ccc9973840133bd920fc3b646282e7faa35bee87130684413b51ebf"
+  },
+  {
+   "path": "propuestas/pendientes-muse-r6/catalogos/entrega.json",
+   "sha256": "649bbe7e5feca82b7e8d5c5144de78b1d8ceccb1c217ca976347b1c9a05cb74b"
+  },
+  {
+   "path": "propuestas/pendientes-muse-r6/catalogos/resultado.md",
+   "sha256": "dd0e0d3ea7d2984d4e08932eb25eebb3e06b5973e81eef15ee81555e81e179f8"
+  },
+  {
+   "path": "propuestas/pendientes-muse-r6/catalogos/solicitudes-web.json",
+   "sha256": "318c5390f5a3f33f6ab7a10f739de7f06876e808cd59091b385cef3f3f9f5662"
+  },
+  {
+   "path": "propuestas/pendientes-muse-r6/catalogos/listo.json",
+   "sha256": "3e3082c070c401d8c4149cb4a917e093d2cb83235e10199cd1d653c7853287c6"
+  }
+ ],
+ "nota_periodos_global": "Los periodos listados por caso son periodos declarados por titulos de recursos CKAN y notas de conjunto (NO cobertura observada, NO vigencia acreditada). Se transcriben para delimitar el documento faltante; no se afirman como vigencia.",
+ "nota_presas": "Presas RESUELTA solo como vinculo documental unico cat_estatal/Clave -> definicion /4 de Catalogo_estatal (dictamen-presas.json, ronda-6). Limites del vinculo: sin joins por Clave, sin identidad de dominios, sin equivalencia catalogo/historico, sin vigencia/edicion acreditadas. V05 (vigencia del Catalogo_estatal 1941-2024) sigue pendiente y no queda acreditada por el vinculo de Presas.",
+ "organizacion": [
+  "A. UTH/CMPE (V01-V04): mismo xlsx sha 53bd5e97, F3 acreditada, falta F4",
+  "B. Recursos Hidricos (V05): xlsx sha 612b2b11, faltan F3+F4; hueco 1960-1969",
+  "C. Salud/Rickettsia (V06-V08 + des_mpo_res): mismo xlsx sha 3b8546ac; V06-V08 faltan F3+F4; des_mpo_res es referencia sin recurso",
+  "D. Proyecciones/CONAPO (V09-V12, V15-V16): mismo xlsx sha ea54aad3 en 3 conjuntos; faltan F3+F4; desfase de corte vs CONAPO",
+  "E. Delictivos/SESNSP (V13-V14): xlsx sha 84bb6fcd y 96776ca8; faltan F3+F4"
+ ],
+ "referencias_catalogo_17_nota": "16 referencias con recurso identificado pero sin vigencia acreditada (V01-V16) + 1 sin resolver (des_mpo_res). Ninguna autoriza suponer que una clave local usa ese sistema (reports/solicitudes-publicador-ronda-5.json).",
+ "tarea": "tarea3: consolidar 16 brechas de vigencia de catalogos V01-V16 y la referencia des_mpo_res",
+ "brechas": [
+  {
+   "id": "V01",
+   "tipo": "vigencia",
+   "grupo": "A",
+   "dependencia_publicador": "DEP-CAT-R6-01",
+   "conjunto": {
+    "id": "403912fd-5853-4e18-8256-f77206f855bd",
+    "titulo": "Promedio Académico"
+   },
+   "catalogo": {
+    "recurso_catalogo": "6d561451-ff08-45d6-b1af-285ff5f417b1",
+    "recurso_url": "https://datos.sonora.gob.mx/dataset/403912fd-5853-4e18-8256-f77206f855bd/resource/6d561451-ff08-45d6-b1af-285ff5f417b1/download/catalogo.xlsx",
+    "sha256": "53bd5e971a033998ed8a72317b6ad1e69314d82463220d8cfd156dfad9034259",
+    "hoja_campo": "Hoja1 / Campo de Formación Académica"
+   },
+   "referencia_iri": "https://example.org/mex-ontologi/declared-code-reference/1eb8b1a583f52b32f256fb5643ffa7402dfb5ecf27d2df1d7114e71403a262a9",
+   "periodos_declarados_por_titulo": [
+    "2022 cuatrimestres 1-3",
+    "2023 cuatrimestres 1-3",
+    "2024 cuatrimestres 1-3",
+    "2025 cuatrimestres 1-3",
+    "2026 cuatrimestre 1"
+   ],
+   "nota_periodos": "Periodos declarados por titulos de recursos CKAN y nota del conjunto; NO cobertura observada.",
+   "estado_actual": "pendiente (F3 acreditada, F4 ausente)",
+   "motivo": "F3 acreditada (CMPE 2016, evidencia primaria). F4 ausente: el publicador (UTH) no declara adopción de la CMPE y la búsqueda web de adopción es negativa; SNIEG solo acredita marco nacional.",
+   "evidencia_revisada": [
+    "W01 (portal UTH, sin CMPE) + W08 (búsqueda UTH negativa) + W09 (SNIEG nacional, sin vínculo UTH)",
+    "Local: package_403912fd-5853-4e18-8256-f77206f855bd.json (extras nulos) + xlsx 53bd5e97 (Hoja1, sin versión) + cmpe2016_inegi.pdf (F3)",
+    "R6-C1 (API CKAN package_show 2026-10-23) + R6-C2 (core-properties xlsx)",
+    "R6 novedad: R6-C1: API CKAN package 403912fd: version=null, extras vacios; Catalogo size 10433 = sha local 53bd5e97; fechas Catalogo/Diccionario 1989-06-04 (placeholder). R6-C2: xlsx creator Ramon Eduardo Sandoval = publisher API. Sin CMPE en ningun campo. F4 sigue ausente."
+   ],
+   "campos_minimos": [
+    "emisor: publicador (DEP-CAT-R6-01)",
+    "edicion citada: CMPE 2016 vinculada a este publicador",
+    "recurso catalogo: 6d561451-ff08-45d6-b1af-285ff5f417b1",
+    "periodos de aplicacion: 2022 cuatrimestres 1-3; 2023 cuatrimestres 1-3; 2024 cuatrimestres 1-3; 2025 cuatrimestres 1-3; 2026 cuatrimestre 1",
+    "fecha o firma del documento"
+   ],
+   "criterio_aceptacion": "Se cierra solo si el documento del publicador cita la adopcion de la CMPE 2016 por este publicador y recurso 6d561451-ff08-45d6-b1af-285ff5f417b1 y periodos (2022 cuatrimestres 1-3; 2023 cuatrimestres 1-3; 2024 cuatrimestres 1-3; 2025 cuatrimestres 1-3; 2026 cuatrimestre 1); verificable (URL o copia local con SHA). Las fechas de portal/API (version=null, placeholder 1989-06-04) y core-properties no acreditan F4 (F3 ya acreditada por CMPE 2016, pdf sha 66ba2fd24aa01d82684df52677b792e17fe55d38273d6325ff4f6f66a3ef714b).",
+   "limites": [
+    "No afirmar vigencia histórica ni extender a otros conjuntos/periodos."
+   ],
+   "documento_requerido_exacto": "Nota de adopcion UTH de la CMPE 2016 con rango de aplicacion por cuatrimestres/anuales 2022-2026 (oficio, lineamiento o nota de version del conjunto). Pendiente exacto: Acreditar F4: documento del publicador (UTH) que vincule la CMPE 2016 con los periodos 2022 cuatrimestres 1-3, 2023 cuatrimestres 1-3, 2024 cuatrimestres 1-3, 2025 cuatrimestres 1-3, 2026 cuatrimestre 1.",
+   "soporte": [
+    {
+     "ruta": "reports/pendientes-ronda-5.json",
+     "sha256": "46f3b6f8826379be5124fb85cf6128b705fbe90deebf2c99bff64098608c8f11",
+     "localizador": "decisiones_significados id=V01"
+    },
+    {
+     "ruta": "propuestas/pendientes-muse-r6/catalogos/entrega.json",
+     "sha256": "649bbe7e5feca82b7e8d5c5144de78b1d8ceccb1c217ca976347b1c9a05cb74b",
+     "localizador": "decisiones_significados id=V01 + novedad_r6 (C1 API package_show 2026-10-23 + C2 core-properties xlsx)"
+    },
+    {
+     "ruta": "local: xlsx sha 53bd5e97",
+     "sha256": "53bd5e971a033998ed8a72317b6ad1e69314d82463220d8cfd156dfad9034259",
+     "localizador": "interior xlsx sin celdas de version/periodo (R4 vigente, re-verificado R6: sizes API = locales)"
+    },
+    {
+     "ruta": "local: data/integracion-ronda-2/entregas/agente-4-vigencia/evidencia/externa/cmpe2016_inegi.pdf",
+     "sha256": "66ba2fd24aa01d82684df52677b792e17fe55d38273d6325ff4f6f66a3ef714b",
+     "localizador": "p.2 catalogacion INEGI c2016; p.8 segunda edicion (F3; no acredita F4)"
+    }
+   ]
+  },
+  {
+   "id": "V02",
+   "tipo": "vigencia",
+   "grupo": "A",
+   "dependencia_publicador": "DEP-CAT-R6-01",
+   "conjunto": {
+    "id": "e5aad52d-5760-481c-ba65-db0ba4a5315e",
+    "titulo": "Matriculas"
+   },
+   "catalogo": {
+    "recurso_catalogo": "aaf0c6c1-76a7-40ac-b542-1319d1bb2a5a",
+    "recurso_url": "https://datos.sonora.gob.mx/dataset/e5aad52d-5760-481c-ba65-db0ba4a5315e/resource/aaf0c6c1-76a7-40ac-b542-1319d1bb2a5a/download/catalogo.xlsx",
+    "sha256": "53bd5e971a033998ed8a72317b6ad1e69314d82463220d8cfd156dfad9034259",
+    "hoja_campo": "Hoja1 / Campo de Formación Académica"
+   },
+   "referencia_iri": "https://example.org/mex-ontologi/declared-code-reference/4c28a0a21e5753bd01eb1cb39615ff939b13c949af50741af5c405bf575619f0",
+   "periodos_declarados_por_titulo": [
+    "2022 cuatrimestres 1-3",
+    "2023 cuatrimestres 1-3",
+    "2024 cuatrimestres 1-3",
+    "2025 cuatrimestres 1-3",
+    "2026 cuatrimestres 1-2"
+   ],
+   "nota_periodos": "Periodos declarados por titulos de recursos CKAN y nota del conjunto; NO cobertura observada.",
+   "estado_actual": "pendiente (F3 acreditada, F4 ausente)",
+   "motivo": "F3 acreditada. F4 ausente: nota del conjunto describe el campo pero no declara edición ni adopción de la CMPE para 2022-2026.",
+   "evidencia_revisada": [
+    "W02 (nota Matrículas confirma campo de formación académica, fuente interna, sin CMPE) + W08 + W09",
+    "Local: package_e5aad52d-5760-481c-ba65-db0ba4a5315e.json (extras nulos) + xlsx 53bd5e97 + cmpe2016_inegi.pdf (F3)",
+    "R6-C1 (API CKAN package_show 2026-10-23) + R6-C2 (core-properties xlsx)",
+    "R6 novedad: R6-C1: API CKAN package e5aad52d: version=null; Catalogo size 10433 (mismo archivo que V01/V03/V04); fechas 1989-06-04. R6-C2: mismo creator. F4 sigue ausente."
+   ],
+   "campos_minimos": [
+    "emisor: publicador (DEP-CAT-R6-01)",
+    "edicion citada: CMPE 2016 vinculada a este publicador",
+    "recurso catalogo: aaf0c6c1-76a7-40ac-b542-1319d1bb2a5a",
+    "periodos de aplicacion: 2022 cuatrimestres 1-3; 2023 cuatrimestres 1-3; 2024 cuatrimestres 1-3; 2025 cuatrimestres 1-3; 2026 cuatrimestres 1-2",
+    "fecha o firma del documento"
+   ],
+   "criterio_aceptacion": "Se cierra solo si el documento del publicador cita la adopcion de la CMPE 2016 por este publicador y recurso aaf0c6c1-76a7-40ac-b542-1319d1bb2a5a y periodos (2022 cuatrimestres 1-3; 2023 cuatrimestres 1-3; 2024 cuatrimestres 1-3; 2025 cuatrimestres 1-3; 2026 cuatrimestres 1-2); verificable (URL o copia local con SHA). Las fechas de portal/API (version=null, placeholder 1989-06-04) y core-properties no acreditan F4 (F3 ya acreditada por CMPE 2016, pdf sha 66ba2fd24aa01d82684df52677b792e17fe55d38273d6325ff4f6f66a3ef714b).",
+   "limites": [
+    "No afirmar vigencia histórica ni extender a otros conjuntos/periodos."
+   ],
+   "documento_requerido_exacto": "Nota de adopcion UTH de la CMPE 2016 con rango de aplicacion por cuatrimestres/anuales 2022-2026 (oficio, lineamiento o nota de version del conjunto). Pendiente exacto: Acreditar F4: documento del publicador (UTH) que vincule la CMPE 2016 con los periodos 2022 cuatrimestres 1-3, 2023 cuatrimestres 1-3, 2024 cuatrimestres 1-3, 2025 cuatrimestres 1-3, 2026 cuatrimestres 1-2.",
+   "soporte": [
+    {
+     "ruta": "reports/pendientes-ronda-5.json",
+     "sha256": "46f3b6f8826379be5124fb85cf6128b705fbe90deebf2c99bff64098608c8f11",
+     "localizador": "decisiones_significados id=V02"
+    },
+    {
+     "ruta": "propuestas/pendientes-muse-r6/catalogos/entrega.json",
+     "sha256": "649bbe7e5feca82b7e8d5c5144de78b1d8ceccb1c217ca976347b1c9a05cb74b",
+     "localizador": "decisiones_significados id=V02 + novedad_r6 (C1 API package_show 2026-10-23 + C2 core-properties xlsx)"
+    },
+    {
+     "ruta": "local: xlsx sha 53bd5e97",
+     "sha256": "53bd5e971a033998ed8a72317b6ad1e69314d82463220d8cfd156dfad9034259",
+     "localizador": "interior xlsx sin celdas de version/periodo (R4 vigente, re-verificado R6: sizes API = locales)"
+    },
+    {
+     "ruta": "local: data/integracion-ronda-2/entregas/agente-4-vigencia/evidencia/externa/cmpe2016_inegi.pdf",
+     "sha256": "66ba2fd24aa01d82684df52677b792e17fe55d38273d6325ff4f6f66a3ef714b",
+     "localizador": "p.2 catalogacion INEGI c2016; p.8 segunda edicion (F3; no acredita F4)"
+    }
+   ]
+  },
+  {
+   "id": "V03",
+   "tipo": "vigencia",
+   "grupo": "A",
+   "dependencia_publicador": "DEP-CAT-R6-01",
+   "conjunto": {
+    "id": "e7a3d62f-4ace-479c-aa52-1c9e384dc429",
+    "titulo": "Estudiantes Titulados"
+   },
+   "catalogo": {
+    "recurso_catalogo": "0e69d911-6ed3-4268-841b-0c4989e7cb45",
+    "recurso_url": "https://datos.sonora.gob.mx/dataset/e7a3d62f-4ace-479c-aa52-1c9e384dc429/resource/0e69d911-6ed3-4268-841b-0c4989e7cb45/download/catalogo.xlsx",
+    "sha256": "53bd5e971a033998ed8a72317b6ad1e69314d82463220d8cfd156dfad9034259",
+    "hoja_campo": "Hoja1 / Campo de Formación Académica"
+   },
+   "referencia_iri": "https://example.org/mex-ontologi/declared-code-reference/4c67f244bf4078ad48133d122b3d7df031a00b7a266145d111ff78622ebecfc4",
+   "periodos_declarados_por_titulo": [
+    "2022 anual",
+    "2023 anual",
+    "2024 anual",
+    "2025 anual"
+   ],
+   "nota_periodos": "Periodos declarados por titulos de recursos CKAN y nota del conjunto; NO cobertura observada.",
+   "estado_actual": "pendiente (F3 acreditada, F4 ausente)",
+   "motivo": "F3 acreditada. F4 ausente: sin declaración del publicador que vincule la CMPE 2016 con los periodos anuales 2022-2025.",
+   "evidencia_revisada": [
+    "W01 (patrón UTH: fuente interna, sin CMPE) + W08 + W09",
+    "Local: package_e7a3d62f-4ace-479c-aa52-1c9e384dc429.json (extras nulos) + xlsx 53bd5e97 + cmpe2016_inegi.pdf (F3)",
+    "R6-C1 (API CKAN package_show 2026-10-23) + R6-C2 (core-properties xlsx)",
+    "R6 novedad: R6-C1: API CKAN package e7a3d62f: version=null; Catalogo size 10433 (archivo compartido UTH); fechas 1989-06-04. F4 sigue ausente."
+   ],
+   "campos_minimos": [
+    "emisor: publicador (DEP-CAT-R6-01)",
+    "edicion citada: CMPE 2016 vinculada a este publicador",
+    "recurso catalogo: 0e69d911-6ed3-4268-841b-0c4989e7cb45",
+    "periodos de aplicacion: 2022 anual; 2023 anual; 2024 anual; 2025 anual",
+    "fecha o firma del documento"
+   ],
+   "criterio_aceptacion": "Se cierra solo si el documento del publicador cita la adopcion de la CMPE 2016 por este publicador y recurso 0e69d911-6ed3-4268-841b-0c4989e7cb45 y periodos (2022 anual; 2023 anual; 2024 anual; 2025 anual); verificable (URL o copia local con SHA). Las fechas de portal/API (version=null, placeholder 1989-06-04) y core-properties no acreditan F4 (F3 ya acreditada por CMPE 2016, pdf sha 66ba2fd24aa01d82684df52677b792e17fe55d38273d6325ff4f6f66a3ef714b).",
+   "limites": [
+    "No afirmar vigencia histórica ni extender a otros conjuntos/periodos."
+   ],
+   "documento_requerido_exacto": "Nota de adopcion UTH de la CMPE 2016 con rango de aplicacion por cuatrimestres/anuales 2022-2026 (oficio, lineamiento o nota de version del conjunto). Pendiente exacto: Acreditar F4: documento del publicador (UTH) que vincule la CMPE 2016 con los periodos 2022 anual, 2023 anual, 2024 anual, 2025 anual.",
+   "soporte": [
+    {
+     "ruta": "reports/pendientes-ronda-5.json",
+     "sha256": "46f3b6f8826379be5124fb85cf6128b705fbe90deebf2c99bff64098608c8f11",
+     "localizador": "decisiones_significados id=V03"
+    },
+    {
+     "ruta": "propuestas/pendientes-muse-r6/catalogos/entrega.json",
+     "sha256": "649bbe7e5feca82b7e8d5c5144de78b1d8ceccb1c217ca976347b1c9a05cb74b",
+     "localizador": "decisiones_significados id=V03 + novedad_r6 (C1 API package_show 2026-10-23 + C2 core-properties xlsx)"
+    },
+    {
+     "ruta": "local: xlsx sha 53bd5e97",
+     "sha256": "53bd5e971a033998ed8a72317b6ad1e69314d82463220d8cfd156dfad9034259",
+     "localizador": "interior xlsx sin celdas de version/periodo (R4 vigente, re-verificado R6: sizes API = locales)"
+    },
+    {
+     "ruta": "local: data/integracion-ronda-2/entregas/agente-4-vigencia/evidencia/externa/cmpe2016_inegi.pdf",
+     "sha256": "66ba2fd24aa01d82684df52677b792e17fe55d38273d6325ff4f6f66a3ef714b",
+     "localizador": "p.2 catalogacion INEGI c2016; p.8 segunda edicion (F3; no acredita F4)"
+    }
+   ]
+  },
+  {
+   "id": "V04",
+   "tipo": "vigencia",
+   "grupo": "A",
+   "dependencia_publicador": "DEP-CAT-R6-01",
+   "conjunto": {
+    "id": "85ee0e2b-ba05-4d9a-8177-cdbf0cb42f8f",
+    "titulo": "Estudiantes egresados"
+   },
+   "catalogo": {
+    "recurso_catalogo": "af7a9aba-5a0e-4cf0-9b7d-5a3550e7907e",
+    "recurso_url": "https://datos.sonora.gob.mx/dataset/85ee0e2b-ba05-4d9a-8177-cdbf0cb42f8f/resource/af7a9aba-5a0e-4cf0-9b7d-5a3550e7907e/download/catalogo.xlsx",
+    "sha256": "53bd5e971a033998ed8a72317b6ad1e69314d82463220d8cfd156dfad9034259",
+    "hoja_campo": "Hoja1 / Campo de Formación Académica"
+   },
+   "referencia_iri": "https://example.org/mex-ontologi/declared-code-reference/7c2e51a0134a25e1c5636921b27ba896e4eb8978108c1b79d238b10548a021bb",
+   "periodos_declarados_por_titulo": [
+    "2022 anual",
+    "2023 anual",
+    "2024 anual",
+    "2025 anual"
+   ],
+   "nota_periodos": "Periodos declarados por titulos de recursos CKAN y nota del conjunto; NO cobertura observada.",
+   "estado_actual": "pendiente (F3 acreditada, F4 ausente)",
+   "motivo": "F3 acreditada. F4 ausente: sin declaración del publicador que vincule la CMPE 2016 con los periodos anuales 2022-2025.",
+   "evidencia_revisada": [
+    "W01 (patrón UTH: fuente interna, sin CMPE) + W08 + W09",
+    "Local: package_85ee0e2b-ba05-4d9a-8177-cdbf0cb42f8f.json (extras nulos) + xlsx 53bd5e97 + cmpe2016_inegi.pdf (F3)",
+    "R6-C1 (API CKAN package_show 2026-10-23) + R6-C2 (core-properties xlsx)",
+    "R6 novedad: R6-C1: API CKAN package 85ee0e2b: version=null; Catalogo size 10433 pero con start 2016-01-01/end 2025-01-01 (NEUTRO: cobertura manual, no declaracion de adopcion CMPE 2016; no aprobar por coincidencia numerica). F4 sigue ausente."
+   ],
+   "campos_minimos": [
+    "emisor: publicador (DEP-CAT-R6-01)",
+    "edicion citada: CMPE 2016 vinculada a este publicador",
+    "recurso catalogo: af7a9aba-5a0e-4cf0-9b7d-5a3550e7907e",
+    "periodos de aplicacion: 2022 anual; 2023 anual; 2024 anual; 2025 anual",
+    "fecha o firma del documento"
+   ],
+   "criterio_aceptacion": "Se cierra solo si el documento del publicador cita la adopcion de la CMPE 2016 por este publicador y recurso af7a9aba-5a0e-4cf0-9b7d-5a3550e7907e y periodos (2022 anual; 2023 anual; 2024 anual; 2025 anual); verificable (URL o copia local con SHA). Las fechas de portal/API (version=null, placeholder 1989-06-04) y core-properties no acreditan F4 (F3 ya acreditada por CMPE 2016, pdf sha 66ba2fd24aa01d82684df52677b792e17fe55d38273d6325ff4f6f66a3ef714b).",
+   "limites": [
+    "No afirmar vigencia histórica ni extender a otros conjuntos/periodos.",
+    "Cobertura 2016-01-01/2025-01-01 en API es cobertura manual, no declaracion de adopcion CMPE"
+   ],
+   "documento_requerido_exacto": "Nota de adopcion UTH de la CMPE 2016 con rango de aplicacion por cuatrimestres/anuales 2022-2026 (oficio, lineamiento o nota de version del conjunto). Pendiente exacto: Acreditar F4: documento del publicador (UTH) que vincule la CMPE 2016 con los periodos 2022 anual, 2023 anual, 2024 anual, 2025 anual.",
+   "soporte": [
+    {
+     "ruta": "reports/pendientes-ronda-5.json",
+     "sha256": "46f3b6f8826379be5124fb85cf6128b705fbe90deebf2c99bff64098608c8f11",
+     "localizador": "decisiones_significados id=V04"
+    },
+    {
+     "ruta": "propuestas/pendientes-muse-r6/catalogos/entrega.json",
+     "sha256": "649bbe7e5feca82b7e8d5c5144de78b1d8ceccb1c217ca976347b1c9a05cb74b",
+     "localizador": "decisiones_significados id=V04 + novedad_r6 (C1 API package_show 2026-10-23 + C2 core-properties xlsx)"
+    },
+    {
+     "ruta": "local: xlsx sha 53bd5e97",
+     "sha256": "53bd5e971a033998ed8a72317b6ad1e69314d82463220d8cfd156dfad9034259",
+     "localizador": "interior xlsx sin celdas de version/periodo (R4 vigente, re-verificado R6: sizes API = locales)"
+    },
+    {
+     "ruta": "local: data/integracion-ronda-2/entregas/agente-4-vigencia/evidencia/externa/cmpe2016_inegi.pdf",
+     "sha256": "66ba2fd24aa01d82684df52677b792e17fe55d38273d6325ff4f6f66a3ef714b",
+     "localizador": "p.2 catalogacion INEGI c2016; p.8 segunda edicion (F3; no acredita F4)"
+    }
+   ]
+  },
+  {
+   "id": "V05",
+   "tipo": "vigencia",
+   "grupo": "B",
+   "dependencia_publicador": "DEP-CAT-R6-02",
+   "conjunto": {
+    "id": "ee8f639f-5e89-46ae-93b9-934b05fc6233",
+    "titulo": "Recursos Hídricos"
+   },
+   "catalogo": {
+    "recurso_catalogo": "f5060479-ee16-49b5-99d4-09aabef8042e",
+    "recurso_url": "https://datos.sonora.gob.mx/dataset/ee8f639f-5e89-46ae-93b9-934b05fc6233/resource/f5060479-ee16-49b5-99d4-09aabef8042e/download/catalogo.xlsx",
+    "sha256": "612b2b11192b97ae7328f80c8a5d1c545e117da46dd436a9b077aaf824b1525f",
+    "hoja_campo": "Catálogo_estatal / Clave"
+   },
+   "referencia_iri": "https://example.org/mex-ontologi/declared-code-reference/3b45c474da5b2dc83e061ed7c26d470eaff0cd4935c626ac4cfa11e64a0e16e8",
+   "periodos_declarados_por_titulo": [
+    "1941-1949",
+    "1950-1959",
+    "1960-1969 (sin URL)",
+    "1970-1979",
+    "1980-1989",
+    "1990-1999",
+    "2000-2009",
+    "2010-2019",
+    "2020-2024"
+   ],
+   "nota_periodos": "Periodos declarados por titulos de recursos CKAN y nota del conjunto; NO cobertura observada.",
+   "estado_actual": "pendiente (F3+F4 ausentes)",
+   "motivo": "F3+F4 ausentes: el portal confirma el hueco 1960-1969 (recurso listado sin descarga) y no declara edición/versión/fecha del Catálogo_estatal ni su rango de aplicación.",
+   "evidencia_revisada": [
+    "W03 (nota 1941-actualidad, fuente monitoreo/sensores, 1960-1969 sin descarga, sin edición declarada)",
+    "Local: package_ee8f639f-5e89-46ae-93b9-934b05fc6233.json (extras nulos) + xlsx 612b2b11 (Catálogo_estatal/Municipios/Regiones, sin versión)",
+    "R6-C1 (API CKAN package_show 2026-10-23) + R6-C2 (core-properties xlsx)",
+    "R6 novedad: R6-C1: API package ee8f639f confirma recurso 1960-1969 id 4d1bb645-19da-407f-8182-b0be2d7b7485, state active, size 541916, url VACIA (constancia API del hueco de descarga, mas precisa que W03). Catalogo size 15123 = local; fechas 1989-06-04. R6-C2: creator Admin 2023-06-29, sin version. F3+F4 ausentes."
+   ],
+   "campos_minimos": [
+    "emisor: publicador (DEP-CAT-R6-02)",
+    "edicion/version/fecha declarada del catalogo (Catálogo_estatal / Clave, sha 612b2b11)",
+    "recurso catalogo: f5060479-ee16-49b5-99d4-09aabef8042e",
+    "periodos de aplicacion: 1941-1949; 1950-1959; 1960-1969 (sin URL); 1970-1979; 1980-1989; 1990-1999; 2000-2009; 2010-2019; 2020-2024",
+    "fecha o firma del documento"
+   ],
+   "criterio_aceptacion": "Se cierra solo si el documento del publicador cita edicion/version/fecha del catalogo (Catálogo_estatal / Clave, sha 612b2b11) y recurso f5060479-ee16-49b5-99d4-09aabef8042e y periodos (1941-1949; 1950-1959; 1960-1969 (sin URL); 1970-1979; 1980-1989; 1990-1999; 2000-2009; 2010-2019; 2020-2024); verificable (URL o copia local con SHA). Las fechas de portal/API (version=null, placeholder 1989-06-04) y core-properties no acreditan F3+F4.",
+   "limites": [
+    "No afirmar vigencia histórica ni extender a otros conjuntos/periodos.",
+    "No habilitar joins por compartir Clave",
+    "Constancia del recurso 1960-1969 (id 4d1bb645, state active, size 541916, url vacia en API)"
+   ],
+   "documento_requerido_exacto": "Declaracion de edicion/version/fecha del Catalogo_estatal (sha 612b2b11) con rango 1941-2024 + URL de descarga del recurso 1960-1969 (id 4d1bb645, hoy con url vacia en API). Pendiente exacto: Acreditar F3+F4: declaración de edición/versión/fecha del catálogo (Catálogo_estatal/Clave, sha 612b2b11) y documento que la vincule con 1941-1949, 1950-1959, 1960-1969, 1970-1979, 1980-1989, 1990-1999, 2000-2009, 2010-2019, 2020-2024; constancia del recurso 1960-1969.",
+   "soporte": [
+    {
+     "ruta": "reports/pendientes-ronda-5.json",
+     "sha256": "46f3b6f8826379be5124fb85cf6128b705fbe90deebf2c99bff64098608c8f11",
+     "localizador": "decisiones_significados id=V05"
+    },
+    {
+     "ruta": "propuestas/pendientes-muse-r6/catalogos/entrega.json",
+     "sha256": "649bbe7e5feca82b7e8d5c5144de78b1d8ceccb1c217ca976347b1c9a05cb74b",
+     "localizador": "decisiones_significados id=V05 + novedad_r6 (C1 API package_show 2026-10-23 + C2 core-properties xlsx)"
+    },
+    {
+     "ruta": "local: xlsx sha 612b2b11",
+     "sha256": "612b2b11192b97ae7328f80c8a5d1c545e117da46dd436a9b077aaf824b1525f",
+     "localizador": "interior xlsx sin celdas de version/periodo (R4 vigente, re-verificado R6: sizes API = locales)"
+    }
+   ]
+  },
+  {
+   "id": "V06",
+   "tipo": "vigencia",
+   "grupo": "C",
+   "dependencia_publicador": "DEP-CAT-R6-03",
+   "conjunto": {
+    "id": "5494daa1-09ca-4750-aeac-2558553700e1",
+    "titulo": "Fiebre manchada (Rickettsia)"
+   },
+   "catalogo": {
+    "recurso_catalogo": "08d3b1a7-dbc0-4f43-b1d2-3266cebb88f8",
+    "recurso_url": "https://datos.sonora.gob.mx/dataset/5494daa1-09ca-4750-aeac-2558553700e1/resource/08d3b1a7-dbc0-4f43-b1d2-3266cebb88f8/download/catalogo.xlsx",
+    "sha256": "3b8546acad7482825755e46a1a619a4838721f8480b94baaef3c755ba293db9c",
+    "hoja_campo": "Catalogo Servicios / servic_atencion"
+   },
+   "referencia_iri": "https://example.org/mex-ontologi/declared-code-reference/9ff643fe3f91869a5a3aff089018f3913d8510551a6d50a7566123a44969b05f",
+   "periodos_declarados_por_titulo": [
+    "2022 anual",
+    "2023 anual",
+    "2024 anual"
+   ],
+   "nota_periodos": "Periodos declarados por titulos de recursos CKAN y nota del conjunto; NO cobertura observada.",
+   "estado_actual": "pendiente (F3+F4 ausentes)",
+   "motivo": "F3+F4 ausentes: el portal no declara edición/versión de la hoja Catalogo Servicios ni su aplicación a 2022-2024.",
+   "evidencia_revisada": [
+    "W04 (recursos publicados: Diccionario+Catalogo+datos 2022-2024; fuente interna; sin versión)",
+    "Local: package_5494daa1-09ca-4750-aeac-2558553700e1.json (extras nulos) + xlsx 3b8546ac (3 hojas, sin versión)",
+    "R6-C1 (API CKAN package_show 2026-10-23) + R6-C2 (core-properties xlsx)",
+    "R6 novedad: R6-C1: API package 5494daa1: version=null; recurso Catalogo con cobertura 2022-01-01/2026-12-31 (avance de cobertura, NO edicion). R6-C2: catalogo 3b8546ac creator openpyxl, created 2026-04-15 (export posterior a periodos 2022-2024, sin celdas de version). F3+F4 ausentes."
+   ],
+   "campos_minimos": [
+    "emisor: publicador (DEP-CAT-R6-03)",
+    "edicion/version/fecha declarada del catalogo (Catalogo Servicios / servic_atencion, sha 3b8546ac)",
+    "recurso catalogo: 08d3b1a7-dbc0-4f43-b1d2-3266cebb88f8",
+    "periodos de aplicacion: 2022 anual; 2023 anual; 2024 anual",
+    "fecha o firma del documento"
+   ],
+   "criterio_aceptacion": "Se cierra solo si el documento del publicador cita edicion/version/fecha del catalogo (Catalogo Servicios / servic_atencion, sha 3b8546ac) y recurso 08d3b1a7-dbc0-4f43-b1d2-3266cebb88f8 y periodos (2022 anual; 2023 anual; 2024 anual); verificable (URL o copia local con SHA). Las fechas de portal/API (version=null, placeholder 1989-06-04) y core-properties no acreditan F3+F4.",
+   "limites": [
+    "No afirmar vigencia histórica ni extender a otros conjuntos/periodos."
+   ],
+   "documento_requerido_exacto": "Declaracion de edicion/version/fecha del catalogo Rickettsia (sha 3b8546ac) con vinculo 2022-2024 + fe de erratas o diccionario corregido y URL del catalogo de des_mpo_res si existe. Pendiente exacto: Acreditar F3+F4: declaración de edición/versión/fecha del catálogo (Catalogo Servicios/servic_atencion, sha 3b8546ac) y documento que la vincule con 2022, 2023, 2024.",
+   "soporte": [
+    {
+     "ruta": "reports/pendientes-ronda-5.json",
+     "sha256": "46f3b6f8826379be5124fb85cf6128b705fbe90deebf2c99bff64098608c8f11",
+     "localizador": "decisiones_significados id=V06"
+    },
+    {
+     "ruta": "propuestas/pendientes-muse-r6/catalogos/entrega.json",
+     "sha256": "649bbe7e5feca82b7e8d5c5144de78b1d8ceccb1c217ca976347b1c9a05cb74b",
+     "localizador": "decisiones_significados id=V06 + novedad_r6 (C1 API package_show 2026-10-23 + C2 core-properties xlsx)"
+    },
+    {
+     "ruta": "local: xlsx sha 3b8546ac",
+     "sha256": "3b8546acad7482825755e46a1a619a4838721f8480b94baaef3c755ba293db9c",
+     "localizador": "interior xlsx sin celdas de version/periodo (R4 vigente, re-verificado R6: sizes API = locales)"
+    }
+   ]
+  },
+  {
+   "id": "V07",
+   "tipo": "vigencia",
+   "grupo": "C",
+   "dependencia_publicador": "DEP-CAT-R6-03",
+   "conjunto": {
+    "id": "5494daa1-09ca-4750-aeac-2558553700e1",
+    "titulo": "Fiebre manchada (Rickettsia)"
+   },
+   "catalogo": {
+    "recurso_catalogo": "08d3b1a7-dbc0-4f43-b1d2-3266cebb88f8",
+    "recurso_url": "https://datos.sonora.gob.mx/dataset/5494daa1-09ca-4750-aeac-2558553700e1/resource/08d3b1a7-dbc0-4f43-b1d2-3266cebb88f8/download/catalogo.xlsx",
+    "sha256": "3b8546acad7482825755e46a1a619a4838721f8480b94baaef3c755ba293db9c",
+    "hoja_campo": "Catalogo rechazo / motiv_rech_ricket_sangre"
+   },
+   "referencia_iri": "https://example.org/mex-ontologi/declared-code-reference/5b1ccbaafec13e5b4e83d513d5817f79d39b709d3a03efc206f2b265dc66fc75",
+   "periodos_declarados_por_titulo": [
+    "2022 anual",
+    "2023 anual",
+    "2024 anual"
+   ],
+   "nota_periodos": "Periodos declarados por titulos de recursos CKAN y nota del conjunto; NO cobertura observada.",
+   "estado_actual": "pendiente (F3+F4 ausentes)",
+   "motivo": "F3+F4 ausentes: sin declaración de edición/versión de la hoja Catalogo rechazo ni su aplicación a 2022-2024.",
+   "evidencia_revisada": [
+    "W04 (igual que V06)",
+    "Local: package_5494daa1 (extras nulos) + xlsx 3b8546ac",
+    "R6-C1 (API CKAN package_show 2026-10-23) + R6-C2 (core-properties xlsx)",
+    "R6 novedad: R6-C1+C2 igual que V06 para hoja Catalogo rechazo (mismo archivo 3b8546ac, export openpyxl 2026). F3+F4 ausentes."
+   ],
+   "campos_minimos": [
+    "emisor: publicador (DEP-CAT-R6-03)",
+    "edicion/version/fecha declarada del catalogo (Catalogo rechazo / motiv_rech_ricket_sangre, sha 3b8546ac)",
+    "recurso catalogo: 08d3b1a7-dbc0-4f43-b1d2-3266cebb88f8",
+    "periodos de aplicacion: 2022 anual; 2023 anual; 2024 anual",
+    "fecha o firma del documento"
+   ],
+   "criterio_aceptacion": "Se cierra solo si el documento del publicador cita edicion/version/fecha del catalogo (Catalogo rechazo / motiv_rech_ricket_sangre, sha 3b8546ac) y recurso 08d3b1a7-dbc0-4f43-b1d2-3266cebb88f8 y periodos (2022 anual; 2023 anual; 2024 anual); verificable (URL o copia local con SHA). Las fechas de portal/API (version=null, placeholder 1989-06-04) y core-properties no acreditan F3+F4.",
+   "limites": [
+    "No afirmar vigencia histórica ni extender a otros conjuntos/periodos."
+   ],
+   "documento_requerido_exacto": "Declaracion de edicion/version/fecha del catalogo Rickettsia (sha 3b8546ac) con vinculo 2022-2024 + fe de erratas o diccionario corregido y URL del catalogo de des_mpo_res si existe. Pendiente exacto: Acreditar F3+F4: declaración de edición/versión/fecha del catálogo (Catalogo rechazo/motiv_rech_ricket_sangre, sha 3b8546ac) y documento que la vincule con 2022, 2023, 2024.",
+   "soporte": [
+    {
+     "ruta": "reports/pendientes-ronda-5.json",
+     "sha256": "46f3b6f8826379be5124fb85cf6128b705fbe90deebf2c99bff64098608c8f11",
+     "localizador": "decisiones_significados id=V07"
+    },
+    {
+     "ruta": "propuestas/pendientes-muse-r6/catalogos/entrega.json",
+     "sha256": "649bbe7e5feca82b7e8d5c5144de78b1d8ceccb1c217ca976347b1c9a05cb74b",
+     "localizador": "decisiones_significados id=V07 + novedad_r6 (C1 API package_show 2026-10-23 + C2 core-properties xlsx)"
+    },
+    {
+     "ruta": "local: xlsx sha 3b8546ac",
+     "sha256": "3b8546acad7482825755e46a1a619a4838721f8480b94baaef3c755ba293db9c",
+     "localizador": "interior xlsx sin celdas de version/periodo (R4 vigente, re-verificado R6: sizes API = locales)"
+    }
+   ]
+  },
+  {
+   "id": "V08",
+   "tipo": "vigencia",
+   "grupo": "C",
+   "dependencia_publicador": "DEP-CAT-R6-03",
+   "conjunto": {
+    "id": "5494daa1-09ca-4750-aeac-2558553700e1",
+    "titulo": "Fiebre manchada (Rickettsia)"
+   },
+   "catalogo": {
+    "recurso_catalogo": "08d3b1a7-dbc0-4f43-b1d2-3266cebb88f8",
+    "recurso_url": "https://datos.sonora.gob.mx/dataset/5494daa1-09ca-4750-aeac-2558553700e1/resource/08d3b1a7-dbc0-4f43-b1d2-3266cebb88f8/download/catalogo.xlsx",
+    "sha256": "3b8546acad7482825755e46a1a619a4838721f8480b94baaef3c755ba293db9c",
+    "hoja_campo": "Catalogo especie / ricket_especie (variable ricket_especie_rtpcr)"
+   },
+   "referencia_iri": "https://example.org/mex-ontologi/declared-code-reference/c8e9eb88050d4c254c2f8e08bee2bac5095eea83f8e07aab0d2e9ce79aca9131",
+   "periodos_declarados_por_titulo": [
+    "2022 anual",
+    "2023 anual",
+    "2024 anual"
+   ],
+   "nota_periodos": "Periodos declarados por titulos de recursos CKAN y nota del conjunto; NO cobertura observada.",
+   "estado_actual": "pendiente (F3+F4 ausentes)",
+   "motivo": "F3+F4 ausentes: sin declaración de edición/versión de la hoja Catalogo especie ni su aplicación a 2022-2024.",
+   "evidencia_revisada": [
+    "W04 (igual que V06)",
+    "Local: package_5494daa1 (extras nulos) + xlsx 3b8546ac",
+    "R6-C1 (API CKAN package_show 2026-10-23) + R6-C2 (core-properties xlsx)",
+    "R6 novedad: R6-C1+C2 igual que V06 para hoja Catalogo especie (mismo archivo 3b8546ac, export openpyxl 2026). F3+F4 ausentes."
+   ],
+   "campos_minimos": [
+    "emisor: publicador (DEP-CAT-R6-03)",
+    "edicion/version/fecha declarada del catalogo (Catalogo especie / ricket_especie (variable ricket_especie_rtpcr), sha 3b8546ac)",
+    "recurso catalogo: 08d3b1a7-dbc0-4f43-b1d2-3266cebb88f8",
+    "periodos de aplicacion: 2022 anual; 2023 anual; 2024 anual",
+    "fecha o firma del documento"
+   ],
+   "criterio_aceptacion": "Se cierra solo si el documento del publicador cita edicion/version/fecha del catalogo (Catalogo especie / ricket_especie (variable ricket_especie_rtpcr), sha 3b8546ac) y recurso 08d3b1a7-dbc0-4f43-b1d2-3266cebb88f8 y periodos (2022 anual; 2023 anual; 2024 anual); verificable (URL o copia local con SHA). Las fechas de portal/API (version=null, placeholder 1989-06-04) y core-properties no acreditan F3+F4.",
+   "limites": [
+    "No afirmar vigencia histórica ni extender a otros conjuntos/periodos."
+   ],
+   "documento_requerido_exacto": "Declaracion de edicion/version/fecha del catalogo Rickettsia (sha 3b8546ac) con vinculo 2022-2024 + fe de erratas o diccionario corregido y URL del catalogo de des_mpo_res si existe. Pendiente exacto: Acreditar F3+F4: declaración de edición/versión/fecha del catálogo (Catalogo especie/ricket_especie, sha 3b8546ac) y documento que la vincule con 2022, 2023, 2024.",
+   "soporte": [
+    {
+     "ruta": "reports/pendientes-ronda-5.json",
+     "sha256": "46f3b6f8826379be5124fb85cf6128b705fbe90deebf2c99bff64098608c8f11",
+     "localizador": "decisiones_significados id=V08"
+    },
+    {
+     "ruta": "propuestas/pendientes-muse-r6/catalogos/entrega.json",
+     "sha256": "649bbe7e5feca82b7e8d5c5144de78b1d8ceccb1c217ca976347b1c9a05cb74b",
+     "localizador": "decisiones_significados id=V08 + novedad_r6 (C1 API package_show 2026-10-23 + C2 core-properties xlsx)"
+    },
+    {
+     "ruta": "local: xlsx sha 3b8546ac",
+     "sha256": "3b8546acad7482825755e46a1a619a4838721f8480b94baaef3c755ba293db9c",
+     "localizador": "interior xlsx sin celdas de version/periodo (R4 vigente, re-verificado R6: sizes API = locales)"
+    }
+   ]
+  },
+  {
+   "id": "V09",
+   "tipo": "vigencia",
+   "grupo": "D",
+   "dependencia_publicador": "DEP-CAT-R6-04",
+   "conjunto": {
+    "id": "0b5f5e16-2de3-4be1-811f-4b0976ed82d3",
+    "titulo": "Proyecciones de población - Grupos quinquenales de edad"
+   },
+   "catalogo": {
+    "recurso_catalogo": "de5c06c7-03d7-4ed4-a9fc-ec7d10b024f0",
+    "recurso_url": "https://datos.sonora.gob.mx/dataset/0b5f5e16-2de3-4be1-811f-4b0976ed82d3/resource/de5c06c7-03d7-4ed4-a9fc-ec7d10b024f0/download/catalogo.xlsx",
+    "sha256": "ea54aad30b7342ce678d1d66157325a5cbaa492380ee4d807b20918198c5b0f5",
+    "hoja_campo": "Catalogo_Municipios / CLAVE"
+   },
+   "referencia_iri": "https://example.org/mex-ontologi/declared-code-reference/a5ef433dd9439bbb04d230f9282143f4a0dd2991ad05371fb6f2f6cd430e9d08",
+   "periodos_declarados_por_titulo": [
+    "1990-2019 reconstruccion",
+    "2020-2040 proyecciones"
+   ],
+   "nota_periodos": "Periodos declarados por titulos de recursos CKAN y nota del conjunto; NO cobertura observada.",
+   "estado_actual": "pendiente (F3 parcial, F4 ausente)",
+   "motivo": "Avance F3 parcial (fuente metodológica CONAPO citada por el publicador, conteo 2475 consistente) pero sin declaración de edición/versión del catalogo.xlsx y con desfase de corte (local 1990-2019/2020-2040 vs CONAPO 1990-2020/2021-2040). F4 ausente.",
+   "evidencia_revisada": [
+    "W05 (Fuentes extras CONAPO 1990-2040 declaradas por el publicador) + W06 (CONAPO 09-05-2024: 2475 municipios, 1990-2020 + 2021-2040; desfase de 1 año vs periodos locales)",
+    "Local: package_0b5f5e16 (extras nulos) + xlsx ea54aad3 (Catalogo_Estado + Catalogo_Municipios, sin versión)",
+    "R6-C1 (API CKAN package_show 2026-10-23) + R6-C2 (core-properties xlsx)",
+    "R6 novedad: R6-C1: API package 0b5f5e16: version=null; fuentes_extras CONAPO 1990-2040 confirmada en API; Catalogo size 83769 = local ea54aad3; fechas Catalogo 1989-06-04; datos 1990-2040. Desfase de corte vs CONAPO 2024 intacto. R6-C2: creator Estephania Pivac Alcaraz 2024-09-02, sin version. F3+F4 ausentes."
+   ],
+   "campos_minimos": [
+    "emisor: publicador (DEP-CAT-R6-04)",
+    "edicion/version/fecha declarada del catalogo (Catalogo_Municipios / CLAVE, sha ea54aad3)",
+    "recurso catalogo: de5c06c7-03d7-4ed4-a9fc-ec7d10b024f0",
+    "periodos de aplicacion: 1990-2019 reconstruccion; 2020-2040 proyecciones",
+    "fecha o firma del documento"
+   ],
+   "criterio_aceptacion": "Se cierra solo si el documento del publicador cita edicion/version/fecha del catalogo (Catalogo_Municipios / CLAVE, sha ea54aad3) y recurso de5c06c7-03d7-4ed4-a9fc-ec7d10b024f0 y periodos (1990-2019 reconstruccion; 2020-2040 proyecciones); verificable (URL o copia local con SHA). Las fechas de portal/API (version=null, placeholder 1989-06-04) y core-properties no acreditan F3+F4.",
+   "limites": [
+    "No afirmar vigencia histórica ni extender a otros conjuntos/periodos; no transferir vigencia del documento CONAPO al catálogo local.",
+    "No transferir vigencia del documento CONAPO 09-05-2024 al catalogo local; aclarar desfase de corte (local 1990-2019/2020-2040 vs CONAPO 1990-2020/2021-2040)"
+   ],
+   "documento_requerido_exacto": "Declaracion de edicion/version/fecha de catalogo.xlsx (sha ea54aad3) con vinculo a reconstruccion 1990-2019 y proyecciones 2020-2040 + aclaracion del desfase de corte vs CONAPO 09-05-2024. Pendiente exacto: Acreditar F3+F4: declaración de edición/versión/fecha del catálogo (Catalogo_Municipios/CLAVE, sha ea54aad3) y documento que la vincule con reconstrucción 1990-2019 y proyecciones 2020-2040; aclarar desfase de corte vs CONAPO 2024.",
+   "soporte": [
+    {
+     "ruta": "reports/pendientes-ronda-5.json",
+     "sha256": "46f3b6f8826379be5124fb85cf6128b705fbe90deebf2c99bff64098608c8f11",
+     "localizador": "decisiones_significados id=V09"
+    },
+    {
+     "ruta": "propuestas/pendientes-muse-r6/catalogos/entrega.json",
+     "sha256": "649bbe7e5feca82b7e8d5c5144de78b1d8ceccb1c217ca976347b1c9a05cb74b",
+     "localizador": "decisiones_significados id=V09 + novedad_r6 (C1 API package_show 2026-10-23 + C2 core-properties xlsx)"
+    },
+    {
+     "ruta": "local: xlsx sha ea54aad3",
+     "sha256": "ea54aad30b7342ce678d1d66157325a5cbaa492380ee4d807b20918198c5b0f5",
+     "localizador": "interior xlsx sin celdas de version/periodo (R4 vigente, re-verificado R6: sizes API = locales)"
+    }
+   ]
+  },
+  {
+   "id": "V10",
+   "tipo": "vigencia",
+   "grupo": "D",
+   "dependencia_publicador": "DEP-CAT-R6-04",
+   "conjunto": {
+    "id": "0b5f5e16-2de3-4be1-811f-4b0976ed82d3",
+    "titulo": "Proyecciones de población - Grupos quinquenales de edad"
+   },
+   "catalogo": {
+    "recurso_catalogo": "de5c06c7-03d7-4ed4-a9fc-ec7d10b024f0",
+    "recurso_url": "https://datos.sonora.gob.mx/dataset/0b5f5e16-2de3-4be1-811f-4b0976ed82d3/resource/de5c06c7-03d7-4ed4-a9fc-ec7d10b024f0/download/catalogo.xlsx",
+    "sha256": "ea54aad30b7342ce678d1d66157325a5cbaa492380ee4d807b20918198c5b0f5",
+    "hoja_campo": "Catalogo_Estado / CLAVE_ENT"
+   },
+   "referencia_iri": "https://example.org/mex-ontologi/declared-code-reference/6626e7c684aa6ea50eaa529bdefe9f74f2c784f5991e08a73b4de188ec31e56c",
+   "periodos_declarados_por_titulo": [
+    "1990-2019 reconstruccion",
+    "2020-2040 proyecciones"
+   ],
+   "nota_periodos": "Periodos declarados por titulos de recursos CKAN y nota del conjunto; NO cobertura observada.",
+   "estado_actual": "pendiente (F3 parcial, F4 ausente)",
+   "motivo": "Igual que V09 para la hoja Catalogo_Estado/CLAVE_ENT: fuente CONAPO citada sin declaración de edición del catálogo ni vínculo de aplicación.",
+   "evidencia_revisada": [
+    "W05 + W06 (igual que V09)",
+    "Local: package_0b5f5e16 (extras nulos) + xlsx ea54aad3",
+    "R6-C1 (API CKAN package_show 2026-10-23) + R6-C2 (core-properties xlsx)",
+    "R6 novedad: R6-C1+C2 igual que V09 para hoja Catalogo_Estado (mismo archivo). F3+F4 ausentes."
+   ],
+   "campos_minimos": [
+    "emisor: publicador (DEP-CAT-R6-04)",
+    "edicion/version/fecha declarada del catalogo (Catalogo_Estado / CLAVE_ENT, sha ea54aad3)",
+    "recurso catalogo: de5c06c7-03d7-4ed4-a9fc-ec7d10b024f0",
+    "periodos de aplicacion: 1990-2019 reconstruccion; 2020-2040 proyecciones",
+    "fecha o firma del documento"
+   ],
+   "criterio_aceptacion": "Se cierra solo si el documento del publicador cita edicion/version/fecha del catalogo (Catalogo_Estado / CLAVE_ENT, sha ea54aad3) y recurso de5c06c7-03d7-4ed4-a9fc-ec7d10b024f0 y periodos (1990-2019 reconstruccion; 2020-2040 proyecciones); verificable (URL o copia local con SHA). Las fechas de portal/API (version=null, placeholder 1989-06-04) y core-properties no acreditan F3+F4.",
+   "limites": [
+    "No afirmar vigencia histórica ni extender a otros conjuntos/periodos.",
+    "No transferir vigencia del documento CONAPO 09-05-2024 al catalogo local; aclarar desfase de corte (local 1990-2019/2020-2040 vs CONAPO 1990-2020/2021-2040)"
+   ],
+   "documento_requerido_exacto": "Declaracion de edicion/version/fecha de catalogo.xlsx (sha ea54aad3) con vinculo a reconstruccion 1990-2019 y proyecciones 2020-2040 + aclaracion del desfase de corte vs CONAPO 09-05-2024. Pendiente exacto: Acreditar F3+F4: declaración de edición/versión/fecha del catálogo (Catalogo_Estado/CLAVE_ENT, sha ea54aad3) y documento que la vincule con reconstrucción 1990-2019 y proyecciones 2020-2040.",
+   "soporte": [
+    {
+     "ruta": "reports/pendientes-ronda-5.json",
+     "sha256": "46f3b6f8826379be5124fb85cf6128b705fbe90deebf2c99bff64098608c8f11",
+     "localizador": "decisiones_significados id=V10"
+    },
+    {
+     "ruta": "propuestas/pendientes-muse-r6/catalogos/entrega.json",
+     "sha256": "649bbe7e5feca82b7e8d5c5144de78b1d8ceccb1c217ca976347b1c9a05cb74b",
+     "localizador": "decisiones_significados id=V10 + novedad_r6 (C1 API package_show 2026-10-23 + C2 core-properties xlsx)"
+    },
+    {
+     "ruta": "local: xlsx sha ea54aad3",
+     "sha256": "ea54aad30b7342ce678d1d66157325a5cbaa492380ee4d807b20918198c5b0f5",
+     "localizador": "interior xlsx sin celdas de version/periodo (R4 vigente, re-verificado R6: sizes API = locales)"
+    }
+   ]
+  },
+  {
+   "id": "V11",
+   "tipo": "vigencia",
+   "grupo": "D",
+   "dependencia_publicador": "DEP-CAT-R6-04",
+   "conjunto": {
+    "id": "943d0723-afbb-470a-8fe8-d62e8671de84",
+    "titulo": "Proyecciones de población - Grandes grupos de edad"
+   },
+   "catalogo": {
+    "recurso_catalogo": "d7c4b8b2-568f-4349-a1ed-23fa93189e83",
+    "recurso_url": "https://datos.sonora.gob.mx/dataset/943d0723-afbb-470a-8fe8-d62e8671de84/resource/d7c4b8b2-568f-4349-a1ed-23fa93189e83/download/catalogo.xlsx",
+    "sha256": "ea54aad30b7342ce678d1d66157325a5cbaa492380ee4d807b20918198c5b0f5",
+    "hoja_campo": "Catalogo_Municipios / CLAVE"
+   },
+   "referencia_iri": "https://example.org/mex-ontologi/declared-code-reference/6b313f08b4fb06fa474536bb04ddea0b113d0ea610840aaf2a36bc9fd9bb5acf",
+   "periodos_declarados_por_titulo": [
+    "1990-2019 reconstruccion",
+    "2020-2040 proyecciones"
+   ],
+   "nota_periodos": "Periodos declarados por titulos de recursos CKAN y nota del conjunto; NO cobertura observada.",
+   "estado_actual": "pendiente (F3 parcial-candidata, F4 ausente)",
+   "motivo": "F3 parcial (misma fuente CONAPO candidata) sin declaración de edición del catálogo; F4 ausente.",
+   "evidencia_revisada": [
+    "W05 (mismo Fuentes extras CONAPO en conjunto hermano; verificar en 943d0723) + W06",
+    "Local: package_943d0723-afbb-470a-8fe8-d62e8671de84.json (extras nulos) + xlsx ea54aad3",
+    "R6-C1 (API CKAN package_show 2026-10-23) + R6-C2 (core-properties xlsx)",
+    "R6 novedad: R6-C1: API package 943d0723: version=null; misma fuentes_extras CONAPO; Catalogo size 83769 (archivo compartido); fechas 1989-06-04. F3+F4 ausentes."
+   ],
+   "campos_minimos": [
+    "emisor: publicador (DEP-CAT-R6-04)",
+    "edicion/version/fecha declarada del catalogo (Catalogo_Municipios / CLAVE, sha ea54aad3)",
+    "recurso catalogo: d7c4b8b2-568f-4349-a1ed-23fa93189e83",
+    "periodos de aplicacion: 1990-2019 reconstruccion; 2020-2040 proyecciones",
+    "fecha o firma del documento"
+   ],
+   "criterio_aceptacion": "Se cierra solo si el documento del publicador cita edicion/version/fecha del catalogo (Catalogo_Municipios / CLAVE, sha ea54aad3) y recurso d7c4b8b2-568f-4349-a1ed-23fa93189e83 y periodos (1990-2019 reconstruccion; 2020-2040 proyecciones); verificable (URL o copia local con SHA). Las fechas de portal/API (version=null, placeholder 1989-06-04) y core-properties no acreditan F3+F4.",
+   "limites": [
+    "No afirmar vigencia histórica ni extender a otros conjuntos/periodos.",
+    "No transferir vigencia del documento CONAPO 09-05-2024 al catalogo local; aclarar desfase de corte (local 1990-2019/2020-2040 vs CONAPO 1990-2020/2021-2040)"
+   ],
+   "documento_requerido_exacto": "Declaracion de edicion/version/fecha de catalogo.xlsx (sha ea54aad3) con vinculo a reconstruccion 1990-2019 y proyecciones 2020-2040 + aclaracion del desfase de corte vs CONAPO 09-05-2024. Pendiente exacto: Acreditar F3+F4: declaración de edición/versión/fecha del catálogo (Catalogo_Municipios/CLAVE, sha ea54aad3) y documento que la vincule con reconstrucción 1990-2019 y proyecciones 2020-2040 (conjunto 943d0723).",
+   "soporte": [
+    {
+     "ruta": "reports/pendientes-ronda-5.json",
+     "sha256": "46f3b6f8826379be5124fb85cf6128b705fbe90deebf2c99bff64098608c8f11",
+     "localizador": "decisiones_significados id=V11"
+    },
+    {
+     "ruta": "propuestas/pendientes-muse-r6/catalogos/entrega.json",
+     "sha256": "649bbe7e5feca82b7e8d5c5144de78b1d8ceccb1c217ca976347b1c9a05cb74b",
+     "localizador": "decisiones_significados id=V11 + novedad_r6 (C1 API package_show 2026-10-23 + C2 core-properties xlsx)"
+    },
+    {
+     "ruta": "local: xlsx sha ea54aad3",
+     "sha256": "ea54aad30b7342ce678d1d66157325a5cbaa492380ee4d807b20918198c5b0f5",
+     "localizador": "interior xlsx sin celdas de version/periodo (R4 vigente, re-verificado R6: sizes API = locales)"
+    }
+   ]
+  },
+  {
+   "id": "V12",
+   "tipo": "vigencia",
+   "grupo": "D",
+   "dependencia_publicador": "DEP-CAT-R6-04",
+   "conjunto": {
+    "id": "943d0723-afbb-470a-8fe8-d62e8671de84",
+    "titulo": "Proyecciones de población - Grandes grupos de edad"
+   },
+   "catalogo": {
+    "recurso_catalogo": "d7c4b8b2-568f-4349-a1ed-23fa93189e83",
+    "recurso_url": "https://datos.sonora.gob.mx/dataset/943d0723-afbb-470a-8fe8-d62e8671de84/resource/d7c4b8b2-568f-4349-a1ed-23fa93189e83/download/catalogo.xlsx",
+    "sha256": "ea54aad30b7342ce678d1d66157325a5cbaa492380ee4d807b20918198c5b0f5",
+    "hoja_campo": "Catalogo_Estado / CLAVE_ENT"
+   },
+   "referencia_iri": "https://example.org/mex-ontologi/declared-code-reference/9bd0b46a6382ebb7dc701f0d101880649222ce8bff9ac541aa7d347ee2f0681b",
+   "periodos_declarados_por_titulo": [
+    "1990-2019 reconstruccion",
+    "2020-2040 proyecciones"
+   ],
+   "nota_periodos": "Periodos declarados por titulos de recursos CKAN y nota del conjunto; NO cobertura observada.",
+   "estado_actual": "pendiente (F3 parcial-candidata, F4 ausente)",
+   "motivo": "Igual que V11 para la hoja Catalogo_Estado/CLAVE_ENT.",
+   "evidencia_revisada": [
+    "W05 + W06 (igual que V11)",
+    "Local: package_943d0723 (extras nulos) + xlsx ea54aad3",
+    "R6-C1 (API CKAN package_show 2026-10-23) + R6-C2 (core-properties xlsx)",
+    "R6 novedad: R6-C1+C2 igual que V11 para hoja Catalogo_Estado (mismo archivo). F3+F4 ausentes."
+   ],
+   "campos_minimos": [
+    "emisor: publicador (DEP-CAT-R6-04)",
+    "edicion/version/fecha declarada del catalogo (Catalogo_Estado / CLAVE_ENT, sha ea54aad3)",
+    "recurso catalogo: d7c4b8b2-568f-4349-a1ed-23fa93189e83",
+    "periodos de aplicacion: 1990-2019 reconstruccion; 2020-2040 proyecciones",
+    "fecha o firma del documento"
+   ],
+   "criterio_aceptacion": "Se cierra solo si el documento del publicador cita edicion/version/fecha del catalogo (Catalogo_Estado / CLAVE_ENT, sha ea54aad3) y recurso d7c4b8b2-568f-4349-a1ed-23fa93189e83 y periodos (1990-2019 reconstruccion; 2020-2040 proyecciones); verificable (URL o copia local con SHA). Las fechas de portal/API (version=null, placeholder 1989-06-04) y core-properties no acreditan F3+F4.",
+   "limites": [
+    "No afirmar vigencia histórica ni extender a otros conjuntos/periodos.",
+    "No transferir vigencia del documento CONAPO 09-05-2024 al catalogo local; aclarar desfase de corte (local 1990-2019/2020-2040 vs CONAPO 1990-2020/2021-2040)"
+   ],
+   "documento_requerido_exacto": "Declaracion de edicion/version/fecha de catalogo.xlsx (sha ea54aad3) con vinculo a reconstruccion 1990-2019 y proyecciones 2020-2040 + aclaracion del desfase de corte vs CONAPO 09-05-2024. Pendiente exacto: Acreditar F3+F4: declaración de edición/versión/fecha del catálogo (Catalogo_Estado/CLAVE_ENT, sha ea54aad3) y documento que la vincule con reconstrucción 1990-2019 y proyecciones 2020-2040 (conjunto 943d0723).",
+   "soporte": [
+    {
+     "ruta": "reports/pendientes-ronda-5.json",
+     "sha256": "46f3b6f8826379be5124fb85cf6128b705fbe90deebf2c99bff64098608c8f11",
+     "localizador": "decisiones_significados id=V12"
+    },
+    {
+     "ruta": "propuestas/pendientes-muse-r6/catalogos/entrega.json",
+     "sha256": "649bbe7e5feca82b7e8d5c5144de78b1d8ceccb1c217ca976347b1c9a05cb74b",
+     "localizador": "decisiones_significados id=V12 + novedad_r6 (C1 API package_show 2026-10-23 + C2 core-properties xlsx)"
+    },
+    {
+     "ruta": "local: xlsx sha ea54aad3",
+     "sha256": "ea54aad30b7342ce678d1d66157325a5cbaa492380ee4d807b20918198c5b0f5",
+     "localizador": "interior xlsx sin celdas de version/periodo (R4 vigente, re-verificado R6: sizes API = locales)"
+    }
+   ]
+  },
+  {
+   "id": "V13",
+   "tipo": "vigencia",
+   "grupo": "E",
+   "dependencia_publicador": "DEP-CAT-R6-05",
+   "conjunto": {
+    "id": "93ca5e1c-702e-4e62-bc61-638907be184a",
+    "titulo": "Incidencia delictiva municipal"
+   },
+   "catalogo": {
+    "recurso_catalogo": "36d3ac85-4327-41f5-9259-538a7723a0ae",
+    "recurso_url": "https://datos.sonora.gob.mx/dataset/93ca5e1c-702e-4e62-bc61-638907be184a/resource/36d3ac85-4327-41f5-9259-538a7723a0ae/download/catalogo.xlsx",
+    "sha256": "84bb6fcda02f3de3b295189d59cf0dde201bc4e048888681b6cd8ea624bb0716",
+    "hoja_campo": "cat_municipio / Cve. Municipio"
+   },
+   "referencia_iri": "https://example.org/mex-ontologi/declared-code-reference/957df4c830f4558d6431d774fad97a1bbf05da13990c3b27fe2e78005151c0be",
+   "periodos_declarados_por_titulo": [
+    "2015",
+    "2016",
+    "2017",
+    "2018",
+    "2019",
+    "2020",
+    "2021",
+    "2022",
+    "2023",
+    "2024",
+    "2025"
+   ],
+   "nota_periodos": "Periodos declarados por titulos de recursos CKAN y nota del conjunto; NO cobertura observada.",
+   "estado_actual": "pendiente (contexto SESNSP declarado, F3+F4 ausentes)",
+   "motivo": "Procedencia SESNSP declarada por el publicador (avance de contexto), pero sin declaración de edición/versión/corte del cat_municipio local ni vínculo con 2015-2025.",
+   "evidencia_revisada": [
+    "W07 (nota declara origen SESNSP procesado para Sonora + Fuentes extras SESNSP; sin edición/corte del catálogo local)",
+    "Local: package_93ca5e1c-702e-4e62-bc61-638907be184a.json (extras nulos) + xlsx 84bb6fcd (cat_municipio, sin versión)",
+    "R6-C1 (API CKAN package_show 2026-10-23) + R6-C2 (core-properties xlsx)",
+    "R6 novedad: R6-C1: API package 93ca5e1c: version=null; fuentes_extras SESNSP datos-abiertos confirmada; Catalogo size 10194 = local; fechas 1989-06-04; datos 2015-2025. R6-C2: creator SESNSP created 2015-06-05 modified 2026-01-22, sin version/corte. F3+F4 ausentes."
+   ],
+   "campos_minimos": [
+    "emisor: publicador (DEP-CAT-R6-05)",
+    "edicion/version/fecha declarada del catalogo (cat_municipio / Cve. Municipio, sha 84bb6fcd)",
+    "recurso catalogo: 36d3ac85-4327-41f5-9259-538a7723a0ae",
+    "periodos de aplicacion: 2015; 2016; 2017; 2018; 2019; 2020; 2021; 2022; 2023; 2024; 2025",
+    "fecha o firma del documento"
+   ],
+   "criterio_aceptacion": "Se cierra solo si el documento del publicador cita edicion/version/fecha del catalogo (cat_municipio / Cve. Municipio, sha 84bb6fcd) y recurso 36d3ac85-4327-41f5-9259-538a7723a0ae y periodos (2015; 2016; 2017; 2018; 2019; 2020; 2021; 2022; 2023; 2024; 2025); verificable (URL o copia local con SHA). Las fechas de portal/API (version=null, placeholder 1989-06-04) y core-properties no acreditan F3+F4.",
+   "limites": [
+    "No afirmar vigencia histórica ni extender a otros conjuntos/periodos; no habilitar joins por compartir Clave.",
+    "No habilitar joins por compartir Clave"
+   ],
+   "documento_requerido_exacto": "Declaracion de edicion/version/fecha y corte SESNSP de cat_municipio (sha 84bb6fcd) y cat_entidad (sha 96776ca8) con vinculo 2015-2025. Pendiente exacto: Acreditar F3+F4: declaración de edición/versión/fecha y corte SESNSP del catálogo (cat_municipio/Cve. Municipio, sha 84bb6fcd) y documento que la vincule con 2015-2025.",
+   "soporte": [
+    {
+     "ruta": "reports/pendientes-ronda-5.json",
+     "sha256": "46f3b6f8826379be5124fb85cf6128b705fbe90deebf2c99bff64098608c8f11",
+     "localizador": "decisiones_significados id=V13"
+    },
+    {
+     "ruta": "propuestas/pendientes-muse-r6/catalogos/entrega.json",
+     "sha256": "649bbe7e5feca82b7e8d5c5144de78b1d8ceccb1c217ca976347b1c9a05cb74b",
+     "localizador": "decisiones_significados id=V13 + novedad_r6 (C1 API package_show 2026-10-23 + C2 core-properties xlsx)"
+    },
+    {
+     "ruta": "local: xlsx sha 84bb6fcd",
+     "sha256": "84bb6fcda02f3de3b295189d59cf0dde201bc4e048888681b6cd8ea624bb0716",
+     "localizador": "interior xlsx sin celdas de version/periodo (R4 vigente, re-verificado R6: sizes API = locales)"
+    }
+   ]
+  },
+  {
+   "id": "V14",
+   "tipo": "vigencia",
+   "grupo": "E",
+   "dependencia_publicador": "DEP-CAT-R6-05",
+   "conjunto": {
+    "id": "caf587a5-23ac-496b-85d4-6ceb1d615d78",
+    "titulo": "Víctimas del fuero común en el estado"
+   },
+   "catalogo": {
+    "recurso_catalogo": "7f3aca28-4251-48b8-a759-69c992580744",
+    "recurso_url": "https://datos.sonora.gob.mx/dataset/caf587a5-23ac-496b-85d4-6ceb1d615d78/resource/7f3aca28-4251-48b8-a759-69c992580744/download/catalogo.xlsx",
+    "sha256": "96776ca8976ebb6e7510f65abaa287888be693f400a1e4adb5777e091d3b5a87",
+    "hoja_campo": "cat_entidad / Clave_Ent"
+   },
+   "referencia_iri": "https://example.org/mex-ontologi/declared-code-reference/526497ffbaeb442341f4ab5c77b53a49235ba807eeb1433f8331d9db720b00f5",
+   "periodos_declarados_por_titulo": [
+    "2015",
+    "2016",
+    "2017",
+    "2018",
+    "2019",
+    "2020",
+    "2021",
+    "2022",
+    "2023",
+    "2024",
+    "2025"
+   ],
+   "nota_periodos": "Periodos declarados por titulos de recursos CKAN y nota del conjunto; NO cobertura observada.",
+   "estado_actual": "pendiente (contexto SESNSP declarado, F3+F4 ausentes)",
+   "motivo": "Procedencia SESNSP declarada (avance de contexto), pero sin declaración de edición/versión/corte del cat_entidad local ni vínculo con 2015-2025.",
+   "evidencia_revisada": [
+    "W07 (nota simétrica SESNSP en Víctimas + Fuentes extras; sin edición/corte)",
+    "Local: package_caf587a5-23ac-496b-85d4-6ceb1d615d78.json (extras nulos) + xlsx 96776ca8 (cat_entidad, sin versión)",
+    "R6-C1 (API CKAN package_show 2026-10-23) + R6-C2 (core-properties xlsx)",
+    "R6 novedad: R6-C1: API package caf587a5: version=null; misma fuentes_extras SESNSP; Catalogo size 10999 = local; fechas 1989-06-04. R6-C2: creator Practicante2 2026-01-22, sin version/corte. F3+F4 ausentes."
+   ],
+   "campos_minimos": [
+    "emisor: publicador (DEP-CAT-R6-05)",
+    "edicion/version/fecha declarada del catalogo (cat_entidad / Clave_Ent, sha 96776ca8)",
+    "recurso catalogo: 7f3aca28-4251-48b8-a759-69c992580744",
+    "periodos de aplicacion: 2015; 2016; 2017; 2018; 2019; 2020; 2021; 2022; 2023; 2024; 2025",
+    "fecha o firma del documento"
+   ],
+   "criterio_aceptacion": "Se cierra solo si el documento del publicador cita edicion/version/fecha del catalogo (cat_entidad / Clave_Ent, sha 96776ca8) y recurso 7f3aca28-4251-48b8-a759-69c992580744 y periodos (2015; 2016; 2017; 2018; 2019; 2020; 2021; 2022; 2023; 2024; 2025); verificable (URL o copia local con SHA). Las fechas de portal/API (version=null, placeholder 1989-06-04) y core-properties no acreditan F3+F4.",
+   "limites": [
+    "No afirmar vigencia histórica ni extender a otros conjuntos/periodos."
+   ],
+   "documento_requerido_exacto": "Declaracion de edicion/version/fecha y corte SESNSP de cat_municipio (sha 84bb6fcd) y cat_entidad (sha 96776ca8) con vinculo 2015-2025. Pendiente exacto: Acreditar F3+F4: declaración de edición/versión/fecha y corte SESNSP del catálogo (cat_entidad/Clave_Ent, sha 96776ca8) y documento que la vincule con 2015-2025.",
+   "soporte": [
+    {
+     "ruta": "reports/pendientes-ronda-5.json",
+     "sha256": "46f3b6f8826379be5124fb85cf6128b705fbe90deebf2c99bff64098608c8f11",
+     "localizador": "decisiones_significados id=V14"
+    },
+    {
+     "ruta": "propuestas/pendientes-muse-r6/catalogos/entrega.json",
+     "sha256": "649bbe7e5feca82b7e8d5c5144de78b1d8ceccb1c217ca976347b1c9a05cb74b",
+     "localizador": "decisiones_significados id=V14 + novedad_r6 (C1 API package_show 2026-10-23 + C2 core-properties xlsx)"
+    },
+    {
+     "ruta": "local: xlsx sha 96776ca8",
+     "sha256": "96776ca8976ebb6e7510f65abaa287888be693f400a1e4adb5777e091d3b5a87",
+     "localizador": "interior xlsx sin celdas de version/periodo (R4 vigente, re-verificado R6: sizes API = locales)"
+    }
+   ]
+  },
+  {
+   "id": "V15",
+   "tipo": "vigencia",
+   "grupo": "D",
+   "dependencia_publicador": "DEP-CAT-R6-04",
+   "conjunto": {
+    "id": "960ef0a9-73ed-4191-ae0b-b868d7e48292",
+    "titulo": "Proyecciones de población - Indicadores demográficos"
+   },
+   "catalogo": {
+    "recurso_catalogo": "e0d2acc2-9841-4f6d-baea-88ba86710a7d",
+    "recurso_url": "https://datos.sonora.gob.mx/dataset/960ef0a9-73ed-4191-ae0b-b868d7e48292/resource/e0d2acc2-9841-4f6d-baea-88ba86710a7d/download/catalogo.xlsx",
+    "sha256": "ea54aad30b7342ce678d1d66157325a5cbaa492380ee4d807b20918198c5b0f5",
+    "hoja_campo": "Catalogo_Municipios / CLAVE"
+   },
+   "referencia_iri": "https://example.org/mex-ontologi/declared-code-reference/bae61ad38ac1e3df9f75026f39187d0a0b6edcd29ef51769e4c3be5714acc37d",
+   "periodos_declarados_por_titulo": [
+    "1990-2040"
+   ],
+   "nota_periodos": "Periodos declarados por titulos de recursos CKAN y nota del conjunto; NO cobertura observada.",
+   "estado_actual": "pendiente (F3 parcial, F4 ausente)",
+   "motivo": "F3 parcial (fuente CONAPO 1990-2040 citada) sin declaración de edición del catálogo; F4 ausente para el rango 1990-2040.",
+   "evidencia_revisada": [
+    "W05 (mismo Fuentes extras CONAPO en conjunto hermano 960ef0a9: Indicadores 1990-2040) + W06",
+    "Local: package_960ef0a9-73ed-4191-ae0b-b868d7e48292.json (extras nulos) + xlsx ea54aad3",
+    "R6-C1 (API CKAN package_show 2026-10-23) + R6-C2 (core-properties xlsx)",
+    "R6 novedad: R6-C1: API package 960ef0a9: version=null; misma fuentes_extras CONAPO; Catalogo size 83769 (archivo compartido); fechas 1989-06-04; datos 1990-2040. F3+F4 ausentes."
+   ],
+   "campos_minimos": [
+    "emisor: publicador (DEP-CAT-R6-04)",
+    "edicion/version/fecha declarada del catalogo (Catalogo_Municipios / CLAVE, sha ea54aad3)",
+    "recurso catalogo: e0d2acc2-9841-4f6d-baea-88ba86710a7d",
+    "periodos de aplicacion: 1990-2040",
+    "fecha o firma del documento"
+   ],
+   "criterio_aceptacion": "Se cierra solo si el documento del publicador cita edicion/version/fecha del catalogo (Catalogo_Municipios / CLAVE, sha ea54aad3) y recurso e0d2acc2-9841-4f6d-baea-88ba86710a7d y periodos (1990-2040); verificable (URL o copia local con SHA). Las fechas de portal/API (version=null, placeholder 1989-06-04) y core-properties no acreditan F3+F4.",
+   "limites": [
+    "No afirmar vigencia histórica ni extender a otros conjuntos/periodos.",
+    "No transferir vigencia del documento CONAPO 09-05-2024 al catalogo local; aclarar desfase de corte (local 1990-2019/2020-2040 vs CONAPO 1990-2020/2021-2040)"
+   ],
+   "documento_requerido_exacto": "Declaracion de edicion/version/fecha de catalogo.xlsx (sha ea54aad3) con vinculo a reconstruccion 1990-2019 y proyecciones 2020-2040 + aclaracion del desfase de corte vs CONAPO 09-05-2024. Pendiente exacto: Acreditar F3+F4: declaración de edición/versión/fecha del catálogo (Catalogo_Municipios/CLAVE, sha ea54aad3) y documento que la vincule con 1990-2040 (conjunto 960ef0a9).",
+   "soporte": [
+    {
+     "ruta": "reports/pendientes-ronda-5.json",
+     "sha256": "46f3b6f8826379be5124fb85cf6128b705fbe90deebf2c99bff64098608c8f11",
+     "localizador": "decisiones_significados id=V15"
+    },
+    {
+     "ruta": "propuestas/pendientes-muse-r6/catalogos/entrega.json",
+     "sha256": "649bbe7e5feca82b7e8d5c5144de78b1d8ceccb1c217ca976347b1c9a05cb74b",
+     "localizador": "decisiones_significados id=V15 + novedad_r6 (C1 API package_show 2026-10-23 + C2 core-properties xlsx)"
+    },
+    {
+     "ruta": "local: xlsx sha ea54aad3",
+     "sha256": "ea54aad30b7342ce678d1d66157325a5cbaa492380ee4d807b20918198c5b0f5",
+     "localizador": "interior xlsx sin celdas de version/periodo (R4 vigente, re-verificado R6: sizes API = locales)"
+    }
+   ]
+  },
+  {
+   "id": "V16",
+   "tipo": "vigencia",
+   "grupo": "D",
+   "dependencia_publicador": "DEP-CAT-R6-04",
+   "conjunto": {
+    "id": "960ef0a9-73ed-4191-ae0b-b868d7e48292",
+    "titulo": "Proyecciones de población - Indicadores demográficos"
+   },
+   "catalogo": {
+    "recurso_catalogo": "e0d2acc2-9841-4f6d-baea-88ba86710a7d",
+    "recurso_url": "https://datos.sonora.gob.mx/dataset/960ef0a9-73ed-4191-ae0b-b868d7e48292/resource/e0d2acc2-9841-4f6d-baea-88ba86710a7d/download/catalogo.xlsx",
+    "sha256": "ea54aad30b7342ce678d1d66157325a5cbaa492380ee4d807b20918198c5b0f5",
+    "hoja_campo": "Catalogo_Estado / CLAVE_ENT"
+   },
+   "referencia_iri": "https://example.org/mex-ontologi/declared-code-reference/c2094a26d8939996516ffb7c725ea36c6da339a3a61466cb926ff24d92f000b5",
+   "periodos_declarados_por_titulo": [
+    "1990-2040"
+   ],
+   "nota_periodos": "Periodos declarados por titulos de recursos CKAN y nota del conjunto; NO cobertura observada.",
+   "estado_actual": "pendiente (F3 parcial, F4 ausente)",
+   "motivo": "Igual que V15 para la hoja Catalogo_Estado/CLAVE_ENT.",
+   "evidencia_revisada": [
+    "W05 + W06 (igual que V15)",
+    "Local: package_960ef0a9 (extras nulos) + xlsx ea54aad3",
+    "R6-C1 (API CKAN package_show 2026-10-23) + R6-C2 (core-properties xlsx)",
+    "R6 novedad: R6-C1+C2 igual que V15 para hoja Catalogo_Estado (mismo archivo). F3+F4 ausentes."
+   ],
+   "campos_minimos": [
+    "emisor: publicador (DEP-CAT-R6-04)",
+    "edicion/version/fecha declarada del catalogo (Catalogo_Estado / CLAVE_ENT, sha ea54aad3)",
+    "recurso catalogo: e0d2acc2-9841-4f6d-baea-88ba86710a7d",
+    "periodos de aplicacion: 1990-2040",
+    "fecha o firma del documento"
+   ],
+   "criterio_aceptacion": "Se cierra solo si el documento del publicador cita edicion/version/fecha del catalogo (Catalogo_Estado / CLAVE_ENT, sha ea54aad3) y recurso e0d2acc2-9841-4f6d-baea-88ba86710a7d y periodos (1990-2040); verificable (URL o copia local con SHA). Las fechas de portal/API (version=null, placeholder 1989-06-04) y core-properties no acreditan F3+F4.",
+   "limites": [
+    "No afirmar vigencia histórica ni extender a otros conjuntos/periodos.",
+    "No transferir vigencia del documento CONAPO 09-05-2024 al catalogo local; aclarar desfase de corte (local 1990-2019/2020-2040 vs CONAPO 1990-2020/2021-2040)"
+   ],
+   "documento_requerido_exacto": "Declaracion de edicion/version/fecha de catalogo.xlsx (sha ea54aad3) con vinculo a reconstruccion 1990-2019 y proyecciones 2020-2040 + aclaracion del desfase de corte vs CONAPO 09-05-2024. Pendiente exacto: Acreditar F3+F4: declaración de edición/versión/fecha del catálogo (Catalogo_Estado/CLAVE_ENT, sha ea54aad3) y documento que la vincule con 1990-2040 (conjunto 960ef0a9).",
+   "soporte": [
+    {
+     "ruta": "reports/pendientes-ronda-5.json",
+     "sha256": "46f3b6f8826379be5124fb85cf6128b705fbe90deebf2c99bff64098608c8f11",
+     "localizador": "decisiones_significados id=V16"
+    },
+    {
+     "ruta": "propuestas/pendientes-muse-r6/catalogos/entrega.json",
+     "sha256": "649bbe7e5feca82b7e8d5c5144de78b1d8ceccb1c217ca976347b1c9a05cb74b",
+     "localizador": "decisiones_significados id=V16 + novedad_r6 (C1 API package_show 2026-10-23 + C2 core-properties xlsx)"
+    },
+    {
+     "ruta": "local: xlsx sha ea54aad3",
+     "sha256": "ea54aad30b7342ce678d1d66157325a5cbaa492380ee4d807b20918198c5b0f5",
+     "localizador": "interior xlsx sin celdas de version/periodo (R4 vigente, re-verificado R6: sizes API = locales)"
+    }
+   ]
+  },
+  {
+   "id": "des_mpo_res",
+   "tipo": "anomalia_referencia_heredada",
+   "grupo": "C",
+   "dependencia_publicador": "DEP-CAT-R6-03",
+   "conjunto": {
+    "id": "5494daa1-09ca-4750-aeac-2558553700e1",
+    "titulo": "Fiebre manchada (Rickettsia)"
+   },
+   "catalogo": {
+    "nota": "Catalogo no identificado en inventario revisado: API package_show del conjunto 5494daa1 (2026-10-23) lista solo Diccionario + Catalogo (3 hojas: Servicios, rechazo, especie; sha 3b8546ac) + 3 datos 2022-2024; busqueda de texto completo negativa para des_mpo_res/ide_id/ide_col/des_jur_res/cve_loc_res en el xlsx. No se afirma existencia ni vigencia de catalogo alguno."
+   },
+   "referencia_iri": "https://example.org/mex-ontologi/declared-code-reference/a2902c1feb2fa4b8349946c2ae418a11bf0f465032c5c62adaf33fb053373cf2",
+   "periodos_declarados_por_titulo": [
+    "2022",
+    "2023",
+    "2024"
+   ],
+   "nota_periodos": "Rango de datos del conjunto (ficha/API); NO vigencia del catalogo (no existe recurso).",
+   "estado_actual": "pendiente (anomalia heredada: la supuesta referencia nace de las filas 177/178 corruptas; la variable genuina fila 7 es texto libre sin catalogo)",
+   "motivo": "Filas 177/178 degeneradas confirmadas (encabezados repetidos como valores); catalogo_declarado des_mpo_res es posicion de columna, no referencia real (dictamen R6 diversos: artefacto_documental). La variable genuina des_mpo_res (fila 7, Municipio donde reside el caso, ejemplo Hermosillo, catalogo vacio) es texto libre. Catalogo no identificado en inventario revisado (API 2026-10-23 + xlsx 3b8546ac). Solo el publicador puede aclararlo.",
+   "evidencia_revisada": [
+    "R5: diccionario 33d0a99e filas 177/178 degeneradas (huellas 64 hex supra, copia programatica) + fila 7 sin catalogo + xlsx 3b8546ac sin ocurrencias",
+    "R6-C1: inventario API cerrado (Diccionario + Catalogo + 3 datos 2022-2024); catalogo no identificado en inventario revisado",
+    "R6-C2: xlsx 3b8546ac creator openpyxl created 2026-04-15, sin version",
+    "R6 diversos: artefacto_documental sin curar; auditoria registra 2 artefactos (177/178) vs 169 carencias"
+   ],
+   "campos_minimos": [
+    "emisor: publicador del conjunto 5494daa1",
+    "que significan o como se corrigen las filas 177/178",
+    "si existe catalogo: URL del recurso + edicion/fecha + aplicabilidad a des_mpo_res 2022-2024; si no existe: declaracion de que no existe",
+    "sin catalogo confirmado no hay vigencia que acreditar"
+   ],
+   "criterio_aceptacion": "Se cierra solo si el publicador entrega fe de erratas o diccionario corregido que aclare 177/178 y, SOLO si confirma que existe catalogo, su URL con edicion/fecha verificable contra inventario API; si declara que no existe, se archiva como anomalia aclarada sin catalogo. Mientras tanto sigue pendiente; la coincidencia de nombre con la fila 7 no acredita nada.",
+   "limites": [
+    "No usar la coincidencia de nombre con la variable de la fila 7; no crear vinculo catalogoRecuperado",
+    "No presentar la existencia de catalogo ni su vigencia como hecho: catalogo no identificado en inventario revisado (2026-10-23), no inexistencia universal",
+    "Las 2 exclusiones EXC-ENC-177/178 no cuentan como significados nuevos"
+   ],
+   "documento_requerido_exacto": "Fe de erratas o diccionario corregido del publicador que aclare que significan las filas 177/178 (huellas 4b17625c / b5dbcdf5); URL del recurso catalogo SOLO si el publicador confirma que existe un catalogo aplicable a des_mpo_res 2022-2024. Si confirma que no existe, basta la fe de erratas.",
+   "soporte": [
+    {
+     "ruta": "reports/pendientes-ronda-5.json",
+     "sha256": "46f3b6f8826379be5124fb85cf6128b705fbe90deebf2c99bff64098608c8f11",
+     "localizador": "huellas 177/178 64 hex (copia programatica)"
+    },
+    {
+     "ruta": "propuestas/pendientes-muse-r6/catalogos/entrega.json",
+     "sha256": "649bbe7e5feca82b7e8d5c5144de78b1d8ceccb1c217ca976347b1c9a05cb74b",
+     "localizador": "decision des_mpo_res + novedad_r6"
+    },
+    {
+     "ruta": "propuestas/depuracion-post-r6/encabezados/exclusiones.json",
+     "sha256": "d4d72cb5f5f971afbec424f491f55300435c7bf7580e35d69906d0dad018f000",
+     "localizador": "EXC-ENC-177/178 (solo lectura; no cuentan como significados)"
+    }
+   ],
+   "variable_genuina_fila7": {
+    "definicion_iri": "https://example.org/mex-ontologi/definition/33d0a99e-c721-496f-a05e-07646e9ae42a%2F7",
+    "variable": "des_mpo_res",
+    "descripcion_literal": "Municipio donde reside el caso",
+    "tipo_dato": "Texto",
+    "catalogo_declarado": "",
+    "ejemplo": "Hermosillo",
+    "uso_observado": "texto libre (muestra 2022: HERMOSILLO, PUERTO PENASCO, CAJEME...)",
+    "fuente": "data/portal/inspecciones/33d0a99e-c721-496f-a05e-07646e9ae42a.json definiciones[6] (178 definiciones)"
+   },
+   "filas_origen_anomalia": [
+    {
+     "definicion_iri": "https://example.org/mex-ontologi/definition/33d0a99e-c721-496f-a05e-07646e9ae42a%2F177",
+     "huella_fila_diccionario": "4b17625c8fea607228fe4f2a790744687a6e8bc45a712f66d4833d6ac541da79",
+     "fuente_huella": "reports/pendientes-ronda-5.json (copia programatica, 64 hex)"
+    },
+    {
+     "definicion_iri": "https://example.org/mex-ontologi/definition/33d0a99e-c721-496f-a05e-07646e9ae42a%2F178",
+     "huella_fila_diccionario": "b5dbcdf58fd1b6e4d87f2396986629d2aa2350d35f1c1291e59d3d79515a0f60",
+     "fuente_huella": "reports/pendientes-ronda-5.json (copia programatica, 64 hex)"
+    }
+   ],
+   "exclusiones_vinculadas": [
+    {
+     "id": "EXC-ENC-177",
+     "huella_fila_diccionario": "4b17625c8fea607228fe4f2a790744687a6e8bc45a712f66d4833d6ac541da79"
+    },
+    {
+     "id": "EXC-ENC-178",
+     "huella_fila_diccionario": "b5dbcdf58fd1b6e4d87f2396986629d2aa2350d35f1c1291e59d3d79515a0f60"
+    }
+   ],
+   "exclusiones_referencia": {
+    "ruta": "propuestas/depuracion-post-r6/encabezados/exclusiones.json",
+    "sha256": "d4d72cb5f5f971afbec424f491f55300435c7bf7580e35d69906d0dad018f000",
+    "nota": "agente hermano; solo lectura. Las 2 exclusiones comparten filas/huellas con este caso y no cuentan como significados nuevos: el total sigue en 17."
+   },
+   "dictamen_r6_diversos": {
+    "ruta": "propuestas/pendientes-muse-r6/diversos-presas/entrega.json",
+    "decision": "artefacto_documental",
+    "motivo": "fila corrupta: repite la cabecera del diccionario como valores; catalogo_declarado des_mpo_res es posicion de columna, no referencia real. Se conserva como artefacto, sin curar"
+   }
+  }
+ ]
+}

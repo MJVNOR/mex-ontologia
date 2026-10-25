@@ -1,0 +1,732 @@
+{
+  "rol": "epidemiologia",
+  "significados": [
+    {
+      "conjunto": "dca16d84-dbf0-4501-b702-dc6372a480ea",
+      "titulo_conjunto": "Vigilancia Epidemiológica",
+      "diccionario": "2334deaa-dd0c-444e-b038-4cc556ad715d",
+      "variable": "cve_cie10",
+      "descripcion": "Clave",
+      "estado": "fuera_del_nucleo_actual",
+      "catalogo_declarado": "",
+      "huella_fila_diccionario": "681e909fd28c2155e3b0b4396e185e481355919e4d65c2888506c08869374114",
+      "definicion_iri": "https://example.org/mex-ontologi/definition/2334deaa-dd0c-444e-b038-4cc556ad715d%2F9",
+      "dictamen_documental": {
+        "definicion_iri": "https://example.org/mex-ontologi/definition/2334deaa-dd0c-444e-b038-4cc556ad715d%2F9",
+        "decision": "pendiente",
+        "motivo": "Descripcion generica 'Clave' sin objeto fijado; el ejemplo sugiere CIE pero inferirlo seria interpretar nombre y ejemplo, no respaldo explicito. Catalogo declarado vacio en las 59 filas. Regla r3a6-005 fija no expandir CIE por formato, ejemplo o campo.",
+        "evidencia": [
+          "propuestas/pendientes-muse-r5/epidemiologia/evidencia/datastore_diccionario_vigilancia.json:59 registros frescos 2026-10-23; cve_cie10 desc='Clave' ejemplo='A04, A08-A09 excepto A08.0'",
+          "data/portal/contenido-inspeccion.json:recurso=2334deaa-dd0c-444e-b038-4cc556ad715d (fila completa: tipo/formato/ejemplo/catalogo)",
+          "data/portal/contenido-inspeccion.json:recurso=1689b19c-b0dc-4e39-bf07-e3a2e684ef1a:hoja=SUIVE (esquema fisico)",
+          "data/semantica/cobertura.json:estado=fuera_del_nucleo_actual",
+          "propuestas/pendientes-muse-r4/lote-3/pendientes.json:dictamen previo revisado",
+          "definicion_iri=https://example.org/mex-ontologi/definition/2334deaa-dd0c-444e-b038-4cc556ad715d%2F9",
+          "data/portal/inspecciones/1689b19c-b0dc-4e39-bf07-e3a2e684ef1a.json:hoja=SUIVE:posicion=9"
+        ],
+        "limites": [
+          "Se conserva el texto original y su ausencia; sin inventar unidades, codigos, sujeto, denominador, poblacion, periodos ni equivalencias.",
+          "Sin habilitar joins ni homologaciones con otras columnas, conjuntos o catalogos nacionales."
+        ]
+      }
+    },
+    {
+      "conjunto": "dca16d84-dbf0-4501-b702-dc6372a480ea",
+      "titulo_conjunto": "Vigilancia Epidemiológica",
+      "diccionario": "2334deaa-dd0c-444e-b038-4cc556ad715d",
+      "variable": "acumulado",
+      "descripcion": "Acumulados",
+      "estado": "fuera_del_nucleo_actual",
+      "catalogo_declarado": "",
+      "huella_fila_diccionario": "f0d809e61ada2173fcef197ce73afddb2e8016b5e60becac65adb4622c52c4d6",
+      "definicion_iri": "https://example.org/mex-ontologi/definition/2334deaa-dd0c-444e-b038-4cc556ad715d%2F11",
+      "dictamen_documental": {
+        "definicion_iri": "https://example.org/mex-ontologi/definition/2334deaa-dd0c-444e-b038-4cc556ad715d%2F11",
+        "decision": "pendiente",
+        "motivo": "'Acumulados' no fija objeto ni periodo de acumulacion; columna fisica pos 11 observada en hoja SUIVE sin documentar su computo.",
+        "evidencia": [
+          "propuestas/pendientes-muse-r5/epidemiologia/evidencia/datastore_diccionario_vigilancia.json:59 registros frescos 2026-10-23; acumulado desc='Acumulados' ejemplo='6'",
+          "data/portal/contenido-inspeccion.json:recurso=2334deaa-dd0c-444e-b038-4cc556ad715d (fila completa: tipo/formato/ejemplo/catalogo)",
+          "data/portal/contenido-inspeccion.json:recurso=1689b19c-b0dc-4e39-bf07-e3a2e684ef1a:hoja=SUIVE (esquema fisico)",
+          "data/semantica/cobertura.json:estado=fuera_del_nucleo_actual",
+          "propuestas/pendientes-muse-r4/lote-3/pendientes.json:dictamen previo revisado",
+          "definicion_iri=https://example.org/mex-ontologi/definition/2334deaa-dd0c-444e-b038-4cc556ad715d%2F11",
+          "data/portal/inspecciones/1689b19c-b0dc-4e39-bf07-e3a2e684ef1a.json:hoja=SUIVE:posicion=11"
+        ],
+        "limites": [
+          "Se conserva el texto original y su ausencia; sin inventar unidades, codigos, sujeto, denominador, poblacion, periodos ni equivalencias.",
+          "Sin habilitar joins ni homologaciones con otras columnas, conjuntos o catalogos nacionales."
+        ]
+      }
+    },
+    {
+      "conjunto": "dca16d84-dbf0-4501-b702-dc6372a480ea",
+      "titulo_conjunto": "Vigilancia Epidemiológica",
+      "diccionario": "2334deaa-dd0c-444e-b038-4cc556ad715d",
+      "variable": "de01_a_04",
+      "descripcion": "Total de personas en vigilancia entre 1 y 5 años",
+      "estado": "fuera_del_nucleo_actual",
+      "catalogo_declarado": "",
+      "huella_fila_diccionario": "71e70bde79d363823ea85bc4003883140edd8c635069c12e4772ce021b6909dd",
+      "definicion_iri": "https://example.org/mex-ontologi/definition/2334deaa-dd0c-444e-b038-4cc556ad715d%2F13",
+      "dictamen_documental": {
+        "definicion_iri": "https://example.org/mex-ontologi/definition/2334deaa-dd0c-444e-b038-4cc556ad715d%2F13",
+        "decision": "pendiente",
+        "motivo": "Fila contradictoria: nombre de01_a_04 (1 a 4) frente a descripcion literal 'Total de personas en vigilancia entre 1 y 5 anos', que ademas solapa la edad 5 con de05_a_09 ('entre 5 y 9'). Las reglas hermanas r3a6-007..016 conservan ese borde literal sin reinterpretar; proponer exigiria elegir intervalo y curaria la contradiccion con una suposicion.",
+        "evidencia": [
+          "propuestas/pendientes-muse-r5/epidemiologia/evidencia/datastore_diccionario_vigilancia.json:59 registros frescos 2026-10-23; de01_a_04 desc='Total de personas en vigilancia entre 1 y 5 años' ejemplo='2'",
+          "data/portal/contenido-inspeccion.json:recurso=2334deaa-dd0c-444e-b038-4cc556ad715d (fila completa: tipo/formato/ejemplo/catalogo)",
+          "data/portal/contenido-inspeccion.json:recurso=1689b19c-b0dc-4e39-bf07-e3a2e684ef1a:hoja=SUIVE (esquema fisico)",
+          "data/semantica/cobertura.json:estado=fuera_del_nucleo_actual",
+          "propuestas/pendientes-muse-r4/lote-3/pendientes.json:dictamen previo revisado",
+          "definicion_iri=https://example.org/mex-ontologi/definition/2334deaa-dd0c-444e-b038-4cc556ad715d%2F13",
+          "data/portal/inspecciones/1689b19c-b0dc-4e39-bf07-e3a2e684ef1a.json:hoja=SUIVE:posicion=13"
+        ],
+        "limites": [
+          "Se conserva el texto original y su ausencia; sin inventar unidades, codigos, sujeto, denominador, poblacion, periodos ni equivalencias.",
+          "Sin habilitar joins ni homologaciones con otras columnas, conjuntos o catalogos nacionales.",
+          "Contradiccion nombre/descripcion y solape conservados como tales; sin reinterpretar bordes."
+        ]
+      }
+    },
+    {
+      "conjunto": "dca16d84-dbf0-4501-b702-dc6372a480ea",
+      "titulo_conjunto": "Vigilancia Epidemiológica",
+      "diccionario": "2334deaa-dd0c-444e-b038-4cc556ad715d",
+      "variable": "se_ignoran",
+      "descripcion": "Pendiente de especificar",
+      "estado": "fuera_del_nucleo_actual",
+      "catalogo_declarado": "",
+      "huella_fila_diccionario": "712a4678ea6443e9f58a98c49834483e2c2821fc6c09ff79afffed6d5b5e4d0c",
+      "definicion_iri": "https://example.org/mex-ontologi/definition/2334deaa-dd0c-444e-b038-4cc556ad715d%2F23",
+      "dictamen_documental": {
+        "definicion_iri": "https://example.org/mex-ontologi/definition/2334deaa-dd0c-444e-b038-4cc556ad715d%2F23",
+        "decision": "pendiente",
+        "motivo": "Descripcion 'Pendiente de especificar': sin respaldo explicito vinculado a esta definicion; no se interpreta el nombre. Columna fisica pos 23 observada.",
+        "evidencia": [
+          "propuestas/pendientes-muse-r5/epidemiologia/evidencia/datastore_diccionario_vigilancia.json:59 registros frescos 2026-10-23; se_ignoran desc='Pendiente de especificar' ejemplo='0'",
+          "data/portal/contenido-inspeccion.json:recurso=2334deaa-dd0c-444e-b038-4cc556ad715d (fila completa: tipo/formato/ejemplo/catalogo)",
+          "data/portal/contenido-inspeccion.json:recurso=1689b19c-b0dc-4e39-bf07-e3a2e684ef1a:hoja=SUIVE (esquema fisico)",
+          "data/semantica/cobertura.json:estado=fuera_del_nucleo_actual",
+          "propuestas/pendientes-muse-r4/lote-3/pendientes.json:dictamen previo revisado",
+          "definicion_iri=https://example.org/mex-ontologi/definition/2334deaa-dd0c-444e-b038-4cc556ad715d%2F23",
+          "data/portal/inspecciones/1689b19c-b0dc-4e39-bf07-e3a2e684ef1a.json:hoja=SUIVE:posicion=23"
+        ],
+        "limites": [
+          "Se conserva el texto original y su ausencia; sin inventar unidades, codigos, sujeto, denominador, poblacion, periodos ni equivalencias.",
+          "Sin habilitar joins ni homologaciones con otras columnas, conjuntos o catalogos nacionales."
+        ]
+      }
+    },
+    {
+      "conjunto": "dca16d84-dbf0-4501-b702-dc6372a480ea",
+      "titulo_conjunto": "Vigilancia Epidemiológica",
+      "diccionario": "2334deaa-dd0c-444e-b038-4cc556ad715d",
+      "variable": "menores_1f",
+      "descripcion": "Pendiente de especificar",
+      "estado": "fuera_del_nucleo_actual",
+      "catalogo_declarado": "",
+      "huella_fila_diccionario": "9c235bec64ee84ac6be73f13281fb34ccfd77466e273cf25a2b893ed8b15694b",
+      "definicion_iri": "https://example.org/mex-ontologi/definition/2334deaa-dd0c-444e-b038-4cc556ad715d%2F24",
+      "dictamen_documental": {
+        "definicion_iri": "https://example.org/mex-ontologi/definition/2334deaa-dd0c-444e-b038-4cc556ad715d%2F24",
+        "decision": "pendiente",
+        "motivo": "Descripcion 'Pendiente de especificar': sin respaldo explicito vinculado a esta definicion; no se interpreta el sufijo f por simetria con la serie sin sufijo ni por proximidad a totalf ('Total acumulado de Mujeres'). Columna fisica pos 24 observada, ejemplo '0'.",
+        "evidencia": [
+          "propuestas/pendientes-muse-r5/epidemiologia/evidencia/datastore_diccionario_vigilancia.json:59 registros frescos 2026-10-23; menores_1f desc='Pendiente de especificar' ejemplo='0'",
+          "data/portal/contenido-inspeccion.json:recurso=2334deaa-dd0c-444e-b038-4cc556ad715d (fila completa: tipo/formato/ejemplo/catalogo)",
+          "data/portal/contenido-inspeccion.json:recurso=1689b19c-b0dc-4e39-bf07-e3a2e684ef1a:hoja=SUIVE (esquema fisico)",
+          "data/semantica/cobertura.json:estado=fuera_del_nucleo_actual",
+          "propuestas/pendientes-muse-r4/lote-3/pendientes.json:dictamen previo revisado",
+          "definicion_iri=https://example.org/mex-ontologi/definition/2334deaa-dd0c-444e-b038-4cc556ad715d%2F24",
+          "data/portal/inspecciones/1689b19c-b0dc-4e39-bf07-e3a2e684ef1a.json:hoja=SUIVE:posicion=24"
+        ],
+        "limites": [
+          "Se conserva el texto original y su ausencia; sin inventar unidades, codigos, sujeto, denominador, poblacion, periodos ni equivalencias.",
+          "Sin habilitar joins ni homologaciones con otras columnas, conjuntos o catalogos nacionales."
+        ]
+      }
+    },
+    {
+      "conjunto": "dca16d84-dbf0-4501-b702-dc6372a480ea",
+      "titulo_conjunto": "Vigilancia Epidemiológica",
+      "diccionario": "2334deaa-dd0c-444e-b038-4cc556ad715d",
+      "variable": "de01_a_04f",
+      "descripcion": "Pendiente de especificar",
+      "estado": "fuera_del_nucleo_actual",
+      "catalogo_declarado": "",
+      "huella_fila_diccionario": "96785af1d47c13ccbdd90e122e3686aac5af1b7574f41d22f10ebe0f4fcaf744",
+      "definicion_iri": "https://example.org/mex-ontologi/definition/2334deaa-dd0c-444e-b038-4cc556ad715d%2F25",
+      "dictamen_documental": {
+        "definicion_iri": "https://example.org/mex-ontologi/definition/2334deaa-dd0c-444e-b038-4cc556ad715d%2F25",
+        "decision": "pendiente",
+        "motivo": "Descripcion 'Pendiente de especificar': sin respaldo explicito vinculado a esta definicion; no se interpreta el sufijo f por simetria con la serie sin sufijo ni por proximidad a totalf ('Total acumulado de Mujeres'). Columna fisica pos 25 observada, ejemplo '0'.",
+        "evidencia": [
+          "propuestas/pendientes-muse-r5/epidemiologia/evidencia/datastore_diccionario_vigilancia.json:59 registros frescos 2026-10-23; de01_a_04f desc='Pendiente de especificar' ejemplo='0'",
+          "data/portal/contenido-inspeccion.json:recurso=2334deaa-dd0c-444e-b038-4cc556ad715d (fila completa: tipo/formato/ejemplo/catalogo)",
+          "data/portal/contenido-inspeccion.json:recurso=1689b19c-b0dc-4e39-bf07-e3a2e684ef1a:hoja=SUIVE (esquema fisico)",
+          "data/semantica/cobertura.json:estado=fuera_del_nucleo_actual",
+          "propuestas/pendientes-muse-r4/lote-3/pendientes.json:dictamen previo revisado",
+          "definicion_iri=https://example.org/mex-ontologi/definition/2334deaa-dd0c-444e-b038-4cc556ad715d%2F25",
+          "data/portal/inspecciones/1689b19c-b0dc-4e39-bf07-e3a2e684ef1a.json:hoja=SUIVE:posicion=25"
+        ],
+        "limites": [
+          "Se conserva el texto original y su ausencia; sin inventar unidades, codigos, sujeto, denominador, poblacion, periodos ni equivalencias.",
+          "Sin habilitar joins ni homologaciones con otras columnas, conjuntos o catalogos nacionales."
+        ]
+      }
+    },
+    {
+      "conjunto": "dca16d84-dbf0-4501-b702-dc6372a480ea",
+      "titulo_conjunto": "Vigilancia Epidemiológica",
+      "diccionario": "2334deaa-dd0c-444e-b038-4cc556ad715d",
+      "variable": "de05_a_09f",
+      "descripcion": "Pendiente de especificar",
+      "estado": "fuera_del_nucleo_actual",
+      "catalogo_declarado": "",
+      "huella_fila_diccionario": "971f30fab7a6a0948bcd4189a83f840ee1752c0668591c84c02a56b312e65893",
+      "definicion_iri": "https://example.org/mex-ontologi/definition/2334deaa-dd0c-444e-b038-4cc556ad715d%2F26",
+      "dictamen_documental": {
+        "definicion_iri": "https://example.org/mex-ontologi/definition/2334deaa-dd0c-444e-b038-4cc556ad715d%2F26",
+        "decision": "pendiente",
+        "motivo": "Descripcion 'Pendiente de especificar': sin respaldo explicito vinculado a esta definicion; no se interpreta el sufijo f por simetria con la serie sin sufijo ni por proximidad a totalf ('Total acumulado de Mujeres'). Columna fisica pos 26 observada, ejemplo '0'.",
+        "evidencia": [
+          "propuestas/pendientes-muse-r5/epidemiologia/evidencia/datastore_diccionario_vigilancia.json:59 registros frescos 2026-10-23; de05_a_09f desc='Pendiente de especificar' ejemplo='0'",
+          "data/portal/contenido-inspeccion.json:recurso=2334deaa-dd0c-444e-b038-4cc556ad715d (fila completa: tipo/formato/ejemplo/catalogo)",
+          "data/portal/contenido-inspeccion.json:recurso=1689b19c-b0dc-4e39-bf07-e3a2e684ef1a:hoja=SUIVE (esquema fisico)",
+          "data/semantica/cobertura.json:estado=fuera_del_nucleo_actual",
+          "propuestas/pendientes-muse-r4/lote-3/pendientes.json:dictamen previo revisado",
+          "definicion_iri=https://example.org/mex-ontologi/definition/2334deaa-dd0c-444e-b038-4cc556ad715d%2F26",
+          "data/portal/inspecciones/1689b19c-b0dc-4e39-bf07-e3a2e684ef1a.json:hoja=SUIVE:posicion=26"
+        ],
+        "limites": [
+          "Se conserva el texto original y su ausencia; sin inventar unidades, codigos, sujeto, denominador, poblacion, periodos ni equivalencias.",
+          "Sin habilitar joins ni homologaciones con otras columnas, conjuntos o catalogos nacionales."
+        ]
+      }
+    },
+    {
+      "conjunto": "dca16d84-dbf0-4501-b702-dc6372a480ea",
+      "titulo_conjunto": "Vigilancia Epidemiológica",
+      "diccionario": "2334deaa-dd0c-444e-b038-4cc556ad715d",
+      "variable": "de10_a_14f",
+      "descripcion": "Pendiente de especificar",
+      "estado": "fuera_del_nucleo_actual",
+      "catalogo_declarado": "",
+      "huella_fila_diccionario": "37d126eb7fdbc381aba67bb453c6af51c79b342e69a2ceff8428980bfdb1495d",
+      "definicion_iri": "https://example.org/mex-ontologi/definition/2334deaa-dd0c-444e-b038-4cc556ad715d%2F27",
+      "dictamen_documental": {
+        "definicion_iri": "https://example.org/mex-ontologi/definition/2334deaa-dd0c-444e-b038-4cc556ad715d%2F27",
+        "decision": "pendiente",
+        "motivo": "Descripcion 'Pendiente de especificar': sin respaldo explicito vinculado a esta definicion; no se interpreta el sufijo f por simetria con la serie sin sufijo ni por proximidad a totalf ('Total acumulado de Mujeres'). Columna fisica pos 27 observada, ejemplo '0'.",
+        "evidencia": [
+          "propuestas/pendientes-muse-r5/epidemiologia/evidencia/datastore_diccionario_vigilancia.json:59 registros frescos 2026-10-23; de10_a_14f desc='Pendiente de especificar' ejemplo='0'",
+          "data/portal/contenido-inspeccion.json:recurso=2334deaa-dd0c-444e-b038-4cc556ad715d (fila completa: tipo/formato/ejemplo/catalogo)",
+          "data/portal/contenido-inspeccion.json:recurso=1689b19c-b0dc-4e39-bf07-e3a2e684ef1a:hoja=SUIVE (esquema fisico)",
+          "data/semantica/cobertura.json:estado=fuera_del_nucleo_actual",
+          "propuestas/pendientes-muse-r4/lote-3/pendientes.json:dictamen previo revisado",
+          "definicion_iri=https://example.org/mex-ontologi/definition/2334deaa-dd0c-444e-b038-4cc556ad715d%2F27",
+          "data/portal/inspecciones/1689b19c-b0dc-4e39-bf07-e3a2e684ef1a.json:hoja=SUIVE:posicion=27"
+        ],
+        "limites": [
+          "Se conserva el texto original y su ausencia; sin inventar unidades, codigos, sujeto, denominador, poblacion, periodos ni equivalencias.",
+          "Sin habilitar joins ni homologaciones con otras columnas, conjuntos o catalogos nacionales."
+        ]
+      }
+    },
+    {
+      "conjunto": "dca16d84-dbf0-4501-b702-dc6372a480ea",
+      "titulo_conjunto": "Vigilancia Epidemiológica",
+      "diccionario": "2334deaa-dd0c-444e-b038-4cc556ad715d",
+      "variable": "de15_a_19f",
+      "descripcion": "Pendiente de especificar",
+      "estado": "fuera_del_nucleo_actual",
+      "catalogo_declarado": "",
+      "huella_fila_diccionario": "a42fd90e2204759a31ee32e07cdfd56b4d77ff5eb4620463bae4efebc57514c7",
+      "definicion_iri": "https://example.org/mex-ontologi/definition/2334deaa-dd0c-444e-b038-4cc556ad715d%2F28",
+      "dictamen_documental": {
+        "definicion_iri": "https://example.org/mex-ontologi/definition/2334deaa-dd0c-444e-b038-4cc556ad715d%2F28",
+        "decision": "pendiente",
+        "motivo": "Descripcion 'Pendiente de especificar': sin respaldo explicito vinculado a esta definicion; no se interpreta el sufijo f por simetria con la serie sin sufijo ni por proximidad a totalf ('Total acumulado de Mujeres'). Columna fisica pos 28 observada, ejemplo '0'.",
+        "evidencia": [
+          "propuestas/pendientes-muse-r5/epidemiologia/evidencia/datastore_diccionario_vigilancia.json:59 registros frescos 2026-10-23; de15_a_19f desc='Pendiente de especificar' ejemplo='0'",
+          "data/portal/contenido-inspeccion.json:recurso=2334deaa-dd0c-444e-b038-4cc556ad715d (fila completa: tipo/formato/ejemplo/catalogo)",
+          "data/portal/contenido-inspeccion.json:recurso=1689b19c-b0dc-4e39-bf07-e3a2e684ef1a:hoja=SUIVE (esquema fisico)",
+          "data/semantica/cobertura.json:estado=fuera_del_nucleo_actual",
+          "propuestas/pendientes-muse-r4/lote-3/pendientes.json:dictamen previo revisado",
+          "definicion_iri=https://example.org/mex-ontologi/definition/2334deaa-dd0c-444e-b038-4cc556ad715d%2F28",
+          "data/portal/inspecciones/1689b19c-b0dc-4e39-bf07-e3a2e684ef1a.json:hoja=SUIVE:posicion=28"
+        ],
+        "limites": [
+          "Se conserva el texto original y su ausencia; sin inventar unidades, codigos, sujeto, denominador, poblacion, periodos ni equivalencias.",
+          "Sin habilitar joins ni homologaciones con otras columnas, conjuntos o catalogos nacionales."
+        ]
+      }
+    },
+    {
+      "conjunto": "dca16d84-dbf0-4501-b702-dc6372a480ea",
+      "titulo_conjunto": "Vigilancia Epidemiológica",
+      "diccionario": "2334deaa-dd0c-444e-b038-4cc556ad715d",
+      "variable": "de20_a_24f",
+      "descripcion": "Pendiente de especificar",
+      "estado": "fuera_del_nucleo_actual",
+      "catalogo_declarado": "",
+      "huella_fila_diccionario": "0cc4157c95452c748982b1c0667684c551a6bdff52e795e20b71f7b7c2b52e14",
+      "definicion_iri": "https://example.org/mex-ontologi/definition/2334deaa-dd0c-444e-b038-4cc556ad715d%2F29",
+      "dictamen_documental": {
+        "definicion_iri": "https://example.org/mex-ontologi/definition/2334deaa-dd0c-444e-b038-4cc556ad715d%2F29",
+        "decision": "pendiente",
+        "motivo": "Descripcion 'Pendiente de especificar': sin respaldo explicito vinculado a esta definicion; no se interpreta el sufijo f por simetria con la serie sin sufijo ni por proximidad a totalf ('Total acumulado de Mujeres'). Columna fisica pos 29 observada, ejemplo '0'.",
+        "evidencia": [
+          "propuestas/pendientes-muse-r5/epidemiologia/evidencia/datastore_diccionario_vigilancia.json:59 registros frescos 2026-10-23; de20_a_24f desc='Pendiente de especificar' ejemplo='0'",
+          "data/portal/contenido-inspeccion.json:recurso=2334deaa-dd0c-444e-b038-4cc556ad715d (fila completa: tipo/formato/ejemplo/catalogo)",
+          "data/portal/contenido-inspeccion.json:recurso=1689b19c-b0dc-4e39-bf07-e3a2e684ef1a:hoja=SUIVE (esquema fisico)",
+          "data/semantica/cobertura.json:estado=fuera_del_nucleo_actual",
+          "propuestas/pendientes-muse-r4/lote-3/pendientes.json:dictamen previo revisado",
+          "definicion_iri=https://example.org/mex-ontologi/definition/2334deaa-dd0c-444e-b038-4cc556ad715d%2F29",
+          "data/portal/inspecciones/1689b19c-b0dc-4e39-bf07-e3a2e684ef1a.json:hoja=SUIVE:posicion=29"
+        ],
+        "limites": [
+          "Se conserva el texto original y su ausencia; sin inventar unidades, codigos, sujeto, denominador, poblacion, periodos ni equivalencias.",
+          "Sin habilitar joins ni homologaciones con otras columnas, conjuntos o catalogos nacionales."
+        ]
+      }
+    },
+    {
+      "conjunto": "dca16d84-dbf0-4501-b702-dc6372a480ea",
+      "titulo_conjunto": "Vigilancia Epidemiológica",
+      "diccionario": "2334deaa-dd0c-444e-b038-4cc556ad715d",
+      "variable": "de25_a_44f",
+      "descripcion": "Pendiente de especificar",
+      "estado": "fuera_del_nucleo_actual",
+      "catalogo_declarado": "",
+      "huella_fila_diccionario": "bfc6c152db70092a5c576d67ffcc541dee1af624ca1e1b0d95f1a6c6f8349b5a",
+      "definicion_iri": "https://example.org/mex-ontologi/definition/2334deaa-dd0c-444e-b038-4cc556ad715d%2F30",
+      "dictamen_documental": {
+        "definicion_iri": "https://example.org/mex-ontologi/definition/2334deaa-dd0c-444e-b038-4cc556ad715d%2F30",
+        "decision": "pendiente",
+        "motivo": "Descripcion 'Pendiente de especificar': sin respaldo explicito vinculado a esta definicion; no se interpreta el sufijo f por simetria con la serie sin sufijo ni por proximidad a totalf ('Total acumulado de Mujeres'). Columna fisica pos 30 observada, ejemplo '1'.",
+        "evidencia": [
+          "propuestas/pendientes-muse-r5/epidemiologia/evidencia/datastore_diccionario_vigilancia.json:59 registros frescos 2026-10-23; de25_a_44f desc='Pendiente de especificar' ejemplo='1'",
+          "data/portal/contenido-inspeccion.json:recurso=2334deaa-dd0c-444e-b038-4cc556ad715d (fila completa: tipo/formato/ejemplo/catalogo)",
+          "data/portal/contenido-inspeccion.json:recurso=1689b19c-b0dc-4e39-bf07-e3a2e684ef1a:hoja=SUIVE (esquema fisico)",
+          "data/semantica/cobertura.json:estado=fuera_del_nucleo_actual",
+          "propuestas/pendientes-muse-r4/lote-3/pendientes.json:dictamen previo revisado",
+          "definicion_iri=https://example.org/mex-ontologi/definition/2334deaa-dd0c-444e-b038-4cc556ad715d%2F30",
+          "data/portal/inspecciones/1689b19c-b0dc-4e39-bf07-e3a2e684ef1a.json:hoja=SUIVE:posicion=30"
+        ],
+        "limites": [
+          "Se conserva el texto original y su ausencia; sin inventar unidades, codigos, sujeto, denominador, poblacion, periodos ni equivalencias.",
+          "Sin habilitar joins ni homologaciones con otras columnas, conjuntos o catalogos nacionales."
+        ]
+      }
+    },
+    {
+      "conjunto": "dca16d84-dbf0-4501-b702-dc6372a480ea",
+      "titulo_conjunto": "Vigilancia Epidemiológica",
+      "diccionario": "2334deaa-dd0c-444e-b038-4cc556ad715d",
+      "variable": "de45_a_49f",
+      "descripcion": "Pendiente de especificar",
+      "estado": "fuera_del_nucleo_actual",
+      "catalogo_declarado": "",
+      "huella_fila_diccionario": "91c1f556eee3a0e4d124a37770bc921d895d4e3640fdcf669f6190d9c3ea6435",
+      "definicion_iri": "https://example.org/mex-ontologi/definition/2334deaa-dd0c-444e-b038-4cc556ad715d%2F31",
+      "dictamen_documental": {
+        "definicion_iri": "https://example.org/mex-ontologi/definition/2334deaa-dd0c-444e-b038-4cc556ad715d%2F31",
+        "decision": "pendiente",
+        "motivo": "Descripcion 'Pendiente de especificar': sin respaldo explicito vinculado a esta definicion; no se interpreta el sufijo f por simetria con la serie sin sufijo ni por proximidad a totalf ('Total acumulado de Mujeres'). Columna fisica pos 31 observada, ejemplo '0'.",
+        "evidencia": [
+          "propuestas/pendientes-muse-r5/epidemiologia/evidencia/datastore_diccionario_vigilancia.json:59 registros frescos 2026-10-23; de45_a_49f desc='Pendiente de especificar' ejemplo='0'",
+          "data/portal/contenido-inspeccion.json:recurso=2334deaa-dd0c-444e-b038-4cc556ad715d (fila completa: tipo/formato/ejemplo/catalogo)",
+          "data/portal/contenido-inspeccion.json:recurso=1689b19c-b0dc-4e39-bf07-e3a2e684ef1a:hoja=SUIVE (esquema fisico)",
+          "data/semantica/cobertura.json:estado=fuera_del_nucleo_actual",
+          "propuestas/pendientes-muse-r4/lote-3/pendientes.json:dictamen previo revisado",
+          "definicion_iri=https://example.org/mex-ontologi/definition/2334deaa-dd0c-444e-b038-4cc556ad715d%2F31",
+          "data/portal/inspecciones/1689b19c-b0dc-4e39-bf07-e3a2e684ef1a.json:hoja=SUIVE:posicion=31"
+        ],
+        "limites": [
+          "Se conserva el texto original y su ausencia; sin inventar unidades, codigos, sujeto, denominador, poblacion, periodos ni equivalencias.",
+          "Sin habilitar joins ni homologaciones con otras columnas, conjuntos o catalogos nacionales."
+        ]
+      }
+    },
+    {
+      "conjunto": "dca16d84-dbf0-4501-b702-dc6372a480ea",
+      "titulo_conjunto": "Vigilancia Epidemiológica",
+      "diccionario": "2334deaa-dd0c-444e-b038-4cc556ad715d",
+      "variable": "de50_a_59f",
+      "descripcion": "Pendiente de especificar",
+      "estado": "fuera_del_nucleo_actual",
+      "catalogo_declarado": "",
+      "huella_fila_diccionario": "0b783d062a8c4d6dc664997cbe2c2f62aac91a0a616b409f953f0c3d9e3f9988",
+      "definicion_iri": "https://example.org/mex-ontologi/definition/2334deaa-dd0c-444e-b038-4cc556ad715d%2F32",
+      "dictamen_documental": {
+        "definicion_iri": "https://example.org/mex-ontologi/definition/2334deaa-dd0c-444e-b038-4cc556ad715d%2F32",
+        "decision": "pendiente",
+        "motivo": "Descripcion 'Pendiente de especificar': sin respaldo explicito vinculado a esta definicion; no se interpreta el sufijo f por simetria con la serie sin sufijo ni por proximidad a totalf ('Total acumulado de Mujeres'). Columna fisica pos 32 observada, ejemplo '0'.",
+        "evidencia": [
+          "propuestas/pendientes-muse-r5/epidemiologia/evidencia/datastore_diccionario_vigilancia.json:59 registros frescos 2026-10-23; de50_a_59f desc='Pendiente de especificar' ejemplo='0'",
+          "data/portal/contenido-inspeccion.json:recurso=2334deaa-dd0c-444e-b038-4cc556ad715d (fila completa: tipo/formato/ejemplo/catalogo)",
+          "data/portal/contenido-inspeccion.json:recurso=1689b19c-b0dc-4e39-bf07-e3a2e684ef1a:hoja=SUIVE (esquema fisico)",
+          "data/semantica/cobertura.json:estado=fuera_del_nucleo_actual",
+          "propuestas/pendientes-muse-r4/lote-3/pendientes.json:dictamen previo revisado",
+          "definicion_iri=https://example.org/mex-ontologi/definition/2334deaa-dd0c-444e-b038-4cc556ad715d%2F32",
+          "data/portal/inspecciones/1689b19c-b0dc-4e39-bf07-e3a2e684ef1a.json:hoja=SUIVE:posicion=32"
+        ],
+        "limites": [
+          "Se conserva el texto original y su ausencia; sin inventar unidades, codigos, sujeto, denominador, poblacion, periodos ni equivalencias.",
+          "Sin habilitar joins ni homologaciones con otras columnas, conjuntos o catalogos nacionales."
+        ]
+      }
+    },
+    {
+      "conjunto": "dca16d84-dbf0-4501-b702-dc6372a480ea",
+      "titulo_conjunto": "Vigilancia Epidemiológica",
+      "diccionario": "2334deaa-dd0c-444e-b038-4cc556ad715d",
+      "variable": "de60_a_64f",
+      "descripcion": "Pendiente de especificar",
+      "estado": "fuera_del_nucleo_actual",
+      "catalogo_declarado": "",
+      "huella_fila_diccionario": "413000668b1a98f5b920a81d0ef2d809ec4245323b769e2cea0b2d9f793f3cf9",
+      "definicion_iri": "https://example.org/mex-ontologi/definition/2334deaa-dd0c-444e-b038-4cc556ad715d%2F33",
+      "dictamen_documental": {
+        "definicion_iri": "https://example.org/mex-ontologi/definition/2334deaa-dd0c-444e-b038-4cc556ad715d%2F33",
+        "decision": "pendiente",
+        "motivo": "Descripcion 'Pendiente de especificar': sin respaldo explicito vinculado a esta definicion; no se interpreta el sufijo f por simetria con la serie sin sufijo ni por proximidad a totalf ('Total acumulado de Mujeres'). Columna fisica pos 33 observada, ejemplo '0'.",
+        "evidencia": [
+          "propuestas/pendientes-muse-r5/epidemiologia/evidencia/datastore_diccionario_vigilancia.json:59 registros frescos 2026-10-23; de60_a_64f desc='Pendiente de especificar' ejemplo='0'",
+          "data/portal/contenido-inspeccion.json:recurso=2334deaa-dd0c-444e-b038-4cc556ad715d (fila completa: tipo/formato/ejemplo/catalogo)",
+          "data/portal/contenido-inspeccion.json:recurso=1689b19c-b0dc-4e39-bf07-e3a2e684ef1a:hoja=SUIVE (esquema fisico)",
+          "data/semantica/cobertura.json:estado=fuera_del_nucleo_actual",
+          "propuestas/pendientes-muse-r4/lote-3/pendientes.json:dictamen previo revisado",
+          "definicion_iri=https://example.org/mex-ontologi/definition/2334deaa-dd0c-444e-b038-4cc556ad715d%2F33",
+          "data/portal/inspecciones/1689b19c-b0dc-4e39-bf07-e3a2e684ef1a.json:hoja=SUIVE:posicion=33"
+        ],
+        "limites": [
+          "Se conserva el texto original y su ausencia; sin inventar unidades, codigos, sujeto, denominador, poblacion, periodos ni equivalencias.",
+          "Sin habilitar joins ni homologaciones con otras columnas, conjuntos o catalogos nacionales."
+        ]
+      }
+    },
+    {
+      "conjunto": "dca16d84-dbf0-4501-b702-dc6372a480ea",
+      "titulo_conjunto": "Vigilancia Epidemiológica",
+      "diccionario": "2334deaa-dd0c-444e-b038-4cc556ad715d",
+      "variable": "de65_y_maf",
+      "descripcion": "Pendiente de especificar",
+      "estado": "fuera_del_nucleo_actual",
+      "catalogo_declarado": "",
+      "huella_fila_diccionario": "dbf3d9f670449df35da5f8973d3e4491e8dd5ba5d334b1f87f0c0c1ab0ad88a6",
+      "definicion_iri": "https://example.org/mex-ontologi/definition/2334deaa-dd0c-444e-b038-4cc556ad715d%2F34",
+      "dictamen_documental": {
+        "definicion_iri": "https://example.org/mex-ontologi/definition/2334deaa-dd0c-444e-b038-4cc556ad715d%2F34",
+        "decision": "pendiente",
+        "motivo": "Descripcion 'Pendiente de especificar': sin respaldo explicito vinculado a esta definicion; no se interpreta el sufijo f por simetria con la serie sin sufijo ni por proximidad a totalf ('Total acumulado de Mujeres'). Columna fisica pos 34 observada, ejemplo '0'.",
+        "evidencia": [
+          "propuestas/pendientes-muse-r5/epidemiologia/evidencia/datastore_diccionario_vigilancia.json:59 registros frescos 2026-10-23; de65_y_maf desc='Pendiente de especificar' ejemplo='0'",
+          "data/portal/contenido-inspeccion.json:recurso=2334deaa-dd0c-444e-b038-4cc556ad715d (fila completa: tipo/formato/ejemplo/catalogo)",
+          "data/portal/contenido-inspeccion.json:recurso=1689b19c-b0dc-4e39-bf07-e3a2e684ef1a:hoja=SUIVE (esquema fisico)",
+          "data/semantica/cobertura.json:estado=fuera_del_nucleo_actual",
+          "propuestas/pendientes-muse-r4/lote-3/pendientes.json:dictamen previo revisado",
+          "definicion_iri=https://example.org/mex-ontologi/definition/2334deaa-dd0c-444e-b038-4cc556ad715d%2F34",
+          "data/portal/inspecciones/1689b19c-b0dc-4e39-bf07-e3a2e684ef1a.json:hoja=SUIVE:posicion=34"
+        ],
+        "limites": [
+          "Se conserva el texto original y su ausencia; sin inventar unidades, codigos, sujeto, denominador, poblacion, periodos ni equivalencias.",
+          "Sin habilitar joins ni homologaciones con otras columnas, conjuntos o catalogos nacionales."
+        ]
+      }
+    },
+    {
+      "conjunto": "dca16d84-dbf0-4501-b702-dc6372a480ea",
+      "titulo_conjunto": "Vigilancia Epidemiológica",
+      "diccionario": "2334deaa-dd0c-444e-b038-4cc556ad715d",
+      "variable": "se_ignoraf",
+      "descripcion": "Pendiente de especificar",
+      "estado": "fuera_del_nucleo_actual",
+      "catalogo_declarado": "",
+      "huella_fila_diccionario": "2ca9f9926c9a1888648ca555419346e0d0d7c0340fa2f3883e4bec38eaa11ea3",
+      "definicion_iri": "https://example.org/mex-ontologi/definition/2334deaa-dd0c-444e-b038-4cc556ad715d%2F35",
+      "dictamen_documental": {
+        "definicion_iri": "https://example.org/mex-ontologi/definition/2334deaa-dd0c-444e-b038-4cc556ad715d%2F35",
+        "decision": "pendiente",
+        "motivo": "Descripcion 'Pendiente de especificar': sin respaldo explicito vinculado a esta definicion; no se interpreta el sufijo f por simetria con la serie sin sufijo ni por proximidad a totalf ('Total acumulado de Mujeres'). Columna fisica pos 35 observada, ejemplo '0'.",
+        "evidencia": [
+          "propuestas/pendientes-muse-r5/epidemiologia/evidencia/datastore_diccionario_vigilancia.json:59 registros frescos 2026-10-23; se_ignoraf desc='Pendiente de especificar' ejemplo='0'",
+          "data/portal/contenido-inspeccion.json:recurso=2334deaa-dd0c-444e-b038-4cc556ad715d (fila completa: tipo/formato/ejemplo/catalogo)",
+          "data/portal/contenido-inspeccion.json:recurso=1689b19c-b0dc-4e39-bf07-e3a2e684ef1a:hoja=SUIVE (esquema fisico)",
+          "data/semantica/cobertura.json:estado=fuera_del_nucleo_actual",
+          "propuestas/pendientes-muse-r4/lote-3/pendientes.json:dictamen previo revisado",
+          "definicion_iri=https://example.org/mex-ontologi/definition/2334deaa-dd0c-444e-b038-4cc556ad715d%2F35",
+          "data/portal/inspecciones/1689b19c-b0dc-4e39-bf07-e3a2e684ef1a.json:hoja=SUIVE:posicion=35"
+        ],
+        "limites": [
+          "Se conserva el texto original y su ausencia; sin inventar unidades, codigos, sujeto, denominador, poblacion, periodos ni equivalencias.",
+          "Sin habilitar joins ni homologaciones con otras columnas, conjuntos o catalogos nacionales."
+        ]
+      }
+    },
+    {
+      "conjunto": "dca16d84-dbf0-4501-b702-dc6372a480ea",
+      "titulo_conjunto": "Vigilancia Epidemiológica",
+      "diccionario": "2334deaa-dd0c-444e-b038-4cc556ad715d",
+      "variable": "ssa",
+      "descripcion": "Pendiente de especificar",
+      "estado": "fuera_del_nucleo_actual",
+      "catalogo_declarado": "",
+      "huella_fila_diccionario": "892a850ba9bee2014e8ea5157ed208a1b7285937ec068a7600f3ced39786d710",
+      "definicion_iri": "https://example.org/mex-ontologi/definition/2334deaa-dd0c-444e-b038-4cc556ad715d%2F36",
+      "dictamen_documental": {
+        "definicion_iri": "https://example.org/mex-ontologi/definition/2334deaa-dd0c-444e-b038-4cc556ad715d%2F36",
+        "decision": "pendiente",
+        "motivo": "Descripcion 'Pendiente de especificar': sin respaldo explicito vinculado a esta definicion; no se interpretan las siglas (ssa) como institucion ni como objeto contado. Columna fisica pos 36 observada, ejemplo '3'.",
+        "evidencia": [
+          "propuestas/pendientes-muse-r5/epidemiologia/evidencia/datastore_diccionario_vigilancia.json:59 registros frescos 2026-10-23; ssa desc='Pendiente de especificar' ejemplo='3'",
+          "data/portal/contenido-inspeccion.json:recurso=2334deaa-dd0c-444e-b038-4cc556ad715d (fila completa: tipo/formato/ejemplo/catalogo)",
+          "data/portal/contenido-inspeccion.json:recurso=1689b19c-b0dc-4e39-bf07-e3a2e684ef1a:hoja=SUIVE (esquema fisico)",
+          "data/semantica/cobertura.json:estado=fuera_del_nucleo_actual",
+          "propuestas/pendientes-muse-r4/lote-3/pendientes.json:dictamen previo revisado",
+          "definicion_iri=https://example.org/mex-ontologi/definition/2334deaa-dd0c-444e-b038-4cc556ad715d%2F36",
+          "data/portal/inspecciones/1689b19c-b0dc-4e39-bf07-e3a2e684ef1a.json:hoja=SUIVE:posicion=36"
+        ],
+        "limites": [
+          "Se conserva el texto original y su ausencia; sin inventar unidades, codigos, sujeto, denominador, poblacion, periodos ni equivalencias.",
+          "Sin habilitar joins ni homologaciones con otras columnas, conjuntos o catalogos nacionales."
+        ]
+      }
+    },
+    {
+      "conjunto": "dca16d84-dbf0-4501-b702-dc6372a480ea",
+      "titulo_conjunto": "Vigilancia Epidemiológica",
+      "diccionario": "2334deaa-dd0c-444e-b038-4cc556ad715d",
+      "variable": "imss_ord",
+      "descripcion": "Pendiente de especificar",
+      "estado": "fuera_del_nucleo_actual",
+      "catalogo_declarado": "",
+      "huella_fila_diccionario": "fed770c9cb25fcea694559f6ed09bb92b1338ec7499cd04ff202607d616af1a1",
+      "definicion_iri": "https://example.org/mex-ontologi/definition/2334deaa-dd0c-444e-b038-4cc556ad715d%2F37",
+      "dictamen_documental": {
+        "definicion_iri": "https://example.org/mex-ontologi/definition/2334deaa-dd0c-444e-b038-4cc556ad715d%2F37",
+        "decision": "pendiente",
+        "motivo": "Descripcion 'Pendiente de especificar': sin respaldo explicito vinculado a esta definicion; no se interpretan las siglas (imss_ord) como institucion ni como objeto contado. Columna fisica pos 37 observada, ejemplo '3'.",
+        "evidencia": [
+          "propuestas/pendientes-muse-r5/epidemiologia/evidencia/datastore_diccionario_vigilancia.json:59 registros frescos 2026-10-23; imss_ord desc='Pendiente de especificar' ejemplo='3'",
+          "data/portal/contenido-inspeccion.json:recurso=2334deaa-dd0c-444e-b038-4cc556ad715d (fila completa: tipo/formato/ejemplo/catalogo)",
+          "data/portal/contenido-inspeccion.json:recurso=1689b19c-b0dc-4e39-bf07-e3a2e684ef1a:hoja=SUIVE (esquema fisico)",
+          "data/semantica/cobertura.json:estado=fuera_del_nucleo_actual",
+          "propuestas/pendientes-muse-r4/lote-3/pendientes.json:dictamen previo revisado",
+          "definicion_iri=https://example.org/mex-ontologi/definition/2334deaa-dd0c-444e-b038-4cc556ad715d%2F37",
+          "data/portal/inspecciones/1689b19c-b0dc-4e39-bf07-e3a2e684ef1a.json:hoja=SUIVE:posicion=37"
+        ],
+        "limites": [
+          "Se conserva el texto original y su ausencia; sin inventar unidades, codigos, sujeto, denominador, poblacion, periodos ni equivalencias.",
+          "Sin habilitar joins ni homologaciones con otras columnas, conjuntos o catalogos nacionales."
+        ]
+      }
+    },
+    {
+      "conjunto": "dca16d84-dbf0-4501-b702-dc6372a480ea",
+      "titulo_conjunto": "Vigilancia Epidemiológica",
+      "diccionario": "2334deaa-dd0c-444e-b038-4cc556ad715d",
+      "variable": "issste",
+      "descripcion": "Pendiente de especificar",
+      "estado": "fuera_del_nucleo_actual",
+      "catalogo_declarado": "",
+      "huella_fila_diccionario": "eefa0119b32476dfc5c023afb1776ab4b3660f5c8c770c13bdfe549f7ea5e5cd",
+      "definicion_iri": "https://example.org/mex-ontologi/definition/2334deaa-dd0c-444e-b038-4cc556ad715d%2F38",
+      "dictamen_documental": {
+        "definicion_iri": "https://example.org/mex-ontologi/definition/2334deaa-dd0c-444e-b038-4cc556ad715d%2F38",
+        "decision": "pendiente",
+        "motivo": "Descripcion 'Pendiente de especificar': sin respaldo explicito vinculado a esta definicion; no se interpretan las siglas (issste) como institucion ni como objeto contado. Columna fisica pos 38 observada, ejemplo '0'.",
+        "evidencia": [
+          "propuestas/pendientes-muse-r5/epidemiologia/evidencia/datastore_diccionario_vigilancia.json:59 registros frescos 2026-10-23; issste desc='Pendiente de especificar' ejemplo='0'",
+          "data/portal/contenido-inspeccion.json:recurso=2334deaa-dd0c-444e-b038-4cc556ad715d (fila completa: tipo/formato/ejemplo/catalogo)",
+          "data/portal/contenido-inspeccion.json:recurso=1689b19c-b0dc-4e39-bf07-e3a2e684ef1a:hoja=SUIVE (esquema fisico)",
+          "data/semantica/cobertura.json:estado=fuera_del_nucleo_actual",
+          "propuestas/pendientes-muse-r4/lote-3/pendientes.json:dictamen previo revisado",
+          "definicion_iri=https://example.org/mex-ontologi/definition/2334deaa-dd0c-444e-b038-4cc556ad715d%2F38",
+          "data/portal/inspecciones/1689b19c-b0dc-4e39-bf07-e3a2e684ef1a.json:hoja=SUIVE:posicion=38"
+        ],
+        "limites": [
+          "Se conserva el texto original y su ausencia; sin inventar unidades, codigos, sujeto, denominador, poblacion, periodos ni equivalencias.",
+          "Sin habilitar joins ni homologaciones con otras columnas, conjuntos o catalogos nacionales."
+        ]
+      }
+    },
+    {
+      "conjunto": "dca16d84-dbf0-4501-b702-dc6372a480ea",
+      "titulo_conjunto": "Vigilancia Epidemiológica",
+      "diccionario": "2334deaa-dd0c-444e-b038-4cc556ad715d",
+      "variable": "otras",
+      "descripcion": "Pendiente de especificar",
+      "estado": "fuera_del_nucleo_actual",
+      "catalogo_declarado": "",
+      "huella_fila_diccionario": "97798bd230f5554b464902d95c2a219314baa597c0011897a29bfbd786833877",
+      "definicion_iri": "https://example.org/mex-ontologi/definition/2334deaa-dd0c-444e-b038-4cc556ad715d%2F39",
+      "dictamen_documental": {
+        "definicion_iri": "https://example.org/mex-ontologi/definition/2334deaa-dd0c-444e-b038-4cc556ad715d%2F39",
+        "decision": "pendiente",
+        "motivo": "Descripcion 'Pendiente de especificar': sin respaldo explicito vinculado a esta definicion; no se interpretan las siglas (otras) como institucion ni como objeto contado. Columna fisica pos 39 observada, ejemplo '0'.",
+        "evidencia": [
+          "propuestas/pendientes-muse-r5/epidemiologia/evidencia/datastore_diccionario_vigilancia.json:59 registros frescos 2026-10-23; otras desc='Pendiente de especificar' ejemplo='0'",
+          "data/portal/contenido-inspeccion.json:recurso=2334deaa-dd0c-444e-b038-4cc556ad715d (fila completa: tipo/formato/ejemplo/catalogo)",
+          "data/portal/contenido-inspeccion.json:recurso=1689b19c-b0dc-4e39-bf07-e3a2e684ef1a:hoja=SUIVE (esquema fisico)",
+          "data/semantica/cobertura.json:estado=fuera_del_nucleo_actual",
+          "propuestas/pendientes-muse-r4/lote-3/pendientes.json:dictamen previo revisado",
+          "definicion_iri=https://example.org/mex-ontologi/definition/2334deaa-dd0c-444e-b038-4cc556ad715d%2F39",
+          "data/portal/inspecciones/1689b19c-b0dc-4e39-bf07-e3a2e684ef1a.json:hoja=SUIVE:posicion=39"
+        ],
+        "limites": [
+          "Se conserva el texto original y su ausencia; sin inventar unidades, codigos, sujeto, denominador, poblacion, periodos ni equivalencias.",
+          "Sin habilitar joins ni homologaciones con otras columnas, conjuntos o catalogos nacionales."
+        ]
+      }
+    },
+    {
+      "conjunto": "dca16d84-dbf0-4501-b702-dc6372a480ea",
+      "titulo_conjunto": "Vigilancia Epidemiológica",
+      "diccionario": "2334deaa-dd0c-444e-b038-4cc556ad715d",
+      "variable": "imss_sol",
+      "descripcion": "Pendiente de especificar",
+      "estado": "fuera_del_nucleo_actual",
+      "catalogo_declarado": "",
+      "huella_fila_diccionario": "ad7ad174a63ee88d244261373816f5c944ba444d1a8308d73d86d36d9bab61e4",
+      "definicion_iri": "https://example.org/mex-ontologi/definition/2334deaa-dd0c-444e-b038-4cc556ad715d%2F40",
+      "dictamen_documental": {
+        "definicion_iri": "https://example.org/mex-ontologi/definition/2334deaa-dd0c-444e-b038-4cc556ad715d%2F40",
+        "decision": "pendiente",
+        "motivo": "Descripcion 'Pendiente de especificar': sin respaldo explicito vinculado a esta definicion; no se interpretan las siglas (imss_sol) como institucion ni como objeto contado. Columna fisica pos 40 observada, ejemplo '0'.",
+        "evidencia": [
+          "propuestas/pendientes-muse-r5/epidemiologia/evidencia/datastore_diccionario_vigilancia.json:59 registros frescos 2026-10-23; imss_sol desc='Pendiente de especificar' ejemplo='0'",
+          "data/portal/contenido-inspeccion.json:recurso=2334deaa-dd0c-444e-b038-4cc556ad715d (fila completa: tipo/formato/ejemplo/catalogo)",
+          "data/portal/contenido-inspeccion.json:recurso=1689b19c-b0dc-4e39-bf07-e3a2e684ef1a:hoja=SUIVE (esquema fisico)",
+          "data/semantica/cobertura.json:estado=fuera_del_nucleo_actual",
+          "propuestas/pendientes-muse-r4/lote-3/pendientes.json:dictamen previo revisado",
+          "definicion_iri=https://example.org/mex-ontologi/definition/2334deaa-dd0c-444e-b038-4cc556ad715d%2F40",
+          "data/portal/inspecciones/1689b19c-b0dc-4e39-bf07-e3a2e684ef1a.json:hoja=SUIVE:posicion=40"
+        ],
+        "limites": [
+          "Se conserva el texto original y su ausencia; sin inventar unidades, codigos, sujeto, denominador, poblacion, periodos ni equivalencias.",
+          "Sin habilitar joins ni homologaciones con otras columnas, conjuntos o catalogos nacionales."
+        ]
+      }
+    },
+    {
+      "conjunto": "dca16d84-dbf0-4501-b702-dc6372a480ea",
+      "titulo_conjunto": "Vigilancia Epidemiológica",
+      "diccionario": "2334deaa-dd0c-444e-b038-4cc556ad715d",
+      "variable": "d_if",
+      "descripcion": "Pendiente de especificar",
+      "estado": "fuera_del_nucleo_actual",
+      "catalogo_declarado": "",
+      "huella_fila_diccionario": "368c74a3fa6a9b27a4cf2338164ecacee7ff4123af36a85f1c94ca5507ad4817",
+      "definicion_iri": "https://example.org/mex-ontologi/definition/2334deaa-dd0c-444e-b038-4cc556ad715d%2F41",
+      "dictamen_documental": {
+        "definicion_iri": "https://example.org/mex-ontologi/definition/2334deaa-dd0c-444e-b038-4cc556ad715d%2F41",
+        "decision": "pendiente",
+        "motivo": "Descripcion 'Pendiente de especificar': sin respaldo explicito vinculado a esta definicion; no se interpretan las siglas (d_if) como institucion ni como objeto contado. Columna fisica pos 41 observada, ejemplo '0'.",
+        "evidencia": [
+          "propuestas/pendientes-muse-r5/epidemiologia/evidencia/datastore_diccionario_vigilancia.json:59 registros frescos 2026-10-23; d_if desc='Pendiente de especificar' ejemplo='0'",
+          "data/portal/contenido-inspeccion.json:recurso=2334deaa-dd0c-444e-b038-4cc556ad715d (fila completa: tipo/formato/ejemplo/catalogo)",
+          "data/portal/contenido-inspeccion.json:recurso=1689b19c-b0dc-4e39-bf07-e3a2e684ef1a:hoja=SUIVE (esquema fisico)",
+          "data/semantica/cobertura.json:estado=fuera_del_nucleo_actual",
+          "propuestas/pendientes-muse-r4/lote-3/pendientes.json:dictamen previo revisado",
+          "definicion_iri=https://example.org/mex-ontologi/definition/2334deaa-dd0c-444e-b038-4cc556ad715d%2F41",
+          "data/portal/inspecciones/1689b19c-b0dc-4e39-bf07-e3a2e684ef1a.json:hoja=SUIVE:posicion=41"
+        ],
+        "limites": [
+          "Se conserva el texto original y su ausencia; sin inventar unidades, codigos, sujeto, denominador, poblacion, periodos ni equivalencias.",
+          "Sin habilitar joins ni homologaciones con otras columnas, conjuntos o catalogos nacionales."
+        ]
+      }
+    },
+    {
+      "conjunto": "dca16d84-dbf0-4501-b702-dc6372a480ea",
+      "titulo_conjunto": "Vigilancia Epidemiológica",
+      "diccionario": "2334deaa-dd0c-444e-b038-4cc556ad715d",
+      "variable": "pemex",
+      "descripcion": "Pendiente de especificar",
+      "estado": "fuera_del_nucleo_actual",
+      "catalogo_declarado": "",
+      "huella_fila_diccionario": "d7071b783b11329835e4809e094c3b21af91de498b2e8c80e51f265a23d687cc",
+      "definicion_iri": "https://example.org/mex-ontologi/definition/2334deaa-dd0c-444e-b038-4cc556ad715d%2F42",
+      "dictamen_documental": {
+        "definicion_iri": "https://example.org/mex-ontologi/definition/2334deaa-dd0c-444e-b038-4cc556ad715d%2F42",
+        "decision": "pendiente",
+        "motivo": "Descripcion 'Pendiente de especificar': sin respaldo explicito vinculado a esta definicion; no se interpretan las siglas (pemex) como institucion ni como objeto contado. Columna fisica pos 42 observada, ejemplo '0'.",
+        "evidencia": [
+          "propuestas/pendientes-muse-r5/epidemiologia/evidencia/datastore_diccionario_vigilancia.json:59 registros frescos 2026-10-23; pemex desc='Pendiente de especificar' ejemplo='0'",
+          "data/portal/contenido-inspeccion.json:recurso=2334deaa-dd0c-444e-b038-4cc556ad715d (fila completa: tipo/formato/ejemplo/catalogo)",
+          "data/portal/contenido-inspeccion.json:recurso=1689b19c-b0dc-4e39-bf07-e3a2e684ef1a:hoja=SUIVE (esquema fisico)",
+          "data/semantica/cobertura.json:estado=fuera_del_nucleo_actual",
+          "propuestas/pendientes-muse-r4/lote-3/pendientes.json:dictamen previo revisado",
+          "definicion_iri=https://example.org/mex-ontologi/definition/2334deaa-dd0c-444e-b038-4cc556ad715d%2F42",
+          "data/portal/inspecciones/1689b19c-b0dc-4e39-bf07-e3a2e684ef1a.json:hoja=SUIVE:posicion=42"
+        ],
+        "limites": [
+          "Se conserva el texto original y su ausencia; sin inventar unidades, codigos, sujeto, denominador, poblacion, periodos ni equivalencias.",
+          "Sin habilitar joins ni homologaciones con otras columnas, conjuntos o catalogos nacionales."
+        ]
+      }
+    },
+    {
+      "conjunto": "dca16d84-dbf0-4501-b702-dc6372a480ea",
+      "titulo_conjunto": "Vigilancia Epidemiológica",
+      "diccionario": "2334deaa-dd0c-444e-b038-4cc556ad715d",
+      "variable": "sedena",
+      "descripcion": "Pendiente de especificar",
+      "estado": "fuera_del_nucleo_actual",
+      "catalogo_declarado": "",
+      "huella_fila_diccionario": "b3b91a250af63c5f1370577f3362b969a442d93312e0089d453949aceb7b93a6",
+      "definicion_iri": "https://example.org/mex-ontologi/definition/2334deaa-dd0c-444e-b038-4cc556ad715d%2F43",
+      "dictamen_documental": {
+        "definicion_iri": "https://example.org/mex-ontologi/definition/2334deaa-dd0c-444e-b038-4cc556ad715d%2F43",
+        "decision": "pendiente",
+        "motivo": "Descripcion 'Pendiente de especificar': sin respaldo explicito vinculado a esta definicion; no se interpretan las siglas (sedena) como institucion ni como objeto contado. Columna fisica pos 43 observada, ejemplo '0'.",
+        "evidencia": [
+          "propuestas/pendientes-muse-r5/epidemiologia/evidencia/datastore_diccionario_vigilancia.json:59 registros frescos 2026-10-23; sedena desc='Pendiente de especificar' ejemplo='0'",
+          "data/portal/contenido-inspeccion.json:recurso=2334deaa-dd0c-444e-b038-4cc556ad715d (fila completa: tipo/formato/ejemplo/catalogo)",
+          "data/portal/contenido-inspeccion.json:recurso=1689b19c-b0dc-4e39-bf07-e3a2e684ef1a:hoja=SUIVE (esquema fisico)",
+          "data/semantica/cobertura.json:estado=fuera_del_nucleo_actual",
+          "propuestas/pendientes-muse-r4/lote-3/pendientes.json:dictamen previo revisado",
+          "definicion_iri=https://example.org/mex-ontologi/definition/2334deaa-dd0c-444e-b038-4cc556ad715d%2F43",
+          "data/portal/inspecciones/1689b19c-b0dc-4e39-bf07-e3a2e684ef1a.json:hoja=SUIVE:posicion=43"
+        ],
+        "limites": [
+          "Se conserva el texto original y su ausencia; sin inventar unidades, codigos, sujeto, denominador, poblacion, periodos ni equivalencias.",
+          "Sin habilitar joins ni homologaciones con otras columnas, conjuntos o catalogos nacionales."
+        ]
+      }
+    },
+    {
+      "conjunto": "dca16d84-dbf0-4501-b702-dc6372a480ea",
+      "titulo_conjunto": "Vigilancia Epidemiológica",
+      "diccionario": "2334deaa-dd0c-444e-b038-4cc556ad715d",
+      "variable": "sedemar",
+      "descripcion": "Pendiente de especificar",
+      "estado": "fuera_del_nucleo_actual",
+      "catalogo_declarado": "",
+      "huella_fila_diccionario": "72f0cdc5158a36e2aa5078e46ebfe64979885d3d52c8c7f51c9563c955db731f",
+      "definicion_iri": "https://example.org/mex-ontologi/definition/2334deaa-dd0c-444e-b038-4cc556ad715d%2F44",
+      "dictamen_documental": {
+        "definicion_iri": "https://example.org/mex-ontologi/definition/2334deaa-dd0c-444e-b038-4cc556ad715d%2F44",
+        "decision": "pendiente",
+        "motivo": "Descripcion 'Pendiente de especificar': sin respaldo explicito vinculado a esta definicion; no se interpretan las siglas (sedemar) como institucion ni como objeto contado. Columna fisica pos 44 observada, ejemplo '0'.",
+        "evidencia": [
+          "propuestas/pendientes-muse-r5/epidemiologia/evidencia/datastore_diccionario_vigilancia.json:59 registros frescos 2026-10-23; sedemar desc='Pendiente de especificar' ejemplo='0'",
+          "data/portal/contenido-inspeccion.json:recurso=2334deaa-dd0c-444e-b038-4cc556ad715d (fila completa: tipo/formato/ejemplo/catalogo)",
+          "data/portal/contenido-inspeccion.json:recurso=1689b19c-b0dc-4e39-bf07-e3a2e684ef1a:hoja=SUIVE (esquema fisico)",
+          "data/semantica/cobertura.json:estado=fuera_del_nucleo_actual",
+          "propuestas/pendientes-muse-r4/lote-3/pendientes.json:dictamen previo revisado",
+          "definicion_iri=https://example.org/mex-ontologi/definition/2334deaa-dd0c-444e-b038-4cc556ad715d%2F44",
+          "data/portal/inspecciones/1689b19c-b0dc-4e39-bf07-e3a2e684ef1a.json:hoja=SUIVE:posicion=44"
+        ],
+        "limites": [
+          "Se conserva el texto original y su ausencia; sin inventar unidades, codigos, sujeto, denominador, poblacion, periodos ni equivalencias.",
+          "Sin habilitar joins ni homologaciones con otras columnas, conjuntos o catalogos nacionales."
+        ]
+      }
+    }
+  ],
+  "conteo": 25
+}

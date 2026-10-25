@@ -1,0 +1,27 @@
+--- a/scripts/consolidar_semantica.py
++++ b/scripts/consolidar_semantica.py
+@@ -453,12 +453,18 @@
+         data += r6_data
+         report['integracion_ronda_6'] = r6_report
+         sources.update(r6_sources)
+-    if (ROOT / 'ontologia/revision-ronda-7.json').exists():
+-        from integrar_ronda_7 import construir as integrar_ronda_7
+-        r7_data, r7_report, r7_sources = integrar_ronda_7(report, rules, base)
+-        data += r7_data
+-        report['integracion_ronda_7'] = r7_report
+-        sources.update(r7_sources)
++    if (ROOT / 'ontologia/revision-ronda-7.json').exists():
++        from integrar_ronda_7 import construir as integrar_ronda_7
++        r7_data, r7_report, r7_sources = integrar_ronda_7(report, rules, base)
++        data += r7_data
++        report['integracion_ronda_7'] = r7_report
++        sources.update(r7_sources)
++    if (ROOT / 'ontologia/revision-ronda-8.json').exists():
++        from integrar_ronda_8 import construir as integrar_ronda_8
++        r8_data, r8_report, r8_sources = integrar_ronda_8(report, rules, base)
++        data += r8_data
++        report['integracion_ronda_8'] = r8_report
++        sources.update(r8_sources)
+     report['huellas_entrada'] = {key: hashlib.sha256(path.read_bytes()).hexdigest() for key, path in sources.items()}
+     from auditar_semantica import auditar
+     report['auditoria_cobertura'] = auditar(report, inventory, columnas(inventory, inspection, base))

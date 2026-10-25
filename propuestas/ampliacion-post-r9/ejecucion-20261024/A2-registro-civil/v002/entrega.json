@@ -1,0 +1,98 @@
+{
+ "rol": "A2-registro-civil",
+ "version": "v002",
+ "modelo": "opencode/deepseek-v4.1-flash-free",
+ "par": "1cf9c8e2-e7e4-43d8-a9fd-6da790e64c98--df2d60f5-2243-4bb0-885a-941aa8a657f5",
+ "resultado": "bloqueado",
+ "pregunta": "¿Qué volúmenes de matrimonios y nacimientos se registran en un periodo y ámbito territorial documentalmente comparables?",
+ "veredicto": "BLOQUEADO",
+ "comparacion_volumenes": null,
+ "join_grafo": null,
+ "alcance": "Análisis separado del par; sin grafo, sin joins, sin tasas, sin descargas, sin contactos, sin Studio. Base IRI intacta.",
+ "correcciones": {
+  "H-02": {
+   "hallazgo": "Conteo de recursos distinto entre resultados.md y resultados.json",
+   "antes": "md: 10 Matrimonios / 15 Nacimientos; json: 11 / 16 sin desglose",
+   "despues": "10 recursos de datos + 1 diccionario = 11; 15 recursos de datos + 1 diccionario = 16",
+   "donde": ["A2-pregunta-ficha.md", "resultados.md", "resultados.json:fuentes_locales.reports/catalogo-perfil.json"]
+  },
+  "H-04": {
+   "hallazgo": "Fuentes locales sin huella SHA256 de archivo completo",
+   "antes": "solo conteos, hashes de fragmento de diccionario y estados",
+   "despues": "SHA256 de archivo completo y bytes de las cuatro fuentes, calculados por código",
+   "donde": ["resultados.json:fuentes_locales", "entrega.json:verificacion.fuentes_sha256", "resultados.md"]
+  },
+  "B-A2-11": {
+   "hallazgo": "Cita textual de unicidad sin tilde: 'Diagnostico' frente a 'Diagnóstico' en la fuente",
+   "antes": "resultados.json citaba 'Diagnostico de muestra; ...'",
+   "despues": "cita literal 'Diagnóstico de muestra; no demuestra unicidad ni cobertura integral'",
+   "donde": ["resultados.json:ejes.unicidad.evidencia", "scripts/analizar.py"]
+  },
+  "B-A2-12": {
+   "hallazgo": "'Anio-Mes de registro' no existe como variable unica",
+   "antes": "la evidencia parafraseaba 'Municipio de registro'/'Anio-Mes de registro'",
+   "despues": "'Municipio de registro', 'Año de registro' y 'Mes de registro' como variables separadas; Matrimonios incluye 'Dia de registro'",
+   "donde": ["resultados.json:ejes.periodo_ambito.evidencia", "A2-pregunta-ficha.md", "scripts/analizar.py"]
+  }
+ },
+ "ficha_8_ejes": {
+  "archivo": "A2-pregunta-ficha.md",
+  "ejes": {
+   "claves": "no_acreditada",
+   "grano": "distinto_bloquea_join",
+   "unicidad": "no_acreditada",
+   "cardinalidad": "no_acreditada",
+   "poblacion": "distinta",
+   "periodo_ambito": "comparable_solo_en_registro_no_acreditado_para_join",
+   "unidades": "no_homologables_sin_regla",
+   "cobertura": "no_acreditada"
+  },
+  "nota": "Sin datos ni conclusiones nuevas; reproduce los 8 ejes de v001."
+ },
+ "verificacion": {
+  "fuentes_sha256": {
+   "reports/catalogo-perfil.json": {
+    "sha256": "aae23b2eb8f8e37cbee18d86c0cac7c73f0899f02fbd417bc90d01a8fd54fc43",
+    "bytes": 227576
+   },
+   "data/portal/contenido-inspeccion.json": {
+    "sha256": "61861aab5bc2b334699c4d78f611a0e2d650c4649bd791927f9095c2ac785efb",
+    "bytes": 2652648
+   },
+   "data/portal/oportunidades-cruce.json": {
+    "sha256": "40f107d5cf9c11ce937073ac2f7b5b0e3c9db8c342f7414cecb0f0744e0d0c14",
+    "bytes": 9645149
+   },
+   "data/portal/lote-cruces/validacion-lote.json": {
+    "sha256": "9031b875b1bf7873722f74847abbbce9b87201415f43788f60be1a75b50ede19",
+    "bytes": 1478239
+   }
+  },
+  "reproducir": ".venv/Scripts/python.exe propuestas/ampliacion-post-r9/ejecucion-20261024/A2-registro-civil/v002/scripts/analizar.py",
+  "probar": ".venv/Scripts/python.exe -B -m unittest discover -s propuestas/ampliacion-post-r9/ejecucion-20261024/A2-registro-civil/v002/tests",
+  "sellar": ".venv/Scripts/python.exe propuestas/ampliacion-post-r9/ejecucion-20261024/A2-registro-civil/v002/scripts/sellar.py"
+ },
+ "archivos": [
+  "propuestas/ampliacion-post-r9/ejecucion-20261024/A2-registro-civil/v002/entrega.json",
+  "propuestas/ampliacion-post-r9/ejecucion-20261024/A2-registro-civil/v002/entrega.md",
+  "propuestas/ampliacion-post-r9/ejecucion-20261024/A2-registro-civil/v002/A2-pregunta-ficha.md",
+  "propuestas/ampliacion-post-r9/ejecucion-20261024/A2-registro-civil/v002/resultados.json",
+  "propuestas/ampliacion-post-r9/ejecucion-20261024/A2-registro-civil/v002/resultados.md",
+  "propuestas/ampliacion-post-r9/ejecucion-20261024/A2-registro-civil/v002/scripts/analizar.py",
+  "propuestas/ampliacion-post-r9/ejecucion-20261024/A2-registro-civil/v002/scripts/sellar.py",
+  "propuestas/ampliacion-post-r9/ejecucion-20261024/A2-registro-civil/v002/tests/test_bloqueo.py",
+  "propuestas/ampliacion-post-r9/ejecucion-20261024/A2-registro-civil/v002/sello.json",
+  "propuestas/ampliacion-post-r9/ejecucion-20261024/A2-registro-civil/v002/sello.sha256"
+ ],
+ "limites": [
+  "No se modificó v001 ni ningún byte sellado de otras entregas.",
+  "No se cargó el grafo, no se ejecutaron joins ni se promovieron candidatas.",
+  "No se tocaron IRI, Gemma, manifiestos R1-R9, config central ni raíz.",
+  "No hubo red ni contactos a publicadores.",
+  "El veredicto y los 8 ejes son los de v001; v002 solo corrige H-02 y H-04."
+ ],
+ "sello": {
+  "archivo": "propuestas/ampliacion-post-r9/ejecucion-20261024/A2-registro-civil/v002/sello.sha256",
+  "generado_por": "propuestas/ampliacion-post-r9/ejecucion-20261024/A2-registro-civil/v002/scripts/sellar.py"
+ }
+}

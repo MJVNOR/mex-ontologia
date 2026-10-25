@@ -1,0 +1,145 @@
+{
+  "tarea": "vigencias-seguridad",
+  "tipo": "vigencias",
+  "clave_id": "id",
+  "conteo": 2,
+  "casos": [
+    {
+      "id": "V13",
+      "tipo": "vigencia",
+      "grupo": "E",
+      "dependencia_publicador": "DEP-CAT-R6-05",
+      "conjunto": {
+        "id": "93ca5e1c-702e-4e62-bc61-638907be184a",
+        "titulo": "Incidencia delictiva municipal"
+      },
+      "catalogo": {
+        "recurso_catalogo": "36d3ac85-4327-41f5-9259-538a7723a0ae",
+        "recurso_url": "https://datos.sonora.gob.mx/dataset/93ca5e1c-702e-4e62-bc61-638907be184a/resource/36d3ac85-4327-41f5-9259-538a7723a0ae/download/catalogo.xlsx",
+        "sha256": "84bb6fcda02f3de3b295189d59cf0dde201bc4e048888681b6cd8ea624bb0716",
+        "hoja_campo": "cat_municipio / Cve. Municipio"
+      },
+      "referencia_iri": "https://example.org/mex-ontologi/declared-code-reference/957df4c830f4558d6431d774fad97a1bbf05da13990c3b27fe2e78005151c0be",
+      "periodos_declarados_por_titulo": [
+        "2015",
+        "2016",
+        "2017",
+        "2018",
+        "2019",
+        "2020",
+        "2021",
+        "2022",
+        "2023",
+        "2024",
+        "2025"
+      ],
+      "nota_periodos": "Periodos declarados por titulos de recursos CKAN y nota del conjunto; NO cobertura observada.",
+      "estado_actual": "pendiente (contexto SESNSP declarado, F3+F4 ausentes)",
+      "motivo": "Procedencia SESNSP declarada por el publicador (avance de contexto), pero sin declaración de edición/versión/corte del cat_municipio local ni vínculo con 2015-2025.",
+      "evidencia_revisada": [
+        "W07 (nota declara origen SESNSP procesado para Sonora + Fuentes extras SESNSP; sin edición/corte del catálogo local)",
+        "Local: package_93ca5e1c-702e-4e62-bc61-638907be184a.json (extras nulos) + xlsx 84bb6fcd (cat_municipio, sin versión)",
+        "R6-C1 (API CKAN package_show 2026-10-23) + R6-C2 (core-properties xlsx)",
+        "R6 novedad: R6-C1: API package 93ca5e1c: version=null; fuentes_extras SESNSP datos-abiertos confirmada; Catalogo size 10194 = local; fechas 1989-06-04; datos 2015-2025. R6-C2: creator SESNSP created 2015-06-05 modified 2026-01-22, sin version/corte. F3+F4 ausentes."
+      ],
+      "campos_minimos": [
+        "emisor: publicador (DEP-CAT-R6-05)",
+        "edicion/version/fecha declarada del catalogo (cat_municipio / Cve. Municipio, sha 84bb6fcd)",
+        "recurso catalogo: 36d3ac85-4327-41f5-9259-538a7723a0ae",
+        "periodos de aplicacion: 2015; 2016; 2017; 2018; 2019; 2020; 2021; 2022; 2023; 2024; 2025",
+        "fecha o firma del documento"
+      ],
+      "criterio_aceptacion": "Se cierra solo si el documento del publicador cita edicion/version/fecha del catalogo (cat_municipio / Cve. Municipio, sha 84bb6fcd) y recurso 36d3ac85-4327-41f5-9259-538a7723a0ae y periodos (2015; 2016; 2017; 2018; 2019; 2020; 2021; 2022; 2023; 2024; 2025); verificable (URL o copia local con SHA). Las fechas de portal/API (version=null, placeholder 1989-06-04) y core-properties no acreditan F3+F4.",
+      "limites": [
+        "No afirmar vigencia histórica ni extender a otros conjuntos/periodos; no habilitar joins por compartir Clave.",
+        "No habilitar joins por compartir Clave"
+      ],
+      "documento_requerido_exacto": "Declaracion de edicion/version/fecha y corte SESNSP de cat_municipio (sha 84bb6fcd) y cat_entidad (sha 96776ca8) con vinculo 2015-2025. Pendiente exacto: Acreditar F3+F4: declaración de edición/versión/fecha y corte SESNSP del catálogo (cat_municipio/Cve. Municipio, sha 84bb6fcd) y documento que la vincule con 2015-2025.",
+      "soporte": [
+        {
+          "ruta": "reports/pendientes-ronda-5.json",
+          "sha256": "46f3b6f8826379be5124fb85cf6128b705fbe90deebf2c99bff64098608c8f11",
+          "localizador": "decisiones_significados id=V13"
+        },
+        {
+          "ruta": "propuestas/pendientes-muse-r6/catalogos/entrega.json",
+          "sha256": "649bbe7e5feca82b7e8d5c5144de78b1d8ceccb1c217ca976347b1c9a05cb74b",
+          "localizador": "decisiones_significados id=V13 + novedad_r6 (C1 API package_show 2026-10-23 + C2 core-properties xlsx)"
+        },
+        {
+          "ruta": "local: xlsx sha 84bb6fcd",
+          "sha256": "84bb6fcda02f3de3b295189d59cf0dde201bc4e048888681b6cd8ea624bb0716",
+          "localizador": "interior xlsx sin celdas de version/periodo (R4 vigente, re-verificado R6: sizes API = locales)"
+        }
+      ]
+    },
+    {
+      "id": "V14",
+      "tipo": "vigencia",
+      "grupo": "E",
+      "dependencia_publicador": "DEP-CAT-R6-05",
+      "conjunto": {
+        "id": "caf587a5-23ac-496b-85d4-6ceb1d615d78",
+        "titulo": "Víctimas del fuero común en el estado"
+      },
+      "catalogo": {
+        "recurso_catalogo": "7f3aca28-4251-48b8-a759-69c992580744",
+        "recurso_url": "https://datos.sonora.gob.mx/dataset/caf587a5-23ac-496b-85d4-6ceb1d615d78/resource/7f3aca28-4251-48b8-a759-69c992580744/download/catalogo.xlsx",
+        "sha256": "96776ca8976ebb6e7510f65abaa287888be693f400a1e4adb5777e091d3b5a87",
+        "hoja_campo": "cat_entidad / Clave_Ent"
+      },
+      "referencia_iri": "https://example.org/mex-ontologi/declared-code-reference/526497ffbaeb442341f4ab5c77b53a49235ba807eeb1433f8331d9db720b00f5",
+      "periodos_declarados_por_titulo": [
+        "2015",
+        "2016",
+        "2017",
+        "2018",
+        "2019",
+        "2020",
+        "2021",
+        "2022",
+        "2023",
+        "2024",
+        "2025"
+      ],
+      "nota_periodos": "Periodos declarados por titulos de recursos CKAN y nota del conjunto; NO cobertura observada.",
+      "estado_actual": "pendiente (contexto SESNSP declarado, F3+F4 ausentes)",
+      "motivo": "Procedencia SESNSP declarada (avance de contexto), pero sin declaración de edición/versión/corte del cat_entidad local ni vínculo con 2015-2025.",
+      "evidencia_revisada": [
+        "W07 (nota simétrica SESNSP en Víctimas + Fuentes extras; sin edición/corte)",
+        "Local: package_caf587a5-23ac-496b-85d4-6ceb1d615d78.json (extras nulos) + xlsx 96776ca8 (cat_entidad, sin versión)",
+        "R6-C1 (API CKAN package_show 2026-10-23) + R6-C2 (core-properties xlsx)",
+        "R6 novedad: R6-C1: API package caf587a5: version=null; misma fuentes_extras SESNSP; Catalogo size 10999 = local; fechas 1989-06-04. R6-C2: creator Practicante2 2026-01-22, sin version/corte. F3+F4 ausentes."
+      ],
+      "campos_minimos": [
+        "emisor: publicador (DEP-CAT-R6-05)",
+        "edicion/version/fecha declarada del catalogo (cat_entidad / Clave_Ent, sha 96776ca8)",
+        "recurso catalogo: 7f3aca28-4251-48b8-a759-69c992580744",
+        "periodos de aplicacion: 2015; 2016; 2017; 2018; 2019; 2020; 2021; 2022; 2023; 2024; 2025",
+        "fecha o firma del documento"
+      ],
+      "criterio_aceptacion": "Se cierra solo si el documento del publicador cita edicion/version/fecha del catalogo (cat_entidad / Clave_Ent, sha 96776ca8) y recurso 7f3aca28-4251-48b8-a759-69c992580744 y periodos (2015; 2016; 2017; 2018; 2019; 2020; 2021; 2022; 2023; 2024; 2025); verificable (URL o copia local con SHA). Las fechas de portal/API (version=null, placeholder 1989-06-04) y core-properties no acreditan F3+F4.",
+      "limites": [
+        "No afirmar vigencia histórica ni extender a otros conjuntos/periodos."
+      ],
+      "documento_requerido_exacto": "Declaracion de edicion/version/fecha y corte SESNSP de cat_municipio (sha 84bb6fcd) y cat_entidad (sha 96776ca8) con vinculo 2015-2025. Pendiente exacto: Acreditar F3+F4: declaración de edición/versión/fecha y corte SESNSP del catálogo (cat_entidad/Clave_Ent, sha 96776ca8) y documento que la vincule con 2015-2025.",
+      "soporte": [
+        {
+          "ruta": "reports/pendientes-ronda-5.json",
+          "sha256": "46f3b6f8826379be5124fb85cf6128b705fbe90deebf2c99bff64098608c8f11",
+          "localizador": "decisiones_significados id=V14"
+        },
+        {
+          "ruta": "propuestas/pendientes-muse-r6/catalogos/entrega.json",
+          "sha256": "649bbe7e5feca82b7e8d5c5144de78b1d8ceccb1c217ca976347b1c9a05cb74b",
+          "localizador": "decisiones_significados id=V14 + novedad_r6 (C1 API package_show 2026-10-23 + C2 core-properties xlsx)"
+        },
+        {
+          "ruta": "local: xlsx sha 96776ca8",
+          "sha256": "96776ca8976ebb6e7510f65abaa287888be693f400a1e4adb5777e091d3b5a87",
+          "localizador": "interior xlsx sin celdas de version/periodo (R4 vigente, re-verificado R6: sizes API = locales)"
+        }
+      ]
+    }
+  ]
+}

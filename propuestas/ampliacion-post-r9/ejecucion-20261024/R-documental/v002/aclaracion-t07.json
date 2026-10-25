@@ -1,0 +1,111 @@
+{
+  "rol": "R-documental",
+  "version": "v002",
+  "tipo": "aclaracion_de_check_y_revision_de_logica",
+  "fecha_utc": "2026-10-24T20:24:26+00:00",
+  "preserva": {
+    "v001": "bytes intactos; no se reescribe ni se re-sella lo entregado",
+    "dictamen_json_sha256": "e171c750584cecb46c0b55dc23d7303ed03bc41d93b3937b1e78ac54e30b27a4",
+    "dictamen_md_sha256": "09ea9b5b13dda06db22739a805f195602e9bdb4ffdd8ffca69914e34845cdc44",
+    "sello_json_sha256": "bc665a13f4ec7447e671b5fed630a04af2e9f90fd12029cec66b8334d02b09ed",
+    "sello_sha256_sidecar": "bc665a13f4ec7447e671b5fed630a04af2e9f90fd12029cec66b8334d02b09ed",
+    "sidecar_coincide": true
+  },
+  "aclaracion_t07": {
+    "pregunta": "Por que T-07 aparecio en false si el detalle A1(2,3.0) A2(4,3.0) A3(1,5.0) concuerda?",
+    "causa": "Defecto del instrumento de auditoria, no de la entrega: el check comparaba el titulo A3 contra un literal sin diacritico ('Poblacion'), mientras el mapa contiene 'Población'. La igualdad de titulo fallaba aunque ID, rango y score ya coincidieran.",
+    "evidencia": {
+      "expresion_intermedia": "Poblacion ITAMA Internamiento",
+      "resultado_intermedio": false,
+      "expresion_corregida": "Población ITAMA Internamiento",
+      "resultado_corregido": true,
+      "titulo_real": "Población ITAMA Internamiento",
+      "diferencia": "literal sin diacritico frente a byte UTF-8 con U+00F3 en el titulo del mapa"
+    },
+    "estado_en_v001_sellado": {
+      "T-07_ok": true,
+      "T-07_detalle": "A1=(2, 3.0) A2=(4, 3.0) A3=(1, 5.0)",
+      "checks_total": 32,
+      "checks_ok": 32,
+      "fallas": []
+    },
+    "por_que_sin_hallazgo": "Los hallazgos se reservan a defectos de la entrega auditada. Este era un defecto del auditor y se corrigio antes de sellar; no corresponde hallazgo contra T ni contra sus autores.",
+    "corridas_intermedias": "La corrida preliminar mostro en false T-07, T-11, T-15, A2-05 y A2-11. T-11 quedo asociado al hallazgo H-01 (huella del plan desactualizada); T-15 y A2-05 eran literales del auditor (punto final y diacritico) y A2-11 usaba claves internas en vez de los nombres de eje de la ficha. Solo los bytes sellados constituyen entrega; las corridas intermedias no.",
+    "regla_declarada_en_v001": "Una falla de check solo degrada el veredicto si no esta asociada a un hallazgo documentado; por eso T-11 no lo degrada y una falla sin explicacion si lo haria."
+  },
+  "revision_carriles": {
+    "metodo": "Identificacion por ID exacto contra el mapa; la etiqueta de carril es solo nominativa.",
+    "filas": [
+      {
+        "carril": "A1-911",
+        "id": "19e5036d-dbe3-4e1d-b021-df5d47b6fb1f--923b485b-515e-4fb9-a4ac-cccbeb88cc92",
+        "rango": 2,
+        "score": 3.0,
+        "rango_staging": 2,
+        "score_staging": 3.0,
+        "titulo_a": "Llamadas Improcedentes 911",
+        "titulo_b": "Llamadas Procedentes 911",
+        "carril_analitico_staging": "A1-911",
+        "estado_staging": "NO_JOIN_APROBADO"
+      },
+      {
+        "carril": "A2-matrimonios-nacimientos",
+        "id": "1cf9c8e2-e7e4-43d8-a9fd-6da790e64c98--df2d60f5-2243-4bb0-885a-941aa8a657f5",
+        "rango": 4,
+        "score": 3.0,
+        "rango_staging": 4,
+        "score_staging": 3.0,
+        "titulo_a": "Matrimonios",
+        "titulo_b": "Nacimientos",
+        "carril_analitico_staging": "A2-matrimonios-nacimientos",
+        "estado_staging": "NO_JOIN_APROBADO"
+      },
+      {
+        "carril": "A3-itama",
+        "id": "27a5c80c-514a-4170-a2e5-7ef40d818641--4d27a1c4-381d-4ce0-a663-0d3e23a93848",
+        "rango": 1,
+        "score": 5.0,
+        "rango_staging": 1,
+        "score_staging": 5.0,
+        "titulo_a": "Población ITAMA Internamiento",
+        "titulo_b": "Población ITAMA Externamiento",
+        "carril_analitico_staging": "A3-itama",
+        "estado_staging": "NO_JOIN_APROBADO"
+      }
+    ],
+    "cobertura_etiquetas": {
+      "con_carril": 3,
+      "sin_carril": 47
+    },
+    "checks_que_lo_cubren": {
+      "T-07": "presencia de los tres IDs, rango y score esperados y titulos del mapa",
+      "T-08b": "carril_analitico exacto por ID y fidelidad de la fila (titulos, familias, bloqueadores, conjuntos)",
+      "T-10": "estado NO_JOIN_APROBADO en las 50 filas; ningun join ni rate"
+    },
+    "T-08b_en_v001": {
+      "ok": true,
+      "detalle": "desviaciones=[]"
+    },
+    "limites": "El carril no acredita comparabilidad, no autoriza join ni rate y no cambia por ranking."
+  },
+  "regla_corregida_para_v002_de_autores": {
+    "titulos": "Comparar por ID, rango y score; usar el titulo como contraste normalizado, nunca como unica puerta de aceptacion.",
+    "carriles": "Mantener el mapeo por ID exacto y exigir que las 47 filas restantes no lleven etiqueta.",
+    "literales": "Tomar los literales de la fuente (UTF-8) en lugar de reescribirlos en el check."
+  },
+  "no_aceptacion_de_bytes_futuros": {
+    "T-top50/v002": "pendiente de sello; no evaluado",
+    "A2-registro-civil/v002": "pendiente de sello; no evaluado",
+    "A1-911/v002": "pendiente de sello; no evaluado",
+    "A3-itama/v002": "pendiente de sello; no evaluado",
+    "W/v002": "sellada por su autor con 6 normas oficiales 3.5.3; fuera de este encargo y sin bytes revisados aqui",
+    "Q/v002 y S/v001": "en proceso; no evaluadas"
+  },
+  "siguiente_encargo": "Auditar T-top50/v002 y A2-registro-civil/v002 cuando esten selladas, y despues A1-911/v002 y A3-itama/v002; sin editar autores ni produccion.",
+  "hashes_fuentes": {
+    "data/portal/oportunidades-cruce.json": "40f107d5cf9c11ce937073ac2f7b5b0e3c9db8c342f7414cecb0f0744e0d0c14",
+    "propuestas/plan-tras-r8/ejecucion-20261024/C2-oportunidades/v001/prioridades_top50.csv": "db1182cda8be4686b4335ed443f3bf22480f04dccaa62f9b71358994c5d6174a",
+    "propuestas/ampliacion-post-r9/ejecucion-20261024/T-top50/v001/top50-oportunidades-r9.json": "a8a2134b5d3de4f63b61802e7c54ae9c3cc175dc0ecb548cc1e5a99bc118f375",
+    "reports/seguimiento-operativo-post-r9.json": "73103b1d2ff6daa7fdc2665e42c68802a98169005c5144129048e2f7a0c4698b"
+  }
+}

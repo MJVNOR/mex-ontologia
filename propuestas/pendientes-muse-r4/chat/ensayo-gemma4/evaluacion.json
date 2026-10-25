@@ -1,0 +1,142 @@
+{
+  "checked_at": "2026-10-23T17:18:55.676Z",
+  "ms_total": 70467,
+  "modelo": "gemma-4-31b-it",
+  "proveedor": "openai-compatible",
+  "triples_final": 284810,
+  "casos_probados": 0,
+  "casos_totales": 6,
+  "bloqueos": 2,
+  "capas": {
+    "sidecar/api": "ejecutada en este harness (retrieve real + mismo prompt y modelo que Studio)",
+    "studio-ui": "no_ejecutada: sin herramienta nativa (@oai/sky no instalado) y guarda de actividad respetada; ventana e investigador ajenos"
+  },
+  "casos": [
+    {
+      "id": "C1-totales",
+      "pregunta": "¿Cuántas correspondencias documentales revisadas hay? Distingue revisadas, candidatas y ambiguas.",
+      "modelo": "gemma-4-31b-it",
+      "canal": "sidecar-Studio (retrieve+QA_SYSTEM_PROMPT+modelo configurado), sin UI",
+      "triples_antes": 284810,
+      "recuperacion": {
+        "anchors": 13,
+        "hechos": 120
+      },
+      "chat": "bloqueado_otro",
+      "causa": "Model endpoint https://generativelanguage.googleapis.com/v1beta/openai returned HTTP 503: [{\n  \"error\": {\n    \"code\": 503,\n    \"message\": \"This model is currently experiencing high demand. Spikes in demand are usually temporary. Please try again later.\",\n    \"status\": \"UNAVAILABLE\"\n  }\n}\n]",
+      "respuesta": null,
+      "evaluacion": {
+        "recuperacion_ok": true,
+        "nota": "recuperacion real registrada; respuesta del modelo pendiente"
+      },
+      "triples_despues": 284810,
+      "grafo_sin_cambios": true,
+      "contexto_caracteres": 47237
+    },
+    {
+      "id": "C2-f2-evidencia",
+      "pregunta": "Explica la evidencia F2 de proyecciones en 2020 y sus condiciones pendientes. No extrapoles a otros años.",
+      "modelo": "gemma-4-31b-it",
+      "canal": "sidecar-Studio (retrieve+QA_SYSTEM_PROMPT+modelo configurado), sin UI",
+      "triples_antes": 284810,
+      "recuperacion": {
+        "anchors": 16,
+        "hechos": 240
+      },
+      "chat": "bloqueado_cuota",
+      "causa": "Model endpoint https://generativelanguage.googleapis.com/v1beta/openai returned HTTP 429: [{\n  \"error\": {\n    \"code\": 429,\n    \"message\": \"You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/rate-limit. \\n* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_input_token_count, limit: 16000, model: gemma-4-31b, description: Generate content input tokens per minute limit exceeded on Free Tier. See https://ai.google.dev/gemini-api/docs/rate-limits.\\nPlease retry in 17.747627508s.\",\n    \"status\": \"RESOURCE_EXHAUSTED\",\n    \"details\": [\n      {\n        \"@type\": \"type.googleapis.com/google.rpc.Help\",\n        \"links\": [\n          {\n            \"description\": \"Learn more about Gemini API quotas\",\n            \"url\": \"https://ai.google.dev/gemini-api/docs/rate-limits\"\n          }\n        ]\n      },\n      {\n        \"@type\": \"type.googleapis.com/google.rpc.QuotaFailure\",\n        \"violations\": [\n          {\n            \"description\": \"Generate content input tokens per minute limit exceeded on Free Tier. See https://ai.google.dev/gemini-api/docs/rate-limits.\",\n            \"quotaMetric\": \"generativelanguage.googleapis.com/generate_content_free_tier_input_token_count\",\n            \"quotaId\": \"GenerateContentInputTokensPerModelPerMinute-FreeTier\",\n            \"quotaDimensions\": {\n              \"location\": \"global\",\n              \"model\": \"gemma-4-31b\"\n            },\n            \"quotaValue\": \"16000\"\n          }\n        ]\n      },\n      {\n        \"@type\": \"type.googleapis.com/google.rpc.RetryInfo\",\n        \"retryDelay\": \"17s\"\n      }\n    ]\n  }\n}\n]",
+      "respuesta": null,
+      "evaluacion": {
+        "recuperacion_ok": true,
+        "nota": "recuperacion real registrada; respuesta del modelo pendiente"
+      },
+      "triples_despues": 284810,
+      "grafo_sin_cambios": true,
+      "contexto_caracteres": 72263
+    },
+    {
+      "id": "C3-f2-igualdad",
+      "pregunta": "¿Qué demuestra la igualdad de los dos valores de 2020 y qué queda sin demostrar?",
+      "modelo": "gemma-4-31b-it",
+      "canal": "sidecar-Studio (retrieve+QA_SYSTEM_PROMPT+modelo configurado), sin UI",
+      "triples_antes": 284810,
+      "recuperacion": {
+        "anchors": 16,
+        "hechos": 140
+      },
+      "chat": "pendiente_cuota",
+      "causa": "cuota 429 en caso previo: sin llamadas al modelo",
+      "respuesta": null,
+      "evaluacion": {
+        "recuperacion_ok": true,
+        "nota": "recuperacion real registrada; respuesta del modelo pendiente"
+      },
+      "triples_despues": 284810,
+      "grafo_sin_cambios": true,
+      "contexto_caracteres": 28881
+    },
+    {
+      "id": "C4-definicion-diccionario",
+      "pregunta": "¿Qué significa la variable año_matrimonio según su diccionario? Consulta el grafo y muestra la evidencia.",
+      "modelo": "gemma-4-31b-it",
+      "canal": "sidecar-Studio (retrieve+QA_SYSTEM_PROMPT+modelo configurado), sin UI",
+      "triples_antes": 284810,
+      "recuperacion": {
+        "anchors": 16,
+        "hechos": 208
+      },
+      "chat": "pendiente_cuota",
+      "causa": "cuota 429 en caso previo: sin llamadas al modelo",
+      "respuesta": null,
+      "evaluacion": {
+        "recuperacion_ok": true,
+        "nota": "recuperacion real registrada; respuesta del modelo pendiente"
+      },
+      "triples_despues": 284810,
+      "grafo_sin_cambios": true,
+      "contexto_caracteres": 144922
+    },
+    {
+      "id": "C5-diferencia-variables",
+      "pregunta": "¿Qué diferencia hay entre año_matrimonio y año_defuncion? Muestra las definiciones originales y distingue lo documentado de lo candidato.",
+      "modelo": "gemma-4-31b-it",
+      "canal": "sidecar-Studio (retrieve+QA_SYSTEM_PROMPT+modelo configurado), sin UI",
+      "triples_antes": 284810,
+      "recuperacion": {
+        "anchors": 16,
+        "hechos": 193
+      },
+      "chat": "pendiente_cuota",
+      "causa": "cuota 429 en caso previo: sin llamadas al modelo",
+      "respuesta": null,
+      "evaluacion": {
+        "recuperacion_ok": true,
+        "nota": "recuperacion real registrada; respuesta del modelo pendiente"
+      },
+      "triples_despues": 284810,
+      "grafo_sin_cambios": true,
+      "contexto_caracteres": 199567
+    },
+    {
+      "id": "C6-clave-26001",
+      "pregunta": "Para la clave 26001 en las comparaciones de 2020, muestra los dos valores con medida, nombre de origen, archivo y filas. ¿Son códigos INEGI?",
+      "modelo": "gemma-4-31b-it",
+      "canal": "sidecar-Studio (retrieve+QA_SYSTEM_PROMPT+modelo configurado), sin UI",
+      "triples_antes": 284810,
+      "recuperacion": {
+        "anchors": 16,
+        "hechos": 240
+      },
+      "chat": "pendiente_cuota",
+      "causa": "cuota 429 en caso previo: sin llamadas al modelo",
+      "respuesta": null,
+      "evaluacion": {
+        "recuperacion_ok": true,
+        "nota": "recuperacion real registrada; respuesta del modelo pendiente"
+      },
+      "triples_despues": 284810,
+      "grafo_sin_cambios": true,
+      "contexto_caracteres": 253334
+    }
+  ]
+}

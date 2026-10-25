@@ -1,0 +1,38 @@
+{
+ "version": "v1",
+ "modelo": "Muse 1.3",
+ "rol": "auditoria-a (independiente)",
+ "regla_decision": {
+  "aceptar": "Fila exacta verificada (huella OK, literal nombre/descripcion, tipo/formato/ejemplo coherentes), ambito restringido a conjunto/diccionario/definicion/huella, concepto limitado a lo realmente documentado, limites que prohiben identidad, catalogo, vigencia, unidad, moneda, cruces y equivalencias.",
+  "corregir": "Sentido univoco documentado pero regla/concepto con defecto subsanable (representacion inexacta, concepto generico que requiere calificador, limite/positivo que no refleja contradiccion, alcance que debe estrecharse). Se detalla el cambio exigido; no integra sin el.",
+  "rechazar": "Contradiccion real tipo-vs-sentido, fila corrupta usada como concepto, inferencia por nombre/ejemplo/simetria, o concepto que afirma equivalencia indebida (identidad entre fuentes, catalogo/version no acreditados). Un limite no cura la contradiccion. Pasa a pendiente.",
+  "pendiente_bien_fundado": "Para entregas sin reglas: el pendiente es correcto si la ausencia es documental (descripcion vacia, contradiccion, truncamiento, fila corrupta) con evidencia y solicitud precisa; es incorrecto si solo se debe a falta de regla previa existiendo sentido univoco."
+ },
+ "verificaciones_por_id": [
+  "huella_fila recomputada",
+  "literal nombre/descripcion vs fila",
+  "tipo/formato/unidad/ejemplo/catalogo vs concepto y representacion",
+  "ambito (conjunto/diccionario/definicion)",
+  "representacion compatible con tipo",
+  "limites: identidad/catalogo/vigencia/unidad/moneda/cruces",
+  "ausencia de identidad entre fuentes",
+  "solicitudes y fuentes con URL/localizador/sha/aplicabilidad"
+ ],
+ "focos_r5": [
+  "TIC: 11 booleanos contradictorios (conteo/procedimiento vs Si/No), vagos P2/P7/P27-P33, dobles P8, anaforas",
+  "nacimientos: 53 descripciones vacias + par RESIDEEXTRANJERO/D divergente; no decodificar por simetria X/XD ni por ejemplo",
+  "defunciones: 32 vacias verificadas; no promover DGIS/INEGI sin vinculo local ni vigencia",
+  "matriculas: 28 vacias + Municipio parcial + Tipo de baja generico; no inferir escala de promedios ni calendario de fechas",
+  "presas: hoja exacta de Clave, sin joins por compartir nombre",
+  "catalogos-web: vigencia exige enlace edicion-recurso-periodo; fecha de publicacion y similitud de valores no bastan"
+ ],
+ "prohibido": [
+  "aprobar por conteo o por script valido",
+  "aprobar por nombre o proximidad",
+  "curar contradicciones/filas corruptas con suposicion",
+  "decodificar siglas, simetrias X/XD, sufijos f, listas de unidad",
+  "contactar publicadores",
+  "controlar Obscura o navegador",
+  "modificar entregas, nucleo, fuentes, rondas inmutables"
+ ]
+}

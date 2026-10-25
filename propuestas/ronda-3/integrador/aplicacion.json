@@ -1,0 +1,31 @@
+{
+  "aplicada_en_utc": "2026-10-23T11:37:20.528847+00:00",
+  "respaldo": "data/backups/antes-ronda-3-20261023T113720Z.zip",
+  "manifiesto_sha256": "c926c28467a499ff72ed626da8014cc6c642c31f7760ca25cffa4ad1d6782dff",
+  "reglas_conceptos_preservados": true,
+  "vinculos_previos_preservados": 836,
+  "vinculos_totales": 865,
+  "studio_modificado": true,
+  "pendiente": [],
+  "estado": "completada",
+  "sincronizacion_verificada": true,
+  "pruebas_centrales": 108,
+  "codigo_instalado_sha256": {
+    "scripts/integrar_ronda_3.py": "6e1af081c263ac2adbf4f72b04d1fbd9e1130ce5135df9e2b6ac0367b495c5d8",
+    "scripts/integrar_cruces_r3.py": "209f9e3b4a675b12d38cedf34a24f39df35573b4bf01784c6aac9e66b025403a",
+    "scripts/guardar_rdf.py": "1f7d2bd3ee4e3ba6946457add685e88c2ab22a98dec50c626005b7ed746c5eb0",
+    "scripts/consolidar_semantica.py": "04345faa0519c8ee229d369a4040f2c47b23a1b89b456d8f1eb91803874c023b",
+    "scripts/integrar_cobertura.py": "d1318f6e9ea62ed396d8d4609a597fdd49696372998aa592ecedbf326c7dc148",
+    "scripts/ampliar_portal.py": "58603b22c277d74ff61c45884cf985710c29addc581ee462a72a28b6d0d361a4",
+    "scripts/sincronizar_studio_portal.py": "90a7b5da441785efe32f4f4419fe3ec1acfaa6dfac2f049100564af1aae9be82",
+    "tests/test_ronda_3_integrada.py": "5df6da32029e7f7daecd083f42e2406e2af07ad47396a3fdccfd5a5c5c8dbe83",
+    "tests/test_guardar_rdf.py": "490142b1d85ae3acd73ff24f77501970b82bf4ee422de6e64d169a0d7e251815",
+    "tests/test_ronda_2.py": "cad91946aedbfdfacdc1febec4209bee3194ee169564f1ebddb7fb395d540ed7"
+  },
+  "ajustes_integracion": [
+    "Indexar solo variables con IRI, conservando las siete filas sin nombre en el informe.",
+    "Guardar Turtle mediante temporal completo y reemplazo, tras errores OSError22 al truncar destinos existentes.",
+    "Conservar el conteo histórico de ronda 2 y comprobar su esperado_actual actualizado.",
+    "Oráculo de recuperación HTTP basado en conteos vivos, sin fijar 836/232 históricos."
+  ]
+}

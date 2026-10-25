@@ -1,0 +1,235 @@
+{
+  "rol": "tic",
+  "condicionadas_a_reglas": [
+    "r5-tic-001",
+    "r5-tic-002",
+    "r5-tic-003",
+    "r5-tic-004",
+    "r5-tic-005",
+    "r5-tic-006",
+    "r5-tic-007"
+  ],
+  "decisiones_columnas": [
+    {
+      "columna": "https://example.org/mex-ontologi/file-column/1e5e326f-2975-4614-9aff-8320f1d9c1a9%2FHoja1%2F2",
+      "recurso": "1e5e326f-2975-4614-9aff-8320f1d9c1a9",
+      "campo": "P2",
+      "decision": "proponer",
+      "motivo": "columna fisica verificada (Hoja1 pos 2, unico) + recurso del mismo conjunto + fila diccionario exacta + concepto sector-dependencia-diagnostico de regla r5-tic-002 condicionada a su aprobacion; alcance documental, sin validar valores ni catalogos",
+      "evidencia": [
+        "data/portal/inspecciones/1e5e326f-2975-4614-9aff-8320f1d9c1a9.json hoja Hoja1 campo pos 2 = 'P2' (ok=True)",
+        "unicidad columna nombre_unico=True (coincidencias=1)",
+        "metodo_encabezado=heuristica_requiere_revision (rutina de captura, no bloquea por si sola)",
+        "data/portal/inventario.json recurso 1e5e326f-2975-4614-9aff-8320f1d9c1a9 conjunto 0ec245ba-6941-4995-a564-52e0a4f3999f (Información General del Entorno Digital en la Administración Pública Estatal)",
+        "data/portal/inspecciones/3851f1c3-5045-4703-ba88-93b3d39e0b70.json fila Hoja1 P2: Tipo de dato=Texto, Descripcion=\"Sector\", Ejemplo=04 - SECRETARIA DE HACIENDA",
+        "huella_esquema=43eb255808ec7a2aa8d85db39d81496c45a87e7bfb2ddea7151a3d798b9e5d1d huella_fila=7e4792227b1e57f623212566d266783aa37726e8a6b627b00ec2056839875577",
+        "cobertura estado=candidata_por_nombre concepto=sector-dependencia-diagnostico descripcion='Sector'",
+        "definicion https://example.org/mex-ontologi/definition/3851f1c3-5045-4703-ba88-93b3d39e0b70%2F2 concepto sector-dependencia-diagnostico",
+        "dependencia explicita y condicionada: regla r5-tic-002 de propuestas/pendientes-muse-r5/tic/entrega.json (aprobacion pendiente de la regla); esta decision no crea regla nueva"
+      ],
+      "definicion_iri": "https://example.org/mex-ontologi/definition/3851f1c3-5045-4703-ba88-93b3d39e0b70%2F2"
+    },
+    {
+      "columna": "https://example.org/mex-ontologi/file-column/1f7476be-6a56-4335-be31-e77d7884c835%2FHoja1%2F2",
+      "recurso": "1f7476be-6a56-4335-be31-e77d7884c835",
+      "campo": "P2",
+      "decision": "proponer",
+      "motivo": "columna fisica verificada (Hoja1 pos 2, unico) + recurso del mismo conjunto + fila diccionario exacta + concepto sector-dependencia-diagnostico de regla r5-tic-003 condicionada a su aprobacion; alcance documental, sin validar valores ni catalogos",
+      "evidencia": [
+        "data/portal/inspecciones/1f7476be-6a56-4335-be31-e77d7884c835.json hoja Hoja1 campo pos 2 = 'P2' (ok=True)",
+        "unicidad columna nombre_unico=True (coincidencias=1)",
+        "metodo_encabezado=heuristica_requiere_revision (rutina de captura, no bloquea por si sola)",
+        "data/portal/inventario.json recurso 1f7476be-6a56-4335-be31-e77d7884c835 conjunto d227c85d-0609-4ab4-9c4f-22aef39b670f (Planeación TIC en la Administración Pública Estatal)",
+        "data/portal/inspecciones/3b314916-24f7-4c48-bcb5-c5fe112a9123.json fila Hoja1 P2: Tipo de dato=Texto, Descripcion=\"Sector\", Ejemplo=04 - SECRETARIA DE HACIENDA",
+        "huella_esquema=485b00853f0bcc8a29cc9fca22bc3d13595c62eace1c457f89786ecf0f8bf607 huella_fila=7e4792227b1e57f623212566d266783aa37726e8a6b627b00ec2056839875577",
+        "cobertura estado=candidata_por_nombre concepto=sector-dependencia-diagnostico descripcion='Sector'",
+        "definicion https://example.org/mex-ontologi/definition/3b314916-24f7-4c48-bcb5-c5fe112a9123%2F2 concepto sector-dependencia-diagnostico",
+        "dependencia explicita y condicionada: regla r5-tic-003 de propuestas/pendientes-muse-r5/tic/entrega.json (aprobacion pendiente de la regla); esta decision no crea regla nueva"
+      ],
+      "definicion_iri": "https://example.org/mex-ontologi/definition/3b314916-24f7-4c48-bcb5-c5fe112a9123%2F2"
+    },
+    {
+      "columna": "https://example.org/mex-ontologi/file-column/3d8d9ae1-bac3-40cc-be26-c919c0d73b4f%2FHoja1%2F2",
+      "recurso": "3d8d9ae1-bac3-40cc-be26-c919c0d73b4f",
+      "campo": "P2",
+      "decision": "proponer",
+      "motivo": "columna fisica verificada (Hoja1 pos 2, unico) + recurso del mismo conjunto + fila diccionario exacta + concepto sector-dependencia-diagnostico de regla r5-tic-001 condicionada a su aprobacion; alcance documental, sin validar valores ni catalogos",
+      "evidencia": [
+        "data/portal/inspecciones/3d8d9ae1-bac3-40cc-be26-c919c0d73b4f.json hoja Hoja1 campo pos 2 = 'P2' (ok=True)",
+        "unicidad columna nombre_unico=True (coincidencias=1)",
+        "metodo_encabezado=heuristica_requiere_revision (rutina de captura, no bloquea por si sola)",
+        "data/portal/inventario.json recurso 3d8d9ae1-bac3-40cc-be26-c919c0d73b4f conjunto aa353273-7ef0-4279-987a-40fc49b3d712 (Politica Digital en la Administración Pública Estatal)",
+        "data/portal/inspecciones/063058e6-aed3-4a60-b944-5e653c77b14d.json fila Hoja1 P2: Tipo de dato=Texto, Descripcion=\"Sector\", Ejemplo=04 - SECRETARIA DE HACIENDA",
+        "huella_esquema=7e26bdce9f810403af61bf9db02dde5244818d14af142daa7970b3902a987486 huella_fila=7e4792227b1e57f623212566d266783aa37726e8a6b627b00ec2056839875577",
+        "cobertura estado=candidata_por_nombre concepto=sector-dependencia-diagnostico descripcion='Sector'",
+        "definicion https://example.org/mex-ontologi/definition/063058e6-aed3-4a60-b944-5e653c77b14d%2F2 concepto sector-dependencia-diagnostico",
+        "dependencia explicita y condicionada: regla r5-tic-001 de propuestas/pendientes-muse-r5/tic/entrega.json (aprobacion pendiente de la regla); esta decision no crea regla nueva"
+      ],
+      "definicion_iri": "https://example.org/mex-ontologi/definition/063058e6-aed3-4a60-b944-5e653c77b14d%2F2"
+    },
+    {
+      "columna": "https://example.org/mex-ontologi/file-column/3d8d9ae1-bac3-40cc-be26-c919c0d73b4f%2FHoja1%2F7",
+      "recurso": "3d8d9ae1-bac3-40cc-be26-c919c0d73b4f",
+      "campo": "P7",
+      "decision": "proponer",
+      "motivo": "columna fisica verificada (Hoja1 pos 7, unico) + recurso del mismo conjunto + fila diccionario exacta + concepto condiciones-innovacion-tic-declaradas de regla r5-tic-006 condicionada a su aprobacion; alcance documental, sin validar valores ni catalogos",
+      "evidencia": [
+        "data/portal/inspecciones/3d8d9ae1-bac3-40cc-be26-c919c0d73b4f.json hoja Hoja1 campo pos 7 = 'P7' (ok=True)",
+        "unicidad columna nombre_unico=True (coincidencias=1)",
+        "metodo_encabezado=heuristica_requiere_revision (rutina de captura, no bloquea por si sola)",
+        "data/portal/inventario.json recurso 3d8d9ae1-bac3-40cc-be26-c919c0d73b4f conjunto aa353273-7ef0-4279-987a-40fc49b3d712 (Politica Digital en la Administración Pública Estatal)",
+        "data/portal/inspecciones/063058e6-aed3-4a60-b944-5e653c77b14d.json fila Hoja1 P7: Tipo de dato=Texto, descripcion completa sin truncar, Ejemplo=Platicas, reuniones, etc",
+        "huella_esquema=7e26bdce9f810403af61bf9db02dde5244818d14af142daa7970b3902a987486 huella_fila=fefc6b0d6ceed477ceef37d5e850751eacef31f435c6c5e05e18a8827680e470",
+        "cobertura estado=candidata_por_nombre concepto=condiciones-innovacion-tic-declaradas descripcion='Enliste las condiciones que considere contribuyan a la innovación en TIC'",
+        "definicion https://example.org/mex-ontologi/definition/063058e6-aed3-4a60-b944-5e653c77b14d%2F7 concepto condiciones-innovacion-tic-declaradas",
+        "dependencia explicita y condicionada: regla r5-tic-006 de propuestas/pendientes-muse-r5/tic/entrega.json (aprobacion pendiente de la regla); esta decision no crea regla nueva"
+      ],
+      "definicion_iri": "https://example.org/mex-ontologi/definition/063058e6-aed3-4a60-b944-5e653c77b14d%2F7"
+    },
+    {
+      "columna": "https://example.org/mex-ontologi/file-column/3d8d9ae1-bac3-40cc-be26-c919c0d73b4f%2FHoja1%2F13",
+      "recurso": "3d8d9ae1-bac3-40cc-be26-c919c0d73b4f",
+      "campo": "P13",
+      "decision": "proponer",
+      "motivo": "columna fisica verificada (Hoja1 pos 13, unico) + recurso del mismo conjunto + fila diccionario exacta + concepto recursos-anuales-innovacion-declarados de regla r5-tic-007 condicionada a su aprobacion; alcance documental, sin validar valores ni catalogos",
+      "evidencia": [
+        "data/portal/inspecciones/3d8d9ae1-bac3-40cc-be26-c919c0d73b4f.json hoja Hoja1 campo pos 13 = 'P13' (ok=True)",
+        "unicidad columna nombre_unico=True (coincidencias=1)",
+        "metodo_encabezado=heuristica_requiere_revision (rutina de captura, no bloquea por si sola)",
+        "data/portal/inventario.json recurso 3d8d9ae1-bac3-40cc-be26-c919c0d73b4f conjunto aa353273-7ef0-4279-987a-40fc49b3d712 (Politica Digital en la Administración Pública Estatal)",
+        "data/portal/inspecciones/063058e6-aed3-4a60-b944-5e653c77b14d.json fila Hoja1 P13: Tipo de dato=Texto, Unidad vacia, Ejemplo=5000, software; descripcion RAW termina en NBSP U+00A0 (caracter final conservado en la captura) y el valor materializado lo recorta",
+        "huella_esquema=7e26bdce9f810403af61bf9db02dde5244818d14af142daa7970b3902a987486 huella_fila=fed72d1b1f284dc88de6809e3cc389ea7d4343e99248e13fd848a94e726e01d8",
+        "cobertura estado=candidata_por_nombre concepto=recursos-anuales-innovacion-declarados descripcion='Enliste los recursos anuales que se hayan destinado a innovación:'",
+        "definicion https://example.org/mex-ontologi/definition/063058e6-aed3-4a60-b944-5e653c77b14d%2F13 concepto recursos-anuales-innovacion-declarados",
+        "dependencia explicita y condicionada: regla r5-tic-007 de propuestas/pendientes-muse-r5/tic/entrega.json (aprobacion pendiente de la regla); esta decision no crea regla nueva",
+        "nota NBSP (auditor B, correccion precisa aceptada): el U+00A0 final es formato de celda sin efecto semantico; hash RAW intacto, sentido y descripcion materializada correctos; no se altera fila original, huellas ni significado"
+      ],
+      "definicion_iri": "https://example.org/mex-ontologi/definition/063058e6-aed3-4a60-b944-5e653c77b14d%2F13"
+    },
+    {
+      "columna": "https://example.org/mex-ontologi/file-column/b444876c-8681-4503-98ca-06876a62faae%2FHoja1%2F2",
+      "recurso": "b444876c-8681-4503-98ca-06876a62faae",
+      "campo": "P2",
+      "decision": "proponer",
+      "motivo": "columna fisica verificada (Hoja1 pos 2, unico) + recurso del mismo conjunto + fila diccionario exacta + concepto sector-dependencia-diagnostico de regla r5-tic-005 condicionada a su aprobacion; alcance documental, sin validar valores ni catalogos",
+      "evidencia": [
+        "data/portal/inspecciones/b444876c-8681-4503-98ca-06876a62faae.json hoja Hoja1 campo pos 2 = 'P2' (ok=True)",
+        "unicidad columna nombre_unico=True (coincidencias=1)",
+        "metodo_encabezado=heuristica_requiere_revision (rutina de captura, no bloquea por si sola)",
+        "data/portal/inventario.json recurso b444876c-8681-4503-98ca-06876a62faae conjunto d175b134-77f4-4201-9409-08b05c1d5ffa (Mejora Regulatoria para el Entorno Digital de la Administración Pública Estatal)",
+        "data/portal/inspecciones/af14d207-7697-4d52-b99b-46a35a1b76ac.json fila Hoja1 P2: Tipo de dato=Texto, Descripcion=\"Sector\", Ejemplo=04 - SECRETARIA DE HACIENDA",
+        "huella_esquema=409464b6b6451e047d0dfe87d037df8977187979fcb1348f0d4a28be52e5ab16 huella_fila=7e4792227b1e57f623212566d266783aa37726e8a6b627b00ec2056839875577",
+        "cobertura estado=candidata_por_nombre concepto=sector-dependencia-diagnostico descripcion='Sector'",
+        "definicion https://example.org/mex-ontologi/definition/af14d207-7697-4d52-b99b-46a35a1b76ac%2F2 concepto sector-dependencia-diagnostico",
+        "dependencia explicita y condicionada: regla r5-tic-005 de propuestas/pendientes-muse-r5/tic/entrega.json (aprobacion pendiente de la regla); esta decision no crea regla nueva"
+      ],
+      "definicion_iri": "https://example.org/mex-ontologi/definition/af14d207-7697-4d52-b99b-46a35a1b76ac%2F2"
+    },
+    {
+      "columna": "https://example.org/mex-ontologi/file-column/c6d42e45-2193-4e22-a5b1-aa2770e9acf1%2FHoja1%2F2",
+      "recurso": "c6d42e45-2193-4e22-a5b1-aa2770e9acf1",
+      "campo": "P2",
+      "decision": "proponer",
+      "motivo": "columna fisica verificada (Hoja1 pos 2, unico) + recurso del mismo conjunto + fila diccionario exacta + concepto sector-dependencia-diagnostico de regla r5-tic-004 condicionada a su aprobacion; alcance documental, sin validar valores ni catalogos",
+      "evidencia": [
+        "data/portal/inspecciones/c6d42e45-2193-4e22-a5b1-aa2770e9acf1.json hoja Hoja1 campo pos 2 = 'P2' (ok=True)",
+        "unicidad columna nombre_unico=True (coincidencias=1)",
+        "metodo_encabezado=heuristica_requiere_revision (rutina de captura, no bloquea por si sola)",
+        "data/portal/inventario.json recurso c6d42e45-2193-4e22-a5b1-aa2770e9acf1 conjunto 9208a313-553c-4308-8d58-506e037060b1 (Presupuesto para las TIC en la Administración Pública Estatal)",
+        "data/portal/inspecciones/8f8e3cfb-e551-4a95-b382-4999351c5f29.json fila Hoja1 P2: Tipo de dato=Texto, Descripcion=\"Sector\", Ejemplo=04 - SECRETARIA DE HACIENDA",
+        "huella_esquema=05688c29525fbcb9cf47951f84631583d952dd5bdf81cef1bd8ce36aaea72b54 huella_fila=7e4792227b1e57f623212566d266783aa37726e8a6b627b00ec2056839875577",
+        "cobertura estado=candidata_por_nombre concepto=sector-dependencia-diagnostico descripcion='Sector'",
+        "definicion https://example.org/mex-ontologi/definition/8f8e3cfb-e551-4a95-b382-4999351c5f29%2F2 concepto sector-dependencia-diagnostico",
+        "dependencia explicita y condicionada: regla r5-tic-004 de propuestas/pendientes-muse-r5/tic/entrega.json (aprobacion pendiente de la regla); esta decision no crea regla nueva"
+      ],
+      "definicion_iri": "https://example.org/mex-ontologi/definition/8f8e3cfb-e551-4a95-b382-4999351c5f29%2F2"
+    }
+  ],
+  "vinculos": [
+    {
+      "recurso": "1e5e326f-2975-4614-9aff-8320f1d9c1a9",
+      "campo": "P2",
+      "columna": "https://example.org/mex-ontologi/file-column/1e5e326f-2975-4614-9aff-8320f1d9c1a9%2FHoja1%2F2",
+      "diccionario": "3851f1c3-5045-4703-ba88-93b3d39e0b70",
+      "concepto": "sector-dependencia-diagnostico",
+      "descripcion": "Sector",
+      "huella_esquema": "43eb255808ec7a2aa8d85db39d81496c45a87e7bfb2ddea7151a3d798b9e5d1d",
+      "huella_fila_diccionario": "7e4792227b1e57f623212566d266783aa37726e8a6b627b00ec2056839875577",
+      "criterio": "Revision explicita del campo en el esquema de este recurso y su fila de diccionario en el mismo conjunto: nombre, contexto, descripcion y representacion verificados, huellas verificadas contra archivos locales. Aplicacion condicionada de regla r5-tic-002 y concepto sector-dependencia-diagnostico para la misma definicion (no crea regla nueva). Alcance de interpretacion documental; no se validan valores, no se confirma pertenencia a catalogos, no se habilitan cruces."
+    },
+    {
+      "recurso": "1f7476be-6a56-4335-be31-e77d7884c835",
+      "campo": "P2",
+      "columna": "https://example.org/mex-ontologi/file-column/1f7476be-6a56-4335-be31-e77d7884c835%2FHoja1%2F2",
+      "diccionario": "3b314916-24f7-4c48-bcb5-c5fe112a9123",
+      "concepto": "sector-dependencia-diagnostico",
+      "descripcion": "Sector",
+      "huella_esquema": "485b00853f0bcc8a29cc9fca22bc3d13595c62eace1c457f89786ecf0f8bf607",
+      "huella_fila_diccionario": "7e4792227b1e57f623212566d266783aa37726e8a6b627b00ec2056839875577",
+      "criterio": "Revision explicita del campo en el esquema de este recurso y su fila de diccionario en el mismo conjunto: nombre, contexto, descripcion y representacion verificados, huellas verificadas contra archivos locales. Aplicacion condicionada de regla r5-tic-003 y concepto sector-dependencia-diagnostico para la misma definicion (no crea regla nueva). Alcance de interpretacion documental; no se validan valores, no se confirma pertenencia a catalogos, no se habilitan cruces."
+    },
+    {
+      "recurso": "3d8d9ae1-bac3-40cc-be26-c919c0d73b4f",
+      "campo": "P2",
+      "columna": "https://example.org/mex-ontologi/file-column/3d8d9ae1-bac3-40cc-be26-c919c0d73b4f%2FHoja1%2F2",
+      "diccionario": "063058e6-aed3-4a60-b944-5e653c77b14d",
+      "concepto": "sector-dependencia-diagnostico",
+      "descripcion": "Sector",
+      "huella_esquema": "7e26bdce9f810403af61bf9db02dde5244818d14af142daa7970b3902a987486",
+      "huella_fila_diccionario": "7e4792227b1e57f623212566d266783aa37726e8a6b627b00ec2056839875577",
+      "criterio": "Revision explicita del campo en el esquema de este recurso y su fila de diccionario en el mismo conjunto: nombre, contexto, descripcion y representacion verificados, huellas verificadas contra archivos locales. Aplicacion condicionada de regla r5-tic-001 y concepto sector-dependencia-diagnostico para la misma definicion (no crea regla nueva). Alcance de interpretacion documental; no se validan valores, no se confirma pertenencia a catalogos, no se habilitan cruces."
+    },
+    {
+      "recurso": "3d8d9ae1-bac3-40cc-be26-c919c0d73b4f",
+      "campo": "P7",
+      "columna": "https://example.org/mex-ontologi/file-column/3d8d9ae1-bac3-40cc-be26-c919c0d73b4f%2FHoja1%2F7",
+      "diccionario": "063058e6-aed3-4a60-b944-5e653c77b14d",
+      "concepto": "condiciones-innovacion-tic-declaradas",
+      "descripcion": "Enliste las condiciones que considere contribuyan a la innovación en TIC",
+      "huella_esquema": "7e26bdce9f810403af61bf9db02dde5244818d14af142daa7970b3902a987486",
+      "huella_fila_diccionario": "fefc6b0d6ceed477ceef37d5e850751eacef31f435c6c5e05e18a8827680e470",
+      "criterio": "Revision explicita del campo en el esquema de este recurso y su fila de diccionario en el mismo conjunto: nombre, contexto, descripcion y representacion verificados, huellas verificadas contra archivos locales. Aplicacion condicionada de regla r5-tic-006 y concepto condiciones-innovacion-tic-declaradas para la misma definicion (no crea regla nueva). Alcance de interpretacion documental; no se validan valores, no se confirma pertenencia a catalogos, no se habilitan cruces."
+    },
+    {
+      "recurso": "3d8d9ae1-bac3-40cc-be26-c919c0d73b4f",
+      "campo": "P13",
+      "columna": "https://example.org/mex-ontologi/file-column/3d8d9ae1-bac3-40cc-be26-c919c0d73b4f%2FHoja1%2F13",
+      "diccionario": "063058e6-aed3-4a60-b944-5e653c77b14d",
+      "concepto": "recursos-anuales-innovacion-declarados",
+      "descripcion": "Enliste los recursos anuales que se hayan destinado a innovación:",
+      "huella_esquema": "7e26bdce9f810403af61bf9db02dde5244818d14af142daa7970b3902a987486",
+      "huella_fila_diccionario": "fed72d1b1f284dc88de6809e3cc389ea7d4343e99248e13fd848a94e726e01d8",
+      "criterio": "Revision explicita del campo en el esquema de este recurso y su fila de diccionario en el mismo conjunto: nombre, contexto, descripcion y representacion verificados, huellas verificadas contra archivos locales. Aplicacion condicionada de regla r5-tic-007 y concepto recursos-anuales-innovacion-declarados para la misma definicion (no crea regla nueva). Alcance de interpretacion documental; no se validan valores, no se confirma pertenencia a catalogos, no se habilitan cruces. Nota NBSP: la descripcion RAW de la fila termina en U+00A0 y el valor materializado lo recorta; hash RAW intacto, sentido y descripcion materializada correctos, sin efecto semantico; no se altera fila original, huellas ni significado."
+    },
+    {
+      "recurso": "b444876c-8681-4503-98ca-06876a62faae",
+      "campo": "P2",
+      "columna": "https://example.org/mex-ontologi/file-column/b444876c-8681-4503-98ca-06876a62faae%2FHoja1%2F2",
+      "diccionario": "af14d207-7697-4d52-b99b-46a35a1b76ac",
+      "concepto": "sector-dependencia-diagnostico",
+      "descripcion": "Sector",
+      "huella_esquema": "409464b6b6451e047d0dfe87d037df8977187979fcb1348f0d4a28be52e5ab16",
+      "huella_fila_diccionario": "7e4792227b1e57f623212566d266783aa37726e8a6b627b00ec2056839875577",
+      "criterio": "Revision explicita del campo en el esquema de este recurso y su fila de diccionario en el mismo conjunto: nombre, contexto, descripcion y representacion verificados, huellas verificadas contra archivos locales. Aplicacion condicionada de regla r5-tic-005 y concepto sector-dependencia-diagnostico para la misma definicion (no crea regla nueva). Alcance de interpretacion documental; no se validan valores, no se confirma pertenencia a catalogos, no se habilitan cruces."
+    },
+    {
+      "recurso": "c6d42e45-2193-4e22-a5b1-aa2770e9acf1",
+      "campo": "P2",
+      "columna": "https://example.org/mex-ontologi/file-column/c6d42e45-2193-4e22-a5b1-aa2770e9acf1%2FHoja1%2F2",
+      "diccionario": "8f8e3cfb-e551-4a95-b382-4999351c5f29",
+      "concepto": "sector-dependencia-diagnostico",
+      "descripcion": "Sector",
+      "huella_esquema": "05688c29525fbcb9cf47951f84631583d952dd5bdf81cef1bd8ce36aaea72b54",
+      "huella_fila_diccionario": "7e4792227b1e57f623212566d266783aa37726e8a6b627b00ec2056839875577",
+      "criterio": "Revision explicita del campo en el esquema de este recurso y su fila de diccionario en el mismo conjunto: nombre, contexto, descripcion y representacion verificados, huellas verificadas contra archivos locales. Aplicacion condicionada de regla r5-tic-004 y concepto sector-dependencia-diagnostico para la misma definicion (no crea regla nueva). Alcance de interpretacion documental; no se validan valores, no se confirma pertenencia a catalogos, no se habilitan cruces."
+    }
+  ],
+  "pendientes": [],
+  "fuentes": [
+    "data/portal/inspecciones/<recurso>.json (esquema fisico Hoja1, ok=True)",
+    "data/portal/inventario.json (recurso-conjunto)",
+    "data/semantica/cobertura.json (candidatas y huellas de esquema)",
+    "propuestas/pendientes-muse-r5/tic/entrega.json (reglas r5-tic-001 a 007, pendientes de aprobacion)",
+    "propuestas/pendientes-muse-r5/tic/columnas-adicionales.json (simulacion de candidatas)"
+  ]
+}

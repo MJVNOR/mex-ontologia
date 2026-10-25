@@ -1,0 +1,20 @@
+# Fragmento mínimo del esquema QUDT (copia de trabajo, sólo lo necesario)
+# Fuente primaria: https://qudt.org/schema/qudt/ — consultada 2026-10-24 vía Obscura.
+# Uso: exclusión/diseño para P1. No acredita unidad de ninguna variable local.
+# No se inventa ninguna URI qudt.org/vocab/unit/... en esta entrega.
+
+qudt_SchemaLabel rdfs:label "QUDT Schema - Version 3.5.3" .
+
+qudt:QuantityValue a owl:Class ;
+  rdfs:isDefinedBy <https://qudt.org/schema/qudt/> ;
+  rdfs:label "Quantity value" .
+
+qudt:quantityValue a owl:ObjectProperty ;
+  rdfs:isDefinedBy <https://qudt.org/schema/qudt/> ;
+  rdfs:label "quantity value" ;
+  rdfs:range qudt:QuantityValue .
+
+qudt:value a rdf:Property ;
+  dcterms:description "A property to relate an observable thing with a value expressed as a decimal" ;
+  rdfs:isDefinedBy <https://qudt.org/schema/qudt/> ;
+  rdfs:label "value" .

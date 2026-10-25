@@ -1,0 +1,44 @@
+--- a/scripts/integrar_ronda_2.py
++++ b/scripts/integrar_ronda_2.py
+@@ -329,7 +329,15 @@
+         from integrar_ronda_7 import cargar as cargar_ronda_7
+         r6c, r6f, r6base, r6accepted, r6s = cargar_ronda_6()
+         r7c, r7f, r7base, r7accepted, r7sources = cargar_ronda_7()
+-        sources.update({k: v for k, v in r7sources.items() if k not in sources})
++        sources.update({k: v for k, v in r7sources.items() if k not in sources})
++        # R8: proyección del reporte vivo a su equivalente R7; el bloque
++        # histórico siguiente corre intacto y el delta R8 se valida después.
++        from integrar_ronda_8 import cargar as cargar_ronda_8, preparar_proyeccion_r7
++        semantic_vivo = semantic
++        r8c, r8f, r8base, r8accepted, r8sources = cargar_ronda_8()
++        sources.update({k: v for k, v in r8sources.items() if k not in sources})
++        semantic, delta8 = preparar_proyeccion_r7(
++            semantic, r7base, r7accepted, r8base, r8accepted, r8f)
+         if r7base['reglas_descripcion_exacta'] != r6base['reglas_descripcion_exacta'] + r6accepted['reglas'] \
+                 or r7base['vinculos_documentales_revisados'] != r6base['vinculos_documentales_revisados'] + r6accepted['vinculos']:
+             raise ValueError('Base R7 discontinua respecto a cadena R6')
+@@ -379,9 +379,21 @@
+         expected['revisadas'] = len(r7base['vinculos_documentales_revisados']) + n_vinc
+         if expected['revisadas'] != 4478:
+             raise ValueError('R7 sin 4478 revisadas derivadas')
+-        expected['candidatas'] = len(viejas) + len(nuevas)
+-        if expected['candidatas'] != 45:
+-            raise ValueError('R7 sin 45 candidatas derivadas (17 + 28)')
++        expected['candidatas'] = len(viejas) + len(nuevas)
++        if expected['candidatas'] != 45:
++            raise ValueError('R7 sin 45 candidatas derivadas (17 + 28)')
++        # Delta R8 real aprobado: derivado del lote A/B, nada observado.
++        vinc8 = {v['columna'] for v in r8accepted['vinculos']}
++        pre_cand8 = {m['columna'] for m in semantic['correspondencias']
++                     if m['estado'] == 'candidata_por_nombre'}
++        if not vinc8 <= pre_cand8:
++            raise ValueError('Vínculo R8 fuera de candidatas R7')
++        en_vivo8 = {m['columna'] for m in semantic_vivo['correspondencias']
++                    if m['estado'] == 'candidata_por_nombre'}
++        if en_vivo8 != pre_cand8 - vinc8:
++            raise ValueError('R8 altera candidatas fuera del delta aprobado')
++        expected['revisadas'] += delta8['n_vinculos']
++        expected['candidatas'] -= delta8['n_vinculos']
+ 
+     if (summary['correspondencias_revisadas_totales'], summary['correspondencias_candidatas_restantes'],
+             len(seen), len(p2['decisiones']), len(p4['referencias'])) != (

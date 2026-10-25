@@ -1,0 +1,123 @@
+{
+ "alcance": "Matriz TRIAJE (no exhaustividad demostrada) de 3916 pares + 3 fichas con agregados reproducibles (SQL/Python/SPARQL, sin BD nueva). No activa cruces, no crea equivalencias, no cambia el grafo.",
+ "bloqueos_y_limites": [
+  "Proyecciones: headers reales resueltos sobre originales (7344 + 3672 filas, cobertura 1990-2040 OBSERVADA en ambos); cruce ano por ano NO ejecutado, solo 2020 cruzado (72/72 claves, nombres y POB coherentes).",
+  "Vigencia de catalogos (16 refs incl. proyecciones): no_acreditada F3/F4; fecha CKAN no es edicion/aplicabilidad.",
+  "Localidades 1850 vs 7300: cobertura observada, no equivalencia territorial global; ITER 2020-03-15 vs IML ano 2020.",
+  "Alias Magdalena acotado al origen revisado (territorio.json).",
+  "26998/26999 son categorias no municipales; nunca claves de union."
+ ],
+ "decisiones": {
+  "pendiente": 3868,
+  "habilitable_con_condiciones": 2,
+  "exploratorio": 40,
+  "exploratorio_con_condiciones_pendientes": 2,
+  "no_validado": 2,
+  "no_comparable": 2
+ },
+ "fichas": [
+  {
+   "caso": "F1",
+   "decision": "exploratorio_con_condiciones_pendientes",
+   "no_concluye": [
+    "tasa de divorcio",
+    "vinculo persona/cohorte",
+    "nombres o codigos INEGI",
+    "extension a otros anios"
+   ],
+   "par": "Matrimonios-Divorcios 2022",
+   "resultado": {
+    "codigos": 67,
+    "ambas": 62,
+    "solo_matrimonios": [
+     24,
+     31,
+     60,
+     62,
+     63
+    ],
+    "total_matrimonios": 13881,
+    "total_divorcios": 6064,
+    "negativos": [
+     "duplicado multiplica sin unicidad",
+     "join 2021x2022 por municipio: 60 falsos",
+     "26998/26999 rechazados",
+     "NULL!=0: 62 observados"
+    ]
+   },
+   "verificador": "scripts/ficha_f1_registro_civil.py (recomputo desde agregados por fuente; derivado solo como contraste)",
+   "condiciones_verificadas": 7,
+   "bloqueos_uso_interpretativo": [
+    "sin catalogo RC (<=72 no es municipio/INEGI)",
+    "ano divorcios sin diccionario",
+    "filas sin deduplicar/sin instantanea",
+    "meses sin verificar",
+    "otros anos exigen revalidar"
+   ]
+  },
+  {
+   "caso": "F2",
+   "decision": "exploratorio_con_condiciones_pendientes",
+   "no_concluye": [
+    "cruce ano por ano 1990-2040 (cobertura observada, cruce solo 2020)",
+    "identidad de medida entre fuentes",
+    "equivalencia INEGI de codigos",
+    "causalidad entre grupos e indicadores"
+   ],
+   "par": "Proyecciones Grandes grupos vs Indicadores",
+   "resultado": {
+    "claves_2020": 72,
+    "nombres_exactos": "72/72",
+    "pob_coherente": "72/72",
+    "filas_originales": "7344 + 3672",
+    "cobertura_observada_ambos": "1990-2040",
+    "anos_cruzados": [
+     "2020"
+    ],
+    "detalle": "fichas/claves-2020.json"
+   },
+   "verificador": "scripts/ficha_f2_proyecciones.py (validacion NUEVA sobre originales fijados)"
+  },
+  {
+   "caso": "F3",
+   "decision": "habilitable_con_condiciones",
+   "no_concluye": [
+    "tasa de titulacion/egreso",
+    "cohortes",
+    "homologacion con/sin acento",
+    "mezcla de periodos"
+   ],
+   "par": "Titulados-Egresados 2020-2021 + Nuevo-Reingreso 2021-2022",
+   "resultado": {
+    "nuevo_reingreso": {
+     "ambas_con_valor": 59,
+     "total_a": 3385,
+     "total_b": 12271,
+     "union": 165
+    },
+    "titulados_egresados": {
+     "ambas_con_valor": 54,
+     "total_a": 1404,
+     "total_b": 1947,
+     "union": 175
+    }
+   },
+   "verificador": "scripts/ficha_f3_educativos.py",
+   "limites": [
+    "identidad programa por nombre con acentos",
+    "periodo de metadatos sin validacion externa",
+    "fuente agregada xlsx con sha",
+    "sin tasas ni cohortes"
+   ]
+  }
+ ],
+ "entrega_en": "propuestas/ronda-3/agente-5-cruces/",
+ "no_propone": [
+  "owl:sameAs",
+  "skos:exactMatch",
+  "activacion de cruces",
+  "cambios al grafo",
+  "nuevos identificadores"
+ ],
+ "verificacion": "scripts/verificar_todo.py (base + matriz triaje + F1 + F2 + F3 + SPARQL + negativos de integridad); todo OK"
+}

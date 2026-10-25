@@ -1,0 +1,135 @@
+{
+  "generado_en_utc": "2026-10-23T11:04:44.962304+00:00",
+  "agente": "ronda-3/agente-13-calificadores",
+  "nota": "Sin descargas externas: todas las fuentes son archivos locales del proyecto leídos sin modificar. Sin secretos.",
+  "nota_fixtures": "fixture_sha256 es el SHA del snapshot propio (30 reglas verbatim); propuestas_sha256 es el SHA del archivo upstream completo de cada agente. No confundirlos: el snapshot no cambia aunque el upstream evolucione en reglas no calificadas.",
+  "fixtures": {
+    "reglas_calificadas_snapshot_sha256": "7dcaa3d4bdcd0f5730c712954d782eb2db70c4ba32e128c5ee1e00011535960e",
+    "agente3_propuestas_sha256": "92a7dcdd1926a5b8c863ae0893568b3d246cc3458ada6c503059ae6cf36eb838",
+    "agente8_propuestas_sha256": "9672a4ba0e9c8d70835db0c5b292762ab03d056bf81b17e0307b78682f4190dc",
+    "reglas_snapshot": 30,
+    "cambios_upstream_no_afectan_snapshot": "agente 3 modificó 2 reglas NDDR no calificadas (SHA 29f1dadf.. -> 92a7dcdd..); agente 8 Nacionalidad no calificada; las 30 reglas con calificador siguen verbatim (0 faltan, 0 difieren)"
+  },
+  "entradas": {
+    "scripts/consolidar_semantica.py": {
+      "sha256": "6cafaf59a90c68f9b0ebba6a3e5a41bed8651af555fca78a21ec5f5225bfdf12",
+      "bytes": 35490,
+      "uso": "original central, solo lectura; copiado a staging/"
+    },
+    "shapes/semantica.ttl": {
+      "sha256": "a2f32088f1fc9f0b98c15b9bff5acbca19fabbb9986f382d6c6da722e3d8294c",
+      "bytes": 4914,
+      "uso": "original central, solo lectura; copiado a staging/"
+    },
+    "tests/test_semantica.py": {
+      "sha256": "a82308a608169a9e2379cce18de6cbb3dcae0334ad0caa672c3d2a077bb3278d",
+      "bytes": 12293,
+      "uso": "original central, solo lectura; base de patch/test_semantica.patch"
+    },
+    "ontologia/semantica.json": {
+      "sha256": "b36ea6c6ea5dbe8f77e93275f9dad2efdfa2f0a1f881a7d5350537541c73ce05",
+      "bytes": 913402,
+      "uso": "reglas vigentes, solo lectura en memoria"
+    },
+    "data/portal/inventario.json": {
+      "sha256": "783f12559b81e3c624e601c48d22733158135aa4229aad0feaea712824922faf",
+      "bytes": 716122,
+      "uso": "inventario actual, solo lectura en memoria"
+    },
+    "data/portal/contenido-inspeccion.json": {
+      "sha256": "61861aab5bc2b334699c4d78f611a0e2d650c4649bd791927f9095c2ac785efb",
+      "bytes": 2652648,
+      "uso": "inspección actual, solo lectura en memoria"
+    },
+    "data/portal/lote-cruces/catalogo-municipal-portal.json": {
+      "sha256": "64ca480a160fdaf943ca0ba39a0c002c852fa6fbe6311eb4b4cab06479dc608b",
+      "bytes": 9460,
+      "uso": "referencia municipal, solo lectura en memoria"
+    },
+    "scripts/ampliar_portal.py": {
+      "sha256": "d5b7f350208e5bc5d54a0b3625ac26a9f0c885f562c499e90fa3113fcf0c202d",
+      "bytes": 16216,
+      "uso": "loader SHACL, solo lectura (ya carga shapes/semantica.ttl)"
+    },
+    "propuestas/ronda-3/agente-3-cobertura/propuestas.json": {
+      "sha256": "92a7dcdd1926a5b8c863ae0893568b3d246cc3458ada6c503059ae6cf36eb838",
+      "bytes": 134021,
+      "uso": "fixture 10 reglas DDR con calificador, solo lectura"
+    },
+    "propuestas/ronda-3/agente-8-educacion/propuestas.json": {
+      "sha256": "9672a4ba0e9c8d70835db0c5b292762ab03d056bf81b17e0307b78682f4190dc",
+      "bytes": 356072,
+      "uso": "fixture 20 reglas sede con calificador, solo lectura"
+    }
+  },
+  "propios": {
+    "fixture/reglas_calificadas.json": {
+      "sha256": "7dcaa3d4bdcd0f5730c712954d782eb2db70c4ba32e128c5ee1e00011535960e",
+      "bytes": 16977
+    },
+    "staging/consolidar_semantica.py": {
+      "sha256": "6cafaf59a90c68f9b0ebba6a3e5a41bed8651af555fca78a21ec5f5225bfdf12",
+      "bytes": 35490
+    },
+    "staging/consolidar_semantica_ORIG.py": {
+      "sha256": "6cafaf59a90c68f9b0ebba6a3e5a41bed8651af555fca78a21ec5f5225bfdf12",
+      "bytes": 35490
+    },
+    "staging/semantica.ttl": {
+      "sha256": "f92bf14a56c65c9381a216ea9fd14b6d45326739e45793badaaba76ba5129fc1",
+      "bytes": 4973
+    },
+    "staging/test_semantica.py": {
+      "sha256": "5da666a85388ee1c4bd44e28c2f8e8026e8fbf7a0725824c11a7fb7c01c80946",
+      "bytes": 14675
+    },
+    "patch/consolidar_semantica.patch": {
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0
+    },
+    "patch/semantica_ttl.patch": {
+      "sha256": "5a14d579973c47c41cbf0df8975d1a10d84f5f2b99eb223f6f47bc3288792b65",
+      "bytes": 2080
+    },
+    "patch/test_semantica.patch": {
+      "sha256": "3992ba3bf582a4c351bcaff51e518e506e80128c3bd6c06e24b4294adc2b63db",
+      "bytes": 3232
+    },
+    "shape/calificador.ttl": {
+      "sha256": "95f544622a26aa9bd9ecbb1704d7aaaea2cbd51d5aa63ffb29f5a18b07c9a0b6",
+      "bytes": 1292
+    },
+    "scripts/verificar.py": {
+      "sha256": "26ee654067ae3dacb053c62f6100d67e03c1f8c6abc06076f328f64d3cfa1e27",
+      "bytes": 17263
+    },
+    "scripts/correr_tests_staging.py": {
+      "sha256": "6a1997e710a7440937faa9beeaed68419095d87acd1a1ac834e7e9e12e374145",
+      "bytes": 1282
+    },
+    "scripts/gen_huellas.py": {
+      "sha256": "8ea414e6679b02dd871098560c6c7ed10ad7d30eacb92aedb37165e4a19246a4",
+      "bytes": 3420
+    },
+    "fuente/verificacion-13.json": {
+      "sha256": "4a2b948a5131a995b7f4e3d49100a6f3dd85d1ccffff3e804d4a03f197487f94",
+      "bytes": 2548
+    },
+    "docs/como_aplicar.md": {
+      "sha256": "2672eaf7322e40a115e7de6907914d65543314a96c9356700512b4cf2899ce9c",
+      "bytes": 2211
+    },
+    "docs/revertir.md": {
+      "sha256": "b53e8c77b0037df449d3a5f4af1d1204870cf7cfd8eb6d04c7124c07d3848269",
+      "bytes": 622
+    },
+    "propuestas.json": {
+      "sha256": "c1e877e207e1a8aa56fc28724e9ef7cdee1328472ec783029d0302cfac73d272",
+      "bytes": 3237
+    },
+    "resultado.md": {
+      "sha256": "6a82a9bfc7631440325ef2d1180dc3709491ec41b05ab628d041179f9001f595",
+      "bytes": 3864
+    }
+  }
+}

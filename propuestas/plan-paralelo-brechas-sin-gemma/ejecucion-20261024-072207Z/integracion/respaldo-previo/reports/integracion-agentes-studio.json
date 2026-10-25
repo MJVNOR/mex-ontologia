@@ -1,0 +1,44 @@
+{
+  "fecha_utc": "2026-10-23T09:30:42.419089+00:00",
+  "conteos": {
+    "conceptos": 103,
+    "variables_respaldadas": 232,
+    "correspondencias_revisadas": 162,
+    "catalogos_identificados": 16,
+    "catalogos_sin_resolver": 1,
+    "localidades": 1850,
+    "comprobaciones": 28,
+    "vinculos_catalogos_nuevos": 8
+  },
+  "verificado": true,
+  "entregas_originales_sin_cambios": true,
+  "sincronizacion": {
+    "respaldo": "data\\backups\\studio-antes-portal-20261023T092839461789Z.ttl",
+    "triples_insertados": 25558,
+    "triples_retirados_gestionados": 202,
+    "triples_totales_studio": 195528,
+    "triples_gestionados": 186677,
+    "verificado": true,
+    "shacl": {
+      "conforms": true,
+      "focus_nodes": 19745,
+      "scope": {
+        "complete": true,
+        "default_graph": true,
+        "note": "every graph in the store, the default graph included. On a store that keeps several versions of an entity in several named graphs this union is a state that held at no instant.",
+        "selector": "whole-store",
+        "semantics_version": "temporal/2"
+      },
+      "unmatched_shapes": [
+        {
+          "shape": "https://example.org/mex-ontologi/shapes/ResultadoMunicipalLote",
+          "target": "https://example.org/mex-ontologi/vocab/ResultadoCruceLote",
+          "target_class": "https://example.org/mex-ontologi/vocab/ResultadoCruceLote",
+          "target_form": "class"
+        }
+      ],
+      "violation_count": 0,
+      "violations": []
+    }
+  }
+}

@@ -1,0 +1,961 @@
+@prefix dcat: <http://www.w3.org/ns/dcat#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix mex: <https://example.org/mex-ontologi/vocab/> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix sh: <http://www.w3.org/ns/shacl#> .
+@prefix shape: <https://example.org/mex-ontologi/shapes/> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+shape:CalificadorDocumental a sh:NodeShape ;
+    sh:property [ sh:datatype xsd:string ;
+            sh:maxCount 1 ;
+            sh:minCount 1 ;
+            sh:minLength 1 ;
+            sh:path mex:dimensionCalificador ],
+        [ sh:datatype xsd:string ;
+            sh:maxCount 1 ;
+            sh:minCount 1 ;
+            sh:minLength 1 ;
+            sh:path mex:valorCalificador ],
+        [ sh:minCount 2 ;
+            sh:nodeKind sh:IRI ;
+            sh:path prov:wasDerivedFrom ] ;
+    sh:targetClass mex:CalificadorDocumental .
+
+shape:CatalogoPublicado a sh:NodeShape ;
+    sh:property [ sh:maxCount 1 ;
+            sh:minCount 1 ;
+            sh:path mex:archivoSha256 ;
+            sh:pattern "^[0-9a-f]{64}$" ],
+        [ sh:maxCount 1 ;
+            sh:minCount 1 ;
+            sh:path mex:hojaOriginal ],
+        [ sh:hasValue "no_documentada" ;
+            sh:maxCount 1 ;
+            sh:path mex:estadoVigencia ],
+        [ sh:minCount 1 ;
+            sh:nodeKind sh:IRI ;
+            sh:path prov:wasDerivedFrom ] ;
+    sh:targetClass mex:CatalogoPublicado .
+
+shape:Columna a sh:NodeShape ;
+    sh:property [ sh:datatype xsd:string ;
+            sh:maxCount 1 ;
+            sh:minCount 1 ;
+            sh:path mex:nombreCampo ],
+        [ sh:datatype xsd:integer ;
+            sh:maxCount 1 ;
+            sh:minCount 1 ;
+            sh:minInclusive 1 ;
+            sh:path mex:posicionCampo ],
+        [ sh:datatype xsd:boolean ;
+            sh:maxCount 1 ;
+            sh:minCount 1 ;
+            sh:path mex:campoInterno ],
+        [ sh:class mex:EsquemaObservado ;
+            sh:maxCount 1 ;
+            sh:minCount 1 ;
+            sh:path dct:isPartOf ] ;
+    sh:targetClass mex:ColumnaObservada .
+
+shape:ComparacionMunicipal2020 a sh:NodeShape ;
+    sh:property [ sh:class mex:RevisionCruceRonda3 ;
+            sh:maxCount 1 ;
+            sh:minCount 1 ;
+            sh:path mex:comparacionDe ],
+        [ sh:datatype xsd:string ;
+            sh:maxCount 1 ;
+            sh:minCount 1 ;
+            sh:path mex:codigoTextual ;
+            sh:pattern "^26[0-9]{3}$" ],
+        [ sh:hasValue "2020" ;
+            sh:maxCount 1 ;
+            sh:minCount 1 ;
+            sh:path mex:periodoCruzado ],
+        [ sh:hasValue true ;
+            sh:maxCount 1 ;
+            sh:minCount 1 ;
+            sh:path mex:igualdadValores ],
+        [ sh:datatype xsd:string ;
+            sh:maxCount 1 ;
+            sh:minCount 1 ;
+            sh:path mex:transformacionPrevia ],
+        [ sh:datatype xsd:string ;
+            sh:minCount 1 ;
+            sh:path mex:limiteInterpretativo ],
+        [ sh:class mex:EvidenciaFuenteComparacion ;
+            sh:maxCount 2 ;
+            sh:minCount 2 ;
+            sh:path [ sh:inversePath mex:evidenciaDeFuente ] ] ;
+    sh:targetClass mex:ComparacionMunicipal2020 .
+
+shape:ComprobacionAplicacionTerritorial a sh:NodeShape ;
+    sh:property [ sh:class mex:RecursoCatalogado ;
+            sh:maxCount 1 ;
+            sh:minCount 1 ;
+            sh:path mex:recursoComprobado ],
+        [ sh:class mex:ReferenciaTerritorial ;
+            sh:maxCount 1 ;
+            sh:minCount 1 ;
+            sh:path mex:referenciaComprobada ],
+        [ sh:class mex:ColumnaObservada ;
+            sh:maxCount 1 ;
+            sh:path mex:columnaComprobada ],
+        [ sh:in ( "compatible" "compatible_con_excepciones" "sin_columna_fisica" ) ;
+            sh:maxCount 1 ;
+            sh:minCount 1 ;
+            sh:path mex:estadoComprobacion ],
+        [ sh:in ( "completa" "encabezado_completo" ) ;
+            sh:maxCount 1 ;
+            sh:minCount 1 ;
+            sh:path mex:coberturaComprobacion ],
+        [ sh:maxCount 1 ;
+            sh:minCount 1 ;
+            sh:path mex:archivoSha256 ;
+            sh:pattern "^[0-9a-f]{64}$" ],
+        [ sh:datatype xsd:string ;
+            sh:maxCount 1 ;
+            sh:minCount 1 ;
+            sh:path mex:evidenciaComprobacionJson ],
+        [ sh:minCount 1 ;
+            sh:path mex:limiteSemantico ],
+        [ sh:minCount 2 ;
+            sh:nodeKind sh:IRI ;
+            sh:path prov:wasDerivedFrom ] ;
+    sh:targetClass mex:ComprobacionAplicacionTerritorial .
+
+shape:ComprobacionLocalidadCensal a sh:NodeShape ;
+    sh:property [ sh:class mex:LocalidadObservada ;
+            sh:maxCount 1 ;
+            sh:minCount 1 ;
+            sh:path mex:entradaLocalidadObservada ],
+        [ sh:class mex:ContrasteLocalidadesCensales ;
+            sh:maxCount 1 ;
+            sh:minCount 1 ;
+            sh:path mex:contrasteLocalidades ],
+        [ sh:datatype xsd:string ;
+            sh:maxCount 1 ;
+            sh:minCount 1 ;
+            sh:path mex:claveCensalOriginal ;
+            sh:pattern "^26[0-9]{7}$" ],
+        [ sh:hasValue "clave_nombre_poblacion_coincidentes_en_fuentes" ;
+            sh:maxCount 1 ;
+            sh:path mex:estadoCoincidenciaCensal ],
+        [ sh:datatype xsd:integer ;
+            sh:maxCount 1 ;
+            sh:minCount 1 ;
+            sh:minInclusive 0 ;
+            sh:path mex:poblacionCoincidente ],
+        [ sh:minCount 2 ;
+            sh:nodeKind sh:IRI ;
+            sh:path prov:wasDerivedFrom ] ;
+    sh:targetClass mex:ComprobacionLocalidadCensal .
+
+shape:ConceptoCompartido a sh:NodeShape ;
+    sh:property [ sh:datatype rdf:langString ;
+            sh:maxCount 1 ;
+            sh:minCount 1 ;
+            sh:path skos:definition ],
+        [ sh:datatype rdf:langString ;
+            sh:minCount 1 ;
+            sh:path skos:prefLabel ],
+        [ sh:class skos:ConceptScheme ;
+            sh:maxCount 1 ;
+            sh:minCount 1 ;
+            sh:path skos:inScheme ],
+        [ sh:class mex:CondicionConexion ;
+            sh:minCount 1 ;
+            sh:path mex:requiereCondicion ] ;
+    sh:targetClass mex:ConceptoCompartido .
+
+shape:Conjunto a sh:NodeShape ;
+    sh:property [ sh:datatype xsd:string ;
+            sh:maxCount 1 ;
+            sh:minCount 1 ;
+            sh:path dct:identifier ],
+        [ sh:minCount 1 ;
+            sh:minLength 1 ;
+            sh:path dct:title ],
+        [ sh:class foaf:Organization ;
+            sh:maxCount 1 ;
+            sh:minCount 1 ;
+            sh:path dct:publisher ],
+        [ sh:minCount 1 ;
+            sh:nodeKind sh:IRI ;
+            sh:path prov:wasDerivedFrom ],
+        [ sh:class mex:RecursoCatalogado ;
+            sh:minCount 1 ;
+            sh:path mex:recurso ] ;
+    sh:targetClass dcat:Dataset .
+
+shape:ContrasteLocalidadesCensales a sh:NodeShape ;
+    sh:property [ sh:maxCount 1 ;
+            sh:minCount 1 ;
+            sh:path mex:sha256FuenteCensal ;
+            sh:pattern "^[0-9a-f]{64}$" ],
+        [ sh:minCount 1 ;
+            sh:path mex:limiteSemantico ],
+        [ sh:minCount 2 ;
+            sh:nodeKind sh:IRI ;
+            sh:path prov:wasDerivedFrom ],
+        [ sh:hasValue "contraste_completo_entre_dos_fuentes" ;
+            sh:maxCount 1 ;
+            sh:path mex:estadoContraste ],
+        [ sh:datatype xsd:integer ;
+            sh:maxCount 1 ;
+            sh:minCount 1 ;
+            sh:minInclusive 0 ;
+            sh:path mex:localidadesComprobadas ] ;
+    sh:targetClass mex:ContrasteLocalidadesCensales .
+
+shape:CorrespondenciaSemantica a sh:NodeShape ;
+    sh:property [ sh:class mex:ColumnaObservada ;
+            sh:maxCount 1 ;
+            sh:minCount 1 ;
+            sh:path mex:columnaOrigen ],
+        [ sh:class mex:VariableDocumentada ;
+            sh:maxCount 1 ;
+            sh:minCount 1 ;
+            sh:path mex:variableDestino ],
+        [ sh:in ( "documental_revisada" "candidata_por_nombre" "ambigua_por_nombre" ) ;
+            sh:maxCount 1 ;
+            sh:minCount 1 ;
+            sh:path mex:estadoCorrespondencia ],
+        [ sh:minCount 2 ;
+            sh:nodeKind sh:IRI ;
+            sh:path prov:wasDerivedFrom ] ;
+    sh:targetClass mex:CorrespondenciaSemantica .
+
+shape:CorrespondenciaTerritorial a sh:NodeShape ;
+    sh:property [ sh:class mex:EntradaCatalogo ;
+            sh:maxCount 1 ;
+            sh:path mex:entradaTerritorialDestino ],
+        [ sh:in ( "codigo_y_nombre_exacto" "codigo_y_nombre_normalizado" "codigo_y_nombre_con_reparacion_codificacion" "codigo_y_alias_revisado" "pendiente_nombre_distinto" "categoria_no_municipal" "sin_codigo_destino" ) ;
+            sh:maxCount 1 ;
+            sh:minCount 1 ;
+            sh:path mex:estadoCorrespondenciaTerritorial ],
+        [ sh:minCount 1 ;
+            sh:path mex:transformacionCodigo ],
+        [ sh:minCount 1 ;
+            sh:path mex:limiteSemantico ],
+        [ sh:minCount 2 ;
+            sh:nodeKind sh:IRI ;
+            sh:path prov:wasDerivedFrom ],
+        [ sh:class mex:EntradaReferenciaTerritorial ;
+            sh:maxCount 1 ;
+            sh:minCount 1 ;
+            sh:path mex:entradaTerritorialOrigen ] ;
+    sh:targetClass mex:CorrespondenciaTerritorial .
+
+shape:Cruce a sh:NodeShape ;
+    sh:property [ sh:minCount 2 ;
+            sh:nodeKind sh:IRI ;
+            sh:path prov:wasDerivedFrom ],
+        [ sh:class mex:ResumenMunicipalLocal ;
+            sh:minCount 1 ;
+            sh:path mex:resumenMunicipal ],
+        [ sh:datatype rdf:langString ;
+            sh:minCount 1 ;
+            sh:path mex:limitacionCruce ] ;
+    sh:targetClass mex:CruceAgregado .
+
+shape:DefinicionVariable a sh:NodeShape ;
+    sh:property [ sh:datatype xsd:string ;
+            sh:maxCount 1 ;
+            sh:minCount 1 ;
+            sh:path mex:nombreVariableDeclarado ],
+        [ sh:datatype xsd:string ;
+            sh:maxCount 1 ;
+            sh:minCount 1 ;
+            sh:path mex:filaDiccionario ],
+        [ sh:minCount 1 ;
+            sh:nodeKind sh:IRI ;
+            sh:path prov:wasDerivedFrom ] ;
+    sh:targetClass mex:DefinicionVariable .
+
+shape:DictamenPendienteSemantico a sh:NodeShape ;
+    sh:property [ sh:maxCount 1 ;
+            sh:minCount 1 ;
+            sh:nodeKind sh:IRI ;
+            sh:path mex:objetoRevisado ],
+        [ sh:in ( "requiere_aclaracion_publicador" "documentado_con_limite" "ya_resuelto_en_integracion" ) ;
+            sh:maxCount 1 ;
+            sh:minCount 1 ;
+            sh:path mex:estadoDictamen ],
+        [ sh:datatype xsd:string ;
+            sh:maxCount 1 ;
+            sh:minCount 1 ;
+            sh:path mex:evidenciaRevisionJson ],
+        [ sh:minCount 1 ;
+            sh:nodeKind sh:IRI ;
+            sh:path prov:wasDerivedFrom ] ;
+    sh:targetClass mex:DictamenPendienteSemantico .
+
+shape:EjecucionLote a sh:NodeShape ;
+    sh:property [ sh:datatype xsd:string ;
+            sh:maxCount 1 ;
+            sh:minCount 1 ;
+            sh:path mex:medidaALote ],
+        [ sh:datatype xsd:string ;
+            sh:maxCount 1 ;
+            sh:minCount 1 ;
+            sh:path mex:medidaBLote ],
+        [ sh:minCount 1 ;
+            sh:nodeKind sh:IRI ;
+            sh:path mex:resultadoLote ],
+        [ sh:minCount 3 ;
+            sh:nodeKind sh:IRI ;
+            sh:path prov:wasDerivedFrom ],
+        [ sh:datatype xsd:string ;
+            sh:maxCount 1 ;
+            sh:minCount 1 ;
+            sh:path mex:alcanceLote ] ;
+    sh:targetClass mex:EjecucionCruceLote .
+
+shape:EntradaCatalogo a sh:NodeShape ;
+    sh:property [ sh:datatype xsd:string ;
+            sh:maxCount 1 ;
+            sh:minCount 1 ;
+            sh:path skos:notation ;
+            sh:pattern "^26[0-9]{3}$" ],
+        [ sh:class mex:SistemaIdentificadores ;
+            sh:maxCount 1 ;
+            sh:minCount 1 ;
+            sh:path skos:inScheme ],
+        [ sh:class mex:MunicipioSegunFuente ;
+            sh:maxCount 1 ;
+            sh:minCount 1 ;
+            sh:path mex:denotaMunicipioFuente ] ;
+    sh:targetClass mex:EntradaCatalogo .
+
+shape:EntradaCatalogoPublicado a sh:NodeShape ;
+    sh:property [ sh:class mex:CatalogoPublicado ;
+            sh:maxCount 1 ;
+            sh:minCount 1 ;
+            sh:path skos:inScheme ],
+        [ sh:datatype xsd:string ;
+            sh:maxCount 1 ;
+            sh:minCount 1 ;
+            sh:path skos:notation ],
+        [ sh:datatype xsd:integer ;
+            sh:maxCount 1 ;
+            sh:minCount 1 ;
+            sh:minInclusive 2 ;
+            sh:path mex:filaOriginal ],
+        [ sh:datatype xsd:string ;
+            sh:maxCount 1 ;
+            sh:minCount 1 ;
+            sh:path mex:filaOriginalJson ] ;
+    sh:targetClass mex:EntradaCatalogoPublicado .
+
+shape:EntradaReferenciaTerritorial a sh:NodeShape ;
+    sh:property [ sh:class mex:ReferenciaTerritorial ;
+            sh:maxCount 1 ;
+            sh:minCount 1 ;
+            sh:path skos:inScheme ],
+        [ sh:datatype xsd:string ;
+            sh:maxCount 1 ;
+            sh:minCount 1 ;
+            sh:path skos:notation ],
+        [ sh:datatype xsd:string ;
+            sh:maxCount 1 ;
+            sh:minCount 1 ;
+            sh:path mex:nombreOriginal ],
+        [ sh:datatype xsd:string ;
+            sh:maxCount 1 ;
+            sh:minCount 1 ;
+            sh:path mex:celdaCodigo ] ;
+    sh:targetClass mex:EntradaReferenciaTerritorial .
+
+shape:Esquema a sh:NodeShape ;
+    sh:property [ sh:class mex:ColumnaObservada ;
+            sh:minCount 1 ;
+            sh:path mex:columna ],
+        [ sh:minCount 1 ;
+            sh:nodeKind sh:IRI ;
+            sh:path prov:wasDerivedFrom ] ;
+    sh:targetClass mex:EsquemaObservado .
+
+shape:EvaluacionPipelineConsulta a sh:NodeShape ;
+    sh:property [ sh:hasValue "no_ejecutada" ;
+            sh:maxCount 1 ;
+            sh:path mex:estadoEvaluacionUI ],
+        [ sh:hasValue "no_demostrada_con_instalacion_Studio" ;
+            sh:maxCount 1 ;
+            sh:path mex:identidadBackend ],
+        [ sh:datatype xsd:integer ;
+            sh:maxCount 1 ;
+            sh:minCount 1 ;
+            sh:path mex:casosIntentados ],
+        [ sh:datatype xsd:integer ;
+            sh:maxCount 1 ;
+            sh:minCount 1 ;
+            sh:path mex:respuestasModelo ],
+        [ sh:minCount 1 ;
+            sh:path mex:limiteSemantico ],
+        [ sh:minCount 1 ;
+            sh:nodeKind sh:IRI ;
+            sh:path prov:wasDerivedFrom ] ;
+    sh:targetClass mex:EvaluacionPipelineConsulta .
+
+shape:EvidenciaFuenteComparacion a sh:NodeShape ;
+    sh:property [ sh:class mex:ComparacionMunicipal2020 ;
+            sh:maxCount 1 ;
+            sh:minCount 1 ;
+            sh:path mex:evidenciaDeFuente ],
+        [ sh:maxCount 1 ;
+            sh:minCount 1 ;
+            sh:nodeKind sh:IRI ;
+            sh:path mex:fuenteOriginal ],
+        [ sh:in ( "grandes_grupos" "indicadores" ) ;
+            sh:maxCount 1 ;
+            sh:minCount 1 ;
+            sh:path mex:fuenteRol ],
+        [ sh:datatype xsd:string ;
+            sh:maxCount 1 ;
+            sh:minCount 1 ;
+            sh:path mex:codigoTextual ;
+            sh:pattern "^26[0-9]{3}$" ],
+        [ sh:datatype xsd:string ;
+            sh:maxCount 1 ;
+            sh:minCount 1 ;
+            sh:path mex:nombreOrigen ],
+        [ sh:datatype xsd:integer ;
+            sh:maxCount 1 ;
+            sh:minCount 1 ;
+            sh:minInclusive 0 ;
+            sh:path mex:valorOrigen ],
+        [ sh:datatype xsd:string ;
+            sh:maxCount 1 ;
+            sh:minCount 1 ;
+            sh:path mex:medidaOrigen ],
+        [ sh:datatype xsd:string ;
+            sh:maxCount 1 ;
+            sh:minCount 1 ;
+            sh:path mex:shaFuente ;
+            sh:pattern "^[0-9a-f]{64}$" ],
+        [ sh:datatype xsd:string ;
+            sh:maxCount 1 ;
+            sh:minCount 1 ;
+            sh:path mex:hojaFuente ],
+        [ sh:in ( mex:EvidenciaFuenteComparacion mex:EvidenciaGrandesGrupos2020 mex:EvidenciaIndicadores2020 ) ;
+            sh:maxCount 2 ;
+            sh:minCount 2 ;
+            sh:path rdf:type ] ;
+    sh:targetClass mex:EvidenciaFuenteComparacion .
+
+shape:FilaIndicadores a sh:NodeShape ;
+    sh:property [ sh:hasValue "indicadores" ;
+            sh:path mex:fuenteRol ],
+        [ sh:datatype xsd:integer ;
+            sh:maxCount 1 ;
+            sh:minCount 1 ;
+            sh:minInclusive 2 ;
+            sh:path mex:filaOrigen ],
+        [ sh:maxCount 0 ;
+            sh:path mex:filaOrigenHombres ],
+        [ sh:maxCount 0 ;
+            sh:path mex:filaOrigenMujeres ] ;
+    sh:targetClass mex:EvidenciaIndicadores2020 ;
+    sh:targetSubjectsOf mex:filaOrigen .
+
+shape:FilasGrandesGrupos a sh:NodeShape ;
+    sh:property [ sh:hasValue "grandes_grupos" ;
+            sh:path mex:fuenteRol ],
+        [ sh:datatype xsd:integer ;
+            sh:maxCount 1 ;
+            sh:minCount 1 ;
+            sh:minInclusive 2 ;
+            sh:path mex:filaOrigenHombres ],
+        [ sh:datatype xsd:integer ;
+            sh:maxCount 1 ;
+            sh:minCount 1 ;
+            sh:minInclusive 2 ;
+            sh:path mex:filaOrigenMujeres ],
+        [ sh:maxCount 0 ;
+            sh:path mex:filaOrigen ] ;
+    sh:targetClass mex:EvidenciaGrandesGrupos2020 ;
+    sh:targetSubjectsOf mex:filaOrigenHombres,
+        mex:filaOrigenMujeres .
+
+shape:Inspeccion a sh:NodeShape ;
+    sh:property [ sh:in ( "pendiente" "esquema_datastore_verificado" ) ;
+            sh:maxCount 1 ;
+            sh:minCount 1 ;
+            sh:path mex:estadoEstructura ],
+        [ sh:class mex:EsquemaObservado ;
+            sh:maxCount 1 ;
+            sh:path mex:esquema ],
+        [ sh:class dcat:DataService ;
+            sh:maxCount 1 ;
+            sh:path mex:servicioConsulta ] ;
+    sh:targetSubjectsOf mex:estadoEstructura .
+
+shape:InspeccionContenido a sh:NodeShape ;
+    sh:property [ sh:in ( "observado" "no_disponible" ) ;
+            sh:maxCount 1 ;
+            sh:minCount 1 ;
+            sh:path mex:resultadoInspeccion ],
+        [ sh:minCount 1 ;
+            sh:nodeKind sh:IRI ;
+            sh:path prov:wasDerivedFrom ],
+        [ sh:datatype xsd:dateTime ;
+            sh:maxCount 1 ;
+            sh:minCount 1 ;
+            sh:path prov:endedAtTime ] ;
+    sh:targetClass mex:InspeccionContenido .
+
+shape:LocalidadObservada a sh:NodeShape ;
+    sh:property [ sh:class mex:ReferenciaLocalidadesObservada ;
+            sh:maxCount 1 ;
+            sh:minCount 1 ;
+            sh:path skos:inScheme ],
+        [ sh:datatype xsd:string ;
+            sh:maxCount 1 ;
+            sh:minCount 1 ;
+            sh:path skos:notation ;
+            sh:pattern "^26[0-9]{7}$" ],
+        [ sh:hasValue "26" ;
+            sh:maxCount 1 ;
+            sh:path mex:componenteEntidad ],
+        [ sh:maxCount 1 ;
+            sh:minCount 1 ;
+            sh:path mex:componenteMunicipio ;
+            sh:pattern "^[0-9]{3}$" ],
+        [ sh:maxCount 1 ;
+            sh:minCount 1 ;
+            sh:path mex:componenteLocalidad ;
+            sh:pattern "^[0-9]{4}$" ],
+        [ sh:datatype xsd:string ;
+            sh:maxCount 1 ;
+            sh:minCount 1 ;
+            sh:path mex:nombreOriginal ],
+        [ sh:datatype xsd:integer ;
+            sh:maxCount 1 ;
+            sh:minCount 1 ;
+            sh:path mex:filaOriginal ],
+        [ sh:minCount 1 ;
+            sh:nodeKind sh:IRI ;
+            sh:path prov:wasDerivedFrom ] ;
+    sh:targetClass mex:LocalidadObservada .
+
+shape:Oportunidad a sh:NodeShape ;
+    sh:property [ sh:class dcat:Dataset ;
+            sh:maxCount 1 ;
+            sh:minCount 1 ;
+            sh:path mex:conjuntoA ],
+        [ sh:datatype xsd:string ;
+            sh:maxCount 1 ;
+            sh:minCount 1 ;
+            sh:path mex:alcanceEjecucion ],
+        [ sh:minCount 1 ;
+            sh:nodeKind sh:IRI ;
+            sh:path prov:wasDerivedFrom ],
+        [ sh:class dcat:Dataset ;
+            sh:maxCount 1 ;
+            sh:minCount 1 ;
+            sh:path mex:conjuntoB ],
+        [ sh:in ( "candidata_por_validar" "exploratorio_ejecutado" "sin_clave_detectada" "solo_dimensiones_amplias_o_tiempo" ) ;
+            sh:maxCount 1 ;
+            sh:minCount 1 ;
+            sh:path mex:estadoOportunidad ],
+        [ sh:in ( "cruce_existente" "revisar_primero" "revisar" "evidencia_insuficiente" ) ;
+            sh:maxCount 1 ;
+            sh:minCount 1 ;
+            sh:path mex:prioridadRevision ] ;
+    sh:targetClass mex:EvaluacionCruce .
+
+shape:Organizacion a sh:NodeShape ;
+    sh:property [ sh:minCount 1 ;
+            sh:minLength 1 ;
+            sh:path foaf:name ] ;
+    sh:targetClass foaf:Organization .
+
+shape:Pagina a sh:NodeShape ;
+    sh:property [ sh:maxCount 1 ;
+            sh:minCount 1 ;
+            sh:nodeKind sh:IRI ;
+            sh:path foaf:page ],
+        [ sh:minCount 1 ;
+            sh:nodeKind sh:IRI ;
+            sh:path prov:wasDerivedFrom ],
+        [ sh:in ( "seccion" "herramienta" "historia" "diagnostico" "analisis_dataton" "pagina_de_datos" ) ;
+            sh:maxCount 1 ;
+            sh:minCount 1 ;
+            sh:path mex:tipoPagina ],
+        [ sh:class mex:VisualizacionDeclarada ;
+            sh:path mex:visualizacionDeclarada ] ;
+    sh:targetClass mex:PaginaPortal .
+
+shape:PerfilClaves a sh:NodeShape ;
+    sh:property [ sh:class mex:ColumnaObservada ;
+            sh:path mex:columnaClave ],
+        [ sh:minCount 1 ;
+            sh:nodeKind sh:IRI ;
+            sh:path prov:wasDerivedFrom ] ;
+    sh:targetClass mex:PerfilClaves .
+
+shape:Recurso a sh:NodeShape ;
+    sh:property [ sh:nodeKind sh:IRI ;
+            sh:path mex:urlDeclarada ],
+        [ sh:minCount 1 ;
+            sh:nodeKind sh:IRI ;
+            sh:path prov:wasDerivedFrom ],
+        [ sh:datatype xsd:string ;
+            sh:maxCount 1 ;
+            sh:minCount 1 ;
+            sh:path dct:identifier ],
+        [ sh:minCount 1 ;
+            sh:minLength 1 ;
+            sh:path dct:title ] ;
+    sh:targetClass mex:RecursoCatalogado .
+
+shape:ReferenciaCatalogoDeclarada a sh:NodeShape ;
+    sh:property [ sh:datatype xsd:string ;
+            sh:maxCount 1 ;
+            sh:minCount 1 ;
+            sh:path mex:nombreCatalogoDeclarado ],
+        [ sh:in ( "solo_referencia_declarada_sin_resolver" "recurso_catalogo_identificado" ) ;
+            sh:maxCount 1 ;
+            sh:minCount 1 ;
+            sh:path mex:estadoReferenciaCatalogo ],
+        [ sh:minCount 1 ;
+            sh:nodeKind sh:IRI ;
+            sh:path prov:wasDerivedFrom ] ;
+    sh:targetClass mex:ReferenciaCatalogoDeclarada .
+
+shape:ReferenciaLocalidadesObservada a sh:NodeShape ;
+    sh:property [ sh:maxCount 1 ;
+            sh:minCount 1 ;
+            sh:path mex:archivoSha256 ;
+            sh:pattern "^[0-9a-f]{64}$" ],
+        [ sh:hasValue "derivada_observada_sin_completitud_oficial" ;
+            sh:maxCount 1 ;
+            sh:path mex:estadoReferenciaObservada ],
+        [ sh:minCount 1 ;
+            sh:path mex:limiteSemantico ],
+        [ sh:minCount 1 ;
+            sh:nodeKind sh:IRI ;
+            sh:path prov:wasDerivedFrom ] ;
+    sh:targetClass mex:ReferenciaLocalidadesObservada .
+
+shape:ReferenciaMunicipal a sh:NodeShape ;
+    sh:property [ sh:datatype xsd:string ;
+            sh:maxCount 1 ;
+            sh:minCount 1 ;
+            sh:path mex:cvegeoReferencia ;
+            sh:pattern "^26[0-9]{3}$" ],
+        [ sh:datatype xsd:string ;
+            sh:maxCount 1 ;
+            sh:minCount 1 ;
+            sh:path mex:nombreMunicipioReferencia ],
+        [ sh:minCount 1 ;
+            sh:nodeKind sh:IRI ;
+            sh:path prov:wasDerivedFrom ] ;
+    sh:targetClass mex:ReferenciaMunicipalPortal .
+
+shape:ReferenciaTerritorial a sh:NodeShape ;
+    sh:property [ sh:datatype xsd:string ;
+            sh:maxCount 1 ;
+            sh:minCount 1 ;
+            sh:path mex:archivoSha256 ;
+            sh:pattern "^[0-9a-f]{64}$" ],
+        [ sh:datatype xsd:string ;
+            sh:maxCount 1 ;
+            sh:minCount 1 ;
+            sh:path mex:hojaOriginal ],
+        [ sh:hasValue "no_documentada" ;
+            sh:maxCount 1 ;
+            sh:minCount 1 ;
+            sh:path mex:estadoVigencia ],
+        [ sh:minCount 1 ;
+            sh:nodeKind sh:IRI ;
+            sh:path prov:wasDerivedFrom ] ;
+    sh:targetClass mex:ReferenciaTerritorial .
+
+shape:Registro a sh:NodeShape ;
+    sh:property [ sh:class dcat:Dataset ;
+            sh:maxCount 1 ;
+            sh:minCount 1 ;
+            sh:path foaf:primaryTopic ] ;
+    sh:targetClass dcat:CatalogRecord .
+
+shape:ResultadoCasoEvaluacion a sh:NodeShape ;
+    sh:property [ sh:class mex:EvaluacionPipelineConsulta ;
+            sh:maxCount 1 ;
+            sh:minCount 1 ;
+            sh:path mex:evaluacionConsulta ],
+        [ sh:in ( "acierto" "fallo_recuperacion_contexto_parcial" "no_ejecutado_cuota_modelo" ) ;
+            sh:maxCount 1 ;
+            sh:minCount 1 ;
+            sh:path mex:estadoCasoEvaluacion ],
+        [ sh:datatype xsd:string ;
+            sh:maxCount 1 ;
+            sh:minCount 1 ;
+            sh:path mex:preguntaEvaluacion ],
+        [ sh:datatype xsd:string ;
+            sh:maxCount 1 ;
+            sh:path mex:respuestaObtenida ],
+        [ sh:minCount 1 ;
+            sh:nodeKind sh:IRI ;
+            sh:path prov:wasDerivedFrom ] ;
+    sh:targetClass mex:ResultadoCasoEvaluacion .
+
+shape:ResultadoEducativoLote a sh:NodeShape ;
+    sh:property [ sh:datatype xsd:string ;
+            sh:maxCount 1 ;
+            sh:minCount 1 ;
+            sh:path mex:programaLocalLote ],
+        [ sh:datatype xsd:string ;
+            sh:maxCount 1 ;
+            sh:minCount 1 ;
+            sh:path mex:sedeDeclaradaLote ],
+        [ sh:datatype xsd:string ;
+            sh:maxCount 1 ;
+            sh:minCount 1 ;
+            sh:path mex:periodoDeclaradoLote ],
+        [ sh:datatype xsd:integer ;
+            sh:maxCount 1 ;
+            sh:minInclusive 0 ;
+            sh:path mex:valorALote ],
+        [ sh:datatype xsd:integer ;
+            sh:maxCount 1 ;
+            sh:minInclusive 0 ;
+            sh:path mex:valorBLote ],
+        [ sh:datatype xsd:boolean ;
+            sh:maxCount 1 ;
+            sh:minCount 1 ;
+            sh:path mex:ambasLote ] ;
+    sh:targetClass mex:ResultadoEducativoLote .
+
+shape:ResultadoMunicipalLote a sh:NodeShape ;
+    sh:property [ sh:datatype xsd:integer ;
+            sh:maxCount 1 ;
+            sh:maxInclusive 72 ;
+            sh:minCount 1 ;
+            sh:minInclusive 1 ;
+            sh:path mex:codigoLocalLote ],
+        [ sh:datatype xsd:integer ;
+            sh:maxCount 1 ;
+            sh:minCount 1 ;
+            sh:path mex:anioLote ],
+        [ sh:datatype xsd:integer ;
+            sh:maxCount 1 ;
+            sh:minInclusive 0 ;
+            sh:path mex:valorALote ],
+        [ sh:datatype xsd:integer ;
+            sh:maxCount 1 ;
+            sh:minInclusive 0 ;
+            sh:path mex:valorBLote ] ;
+    sh:targetClass mex:ResultadoCruceLote .
+
+shape:ResumenMunicipal a sh:NodeShape ;
+    sh:property [ sh:datatype xsd:integer ;
+            sh:maxCount 1 ;
+            sh:minCount 1 ;
+            sh:path mex:anioRegistro ],
+        [ sh:datatype xsd:integer ;
+            sh:maxCount 1 ;
+            sh:minInclusive 0 ;
+            sh:path mex:conteoMatrimonios ],
+        [ sh:datatype xsd:integer ;
+            sh:maxCount 1 ;
+            sh:minInclusive 0 ;
+            sh:path mex:conteoDivorcios ],
+        [ sh:datatype xsd:boolean ;
+            sh:maxCount 1 ;
+            sh:minCount 1 ;
+            sh:path mex:presenteEnAmbas ],
+        [ sh:class mex:CruceAgregado ;
+            sh:maxCount 1 ;
+            sh:minCount 1 ;
+            sh:path dct:isPartOf ],
+        [ sh:datatype xsd:integer ;
+            sh:maxCount 1 ;
+            sh:maxInclusive 72 ;
+            sh:minCount 1 ;
+            sh:minInclusive 1 ;
+            sh:path mex:codigoMunicipioFuente ] ;
+    sh:targetClass mex:ResumenMunicipalLocal .
+
+shape:RevisionCruceRonda3 a sh:NodeShape ;
+    sh:property [ sh:in ( "exploratorio" "exploratorio_con_condiciones_pendientes" "habilitable_con_condiciones" ) ;
+            sh:maxCount 1 ;
+            sh:minCount 1 ;
+            sh:path mex:estadoDecision ],
+        [ sh:datatype xsd:string ;
+            sh:minCount 1 ;
+            sh:path mex:condicionPendiente ],
+        [ sh:minCount 1 ;
+            sh:nodeKind sh:IRI ;
+            sh:path prov:wasDerivedFrom ],
+        [ sh:in ( "recomputo_agregados_fuente_historico" "validacion_original_2020" "union_listas_fuente_historico" ) ;
+            sh:maxCount 1 ;
+            sh:minCount 1 ;
+            sh:path mex:tipoEvidencia ],
+        [ sh:datatype xsd:string ;
+            sh:maxCount 1 ;
+            sh:minCount 1 ;
+            sh:path mex:alcanceVerificacion ] ;
+    sh:targetClass mex:RevisionCruceRonda3 .
+
+shape:RevisionDocumental a sh:NodeShape ;
+    sh:property [ sh:hasValue "documental_revisada" ;
+            sh:maxCount 1 ;
+            sh:path mex:estadoCorrespondencia ],
+        [ sh:datatype xsd:string ;
+            sh:maxCount 1 ;
+            sh:minCount 1 ;
+            sh:path mex:huellaEsquemaRevisado ;
+            sh:pattern "^[0-9a-f]{64}$" ],
+        [ sh:datatype xsd:string ;
+            sh:maxCount 1 ;
+            sh:minCount 1 ;
+            sh:path mex:huellaFilaDiccionario ;
+            sh:pattern "^[0-9a-f]{64}$" ],
+        [ sh:datatype rdf:langString ;
+            sh:minCount 1 ;
+            sh:path mex:criterioRevision ],
+        [ sh:datatype rdf:langString ;
+            sh:minCount 1 ;
+            sh:path mex:evidenciaTextual ],
+        [ sh:datatype rdf:langString ;
+            sh:minCount 1 ;
+            sh:path mex:limiteSemantico ] ;
+    sh:targetSubjectsOf mex:huellaEsquemaRevisado .
+
+shape:RevisionVigenciaCatalogo a sh:NodeShape ;
+    sh:property [ sh:class mex:ReferenciaCatalogoDeclarada ;
+            sh:maxCount 1 ;
+            sh:minCount 1 ;
+            sh:path mex:referenciaDeclarada ],
+        [ sh:hasValue "no_acreditada" ;
+            sh:maxCount 1 ;
+            sh:path mex:estadoVigenciaRevisada ],
+        [ sh:datatype xsd:string ;
+            sh:maxCount 1 ;
+            sh:minCount 1 ;
+            sh:path mex:facetasVigenciaJson ],
+        [ sh:minCount 1 ;
+            sh:path mex:limiteSemantico ],
+        [ sh:minCount 2 ;
+            sh:nodeKind sh:IRI ;
+            sh:path prov:wasDerivedFrom ] ;
+    sh:targetClass mex:RevisionVigenciaCatalogo .
+
+shape:Servicio a sh:NodeShape ;
+    sh:property [ sh:maxCount 1 ;
+            sh:minCount 1 ;
+            sh:nodeKind sh:IRI ;
+            sh:path dcat:endpointURL ] ;
+    sh:targetClass dcat:DataService .
+
+shape:SistemaIdentificadores a sh:NodeShape ;
+    sh:property [ sh:datatype xsd:string ;
+            sh:maxCount 1 ;
+            sh:minCount 1 ;
+            sh:path mex:patronCodigo ],
+        [ sh:minCount 1 ;
+            sh:nodeKind sh:IRI ;
+            sh:path prov:wasDerivedFrom ] ;
+    sh:targetClass mex:SistemaIdentificadores .
+
+shape:SistemaUsado a sh:NodeShape ;
+    sh:property [ sh:class mex:SistemaIdentificadores ;
+            sh:maxCount 1 ;
+            sh:path mex:usaSistemaIdentificadores ] ;
+    sh:targetSubjectsOf mex:usaSistemaIdentificadores .
+
+shape:ValidacionLote a sh:NodeShape ;
+    sh:property [ sh:in ( "requiere_revision" "requiere_transformacion_o_catalogo" "ejecucion_parcial_exploratoria" "fallo_validacion_integral" ) ;
+            sh:maxCount 1 ;
+            sh:minCount 1 ;
+            sh:path mex:decisionLote ],
+        [ sh:datatype xsd:string ;
+            sh:minCount 1 ;
+            sh:path mex:motivoLote ],
+        [ sh:class mex:EjecucionCruceLote ;
+            sh:path mex:ejecucionLote ],
+        [ sh:minCount 1 ;
+            sh:nodeKind sh:IRI ;
+            sh:path prov:wasDerivedFrom ] ;
+    sh:targetClass mex:ValidacionLote .
+
+shape:VariableDocumentada a sh:NodeShape ;
+    sh:property [ sh:class mex:ConceptoCompartido ;
+            sh:maxCount 1 ;
+            sh:path mex:significadoDocumentado ],
+        [ sh:class mex:ConceptoCompartido ;
+            sh:maxCount 1 ;
+            sh:path mex:significadoCandidato ],
+        [ sh:class mex:CalificadorDocumental ;
+            sh:path mex:tieneCalificadorDocumentado ],
+        [ sh:minCount 1 ;
+            sh:nodeKind sh:IRI ;
+            sh:path prov:wasDerivedFrom ],
+        [ sh:datatype xsd:string ;
+            sh:maxCount 1 ;
+            sh:minCount 1 ;
+            sh:path mex:nombreVariableLocal ],
+        [ sh:class mex:DefinicionVariable ;
+            sh:maxCount 1 ;
+            sh:minCount 1 ;
+            sh:path mex:definicionOriginal ],
+        [ sh:in ( "respaldada_por_definicion" "candidata_sin_definicion_suficiente" "fuera_del_nucleo_actual" ) ;
+            sh:maxCount 1 ;
+            sh:minCount 1 ;
+            sh:path mex:estadoSemantico ] ;
+    sh:targetClass mex:VariableDocumentada .
+
+shape:VinculoCatalogoPublicado a sh:NodeShape ;
+    sh:property [ sh:class mex:CatalogoPublicado ;
+            sh:maxCount 1 ;
+            sh:minCount 1 ;
+            sh:path mex:catalogoRecuperado ],
+        [ sh:class mex:VariableDocumentada ;
+            sh:minCount 1 ;
+            sh:path mex:variableDestino ],
+        [ sh:minCount 1 ;
+            sh:path mex:criterioRevision ],
+        [ sh:minCount 2 ;
+            sh:nodeKind sh:IRI ;
+            sh:path prov:wasDerivedFrom ],
+        [ sh:class mex:ReferenciaCatalogoDeclarada ;
+            sh:maxCount 1 ;
+            sh:minCount 1 ;
+            sh:path mex:referenciaDeclarada ] ;
+    sh:targetClass mex:VinculoCatalogoPublicado .
+
+shape:VinculoCatalogoTerritorial a sh:NodeShape ;
+    sh:property [ sh:class mex:ReferenciaCatalogoDeclarada ;
+            sh:maxCount 1 ;
+            sh:minCount 1 ;
+            sh:path mex:referenciaDeclarada ],
+        [ sh:class mex:ReferenciaTerritorial ;
+            sh:maxCount 1 ;
+            sh:minCount 1 ;
+            sh:path mex:catalogoRecuperado ],
+        [ sh:class mex:VariableDocumentada ;
+            sh:maxCount 1 ;
+            sh:minCount 1 ;
+            sh:path mex:variableDestino ],
+        [ sh:minCount 1 ;
+            sh:path mex:criterioRevision ],
+        [ sh:minCount 2 ;
+            sh:nodeKind sh:IRI ;
+            sh:path prov:wasDerivedFrom ] ;
+    sh:targetClass mex:VinculoCatalogoTerritorial .
+
+shape:Visualizacion a sh:NodeShape ;
+    sh:property [ sh:maxCount 1 ;
+            sh:minCount 1 ;
+            sh:nodeKind sh:IRI ;
+            sh:path foaf:page ],
+        [ sh:minCount 1 ;
+            sh:nodeKind sh:IRI ;
+            sh:path prov:wasDerivedFrom ] ;
+    sh:targetClass mex:VisualizacionDeclarada .
+

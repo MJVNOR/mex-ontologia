@@ -1,0 +1,85 @@
+diff --git a/studio/src/AppShell.tsx b/studio/src/AppShell.tsx
+index 1fdec8a..32013f8 100644
+--- a/studio/src/AppShell.tsx
++++ b/studio/src/AppShell.tsx
+@@ -20,12 +20,19 @@ import './App.css'
+ // even inside an `if (isLive)` branch, since ES module evaluation happens at
+ // import time, not at render time.
+ const LiveChrome = lazy(() => import('./components/LiveChrome').then((m) => ({ default: m.LiveChrome })))
++const LiveValidationPanel = lazy(() => import('./components/LiveValidationPanel').then((m) => ({ default: m.LiveValidationPanel })))
+ 
+ const isLive =
+   chooseSourceKind(import.meta.env as unknown as Record<string, string | undefined>) === 'live'
+ 
+ type Tab = 'findings' | 'corpus' | 'compare' | 'validation' | 'chat'
+ 
++// Chat and answer comparisons from the demo are only available in replay.
++// LiveChrome supplies the live agent chat; live validation runs SHACL below.
++const panelTabs: Tab[] = isLive
++  ? ['findings', 'corpus', 'validation']
++  : ['findings', 'corpus', 'compare', 'validation', 'chat']
++
+ /**
+  * The tabbed sidebar: findings + resolution, corpus, and the grounded-vs-
+  * baseline comparison. This is the one demonstration surface both build
+@@ -65,9 +72,8 @@ function DemoPanels() {
+   // demo-source.ts streams chunks for one question), so this reads the same
+   // precomputed bundle replay mode's sources read internally, purely to
+   // populate the pickers. Live mode has no scripted set for either (a live
+-  // compare throws, and live ask() throws -- see compare-source.ts and
+-  // live-source.ts), so both pickers stay empty there and each panel
+-  // explains why on ask.
++  // compare throws -- see compare-source.ts), so the comparison picker
++  // stays empty there. Scripted chat is only available in replay mode.
+   useEffect(() => {
+     let cancelled = false
+     if (!isLive) {
+@@ -89,13 +95,10 @@ function DemoPanels() {
+     }
+   }, [])
+ 
+-  // The validation panel's two runs are static: there is no question to
+-  // ask, so they load once on mount rather than on a user action, the way
+-  // graph and findings load in demo-store.ts. In live mode getValidationSource()
+-  // throws immediately (see validation-source.ts), and that message is
+-  // shown as-is rather than swallowed, the same honesty compare-source.ts's
+-  // live branch already applies.
++  // Only replay mode loads the two precomputed validation runs. Live mode
++  // validates the current graph on demand through LiveValidationPanel.
+   useEffect(() => {
++    if (isLive) return
+     let cancelled = false
+     setValidationPending(true)
+     getValidationSource()
+@@ -136,7 +139,7 @@ function DemoPanels() {
+   return (
+     <div className="flex flex-col h-full overflow-hidden">
+       <div className="flex border-b text-xs shrink-0" style={{ borderColor: 'var(--border)' }}>
+-        {(['findings', 'corpus', 'compare', 'validation', 'chat'] as Tab[]).map((t) => (
++        {panelTabs.map((t) => (
+           <button
+             key={t}
+             onClick={() => setTab(t)}
+@@ -171,7 +174,7 @@ function DemoPanels() {
+         {tab === 'corpus' && (
+           <CorpusPanel documents={documents} error={documentsError} onOpen={() => {}} />
+         )}
+-        {tab === 'compare' && (
++        {!isLive && tab === 'compare' && (
+           <ComparePanel
+             result={compareResult}
+             onAsk={handleAsk}
+@@ -180,9 +183,11 @@ function DemoPanels() {
+           />
+         )}
+         {tab === 'validation' && (
+-          <ValidationPanel fixtures={validationFixtures} error={validationError} pending={validationPending} />
++          isLive
++            ? <Suspense fallback={<p className="p-3">Cargando validación…</p>}><LiveValidationPanel /></Suspense>
++            : <ValidationPanel fixtures={validationFixtures} error={validationError} pending={validationPending} />
+         )}
+-        {tab === 'chat' && (
++        {!isLive && tab === 'chat' && (
+           <ScriptedChatPanel chat={chat} pending={chatPending} onAsk={ask} questions={chatQuestions} />
+         )}
+       </div>

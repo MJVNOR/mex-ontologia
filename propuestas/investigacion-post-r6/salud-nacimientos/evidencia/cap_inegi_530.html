@@ -1,0 +1,1436 @@
+<!DOCTYPE html>
+<html>
+
+<head>    
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<title>Mexico - Subsistema de Información sobre Nacimientos</title>
+<meta name="description" content="El Certificado de Nacimiento es un formato único nacional establecido por la Secretaría de Salud de expedición gratuita y obligatoria, con carácter individual e intransferible, que hace constar el nacimiento de un nacido vivo y las circunstancias que acompañaron el hecho.  El objetivo es promover el registro oportuno, veraz e íntegro de los nacidos vivos ocurridos en el país, con el propósito de contar con un marco confiable para fines legales y estadísticos, que apoye, por una parte, la protección de los derechos de los niños y niñas, y por otra parte la planeación, asignación de recursos y evaluación de los servicios de salud."/>
+<!-- 
+<link rel="stylesheet" href="<php echo base_url().$bootstrap_theme ?>/css/reset-fonts-grids.css">
+-->
+<link rel="stylesheet" href="https://www.inegi.org.mx/rnm/themes/nada/css/font-awesome.min.css">
+
+<!--
+<php if($use_cdn):?>    
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+<php else:?>
+    <link rel="stylesheet" href="<php echo base_url().$bootstrap_theme; ?>/css/bootstrap.min.css">
+<php endif;?>    
+-->
+
+<!--SITIO INEGI SNM --->
+<script src="https://www.inegi.org.mx/lib/jquery/jquery-1.11.2.min.js" type="text/javascript"></script>
+ <script src="https://www.inegi.org.mx/lib/bootstrap/bootstrap.min.js" type="text/javascript"></script>
+<script src="https://www.inegi.org.mx/componentes/encabezado/js/recursos.min.js"></script>
+ <link rel="stylesheet" type="text/css" href="https://www.inegi.org.mx/estilos/sitio/con_sitio.min.css" />
+<script type="text/javascript">
+    jq13 = jQuery.noConflict(true);
+ </script>
+
+<link rel="stylesheet" href="https://www.inegi.org.mx/rnm/themes/nada/css/style.css?v03212019">
+<link rel="stylesheet" href="https://www.inegi.org.mx/rnm/themes/nada/css/custom.css?v03212019">
+
+
+    <script src="https://www.inegi.org.mx/rnm/javascript/jquery/jquery.js"></script>    
+    <script src="https://www.inegi.org.mx/rnm/themes/nada/js/popper.min.js"></script>
+    <script src="https://www.inegi.org.mx/rnm/themes/nada/js/bootstrap.min.js"></script>
+
+<script src="https://www.inegi.org.mx/rnm/themes/nada/js/script.js"></script>
+<script type="text/javascript" src="https://www.inegi.org.mx/rnm/javascript/jquery.ba-bbq.js"></script>
+
+<script type="text/javascript">
+    var CI = {'base_url': 'https://www.inegi.org.mx/rnm/index.php'};
+
+    if (top.frames.length!=0) {
+        top.location=self.document.location;
+    }
+
+    $(document).ready(function()  {
+        /*global ajax error handler */
+        $( document ).ajaxError(function(event, jqxhr, settings, exception) {
+            if(jqxhr.status==401){
+                window.location=CI.base_url+'/auth/login/?destination=catalog/';
+            }
+            else if (jqxhr.status>=500){
+                alert(jqxhr.responseText);
+            }
+        });
+
+    }); //end-document-ready
+
+</script>
+
+
+<script type="application/ld+json">
+    {
+    "@context": "https://schema.org/",
+    "@type": "Dataset",
+    "name": "Subsistema de Informaci\u00f3n sobre Nacimientos - Mexico",
+    "description": "Resumen\r\n---------------------------\r\n\r\nEl Certificado de Nacimiento es un formato \u00fanico nacional establecido por la Secretar\u00eda de Salud de expedici\u00f3n gratuita y obligatoria, con car\u00e1cter individual e intransferible, que hace constar el nacimiento de un nacido vivo y las circunstancias que acompa\u00f1aron el hecho.\n\nEl objetivo es promover el registro oportuno, veraz e \u00edntegro de los nacidos vivos ocurridos en el pa\u00eds, con el prop\u00f3sito de contar con un marco confiable para fines legales y estad\u00edsticos, que apoye, por una parte, la protecci\u00f3n de los derechos de los ni\u00f1os y ni\u00f1as, y por otra parte la planeaci\u00f3n, asignaci\u00f3n de recursos y evaluaci\u00f3n de los servicios de salud.\r\n\r\nGeographic coverage\r\n---------------------------\r\n\r\nEntidad federativa, municipio, localidad.\r\n\r\nAnalysis unit\r\n---------------------------\r\n\r\nLos nacidos vivos ocurridos y certificados en el territorio  nacional por un profesional de la salud o persona autorizada por la Secretar\u00eda de Salud.\r\n\r\nUniverso de estudio\r\n---------------------------\r\n\r\nNacido vivo y su  madre, en el momento del parto\r\n\r\nKind of data\r\n---------------------------\r\n\r\nRegistro administrativo\r\n\r\nMode of data collection\r\n---------------------------\r\n\r\nRegistro administrativo\r\n\r\nResearch instrument\r\n---------------------------\r\n\r\nEl Certificado de Nacimiento es un documento oficial de car\u00e1cter individual e intransferible que certifica el nacimiento de un producto vivo en el momento mismo de su ocurrencia, proporcionando a la madre un comprobante de este hecho. Es un formato \u00fanico de registro de nacimientos de uso obligatorio en el territorio nacional.\r\n\r\nCleaning operations\r\n---------------------------\r\n\r\nEl Certificado de Nacimiento deber\u00e1 ser llenado adecuadamente con base en los manuales de implementaci\u00f3n y de llenado elaborados ex profeso.\n\nEl \u00e1rea de estad\u00edstica o equivalente de los SESA se coordina con los Jefes Jurisdiccionales, Directores de las Unidades Hospitalarias e Instituciones del Sector Salud tanto p\u00fablico como privado para la recolecci\u00f3n de la base de datos en el sistema inform\u00e1tico SINAC. Misma que debe ser revisada por los SESA para su posterior env\u00edo a la DGIS para la integraci\u00f3n de la base de datos Nacional.\n\nLa informaci\u00f3n preliminar de cierres mensuales se hace p\u00fablica mediante cubos din\u00e1micos disponibles en la p\u00e1gina de internet de la DGIS.\n\nCabe mencionar que los cierres anuales est\u00e1n disponibles a partir del 30 de abril del siguiente del siguiente a\u00f1o.\r\n\r\nData appraisal\r\n---------------------------\r\n\r\nLa informaci\u00f3n se revisa variable por variable verificando que se encuentre correctamente capturada para que en caso contrario se proceda a la validaci\u00f3n e imputaci\u00f3n de los datos no especificados o fuera de rango.",
+    "url": "https://www.inegi.org.mx/rnm/index.php/catalog/530",
+    "sameAs": "https://www.inegi.org.mx/rnm/index.php/catalog/study/MEX-SALUD-SINAC-2018",
+    "identifier": "MEX-SALUD-SINAC-2018",
+    "includedInDataCatalog": {
+        "@type": "DataCatalog",
+        "name": "https://www.inegi.org.mx/rnm/"
+    },
+    "temporalCoverage": "2017",
+    "dateCreated": "2019-11-04T20:55:49+01:00",
+    "dateModified": "2020-08-19T20:57:21+02:00",
+    "spatialCoverage": {
+        "@type": "Place",
+        "name": "Mexico"
+    },
+    "keywords": [
+        "Nacimientos, certificados, SINAC"
+    ],
+    "creator": [
+        {
+            "@type": "Organization",
+            "name": "Secretar\u00eda de Salud"
+        },
+        {
+            "@type": "Organization",
+            "name": "Subsecretar\u00eda de Integraci\u00f3n y Desarrollo del Sector Salud"
+        },
+        {
+            "@type": "Organization",
+            "name": "Direcci\u00f3n General de Informaci\u00f3n en Salud"
+        },
+        {
+            "@type": "Organization",
+            "name": "Direcci\u00f3n Sobre Necesidades de Salud y Poblaci\u00f3n"
+        }
+    ],
+    "producer": [
+        {
+            "@type": "Organization",
+            "name": "Entidades Federativas"
+        },
+        {
+            "@type": "Organization",
+            "name": "Jurisdicciones"
+        },
+        {
+            "@type": "Organization",
+            "name": "Unidades M\u00e9dicas"
+        },
+        {
+            "@type": "Organization",
+            "name": "Doctores/Pasantes/Parteras"
+        },
+        {
+            "@type": "Organization",
+            "name": ""
+        }
+    ]
+}</script></head>
+<body>
+<!-- site header -->
+<style>
+    
+    </style>
+<header class="site-header">
+    <!--<div class="container"> -->
+        <!--  /***** Login Bar Start *****/ 
+        <php $this->load->view('users/user_bar'); ?>-->
+        <!--  /***** Login Bar Close *****/ -->
+        <!--  <div class="row">
+            <div class="col-12">-->
+                <div id="Encabezado"></div>
+                <link rel="stylesheet" type="text/css" href="https://www.inegi.org.mx/estilos/sitio/plantillas.min.css" />
+                <!--<nav class="navbar navbar-expand-md navbar-light rounded navbar-toggleable-md wb-navbar">
+                    <php 
+                    /** LOGO + Text */
+                    ?>
+                    <php  ?>
+                    <div class="navbar-brand">
+                        <a href="<php echo site_url();?>" class="g01v1-logo nada-logo">
+                            <img title="<php echo $this->config->item("website_title");?>" src="https://www.inegi.org.mx/rnm/themes/nada/images/logo-placeholder.png" class="img-responsive">
+                        </a>
+                        <strong><a class="nada-sitename" href="#index.html">Microdata Library</a></strong>
+                    </div>
+                    <php ?>
+                    <php /**** text only**/  ?>
+                    <php /**/ ?>
+                    <div class="navbar-brand">                        
+                        <div><a class="nada-site-title" href="<php echo site_url();?>">
+                            <php echo $this->config->item("website_title");?></a></div>
+                        <div class="nada-site-subtitle">An Online Microdata Catalog</div>
+                    </div>
+                    <php /**/?>
+                    
+                    <button class="navbar-toggler navbar-toggler-right collapsed wb-navbar-button-toggler" type="button" data-toggle="collapse" data-target="#containerNavbar" aria-controls="containerNavbar" aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                    Start menus 
+                    <div class="navbar-collapse collapse" id="containerNavbar" aria-expanded="false">
+                        <php if ($menu_horizontal===TRUE):?>
+                            <php echo isset($sidebar) ? $sidebar : '';?>
+                        <php endif;?>
+                    </div>
+                    Close Menus 
+                </nav>-->
+           <!-- </div>
+        </div>-->
+        <!-- /row -->
+    <!--</div>-->
+</header>
+<!-- page body -->
+<div class="container">
+                                    <div class="body-content-wrap">
+                    
+                    <!--<php include 'share.php';?>-->
+                    <!--breadcrumbs -->
+                    <!--<div class="container">-->
+                                        
+                                            <ol class="wb-breadcrumb">
+                            	    <div class="breadcrumbs" xmlns:v="http://rdf.data-vocabulary.org/#">
+           <span typeof="v:Breadcrumb">
+                		         <a href="https://www.inegi.org.mx/rnm/index.php/" rel="v:url" property="v:title">Inicio</a> /
+                        
+       </span>
+                  <span typeof="v:Breadcrumb">
+                		         <a href="https://www.inegi.org.mx/rnm/index.php/catalog" rel="v:url" property="v:title">Catálogo de proyectos</a> /
+                        
+       </span>
+                  <span typeof="v:Breadcrumb">
+                		         <a href="https://www.inegi.org.mx/rnm/index.php/catalog/IIN-UE" rel="v:url" property="v:title">IIN-UE</a> /
+                        
+       </span>
+                  <span typeof="v:Breadcrumb">
+        	         	         <a class="active" href="https://www.inegi.org.mx/rnm/index.php/catalog/530" rel="v:url" property="v:title">MEX-SALUD-SINAC-2018</a>
+                        
+       </span>
+               </div>
+                        </ol>
+                                        <style></style>
+<div class="row">     
+    <div class="col-xs-12" style="border-right-width: 5px;padding-bottom: 15px;">
+        <div class="row con_desf_inf" id="presenta" tabindex="401" style="margin-top:0px;margin-right: 0px;margin-left: 0px;"" aria-label="Presentacin BIINEGI">
+        <h4 id="divTitle_48">Red Nacional de Metadatos</h4>
+            <div class="pad10">
+                <p>
+                <img src="https://www.inegi.org.mx/img/temas/ddi.png"  align="left"  style="margin: 0px 16px 5px 0px;"><span id="itemMC_59">
+                    <!--La Red Nacional de Metadatos (RNM) es la herramienta implementada por el INEGI, como plataforma de difusi&oacute;n y consulta de los metadatos de los proyectos de informaci&oacute;n estad&iacute;stica b&aacute;sica; constituye un sistema de catalogaci&oacute;n que permite a los usuarios realizar b&uacute;squedas y consultas generales sobre las operaciones estad&iacute;sticas o espec&iacute;ficas a nivel de variable de los proyectos estad&iacute;sticos que han sido documentados de manera exhaustiva en la Iniciativa de Documentaci&oacute;n de Datos (DDI, por sus siglas en ingl&eacute;s).</span>-->
+                    La Red Nacional de Metadatos (RNM) es la herramienta implementada por el INEGI, como plataforma de difusi&oacute;n y consulta de los metadatos de los proyectos de informaci&oacute;n estad&iacute;stica b&aacute;sica; constituye un sistema de catalogaci&oacute;n que permite a los usuarios realizar b&uacute;squedas y consultas generales sobre las operaciones estad&iacute;sticas o espec&iacute;ficas a nivel de variable de los proyectos estad&iacute;sticos que fueron documentados en apego a las especificaciones de la Norma T&eacute;cnica para la Elaboraci&oacute;n de Metadatos para proyectos de generaci&oacute;n de Informaci&oacute;n Estad&iacute;stica B&aacute;sica y de los componentes estad&iacute;sticos derivados de proyectos geogr&aacute;ficos (vigente entre 2015 y 2025).</span>
+                </p>
+                </br>
+                <p>
+                    Los metadatos documentados bajo la Norma Técnica para la elaboraci&oacute;n de Metadatos de los Procesos de Producci&oacute;n de la Informaci&oacute;n Estadística y Geogr&aacute;fica, se pueden consultar a trav&eacute;s del Sistema de Difusi&oacute;n de Metadatos  (<a href="https://www.inegi.org.mx/app/sdm/default.html" target="_blank" rel="noopener noreferrer">https://www.inegi.org.mx/app/sdm/default.html</a>).
+                 </p>
+                <div class="clearfix"></div>
+                <div class="escondido">
+                <ul class="pla_lista_contenido"></ul>
+                </div>
+            </div>
+        </div>
+    </div>     
+</div>                
+<!--<header class="site-header">-->
+    <!--<div class="container"> -->
+        <!--  /***** Login Bar Start *****/ 
+        <php $this->load->view('users/user_bar'); ?>-->
+        <!--  /***** Login Bar Close *****/ -->
+        <!--  <div class="row">
+            <div class="col-12">-->
+                <!--<div id="Encabezado"></div>
+                <link rel="stylesheet" type="text/css" href="http://desarrollowww.inegi.org.mx/estilos/sitio/plantillas.min.css" />-->
+                <!--<nav class="navbar navbar-expand-md navbar-light rounded navbar-toggleable-md wb-navbar">
+                    <php 
+                    /** LOGO + Text */
+                    ?>
+                    <php  ?>
+                    <div class="navbar-brand">
+                        <a href="<php echo site_url();?>" class="g01v1-logo nada-logo">
+                            <img title="<php echo $this->config->item("website_title");?>" src="https://www.inegi.org.mx/rnm/themes/nada/images/logo-placeholder.png" class="img-responsive">
+                        </a>
+                        <strong><a class="nada-sitename" href="#index.html">Microdata Library</a></strong>
+                    </div>
+                    <php ?>
+                    <php /**** text only**/  ?>
+                    <php /**/ ?>
+                    <div class="navbar-brand">                        
+                        <div><a class="nada-site-title" href="<php echo site_url();?>">
+                            <php echo $this->config->item("website_title");?></a></div>
+                        <div class="nada-site-subtitle">An Online Microdata Catalog</div>
+                    </div>
+                    <php /**/?>
+                    
+                    <button class="navbar-toggler navbar-toggler-right collapsed wb-navbar-button-toggler" type="button" data-toggle="collapse" data-target="#containerNavbar" aria-controls="containerNavbar" aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                    Start menus 
+                    <div class="navbar-collapse collapse" id="containerNavbar" aria-expanded="false">
+                        <php if ($menu_horizontal===TRUE):?>
+                            <php echo isset($sidebar) ? $sidebar : '';?>
+                        <php endif;?>
+                    </div>
+                    Close Menus 
+                </nav>-->
+           <!-- </div>
+        </div>-->
+        <!-- /row -->
+    <!--</div>-->
+</header>                    <!--</div>-->
+                    <!-- /breadcrumbs -->
+                    
+<div class="page-body-full study-metadata-page">
+	<span 
+		id="dataset-metadata-info" 
+		data-repositoryid="IIN-UE"
+		data-id="530"
+		data-idno="MEX-SALUD-SINAC-2018"
+	></span>
+
+<div class="container-fluid page-header">
+<div class="container-fluid">
+
+
+<div class="row">
+			<div class="col-md-2">
+	<div class="collection-thumb-container">
+		<a href="https://www.inegi.org.mx/rnm/index.php/catalog/IIN-UE">
+		<img  src="https://www.inegi.org.mx/rnm/files/images/IIN.jpg" class="mr-3 img-fluid img-thumbnail" alt="IIN-UE" title="Metadatos de la Información de Interés Nacional generada por otras Unidades de Estado"/>
+		</a>
+			</div>
+	</div>
+			
+	<div class="col-md-10">
+		<h1 class="mt-0 mb-1" id="dataset-title">Subsistema de Información sobre Nacimientos</h1>
+		<h6 class="sub-title" id="dataset-sub-title"><span id="dataset-country">Mexico</span>, <span id="dataset-year">2017</span>
+		                    
+							<div class="collection badge badge-light"><a href="https://www.inegi.org.mx/rnm/index.php/catalog/IIN-UE">Metadatos de la Información de Interés Nacional generada por otras Unidades de Estado</a></div>
+			                    
+		
+		</h6>
+					
+
+		<div class="producers mb-3">
+					Secretaría de Salud, Subsecretaría de Integración y Desarrollo del Sector Salud, Dirección General de Información en Salud, Dirección Sobre Necesidades de Salud y Población				</div>
+	
+
+		<div class="dataset-footer-bar mt-2">					
+			
+			<span class="mr-3 link-col float-left">
+				<small>
+					Creado el 
+					<strong>August 19, 2020</strong>
+				</small>
+			</span>
+			
+			<span class="mr-3 link-col float-left">
+				<small>
+					Última modificación 
+					<strong>August 19, 2020</strong>
+				</small>
+			</span>
+			
+                        <span class="mr-3 link-col float-left">
+                <small>
+				<i class="fa fa-eye" aria-hidden="true"></i> 
+				Visitas a la página 
+				<strong>51516</strong>
+			</small>
+            </span>
+			
+			            <span class="mr-3 link-col float-left">
+                <small>
+				<i class="fa fa-eye" aria-hidden="true"></i> 
+				Descargar 
+				<strong>164</strong>
+			</small>
+            </span>
+						
+						
+							<span class="mr-3 link-col  float-left">
+				<small>
+				<a  target="_blank" href="http://www.dgis.salud.gob.mx/contenidos/sinais/s_sinac.html" title="Sitio Web de la operación estadística (con toda la documentación disponible)">
+				<i class="fa fa-globe" aria-hidden="true"> </i> Sitio Web de la operación estadística				</a>
+				</small>
+				</span>
+					
+			
+			<span class="mr-3 link-col  float-left">
+				<small><i class="fa fa-download" aria-hidden="true"> </i> metadata</small>
+									<a href="https://www.inegi.org.mx/rnm/index.php/metadata/export/530/ddi" title="metadata_in_ddi_xml">
+						<span class="badge badge-primary"> DDI/XML</span>
+					</a>
+				
+				<a href="https://www.inegi.org.mx/rnm/index.php/metadata/export/530/json" title="metadata_in_json">
+					<span class="badge badge-info">JSON</span>
+				</a>
+			</span>			
+
+		</div>
+
+	</div>
+</div>
+
+
+
+
+
+
+<!-- Nav tabs -->
+<ul class="nav nav-tabs wb-nav-tab-space flex-wrap" role="tablist">
+								<li class="nav-item tab-study_description active"  >
+				<a href="https://www.inegi.org.mx/rnm/index.php/catalog/530/study-description" class="nav-link wb-nav-link wb-text-link-uppercase active" role="tab"  data-id="related-materials" title="Related documentation: questionnaires, reports, technical documents, tables">Información del proyecto estadístico</a>
+			</li>
+										<li class="nav-item tab-data_dictionary "  >
+				<a href="https://www.inegi.org.mx/rnm/index.php/catalog/530/data-dictionary" class="nav-link wb-nav-link wb-text-link-uppercase " role="tab"  data-id="related-materials" title="Related documentation: questionnaires, reports, technical documents, tables">Diccionario de Datos</a>
+			</li>
+										
+	<!--review-->
+	</ul>
+<!-- end nav tabs -->
+</div>
+</div>
+
+
+
+<div class="container-fluid study-metadata-body-content " >
+
+
+<!-- tabs -->
+<div id="tabs" class="study-metadata ui-tabs ui-widget ui-widget-content ui-corner-all study-tabs" >	
+  
+  <div id="tabs-1" aria-labelledby="ui-id-1" class="ui-tabs-panel ui-widget-content ui-corner-bottom" role="tabpanel" >
+  	
+        <div class="tab-body-no-sidebar-x"><div class="row metadata-container">    
+    
+
+
+
+<!-- identification section -->
+
+
+<!-- version -->
+
+
+<!-- scope -->
+
+
+<!-- coverage -->
+
+
+<!-- producers_sponsors -->
+
+
+<!-- sampling -->
+
+
+<!-- data_collection -->
+
+
+<!-- questionnaires -->
+
+
+<!-- data_processing -->
+
+
+<!-- data_appraisal -->
+
+
+<!-- data_access -->
+
+
+<!-- disclaimer_copyright -->
+
+
+<!-- metadata_production -->
+
+
+<!-- sidebar with section links -->
+<!--<div class="col-sm-2 col-lg-2  d-none d-sm-block">-->   
+<div class="col-xs-12 col-md-2 d-none d-sm-block">
+<!--<div class="navbar-collapse sticky-top">
+    <ul class="navbar-nav flex-column wb--full-width">-->
+<div class="tab-sidebar">
+    <ul class="study-items">
+                
+         
+                
+            <!--<li class="nav-item">-->
+            <li class="item">
+                  
+                    <a href="https://www.inegi.org.mx/rnm/index.php/catalog/530#metadata-general">Información general</a>
+                 
+            </li>
+                                    
+                        
+         
+                                    
+         
+                                    
+         
+                                    
+                        
+         
+                
+            <!--<li class="nav-item">-->
+            <li class="item">
+                  
+                    <a href="https://www.inegi.org.mx/rnm/index.php/catalog/530#metadata-data_collection">Recolección de Datos</a>
+                 
+            </li>
+                                    
+         
+                                    
+         
+                
+            <!--<li class="nav-item">-->
+            <li class="item">
+                  
+                    <a href="https://www.inegi.org.mx/rnm/index.php/catalog/530#metadata-data_processing">Procesamiento de Datos</a>
+                 
+            </li>
+                                    
+         
+                
+            <!--<li class="nav-item">-->
+            <li class="item">
+                  
+                    <a href="https://www.inegi.org.mx/rnm/index.php/catalog/530#metadata-data_appraisal">Indicadores de la Calidad/Evaluación de la Calidad</a>
+                 
+            </li>
+                                    
+         
+                
+            <!--<li class="nav-item">-->
+            <li class="item">
+                  
+                    <a href="https://www.inegi.org.mx/rnm/index.php/catalog/530#metadata-data_access">Política de Acceso a los microdatos</a>
+                 
+            </li>
+                                    
+         
+                                    
+         
+                            </ul>
+</div>
+</div>
+
+<!--metadata content-->
+
+<!--<div class="col-12 col-sm-10 col-lg-10 wb-border-left">-->
+<div class="col-xs-12 col-md-10 wb-border-left">
+                                                                                                <div id="metadata-identification" class="section-identification">
+                 <div class="xsl-title">Información general</div>   
+                    <h2 class="xsl-subtitle">Identificación</h2>
+        <div class="field field-idno">
+
+<div class="xsl-caption field-caption">NÚMERO DE IDENTIFICACIÓN DEL PROYECTO ESTADÍSTICO</div>
+    
+    <div class="field-value --1">
+                    
+            <span>MEX-SALUD-SINAC-2018</span> 
+            
+            
+            
+            </div>
+</div>
+<div class="field field-title">
+
+<div class="xsl-caption field-caption">Título</div>
+    
+    <div class="field-value --1">
+                    
+            <span>Subsistema de Información sobre Nacimientos</span> 
+            
+            
+            
+            </div>
+</div>
+<div class="table-responsive field field-metadata.study_desc.study_info.nation">
+    <div class="xsl-caption field-caption">País</div>
+    <div class="field-value --4">                
+                        
+        <table class="table table-bordered table-striped table-condensed xsl-table table-grid">
+            <tr>
+                                    <th>Nombre</th>
+                                    <th>Código del País</th>
+                            </tr>
+            
+                            <tr>
+                                                                    <td>
+                                                            México                                
+                        </td>
+                                                                    <td>
+                                                            Mex                                
+                        </td>
+                                        
+                </tr>
+                    </table>
+        
+    </div>
+</div>
+<div class="field field-metadata.study_desc.series_statement.series_name">
+
+<div class="xsl-caption field-caption">TIPO DE ESTUDIO</div>
+    
+    <div class="field-value --1">
+                    
+            <span>Registro administrativo</span> 
+            
+            
+            
+            </div>
+</div>
+<div class="field field-metadata.study_desc.series_statement.series_info">
+
+<div class="xsl-caption field-caption">ANTECEDENTES DEL PROYECTO ESTADÍSTICO</div>
+    
+    <div class="field-value --1">
+                    
+            <span>La generación y difusión continua de las estadísticas de nacimientos se inició en 1893, por la Dirección General de Estadística. <br />
+La Ley General de Salud establece que un certificado es la constancia expedida en los términos que establezcan las autoridades competentes para la comprobación o información de determinados hechos. Los certificados de hechos vitales están conformados por el certificado de nacimientos, de defunción y de muerte fetal, expedidos por profesionales de la salud o personas autorizadas por la autoridad sanitaria competente.<br />
+Uno de los principales objetivos que persiguen los certificados de hechos vitales es generar estadísticas que permitan analizar el comportamiento y dinámica de la población. Las estadísticas vitales se consideran elementos fundamentales para conocer la situación demográfica de un país y para la planeación económica y social, identificando a los grupos demandantes de servicios médicos, de educación y vivienda, entre otros.<br />
+De acuerdo con el Reglamento Interior de la Secretaría de Salud, la Dirección General de Información en Salud es la instancia autorizada para establecer el diseño y contenido de los certificados de estadísticas vitales, así como controlar y supervisar, en colaboración con los Servicios Estatales de Salud, su distribución, registro y captación.<br />
+En septiembre de 2007, después de más de una década de trabajo interinstitucional coordinado por la Dirección General de Información en Salud, la Secretaría de Salud instituyó el Certificado de Nacimiento como el formato único nacional, de expedición gratuita y obligatoria, con carácter individual e intransferible, que hace constar el nacimiento de un nacido vivo y las circunstancias que acompañaron el hecho, haciendo de éste un requisito para la inscripción de un nacimiento ante el Registro Civil.</span> 
+            
+            
+            
+            </div>
+</div>
+<div class="field field-metadata.study_desc.study_info.abstract">
+
+<div class="xsl-caption field-caption">RESUMEN</div>
+    
+    <div class="field-value --1">
+                    
+            <span>El Certificado de Nacimiento es un formato único nacional establecido por la Secretaría de Salud de expedición gratuita y obligatoria, con carácter individual e intransferible, que hace constar el nacimiento de un nacido vivo y las circunstancias que acompañaron el hecho.<br />
+<br />
+El objetivo es promover el registro oportuno, veraz e íntegro de los nacidos vivos ocurridos en el país, con el propósito de contar con un marco confiable para fines legales y estadísticos, que apoye, por una parte, la protección de los derechos de los niños y niñas, y por otra parte la planeación, asignación de recursos y evaluación de los servicios de salud.</span> 
+            
+            
+            
+            </div>
+</div>
+<div class="field field-metadata.study_desc.study_info.data_kind">
+
+<div class="xsl-caption field-caption">TIPO DE DATO</div>
+    
+    <div class="field-value --1">
+                    
+            <span>Registro administrativo</span> 
+            
+            
+            
+            </div>
+</div>
+<div class="field field-metadata.study_desc.study_info.analysis_unit">
+
+<div class="xsl-caption field-caption">UNIDAD DE ANÁLISIS</div>
+    
+    <div class="field-value --1">
+                    
+            <span>Los nacidos vivos ocurridos y certificados en el territorio  nacional por un profesional de la salud o persona autorizada por la Secretaría de Salud.</span> 
+            
+            
+            
+            </div>
+</div>
+    </div>
+
+                        
+                            <div id="metadata-scope" class="section-scope">
+                   <h2 class="xsl-subtitle">Cobertura temática</h2>
+        <div class="field field-metadata.study_desc.study_info.notes">
+
+<div class="xsl-caption field-caption">NOTAS</div>
+    
+    <div class="field-value --1">
+                    
+            <span>Estadísticas sociodemográficas, población, demografía, nacimientos</span> 
+            
+            
+            
+            </div>
+</div>
+<div class="table-responsive field field-metadata.study_desc.study_info.topics">
+    <div class="xsl-caption field-caption">CLASIFICACIÓN POR SUBTEMAS</div>
+    <div class="field-value --4">                
+                        
+        <table class="table table-bordered table-striped table-condensed xsl-table table-grid">
+            <tr>
+                                    <th>Tema</th>
+                            </tr>
+            
+                            <tr>
+                                                                    <td>
+                                                            Datos de la madre                                
+                        </td>
+                                                                                        
+                </tr>
+                            <tr>
+                                                                    <td>
+                                                            Datos del nacido vivo y del nacimiento                                
+                        </td>
+                                                                                        
+                </tr>
+                            <tr>
+                                                                    <td>
+                                                            Datos del certificante                                
+                        </td>
+                                                                                        
+                </tr>
+                    </table>
+        
+    </div>
+</div>
+<div class="table-responsive field field-metadata.study_desc.study_info.keywords">
+    <div class="xsl-caption field-caption">Palabras Claves</div>
+    <div class="field-value --4">                
+                        
+        <table class="table table-bordered table-striped table-condensed xsl-table table-grid">
+            <tr>
+                                    <th>Palabra Clave</th>
+                            </tr>
+            
+                            <tr>
+                                                                    <td>
+                                                            Nacimientos, certificados, SINAC                                
+                        </td>
+                                                                                        
+                </tr>
+                    </table>
+        
+    </div>
+</div>
+    </div>
+
+                                    <div id="metadata-coverage" class="section-coverage">
+                   <h2 class="xsl-subtitle">Cobertura</h2>
+        <div class="field field-metadata.study_desc.study_info.geog_coverage">
+
+<div class="xsl-caption field-caption">COBERTURA GEOGRÁFICA</div>
+    
+    <div class="field-value --1">
+                    
+            <span>Entidad federativa, municipio, localidad.</span> 
+            
+            
+            
+            </div>
+</div>
+<div class="field field-metadata.study_desc.study_info.universe">
+
+<div class="xsl-caption field-caption">UNIVERSO</div>
+    
+    <div class="field-value --1">
+                    
+            <span>Nacido vivo y su  madre, en el momento del parto</span> 
+            
+            
+            
+            </div>
+</div>
+    </div>
+
+                                    <div id="metadata-producers_sponsors" class="section-producers_sponsors">
+                   <h2 class="xsl-subtitle">Productores y Auspiciadores</h2>
+        <div class="table-responsive field field-metadata.study_desc.authoring_entity">
+    <div class="xsl-caption field-caption">INVESTIGADOR(ES) PRIMARIO(S)</div>
+    <div class="field-value --4">                
+                        
+        <table class="table table-bordered table-striped table-condensed xsl-table table-grid">
+            <tr>
+                                    <th>Nombre</th>
+                            </tr>
+            
+                            <tr>
+                                                                    <td>
+                                                            Secretaría de Salud                                
+                        </td>
+                                                                
+                </tr>
+                            <tr>
+                                                                    <td>
+                                                            Subsecretaría de Integración y Desarrollo del Sector Salud                                
+                        </td>
+                                                                
+                </tr>
+                            <tr>
+                                                                    <td>
+                                                            Dirección General de Información en Salud                                
+                        </td>
+                                                                
+                </tr>
+                            <tr>
+                                                                    <td>
+                                                            Dirección Sobre Necesidades de Salud y Población                                
+                        </td>
+                                                                
+                </tr>
+                    </table>
+        
+    </div>
+</div>
+<div class="table-responsive field field-metadata.study_desc.production_statement.producers">
+    <div class="xsl-caption field-caption">Productores</div>
+    <div class="field-value --4">                
+                        
+        <table class="table table-bordered table-striped table-condensed xsl-table table-grid">
+            <tr>
+                                    <th>Name</th>
+                                    <th>Role</th>
+                            </tr>
+            
+                            <tr>
+                                                                    <td>
+                                                            Entidades Federativas                                
+                        </td>
+                                                                                            <td>
+                                                            Concentrado, registro y envío a la Dirección General de Información en Salud.                                
+                        </td>
+                                        
+                </tr>
+                            <tr>
+                                                                    <td>
+                                                            Jurisdicciones                                
+                        </td>
+                                                                                            <td>
+                                                            Registro del certificado y envío a los Servicios Estatales de Salud.                                
+                        </td>
+                                        
+                </tr>
+                            <tr>
+                                                                    <td>
+                                                            Unidades Médicas                                
+                        </td>
+                                                                                            <td>
+                                                            Registro del certificado y envío a la jurisdicción sanitaria correspondiente.                                
+                        </td>
+                                        
+                </tr>
+                            <tr>
+                                                                    <td>
+                                                            Doctores/Pasantes/Parteras                                
+                        </td>
+                                                                                            <td>
+                                                            Llenado del certificado                                
+                        </td>
+                                        
+                </tr>
+                            <tr>
+                                                                    <td>
+                                                                                            
+                        </td>
+                                                                                            <td>
+                                                                                            
+                        </td>
+                                        
+                </tr>
+                    </table>
+        
+    </div>
+</div>
+    </div>
+
+                                
+                                                                    <div id="metadata-data_collection" class="section-data_collection">
+                   <h2 class="xsl-subtitle">Recolección de Datos</h2>
+        <div class="table-responsive field field-metadata.study_desc.study_info.coll_dates">
+    <div class="xsl-caption field-caption">Periodo de ejecución del proyecto estadístico</div>
+    <div class="field-value --4">                
+                        
+        <table class="table table-bordered table-striped table-condensed xsl-table table-grid">
+            <tr>
+                                    <th>Inicio</th>
+                                    <th>Fin</th>
+                            </tr>
+            
+                            <tr>
+                                                                    <td>
+                                                            2017-01-01                                
+                        </td>
+                                                                    <td>
+                                                            2017-12-31                                
+                        </td>
+                                                                
+                </tr>
+                    </table>
+        
+    </div>
+</div>
+<div class="table-responsive field field-metadata.study_desc.study_info.time_periods">
+    <div class="xsl-caption field-caption">Periodo de referencia</div>
+    <div class="field-value --4">                
+                        
+        <table class="table table-bordered table-striped table-condensed xsl-table table-grid">
+            <tr>
+                                    <th>Inicio</th>
+                                    <th>Fin</th>
+                            </tr>
+            
+                            <tr>
+                                                                    <td>
+                                                            2017-01-01                                
+                        </td>
+                                                                    <td>
+                                                            2017-12-31                                
+                        </td>
+                                                                
+                </tr>
+                    </table>
+        
+    </div>
+</div>
+<div class="field field-metadata.study_desc.method.data_collection.coll_mode">
+
+<div class="xsl-caption field-caption">Modo de recolección de datos</div>
+    
+    <div class="field-value --1">
+                    
+            <span>Registro administrativo</span> 
+            
+            
+            
+            </div>
+</div>
+<div class="field field-metadata.study_desc.method.data_collection.act_min">
+
+<div class="xsl-caption field-caption">SUPERVISIÓN</div>
+    
+    <div class="field-value --1">
+                    
+            <span>La distribución de los Certificados de Nacimiento se realiza bajo estricto control de folios, asegurando que tanto las unidades médicas como las parteras tradicionales registradas y las unidades móviles disponen de formatos suficientes para garantizar la certificación de los nacimientos de su área de responsabilidad.<br />
+Los Servicios Estatales de Salud serán los responsables del uso que los involucrados realicen de los Certificados de Nacimiento, por lo tanto, para las entregas subsecuentes de formatos deben solicitar a los interesados que den cuenta de los certificados utilizando conforme al flujo de información establecido en los manuales estatales de implementación, ya sea enviando sus bases de datos, las copias para su captura o bien los oficios de cancelación o pérdida.</span> 
+            
+            
+            
+            </div>
+</div>
+<div class="table-responsive field field-metadata.study_desc.method.data_collection.data_collectors">
+    <div class="xsl-caption field-caption">Recolector(es) de datos</div>
+    <div class="field-value --4">                
+                        
+        <table class="table table-bordered table-striped table-condensed xsl-table table-grid">
+            <tr>
+                                    <th>Nombre</th>
+                                    <th>Abreviación</th>
+                                    <th>Affiliation</th>
+                            </tr>
+            
+                            <tr>
+                                                                    <td>
+                                                            Servicios Estatales de Salud                                
+                        </td>
+                                                                    <td>
+                                                            SESA                                
+                        </td>
+                                                                    <td>
+                                                            Gobierno del Estado correspondiente                                
+                        </td>
+                                        
+                </tr>
+                            <tr>
+                                                                    <td>
+                                                            Jurisdicción Sanitaria                                
+                        </td>
+                                                                    <td>
+                                                            JUR                                
+                        </td>
+                                                                    <td>
+                                                            SESA                                
+                        </td>
+                                        
+                </tr>
+                    </table>
+        
+    </div>
+</div>
+    </div>
+
+            <div id="metadata-questionnaires" class="section-questionnaires">
+                   <h2 class="xsl-subtitle">Cuestionarios</h2>
+        <div class="field field-metadata.study_desc.method.data_collection.research_instrument">
+
+<div class="xsl-caption field-caption">Cuestionarios</div>
+    
+    <div class="field-value --1">
+                    
+            <span>El Certificado de Nacimiento es un documento oficial de carácter individual e intransferible que certifica el nacimiento de un producto vivo en el momento mismo de su ocurrencia, proporcionando a la madre un comprobante de este hecho. Es un formato único de registro de nacimientos de uso obligatorio en el territorio nacional.</span> 
+            
+            
+            
+            </div>
+</div>
+    </div>
+
+                    <div id="metadata-data_processing" class="section-data_processing">
+                   <h2 class="xsl-subtitle">Procesamiento de Datos</h2>
+        <div class="field field-metadata.study_desc.method.data_collection.cleaning_operations">
+
+<div class="xsl-caption field-caption">Edición de Datos</div>
+    
+    <div class="field-value --1">
+                    
+            <span>El Certificado de Nacimiento deberá ser llenado adecuadamente con base en los manuales de implementación y de llenado elaborados ex profeso.<br />
+<br />
+El área de estadística o equivalente de los SESA se coordina con los Jefes Jurisdiccionales, Directores de las Unidades Hospitalarias e Instituciones del Sector Salud tanto público como privado para la recolección de la base de datos en el sistema informático SINAC. Misma que debe ser revisada por los SESA para su posterior envío a la DGIS para la integración de la base de datos Nacional.<br />
+<br />
+La información preliminar de cierres mensuales se hace pública mediante cubos dinámicos disponibles en la página de internet de la DGIS.<br />
+<br />
+Cabe mencionar que los cierres anuales están disponibles a partir del 30 de abril del siguiente del siguiente año.</span> 
+            
+            
+            
+            </div>
+</div>
+<div class="field field-metadata.study_desc.method.data_collection.method_notes">
+
+<div class="xsl-subtitle">Organización y preparación</div>
+    
+    <div class="field-value --1">
+                    
+            <span>Los actores involucrados (Federación, Servicios Estatales y Municipales de Salud, Instituciones del Sector Salud, Unidades de Atención Médica, Personal de Salud) deberán verificar el cumplimiento del presente Manual.<br />
+El Nivel Federal a través de la DGIS establecerá las Normas Generales de Operación para la Implementación y Operación del Certificado de Nacimiento y del Subsistema de Información sobre Nacimientos (SINAC).<br />
+La DGIS elaborará los manuales de implementación y llenado del Certificado de Nacimiento, así como el manual de instalación y operación del programa de captura, poniéndolos a disposición de los interesados en un sitio de acceso público (página de Internet).<br />
+La DGIS capacitará a los responsables del Certificado de Nacimientos en los Servicios Estatales de Salud en el manejo de las Normas Generales de Operación para la Implementación y Operación del mismo, así como en el uso del programa de captura desarrollado ex profeso. A su vez los Servicios Estatales de Salud tendrán la obligación de reproducir dichos conocimientos a nivel local.<br />
+Los Secretarios Estatales de Salud establecerán las relaciones correspondientes con el Registro Civil y con el Sector Salud, tanto público como privado, para que cada uno de ellos cumpla con los objetivos y disposiciones vigentes.</span> 
+            
+            
+            
+            </div>
+</div>
+    </div>
+
+                    <div id="metadata-data_appraisal" class="section-data_appraisal">
+                   <h2 class="xsl-subtitle">Indicadores de la Calidad/Evaluación de la Calidad</h2>
+        <div class="field field-metadata.study_desc.method.analysis_info.data_appraisal">
+
+<div class="xsl-caption field-caption">Data Appraisal</div>
+    
+    <div class="field-value --1">
+                    
+            <span>La información se revisa variable por variable verificando que se encuentre correctamente capturada para que en caso contrario se proceda a la validación e imputación de los datos no especificados o fuera de rango.</span> 
+            
+            
+            
+            </div>
+</div>
+    </div>
+
+                                                                                    <div id="metadata-data_access" class="section-data_access">
+                   <h2 class="xsl-subtitle">Política de Acceso a los microdatos</h2>
+        <div class="table-responsive field field-metadata.study_desc.data_access.dataset_use.contact">
+    <div class="xsl-caption field-caption">Autorización de accceso</div>
+    <div class="field-value --4">                
+                        
+        <table class="table table-bordered table-striped table-condensed xsl-table table-grid">
+            <tr>
+                                    <th>Name</th>
+                                    <th>Affiliation</th>
+                                    <th>URL</th>
+                            </tr>
+            
+                            <tr>
+                                                                    <td>
+                                                            Secretaría de Salud                                
+                        </td>
+                                                                    <td>
+                                                            Gobierno Federal                                
+                        </td>
+                                                                                            <td>
+                                                            http://www.dgis.salud.gob.mx/contenidos/basesdedatos/std_nacimientos_gobmx.html                                
+                        </td>
+                                        
+                </tr>
+                    </table>
+        
+    </div>
+</div>
+<div class="table-responsive field field-metadata.study_desc.distribution_statement.contact">
+    <div class="xsl-caption field-caption">Contactos</div>
+    <div class="field-value --4">                
+                        
+        <table class="table table-bordered table-striped table-condensed xsl-table table-grid">
+            <tr>
+                                    <th>Name</th>
+                                    <th>Afiliación</th>
+                                    <th>Correo electrónico</th>
+                            </tr>
+            
+                            <tr>
+                                                                    <td>
+                                                            Soporte Sinba                                
+                        </td>
+                                                                    <td>
+                                                            Secretaria de Salud                                
+                        </td>
+                                                                    <td>
+                                                            soporte.sinba@salud.gob.mx                                
+                        </td>
+                                                                
+                </tr>
+                    </table>
+        
+    </div>
+</div>
+<div class="table-responsive field field-metadata.study_desc.data_access.dataset_use.conf_dec">
+    <div class="xsl-caption field-caption">Confidencialidad</div>
+    <div class="field-value ----">                
+                        La información publicada no contiene datos personales        
+    </div>
+</div>
+<div class="field field-metadata.study_desc.data_access.dataset_use.conditions">
+
+<div class="xsl-caption field-caption">Condición de acceso</div>
+    
+    <div class="field-value --1">
+                    
+            <span>Acceso público</span> 
+            
+            
+            
+            </div>
+</div>
+<div class="field field-metadata.study_desc.data_access.dataset_use.cit_req">
+
+<div class="xsl-caption field-caption"> </div>
+    
+    <div class="field-value --1">
+                    
+            <span>Acceso público</span> 
+            
+            
+            
+            </div>
+</div>
+    </div>
+
+                    <div id="metadata-disclaimer_copyright" class="section-disclaimer_copyright">
+                   <h2 class="xsl-subtitle">Notas legales y derechos de autor</h2>
+        <div class="field field-metadata.study_desc.data_access.dataset_use.disclaimer">
+
+<div class="xsl-caption field-caption">Notas legales</div>
+    
+    <div class="field-value --1">
+                    
+            <span>Al utilizar la información del Subsistema de Información sobre Nacimientos (SINAC), usted acepta expresamente los siguientes:<br />
+TÉRMINOS DE LIBRE USO DE LA INFORMACIÓN DE LA SECRETARÍA DE SALUD/DIRECCIÓN GENERAL DE INFORMACIÓN EN SALUD (DGIS)<br />
+1. El Usuario:<br />
+a. Puede hacer y distribuir copias de la información, sin alterar ni suprimir sus metadatos.<br />
+b. Puede difundir y publicar la información indicando SS/DGIS como en la fuente de información.<br />
+c. Puede adaptar y reordenar la información, sin alterar los datos.<br />
+d. Puede extraer total o parcialmente la información.<br />
+e. Puede explotar comercialmente la información, utilizándola como insumo para generar otros productos o servicios.<br />
+f. Debe otorgar los créditos correspondientes a la Secretaría de Salud/DGIS como autor, y cuando técnicamente sea posible, mencionar la fuente de extracción de la información de la siguiente manera: “Fuente: SS/DGIS, Subsistema de Información sobre Nacimientos” y en su caso fecha de actualización, ejemplo: “Fuente: SS/DGIS, SINAC 2018”.<br />
+g. No debe utilizar la información con objeto de engañar o confundir a la población variando el sentido original de la misma y su veracidad.<br />
+h. No debe aparentar que el uso que haga de la información, representa una postura oficial de la Secretaría de Salud/DGIS o que el mismo está avalado, integrado, patrocinado o apoyado por la fuente de origen.<br />
+2. La Secretaría de Salud/DGIS no será responsable por la interpretación y aplicación que el usuario haga de los resultados obtenidos a través del uso de la información; por lo que cualquier decisión basada en su interpretación excluye a la Secretaría de Salud/DGIS de responsabilidad alguna. Asimismo, la Secretaría de Salud/DGIS no será responsable de las diferencias obtenidas por precisiones, redondeos o truncamientos numéricos, así como por cambios técnicos o tecnológicos que puedan incidir en tales resultados.<br />
+3. La vigencia de estos Términos de Libre Uso es por tiempo indefinido siempre que no se contravengan las disposiciones anteriores.<br />
+4. El uso no autorizado en contravención de estos Términos de Libre Uso, podrá ser sancionado de acuerdo con la legislación vigente aplicable, por lo que en caso de existir controversia, el usuario está de acuerdo expresamente en someterse a la jurisdicción y competencia de los Tribunales Federales de la Ciudad de México, renunciando al fuero que pudiera corresponderle por razón de domicilio presente, futuro o cualquier otra causa.<br />
+6. La Secretaría de Salud/DGIS se reserva el derecho a modificar en cualquier momento los presentes Términos de Libre Uso.</span> 
+            
+            
+            
+            </div>
+</div>
+    </div>
+
+                                    <div id="metadata-metadata_production" class="section-metadata_production">
+                   <h2 class="xsl-subtitle">Producción del metadato</h2>
+        <div class="field field-metadata.doc_desc.idno">
+
+<div class="xsl-caption field-caption">NÚMERO DE IDENTIFICACIÓN DEL DOCUMENTO DE METADATOS</div>
+    
+    <div class="field-value --1">
+                    
+            <span>DDI-MEX-SALUD-SINAC-2018-V1.0</span> 
+            
+            
+            
+            </div>
+</div>
+<div class="table-responsive field field-metadata.doc_desc.producers">
+    <div class="xsl-caption field-caption"> </div>
+    <div class="field-value --4">                
+                        
+        <table class="table table-bordered table-striped table-condensed xsl-table table-grid">
+            <tr>
+                                    <th>Nombre</th>
+                                    <th>Abreviación</th>
+                                    <th>Affiliation</th>
+                                    <th>Role</th>
+                            </tr>
+            
+                            <tr>
+                                                                    <td>
+                                                            Secretaría de Salud                                
+                        </td>
+                                                                    <td>
+                                                            SALUD                                
+                        </td>
+                                                                    <td>
+                                                            Gobierno Federal                                
+                        </td>
+                                                                    <td>
+                                                            Captar, producir y procesar la información de nacimientos para el proceso de planeación y control del Sistema Nacional de Salud.                                
+                        </td>
+                                        
+                </tr>
+                            <tr>
+                                                                    <td>
+                                                            Subsecretaría de Integración y Desarrollo del Sector Salud                                
+                        </td>
+                                                                    <td>
+                                                            SIDSS                                
+                        </td>
+                                                                    <td>
+                                                            Secretaría de Salud                                
+                        </td>
+                                                                    <td>
+                                                            Dirigir el sistema de información estadistica de la Secretaría de Salud y del Sistema Nacional de Salud.                                
+                        </td>
+                                        
+                </tr>
+                            <tr>
+                                                                    <td>
+                                                            Dirección General de Información en Salud                                
+                        </td>
+                                                                    <td>
+                                                            DGIS                                
+                        </td>
+                                                                    <td>
+                                                            Subsecretaría de Integración y Desarrollo del Sector Salud                                
+                        </td>
+                                                                    <td>
+                                                            Responsable del diseño, impresión, actualización y distribución primaria a las entidades, de los Certificados de Nacimiento.                                
+                        </td>
+                                        
+                </tr>
+                            <tr>
+                                                                    <td>
+                                                            Dirección de Información sobre Necesidades de Salud y Población                                
+                        </td>
+                                                                    <td>
+                                                            DINSP                                
+                        </td>
+                                                                    <td>
+                                                            DGIS                                
+                        </td>
+                                                                    <td>
+                                                            Analizar y supervisar la información del Subsistema de Información de Nacimientos.                                
+                        </td>
+                                        
+                </tr>
+                            <tr>
+                                                                    <td>
+                                                            Servicios Estatales de Salud                                
+                        </td>
+                                                                    <td>
+                                                            SESA                                
+                        </td>
+                                                                    <td>
+                                                            Gobierno de los Estados                                
+                        </td>
+                                                                    <td>
+                                                            Resposable de la integración Oportuna de la información de nacimientos certificados, así como de vigilar y asegurar la calidad de la información de los mismos.                                
+                        </td>
+                                        
+                </tr>
+                    </table>
+        
+    </div>
+</div>
+<div class="field field-metadata.doc_desc.prod_date">
+
+<div class="xsl-caption field-caption">FECHA DE CONCLUSIÓN DE LA DOCUMENTACIÓN</div>
+    
+    <div class="field-value --1">
+                    
+            <span>2018-09-03</span> 
+            
+            
+            
+            </div>
+</div>
+    </div>
+
+    </div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jQuery-linkify/2.1.8/linkify.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jQuery-linkify/2.1.8/linkify-jquery.min.js"></script>
+
+<script>
+    $(function() {
+        $(".metadata-container").linkify();
+    });
+</script>    </div></div>
+      </div>
+</div>
+<!-- end-tabs-->    
+   </div> 
+</div>
+
+
+<!--survey summary resources-->
+<script type="text/javascript">
+	function toggle_resource(element_id){
+		$("#"+element_id).parent(".resource").toggleClass("active");
+		$("#"+element_id).toggle();
+	}
+	
+	$(document).ready(function () { 
+		bind_behaviours();
+		
+		$(".show-datafiles").click(function(){
+			$(".data-files .hidden").removeClass("hidden");
+			$(".show-datafiles").hide();
+			return false;
+		});
+
+	});	
+	
+	function bind_behaviours() {
+		//show variable info by id
+		$(".resource-info").unbind('click');
+		$(".resource-info").click(function(){
+			if($(this).attr("id")!=''){
+				toggle_resource('info_'+$(this).attr("id"));
+			}
+			return false;
+		});			
+	}
+</script>                </div>
+                    </div>
+
+
+
+
+
+
+<!-- Modal Aviso 
+<div class="modal fade" id="modalMantenimiento" tabindex="-1" role="dialog" aria-labelledby="modalMantenimientoLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered" role="document">
+        <div class="modal-content">
+
+            <div class="modal-header bg-warning">
+                <h4 class="modal-title" id="modalMantenimientoLabel">
+                    Aviso Importante
+                </h4>
+
+                <button type="button" class="close" data-dismiss="modal" aria-label="Cerrar">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+
+            <div class="modal-body">
+
+                <h4>Mantenimiento programado</h4>
+
+                <p>
+                    Con motivo de trabajos de mantenimiento,
+                    <strong>algunas secciones de la Normateca</strong>, así como los
+                    <strong>servicios de atención telefónica y en línea</strong>,
+                    se suspenderán a partir de las
+                    <strong>17:00 horas del viernes 3 de julio</strong>.
+                </p>
+
+                <p>
+                    Los servicios se restablecerán el
+                    <strong>lunes 6 de julio</strong>.
+                </p>
+
+                <p>
+                    Agradecemos su comprensión.
+                </p>
+
+            </div>
+
+            <div class="modal-footer">
+                <button type="button" class="btn btn-default" data-dismiss="modal">
+                    Cerrar
+                </button>
+
+                <button type="button" class="btn btn-primary" data-dismiss="modal">
+                    Aceptar
+                </button>
+            </div>
+
+        </div>
+    </div>
+</div>
+
+<script>
+$(document).ready(function () {
+    $('#modalMantenimiento').modal({
+        backdrop: 'static',
+        keyboard: true
+    });
+
+    $('#modalMantenimiento').modal('show');
+});
+</script>-->
+
+<!-- page footer -->
+<footer>
+    <!-- footer top section -->
+        <!-- End footer top section -->
+
+    <!-- footer bottom section -->
+    <!--<div class="full-row-footer-black-components">-->
+        <!--<div class="container">-->
+            <!--<div class="footer">-->
+                <!--<div class="row">-->
+                    <!-- / footer logo --> 
+                    <!--<div class="col-12">-->
+                        <div id="PiePagina"></div>
+                        <script src="https://www.inegi.org.mx/componentes/encabezado/js/enc_genera.min.js"></script>
+                        <!--
+                        <div class="text-center text-lg-left mt-2">
+                        <php /* logo ?>
+                        <a href="<php echo site_url();?>" class="g01v1-logo nada-logo">
+                            <img style="width:50px;" title="<php echo $this->config->item("website_title");?>" src="https://www.inegi.org.mx/rnm/themes/nada/images/logo-placeholder.png" class="img-responsive">                            
+                        </a>
+                        <php */?>
+
+                        <php /* text only */ ?>
+                        <a href="<php echo site_url();?>" style="color:white;padding-top:20px;" >
+                            <php echo $this->config->item("website_title");?>
+                        </a>                        
+                        <php /* */?>
+                        </div>
+                        -->
+                    <!--</div>-->
+                    <!--/ footer logo -->
+
+                    <!-- Copyrights
+                    <div class="col-12 col-md-6 footer-bottom-right">
+                        <div class="">
+                            <div class="footer-copy-right">
+
+                                <p class="text-center text-lg-right">
+
+                                    <small>
+                                        ©
+                                        <script language="JavaScript">
+                                            var time = new Date();
+                                            var year = time.getYear();
+                                            if (year < 2000)
+                                                year = year + 1900 + ", ";
+                                            document.write(year); 
+                                        </script> <php echo $this->config->item("website_title");?>, All Rights Reserved.
+                                    </small>
+
+                                </p>
+
+                            </div>
+
+                        </div>
+                    </div>-->
+                    <!-- / Copyrights  -->
+
+                <!--</div>-->
+            <!--</div>-->
+        <!--</div>-->
+    <!--</div>-->
+</footer></body>
+
+</html>

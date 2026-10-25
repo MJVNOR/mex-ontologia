@@ -25,6 +25,22 @@ def validar_codigo(code, width):
     return code
 
 
+def validar_estado_dictamen(variable, decision, aprobadas_posteriores):
+    """True solo para una resolución posterior exacta; nunca promociona por sí misma."""
+    definition = decision['definicion_iri']
+    if (variable.get('definicion_iri') != definition or
+            variable['huella_fila_diccionario'] != decision['huella_fila_diccionario']):
+        raise ValueError('Evidencia de dictamen histórico cambió')
+    if variable['estado'] == 'candidata_sin_definicion_suficiente':
+        return False
+    rule = aprobadas_posteriores.get(definition)
+    if (rule and variable['estado'] == 'respaldada_por_definicion' and
+            variable.get('regla') == rule['id'] and variable.get('concepto') == rule['concepto'] and
+            rule['huella_fila_diccionario'] == decision['huella_fila_diccionario']):
+        return True
+    raise ValueError('Dictamen no corresponde a pendiente actual ni a resolución posterior aprobada')
+
+
 def cargar_evidencia():
     config_path = ROOT / 'ontologia/revision-ronda-2.json'
     config = json.loads(config_path.read_text(encoding='utf-8'))
@@ -126,6 +142,19 @@ def construir(semantic, semantic_data, inventory, inspection, base):
             r not in rules['vinculos_documentales_revisados'] for r in previous['vinculos_documentales_revisados']):
         raise ValueError('Se alteró una revisión anterior a ronda 2')
 
+    approved_later = {}
+    if (ROOT / 'ontologia/revision-ronda-4.json').exists():
+        from integrar_ronda_4 import validar
+        _, _, _, r4, _ = validar(rules)
+        approved_later = {definition: rule for rule in r4['reglas'] for definition in rule['definiciones']}
+    if (ROOT / 'ontologia/revision-ronda-7.json').exists():
+        # validar(rules) arriba comprueba la cadena exacta R4→R5→R6→R7.
+        # Cada resolución posterior conserva el gate de estado, regla,
+        # concepto y huella de fila de validar_estado_dictamen.
+        from integrar_ronda_7 import cargar as cargar_r7_dictamenes
+        _, _, _, aceptadas_r7_dictamenes, fuentes_r7_dictamenes = cargar_r7_dictamenes()
+        sources.update(fuentes_r7_dictamenes)
+        approved_later.update({d: r for r in aceptadas_r7_dictamenes['reglas'] for d in r['definiciones']})
     p2 = read('agente-2-pendientes')
     questions = {q['id']: q for q in p2['preguntas_publicador']}
     for d in p2['decisiones']:
@@ -136,8 +165,10 @@ def construir(semantic, semantic_data, inventory, inspection, base):
         lit(review, 'evidenciaRevisionJson', json.dumps(d, ensure_ascii=False))
         if d['tipo'] == 'significado':
             v = variables[d['definicion_iri']]
-            if v['huella_fila_diccionario'] != d['huella_fila_diccionario'] or v['estado'] != 'candidata_sin_definicion_suficiente':
-                raise ValueError('Dictamen no corresponde a significado pendiente actual')
+            if validar_estado_dictamen(v, d, approved_later):
+                g.add((review, mex.limiteSemantico, Literal(
+                    'Dictamen histórico de ronda 2: este significado fue respaldado después por una regla auditada posterior. '
+                    'La clasificación original se conserva como evidencia histórica; el estado vigente se consulta en la variable documentada.', lang='es')))
             target = URIRef(v['iri'])
         elif d['tipo'] == 'referencia_catalogo':
             target = URIRef(d['referencia_iri'])
@@ -280,7 +311,102 @@ def construir(semantic, semantic_data, inventory, inspection, base):
                'evaluacion_pipeline': {'intentos': 20, 'respuestas': 4, 'aciertos': 2, 'fallos_recuperacion': 2,
                                        'errores_http_cuota': 16, 'ui': 'no_ejecutada', 'identidad_backend': 'no_demostrada'},
                'respaldo': config['respaldo'], 'fuentes_fijadas': len(manifest['archivos'])}
-    expected = config['esperado']
+    expected = dict(config.get('esperado_actual', config['esperado']))
+    r6cfg = ROOT / 'ontologia/revision-ronda-6.json'
+    if r6cfg.exists():
+        # R6 añade como máximo su vínculo auditado; el esperado histórico queda intacto.
+        r6exp = (json.loads(r6cfg.read_text(encoding='utf-8')).get('estados_correspondencias_esperados') or {})
+        if 'documental_revisada' in r6exp:
+            expected['revisadas'] = r6exp['documental_revisada']
+
+    r7cfg = ROOT / 'ontologia/revision-ronda-7.json'
+    if r7cfg.exists():
+        # R7: cadena auditada, luego revisadas 4478 y candidatas 45 = 17 + 28.
+        if not r6cfg.exists():
+            raise ValueError('R7 exige su base R6 instalada')
+
+        from integrar_ronda_6 import cargar as cargar_ronda_6
+        from integrar_ronda_7 import cargar as cargar_ronda_7
+        r6c, r6f, r6base, r6accepted, r6s = cargar_ronda_6()
+        r7c, r7f, r7base, r7accepted, r7sources = cargar_ronda_7()
+        sources.update({k: v for k, v in r7sources.items() if k not in sources})
+        # R8 (solo si existe su config): proyecta el reporte vivo a su
+        # equivalente R7; el bloque historico siguiente corre intacto.
+        semantic_vivo = semantic
+        delta8 = None
+        if (ROOT / 'ontologia/revision-ronda-8.json').exists():
+            from integrar_ronda_8 import cargar as cargar_ronda_8
+            from r8_proyeccion import preparar_proyeccion_r7
+            r8c, r8f, r8base, r8accepted, r8sources = cargar_ronda_8(ROOT)
+            sources.update({k: v for k, v in r8sources.items() if k not in sources})
+            semantic, delta8 = preparar_proyeccion_r7(
+                semantic, r7base, r7accepted, r8base, r8accepted)
+        if r7base['reglas_descripcion_exacta'] != r6base['reglas_descripcion_exacta'] + r6accepted['reglas'] \
+                or r7base['vinculos_documentales_revisados'] != r6base['vinculos_documentales_revisados'] + r6accepted['vinculos']:
+            raise ValueError('Base R7 discontinua respecto a cadena R6')
+        for k, v in r6base['conceptos'].items():
+            if r7base['conceptos'].get(k) != v:
+                raise ValueError('Concepto base alterado en cadena R7: ' + k)
+        for k, v in r6accepted['conceptos'].items():
+            if r7base['conceptos'].get(k) != v:
+                raise ValueError('Concepto R6 ausente en base R7: ' + k)
+        n_reglas, n_vinc, n_con = (len(r7accepted[k]) for k in ('reglas', 'vinculos', 'conceptos'))
+        if (n_reglas, n_vinc, n_con) != (31, 3, 31):
+            raise ValueError('R7 fuera del lote auditado 31/3/31')
+        # Pre-estado R6 desde cobertura congelada con SHA del respaldo-previo.
+        bkroot = ROOT / 'propuestas/plan-paralelo-brechas-sin-gemma/ejecucion-20261024-072207Z/integracion/respaldo-previo'
+        bkman = json.loads((bkroot / 'manifiesto-respaldo.json').read_text(encoding='utf-8'))
+        pin = {c['original']: c['sha256'] for c in bkman['copias']}
+        if sha(bkroot / 'manifiesto-respaldo.json') != 'ea354f8a635e298ab6c886ea12fe3ebf4b592658a8592514c182842f4420d5cd':
+            raise ValueError('Manifiesto de respaldo-previo alterado')
+        bkcov = bkroot / 'data/semantica/cobertura.json'
+        if sha(bkcov) != pin.get('data/semantica/cobertura.json'):
+            raise ValueError('Cobertura R6 de respaldo alterada')
+        bkcob = json.loads(bkcov.read_text(encoding='utf-8'))
+        pre_est = {v['definicion_iri']: v['estado'] for v in bkcob['variables']}
+        backed = [r['definiciones'][0] for r in r7accepted['reglas']]
+        if any(pre_est.get(d) == 'respaldada_por_definicion' for d in backed):
+            raise ValueError('R7 re-respalda definición previa')
+        de_cand = [d for d in backed if pre_est.get(d) == 'candidata_sin_definicion_suficiente']
+        de_fuera = [d for d in backed if pre_est.get(d) == 'fuera_del_nucleo_actual']
+        if (len(de_cand), len(de_fuera)) != (3, 28):
+            raise ValueError('R7 sin partición 3 candidatas + 28 fuera')
+        pre_cand_cols = {m['columna'] for m in bkcob['correspondencias'] if m['estado'] == 'candidata_por_nombre'}
+        promovidas = {v['columna'] for v in r7accepted['vinculos']}
+        if not promovidas <= pre_cand_cols:
+            raise ValueError('Vínculo R7 fuera de candidatas previas')
+        viejas = pre_cand_cols - promovidas
+        if len(viejas) != 17:
+            raise ValueError('R7 sin 17 candidatas anteriores')
+        en_vivo = {m['columna'] for m in semantic['correspondencias'] if m['estado'] == 'candidata_por_nombre'}
+        nuevas = en_vivo - pre_cand_cols
+        if len(nuevas) != 28 or not nuevas.isdisjoint(viejas):
+            raise ValueError('R7 sin 28 coincidencias nuevas exactas')
+        vardef = {v['iri']: v['definicion_iri'] for v in semantic['variables'] if 'iri' in v}
+        backed = [r['definiciones'][0] for r in r7accepted['reglas']]
+        for m in semantic['correspondencias']:
+            if m['columna'] in nuevas and vardef.get(m['variable']) not in backed:
+                raise ValueError('Coincidencia nueva sin respaldo R7: ' + m['columna'])
+        expected['revisadas'] = len(r7base['vinculos_documentales_revisados']) + n_vinc
+        if expected['revisadas'] != 4478:
+            raise ValueError('R7 sin 4478 revisadas derivadas')
+        expected['candidatas'] = len(viejas) + len(nuevas)
+        if expected['candidatas'] != 45:
+            raise ValueError('R7 sin 45 candidatas derivadas (17 + 28)')
+        if delta8 is not None:
+            # Delta R8 derivado del lote A/B, nada observado como expected.
+            vinc8 = {v['columna'] for v in r8accepted['vinculos']}
+            pre_cand8 = {m['columna'] for m in semantic['correspondencias']
+                         if m['estado'] == 'candidata_por_nombre'}
+            if not vinc8 <= pre_cand8:
+                raise ValueError('Vinculo R8 fuera de candidatas R7')
+            en_vivo8 = {m['columna'] for m in semantic_vivo['correspondencias']
+                        if m['estado'] == 'candidata_por_nombre'}
+            if en_vivo8 != pre_cand8 - vinc8:
+                raise ValueError('R8 altera candidatas fuera del delta aprobado')
+            expected['revisadas'] += delta8['n_vinculos']
+            expected['candidatas'] -= delta8['n_vinculos']
+
     if (summary['correspondencias_revisadas_totales'], summary['correspondencias_candidatas_restantes'],
             len(seen), len(p2['decisiones']), len(p4['referencias'])) != (
             expected['revisadas'], expected['candidatas'], expected['comprobaciones_localidades'],
@@ -288,7 +414,8 @@ def construir(semantic, semantic_data, inventory, inspection, base):
         raise ValueError('Conteos inesperados de ronda 2')
     (OUT / 'ronda-2.ttl').write_text(g.serialize(format='turtle'), encoding='utf-8')
     (ROOT / 'reports/integracion-ronda-2.json').write_text(json.dumps(summary, ensure_ascii=False, indent=2) + '\n', encoding='utf-8')
-    lines = ['# Integración central — ronda 2', '',
+    lines = ['# Integración central — ronda 2 (antecedente histórico)', '',
+             'Los conteos de las tablas describen el cierre original de ronda 2. La cobertura vigente se registra en reports/consolidacion-semantica.md y data/semantica/cobertura.json.', '',
              'Las cinco entregas se conservan como copias fijadas por SHA-256. Las carpetas originales no se modifican. La generación es sin red ni modelos.', '',
              '| Resultado | Cantidad |', '| --- | ---: |',
              '| Nuevas correspondencias documentales | 674 |', '| Correspondencias revisadas totales | 836 |',
@@ -305,7 +432,7 @@ def construir(semantic, semantic_data, inventory, inspection, base):
              '- Agente 5: diagnóstico histórico PARCIAL del pipeline fuente contra el grafo vivo previo a esta integración: 20 intentos, 4 respuestas (2 aciertos y 2 fallos de recuperación), 16 intentos con error HTTP/cuota. UI no evaluada; identidad con el backend instalado no demostrada. No se relanzaron modelos ni se corrigió el chat. Las expectativas y consultas guardadas conservan los conteos anteriores 162/792; son evidencia histórica, no los conteos actuales.', '',
              '## Reproducción y pendientes', '',
              'ontologia/revision-ronda-2.json fija data/integracion-ronda-2/manifiesto.json. scripts/ampliar_portal.py --load regenera y valida el grafo; scripts/sincronizar_studio_portal.py respalda y conserva las ediciones ajenas a la ampliación.', '',
-             'Las cinco observaciones originales siguen preservadas. Quedan 23 significados candidatos, 118 correspondencias candidatas, 3 columnas ambiguas/6 vínculos, des_mpo_res sin resolver, vigencia histórica no acreditada y pruebas pendientes de UI/16 preguntas sin respuesta. Las 1308 definiciones fuera del núcleo conservan ese estado. No se ejecutaron nuevos cruces ni se crearon owl:sameAs/skos:exactMatch.', '',
+             'Al cerrar esta ronda quedaron 23 significados candidatos, 118 correspondencias candidatas, 3 columnas ambiguas/6 vínculos, des_mpo_res sin resolver, vigencia histórica no acreditada y pruebas pendientes de UI/16 preguntas sin respuesta. Entonces 1308 definiciones estaban fuera del núcleo; las ampliaciones posteriores se documentan en la cobertura vigente. Esta ronda no ejecutó nuevos cruces ni creó owl:sameAs/skos:exactMatch.', '',
              'Respaldo central previo: ' + config['respaldo'], '']
     (ROOT / 'reports/integracion-ronda-2.md').write_text('\n'.join(lines), encoding='utf-8')
     return g, model, summary, sources

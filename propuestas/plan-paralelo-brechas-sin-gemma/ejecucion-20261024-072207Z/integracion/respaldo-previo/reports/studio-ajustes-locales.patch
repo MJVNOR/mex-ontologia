@@ -1,0 +1,257 @@
+diff --git a/studio/src-tauri/src/chat.rs b/studio/src-tauri/src/chat.rs
+index 53f22ca..3beced9 100644
+--- a/studio/src-tauri/src/chat.rs
++++ b/studio/src-tauri/src/chat.rs
+@@ -4,6 +4,8 @@ use std::path::{Path, PathBuf};
+ use std::process::{Child, Command, Stdio};
+ use std::sync::Mutex;
+ use tauri::{Emitter, Manager};
++#[cfg(target_os = "windows")]
++use std::os::windows::process::CommandExt;
+ 
+ use crate::engine;
+ 
+@@ -125,8 +127,10 @@ pub fn spawn_agent_sidecar(app: &tauri::AppHandle) -> Result<(), String> {
+     // rather than re-resolved here so the sidecar can't drift from it.
+     let port = engine::engine_port();
+ 
+-    let mut child = Command::new(&node)
+-        .arg(&entry)
++    let mut command = Command::new(&node);
++    #[cfg(target_os = "windows")]
++    command.creation_flags(0x08000000); // CREATE_NO_WINDOW for the Node sidecar.
++    let mut child = command.arg(&entry)
+         .stdin(Stdio::piped())
+         .stdout(Stdio::piped())
+         .stderr(Stdio::piped())
+diff --git a/studio/src-tauri/src/engine.rs b/studio/src-tauri/src/engine.rs
+index 16362b1..1e2cdef 100644
+--- a/studio/src-tauri/src/engine.rs
++++ b/studio/src-tauri/src/engine.rs
+@@ -4,6 +4,8 @@ use std::process::{Child, Command, Stdio};
+ use std::sync::atomic::AtomicBool;
+ use std::sync::{Arc, Mutex};
+ use tauri::{Emitter, Manager};
++#[cfg(target_os = "windows")]
++use std::os::windows::process::CommandExt;
+ 
+ pub struct EngineState {
+     pub running: Arc<AtomicBool>,
+@@ -41,6 +43,15 @@ fn find_existing_binary(dir: &Path) -> Option<PathBuf> {
+ }
+ 
+ fn resolve_engine_binary() -> Result<PathBuf, String> {
++    // Installed bundles place the sidecar next to the application executable.
++    // Resolve it before development paths so an installed app is self-contained.
++    if let Ok(exe) = std::env::current_exe() {
++        if let Some(dir) = exe.parent() {
++            if let Some(path) = find_existing_binary(dir) {
++                return Ok(path);
++            }
++        }
++    }
+     let manifest_dir = PathBuf::from(env!("CARGO_MANIFEST_DIR"));
+     let bundled_dir = manifest_dir.join("binaries");
+     if let Some(path) = find_existing_binary(&bundled_dir) {
+@@ -157,8 +168,10 @@ pub fn spawn_engine(app: &tauri::AppHandle) -> Result<(), String> {
+ 
+     eprintln!("[engine] spawning {}", binary.display());
+ 
+-    let mut child = Command::new(&binary)
+-        .args(["serve-http", "--port", &port.to_string()])
++    let mut command = Command::new(&binary);
++    #[cfg(target_os = "windows")]
++    command.creation_flags(0x08000000); // CREATE_NO_WINDOW for the engine sidecar.
++    let mut child = command.args(["serve-http", "--port", &port.to_string()])
+         .stdout(Stdio::piped())
+         .stderr(Stdio::piped())
+         .spawn()
+diff --git a/studio/src/components/LiveChrome.tsx b/studio/src/components/LiveChrome.tsx
+index f475e2f..3a8dc84 100644
+--- a/studio/src/components/LiveChrome.tsx
++++ b/studio/src/components/LiveChrome.tsx
+@@ -43,6 +43,10 @@ export function LiveChrome({ children }: { children: React.ReactNode }) {
+     connect();
+   }, [connect]);
+ 
++  useEffect(() => {
++    if (status === 'connected') void useDemoStore.getState().load();
++  }, [status]);
++
+   // Chat-driven ontology mutations (onto_load, onto_apply, ...) happen over
+   // the agent sidecar, entirely outside the demo-store. Graph3D no longer
+   // queries the engine itself, so it needs telling when something changed.
+diff --git a/studio/src/components/TreeView.tsx b/studio/src/components/TreeView.tsx
+index f96743d..912a869 100644
+--- a/studio/src/components/TreeView.tsx
++++ b/studio/src/components/TreeView.tsx
+@@ -128,7 +128,7 @@ SELECT ?ind ?label ?type WHERE {
+   ?ind a ?type . ?type a owl:Class .
+   OPTIONAL { ?ind rdfs:label ?label }
+   FILTER(!isBlank(?ind) && ?type != owl:Class && ?type != rdfs:Class && ?type != owl:ObjectProperty && ?type != owl:DatatypeProperty && ?type != owl:AnnotationProperty && ?type != owl:NamedIndividual)
+-} LIMIT 500`,
++} LIMIT 2000`,
+ };
+ 
+ function countDescendants(node: TreeNode): number {
+@@ -255,7 +255,7 @@ export function TreeView({ onNodeSelect }: TreeViewProps) {
+       const seenClasses = new Set<string>();
+       for (const b of classBindings) {
+         const uri = b.c?.value; if (!uri) continue;
+-        const id = shortUri(uri);
++        const id = uri;
+         seenClasses.add(uri);
+         if (!nodeMap.has(id)) nodeMap.set(id, { label: pickLabel(lmap.get(uri) ?? [], currentLang, uri), uri, nodeType: 'Class' });
+       }
+@@ -263,7 +263,7 @@ export function TreeView({ onNodeSelect }: TreeViewProps) {
+       for (const b of parseSparqlResults(subclassText)) {
+         const subUri = b.sub?.value, parentUri = b.parent?.value;
+         if (!subUri || !parentUri) continue;
+-        const sid = shortUri(subUri), pid = shortUri(parentUri);
++        const sid = subUri, pid = parentUri;
+         if (!nodeMap.has(pid)) nodeMap.set(pid, { label: pickLabel(lmap.get(parentUri) ?? [], currentLang, parentUri), uri: parentUri, nodeType: 'Class' });
+         if (!parentToChildren.has(pid)) parentToChildren.set(pid, new Set());
+         parentToChildren.get(pid)!.add(sid);
+@@ -274,10 +274,10 @@ export function TreeView({ onNodeSelect }: TreeViewProps) {
+       const propHasParent = new Set<string>();
+       for (const b of objPropBindings) {
+         const uri = b.p?.value; if (!uri) continue;
+-        const id = shortUri(uri);
++        const id = uri;
+         if (!nodeMap.has(id)) nodeMap.set(id, { label: pickLabel(lmap.get(uri) ?? [], currentLang, uri), uri, nodeType: 'ObjectProperty' });
+         if (b.parent?.value) {
+-          const pid = shortUri(b.parent.value);
++          const pid = b.parent.value;
+           if (!propParentToChildren.has(pid)) propParentToChildren.set(pid, new Set());
+           propParentToChildren.get(pid)!.add(id);
+           propHasParent.add(id);
+@@ -286,7 +286,7 @@ export function TreeView({ onNodeSelect }: TreeViewProps) {
+ 
+       for (const b of dataPropBindings) {
+         const uri = b.p?.value; if (!uri) continue;
+-        const id = shortUri(uri);
++        const id = uri;
+         if (!nodeMap.has(id)) nodeMap.set(id, { label: pickLabel(lmap.get(uri) ?? [], currentLang, uri), uri, nodeType: 'DatatypeProperty' });
+       }
+ 
+@@ -294,7 +294,7 @@ export function TreeView({ onNodeSelect }: TreeViewProps) {
+       for (const b of individualBindings) {
+         const uri = b.ind?.value, typeUri = b.type?.value;
+         if (!uri || !typeUri) continue;
+-        const id = shortUri(uri), tid = shortUri(typeUri);
++        const id = uri, tid = typeUri;
+         if (!nodeMap.has(id)) nodeMap.set(id, { label: pickLabel(lmap.get(uri) ?? [], currentLang, uri), uri, nodeType: 'Individual' });
+         if (!indsByClass.has(tid)) indsByClass.set(tid, []);
+         indsByClass.get(tid)!.push(id);
+@@ -415,7 +415,7 @@ SELECT ?prop ?propLabel ?target ?targetLabel ?dir WHERE {
+       const bindings = parseSparqlResults(text);
+       const conns = bindings.map(b => ({
+         label: (b.dir?.value === 'in' ? '← ' : '→ ') + (b.propLabel?.value || shortUri(b.prop?.value || '')),
+-        targetId: shortUri(b.target?.value || ''),
++        targetId: b.target?.value || '',
+         targetLabel: b.targetLabel?.value || shortUri(b.target?.value || ''),
+       }));
+       setConnections(conns);
+diff --git a/studio/src/hooks/useEngine.ts b/studio/src/hooks/useEngine.ts
+index dacc544..b9f6878 100644
+--- a/studio/src/hooks/useEngine.ts
++++ b/studio/src/hooks/useEngine.ts
+@@ -25,12 +25,12 @@ export const useEngine = create<EngineStore>((set, get) => ({
+         // Use REST API for connectivity check, no MCP session needed
+         const stats = await mcp.getStats();
+         if (stats) {
+-          set({ status: 'connected' });
+           // Also init MCP session for write operations
+-          mcp.initialize().catch(() => {/* MCP writes degrade gracefully */});
++          await mcp.initialize().catch(() => {/* MCP writes degrade gracefully */});
+           // Load persisted graph from file
+           await mcp.loadGraphFromFile();
+           await get().refreshStats();
++          set({ status: 'connected' });
+           // Trigger graph canvas refresh
+           setTimeout(() => {
+             const refresh = (window as unknown as Record<string, () => void>).__refreshGraph;
+diff --git a/studio/src/lib/__tests__/live-source.test.ts b/studio/src/lib/__tests__/live-source.test.ts
+index 8d9b4ca..5d496e3 100644
+--- a/studio/src/lib/__tests__/live-source.test.ts
++++ b/studio/src/lib/__tests__/live-source.test.ts
+@@ -12,6 +12,18 @@ function sparqlJson(bindings: Record<string, string>[]): string {
+ }
+ 
+ describe('LiveSource', () => {
++  it('reads the actual released-engine response without dropping graph nodes', async () => {
++    const sparqlQuery = vi.fn(async (q: string) => JSON.stringify({
++      results: q.includes('rdfs:subClassOf ?b')
++        ? [{ a: '<https://example.org/Presa>', b: '<https://example.org/Infraestructura>' }]
++        : [{ c: '<https://example.org/Presa>', l: '"Presa con \\"comillas\\" y á"@es' }],
++      variables: [],
++    }))
++    const graph = await createLiveSource({ sparqlQuery, callTool: vi.fn() }).graph()
++    expect(graph.classes).toEqual([{ iri: 'https://example.org/Presa', label: 'Presa con "comillas" y á' }])
++    expect(graph.edges).toEqual([{ source: 'https://example.org/Presa', target: 'https://example.org/Infraestructura' }])
++  })
++
+   it('maps the class and subclass queries into a GraphView', async () => {
+     const sparqlQuery = vi.fn(async (q: string) =>
+       q.includes('rdfs:subClassOf ?b')
+diff --git a/studio/src/lib/live-source.ts b/studio/src/lib/live-source.ts
+index 10c35ac..6739b6f 100644
+--- a/studio/src/lib/live-source.ts
++++ b/studio/src/lib/live-source.ts
+@@ -12,7 +12,7 @@ PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>`
+ // The same class and subclass queries Graph3D.tsx issues (studio/src/components/Graph3D.tsx),
+ // moved here so the component reads through DemoSource instead of talking to the engine directly.
+ const CLASSES = `${PREFIXES}
+-SELECT ?c ?l WHERE {
++SELECT DISTINCT ?c ?l WHERE {
+   { ?c a owl:Class } UNION { ?c rdfs:subClassOf ?x }
+   OPTIONAL { ?c rdfs:label ?l }
+   FILTER(!isBlank(?c))
+@@ -40,10 +40,22 @@ SELECT ?thing ?doc WHERE {
+ // (demo/corpus/dcat-us/recovered-shapes.ttl). Passed as a path rather than
+ // inline content: the live source runs in the webview and has no filesystem
+ // access of its own, only the engine process does.
+-const SHAPES_PATH = 'demo/corpus/dcat-us/recovered-shapes.ttl'
++const SHAPES_PATH = import.meta.env.VITE_SHAPES_PATH || 'demo/corpus/dcat-us/recovered-shapes.ttl'
+ 
+ function rows(raw: string): Record<string, string>[] {
+   const parsed = JSON.parse(raw)
++  if (parsed.error) throw new Error(String(parsed.error))
++  // Released engines return an array of N-Triples-style terms; also accept
++  // standard SPARQL JSON for compatibility with other engine versions.
++  if (Array.isArray(parsed.results)) {
++    return parsed.results.map((row: Record<string, string>) =>
++      Object.fromEntries(Object.entries(row).map(([key, value]) => {
++        if (value.startsWith('<') && value.endsWith('>')) return [key, value.slice(1, -1)]
++        const literal = value.match(/^("(?:[^"\\]|\\.)*")(?:@[\w-]+|\^\^<[^>]*>)?$/)
++        return [key, literal ? JSON.parse(literal[1]) : value]
++      })),
++    )
++  }
+   const bindings = parsed?.results?.bindings ?? []
+   return bindings.map((b: Record<string, { value: string }>) =>
+     Object.fromEntries(Object.entries(b).map(([k, v]) => [k, v.value])),
+diff --git a/studio/src/lib/mcp-client.ts b/studio/src/lib/mcp-client.ts
+index 5a242db..c7ac50e 100644
+--- a/studio/src/lib/mcp-client.ts
++++ b/studio/src/lib/mcp-client.ts
+@@ -105,8 +105,8 @@ export async function getStats(): Promise<{ triples: number; classes: number; pr
+       properties: result.properties ?? 0,
+       individuals: result.individuals ?? 0,
+     };
+-  } catch {
+-    return { triples: 0, classes: 0, properties: 0, individuals: 0 };
++  } catch (error) {
++    throw error;
+   }
+ }
+ 
+@@ -133,7 +133,7 @@ export async function lint(turtle: string): Promise<string> {
+   return callTool('onto_lint', { input: turtle, inline: true });
+ }
+ 
+-const LIVE_FILE = '~/.open-ontologies/studio-live.ttl';
++const LIVE_FILE = import.meta.env.VITE_LIVE_FILE || '~/.open-ontologies/studio-live.ttl';
+ 
+ export async function saveGraphToFile(): Promise<void> {
+   try {

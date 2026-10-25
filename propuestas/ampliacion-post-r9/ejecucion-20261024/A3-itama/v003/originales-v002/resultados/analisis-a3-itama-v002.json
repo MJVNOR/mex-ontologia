@@ -1,0 +1,1195 @@
+{
+  "agente": "A3-itama",
+  "version": "v002",
+  "fecha_corte_documental": "2026-10-24",
+  "modelo": "opencode/deepseek-v4.1-flash-free",
+  "sustituye_a": "v001 (solo lectura, no modificada)",
+  "par": {
+    "id": "27a5c80c-514a-4170-a2e5-7ef40d818641--4d27a1c4-381d-4ce0-a663-0d3e23a93848",
+    "conjunto_a": "27a5c80c-514a-4170-a2e5-7ef40d818641",
+    "conjunto_b": "4d27a1c4-381d-4ce0-a663-0d3e23a93848",
+    "titulo_a": "Población ITAMA Internamiento",
+    "titulo_b": "Población ITAMA Externamiento",
+    "estado": "candidata_por_validar",
+    "prioridad": "revisar_primero",
+    "decision_lote": "requiere_transformacion_o_catalogo"
+  },
+  "pregunta": "¿Cómo se distribuyen los registros de internamiento y externamiento por sexo/escolaridad en un periodo común?",
+  "decision": "BLOQUEADO",
+  "correcciones_v001": [
+    {
+      "id": "C1",
+      "afirmacion_v001": "Repo: 0 copias locales *.xlsx (excluidos node_modules/.venv).",
+      "tipo": "falso",
+      "verificacion": {
+        "patron": "barrido recursivo de la raíz del repo sobre *.xlsx y *.csv (sin filtrar por carpeta)",
+        "xlsx_en_repo": 138,
+        "ejemplos": [
+          "data/territorio/fuentes/0c1554d8-71e9-46af-87de-55de8ededc88.xlsx",
+          "data/territorio/fuentes/21d44f7d-7ccc-4958-8e66-de4e808ac5cf.xlsx",
+          "data/territorio/fuentes/36d3ac85-4327-41f5-9259-538a7723a0ae.xlsx",
+          "data/territorio/fuentes/3ec220d5-dca4-43cc-ab57-796d84b8bb22.xlsx",
+          "data/territorio/fuentes/432af774-15d7-4218-9e5f-3c050871e4dd.xlsx",
+          "data/territorio/fuentes/483259a2-b688-4f4b-beae-9c7016881a63.xlsx"
+        ]
+      },
+      "correccion": "El repo contiene 138 archivos XLSX (111697276 bytes) y 96 CSV, entre ellos data/territorio/fuentes y data/integracion/fuentes. La afirmación válida, ya verificada por ID, es más estrecha: 0 de esos archivos son copia exacta de los 6 XLSX + 2 CSV del par ITAMA (SHA-256, nombre/UUID y firma de hojas)."
+    },
+    {
+      "id": "C2",
+      "afirmacion_v001": "ESCOLARIDAD: columna presente en la muestra A con 29/29 nulos.",
+      "tipo": "impreciso",
+      "verificacion": {
+        "hojas_poblacion_sin_columna_escolaridad": [
+          "POBLACION EXTERNAMIENTO",
+          "POBLACION INTERNAMIENTO"
+        ],
+        "hojas_con_escolaridad": {
+          "56dbfc19-0e71-45dc-bf50-6b5a5a92bd7c": [
+            "FEBRERO 2016"
+          ],
+          "59f89fe2-1999-47c5-b464-5f303377fc04": [
+            "FEBRERO 2016"
+          ],
+          "525d84db-d4aa-480d-9c1a-a3d4e7524ac2": [
+            "FEBRERO 2016"
+          ],
+          "cf589b78-2fee-4fb6-b7c8-434e050a058e": [],
+          "71defd43-bee9-45fa-9463-ce2cac2b9ab8": [
+            "FEBRERO 2016"
+          ],
+          "7f95e924-57cc-4f3a-8b5a-e254e7b97993": []
+        },
+        "variables_en_diccionarios": {
+          "27a5c80c-514a-4170-a2e5-7ef40d818641": [
+            "sexo",
+            "edad actual",
+            "municipio de nacimiento",
+            "delito",
+            "localidad del delito"
+          ],
+          "4d27a1c4-381d-4ce0-a663-0d3e23a93848": [
+            "sexo",
+            "edad actual",
+            "municipio de nacimiento",
+            "delito",
+            "localidad del delito",
+            "sentencia"
+          ]
+        }
+      },
+      "correccion": "La hoja 'POBLACION INTERNAMIENTO' no publica la columna ESCOLARIDAD: los 29/29 nulos provienen de un campo inexistente en esa hoja, no de una medición. ESCOLARIDAD sólo aparece en la hoja heredada 'FEBRERO 2016' (38 campos) y no figura en ninguno de los dos diccionarios."
+    },
+    {
+      "id": "C3",
+      "afirmacion_v001": "Reproducible con scripts/analisis_a3_itama.py; verificación pruebas/test_a3_itama.py; sellado congelada.json.",
+      "tipo": "no_reproducible",
+      "verificacion": {
+        "v001_archivos": [
+          "entrega.json",
+          "entrega.md",
+          "scripts/analisis_a3_itama.py"
+        ],
+        "v001_ausencias": [
+          "pruebas/test_a3_itama.py",
+          "congelada.json"
+        ],
+        "fallo_observado": "analisis_a3_itama.py resuelve ROOT con parents[3], que apunta a ejecucion-20261024/, y termina en FileNotFoundError antes de calcular la ficha."
+      },
+      "correccion": "v001 no contiene pruebas ni sello y su script no llega a ejecutarse. v002 localiza la raíz por marcador (pyproject.toml + data/catalogo/metadatos.json), incluye pruebas y genera su propio sello SHA-256."
+    },
+    {
+      "id": "C4",
+      "afirmacion_v001": "Periodo común solo a nivel de metadatos.",
+      "tipo": "precision",
+      "verificacion": {
+        "periodo_metadatos": {
+          "inicio": "2026-01-01",
+          "fin": "2026-09-30"
+        },
+        "columnas_fecha_en_hoja_poblacion": {
+          "56dbfc19-0e71-45dc-bf50-6b5a5a92bd7c": 0,
+          "59f89fe2-1999-47c5-b464-5f303377fc04": 0,
+          "525d84db-d4aa-480d-9c1a-a3d4e7524ac2": 0,
+          "cf589b78-2fee-4fb6-b7c8-434e050a058e": 0,
+          "71defd43-bee9-45fa-9463-ce2cac2b9ab8": 0,
+          "7f95e924-57cc-4f3a-8b5a-e254e7b97993": 0
+        }
+      },
+      "correccion": "Se mantiene el bloqueo de periodo, con evidencia más fuerte: las hojas de población no tienen ninguna columna de fecha, de modo que el trimestre declarado no es verificable fila a fila; los libros reutilizan plantillas con hojas históricas ('FEBRERO 2016', con fechas de 2016) y fórmulas '=HOY()'. El periodo 2026-01-01 a 2026-09-30 es documental (metadatos), no un periodo observado en los registros."
+    }
+  ],
+  "fuentes_locales": [
+    {
+      "ruta": "data/catalogo/metadatos.json",
+      "sha256": "5bd36098dbbce8c3aa51edb02b18a7d7b2ffdd21c864e93e8d4942b5986c4d19",
+      "bytes": 335143
+    },
+    {
+      "ruta": "data/portal/oportunidades-cruce.json",
+      "sha256": "40f107d5cf9c11ce937073ac2f7b5b0e3c9db8c342f7414cecb0f0744e0d0c14",
+      "bytes": 9645149
+    },
+    {
+      "ruta": "data/portal/lote-cruces/validacion-lote.json",
+      "sha256": "9031b875b1bf7873722f74847abbbce9b87201415f43788f60be1a75b50ede19",
+      "bytes": 1478239
+    },
+    {
+      "ruta": "data/semantica/cobertura.json",
+      "sha256": "1486fcae52a210c803e1173aa0ecbfddd40d1e66a3147aebb1c64fdfa39dfb31",
+      "bytes": 9811324
+    },
+    {
+      "ruta": "data/semantica/nucleo.ttl",
+      "sha256": "e570e590004ede2d20a925890e550977f4c28a1561c8621a1ff4c31ad821ac79",
+      "bytes": 1252194
+    },
+    {
+      "ruta": "data/portal/inspecciones/56dbfc19-0e71-45dc-bf50-6b5a5a92bd7c.json",
+      "sha256": "3de04a1f9eea0226500bfbd7070d069c5268f43c72a78159d1493e7d4ed7cf53",
+      "bytes": 11559
+    },
+    {
+      "ruta": "data/portal/inspecciones/59f89fe2-1999-47c5-b464-5f303377fc04.json",
+      "sha256": "a9032d2fd95eca4ec8eb51f39119c88d198506d3d7e603caa581ffd099851872",
+      "bytes": 11559
+    },
+    {
+      "ruta": "data/portal/inspecciones/525d84db-d4aa-480d-9c1a-a3d4e7524ac2.json",
+      "sha256": "10e2652f5882ca73f07fa5b4754efd7c7a06434ffd606dc99bae1c0736b54b0d",
+      "bytes": 11563
+    },
+    {
+      "ruta": "data/portal/inspecciones/cf589b78-2fee-4fb6-b7c8-434e050a058e.json",
+      "sha256": "d3daf4c06b8b833a50b8487667de90fd7c9bca8bf17dbd22e5e8958cba91271b",
+      "bytes": 1473
+    },
+    {
+      "ruta": "data/portal/inspecciones/71defd43-bee9-45fa-9463-ce2cac2b9ab8.json",
+      "sha256": "8242ca6ff2dc99466609fb09b58b90a53001f089f4c71fc03c2ee3047298a6c8",
+      "bytes": 11644
+    },
+    {
+      "ruta": "data/portal/inspecciones/7f95e924-57cc-4f3a-8b5a-e254e7b97993.json",
+      "sha256": "1c77f63bd6762bd886a34ced92325f9d35a32c2f7359c509d1dcfddd50a8bd2e",
+      "bytes": 1477
+    },
+    {
+      "ruta": "data/portal/inspecciones/07781b38-8a53-42eb-b3b7-3c1ebc6a4415.json",
+      "sha256": "c7d0fd55b30181abd74d4bd18d2ab6342fa331d1e7c65071bad449be782486da",
+      "bytes": 4003
+    },
+    {
+      "ruta": "data/portal/inspecciones/a7ee5717-b14d-439b-9508-bada58d0d185.json",
+      "sha256": "f5c11fba0ad4e82cb37b25d9d8eaf6c9aa418fdcf221167d3262d5e98aa2d53f",
+      "bytes": 4443
+    }
+  ],
+  "universo_documental": {
+    "frecuencia_declarada": "trimestral",
+    "granularidad_declarada": "trimestral",
+    "jurisdiccion": "estatal",
+    "notas_publicador": {
+      "27a5c80c-514a-4170-a2e5-7ef40d818641": "Relación de menores que han sido recluidos en ITAMA",
+      "4d27a1c4-381d-4ce0-a663-0d3e23a93848": "Relación de los internos que salieron de reclusión en ITAMA"
+    },
+    "recursos": {
+      "internamiento": [
+        {
+          "id": "56dbfc19-0e71-45dc-bf50-6b5a5a92bd7c",
+          "nombre": "Población ITAMA Internamiento primer trimestre 2026",
+          "inicio": "2026-01-01",
+          "fin": "2026-03-31",
+          "bytes": 189650,
+          "sha256": "5d5177563b0ab9ac99cd2f928595e8d0d2e3c0ae32004e52fe2d82817ce7d69a",
+          "completo_reportado": true,
+          "consultado_en_utc": "2026-10-23T06:20:53.078779+00:00",
+          "hojas": [
+            {
+              "hoja": "POBLACION INTERNAMIENTO",
+              "n_campos": 5,
+              "tiene_escolaridad": false,
+              "n_columnas_fecha": 0,
+              "campos": [
+                "SEXO",
+                "EDAD ACTUAL",
+                "MUNICIPIO DE NACIMIENTO",
+                "DELITO",
+                "LOCALIDAD DEL DELITO"
+              ]
+            },
+            {
+              "hoja": "TIEMPO LIBRE",
+              "n_campos": 14,
+              "tiene_escolaridad": false,
+              "n_columnas_fecha": 6,
+              "campos": [
+                "NO.",
+                "NOMBRE DEL ADOLESCENTE",
+                "NACIMIENTO",
+                "NO. EXP.",
+                "JURISDICCION",
+                "DELITO",
+                "FECHA DE DETENCION",
+                "FECHA DE AUTO DE SUJECION",
+                "FECHA DE INGRESO",
+                "FECHA DE SENTENCIA",
+                "TIEMPO DE SENTENCIA",
+                "FECHA DE EJECUTORIA",
+                "FECHA DE EGRESO",
+                "OBSERVACIONES"
+              ]
+            },
+            {
+              "hoja": "FEBRERO 2016",
+              "n_campos": 38,
+              "tiene_escolaridad": true,
+              "n_columnas_fecha": 4,
+              "campos": [
+                "NO.",
+                "NOMBRE DEL ADOLESCENTE",
+                "T.S",
+                "PSIC.",
+                "FECHA DE INGRESO",
+                "NO. EXP.",
+                "JURISDICCION",
+                "DELI   TO",
+                "SENTENCIA",
+                "FECHA DE SENTENCIA",
+                "CUMPLIMIENTO DE SENTENCIA",
+                "OBSERVACIONES",
+                "TIEMPO PARA ENTREGAR EVOLUCION",
+                "FECHA DE INGRESO",
+                "UBICACIÓN",
+                "NACIMIENTO",
+                "EDAD",
+                "HAORA",
+                "AHORA",
+                "INFRACCION",
+                "REITERANCIA",
+                "APODO",
+                "PANDILLA",
+                "DIRECCIÓN",
+                "COLONIA",
+                "CIUDAD",
+                "ESTADO",
+                "LUGAR \nNACIMIENTO",
+                "ESCOLARIDAD",
+                "OCUPACIÓN",
+                "TELÉFONO",
+                "EDO. CIVIL",
+                "USA \nDROGA",
+                "TIPO \nDROGAS",
+                "MTRO",
+                "REIT OTRO CENTRO",
+                "FECHA DE INGRESO A BARANDILLA",
+                "FUERO COMUN / FEDERAL"
+              ]
+            },
+            {
+              "hoja": "DIVERSO PROCESO",
+              "n_campos": 18,
+              "tiene_escolaridad": false,
+              "n_columnas_fecha": 6,
+              "campos": [
+                "Consecutivo",
+                "NOMBRE DEL ADOLESCENTE",
+                "NACIMIENTO",
+                "FECHA ACTUAL \"=HOY()\"",
+                "EDAD ACTUAL \"=ENTERO((D3-C3)/365.5)\"",
+                "NO. EXP./CADOL",
+                "DELITO",
+                "JURISDICCION",
+                "FUERO",
+                "FECHA DE DETENCION",
+                "FECHA DE INGRESO",
+                "FECHA DE AUTO DE VINCULACIÓN",
+                "FECHA DE SENTENCIA",
+                "TIEMPO DE SENTENCIA",
+                "FECHA DE EJECUTORIA",
+                "CEA",
+                "CUMPLIMIENTO",
+                "OBSERVACIONES"
+              ]
+            },
+            {
+              "hoja": "SENTENCIAS",
+              "n_campos": 14,
+              "tiene_escolaridad": false,
+              "n_columnas_fecha": 5,
+              "campos": [
+                "NO.",
+                "NOMBRE DEL ADOLESCENTE",
+                "NACIMIENTO",
+                "NO. EXP.",
+                "JURISDICCION",
+                "DELITO",
+                "FECHA DE DETENCION",
+                "FECHA DE AUTO DE VINCULACION.POSESION DE CARGADORES DE ARMA DE FUEGO DE USO EXCLUSIVO DEL EJERCITO, ARMADA,   FUERZA AEREA. HOMICIDIO EN GRADO DE TENTATIVA, PORTACION DE ARMA DE FUEGO SINLICENCIA, CONTRA LA SALUD EN MODALIDAD DE NARCOMENUDEO EN LA HIPOTESIS DE POSESION DE CANNABIS SATIVA L(MARIHUANA) Y CLOHIDRATO DE COCAINA, DELITOS CONTRA SERVIDORES PUBLICOS Y PANDILLERISMO",
+                "FECHA DE INGRESO",
+                "FECHA DE SENTENCIA",
+                "TIEMPO DE SENTENCIA",
+                "FECHA DE EJECUTORIA",
+                "EGRESO",
+                "OBSERVACIONES"
+              ]
+            },
+            {
+              "hoja": "ORAL",
+              "n_campos": 14,
+              "tiene_escolaridad": false,
+              "n_columnas_fecha": 6,
+              "campos": [
+                "NO.",
+                "NOMBRE DEL ADOLESCENTE",
+                "NACIMIENTO",
+                "NO. EXP.",
+                "JURISDICCION",
+                "DELITO",
+                "FECHA DE DETENCION",
+                "FECHA DE AUTO DE SUJECION",
+                "FECHA DE INGRESO",
+                "FECHA DE SENTENCIA",
+                "TIEMPO DE SENTENCIA",
+                "FECHA DE EJECUTORIA",
+                "FECHA DE EGRESO",
+                "OBSERVACIONES"
+              ]
+            }
+          ]
+        },
+        {
+          "id": "59f89fe2-1999-47c5-b464-5f303377fc04",
+          "nombre": "Población ITAMA Internamiento segundo trimestre 2026",
+          "inicio": "2026-04-01",
+          "fin": "2026-06-30",
+          "bytes": 189281,
+          "sha256": "fcba1d02f9c6a3468d1e10bbcdabbf1919c7a5ec415e3292e0b005fb79e95149",
+          "completo_reportado": true,
+          "consultado_en_utc": "2026-10-23T06:20:53.185899+00:00",
+          "hojas": [
+            {
+              "hoja": "POBLACION INTERNAMIENTO",
+              "n_campos": 5,
+              "tiene_escolaridad": false,
+              "n_columnas_fecha": 0,
+              "campos": [
+                "SEXO",
+                "EDAD ACTUAL",
+                "MUNICIPIO DE NACIMIENTO",
+                "DELITO",
+                "LOCALIDAD DEL DELITO"
+              ]
+            },
+            {
+              "hoja": "TIEMPO LIBRE",
+              "n_campos": 14,
+              "tiene_escolaridad": false,
+              "n_columnas_fecha": 6,
+              "campos": [
+                "NO.",
+                "NOMBRE DEL ADOLESCENTE",
+                "NACIMIENTO",
+                "NO. EXP.",
+                "JURISDICCION",
+                "DELITO",
+                "FECHA DE DETENCION",
+                "FECHA DE AUTO DE SUJECION",
+                "FECHA DE INGRESO",
+                "FECHA DE SENTENCIA",
+                "TIEMPO DE SENTENCIA",
+                "FECHA DE EJECUTORIA",
+                "FECHA DE EGRESO",
+                "OBSERVACIONES"
+              ]
+            },
+            {
+              "hoja": "FEBRERO 2016",
+              "n_campos": 38,
+              "tiene_escolaridad": true,
+              "n_columnas_fecha": 4,
+              "campos": [
+                "NO.",
+                "NOMBRE DEL ADOLESCENTE",
+                "T.S",
+                "PSIC.",
+                "FECHA DE INGRESO",
+                "NO. EXP.",
+                "JURISDICCION",
+                "DELI   TO",
+                "SENTENCIA",
+                "FECHA DE SENTENCIA",
+                "CUMPLIMIENTO DE SENTENCIA",
+                "OBSERVACIONES",
+                "TIEMPO PARA ENTREGAR EVOLUCION",
+                "FECHA DE INGRESO",
+                "UBICACIÓN",
+                "NACIMIENTO",
+                "EDAD",
+                "HAORA",
+                "AHORA",
+                "INFRACCION",
+                "REITERANCIA",
+                "APODO",
+                "PANDILLA",
+                "DIRECCIÓN",
+                "COLONIA",
+                "CIUDAD",
+                "ESTADO",
+                "LUGAR \nNACIMIENTO",
+                "ESCOLARIDAD",
+                "OCUPACIÓN",
+                "TELÉFONO",
+                "EDO. CIVIL",
+                "USA \nDROGA",
+                "TIPO \nDROGAS",
+                "MTRO",
+                "REIT OTRO CENTRO",
+                "FECHA DE INGRESO A BARANDILLA",
+                "FUERO COMUN / FEDERAL"
+              ]
+            },
+            {
+              "hoja": "DIVERSO PROCESO",
+              "n_campos": 18,
+              "tiene_escolaridad": false,
+              "n_columnas_fecha": 6,
+              "campos": [
+                "Consecutivo",
+                "NOMBRE DEL ADOLESCENTE",
+                "NACIMIENTO",
+                "FECHA ACTUAL \"=HOY()\"",
+                "EDAD ACTUAL \"=ENTERO((D3-C3)/365.5)\"",
+                "NO. EXP./CADOL",
+                "DELITO",
+                "JURISDICCION",
+                "FUERO",
+                "FECHA DE DETENCION",
+                "FECHA DE INGRESO",
+                "FECHA DE AUTO DE VINCULACIÓN",
+                "FECHA DE SENTENCIA",
+                "TIEMPO DE SENTENCIA",
+                "FECHA DE EJECUTORIA",
+                "CEA",
+                "CUMPLIMIENTO",
+                "OBSERVACIONES"
+              ]
+            },
+            {
+              "hoja": "SENTENCIAS",
+              "n_campos": 14,
+              "tiene_escolaridad": false,
+              "n_columnas_fecha": 5,
+              "campos": [
+                "NO.",
+                "NOMBRE DEL ADOLESCENTE",
+                "NACIMIENTO",
+                "NO. EXP.",
+                "JURISDICCION",
+                "DELITO",
+                "FECHA DE DETENCION",
+                "FECHA DE AUTO DE VINCULACION.POSESION DE CARGADORES DE ARMA DE FUEGO DE USO EXCLUSIVO DEL EJERCITO, ARMADA,   FUERZA AEREA. HOMICIDIO EN GRADO DE TENTATIVA, PORTACION DE ARMA DE FUEGO SINLICENCIA, CONTRA LA SALUD EN MODALIDAD DE NARCOMENUDEO EN LA HIPOTESIS DE POSESION DE CANNABIS SATIVA L(MARIHUANA) Y CLOHIDRATO DE COCAINA, DELITOS CONTRA SERVIDORES PUBLICOS Y PANDILLERISMO",
+                "FECHA DE INGRESO",
+                "FECHA DE SENTENCIA",
+                "TIEMPO DE SENTENCIA",
+                "FECHA DE EJECUTORIA",
+                "EGRESO",
+                "OBSERVACIONES"
+              ]
+            },
+            {
+              "hoja": "ORAL",
+              "n_campos": 14,
+              "tiene_escolaridad": false,
+              "n_columnas_fecha": 6,
+              "campos": [
+                "NO.",
+                "NOMBRE DEL ADOLESCENTE",
+                "NACIMIENTO",
+                "NO. EXP.",
+                "JURISDICCION",
+                "DELITO",
+                "FECHA DE DETENCION",
+                "FECHA DE AUTO DE SUJECION",
+                "FECHA DE INGRESO",
+                "FECHA DE SENTENCIA",
+                "TIEMPO DE SENTENCIA",
+                "FECHA DE EJECUTORIA",
+                "FECHA DE EGRESO",
+                "OBSERVACIONES"
+              ]
+            }
+          ]
+        },
+        {
+          "id": "525d84db-d4aa-480d-9c1a-a3d4e7524ac2",
+          "nombre": "Población ITAMA Internamiento tercer trimestre 2026",
+          "inicio": "2026-07-01",
+          "fin": "2026-09-30",
+          "bytes": 189076,
+          "sha256": "2c49a18e3d6778be3076a4566fbd087107a162fae8e4a9a39905f5b019939400",
+          "completo_reportado": true,
+          "consultado_en_utc": "2026-10-23T06:20:53.352295+00:00",
+          "hojas": [
+            {
+              "hoja": "POBLACION INTERNAMIENTO",
+              "n_campos": 5,
+              "tiene_escolaridad": false,
+              "n_columnas_fecha": 0,
+              "campos": [
+                "SEXO",
+                "EDAD ACTUAL",
+                "MUNICIPIO DE NACIMIENTO",
+                "DELITO",
+                "LOCALIDAD DEL DELITO"
+              ]
+            },
+            {
+              "hoja": "TIEMPO LIBRE",
+              "n_campos": 14,
+              "tiene_escolaridad": false,
+              "n_columnas_fecha": 6,
+              "campos": [
+                "NO.",
+                "NOMBRE DEL ADOLESCENTE",
+                "NACIMIENTO",
+                "NO. EXP.",
+                "JURISDICCION",
+                "DELITO",
+                "FECHA DE DETENCION",
+                "FECHA DE AUTO DE SUJECION",
+                "FECHA DE INGRESO",
+                "FECHA DE SENTENCIA",
+                "TIEMPO DE SENTENCIA",
+                "FECHA DE EJECUTORIA",
+                "FECHA DE EGRESO",
+                "OBSERVACIONES"
+              ]
+            },
+            {
+              "hoja": "FEBRERO 2016",
+              "n_campos": 38,
+              "tiene_escolaridad": true,
+              "n_columnas_fecha": 4,
+              "campos": [
+                "NO.",
+                "NOMBRE DEL ADOLESCENTE",
+                "T.S",
+                "PSIC.",
+                "FECHA DE INGRESO",
+                "NO. EXP.",
+                "JURISDICCION",
+                "DELI   TO",
+                "SENTENCIA",
+                "FECHA DE SENTENCIA",
+                "CUMPLIMIENTO DE SENTENCIA",
+                "OBSERVACIONES",
+                "TIEMPO PARA ENTREGAR EVOLUCION",
+                "FECHA DE INGRESO",
+                "UBICACIÓN",
+                "NACIMIENTO",
+                "EDAD",
+                "HAORA",
+                "AHORA",
+                "INFRACCION",
+                "REITERANCIA",
+                "APODO",
+                "PANDILLA",
+                "DIRECCIÓN",
+                "COLONIA",
+                "CIUDAD",
+                "ESTADO",
+                "LUGAR \nNACIMIENTO",
+                "ESCOLARIDAD",
+                "OCUPACIÓN",
+                "TELÉFONO",
+                "EDO. CIVIL",
+                "USA \nDROGA",
+                "TIPO \nDROGAS",
+                "MTRO",
+                "REIT OTRO CENTRO",
+                "FECHA DE INGRESO A BARANDILLA",
+                "FUERO COMUN / FEDERAL"
+              ]
+            },
+            {
+              "hoja": "DIVERSO PROCESO",
+              "n_campos": 18,
+              "tiene_escolaridad": false,
+              "n_columnas_fecha": 6,
+              "campos": [
+                "Consecutivo",
+                "NOMBRE DEL ADOLESCENTE",
+                "NACIMIENTO",
+                "FECHA ACTUAL \"=HOY()\"",
+                "EDAD ACTUAL \"=ENTERO((D3-C3)/365.5)\"",
+                "NO. EXP./CADOL",
+                "DELITO",
+                "JURISDICCION",
+                "FUERO",
+                "FECHA DE DETENCION",
+                "FECHA DE INGRESO",
+                "FECHA DE AUTO DE VINCULACIÓN",
+                "FECHA DE SENTENCIA",
+                "TIEMPO DE SENTENCIA",
+                "FECHA DE EJECUTORIA",
+                "CEA",
+                "CUMPLIMIENTO",
+                "OBSERVACIONES"
+              ]
+            },
+            {
+              "hoja": "SENTENCIAS",
+              "n_campos": 14,
+              "tiene_escolaridad": false,
+              "n_columnas_fecha": 5,
+              "campos": [
+                "NO.",
+                "NOMBRE DEL ADOLESCENTE",
+                "NACIMIENTO",
+                "NO. EXP.",
+                "JURISDICCION",
+                "DELITO",
+                "FECHA DE DETENCION",
+                "FECHA DE AUTO DE VINCULACION.POSESION DE CARGADORES DE ARMA DE FUEGO DE USO EXCLUSIVO DEL EJERCITO, ARMADA,   FUERZA AEREA. HOMICIDIO EN GRADO DE TENTATIVA, PORTACION DE ARMA DE FUEGO SINLICENCIA, CONTRA LA SALUD EN MODALIDAD DE NARCOMENUDEO EN LA HIPOTESIS DE POSESION DE CANNABIS SATIVA L(MARIHUANA) Y CLOHIDRATO DE COCAINA, DELITOS CONTRA SERVIDORES PUBLICOS Y PANDILLERISMO",
+                "FECHA DE INGRESO",
+                "FECHA DE SENTENCIA",
+                "TIEMPO DE SENTENCIA",
+                "FECHA DE EJECUTORIA",
+                "EGRESO",
+                "OBSERVACIONES"
+              ]
+            },
+            {
+              "hoja": "ORAL",
+              "n_campos": 14,
+              "tiene_escolaridad": false,
+              "n_columnas_fecha": 6,
+              "campos": [
+                "NO.",
+                "NOMBRE DEL ADOLESCENTE",
+                "NACIMIENTO",
+                "NO. EXP.",
+                "JURISDICCION",
+                "DELITO",
+                "FECHA DE DETENCION",
+                "FECHA DE AUTO DE SUJECION",
+                "FECHA DE INGRESO",
+                "FECHA DE SENTENCIA",
+                "TIEMPO DE SENTENCIA",
+                "FECHA DE EJECUTORIA",
+                "FECHA DE EGRESO",
+                "OBSERVACIONES"
+              ]
+            }
+          ]
+        }
+      ],
+      "externamiento": [
+        {
+          "id": "cf589b78-2fee-4fb6-b7c8-434e050a058e",
+          "nombre": "Población ITAMA Externamiento primer trimestre 2026",
+          "inicio": "2026-01-01",
+          "fin": "2026-03-31",
+          "bytes": 72829,
+          "sha256": "d83143384cb1883f486faf02db667f4292a9ab094dbe2251cfa01c708ab3e59e",
+          "completo_reportado": true,
+          "consultado_en_utc": "2026-10-23T06:21:12.688538+00:00",
+          "hojas": [
+            {
+              "hoja": "POBLACION EXTERNAMIENTO",
+              "n_campos": 6,
+              "tiene_escolaridad": false,
+              "n_columnas_fecha": 0,
+              "campos": [
+                "SEXO",
+                "EDAD ACTUAL",
+                "MUNICIPIO DE NACIMIENTO",
+                "DELITO",
+                "LOCALIDAD DEL DELITO",
+                "TIEMPO DE SENTENCIA"
+              ]
+            }
+          ]
+        },
+        {
+          "id": "71defd43-bee9-45fa-9463-ce2cac2b9ab8",
+          "nombre": "Población ITAMA Externamiento segundo trimestre 2026",
+          "inicio": "2026-04-01",
+          "fin": "2026-06-30",
+          "bytes": 143122,
+          "sha256": "4e6195fd8271bee2f56fbeaeca467269b9f3b521709abd3ac26ca6fbf03760f6",
+          "completo_reportado": true,
+          "consultado_en_utc": "2026-10-23T06:21:13.020482+00:00",
+          "hojas": [
+            {
+              "hoja": "POBLACION EXTERNAMIENTO",
+              "n_campos": 6,
+              "tiene_escolaridad": false,
+              "n_columnas_fecha": 0,
+              "campos": [
+                "SEXO",
+                "EDAD ACTUAL",
+                "MUNICIPIO DE NACIMIENTO",
+                "DELITO",
+                "LOCALIDAD DEL DELITO",
+                "TIEMPO DE SENTENCIA"
+              ]
+            },
+            {
+              "hoja": "TIEMPO LIBRE",
+              "n_campos": 14,
+              "tiene_escolaridad": false,
+              "n_columnas_fecha": 6,
+              "campos": [
+                "NO.",
+                "NOMBRE DEL ADOLESCENTE",
+                "NACIMIENTO",
+                "NO. EXP.",
+                "JURISDICCION",
+                "DELITO",
+                "FECHA DE DETENCION",
+                "FECHA DE AUTO DE SUJECION",
+                "FECHA DE INGRESO",
+                "FECHA DE SENTENCIA",
+                "TIEMPO DE SENTENCIA",
+                "FECHA DE EJECUTORIA",
+                "FECHA DE EGRESO",
+                "OBSERVACIONES"
+              ]
+            },
+            {
+              "hoja": "FEBRERO 2016",
+              "n_campos": 38,
+              "tiene_escolaridad": true,
+              "n_columnas_fecha": 4,
+              "campos": [
+                "NO.",
+                "NOMBRE DEL ADOLESCENTE",
+                "T.S",
+                "PSIC.",
+                "FECHA DE INGRESO",
+                "NO. EXP.",
+                "JURISDICCION",
+                "DELI   TO",
+                "SENTENCIA",
+                "FECHA DE SENTENCIA",
+                "CUMPLIMIENTO DE SENTENCIA",
+                "OBSERVACIONES",
+                "TIEMPO PARA ENTREGAR EVOLUCION",
+                "FECHA DE INGRESO",
+                "UBICACIÓN",
+                "NACIMIENTO",
+                "EDAD",
+                "HAORA",
+                "AHORA",
+                "INFRACCION",
+                "REITERANCIA",
+                "APODO",
+                "PANDILLA",
+                "DIRECCIÓN",
+                "COLONIA",
+                "CIUDAD",
+                "ESTADO",
+                "LUGAR \nNACIMIENTO",
+                "ESCOLARIDAD",
+                "OCUPACIÓN",
+                "TELÉFONO",
+                "EDO. CIVIL",
+                "USA \nDROGA",
+                "TIPO \nDROGAS",
+                "MTRO",
+                "REIT OTRO CENTRO",
+                "FECHA DE INGRESO A BARANDILLA",
+                "FUERO COMUN / FEDERAL"
+              ]
+            },
+            {
+              "hoja": "DIVERSO PROCESO",
+              "n_campos": 18,
+              "tiene_escolaridad": false,
+              "n_columnas_fecha": 6,
+              "campos": [
+                "Consecutivo",
+                "NOMBRE DEL ADOLESCENTE",
+                "NACIMIENTO",
+                "FECHA ACTUAL \"=HOY()\"",
+                "EDAD ACTUAL \"=ENTERO((D3-C3)/365.5)\"",
+                "NO. EXP./CADOL",
+                "DELITO",
+                "JURISDICCION",
+                "FUERO",
+                "FECHA DE DETENCION",
+                "FECHA DE INGRESO",
+                "FECHA DE AUTO DE VINCULACIÓN",
+                "FECHA DE SENTENCIA",
+                "TIEMPO DE SENTENCIA",
+                "FECHA DE EJECUTORIA",
+                "CEA",
+                "CUMPLIMIENTO",
+                "OBSERVACIONES"
+              ]
+            },
+            {
+              "hoja": "SENTENCIAS",
+              "n_campos": 14,
+              "tiene_escolaridad": false,
+              "n_columnas_fecha": 5,
+              "campos": [
+                "NO.",
+                "NOMBRE DEL ADOLESCENTE",
+                "NACIMIENTO",
+                "NO. EXP.",
+                "JURISDICCION",
+                "DELITO",
+                "FECHA DE DETENCION",
+                "FECHA DE AUTO DE VINCULACION.POSESION DE CARGADORES DE ARMA DE FUEGO DE USO EXCLUSIVO DEL EJERCITO, ARMADA,   FUERZA AEREA. HOMICIDIO EN GRADO DE TENTATIVA, PORTACION DE ARMA DE FUEGO SINLICENCIA, CONTRA LA SALUD EN MODALIDAD DE NARCOMENUDEO EN LA HIPOTESIS DE POSESION DE CANNABIS SATIVA L(MARIHUANA) Y CLOHIDRATO DE COCAINA, DELITOS CONTRA SERVIDORES PUBLICOS Y PANDILLERISMO",
+                "FECHA DE INGRESO",
+                "FECHA DE SENTENCIA",
+                "TIEMPO DE SENTENCIA",
+                "FECHA DE EJECUTORIA",
+                "EGRESO",
+                "OBSERVACIONES"
+              ]
+            },
+            {
+              "hoja": "ORAL",
+              "n_campos": 14,
+              "tiene_escolaridad": false,
+              "n_columnas_fecha": 6,
+              "campos": [
+                "NO.",
+                "NOMBRE DEL ADOLESCENTE",
+                "NACIMIENTO",
+                "NO. EXP.",
+                "JURISDICCION",
+                "DELITO",
+                "FECHA DE DETENCION",
+                "FECHA DE AUTO DE SUJECION",
+                "FECHA DE INGRESO",
+                "FECHA DE SENTENCIA",
+                "TIEMPO DE SENTENCIA",
+                "FECHA DE EJECUTORIA",
+                "FECHA DE EGRESO",
+                "OBSERVACIONES"
+              ]
+            }
+          ]
+        },
+        {
+          "id": "7f95e924-57cc-4f3a-8b5a-e254e7b97993",
+          "nombre": "Población ITAMA Externamiento tercer trimestre 2026",
+          "inicio": "2026-07-01",
+          "fin": "2026-09-30",
+          "bytes": 72409,
+          "sha256": "8b8a0719c2c5795fcabc71aaab534f0d0aed35136c8f39a1b492ac3a44fd59eb",
+          "completo_reportado": true,
+          "consultado_en_utc": "2026-10-23T06:21:13.173980+00:00",
+          "hojas": [
+            {
+              "hoja": "POBLACION EXTERNAMIENTO",
+              "n_campos": 6,
+              "tiene_escolaridad": false,
+              "n_columnas_fecha": 0,
+              "campos": [
+                "SEXO",
+                "EDAD ACTUAL",
+                "MUNICIPIO DE NACIMIENTO",
+                "DELITO",
+                "LOCALIDAD DEL DELITO",
+                "TIEMPO DE SENTENCIA"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    "diccionarios": {
+      "27a5c80c-514a-4170-a2e5-7ef40d818641": {
+        "id": "07781b38-8a53-42eb-b3b7-3c1ebc6a4415",
+        "sha256": "08f7d20558a57e4f057d352ddaafaa172944f5990c5cb2975099e31f072e8663",
+        "bytes": 570,
+        "variables": [
+          "sexo",
+          "edad actual",
+          "municipio de nacimiento",
+          "delito",
+          "localidad del delito"
+        ],
+        "identificadores": [
+          "",
+          "",
+          "",
+          "",
+          ""
+        ],
+        "unidad_de_medida": {
+          "sexo": "",
+          "edad actual": "",
+          "municipio de nacimiento": "",
+          "delito": "",
+          "localidad del delito": ""
+        },
+        "tipo_de_dato": {
+          "sexo": "texto",
+          "edad actual": "numero",
+          "municipio de nacimiento": "texto",
+          "delito": "texto",
+          "localidad del delito": "texto"
+        },
+        "ejemplo": {
+          "sexo": "hombre",
+          "edad actual": "17",
+          "municipio de nacimiento": "obregón, sonora",
+          "delito": "secuestro agravado",
+          "localidad del delito": "navojoa, sonora"
+        }
+      },
+      "4d27a1c4-381d-4ce0-a663-0d3e23a93848": {
+        "id": "a7ee5717-b14d-439b-9508-bada58d0d185",
+        "sha256": "5f79458cd80bf24fcfd7cf5408666bbd1b9fd0839133ba92822aad0bc928e722",
+        "bytes": 655,
+        "variables": [
+          "sexo",
+          "edad actual",
+          "municipio de nacimiento",
+          "delito",
+          "localidad del delito",
+          "sentencia"
+        ],
+        "identificadores": [
+          "",
+          "",
+          "",
+          "",
+          "",
+          ""
+        ],
+        "unidad_de_medida": {
+          "sexo": "",
+          "edad actual": "",
+          "municipio de nacimiento": "",
+          "delito": "",
+          "localidad del delito": "",
+          "sentencia": ""
+        },
+        "tipo_de_dato": {
+          "sexo": "texto",
+          "edad actual": "numero",
+          "municipio de nacimiento": "texto",
+          "delito": "texto",
+          "localidad del delito": "texto",
+          "sentencia": "numero"
+        },
+        "ejemplo": {
+          "sexo": "hombre",
+          "edad actual": "15",
+          "municipio de nacimiento": "hermosillo, sonora",
+          "delito": "abuso sexual",
+          "localidad del delito": "hermosillo, sonora",
+          "sentencia": "1 año 8 meses"
+        }
+      }
+    },
+    "periodo_metadatos": {
+      "inicio": "2026-01-01",
+      "fin": "2026-09-30"
+    },
+    "periodo_filas": {
+      "estado": "no_verificable",
+      "razon": "las hojas de población no publican columna de fecha; las hojas operativas conservan fechas históricas y fórmulas =HOY()"
+    }
+  },
+  "ficha_8_ejes": {
+    "claves": {
+      "estado": "sin_clave_documentada",
+      "evidencia": "Los diccionarios de ambos conjuntos dejan vacío el campo 'Identificadores' en las 5/6 variables declaradas; las hojas de población sólo publican atributos (sexo, edad, municipio de nacimiento, delito, localidad del delito). Ninguna columna identificadora permite seguimiento de registro ni unión entre trimestres."
+    },
+    "grano": {
+      "estado": "no_definido",
+      "evidencia": "Las notas del publicador describen 'relación de menores recluidos' / 'internos que salieron de reclusión', lo que sugiere fila=persona, pero ningún diccionario ni metadato define el grano. Los libros mezclan hojas de población con hojas operativas (TIEMPO LIBRE, DIVERSO PROCESO, SENTENCIAS, ORAL) y una heredada (FEBRERO 2016) con 38 campos."
+    },
+    "unicidad": {
+      "estado": "no_acreditada",
+      "evidencia": "Sin columna identificadora y sin copia local completa de los libros, no hay forma de comprobar duplicados. Las muestras (29 y 16 filas) no acreditan unicidad del archivo entero."
+    },
+    "cardinalidad": {
+      "estado": "no_acreditada",
+      "evidencia": "Ninguno de los 6 recursos aparece en lote.agregados_recursos, por lo que no existe total_filas documentado. Se conocen 29 y 16 filas de dos muestras; la consulta de externamiento usó límite 29 y devolvió 16, dato compatible con hoja agotada pero que no cuenta el resto del libro."
+    },
+    "poblacion": {
+      "estado": "distinta_y_no_sumable",
+      "evidencia": "Internamiento = personas recluidas; externamiento = personas que salieron de reclusión (notas del publicador y conceptos separados en núcleo). Una misma persona puede aparecer en ambos universos; sin person matching —prohibido— no se unen ni se suman."
+    },
+    "periodo": {
+      "estado": "documental_2026_filas_no_verificado",
+      "evidencia": "Metadatos: frecuencia trimestral, tres recursos por conjunto con T1/T2/T3 2026; intersección 2026-01-01 a 2026-09-30. Filas: las hojas de población no tienen columnas de fecha; las hojas operativas y la heredada 'FEBRERO 2016' conservan fechas y fórmulas =HOY(). El periodo 2026 no se puede atribuir a los registros."
+    },
+    "unidades": {
+      "estado": "no_declaradas",
+      "evidencia": "Los diccionarios dejan 'Unidad de medida' vacía en todas las variables. 'edad actual' es numérica sin unidad; 'sentencia' está tipada como número pero su ejemplo es texto ('1 año 8 meses'), de modo que ni siquiera el tipo es consistente. No hay medida agregable."
+    },
+    "cobertura_datos": {
+      "estado": "insuficiente_para_distribucion",
+      "evidencia": "SEXO no tiene catálogo de valores: la muestra A (29 filas) sólo contiene HOMBRE y la B (16) HOMBRE/MUJER; COLONIA, ESTADO y JURISDICCION salen 100% nulas en la muestra A. ESCOLARIDAD no se publica en las hojas de población, no está en los diccionarios y no tiene concepto ITAMA en núcleo."
+    }
+  },
+  "escolaridad": {
+    "estado": "fuentes_insuficientes",
+    "publicada_en_hoja_de_poblacion": false,
+    "hojas_poblacion_sin_columna": [
+      "POBLACION EXTERNAMIENTO",
+      "POBLACION INTERNAMIENTO"
+    ],
+    "presente_solo_en_hoja_heredada": {
+      "56dbfc19-0e71-45dc-bf50-6b5a5a92bd7c": [
+        "FEBRERO 2016"
+      ],
+      "59f89fe2-1999-47c5-b464-5f303377fc04": [
+        "FEBRERO 2016"
+      ],
+      "525d84db-d4aa-480d-9c1a-a3d4e7524ac2": [
+        "FEBRERO 2016"
+      ],
+      "cf589b78-2fee-4fb6-b7c8-434e050a058e": [],
+      "71defd43-bee9-45fa-9463-ce2cac2b9ab8": [
+        "FEBRERO 2016"
+      ],
+      "7f95e924-57cc-4f3a-8b5a-e254e7b97993": []
+    },
+    "en_diccionarios": {
+      "27a5c80c-514a-4170-a2e5-7ef40d818641": false,
+      "4d27a1c4-381d-4ce0-a663-0d3e23a93848": false
+    },
+    "concepto_itama_en_nucleo": false,
+    "conceptos_escolaridad_en_nucleo": [
+      "escolaridad-beneficiado-mano",
+      "escolaridad-difunto",
+      "escolaridad-madre"
+    ],
+    "catalogo_externo_no_aplicable": {
+      "ruta": "propuestas/cierre-brechas-post-r6/significados-salud/evidencia/cat_defun_2022/catalogos/escolaridad.csv",
+      "motivo": "catálogo de defunciones 2022; pertenece a otro universo y no hay documento del publicador que lo vincule a ITAMA"
+    },
+    "conclusion": "No hay fuente suficiente para medir escolaridad en ITAMA: la columna no existe en la hoja de población, los diccionarios no la definen y núcleo no tiene concepto ITAMA. El 29/29 nulo de v001 era ausencia de columna, no dato faltante medido."
+  },
+  "analisis_agregado": {
+    "estado": "BLOQUEADO",
+    "calculado": false,
+    "distribuciones_publicadas": [],
+    "motivos": [
+      "Sin copias locales completas de los 6 XLSX no hay conteo de filas ni de categorías.",
+      "Sin catálogo de valores de sexo ni definición de escolaridad no hay agregación válida.",
+      "Grano, unidad y cardinalidad no acreditados: no hay medida que agregar.",
+      "Poblaciones distintas (internadas / externadas): no se suman ni se unen personas."
+    ],
+    "unicos_conteos_disponibles": {
+      "naturaleza": "diagnóstico de muestra del lote local, no del archivo",
+      "internamiento_t2_filas": 29,
+      "externamiento_t1_filas": 16,
+      "nota": "No se extrapolan, no se convierten en porcentajes y no se comparan entre sí."
+    },
+    "que_faltaria": [
+      "Copias locales completas de los 6 XLSX (o SHA-256 verificable de cada archivo íntegro).",
+      "Catálogo de valores de sexo y de escolaridad del publicador, con definición de nulos.",
+      "Definición de grano (fila = persona o registro) y de unidad de las medidas.",
+      "Conteo total de filas por recurso y por hoja, con regla de deduplicación aceptada."
+    ]
+  },
+  "inventario_copias": {
+    "patron": "barrido recursivo de la raíz del repo sobre *.xlsx y *.csv (sin filtrar por carpeta)",
+    "exclusiones": {
+      ".git": 0,
+      "node_modules": "no excluido",
+      ".venv": "no excluido"
+    },
+    "xlsx_total": 138,
+    "csv_total": 96,
+    "xlsx_bytes_total": 111697276,
+    "coincidencias_exactas_itama": [],
+    "busqueda_por_nombre": {
+      "56dbfc19-0e71-45dc-bf50-6b5a5a92bd7c": [],
+      "59f89fe2-1999-47c5-b464-5f303377fc04": [],
+      "525d84db-d4aa-480d-9c1a-a3d4e7524ac2": [],
+      "cf589b78-2fee-4fb6-b7c8-434e050a058e": [],
+      "71defd43-bee9-45fa-9463-ce2cac2b9ab8": [],
+      "7f95e924-57cc-4f3a-8b5a-e254e7b97993": [],
+      "07781b38-8a53-42eb-b3b7-3c1ebc6a4415": [],
+      "a7ee5717-b14d-439b-9508-bada58d0d185": [],
+      "itama": [],
+      "internamiento": [],
+      "externamiento": []
+    },
+    "firma_contenido_hojas_itama": [],
+    "ejemplos_xlsx_existentes_fuera_de_itama": [
+      "data/territorio/fuentes/0c1554d8-71e9-46af-87de-55de8ededc88.xlsx",
+      "data/territorio/fuentes/21d44f7d-7ccc-4958-8e66-de4e808ac5cf.xlsx",
+      "data/territorio/fuentes/36d3ac85-4327-41f5-9259-538a7723a0ae.xlsx",
+      "data/territorio/fuentes/3ec220d5-dca4-43cc-ab57-796d84b8bb22.xlsx",
+      "data/territorio/fuentes/432af774-15d7-4218-9e5f-3c050871e4dd.xlsx",
+      "data/territorio/fuentes/483259a2-b688-4f4b-beae-9c7016881a63.xlsx"
+    ],
+    "conclusion": "El repo SÍ contiene hojas de cálculo: 138 XLSX y 96 CSV. Ninguna es copia exacta de los 8 recursos ITAMA del par: 0 coincidencias por SHA-256, 0 por nombre/UUID y 0 por firma de hojas del libro."
+  },
+  "inventario_copias_por_carpeta": {
+    "propuestas/plan-paralelo-brechas-sin-gemma": 69,
+    "propuestas/cierre-brechas-post-r6": 56,
+    "data/integracion": 35,
+    "propuestas/agente-5-aplicacion-territorial": 25,
+    "data/integracion-ronda-7": 15,
+    "data/territorio": 15,
+    "propuestas/ronda-3": 5,
+    "propuestas/agente-1-catalogos": 4,
+    "propuestas/agente-2-localidades": 4,
+    "propuestas/plan-tras-r8": 3,
+    "propuestas/investigacion-post-r6": 2,
+    "propuestas/pendientes-muse-r6": 1
+  },
+  "v001": {
+    "estado": "solo_lectura_no_modificado",
+    "archivos": [
+      {
+        "ruta": "entrega.json",
+        "sha256": "754bae47487e6424a3dda2484229073a46311c42f92627f34acd26763f2fe9f1",
+        "bytes": 8868
+      },
+      {
+        "ruta": "entrega.md",
+        "sha256": "f10261d2201223e7087bebe8bd6262e9a62b6ff826f7a58430a40e9a8a15116c",
+        "bytes": 3249
+      },
+      {
+        "ruta": "scripts/analisis_a3_itama.py",
+        "sha256": "7438d8c17080387d90d7dd835469618bdfa383b51d62b19ef127b5bccfef0f4f",
+        "bytes": 3543
+      }
+    ],
+    "ausencias": [
+      "pruebas/test_a3_itama.py",
+      "congelada.json"
+    ]
+  },
+  "variables_documentadas": [
+    "sexo",
+    "edad actual",
+    "municipio de nacimiento",
+    "delito",
+    "localidad del delito",
+    "sexo",
+    "edad actual",
+    "municipio de nacimiento",
+    "delito",
+    "localidad del delito",
+    "sentencia"
+  ],
+  "sin_red": true,
+  "limites": [
+    "Sin person matching: no se unen personas ni se deduplican universos.",
+    "No se suman internamiento y externamiento: poblaciones distintas.",
+    "No se completan periodos, sujetos ni valores por título o convención.",
+    "Una muestra no acredita unicidad ni cardinalidad del recurso completo.",
+    "Sin joins al grafo, sin promociones de candidatas, sin Gemma, sin contactos, sin búsquedas web.",
+    "No se modifica la base IRI, ni R1–R9, ni escritores centrales; sólo se escribe esta carpeta."
+  ]
+}

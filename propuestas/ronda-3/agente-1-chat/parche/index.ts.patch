@@ -1,0 +1,11 @@
+--- studio/src-tauri/sidecars/agent/index.ts (original)
++++ studio/src-tauri/sidecars/agent/index.ts (parchado)
+@@ -215,7 +215,7 @@
+   const r = await retrieve(mcp, question, 2);
+   const key = graphAnswerCacheKey(question, asContext(r), `${provider.name}:${await provider.describe()}`, QA_SYSTEM_PROMPT);
+ 
+-  if (r.anchors.length === 0 && !r.correspondenceContext) {
++  if (r.anchors.length === 0 && !r.correspondenceContext && !r.correspondenceOverview && !r.resourceContext && !r.variableOverview) {
+     // Nothing in the graph matched. Say so, and answer from the empty result
+     // rather than inventing content.
+     send({

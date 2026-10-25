@@ -1,0 +1,124 @@
+{
+  "fecha_utc": "2026-10-23T18:07:01.343318+00:00",
+  "estado": "núcleo integrado y verificado; chat en fase de instalación y prueba",
+  "resumen": {
+    "definiciones_con_nombre_examinadas": 1563,
+    "filas_sin_nombre": 7,
+    "estados_variables": {
+      "respaldada_por_definicion": 1384,
+      "fuera_del_nucleo_actual": 160,
+      "candidata_sin_definicion_suficiente": 19
+    },
+    "variables_materializadas": 1406,
+    "estados_correspondencias": {
+      "documental_revisada": 4466,
+      "ambigua_por_nombre": 2,
+      "candidata_por_nombre": 20
+    },
+    "columnas_totales_examinadas": 5523,
+    "columnas_con_correspondencia": 4487,
+    "conceptos_compartidos": 1072,
+    "referencias_catalogo_sin_resolver": 1,
+    "sistemas_identificadores_recuperados": 1,
+    "condiciones_conexion": 6,
+    "referencias_catalogo_con_recurso_identificado": 16
+  },
+  "significados_respaldados": 1384,
+  "significados_pendientes": 179,
+  "conceptos": 1072,
+  "correspondencias_revisadas": 4466,
+  "adiciones": {
+    "significados": 172,
+    "conceptos": 132,
+    "correspondencias": 3601
+  },
+  "columnas_ambiguas": 1,
+  "vinculos_ambiguos": 2,
+  "referencias_catalogo_sin_vigencia": 16,
+  "referencias_catalogo_no_resueltas": 1,
+  "pruebas_centrales": {
+    "total": 121,
+    "resultado": "OK",
+    "log": "propuestas/pendientes-muse-r4/integrador/pruebas-finales-corregidas-2.log"
+  },
+  "shacl": {
+    "conforms": true,
+    "focus_nodes": 32380,
+    "scope": {
+      "complete": true,
+      "default_graph": true,
+      "note": "every graph in the store, the default graph included. On a store that keeps several versions of an entity in several named graphs this union is a state that held at no instant.",
+      "selector": "whole-store",
+      "semantics_version": "temporal/2"
+    },
+    "unmatched_shapes": [
+      {
+        "shape": "https://example.org/mex-ontologi/shapes/ResultadoMunicipalLote",
+        "target": "https://example.org/mex-ontologi/vocab/ResultadoCruceLote",
+        "target_class": "https://example.org/mex-ontologi/vocab/ResultadoCruceLote",
+        "target_form": "class"
+      }
+    ],
+    "violation_count": 0,
+    "violations": []
+  },
+  "grafo_generado": {
+    "classes": 56,
+    "data_properties": 155,
+    "individuals": 27175,
+    "object_properties": 48,
+    "properties": 203,
+    "triples": 320260
+  },
+  "studio": {
+    "fecha_utc": "2026-10-23T18:05:45.356432+00:00",
+    "consultas": {
+      "respaldadas": "PREFIX mex: <https://example.org/mex-ontologi/vocab/> SELECT (COUNT(DISTINCT ?item) AS ?total) WHERE { ?item a mex:VariableDocumentada; mex:estadoSemantico \"respaldada_por_definicion\" . }",
+      "significados_candidatos": "PREFIX mex: <https://example.org/mex-ontologi/vocab/> SELECT (COUNT(DISTINCT ?item) AS ?total) WHERE { ?item a mex:VariableDocumentada; mex:estadoSemantico \"candidata_sin_definicion_suficiente\" . }",
+      "conceptos": "PREFIX mex: <https://example.org/mex-ontologi/vocab/> SELECT (COUNT(DISTINCT ?item) AS ?total) WHERE { ?item a mex:ConceptoCompartido . }",
+      "revisadas": "PREFIX mex: <https://example.org/mex-ontologi/vocab/> SELECT (COUNT(DISTINCT ?item) AS ?total) WHERE { ?item a mex:CorrespondenciaSemantica; mex:estadoCorrespondencia \"documental_revisada\" . }",
+      "candidatas": "PREFIX mex: <https://example.org/mex-ontologi/vocab/> SELECT (COUNT(DISTINCT ?item) AS ?total) WHERE { ?item a mex:CorrespondenciaSemantica; mex:estadoCorrespondencia \"candidata_por_nombre\" . }",
+      "vinculos_ambiguos": "PREFIX mex: <https://example.org/mex-ontologi/vocab/> SELECT (COUNT(DISTINCT ?item) AS ?total) WHERE { ?item a mex:CorrespondenciaSemantica; mex:estadoCorrespondencia \"ambigua_por_nombre\" . }",
+      "variables_calificadas": "PREFIX mex: <https://example.org/mex-ontologi/vocab/> SELECT (COUNT(DISTINCT ?item) AS ?total) WHERE { ?item mex:tieneCalificadorDocumentado ?q . }",
+      "componentes_calificador": "PREFIX mex: <https://example.org/mex-ontologi/vocab/> SELECT (COUNT(DISTINCT ?item) AS ?total) WHERE { ?v mex:tieneCalificadorDocumentado ?item . }",
+      "fichas_cruce_preservadas": "PREFIX mex: <https://example.org/mex-ontologi/vocab/> SELECT (COUNT(DISTINCT ?item) AS ?total) WHERE { ?item a mex:RevisionCruceRonda3 . }",
+      "comparaciones_2020_preservadas": "PREFIX mex: <https://example.org/mex-ontologi/vocab/> SELECT (COUNT(DISTINCT ?item) AS ?total) WHERE { ?item a mex:ComparacionMunicipal2020 . }",
+      "evidencias_fuente_preservadas": "PREFIX mex: <https://example.org/mex-ontologi/vocab/> SELECT (COUNT(DISTINCT ?item) AS ?total) WHERE { ?item a mex:EvidenciaFuenteComparacion . }"
+    },
+    "conteos": {
+      "respaldadas": 1384,
+      "significados_candidatos": 19,
+      "conceptos": 1072,
+      "revisadas": 4466,
+      "candidatas": 20,
+      "vinculos_ambiguos": 2,
+      "variables_calificadas": 149,
+      "componentes_calificador": 195,
+      "fichas_cruce_preservadas": 3,
+      "comparaciones_2020_preservadas": 72,
+      "evidencias_fuente_preservadas": 144
+    },
+    "verificado": true,
+    "manifiesto_sha256": "c9edd8a180b0c79cc4c3eacce3c9e52009ddb63e68951db7181c6a377da046f2",
+    "semantica_sha256": "0d8ffc7509e4d694dfdb76bb28a6f6eca209bdb6f546b17dd1826171657e4b28",
+    "limite": "SELECT valida el grafo vivo; las respuestas del modelo se evalúan por separado."
+  },
+  "sincronizacion": {
+    "respaldo": "data\\backups\\studio-antes-portal-20261023T175938824705Z.ttl",
+    "triples_insertados": 39402,
+    "triples_retirados_gestionados": 3343,
+    "triples_totales_studio": 320869,
+    "triples_gestionados": 312018,
+    "verificado": true,
+    "estado": "grafo y propiedad sincronizados; copia canónica requiere cerrar archivo mapeado",
+    "copia_viva_recuperacion": "data\\backups\\studio-r4-sincronizado-20261023T180451Z.ttl",
+    "copia_sha256": "184bb71d403c04066c767693abeee9694129af65664e2b6aca5c451700fca04e",
+    "error_original": "Windows 1224 en /save data/catalogo/studio-live.ttl; la escritura del grafo y comprobación ya habían terminado",
+    "fecha_utc": "2026-10-23T18:05:25.927383+00:00"
+  },
+  "manifiesto_ronda4_sha256": "c9edd8a180b0c79cc4c3eacce3c9e52009ddb63e68951db7181c6a377da046f2",
+  "reparacion_historia_manifiesto_sha256": "c4d7b52a18fa437fb810611d2be50998965ec8d04b160d4c8cf4eb0bd52c8528",
+  "modelo_chat_solicitado": "gemma-4-31b-it",
+  "chat_real_final": "pendiente de activar sidecar compilado y pruebas espaciadas",
+  "ronda5": "Investigación de 179 significados + presas + catálogos en curso; no confundir propuestas con integraciones."
+}

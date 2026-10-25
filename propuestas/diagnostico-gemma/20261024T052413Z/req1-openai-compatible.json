@@ -1,0 +1,23 @@
+{
+  "inicio_utc": "2026-10-24T05:24:42Z",
+  "url": "https://generativelanguage.googleapis.com/v1beta/openai/chat/completions",
+  "body_enviado": {
+    "model": "gemma-4-31b-it",
+    "messages": [
+      {
+        "role": "user",
+        "content": "Responde solamente OK"
+      }
+    ],
+    "max_tokens": 8
+  },
+  "status": 200,
+  "duracion_s": 12.76,
+  "headers_diagnostico": {
+    "content-type": "application/json",
+    "date": "Sat, 24 Oct 2026 05:24:55 GMT",
+    "server": "scaffolding on HTTPServer2"
+  },
+  "cuerpo": "{\"choices\":[{\"finish_reason\":\"length\",\"index\":0,\"message\":{\"content\":\"<thought>*   Input: \\\"</thought>\",\"extra_content\":{\"google\":{\"thought\":true}},\"role\":\"assistant\"}}],\"created\":1792819495,\"id\":\"G0HcateuDqGJqtsPzqLR4Ao\",\"model\":\"gemma-4-31b-it\",\"object\":\"chat.completion\",\"usage\":{\"completion_tokens\":0,\"prompt_tokens\":5,\"total_tokens\":10}}",
+  "error": null
+}

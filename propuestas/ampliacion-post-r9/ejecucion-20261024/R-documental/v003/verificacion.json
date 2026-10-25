@@ -1,0 +1,573 @@
+{
+  "entregas": {
+    "A1-911/v002": {
+      "checks": [
+        {
+          "detalle": "6/6 archivos; sidecar OK; extras=[]",
+          "id": "sello",
+          "ok": true
+        },
+        {
+          "detalle": "13/13 fuentes vigentes",
+          "id": "fuentes",
+          "ok": true
+        },
+        {
+          "detalle": "A=3, B=3; 6 recursos con ficha",
+          "id": "recursos_par",
+          "ok": true
+        },
+        {
+          "detalle": "54285a13 == 6ce17dd1 (sha 9d710cb868c3fb63…, 8955252 bytes); el sha aparece en 2 inspecciones",
+          "id": "duplicado_q1",
+          "ok": true
+        },
+        {
+          "detalle": "hoja improcedentes en ['0df8592f-bb3d-466c-aec3-6cbc91253be0']; Q1 improcedentes contiene hoja 'LLAMADAS PROCEDENTES 911'",
+          "id": "improcedentes_solo_q2",
+          "ok": true
+        },
+        {
+          "detalle": "sha idéntico A/B; 7 variables; unidades vacías=True; Identificadores no vacío solo en ['hora']; sin variable motivo",
+          "id": "diccionario",
+          "ok": true
+        },
+        {
+          "detalle": "6/6 esquemas con metodo_encabezado=heuristica_requiere_revision",
+          "id": "esquemas_heuristica",
+          "ok": true
+        },
+        {
+          "detalle": "columnas Q2: ['FECHA', 'HORA', 'MOTIVO NO PROCEDENTE']",
+          "id": "q2_sin_municipio",
+          "ok": true
+        },
+        {
+          "detalle": "muestra A=54285a13… (Lamadas Improcedentes 911 primer trimestre 2026); B=943e2919… (Lamadas Procedentes 911 segundo trimestre 2026)",
+          "id": "muestra_a",
+          "ok": true
+        },
+        {
+          "detalle": "límite 29; filas 29/29; campos ['COLONIA', 'LOCALIDAD', 'MUNICIPIO']",
+          "id": "muestra_n29",
+          "ok": true
+        },
+        {
+          "detalle": "repeticiones (A,B): {'MUNICIPIO': (20, 20), 'LOCALIDAD': (18, 10), 'COLONIA': (1, 4)}",
+          "id": "repeticiones_muestra",
+          "ok": true
+        },
+        {
+          "detalle": "coincidencias muestrales MUNICIPIO=0: []",
+          "id": "coincidencias_6",
+          "ok": false
+        },
+        {
+          "detalle": "copias exactas xlsx/xls/csv de los 3 archivos 911: 0 []",
+          "id": "sin_copias_locales",
+          "ok": true
+        },
+        {
+          "detalle": "join=false; proporción=bloqueada; resultado=bloqueado",
+          "id": "sin_join_ni_tasa",
+          "ok": true
+        },
+        {
+          "detalle": "ejes: ['cardinalidad', 'claves', 'cobertura_datos', 'grano', 'periodo', 'poblacion', 'unicidad', 'unidades']",
+          "id": "ficha_8_ejes",
+          "ok": true
+        },
+        {
+          "detalle": "límite declarado: el duplicado no se usa para agregar/sumar",
+          "id": "duplicado_no_usado_para_sumar",
+          "ok": true
+        }
+      ],
+      "coincidencias_muestra": [],
+      "entrega": "A1-911/v002",
+      "sello": {
+        "archivos_discrepantes": [],
+        "archivos_ok": 6,
+        "entradas": 6,
+        "entrega": "A1-911/v002",
+        "extras_no_sellados": [],
+        "par": "19e5036d-dbe3-4e1d-b021-df5d47b6fb1f--923b485b-515e-4fb9-a4ac-cccbeb88cc92",
+        "resultado": "bloqueado",
+        "ruta_sello": "propuestas\\ampliacion-post-r9\\ejecucion-20261024\\A1-911\\v002\\sello.json",
+        "sello_valido": true,
+        "sha256_sello_archivo": "35e0b12b6f7a310168037e4ff76a7ca2cd8548cee06306922fc075e39c134e03",
+        "sidecar": "35e0b12b6f7a310168037e4ff76a7ca2cd8548cee06306922fc075e39c134e03  sello.json",
+        "sidecar_declara_sello_json": true,
+        "sidecar_hash_ok": true,
+        "tipo": "mapa_relativo"
+      },
+      "total": 16,
+      "total_ok": 15
+    },
+    "A2-registro-civil/v002": {
+      "checks": [
+        {
+          "detalle": "8/8 archivos; sidecar OK; extras=[]",
+          "id": "sello",
+          "ok": true
+        },
+        {
+          "detalle": "sha/bytes OK",
+          "id": "fuente:reports/catalogo-perfil.json",
+          "ok": true
+        },
+        {
+          "detalle": "sha/bytes OK",
+          "id": "fuente:data/portal/contenido-inspeccion.json",
+          "ok": true
+        },
+        {
+          "detalle": "sha/bytes OK",
+          "id": "fuente:data/portal/oportunidades-cruce.json",
+          "ok": true
+        },
+        {
+          "detalle": "sha/bytes OK",
+          "id": "fuente:data/portal/lote-cruces/validacion-lote.json",
+          "ok": true
+        },
+        {
+          "detalle": "Matrimonios 11=10+1; Nacimientos 16=15+1",
+          "id": "h02_conteos",
+          "ok": true
+        },
+        {
+          "detalle": "Matrimonios=['año_matrimonio', 'dia_matrimonio', 'edad_cty1', 'edad_cty2', 'mes_matrimonio', 'municipio', 'sexo_cty1', 'sexo_cty2']; Nacimientos=['año', 'hombres', 'mes', 'mujeres', 'municipio', 'total']",
+          "id": "grano_diccionarios",
+          "ok": true
+        },
+        {
+          "detalle": "6 pruebas: 5 total≠hombres+mujeres, 1 meses faltantes; decision=fallo_validacion_integral",
+          "id": "cardinalidad_6_pruebas",
+          "ok": true
+        },
+        {
+          "detalle": "cita literal con tilde en A/B; muestras n=100/100",
+          "id": "unicidad_cita",
+          "ok": true
+        },
+        {
+          "detalle": "A=Matrimonios 2023 total 14685; B=Nacimientos 2024 total 627 (recursos/años distintos)",
+          "id": "muestras_totales",
+          "ok": true
+        },
+        {
+          "detalle": "variables separadas y cita textual; sin 'Anio-Mes de registro'",
+          "id": "periodo_variables",
+          "ok": true
+        },
+        {
+          "detalle": "resultados.json idéntico al sellado",
+          "id": "script_reproduce",
+          "ok": true
+        },
+        {
+          "detalle": "md de entrega y resultados declaran 10+1 / 15+1",
+          "id": "md_json_coherentes",
+          "ok": false
+        },
+        {
+          "detalle": "comparación y join nulos; BLOQUEADO",
+          "id": "sin_join_ni_tasa",
+          "ok": true
+        },
+        {
+          "detalle": "resultados.md: 'Causas (bloquean cualquier comparación/join)'; resultados.json: 'grano distinto ... impide join fila a fila' como causa de bloqueo; resultados.json: poblaciones distintas listada entre las causas que bloquean",
+          "id": "bloqueo_por_cobertura_no_solo_grano",
+          "ok": false
+        }
+      ],
+      "entrega": "A2-registro-civil/v002",
+      "sello": {
+        "archivos_discrepantes": [],
+        "archivos_ok": 8,
+        "entradas": 8,
+        "entrega": "A2-registro-civil/v002",
+        "extras_no_sellados": [],
+        "par": "1cf9c8e2-e7e4-43d8-a9fd-6da790e64c98--df2d60f5-2243-4bb0-885a-941aa8a657f5",
+        "resultado": "bloqueado",
+        "ruta_sello": "propuestas\\ampliacion-post-r9\\ejecucion-20261024\\A2-registro-civil\\v002\\sello.json",
+        "sello_valido": true,
+        "sha256_sello_archivo": "98278eb1e64d735ddf9e44ce9296f53b041cf2051fb2d5a0639e5748ba64b7e6",
+        "sidecar": "98278eb1e64d735ddf9e44ce9296f53b041cf2051fb2d5a0639e5748ba64b7e6  sello.json",
+        "sidecar_declara_sello_json": true,
+        "sidecar_hash_ok": true,
+        "tipo": "mapa_relativo"
+      },
+      "sobreafirmaciones": [
+        "resultados.md: 'Causas (bloquean cualquier comparación/join)'",
+        "resultados.json: 'grano distinto ... impide join fila a fila' como causa de bloqueo",
+        "resultados.json: poblaciones distintas listada entre las causas que bloquean"
+      ],
+      "total": 15,
+      "total_ok": 13
+    },
+    "A3-itama/v002": {
+      "checks": [
+        {
+          "detalle": "5/9 archivos; discrepancias=['entrega.json', 'entrega.md', 'scripts/analisis_a3_itama_v002.py', 'scripts/sellar_v002.py']; extras=['evidencia-busqueda.json', 'nucleo.ttl', 'scripts/registrar_busqueda_itama.py', 'tests/test_a3_itama_v002.py']",
+          "id": "sello",
+          "ok": false
+        },
+        {
+          "detalle": "archivos con mtime posterior al sello (10): ['entrega.json', 'entrega.md', 'evidencia-busqueda.json', 'nucleo.ttl', 'scripts\\\\__pycache__\\\\analisis_a3_itama_v002.cpython-312.pyc', 'scripts\\\\__pycache__\\\\registrar_busqueda_itama.cpython-312.pyc', 'scripts\\\\analisis_a3_itama_v002.py', 'scripts\\\\registrar_busqueda_itama.py', 'scripts\\\\sellar_v002.py', 'tests\\\\test_a3_itama_v002.py']",
+          "id": "sin_escrituras_post_sello",
+          "ok": false
+        },
+        {
+          "detalle": "barrido independiente: 138 xlsx, 96 csv; inventario declara 138/96",
+          "id": "conteo_repo",
+          "ok": true
+        },
+        {
+          "detalle": "8 recursos ITAMA (6 xlsx); copias exactas en repo: 0",
+          "id": "itama_8_y_cero_copias",
+          "ok": true
+        },
+        {
+          "detalle": "muestras A=29 B=16; límites 29/29",
+          "id": "muestras_29_16",
+          "ok": true
+        },
+        {
+          "detalle": "escolaridad en muestra A: {'filas_muestra': 29, 'nulos': 29, 'distintos_muestra': 0, 'repeticiones_muestra': 0, 'valores_muestra_clave': []}",
+          "id": "escolaridad_ausente",
+          "ok": true
+        },
+        {
+          "detalle": "campos por diccionario=[5, 6]; unidades vacías",
+          "id": "diccionarios_11",
+          "ok": false
+        }
+      ],
+      "entrega": "A3-itama/v002",
+      "posteriores_al_sello": [
+        "entrega.json",
+        "entrega.md",
+        "evidencia-busqueda.json",
+        "nucleo.ttl",
+        "scripts\\__pycache__\\analisis_a3_itama_v002.cpython-312.pyc",
+        "scripts\\__pycache__\\registrar_busqueda_itama.cpython-312.pyc",
+        "scripts\\analisis_a3_itama_v002.py",
+        "scripts\\registrar_busqueda_itama.py",
+        "scripts\\sellar_v002.py",
+        "tests\\test_a3_itama_v002.py"
+      ],
+      "sello": {
+        "archivos_discrepantes": [
+          {
+            "bytes_actual": 13128,
+            "bytes_esperado": 5502,
+            "estado": "discrepa",
+            "ruta": "entrega.json",
+            "sha256_actual": "327a283d7516b4f4b2d842dc8bebfa3fc260cac704e61b90a1d017688e03d5bf",
+            "sha256_esperado": "1fd3dc5abe1385e742b3aeab0a3f5c8a0ca1d32563df760dc267bbd3e5d81243"
+          },
+          {
+            "bytes_actual": 4417,
+            "bytes_esperado": 6325,
+            "estado": "discrepa",
+            "ruta": "entrega.md",
+            "sha256_actual": "3411d28cea32433f8056a7a7c911a70f1c6a4f81b2e34ca86ac7e20a5be4506f",
+            "sha256_esperado": "24ea7d2c62aae49134e551317a42dddc1939618d1c47c294ec7375502deb67bb"
+          },
+          {
+            "bytes_actual": 11765,
+            "bytes_esperado": 26248,
+            "estado": "discrepa",
+            "ruta": "scripts/analisis_a3_itama_v002.py",
+            "sha256_actual": "0063200e20d7fc3566ad2c6f497b609c9eaf7a081d7932159f0a9f7172f96f21",
+            "sha256_esperado": "660dc4dbd4be3d9ca2807d47fe5637667bd7396c1c93f9d45ebf1be0af3caa94"
+          },
+          {
+            "bytes_actual": 1501,
+            "bytes_esperado": 3962,
+            "estado": "discrepa",
+            "ruta": "scripts/sellar_v002.py",
+            "sha256_actual": "2cdce43c82bce765e2cfb86476f19ee180781d44b2f86dc297e67eeb829cb0ef",
+            "sha256_esperado": "bfb5040a638742be652b4383914dadccadc2ac124b6960269ab6440010f5e575"
+          }
+        ],
+        "archivos_ok": 5,
+        "ejecuciones": [
+          {
+            "comando": "uv run python propuestas\\ampliacion-post-r9\\ejecucion-20261024\\A3-itama\\v002\\scripts\\analisis_a3_itama_v002.py",
+            "ejecucion": "analisis",
+            "exit_code": 0,
+            "salida_capturada": "resultados/ejecucion-analisis.out",
+            "salida_sha256": "885ebee366231e445f2e62169d6bf40f70bd145ccb05124e704acdace1a8a00a"
+          },
+          {
+            "comando": "uv run python propuestas\\ampliacion-post-r9\\ejecucion-20261024\\A3-itama\\v002\\pruebas\\test_a3_itama_v002.py",
+            "ejecucion": "pruebas",
+            "exit_code": 0,
+            "salida_capturada": "resultados/ejecucion-pruebas.out",
+            "salida_sha256": "26cd8e75741c44158710aed4d702627ea59c84791bbf91035e0220b07e0d531a"
+          }
+        ],
+        "entradas": 9,
+        "entrega": "A3-itama/v002",
+        "excluido": [
+          "congelada.json (el propio sello)"
+        ],
+        "extras_no_sellados": [
+          "evidencia-busqueda.json",
+          "nucleo.ttl",
+          "scripts/registrar_busqueda_itama.py",
+          "tests/test_a3_itama_v002.py"
+        ],
+        "generado_en_utc": "2026-10-24T20:22:19Z",
+        "ruta_sello": "propuestas\\ampliacion-post-r9\\ejecucion-20261024\\A3-itama\\v002\\congelada.json",
+        "sello_canonico_ok": true,
+        "sello_sha256_declarado": "050bb906bce471cefaeb10f84852db02416418e9b656e3258788a1e7f2dc305d",
+        "sello_sha256_recalculado": "050bb906bce471cefaeb10f84852db02416418e9b656e3258788a1e7f2dc305d",
+        "sello_valido": false,
+        "sha256_sello_archivo": "b65782a15cadd9ad78bce2eaaa5b039985333918fc61c20f4dfc2de744e14459",
+        "tipo": "lista_relativa",
+        "total_bytes_declarado": 178995
+      },
+      "total": 7,
+      "total_ok": 4
+    },
+    "T-top50/v002": {
+      "checks": [
+        {
+          "detalle": "10/10 archivos; sello canónico OK; extras=[]",
+          "id": "sello",
+          "ok": true
+        },
+        {
+          "detalle": "plan actual f43214a0d38ff2cb… == declarado f43214a0d38ff2cb…; bytes 5672",
+          "id": "h01_plan_actual",
+          "ok": true
+        },
+        {
+          "detalle": "3916 pares, 1191 candidatas",
+          "id": "universo_3916_1191",
+          "ok": true
+        },
+        {
+          "detalle": "3916 ids únicos de 3916",
+          "id": "ids_unicos",
+          "ok": true
+        },
+        {
+          "detalle": "1191 scores recomputados; cola -8.5",
+          "id": "scores_1191",
+          "ok": true
+        },
+        {
+          "detalle": "top50=50, matriz=1191",
+          "id": "csv_50_1191",
+          "ok": true
+        },
+        {
+          "detalle": "1191 scores de matriz == recomputo",
+          "id": "matriz_scores",
+          "ok": true
+        },
+        {
+          "detalle": "50 rangos/ids/scores y orden desc,id asc",
+          "id": "top50_orden",
+          "ok": true
+        },
+        {
+          "detalle": "50 filas, rangos 1..50",
+          "id": "json_50",
+          "ok": true
+        },
+        {
+          "detalle": "ids/scores de las 50 filas == CSV",
+          "id": "json_filas_coinciden_csv",
+          "ok": true
+        },
+        {
+          "detalle": "50/50 filas NO_JOIN_APROBADO",
+          "id": "no_join",
+          "ok": true
+        },
+        {
+          "detalle": "A3-itama: rango 1 score 5.0; A1-911: rango 2 score 3.0; A2-matrimonios-nacimientos: rango 4 score 3.0; etiquetadas 3/50",
+          "id": "carriles_3",
+          "ok": true
+        },
+        {
+          "detalle": "los 3 pares identificados por ID exacto, rangos 2/4/1, sin join",
+          "id": "pares_a1_a3",
+          "ok": true
+        },
+        {
+          "detalle": "7/7 fuentes con hash/bytes vigentes",
+          "id": "fuentes_meta",
+          "ok": true
+        },
+        {
+          "detalle": "3/3 artefactos idénticos",
+          "id": "script_reproduce",
+          "ok": true
+        },
+        {
+          "detalle": "el script rechaza escribir en fuentes y en carpetas con congelada.json; excepción explícita para su propia carpeta de versión",
+          "id": "script_guardas",
+          "ok": true
+        }
+      ],
+      "entrega": "T-top50/v002",
+      "reproduccion": {
+        "top50-oportunidades-r9.html": {
+          "igual": true,
+          "reproducido": "13149984df253b56aa1fc1b30cdfa1310f697cc0094664037490fbad671558c1",
+          "sellado": "13149984df253b56aa1fc1b30cdfa1310f697cc0094664037490fbad671558c1"
+        },
+        "top50-oportunidades-r9.json": {
+          "igual": true,
+          "reproducido": "8342bfcdf3d6e272dc90e2a46714452f58e3e4d2b8d25efa54b4b1af57314f37",
+          "sellado": "8342bfcdf3d6e272dc90e2a46714452f58e3e4d2b8d25efa54b4b1af57314f37"
+        },
+        "top50-oportunidades-r9.md": {
+          "igual": true,
+          "reproducido": "bacacd474c596446fd8a527eb62f7743433fd9ec04e0957470ce628df1ec4d80",
+          "sellado": "bacacd474c596446fd8a527eb62f7743433fd9ec04e0957470ce628df1ec4d80"
+        }
+      },
+      "sello": {
+        "archivos_discrepantes": [],
+        "archivos_ok": 10,
+        "ejecuciones": [
+          {
+            "comando": "uv run python propuestas/ampliacion-post-r9/ejecucion-20261024/T-top50/v002/scripts/publicar_top50_r9.py --out-dir propuestas/ampliacion-post-r9/ejecucion-20261024/T-top50/v002",
+            "ejecucion": "publicacion",
+            "exit_code": 0,
+            "salida_capturada": "resultados/publicacion.out",
+            "salida_sha256": "b5a482584fb599b2e633553de8bc39df6856a093aa1e7153b1c3dc99f32ee62b"
+          },
+          {
+            "comando": "uv run python propuestas/ampliacion-post-r9/ejecucion-20261024/T-top50/v002/tests/test_publicar_top50_r9.py",
+            "ejecucion": "pruebas",
+            "exit_code": 0,
+            "salida_capturada": "resultados/pruebas.out",
+            "salida_sha256": "7275b931b7ea5dc383bdf19827fcc4eccebe13433deafa66a99467aa31f4ba91"
+          }
+        ],
+        "entradas": 10,
+        "entrega": "T-top50/v002",
+        "excluido": [
+          "congelada.json (el propio sello)",
+          "__pycache__/",
+          "*.pyc"
+        ],
+        "extras_no_sellados": [],
+        "generado_en_utc": "2026-10-24T20:26:45Z",
+        "ruta_sello": "propuestas\\ampliacion-post-r9\\ejecucion-20261024\\T-top50\\v002\\congelada.json",
+        "sello_canonico_ok": true,
+        "sello_sha256_declarado": "11c089c29d2914c91af63982800026e00efede92c09969defcaebc9ee2031c64",
+        "sello_sha256_recalculado": "11c089c29d2914c91af63982800026e00efede92c09969defcaebc9ee2031c64",
+        "sello_valido": true,
+        "sha256_sello_archivo": "c51be02141113e8031dfa6f20ef3f7c1a630848b82cfd0ef3e75185ac9f3b90d",
+        "tipo": "lista_relativa",
+        "total_bytes_declarado": 168981
+      },
+      "total": 16,
+      "total_ok": 16
+    },
+    "W-estandares/v002": {
+      "checks": [
+        {
+          "detalle": "12/12 archivos; extras=[]",
+          "id": "sello",
+          "ok": true
+        },
+        {
+          "detalle": "base.json cf6423cce495c6bb…",
+          "id": "base_r9",
+          "ok": true
+        },
+        {
+          "detalle": "peticiones 6; sha de solicitud vigente",
+          "id": "peticiones_6",
+          "ok": true
+        },
+        {
+          "detalle": "casos ['Q-U01', 'Q-U02', 'Q-U03', 'Q-U04', 'Q-U05', 'Q-U06'] -> ['Q-W-01', 'Q-W-02', 'Q-W-03', 'Q-W-04', 'Q-W-05', 'Q-W-06']",
+          "id": "casos_qw",
+          "ok": true
+        },
+        {
+          "detalle": [
+            {
+              "falta": [
+                "etiqueta_texto"
+              ],
+              "id": "Q-W-01"
+            },
+            {
+              "falta": [
+                "etiqueta_texto"
+              ],
+              "id": "Q-W-04"
+            },
+            {
+              "falta": [
+                "etiqueta_texto"
+              ],
+              "id": "Q-W-05"
+            }
+          ],
+          "id": "terminos_6",
+          "ok": false
+        },
+        {
+          "detalle": "evidencia: GW·h; ucumCode GW.h; uneceCommonCode GWH; sin 'GWh'",
+          "id": "gigaw_simbolo",
+          "ok": false
+        },
+        {
+          "detalle": "PERCENT: conversionMultiplier 0.01 en el término normativo",
+          "id": "percent_factor",
+          "ok": true
+        },
+        {
+          "detalle": "6 capas, sujetos únicos",
+          "id": "capas_6",
+          "ok": true
+        },
+        {
+          "detalle": "0 alias, 0 casos locales promovidos; sin factores aplicados",
+          "id": "sin_alias_ni_factores",
+          "ok": false
+        },
+        {
+          "detalle": "se declara que la fuente normativa no acredita el uso local",
+          "id": "fuente_local_distinta",
+          "ok": true
+        }
+      ],
+      "entrega": "W-estandares/v002",
+      "sello": {
+        "archivos_discrepantes": [],
+        "archivos_ok": 12,
+        "entradas": 12,
+        "entrega": "W-estandares/v002",
+        "extras_no_sellados": [],
+        "fecha_utc": "2026-10-24T20:20:38.953908+00:00",
+        "ruta_sello": "propuestas\\ampliacion-post-r9\\ejecucion-20261024\\W-estandares\\v002\\congelada.json",
+        "sello_valido": true,
+        "sha256_sello_archivo": "7991c0f76bf14787bd221351757de47ec4e3100ecfe92d86ca56f8f0c15bc4c1",
+        "tipo": "lista_absoluta"
+      },
+      "total": 10,
+      "total_ok": 7
+    }
+  },
+  "generado_en_utc": "2026-10-24",
+  "metodo": "reproduccion_independiente_solo_lectura",
+  "pendientes_no_auditados": {
+    "Q-unidades/v003": "sin sello al cierre de esta verificacion",
+    "S-shacl/v001": "en prueba; sin sello"
+  }
+}

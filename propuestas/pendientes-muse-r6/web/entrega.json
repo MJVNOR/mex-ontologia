@@ -1,0 +1,270 @@
+{
+  "rol": "web",
+  "generado_en_utc": "2026-10-23T00:00:00+00:00",
+  "alcance": "Verificacion primaria R5+R6 (38 piezas) + atencion de 21 solicitudes (10 primera vuelta + 11 segunda: SAL-R6-01..04, EPI-R6-01..03, SW6-PRESAS-01, SW6-DIV-01..03). 20 pendiente, 1 resuelto-dominio (Clave presas). Sin propuestas al nucleo.",
+  "conteos": {
+    "decisiones": 21,
+    "pendiente": 20,
+    "resuelto-dominio": 1,
+    "proponer": 0,
+    "artefacto_documental": 0,
+    "conceptos_nuevos": 0,
+    "reglas_nuevas": 0,
+    "vinculos": 0,
+    "correcciones_ruta": 4
+  },
+  "decisiones": [
+    {
+      "id": "r6-tic-web-01",
+      "decision": "pendiente",
+      "motivo": "URL primaria real y viva (verificada VW-17); el documento exacto nuevo (cuestionario integro P10/P16/P18/P21 + referente P11) no existe en publico: solo el publicador (Agencia de Transformacion Digital) lo posee.",
+      "evidencia": [
+        "respuestas_web.json:r6-tic-web-01",
+        "verificacion_primarias.json:VW-17"
+      ],
+      "pendiente_exacto": "Cuestionario original completo de Politica Digital. En manos del publicador.",
+      "limite": "No inferir textos truncados ni referentes por proximidad."
+    },
+    {
+      "id": "r6-tic-web-02",
+      "decision": "pendiente",
+      "motivo": "URL primaria real y viva; sin cuestionario ni vinculo P14-P15 en publico. Solo publicador.",
+      "evidencia": [
+        "respuestas_web.json:r6-tic-web-02",
+        "verificacion_primarias.json:VW-17"
+      ],
+      "pendiente_exacto": "Cuestionario de Informacion General (actividades P10, sujeto P11, vinculo P14-P15). En manos del publicador.",
+      "limite": "No transferir sujetos por proximidad."
+    },
+    {
+      "id": "r6-tic-web-03",
+      "decision": "pendiente",
+      "motivo": "URL primaria real y viva; sin muestra de P11 ni cuestionario en publico. Solo publicador.",
+      "evidencia": [
+        "respuestas_web.json:r6-tic-web-03",
+        "verificacion_primarias.json:VW-17"
+      ],
+      "pendiente_exacto": "Muestra de valores P11 (recurso c6d42e45) o cuestionario Presupuesto TIC. En manos del publicador.",
+      "limite": "No usar ejemplo como dominio."
+    },
+    {
+      "id": "r6-tic-web-04",
+      "decision": "pendiente",
+      "motivo": "URL primaria real y viva; P22 integro y valores P36/P39/P40 sin fuente publica. Solo publicador.",
+      "evidencia": [
+        "respuestas_web.json:r6-tic-web-04",
+        "verificacion_primarias.json:VW-17"
+      ],
+      "pendiente_exacto": "Texto integro P22 + muestra P36/P39/P40 (recurso 91c95c1b) o cuestionario. En manos del publicador.",
+      "limite": "No inferir resto de enumeracion."
+    },
+    {
+      "id": "r6-tic-web-05",
+      "decision": "pendiente",
+      "motivo": "URL primaria real y viva; sin cuestionario (P8/P13) ni valores verificables. Solo publicador.",
+      "evidencia": [
+        "respuestas_web.json:r6-tic-web-05",
+        "verificacion_primarias.json:VW-17"
+      ],
+      "pendiente_exacto": "Cuestionario Mejora Regulatoria + muestra P36/P39/P40 (recurso b444876c). En manos del publicador.",
+      "limite": "Descripcion-vs-dominio se conserva."
+    },
+    {
+      "id": "r6-tic-web-06",
+      "decision": "pendiente",
+      "motivo": "URL primaria real y viva; sin vinculos filtro-detalle ni nota de marca 4. Solo publicador.",
+      "evidencia": [
+        "respuestas_web.json:r6-tic-web-06",
+        "verificacion_primarias.json:VW-17"
+      ],
+      "pendiente_exacto": "Cuestionario Infraestructura/Ciberseguridad con vinculos P26-P33 y marca 4. En manos del publicador.",
+      "limite": "No transferir referentes por proximidad."
+    },
+    {
+      "id": "r6-tic-web-07",
+      "decision": "pendiente",
+      "motivo": "URLs primarias reales y vivas; sin cuestionario que fije referente de P7. Solo publicador.",
+      "evidencia": [
+        "respuestas_web.json:r6-tic-web-07",
+        "verificacion_primarias.json:VW-17"
+      ],
+      "pendiente_exacto": "Cuestionarios Gobernanza y Fortalezas (referente P7). En manos del publicador.",
+      "limite": "No equiparar gemelas entre diccionarios."
+    },
+    {
+      "id": "MAT-R6-01",
+      "decision": "pendiente",
+      "motivo": "URL solicitada con /sr_Latn/ devuelve 404 (cita literal verificada); canonica sin locale verificada viva (VW-23). El diccionario con descripciones no vacias sigue solo en manos del publicador (UES).",
+      "evidencia": [
+        "respuestas_web.json:MAT-R6-01",
+        "verificacion_primarias.json:VW-23"
+      ],
+      "pendiente_exacto": "Diccionario vigente con descripciones + muestra de valores. En manos del publicador.",
+      "limite": "No usar locale-prefijo; no aprobar por nombre."
+    },
+    {
+      "id": "MAT-R6-02",
+      "decision": "pendiente",
+      "motivo": "Pagina real (200) pero sin contenido extraible (negativo acotado a esta visita). Calendario 2022-2 con clave 222/(Reing) solo en manos del publicador.",
+      "evidencia": [
+        "respuestas_web.json:MAT-R6-02"
+      ],
+      "pendiente_exacto": "Calendario Escolar UES 2022-2 o nota que defina 222/(Reing)/ciclo senalado. En manos del publicador.",
+      "limite": "Negativo acotado, no ausencia universal."
+    },
+    {
+      "id": "MAT-R6-03",
+      "decision": "pendiente",
+      "motivo": "URL real (sirve PDF); sin OCR/extraccion en este rol. La edicion aplicable al dato 2022-2 (distinta de 2019) sigue solo en manos del publicador.",
+      "evidencia": [
+        "respuestas_web.json:MAT-R6-03"
+      ],
+      "pendiente_exacto": "Norma UES de evaluacion/titulacion edicion 2022-2. En manos del publicador.",
+      "limite": "No suponer escala 0-10 ni redondeo."
+    },
+    {
+      "id": "SAL-R6-01",
+      "decision": "pendiente",
+      "motivo": "URLs reales y vivas; diccionario corregido con descripciones y codebook + vinculo edicion-recurso-periodo (recurso 46977217, 2022-01-01/2022-09-26) solo en manos del publicador.",
+      "evidencia": [
+        "respuestas_web2.json:SAL-R6-01",
+        "verificacion_nuevas.json:VW-34"
+      ],
+      "pendiente_exacto": "Diccionario SINAC corregido o nota del publicador con descripcion+codebook y vinculo explicito. En manos del publicador.",
+      "limite": "No aprobar por nombre ni ejemplo."
+    },
+    {
+      "id": "SAL-R6-02",
+      "decision": "pendiente",
+      "motivo": "Pagina SINAC viva pero sin manual de nacimiento ni edicion 2022; Manual Modelo 2015 no cubre vigencia 2022. Solo DGIS/publicador.",
+      "evidencia": [
+        "respuestas_web2.json:SAL-R6-02",
+        "verificacion_nuevas.json:VW-24"
+      ],
+      "pendiente_exacto": "Manual SINAC edicion 2022 o nota DGIS de vigencia del Modelo 2015 para datos 2022. En manos del publicador.",
+      "limite": "Manual 2015 solo acredita contexto, no aplicabilidad 2022."
+    },
+    {
+      "id": "SAL-R6-03",
+      "decision": "pendiente",
+      "motivo": "NUEVO: Manual SEED Modelo 2022 autentico y preservado (SHA 698ee48a); periodo del recurso fijado (2022-01-01/2022-09-22). Falta nota del publicador que vincule manual-recurso-CIE aplicable 2022.",
+      "evidencia": [
+        "respuestas_web2.json:SAL-R6-03",
+        "verificacion_nuevas.json:VW-25",
+        "verificacion_nuevas.json:VW-26",
+        "verificacion_nuevas.json:VW-29"
+      ],
+      "pendiente_exacto": "Nota del publicador: tabla pregunta-manual<->columna-local + edicion CIE aplicable a 2022. En manos del publicador.",
+      "limite": "Manual nacional solo no acredita columnas locales."
+    },
+    {
+      "id": "SAL-R6-04",
+      "decision": "pendiente",
+      "motivo": "NUEVO: preguntas exactas localizadas (P17 informante vs P34 agresor; P31-36 intencionalidad; P32 lugar lesion; edad gestacional semanas). La correspondencia con columnas D/locales la decide salud.",
+      "evidencia": [
+        "respuestas_web2.json:SAL-R6-04",
+        "verificacion_nuevas.json:VW-27-P17_parentesco_informante",
+        "verificacion_nuevas.json:VW-27-P34_relacion_agresor",
+        "verificacion_nuevas.json:VW-27-P31_36_intencionalidad",
+        "verificacion_nuevas.json:VW-28-edadgest",
+        "verificacion_nuevas.json:VW-28-sitio"
+      ],
+      "pendiente_exacto": "Confirmacion de correspondencia columna-pregunta por salud; parentesco-agresor != parentesco-informante ya fijado.",
+      "limite": "Web registra literales; no propone significados."
+    },
+    {
+      "id": "EPI-R6-01",
+      "decision": "pendiente",
+      "motivo": "Sin instrumento SUIVE edicion 2022 ni nota de vinculo en publico; portal sin Fuentes extras. Solo publicador Sonora.",
+      "evidencia": [
+        "respuestas_web2.json:EPI-R6-01",
+        "verificacion_nuevas.json:VW-35"
+      ],
+      "pendiente_exacto": "Instrumento SUIVE edicion aplicable al periodo 2022-01-01/2022-12-31 o nota de vinculo edicion-recurso-periodo. En manos del publicador.",
+      "limite": "No interpretar sufijo f ni siglas por simetria."
+    },
+    {
+      "id": "EPI-R6-02",
+      "decision": "pendiente",
+      "motivo": "Recurso diccionario vivo pero sin descripciones corregidas ni regla de computo en publico. Solo publicador.",
+      "evidencia": [
+        "respuestas_web2.json:EPI-R6-02",
+        "verificacion_nuevas.json:VW-35"
+      ],
+      "pendiente_exacto": "Diccionario corregido + regla de computo acumulado/totalm/totalf. En manos del publicador.",
+      "limite": "No resolver computos por aritmetica propia."
+    },
+    {
+      "id": "EPI-R6-03",
+      "decision": "pendiente",
+      "motivo": "Sin version CIE aplicable al recurso 2022 ni nota de intervalo/borde edad 5; CIE-10 vigente solo marco nacional. Solo publicador.",
+      "evidencia": [
+        "respuestas_web2.json:EPI-R6-03"
+      ],
+      "pendiente_exacto": "Version CIE aplicable al recurso 2022 + nota de intervalo de01_a_04 y edad 5. En manos del publicador.",
+      "limite": "Contradiccion nombre/descripcion se conserva."
+    },
+    {
+      "id": "SW6-PRESAS-01",
+      "decision": "pendiente",
+      "motivo": "Dominio Clave CCCCC acreditado con archivo autentico (9 valores LCDSO-IRASO, hoja cat_estatal); SINA no aporta. Falta declaracion de edicion/version del catalogo y su vinculo temporal (F3/F4).",
+      "evidencia": [
+        "respuestas_web2.json:SW6-PRESAS-01",
+        "verificacion_nuevas.json:VW-31",
+        "verificacion_nuevas.json:VW-33"
+      ],
+      "pendiente_exacto": "Declaracion de edicion/version/fecha de cat_estatal_1.xlsx (SHA b7a398a0) y su rango de aplicacion. En manos del publicador.",
+      "limite": "Valores acreditan dominio, no vigencia ni edicion."
+    },
+    {
+      "id": "SW6-DIV-01",
+      "decision": "pendiente",
+      "motivo": "UUID ya no resuelve (usar slug); sin vinculo INEGI/CONAPO para CLASIF ni nota COESPO en publico. Solo publicador.",
+      "evidencia": [
+        "respuestas_web2.json:SW6-DIV-01",
+        "verificacion_nuevas.json:VW-32"
+      ],
+      "pendiente_exacto": "Nota metodologica COESPO (objeto de CLASIF) o vinculo a INEGI/CONAPO con edicion y periodo. En manos del publicador.",
+      "limite": "No transferir lista Barrio/Colonia como clasificacion."
+    },
+    {
+      "id": "SW6-DIV-02",
+      "decision": "pendiente",
+      "motivo": "Cubo verificado; archivo Descripcion de variables enlazado pero sin texto extraible en esta visita (negativo acotado). Sin variable mixta verificable. Ruta alterna o publicador.",
+      "evidencia": [
+        "respuestas_web2.json:SW6-DIV-02",
+        "verificacion_nuevas.json:VW-30"
+      ],
+      "pendiente_exacto": "Archivo Descripcion de variables legible o Guia GIIS-B014 vigente 2018-2022. En manos del publicador/DGIS.",
+      "limite": "No suponer variable Total_Egresos=urgencias."
+    },
+    {
+      "id": "SW6-DIV-03",
+      "decision": "pendiente",
+      "motivo": "UUID verificado vivo en VW-05 (correccion); conclusion negativa intacta: otras sin definir, catalogo sin hoja para otras. Diccionario corregido solo en manos de SAGARHPA.",
+      "evidencia": [
+        "respuestas_web2.json:SW6-DIV-03",
+        "verificacion_primarias.json:VW-05"
+      ],
+      "pendiente_exacto": "Diccionario corregido o nota SAGARHPA que complete Clave/Nombre de otras. En manos del publicador.",
+      "limite": "No interpretar objeto de otras."
+    }
+  ],
+  "reglas": [],
+  "conceptos_nuevos": [],
+  "vinculos": [],
+  "fuentes": [
+    "verificacion_primarias.json (23 piezas VW-01..VW-23, Obscura 2026-10-23)",
+    "respuestas_web.json (10 respuestas)",
+    "verificacion_nuevas.json (15 piezas VW-24..VW-35)",
+    "respuestas_web2.json (11 respuestas)"
+  ],
+  "novedades_vs_r5": [
+    "R12 corregida en ruta (UUID pesca SI resuelve); conclusion negativa intacta",
+    "W03 enriquecida con metadatos del recurso 1960-1969 (periodo 1960-01-01/1969-12-31, 529,2 KiB); sin download href, conclusion intacta",
+    "MAT-R6-01 corregida (404 con /sr_Latn/; canonica verificada)",
+    "Manual SEED Modelo 2022 autentico preservado (SHA 698ee48a): P17 informante vs P34 agresor, P31-36 intencionalidad, P32 lugar lesion, edad gestacional en semanas",
+    "cat_estatal_1.xlsx autentico (SHA b7a398a0): dominio Clave CCCCC con 9 valores; descarga normal sin evasion",
+    "UUID marginacion a3320cad ya no resuelve (usar slug); UUID pesca e093cf34 confirmado vivo"
+  ]
+}

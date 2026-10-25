@@ -1,0 +1,217 @@
+{
+  "fecha_utc": "2026-10-24T20:34:21.022377+00:00",
+  "carril": "S-shacl",
+  "version": "v001-complemento",
+  "motor": {
+    "ejecutable": "tools\\open-ontologies.exe",
+    "sha256": "765803297dbaaeef6fce9bcb2b1794d0bd6683a21afa7981d504722ff611e1bf"
+  },
+  "entradas": {
+    "config.toml": "0fa293d24094e70d81be6df257c4081627e1d571f9fc44dabb5e7bd21b1ff0c4",
+    "data/portal/portal-completo.ttl": "b4ea9e921872cff0600a4909cc9e51d5c673251a74c9aefa8d64335c11459091",
+    "data/portal/studio-verificacion.ttl": "bb03a389cca120f1f798458e18b1edf38dbb9d726f84652f14db49a4fd422812",
+    "data/portal/shapes.ttl": "480bab90ac6537cd5c9c989f6962e7536023c3737355af2f565c852b01070fa6",
+    "shapes.ttl (entrega R1-R6)": "0f342433c003d20cdda74fd8190cb746c8f7c665875b0584e5b5759dcf205566"
+  },
+  "reglas": [
+    {
+      "id": "S2",
+      "forma": "https://example.org/mex-ontologi/shapes/AdicionalCorrespondenciaRevisadaConHuella",
+      "justificacion": "La forma RevisionDocumental ya exige que quien tenga huellaEsquemaRevisado esté en 'documental_revisada'. Falta el recíproco: sin él una correspondencia puede marcarse como revisada sin la huella del esquema ni de la fila del diccionario que la sostienen, y ninguna forma lo detecta (R5 solo mira la variable de destino).",
+      "fixtures": [
+        "S2-positivo.ttl",
+        "S2-negativo.ttl"
+      ],
+      "positivo_conforms": true,
+      "negativo_conforms": false,
+      "negativo_focus_nodes": [
+        "https://example.org/mex-ontologi/prueba-s-shacl/c-revisada-sin-huella"
+      ],
+      "resultado": "pasa"
+    },
+    {
+      "id": "S3",
+      "forma": "https://example.org/mex-ontologi/shapes/AdicionalResumenMunicipalCoherencia",
+      "justificacion": "presenteEnAmbas declara aparición en las dos fuentes del cruce y los conteos vienen de cada fuente. La bandera sin ambos conteos, o ambos conteos con bandera falsa, describe un cruce inexistente; ninguna forma vigente ni R1-R6 lo mira.",
+      "fixtures": [
+        "S3-positivo.ttl",
+        "S3-negativo.ttl"
+      ],
+      "positivo_conforms": true,
+      "negativo_conforms": false,
+      "negativo_focus_nodes": [
+        "https://example.org/mex-ontologi/prueba-s-shacl/r-ambas-sin-bandera",
+        "https://example.org/mex-ontologi/prueba-s-shacl/r-incompleto"
+      ],
+      "resultado": "pasa"
+    },
+    {
+      "id": "S5a",
+      "forma": "https://example.org/mex-ontologi/shapes/AdicionalCondicionConexion",
+      "justificacion": "mex:CondicionConexion es obligatoria en ConceptoCompartido (minCount 1) y no tenía restricción propia: un IRI vacío satisfacía la forma del concepto.",
+      "fixtures": [
+        "S5-positivo.ttl",
+        "S5-negativo.ttl"
+      ],
+      "positivo_conforms": true,
+      "negativo_conforms": false,
+      "negativo_focus_nodes": [
+        "https://example.org/mex-ontologi/prueba-s-shacl/condicion-sin-descripcion"
+      ],
+      "resultado": "pasa"
+    },
+    {
+      "id": "S5b",
+      "forma": "https://example.org/mex-ontologi/shapes/AdicionalMunicipioSegunFuente",
+      "justificacion": "mex:MunicipioSegunFuente es obligatoria en EntradaCatalogo (minCount 1) y tampoco tenía restricción: sin nombre ni procedencia, la entrada apuntaba a un nodo mudo.",
+      "fixtures": [
+        "S5-positivo.ttl",
+        "S5-negativo.ttl"
+      ],
+      "positivo_conforms": true,
+      "negativo_conforms": false,
+      "negativo_focus_nodes": [
+        "https://example.org/mex-ontologi/prueba-s-shacl/municipio-sin-procedencia"
+      ],
+      "resultado": "pasa"
+    }
+  ],
+  "pruebas_copias": [
+    {
+      "copia": "data\\portal\\portal-completo.ttl",
+      "corridas": {
+        "produccion": {
+          "conforms": true,
+          "violation_count": 0,
+          "focus_nodes": 33970
+        },
+        "sellada_R1-R6": {
+          "conforms": true,
+          "violation_count": 0,
+          "focus_nodes": 10293
+        },
+        "complemento": {
+          "conforms": true,
+          "violation_count": 0,
+          "focus_nodes": 4668
+        },
+        "union_sellada_complemento": {
+          "conforms": true,
+          "violation_count": 0,
+          "focus_nodes": 14961
+        }
+      },
+      "complemento_por_forma_y_restriccion": {},
+      "sin_instancias_reportadas": [
+        {
+          "shape": "https://example.org/mex-ontologi/shapes/ResultadoMunicipalLote",
+          "target": "https://example.org/mex-ontologi/vocab/ResultadoCruceLote",
+          "target_class": "https://example.org/mex-ontologi/vocab/ResultadoCruceLote",
+          "target_form": "class"
+        }
+      ]
+    },
+    {
+      "copia": "data\\portal\\studio-verificacion.ttl",
+      "corridas": {
+        "produccion": {
+          "conforms": true,
+          "violation_count": 0,
+          "focus_nodes": 33970
+        },
+        "sellada_R1-R6": {
+          "conforms": true,
+          "violation_count": 0,
+          "focus_nodes": 10293
+        },
+        "complemento": {
+          "conforms": true,
+          "violation_count": 0,
+          "focus_nodes": 4668
+        },
+        "union_sellada_complemento": {
+          "conforms": true,
+          "violation_count": 0,
+          "focus_nodes": 14961
+        }
+      },
+      "complemento_por_forma_y_restriccion": {},
+      "sin_instancias_reportadas": [
+        {
+          "shape": "https://example.org/mex-ontologi/shapes/ResultadoMunicipalLote",
+          "target": "https://example.org/mex-ontologi/vocab/ResultadoCruceLote",
+          "target_class": "https://example.org/mex-ontologi/vocab/ResultadoCruceLote",
+          "target_form": "class"
+        }
+      ]
+    }
+  ],
+  "sonda_sh_or": {
+    "forma": "analisis/sonda-sh-or.ttl",
+    "datos": "analisis/sonda-sh-or-datos.ttl",
+    "conforms": true,
+    "violation_count": 0,
+    "sh_or_evaluado": false,
+    "consecuencia": "el motor no reporta la violación de sh:or; las formas que lo necesiten deben usar sh:sparql, como S2/S3"
+  },
+  "no_propuestas": [
+    {
+      "borrador": "S1 respaldada_por_definicion -> significadoDocumentado",
+      "motivo": "Ya cubierta por shape:VariableRespaldadaConSignificadoDocumentado (R1) de shapes.ttl."
+    },
+    {
+      "borrador": "S4 contrato completo de UnidadDeclarada",
+      "motivo": "Ya cubierta por shape:UnidadDeclaradaContrato (R6) de shapes.ttl; se evita duplicar las mismas rutas. R6 no exige rdfs:comment de alcance ni evidenciaNormativa: queda anotado como hueco para el integrador, no como regla nueva."
+    },
+    {
+      "borrador": "enumeración cerrada de mex:estadoVigencia",
+      "motivo": "El estado se usa en varias capas (integrar_entregas.py escribe 'edicion_INEGI_no_cotejada', ausente en la copia del portal): una lista cerrada aquí sería incompleta y rechazaría valores válidos de otras capas."
+    },
+    {
+      "borrador": "candidata_sin_definicion_suficiente -> significadoCandidato",
+      "motivo": "Se cumple en la copia (16/16), pero el estado describe suficiencia de definición, no la existencia de una candidata; sin respaldo documental se descarta."
+    }
+  ],
+  "formas_sin_instancias": [
+    {
+      "forma": "https://example.org/mex-ontologi/shapes/ResultadoMunicipalLote",
+      "target_class": "https://example.org/mex-ontologi/vocab/ResultadoCruceLote",
+      "copia": "data\\portal\\portal-completo.ttl"
+    },
+    {
+      "forma": "https://example.org/mex-ontologi/shapes/ResultadoMunicipalLote",
+      "target_class": "https://example.org/mex-ontologi/vocab/ResultadoCruceLote",
+      "copia": "data\\portal\\studio-verificacion.ttl"
+    }
+  ],
+  "restricciones_no_evaluadas": [
+    "Todas las restricciones del complemento se evaluaron (0 ignoradas); el motor no reporta un campo de restricciones ignoradas en esta invocación.",
+    "sh:or queda fuera de uso: se comprobó que no produce violación (analisis/sonda-sh-or.ttl).",
+    "ResultadoMunicipalLote: forma de producción sin instancias; sus cuatro restricciones no se ejercitaron contra datos."
+  ],
+  "artefactos": {
+    "propuesta/shapes-adicionales.ttl": "9183095edb8923040e54f9de3763a67b0c966d0d4b65328ef6cdcc0898518154",
+    "verificar.py": "c55a124a202d7dc832d340ab40224ab08c31538ae38eb421917bbab4a28b5c90",
+    "verificacion.json": "e6fb2686f794d4902698f1a1ad7aa76407e2bf16024563a955e7d579b6e1b769",
+    "analisis/inspeccionar_copias.py": "6297b18f3da7b0a7493872a39d5cb50da3c83266bcf2616402e03a52ec18ec66",
+    "analisis/inspeccion.json": "164983d2057f289fcff973442a5071c4e352d567bb75119f12a58184d39e0fe2",
+    "analisis/sonda-sh-or.ttl": "b3b46b45b2494da38177d5c9a7081dbcff3597a2d6e8d1f3318d268495d17d9a",
+    "analisis/sonda-sh-or-datos.ttl": "b1afd6b2001b7514bd6fc58f0da07c681bf964600d1ac1cdfb5d1d7ec7009d32",
+    "fixtures/S2-negativo.ttl": "b00e79671a9119b535b0f6bec114a7e7f41f27054373a7918262ba4add91f660",
+    "fixtures/S2-positivo.ttl": "7e2e787a4dd4c87370f57779507b03b5857e05573ba9aa61ba843260aa750e0c",
+    "fixtures/S3-negativo.ttl": "a725da8f3ae77e14774397dd98a0643a833d430425b20037b1a596d6e8bb418b",
+    "fixtures/S3-positivo.ttl": "7222cf34da8374ffaf809c37ed645e156bdd9f6df26f35b5c54454fbe3b5149a",
+    "fixtures/S5-negativo.ttl": "15740023ad8f9b625a9020f33ed41261650263c86208c0911b65b39f175f1860",
+    "fixtures/S5-positivo.ttl": "8802ec25e89e5f788f21af376dfef1f438a72c1c744573146ce19bca2a89ae60"
+  },
+  "relacion_entrega_previa": "shapes.ttl, validar.py, fixtures/{positivo,negativo,esperado,positivo-instancias-r9}, entrega.*, resultados-validacion.json y sello.json son de la entrega R1-R6 y no se tocaron. Este complemento añade S2, S3, S5a y S5b, que R1-R6 no cubren, y omite S1/S4 por duplicarlas.",
+  "limites": [
+    "Los fixtures se validan solo contra el complemento, no contra producción ni R1-R6: aisla cada regla, no acredita el grafo.",
+    "sh:or no se evalúa en este motor (sonda_sh_or); por eso S2/S3 usan sh:sparql.",
+    "El motor trata los literales sin tipo como no xsd:string: las formas nuevas no imponen sh:datatype xsd:string sobre etiquetas ni comentarios (sí nodeKind en los IRI).",
+    "ResultadoMunicipalLote (producción) no tiene instancias: el motor lo reporta en unmatched_shapes y sus restricciones no se evaluaron.",
+    "Las copias son los archivos locales del repositorio, no una instantánea certificada de Studio.",
+    "Las reglas R1-R6 de esta carpeta tienen su propia entrega sellada; este complemento no las repite ni las sustituye.",
+    "sello.json y entrega.* de esta carpeta pertenecen a la entrega R1-R6 y no cubren estos bytes; sus hashes vigentes están en entrega-deepseek.json."
+  ]
+}

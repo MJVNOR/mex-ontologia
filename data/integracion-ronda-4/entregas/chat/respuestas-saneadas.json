@@ -1,0 +1,44 @@
+[
+  {
+    "id": "C1-totales",
+    "pregunta": "¿Cuántas correspondencias documentales revisadas hay? Distingue revisadas, candidatas y ambiguas.",
+    "chat": "probado",
+    "causa": null,
+    "respuesta": "Existen 865 correspondencias bajo el estado \"documental_revisada\", 3283 bajo el estado \"candidata_por_nombre\" y 12 bajo el estado \"ambigua_por_nombre\", sumando un total de 4160 correspondencias en el grafo.\n\n---\n\n- El estado \"documental_revisada\" cuenta con 865 registros [GLOBAL CORRESPONDENCE COUNTS].\n- El estado \"candidata_por_nombre\" cuenta con 3283 registros [GLOBAL CORRESPONDENCE COUNTS].\n- El estado \"ambigua_por_nombre\" cuenta con 12 registros [GLOBAL CORRESPONDENCE COUNTS].\n- El total global de correspondencias es 4160 [GLOBAL CORRESPONDENCE COUNTS]."
+  },
+  {
+    "id": "C2-f2-evidencia",
+    "pregunta": "Explica la evidencia F2 de proyecciones en 2020 y sus condiciones pendientes. No extrapoles a otros años.",
+    "chat": "falla_oraculo",
+    "causa": null,
+    "respuesta": "La evidencia sobre las condiciones para la innovación en TIC (identificada como la dependencia coordinadora) declara que el cumplimiento de las condiciones (P7) queda pendiente, especificando que se debe diagnosticar el entorno digital y el APE Sonora. Esta definición se encuentra vinculada al concepto `https://example.org/mex-ontologi/concept/condiciones-innovacion-tic-dependencia` [S1].\n\n---\n\n- El concepto requiere la comprobación de seis condiciones específicas: catálogo, contexto, grano, periodo, rol y unidad [S1].\n- La definición oficial indica: \"La dependencia coordinadora declara tener las condiciones para la innovacion en TIC (Si/No, Diagnostico del Entorno Digital, APE Sonora). El cuales (P7) queda pendiente\" [S1].\n- El nodo de origen de esta evidencia es el archivo `semantica.json` [S1]."
+  },
+  {
+    "id": "C3-f2-igualdad",
+    "pregunta": "¿Qué demuestra la igualdad de los dos valores de 2020 y qué queda sin demostrar?",
+    "chat": "probado",
+    "causa": null,
+    "respuesta": "La igualdad de los dos valores de 2020 demuestra una igualdad aritmética entre las fuentes, pero no una identidad de medida, ya que se trata de una yuxtaposición de constructos distintos (suma de grandes grupos frente a indicadores) [F2]. Queda sin demostrar la equivalencia INEGI, la vigencia de los catálogos utilizados y la validez del cruce para años distintos a 2020 (periodo 1990-2040) [F2].\n\n---\n*   La evidencia calificada F2 establece que la igualdad aritmética es válida para 2020, confirmando que la suma de grupos es igual a la población total en 7344/7344 casos [F2].\n*   Se especifica explícitamente como \"igualdad aritmética 2020, no identidad de medida\" [26001 — 2020].\n*   El estado de la decisión se clasifica como \"exploratorio_con_condiciones_pendientes\" [F2].\n*   Las condiciones pendientes incluyen la falta de equivalencia INEGI afirmada y la no acreditación de la vigencia de los catálogos [F2].\n*   El cruce año por año para el periodo 1990-2040 no ha sido ejecutado, limitándose únicamente al año 2020 [F2]."
+  },
+  {
+    "id": "C4-definicion-diccionario",
+    "pregunta": "¿Qué significa la variable año_matrimonio según su diccionario? Consulta el grafo y muestra la evidencia.",
+    "chat": "probado",
+    "causa": null,
+    "respuesta": "La variable `año_matrimonio` se define en su diccionario como \"Año de registro\", según se establece en la fila de diccionario asociada a la definición de la variable.\n\n---\n- La definición de la variable `año_matrimonio — Matrimonios` [URI: <https://example.org/mex-ontologi/definition/364ffa5c-e1c2-4185-a22f-80bede6735d0%2F6>] indica explícitamente: \"Año de registro\".\n- Esta definición proviene del archivo `diccionario.csv` [URL: <https://datos.sonora.gob.mx/dataset/1cf9c8e2-e7e4-43d8-a9fd-6da790e64c98/resource/364ffa5c-e1c2-4185-a22f-80bede6735d0/download/diccionario.csv>].\n- La propiedad `filaDiccionario` confirma el contenido: `{\"Descripción\": \"Año de registro\", ...}`.\n- El concepto compartido `Año de registro` [URI: <https://example.org/mex-ontologi/concept/anio-registro>] amplía la descripción: \"Año en que se registra un hecho según la definición documental; no implica que el hecho haya ocurrido ese año.\""
+  },
+  {
+    "id": "C5-diferencia-variables",
+    "pregunta": "¿Qué diferencia hay entre año_matrimonio y año_defuncion? Muestra las definiciones originales y distingue lo documentado de lo candidato.",
+    "chat": "falla_oraculo",
+    "causa": null,
+    "respuesta": "La diferencia entre `año_matrimonio` y `año_defuncion` radica en su significado semántico: el primero se refiere al \"Año de registro\" de un matrimonio, mientras que el segundo al \"Año en el que fallecio\" una persona. Ambos cuentan con definiciones originales declaradas en sus respectivos diccionarios y, en el subgrafo recuperado, todas las columnas analizadas para ambas variables poseen un estado de correspondencia \"documental_revisada\", lo que las distingue de las simples definiciones candidatas.\n\n---\n- **Definición `año_matrimonio`**: \"Año de registro\" [Definición <https://example.org/mex-ontologi/definition/364ffa5c-e1c2-4185-a22f-80bede6735d0%2F6>].\n- **Definición `año_defuncion`**: \"Año en el que fallecio\" [Definición <https://example.org/mex-ontologi/definition/ab19bd4a-847a-4451-b0db-1249dcb892db%2F6>].\n- **Estado Documentado**: Ambas variables están registradas como \"Variable documentada\" y su estado semántico es \"respaldada_por_definicion\" [Documented-Variable <https://example.org/mex-ontologi/documented-variable/364ffa5c-e1c2-4185-a22f-80bede6735d0%2F6> y <https://example.org/mex-ontologi/documented-variable/ab19bd4a-847a-4451-b0db-1249dcb892db%2F6>].\n- **Correspondencia**: Las columnas asociadas a ambas variables han sido validadas con estado \"documental_revisada\", superando el estatus de \"definicionCandidata\" presente en el grafo [Mapeos <https://example.org/mex-ontologi/semantic-mapping/00266ff077b290d1200c75a0c0945fccfa22f636ba62a165ff8388c94af61db0> y <https://example.org/mex-ontologi/semantic-mapping/2ba9f00274a2d6775aa59568282a865effe99281892b2c71c809d1b1b45a881c>].\n- **Conteo**: Se registran 10 correspondencias \"documental_revisada\" para cada variable en el alcance del conjunto analizado."
+  },
+  {
+    "id": "C6-clave-26001",
+    "pregunta": "Para la clave 26001 en las comparaciones de 2020, muestra los dos valores con medida, nombre de origen, archivo y filas. ¿Son códigos INEGI?",
+    "chat": "bloqueado_cuota",
+    "causa": "Model endpoint https://generativelanguage.googleapis.com/v1beta/openai returned HTTP 429: [{\n  \"error\": {\n    \"code\": 429,\n    \"message\": \"You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/rate-limit. \\n* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_input_token_count, limit: 250000, model: gemini-3.1-flash-lite, description: Generate content input tokens per minute limit exceeded on Free Tier. See https://ai.google.dev/gemini-api/docs/rate-limits.\\nPlease retry in 8.512495297s.\",\n    \"status\": \"RESOURCE_EXHAUSTED\",\n    \"details\": [\n      {\n        \"@type\": \"type.googleapis.com/google.rpc.Help\",\n        \"links\": [\n          {\n            \"description\": \"Learn more about Gemini API quotas\",\n            \"url\": \"https://ai.google.dev/gemini-api/docs/rate-limits\"\n          }\n        ]\n      },\n      {\n        \"@type\": \"type.googleapis.com/google.rpc.QuotaFailure\",\n        \"violations\": [\n          {\n            \"description\": \"Generate content input tokens per minute limit exceeded on Free Tier. See https://ai.google.dev/gemini-api/docs/rate-limits.\",\n            \"quotaMetric\": \"generativelanguage.googleapis.com/generate_content_free_tier_input_token_count\",\n            \"quotaId\": \"GenerateContentInputTokensPerModelPerMinute-FreeTier\",\n            \"quotaDimensions\": {\n              \"location\": \"global\",\n              \"model\": \"gemini-3.1-flash-lite\"\n            },\n            \"quotaValue\": \"250000\"\n          }\n        ]\n      },\n      {\n        \"@type\": \"type.googleapis.com/google.rpc.RetryInfo\",\n        \"retryDelay\": \"8s\"\n      }\n    ]\n  }\n}\n]",
+    "respuesta": null
+  }
+]

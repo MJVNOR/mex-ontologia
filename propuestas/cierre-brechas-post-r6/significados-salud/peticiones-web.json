@@ -1,0 +1,161 @@
+{
+  "agente_solicitante": "significados-salud (cierre-brechas-post-r6)",
+  "destinatario": "agente web-obscura (navegacion compartida exclusiva)",
+  "fecha_utc": "2026-10-24",
+  "nota_coordinacion": "No manejar el navegador compartido desde este agente; solo peticiones via expediente. El agente web-obscura devuelve resultados en carpeta web-obscura cuando existan; este agente trabaja en paralelo con herramientas web nativas independientes y material local preservado.",
+  "peticiones": [
+    {
+      "id_peticion": "W01",
+      "alcance": "completa",
+      "conteo_ids": 32,
+      "ids_caso_relacionados": [
+        "https://example.org/mex-ontologi/definition/12f684e9-f4d5-4714-933d-aa153a812174%2F17",
+        "https://example.org/mex-ontologi/definition/12f684e9-f4d5-4714-933d-aa153a812174%2F30",
+        "https://example.org/mex-ontologi/definition/12f684e9-f4d5-4714-933d-aa153a812174%2F31",
+        "https://example.org/mex-ontologi/definition/12f684e9-f4d5-4714-933d-aa153a812174%2F32",
+        "https://example.org/mex-ontologi/definition/12f684e9-f4d5-4714-933d-aa153a812174%2F33",
+        "https://example.org/mex-ontologi/definition/12f684e9-f4d5-4714-933d-aa153a812174%2F34",
+        "https://example.org/mex-ontologi/definition/12f684e9-f4d5-4714-933d-aa153a812174%2F35",
+        "https://example.org/mex-ontologi/definition/12f684e9-f4d5-4714-933d-aa153a812174%2F36",
+        "https://example.org/mex-ontologi/definition/12f684e9-f4d5-4714-933d-aa153a812174%2F37",
+        "https://example.org/mex-ontologi/definition/12f684e9-f4d5-4714-933d-aa153a812174%2F38",
+        "https://example.org/mex-ontologi/definition/12f684e9-f4d5-4714-933d-aa153a812174%2F53",
+        "https://example.org/mex-ontologi/definition/12f684e9-f4d5-4714-933d-aa153a812174%2F54",
+        "https://example.org/mex-ontologi/definition/12f684e9-f4d5-4714-933d-aa153a812174%2F55",
+        "https://example.org/mex-ontologi/definition/12f684e9-f4d5-4714-933d-aa153a812174%2F56",
+        "https://example.org/mex-ontologi/definition/12f684e9-f4d5-4714-933d-aa153a812174%2F57",
+        "https://example.org/mex-ontologi/definition/12f684e9-f4d5-4714-933d-aa153a812174%2F58",
+        "https://example.org/mex-ontologi/definition/12f684e9-f4d5-4714-933d-aa153a812174%2F63",
+        "https://example.org/mex-ontologi/definition/12f684e9-f4d5-4714-933d-aa153a812174%2F64",
+        "https://example.org/mex-ontologi/definition/12f684e9-f4d5-4714-933d-aa153a812174%2F67",
+        "https://example.org/mex-ontologi/definition/12f684e9-f4d5-4714-933d-aa153a812174%2F68",
+        "https://example.org/mex-ontologi/definition/12f684e9-f4d5-4714-933d-aa153a812174%2F69",
+        "https://example.org/mex-ontologi/definition/12f684e9-f4d5-4714-933d-aa153a812174%2F70",
+        "https://example.org/mex-ontologi/definition/12f684e9-f4d5-4714-933d-aa153a812174%2F71",
+        "https://example.org/mex-ontologi/definition/12f684e9-f4d5-4714-933d-aa153a812174%2F72",
+        "https://example.org/mex-ontologi/definition/12f684e9-f4d5-4714-933d-aa153a812174%2F73",
+        "https://example.org/mex-ontologi/definition/12f684e9-f4d5-4714-933d-aa153a812174%2F74",
+        "https://example.org/mex-ontologi/definition/12f684e9-f4d5-4714-933d-aa153a812174%2F75",
+        "https://example.org/mex-ontologi/definition/12f684e9-f4d5-4714-933d-aa153a812174%2F76",
+        "https://example.org/mex-ontologi/definition/12f684e9-f4d5-4714-933d-aa153a812174%2F77",
+        "https://example.org/mex-ontologi/definition/12f684e9-f4d5-4714-933d-aa153a812174%2F78",
+        "https://example.org/mex-ontologi/definition/12f684e9-f4d5-4714-933d-aa153a812174%2F79",
+        "https://example.org/mex-ontologi/definition/12f684e9-f4d5-4714-933d-aa153a812174%2F80"
+      ],
+      "estado": "pendiente",
+      "brecha": "Falta nota del publicador que vincule el recurso 6f39fc5d (Defunciones Sonora 2022-01-01 a 2022-09-22, XLSX datastore_active=false) con preguntas del Manual SEED Modelo 2022 (tabla pregunta<->columna + codebook de valores numericos y literales D).",
+      "consultas_urls": [
+        "https://datos.gob.mx/busca/dataset/defunciones",
+        "http://www.dgis.salud.gob.mx/contenidos/basesdedatos/seed.html",
+        "http://www.dgis.salud.gob.mx/descargas/seed/pdf/Manual_Llenado_CD_CMF_2022_20220930.pdf"
+      ],
+      "preguntas_concretas": [
+        "¿Existe diccionario de datos o codebook publicado del recurso de defunciones 2022 (columnas CLAVEOCUPACIONHABITUAL, TRABAJAACTUALMENTE, AFILIACION, SITIODEFUNCION y sus columnas D)?",
+        "¿Alguna pagina del publicador (datos.gob.mx / DGIS / Sonora) publica tabla pregunta-del-certificado <-> columna-del-XLSX?"
+      ],
+      "resultado_web_obscura": {
+        "atendida_nucleo": false,
+        "detalle": "F-CIE-U071 (contexto U07.1, sin edicion 2022) y F-CLUES-01 (catalogo CLUES nacional) sirven de contexto a 3/32 IDs; la tabla pregunta<->columna y el codebook del publicador para el recurso 6f39fc5d no fueron aportados.",
+        "fuentes": [
+          {
+            "ruta": "propuestas/cierre-brechas-post-r6/web-obscura/fuentes.json",
+            "sha256": "3668e3d9a32a501288e4756de2b125c2c7f344c5d7f68b7801dbe090c20b77fe"
+          },
+          {
+            "ruta": "propuestas/cierre-brechas-post-r6/web-obscura/fuentes.md",
+            "sha256": "aab5f31b5dc7de7fae1f2c64b0c3e2d1f4f507b3a5333416b3675e79e95da358"
+          },
+          {
+            "ruta": "propuestas/cierre-brechas-post-r6/web-obscura/disponibilidad.json",
+            "sha256": "2ef51cf359555623f902c0da2bbe586144212f6e95b15018e581182a2e26fd50"
+          }
+        ]
+      }
+    },
+    {
+      "id_peticion": "W02",
+      "alcance": "completa",
+      "conteo_ids": 53,
+      "ids_caso_relacionados": [
+        "https://example.org/mex-ontologi/definition/22202305-2d02-4c49-b216-cc98224357f0%2F31",
+        "https://example.org/mex-ontologi/definition/22202305-2d02-4c49-b216-cc98224357f0%2F32",
+        "https://example.org/mex-ontologi/definition/22202305-2d02-4c49-b216-cc98224357f0%2F33",
+        "https://example.org/mex-ontologi/definition/22202305-2d02-4c49-b216-cc98224357f0%2F34",
+        "https://example.org/mex-ontologi/definition/22202305-2d02-4c49-b216-cc98224357f0%2F35",
+        "https://example.org/mex-ontologi/definition/22202305-2d02-4c49-b216-cc98224357f0%2F37",
+        "https://example.org/mex-ontologi/definition/22202305-2d02-4c49-b216-cc98224357f0%2F38",
+        "https://example.org/mex-ontologi/definition/22202305-2d02-4c49-b216-cc98224357f0%2F39",
+        "https://example.org/mex-ontologi/definition/22202305-2d02-4c49-b216-cc98224357f0%2F40",
+        "https://example.org/mex-ontologi/definition/22202305-2d02-4c49-b216-cc98224357f0%2F43",
+        "https://example.org/mex-ontologi/definition/22202305-2d02-4c49-b216-cc98224357f0%2F44",
+        "https://example.org/mex-ontologi/definition/22202305-2d02-4c49-b216-cc98224357f0%2F45",
+        "https://example.org/mex-ontologi/definition/22202305-2d02-4c49-b216-cc98224357f0%2F46",
+        "https://example.org/mex-ontologi/definition/22202305-2d02-4c49-b216-cc98224357f0%2F57",
+        "https://example.org/mex-ontologi/definition/22202305-2d02-4c49-b216-cc98224357f0%2F58",
+        "https://example.org/mex-ontologi/definition/22202305-2d02-4c49-b216-cc98224357f0%2F59",
+        "https://example.org/mex-ontologi/definition/22202305-2d02-4c49-b216-cc98224357f0%2F60",
+        "https://example.org/mex-ontologi/definition/22202305-2d02-4c49-b216-cc98224357f0%2F61",
+        "https://example.org/mex-ontologi/definition/22202305-2d02-4c49-b216-cc98224357f0%2F62",
+        "https://example.org/mex-ontologi/definition/22202305-2d02-4c49-b216-cc98224357f0%2F63",
+        "https://example.org/mex-ontologi/definition/22202305-2d02-4c49-b216-cc98224357f0%2F64",
+        "https://example.org/mex-ontologi/definition/22202305-2d02-4c49-b216-cc98224357f0%2F65",
+        "https://example.org/mex-ontologi/definition/22202305-2d02-4c49-b216-cc98224357f0%2F66",
+        "https://example.org/mex-ontologi/definition/22202305-2d02-4c49-b216-cc98224357f0%2F67",
+        "https://example.org/mex-ontologi/definition/22202305-2d02-4c49-b216-cc98224357f0%2F68",
+        "https://example.org/mex-ontologi/definition/22202305-2d02-4c49-b216-cc98224357f0%2F69",
+        "https://example.org/mex-ontologi/definition/22202305-2d02-4c49-b216-cc98224357f0%2F70",
+        "https://example.org/mex-ontologi/definition/22202305-2d02-4c49-b216-cc98224357f0%2F71",
+        "https://example.org/mex-ontologi/definition/22202305-2d02-4c49-b216-cc98224357f0%2F72",
+        "https://example.org/mex-ontologi/definition/22202305-2d02-4c49-b216-cc98224357f0%2F73",
+        "https://example.org/mex-ontologi/definition/22202305-2d02-4c49-b216-cc98224357f0%2F74",
+        "https://example.org/mex-ontologi/definition/22202305-2d02-4c49-b216-cc98224357f0%2F75",
+        "https://example.org/mex-ontologi/definition/22202305-2d02-4c49-b216-cc98224357f0%2F76",
+        "https://example.org/mex-ontologi/definition/22202305-2d02-4c49-b216-cc98224357f0%2F77",
+        "https://example.org/mex-ontologi/definition/22202305-2d02-4c49-b216-cc98224357f0%2F78",
+        "https://example.org/mex-ontologi/definition/22202305-2d02-4c49-b216-cc98224357f0%2F79",
+        "https://example.org/mex-ontologi/definition/22202305-2d02-4c49-b216-cc98224357f0%2F80",
+        "https://example.org/mex-ontologi/definition/22202305-2d02-4c49-b216-cc98224357f0%2F83",
+        "https://example.org/mex-ontologi/definition/22202305-2d02-4c49-b216-cc98224357f0%2F84",
+        "https://example.org/mex-ontologi/definition/22202305-2d02-4c49-b216-cc98224357f0%2F87",
+        "https://example.org/mex-ontologi/definition/22202305-2d02-4c49-b216-cc98224357f0%2F88",
+        "https://example.org/mex-ontologi/definition/22202305-2d02-4c49-b216-cc98224357f0%2F89",
+        "https://example.org/mex-ontologi/definition/22202305-2d02-4c49-b216-cc98224357f0%2F90",
+        "https://example.org/mex-ontologi/definition/22202305-2d02-4c49-b216-cc98224357f0%2F97",
+        "https://example.org/mex-ontologi/definition/22202305-2d02-4c49-b216-cc98224357f0%2F98",
+        "https://example.org/mex-ontologi/definition/22202305-2d02-4c49-b216-cc98224357f0%2F99",
+        "https://example.org/mex-ontologi/definition/22202305-2d02-4c49-b216-cc98224357f0%2F100",
+        "https://example.org/mex-ontologi/definition/22202305-2d02-4c49-b216-cc98224357f0%2F101",
+        "https://example.org/mex-ontologi/definition/22202305-2d02-4c49-b216-cc98224357f0%2F102",
+        "https://example.org/mex-ontologi/definition/22202305-2d02-4c49-b216-cc98224357f0%2F103",
+        "https://example.org/mex-ontologi/definition/22202305-2d02-4c49-b216-cc98224357f0%2F104",
+        "https://example.org/mex-ontologi/definition/22202305-2d02-4c49-b216-cc98224357f0%2F105",
+        "https://example.org/mex-ontologi/definition/22202305-2d02-4c49-b216-cc98224357f0%2F106"
+      ],
+      "estado": "pendiente",
+      "brecha": "Falta diccionario corregido o nota del publicador que vincule cada fila (diccionario 22202305, recurso 46977217 SINAC 2022-01-01 a 2022-09-26) con descripcion + codebook + tabla pregunta-manual<->columna-local y edicion aplicable. Columnas D y TIEMPOTRASLADO sin contraparte nacional.",
+      "consultas_urls": [
+        "https://datos.gob.mx/busca/dataset/informacion-sobre-nacimientos",
+        "http://www.dgis.salud.gob.mx/contenidos/basesdedatos/sinac.html"
+      ],
+      "preguntas_concretas": [
+        "¿Existe diccionario de datos publicado del recurso SINAC Sonora 2022 con descripciones (no Pendiente de especificar)?",
+        "¿Existe codebook de valores para APGAR, SILVERMAN, TAMIZAUDITIVO, VACUNA_BCG, VITAMINA_A/K, PRODUCTOEMBARAZO, RESOLUCIONEMBARAZO, UTILIZOFORCEPS?",
+        "¿Que significan las columnas D y TIEMPOTRASLADO segun el publicador?"
+      ],
+      "resultado_web_obscura": {
+        "atendida_nucleo": false,
+        "detalle": "Sin resultado especifico para SINAC en el paquete web-obscura (resumen por tarea: F-CLUES-01 + F-CIE-U071 + manual SEED ya en expediente, todo sigue_pendiente). Diccionario corregido y codebook del recurso 46977217 no aportados.",
+        "fuentes": [
+          {
+            "ruta": "propuestas/cierre-brechas-post-r6/web-obscura/fuentes.json",
+            "sha256": "3668e3d9a32a501288e4756de2b125c2c7f344c5d7f68b7801dbe090c20b77fe"
+          },
+          {
+            "ruta": "propuestas/cierre-brechas-post-r6/web-obscura/fuentes.md",
+            "sha256": "aab5f31b5dc7de7fae1f2c64b0c3e2d1f4f507b3a5333416b3675e79e95da358"
+          }
+        ]
+      }
+    }
+  ]
+}

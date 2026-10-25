@@ -1,0 +1,1263 @@
+[
+  {
+    "definicion_iri": "https://example.org/mex-ontologi/definition/22202305-2d02-4c49-b216-cc98224357f0%2F31",
+    "fila": "31",
+    "variable": "ORDENNACIMIENTO",
+    "tier": "A2",
+    "afirmacion": "ORDENNACIMIENTO = variable IDnac=19 del descriptor SINAC 2020-2025: Orden de nacimiento del recién nacido vivo. El valor 99 corresponde a No Especificado. Sin catalogo nacional; tipo local (Numérico entero) compatible; ejemplo '1'.",
+    "original_sha256": "1bc1b741708525a7b6bb6a0576c72684782a58bc999ea1ad889b922a6b63a090",
+    "limites": [
+      "Descriptor/catalogos DGIS citados son del registro nacional (DEFUN 2022 / SINAC 2020-2025), no del extracto Sonora del portal; la coincidencia de nombres o valores no sustituye la tabla del publicador.",
+      "Negativas y ausencias acotadas a lo revisado el 2026-10-24; no ausencia universal.",
+      "Reinterpretacion v002 (explicita para auditores A/B): la correspondencia ya no exige nota del publicador como unico medio; se prueba por sistema+edicion+identificador exacto+representacion (codigo local en catalogo nacional + etiqueta D identica)+ambito.",
+      "Diferencia de representacion declarada: codigos nacionales como texto con cero inicial ('01','00') frente a entero local (1, 0); mapeo biyectivo por igualdad numerica + etiqueta D; el tipo local entero no preserva ceros a la izquierda.",
+      "Edicion declarada por titulo/rango DGIS (descriptor 2020-2025, catalogos 2020-2023, geo 202201/202203/202204); sin acta de vigencia separada."
+    ],
+    "evidencia": [
+      {
+        "ruta": "data/portal/inspecciones/22202305-2d02-4c49-b216-cc98224357f0.json",
+        "sha256": "76fe68223bc861fcdf62cb33f5b9a207503b192c2ef531a4aad31d52e7a7513b",
+        "localizador": "/definiciones/30 (fila 31, variable ORDENNACIMIENTO)"
+      },
+      {
+        "ruta": "data/portal/inspecciones/46977217-9396-4f9c-bddb-6616e82530b4.json",
+        "sha256": "13831dec294ac79e90d3c618dd7f322d512afc392babe1405eb903d40c18afd5",
+        "localizador": "tablas[0]: hoja 'SINAC 2022 26-09-22', 106 campos; encabezado incluye ORDENNACIMIENTO"
+      },
+      {
+        "ruta": "propuestas/cierre-brechas-post-r6/significados-salud/evidencia/desc_sinac_2020_2025/Descriptores_SINAC_2020.xlsx",
+        "sha256": "0af0b6be1faeb3867da872cd1b2021785af4feb78311c5de7c1fa44807fd6ed4",
+        "localizador": "Hoja1 fila ID=19, VARIABLE=ORDENNACIMIENTO"
+      },
+      {
+        "ruta": ".\\propuestas/plan-paralelo-brechas-sin-gemma/ejecucion-20261024-072207Z/S2-nacimientos\\trabajo\\evidencia\\sinac_catalogos_2020_2023.zip",
+        "sha256": "9c7dcd52dd8fdb2cfb9c7de3711e0ccc323cfa9cff86712eaeeb3e883141cb4e",
+        "localizador": "contenido del zip (20 xlsx); sin columnas D ni ANOMALIACIE* ni DIAGNOSTICOS"
+      }
+    ]
+  },
+  {
+    "definicion_iri": "https://example.org/mex-ontologi/definition/22202305-2d02-4c49-b216-cc98224357f0%2F32",
+    "fila": "32",
+    "variable": "ATENCIONPRENATAL",
+    "tier": "A1",
+    "afirmacion": "ATENCIONPRENATAL = variable IDnac=20 del descriptor SINAC 2020-2025: La madre recibió atención  prenatal Codigos SI_NO verificados (p. ej. 1='SI'); columna local = codigo entero, etiqueta D = descripcion del catalogo.",
+    "original_sha256": "03b7364b27df252def83442baca465842b113f3eacc81c6249310766c3d850d7",
+    "limites": [
+      "Descriptor/catalogos DGIS citados son del registro nacional (DEFUN 2022 / SINAC 2020-2025), no del extracto Sonora del portal; la coincidencia de nombres o valores no sustituye la tabla del publicador.",
+      "Negativas y ausencias acotadas a lo revisado el 2026-10-24; no ausencia universal.",
+      "Reinterpretacion v002 (explicita para auditores A/B): la correspondencia ya no exige nota del publicador como unico medio; se prueba por sistema+edicion+identificador exacto+representacion (codigo local en catalogo nacional + etiqueta D identica)+ambito.",
+      "Diferencia de representacion declarada: codigos nacionales como texto con cero inicial ('01','00') frente a entero local (1, 0); mapeo biyectivo por igualdad numerica + etiqueta D; el tipo local entero no preserva ceros a la izquierda.",
+      "Edicion declarada por titulo/rango DGIS (descriptor 2020-2025, catalogos 2020-2023, geo 202201/202203/202204); sin acta de vigencia separada."
+    ],
+    "evidencia": [
+      {
+        "ruta": "data/portal/inspecciones/22202305-2d02-4c49-b216-cc98224357f0.json",
+        "sha256": "76fe68223bc861fcdf62cb33f5b9a207503b192c2ef531a4aad31d52e7a7513b",
+        "localizador": "/definiciones/31 (fila 32, variable ATENCIONPRENATAL)"
+      },
+      {
+        "ruta": "data/portal/inspecciones/46977217-9396-4f9c-bddb-6616e82530b4.json",
+        "sha256": "13831dec294ac79e90d3c618dd7f322d512afc392babe1405eb903d40c18afd5",
+        "localizador": "tablas[0]: hoja 'SINAC 2022 26-09-22', 106 campos; encabezado incluye ATENCIONPRENATAL"
+      },
+      {
+        "ruta": "propuestas/cierre-brechas-post-r6/significados-salud/evidencia/desc_sinac_2020_2025/Descriptores_SINAC_2020.xlsx",
+        "sha256": "0af0b6be1faeb3867da872cd1b2021785af4feb78311c5de7c1fa44807fd6ed4",
+        "localizador": "Hoja1 fila ID=20, VARIABLE=ATENCIONPRENATAL"
+      },
+      {
+        "ruta": ".\\propuestas/plan-paralelo-brechas-sin-gemma/ejecucion-20261024-072207Z/S2-nacimientos\\trabajo\\evidencia\\sinac_catalogos_2020_2023.zip",
+        "sha256": "9c7dcd52dd8fdb2cfb9c7de3711e0ccc323cfa9cff86712eaeeb3e883141cb4e",
+        "localizador": "contenido del zip (20 xlsx); sin columnas D ni ANOMALIACIE* ni DIAGNOSTICOS"
+      },
+      {
+        "ruta": "propuestas/plan-paralelo-brechas-sin-gemma/ejecucion-20261024-072207Z/S2-nacimientos/trabajo/evidencia/cat_sinac_2020_2023/SI_NO.xlsx",
+        "sha256": "3eca684c75bff3a83a52adb3f6fdf0a829871ef5245205da9e7840c1a61389d3",
+        "localizador": "Hoja1, catalogo SI_NO: codigo 1"
+      }
+    ]
+  },
+  {
+    "definicion_iri": "https://example.org/mex-ontologi/definition/22202305-2d02-4c49-b216-cc98224357f0%2F34",
+    "fila": "34",
+    "variable": "TRIMESTREPRIMERCONSULTA",
+    "tier": "A1",
+    "afirmacion": "TRIMESTREPRIMERCONSULTA = variable IDnac=21 del descriptor SINAC 2020-2025: Trimestre en el que la madre recibió la primer consulta prenatal Codigos TRIMESTRE_PRIMER_CONSULTA verificados (p. ej. 1='PRIMER TRIMESTRE'); columna local = codigo entero, etiqueta D = descripcion del catalogo.",
+    "original_sha256": "7647fe31f2ffc922697baeb5e0115ed80f0817f6e64feade07c88a0911a69e2d",
+    "limites": [
+      "Descriptor/catalogos DGIS citados son del registro nacional (DEFUN 2022 / SINAC 2020-2025), no del extracto Sonora del portal; la coincidencia de nombres o valores no sustituye la tabla del publicador.",
+      "Negativas y ausencias acotadas a lo revisado el 2026-10-24; no ausencia universal.",
+      "Reinterpretacion v002 (explicita para auditores A/B): la correspondencia ya no exige nota del publicador como unico medio; se prueba por sistema+edicion+identificador exacto+representacion (codigo local en catalogo nacional + etiqueta D identica)+ambito.",
+      "Diferencia de representacion declarada: codigos nacionales como texto con cero inicial ('01','00') frente a entero local (1, 0); mapeo biyectivo por igualdad numerica + etiqueta D; el tipo local entero no preserva ceros a la izquierda.",
+      "Edicion declarada por titulo/rango DGIS (descriptor 2020-2025, catalogos 2020-2023, geo 202201/202203/202204); sin acta de vigencia separada."
+    ],
+    "evidencia": [
+      {
+        "ruta": "data/portal/inspecciones/22202305-2d02-4c49-b216-cc98224357f0.json",
+        "sha256": "76fe68223bc861fcdf62cb33f5b9a207503b192c2ef531a4aad31d52e7a7513b",
+        "localizador": "/definiciones/33 (fila 34, variable TRIMESTREPRIMERCONSULTA)"
+      },
+      {
+        "ruta": "data/portal/inspecciones/46977217-9396-4f9c-bddb-6616e82530b4.json",
+        "sha256": "13831dec294ac79e90d3c618dd7f322d512afc392babe1405eb903d40c18afd5",
+        "localizador": "tablas[0]: hoja 'SINAC 2022 26-09-22', 106 campos; encabezado incluye TRIMESTREPRIMERCONSULTA"
+      },
+      {
+        "ruta": "propuestas/cierre-brechas-post-r6/significados-salud/evidencia/desc_sinac_2020_2025/Descriptores_SINAC_2020.xlsx",
+        "sha256": "0af0b6be1faeb3867da872cd1b2021785af4feb78311c5de7c1fa44807fd6ed4",
+        "localizador": "Hoja1 fila ID=21, VARIABLE=TRIMESTREPRIMERCONSULTA"
+      },
+      {
+        "ruta": ".\\propuestas/plan-paralelo-brechas-sin-gemma/ejecucion-20261024-072207Z/S2-nacimientos\\trabajo\\evidencia\\sinac_catalogos_2020_2023.zip",
+        "sha256": "9c7dcd52dd8fdb2cfb9c7de3711e0ccc323cfa9cff86712eaeeb3e883141cb4e",
+        "localizador": "contenido del zip (20 xlsx); sin columnas D ni ANOMALIACIE* ni DIAGNOSTICOS"
+      },
+      {
+        "ruta": "propuestas/plan-paralelo-brechas-sin-gemma/ejecucion-20261024-072207Z/S2-nacimientos/trabajo/evidencia/cat_sinac_2020_2023/TRIMESTRE_PRIMER_CONSULTA.xlsx",
+        "sha256": "a3a2107a1760190fa50771a1aab8a29854868f8aed4a3754f9acf7d2e77bacd8",
+        "localizador": "Hoja1, catalogo TRIMESTRE_PRIMER_CONSULTA: codigo 1"
+      }
+    ]
+  },
+  {
+    "definicion_iri": "https://example.org/mex-ontologi/definition/22202305-2d02-4c49-b216-cc98224357f0%2F37",
+    "fila": "37",
+    "variable": "SOBREVIVIOPARTO",
+    "tier": "A1",
+    "afirmacion": "SOBREVIVIOPARTO = variable IDnac=23 del descriptor SINAC 2020-2025: La madre sobrevivió al parto Codigos SI_NO verificados (p. ej. 1='SI'); columna local = codigo entero, etiqueta D = descripcion del catalogo.",
+    "original_sha256": "d0201cf110c7583aec37abc29b7cb8e0ea5636b80644e1a1d1978c9ca535301c",
+    "limites": [
+      "Descriptor/catalogos DGIS citados son del registro nacional (DEFUN 2022 / SINAC 2020-2025), no del extracto Sonora del portal; la coincidencia de nombres o valores no sustituye la tabla del publicador.",
+      "Negativas y ausencias acotadas a lo revisado el 2026-10-24; no ausencia universal.",
+      "Reinterpretacion v002 (explicita para auditores A/B): la correspondencia ya no exige nota del publicador como unico medio; se prueba por sistema+edicion+identificador exacto+representacion (codigo local en catalogo nacional + etiqueta D identica)+ambito.",
+      "Diferencia de representacion declarada: codigos nacionales como texto con cero inicial ('01','00') frente a entero local (1, 0); mapeo biyectivo por igualdad numerica + etiqueta D; el tipo local entero no preserva ceros a la izquierda.",
+      "Edicion declarada por titulo/rango DGIS (descriptor 2020-2025, catalogos 2020-2023, geo 202201/202203/202204); sin acta de vigencia separada."
+    ],
+    "evidencia": [
+      {
+        "ruta": "data/portal/inspecciones/22202305-2d02-4c49-b216-cc98224357f0.json",
+        "sha256": "76fe68223bc861fcdf62cb33f5b9a207503b192c2ef531a4aad31d52e7a7513b",
+        "localizador": "/definiciones/36 (fila 37, variable SOBREVIVIOPARTO)"
+      },
+      {
+        "ruta": "data/portal/inspecciones/46977217-9396-4f9c-bddb-6616e82530b4.json",
+        "sha256": "13831dec294ac79e90d3c618dd7f322d512afc392babe1405eb903d40c18afd5",
+        "localizador": "tablas[0]: hoja 'SINAC 2022 26-09-22', 106 campos; encabezado incluye SOBREVIVIOPARTO"
+      },
+      {
+        "ruta": "propuestas/cierre-brechas-post-r6/significados-salud/evidencia/desc_sinac_2020_2025/Descriptores_SINAC_2020.xlsx",
+        "sha256": "0af0b6be1faeb3867da872cd1b2021785af4feb78311c5de7c1fa44807fd6ed4",
+        "localizador": "Hoja1 fila ID=23, VARIABLE=SOBREVIVIOPARTO"
+      },
+      {
+        "ruta": ".\\propuestas/plan-paralelo-brechas-sin-gemma/ejecucion-20261024-072207Z/S2-nacimientos\\trabajo\\evidencia\\sinac_catalogos_2020_2023.zip",
+        "sha256": "9c7dcd52dd8fdb2cfb9c7de3711e0ccc323cfa9cff86712eaeeb3e883141cb4e",
+        "localizador": "contenido del zip (20 xlsx); sin columnas D ni ANOMALIACIE* ni DIAGNOSTICOS"
+      },
+      {
+        "ruta": "propuestas/plan-paralelo-brechas-sin-gemma/ejecucion-20261024-072207Z/S2-nacimientos/trabajo/evidencia/cat_sinac_2020_2023/SI_NO.xlsx",
+        "sha256": "3eca684c75bff3a83a52adb3f6fdf0a829871ef5245205da9e7840c1a61389d3",
+        "localizador": "Hoja1, catalogo SI_NO: codigo 1"
+      }
+    ]
+  },
+  {
+    "definicion_iri": "https://example.org/mex-ontologi/definition/22202305-2d02-4c49-b216-cc98224357f0%2F39",
+    "fila": "39",
+    "variable": "AFILIACION",
+    "tier": "A1",
+    "afirmacion": "AFILIACION = variable IDnac=24 del descriptor SINAC 2020-2025: Código y descripción de Afiliación a los Servicios de Salud (derechohabiencia) Codigos AFILIACION_CERTIFICADOS verificados (p. ej. 1='NINGUNA'); columna local = codigo entero, etiqueta D = descripcion del catalogo.",
+    "original_sha256": "99840b0915391567c59b94e7ce2cb1efbbf8d74079fd17b602f8b0bc96def8a3",
+    "limites": [
+      "Descriptor/catalogos DGIS citados son del registro nacional (DEFUN 2022 / SINAC 2020-2025), no del extracto Sonora del portal; la coincidencia de nombres o valores no sustituye la tabla del publicador.",
+      "Negativas y ausencias acotadas a lo revisado el 2026-10-24; no ausencia universal.",
+      "Reinterpretacion v002 (explicita para auditores A/B): la correspondencia ya no exige nota del publicador como unico medio; se prueba por sistema+edicion+identificador exacto+representacion (codigo local en catalogo nacional + etiqueta D identica)+ambito.",
+      "Diferencia de representacion declarada: codigos nacionales como texto con cero inicial ('01','00') frente a entero local (1, 0); mapeo biyectivo por igualdad numerica + etiqueta D; el tipo local entero no preserva ceros a la izquierda.",
+      "Edicion declarada por titulo/rango DGIS (descriptor 2020-2025, catalogos 2020-2023, geo 202201/202203/202204); sin acta de vigencia separada."
+    ],
+    "evidencia": [
+      {
+        "ruta": "data/portal/inspecciones/22202305-2d02-4c49-b216-cc98224357f0.json",
+        "sha256": "76fe68223bc861fcdf62cb33f5b9a207503b192c2ef531a4aad31d52e7a7513b",
+        "localizador": "/definiciones/38 (fila 39, variable AFILIACION)"
+      },
+      {
+        "ruta": "data/portal/inspecciones/46977217-9396-4f9c-bddb-6616e82530b4.json",
+        "sha256": "13831dec294ac79e90d3c618dd7f322d512afc392babe1405eb903d40c18afd5",
+        "localizador": "tablas[0]: hoja 'SINAC 2022 26-09-22', 106 campos; encabezado incluye AFILIACION"
+      },
+      {
+        "ruta": "propuestas/cierre-brechas-post-r6/significados-salud/evidencia/desc_sinac_2020_2025/Descriptores_SINAC_2020.xlsx",
+        "sha256": "0af0b6be1faeb3867da872cd1b2021785af4feb78311c5de7c1fa44807fd6ed4",
+        "localizador": "Hoja1 fila ID=24, VARIABLE=AFILIACION"
+      },
+      {
+        "ruta": ".\\propuestas/plan-paralelo-brechas-sin-gemma/ejecucion-20261024-072207Z/S2-nacimientos\\trabajo\\evidencia\\sinac_catalogos_2020_2023.zip",
+        "sha256": "9c7dcd52dd8fdb2cfb9c7de3711e0ccc323cfa9cff86712eaeeb3e883141cb4e",
+        "localizador": "contenido del zip (20 xlsx); sin columnas D ni ANOMALIACIE* ni DIAGNOSTICOS"
+      },
+      {
+        "ruta": "propuestas/plan-paralelo-brechas-sin-gemma/ejecucion-20261024-072207Z/S2-nacimientos/trabajo/evidencia/cat_sinac_2020_2023/AFILIACION_CERTIFICADOS.xlsx",
+        "sha256": "ec9ea0f80e8ece023b09c5e284a8962faa106a567deffe352068ba98e028427f",
+        "localizador": "Hoja1, catalogo AFILIACION_CERTIFICADOS: codigo 1"
+      }
+    ]
+  },
+  {
+    "definicion_iri": "https://example.org/mex-ontologi/definition/22202305-2d02-4c49-b216-cc98224357f0%2F43",
+    "fila": "43",
+    "variable": "INTERRUMPIOESTUDIOS",
+    "tier": "A1",
+    "afirmacion": "INTERRUMPIOESTUDIOS = variable IDnac=26 del descriptor SINAC 2020-2025: Interrumpió estudios por motivo del embarazo Codigos SI_NO verificados (p. ej. 2='NO'); columna local = codigo entero, etiqueta D = descripcion del catalogo.",
+    "original_sha256": "b2e7d7f1da5c937525c73a885d4e6ceb3369017bc598b1608e2ad7be0714d51f",
+    "limites": [
+      "Descriptor/catalogos DGIS citados son del registro nacional (DEFUN 2022 / SINAC 2020-2025), no del extracto Sonora del portal; la coincidencia de nombres o valores no sustituye la tabla del publicador.",
+      "Negativas y ausencias acotadas a lo revisado el 2026-10-24; no ausencia universal.",
+      "Reinterpretacion v002 (explicita para auditores A/B): la correspondencia ya no exige nota del publicador como unico medio; se prueba por sistema+edicion+identificador exacto+representacion (codigo local en catalogo nacional + etiqueta D identica)+ambito.",
+      "Diferencia de representacion declarada: codigos nacionales como texto con cero inicial ('01','00') frente a entero local (1, 0); mapeo biyectivo por igualdad numerica + etiqueta D; el tipo local entero no preserva ceros a la izquierda.",
+      "Edicion declarada por titulo/rango DGIS (descriptor 2020-2025, catalogos 2020-2023, geo 202201/202203/202204); sin acta de vigencia separada."
+    ],
+    "evidencia": [
+      {
+        "ruta": "data/portal/inspecciones/22202305-2d02-4c49-b216-cc98224357f0.json",
+        "sha256": "76fe68223bc861fcdf62cb33f5b9a207503b192c2ef531a4aad31d52e7a7513b",
+        "localizador": "/definiciones/42 (fila 43, variable INTERRUMPIOESTUDIOS)"
+      },
+      {
+        "ruta": "data/portal/inspecciones/46977217-9396-4f9c-bddb-6616e82530b4.json",
+        "sha256": "13831dec294ac79e90d3c618dd7f322d512afc392babe1405eb903d40c18afd5",
+        "localizador": "tablas[0]: hoja 'SINAC 2022 26-09-22', 106 campos; encabezado incluye INTERRUMPIOESTUDIOS"
+      },
+      {
+        "ruta": "propuestas/cierre-brechas-post-r6/significados-salud/evidencia/desc_sinac_2020_2025/Descriptores_SINAC_2020.xlsx",
+        "sha256": "0af0b6be1faeb3867da872cd1b2021785af4feb78311c5de7c1fa44807fd6ed4",
+        "localizador": "Hoja1 fila ID=26, VARIABLE=INTERRUMPIOESTUDIOS"
+      },
+      {
+        "ruta": ".\\propuestas/plan-paralelo-brechas-sin-gemma/ejecucion-20261024-072207Z/S2-nacimientos\\trabajo\\evidencia\\sinac_catalogos_2020_2023.zip",
+        "sha256": "9c7dcd52dd8fdb2cfb9c7de3711e0ccc323cfa9cff86712eaeeb3e883141cb4e",
+        "localizador": "contenido del zip (20 xlsx); sin columnas D ni ANOMALIACIE* ni DIAGNOSTICOS"
+      },
+      {
+        "ruta": "propuestas/plan-paralelo-brechas-sin-gemma/ejecucion-20261024-072207Z/S2-nacimientos/trabajo/evidencia/cat_sinac_2020_2023/SI_NO.xlsx",
+        "sha256": "3eca684c75bff3a83a52adb3f6fdf0a829871ef5245205da9e7840c1a61389d3",
+        "localizador": "Hoja1, catalogo SI_NO: codigo 2"
+      }
+    ]
+  },
+  {
+    "definicion_iri": "https://example.org/mex-ontologi/definition/22202305-2d02-4c49-b216-cc98224357f0%2F45",
+    "fila": "45",
+    "variable": "CLAVEOCUPACIONHABITUAL",
+    "tier": "A1",
+    "afirmacion": "CLAVEOCUPACIONHABITUAL = variable IDnac=27 del descriptor SINAC 2020-2025: Código de la ocupación habitual de la madre Codigos OCUPACION_HABITUAL verificados (p. ej. 2='NO REMUNERADO, AMA DE CASA'); columna local = codigo entero, etiqueta D = descripcion del catalogo.",
+    "original_sha256": "705a6c9941618ffd47eeba6f57fb4a8726233ad81565df4e25bd720ec920b91e",
+    "limites": [
+      "Descriptor/catalogos DGIS citados son del registro nacional (DEFUN 2022 / SINAC 2020-2025), no del extracto Sonora del portal; la coincidencia de nombres o valores no sustituye la tabla del publicador.",
+      "Negativas y ausencias acotadas a lo revisado el 2026-10-24; no ausencia universal.",
+      "Reinterpretacion v002 (explicita para auditores A/B): la correspondencia ya no exige nota del publicador como unico medio; se prueba por sistema+edicion+identificador exacto+representacion (codigo local en catalogo nacional + etiqueta D identica)+ambito.",
+      "Diferencia de representacion declarada: codigos nacionales como texto con cero inicial ('01','00') frente a entero local (1, 0); mapeo biyectivo por igualdad numerica + etiqueta D; el tipo local entero no preserva ceros a la izquierda.",
+      "Edicion declarada por titulo/rango DGIS (descriptor 2020-2025, catalogos 2020-2023, geo 202201/202203/202204); sin acta de vigencia separada."
+    ],
+    "evidencia": [
+      {
+        "ruta": "data/portal/inspecciones/22202305-2d02-4c49-b216-cc98224357f0.json",
+        "sha256": "76fe68223bc861fcdf62cb33f5b9a207503b192c2ef531a4aad31d52e7a7513b",
+        "localizador": "/definiciones/44 (fila 45, variable CLAVEOCUPACIONHABITUAL)"
+      },
+      {
+        "ruta": "data/portal/inspecciones/46977217-9396-4f9c-bddb-6616e82530b4.json",
+        "sha256": "13831dec294ac79e90d3c618dd7f322d512afc392babe1405eb903d40c18afd5",
+        "localizador": "tablas[0]: hoja 'SINAC 2022 26-09-22', 106 campos; encabezado incluye CLAVEOCUPACIONHABITUAL"
+      },
+      {
+        "ruta": "propuestas/cierre-brechas-post-r6/significados-salud/evidencia/desc_sinac_2020_2025/Descriptores_SINAC_2020.xlsx",
+        "sha256": "0af0b6be1faeb3867da872cd1b2021785af4feb78311c5de7c1fa44807fd6ed4",
+        "localizador": "Hoja1 fila ID=27, VARIABLE=CLAVEOCUPACIONHABITUAL"
+      },
+      {
+        "ruta": ".\\propuestas/plan-paralelo-brechas-sin-gemma/ejecucion-20261024-072207Z/S2-nacimientos\\trabajo\\evidencia\\sinac_catalogos_2020_2023.zip",
+        "sha256": "9c7dcd52dd8fdb2cfb9c7de3711e0ccc323cfa9cff86712eaeeb3e883141cb4e",
+        "localizador": "contenido del zip (20 xlsx); sin columnas D ni ANOMALIACIE* ni DIAGNOSTICOS"
+      },
+      {
+        "ruta": "propuestas/plan-paralelo-brechas-sin-gemma/ejecucion-20261024-072207Z/S2-nacimientos/trabajo/evidencia/cat_sinac_2020_2023/OCUPACION_HABITUAL.xlsx",
+        "sha256": "f6ab912c7d9a5d183600fb42a6f1280b2aa04a2268df948f3f92191ceb5c407b",
+        "localizador": "Hoja1, catalogo OCUPACION_HABITUAL: codigo 2"
+      }
+    ]
+  },
+  {
+    "definicion_iri": "https://example.org/mex-ontologi/definition/22202305-2d02-4c49-b216-cc98224357f0%2F57",
+    "fila": "57",
+    "variable": "APGAR",
+    "tier": "A2",
+    "afirmacion": "APGAR = variable IDnac=36 del descriptor SINAC 2020-2025: Calificación obtenida  del nacido vivo a los cinco minutos del nacimiento. El valor 99 corresponde a No Especificado. Sin catalogo nacional; tipo local (Numérico entero) compatible; ejemplo '9'.",
+    "original_sha256": "7ee16466785f5b6aa9c6214134e30e67483935f43dce133cf106af9254b78824",
+    "limites": [
+      "Descriptor/catalogos DGIS citados son del registro nacional (DEFUN 2022 / SINAC 2020-2025), no del extracto Sonora del portal; la coincidencia de nombres o valores no sustituye la tabla del publicador.",
+      "Negativas y ausencias acotadas a lo revisado el 2026-10-24; no ausencia universal.",
+      "Reinterpretacion v002 (explicita para auditores A/B): la correspondencia ya no exige nota del publicador como unico medio; se prueba por sistema+edicion+identificador exacto+representacion (codigo local en catalogo nacional + etiqueta D identica)+ambito.",
+      "Diferencia de representacion declarada: codigos nacionales como texto con cero inicial ('01','00') frente a entero local (1, 0); mapeo biyectivo por igualdad numerica + etiqueta D; el tipo local entero no preserva ceros a la izquierda.",
+      "Edicion declarada por titulo/rango DGIS (descriptor 2020-2025, catalogos 2020-2023, geo 202201/202203/202204); sin acta de vigencia separada."
+    ],
+    "evidencia": [
+      {
+        "ruta": "data/portal/inspecciones/22202305-2d02-4c49-b216-cc98224357f0.json",
+        "sha256": "76fe68223bc861fcdf62cb33f5b9a207503b192c2ef531a4aad31d52e7a7513b",
+        "localizador": "/definiciones/56 (fila 57, variable APGAR)"
+      },
+      {
+        "ruta": "data/portal/inspecciones/46977217-9396-4f9c-bddb-6616e82530b4.json",
+        "sha256": "13831dec294ac79e90d3c618dd7f322d512afc392babe1405eb903d40c18afd5",
+        "localizador": "tablas[0]: hoja 'SINAC 2022 26-09-22', 106 campos; encabezado incluye APGAR"
+      },
+      {
+        "ruta": "propuestas/cierre-brechas-post-r6/significados-salud/evidencia/desc_sinac_2020_2025/Descriptores_SINAC_2020.xlsx",
+        "sha256": "0af0b6be1faeb3867da872cd1b2021785af4feb78311c5de7c1fa44807fd6ed4",
+        "localizador": "Hoja1 fila ID=36, VARIABLE=APGAR"
+      },
+      {
+        "ruta": ".\\propuestas/plan-paralelo-brechas-sin-gemma/ejecucion-20261024-072207Z/S2-nacimientos\\trabajo\\evidencia\\sinac_catalogos_2020_2023.zip",
+        "sha256": "9c7dcd52dd8fdb2cfb9c7de3711e0ccc323cfa9cff86712eaeeb3e883141cb4e",
+        "localizador": "contenido del zip (20 xlsx); sin columnas D ni ANOMALIACIE* ni DIAGNOSTICOS"
+      }
+    ]
+  },
+  {
+    "definicion_iri": "https://example.org/mex-ontologi/definition/22202305-2d02-4c49-b216-cc98224357f0%2F58",
+    "fila": "58",
+    "variable": "SILVERMAN",
+    "tier": "A2",
+    "afirmacion": "SILVERMAN = variable IDnac=37 del descriptor SINAC 2020-2025: Calificación obtenida  del nacido a los diez minutos del nacimiento. El valor 99 corresponde a No Especificado. Sin catalogo nacional; tipo local (Numérico entero) compatible; ejemplo '0'.",
+    "original_sha256": "aed673f43d7493a0d41695c5065d4c89728650f992b801beb897587548443913",
+    "limites": [
+      "Descriptor/catalogos DGIS citados son del registro nacional (DEFUN 2022 / SINAC 2020-2025), no del extracto Sonora del portal; la coincidencia de nombres o valores no sustituye la tabla del publicador.",
+      "Negativas y ausencias acotadas a lo revisado el 2026-10-24; no ausencia universal.",
+      "Reinterpretacion v002 (explicita para auditores A/B): la correspondencia ya no exige nota del publicador como unico medio; se prueba por sistema+edicion+identificador exacto+representacion (codigo local en catalogo nacional + etiqueta D identica)+ambito.",
+      "Diferencia de representacion declarada: codigos nacionales como texto con cero inicial ('01','00') frente a entero local (1, 0); mapeo biyectivo por igualdad numerica + etiqueta D; el tipo local entero no preserva ceros a la izquierda.",
+      "Edicion declarada por titulo/rango DGIS (descriptor 2020-2025, catalogos 2020-2023, geo 202201/202203/202204); sin acta de vigencia separada."
+    ],
+    "evidencia": [
+      {
+        "ruta": "data/portal/inspecciones/22202305-2d02-4c49-b216-cc98224357f0.json",
+        "sha256": "76fe68223bc861fcdf62cb33f5b9a207503b192c2ef531a4aad31d52e7a7513b",
+        "localizador": "/definiciones/57 (fila 58, variable SILVERMAN)"
+      },
+      {
+        "ruta": "data/portal/inspecciones/46977217-9396-4f9c-bddb-6616e82530b4.json",
+        "sha256": "13831dec294ac79e90d3c618dd7f322d512afc392babe1405eb903d40c18afd5",
+        "localizador": "tablas[0]: hoja 'SINAC 2022 26-09-22', 106 campos; encabezado incluye SILVERMAN"
+      },
+      {
+        "ruta": "propuestas/cierre-brechas-post-r6/significados-salud/evidencia/desc_sinac_2020_2025/Descriptores_SINAC_2020.xlsx",
+        "sha256": "0af0b6be1faeb3867da872cd1b2021785af4feb78311c5de7c1fa44807fd6ed4",
+        "localizador": "Hoja1 fila ID=37, VARIABLE=SILVERMAN"
+      },
+      {
+        "ruta": ".\\propuestas/plan-paralelo-brechas-sin-gemma/ejecucion-20261024-072207Z/S2-nacimientos\\trabajo\\evidencia\\sinac_catalogos_2020_2023.zip",
+        "sha256": "9c7dcd52dd8fdb2cfb9c7de3711e0ccc323cfa9cff86712eaeeb3e883141cb4e",
+        "localizador": "contenido del zip (20 xlsx); sin columnas D ni ANOMALIACIE* ni DIAGNOSTICOS"
+      }
+    ]
+  },
+  {
+    "definicion_iri": "https://example.org/mex-ontologi/definition/22202305-2d02-4c49-b216-cc98224357f0%2F59",
+    "fila": "59",
+    "variable": "TAMIZAUDITIVO",
+    "tier": "A1",
+    "afirmacion": "TAMIZAUDITIVO = variable IDnac=38 del descriptor SINAC 2020-2025: Se le realizó el tamiz auditivo Codigos SI_NO verificados (p. ej. 2='NO'); columna local = codigo entero, etiqueta D = descripcion del catalogo.",
+    "original_sha256": "17c30d39853576e82b7c75b8243687bbc99950b7b04f35c5bec4bb5c22b260c5",
+    "limites": [
+      "Descriptor/catalogos DGIS citados son del registro nacional (DEFUN 2022 / SINAC 2020-2025), no del extracto Sonora del portal; la coincidencia de nombres o valores no sustituye la tabla del publicador.",
+      "Negativas y ausencias acotadas a lo revisado el 2026-10-24; no ausencia universal.",
+      "Reinterpretacion v002 (explicita para auditores A/B): la correspondencia ya no exige nota del publicador como unico medio; se prueba por sistema+edicion+identificador exacto+representacion (codigo local en catalogo nacional + etiqueta D identica)+ambito.",
+      "Diferencia de representacion declarada: codigos nacionales como texto con cero inicial ('01','00') frente a entero local (1, 0); mapeo biyectivo por igualdad numerica + etiqueta D; el tipo local entero no preserva ceros a la izquierda.",
+      "Edicion declarada por titulo/rango DGIS (descriptor 2020-2025, catalogos 2020-2023, geo 202201/202203/202204); sin acta de vigencia separada."
+    ],
+    "evidencia": [
+      {
+        "ruta": "data/portal/inspecciones/22202305-2d02-4c49-b216-cc98224357f0.json",
+        "sha256": "76fe68223bc861fcdf62cb33f5b9a207503b192c2ef531a4aad31d52e7a7513b",
+        "localizador": "/definiciones/58 (fila 59, variable TAMIZAUDITIVO)"
+      },
+      {
+        "ruta": "data/portal/inspecciones/46977217-9396-4f9c-bddb-6616e82530b4.json",
+        "sha256": "13831dec294ac79e90d3c618dd7f322d512afc392babe1405eb903d40c18afd5",
+        "localizador": "tablas[0]: hoja 'SINAC 2022 26-09-22', 106 campos; encabezado incluye TAMIZAUDITIVO"
+      },
+      {
+        "ruta": "propuestas/cierre-brechas-post-r6/significados-salud/evidencia/desc_sinac_2020_2025/Descriptores_SINAC_2020.xlsx",
+        "sha256": "0af0b6be1faeb3867da872cd1b2021785af4feb78311c5de7c1fa44807fd6ed4",
+        "localizador": "Hoja1 fila ID=38, VARIABLE=TAMIZAUDITIVO"
+      },
+      {
+        "ruta": ".\\propuestas/plan-paralelo-brechas-sin-gemma/ejecucion-20261024-072207Z/S2-nacimientos\\trabajo\\evidencia\\sinac_catalogos_2020_2023.zip",
+        "sha256": "9c7dcd52dd8fdb2cfb9c7de3711e0ccc323cfa9cff86712eaeeb3e883141cb4e",
+        "localizador": "contenido del zip (20 xlsx); sin columnas D ni ANOMALIACIE* ni DIAGNOSTICOS"
+      },
+      {
+        "ruta": "propuestas/plan-paralelo-brechas-sin-gemma/ejecucion-20261024-072207Z/S2-nacimientos/trabajo/evidencia/cat_sinac_2020_2023/SI_NO.xlsx",
+        "sha256": "3eca684c75bff3a83a52adb3f6fdf0a829871ef5245205da9e7840c1a61389d3",
+        "localizador": "Hoja1, catalogo SI_NO: codigo 2"
+      }
+    ]
+  },
+  {
+    "definicion_iri": "https://example.org/mex-ontologi/definition/22202305-2d02-4c49-b216-cc98224357f0%2F61",
+    "fila": "61",
+    "variable": "VACUNA_BCG",
+    "tier": "A1",
+    "afirmacion": "VACUNA_BCG = variable IDnac=39 del descriptor SINAC 2020-2025: Se le aplicó la vacuna BCG Codigos SI_NO verificados (p. ej. 1='SI'); columna local = codigo entero, etiqueta D = descripcion del catalogo.",
+    "original_sha256": "f95a163114b7514d4e19aa63d0afccfbdae14da51847d71c1a1b795e4e8d2bdb",
+    "limites": [
+      "Descriptor/catalogos DGIS citados son del registro nacional (DEFUN 2022 / SINAC 2020-2025), no del extracto Sonora del portal; la coincidencia de nombres o valores no sustituye la tabla del publicador.",
+      "Negativas y ausencias acotadas a lo revisado el 2026-10-24; no ausencia universal.",
+      "Reinterpretacion v002 (explicita para auditores A/B): la correspondencia ya no exige nota del publicador como unico medio; se prueba por sistema+edicion+identificador exacto+representacion (codigo local en catalogo nacional + etiqueta D identica)+ambito.",
+      "Diferencia de representacion declarada: codigos nacionales como texto con cero inicial ('01','00') frente a entero local (1, 0); mapeo biyectivo por igualdad numerica + etiqueta D; el tipo local entero no preserva ceros a la izquierda.",
+      "Edicion declarada por titulo/rango DGIS (descriptor 2020-2025, catalogos 2020-2023, geo 202201/202203/202204); sin acta de vigencia separada."
+    ],
+    "evidencia": [
+      {
+        "ruta": "data/portal/inspecciones/22202305-2d02-4c49-b216-cc98224357f0.json",
+        "sha256": "76fe68223bc861fcdf62cb33f5b9a207503b192c2ef531a4aad31d52e7a7513b",
+        "localizador": "/definiciones/60 (fila 61, variable VACUNA_BCG)"
+      },
+      {
+        "ruta": "data/portal/inspecciones/46977217-9396-4f9c-bddb-6616e82530b4.json",
+        "sha256": "13831dec294ac79e90d3c618dd7f322d512afc392babe1405eb903d40c18afd5",
+        "localizador": "tablas[0]: hoja 'SINAC 2022 26-09-22', 106 campos; encabezado incluye VACUNA_BCG"
+      },
+      {
+        "ruta": "propuestas/cierre-brechas-post-r6/significados-salud/evidencia/desc_sinac_2020_2025/Descriptores_SINAC_2020.xlsx",
+        "sha256": "0af0b6be1faeb3867da872cd1b2021785af4feb78311c5de7c1fa44807fd6ed4",
+        "localizador": "Hoja1 fila ID=39, VARIABLE=VACUNA_BCG"
+      },
+      {
+        "ruta": ".\\propuestas/plan-paralelo-brechas-sin-gemma/ejecucion-20261024-072207Z/S2-nacimientos\\trabajo\\evidencia\\sinac_catalogos_2020_2023.zip",
+        "sha256": "9c7dcd52dd8fdb2cfb9c7de3711e0ccc323cfa9cff86712eaeeb3e883141cb4e",
+        "localizador": "contenido del zip (20 xlsx); sin columnas D ni ANOMALIACIE* ni DIAGNOSTICOS"
+      },
+      {
+        "ruta": "propuestas/plan-paralelo-brechas-sin-gemma/ejecucion-20261024-072207Z/S2-nacimientos/trabajo/evidencia/cat_sinac_2020_2023/SI_NO.xlsx",
+        "sha256": "3eca684c75bff3a83a52adb3f6fdf0a829871ef5245205da9e7840c1a61389d3",
+        "localizador": "Hoja1, catalogo SI_NO: codigo 1"
+      }
+    ]
+  },
+  {
+    "definicion_iri": "https://example.org/mex-ontologi/definition/22202305-2d02-4c49-b216-cc98224357f0%2F63",
+    "fila": "63",
+    "variable": "VACUNAHEPATITIS_B",
+    "tier": "A1",
+    "afirmacion": "VACUNAHEPATITIS_B = variable IDnac=40 del descriptor SINAC 2020-2025: Se le aplicó la vacuna Hepatitis B Codigos SI_NO verificados (p. ej. 1='SI'); columna local = codigo entero, etiqueta D = descripcion del catalogo.",
+    "original_sha256": "dc0e2e7e164b4c6a30b0d13363239d6b11dcd9a06a85cf49b31ef66dfae6b9ce",
+    "limites": [
+      "Descriptor/catalogos DGIS citados son del registro nacional (DEFUN 2022 / SINAC 2020-2025), no del extracto Sonora del portal; la coincidencia de nombres o valores no sustituye la tabla del publicador.",
+      "Negativas y ausencias acotadas a lo revisado el 2026-10-24; no ausencia universal.",
+      "Reinterpretacion v002 (explicita para auditores A/B): la correspondencia ya no exige nota del publicador como unico medio; se prueba por sistema+edicion+identificador exacto+representacion (codigo local en catalogo nacional + etiqueta D identica)+ambito.",
+      "Diferencia de representacion declarada: codigos nacionales como texto con cero inicial ('01','00') frente a entero local (1, 0); mapeo biyectivo por igualdad numerica + etiqueta D; el tipo local entero no preserva ceros a la izquierda.",
+      "Edicion declarada por titulo/rango DGIS (descriptor 2020-2025, catalogos 2020-2023, geo 202201/202203/202204); sin acta de vigencia separada."
+    ],
+    "evidencia": [
+      {
+        "ruta": "data/portal/inspecciones/22202305-2d02-4c49-b216-cc98224357f0.json",
+        "sha256": "76fe68223bc861fcdf62cb33f5b9a207503b192c2ef531a4aad31d52e7a7513b",
+        "localizador": "/definiciones/62 (fila 63, variable VACUNAHEPATITIS_B)"
+      },
+      {
+        "ruta": "data/portal/inspecciones/46977217-9396-4f9c-bddb-6616e82530b4.json",
+        "sha256": "13831dec294ac79e90d3c618dd7f322d512afc392babe1405eb903d40c18afd5",
+        "localizador": "tablas[0]: hoja 'SINAC 2022 26-09-22', 106 campos; encabezado incluye VACUNAHEPATITIS_B"
+      },
+      {
+        "ruta": "propuestas/cierre-brechas-post-r6/significados-salud/evidencia/desc_sinac_2020_2025/Descriptores_SINAC_2020.xlsx",
+        "sha256": "0af0b6be1faeb3867da872cd1b2021785af4feb78311c5de7c1fa44807fd6ed4",
+        "localizador": "Hoja1 fila ID=40, VARIABLE=VACUNAHEPATITIS_B"
+      },
+      {
+        "ruta": ".\\propuestas/plan-paralelo-brechas-sin-gemma/ejecucion-20261024-072207Z/S2-nacimientos\\trabajo\\evidencia\\sinac_catalogos_2020_2023.zip",
+        "sha256": "9c7dcd52dd8fdb2cfb9c7de3711e0ccc323cfa9cff86712eaeeb3e883141cb4e",
+        "localizador": "contenido del zip (20 xlsx); sin columnas D ni ANOMALIACIE* ni DIAGNOSTICOS"
+      },
+      {
+        "ruta": "propuestas/plan-paralelo-brechas-sin-gemma/ejecucion-20261024-072207Z/S2-nacimientos/trabajo/evidencia/cat_sinac_2020_2023/SI_NO.xlsx",
+        "sha256": "3eca684c75bff3a83a52adb3f6fdf0a829871ef5245205da9e7840c1a61389d3",
+        "localizador": "Hoja1, catalogo SI_NO: codigo 1"
+      }
+    ]
+  },
+  {
+    "definicion_iri": "https://example.org/mex-ontologi/definition/22202305-2d02-4c49-b216-cc98224357f0%2F65",
+    "fila": "65",
+    "variable": "VITAMINA_A",
+    "tier": "A1",
+    "afirmacion": "VITAMINA_A = variable IDnac=41 del descriptor SINAC 2020-2025: Se le aplicó la vitamina A Codigos SI_NO verificados (p. ej. 0='NO ESPECIFICADO'); columna local = codigo entero, etiqueta D = descripcion del catalogo.",
+    "original_sha256": "fc3f673abdcb3f45fc2df9bb9f7f4b6f03302f8fa4ced9e9f2addb595ddb1bf1",
+    "limites": [
+      "Descriptor/catalogos DGIS citados son del registro nacional (DEFUN 2022 / SINAC 2020-2025), no del extracto Sonora del portal; la coincidencia de nombres o valores no sustituye la tabla del publicador.",
+      "Negativas y ausencias acotadas a lo revisado el 2026-10-24; no ausencia universal.",
+      "Reinterpretacion v002 (explicita para auditores A/B): la correspondencia ya no exige nota del publicador como unico medio; se prueba por sistema+edicion+identificador exacto+representacion (codigo local en catalogo nacional + etiqueta D identica)+ambito.",
+      "Diferencia de representacion declarada: codigos nacionales como texto con cero inicial ('01','00') frente a entero local (1, 0); mapeo biyectivo por igualdad numerica + etiqueta D; el tipo local entero no preserva ceros a la izquierda.",
+      "Edicion declarada por titulo/rango DGIS (descriptor 2020-2025, catalogos 2020-2023, geo 202201/202203/202204); sin acta de vigencia separada."
+    ],
+    "evidencia": [
+      {
+        "ruta": "data/portal/inspecciones/22202305-2d02-4c49-b216-cc98224357f0.json",
+        "sha256": "76fe68223bc861fcdf62cb33f5b9a207503b192c2ef531a4aad31d52e7a7513b",
+        "localizador": "/definiciones/64 (fila 65, variable VITAMINA_A)"
+      },
+      {
+        "ruta": "data/portal/inspecciones/46977217-9396-4f9c-bddb-6616e82530b4.json",
+        "sha256": "13831dec294ac79e90d3c618dd7f322d512afc392babe1405eb903d40c18afd5",
+        "localizador": "tablas[0]: hoja 'SINAC 2022 26-09-22', 106 campos; encabezado incluye VITAMINA_A"
+      },
+      {
+        "ruta": "propuestas/cierre-brechas-post-r6/significados-salud/evidencia/desc_sinac_2020_2025/Descriptores_SINAC_2020.xlsx",
+        "sha256": "0af0b6be1faeb3867da872cd1b2021785af4feb78311c5de7c1fa44807fd6ed4",
+        "localizador": "Hoja1 fila ID=41, VARIABLE=VITAMINA_A"
+      },
+      {
+        "ruta": ".\\propuestas/plan-paralelo-brechas-sin-gemma/ejecucion-20261024-072207Z/S2-nacimientos\\trabajo\\evidencia\\sinac_catalogos_2020_2023.zip",
+        "sha256": "9c7dcd52dd8fdb2cfb9c7de3711e0ccc323cfa9cff86712eaeeb3e883141cb4e",
+        "localizador": "contenido del zip (20 xlsx); sin columnas D ni ANOMALIACIE* ni DIAGNOSTICOS"
+      },
+      {
+        "ruta": "propuestas/plan-paralelo-brechas-sin-gemma/ejecucion-20261024-072207Z/S2-nacimientos/trabajo/evidencia/cat_sinac_2020_2023/SI_NO.xlsx",
+        "sha256": "3eca684c75bff3a83a52adb3f6fdf0a829871ef5245205da9e7840c1a61389d3",
+        "localizador": "Hoja1, catalogo SI_NO: codigo 0"
+      }
+    ]
+  },
+  {
+    "definicion_iri": "https://example.org/mex-ontologi/definition/22202305-2d02-4c49-b216-cc98224357f0%2F67",
+    "fila": "67",
+    "variable": "VITAMINA_K",
+    "tier": "A1",
+    "afirmacion": "VITAMINA_K = variable IDnac=42 del descriptor SINAC 2020-2025: Se le aplicó la vitamina K Codigos SI_NO verificados (p. ej. 1='SI'); columna local = codigo entero, etiqueta D = descripcion del catalogo.",
+    "original_sha256": "d90dc6179c2d566d60835760d0365563e54580087086db437fc2d3adab97fef7",
+    "limites": [
+      "Descriptor/catalogos DGIS citados son del registro nacional (DEFUN 2022 / SINAC 2020-2025), no del extracto Sonora del portal; la coincidencia de nombres o valores no sustituye la tabla del publicador.",
+      "Negativas y ausencias acotadas a lo revisado el 2026-10-24; no ausencia universal.",
+      "Reinterpretacion v002 (explicita para auditores A/B): la correspondencia ya no exige nota del publicador como unico medio; se prueba por sistema+edicion+identificador exacto+representacion (codigo local en catalogo nacional + etiqueta D identica)+ambito.",
+      "Diferencia de representacion declarada: codigos nacionales como texto con cero inicial ('01','00') frente a entero local (1, 0); mapeo biyectivo por igualdad numerica + etiqueta D; el tipo local entero no preserva ceros a la izquierda.",
+      "Edicion declarada por titulo/rango DGIS (descriptor 2020-2025, catalogos 2020-2023, geo 202201/202203/202204); sin acta de vigencia separada."
+    ],
+    "evidencia": [
+      {
+        "ruta": "data/portal/inspecciones/22202305-2d02-4c49-b216-cc98224357f0.json",
+        "sha256": "76fe68223bc861fcdf62cb33f5b9a207503b192c2ef531a4aad31d52e7a7513b",
+        "localizador": "/definiciones/66 (fila 67, variable VITAMINA_K)"
+      },
+      {
+        "ruta": "data/portal/inspecciones/46977217-9396-4f9c-bddb-6616e82530b4.json",
+        "sha256": "13831dec294ac79e90d3c618dd7f322d512afc392babe1405eb903d40c18afd5",
+        "localizador": "tablas[0]: hoja 'SINAC 2022 26-09-22', 106 campos; encabezado incluye VITAMINA_K"
+      },
+      {
+        "ruta": "propuestas/cierre-brechas-post-r6/significados-salud/evidencia/desc_sinac_2020_2025/Descriptores_SINAC_2020.xlsx",
+        "sha256": "0af0b6be1faeb3867da872cd1b2021785af4feb78311c5de7c1fa44807fd6ed4",
+        "localizador": "Hoja1 fila ID=42, VARIABLE=VITAMINA_K"
+      },
+      {
+        "ruta": ".\\propuestas/plan-paralelo-brechas-sin-gemma/ejecucion-20261024-072207Z/S2-nacimientos\\trabajo\\evidencia\\sinac_catalogos_2020_2023.zip",
+        "sha256": "9c7dcd52dd8fdb2cfb9c7de3711e0ccc323cfa9cff86712eaeeb3e883141cb4e",
+        "localizador": "contenido del zip (20 xlsx); sin columnas D ni ANOMALIACIE* ni DIAGNOSTICOS"
+      },
+      {
+        "ruta": "propuestas/plan-paralelo-brechas-sin-gemma/ejecucion-20261024-072207Z/S2-nacimientos/trabajo/evidencia/cat_sinac_2020_2023/SI_NO.xlsx",
+        "sha256": "3eca684c75bff3a83a52adb3f6fdf0a829871ef5245205da9e7840c1a61389d3",
+        "localizador": "Hoja1, catalogo SI_NO: codigo 1"
+      }
+    ]
+  },
+  {
+    "definicion_iri": "https://example.org/mex-ontologi/definition/22202305-2d02-4c49-b216-cc98224357f0%2F69",
+    "fila": "69",
+    "variable": "PRODUCTOEMBARAZO",
+    "tier": "A1",
+    "afirmacion": "PRODUCTOEMBARAZO = variable IDnac=43 del descriptor SINAC 2020-2025: Identificación del tipo de productos extraídos. Codigos PRODUCTO_EMBARAZO verificados (p. ej. 1='ÚNICO'); columna local = codigo entero, etiqueta D = descripcion del catalogo.",
+    "original_sha256": "7b2b47d8addaede50cb3e8a268340555c77ba3ba00e3499083dd76e1748e4a82",
+    "limites": [
+      "Descriptor/catalogos DGIS citados son del registro nacional (DEFUN 2022 / SINAC 2020-2025), no del extracto Sonora del portal; la coincidencia de nombres o valores no sustituye la tabla del publicador.",
+      "Negativas y ausencias acotadas a lo revisado el 2026-10-24; no ausencia universal.",
+      "Reinterpretacion v002 (explicita para auditores A/B): la correspondencia ya no exige nota del publicador como unico medio; se prueba por sistema+edicion+identificador exacto+representacion (codigo local en catalogo nacional + etiqueta D identica)+ambito.",
+      "Diferencia de representacion declarada: codigos nacionales como texto con cero inicial ('01','00') frente a entero local (1, 0); mapeo biyectivo por igualdad numerica + etiqueta D; el tipo local entero no preserva ceros a la izquierda.",
+      "Edicion declarada por titulo/rango DGIS (descriptor 2020-2025, catalogos 2020-2023, geo 202201/202203/202204); sin acta de vigencia separada."
+    ],
+    "evidencia": [
+      {
+        "ruta": "data/portal/inspecciones/22202305-2d02-4c49-b216-cc98224357f0.json",
+        "sha256": "76fe68223bc861fcdf62cb33f5b9a207503b192c2ef531a4aad31d52e7a7513b",
+        "localizador": "/definiciones/68 (fila 69, variable PRODUCTOEMBARAZO)"
+      },
+      {
+        "ruta": "data/portal/inspecciones/46977217-9396-4f9c-bddb-6616e82530b4.json",
+        "sha256": "13831dec294ac79e90d3c618dd7f322d512afc392babe1405eb903d40c18afd5",
+        "localizador": "tablas[0]: hoja 'SINAC 2022 26-09-22', 106 campos; encabezado incluye PRODUCTOEMBARAZO"
+      },
+      {
+        "ruta": "propuestas/cierre-brechas-post-r6/significados-salud/evidencia/desc_sinac_2020_2025/Descriptores_SINAC_2020.xlsx",
+        "sha256": "0af0b6be1faeb3867da872cd1b2021785af4feb78311c5de7c1fa44807fd6ed4",
+        "localizador": "Hoja1 fila ID=43, VARIABLE=PRODUCTOEMBARAZO"
+      },
+      {
+        "ruta": ".\\propuestas/plan-paralelo-brechas-sin-gemma/ejecucion-20261024-072207Z/S2-nacimientos\\trabajo\\evidencia\\sinac_catalogos_2020_2023.zip",
+        "sha256": "9c7dcd52dd8fdb2cfb9c7de3711e0ccc323cfa9cff86712eaeeb3e883141cb4e",
+        "localizador": "contenido del zip (20 xlsx); sin columnas D ni ANOMALIACIE* ni DIAGNOSTICOS"
+      },
+      {
+        "ruta": "propuestas/plan-paralelo-brechas-sin-gemma/ejecucion-20261024-072207Z/S2-nacimientos/trabajo/evidencia/cat_sinac_2020_2023/PRODUCTO_EMBARAZO.xlsx",
+        "sha256": "d586b9f7fc30a04c1e279030bc20affb057db5f1670e0932d3dbf3f0e12c9e96",
+        "localizador": "Hoja1, catalogo PRODUCTO_EMBARAZO: codigo 1"
+      }
+    ]
+  },
+  {
+    "definicion_iri": "https://example.org/mex-ontologi/definition/22202305-2d02-4c49-b216-cc98224357f0%2F71",
+    "fila": "71",
+    "variable": "ORDENPRODUCTO",
+    "tier": "A2",
+    "afirmacion": "ORDENPRODUCTO = variable IDnac=44 del descriptor SINAC 2020-2025: Número de producto de acuerdo al orden de extracción del evento actual.  Sin catalogo nacional; tipo local (Numérico entero) compatible; ejemplo ''.",
+    "original_sha256": "be7c7f380041d55fdf9f053e521305971f5c2b03b06d6e20c1befcbcd7b620b3",
+    "limites": [
+      "Descriptor/catalogos DGIS citados son del registro nacional (DEFUN 2022 / SINAC 2020-2025), no del extracto Sonora del portal; la coincidencia de nombres o valores no sustituye la tabla del publicador.",
+      "Negativas y ausencias acotadas a lo revisado el 2026-10-24; no ausencia universal.",
+      "Reinterpretacion v002 (explicita para auditores A/B): la correspondencia ya no exige nota del publicador como unico medio; se prueba por sistema+edicion+identificador exacto+representacion (codigo local en catalogo nacional + etiqueta D identica)+ambito.",
+      "Diferencia de representacion declarada: codigos nacionales como texto con cero inicial ('01','00') frente a entero local (1, 0); mapeo biyectivo por igualdad numerica + etiqueta D; el tipo local entero no preserva ceros a la izquierda.",
+      "Edicion declarada por titulo/rango DGIS (descriptor 2020-2025, catalogos 2020-2023, geo 202201/202203/202204); sin acta de vigencia separada."
+    ],
+    "evidencia": [
+      {
+        "ruta": "data/portal/inspecciones/22202305-2d02-4c49-b216-cc98224357f0.json",
+        "sha256": "76fe68223bc861fcdf62cb33f5b9a207503b192c2ef531a4aad31d52e7a7513b",
+        "localizador": "/definiciones/70 (fila 71, variable ORDENPRODUCTO)"
+      },
+      {
+        "ruta": "data/portal/inspecciones/46977217-9396-4f9c-bddb-6616e82530b4.json",
+        "sha256": "13831dec294ac79e90d3c618dd7f322d512afc392babe1405eb903d40c18afd5",
+        "localizador": "tablas[0]: hoja 'SINAC 2022 26-09-22', 106 campos; encabezado incluye ORDENPRODUCTO"
+      },
+      {
+        "ruta": "propuestas/cierre-brechas-post-r6/significados-salud/evidencia/desc_sinac_2020_2025/Descriptores_SINAC_2020.xlsx",
+        "sha256": "0af0b6be1faeb3867da872cd1b2021785af4feb78311c5de7c1fa44807fd6ed4",
+        "localizador": "Hoja1 fila ID=44, VARIABLE=ORDENPRODUCTO"
+      },
+      {
+        "ruta": ".\\propuestas/plan-paralelo-brechas-sin-gemma/ejecucion-20261024-072207Z/S2-nacimientos\\trabajo\\evidencia\\sinac_catalogos_2020_2023.zip",
+        "sha256": "9c7dcd52dd8fdb2cfb9c7de3711e0ccc323cfa9cff86712eaeeb3e883141cb4e",
+        "localizador": "contenido del zip (20 xlsx); sin columnas D ni ANOMALIACIE* ni DIAGNOSTICOS"
+      }
+    ]
+  },
+  {
+    "definicion_iri": "https://example.org/mex-ontologi/definition/22202305-2d02-4c49-b216-cc98224357f0%2F72",
+    "fila": "72",
+    "variable": "TOTALPRODUCTOS",
+    "tier": "A2",
+    "afirmacion": "TOTALPRODUCTOS = variable IDnac=45 del descriptor SINAC 2020-2025: Total de productos extraídos del evento actual. Sin catalogo nacional; tipo local (Numérico entero) compatible; ejemplo ''.",
+    "original_sha256": "9a167d3d38bbef572e8d29f29327566a4b4d301a0c4d6b30f514253c355195aa",
+    "limites": [
+      "Descriptor/catalogos DGIS citados son del registro nacional (DEFUN 2022 / SINAC 2020-2025), no del extracto Sonora del portal; la coincidencia de nombres o valores no sustituye la tabla del publicador.",
+      "Negativas y ausencias acotadas a lo revisado el 2026-10-24; no ausencia universal.",
+      "Reinterpretacion v002 (explicita para auditores A/B): la correspondencia ya no exige nota del publicador como unico medio; se prueba por sistema+edicion+identificador exacto+representacion (codigo local en catalogo nacional + etiqueta D identica)+ambito.",
+      "Diferencia de representacion declarada: codigos nacionales como texto con cero inicial ('01','00') frente a entero local (1, 0); mapeo biyectivo por igualdad numerica + etiqueta D; el tipo local entero no preserva ceros a la izquierda.",
+      "Edicion declarada por titulo/rango DGIS (descriptor 2020-2025, catalogos 2020-2023, geo 202201/202203/202204); sin acta de vigencia separada."
+    ],
+    "evidencia": [
+      {
+        "ruta": "data/portal/inspecciones/22202305-2d02-4c49-b216-cc98224357f0.json",
+        "sha256": "76fe68223bc861fcdf62cb33f5b9a207503b192c2ef531a4aad31d52e7a7513b",
+        "localizador": "/definiciones/71 (fila 72, variable TOTALPRODUCTOS)"
+      },
+      {
+        "ruta": "data/portal/inspecciones/46977217-9396-4f9c-bddb-6616e82530b4.json",
+        "sha256": "13831dec294ac79e90d3c618dd7f322d512afc392babe1405eb903d40c18afd5",
+        "localizador": "tablas[0]: hoja 'SINAC 2022 26-09-22', 106 campos; encabezado incluye TOTALPRODUCTOS"
+      },
+      {
+        "ruta": "propuestas/cierre-brechas-post-r6/significados-salud/evidencia/desc_sinac_2020_2025/Descriptores_SINAC_2020.xlsx",
+        "sha256": "0af0b6be1faeb3867da872cd1b2021785af4feb78311c5de7c1fa44807fd6ed4",
+        "localizador": "Hoja1 fila ID=45, VARIABLE=TOTALPRODUCTOS"
+      },
+      {
+        "ruta": ".\\propuestas/plan-paralelo-brechas-sin-gemma/ejecucion-20261024-072207Z/S2-nacimientos\\trabajo\\evidencia\\sinac_catalogos_2020_2023.zip",
+        "sha256": "9c7dcd52dd8fdb2cfb9c7de3711e0ccc323cfa9cff86712eaeeb3e883141cb4e",
+        "localizador": "contenido del zip (20 xlsx); sin columnas D ni ANOMALIACIE* ni DIAGNOSTICOS"
+      }
+    ]
+  },
+  {
+    "definicion_iri": "https://example.org/mex-ontologi/definition/22202305-2d02-4c49-b216-cc98224357f0%2F74",
+    "fila": "74",
+    "variable": "CODIGOCIEANOMALIA1",
+    "tier": "",
+    "afirmacion": "CODIGOCIEANOMALIA1 = variable IDnac=46 del descriptor SINAC 2020-2025: Código de la CIE10 que corresponde a la anomalía congénita, enfermedad o lesión del nacido vivo. El valor 0000 corresponde a NINGUNA APARENTE. Catalogo DIAGNOSTICOS = CIE-10 (lineamientos DOF CEN en evidencia previa); ejemplo local '0000' = NINGUNA APARENTE, corroborado por columna hermana ANOMALIACIE* del mismo renglon.",
+    "original_sha256": "e50e44e05a0f7b93e2f1f027a8c77bc8a26065a9a6ca8abe4c5036ec2e39abd2",
+    "limites": [
+      "Descriptor/catalogos DGIS citados son del registro nacional (DEFUN 2022 / SINAC 2020-2025), no del extracto Sonora del portal; la coincidencia de nombres o valores no sustituye la tabla del publicador.",
+      "Negativas y ausencias acotadas a lo revisado el 2026-10-24; no ausencia universal.",
+      "Reinterpretacion v002 (explicita para auditores A/B): la correspondencia ya no exige nota del publicador como unico medio; se prueba por sistema+edicion+identificador exacto+representacion (codigo local en catalogo nacional + etiqueta D identica)+ambito.",
+      "Diferencia de representacion declarada: codigos nacionales como texto con cero inicial ('01','00') frente a entero local (1, 0); mapeo biyectivo por igualdad numerica + etiqueta D; el tipo local entero no preserva ceros a la izquierda.",
+      "Edicion declarada por titulo/rango DGIS (descriptor 2020-2025, catalogos 2020-2023, geo 202201/202203/202204); sin acta de vigencia separada.",
+      "DIAGNOSTICOS no trae archivo en el zip 2020-2023; codebook = CIE-10 por columna de catalogo del descriptor + lineamientos DOF CEN."
+    ],
+    "evidencia": [
+      {
+        "ruta": "data/portal/inspecciones/22202305-2d02-4c49-b216-cc98224357f0.json",
+        "sha256": "76fe68223bc861fcdf62cb33f5b9a207503b192c2ef531a4aad31d52e7a7513b",
+        "localizador": "/definiciones/73 (fila 74, variable CODIGOCIEANOMALIA1)"
+      },
+      {
+        "ruta": "data/portal/inspecciones/46977217-9396-4f9c-bddb-6616e82530b4.json",
+        "sha256": "13831dec294ac79e90d3c618dd7f322d512afc392babe1405eb903d40c18afd5",
+        "localizador": "tablas[0]: hoja 'SINAC 2022 26-09-22', 106 campos; encabezado incluye CODIGOCIEANOMALIA1"
+      },
+      {
+        "ruta": "propuestas/cierre-brechas-post-r6/significados-salud/evidencia/desc_sinac_2020_2025/Descriptores_SINAC_2020.xlsx",
+        "sha256": "0af0b6be1faeb3867da872cd1b2021785af4feb78311c5de7c1fa44807fd6ed4",
+        "localizador": "Hoja1 fila ID=46, VARIABLE=CODIGOCIEANOMALIA1"
+      },
+      {
+        "ruta": ".\\propuestas/plan-paralelo-brechas-sin-gemma/ejecucion-20261024-072207Z/S2-nacimientos\\trabajo\\evidencia\\sinac_catalogos_2020_2023.zip",
+        "sha256": "9c7dcd52dd8fdb2cfb9c7de3711e0ccc323cfa9cff86712eaeeb3e883141cb4e",
+        "localizador": "contenido del zip (20 xlsx); sin columnas D ni ANOMALIACIE* ni DIAGNOSTICOS"
+      }
+    ]
+  },
+  {
+    "definicion_iri": "https://example.org/mex-ontologi/definition/22202305-2d02-4c49-b216-cc98224357f0%2F76",
+    "fila": "76",
+    "variable": "CODIGOCIEANOMALIA2",
+    "tier": "",
+    "afirmacion": "CODIGOCIEANOMALIA2 = variable IDnac=47 del descriptor SINAC 2020-2025: 2da. Código de la CIE10 que corresponde a la anomalía congénita, enfermedad o lesión del nacido vivo. El valor 0000 corresponde a NINGUNA APARENTE. Catalogo DIAGNOSTICOS = CIE-10 (lineamientos DOF CEN en evidencia previa); ejemplo local '0000' = NINGUNA APARENTE, corroborado por columna hermana ANOMALIACIE* del mismo renglon.",
+    "original_sha256": "3a3a2092c0948b81ba94e2e1e7d61bb048207c6db8d7e3f6e94aeb3eb8bfa4d4",
+    "limites": [
+      "Descriptor/catalogos DGIS citados son del registro nacional (DEFUN 2022 / SINAC 2020-2025), no del extracto Sonora del portal; la coincidencia de nombres o valores no sustituye la tabla del publicador.",
+      "Negativas y ausencias acotadas a lo revisado el 2026-10-24; no ausencia universal.",
+      "Reinterpretacion v002 (explicita para auditores A/B): la correspondencia ya no exige nota del publicador como unico medio; se prueba por sistema+edicion+identificador exacto+representacion (codigo local en catalogo nacional + etiqueta D identica)+ambito.",
+      "Diferencia de representacion declarada: codigos nacionales como texto con cero inicial ('01','00') frente a entero local (1, 0); mapeo biyectivo por igualdad numerica + etiqueta D; el tipo local entero no preserva ceros a la izquierda.",
+      "Edicion declarada por titulo/rango DGIS (descriptor 2020-2025, catalogos 2020-2023, geo 202201/202203/202204); sin acta de vigencia separada.",
+      "DIAGNOSTICOS no trae archivo en el zip 2020-2023; codebook = CIE-10 por columna de catalogo del descriptor + lineamientos DOF CEN."
+    ],
+    "evidencia": [
+      {
+        "ruta": "data/portal/inspecciones/22202305-2d02-4c49-b216-cc98224357f0.json",
+        "sha256": "76fe68223bc861fcdf62cb33f5b9a207503b192c2ef531a4aad31d52e7a7513b",
+        "localizador": "/definiciones/75 (fila 76, variable CODIGOCIEANOMALIA2)"
+      },
+      {
+        "ruta": "data/portal/inspecciones/46977217-9396-4f9c-bddb-6616e82530b4.json",
+        "sha256": "13831dec294ac79e90d3c618dd7f322d512afc392babe1405eb903d40c18afd5",
+        "localizador": "tablas[0]: hoja 'SINAC 2022 26-09-22', 106 campos; encabezado incluye CODIGOCIEANOMALIA2"
+      },
+      {
+        "ruta": "propuestas/cierre-brechas-post-r6/significados-salud/evidencia/desc_sinac_2020_2025/Descriptores_SINAC_2020.xlsx",
+        "sha256": "0af0b6be1faeb3867da872cd1b2021785af4feb78311c5de7c1fa44807fd6ed4",
+        "localizador": "Hoja1 fila ID=47, VARIABLE=CODIGOCIEANOMALIA2"
+      },
+      {
+        "ruta": ".\\propuestas/plan-paralelo-brechas-sin-gemma/ejecucion-20261024-072207Z/S2-nacimientos\\trabajo\\evidencia\\sinac_catalogos_2020_2023.zip",
+        "sha256": "9c7dcd52dd8fdb2cfb9c7de3711e0ccc323cfa9cff86712eaeeb3e883141cb4e",
+        "localizador": "contenido del zip (20 xlsx); sin columnas D ni ANOMALIACIE* ni DIAGNOSTICOS"
+      }
+    ]
+  },
+  {
+    "definicion_iri": "https://example.org/mex-ontologi/definition/22202305-2d02-4c49-b216-cc98224357f0%2F77",
+    "fila": "77",
+    "variable": "RESOLUCIONEMBARAZO",
+    "tier": "A1",
+    "afirmacion": "RESOLUCIONEMBARAZO = variable IDnac=51 del descriptor SINAC 2020-2025: Procedimiento utilizado en el nacimiento Codigos RESOLUCION_EMBARAZO verificados (p. ej. 3='CESÁREA'); columna local = codigo entero, etiqueta D = descripcion del catalogo.",
+    "original_sha256": "65e7994614014602783b74d2012ab4ffaba32794a64ba26017704995709260e7",
+    "limites": [
+      "Descriptor/catalogos DGIS citados son del registro nacional (DEFUN 2022 / SINAC 2020-2025), no del extracto Sonora del portal; la coincidencia de nombres o valores no sustituye la tabla del publicador.",
+      "Negativas y ausencias acotadas a lo revisado el 2026-10-24; no ausencia universal.",
+      "Reinterpretacion v002 (explicita para auditores A/B): la correspondencia ya no exige nota del publicador como unico medio; se prueba por sistema+edicion+identificador exacto+representacion (codigo local en catalogo nacional + etiqueta D identica)+ambito.",
+      "Diferencia de representacion declarada: codigos nacionales como texto con cero inicial ('01','00') frente a entero local (1, 0); mapeo biyectivo por igualdad numerica + etiqueta D; el tipo local entero no preserva ceros a la izquierda.",
+      "Edicion declarada por titulo/rango DGIS (descriptor 2020-2025, catalogos 2020-2023, geo 202201/202203/202204); sin acta de vigencia separada."
+    ],
+    "evidencia": [
+      {
+        "ruta": "data/portal/inspecciones/22202305-2d02-4c49-b216-cc98224357f0.json",
+        "sha256": "76fe68223bc861fcdf62cb33f5b9a207503b192c2ef531a4aad31d52e7a7513b",
+        "localizador": "/definiciones/76 (fila 77, variable RESOLUCIONEMBARAZO)"
+      },
+      {
+        "ruta": "data/portal/inspecciones/46977217-9396-4f9c-bddb-6616e82530b4.json",
+        "sha256": "13831dec294ac79e90d3c618dd7f322d512afc392babe1405eb903d40c18afd5",
+        "localizador": "tablas[0]: hoja 'SINAC 2022 26-09-22', 106 campos; encabezado incluye RESOLUCIONEMBARAZO"
+      },
+      {
+        "ruta": "propuestas/cierre-brechas-post-r6/significados-salud/evidencia/desc_sinac_2020_2025/Descriptores_SINAC_2020.xlsx",
+        "sha256": "0af0b6be1faeb3867da872cd1b2021785af4feb78311c5de7c1fa44807fd6ed4",
+        "localizador": "Hoja1 fila ID=51, VARIABLE=RESOLUCIONEMBARAZO"
+      },
+      {
+        "ruta": ".\\propuestas/plan-paralelo-brechas-sin-gemma/ejecucion-20261024-072207Z/S2-nacimientos\\trabajo\\evidencia\\sinac_catalogos_2020_2023.zip",
+        "sha256": "9c7dcd52dd8fdb2cfb9c7de3711e0ccc323cfa9cff86712eaeeb3e883141cb4e",
+        "localizador": "contenido del zip (20 xlsx); sin columnas D ni ANOMALIACIE* ni DIAGNOSTICOS"
+      },
+      {
+        "ruta": "propuestas/plan-paralelo-brechas-sin-gemma/ejecucion-20261024-072207Z/S2-nacimientos/trabajo/evidencia/cat_sinac_2020_2023/RESOLUCION_EMBARAZO.xlsx",
+        "sha256": "ea2abd8b970be44af033f551fd4dbd41f6d094be36cf2ad3352e3ae423d2405f",
+        "localizador": "Hoja1, catalogo RESOLUCION_EMBARAZO: codigo 3"
+      }
+    ]
+  },
+  {
+    "definicion_iri": "https://example.org/mex-ontologi/definition/22202305-2d02-4c49-b216-cc98224357f0%2F79",
+    "fila": "79",
+    "variable": "UTILIZOFORCEPS",
+    "tier": "A1",
+    "afirmacion": "UTILIZOFORCEPS = variable IDnac=52 del descriptor SINAC 2020-2025: Se utilizaron fórceps durante el procedimiento Codigos UTILIZO_FORCEPS verificados (p. ej. 8='NO APLICA'); columna local = codigo entero, etiqueta D = descripcion del catalogo.",
+    "original_sha256": "e64aea2e81536f46db5302e3f261a896ceea22eb20cbf5f2e59b9c91bb5d981e",
+    "limites": [
+      "Descriptor/catalogos DGIS citados son del registro nacional (DEFUN 2022 / SINAC 2020-2025), no del extracto Sonora del portal; la coincidencia de nombres o valores no sustituye la tabla del publicador.",
+      "Negativas y ausencias acotadas a lo revisado el 2026-10-24; no ausencia universal.",
+      "Reinterpretacion v002 (explicita para auditores A/B): la correspondencia ya no exige nota del publicador como unico medio; se prueba por sistema+edicion+identificador exacto+representacion (codigo local en catalogo nacional + etiqueta D identica)+ambito.",
+      "Diferencia de representacion declarada: codigos nacionales como texto con cero inicial ('01','00') frente a entero local (1, 0); mapeo biyectivo por igualdad numerica + etiqueta D; el tipo local entero no preserva ceros a la izquierda.",
+      "Edicion declarada por titulo/rango DGIS (descriptor 2020-2025, catalogos 2020-2023, geo 202201/202203/202204); sin acta de vigencia separada."
+    ],
+    "evidencia": [
+      {
+        "ruta": "data/portal/inspecciones/22202305-2d02-4c49-b216-cc98224357f0.json",
+        "sha256": "76fe68223bc861fcdf62cb33f5b9a207503b192c2ef531a4aad31d52e7a7513b",
+        "localizador": "/definiciones/78 (fila 79, variable UTILIZOFORCEPS)"
+      },
+      {
+        "ruta": "data/portal/inspecciones/46977217-9396-4f9c-bddb-6616e82530b4.json",
+        "sha256": "13831dec294ac79e90d3c618dd7f322d512afc392babe1405eb903d40c18afd5",
+        "localizador": "tablas[0]: hoja 'SINAC 2022 26-09-22', 106 campos; encabezado incluye UTILIZOFORCEPS"
+      },
+      {
+        "ruta": "propuestas/cierre-brechas-post-r6/significados-salud/evidencia/desc_sinac_2020_2025/Descriptores_SINAC_2020.xlsx",
+        "sha256": "0af0b6be1faeb3867da872cd1b2021785af4feb78311c5de7c1fa44807fd6ed4",
+        "localizador": "Hoja1 fila ID=52, VARIABLE=UTILIZOFORCEPS"
+      },
+      {
+        "ruta": ".\\propuestas/plan-paralelo-brechas-sin-gemma/ejecucion-20261024-072207Z/S2-nacimientos\\trabajo\\evidencia\\sinac_catalogos_2020_2023.zip",
+        "sha256": "9c7dcd52dd8fdb2cfb9c7de3711e0ccc323cfa9cff86712eaeeb3e883141cb4e",
+        "localizador": "contenido del zip (20 xlsx); sin columnas D ni ANOMALIACIE* ni DIAGNOSTICOS"
+      },
+      {
+        "ruta": "propuestas/plan-paralelo-brechas-sin-gemma/ejecucion-20261024-072207Z/S2-nacimientos/trabajo/evidencia/cat_sinac_2020_2023/UTILIZO_FORCEPS.xlsx",
+        "sha256": "1362e1a5e5c573164cf1cc9e62a80984ce90e9e52c25de6bc0ac41231c51c96a",
+        "localizador": "Hoja1, catalogo UTILIZO_FORCEPS: codigo 8"
+      }
+    ]
+  },
+  {
+    "definicion_iri": "https://example.org/mex-ontologi/definition/22202305-2d02-4c49-b216-cc98224357f0%2F83",
+    "fila": "83",
+    "variable": "CLUES",
+    "tier": "",
+    "afirmacion": "CLUES = variable IDnac=49 del descriptor SINAC 2020-2025: Clave Única de Establecimientos en Salud del sitio de atención del parto descrita por el prestador de servicios de salud. El valor  9998 corresponde a  \"No tiene CLUES\" Verificacion de ambito: SRSMP000314 EN OPERACION (Sonora/SLRC) en ESTABLECIMIENTO_SALUD_202204.",
+    "original_sha256": "acd7f18d58d83949f99cde935bbd9d2b312fb2ae748dbbe3a9a041293f0c2fd0",
+    "limites": [
+      "Descriptor/catalogos DGIS citados son del registro nacional (DEFUN 2022 / SINAC 2020-2025), no del extracto Sonora del portal; la coincidencia de nombres o valores no sustituye la tabla del publicador.",
+      "Negativas y ausencias acotadas a lo revisado el 2026-10-24; no ausencia universal.",
+      "Reinterpretacion v002 (explicita para auditores A/B): la correspondencia ya no exige nota del publicador como unico medio; se prueba por sistema+edicion+identificador exacto+representacion (codigo local en catalogo nacional + etiqueta D identica)+ambito.",
+      "Diferencia de representacion declarada: codigos nacionales como texto con cero inicial ('01','00') frente a entero local (1, 0); mapeo biyectivo por igualdad numerica + etiqueta D; el tipo local entero no preserva ceros a la izquierda.",
+      "Edicion declarada por titulo/rango DGIS (descriptor 2020-2025, catalogos 2020-2023, geo 202201/202203/202204); sin acta de vigencia separada."
+    ],
+    "evidencia": [
+      {
+        "ruta": "data/portal/inspecciones/22202305-2d02-4c49-b216-cc98224357f0.json",
+        "sha256": "76fe68223bc861fcdf62cb33f5b9a207503b192c2ef531a4aad31d52e7a7513b",
+        "localizador": "/definiciones/82 (fila 83, variable CLUES)"
+      },
+      {
+        "ruta": "data/portal/inspecciones/46977217-9396-4f9c-bddb-6616e82530b4.json",
+        "sha256": "13831dec294ac79e90d3c618dd7f322d512afc392babe1405eb903d40c18afd5",
+        "localizador": "tablas[0]: hoja 'SINAC 2022 26-09-22', 106 campos; encabezado incluye CLUES"
+      },
+      {
+        "ruta": "propuestas/cierre-brechas-post-r6/significados-salud/evidencia/desc_sinac_2020_2025/Descriptores_SINAC_2020.xlsx",
+        "sha256": "0af0b6be1faeb3867da872cd1b2021785af4feb78311c5de7c1fa44807fd6ed4",
+        "localizador": "Hoja1 fila ID=49, VARIABLE=CLUES"
+      },
+      {
+        "ruta": ".\\propuestas/plan-paralelo-brechas-sin-gemma/ejecucion-20261024-072207Z/S2-nacimientos\\trabajo\\evidencia\\sinac_catalogos_2020_2023.zip",
+        "sha256": "9c7dcd52dd8fdb2cfb9c7de3711e0ccc323cfa9cff86712eaeeb3e883141cb4e",
+        "localizador": "contenido del zip (20 xlsx); sin columnas D ni ANOMALIACIE* ni DIAGNOSTICOS"
+      },
+      {
+        "ruta": "propuestas/plan-paralelo-brechas-sin-gemma/ejecucion-20261024-072207Z/S2-nacimientos/trabajo/evidencia/cat_sinac_2020_2023/ESTABLECIMIENTO_SALUD_202204.xlsx",
+        "sha256": "adb4704b44617fa9a343e46ac6e804bb2c14554098062e00545099ac18e07c53",
+        "localizador": "Hoja1, catalogo ESTABLECIMIENTO_SALUD: SRSMP000314 EN OPERACION (Sonora/SLRC) en ESTABLECIMIENTO_SALUD_202204"
+      }
+    ]
+  },
+  {
+    "definicion_iri": "https://example.org/mex-ontologi/definition/22202305-2d02-4c49-b216-cc98224357f0%2F84",
+    "fila": "84",
+    "variable": "TIEMPOTRASLADO",
+    "tier": "",
+    "afirmacion": "TIEMPOTRASLADO = variable IDnac=50 del descriptor SINAC 2020-2025: Tiempo de traslado desde su hogar hasta el sitio de atención del parto. Sin catalogo nacional; tipo local Hora con ejemplo '12:15:00 AM' (duracion codificada como hora).",
+    "original_sha256": "11d8c90918969759c11e4c08e13ed599c4205d036bde8bdb8679c2660bc38255",
+    "limites": [
+      "Descriptor/catalogos DGIS citados son del registro nacional (DEFUN 2022 / SINAC 2020-2025), no del extracto Sonora del portal; la coincidencia de nombres o valores no sustituye la tabla del publicador.",
+      "Negativas y ausencias acotadas a lo revisado el 2026-10-24; no ausencia universal.",
+      "Reinterpretacion v002 (explicita para auditores A/B): la correspondencia ya no exige nota del publicador como unico medio; se prueba por sistema+edicion+identificador exacto+representacion (codigo local en catalogo nacional + etiqueta D identica)+ambito.",
+      "Diferencia de representacion declarada: codigos nacionales como texto con cero inicial ('01','00') frente a entero local (1, 0); mapeo biyectivo por igualdad numerica + etiqueta D; el tipo local entero no preserva ceros a la izquierda.",
+      "Edicion declarada por titulo/rango DGIS (descriptor 2020-2025, catalogos 2020-2023, geo 202201/202203/202204); sin acta de vigencia separada.",
+      "Formato de duracion como Hora no especificado en el descriptor; el significado no depende de esa codificacion."
+    ],
+    "evidencia": [
+      {
+        "ruta": "data/portal/inspecciones/22202305-2d02-4c49-b216-cc98224357f0.json",
+        "sha256": "76fe68223bc861fcdf62cb33f5b9a207503b192c2ef531a4aad31d52e7a7513b",
+        "localizador": "/definiciones/83 (fila 84, variable TIEMPOTRASLADO)"
+      },
+      {
+        "ruta": "data/portal/inspecciones/46977217-9396-4f9c-bddb-6616e82530b4.json",
+        "sha256": "13831dec294ac79e90d3c618dd7f322d512afc392babe1405eb903d40c18afd5",
+        "localizador": "tablas[0]: hoja 'SINAC 2022 26-09-22', 106 campos; encabezado incluye TIEMPOTRASLADO"
+      },
+      {
+        "ruta": "propuestas/cierre-brechas-post-r6/significados-salud/evidencia/desc_sinac_2020_2025/Descriptores_SINAC_2020.xlsx",
+        "sha256": "0af0b6be1faeb3867da872cd1b2021785af4feb78311c5de7c1fa44807fd6ed4",
+        "localizador": "Hoja1 fila ID=50, VARIABLE=TIEMPOTRASLADO"
+      },
+      {
+        "ruta": ".\\propuestas/plan-paralelo-brechas-sin-gemma/ejecucion-20261024-072207Z/S2-nacimientos\\trabajo\\evidencia\\sinac_catalogos_2020_2023.zip",
+        "sha256": "9c7dcd52dd8fdb2cfb9c7de3711e0ccc323cfa9cff86712eaeeb3e883141cb4e",
+        "localizador": "contenido del zip (20 xlsx); sin columnas D ni ANOMALIACIE* ni DIAGNOSTICOS"
+      }
+    ]
+  },
+  {
+    "definicion_iri": "https://example.org/mex-ontologi/definition/22202305-2d02-4c49-b216-cc98224357f0%2F87",
+    "fila": "87",
+    "variable": "PERSONALATENDIO",
+    "tier": "A1",
+    "afirmacion": "PERSONALATENDIO = variable IDnac=54 del descriptor SINAC 2020-2025: Persona que atendió el parto Codigos PERSONA_ATENDIO_PARTO verificados (p. ej. 1='MÉDICO'); columna local = codigo entero, etiqueta D = descripcion del catalogo.",
+    "original_sha256": "46eca1da7b5ddfdab38f6da8de312575c61e4b96efaf664a610a17ecdcd15799",
+    "limites": [
+      "Descriptor/catalogos DGIS citados son del registro nacional (DEFUN 2022 / SINAC 2020-2025), no del extracto Sonora del portal; la coincidencia de nombres o valores no sustituye la tabla del publicador.",
+      "Negativas y ausencias acotadas a lo revisado el 2026-10-24; no ausencia universal.",
+      "Reinterpretacion v002 (explicita para auditores A/B): la correspondencia ya no exige nota del publicador como unico medio; se prueba por sistema+edicion+identificador exacto+representacion (codigo local en catalogo nacional + etiqueta D identica)+ambito.",
+      "Diferencia de representacion declarada: codigos nacionales como texto con cero inicial ('01','00') frente a entero local (1, 0); mapeo biyectivo por igualdad numerica + etiqueta D; el tipo local entero no preserva ceros a la izquierda.",
+      "Edicion declarada por titulo/rango DGIS (descriptor 2020-2025, catalogos 2020-2023, geo 202201/202203/202204); sin acta de vigencia separada."
+    ],
+    "evidencia": [
+      {
+        "ruta": "data/portal/inspecciones/22202305-2d02-4c49-b216-cc98224357f0.json",
+        "sha256": "76fe68223bc861fcdf62cb33f5b9a207503b192c2ef531a4aad31d52e7a7513b",
+        "localizador": "/definiciones/86 (fila 87, variable PERSONALATENDIO)"
+      },
+      {
+        "ruta": "data/portal/inspecciones/46977217-9396-4f9c-bddb-6616e82530b4.json",
+        "sha256": "13831dec294ac79e90d3c618dd7f322d512afc392babe1405eb903d40c18afd5",
+        "localizador": "tablas[0]: hoja 'SINAC 2022 26-09-22', 106 campos; encabezado incluye PERSONALATENDIO"
+      },
+      {
+        "ruta": "propuestas/cierre-brechas-post-r6/significados-salud/evidencia/desc_sinac_2020_2025/Descriptores_SINAC_2020.xlsx",
+        "sha256": "0af0b6be1faeb3867da872cd1b2021785af4feb78311c5de7c1fa44807fd6ed4",
+        "localizador": "Hoja1 fila ID=54, VARIABLE=PERSONALATENDIO"
+      },
+      {
+        "ruta": ".\\propuestas/plan-paralelo-brechas-sin-gemma/ejecucion-20261024-072207Z/S2-nacimientos\\trabajo\\evidencia\\sinac_catalogos_2020_2023.zip",
+        "sha256": "9c7dcd52dd8fdb2cfb9c7de3711e0ccc323cfa9cff86712eaeeb3e883141cb4e",
+        "localizador": "contenido del zip (20 xlsx); sin columnas D ni ANOMALIACIE* ni DIAGNOSTICOS"
+      },
+      {
+        "ruta": "propuestas/plan-paralelo-brechas-sin-gemma/ejecucion-20261024-072207Z/S2-nacimientos/trabajo/evidencia/cat_sinac_2020_2023/PERSONA_ATENDIO_PARTO.xlsx",
+        "sha256": "e1a49a8ab27dd10656321a4822c166de7bc269a8b24765e90d218d3c02462303",
+        "localizador": "Hoja1, catalogo PERSONA_ATENDIO_PARTO: codigo 1"
+      }
+    ]
+  },
+  {
+    "definicion_iri": "https://example.org/mex-ontologi/definition/22202305-2d02-4c49-b216-cc98224357f0%2F89",
+    "fila": "89",
+    "variable": "TIPOMEDICOATENDIO",
+    "tier": "A1",
+    "afirmacion": "TIPOMEDICOATENDIO = variable IDnac=55 del descriptor SINAC 2020-2025: Tipo de médico que atendió el parto Codigos TIPO_MEDICO verificados (p. ej. 11='MÉDICO GINECO OBSTETRA'); columna local = codigo entero, etiqueta D = descripcion del catalogo.",
+    "original_sha256": "9e79733d7de4fa79753fa0bcf7d5dc8b54f96d257d0d45176c05e2e28716a231",
+    "limites": [
+      "Descriptor/catalogos DGIS citados son del registro nacional (DEFUN 2022 / SINAC 2020-2025), no del extracto Sonora del portal; la coincidencia de nombres o valores no sustituye la tabla del publicador.",
+      "Negativas y ausencias acotadas a lo revisado el 2026-10-24; no ausencia universal.",
+      "Reinterpretacion v002 (explicita para auditores A/B): la correspondencia ya no exige nota del publicador como unico medio; se prueba por sistema+edicion+identificador exacto+representacion (codigo local en catalogo nacional + etiqueta D identica)+ambito.",
+      "Diferencia de representacion declarada: codigos nacionales como texto con cero inicial ('01','00') frente a entero local (1, 0); mapeo biyectivo por igualdad numerica + etiqueta D; el tipo local entero no preserva ceros a la izquierda.",
+      "Edicion declarada por titulo/rango DGIS (descriptor 2020-2025, catalogos 2020-2023, geo 202201/202203/202204); sin acta de vigencia separada."
+    ],
+    "evidencia": [
+      {
+        "ruta": "data/portal/inspecciones/22202305-2d02-4c49-b216-cc98224357f0.json",
+        "sha256": "76fe68223bc861fcdf62cb33f5b9a207503b192c2ef531a4aad31d52e7a7513b",
+        "localizador": "/definiciones/88 (fila 89, variable TIPOMEDICOATENDIO)"
+      },
+      {
+        "ruta": "data/portal/inspecciones/46977217-9396-4f9c-bddb-6616e82530b4.json",
+        "sha256": "13831dec294ac79e90d3c618dd7f322d512afc392babe1405eb903d40c18afd5",
+        "localizador": "tablas[0]: hoja 'SINAC 2022 26-09-22', 106 campos; encabezado incluye TIPOMEDICOATENDIO"
+      },
+      {
+        "ruta": "propuestas/cierre-brechas-post-r6/significados-salud/evidencia/desc_sinac_2020_2025/Descriptores_SINAC_2020.xlsx",
+        "sha256": "0af0b6be1faeb3867da872cd1b2021785af4feb78311c5de7c1fa44807fd6ed4",
+        "localizador": "Hoja1 fila ID=55, VARIABLE=TIPOMEDICOATENDIO"
+      },
+      {
+        "ruta": ".\\propuestas/plan-paralelo-brechas-sin-gemma/ejecucion-20261024-072207Z/S2-nacimientos\\trabajo\\evidencia\\sinac_catalogos_2020_2023.zip",
+        "sha256": "9c7dcd52dd8fdb2cfb9c7de3711e0ccc323cfa9cff86712eaeeb3e883141cb4e",
+        "localizador": "contenido del zip (20 xlsx); sin columnas D ni ANOMALIACIE* ni DIAGNOSTICOS"
+      },
+      {
+        "ruta": "propuestas/plan-paralelo-brechas-sin-gemma/ejecucion-20261024-072207Z/S2-nacimientos/trabajo/evidencia/cat_sinac_2020_2023/TIPO_MEDICO.xlsx",
+        "sha256": "e3a891aeecd1849e4f3f66169780ee0ce8a4c28b450fa68d9937a5bb5cd7f99c",
+        "localizador": "Hoja1, catalogo TIPO_MEDICO: codigo 11"
+      }
+    ]
+  },
+  {
+    "definicion_iri": "https://example.org/mex-ontologi/definition/22202305-2d02-4c49-b216-cc98224357f0%2F97",
+    "fila": "97",
+    "variable": "CERTIFICADOPOR",
+    "tier": "A1",
+    "afirmacion": "CERTIFICADOPOR = variable IDnac=59 del descriptor SINAC 2020-2025: Tipo de profesional de la salud que certifica el nacimiento Codigos NACIMIENTO_CERTIFICADO_POR verificados (p. ej. 7='MÉDICO GINECO-OBSTETRA'); columna local = codigo entero, etiqueta D = descripcion del catalogo.",
+    "original_sha256": "2a0ace6328246b689682872dd6fdbeaba0597b882b50795ba8df6dbb832b4931",
+    "limites": [
+      "Descriptor/catalogos DGIS citados son del registro nacional (DEFUN 2022 / SINAC 2020-2025), no del extracto Sonora del portal; la coincidencia de nombres o valores no sustituye la tabla del publicador.",
+      "Negativas y ausencias acotadas a lo revisado el 2026-10-24; no ausencia universal.",
+      "Reinterpretacion v002 (explicita para auditores A/B): la correspondencia ya no exige nota del publicador como unico medio; se prueba por sistema+edicion+identificador exacto+representacion (codigo local en catalogo nacional + etiqueta D identica)+ambito.",
+      "Diferencia de representacion declarada: codigos nacionales como texto con cero inicial ('01','00') frente a entero local (1, 0); mapeo biyectivo por igualdad numerica + etiqueta D; el tipo local entero no preserva ceros a la izquierda.",
+      "Edicion declarada por titulo/rango DGIS (descriptor 2020-2025, catalogos 2020-2023, geo 202201/202203/202204); sin acta de vigencia separada."
+    ],
+    "evidencia": [
+      {
+        "ruta": "data/portal/inspecciones/22202305-2d02-4c49-b216-cc98224357f0.json",
+        "sha256": "76fe68223bc861fcdf62cb33f5b9a207503b192c2ef531a4aad31d52e7a7513b",
+        "localizador": "/definiciones/96 (fila 97, variable CERTIFICADOPOR)"
+      },
+      {
+        "ruta": "data/portal/inspecciones/46977217-9396-4f9c-bddb-6616e82530b4.json",
+        "sha256": "13831dec294ac79e90d3c618dd7f322d512afc392babe1405eb903d40c18afd5",
+        "localizador": "tablas[0]: hoja 'SINAC 2022 26-09-22', 106 campos; encabezado incluye CERTIFICADOPOR"
+      },
+      {
+        "ruta": "propuestas/cierre-brechas-post-r6/significados-salud/evidencia/desc_sinac_2020_2025/Descriptores_SINAC_2020.xlsx",
+        "sha256": "0af0b6be1faeb3867da872cd1b2021785af4feb78311c5de7c1fa44807fd6ed4",
+        "localizador": "Hoja1 fila ID=59, VARIABLE=CERTIFICADOPOR"
+      },
+      {
+        "ruta": ".\\propuestas/plan-paralelo-brechas-sin-gemma/ejecucion-20261024-072207Z/S2-nacimientos\\trabajo\\evidencia\\sinac_catalogos_2020_2023.zip",
+        "sha256": "9c7dcd52dd8fdb2cfb9c7de3711e0ccc323cfa9cff86712eaeeb3e883141cb4e",
+        "localizador": "contenido del zip (20 xlsx); sin columnas D ni ANOMALIACIE* ni DIAGNOSTICOS"
+      },
+      {
+        "ruta": "propuestas/plan-paralelo-brechas-sin-gemma/ejecucion-20261024-072207Z/S2-nacimientos/trabajo/evidencia/cat_sinac_2020_2023/NACIMIENTO_CERTIFICADO_POR.xlsx",
+        "sha256": "e0a4bff0b8af33be4a8a25cd1362d8e888e05d9ebb1904822b56672fd2b3e8bc",
+        "localizador": "Hoja1, catalogo NACIMIENTO_CERTIFICADO_POR: codigo 7"
+      }
+    ]
+  },
+  {
+    "definicion_iri": "https://example.org/mex-ontologi/definition/22202305-2d02-4c49-b216-cc98224357f0%2F99",
+    "fila": "99",
+    "variable": "CLUESCERTIFICA",
+    "tier": "",
+    "afirmacion": "CLUESCERTIFICA = variable IDnac=60 del descriptor SINAC 2020-2025: Clave Única de Establecimiento en Salud que certifica el parto Verificacion de ambito: mismo catalogo ESTABLECIMIENTO_SALUD_202204; ejemplo local vacio.",
+    "original_sha256": "529ad4591b3d4c0683dd261eb1b8c92ad1c4da92b2252efa82a12afa33ee1492",
+    "limites": [
+      "Descriptor/catalogos DGIS citados son del registro nacional (DEFUN 2022 / SINAC 2020-2025), no del extracto Sonora del portal; la coincidencia de nombres o valores no sustituye la tabla del publicador.",
+      "Negativas y ausencias acotadas a lo revisado el 2026-10-24; no ausencia universal.",
+      "Reinterpretacion v002 (explicita para auditores A/B): la correspondencia ya no exige nota del publicador como unico medio; se prueba por sistema+edicion+identificador exacto+representacion (codigo local en catalogo nacional + etiqueta D identica)+ambito.",
+      "Diferencia de representacion declarada: codigos nacionales como texto con cero inicial ('01','00') frente a entero local (1, 0); mapeo biyectivo por igualdad numerica + etiqueta D; el tipo local entero no preserva ceros a la izquierda.",
+      "Edicion declarada por titulo/rango DGIS (descriptor 2020-2025, catalogos 2020-2023, geo 202201/202203/202204); sin acta de vigencia separada.",
+      "Ejemplo local vacio en el diccionario; la correspondencia se sostiene por identificador+sistema+edicion+catalogo, sin verificacion de valor local."
+    ],
+    "evidencia": [
+      {
+        "ruta": "data/portal/inspecciones/22202305-2d02-4c49-b216-cc98224357f0.json",
+        "sha256": "76fe68223bc861fcdf62cb33f5b9a207503b192c2ef531a4aad31d52e7a7513b",
+        "localizador": "/definiciones/98 (fila 99, variable CLUESCERTIFICA)"
+      },
+      {
+        "ruta": "data/portal/inspecciones/46977217-9396-4f9c-bddb-6616e82530b4.json",
+        "sha256": "13831dec294ac79e90d3c618dd7f322d512afc392babe1405eb903d40c18afd5",
+        "localizador": "tablas[0]: hoja 'SINAC 2022 26-09-22', 106 campos; encabezado incluye CLUESCERTIFICA"
+      },
+      {
+        "ruta": "propuestas/cierre-brechas-post-r6/significados-salud/evidencia/desc_sinac_2020_2025/Descriptores_SINAC_2020.xlsx",
+        "sha256": "0af0b6be1faeb3867da872cd1b2021785af4feb78311c5de7c1fa44807fd6ed4",
+        "localizador": "Hoja1 fila ID=60, VARIABLE=CLUESCERTIFICA"
+      },
+      {
+        "ruta": ".\\propuestas/plan-paralelo-brechas-sin-gemma/ejecucion-20261024-072207Z/S2-nacimientos\\trabajo\\evidencia\\sinac_catalogos_2020_2023.zip",
+        "sha256": "9c7dcd52dd8fdb2cfb9c7de3711e0ccc323cfa9cff86712eaeeb3e883141cb4e",
+        "localizador": "contenido del zip (20 xlsx); sin columnas D ni ANOMALIACIE* ni DIAGNOSTICOS"
+      },
+      {
+        "ruta": "propuestas/plan-paralelo-brechas-sin-gemma/ejecucion-20261024-072207Z/S2-nacimientos/trabajo/evidencia/cat_sinac_2020_2023/ESTABLECIMIENTO_SALUD_202204.xlsx",
+        "sha256": "adb4704b44617fa9a343e46ac6e804bb2c14554098062e00545099ac18e07c53",
+        "localizador": "Hoja1, catalogo ESTABLECIMIENTO_SALUD: mismo catalogo ESTABLECIMIENTO_SALUD_202204; ejemplo local vacio"
+      }
+    ]
+  },
+  {
+    "definicion_iri": "https://example.org/mex-ontologi/definition/22202305-2d02-4c49-b216-cc98224357f0%2F100",
+    "fila": "100",
+    "variable": "ENTIDADFEDERATIVACERTIFICA",
+    "tier": "",
+    "afirmacion": "ENTIDADFEDERATIVACERTIFICA = variable IDnac=61 del descriptor SINAC 2020-2025: Entidad federativa del establecimiento de salud que certifica el parto. 00 es el valor para \"No Especificado\", 99 para \"Se Ignora\" y 88 para \"No Aplica\". Verificacion de ambito: 26=SONORA en ENTIDADES.",
+    "original_sha256": "4c2dbf5247d5649d5fd62ea1eb78b387f8c35967571a8414b9e94a54d8eedce7",
+    "limites": [
+      "Descriptor/catalogos DGIS citados son del registro nacional (DEFUN 2022 / SINAC 2020-2025), no del extracto Sonora del portal; la coincidencia de nombres o valores no sustituye la tabla del publicador.",
+      "Negativas y ausencias acotadas a lo revisado el 2026-10-24; no ausencia universal.",
+      "Reinterpretacion v002 (explicita para auditores A/B): la correspondencia ya no exige nota del publicador como unico medio; se prueba por sistema+edicion+identificador exacto+representacion (codigo local en catalogo nacional + etiqueta D identica)+ambito.",
+      "Diferencia de representacion declarada: codigos nacionales como texto con cero inicial ('01','00') frente a entero local (1, 0); mapeo biyectivo por igualdad numerica + etiqueta D; el tipo local entero no preserva ceros a la izquierda.",
+      "Edicion declarada por titulo/rango DGIS (descriptor 2020-2025, catalogos 2020-2023, geo 202201/202203/202204); sin acta de vigencia separada."
+    ],
+    "evidencia": [
+      {
+        "ruta": "data/portal/inspecciones/22202305-2d02-4c49-b216-cc98224357f0.json",
+        "sha256": "76fe68223bc861fcdf62cb33f5b9a207503b192c2ef531a4aad31d52e7a7513b",
+        "localizador": "/definiciones/99 (fila 100, variable ENTIDADFEDERATIVACERTIFICA)"
+      },
+      {
+        "ruta": "data/portal/inspecciones/46977217-9396-4f9c-bddb-6616e82530b4.json",
+        "sha256": "13831dec294ac79e90d3c618dd7f322d512afc392babe1405eb903d40c18afd5",
+        "localizador": "tablas[0]: hoja 'SINAC 2022 26-09-22', 106 campos; encabezado incluye ENTIDADFEDERATIVACERTIFICA"
+      },
+      {
+        "ruta": "propuestas/cierre-brechas-post-r6/significados-salud/evidencia/desc_sinac_2020_2025/Descriptores_SINAC_2020.xlsx",
+        "sha256": "0af0b6be1faeb3867da872cd1b2021785af4feb78311c5de7c1fa44807fd6ed4",
+        "localizador": "Hoja1 fila ID=61, VARIABLE=ENTIDADFEDERATIVACERTIFICA"
+      },
+      {
+        "ruta": ".\\propuestas/plan-paralelo-brechas-sin-gemma/ejecucion-20261024-072207Z/S2-nacimientos\\trabajo\\evidencia\\sinac_catalogos_2020_2023.zip",
+        "sha256": "9c7dcd52dd8fdb2cfb9c7de3711e0ccc323cfa9cff86712eaeeb3e883141cb4e",
+        "localizador": "contenido del zip (20 xlsx); sin columnas D ni ANOMALIACIE* ni DIAGNOSTICOS"
+      },
+      {
+        "ruta": "propuestas/plan-paralelo-brechas-sin-gemma/ejecucion-20261024-072207Z/S2-nacimientos/trabajo/evidencia/cat_sinac_2020_2023/ENTIDADES.xlsx",
+        "sha256": "a36a00814d9977a72c26c541257c468ccb4ea816d0dd3263aedd107d0af34e6e",
+        "localizador": "Hoja1, catalogo ENTIDADES: 26=SONORA en ENTIDADES"
+      }
+    ]
+  },
+  {
+    "definicion_iri": "https://example.org/mex-ontologi/definition/22202305-2d02-4c49-b216-cc98224357f0%2F102",
+    "fila": "102",
+    "variable": "MUNICIPIOCERTIFICA",
+    "tier": "",
+    "afirmacion": "MUNICIPIOCERTIFICA = variable IDnac=62 del descriptor SINAC 2020-2025: Municipio o delegación del establecimiento de salud que certifica el parto.  999 es el valor para \"No Especificado\", 998 para \"Se Ignora\" y 997 para \"No Aplica\". Verificacion de ambito: 26/055=SAN LUIS RIO COLORADO VIGENTE en MUNICIPIOS_202201.",
+    "original_sha256": "3dcd6f0adf4b358a6a6f50ad237cc7edb54904c10436f3b31f8db7920a51a602",
+    "limites": [
+      "Descriptor/catalogos DGIS citados son del registro nacional (DEFUN 2022 / SINAC 2020-2025), no del extracto Sonora del portal; la coincidencia de nombres o valores no sustituye la tabla del publicador.",
+      "Negativas y ausencias acotadas a lo revisado el 2026-10-24; no ausencia universal.",
+      "Reinterpretacion v002 (explicita para auditores A/B): la correspondencia ya no exige nota del publicador como unico medio; se prueba por sistema+edicion+identificador exacto+representacion (codigo local en catalogo nacional + etiqueta D identica)+ambito.",
+      "Diferencia de representacion declarada: codigos nacionales como texto con cero inicial ('01','00') frente a entero local (1, 0); mapeo biyectivo por igualdad numerica + etiqueta D; el tipo local entero no preserva ceros a la izquierda.",
+      "Edicion declarada por titulo/rango DGIS (descriptor 2020-2025, catalogos 2020-2023, geo 202201/202203/202204); sin acta de vigencia separada."
+    ],
+    "evidencia": [
+      {
+        "ruta": "data/portal/inspecciones/22202305-2d02-4c49-b216-cc98224357f0.json",
+        "sha256": "76fe68223bc861fcdf62cb33f5b9a207503b192c2ef531a4aad31d52e7a7513b",
+        "localizador": "/definiciones/101 (fila 102, variable MUNICIPIOCERTIFICA)"
+      },
+      {
+        "ruta": "data/portal/inspecciones/46977217-9396-4f9c-bddb-6616e82530b4.json",
+        "sha256": "13831dec294ac79e90d3c618dd7f322d512afc392babe1405eb903d40c18afd5",
+        "localizador": "tablas[0]: hoja 'SINAC 2022 26-09-22', 106 campos; encabezado incluye MUNICIPIOCERTIFICA"
+      },
+      {
+        "ruta": "propuestas/cierre-brechas-post-r6/significados-salud/evidencia/desc_sinac_2020_2025/Descriptores_SINAC_2020.xlsx",
+        "sha256": "0af0b6be1faeb3867da872cd1b2021785af4feb78311c5de7c1fa44807fd6ed4",
+        "localizador": "Hoja1 fila ID=62, VARIABLE=MUNICIPIOCERTIFICA"
+      },
+      {
+        "ruta": ".\\propuestas/plan-paralelo-brechas-sin-gemma/ejecucion-20261024-072207Z/S2-nacimientos\\trabajo\\evidencia\\sinac_catalogos_2020_2023.zip",
+        "sha256": "9c7dcd52dd8fdb2cfb9c7de3711e0ccc323cfa9cff86712eaeeb3e883141cb4e",
+        "localizador": "contenido del zip (20 xlsx); sin columnas D ni ANOMALIACIE* ni DIAGNOSTICOS"
+      },
+      {
+        "ruta": "propuestas/plan-paralelo-brechas-sin-gemma/ejecucion-20261024-072207Z/S2-nacimientos/trabajo/evidencia/cat_sinac_2020_2023/MUNICIPIOS_202201 (2).xlsx",
+        "sha256": "f4002505634fd8cfa556e8737086e66d0be2d78746590f2ba893672d65a53c45",
+        "localizador": "Hoja1, catalogo MUNICIPIOS: 26/055=SAN LUIS RIO COLORADO VIGENTE en MUNICIPIOS_202201"
+      }
+    ]
+  },
+  {
+    "definicion_iri": "https://example.org/mex-ontologi/definition/22202305-2d02-4c49-b216-cc98224357f0%2F104",
+    "fila": "104",
+    "variable": "LOCALIDADCERTIFICA",
+    "tier": "",
+    "afirmacion": "LOCALIDADCERTIFICA = variable IDnac=63 del descriptor SINAC 2020-2025: Localidad del establecimiento de salud que certifica el parto. 9999 Es el valor correspondiente a No Especificado. Verificacion de ambito: 26/055/0001=SAN LUIS RIO COLORADO en LOCALIDADES_202203.",
+    "original_sha256": "470ae44515c8695fc7b6477f5a42062c19dcfed68940197e67cd39ff3eee59e3",
+    "limites": [
+      "Descriptor/catalogos DGIS citados son del registro nacional (DEFUN 2022 / SINAC 2020-2025), no del extracto Sonora del portal; la coincidencia de nombres o valores no sustituye la tabla del publicador.",
+      "Negativas y ausencias acotadas a lo revisado el 2026-10-24; no ausencia universal.",
+      "Reinterpretacion v002 (explicita para auditores A/B): la correspondencia ya no exige nota del publicador como unico medio; se prueba por sistema+edicion+identificador exacto+representacion (codigo local en catalogo nacional + etiqueta D identica)+ambito.",
+      "Diferencia de representacion declarada: codigos nacionales como texto con cero inicial ('01','00') frente a entero local (1, 0); mapeo biyectivo por igualdad numerica + etiqueta D; el tipo local entero no preserva ceros a la izquierda.",
+      "Edicion declarada por titulo/rango DGIS (descriptor 2020-2025, catalogos 2020-2023, geo 202201/202203/202204); sin acta de vigencia separada."
+    ],
+    "evidencia": [
+      {
+        "ruta": "data/portal/inspecciones/22202305-2d02-4c49-b216-cc98224357f0.json",
+        "sha256": "76fe68223bc861fcdf62cb33f5b9a207503b192c2ef531a4aad31d52e7a7513b",
+        "localizador": "/definiciones/103 (fila 104, variable LOCALIDADCERTIFICA)"
+      },
+      {
+        "ruta": "data/portal/inspecciones/46977217-9396-4f9c-bddb-6616e82530b4.json",
+        "sha256": "13831dec294ac79e90d3c618dd7f322d512afc392babe1405eb903d40c18afd5",
+        "localizador": "tablas[0]: hoja 'SINAC 2022 26-09-22', 106 campos; encabezado incluye LOCALIDADCERTIFICA"
+      },
+      {
+        "ruta": "propuestas/cierre-brechas-post-r6/significados-salud/evidencia/desc_sinac_2020_2025/Descriptores_SINAC_2020.xlsx",
+        "sha256": "0af0b6be1faeb3867da872cd1b2021785af4feb78311c5de7c1fa44807fd6ed4",
+        "localizador": "Hoja1 fila ID=63, VARIABLE=LOCALIDADCERTIFICA"
+      },
+      {
+        "ruta": ".\\propuestas/plan-paralelo-brechas-sin-gemma/ejecucion-20261024-072207Z/S2-nacimientos\\trabajo\\evidencia\\sinac_catalogos_2020_2023.zip",
+        "sha256": "9c7dcd52dd8fdb2cfb9c7de3711e0ccc323cfa9cff86712eaeeb3e883141cb4e",
+        "localizador": "contenido del zip (20 xlsx); sin columnas D ni ANOMALIACIE* ni DIAGNOSTICOS"
+      },
+      {
+        "ruta": "propuestas/plan-paralelo-brechas-sin-gemma/ejecucion-20261024-072207Z/S2-nacimientos/trabajo/evidencia/cat_sinac_2020_2023/LOCALIDADES_202203 (2).xlsx",
+        "sha256": "b30ca282e66148b91efb63608ede3e18a93f458710898909c0593a9f9c4a14bb",
+        "localizador": "Hoja1, catalogo LOCALIDADES: 26/055/0001=SAN LUIS RIO COLORADO en LOCALIDADES_202203"
+      }
+    ]
+  },
+  {
+    "definicion_iri": "https://example.org/mex-ontologi/definition/22202305-2d02-4c49-b216-cc98224357f0%2F106",
+    "fila": "106",
+    "variable": "FECHACERTIFICADO",
+    "tier": "A2",
+    "afirmacion": "FECHACERTIFICADO = variable IDnac=64 del descriptor SINAC 2020-2025: Fecha de la certificación Sin catalogo nacional; tipo local (Fecha) compatible; ejemplo '1/8/2022'.",
+    "original_sha256": "c98a8a2c606764a489e3c44bf0da2043d79e368870044b0d2d666fb6bf186051",
+    "limites": [
+      "Descriptor/catalogos DGIS citados son del registro nacional (DEFUN 2022 / SINAC 2020-2025), no del extracto Sonora del portal; la coincidencia de nombres o valores no sustituye la tabla del publicador.",
+      "Negativas y ausencias acotadas a lo revisado el 2026-10-24; no ausencia universal.",
+      "Reinterpretacion v002 (explicita para auditores A/B): la correspondencia ya no exige nota del publicador como unico medio; se prueba por sistema+edicion+identificador exacto+representacion (codigo local en catalogo nacional + etiqueta D identica)+ambito.",
+      "Diferencia de representacion declarada: codigos nacionales como texto con cero inicial ('01','00') frente a entero local (1, 0); mapeo biyectivo por igualdad numerica + etiqueta D; el tipo local entero no preserva ceros a la izquierda.",
+      "Edicion declarada por titulo/rango DGIS (descriptor 2020-2025, catalogos 2020-2023, geo 202201/202203/202204); sin acta de vigencia separada."
+    ],
+    "evidencia": [
+      {
+        "ruta": "data/portal/inspecciones/22202305-2d02-4c49-b216-cc98224357f0.json",
+        "sha256": "76fe68223bc861fcdf62cb33f5b9a207503b192c2ef531a4aad31d52e7a7513b",
+        "localizador": "/definiciones/105 (fila 106, variable FECHACERTIFICADO)"
+      },
+      {
+        "ruta": "data/portal/inspecciones/46977217-9396-4f9c-bddb-6616e82530b4.json",
+        "sha256": "13831dec294ac79e90d3c618dd7f322d512afc392babe1405eb903d40c18afd5",
+        "localizador": "tablas[0]: hoja 'SINAC 2022 26-09-22', 106 campos; encabezado incluye FECHACERTIFICADO"
+      },
+      {
+        "ruta": "propuestas/cierre-brechas-post-r6/significados-salud/evidencia/desc_sinac_2020_2025/Descriptores_SINAC_2020.xlsx",
+        "sha256": "0af0b6be1faeb3867da872cd1b2021785af4feb78311c5de7c1fa44807fd6ed4",
+        "localizador": "Hoja1 fila ID=64, VARIABLE=FECHACERTIFICADO"
+      },
+      {
+        "ruta": ".\\propuestas/plan-paralelo-brechas-sin-gemma/ejecucion-20261024-072207Z/S2-nacimientos\\trabajo\\evidencia\\sinac_catalogos_2020_2023.zip",
+        "sha256": "9c7dcd52dd8fdb2cfb9c7de3711e0ccc323cfa9cff86712eaeeb3e883141cb4e",
+        "localizador": "contenido del zip (20 xlsx); sin columnas D ni ANOMALIACIE* ni DIAGNOSTICOS"
+      }
+    ]
+  }
+]

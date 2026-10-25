@@ -1,0 +1,140 @@
+{
+  "rol": "P4-shacl-versionado",
+  "version": "v002",
+  "fecha_utc": "2026-10-24T10:21:49.102348+00:00",
+  "base": "reports/ronda-8.json",
+  "estado": "propuesta_para_auditar",
+  "casos": [],
+  "forma_exacta_v001": {
+    "ruta": "propuestas/plan-tras-r8/ejecucion-20261024/P4-shacl-versionado/v001/propuesta/shape-exclusion-significado.ttl",
+    "sha256": "fc301d854b6c9175be601282ab4073f054a1736103b92ea634003c7bcc2b148d"
+  },
+  "snapshot": {
+    "ruta": "data/catalogo/studio-live.ttl",
+    "sha256": "ebce180573d745f98798732e83a9ea9b79681d47cb71f5cec5a18d3543a2fe57",
+    "store": "temporal aislado (sin mutar Studio)",
+    "stats": {
+      "classes": 56,
+      "data_properties": 155,
+      "individuals": 27314,
+      "object_properties": 48,
+      "properties": 203,
+      "triples": 322952
+    }
+  },
+  "motor": {
+    "exe": "tools/open-ontologies.exe",
+    "exe_sha256": "765803297dbaaeef6fce9bcb2b1794d0bd6683a21afa7981d504722ff611e1bf",
+    "version_flag": "el exe no acepta --version (error 'unexpected argument'); version registrada por SHA-256 del binario",
+    "operador": "sh:sparql (determinado en la instalacion probada)",
+    "nota_operadores": "sh:not/xone no detectaron evaluacion en la instalacion probada (conforms null + skipped_constraints); no se afirma soporte universal, solo lo observado con este binario",
+    "comandos": [
+      [
+        "validate",
+        "C:\\Users\\marti\\Documents\\MEX-Ontologi\\data\\catalogo\\studio-live.ttl"
+      ],
+      [
+        "load",
+        "C:\\Users\\marti\\Documents\\MEX-Ontologi\\data\\catalogo\\studio-live.ttl"
+      ],
+      [
+        "stats"
+      ],
+      [
+        "shacl",
+        "C:\\Users\\marti\\Documents\\MEX-Ontologi\\propuestas\\plan-tras-r8\\ejecucion-20261024\\P4-shacl-versionado\\v001\\propuesta\\shape-exclusion-significado.ttl"
+      ],
+      [
+        "query",
+        "SELECT (COUNT(DISTINCT ?v) AS ?n) WHERE { ?v a <https://example.org/mex-ontologi..."
+      ],
+      [
+        "query",
+        "SELECT (COUNT(DISTINCT ?v) AS ?n) WHERE { ?v a <https://example.org/mex-ontologi..."
+      ],
+      [
+        "query",
+        "SELECT (COUNT(DISTINCT ?v) AS ?n) WHERE { ?v a <https://example.org/mex-ontologi..."
+      ],
+      [
+        "query",
+        "SELECT (COUNT(DISTINCT ?v) AS ?n) WHERE { ?v a <https://example.org/mex-ontologi..."
+      ],
+      [
+        "query",
+        "SELECT (COUNT(DISTINCT ?v) AS ?n) WHERE { ?v a <https://example.org/mex-ontologi..."
+      ],
+      [
+        "query",
+        "SELECT ?v ?d ?c WHERE { ?v a <https://example.org/mex-ontologi/vocab/VariableDoc..."
+      ],
+      [
+        "query",
+        "SELECT (COUNT(DISTINCT ?s) AS ?n) WHERE { ?s <https://example.org/mex-ontologi/v..."
+      ]
+    ]
+  },
+  "resultado_snapshot": {
+    "conforms": true,
+    "violation_count": 0,
+    "focus_nodes": 1442,
+    "violations": [],
+    "variables": {
+      "VariableDocumentada_total": 1442,
+      "con_documentado": 1423,
+      "con_candidato": 16,
+      "con_ambos": 0,
+      "sin_ninguno": 3,
+      "candidato_fuera_de_alcance": 0
+    },
+    "sujetos_con_ambos": []
+  },
+  "conflictos_extras_manuales": "NINGUNO: 0 variables con ambos; se informa sin eliminar nada",
+  "fixtures": [
+    {
+      "fixture": "v001/fixtures/fixture-neither.ttl",
+      "sha256": "ebf488191df0020de8bfde2c31cccfadd4267dad727e99bc9305a094953dc289",
+      "esperado_conforms": true,
+      "conforms": true,
+      "violation_count": 0
+    },
+    {
+      "fixture": "v001/fixtures/fixture-doc.ttl",
+      "sha256": "5ca2efcf99411367a2a534e36cbd50c31a16fe4b3b75d83ce931fa08ea7fa1df",
+      "esperado_conforms": true,
+      "conforms": true,
+      "violation_count": 0
+    },
+    {
+      "fixture": "v001/fixtures/fixture-cand.ttl",
+      "sha256": "1848c71e0d687d5ba88365d61176b99feab1a9aeff60717e19780b78be364a8d",
+      "esperado_conforms": true,
+      "conforms": true,
+      "violation_count": 0
+    },
+    {
+      "fixture": "v001/fixtures/fixture-both.ttl",
+      "sha256": "6a243f7855fcb06f77184250c0d612fc00e3b0be31d6955131896a134f0cffc0",
+      "esperado_conforms": false,
+      "conforms": false,
+      "violation_count": 1
+    }
+  ],
+  "versionado": {
+    "format_version": "1 (esquema de esta entrega; sube solo si cambia el esquema)",
+    "release": "R8 vigente (cambia solo con ronda aprobada; R9 cuando se integre lo aprobado)",
+    "regla": "manifiestos R1-R8 intactos; solo append/snapshots futuros; sin migraciones historicas"
+  },
+  "limites": [
+    "v001 sellada: solo lectura; esta entrega vive en v002 y no modifica produccion, shapes centrales, manifiestos, grafo ni Studio.",
+    "Gemma excluido; sin contactos externos; sin navegador (reservado a W); sin peticiones-web.json.",
+    "sh:not/xone: afirmacion acotada a la instalacion probada, no universal.",
+    "Conflictos, si los hubiera, se informan y no se eliminan."
+  ],
+  "condiciones_de_aceptacion": [
+    "La forma exacta de v001 (mismo SHA) conforma sobre el snapshot R8.",
+    "Ninguna VariableDocumentada tiene ambos significados; se permite ninguna.",
+    "Fixtures: 3x true + 1x false con motor real.",
+    "Versionado formato vs release sin migraciones historicas."
+  ]
+}

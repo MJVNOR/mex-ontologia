@@ -1,0 +1,579 @@
+{
+  "sonda": "tools-schema (lectura tools/list; cero modelo)",
+  "n_tools": 114,
+  "nombres": [
+    "borderline_partition",
+    "borderline_record_verdict",
+    "eval_rag",
+    "eval_rag_mmrag",
+    "graph_projection_entailment_check",
+    "graph_projection_lossy_check",
+    "onto_action_applicable",
+    "onto_action_apply",
+    "onto_action_apply_concurrent",
+    "onto_action_list",
+    "onto_action_register",
+    "onto_align",
+    "onto_align_feedback",
+    "onto_align_flora",
+    "onto_align_fuzzy",
+    "onto_apply",
+    "onto_cache_list",
+    "onto_cache_remove",
+    "onto_cache_status",
+    "onto_certify_action",
+    "onto_classify_el",
+    "onto_clear",
+    "onto_closure_diff",
+    "onto_coevolve_dependency_graph",
+    "onto_communities",
+    "onto_conservative_check",
+    "onto_convert",
+    "onto_cq_run",
+    "onto_cq_verdicts_list",
+    "onto_crosswalk",
+    "onto_default_apply",
+    "onto_default_register",
+    "onto_defects",
+    "onto_diff",
+    "onto_dl_check",
+    "onto_dl_explain",
+    "onto_dlp_boundary",
+    "onto_drift",
+    "onto_enforce",
+    "onto_enforce_feedback",
+    "onto_enrich",
+    "onto_eval_alignment",
+    "onto_extend",
+    "onto_extract_scaffold",
+    "onto_extract_validate",
+    "onto_fol_export",
+    "onto_fol_model",
+    "onto_fol_prove",
+    "onto_history",
+    "onto_import",
+    "onto_induce",
+    "onto_ingest",
+    "onto_invariant_check",
+    "onto_invariant_list",
+    "onto_invariant_register",
+    "onto_invariant_remove",
+    "onto_justify",
+    "onto_lineage",
+    "onto_lint",
+    "onto_lint_feedback",
+    "onto_load",
+    "onto_lock",
+    "onto_map",
+    "onto_marketplace",
+    "onto_module_extract",
+    "onto_monitor",
+    "onto_monitor_clear",
+    "onto_ossie_import",
+    "onto_owl_shacl_coevolve_check",
+    "onto_owl_shacl_coevolve_incremental",
+    "onto_pack",
+    "onto_plan",
+    "onto_plan_classical",
+    "onto_plan_compile_pddl",
+    "onto_plan_validate",
+    "onto_policy_check",
+    "onto_policy_list",
+    "onto_policy_register",
+    "onto_provenance",
+    "onto_pull",
+    "onto_push",
+    "onto_query",
+    "onto_reason",
+    "onto_reason_incremental",
+    "onto_recompile",
+    "onto_repo_list",
+    "onto_repo_load",
+    "onto_rollback",
+    "onto_rules_import",
+    "onto_save",
+    "onto_segment_retrieve",
+    "onto_shacl",
+    "onto_shacl_check",
+    "onto_shape_combinatorics",
+    "onto_shape_induce",
+    "onto_sql_sync_reset",
+    "onto_sql_sync_state",
+    "onto_sql_sync_states_list",
+    "onto_stats",
+    "onto_status",
+    "onto_support_check",
+    "onto_support_report",
+    "onto_support_verdict",
+    "onto_temporal_conflicts",
+    "onto_temporal_query",
+    "onto_temporal_snapshot",
+    "onto_trace_label",
+    "onto_unload",
+    "onto_unpack",
+    "onto_validate",
+    "onto_validate_clinical",
+    "onto_verify_cq",
+    "onto_version",
+    "onto_vocab_check"
+  ],
+  "tools_json_bytes": 132666,
+  "por_herramienta": [
+    {
+      "name": "borderline_partition",
+      "schema_bytes": 444
+    },
+    {
+      "name": "borderline_record_verdict",
+      "schema_bytes": 445
+    },
+    {
+      "name": "eval_rag",
+      "schema_bytes": 351
+    },
+    {
+      "name": "eval_rag_mmrag",
+      "schema_bytes": 374
+    },
+    {
+      "name": "graph_projection_entailment_check",
+      "schema_bytes": 1546
+    },
+    {
+      "name": "graph_projection_lossy_check",
+      "schema_bytes": 630
+    },
+    {
+      "name": "onto_action_applicable",
+      "schema_bytes": 629
+    },
+    {
+      "name": "onto_action_apply",
+      "schema_bytes": 1494
+    },
+    {
+      "name": "onto_action_apply_concurrent",
+      "schema_bytes": 696
+    },
+    {
+      "name": "onto_action_list",
+      "schema_bytes": 33
+    },
+    {
+      "name": "onto_action_register",
+      "schema_bytes": 644
+    },
+    {
+      "name": "onto_align",
+      "schema_bytes": 2608
+    },
+    {
+      "name": "onto_align_feedback",
+      "schema_bytes": 655
+    },
+    {
+      "name": "onto_align_flora",
+      "schema_bytes": 736
+    },
+    {
+      "name": "onto_align_fuzzy",
+      "schema_bytes": 668
+    },
+    {
+      "name": "onto_apply",
+      "schema_bytes": 382
+    },
+    {
+      "name": "onto_cache_list",
+      "schema_bytes": 103
+    },
+    {
+      "name": "onto_cache_remove",
+      "schema_bytes": 392
+    },
+    {
+      "name": "onto_cache_status",
+      "schema_bytes": 105
+    },
+    {
+      "name": "onto_certify_action",
+      "schema_bytes": 2726
+    },
+    {
+      "name": "onto_classify_el",
+      "schema_bytes": 33
+    },
+    {
+      "name": "onto_clear",
+      "schema_bytes": 33
+    },
+    {
+      "name": "onto_closure_diff",
+      "schema_bytes": 972
+    },
+    {
+      "name": "onto_coevolve_dependency_graph",
+      "schema_bytes": 258
+    },
+    {
+      "name": "onto_communities",
+      "schema_bytes": 416
+    },
+    {
+      "name": "onto_conservative_check",
+      "schema_bytes": 1383
+    },
+    {
+      "name": "onto_convert",
+      "schema_bytes": 468
+    },
+    {
+      "name": "onto_cq_run",
+      "schema_bytes": 354
+    },
+    {
+      "name": "onto_cq_verdicts_list",
+      "schema_bytes": 221
+    },
+    {
+      "name": "onto_crosswalk",
+      "schema_bytes": 338
+    },
+    {
+      "name": "onto_default_apply",
+      "schema_bytes": 33
+    },
+    {
+      "name": "onto_default_register",
+      "schema_bytes": 617
+    },
+    {
+      "name": "onto_defects",
+      "schema_bytes": 33
+    },
+    {
+      "name": "onto_diff",
+      "schema_bytes": 316
+    },
+    {
+      "name": "onto_dl_check",
+      "schema_bytes": 344
+    },
+    {
+      "name": "onto_dl_explain",
+      "schema_bytes": 238
+    },
+    {
+      "name": "onto_dlp_boundary",
+      "schema_bytes": 33
+    },
+    {
+      "name": "onto_drift",
+      "schema_bytes": 890
+    },
+    {
+      "name": "onto_enforce",
+      "schema_bytes": 273
+    },
+    {
+      "name": "onto_enforce_feedback",
+      "schema_bytes": 523
+    },
+    {
+      "name": "onto_enrich",
+      "schema_bytes": 375
+    },
+    {
+      "name": "onto_eval_alignment",
+      "schema_bytes": 448
+    },
+    {
+      "name": "onto_extend",
+      "schema_bytes": 1010
+    },
+    {
+      "name": "onto_extract_scaffold",
+      "schema_bytes": 325
+    },
+    {
+      "name": "onto_extract_validate",
+      "schema_bytes": 463
+    },
+    {
+      "name": "onto_fol_export",
+      "schema_bytes": 2906
+    },
+    {
+      "name": "onto_fol_model",
+      "schema_bytes": 1512
+    },
+    {
+      "name": "onto_fol_prove",
+      "schema_bytes": 1367
+    },
+    {
+      "name": "onto_history",
+      "schema_bytes": 33
+    },
+    {
+      "name": "onto_import",
+      "schema_bytes": 267
+    },
+    {
+      "name": "onto_induce",
+      "schema_bytes": 797
+    },
+    {
+      "name": "onto_ingest",
+      "schema_bytes": 1070
+    },
+    {
+      "name": "onto_invariant_check",
+      "schema_bytes": 33
+    },
+    {
+      "name": "onto_invariant_list",
+      "schema_bytes": 33
+    },
+    {
+      "name": "onto_invariant_register",
+      "schema_bytes": 528
+    },
+    {
+      "name": "onto_invariant_remove",
+      "schema_bytes": 220
+    },
+    {
+      "name": "onto_justify",
+      "schema_bytes": 2208
+    },
+    {
+      "name": "onto_lineage",
+      "schema_bytes": 219
+    },
+    {
+      "name": "onto_lint",
+      "schema_bytes": 319
+    },
+    {
+      "name": "onto_lint_feedback",
+      "schema_bytes": 496
+    },
+    {
+      "name": "onto_load",
+      "schema_bytes": 890
+    },
+    {
+      "name": "onto_lock",
+      "schema_bytes": 301
+    },
+    {
+      "name": "onto_map",
+      "schema_bytes": 429
+    },
+    {
+      "name": "onto_marketplace",
+      "schema_bytes": 722
+    },
+    {
+      "name": "onto_module_extract",
+      "schema_bytes": 1749
+    },
+    {
+      "name": "onto_monitor",
+      "schema_bytes": 246
+    },
+    {
+      "name": "onto_monitor_clear",
+      "schema_bytes": 33
+    },
+    {
+      "name": "onto_ossie_import",
+      "schema_bytes": 1284
+    },
+    {
+      "name": "onto_owl_shacl_coevolve_check",
+      "schema_bytes": 502
+    },
+    {
+      "name": "onto_owl_shacl_coevolve_incremental",
+      "schema_bytes": 539
+    },
+    {
+      "name": "onto_pack",
+      "schema_bytes": 1131
+    },
+    {
+      "name": "onto_plan",
+      "schema_bytes": 1721
+    },
+    {
+      "name": "onto_plan_classical",
+      "schema_bytes": 961
+    },
+    {
+      "name": "onto_plan_compile_pddl",
+      "schema_bytes": 788
+    },
+    {
+      "name": "onto_plan_validate",
+      "schema_bytes": 1176
+    },
+    {
+      "name": "onto_policy_check",
+      "schema_bytes": 257
+    },
+    {
+      "name": "onto_policy_list",
+      "schema_bytes": 33
+    },
+    {
+      "name": "onto_policy_register",
+      "schema_bytes": 487
+    },
+    {
+      "name": "onto_provenance",
+      "schema_bytes": 1682
+    },
+    {
+      "name": "onto_pull",
+      "schema_bytes": 798
+    },
+    {
+      "name": "onto_push",
+      "schema_bytes": 630
+    },
+    {
+      "name": "onto_query",
+      "schema_bytes": 197
+    },
+    {
+      "name": "onto_reason",
+      "schema_bytes": 2850
+    },
+    {
+      "name": "onto_reason_incremental",
+      "schema_bytes": 744
+    },
+    {
+      "name": "onto_recompile",
+      "schema_bytes": 390
+    },
+    {
+      "name": "onto_repo_list",
+      "schema_bytes": 914
+    },
+    {
+      "name": "onto_repo_load",
+      "schema_bytes": 953
+    },
+    {
+      "name": "onto_rollback",
+      "schema_bytes": 205
+    },
+    {
+      "name": "onto_rules_import",
+      "schema_bytes": 1221
+    },
+    {
+      "name": "onto_save",
+      "schema_bytes": 290
+    },
+    {
+      "name": "onto_segment_retrieve",
+      "schema_bytes": 681
+    },
+    {
+      "name": "onto_shacl",
+      "schema_bytes": 2244
+    },
+    {
+      "name": "onto_shacl_check",
+      "schema_bytes": 683
+    },
+    {
+      "name": "onto_shape_combinatorics",
+      "schema_bytes": 324
+    },
+    {
+      "name": "onto_shape_induce",
+      "schema_bytes": 903
+    },
+    {
+      "name": "onto_sql_sync_reset",
+      "schema_bytes": 223
+    },
+    {
+      "name": "onto_sql_sync_state",
+      "schema_bytes": 223
+    },
+    {
+      "name": "onto_sql_sync_states_list",
+      "schema_bytes": 33
+    },
+    {
+      "name": "onto_stats",
+      "schema_bytes": 33
+    },
+    {
+      "name": "onto_status",
+      "schema_bytes": 33
+    },
+    {
+      "name": "onto_support_check",
+      "schema_bytes": 404
+    },
+    {
+      "name": "onto_support_report",
+      "schema_bytes": 234
+    },
+    {
+      "name": "onto_support_verdict",
+      "schema_bytes": 401
+    },
+    {
+      "name": "onto_temporal_conflicts",
+      "schema_bytes": 33
+    },
+    {
+      "name": "onto_temporal_query",
+      "schema_bytes": 511
+    },
+    {
+      "name": "onto_temporal_snapshot",
+      "schema_bytes": 517
+    },
+    {
+      "name": "onto_trace_label",
+      "schema_bytes": 1299
+    },
+    {
+      "name": "onto_unload",
+      "schema_bytes": 554
+    },
+    {
+      "name": "onto_unpack",
+      "schema_bytes": 1064
+    },
+    {
+      "name": "onto_validate",
+      "schema_bytes": 433
+    },
+    {
+      "name": "onto_validate_clinical",
+      "schema_bytes": 33
+    },
+    {
+      "name": "onto_verify_cq",
+      "schema_bytes": 456
+    },
+    {
+      "name": "onto_version",
+      "schema_bytes": 231
+    },
+    {
+      "name": "onto_vocab_check",
+      "schema_bytes": 833
+    }
+  ]
+}

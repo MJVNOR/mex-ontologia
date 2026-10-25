@@ -1,0 +1,167 @@
+{
+ "agente": "A3-itama",
+ "version": "v003",
+ "tipo": "consolidado_sin_recambios",
+ "consolida_a": "A3-itama/v002 (intacta, no modificada)",
+ "modelo_original": "opencode/deepseek-v4.1-flash-free",
+ "modelo_consolidacion": "opencode-go/muse-spark-1.3-contributor",
+ "fecha_utc": "2026-10-25",
+ "base": "R9",
+ "pregunta": "Como se distribuyen los registros de internamiento y externamiento por sexo/escolaridad en un periodo comun?",
+ "par_id": "27a5c80c-514a-4170-a2e5-7ef40d818641--4d27a1c4-381d-4ce0-a663-0d3e23a93848",
+ "decision": "BLOQUEADO",
+ "resultado": "BLOQUEADO: no es computable una distribucion agregada por sexo/escolaridad en periodo comun. Causas: (1) no hay copias locales de los 6 XLSX ITAMA (0 de 6; el repo si contiene 138 XLSX y 96 CSV de otros conjuntos, fuera de alcance), solo muestras historicas n=29/n=16 que no validan el archivo entero; (2) ESCOLARIDAD no se publica en las hojas POBLACION, carece de concepto ITAMA y de definicion en ambos diccionarios; el 29/29 nulo de la muestra A es ausencia de columna; (3) unicidad, cardinalidad, grano, unidades y periodo por fila no acreditados; (4) las poblaciones son distintas y no sumables. Desbloqueo: copias locales completas + catalogo de valores + grano y unidad.",
+ "cifras_verificadas": {
+  "xlsx_en_repo": 138,
+  "csv_en_repo": 96,
+  "copias_exactas_itama": 0,
+  "recursos_xlsx": 6,
+  "periodo_metadatos": {
+   "inicio": "2026-01-01",
+   "fin": "2026-09-30"
+  },
+  "muestras": {
+   "a": 29,
+   "b": 16
+  },
+  "escolaridad_nulos_muestra_a": 29
+ },
+ "raw_analitico_sha256": "526ef2d52bbbfe0608811587b4d549b266644ec2ab93e5c954331a2cc555861d",
+ "raw_analitico_ruta": "originales-v002/resultados/analisis-a3-itama-v002.json",
+ "ficha_8_ejes": {
+  "claves": "sin_clave_detectada",
+  "grano": "indefinido",
+  "unicidad": "no_acreditada",
+  "cardinalidad": "no_acreditada",
+  "poblacion": "distinta_y_no_sumable",
+  "periodo": "comun_solo_a_nivel_metadatos",
+  "unidades": "no_declaradas",
+  "cobertura_datos": "insuficiente_para_distribucion"
+ },
+ "snapshots_byte_exactos": [
+  {
+   "snapshot": "originales-v002/resultados/analisis-a3-itama-v002.json",
+   "fuente_v002": "A3-itama/v002/resultados/analisis-a3-itama-v002.json",
+   "sha256": "526ef2d52bbbfe0608811587b4d549b266644ec2ab93e5c954331a2cc555861d",
+   "bytes": 45956,
+   "byte_exacta": true
+  },
+  {
+   "snapshot": "originales-v002/resultados/ejecucion-analisis.out",
+   "fuente_v002": "A3-itama/v002/resultados/ejecucion-analisis.out",
+   "sha256": "885ebee366231e445f2e62169d6bf40f70bd145ccb05124e704acdace1a8a00a",
+   "bytes": 488,
+   "byte_exacta": true
+  },
+  {
+   "snapshot": "originales-v002/resultados/ejecucion-pruebas.out",
+   "fuente_v002": "A3-itama/v002/resultados/ejecucion-pruebas.out",
+   "sha256": "26cd8e75741c44158710aed4d702627ea59c84791bbf91035e0220b07e0d531a",
+   "bytes": 394,
+   "byte_exacta": true
+  },
+  {
+   "snapshot": "originales-v002/resultados/inventario-archivos-repo.json",
+   "fuente_v002": "A3-itama/v002/resultados/inventario-archivos-repo.json",
+   "sha256": "0ba583fec4e847faa0b8296f68dba105606a65a60268da8d279f6cfa59b04ba1",
+   "bytes": 82945,
+   "byte_exacta": true
+  },
+  {
+   "snapshot": "originales-v002/evidencia-busqueda.json",
+   "fuente_v002": "A3-itama/v002/evidencia-busqueda.json",
+   "sha256": "fc8a5adc2835739143279d3e97310b6f5f8309d7378deb57a6eb80bd4e860cae",
+   "bytes": 41159,
+   "byte_exacta": true
+  },
+  {
+   "snapshot": "originales-v002/nucleo.ttl",
+   "fuente_v002": "A3-itama/v002/nucleo.ttl",
+   "sha256": "9deb8b35ff529e87084721fbfac9ddb400e1904905c395981171055319f1ab31",
+   "bytes": 7362,
+   "byte_exacta": true
+  },
+  {
+   "snapshot": "originales-v002/scripts/analisis_a3_itama_v002.py",
+   "fuente_v002": "A3-itama/v002/scripts/analisis_a3_itama_v002.py",
+   "sha256": "0063200e20d7fc3566ad2c6f497b609c9eaf7a081d7932159f0a9f7172f96f21",
+   "bytes": 11765,
+   "byte_exacta": true
+  },
+  {
+   "snapshot": "originales-v002/scripts/registrar_busqueda_itama.py",
+   "fuente_v002": "A3-itama/v002/scripts/registrar_busqueda_itama.py",
+   "sha256": "46492b4f7ce02abbdebb643f68e1548bf8486ad55da555b94a255f26ec87132d",
+   "bytes": 11905,
+   "byte_exacta": true
+  },
+  {
+   "snapshot": "originales-v002/pruebas/test_a3_itama_v002.py",
+   "fuente_v002": "A3-itama/v002/pruebas/test_a3_itama_v002.py",
+   "sha256": "739814e62f1ae06e53029264d64d7e0d6d3596997371dd6b5af1e83c37cedaff",
+   "bytes": 7175,
+   "byte_exacta": true
+  }
+ ],
+ "excluidos_de_snapshots": [
+  {
+   "ruta_v002": "A3-itama/v002/tests/test_a3_itama_v002.py",
+   "sha256": "6a27aa561a82b1399e5bcc5a34f2f1f35321f67e1b156508efd3cb9478866ece",
+   "bytes": 4433,
+   "motivo": "duplicado obsoleto no sellado (3F+1E)"
+  },
+  {
+   "ruta_v002": "A3-itama/v002/scripts/__pycache__/analisis_a3_itama_v002.cpython-312.pyc",
+   "sha256": "c91a954f2511191c826e36e8cc2e34d95a3f05c1511205ddffd7a32db1b0e084",
+   "bytes": 17160,
+   "motivo": "cache"
+  },
+  {
+   "ruta_v002": "A3-itama/v002/scripts/__pycache__/registrar_busqueda_itama.cpython-312.pyc",
+   "sha256": "3d72a2d5291f0e3118013e45cf188631d168185dd794514e5dadb55b4ddbbd66",
+   "bytes": 16096,
+   "motivo": "cache"
+  },
+  {
+   "ruta_v002": "A3-itama/v002/scripts/sellar_v002.py",
+   "sha256": "2cdce43c82bce765e2cfb86476f19ee180781d44b2f86dc297e67eeb829cb0ef",
+   "bytes": 1501,
+   "motivo": "sealer viejo desfasado"
+  },
+  {
+   "ruta_v002": "A3-itama/v002/congelada.json",
+   "sha256": "b65782a15cadd9ad78bce2eaaa5b039985333918fc61c20f4dfc2de744e14459",
+   "bytes": 3222,
+   "motivo": "manifiesto viejo desfasado"
+  },
+  {
+   "ruta_v002": "A3-itama/v002/entrega.json",
+   "sha256": "d38c06a2539b91f04d11171840d6d3a8165facb259a6ec3b0cbcadce94a7bc05",
+   "bytes": 15109,
+   "motivo": "manifiesto/entrega viejos desfasados"
+  },
+  {
+   "ruta_v002": "A3-itama/v002/entrega.md",
+   "sha256": "3411d28cea32433f8056a7a7c911a70f1c6a4f81b2e34ca86ac7e20a5be4506f",
+   "bytes": 4417,
+   "motivo": "manifiesto/entrega viejos desfasados"
+  }
+ ],
+ "dictamen_D": {
+  "ruta": "reanudacion-muse/D-analisis/v001/dictamen-A3-itama.json",
+  "veredicto": "ACEPTADA_EN_FONDO_CON_OBSERVACIONES_DE_FORMA",
+  "pruebas_canonicas": "pruebas/test_a3_itama_v002.py 9/9 OK",
+  "reverificacion": "9/9 OK re-ejecutadas solo-lectura 2026-10-25 contra v002 intacta, sin escribir fuentes"
+ },
+ "limites_originales_v002": [
+  "Sin person matching.",
+  "No sumar universos.",
+  "No completar periodos/sujetos por titulo.",
+  "Las muestras no validan el archivo entero.",
+  "Sin joins al grafo ni promociones de candidatas.",
+  "Sin Gemma, sin contactos y sin busqueda web; solo archivos locales/documentacion.",
+  "No modifica base IRI, manifiestos R1-R9, nucleo ni escritores centrales."
+ ],
+ "alcance_v003": "Solo escribe A3-itama/v003. No recalcula ni inventa resultados. R10 sincope pendiente.",
+ "reproducibilidad": "Los scripts en originales-v002/ son evidencia original, no refactor portable. Para reproducir: validar el SHA del snapshot contra este sello y ejecutar el canonico original pruebas/test_a3_itama_v002.py; no usar tests/test_a3_itama_v002.py (duplicado obsoleto, excluido)."
+}

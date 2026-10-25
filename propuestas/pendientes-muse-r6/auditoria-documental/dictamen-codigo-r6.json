@@ -1,0 +1,16 @@
+{
+ "rol": "auditoria-documental",
+ "alcance": "Solo staging catalogos/codigo (4 archivos). Central y manifiestos previos intactos.",
+ "defecto_confirmado": "integrar_ronda_5.validar_sobre_base delegaba a R6 ANTES de verificar exactitud/duplicados/aprobaciones R5: con config R6 presente, un payload R5 duplicado o sin aprobacion saltaba sus propios controles.",
+ "correccion_staging": "Reordenadas las validaciones historicas R5 (exactitud, duplicados, aprobaciones) antes de la delegacion a R6; delegacion intacta despues. Solo copia staging; central sin delegacion R6, intacto.",
+ "consolidar_semantica": "Diff staging-vs-central de 11 lineas: solo hook R6 (construir integra R6 si existe config). Sin cambios.",
+ "tests": "12/12 OK offline (9 previos + 3 nuevos Ronda5ConConfigR6Test: duplicados, sin-aprobacion y delegacion-tras-chequeos con config R6 presente). Tests nuevos fallan contra codigo defectuoso (verificado).",
+ "dictamen": "aprobar-staging",
+ "condicion": "Root instala; la integracion del +1 pin requiere ademas el segundo auditor (dictamen-presas.json ya emitido por esta auditoria: aceptar pin /4). Sin reglas/conceptos nuevos; <=1 link exacto adenda (vinculo_propuesto).",
+ "sha_archivos": {
+  "scripts/integrar_ronda_5.py": "52c4d6cfad0a33532ce24c50ffae12360a358ebabd5850a35742a485e0ccff14",
+  "scripts/integrar_ronda_6.py": "a87bdf8a3a372a2fe714f83c9fe5bee9a3320c4454636265133efd36fba392b6",
+  "scripts/consolidar_semantica.py": "f8044afce9b4f8d4af12d197624228cf49bb7e86fdad94668457dbd615726191",
+  "tests/test_ronda_6.py": "2e08f17e75ae729d79a1de59c9718170ad9bd2d71862b133339a948a5faa90a6"
+ }
+}

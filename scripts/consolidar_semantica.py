@@ -1,12 +1,14 @@
 """Consolida conceptos, variables documentadas y correspondencias sin ejecutar cruces."""
 from collections import Counter, defaultdict
 from datetime import datetime, timezone
+from functools import lru_cache
 import hashlib
 import json
+from guardar_rdf import escribir_json_atomico
 import tomllib
 from urllib.parse import quote
 
-from rdflib import Graph, Literal, Namespace, OWL, RDF, RDFS, SKOS, URIRef, DCTERMS as DCT
+from rdflib import Graph, Literal, Namespace, OWL, RDF, RDFS, SKOS, URIRef, XSD, DCTERMS as DCT
 from construir_catalogo import ROOT, PROV
 from integrar_contenido import clave, valor
 from mapear_cruces import clasificar
@@ -19,17 +21,46 @@ def huella(value):
     return hashlib.sha256(json.dumps(value, ensure_ascii=False, sort_keys=True, separators=(',', ':')).encode('utf-8')).hexdigest()
 
 
+def validar_calificador(raw):
+    """Conserva dimensiones y valores documentales sin normalizar códigos."""
+    if not isinstance(raw, dict) or not raw:
+        raise ValueError('Calificador documental debe ser un objeto no vacío')
+    if any(not isinstance(k, str) or not k.strip() or
+           not isinstance(v, str) or not v.strip() for k, v in raw.items()):
+        raise ValueError('Dimensión y valor del calificador deben ser textos no vacíos')
+    return dict(raw)
+
+
+@lru_cache(maxsize=16384)
+def _clave_literal(text):
+    """Normaliza un literal; la caché depende del texto, no de reglas mutables."""
+    return clave(text)
+
+
 def interpretacion(name, description, dataset, rules, dictionary=None, definition=None):
-    matches = [r for r in rules['reglas_descripcion_exacta'] if clave(description) in {clave(d) for d in r['descripciones']}
-               and (not r.get('nombres') or clave(name) in {clave(n) for n in r['nombres']})
+    normalized_description, normalized_name = _clave_literal(str(description)), _clave_literal(str(name))
+    matches = [r for r in rules['reglas_descripcion_exacta'] if normalized_description in {_clave_literal(str(d)) for d in r['descripciones']}
+               and (not r.get('nombres') or normalized_name in {_clave_literal(str(n)) for n in r['nombres']})
                and (not r.get('conjuntos') or dataset in r['conjuntos'])
                and (not r.get('diccionarios') or dictionary in r['diccionarios'])
                and (not r.get('definiciones') or definition in r['definiciones'])]
     if len(matches) > 1:
         raise ValueError('Reglas semánticas en conflicto: ' + str([r['id'] for r in matches]))
     if matches:
-        return {'estado': 'respaldada_por_definicion', 'concepto': matches[0]['concepto'],
-                'regla': matches[0]['id'], 'representacion': matches[0]['representacion']}
+        rule = matches[0]
+        assignment = {'estado': 'respaldada_por_definicion', 'concepto': rule['concepto'],
+                      'regla': rule['id'], 'representacion': rule['representacion']}
+        if 'calificador' in rule:
+            assignment['calificador'] = validar_calificador(rule['calificador'])
+        limits = rule.get('limites', [])
+        if isinstance(limits, str):
+            limits = [limits]
+        limits = [*limits, *([rule['limite']] if rule.get('limite') else [])]
+        if limits:
+            assignment['limites'] = list(dict.fromkeys(limits))
+        if rule.get('fuente_revision'):
+            assignment['fuente_revision'] = rule['fuente_revision']
+        return assignment
     family = clasificar(name, description)
     suggestions = {'municipio': 'municipio', 'entidad': 'entidad', 'localidad': 'localidad', 'clave_geoestadistica': 'territorio',
                    'anio': 'anio', 'mes': 'tiempo', 'periodo': 'tiempo', 'programa_educativo': 'programa-educativo',
@@ -82,7 +113,8 @@ def construir(inventory, inspection, rules, reference, base):
     classes = {'ConceptoCompartido': 'Concepto compartido', 'VariableDocumentada': 'Variable documentada',
                'CorrespondenciaSemantica': 'Correspondencia semántica de columna', 'ReferenciaCatalogoDeclarada': 'Referencia a catálogo declarada',
                'SistemaIdentificadores': 'Sistema de identificadores observado', 'EntradaCatalogo': 'Entrada de catálogo de códigos',
-               'MunicipioSegunFuente': 'Municipio según referencia del portal', 'CondicionConexion': 'Condición para conectar información'}
+               'MunicipioSegunFuente': 'Municipio según referencia del portal', 'CondicionConexion': 'Condición para conectar información',
+               'CalificadorDocumental': 'Calificador documental de variable'}
     for key, label in classes.items():
         model.add((mex[key], RDF.type, OWL.Class)).add((mex[key], RDFS.label, Literal(label, lang='es')))
     model.add((mex.ConceptoCompartido, RDFS.subClassOf, SKOS.Concept))
@@ -92,7 +124,8 @@ def construir(inventory, inspection, rules, reference, base):
                'columnaOrigen': 'Columna de origen de la correspondencia', 'variableDestino': 'Variable documental de destino',
                'catalogoDeclarado': 'Referencia a catálogo declarada por la fuente', 'requiereCondicion': 'Condición necesaria para conectar',
                'requiereDistinguirDe': 'Sentido que debe distinguirse', 'usaSistemaIdentificadores': 'Sistema de identificadores observado en esta columna',
-               'denotaMunicipioFuente': 'Municipio identificado por la entrada en esta referencia'}
+               'denotaMunicipioFuente': 'Municipio identificado por la entrada en esta referencia',
+               'tieneCalificadorDocumentado': 'Calificador documental de la variable'}
     literals = {'estadoSemantico': 'Estado de interpretación semántica', 'reglaSemantica': 'Regla de interpretación documentada',
                 'representacionDocumentada': 'Representación documental de la variable', 'tipoDatoOriginal': 'Tipo de dato declarado original',
                 'unidadOriginal': 'Unidad original sin homologar', 'nombreVariableLocal': 'Nombre de variable local',
@@ -101,6 +134,8 @@ def construir(inventory, inspection, rules, reference, base):
                 'limiteSemantico': 'Límite de interpretación', 'patronCodigo': 'Patrón de código observado',
                 'componenteEntidad': 'Componente entidad del código', 'componenteMunicipio': 'Componente municipio del código',
                 'criterioRevision': 'Criterio de revisión documental de esta correspondencia',
+                'dimensionCalificador': 'Dimensión del calificador documental', 'valorCalificador': 'Valor del calificador documental',
+                'sha256Evidencia': 'Huella SHA-256 de la evidencia fijada',
                 'huellaEsquemaRevisado': 'Huella del esquema revisado', 'huellaFilaDiccionario': 'Huella de la fila del diccionario revisada'}
     for mapping, cls in [(objects, OWL.ObjectProperty), (literals, OWL.DatatypeProperty)]:
         for key, label in mapping.items():
@@ -183,6 +218,22 @@ def construir(inventory, inspection, rules, reference, base):
                 g.add((variable, mex.reglaSemantica, Literal(assignment['regla'])))
                 g.add((variable, mex.representacionDocumentada, Literal(assignment['representacion'])))
                 g.add((variable, PROV.wasDerivedFrom, rules_uri))
+            for dimension, value in assignment.get('calificador', {}).items():
+                qualifier = node('documented-qualifier', r['id'] + '/' + str(index) + '/' + dimension)
+                g.add((variable, mex.tieneCalificadorDocumentado, qualifier))
+                g.add((qualifier, RDF.type, mex.CalificadorDocumental))
+                g.add((qualifier, RDFS.label, Literal(dimension + ': ' + value, lang='es')))
+                g.add((qualifier, mex.dimensionCalificador, Literal(dimension, datatype=XSD.string)))
+                g.add((qualifier, mex.valorCalificador, Literal(value, datatype=XSD.string)))
+                g.add((qualifier, PROV.wasDerivedFrom, definition))
+                g.add((qualifier, PROV.wasDerivedFrom, rules_uri))
+            for limit in assignment.get('limites', []):
+                g.add((variable, mex.limiteSemantico, Literal(limit, lang='es')))
+            if assignment.get('fuente_revision'):
+                source = (ROOT / assignment['fuente_revision']).resolve()
+                if not source.is_relative_to(ROOT.resolve()):
+                    raise ValueError('Fuente de revisión fuera del proyecto')
+                g.add((variable, PROV.wasDerivedFrom, URIRef(source.as_uri())))
             if valid_catalog:
                 refid = hashlib.sha256((r['conjunto_id'] + '\n' + catalog).encode()).hexdigest()
                 ref = node('declared-code-reference', refid)
@@ -209,10 +260,16 @@ def construir(inventory, inspection, rules, reference, base):
         if revision and variable_name != col['campo'] and not revision.get('columna'):
             raise ValueError('Un alias revisado requiere la IRI de la columna física')
         matches = lookup.get((col['conjunto'], clave(variable_name)), [])
+        definition_pin = revision.get('definicion_iri') if revision else None
+        if definition_pin:
+            if not revision.get('columna') or not all(revision.get(k) for k in ('huella_esquema', 'huella_fila_diccionario', 'descripcion', 'criterio')):
+                raise ValueError('Selección de definición requiere columna física y evidencia completa')
+            matches = [v for v in matches if v['definicion_iri'] == definition_pin]
         if not matches:
             continue
         if revision:
-            if len(matches) != 1 or all_names[(col['conjunto'], clave(variable_name))] != 1 or not col['nombre_unico'] or matches[0]['diccionario'] != revision['diccionario'] or matches[0].get('concepto') != revision['concepto'] or matches[0]['estado'] != 'respaldada_por_definicion':
+            name_ambiguous = (all_names[(col['conjunto'], clave(variable_name))] != 1 or not col['nombre_unico']) and not definition_pin
+            if len(matches) != 1 or name_ambiguous or matches[0]['diccionario'] != revision['diccionario'] or matches[0].get('concepto') != revision['concepto'] or matches[0]['estado'] != 'respaldada_por_definicion':
                 raise ValueError('Correspondencia revisada dejó de coincidir: ' + str(revision))
             for key, observed in [('huella_esquema', col['huella_esquema']),
                                   ('huella_fila_diccionario', matches[0]['huella_fila_diccionario']),
@@ -307,6 +364,9 @@ def generar():
         sources['referencia_municipal'] = reference_path
         reference = json.loads(reference_path.read_text(encoding='utf-8'))
     rules, inventory, inspection = [json.loads(sources[key].read_text(encoding='utf-8')) for key in ('reglas', 'inventario', 'inspeccion')]
+    if (ROOT / 'ontologia/revision-cobertura.json').exists():
+        from integrar_cobertura import cargar_evidencia
+        cargar_evidencia(rules)
     if {r['id'] for r in inventory['recursos']} != {r['id'] for r in inspection['recursos']}:
         raise ValueError('Inventario e inspección no coinciden')
     base = tomllib.loads((ROOT / 'config.toml').read_text(encoding='utf-8'))['catalogo']['base_iri']
@@ -341,7 +401,7 @@ def generar():
         report['resumen']['referencias_catalogo_sin_resolver'] = len(set(data.subjects(mex.estadoReferenciaCatalogo, Literal('solo_referencia_declarada_sin_resolver'))))
         report['resumen']['referencias_catalogo_con_recurso_identificado'] = len(territorial_report['resoluciones'])
         (ROOT / 'data/territorio/territorio.ttl').write_text(territorial_data.serialize(format='turtle'), encoding='utf-8')
-        (ROOT / 'data/territorio/verificacion.json').write_text(json.dumps(territorial_report, ensure_ascii=False, indent=2) + '\n', encoding='utf-8')
+        escribir_json_atomico(territorial_report, ROOT / 'data/territorio/verificacion.json')
         documentar_territorio(territorial_report)
     if (ROOT / 'ontologia/revision-agentes.json').exists():
         from integrar_entregas import construir as integrar_entregas
@@ -364,13 +424,68 @@ def generar():
         model += round_model
         report['integracion_ronda_2'] = round_report
         sources.update(round_sources)
+    if (ROOT / 'ontologia/revision-cobertura.json').exists():
+        from integrar_cobertura import construir as integrar_cobertura
+        coverage_data, coverage_report, coverage_sources = integrar_cobertura(report, rules, base)
+        data += coverage_data
+        report['integracion_cobertura'] = coverage_report
+        sources.update(coverage_sources)
+    if (ROOT / 'ontologia/revision-ronda-3.json').exists():
+        from integrar_ronda_3 import construir as integrar_ronda_3
+        r3_data, r3_report, r3_sources = integrar_ronda_3(report, rules, base)
+        data += r3_data
+        report['integracion_ronda_3'] = r3_report
+        sources.update(r3_sources)
+    if (ROOT / 'ontologia/revision-ronda-4.json').exists():
+        from integrar_ronda_4 import construir as integrar_ronda_4
+        r4_data, r4_report, r4_sources = integrar_ronda_4(report, rules, base)
+        data += r4_data
+        report['integracion_ronda_4'] = r4_report
+        sources.update(r4_sources)
+    if (ROOT / 'ontologia/revision-ronda-5.json').exists():
+        from integrar_ronda_5 import construir as integrar_ronda_5
+        r5_data, r5_report, r5_sources = integrar_ronda_5(report, rules, base)
+        data += r5_data
+        report['integracion_ronda_5'] = r5_report
+        sources.update(r5_sources)
+    if (ROOT / 'ontologia/revision-ronda-6.json').exists():
+        from integrar_ronda_6 import construir as integrar_ronda_6
+        r6_data, r6_report, r6_sources = integrar_ronda_6(report, rules, base)
+        data += r6_data
+        report['integracion_ronda_6'] = r6_report
+        sources.update(r6_sources)
+    if (ROOT / 'ontologia/revision-ronda-7.json').exists():
+        from integrar_ronda_7 import construir as integrar_ronda_7
+        r7_data, r7_report, r7_sources = integrar_ronda_7(report, rules, base)
+        data += r7_data
+        report['integracion_ronda_7'] = r7_report
+        sources.update(r7_sources)
+    if (ROOT / 'ontologia/revision-ronda-8.json').exists():
+        from integrar_ronda_8 import construir as integrar_ronda_8
+        r8_data, r8_report, r8_sources = integrar_ronda_8(report, rules, base, ROOT)
+        data += r8_data
+        report['integracion_ronda_8'] = r8_report
+        sources.update(r8_sources)
+    if (ROOT / 'ontologia/revision-ronda-9.json').exists():
+        from integrar_ronda_9 import construir as integrar_ronda_9
+        r9_data, r9_report, r9_sources = integrar_ronda_9(report, rules, base, ROOT)
+        data += r9_data
+        report['integracion_ronda_9'] = r9_report
+        sources.update(r9_sources)
+    if (ROOT / 'ontologia/revision-ronda-10.json').exists():
+        from integrar_ronda_10 import construir as integrar_ronda_10
+        r10_data, r10_report, r10_sources = integrar_ronda_10(report, rules, base, ROOT)
+        data += r10_data
+        report['integracion_ronda_10'] = r10_report
+        sources.update(r10_sources)
     report['huellas_entrada'] = {key: hashlib.sha256(path.read_bytes()).hexdigest() for key, path in sources.items()}
     from auditar_semantica import auditar
     report['auditoria_cobertura'] = auditar(report, inventory, columnas(inventory, inspection, base))
     OUT.mkdir(parents=True, exist_ok=True)
-    data.serialize(OUT / 'interpretaciones.ttl', format='turtle', encoding='utf-8')
-    model.serialize(OUT / 'nucleo.ttl', format='turtle', encoding='utf-8')
-    (OUT / 'cobertura.json').write_text(json.dumps(report, ensure_ascii=False, indent=2), encoding='utf-8')
+    from guardar_rdf import serializar_atomico
+    serializar_atomico(data, OUT / 'interpretaciones.ttl')
+    serializar_atomico(model, OUT / 'nucleo.ttl')
+    escribir_json_atomico(report, OUT / 'cobertura.json')
     documentar(report)
     return data, model, report
 

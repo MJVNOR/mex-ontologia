@@ -1,0 +1,59 @@
+diff --git a/tests/test_semantica.py b/propuestas/ronda-3/agente-13-calificadores/staging/test_semantica.py
+index d294bd6..7434a9c 100644
+--- a/tests/test_semantica.py
++++ b/propuestas/ronda-3/agente-13-calificadores/staging/test_semantica.py
+@@ -7,7 +7,7 @@ import unittest
+ from rdflib import Namespace, URIRef, Literal, RDF, OWL, SKOS
+ 
+ sys.path.insert(0, str(Path(__file__).resolve().parents[1] / 'scripts'))
+-from consolidar_semantica import construir, interpretacion, columnas, huella
++from consolidar_semantica import construir, interpretacion, columnas, huella, validar_calificador
+ 
+ 
+ class SemanticaTest(unittest.TestCase):
+@@ -179,5 +179,45 @@ class SemanticaTest(unittest.TestCase):
+         self.assertIn(Literal('26001'), set(data.objects(None, SKOS.notation)))
+ 
+ 
++class CalificadorTest(unittest.TestCase):
++    """Propuesto por agente-13 (ronda 3): el calificador formal de la regla
++    sobrevive hasta el record y el RDF sin inferir identidad ni sede externa."""
++
++    def test_interpretacion_preserva_calificador_verbatim_sin_mutar_regla(self):
++        import copy as _copy
++        rules = json.loads((Path(__file__).resolve().parents[1] / 'ontologia/semantica.json').read_text(encoding='utf-8'))
++        rule = {'id': 'q', 'concepto': 'c', 'descripciones': ['Desc q'],
++                'representacion': 'no_especificada', 'calificador': {'sede': ' San Luis R.C. '}}
++        rules['reglas_descripcion_exacta'] = [rule]
++        antes = _copy.deepcopy(rule)
++        out = interpretacion('N', 'Desc q', 'd', rules)
++        self.assertEqual(out['calificador'], {'sede': ' San Luis R.C. '})
++        self.assertIsNot(out['calificador'], rule['calificador'])
++        out['calificador']['sede'] = 'MUTADO'
++        self.assertEqual(rule, antes)
++
++    def test_calificador_invalido_se_rechaza_sin_convertir(self):
++        for malo in (None, {}, {'': 'x'}, {'k': ''}, {'k': None}, {'k': 139},
++                     {'k': True}, {'k': ['x']}, {'k': {'a': 'b'}}, {123: 'x'},
++                     {'sede': '   '}, {'   ': 'San Luis R.C.'}):
++            rule = {'id': 'q', 'concepto': 'c', 'descripciones': ['Desc q'],
++                    'representacion': 'no_especificada', 'calificador': malo}
++            with self.assertRaises(ValueError, msg=repr(malo)):
++                interpretacion('N', 'Desc q', 'd', {'reglas_descripcion_exacta': [rule], 'conceptos': {}})
++
++    def test_validar_calificador_rechaza_solo_blancos_y_devuelve_verbatim(self):
++        with self.assertRaises(ValueError):
++            validar_calificador({'sede': '   '})
++        with self.assertRaises(ValueError):
++            validar_calificador({'   ': 'x'})
++        self.assertEqual(validar_calificador({'sede': ' San Luis R.C. '}), {'sede': ' San Luis R.C. '})
++
++    def test_regla_vigente_sin_calificador_no_lo_inventa(self):
++        rules = json.loads((Path(__file__).resolve().parents[1] / 'ontologia/semantica.json').read_text(encoding='utf-8'))
++        out = interpretacion('CLUES', 'Clave de la Unidad', 'conjunto-inexistente', rules)
++        self.assertEqual(out['estado'], 'candidata_sin_definicion_suficiente')
++        self.assertNotIn('calificador', out)
++
++
+ if __name__ == '__main__':
+     unittest.main()

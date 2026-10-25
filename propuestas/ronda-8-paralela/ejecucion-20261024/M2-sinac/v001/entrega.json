@@ -1,0 +1,1465 @@
+{
+ "rol": "M2-sinac",
+ "version": "v001",
+ "fecha_utc": "2026-10-24T08:47:19.247831+00:00",
+ "base": "propuestas/ronda-8-paralela/ejecucion-20261024/base.json",
+ "casos_asignados": 14,
+ "resumen": {
+  "propuesta_para_auditar": 14,
+  "brecha_externa": 0,
+  "acceso_no_resuelto": 0
+ },
+ "comprobaciones_ejecutadas_por_codigo": [
+  "columna[n].id == diccionario[n].Nombre para los 14 (ordinal identico)",
+  "huella_esquema == sha256-tabla de semantica.json para el recurso (9b46e1c0...)",
+  "huella_fila == huella declarada en asignacion para los 14",
+  "VARIABLE del descriptor IDnac == campo local para los 14 (lectura directa del xlsx)",
+  "codigo-ejemplo local hallado en catalogo nacional con etiqueta coincidente (7 casos A1)"
+ ],
+ "peticiones_web": "ninguna: toda la evidencia es local y ya examinada en R7; sin pista primaria nueva",
+ "decisiones": [
+  {
+   "id": "https://example.org/mex-ontologi/semantic-mapping/8426466191ebd2c7175453ae963c2156f7699993f965236c0df982e9c4034a82",
+   "columna": "https://example.org/mex-ontologi/file-column/46977217-9396-4f9c-bddb-6616e82530b4%2FSINAC%202022%2026-09-22%2F65",
+   "campo": "VITAMINA_A",
+   "recurso": "46977217-9396-4f9c-bddb-6616e82530b4",
+   "definicion_iri": "https://example.org/mex-ontologi/documented-variable/22202305-2d02-4c49-b216-cc98224357f0%2F65",
+   "concepto": "sinac-vitamina-a",
+   "regla": "r7-s2-065",
+   "estado": "propuesta_para_auditar",
+   "afirmacion_propuesta": "La columna VITAMINA_A (posicion 65 de 106, hoja 'SINAC 2022 26-09-22', recurso 46977217, 2022-01-01 a 2022-09-26) es la materializacion fisica de la variable VITAMINA_A (fila 65 de 106 del diccionario 22202305, conjunto 940de7d8): nombre exacto coincidente y ordinal identico. VITAMINA_A = variable IDnac=41 del descriptor SINAC 2020-2025: Se le aplicó la vitamina A Codigos SI_NO verificados (p. ej. 0='NO ESPECIFICADO'); columna local = codigo entero, etiqueta D = descripcion del catalogo.",
+   "motivo": "Vinculo fisico exacto verificado por codigo en inspecciones originales: columna 65=VITAMINA_A (huella_esquema 9b46e1c0e32a...) ↔ fila 65=VITAMINA_A (huella_fila 1cb751023a12...). Significado ya respaldado en R7 (r7-s2-065, sinac-vitamina-a, estado integrado_r7). No se aprueba por nombre solo: ordinal, vecinos, tipo/ejemplo y huellas coinciden.",
+   "vinculo_propuesto": {
+    "columna": "https://example.org/mex-ontologi/file-column/46977217-9396-4f9c-bddb-6616e82530b4%2FSINAC%202022%2026-09-22%2F65",
+    "campo": "VITAMINA_A",
+    "recurso": "46977217-9396-4f9c-bddb-6616e82530b4",
+    "diccionario": "22202305-2d02-4c49-b216-cc98224357f0",
+    "definicion_iri": "https://example.org/mex-ontologi/documented-variable/22202305-2d02-4c49-b216-cc98224357f0%2F65",
+    "concepto": "sinac-vitamina-a",
+    "descripcion": "Se le aplicó la vitamina A",
+    "huella_esquema": "9b46e1c0e32acd903780264f0ebbc538a835eb1bf92a70faa36ba7e839a1ec95",
+    "huella_fila_diccionario": "1cb751023a12f3a604fb3abbe8627293b7ad2cc7cc777faa1b53b116c0982429",
+    "criterio": "Revision explicita del campo en el esquema de este recurso y su fila de diccionario en el mismo conjunto: nombre exacto VITAMINA_A, posicion ordinal identica (columna 65 de 106 ↔ fila 65 de 106, vecinos VACUNAHEPATITIS_BD | VITAMINA_AD), tipo/ejemplo local (Numérico entero / '0') y descripcion del descriptor nacional IDnac=41. Alcance de interpretacion documental; no valida valores ni confirma pertenencia a catalogos."
+   },
+   "evidencia": [
+    {
+     "ruta": "data/portal/inspecciones/22202305-2d02-4c49-b216-cc98224357f0.json",
+     "sha256": "76fe68223bc861fcdf62cb33f5b9a207503b192c2ef531a4aad31d52e7a7513b",
+     "url": "https://datos.sonora.gob.mx/api/3/action/datastore_search?resource_id=22202305-2d02-4c49-b216-cc98224357f0&limit=1000&offset=0&sort=_id+asc",
+     "localizador": "/definiciones/64 (fila 65, variable VITAMINA_A)",
+     "afirmacion_soportada": "Fila local: Nombre=VITAMINA_A, Tipo=Numérico entero, Ejemplo='0', Descripcion=Pendiente de especificar, Catalogo=''"
+    },
+    {
+     "ruta": "data/portal/inspecciones/46977217-9396-4f9c-bddb-6616e82530b4.json",
+     "sha256": "13831dec294ac79e90d3c618dd7f322d512afc392babe1405eb903d40c18afd5",
+     "url": "https://datos.sonora.gob.mx/dataset/940de7d8-73ec-4a08-8d26-b7cc97ff17bd/resource/46977217-9396-4f9c-bddb-6616e82530b4/download/202209281437030-file.xlsx",
+     "localizador": "tablas[0]: hoja 'SINAC 2022 26-09-22', 106 campos; posicion 65 = VITAMINA_A (vecinos VACUNAHEPATITIS_BD | VITAMINA_AD)",
+     "afirmacion_soportada": "El recurso 46977217 trae la columna VITAMINA_A en la posicion 65, mismo ordinal que la fila 65 del diccionario"
+    },
+    {
+     "ruta": "propuestas/cierre-brechas-post-r6/significados-salud/evidencia/desc_sinac_2020_2025/Descriptores_SINAC_2020.xlsx",
+     "sha256": "0af0b6be1faeb3867da872cd1b2021785af4feb78311c5de7c1fa44807fd6ed4",
+     "url": "http://www.dgis.salud.gob.mx/descargas/datosabiertos/nacimientos/sinac_descriptores_2020_2025.zip",
+     "localizador": "Hoja1 fila ID=41, VARIABLE=VITAMINA_A",
+     "afirmacion_soportada": "Descriptor SINAC 2020-2025: VITAMINA_A = Se le aplicó la vitamina A Catalogo: SI_NO."
+    },
+    {
+     "ruta": "propuestas/plan-paralelo-brechas-sin-gemma/ejecucion-20261024-072207Z/S2-nacimientos/trabajo/evidencia/sinac_catalogos_2020_2023.zip",
+     "sha256": "9c7dcd52dd8fdb2cfb9c7de3711e0ccc323cfa9cff86712eaeeb3e883141cb4e",
+     "url": "http://www.dgis.salud.gob.mx/descargas/datosabiertos/nacimientos/sinac_catalogos_2020_2023.zip",
+     "localizador": "zip 20 xlsx; sin columnas D ni ANOMALIACIE* ni DIAGNOSTICOS",
+     "afirmacion_soportada": "Codebook nacional 2020-2023; vigencia cubre el recurso 2022"
+    },
+    {
+     "ruta": "propuestas/plan-paralelo-brechas-sin-gemma/ejecucion-20261024-072207Z/S2-nacimientos/trabajo/evidencia/cat_sinac_2020_2023/SI_NO.xlsx",
+     "sha256": "3eca684c75bff3a83a52adb3f6fdf0a829871ef5245205da9e7840c1a61389d3",
+     "url": "http://www.dgis.salud.gob.mx/descargas/datosabiertos/nacimientos/sinac_catalogos_2020_2023.zip",
+     "localizador": "Hoja1, catalogo SI_NO: codigo 0",
+     "afirmacion_soportada": "Codigo local '0' = 'NO ESPECIFICADO' en el catalogo nacional SI_NO"
+    }
+   ],
+   "evidencia_faltante": null,
+   "condicion_reapertura": "Si la auditoria rechaza el vinculo, revierte a brecha_externa con el motivo del dictamen; reapertura con fe de erratas del publicador o instrumento que corrija ordinal/nombre.",
+   "limites": [
+    "Solo código 0 verificado con ejemplo+D locales; no lista completa SI_NO; no tabla determinada; no identidad global de catálogos; vigencia acotada al recurso 2022-01-01 a 2022-09-26. Código nacional '0' = 'NO ESPECIFICADO'.",
+    "Significado solo para el recurso SINAC 2022 (46977217, 2022-01-01 a 2022-09-26) y la definición local fijada; no autoriza otra edición, adopción global, totalidad del catálogo, equivalencias ni vigencias."
+   ]
+  },
+  {
+   "id": "https://example.org/mex-ontologi/semantic-mapping/979dbc5a7c74c6308a9e9a13cb4a52c680919fbe3deddca7c2b72121bec25617",
+   "columna": "https://example.org/mex-ontologi/file-column/46977217-9396-4f9c-bddb-6616e82530b4%2FSINAC%202022%2026-09-22%2F67",
+   "campo": "VITAMINA_K",
+   "recurso": "46977217-9396-4f9c-bddb-6616e82530b4",
+   "definicion_iri": "https://example.org/mex-ontologi/documented-variable/22202305-2d02-4c49-b216-cc98224357f0%2F67",
+   "concepto": "sinac-vitamina-k",
+   "regla": "r7-s2-067",
+   "estado": "propuesta_para_auditar",
+   "afirmacion_propuesta": "La columna VITAMINA_K (posicion 67 de 106, hoja 'SINAC 2022 26-09-22', recurso 46977217, 2022-01-01 a 2022-09-26) es la materializacion fisica de la variable VITAMINA_K (fila 67 de 106 del diccionario 22202305, conjunto 940de7d8): nombre exacto coincidente y ordinal identico. VITAMINA_K = variable IDnac=42 del descriptor SINAC 2020-2025: Se le aplicó la vitamina K Codigos SI_NO verificados (p. ej. 1='SI'); columna local = codigo entero, etiqueta D = descripcion del catalogo.",
+   "motivo": "Vinculo fisico exacto verificado por codigo en inspecciones originales: columna 67=VITAMINA_K (huella_esquema 9b46e1c0e32a...) ↔ fila 67=VITAMINA_K (huella_fila 7180af0ba9ef...). Significado ya respaldado en R7 (r7-s2-067, sinac-vitamina-k, estado integrado_r7). No se aprueba por nombre solo: ordinal, vecinos, tipo/ejemplo y huellas coinciden.",
+   "vinculo_propuesto": {
+    "columna": "https://example.org/mex-ontologi/file-column/46977217-9396-4f9c-bddb-6616e82530b4%2FSINAC%202022%2026-09-22%2F67",
+    "campo": "VITAMINA_K",
+    "recurso": "46977217-9396-4f9c-bddb-6616e82530b4",
+    "diccionario": "22202305-2d02-4c49-b216-cc98224357f0",
+    "definicion_iri": "https://example.org/mex-ontologi/documented-variable/22202305-2d02-4c49-b216-cc98224357f0%2F67",
+    "concepto": "sinac-vitamina-k",
+    "descripcion": "Se le aplicó la vitamina K",
+    "huella_esquema": "9b46e1c0e32acd903780264f0ebbc538a835eb1bf92a70faa36ba7e839a1ec95",
+    "huella_fila_diccionario": "7180af0ba9ef0fa427fa288465c55f66c5d15a0b62f0e769d950f7c72049ff23",
+    "criterio": "Revision explicita del campo en el esquema de este recurso y su fila de diccionario en el mismo conjunto: nombre exacto VITAMINA_K, posicion ordinal identica (columna 67 de 106 ↔ fila 67 de 106, vecinos VITAMINA_AD | VITAMINA_KD), tipo/ejemplo local (Numérico entero / '1') y descripcion del descriptor nacional IDnac=42. Alcance de interpretacion documental; no valida valores ni confirma pertenencia a catalogos."
+   },
+   "evidencia": [
+    {
+     "ruta": "data/portal/inspecciones/22202305-2d02-4c49-b216-cc98224357f0.json",
+     "sha256": "76fe68223bc861fcdf62cb33f5b9a207503b192c2ef531a4aad31d52e7a7513b",
+     "url": "https://datos.sonora.gob.mx/api/3/action/datastore_search?resource_id=22202305-2d02-4c49-b216-cc98224357f0&limit=1000&offset=0&sort=_id+asc",
+     "localizador": "/definiciones/66 (fila 67, variable VITAMINA_K)",
+     "afirmacion_soportada": "Fila local: Nombre=VITAMINA_K, Tipo=Numérico entero, Ejemplo='1', Descripcion=Pendiente de especificar, Catalogo=''"
+    },
+    {
+     "ruta": "data/portal/inspecciones/46977217-9396-4f9c-bddb-6616e82530b4.json",
+     "sha256": "13831dec294ac79e90d3c618dd7f322d512afc392babe1405eb903d40c18afd5",
+     "url": "https://datos.sonora.gob.mx/dataset/940de7d8-73ec-4a08-8d26-b7cc97ff17bd/resource/46977217-9396-4f9c-bddb-6616e82530b4/download/202209281437030-file.xlsx",
+     "localizador": "tablas[0]: hoja 'SINAC 2022 26-09-22', 106 campos; posicion 67 = VITAMINA_K (vecinos VITAMINA_AD | VITAMINA_KD)",
+     "afirmacion_soportada": "El recurso 46977217 trae la columna VITAMINA_K en la posicion 67, mismo ordinal que la fila 67 del diccionario"
+    },
+    {
+     "ruta": "propuestas/cierre-brechas-post-r6/significados-salud/evidencia/desc_sinac_2020_2025/Descriptores_SINAC_2020.xlsx",
+     "sha256": "0af0b6be1faeb3867da872cd1b2021785af4feb78311c5de7c1fa44807fd6ed4",
+     "url": "http://www.dgis.salud.gob.mx/descargas/datosabiertos/nacimientos/sinac_descriptores_2020_2025.zip",
+     "localizador": "Hoja1 fila ID=42, VARIABLE=VITAMINA_K",
+     "afirmacion_soportada": "Descriptor SINAC 2020-2025: VITAMINA_K = Se le aplicó la vitamina K Catalogo: SI_NO."
+    },
+    {
+     "ruta": "propuestas/plan-paralelo-brechas-sin-gemma/ejecucion-20261024-072207Z/S2-nacimientos/trabajo/evidencia/sinac_catalogos_2020_2023.zip",
+     "sha256": "9c7dcd52dd8fdb2cfb9c7de3711e0ccc323cfa9cff86712eaeeb3e883141cb4e",
+     "url": "http://www.dgis.salud.gob.mx/descargas/datosabiertos/nacimientos/sinac_catalogos_2020_2023.zip",
+     "localizador": "zip 20 xlsx; sin columnas D ni ANOMALIACIE* ni DIAGNOSTICOS",
+     "afirmacion_soportada": "Codebook nacional 2020-2023; vigencia cubre el recurso 2022"
+    },
+    {
+     "ruta": "propuestas/plan-paralelo-brechas-sin-gemma/ejecucion-20261024-072207Z/S2-nacimientos/trabajo/evidencia/cat_sinac_2020_2023/SI_NO.xlsx",
+     "sha256": "3eca684c75bff3a83a52adb3f6fdf0a829871ef5245205da9e7840c1a61389d3",
+     "url": "http://www.dgis.salud.gob.mx/descargas/datosabiertos/nacimientos/sinac_catalogos_2020_2023.zip",
+     "localizador": "Hoja1, catalogo SI_NO: codigo 1",
+     "afirmacion_soportada": "Codigo local '1' = 'SI' en el catalogo nacional SI_NO"
+    }
+   ],
+   "evidencia_faltante": null,
+   "condicion_reapertura": "Si la auditoria rechaza el vinculo, revierte a brecha_externa con el motivo del dictamen; reapertura con fe de erratas del publicador o instrumento que corrija ordinal/nombre.",
+   "limites": [
+    "Solo código 1 verificado con ejemplo+D locales; no lista completa SI_NO; no tabla determinada; no identidad global de catálogos; vigencia acotada al recurso 2022-01-01 a 2022-09-26.",
+    "Significado solo para el recurso SINAC 2022 (46977217, 2022-01-01 a 2022-09-26) y la definición local fijada; no autoriza otra edición, adopción global, totalidad del catálogo, equivalencias ni vigencias."
+   ]
+  },
+  {
+   "id": "https://example.org/mex-ontologi/semantic-mapping/768c291066592161f0b0e844a43f4688f56f6564d9755615b074c467bf9ec626",
+   "columna": "https://example.org/mex-ontologi/file-column/46977217-9396-4f9c-bddb-6616e82530b4%2FSINAC%202022%2026-09-22%2F69",
+   "campo": "PRODUCTOEMBARAZO",
+   "recurso": "46977217-9396-4f9c-bddb-6616e82530b4",
+   "definicion_iri": "https://example.org/mex-ontologi/documented-variable/22202305-2d02-4c49-b216-cc98224357f0%2F69",
+   "concepto": "sinac-productoembarazo",
+   "regla": "r7-s2-069",
+   "estado": "propuesta_para_auditar",
+   "afirmacion_propuesta": "La columna PRODUCTOEMBARAZO (posicion 69 de 106, hoja 'SINAC 2022 26-09-22', recurso 46977217, 2022-01-01 a 2022-09-26) es la materializacion fisica de la variable PRODUCTOEMBARAZO (fila 69 de 106 del diccionario 22202305, conjunto 940de7d8): nombre exacto coincidente y ordinal identico. PRODUCTOEMBARAZO = variable IDnac=43 del descriptor SINAC 2020-2025: Identificación del tipo de productos extraídos. Codigos PRODUCTO_EMBARAZO verificados (p. ej. 1='ÚNICO'); columna local = codigo entero, etiqueta D = descripcion del catalogo.",
+   "motivo": "Vinculo fisico exacto verificado por codigo en inspecciones originales: columna 69=PRODUCTOEMBARAZO (huella_esquema 9b46e1c0e32a...) ↔ fila 69=PRODUCTOEMBARAZO (huella_fila b66a776bd99b...). Significado ya respaldado en R7 (r7-s2-069, sinac-productoembarazo, estado integrado_r7). No se aprueba por nombre solo: ordinal, vecinos, tipo/ejemplo y huellas coinciden.",
+   "vinculo_propuesto": {
+    "columna": "https://example.org/mex-ontologi/file-column/46977217-9396-4f9c-bddb-6616e82530b4%2FSINAC%202022%2026-09-22%2F69",
+    "campo": "PRODUCTOEMBARAZO",
+    "recurso": "46977217-9396-4f9c-bddb-6616e82530b4",
+    "diccionario": "22202305-2d02-4c49-b216-cc98224357f0",
+    "definicion_iri": "https://example.org/mex-ontologi/documented-variable/22202305-2d02-4c49-b216-cc98224357f0%2F69",
+    "concepto": "sinac-productoembarazo",
+    "descripcion": "Identificación del tipo de productos extraídos.",
+    "huella_esquema": "9b46e1c0e32acd903780264f0ebbc538a835eb1bf92a70faa36ba7e839a1ec95",
+    "huella_fila_diccionario": "b66a776bd99ba4884bd6df9804696b53ef6b6de5a0fd9c8a22d70c78fac07881",
+    "criterio": "Revision explicita del campo en el esquema de este recurso y su fila de diccionario en el mismo conjunto: nombre exacto PRODUCTOEMBARAZO, posicion ordinal identica (columna 69 de 106 ↔ fila 69 de 106, vecinos VITAMINA_KD | PRODUCTOEMBARAZOD), tipo/ejemplo local (Numérico entero / '1') y descripcion del descriptor nacional IDnac=43. Alcance de interpretacion documental; no valida valores ni confirma pertenencia a catalogos."
+   },
+   "evidencia": [
+    {
+     "ruta": "data/portal/inspecciones/22202305-2d02-4c49-b216-cc98224357f0.json",
+     "sha256": "76fe68223bc861fcdf62cb33f5b9a207503b192c2ef531a4aad31d52e7a7513b",
+     "url": "https://datos.sonora.gob.mx/api/3/action/datastore_search?resource_id=22202305-2d02-4c49-b216-cc98224357f0&limit=1000&offset=0&sort=_id+asc",
+     "localizador": "/definiciones/68 (fila 69, variable PRODUCTOEMBARAZO)",
+     "afirmacion_soportada": "Fila local: Nombre=PRODUCTOEMBARAZO, Tipo=Numérico entero, Ejemplo='1', Descripcion=Pendiente de especificar, Catalogo=''"
+    },
+    {
+     "ruta": "data/portal/inspecciones/46977217-9396-4f9c-bddb-6616e82530b4.json",
+     "sha256": "13831dec294ac79e90d3c618dd7f322d512afc392babe1405eb903d40c18afd5",
+     "url": "https://datos.sonora.gob.mx/dataset/940de7d8-73ec-4a08-8d26-b7cc97ff17bd/resource/46977217-9396-4f9c-bddb-6616e82530b4/download/202209281437030-file.xlsx",
+     "localizador": "tablas[0]: hoja 'SINAC 2022 26-09-22', 106 campos; posicion 69 = PRODUCTOEMBARAZO (vecinos VITAMINA_KD | PRODUCTOEMBARAZOD)",
+     "afirmacion_soportada": "El recurso 46977217 trae la columna PRODUCTOEMBARAZO en la posicion 69, mismo ordinal que la fila 69 del diccionario"
+    },
+    {
+     "ruta": "propuestas/cierre-brechas-post-r6/significados-salud/evidencia/desc_sinac_2020_2025/Descriptores_SINAC_2020.xlsx",
+     "sha256": "0af0b6be1faeb3867da872cd1b2021785af4feb78311c5de7c1fa44807fd6ed4",
+     "url": "http://www.dgis.salud.gob.mx/descargas/datosabiertos/nacimientos/sinac_descriptores_2020_2025.zip",
+     "localizador": "Hoja1 fila ID=43, VARIABLE=PRODUCTOEMBARAZO",
+     "afirmacion_soportada": "Descriptor SINAC 2020-2025: PRODUCTOEMBARAZO = Identificación del tipo de productos extraídos. Catalogo: PRODUCTO_EMBARAZO."
+    },
+    {
+     "ruta": "propuestas/plan-paralelo-brechas-sin-gemma/ejecucion-20261024-072207Z/S2-nacimientos/trabajo/evidencia/sinac_catalogos_2020_2023.zip",
+     "sha256": "9c7dcd52dd8fdb2cfb9c7de3711e0ccc323cfa9cff86712eaeeb3e883141cb4e",
+     "url": "http://www.dgis.salud.gob.mx/descargas/datosabiertos/nacimientos/sinac_catalogos_2020_2023.zip",
+     "localizador": "zip 20 xlsx; sin columnas D ni ANOMALIACIE* ni DIAGNOSTICOS",
+     "afirmacion_soportada": "Codebook nacional 2020-2023; vigencia cubre el recurso 2022"
+    },
+    {
+     "ruta": "propuestas/plan-paralelo-brechas-sin-gemma/ejecucion-20261024-072207Z/S2-nacimientos/trabajo/evidencia/cat_sinac_2020_2023/PRODUCTO_EMBARAZO.xlsx",
+     "sha256": "d586b9f7fc30a04c1e279030bc20affb057db5f1670e0932d3dbf3f0e12c9e96",
+     "url": "http://www.dgis.salud.gob.mx/descargas/datosabiertos/nacimientos/sinac_catalogos_2020_2023.zip",
+     "localizador": "Hoja1, catalogo PRODUCTO_EMBARAZO: codigo 1",
+     "afirmacion_soportada": "Codigo local '1' = 'ÚNICO' en el catalogo nacional PRODUCTO_EMBARAZO"
+    }
+   ],
+   "evidencia_faltante": null,
+   "condicion_reapertura": "Si la auditoria rechaza el vinculo, revierte a brecha_externa con el motivo del dictamen; reapertura con fe de erratas del publicador o instrumento que corrija ordinal/nombre.",
+   "limites": [
+    "Solo código 1 verificado con ejemplo+D locales; no lista completa PRODUCTO_EMBARAZO; no tabla determinada; no identidad global de catálogos; vigencia acotada al recurso 2022-01-01 a 2022-09-26. Código nacional '1' = 'UNICO'.",
+    "Significado solo para el recurso SINAC 2022 (46977217, 2022-01-01 a 2022-09-26) y la definición local fijada; no autoriza otra edición, adopción global, totalidad del catálogo, equivalencias ni vigencias."
+   ]
+  },
+  {
+   "id": "https://example.org/mex-ontologi/semantic-mapping/2add7f25cbcc776a95e6f98daac7a1eba865ff8c9a050aea6d7a889a62b4c434",
+   "columna": "https://example.org/mex-ontologi/file-column/46977217-9396-4f9c-bddb-6616e82530b4%2FSINAC%202022%2026-09-22%2F71",
+   "campo": "ORDENPRODUCTO",
+   "recurso": "46977217-9396-4f9c-bddb-6616e82530b4",
+   "definicion_iri": "https://example.org/mex-ontologi/documented-variable/22202305-2d02-4c49-b216-cc98224357f0%2F71",
+   "concepto": "sinac-ordenproducto",
+   "regla": "r7-s2-071",
+   "estado": "propuesta_para_auditar",
+   "afirmacion_propuesta": "La columna ORDENPRODUCTO (posicion 71 de 106, hoja 'SINAC 2022 26-09-22', recurso 46977217, 2022-01-01 a 2022-09-26) es la materializacion fisica de la variable ORDENPRODUCTO (fila 71 de 106 del diccionario 22202305, conjunto 940de7d8): nombre exacto coincidente y ordinal identico. ORDENPRODUCTO = variable IDnac=44 del descriptor SINAC 2020-2025: Número de producto de acuerdo al orden de extracción del evento actual. Sin catalogo nacional (descriptor Catálogo=None); tipo local (Numérico entero) compatible; ejemplo ''.",
+   "motivo": "Vinculo fisico exacto verificado por codigo en inspecciones originales: columna 71=ORDENPRODUCTO (huella_esquema 9b46e1c0e32a...) ↔ fila 71=ORDENPRODUCTO (huella_fila abcad05c8850...). Significado ya respaldado en R7 (r7-s2-071, sinac-ordenproducto, estado integrado_r7). No se aprueba por nombre solo: ordinal, vecinos, tipo/ejemplo y huellas coinciden.",
+   "vinculo_propuesto": {
+    "columna": "https://example.org/mex-ontologi/file-column/46977217-9396-4f9c-bddb-6616e82530b4%2FSINAC%202022%2026-09-22%2F71",
+    "campo": "ORDENPRODUCTO",
+    "recurso": "46977217-9396-4f9c-bddb-6616e82530b4",
+    "diccionario": "22202305-2d02-4c49-b216-cc98224357f0",
+    "definicion_iri": "https://example.org/mex-ontologi/documented-variable/22202305-2d02-4c49-b216-cc98224357f0%2F71",
+    "concepto": "sinac-ordenproducto",
+    "descripcion": "Número de producto de acuerdo al orden de extracción del evento actual.",
+    "huella_esquema": "9b46e1c0e32acd903780264f0ebbc538a835eb1bf92a70faa36ba7e839a1ec95",
+    "huella_fila_diccionario": "abcad05c885063318a672bd488a1a7d5afe1f258dea83e0fdf5c10fbac4c455c",
+    "criterio": "Revision explicita del campo en el esquema de este recurso y su fila de diccionario en el mismo conjunto: nombre exacto ORDENPRODUCTO, posicion ordinal identica (columna 71 de 106 ↔ fila 71 de 106, vecinos PRODUCTOEMBARAZOD | TOTALPRODUCTOS), tipo/ejemplo local (Numérico entero / '') y descripcion del descriptor nacional IDnac=44. Alcance de interpretacion documental; no valida valores ni confirma pertenencia a catalogos."
+   },
+   "evidencia": [
+    {
+     "ruta": "data/portal/inspecciones/22202305-2d02-4c49-b216-cc98224357f0.json",
+     "sha256": "76fe68223bc861fcdf62cb33f5b9a207503b192c2ef531a4aad31d52e7a7513b",
+     "url": "https://datos.sonora.gob.mx/api/3/action/datastore_search?resource_id=22202305-2d02-4c49-b216-cc98224357f0&limit=1000&offset=0&sort=_id+asc",
+     "localizador": "/definiciones/70 (fila 71, variable ORDENPRODUCTO)",
+     "afirmacion_soportada": "Fila local: Nombre=ORDENPRODUCTO, Tipo=Numérico entero, Ejemplo='', Descripcion=Pendiente de especificar, Catalogo=''"
+    },
+    {
+     "ruta": "data/portal/inspecciones/46977217-9396-4f9c-bddb-6616e82530b4.json",
+     "sha256": "13831dec294ac79e90d3c618dd7f322d512afc392babe1405eb903d40c18afd5",
+     "url": "https://datos.sonora.gob.mx/dataset/940de7d8-73ec-4a08-8d26-b7cc97ff17bd/resource/46977217-9396-4f9c-bddb-6616e82530b4/download/202209281437030-file.xlsx",
+     "localizador": "tablas[0]: hoja 'SINAC 2022 26-09-22', 106 campos; posicion 71 = ORDENPRODUCTO (vecinos PRODUCTOEMBARAZOD | TOTALPRODUCTOS)",
+     "afirmacion_soportada": "El recurso 46977217 trae la columna ORDENPRODUCTO en la posicion 71, mismo ordinal que la fila 71 del diccionario"
+    },
+    {
+     "ruta": "propuestas/cierre-brechas-post-r6/significados-salud/evidencia/desc_sinac_2020_2025/Descriptores_SINAC_2020.xlsx",
+     "sha256": "0af0b6be1faeb3867da872cd1b2021785af4feb78311c5de7c1fa44807fd6ed4",
+     "url": "http://www.dgis.salud.gob.mx/descargas/datosabiertos/nacimientos/sinac_descriptores_2020_2025.zip",
+     "localizador": "Hoja1 fila ID=44, VARIABLE=ORDENPRODUCTO",
+     "afirmacion_soportada": "Descriptor SINAC 2020-2025: ORDENPRODUCTO = Número de producto de acuerdo al orden de extracción del evento actual. Catalogo: None."
+    },
+    {
+     "ruta": "propuestas/plan-paralelo-brechas-sin-gemma/ejecucion-20261024-072207Z/S2-nacimientos/trabajo/evidencia/sinac_catalogos_2020_2023.zip",
+     "sha256": "9c7dcd52dd8fdb2cfb9c7de3711e0ccc323cfa9cff86712eaeeb3e883141cb4e",
+     "url": "http://www.dgis.salud.gob.mx/descargas/datosabiertos/nacimientos/sinac_catalogos_2020_2023.zip",
+     "localizador": "zip 20 xlsx; sin columnas D ni ANOMALIACIE* ni DIAGNOSTICOS",
+     "afirmacion_soportada": "Codebook nacional 2020-2023; vigencia cubre el recurso 2022"
+    }
+   ],
+   "evidencia_faltante": null,
+   "condicion_reapertura": "Si la auditoria rechaza el vinculo, revierte a brecha_externa con el motivo del dictamen; reapertura con fe de erratas del publicador o instrumento que corrija ordinal/nombre.",
+   "limites": [
+    "Sin catalogo nacional; ejemplo local vacio declarado.",
+    "Significado solo para el recurso SINAC 2022 (46977217, 2022-01-01 a 2022-09-26) y la definición local fijada; no autoriza otra edición, adopción global, totalidad del catálogo, equivalencias ni vigencias."
+   ]
+  },
+  {
+   "id": "https://example.org/mex-ontologi/semantic-mapping/c4ecee86f22fc10c28d1cba6c3ee606016b77584a86069898d2aeca4fea83a39",
+   "columna": "https://example.org/mex-ontologi/file-column/46977217-9396-4f9c-bddb-6616e82530b4%2FSINAC%202022%2026-09-22%2F72",
+   "campo": "TOTALPRODUCTOS",
+   "recurso": "46977217-9396-4f9c-bddb-6616e82530b4",
+   "definicion_iri": "https://example.org/mex-ontologi/documented-variable/22202305-2d02-4c49-b216-cc98224357f0%2F72",
+   "concepto": "sinac-totalproductos",
+   "regla": "r7-s2-072",
+   "estado": "propuesta_para_auditar",
+   "afirmacion_propuesta": "La columna TOTALPRODUCTOS (posicion 72 de 106, hoja 'SINAC 2022 26-09-22', recurso 46977217, 2022-01-01 a 2022-09-26) es la materializacion fisica de la variable TOTALPRODUCTOS (fila 72 de 106 del diccionario 22202305, conjunto 940de7d8): nombre exacto coincidente y ordinal identico. TOTALPRODUCTOS = variable IDnac=45 del descriptor SINAC 2020-2025: Total de productos extraídos del evento actual. Sin catalogo nacional (descriptor Catálogo=None); tipo local (Numérico entero) compatible; ejemplo ''.",
+   "motivo": "Vinculo fisico exacto verificado por codigo en inspecciones originales: columna 72=TOTALPRODUCTOS (huella_esquema 9b46e1c0e32a...) ↔ fila 72=TOTALPRODUCTOS (huella_fila ebfe8f35dcd8...). Significado ya respaldado en R7 (r7-s2-072, sinac-totalproductos, estado integrado_r7). No se aprueba por nombre solo: ordinal, vecinos, tipo/ejemplo y huellas coinciden.",
+   "vinculo_propuesto": {
+    "columna": "https://example.org/mex-ontologi/file-column/46977217-9396-4f9c-bddb-6616e82530b4%2FSINAC%202022%2026-09-22%2F72",
+    "campo": "TOTALPRODUCTOS",
+    "recurso": "46977217-9396-4f9c-bddb-6616e82530b4",
+    "diccionario": "22202305-2d02-4c49-b216-cc98224357f0",
+    "definicion_iri": "https://example.org/mex-ontologi/documented-variable/22202305-2d02-4c49-b216-cc98224357f0%2F72",
+    "concepto": "sinac-totalproductos",
+    "descripcion": "Total de productos extraídos del evento actual.",
+    "huella_esquema": "9b46e1c0e32acd903780264f0ebbc538a835eb1bf92a70faa36ba7e839a1ec95",
+    "huella_fila_diccionario": "ebfe8f35dcd87b903edd93c23e54950db3e88042f03c98afff7c55b5735fb5b0",
+    "criterio": "Revision explicita del campo en el esquema de este recurso y su fila de diccionario en el mismo conjunto: nombre exacto TOTALPRODUCTOS, posicion ordinal identica (columna 72 de 106 ↔ fila 72 de 106, vecinos ORDENPRODUCTO | ANOMALIACIE1), tipo/ejemplo local (Numérico entero / '') y descripcion del descriptor nacional IDnac=45. Alcance de interpretacion documental; no valida valores ni confirma pertenencia a catalogos."
+   },
+   "evidencia": [
+    {
+     "ruta": "data/portal/inspecciones/22202305-2d02-4c49-b216-cc98224357f0.json",
+     "sha256": "76fe68223bc861fcdf62cb33f5b9a207503b192c2ef531a4aad31d52e7a7513b",
+     "url": "https://datos.sonora.gob.mx/api/3/action/datastore_search?resource_id=22202305-2d02-4c49-b216-cc98224357f0&limit=1000&offset=0&sort=_id+asc",
+     "localizador": "/definiciones/71 (fila 72, variable TOTALPRODUCTOS)",
+     "afirmacion_soportada": "Fila local: Nombre=TOTALPRODUCTOS, Tipo=Numérico entero, Ejemplo='', Descripcion=Pendiente de especificar, Catalogo=''"
+    },
+    {
+     "ruta": "data/portal/inspecciones/46977217-9396-4f9c-bddb-6616e82530b4.json",
+     "sha256": "13831dec294ac79e90d3c618dd7f322d512afc392babe1405eb903d40c18afd5",
+     "url": "https://datos.sonora.gob.mx/dataset/940de7d8-73ec-4a08-8d26-b7cc97ff17bd/resource/46977217-9396-4f9c-bddb-6616e82530b4/download/202209281437030-file.xlsx",
+     "localizador": "tablas[0]: hoja 'SINAC 2022 26-09-22', 106 campos; posicion 72 = TOTALPRODUCTOS (vecinos ORDENPRODUCTO | ANOMALIACIE1)",
+     "afirmacion_soportada": "El recurso 46977217 trae la columna TOTALPRODUCTOS en la posicion 72, mismo ordinal que la fila 72 del diccionario"
+    },
+    {
+     "ruta": "propuestas/cierre-brechas-post-r6/significados-salud/evidencia/desc_sinac_2020_2025/Descriptores_SINAC_2020.xlsx",
+     "sha256": "0af0b6be1faeb3867da872cd1b2021785af4feb78311c5de7c1fa44807fd6ed4",
+     "url": "http://www.dgis.salud.gob.mx/descargas/datosabiertos/nacimientos/sinac_descriptores_2020_2025.zip",
+     "localizador": "Hoja1 fila ID=45, VARIABLE=TOTALPRODUCTOS",
+     "afirmacion_soportada": "Descriptor SINAC 2020-2025: TOTALPRODUCTOS = Total de productos extraídos del evento actual. Catalogo: None."
+    },
+    {
+     "ruta": "propuestas/plan-paralelo-brechas-sin-gemma/ejecucion-20261024-072207Z/S2-nacimientos/trabajo/evidencia/sinac_catalogos_2020_2023.zip",
+     "sha256": "9c7dcd52dd8fdb2cfb9c7de3711e0ccc323cfa9cff86712eaeeb3e883141cb4e",
+     "url": "http://www.dgis.salud.gob.mx/descargas/datosabiertos/nacimientos/sinac_catalogos_2020_2023.zip",
+     "localizador": "zip 20 xlsx; sin columnas D ni ANOMALIACIE* ni DIAGNOSTICOS",
+     "afirmacion_soportada": "Codebook nacional 2020-2023; vigencia cubre el recurso 2022"
+    }
+   ],
+   "evidencia_faltante": null,
+   "condicion_reapertura": "Si la auditoria rechaza el vinculo, revierte a brecha_externa con el motivo del dictamen; reapertura con fe de erratas del publicador o instrumento que corrija ordinal/nombre.",
+   "limites": [
+    "Sin catalogo nacional; ejemplo local vacio declarado.",
+    "Significado solo para el recurso SINAC 2022 (46977217, 2022-01-01 a 2022-09-26) y la definición local fijada; no autoriza otra edición, adopción global, totalidad del catálogo, equivalencias ni vigencias."
+   ]
+  },
+  {
+   "id": "https://example.org/mex-ontologi/semantic-mapping/e7a61f51eb23aefc9fc53ff1090477fcaea64b51396e09c29d2856268647dc1d",
+   "columna": "https://example.org/mex-ontologi/file-column/46977217-9396-4f9c-bddb-6616e82530b4%2FSINAC%202022%2026-09-22%2F74",
+   "campo": "CODIGOCIEANOMALIA1",
+   "recurso": "46977217-9396-4f9c-bddb-6616e82530b4",
+   "definicion_iri": "https://example.org/mex-ontologi/documented-variable/22202305-2d02-4c49-b216-cc98224357f0%2F74",
+   "concepto": "sinac-codigocieanomalia1",
+   "regla": "r7-s2-074",
+   "estado": "propuesta_para_auditar",
+   "afirmacion_propuesta": "La columna CODIGOCIEANOMALIA1 (posicion 74 de 106, hoja 'SINAC 2022 26-09-22', recurso 46977217, 2022-01-01 a 2022-09-26) es la materializacion fisica de la variable CODIGOCIEANOMALIA1 (fila 74 de 106 del diccionario 22202305, conjunto 940de7d8): nombre exacto coincidente y ordinal identico. CODIGOCIEANOMALIA1 = variable IDnac=46 del descriptor SINAC 2020-2025: Código de la CIE10 que corresponde a la anomalía congénita, enfermedad o lesión del nacido vivo. El valor 0000 corresponde a NINGUNA APARENTE. Catalogo DIAGNOSTICOS = CIE-10 (lineamientos DOF/CEN en evidencia previa); ejemplo local '0000' = NINGUNA APARENTE, corroborado por columna hermana ANOMALIACIE* del mismo renglon.",
+   "motivo": "Vinculo fisico exacto verificado por codigo en inspecciones originales: columna 74=CODIGOCIEANOMALIA1 (huella_esquema 9b46e1c0e32a...) ↔ fila 74=CODIGOCIEANOMALIA1 (huella_fila 109d0f8a09c2...). Significado ya respaldado en R7 (r7-s2-074, sinac-codigocieanomalia1, estado integrado_r7). No se aprueba por nombre solo: ordinal, vecinos, tipo/ejemplo y huellas coinciden.",
+   "vinculo_propuesto": {
+    "columna": "https://example.org/mex-ontologi/file-column/46977217-9396-4f9c-bddb-6616e82530b4%2FSINAC%202022%2026-09-22%2F74",
+    "campo": "CODIGOCIEANOMALIA1",
+    "recurso": "46977217-9396-4f9c-bddb-6616e82530b4",
+    "diccionario": "22202305-2d02-4c49-b216-cc98224357f0",
+    "definicion_iri": "https://example.org/mex-ontologi/documented-variable/22202305-2d02-4c49-b216-cc98224357f0%2F74",
+    "concepto": "sinac-codigocieanomalia1",
+    "descripcion": "Código de la CIE10 que corresponde a la anomalía congénita, enfermedad o lesión del nacido vivo. El valor 0000 corresponde a NINGUNA APARENTE.",
+    "huella_esquema": "9b46e1c0e32acd903780264f0ebbc538a835eb1bf92a70faa36ba7e839a1ec95",
+    "huella_fila_diccionario": "109d0f8a09c2f065e43b67ee1231d75db5b444e2cfac5b515708f543922cc9cb",
+    "criterio": "Revision explicita del campo en el esquema de este recurso y su fila de diccionario en el mismo conjunto: nombre exacto CODIGOCIEANOMALIA1, posicion ordinal identica (columna 74 de 106 ↔ fila 74 de 106, vecinos ANOMALIACIE1 | ANOMALIACIE2), tipo/ejemplo local (Numérico entero / '0000') y descripcion del descriptor nacional IDnac=46. Alcance de interpretacion documental; no valida valores ni confirma pertenencia a catalogos."
+   },
+   "evidencia": [
+    {
+     "ruta": "data/portal/inspecciones/22202305-2d02-4c49-b216-cc98224357f0.json",
+     "sha256": "76fe68223bc861fcdf62cb33f5b9a207503b192c2ef531a4aad31d52e7a7513b",
+     "url": "https://datos.sonora.gob.mx/api/3/action/datastore_search?resource_id=22202305-2d02-4c49-b216-cc98224357f0&limit=1000&offset=0&sort=_id+asc",
+     "localizador": "/definiciones/73 (fila 74, variable CODIGOCIEANOMALIA1)",
+     "afirmacion_soportada": "Fila local: Nombre=CODIGOCIEANOMALIA1, Tipo=Numérico entero, Ejemplo='0000', Descripcion=Pendiente de especificar, Catalogo=''"
+    },
+    {
+     "ruta": "data/portal/inspecciones/46977217-9396-4f9c-bddb-6616e82530b4.json",
+     "sha256": "13831dec294ac79e90d3c618dd7f322d512afc392babe1405eb903d40c18afd5",
+     "url": "https://datos.sonora.gob.mx/dataset/940de7d8-73ec-4a08-8d26-b7cc97ff17bd/resource/46977217-9396-4f9c-bddb-6616e82530b4/download/202209281437030-file.xlsx",
+     "localizador": "tablas[0]: hoja 'SINAC 2022 26-09-22', 106 campos; posicion 74 = CODIGOCIEANOMALIA1 (vecinos ANOMALIACIE1 | ANOMALIACIE2)",
+     "afirmacion_soportada": "El recurso 46977217 trae la columna CODIGOCIEANOMALIA1 en la posicion 74, mismo ordinal que la fila 74 del diccionario"
+    },
+    {
+     "ruta": "propuestas/cierre-brechas-post-r6/significados-salud/evidencia/desc_sinac_2020_2025/Descriptores_SINAC_2020.xlsx",
+     "sha256": "0af0b6be1faeb3867da872cd1b2021785af4feb78311c5de7c1fa44807fd6ed4",
+     "url": "http://www.dgis.salud.gob.mx/descargas/datosabiertos/nacimientos/sinac_descriptores_2020_2025.zip",
+     "localizador": "Hoja1 fila ID=46, VARIABLE=CODIGOCIEANOMALIA1",
+     "afirmacion_soportada": "Descriptor SINAC 2020-2025: CODIGOCIEANOMALIA1 = Código de la CIE10 que corresponde a la anomalía congénita, enfermedad o lesión del nacido vivo. El valor 0000 corresponde a NINGUNA APARENTE. Catalogo: DIAGNOSTICOS."
+    },
+    {
+     "ruta": "propuestas/plan-paralelo-brechas-sin-gemma/ejecucion-20261024-072207Z/S2-nacimientos/trabajo/evidencia/sinac_catalogos_2020_2023.zip",
+     "sha256": "9c7dcd52dd8fdb2cfb9c7de3711e0ccc323cfa9cff86712eaeeb3e883141cb4e",
+     "url": "http://www.dgis.salud.gob.mx/descargas/datosabiertos/nacimientos/sinac_catalogos_2020_2023.zip",
+     "localizador": "zip 20 xlsx; sin columnas D ni ANOMALIACIE* ni DIAGNOSTICOS",
+     "afirmacion_soportada": "Codebook nacional 2020-2023; vigencia cubre el recurso 2022"
+    }
+   ],
+   "evidencia_faltante": null,
+   "condicion_reapertura": "Si la auditoria rechaza el vinculo, revierte a brecha_externa con el motivo del dictamen; reapertura con fe de erratas del publicador o instrumento que corrija ordinal/nombre.",
+   "limites": [
+    "Excluidos: '0000 = NINGUNA APARENTE' (corroborado solo por columna hermana ANOMALIACIE1, ella misma en brecha 73) y equivalencia 'DIAGNOSTICOS = CIE-10' (DIAGNOSTICOS ausente del zip; DOF CEN citado sin localizador en esta entrega).",
+    "Equivalencia total del catálogo no verificada (DIAGNOSTICOS ausente del zip).",
+    "Excluido por falta de ruta+sha en la entrega el paréntesis sobre lineamientos DOF/CEN; ejemplo local '0000' sin lectura aprobada; equivalencia total del catálogo no verificada (DIAGNOSTICOS ausente del zip).",
+    "Significado solo para el recurso SINAC 2022 (46977217, 2022-01-01 a 2022-09-26) y la definición local fijada; no autoriza otra edición, adopción global, totalidad del catálogo, equivalencias ni vigencias."
+   ]
+  },
+  {
+   "id": "https://example.org/mex-ontologi/semantic-mapping/1abf8eefad9d949a19d70e09b097403317c332033dcc0013e276cc4308f4f152",
+   "columna": "https://example.org/mex-ontologi/file-column/46977217-9396-4f9c-bddb-6616e82530b4%2FSINAC%202022%2026-09-22%2F76",
+   "campo": "CODIGOCIEANOMALIA2",
+   "recurso": "46977217-9396-4f9c-bddb-6616e82530b4",
+   "definicion_iri": "https://example.org/mex-ontologi/documented-variable/22202305-2d02-4c49-b216-cc98224357f0%2F76",
+   "concepto": "sinac-codigocieanomalia2",
+   "regla": "r7-s2-076",
+   "estado": "propuesta_para_auditar",
+   "afirmacion_propuesta": "La columna CODIGOCIEANOMALIA2 (posicion 76 de 106, hoja 'SINAC 2022 26-09-22', recurso 46977217, 2022-01-01 a 2022-09-26) es la materializacion fisica de la variable CODIGOCIEANOMALIA2 (fila 76 de 106 del diccionario 22202305, conjunto 940de7d8): nombre exacto coincidente y ordinal identico. CODIGOCIEANOMALIA2 = variable IDnac=47 del descriptor SINAC 2020-2025: 2da. Código de la CIE10 que corresponde a la anomalía congénita, enfermedad o lesión del nacido vivo. El valor 0000 corresponde a NINGUNA APARENTE. Catalogo DIAGNOSTICOS = CIE-10 (lineamientos DOF/CEN en evidencia previa); ejemplo local '0000' = NINGUNA APARENTE, corroborado por columna hermana ANOMALIACIE* del mismo renglon.",
+   "motivo": "Vinculo fisico exacto verificado por codigo en inspecciones originales: columna 76=CODIGOCIEANOMALIA2 (huella_esquema 9b46e1c0e32a...) ↔ fila 76=CODIGOCIEANOMALIA2 (huella_fila 998a3d29cfa9...). Significado ya respaldado en R7 (r7-s2-076, sinac-codigocieanomalia2, estado integrado_r7). No se aprueba por nombre solo: ordinal, vecinos, tipo/ejemplo y huellas coinciden.",
+   "vinculo_propuesto": {
+    "columna": "https://example.org/mex-ontologi/file-column/46977217-9396-4f9c-bddb-6616e82530b4%2FSINAC%202022%2026-09-22%2F76",
+    "campo": "CODIGOCIEANOMALIA2",
+    "recurso": "46977217-9396-4f9c-bddb-6616e82530b4",
+    "diccionario": "22202305-2d02-4c49-b216-cc98224357f0",
+    "definicion_iri": "https://example.org/mex-ontologi/documented-variable/22202305-2d02-4c49-b216-cc98224357f0%2F76",
+    "concepto": "sinac-codigocieanomalia2",
+    "descripcion": "2da. Código de la CIE10 que corresponde a la anomalía congénita, enfermedad o lesión del nacido vivo. El valor 0000 corresponde a NINGUNA APARENTE.",
+    "huella_esquema": "9b46e1c0e32acd903780264f0ebbc538a835eb1bf92a70faa36ba7e839a1ec95",
+    "huella_fila_diccionario": "998a3d29cfa98c49c38767c027ea4f7795876b5a2c98b3e47b2e17ed489f1c44",
+    "criterio": "Revision explicita del campo en el esquema de este recurso y su fila de diccionario en el mismo conjunto: nombre exacto CODIGOCIEANOMALIA2, posicion ordinal identica (columna 76 de 106 ↔ fila 76 de 106, vecinos ANOMALIACIE2 | RESOLUCIONEMBARAZO), tipo/ejemplo local (Numérico entero / '0000') y descripcion del descriptor nacional IDnac=47. Alcance de interpretacion documental; no valida valores ni confirma pertenencia a catalogos."
+   },
+   "evidencia": [
+    {
+     "ruta": "data/portal/inspecciones/22202305-2d02-4c49-b216-cc98224357f0.json",
+     "sha256": "76fe68223bc861fcdf62cb33f5b9a207503b192c2ef531a4aad31d52e7a7513b",
+     "url": "https://datos.sonora.gob.mx/api/3/action/datastore_search?resource_id=22202305-2d02-4c49-b216-cc98224357f0&limit=1000&offset=0&sort=_id+asc",
+     "localizador": "/definiciones/75 (fila 76, variable CODIGOCIEANOMALIA2)",
+     "afirmacion_soportada": "Fila local: Nombre=CODIGOCIEANOMALIA2, Tipo=Numérico entero, Ejemplo='0000', Descripcion=Pendiente de especificar, Catalogo=''"
+    },
+    {
+     "ruta": "data/portal/inspecciones/46977217-9396-4f9c-bddb-6616e82530b4.json",
+     "sha256": "13831dec294ac79e90d3c618dd7f322d512afc392babe1405eb903d40c18afd5",
+     "url": "https://datos.sonora.gob.mx/dataset/940de7d8-73ec-4a08-8d26-b7cc97ff17bd/resource/46977217-9396-4f9c-bddb-6616e82530b4/download/202209281437030-file.xlsx",
+     "localizador": "tablas[0]: hoja 'SINAC 2022 26-09-22', 106 campos; posicion 76 = CODIGOCIEANOMALIA2 (vecinos ANOMALIACIE2 | RESOLUCIONEMBARAZO)",
+     "afirmacion_soportada": "El recurso 46977217 trae la columna CODIGOCIEANOMALIA2 en la posicion 76, mismo ordinal que la fila 76 del diccionario"
+    },
+    {
+     "ruta": "propuestas/cierre-brechas-post-r6/significados-salud/evidencia/desc_sinac_2020_2025/Descriptores_SINAC_2020.xlsx",
+     "sha256": "0af0b6be1faeb3867da872cd1b2021785af4feb78311c5de7c1fa44807fd6ed4",
+     "url": "http://www.dgis.salud.gob.mx/descargas/datosabiertos/nacimientos/sinac_descriptores_2020_2025.zip",
+     "localizador": "Hoja1 fila ID=47, VARIABLE=CODIGOCIEANOMALIA2",
+     "afirmacion_soportada": "Descriptor SINAC 2020-2025: CODIGOCIEANOMALIA2 = 2da. Código de la CIE10 que corresponde a la anomalía congénita, enfermedad o lesión del nacido vivo. El valor 0000 corresponde a NINGUNA APARENTE. Catalogo: DIAGNOSTICOS."
+    },
+    {
+     "ruta": "propuestas/plan-paralelo-brechas-sin-gemma/ejecucion-20261024-072207Z/S2-nacimientos/trabajo/evidencia/sinac_catalogos_2020_2023.zip",
+     "sha256": "9c7dcd52dd8fdb2cfb9c7de3711e0ccc323cfa9cff86712eaeeb3e883141cb4e",
+     "url": "http://www.dgis.salud.gob.mx/descargas/datosabiertos/nacimientos/sinac_catalogos_2020_2023.zip",
+     "localizador": "zip 20 xlsx; sin columnas D ni ANOMALIACIE* ni DIAGNOSTICOS",
+     "afirmacion_soportada": "Codebook nacional 2020-2023; vigencia cubre el recurso 2022"
+    }
+   ],
+   "evidencia_faltante": null,
+   "condicion_reapertura": "Si la auditoria rechaza el vinculo, revierte a brecha_externa con el motivo del dictamen; reapertura con fe de erratas del publicador o instrumento que corrija ordinal/nombre.",
+   "limites": [
+    "Igual que 74 (hermana ANOMALIACIE2 en brecha 75; DIAGNOSTICOS ausente del zip).",
+    "Equivalencia total del catálogo no verificada (DIAGNOSTICOS ausente del zip).",
+    "Excluido por falta de ruta+sha en la entrega el paréntesis sobre lineamientos DOF/CEN; ejemplo local '0000' sin lectura aprobada; equivalencia total del catálogo no verificada (DIAGNOSTICOS ausente del zip).",
+    "Significado solo para el recurso SINAC 2022 (46977217, 2022-01-01 a 2022-09-26) y la definición local fijada; no autoriza otra edición, adopción global, totalidad del catálogo, equivalencias ni vigencias."
+   ]
+  },
+  {
+   "id": "https://example.org/mex-ontologi/semantic-mapping/c7cb24a799698509c936acd8b654cfb1c02ad51d473612443ea87bd1c47f98f9",
+   "columna": "https://example.org/mex-ontologi/file-column/46977217-9396-4f9c-bddb-6616e82530b4%2FSINAC%202022%2026-09-22%2F77",
+   "campo": "RESOLUCIONEMBARAZO",
+   "recurso": "46977217-9396-4f9c-bddb-6616e82530b4",
+   "definicion_iri": "https://example.org/mex-ontologi/documented-variable/22202305-2d02-4c49-b216-cc98224357f0%2F77",
+   "concepto": "sinac-resolucionembarazo",
+   "regla": "r7-s2-077",
+   "estado": "propuesta_para_auditar",
+   "afirmacion_propuesta": "La columna RESOLUCIONEMBARAZO (posicion 77 de 106, hoja 'SINAC 2022 26-09-22', recurso 46977217, 2022-01-01 a 2022-09-26) es la materializacion fisica de la variable RESOLUCIONEMBARAZO (fila 77 de 106 del diccionario 22202305, conjunto 940de7d8): nombre exacto coincidente y ordinal identico. RESOLUCIONEMBARAZO = variable IDnac=51 del descriptor SINAC 2020-2025: Procedimiento utilizado en el nacimiento Codigos RESOLUCION_EMBARAZO verificados (p. ej. 3='CESÁREA'); columna local = codigo entero, etiqueta D = descripcion del catalogo.",
+   "motivo": "Vinculo fisico exacto verificado por codigo en inspecciones originales: columna 77=RESOLUCIONEMBARAZO (huella_esquema 9b46e1c0e32a...) ↔ fila 77=RESOLUCIONEMBARAZO (huella_fila f4c1bedd6497...). Significado ya respaldado en R7 (r7-s2-077, sinac-resolucionembarazo, estado integrado_r7). No se aprueba por nombre solo: ordinal, vecinos, tipo/ejemplo y huellas coinciden.",
+   "vinculo_propuesto": {
+    "columna": "https://example.org/mex-ontologi/file-column/46977217-9396-4f9c-bddb-6616e82530b4%2FSINAC%202022%2026-09-22%2F77",
+    "campo": "RESOLUCIONEMBARAZO",
+    "recurso": "46977217-9396-4f9c-bddb-6616e82530b4",
+    "diccionario": "22202305-2d02-4c49-b216-cc98224357f0",
+    "definicion_iri": "https://example.org/mex-ontologi/documented-variable/22202305-2d02-4c49-b216-cc98224357f0%2F77",
+    "concepto": "sinac-resolucionembarazo",
+    "descripcion": "Procedimiento utilizado en el nacimiento",
+    "huella_esquema": "9b46e1c0e32acd903780264f0ebbc538a835eb1bf92a70faa36ba7e839a1ec95",
+    "huella_fila_diccionario": "f4c1bedd6497fb849c4715849b63333ecc867d51d09312f371ac8c75af64759c",
+    "criterio": "Revision explicita del campo en el esquema de este recurso y su fila de diccionario en el mismo conjunto: nombre exacto RESOLUCIONEMBARAZO, posicion ordinal identica (columna 77 de 106 ↔ fila 77 de 106, vecinos CODIGOCIEANOMALIA2 | RESOLUCIONEMBARAZOD), tipo/ejemplo local (Numérico entero / '3') y descripcion del descriptor nacional IDnac=51. Alcance de interpretacion documental; no valida valores ni confirma pertenencia a catalogos."
+   },
+   "evidencia": [
+    {
+     "ruta": "data/portal/inspecciones/22202305-2d02-4c49-b216-cc98224357f0.json",
+     "sha256": "76fe68223bc861fcdf62cb33f5b9a207503b192c2ef531a4aad31d52e7a7513b",
+     "url": "https://datos.sonora.gob.mx/api/3/action/datastore_search?resource_id=22202305-2d02-4c49-b216-cc98224357f0&limit=1000&offset=0&sort=_id+asc",
+     "localizador": "/definiciones/76 (fila 77, variable RESOLUCIONEMBARAZO)",
+     "afirmacion_soportada": "Fila local: Nombre=RESOLUCIONEMBARAZO, Tipo=Numérico entero, Ejemplo='3', Descripcion=Pendiente de especificar, Catalogo=''"
+    },
+    {
+     "ruta": "data/portal/inspecciones/46977217-9396-4f9c-bddb-6616e82530b4.json",
+     "sha256": "13831dec294ac79e90d3c618dd7f322d512afc392babe1405eb903d40c18afd5",
+     "url": "https://datos.sonora.gob.mx/dataset/940de7d8-73ec-4a08-8d26-b7cc97ff17bd/resource/46977217-9396-4f9c-bddb-6616e82530b4/download/202209281437030-file.xlsx",
+     "localizador": "tablas[0]: hoja 'SINAC 2022 26-09-22', 106 campos; posicion 77 = RESOLUCIONEMBARAZO (vecinos CODIGOCIEANOMALIA2 | RESOLUCIONEMBARAZOD)",
+     "afirmacion_soportada": "El recurso 46977217 trae la columna RESOLUCIONEMBARAZO en la posicion 77, mismo ordinal que la fila 77 del diccionario"
+    },
+    {
+     "ruta": "propuestas/cierre-brechas-post-r6/significados-salud/evidencia/desc_sinac_2020_2025/Descriptores_SINAC_2020.xlsx",
+     "sha256": "0af0b6be1faeb3867da872cd1b2021785af4feb78311c5de7c1fa44807fd6ed4",
+     "url": "http://www.dgis.salud.gob.mx/descargas/datosabiertos/nacimientos/sinac_descriptores_2020_2025.zip",
+     "localizador": "Hoja1 fila ID=51, VARIABLE=RESOLUCIONEMBARAZO",
+     "afirmacion_soportada": "Descriptor SINAC 2020-2025: RESOLUCIONEMBARAZO = Procedimiento utilizado en el nacimiento Catalogo: RESOLUCION_EMBARAZO."
+    },
+    {
+     "ruta": "propuestas/plan-paralelo-brechas-sin-gemma/ejecucion-20261024-072207Z/S2-nacimientos/trabajo/evidencia/sinac_catalogos_2020_2023.zip",
+     "sha256": "9c7dcd52dd8fdb2cfb9c7de3711e0ccc323cfa9cff86712eaeeb3e883141cb4e",
+     "url": "http://www.dgis.salud.gob.mx/descargas/datosabiertos/nacimientos/sinac_catalogos_2020_2023.zip",
+     "localizador": "zip 20 xlsx; sin columnas D ni ANOMALIACIE* ni DIAGNOSTICOS",
+     "afirmacion_soportada": "Codebook nacional 2020-2023; vigencia cubre el recurso 2022"
+    },
+    {
+     "ruta": "propuestas/plan-paralelo-brechas-sin-gemma/ejecucion-20261024-072207Z/S2-nacimientos/trabajo/evidencia/cat_sinac_2020_2023/RESOLUCION_EMBARAZO.xlsx",
+     "sha256": "ea2abd8b970be44af033f551fd4dbd41f6d094be36cf2ad3352e3ae423d2405f",
+     "url": "http://www.dgis.salud.gob.mx/descargas/datosabiertos/nacimientos/sinac_catalogos_2020_2023.zip",
+     "localizador": "Hoja1, catalogo RESOLUCION_EMBARAZO: codigo 3",
+     "afirmacion_soportada": "Codigo local '3' = 'CESÁREA' en el catalogo nacional RESOLUCION_EMBARAZO"
+    }
+   ],
+   "evidencia_faltante": null,
+   "condicion_reapertura": "Si la auditoria rechaza el vinculo, revierte a brecha_externa con el motivo del dictamen; reapertura con fe de erratas del publicador o instrumento que corrija ordinal/nombre.",
+   "limites": [
+    "Solo código 3 verificado con ejemplo+D locales; no lista completa RESOLUCION_EMBARAZO; no tabla determinada; no identidad global de catálogos; vigencia acotada al recurso 2022-01-01 a 2022-09-26. Código nacional '3' = 'CESAREA'.",
+    "Significado solo para el recurso SINAC 2022 (46977217, 2022-01-01 a 2022-09-26) y la definición local fijada; no autoriza otra edición, adopción global, totalidad del catálogo, equivalencias ni vigencias."
+   ]
+  },
+  {
+   "id": "https://example.org/mex-ontologi/semantic-mapping/25a8c2809c1c8653f68487d60aad17390c8a5e30b8f0ca6c0ec2c87b089c6ca1",
+   "columna": "https://example.org/mex-ontologi/file-column/46977217-9396-4f9c-bddb-6616e82530b4%2FSINAC%202022%2026-09-22%2F79",
+   "campo": "UTILIZOFORCEPS",
+   "recurso": "46977217-9396-4f9c-bddb-6616e82530b4",
+   "definicion_iri": "https://example.org/mex-ontologi/documented-variable/22202305-2d02-4c49-b216-cc98224357f0%2F79",
+   "concepto": "sinac-utilizoforceps",
+   "regla": "r7-s2-079",
+   "estado": "propuesta_para_auditar",
+   "afirmacion_propuesta": "La columna UTILIZOFORCEPS (posicion 79 de 106, hoja 'SINAC 2022 26-09-22', recurso 46977217, 2022-01-01 a 2022-09-26) es la materializacion fisica de la variable UTILIZOFORCEPS (fila 79 de 106 del diccionario 22202305, conjunto 940de7d8): nombre exacto coincidente y ordinal identico. UTILIZOFORCEPS = variable IDnac=52 del descriptor SINAC 2020-2025: Se utilizaron fórceps durante el procedimiento Codigos UTILIZO_FORCEPS verificados (p. ej. 8='NO APLICA'); columna local = codigo entero, etiqueta D = descripcion del catalogo.",
+   "motivo": "Vinculo fisico exacto verificado por codigo en inspecciones originales: columna 79=UTILIZOFORCEPS (huella_esquema 9b46e1c0e32a...) ↔ fila 79=UTILIZOFORCEPS (huella_fila 221fff103485...). Significado ya respaldado en R7 (r7-s2-079, sinac-utilizoforceps, estado integrado_r7). No se aprueba por nombre solo: ordinal, vecinos, tipo/ejemplo y huellas coinciden.",
+   "vinculo_propuesto": {
+    "columna": "https://example.org/mex-ontologi/file-column/46977217-9396-4f9c-bddb-6616e82530b4%2FSINAC%202022%2026-09-22%2F79",
+    "campo": "UTILIZOFORCEPS",
+    "recurso": "46977217-9396-4f9c-bddb-6616e82530b4",
+    "diccionario": "22202305-2d02-4c49-b216-cc98224357f0",
+    "definicion_iri": "https://example.org/mex-ontologi/documented-variable/22202305-2d02-4c49-b216-cc98224357f0%2F79",
+    "concepto": "sinac-utilizoforceps",
+    "descripcion": "Se utilizaron fórceps durante el procedimiento",
+    "huella_esquema": "9b46e1c0e32acd903780264f0ebbc538a835eb1bf92a70faa36ba7e839a1ec95",
+    "huella_fila_diccionario": "221fff1034855415f2178988e1d14dce40c3a601a3698d286bc14cc365f19018",
+    "criterio": "Revision explicita del campo en el esquema de este recurso y su fila de diccionario en el mismo conjunto: nombre exacto UTILIZOFORCEPS, posicion ordinal identica (columna 79 de 106 ↔ fila 79 de 106, vecinos RESOLUCIONEMBARAZOD | UTILIZOFORCEPSD), tipo/ejemplo local (Numérico entero / '8') y descripcion del descriptor nacional IDnac=52. Alcance de interpretacion documental; no valida valores ni confirma pertenencia a catalogos."
+   },
+   "evidencia": [
+    {
+     "ruta": "data/portal/inspecciones/22202305-2d02-4c49-b216-cc98224357f0.json",
+     "sha256": "76fe68223bc861fcdf62cb33f5b9a207503b192c2ef531a4aad31d52e7a7513b",
+     "url": "https://datos.sonora.gob.mx/api/3/action/datastore_search?resource_id=22202305-2d02-4c49-b216-cc98224357f0&limit=1000&offset=0&sort=_id+asc",
+     "localizador": "/definiciones/78 (fila 79, variable UTILIZOFORCEPS)",
+     "afirmacion_soportada": "Fila local: Nombre=UTILIZOFORCEPS, Tipo=Numérico entero, Ejemplo='8', Descripcion=Pendiente de especificar, Catalogo=''"
+    },
+    {
+     "ruta": "data/portal/inspecciones/46977217-9396-4f9c-bddb-6616e82530b4.json",
+     "sha256": "13831dec294ac79e90d3c618dd7f322d512afc392babe1405eb903d40c18afd5",
+     "url": "https://datos.sonora.gob.mx/dataset/940de7d8-73ec-4a08-8d26-b7cc97ff17bd/resource/46977217-9396-4f9c-bddb-6616e82530b4/download/202209281437030-file.xlsx",
+     "localizador": "tablas[0]: hoja 'SINAC 2022 26-09-22', 106 campos; posicion 79 = UTILIZOFORCEPS (vecinos RESOLUCIONEMBARAZOD | UTILIZOFORCEPSD)",
+     "afirmacion_soportada": "El recurso 46977217 trae la columna UTILIZOFORCEPS en la posicion 79, mismo ordinal que la fila 79 del diccionario"
+    },
+    {
+     "ruta": "propuestas/cierre-brechas-post-r6/significados-salud/evidencia/desc_sinac_2020_2025/Descriptores_SINAC_2020.xlsx",
+     "sha256": "0af0b6be1faeb3867da872cd1b2021785af4feb78311c5de7c1fa44807fd6ed4",
+     "url": "http://www.dgis.salud.gob.mx/descargas/datosabiertos/nacimientos/sinac_descriptores_2020_2025.zip",
+     "localizador": "Hoja1 fila ID=52, VARIABLE=UTILIZOFORCEPS",
+     "afirmacion_soportada": "Descriptor SINAC 2020-2025: UTILIZOFORCEPS = Se utilizaron fórceps durante el procedimiento Catalogo: UTILIZO_FORCEPS."
+    },
+    {
+     "ruta": "propuestas/plan-paralelo-brechas-sin-gemma/ejecucion-20261024-072207Z/S2-nacimientos/trabajo/evidencia/sinac_catalogos_2020_2023.zip",
+     "sha256": "9c7dcd52dd8fdb2cfb9c7de3711e0ccc323cfa9cff86712eaeeb3e883141cb4e",
+     "url": "http://www.dgis.salud.gob.mx/descargas/datosabiertos/nacimientos/sinac_catalogos_2020_2023.zip",
+     "localizador": "zip 20 xlsx; sin columnas D ni ANOMALIACIE* ni DIAGNOSTICOS",
+     "afirmacion_soportada": "Codebook nacional 2020-2023; vigencia cubre el recurso 2022"
+    },
+    {
+     "ruta": "propuestas/plan-paralelo-brechas-sin-gemma/ejecucion-20261024-072207Z/S2-nacimientos/trabajo/evidencia/cat_sinac_2020_2023/UTILIZO_FORCEPS.xlsx",
+     "sha256": "1362e1a5e5c573164cf1cc9e62a80984ce90e9e52c25de6bc0ac41231c51c96a",
+     "url": "http://www.dgis.salud.gob.mx/descargas/datosabiertos/nacimientos/sinac_catalogos_2020_2023.zip",
+     "localizador": "Hoja1, catalogo UTILIZO_FORCEPS: codigo 8",
+     "afirmacion_soportada": "Codigo local '8' = 'NO APLICA' en el catalogo nacional UTILIZO_FORCEPS"
+    }
+   ],
+   "evidencia_faltante": null,
+   "condicion_reapertura": "Si la auditoria rechaza el vinculo, revierte a brecha_externa con el motivo del dictamen; reapertura con fe de erratas del publicador o instrumento que corrija ordinal/nombre.",
+   "limites": [
+    "Solo código 8 verificado con ejemplo+D locales; no lista completa UTILIZO_FORCEPS; no tabla determinada; no identidad global de catálogos; vigencia acotada al recurso 2022-01-01 a 2022-09-26. Código nacional '8' = 'NO APLICA'.",
+    "Significado solo para el recurso SINAC 2022 (46977217, 2022-01-01 a 2022-09-26) y la definición local fijada; no autoriza otra edición, adopción global, totalidad del catálogo, equivalencias ni vigencias."
+   ]
+  },
+  {
+   "id": "https://example.org/mex-ontologi/semantic-mapping/a5d023cac3d89cbeb35cda0203035b9d94360d84e4b6f5e446e2d53d56b2e02a",
+   "columna": "https://example.org/mex-ontologi/file-column/46977217-9396-4f9c-bddb-6616e82530b4%2FSINAC%202022%2026-09-22%2F84",
+   "campo": "TIEMPOTRASLADO",
+   "recurso": "46977217-9396-4f9c-bddb-6616e82530b4",
+   "definicion_iri": "https://example.org/mex-ontologi/documented-variable/22202305-2d02-4c49-b216-cc98224357f0%2F84",
+   "concepto": "sinac-tiempotraslado",
+   "regla": "r7-s2-084",
+   "estado": "propuesta_para_auditar",
+   "afirmacion_propuesta": "La columna TIEMPOTRASLADO (posicion 84 de 106, hoja 'SINAC 2022 26-09-22', recurso 46977217, 2022-01-01 a 2022-09-26) es la materializacion fisica de la variable TIEMPOTRASLADO (fila 84 de 106 del diccionario 22202305, conjunto 940de7d8): nombre exacto coincidente y ordinal identico. TIEMPOTRASLADO = variable IDnac=50 del descriptor SINAC 2020-2025: Tiempo de traslado desde su hogar hasta el sitio de atención del parto. Sin catalogo nacional; tipo local Hora con ejemplo '12:15:00 AM' (duracion codificada como hora).",
+   "motivo": "Vinculo fisico exacto verificado por codigo en inspecciones originales: columna 84=TIEMPOTRASLADO (huella_esquema 9b46e1c0e32a...) ↔ fila 84=TIEMPOTRASLADO (huella_fila 1991915d59e2...). Significado ya respaldado en R7 (r7-s2-084, sinac-tiempotraslado, estado integrado_r7). No se aprueba por nombre solo: ordinal, vecinos, tipo/ejemplo y huellas coinciden.",
+   "vinculo_propuesto": {
+    "columna": "https://example.org/mex-ontologi/file-column/46977217-9396-4f9c-bddb-6616e82530b4%2FSINAC%202022%2026-09-22%2F84",
+    "campo": "TIEMPOTRASLADO",
+    "recurso": "46977217-9396-4f9c-bddb-6616e82530b4",
+    "diccionario": "22202305-2d02-4c49-b216-cc98224357f0",
+    "definicion_iri": "https://example.org/mex-ontologi/documented-variable/22202305-2d02-4c49-b216-cc98224357f0%2F84",
+    "concepto": "sinac-tiempotraslado",
+    "descripcion": "Tiempo de traslado desde su hogar hasta el sitio de atención del parto.",
+    "huella_esquema": "9b46e1c0e32acd903780264f0ebbc538a835eb1bf92a70faa36ba7e839a1ec95",
+    "huella_fila_diccionario": "1991915d59e2db4cb7632a3ace696000c61a579578a3115399103ac11e2f4404",
+    "criterio": "Revision explicita del campo en el esquema de este recurso y su fila de diccionario en el mismo conjunto: nombre exacto TIEMPOTRASLADO, posicion ordinal identica (columna 84 de 106 ↔ fila 84 de 106, vecinos CLUES | TIPOCESAREA), tipo/ejemplo local (Hora / '12:15:00 AM') y descripcion del descriptor nacional IDnac=50. Alcance de interpretacion documental; no valida valores ni confirma pertenencia a catalogos."
+   },
+   "evidencia": [
+    {
+     "ruta": "data/portal/inspecciones/22202305-2d02-4c49-b216-cc98224357f0.json",
+     "sha256": "76fe68223bc861fcdf62cb33f5b9a207503b192c2ef531a4aad31d52e7a7513b",
+     "url": "https://datos.sonora.gob.mx/api/3/action/datastore_search?resource_id=22202305-2d02-4c49-b216-cc98224357f0&limit=1000&offset=0&sort=_id+asc",
+     "localizador": "/definiciones/83 (fila 84, variable TIEMPOTRASLADO)",
+     "afirmacion_soportada": "Fila local: Nombre=TIEMPOTRASLADO, Tipo=Hora, Ejemplo='12:15:00 AM', Descripcion=Pendiente de especificar, Catalogo=''"
+    },
+    {
+     "ruta": "data/portal/inspecciones/46977217-9396-4f9c-bddb-6616e82530b4.json",
+     "sha256": "13831dec294ac79e90d3c618dd7f322d512afc392babe1405eb903d40c18afd5",
+     "url": "https://datos.sonora.gob.mx/dataset/940de7d8-73ec-4a08-8d26-b7cc97ff17bd/resource/46977217-9396-4f9c-bddb-6616e82530b4/download/202209281437030-file.xlsx",
+     "localizador": "tablas[0]: hoja 'SINAC 2022 26-09-22', 106 campos; posicion 84 = TIEMPOTRASLADO (vecinos CLUES | TIPOCESAREA)",
+     "afirmacion_soportada": "El recurso 46977217 trae la columna TIEMPOTRASLADO en la posicion 84, mismo ordinal que la fila 84 del diccionario"
+    },
+    {
+     "ruta": "propuestas/cierre-brechas-post-r6/significados-salud/evidencia/desc_sinac_2020_2025/Descriptores_SINAC_2020.xlsx",
+     "sha256": "0af0b6be1faeb3867da872cd1b2021785af4feb78311c5de7c1fa44807fd6ed4",
+     "url": "http://www.dgis.salud.gob.mx/descargas/datosabiertos/nacimientos/sinac_descriptores_2020_2025.zip",
+     "localizador": "Hoja1 fila ID=50, VARIABLE=TIEMPOTRASLADO",
+     "afirmacion_soportada": "Descriptor SINAC 2020-2025: TIEMPOTRASLADO = Tiempo de traslado desde su hogar hasta el sitio de atención del parto. Catalogo: None."
+    },
+    {
+     "ruta": "propuestas/plan-paralelo-brechas-sin-gemma/ejecucion-20261024-072207Z/S2-nacimientos/trabajo/evidencia/sinac_catalogos_2020_2023.zip",
+     "sha256": "9c7dcd52dd8fdb2cfb9c7de3711e0ccc323cfa9cff86712eaeeb3e883141cb4e",
+     "url": "http://www.dgis.salud.gob.mx/descargas/datosabiertos/nacimientos/sinac_catalogos_2020_2023.zip",
+     "localizador": "zip 20 xlsx; sin columnas D ni ANOMALIACIE* ni DIAGNOSTICOS",
+     "afirmacion_soportada": "Codebook nacional 2020-2023; vigencia cubre el recurso 2022"
+    }
+   ],
+   "evidencia_faltante": null,
+   "condicion_reapertura": "Si la auditoria rechaza el vinculo, revierte a brecha_externa con el motivo del dictamen; reapertura con fe de erratas del publicador o instrumento que corrija ordinal/nombre.",
+   "limites": [
+    "Representacion como Hora ('12:15:00 AM') para una duracion: formato/unidad no especificados en el descriptor; no se aprueba lectura de duracion.",
+    "Excluida la glosa autoral entre parentesis: unidad y codificacion duracion->hora no acreditadas por el descriptor (IDnac=50 sin catalogo ni unidad). Lo aprobado: variable + texto descriptor + tipo Hora + ejemplo '12:15:00 AM' como instancia de formato, sin afirmar unidad.",
+    "Significado solo para el recurso SINAC 2022 (46977217, 2022-01-01 a 2022-09-26) y la definición local fijada; no autoriza otra edición, adopción global, totalidad del catálogo, equivalencias ni vigencias."
+   ]
+  },
+  {
+   "id": "https://example.org/mex-ontologi/semantic-mapping/fe89984c9387b8e8b98eb93473a10f1dc9604610074306f70203d16208d5a7cc",
+   "columna": "https://example.org/mex-ontologi/file-column/46977217-9396-4f9c-bddb-6616e82530b4%2FSINAC%202022%2026-09-22%2F87",
+   "campo": "PERSONALATENDIO",
+   "recurso": "46977217-9396-4f9c-bddb-6616e82530b4",
+   "definicion_iri": "https://example.org/mex-ontologi/documented-variable/22202305-2d02-4c49-b216-cc98224357f0%2F87",
+   "concepto": "sinac-personalatendio",
+   "regla": "r7-s2-087",
+   "estado": "propuesta_para_auditar",
+   "afirmacion_propuesta": "La columna PERSONALATENDIO (posicion 87 de 106, hoja 'SINAC 2022 26-09-22', recurso 46977217, 2022-01-01 a 2022-09-26) es la materializacion fisica de la variable PERSONALATENDIO (fila 87 de 106 del diccionario 22202305, conjunto 940de7d8): nombre exacto coincidente y ordinal identico. PERSONALATENDIO = variable IDnac=54 del descriptor SINAC 2020-2025: Persona que atendió el parto Codigos PERSONA_ATENDIO_PARTO verificados (p. ej. 1='MÉDICO'); columna local = codigo entero, etiqueta D = descripcion del catalogo.",
+   "motivo": "Vinculo fisico exacto verificado por codigo en inspecciones originales: columna 87=PERSONALATENDIO (huella_esquema 9b46e1c0e32a...) ↔ fila 87=PERSONALATENDIO (huella_fila 511637fdd52b...). Significado ya respaldado en R7 (r7-s2-087, sinac-personalatendio, estado integrado_r7). No se aprueba por nombre solo: ordinal, vecinos, tipo/ejemplo y huellas coinciden.",
+   "vinculo_propuesto": {
+    "columna": "https://example.org/mex-ontologi/file-column/46977217-9396-4f9c-bddb-6616e82530b4%2FSINAC%202022%2026-09-22%2F87",
+    "campo": "PERSONALATENDIO",
+    "recurso": "46977217-9396-4f9c-bddb-6616e82530b4",
+    "diccionario": "22202305-2d02-4c49-b216-cc98224357f0",
+    "definicion_iri": "https://example.org/mex-ontologi/documented-variable/22202305-2d02-4c49-b216-cc98224357f0%2F87",
+    "concepto": "sinac-personalatendio",
+    "descripcion": "Persona que atendió el parto",
+    "huella_esquema": "9b46e1c0e32acd903780264f0ebbc538a835eb1bf92a70faa36ba7e839a1ec95",
+    "huella_fila_diccionario": "511637fdd52b46d22a91e644babc50e06be4c5723f1e2783337b591ffe1a79fc",
+    "criterio": "Revision explicita del campo en el esquema de este recurso y su fila de diccionario en el mismo conjunto: nombre exacto PERSONALATENDIO, posicion ordinal identica (columna 87 de 106 ↔ fila 87 de 106, vecinos TIPOCESAREAD | PERSONALATENDIOD), tipo/ejemplo local (Numérico entero / '1') y descripcion del descriptor nacional IDnac=54. Alcance de interpretacion documental; no valida valores ni confirma pertenencia a catalogos."
+   },
+   "evidencia": [
+    {
+     "ruta": "data/portal/inspecciones/22202305-2d02-4c49-b216-cc98224357f0.json",
+     "sha256": "76fe68223bc861fcdf62cb33f5b9a207503b192c2ef531a4aad31d52e7a7513b",
+     "url": "https://datos.sonora.gob.mx/api/3/action/datastore_search?resource_id=22202305-2d02-4c49-b216-cc98224357f0&limit=1000&offset=0&sort=_id+asc",
+     "localizador": "/definiciones/86 (fila 87, variable PERSONALATENDIO)",
+     "afirmacion_soportada": "Fila local: Nombre=PERSONALATENDIO, Tipo=Numérico entero, Ejemplo='1', Descripcion=Pendiente de especificar, Catalogo=''"
+    },
+    {
+     "ruta": "data/portal/inspecciones/46977217-9396-4f9c-bddb-6616e82530b4.json",
+     "sha256": "13831dec294ac79e90d3c618dd7f322d512afc392babe1405eb903d40c18afd5",
+     "url": "https://datos.sonora.gob.mx/dataset/940de7d8-73ec-4a08-8d26-b7cc97ff17bd/resource/46977217-9396-4f9c-bddb-6616e82530b4/download/202209281437030-file.xlsx",
+     "localizador": "tablas[0]: hoja 'SINAC 2022 26-09-22', 106 campos; posicion 87 = PERSONALATENDIO (vecinos TIPOCESAREAD | PERSONALATENDIOD)",
+     "afirmacion_soportada": "El recurso 46977217 trae la columna PERSONALATENDIO en la posicion 87, mismo ordinal que la fila 87 del diccionario"
+    },
+    {
+     "ruta": "propuestas/cierre-brechas-post-r6/significados-salud/evidencia/desc_sinac_2020_2025/Descriptores_SINAC_2020.xlsx",
+     "sha256": "0af0b6be1faeb3867da872cd1b2021785af4feb78311c5de7c1fa44807fd6ed4",
+     "url": "http://www.dgis.salud.gob.mx/descargas/datosabiertos/nacimientos/sinac_descriptores_2020_2025.zip",
+     "localizador": "Hoja1 fila ID=54, VARIABLE=PERSONALATENDIO",
+     "afirmacion_soportada": "Descriptor SINAC 2020-2025: PERSONALATENDIO = Persona que atendió el parto Catalogo: PERSONA_ATENDIO_PARTO."
+    },
+    {
+     "ruta": "propuestas/plan-paralelo-brechas-sin-gemma/ejecucion-20261024-072207Z/S2-nacimientos/trabajo/evidencia/sinac_catalogos_2020_2023.zip",
+     "sha256": "9c7dcd52dd8fdb2cfb9c7de3711e0ccc323cfa9cff86712eaeeb3e883141cb4e",
+     "url": "http://www.dgis.salud.gob.mx/descargas/datosabiertos/nacimientos/sinac_catalogos_2020_2023.zip",
+     "localizador": "zip 20 xlsx; sin columnas D ni ANOMALIACIE* ni DIAGNOSTICOS",
+     "afirmacion_soportada": "Codebook nacional 2020-2023; vigencia cubre el recurso 2022"
+    },
+    {
+     "ruta": "propuestas/plan-paralelo-brechas-sin-gemma/ejecucion-20261024-072207Z/S2-nacimientos/trabajo/evidencia/cat_sinac_2020_2023/PERSONA_ATENDIO_PARTO.xlsx",
+     "sha256": "e1a49a8ab27dd10656321a4822c166de7bc269a8b24765e90d218d3c02462303",
+     "url": "http://www.dgis.salud.gob.mx/descargas/datosabiertos/nacimientos/sinac_catalogos_2020_2023.zip",
+     "localizador": "Hoja1, catalogo PERSONA_ATENDIO_PARTO: codigo 1",
+     "afirmacion_soportada": "Codigo local '1' = 'MÉDICO' en el catalogo nacional PERSONA_ATENDIO_PARTO"
+    }
+   ],
+   "evidencia_faltante": null,
+   "condicion_reapertura": "Si la auditoria rechaza el vinculo, revierte a brecha_externa con el motivo del dictamen; reapertura con fe de erratas del publicador o instrumento que corrija ordinal/nombre.",
+   "limites": [
+    "Solo código 1 verificado con ejemplo+D locales; no lista completa PERSONA_ATENDIO_PARTO; no tabla determinada; no identidad global de catálogos; vigencia acotada al recurso 2022-01-01 a 2022-09-26.",
+    "Significado solo para el recurso SINAC 2022 (46977217, 2022-01-01 a 2022-09-26) y la definición local fijada; no autoriza otra edición, adopción global, totalidad del catálogo, equivalencias ni vigencias."
+   ]
+  },
+  {
+   "id": "https://example.org/mex-ontologi/semantic-mapping/500d674f028a94a1169f1d4d828f7304a4c8044d0673a50c8502e757f5cc5c28",
+   "columna": "https://example.org/mex-ontologi/file-column/46977217-9396-4f9c-bddb-6616e82530b4%2FSINAC%202022%2026-09-22%2F89",
+   "campo": "TIPOMEDICOATENDIO",
+   "recurso": "46977217-9396-4f9c-bddb-6616e82530b4",
+   "definicion_iri": "https://example.org/mex-ontologi/documented-variable/22202305-2d02-4c49-b216-cc98224357f0%2F89",
+   "concepto": "sinac-tipomedicoatendio",
+   "regla": "r7-s2-089",
+   "estado": "propuesta_para_auditar",
+   "afirmacion_propuesta": "La columna TIPOMEDICOATENDIO (posicion 89 de 106, hoja 'SINAC 2022 26-09-22', recurso 46977217, 2022-01-01 a 2022-09-26) es la materializacion fisica de la variable TIPOMEDICOATENDIO (fila 89 de 106 del diccionario 22202305, conjunto 940de7d8): nombre exacto coincidente y ordinal identico. TIPOMEDICOATENDIO = variable IDnac=55 del descriptor SINAC 2020-2025: Tipo de médico que atendió el parto Codigos TIPO_MEDICO verificados (p. ej. 11='MÉDICO GINECO OBSTETRA'); columna local = codigo entero, etiqueta D = descripcion del catalogo.",
+   "motivo": "Vinculo fisico exacto verificado por codigo en inspecciones originales: columna 89=TIPOMEDICOATENDIO (huella_esquema 9b46e1c0e32a...) ↔ fila 89=TIPOMEDICOATENDIO (huella_fila eb4257a20d25...). Significado ya respaldado en R7 (r7-s2-089, sinac-tipomedicoatendio, estado integrado_r7). No se aprueba por nombre solo: ordinal, vecinos, tipo/ejemplo y huellas coinciden.",
+   "vinculo_propuesto": {
+    "columna": "https://example.org/mex-ontologi/file-column/46977217-9396-4f9c-bddb-6616e82530b4%2FSINAC%202022%2026-09-22%2F89",
+    "campo": "TIPOMEDICOATENDIO",
+    "recurso": "46977217-9396-4f9c-bddb-6616e82530b4",
+    "diccionario": "22202305-2d02-4c49-b216-cc98224357f0",
+    "definicion_iri": "https://example.org/mex-ontologi/documented-variable/22202305-2d02-4c49-b216-cc98224357f0%2F89",
+    "concepto": "sinac-tipomedicoatendio",
+    "descripcion": "Tipo de médico que atendió el parto",
+    "huella_esquema": "9b46e1c0e32acd903780264f0ebbc538a835eb1bf92a70faa36ba7e839a1ec95",
+    "huella_fila_diccionario": "eb4257a20d25073d0b7ba5bb875a53c333163438cc3dfa8cd2f1a1ee3bf80a3c",
+    "criterio": "Revision explicita del campo en el esquema de este recurso y su fila de diccionario en el mismo conjunto: nombre exacto TIPOMEDICOATENDIO, posicion ordinal identica (columna 89 de 106 ↔ fila 89 de 106, vecinos PERSONALATENDIOD | TIPOMEDICOATENDIOD), tipo/ejemplo local (Numérico entero / '11') y descripcion del descriptor nacional IDnac=55. Alcance de interpretacion documental; no valida valores ni confirma pertenencia a catalogos."
+   },
+   "evidencia": [
+    {
+     "ruta": "data/portal/inspecciones/22202305-2d02-4c49-b216-cc98224357f0.json",
+     "sha256": "76fe68223bc861fcdf62cb33f5b9a207503b192c2ef531a4aad31d52e7a7513b",
+     "url": "https://datos.sonora.gob.mx/api/3/action/datastore_search?resource_id=22202305-2d02-4c49-b216-cc98224357f0&limit=1000&offset=0&sort=_id+asc",
+     "localizador": "/definiciones/88 (fila 89, variable TIPOMEDICOATENDIO)",
+     "afirmacion_soportada": "Fila local: Nombre=TIPOMEDICOATENDIO, Tipo=Numérico entero, Ejemplo='11', Descripcion=Pendiente de especificar, Catalogo=''"
+    },
+    {
+     "ruta": "data/portal/inspecciones/46977217-9396-4f9c-bddb-6616e82530b4.json",
+     "sha256": "13831dec294ac79e90d3c618dd7f322d512afc392babe1405eb903d40c18afd5",
+     "url": "https://datos.sonora.gob.mx/dataset/940de7d8-73ec-4a08-8d26-b7cc97ff17bd/resource/46977217-9396-4f9c-bddb-6616e82530b4/download/202209281437030-file.xlsx",
+     "localizador": "tablas[0]: hoja 'SINAC 2022 26-09-22', 106 campos; posicion 89 = TIPOMEDICOATENDIO (vecinos PERSONALATENDIOD | TIPOMEDICOATENDIOD)",
+     "afirmacion_soportada": "El recurso 46977217 trae la columna TIPOMEDICOATENDIO en la posicion 89, mismo ordinal que la fila 89 del diccionario"
+    },
+    {
+     "ruta": "propuestas/cierre-brechas-post-r6/significados-salud/evidencia/desc_sinac_2020_2025/Descriptores_SINAC_2020.xlsx",
+     "sha256": "0af0b6be1faeb3867da872cd1b2021785af4feb78311c5de7c1fa44807fd6ed4",
+     "url": "http://www.dgis.salud.gob.mx/descargas/datosabiertos/nacimientos/sinac_descriptores_2020_2025.zip",
+     "localizador": "Hoja1 fila ID=55, VARIABLE=TIPOMEDICOATENDIO",
+     "afirmacion_soportada": "Descriptor SINAC 2020-2025: TIPOMEDICOATENDIO = Tipo de médico que atendió el parto Catalogo: TIPO_MEDICO."
+    },
+    {
+     "ruta": "propuestas/plan-paralelo-brechas-sin-gemma/ejecucion-20261024-072207Z/S2-nacimientos/trabajo/evidencia/sinac_catalogos_2020_2023.zip",
+     "sha256": "9c7dcd52dd8fdb2cfb9c7de3711e0ccc323cfa9cff86712eaeeb3e883141cb4e",
+     "url": "http://www.dgis.salud.gob.mx/descargas/datosabiertos/nacimientos/sinac_catalogos_2020_2023.zip",
+     "localizador": "zip 20 xlsx; sin columnas D ni ANOMALIACIE* ni DIAGNOSTICOS",
+     "afirmacion_soportada": "Codebook nacional 2020-2023; vigencia cubre el recurso 2022"
+    },
+    {
+     "ruta": "propuestas/plan-paralelo-brechas-sin-gemma/ejecucion-20261024-072207Z/S2-nacimientos/trabajo/evidencia/cat_sinac_2020_2023/TIPO_MEDICO.xlsx",
+     "sha256": "e3a891aeecd1849e4f3f66169780ee0ce8a4c28b450fa68d9937a5bb5cd7f99c",
+     "url": "http://www.dgis.salud.gob.mx/descargas/datosabiertos/nacimientos/sinac_catalogos_2020_2023.zip",
+     "localizador": "Hoja1, catalogo TIPO_MEDICO: codigo 11",
+     "afirmacion_soportada": "Codigo local '11' = 'MÉDICO GINECO OBSTETRA' en el catalogo nacional TIPO_MEDICO"
+    }
+   ],
+   "evidencia_faltante": null,
+   "condicion_reapertura": "Si la auditoria rechaza el vinculo, revierte a brecha_externa con el motivo del dictamen; reapertura con fe de erratas del publicador o instrumento que corrija ordinal/nombre.",
+   "limites": [
+    "Solo código 11 verificado con ejemplo+D locales; no lista completa TIPO_MEDICO; no tabla determinada; no identidad global de catálogos; vigencia acotada al recurso 2022-01-01 a 2022-09-26.",
+    "Significado solo para el recurso SINAC 2022 (46977217, 2022-01-01 a 2022-09-26) y la definición local fijada; no autoriza otra edición, adopción global, totalidad del catálogo, equivalencias ni vigencias."
+   ]
+  },
+  {
+   "id": "https://example.org/mex-ontologi/semantic-mapping/047b9def036c4e28f8ff37f70245c50d4958fff521b8346a382ee38a386de6ae",
+   "columna": "https://example.org/mex-ontologi/file-column/46977217-9396-4f9c-bddb-6616e82530b4%2FSINAC%202022%2026-09-22%2F97",
+   "campo": "CERTIFICADOPOR",
+   "recurso": "46977217-9396-4f9c-bddb-6616e82530b4",
+   "definicion_iri": "https://example.org/mex-ontologi/documented-variable/22202305-2d02-4c49-b216-cc98224357f0%2F97",
+   "concepto": "sinac-certificadopor",
+   "regla": "r7-s2-097",
+   "estado": "propuesta_para_auditar",
+   "afirmacion_propuesta": "La columna CERTIFICADOPOR (posicion 97 de 106, hoja 'SINAC 2022 26-09-22', recurso 46977217, 2022-01-01 a 2022-09-26) es la materializacion fisica de la variable CERTIFICADOPOR (fila 97 de 106 del diccionario 22202305, conjunto 940de7d8): nombre exacto coincidente y ordinal identico. CERTIFICADOPOR = variable IDnac=59 del descriptor SINAC 2020-2025: Tipo de profesional de la salud que certifica el nacimiento Codigos NACIMIENTO_CERTIFICADO_POR verificados (p. ej. 7='MÉDICO GINECO-OBSTETRA'); columna local = codigo entero, etiqueta D = descripcion del catalogo.",
+   "motivo": "Vinculo fisico exacto verificado por codigo en inspecciones originales: columna 97=CERTIFICADOPOR (huella_esquema 9b46e1c0e32a...) ↔ fila 97=CERTIFICADOPOR (huella_fila 64c94f6639e0...). Significado ya respaldado en R7 (r7-s2-097, sinac-certificadopor, estado integrado_r7). No se aprueba por nombre solo: ordinal, vecinos, tipo/ejemplo y huellas coinciden.",
+   "vinculo_propuesto": {
+    "columna": "https://example.org/mex-ontologi/file-column/46977217-9396-4f9c-bddb-6616e82530b4%2FSINAC%202022%2026-09-22%2F97",
+    "campo": "CERTIFICADOPOR",
+    "recurso": "46977217-9396-4f9c-bddb-6616e82530b4",
+    "diccionario": "22202305-2d02-4c49-b216-cc98224357f0",
+    "definicion_iri": "https://example.org/mex-ontologi/documented-variable/22202305-2d02-4c49-b216-cc98224357f0%2F97",
+    "concepto": "sinac-certificadopor",
+    "descripcion": "Tipo de profesional de la salud que certifica el nacimiento",
+    "huella_esquema": "9b46e1c0e32acd903780264f0ebbc538a835eb1bf92a70faa36ba7e839a1ec95",
+    "huella_fila_diccionario": "64c94f6639e0ec20742adc78b3a8d1bf1b69a59d2a83467134958b0739ec0b99",
+    "criterio": "Revision explicita del campo en el esquema de este recurso y su fila de diccionario en el mismo conjunto: nombre exacto CERTIFICADOPOR, posicion ordinal identica (columna 97 de 106 ↔ fila 97 de 106, vecinos LOCALIDADPARTOD | CERTIFICADOPORD), tipo/ejemplo local (Numérico entero / '7') y descripcion del descriptor nacional IDnac=59. Alcance de interpretacion documental; no valida valores ni confirma pertenencia a catalogos."
+   },
+   "evidencia": [
+    {
+     "ruta": "data/portal/inspecciones/22202305-2d02-4c49-b216-cc98224357f0.json",
+     "sha256": "76fe68223bc861fcdf62cb33f5b9a207503b192c2ef531a4aad31d52e7a7513b",
+     "url": "https://datos.sonora.gob.mx/api/3/action/datastore_search?resource_id=22202305-2d02-4c49-b216-cc98224357f0&limit=1000&offset=0&sort=_id+asc",
+     "localizador": "/definiciones/96 (fila 97, variable CERTIFICADOPOR)",
+     "afirmacion_soportada": "Fila local: Nombre=CERTIFICADOPOR, Tipo=Numérico entero, Ejemplo='7', Descripcion=Pendiente de especificar, Catalogo=''"
+    },
+    {
+     "ruta": "data/portal/inspecciones/46977217-9396-4f9c-bddb-6616e82530b4.json",
+     "sha256": "13831dec294ac79e90d3c618dd7f322d512afc392babe1405eb903d40c18afd5",
+     "url": "https://datos.sonora.gob.mx/dataset/940de7d8-73ec-4a08-8d26-b7cc97ff17bd/resource/46977217-9396-4f9c-bddb-6616e82530b4/download/202209281437030-file.xlsx",
+     "localizador": "tablas[0]: hoja 'SINAC 2022 26-09-22', 106 campos; posicion 97 = CERTIFICADOPOR (vecinos LOCALIDADPARTOD | CERTIFICADOPORD)",
+     "afirmacion_soportada": "El recurso 46977217 trae la columna CERTIFICADOPOR en la posicion 97, mismo ordinal que la fila 97 del diccionario"
+    },
+    {
+     "ruta": "propuestas/cierre-brechas-post-r6/significados-salud/evidencia/desc_sinac_2020_2025/Descriptores_SINAC_2020.xlsx",
+     "sha256": "0af0b6be1faeb3867da872cd1b2021785af4feb78311c5de7c1fa44807fd6ed4",
+     "url": "http://www.dgis.salud.gob.mx/descargas/datosabiertos/nacimientos/sinac_descriptores_2020_2025.zip",
+     "localizador": "Hoja1 fila ID=59, VARIABLE=CERTIFICADOPOR",
+     "afirmacion_soportada": "Descriptor SINAC 2020-2025: CERTIFICADOPOR = Tipo de profesional de la salud que certifica el nacimiento Catalogo: NACIMIENTO_CERTIFICADO_POR."
+    },
+    {
+     "ruta": "propuestas/plan-paralelo-brechas-sin-gemma/ejecucion-20261024-072207Z/S2-nacimientos/trabajo/evidencia/sinac_catalogos_2020_2023.zip",
+     "sha256": "9c7dcd52dd8fdb2cfb9c7de3711e0ccc323cfa9cff86712eaeeb3e883141cb4e",
+     "url": "http://www.dgis.salud.gob.mx/descargas/datosabiertos/nacimientos/sinac_catalogos_2020_2023.zip",
+     "localizador": "zip 20 xlsx; sin columnas D ni ANOMALIACIE* ni DIAGNOSTICOS",
+     "afirmacion_soportada": "Codebook nacional 2020-2023; vigencia cubre el recurso 2022"
+    },
+    {
+     "ruta": "propuestas/plan-paralelo-brechas-sin-gemma/ejecucion-20261024-072207Z/S2-nacimientos/trabajo/evidencia/cat_sinac_2020_2023/NACIMIENTO_CERTIFICADO_POR.xlsx",
+     "sha256": "e0a4bff0b8af33be4a8a25cd1362d8e888e05d9ebb1904822b56672fd2b3e8bc",
+     "url": "http://www.dgis.salud.gob.mx/descargas/datosabiertos/nacimientos/sinac_catalogos_2020_2023.zip",
+     "localizador": "Hoja1, catalogo NACIMIENTO_CERTIFICADO_POR: codigo 7",
+     "afirmacion_soportada": "Codigo local '7' = 'MÉDICO GINECO-OBSTETRA' en el catalogo nacional NACIMIENTO_CERTIFICADO_POR"
+    }
+   ],
+   "evidencia_faltante": null,
+   "condicion_reapertura": "Si la auditoria rechaza el vinculo, revierte a brecha_externa con el motivo del dictamen; reapertura con fe de erratas del publicador o instrumento que corrija ordinal/nombre.",
+   "limites": [
+    "Solo código 7 verificado con ejemplo+D locales; no lista completa NACIMIENTO_CERTIFICADO_POR; no tabla determinada; no identidad global de catálogos; vigencia acotada al recurso 2022-01-01 a 2022-09-26.",
+    "Significado solo para el recurso SINAC 2022 (46977217, 2022-01-01 a 2022-09-26) y la definición local fijada; no autoriza otra edición, adopción global, totalidad del catálogo, equivalencias ni vigencias."
+   ]
+  },
+  {
+   "id": "https://example.org/mex-ontologi/semantic-mapping/a5328c1e86e7a355bade45ffbcc5651ff1eb5af356af4ed4d0745f5e90171a17",
+   "columna": "https://example.org/mex-ontologi/file-column/46977217-9396-4f9c-bddb-6616e82530b4%2FSINAC%202022%2026-09-22%2F99",
+   "campo": "CLUESCERTIFICA",
+   "recurso": "46977217-9396-4f9c-bddb-6616e82530b4",
+   "definicion_iri": "https://example.org/mex-ontologi/documented-variable/22202305-2d02-4c49-b216-cc98224357f0%2F99",
+   "concepto": "sinac-cluescertifica",
+   "regla": "r7-s2-099",
+   "estado": "propuesta_para_auditar",
+   "afirmacion_propuesta": "La columna CLUESCERTIFICA (posicion 99 de 106, hoja 'SINAC 2022 26-09-22', recurso 46977217, 2022-01-01 a 2022-09-26) es la materializacion fisica de la variable CLUESCERTIFICA (fila 99 de 106 del diccionario 22202305, conjunto 940de7d8): nombre exacto coincidente y ordinal identico. CLUESCERTIFICA = variable IDnac=60 del descriptor SINAC 2020-2025: Clave Única de Establecimiento en Salud que certifica el parto Verificacion de ambito: mismo catalogo ESTABLECIMIENTO_SALUD_202204; ejemplo local vacio.",
+   "motivo": "Vinculo fisico exacto verificado por codigo en inspecciones originales: columna 99=CLUESCERTIFICA (huella_esquema 9b46e1c0e32a...) ↔ fila 99=CLUESCERTIFICA (huella_fila dc38e62e8b63...). Significado ya respaldado en R7 (r7-s2-099, sinac-cluescertifica, estado integrado_r7). No se aprueba por nombre solo: ordinal, vecinos, tipo/ejemplo y huellas coinciden.",
+   "vinculo_propuesto": {
+    "columna": "https://example.org/mex-ontologi/file-column/46977217-9396-4f9c-bddb-6616e82530b4%2FSINAC%202022%2026-09-22%2F99",
+    "campo": "CLUESCERTIFICA",
+    "recurso": "46977217-9396-4f9c-bddb-6616e82530b4",
+    "diccionario": "22202305-2d02-4c49-b216-cc98224357f0",
+    "definicion_iri": "https://example.org/mex-ontologi/documented-variable/22202305-2d02-4c49-b216-cc98224357f0%2F99",
+    "concepto": "sinac-cluescertifica",
+    "descripcion": "Clave Única de Establecimiento en Salud que certifica el parto",
+    "huella_esquema": "9b46e1c0e32acd903780264f0ebbc538a835eb1bf92a70faa36ba7e839a1ec95",
+    "huella_fila_diccionario": "dc38e62e8b63f4b1bddac667f4a73aa803a86e3ac106b8ffe9f93c88f8f6608a",
+    "criterio": "Revision explicita del campo en el esquema de este recurso y su fila de diccionario en el mismo conjunto: nombre exacto CLUESCERTIFICA, posicion ordinal identica (columna 99 de 106 ↔ fila 99 de 106, vecinos CERTIFICADOPORD | ENTIDADFEDERATIVACERTIFICA), tipo/ejemplo local (Alfanumerico / '') y descripcion del descriptor nacional IDnac=60. Alcance de interpretacion documental; no valida valores ni confirma pertenencia a catalogos."
+   },
+   "evidencia": [
+    {
+     "ruta": "data/portal/inspecciones/22202305-2d02-4c49-b216-cc98224357f0.json",
+     "sha256": "76fe68223bc861fcdf62cb33f5b9a207503b192c2ef531a4aad31d52e7a7513b",
+     "url": "https://datos.sonora.gob.mx/api/3/action/datastore_search?resource_id=22202305-2d02-4c49-b216-cc98224357f0&limit=1000&offset=0&sort=_id+asc",
+     "localizador": "/definiciones/98 (fila 99, variable CLUESCERTIFICA)",
+     "afirmacion_soportada": "Fila local: Nombre=CLUESCERTIFICA, Tipo=Alfanumerico, Ejemplo='', Descripcion=Pendiente de especificar, Catalogo=''"
+    },
+    {
+     "ruta": "data/portal/inspecciones/46977217-9396-4f9c-bddb-6616e82530b4.json",
+     "sha256": "13831dec294ac79e90d3c618dd7f322d512afc392babe1405eb903d40c18afd5",
+     "url": "https://datos.sonora.gob.mx/dataset/940de7d8-73ec-4a08-8d26-b7cc97ff17bd/resource/46977217-9396-4f9c-bddb-6616e82530b4/download/202209281437030-file.xlsx",
+     "localizador": "tablas[0]: hoja 'SINAC 2022 26-09-22', 106 campos; posicion 99 = CLUESCERTIFICA (vecinos CERTIFICADOPORD | ENTIDADFEDERATIVACERTIFICA)",
+     "afirmacion_soportada": "El recurso 46977217 trae la columna CLUESCERTIFICA en la posicion 99, mismo ordinal que la fila 99 del diccionario"
+    },
+    {
+     "ruta": "propuestas/cierre-brechas-post-r6/significados-salud/evidencia/desc_sinac_2020_2025/Descriptores_SINAC_2020.xlsx",
+     "sha256": "0af0b6be1faeb3867da872cd1b2021785af4feb78311c5de7c1fa44807fd6ed4",
+     "url": "http://www.dgis.salud.gob.mx/descargas/datosabiertos/nacimientos/sinac_descriptores_2020_2025.zip",
+     "localizador": "Hoja1 fila ID=60, VARIABLE=CLUESCERTIFICA",
+     "afirmacion_soportada": "Descriptor SINAC 2020-2025: CLUESCERTIFICA = Clave Única de Establecimiento en Salud que certifica el parto Catalogo: ESTABLECIMIENTOS_SALUD."
+    },
+    {
+     "ruta": "propuestas/plan-paralelo-brechas-sin-gemma/ejecucion-20261024-072207Z/S2-nacimientos/trabajo/evidencia/sinac_catalogos_2020_2023.zip",
+     "sha256": "9c7dcd52dd8fdb2cfb9c7de3711e0ccc323cfa9cff86712eaeeb3e883141cb4e",
+     "url": "http://www.dgis.salud.gob.mx/descargas/datosabiertos/nacimientos/sinac_catalogos_2020_2023.zip",
+     "localizador": "zip 20 xlsx; sin columnas D ni ANOMALIACIE* ni DIAGNOSTICOS",
+     "afirmacion_soportada": "Codebook nacional 2020-2023; vigencia cubre el recurso 2022"
+    },
+    {
+     "ruta": "propuestas/plan-paralelo-brechas-sin-gemma/ejecucion-20261024-072207Z/S2-nacimientos/trabajo/evidencia/cat_sinac_2020_2023/ESTABLECIMIENTO_SALUD_202204.xlsx",
+     "sha256": "adb4704b44617fa9a343e46ac6e804bb2c14554098062e00545099ac18e07c53",
+     "url": "http://www.dgis.salud.gob.mx/descargas/datosabiertos/nacimientos/sinac_catalogos_2020_2023.zip",
+     "localizador": "Hoja1 ID/CLUES/.../ESTATUS (41802 filas, corte 202204)",
+     "afirmacion_soportada": "Catalogo nacional de establecimientos (mismo que cita el descriptor); ejemplo local vacio, sin verificacion de valor"
+    }
+   ],
+   "evidencia_faltante": null,
+   "condicion_reapertura": "Si la auditoria rechaza el vinculo, revierte a brecha_externa con el motivo del dictamen; reapertura con fe de erratas del publicador o instrumento que corrija ordinal/nombre.",
+   "limites": [
+    "Significado acreditado sin verificacion de valor local (ejemplo vacio declarado); no autoriza equivalencias.",
+    "Ejemplo local vacio: sin verificacion de instancia; lo aprobado es el significado de la variable (mnemonico exacto + descriptor IDnac=60 + catalogo ESTABLECIMIENTO_SALUD_202204 + edicion/ambito), no un valor local concreto.",
+    "Significado solo para el recurso SINAC 2022 (46977217, 2022-01-01 a 2022-09-26) y la definición local fijada; no autoriza otra edición, adopción global, totalidad del catálogo, equivalencias ni vigencias."
+   ]
+  }
+ ],
+ "vinculos_propuestos": [
+  {
+   "columna": "https://example.org/mex-ontologi/file-column/46977217-9396-4f9c-bddb-6616e82530b4%2FSINAC%202022%2026-09-22%2F65",
+   "campo": "VITAMINA_A",
+   "recurso": "46977217-9396-4f9c-bddb-6616e82530b4",
+   "diccionario": "22202305-2d02-4c49-b216-cc98224357f0",
+   "definicion_iri": "https://example.org/mex-ontologi/documented-variable/22202305-2d02-4c49-b216-cc98224357f0%2F65",
+   "concepto": "sinac-vitamina-a",
+   "descripcion": "Se le aplicó la vitamina A",
+   "huella_esquema": "9b46e1c0e32acd903780264f0ebbc538a835eb1bf92a70faa36ba7e839a1ec95",
+   "huella_fila_diccionario": "1cb751023a12f3a604fb3abbe8627293b7ad2cc7cc777faa1b53b116c0982429",
+   "criterio": "Revision explicita del campo en el esquema de este recurso y su fila de diccionario en el mismo conjunto: nombre exacto VITAMINA_A, posicion ordinal identica (columna 65 de 106 ↔ fila 65 de 106, vecinos VACUNAHEPATITIS_BD | VITAMINA_AD), tipo/ejemplo local (Numérico entero / '0') y descripcion del descriptor nacional IDnac=41. Alcance de interpretacion documental; no valida valores ni confirma pertenencia a catalogos."
+  },
+  {
+   "columna": "https://example.org/mex-ontologi/file-column/46977217-9396-4f9c-bddb-6616e82530b4%2FSINAC%202022%2026-09-22%2F67",
+   "campo": "VITAMINA_K",
+   "recurso": "46977217-9396-4f9c-bddb-6616e82530b4",
+   "diccionario": "22202305-2d02-4c49-b216-cc98224357f0",
+   "definicion_iri": "https://example.org/mex-ontologi/documented-variable/22202305-2d02-4c49-b216-cc98224357f0%2F67",
+   "concepto": "sinac-vitamina-k",
+   "descripcion": "Se le aplicó la vitamina K",
+   "huella_esquema": "9b46e1c0e32acd903780264f0ebbc538a835eb1bf92a70faa36ba7e839a1ec95",
+   "huella_fila_diccionario": "7180af0ba9ef0fa427fa288465c55f66c5d15a0b62f0e769d950f7c72049ff23",
+   "criterio": "Revision explicita del campo en el esquema de este recurso y su fila de diccionario en el mismo conjunto: nombre exacto VITAMINA_K, posicion ordinal identica (columna 67 de 106 ↔ fila 67 de 106, vecinos VITAMINA_AD | VITAMINA_KD), tipo/ejemplo local (Numérico entero / '1') y descripcion del descriptor nacional IDnac=42. Alcance de interpretacion documental; no valida valores ni confirma pertenencia a catalogos."
+  },
+  {
+   "columna": "https://example.org/mex-ontologi/file-column/46977217-9396-4f9c-bddb-6616e82530b4%2FSINAC%202022%2026-09-22%2F69",
+   "campo": "PRODUCTOEMBARAZO",
+   "recurso": "46977217-9396-4f9c-bddb-6616e82530b4",
+   "diccionario": "22202305-2d02-4c49-b216-cc98224357f0",
+   "definicion_iri": "https://example.org/mex-ontologi/documented-variable/22202305-2d02-4c49-b216-cc98224357f0%2F69",
+   "concepto": "sinac-productoembarazo",
+   "descripcion": "Identificación del tipo de productos extraídos.",
+   "huella_esquema": "9b46e1c0e32acd903780264f0ebbc538a835eb1bf92a70faa36ba7e839a1ec95",
+   "huella_fila_diccionario": "b66a776bd99ba4884bd6df9804696b53ef6b6de5a0fd9c8a22d70c78fac07881",
+   "criterio": "Revision explicita del campo en el esquema de este recurso y su fila de diccionario en el mismo conjunto: nombre exacto PRODUCTOEMBARAZO, posicion ordinal identica (columna 69 de 106 ↔ fila 69 de 106, vecinos VITAMINA_KD | PRODUCTOEMBARAZOD), tipo/ejemplo local (Numérico entero / '1') y descripcion del descriptor nacional IDnac=43. Alcance de interpretacion documental; no valida valores ni confirma pertenencia a catalogos."
+  },
+  {
+   "columna": "https://example.org/mex-ontologi/file-column/46977217-9396-4f9c-bddb-6616e82530b4%2FSINAC%202022%2026-09-22%2F71",
+   "campo": "ORDENPRODUCTO",
+   "recurso": "46977217-9396-4f9c-bddb-6616e82530b4",
+   "diccionario": "22202305-2d02-4c49-b216-cc98224357f0",
+   "definicion_iri": "https://example.org/mex-ontologi/documented-variable/22202305-2d02-4c49-b216-cc98224357f0%2F71",
+   "concepto": "sinac-ordenproducto",
+   "descripcion": "Número de producto de acuerdo al orden de extracción del evento actual.",
+   "huella_esquema": "9b46e1c0e32acd903780264f0ebbc538a835eb1bf92a70faa36ba7e839a1ec95",
+   "huella_fila_diccionario": "abcad05c885063318a672bd488a1a7d5afe1f258dea83e0fdf5c10fbac4c455c",
+   "criterio": "Revision explicita del campo en el esquema de este recurso y su fila de diccionario en el mismo conjunto: nombre exacto ORDENPRODUCTO, posicion ordinal identica (columna 71 de 106 ↔ fila 71 de 106, vecinos PRODUCTOEMBARAZOD | TOTALPRODUCTOS), tipo/ejemplo local (Numérico entero / '') y descripcion del descriptor nacional IDnac=44. Alcance de interpretacion documental; no valida valores ni confirma pertenencia a catalogos."
+  },
+  {
+   "columna": "https://example.org/mex-ontologi/file-column/46977217-9396-4f9c-bddb-6616e82530b4%2FSINAC%202022%2026-09-22%2F72",
+   "campo": "TOTALPRODUCTOS",
+   "recurso": "46977217-9396-4f9c-bddb-6616e82530b4",
+   "diccionario": "22202305-2d02-4c49-b216-cc98224357f0",
+   "definicion_iri": "https://example.org/mex-ontologi/documented-variable/22202305-2d02-4c49-b216-cc98224357f0%2F72",
+   "concepto": "sinac-totalproductos",
+   "descripcion": "Total de productos extraídos del evento actual.",
+   "huella_esquema": "9b46e1c0e32acd903780264f0ebbc538a835eb1bf92a70faa36ba7e839a1ec95",
+   "huella_fila_diccionario": "ebfe8f35dcd87b903edd93c23e54950db3e88042f03c98afff7c55b5735fb5b0",
+   "criterio": "Revision explicita del campo en el esquema de este recurso y su fila de diccionario en el mismo conjunto: nombre exacto TOTALPRODUCTOS, posicion ordinal identica (columna 72 de 106 ↔ fila 72 de 106, vecinos ORDENPRODUCTO | ANOMALIACIE1), tipo/ejemplo local (Numérico entero / '') y descripcion del descriptor nacional IDnac=45. Alcance de interpretacion documental; no valida valores ni confirma pertenencia a catalogos."
+  },
+  {
+   "columna": "https://example.org/mex-ontologi/file-column/46977217-9396-4f9c-bddb-6616e82530b4%2FSINAC%202022%2026-09-22%2F74",
+   "campo": "CODIGOCIEANOMALIA1",
+   "recurso": "46977217-9396-4f9c-bddb-6616e82530b4",
+   "diccionario": "22202305-2d02-4c49-b216-cc98224357f0",
+   "definicion_iri": "https://example.org/mex-ontologi/documented-variable/22202305-2d02-4c49-b216-cc98224357f0%2F74",
+   "concepto": "sinac-codigocieanomalia1",
+   "descripcion": "Código de la CIE10 que corresponde a la anomalía congénita, enfermedad o lesión del nacido vivo. El valor 0000 corresponde a NINGUNA APARENTE.",
+   "huella_esquema": "9b46e1c0e32acd903780264f0ebbc538a835eb1bf92a70faa36ba7e839a1ec95",
+   "huella_fila_diccionario": "109d0f8a09c2f065e43b67ee1231d75db5b444e2cfac5b515708f543922cc9cb",
+   "criterio": "Revision explicita del campo en el esquema de este recurso y su fila de diccionario en el mismo conjunto: nombre exacto CODIGOCIEANOMALIA1, posicion ordinal identica (columna 74 de 106 ↔ fila 74 de 106, vecinos ANOMALIACIE1 | ANOMALIACIE2), tipo/ejemplo local (Numérico entero / '0000') y descripcion del descriptor nacional IDnac=46. Alcance de interpretacion documental; no valida valores ni confirma pertenencia a catalogos."
+  },
+  {
+   "columna": "https://example.org/mex-ontologi/file-column/46977217-9396-4f9c-bddb-6616e82530b4%2FSINAC%202022%2026-09-22%2F76",
+   "campo": "CODIGOCIEANOMALIA2",
+   "recurso": "46977217-9396-4f9c-bddb-6616e82530b4",
+   "diccionario": "22202305-2d02-4c49-b216-cc98224357f0",
+   "definicion_iri": "https://example.org/mex-ontologi/documented-variable/22202305-2d02-4c49-b216-cc98224357f0%2F76",
+   "concepto": "sinac-codigocieanomalia2",
+   "descripcion": "2da. Código de la CIE10 que corresponde a la anomalía congénita, enfermedad o lesión del nacido vivo. El valor 0000 corresponde a NINGUNA APARENTE.",
+   "huella_esquema": "9b46e1c0e32acd903780264f0ebbc538a835eb1bf92a70faa36ba7e839a1ec95",
+   "huella_fila_diccionario": "998a3d29cfa98c49c38767c027ea4f7795876b5a2c98b3e47b2e17ed489f1c44",
+   "criterio": "Revision explicita del campo en el esquema de este recurso y su fila de diccionario en el mismo conjunto: nombre exacto CODIGOCIEANOMALIA2, posicion ordinal identica (columna 76 de 106 ↔ fila 76 de 106, vecinos ANOMALIACIE2 | RESOLUCIONEMBARAZO), tipo/ejemplo local (Numérico entero / '0000') y descripcion del descriptor nacional IDnac=47. Alcance de interpretacion documental; no valida valores ni confirma pertenencia a catalogos."
+  },
+  {
+   "columna": "https://example.org/mex-ontologi/file-column/46977217-9396-4f9c-bddb-6616e82530b4%2FSINAC%202022%2026-09-22%2F77",
+   "campo": "RESOLUCIONEMBARAZO",
+   "recurso": "46977217-9396-4f9c-bddb-6616e82530b4",
+   "diccionario": "22202305-2d02-4c49-b216-cc98224357f0",
+   "definicion_iri": "https://example.org/mex-ontologi/documented-variable/22202305-2d02-4c49-b216-cc98224357f0%2F77",
+   "concepto": "sinac-resolucionembarazo",
+   "descripcion": "Procedimiento utilizado en el nacimiento",
+   "huella_esquema": "9b46e1c0e32acd903780264f0ebbc538a835eb1bf92a70faa36ba7e839a1ec95",
+   "huella_fila_diccionario": "f4c1bedd6497fb849c4715849b63333ecc867d51d09312f371ac8c75af64759c",
+   "criterio": "Revision explicita del campo en el esquema de este recurso y su fila de diccionario en el mismo conjunto: nombre exacto RESOLUCIONEMBARAZO, posicion ordinal identica (columna 77 de 106 ↔ fila 77 de 106, vecinos CODIGOCIEANOMALIA2 | RESOLUCIONEMBARAZOD), tipo/ejemplo local (Numérico entero / '3') y descripcion del descriptor nacional IDnac=51. Alcance de interpretacion documental; no valida valores ni confirma pertenencia a catalogos."
+  },
+  {
+   "columna": "https://example.org/mex-ontologi/file-column/46977217-9396-4f9c-bddb-6616e82530b4%2FSINAC%202022%2026-09-22%2F79",
+   "campo": "UTILIZOFORCEPS",
+   "recurso": "46977217-9396-4f9c-bddb-6616e82530b4",
+   "diccionario": "22202305-2d02-4c49-b216-cc98224357f0",
+   "definicion_iri": "https://example.org/mex-ontologi/documented-variable/22202305-2d02-4c49-b216-cc98224357f0%2F79",
+   "concepto": "sinac-utilizoforceps",
+   "descripcion": "Se utilizaron fórceps durante el procedimiento",
+   "huella_esquema": "9b46e1c0e32acd903780264f0ebbc538a835eb1bf92a70faa36ba7e839a1ec95",
+   "huella_fila_diccionario": "221fff1034855415f2178988e1d14dce40c3a601a3698d286bc14cc365f19018",
+   "criterio": "Revision explicita del campo en el esquema de este recurso y su fila de diccionario en el mismo conjunto: nombre exacto UTILIZOFORCEPS, posicion ordinal identica (columna 79 de 106 ↔ fila 79 de 106, vecinos RESOLUCIONEMBARAZOD | UTILIZOFORCEPSD), tipo/ejemplo local (Numérico entero / '8') y descripcion del descriptor nacional IDnac=52. Alcance de interpretacion documental; no valida valores ni confirma pertenencia a catalogos."
+  },
+  {
+   "columna": "https://example.org/mex-ontologi/file-column/46977217-9396-4f9c-bddb-6616e82530b4%2FSINAC%202022%2026-09-22%2F84",
+   "campo": "TIEMPOTRASLADO",
+   "recurso": "46977217-9396-4f9c-bddb-6616e82530b4",
+   "diccionario": "22202305-2d02-4c49-b216-cc98224357f0",
+   "definicion_iri": "https://example.org/mex-ontologi/documented-variable/22202305-2d02-4c49-b216-cc98224357f0%2F84",
+   "concepto": "sinac-tiempotraslado",
+   "descripcion": "Tiempo de traslado desde su hogar hasta el sitio de atención del parto.",
+   "huella_esquema": "9b46e1c0e32acd903780264f0ebbc538a835eb1bf92a70faa36ba7e839a1ec95",
+   "huella_fila_diccionario": "1991915d59e2db4cb7632a3ace696000c61a579578a3115399103ac11e2f4404",
+   "criterio": "Revision explicita del campo en el esquema de este recurso y su fila de diccionario en el mismo conjunto: nombre exacto TIEMPOTRASLADO, posicion ordinal identica (columna 84 de 106 ↔ fila 84 de 106, vecinos CLUES | TIPOCESAREA), tipo/ejemplo local (Hora / '12:15:00 AM') y descripcion del descriptor nacional IDnac=50. Alcance de interpretacion documental; no valida valores ni confirma pertenencia a catalogos."
+  },
+  {
+   "columna": "https://example.org/mex-ontologi/file-column/46977217-9396-4f9c-bddb-6616e82530b4%2FSINAC%202022%2026-09-22%2F87",
+   "campo": "PERSONALATENDIO",
+   "recurso": "46977217-9396-4f9c-bddb-6616e82530b4",
+   "diccionario": "22202305-2d02-4c49-b216-cc98224357f0",
+   "definicion_iri": "https://example.org/mex-ontologi/documented-variable/22202305-2d02-4c49-b216-cc98224357f0%2F87",
+   "concepto": "sinac-personalatendio",
+   "descripcion": "Persona que atendió el parto",
+   "huella_esquema": "9b46e1c0e32acd903780264f0ebbc538a835eb1bf92a70faa36ba7e839a1ec95",
+   "huella_fila_diccionario": "511637fdd52b46d22a91e644babc50e06be4c5723f1e2783337b591ffe1a79fc",
+   "criterio": "Revision explicita del campo en el esquema de este recurso y su fila de diccionario en el mismo conjunto: nombre exacto PERSONALATENDIO, posicion ordinal identica (columna 87 de 106 ↔ fila 87 de 106, vecinos TIPOCESAREAD | PERSONALATENDIOD), tipo/ejemplo local (Numérico entero / '1') y descripcion del descriptor nacional IDnac=54. Alcance de interpretacion documental; no valida valores ni confirma pertenencia a catalogos."
+  },
+  {
+   "columna": "https://example.org/mex-ontologi/file-column/46977217-9396-4f9c-bddb-6616e82530b4%2FSINAC%202022%2026-09-22%2F89",
+   "campo": "TIPOMEDICOATENDIO",
+   "recurso": "46977217-9396-4f9c-bddb-6616e82530b4",
+   "diccionario": "22202305-2d02-4c49-b216-cc98224357f0",
+   "definicion_iri": "https://example.org/mex-ontologi/documented-variable/22202305-2d02-4c49-b216-cc98224357f0%2F89",
+   "concepto": "sinac-tipomedicoatendio",
+   "descripcion": "Tipo de médico que atendió el parto",
+   "huella_esquema": "9b46e1c0e32acd903780264f0ebbc538a835eb1bf92a70faa36ba7e839a1ec95",
+   "huella_fila_diccionario": "eb4257a20d25073d0b7ba5bb875a53c333163438cc3dfa8cd2f1a1ee3bf80a3c",
+   "criterio": "Revision explicita del campo en el esquema de este recurso y su fila de diccionario en el mismo conjunto: nombre exacto TIPOMEDICOATENDIO, posicion ordinal identica (columna 89 de 106 ↔ fila 89 de 106, vecinos PERSONALATENDIOD | TIPOMEDICOATENDIOD), tipo/ejemplo local (Numérico entero / '11') y descripcion del descriptor nacional IDnac=55. Alcance de interpretacion documental; no valida valores ni confirma pertenencia a catalogos."
+  },
+  {
+   "columna": "https://example.org/mex-ontologi/file-column/46977217-9396-4f9c-bddb-6616e82530b4%2FSINAC%202022%2026-09-22%2F97",
+   "campo": "CERTIFICADOPOR",
+   "recurso": "46977217-9396-4f9c-bddb-6616e82530b4",
+   "diccionario": "22202305-2d02-4c49-b216-cc98224357f0",
+   "definicion_iri": "https://example.org/mex-ontologi/documented-variable/22202305-2d02-4c49-b216-cc98224357f0%2F97",
+   "concepto": "sinac-certificadopor",
+   "descripcion": "Tipo de profesional de la salud que certifica el nacimiento",
+   "huella_esquema": "9b46e1c0e32acd903780264f0ebbc538a835eb1bf92a70faa36ba7e839a1ec95",
+   "huella_fila_diccionario": "64c94f6639e0ec20742adc78b3a8d1bf1b69a59d2a83467134958b0739ec0b99",
+   "criterio": "Revision explicita del campo en el esquema de este recurso y su fila de diccionario en el mismo conjunto: nombre exacto CERTIFICADOPOR, posicion ordinal identica (columna 97 de 106 ↔ fila 97 de 106, vecinos LOCALIDADPARTOD | CERTIFICADOPORD), tipo/ejemplo local (Numérico entero / '7') y descripcion del descriptor nacional IDnac=59. Alcance de interpretacion documental; no valida valores ni confirma pertenencia a catalogos."
+  },
+  {
+   "columna": "https://example.org/mex-ontologi/file-column/46977217-9396-4f9c-bddb-6616e82530b4%2FSINAC%202022%2026-09-22%2F99",
+   "campo": "CLUESCERTIFICA",
+   "recurso": "46977217-9396-4f9c-bddb-6616e82530b4",
+   "diccionario": "22202305-2d02-4c49-b216-cc98224357f0",
+   "definicion_iri": "https://example.org/mex-ontologi/documented-variable/22202305-2d02-4c49-b216-cc98224357f0%2F99",
+   "concepto": "sinac-cluescertifica",
+   "descripcion": "Clave Única de Establecimiento en Salud que certifica el parto",
+   "huella_esquema": "9b46e1c0e32acd903780264f0ebbc538a835eb1bf92a70faa36ba7e839a1ec95",
+   "huella_fila_diccionario": "dc38e62e8b63f4b1bddac667f4a73aa803a86e3ac106b8ffe9f93c88f8f6608a",
+   "criterio": "Revision explicita del campo en el esquema de este recurso y su fila de diccionario en el mismo conjunto: nombre exacto CLUESCERTIFICA, posicion ordinal identica (columna 99 de 106 ↔ fila 99 de 106, vecinos CERTIFICADOPORD | ENTIDADFEDERATIVACERTIFICA), tipo/ejemplo local (Alfanumerico / '') y descripcion del descriptor nacional IDnac=60. Alcance de interpretacion documental; no valida valores ni confirma pertenencia a catalogos."
+  }
+ ],
+ "origenes_por_columna": {
+  "https://example.org/mex-ontologi/file-column/46977217-9396-4f9c-bddb-6616e82530b4%2FSINAC%202022%2026-09-22%2F65": [
+   {
+    "ruta": "data/portal/inspecciones/22202305-2d02-4c49-b216-cc98224357f0.json",
+    "sha256": "76fe68223bc861fcdf62cb33f5b9a207503b192c2ef531a4aad31d52e7a7513b"
+   },
+   {
+    "ruta": "data/portal/inspecciones/46977217-9396-4f9c-bddb-6616e82530b4.json",
+    "sha256": "13831dec294ac79e90d3c618dd7f322d512afc392babe1405eb903d40c18afd5"
+   },
+   {
+    "ruta": "propuestas/cierre-brechas-post-r6/significados-salud/evidencia/desc_sinac_2020_2025/Descriptores_SINAC_2020.xlsx",
+    "sha256": "0af0b6be1faeb3867da872cd1b2021785af4feb78311c5de7c1fa44807fd6ed4"
+   },
+   {
+    "ruta": "propuestas/plan-paralelo-brechas-sin-gemma/ejecucion-20261024-072207Z/S2-nacimientos/trabajo/evidencia/sinac_catalogos_2020_2023.zip",
+    "sha256": "9c7dcd52dd8fdb2cfb9c7de3711e0ccc323cfa9cff86712eaeeb3e883141cb4e"
+   },
+   {
+    "ruta": "propuestas/plan-paralelo-brechas-sin-gemma/ejecucion-20261024-072207Z/S2-nacimientos/trabajo/evidencia/cat_sinac_2020_2023/SI_NO.xlsx",
+    "sha256": "3eca684c75bff3a83a52adb3f6fdf0a829871ef5245205da9e7840c1a61389d3"
+   }
+  ],
+  "https://example.org/mex-ontologi/file-column/46977217-9396-4f9c-bddb-6616e82530b4%2FSINAC%202022%2026-09-22%2F67": [
+   {
+    "ruta": "data/portal/inspecciones/22202305-2d02-4c49-b216-cc98224357f0.json",
+    "sha256": "76fe68223bc861fcdf62cb33f5b9a207503b192c2ef531a4aad31d52e7a7513b"
+   },
+   {
+    "ruta": "data/portal/inspecciones/46977217-9396-4f9c-bddb-6616e82530b4.json",
+    "sha256": "13831dec294ac79e90d3c618dd7f322d512afc392babe1405eb903d40c18afd5"
+   },
+   {
+    "ruta": "propuestas/cierre-brechas-post-r6/significados-salud/evidencia/desc_sinac_2020_2025/Descriptores_SINAC_2020.xlsx",
+    "sha256": "0af0b6be1faeb3867da872cd1b2021785af4feb78311c5de7c1fa44807fd6ed4"
+   },
+   {
+    "ruta": "propuestas/plan-paralelo-brechas-sin-gemma/ejecucion-20261024-072207Z/S2-nacimientos/trabajo/evidencia/sinac_catalogos_2020_2023.zip",
+    "sha256": "9c7dcd52dd8fdb2cfb9c7de3711e0ccc323cfa9cff86712eaeeb3e883141cb4e"
+   },
+   {
+    "ruta": "propuestas/plan-paralelo-brechas-sin-gemma/ejecucion-20261024-072207Z/S2-nacimientos/trabajo/evidencia/cat_sinac_2020_2023/SI_NO.xlsx",
+    "sha256": "3eca684c75bff3a83a52adb3f6fdf0a829871ef5245205da9e7840c1a61389d3"
+   }
+  ],
+  "https://example.org/mex-ontologi/file-column/46977217-9396-4f9c-bddb-6616e82530b4%2FSINAC%202022%2026-09-22%2F69": [
+   {
+    "ruta": "data/portal/inspecciones/22202305-2d02-4c49-b216-cc98224357f0.json",
+    "sha256": "76fe68223bc861fcdf62cb33f5b9a207503b192c2ef531a4aad31d52e7a7513b"
+   },
+   {
+    "ruta": "data/portal/inspecciones/46977217-9396-4f9c-bddb-6616e82530b4.json",
+    "sha256": "13831dec294ac79e90d3c618dd7f322d512afc392babe1405eb903d40c18afd5"
+   },
+   {
+    "ruta": "propuestas/cierre-brechas-post-r6/significados-salud/evidencia/desc_sinac_2020_2025/Descriptores_SINAC_2020.xlsx",
+    "sha256": "0af0b6be1faeb3867da872cd1b2021785af4feb78311c5de7c1fa44807fd6ed4"
+   },
+   {
+    "ruta": "propuestas/plan-paralelo-brechas-sin-gemma/ejecucion-20261024-072207Z/S2-nacimientos/trabajo/evidencia/sinac_catalogos_2020_2023.zip",
+    "sha256": "9c7dcd52dd8fdb2cfb9c7de3711e0ccc323cfa9cff86712eaeeb3e883141cb4e"
+   },
+   {
+    "ruta": "propuestas/plan-paralelo-brechas-sin-gemma/ejecucion-20261024-072207Z/S2-nacimientos/trabajo/evidencia/cat_sinac_2020_2023/PRODUCTO_EMBARAZO.xlsx",
+    "sha256": "d586b9f7fc30a04c1e279030bc20affb057db5f1670e0932d3dbf3f0e12c9e96"
+   }
+  ],
+  "https://example.org/mex-ontologi/file-column/46977217-9396-4f9c-bddb-6616e82530b4%2FSINAC%202022%2026-09-22%2F71": [
+   {
+    "ruta": "data/portal/inspecciones/22202305-2d02-4c49-b216-cc98224357f0.json",
+    "sha256": "76fe68223bc861fcdf62cb33f5b9a207503b192c2ef531a4aad31d52e7a7513b"
+   },
+   {
+    "ruta": "data/portal/inspecciones/46977217-9396-4f9c-bddb-6616e82530b4.json",
+    "sha256": "13831dec294ac79e90d3c618dd7f322d512afc392babe1405eb903d40c18afd5"
+   },
+   {
+    "ruta": "propuestas/cierre-brechas-post-r6/significados-salud/evidencia/desc_sinac_2020_2025/Descriptores_SINAC_2020.xlsx",
+    "sha256": "0af0b6be1faeb3867da872cd1b2021785af4feb78311c5de7c1fa44807fd6ed4"
+   },
+   {
+    "ruta": "propuestas/plan-paralelo-brechas-sin-gemma/ejecucion-20261024-072207Z/S2-nacimientos/trabajo/evidencia/sinac_catalogos_2020_2023.zip",
+    "sha256": "9c7dcd52dd8fdb2cfb9c7de3711e0ccc323cfa9cff86712eaeeb3e883141cb4e"
+   }
+  ],
+  "https://example.org/mex-ontologi/file-column/46977217-9396-4f9c-bddb-6616e82530b4%2FSINAC%202022%2026-09-22%2F72": [
+   {
+    "ruta": "data/portal/inspecciones/22202305-2d02-4c49-b216-cc98224357f0.json",
+    "sha256": "76fe68223bc861fcdf62cb33f5b9a207503b192c2ef531a4aad31d52e7a7513b"
+   },
+   {
+    "ruta": "data/portal/inspecciones/46977217-9396-4f9c-bddb-6616e82530b4.json",
+    "sha256": "13831dec294ac79e90d3c618dd7f322d512afc392babe1405eb903d40c18afd5"
+   },
+   {
+    "ruta": "propuestas/cierre-brechas-post-r6/significados-salud/evidencia/desc_sinac_2020_2025/Descriptores_SINAC_2020.xlsx",
+    "sha256": "0af0b6be1faeb3867da872cd1b2021785af4feb78311c5de7c1fa44807fd6ed4"
+   },
+   {
+    "ruta": "propuestas/plan-paralelo-brechas-sin-gemma/ejecucion-20261024-072207Z/S2-nacimientos/trabajo/evidencia/sinac_catalogos_2020_2023.zip",
+    "sha256": "9c7dcd52dd8fdb2cfb9c7de3711e0ccc323cfa9cff86712eaeeb3e883141cb4e"
+   }
+  ],
+  "https://example.org/mex-ontologi/file-column/46977217-9396-4f9c-bddb-6616e82530b4%2FSINAC%202022%2026-09-22%2F74": [
+   {
+    "ruta": "data/portal/inspecciones/22202305-2d02-4c49-b216-cc98224357f0.json",
+    "sha256": "76fe68223bc861fcdf62cb33f5b9a207503b192c2ef531a4aad31d52e7a7513b"
+   },
+   {
+    "ruta": "data/portal/inspecciones/46977217-9396-4f9c-bddb-6616e82530b4.json",
+    "sha256": "13831dec294ac79e90d3c618dd7f322d512afc392babe1405eb903d40c18afd5"
+   },
+   {
+    "ruta": "propuestas/cierre-brechas-post-r6/significados-salud/evidencia/desc_sinac_2020_2025/Descriptores_SINAC_2020.xlsx",
+    "sha256": "0af0b6be1faeb3867da872cd1b2021785af4feb78311c5de7c1fa44807fd6ed4"
+   },
+   {
+    "ruta": "propuestas/plan-paralelo-brechas-sin-gemma/ejecucion-20261024-072207Z/S2-nacimientos/trabajo/evidencia/sinac_catalogos_2020_2023.zip",
+    "sha256": "9c7dcd52dd8fdb2cfb9c7de3711e0ccc323cfa9cff86712eaeeb3e883141cb4e"
+   }
+  ],
+  "https://example.org/mex-ontologi/file-column/46977217-9396-4f9c-bddb-6616e82530b4%2FSINAC%202022%2026-09-22%2F76": [
+   {
+    "ruta": "data/portal/inspecciones/22202305-2d02-4c49-b216-cc98224357f0.json",
+    "sha256": "76fe68223bc861fcdf62cb33f5b9a207503b192c2ef531a4aad31d52e7a7513b"
+   },
+   {
+    "ruta": "data/portal/inspecciones/46977217-9396-4f9c-bddb-6616e82530b4.json",
+    "sha256": "13831dec294ac79e90d3c618dd7f322d512afc392babe1405eb903d40c18afd5"
+   },
+   {
+    "ruta": "propuestas/cierre-brechas-post-r6/significados-salud/evidencia/desc_sinac_2020_2025/Descriptores_SINAC_2020.xlsx",
+    "sha256": "0af0b6be1faeb3867da872cd1b2021785af4feb78311c5de7c1fa44807fd6ed4"
+   },
+   {
+    "ruta": "propuestas/plan-paralelo-brechas-sin-gemma/ejecucion-20261024-072207Z/S2-nacimientos/trabajo/evidencia/sinac_catalogos_2020_2023.zip",
+    "sha256": "9c7dcd52dd8fdb2cfb9c7de3711e0ccc323cfa9cff86712eaeeb3e883141cb4e"
+   }
+  ],
+  "https://example.org/mex-ontologi/file-column/46977217-9396-4f9c-bddb-6616e82530b4%2FSINAC%202022%2026-09-22%2F77": [
+   {
+    "ruta": "data/portal/inspecciones/22202305-2d02-4c49-b216-cc98224357f0.json",
+    "sha256": "76fe68223bc861fcdf62cb33f5b9a207503b192c2ef531a4aad31d52e7a7513b"
+   },
+   {
+    "ruta": "data/portal/inspecciones/46977217-9396-4f9c-bddb-6616e82530b4.json",
+    "sha256": "13831dec294ac79e90d3c618dd7f322d512afc392babe1405eb903d40c18afd5"
+   },
+   {
+    "ruta": "propuestas/cierre-brechas-post-r6/significados-salud/evidencia/desc_sinac_2020_2025/Descriptores_SINAC_2020.xlsx",
+    "sha256": "0af0b6be1faeb3867da872cd1b2021785af4feb78311c5de7c1fa44807fd6ed4"
+   },
+   {
+    "ruta": "propuestas/plan-paralelo-brechas-sin-gemma/ejecucion-20261024-072207Z/S2-nacimientos/trabajo/evidencia/sinac_catalogos_2020_2023.zip",
+    "sha256": "9c7dcd52dd8fdb2cfb9c7de3711e0ccc323cfa9cff86712eaeeb3e883141cb4e"
+   },
+   {
+    "ruta": "propuestas/plan-paralelo-brechas-sin-gemma/ejecucion-20261024-072207Z/S2-nacimientos/trabajo/evidencia/cat_sinac_2020_2023/RESOLUCION_EMBARAZO.xlsx",
+    "sha256": "ea2abd8b970be44af033f551fd4dbd41f6d094be36cf2ad3352e3ae423d2405f"
+   }
+  ],
+  "https://example.org/mex-ontologi/file-column/46977217-9396-4f9c-bddb-6616e82530b4%2FSINAC%202022%2026-09-22%2F79": [
+   {
+    "ruta": "data/portal/inspecciones/22202305-2d02-4c49-b216-cc98224357f0.json",
+    "sha256": "76fe68223bc861fcdf62cb33f5b9a207503b192c2ef531a4aad31d52e7a7513b"
+   },
+   {
+    "ruta": "data/portal/inspecciones/46977217-9396-4f9c-bddb-6616e82530b4.json",
+    "sha256": "13831dec294ac79e90d3c618dd7f322d512afc392babe1405eb903d40c18afd5"
+   },
+   {
+    "ruta": "propuestas/cierre-brechas-post-r6/significados-salud/evidencia/desc_sinac_2020_2025/Descriptores_SINAC_2020.xlsx",
+    "sha256": "0af0b6be1faeb3867da872cd1b2021785af4feb78311c5de7c1fa44807fd6ed4"
+   },
+   {
+    "ruta": "propuestas/plan-paralelo-brechas-sin-gemma/ejecucion-20261024-072207Z/S2-nacimientos/trabajo/evidencia/sinac_catalogos_2020_2023.zip",
+    "sha256": "9c7dcd52dd8fdb2cfb9c7de3711e0ccc323cfa9cff86712eaeeb3e883141cb4e"
+   },
+   {
+    "ruta": "propuestas/plan-paralelo-brechas-sin-gemma/ejecucion-20261024-072207Z/S2-nacimientos/trabajo/evidencia/cat_sinac_2020_2023/UTILIZO_FORCEPS.xlsx",
+    "sha256": "1362e1a5e5c573164cf1cc9e62a80984ce90e9e52c25de6bc0ac41231c51c96a"
+   }
+  ],
+  "https://example.org/mex-ontologi/file-column/46977217-9396-4f9c-bddb-6616e82530b4%2FSINAC%202022%2026-09-22%2F84": [
+   {
+    "ruta": "data/portal/inspecciones/22202305-2d02-4c49-b216-cc98224357f0.json",
+    "sha256": "76fe68223bc861fcdf62cb33f5b9a207503b192c2ef531a4aad31d52e7a7513b"
+   },
+   {
+    "ruta": "data/portal/inspecciones/46977217-9396-4f9c-bddb-6616e82530b4.json",
+    "sha256": "13831dec294ac79e90d3c618dd7f322d512afc392babe1405eb903d40c18afd5"
+   },
+   {
+    "ruta": "propuestas/cierre-brechas-post-r6/significados-salud/evidencia/desc_sinac_2020_2025/Descriptores_SINAC_2020.xlsx",
+    "sha256": "0af0b6be1faeb3867da872cd1b2021785af4feb78311c5de7c1fa44807fd6ed4"
+   },
+   {
+    "ruta": "propuestas/plan-paralelo-brechas-sin-gemma/ejecucion-20261024-072207Z/S2-nacimientos/trabajo/evidencia/sinac_catalogos_2020_2023.zip",
+    "sha256": "9c7dcd52dd8fdb2cfb9c7de3711e0ccc323cfa9cff86712eaeeb3e883141cb4e"
+   }
+  ],
+  "https://example.org/mex-ontologi/file-column/46977217-9396-4f9c-bddb-6616e82530b4%2FSINAC%202022%2026-09-22%2F87": [
+   {
+    "ruta": "data/portal/inspecciones/22202305-2d02-4c49-b216-cc98224357f0.json",
+    "sha256": "76fe68223bc861fcdf62cb33f5b9a207503b192c2ef531a4aad31d52e7a7513b"
+   },
+   {
+    "ruta": "data/portal/inspecciones/46977217-9396-4f9c-bddb-6616e82530b4.json",
+    "sha256": "13831dec294ac79e90d3c618dd7f322d512afc392babe1405eb903d40c18afd5"
+   },
+   {
+    "ruta": "propuestas/cierre-brechas-post-r6/significados-salud/evidencia/desc_sinac_2020_2025/Descriptores_SINAC_2020.xlsx",
+    "sha256": "0af0b6be1faeb3867da872cd1b2021785af4feb78311c5de7c1fa44807fd6ed4"
+   },
+   {
+    "ruta": "propuestas/plan-paralelo-brechas-sin-gemma/ejecucion-20261024-072207Z/S2-nacimientos/trabajo/evidencia/sinac_catalogos_2020_2023.zip",
+    "sha256": "9c7dcd52dd8fdb2cfb9c7de3711e0ccc323cfa9cff86712eaeeb3e883141cb4e"
+   },
+   {
+    "ruta": "propuestas/plan-paralelo-brechas-sin-gemma/ejecucion-20261024-072207Z/S2-nacimientos/trabajo/evidencia/cat_sinac_2020_2023/PERSONA_ATENDIO_PARTO.xlsx",
+    "sha256": "e1a49a8ab27dd10656321a4822c166de7bc269a8b24765e90d218d3c02462303"
+   }
+  ],
+  "https://example.org/mex-ontologi/file-column/46977217-9396-4f9c-bddb-6616e82530b4%2FSINAC%202022%2026-09-22%2F89": [
+   {
+    "ruta": "data/portal/inspecciones/22202305-2d02-4c49-b216-cc98224357f0.json",
+    "sha256": "76fe68223bc861fcdf62cb33f5b9a207503b192c2ef531a4aad31d52e7a7513b"
+   },
+   {
+    "ruta": "data/portal/inspecciones/46977217-9396-4f9c-bddb-6616e82530b4.json",
+    "sha256": "13831dec294ac79e90d3c618dd7f322d512afc392babe1405eb903d40c18afd5"
+   },
+   {
+    "ruta": "propuestas/cierre-brechas-post-r6/significados-salud/evidencia/desc_sinac_2020_2025/Descriptores_SINAC_2020.xlsx",
+    "sha256": "0af0b6be1faeb3867da872cd1b2021785af4feb78311c5de7c1fa44807fd6ed4"
+   },
+   {
+    "ruta": "propuestas/plan-paralelo-brechas-sin-gemma/ejecucion-20261024-072207Z/S2-nacimientos/trabajo/evidencia/sinac_catalogos_2020_2023.zip",
+    "sha256": "9c7dcd52dd8fdb2cfb9c7de3711e0ccc323cfa9cff86712eaeeb3e883141cb4e"
+   },
+   {
+    "ruta": "propuestas/plan-paralelo-brechas-sin-gemma/ejecucion-20261024-072207Z/S2-nacimientos/trabajo/evidencia/cat_sinac_2020_2023/TIPO_MEDICO.xlsx",
+    "sha256": "e3a891aeecd1849e4f3f66169780ee0ce8a4c28b450fa68d9937a5bb5cd7f99c"
+   }
+  ],
+  "https://example.org/mex-ontologi/file-column/46977217-9396-4f9c-bddb-6616e82530b4%2FSINAC%202022%2026-09-22%2F97": [
+   {
+    "ruta": "data/portal/inspecciones/22202305-2d02-4c49-b216-cc98224357f0.json",
+    "sha256": "76fe68223bc861fcdf62cb33f5b9a207503b192c2ef531a4aad31d52e7a7513b"
+   },
+   {
+    "ruta": "data/portal/inspecciones/46977217-9396-4f9c-bddb-6616e82530b4.json",
+    "sha256": "13831dec294ac79e90d3c618dd7f322d512afc392babe1405eb903d40c18afd5"
+   },
+   {
+    "ruta": "propuestas/cierre-brechas-post-r6/significados-salud/evidencia/desc_sinac_2020_2025/Descriptores_SINAC_2020.xlsx",
+    "sha256": "0af0b6be1faeb3867da872cd1b2021785af4feb78311c5de7c1fa44807fd6ed4"
+   },
+   {
+    "ruta": "propuestas/plan-paralelo-brechas-sin-gemma/ejecucion-20261024-072207Z/S2-nacimientos/trabajo/evidencia/sinac_catalogos_2020_2023.zip",
+    "sha256": "9c7dcd52dd8fdb2cfb9c7de3711e0ccc323cfa9cff86712eaeeb3e883141cb4e"
+   },
+   {
+    "ruta": "propuestas/plan-paralelo-brechas-sin-gemma/ejecucion-20261024-072207Z/S2-nacimientos/trabajo/evidencia/cat_sinac_2020_2023/NACIMIENTO_CERTIFICADO_POR.xlsx",
+    "sha256": "e0a4bff0b8af33be4a8a25cd1362d8e888e05d9ebb1904822b56672fd2b3e8bc"
+   }
+  ],
+  "https://example.org/mex-ontologi/file-column/46977217-9396-4f9c-bddb-6616e82530b4%2FSINAC%202022%2026-09-22%2F99": [
+   {
+    "ruta": "data/portal/inspecciones/22202305-2d02-4c49-b216-cc98224357f0.json",
+    "sha256": "76fe68223bc861fcdf62cb33f5b9a207503b192c2ef531a4aad31d52e7a7513b"
+   },
+   {
+    "ruta": "data/portal/inspecciones/46977217-9396-4f9c-bddb-6616e82530b4.json",
+    "sha256": "13831dec294ac79e90d3c618dd7f322d512afc392babe1405eb903d40c18afd5"
+   },
+   {
+    "ruta": "propuestas/cierre-brechas-post-r6/significados-salud/evidencia/desc_sinac_2020_2025/Descriptores_SINAC_2020.xlsx",
+    "sha256": "0af0b6be1faeb3867da872cd1b2021785af4feb78311c5de7c1fa44807fd6ed4"
+   },
+   {
+    "ruta": "propuestas/plan-paralelo-brechas-sin-gemma/ejecucion-20261024-072207Z/S2-nacimientos/trabajo/evidencia/sinac_catalogos_2020_2023.zip",
+    "sha256": "9c7dcd52dd8fdb2cfb9c7de3711e0ccc323cfa9cff86712eaeeb3e883141cb4e"
+   },
+   {
+    "ruta": "propuestas/plan-paralelo-brechas-sin-gemma/ejecucion-20261024-072207Z/S2-nacimientos/trabajo/evidencia/cat_sinac_2020_2023/ESTABLECIMIENTO_SALUD_202204.xlsx",
+    "sha256": "adb4704b44617fa9a343e46ac6e804bb2c14554098062e00545099ac18e07c53"
+   }
+  ]
+ },
+ "fuentes": [
+  {
+   "ruta": "data/portal/inspecciones/22202305-2d02-4c49-b216-cc98224357f0.json",
+   "sha256": "76fe68223bc861fcdf62cb33f5b9a207503b192c2ef531a4aad31d52e7a7513b",
+   "url": "https://datos.sonora.gob.mx/api/3/action/datastore_search?resource_id=22202305-2d02-4c49-b216-cc98224357f0&limit=1000&offset=0&sort=_id+asc",
+   "localizador": "/definiciones/64 (fila 65, variable VITAMINA_A)"
+  },
+  {
+   "ruta": "data/portal/inspecciones/46977217-9396-4f9c-bddb-6616e82530b4.json",
+   "sha256": "13831dec294ac79e90d3c618dd7f322d512afc392babe1405eb903d40c18afd5",
+   "url": "https://datos.sonora.gob.mx/dataset/940de7d8-73ec-4a08-8d26-b7cc97ff17bd/resource/46977217-9396-4f9c-bddb-6616e82530b4/download/202209281437030-file.xlsx",
+   "localizador": "tablas[0]: hoja 'SINAC 2022 26-09-22', 106 campos; posicion 65 = VITAMINA_A (vecinos VACUNAHEPATITIS_BD | VITAMINA_AD)"
+  },
+  {
+   "ruta": "propuestas/cierre-brechas-post-r6/significados-salud/evidencia/desc_sinac_2020_2025/Descriptores_SINAC_2020.xlsx",
+   "sha256": "0af0b6be1faeb3867da872cd1b2021785af4feb78311c5de7c1fa44807fd6ed4",
+   "url": "http://www.dgis.salud.gob.mx/descargas/datosabiertos/nacimientos/sinac_descriptores_2020_2025.zip",
+   "localizador": "Hoja1 fila ID=41, VARIABLE=VITAMINA_A"
+  },
+  {
+   "ruta": "propuestas/plan-paralelo-brechas-sin-gemma/ejecucion-20261024-072207Z/S2-nacimientos/trabajo/evidencia/sinac_catalogos_2020_2023.zip",
+   "sha256": "9c7dcd52dd8fdb2cfb9c7de3711e0ccc323cfa9cff86712eaeeb3e883141cb4e",
+   "url": "http://www.dgis.salud.gob.mx/descargas/datosabiertos/nacimientos/sinac_catalogos_2020_2023.zip",
+   "localizador": "zip 20 xlsx; sin columnas D ni ANOMALIACIE* ni DIAGNOSTICOS"
+  },
+  {
+   "ruta": "propuestas/plan-paralelo-brechas-sin-gemma/ejecucion-20261024-072207Z/S2-nacimientos/trabajo/evidencia/cat_sinac_2020_2023/SI_NO.xlsx",
+   "sha256": "3eca684c75bff3a83a52adb3f6fdf0a829871ef5245205da9e7840c1a61389d3",
+   "url": "http://www.dgis.salud.gob.mx/descargas/datosabiertos/nacimientos/sinac_catalogos_2020_2023.zip",
+   "localizador": "Hoja1, catalogo SI_NO: codigo 0"
+  },
+  {
+   "ruta": "propuestas/plan-paralelo-brechas-sin-gemma/ejecucion-20261024-072207Z/S2-nacimientos/trabajo/evidencia/cat_sinac_2020_2023/PRODUCTO_EMBARAZO.xlsx",
+   "sha256": "d586b9f7fc30a04c1e279030bc20affb057db5f1670e0932d3dbf3f0e12c9e96",
+   "url": "http://www.dgis.salud.gob.mx/descargas/datosabiertos/nacimientos/sinac_catalogos_2020_2023.zip",
+   "localizador": "Hoja1, catalogo PRODUCTO_EMBARAZO: codigo 1"
+  },
+  {
+   "ruta": "propuestas/plan-paralelo-brechas-sin-gemma/ejecucion-20261024-072207Z/S2-nacimientos/trabajo/evidencia/cat_sinac_2020_2023/RESOLUCION_EMBARAZO.xlsx",
+   "sha256": "ea2abd8b970be44af033f551fd4dbd41f6d094be36cf2ad3352e3ae423d2405f",
+   "url": "http://www.dgis.salud.gob.mx/descargas/datosabiertos/nacimientos/sinac_catalogos_2020_2023.zip",
+   "localizador": "Hoja1, catalogo RESOLUCION_EMBARAZO: codigo 3"
+  },
+  {
+   "ruta": "propuestas/plan-paralelo-brechas-sin-gemma/ejecucion-20261024-072207Z/S2-nacimientos/trabajo/evidencia/cat_sinac_2020_2023/UTILIZO_FORCEPS.xlsx",
+   "sha256": "1362e1a5e5c573164cf1cc9e62a80984ce90e9e52c25de6bc0ac41231c51c96a",
+   "url": "http://www.dgis.salud.gob.mx/descargas/datosabiertos/nacimientos/sinac_catalogos_2020_2023.zip",
+   "localizador": "Hoja1, catalogo UTILIZO_FORCEPS: codigo 8"
+  },
+  {
+   "ruta": "propuestas/plan-paralelo-brechas-sin-gemma/ejecucion-20261024-072207Z/S2-nacimientos/trabajo/evidencia/cat_sinac_2020_2023/PERSONA_ATENDIO_PARTO.xlsx",
+   "sha256": "e1a49a8ab27dd10656321a4822c166de7bc269a8b24765e90d218d3c02462303",
+   "url": "http://www.dgis.salud.gob.mx/descargas/datosabiertos/nacimientos/sinac_catalogos_2020_2023.zip",
+   "localizador": "Hoja1, catalogo PERSONA_ATENDIO_PARTO: codigo 1"
+  },
+  {
+   "ruta": "propuestas/plan-paralelo-brechas-sin-gemma/ejecucion-20261024-072207Z/S2-nacimientos/trabajo/evidencia/cat_sinac_2020_2023/TIPO_MEDICO.xlsx",
+   "sha256": "e3a891aeecd1849e4f3f66169780ee0ce8a4c28b450fa68d9937a5bb5cd7f99c",
+   "url": "http://www.dgis.salud.gob.mx/descargas/datosabiertos/nacimientos/sinac_catalogos_2020_2023.zip",
+   "localizador": "Hoja1, catalogo TIPO_MEDICO: codigo 11"
+  },
+  {
+   "ruta": "propuestas/plan-paralelo-brechas-sin-gemma/ejecucion-20261024-072207Z/S2-nacimientos/trabajo/evidencia/cat_sinac_2020_2023/NACIMIENTO_CERTIFICADO_POR.xlsx",
+   "sha256": "e0a4bff0b8af33be4a8a25cd1362d8e888e05d9ebb1904822b56672fd2b3e8bc",
+   "url": "http://www.dgis.salud.gob.mx/descargas/datosabiertos/nacimientos/sinac_catalogos_2020_2023.zip",
+   "localizador": "Hoja1, catalogo NACIMIENTO_CERTIFICADO_POR: codigo 7"
+  },
+  {
+   "ruta": "propuestas/plan-paralelo-brechas-sin-gemma/ejecucion-20261024-072207Z/S2-nacimientos/trabajo/evidencia/cat_sinac_2020_2023/ESTABLECIMIENTO_SALUD_202204.xlsx",
+   "sha256": "adb4704b44617fa9a343e46ac6e804bb2c14554098062e00545099ac18e07c53",
+   "url": "http://www.dgis.salud.gob.mx/descargas/datosabiertos/nacimientos/sinac_catalogos_2020_2023.zip",
+   "localizador": "Hoja1 ID/CLUES/.../ESTATUS (41802 filas, corte 202204)"
+  }
+ ]
+}

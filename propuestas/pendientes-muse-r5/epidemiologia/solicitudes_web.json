@@ -1,0 +1,52 @@
+[
+  {
+    "id": "SW-EPI-01",
+    "url_probable": "https://datos.sonora.gob.mx/dataset/vigilancia-epidemiologica",
+    "busqueda_concreta": "Manual o lineamiento del SUIVE / formato semanal de vigilancia epidemiologica Sonora que defina: columna cve_cie10, columna acumulado (objeto y periodo), serie con sufijo f (particion por sexo) y columnas ssa/imss_ord/issste/otras/imss_sol/d_if/pemex/sedena/sedemar (objeto contado por institucion).",
+    "definiciones_afectadas": [
+      "https://example.org/mex-ontologi/definition/2334deaa-dd0c-444e-b038-4cc556ad715d%2F9",
+      "https://example.org/mex-ontologi/definition/2334deaa-dd0c-444e-b038-4cc556ad715d%2F11",
+      "https://example.org/mex-ontologi/definition/2334deaa-dd0c-444e-b038-4cc556ad715d%2F23",
+      "https://example.org/mex-ontologi/definition/2334deaa-dd0c-444e-b038-4cc556ad715d%2F24",
+      "https://example.org/mex-ontologi/definition/2334deaa-dd0c-444e-b038-4cc556ad715d%2F25",
+      "https://example.org/mex-ontologi/definition/2334deaa-dd0c-444e-b038-4cc556ad715d%2F26",
+      "https://example.org/mex-ontologi/definition/2334deaa-dd0c-444e-b038-4cc556ad715d%2F27",
+      "https://example.org/mex-ontologi/definition/2334deaa-dd0c-444e-b038-4cc556ad715d%2F28",
+      "https://example.org/mex-ontologi/definition/2334deaa-dd0c-444e-b038-4cc556ad715d%2F29",
+      "https://example.org/mex-ontologi/definition/2334deaa-dd0c-444e-b038-4cc556ad715d%2F30",
+      "https://example.org/mex-ontologi/definition/2334deaa-dd0c-444e-b038-4cc556ad715d%2F31",
+      "https://example.org/mex-ontologi/definition/2334deaa-dd0c-444e-b038-4cc556ad715d%2F32",
+      "https://example.org/mex-ontologi/definition/2334deaa-dd0c-444e-b038-4cc556ad715d%2F33",
+      "https://example.org/mex-ontologi/definition/2334deaa-dd0c-444e-b038-4cc556ad715d%2F34",
+      "https://example.org/mex-ontologi/definition/2334deaa-dd0c-444e-b038-4cc556ad715d%2F35",
+      "https://example.org/mex-ontologi/definition/2334deaa-dd0c-444e-b038-4cc556ad715d%2F36",
+      "https://example.org/mex-ontologi/definition/2334deaa-dd0c-444e-b038-4cc556ad715d%2F37",
+      "https://example.org/mex-ontologi/definition/2334deaa-dd0c-444e-b038-4cc556ad715d%2F38",
+      "https://example.org/mex-ontologi/definition/2334deaa-dd0c-444e-b038-4cc556ad715d%2F39",
+      "https://example.org/mex-ontologi/definition/2334deaa-dd0c-444e-b038-4cc556ad715d%2F40",
+      "https://example.org/mex-ontologi/definition/2334deaa-dd0c-444e-b038-4cc556ad715d%2F41",
+      "https://example.org/mex-ontologi/definition/2334deaa-dd0c-444e-b038-4cc556ad715d%2F42",
+      "https://example.org/mex-ontologi/definition/2334deaa-dd0c-444e-b038-4cc556ad715d%2F43",
+      "https://example.org/mex-ontologi/definition/2334deaa-dd0c-444e-b038-4cc556ad715d%2F44"
+    ],
+    "evidencia_exacta_requerida": "Fragmento/localizador del documento donde cada columna quede definida (objeto, particion, periodo); URL, fecha de captura y hash del documento."
+  },
+  {
+    "id": "SW-EPI-02",
+    "url_probable": "https://www.gob.mx/salud/documentos/catalogo-cie-10",
+    "busqueda_concreta": "Catalogo CIE-10 (edicion/version) vigente para 2022 y evidencia de que el recurso 1689b19c-b0dc-4e39-bf07-e3a2e684ef1a o el diccionario 2334deaa-dd0c-444e-b038-4cc556ad715d lo adopta para cve_cie10 (ejemplo A04, A08-A09 excepto A08.0).",
+    "definiciones_afectadas": [
+      "https://example.org/mex-ontologi/definition/2334deaa-dd0c-444e-b038-4cc556ad715d%2F9"
+    ],
+    "evidencia_exacta_requerida": "Vinculo documental edicion-recurso-periodo: que la edicion citada aplique a este conjunto y periodo; la sola existencia del catalogo nacional no basta."
+  },
+  {
+    "id": "SW-EPI-03",
+    "url_probable": "https://datos.sonora.gob.mx/dataset/dca16d84-dbf0-4501-b702-dc6372a480ea",
+    "busqueda_concreta": "Nota metodologica o ficha del conjunto que fije el intervalo real de de01_a_04 (nombre 01-04 vs descripcion entre 1 y 5 anos) y el tratamiento de la edad 5 frente a de05_a_09 (entre 5 y 9).",
+    "definiciones_afectadas": [
+      "https://example.org/mex-ontologi/definition/2334deaa-dd0c-444e-b038-4cc556ad715d%2F13"
+    ],
+    "evidencia_exacta_requerida": "Texto que resuelva nombre vs descripcion y el solape en edad 5; sin reinterpretar bordes por cuenta propia."
+  }
+]

@@ -1,0 +1,273 @@
+{
+  "format_version": 1,
+  "release": "R10",
+  "release_base": "R9",
+  "fecha_utc": "2026-10-25T02:46:29.443577+00:00",
+  "fecha_cliente": "2026-10-24T19:46:29.443577-07:00",
+  "zona_cliente": "America/Hermosillo",
+  "estado": "cerrado_integrado_validado_y_sincronizado",
+  "expediente": "propuestas/ampliacion-post-r9/ejecucion-20261024",
+  "modelo_reanudacion": "opencode-go/muse-spark-1.3-contributor",
+  "mcp": "nativo OpenCode",
+  "base_iri": "https://example.org/mex-ontologi/",
+  "config_toml_sin_cambios": true,
+  "delta": {
+    "significados": 0,
+    "conceptos": 0,
+    "correspondencias_revisadas": 0,
+    "joins": 0,
+    "declaraciones_unidad": 5,
+    "formas_shacl": 6,
+    "triples_agregados": 90,
+    "triples_retirados": 0
+  },
+  "resumen_actual": {
+    "definiciones_con_nombre_examinadas": 1563,
+    "filas_sin_nombre": 7,
+    "estados_variables": {
+      "respaldada_por_definicion": 1423,
+      "fuera_del_nucleo_actual": 124,
+      "candidata_sin_definicion_suficiente": 16
+    },
+    "variables_materializadas": 1442,
+    "estados_correspondencias": {
+      "documental_revisada": 4506,
+      "candidata_por_nombre": 17
+    },
+    "columnas_totales_examinadas": 5523,
+    "columnas_con_correspondencia": 4523,
+    "conceptos_compartidos": 1106,
+    "referencias_catalogo_sin_resolver": 1,
+    "sistemas_identificadores_recuperados": 1,
+    "condiciones_conexion": 6,
+    "referencias_catalogo_con_recurso_identificado": 16
+  },
+  "unidades": [
+    {
+      "id": "Q-U02",
+      "variable": "pesoprom",
+      "literal": "Kilogramos",
+      "unidad_qudt": "http://qudt.org/vocab/unit/KiloGM",
+      "definicion_iri": "https://example.org/mex-ontologi/definition/a4eb0b8b-d6c6-44b8-b00a-f5f45c1875a5%2F11"
+    },
+    {
+      "id": "Q-U03",
+      "variable": "Unidad de Medida",
+      "literal": "MW",
+      "unidad_qudt": "http://qudt.org/vocab/unit/MegaW",
+      "definicion_iri": "https://example.org/mex-ontologi/definition/a6cdb7ad-ec32-44aa-851d-684947df4243%2F9"
+    },
+    {
+      "id": "Q-U04",
+      "variable": "Unidad de Medida",
+      "literal": "GWh",
+      "unidad_qudt": "http://qudt.org/vocab/unit/GigaW-HR",
+      "definicion_iri": "https://example.org/mex-ontologi/definition/a6cdb7ad-ec32-44aa-851d-684947df4243%2F11"
+    },
+    {
+      "id": "Q-U05",
+      "variable": "ANALF",
+      "literal": "Porcentaje",
+      "unidad_qudt": "http://qudt.org/vocab/unit/PERCENT",
+      "definicion_iri": "https://example.org/mex-ontologi/definition/251309e5-0309-46ed-9711-77a1dd408eeb%2F9"
+    },
+    {
+      "id": "Q-U06",
+      "variable": "temperatura",
+      "literal": "Grados celcius",
+      "unidad_qudt": "http://qudt.org/vocab/unit/DEG_C",
+      "definicion_iri": "https://example.org/mex-ontologi/definition/33d0a99e-c721-496f-a05e-07646e9ae42a%2F27"
+    }
+  ],
+  "declaraciones_unidad_total": 7,
+  "analisis": {
+    "top50_filas": 50,
+    "candidatas_estructurales": 1191,
+    "pares_mapa": 3916,
+    "pares_analizados": 3,
+    "ejes_por_par": 8,
+    "estado": "tres_bloqueados_con_evidencia",
+    "publicaciones": [
+      "reports/top50-oportunidades-r9.html",
+      "reports/top50-oportunidades-r9.json",
+      "reports/top50-oportunidades-r9.md",
+      "reports/analisis-pares-post-r9.md",
+      "reports/analisis-pares-post-r9.json"
+    ],
+    "itama_consolidado": "propuestas/ampliacion-post-r9/ejecucion-20261024/A3-itama/v003"
+  },
+  "pruebas": {
+    "suite_python": 233,
+    "segundos": 72.952,
+    "resultado": "OK",
+    "omitidas": 0,
+    "nuevas_integracion": 18,
+    "nuevas_cli_publicador": 2,
+    "log": "propuestas/ampliacion-post-r9/ejecucion-20261024/reanudacion-muse/suite-r10.log"
+  },
+  "validacion": {
+    "portal_triples": 322495,
+    "studio_triples": 323104,
+    "sintaxis_rdf": true,
+    "portal_shacl": true,
+    "studio_shacl": true,
+    "violaciones": 0,
+    "consultas_portal_ejecutadas": 30,
+    "delta_exacto_integrador": true,
+    "fixtures_nuevas_formas": "15 infracciones negativas detectadas; controles positivos conformes; motor real",
+    "formas_sin_instancias_portal": [
+      {
+        "shape": "https://example.org/mex-ontologi/shapes/ResultadoMunicipalLote",
+        "target": "https://example.org/mex-ontologi/vocab/ResultadoCruceLote",
+        "target_class": "https://example.org/mex-ontologi/vocab/ResultadoCruceLote",
+        "target_form": "class"
+      }
+    ]
+  },
+  "sincronizacion": {
+    "respaldo": "data\\backups\\studio-antes-portal-20261025T024314810289Z.ttl",
+    "triples_insertados": 90,
+    "triples_retirados_gestionados": 0,
+    "triples_totales_studio": 323104,
+    "triples_gestionados": 314253,
+    "verificado": true,
+    "shacl": {
+      "conforms": true,
+      "focus_nodes": 44268,
+      "scope": {
+        "complete": true,
+        "default_graph": true,
+        "note": "every graph in the store, the default graph included. On a store that keeps several versions of an entity in several named graphs this union is a state that held at no instant.",
+        "selector": "whole-store",
+        "semantics_version": "temporal/2"
+      },
+      "unmatched_shapes": [
+        {
+          "shape": "https://example.org/mex-ontologi/shapes/ResultadoMunicipalLote",
+          "target": "https://example.org/mex-ontologi/vocab/ResultadoCruceLote",
+          "target_class": "https://example.org/mex-ontologi/vocab/ResultadoCruceLote",
+          "target_form": "class"
+        }
+      ],
+      "violation_count": 0,
+      "violations": []
+    }
+  },
+  "respaldos": {
+    "base": {
+      "zip": "propuestas/ampliacion-post-r9/ejecucion-20261024/respaldo-previo.zip",
+      "sha256": "2446e983186db55198a92f275d0a6c7400f99c69ffeb00ddb366756f318e4fa6",
+      "archivos": 130,
+      "verificado": true
+    },
+    "studio": "data/backups/studio-antes-portal-20261025T024314810289Z.ttl",
+    "studio_sha256": "6459c8550bb84d3beba3c1162fb66408ff0f46f801a6acf30d20418521d6b65f"
+  },
+  "pendientes": {
+    "significados_reales": 138,
+    "vigencias": 16,
+    "candidatas_semanticas": 17,
+    "referencia_catalogo": "des_mpo_res",
+    "encabezados_corruptos": 2,
+    "acceso_vigencias": [
+      "V13",
+      "V14"
+    ],
+    "unidades_no_promovidas": [
+      "Toneladas: variante local sin acreditar",
+      "hm³: término exacto no verificado en la versión respaldada"
+    ],
+    "analisis": "Se requiere documentación/cobertura adicional antes de calcular comparaciones."
+  },
+  "fuera_de_alcance": [
+    "Gemma",
+    "cambiar la base IRI",
+    "contactar publicadores",
+    "promover significados o candidatas sin respaldo"
+  ],
+  "trazabilidad": {
+    "historicos_inmutables_comprobados": 41,
+    "historicos_sha256": {
+      "data/integracion/manifiesto.json": "346fcfeb0c3633320130a1262443f626ed28b695db302e93be7cd87171069ba5",
+      "data/integracion-cobertura/manifiesto.json": "b7f3876ae7203e9ee191eb86d8f6f59255492c50343e91ed2b7541f7a931fbec",
+      "data/integracion-ronda-2/entregas/agente-4-vigencia/evidencia/externa/manifiesto_externa.json": "ccd0d35c8ec95a4fef18ba57c849e7e19f293b79837bf41bb080adb9e788af89",
+      "data/integracion-ronda-2/manifiesto.json": "9c99f01ac85f2b1711e61fbd2fa37bdb703adb2486ada1eb49477bf777490097",
+      "data/integracion-ronda-3/manifiesto.json": "c926c28467a499ff72ed626da8014cc6c642c31f7760ca25cffa4ad1d6782dff",
+      "data/integracion-ronda-4/manifiesto.json": "c9edd8a180b0c79cc4c3eacce3c9e52009ddb63e68951db7181c6a377da046f2",
+      "data/integracion-ronda-4-historia/manifiesto.json": "c4d7b52a18fa437fb810611d2be50998965ec8d04b160d4c8cf4eb0bd52c8528",
+      "data/integracion-ronda-5/manifiesto.json": "0dc74594574db81029455e997c009804aa5fc7af1346b6fb6f1d29693958626f",
+      "data/integracion-ronda-5-compatibilidad/manifiesto.json": "62e9f59aee0b2b3b8b71b8bf0210253914176a14610df72ab51430197a8d3383",
+      "data/integracion-ronda-5-web/manifiesto.json": "80d1205b7da589d79c6bbda5574dbbd3f54b93448b5f7a45f5782bf8a2141bd1",
+      "data/integracion-ronda-6/manifiesto.json": "2b618252e4198e8e4a8c992d65ed288b4766c59d049e96dfc004c4a28206f5f2",
+      "data/integracion-ronda-7/manifiesto.json": "7b5d242feeaf23bd6f54f44b6314e8afb829a88fd1ee9bb5a70807c900cf7a55",
+      "data/integracion-ronda-8/fuentes/manifiesto-r7.json": "7b5d242feeaf23bd6f54f44b6314e8afb829a88fd1ee9bb5a70807c900cf7a55",
+      "data/integracion-ronda-8/manifiesto.json": "aca4c85162076873211d4fcb50dd0e50dfbed6bde2f1ed25f0c4521f93723b77",
+      "data/integracion-ronda-9/manifiesto.json": "033da3d96348eedbcd8d211f8cbbe56cd0722dd12123aa738e9d8bf6f56dabbd",
+      "ontologia/revision-agentes.json": "2fe94827de8f4a5f3f6bbc70aed65d955aa1c98648076ab08899e972dbb6783b",
+      "ontologia/revision-cobertura.json": "c2c6f6d4601ea214474bb3a6168262a00889c793c4cec83dbb522484202abb25",
+      "ontologia/revision-ronda-2.json": "550346b52f90d3b88c6949869c0b3517b24264a495ba4e432bf7868053470505",
+      "ontologia/revision-ronda-3.json": "df2190a368bff4416122485e730c99680f85205a2d578412817887e2662df619",
+      "ontologia/revision-ronda-4.json": "2fd56229f82dd64d1fadb1d0727c5fae2515621c1d17a386543788028d5738f2",
+      "ontologia/revision-ronda-5.json": "2950dfb5d3a48c7a3fec101f0cdd7fcd77f67cc0b6472d6ca0db36ca52030fbf",
+      "ontologia/revision-ronda-6.json": "fc3cdf0b1ef6b5a9981bd0fcc29439a8290ddc4a044430ede540424dfd7dc8cc",
+      "ontologia/revision-ronda-7.json": "c061e436e9675b0d1156a490bc6b954bee1af85ac69e8a6021631d6444547e00",
+      "ontologia/revision-ronda-8.json": "d8e5871df5ed3dddc9f6d22062ac497969410406d9adad52fceeea324ef27ea3",
+      "ontologia/revision-ronda-9.json": "3bbfd40c489babaaf8d8162da035ff88ace4fa8aedb4e0d6c52f49534454b727",
+      "ontologia/semantica.json": "dba467b63286171bb68f5b1400a1ed51bfb99d5663e5b34a36f31fb94953cebd",
+      "ontologia/territorio.json": "71c0c890ea9478c47697cb1cf6742f4205fed45f2fbf501ad86fb6f8ecb00a73",
+      "reports/ronda-4-studio.json": "01f4cf125ad0acff3786d6b6d962686ec8083fcf7a4f095f3078db58e78300fc",
+      "reports/ronda-4.json": "975e9417ada9790e0a5329bf2e0e481812198be2548cb8566d241315a117da67",
+      "reports/ronda-4.md": "9dec09c310b12871de0da9d8c3b55bd846ad77e2ed6641203b8ea2355f11e6d1",
+      "reports/ronda-5-studio.json": "fd36ed2780edaed28bd52304aff5e3c781e14855690785fd509842932a9d6f50",
+      "reports/ronda-5.json": "3c392d113669469a61a3e8e84293cdd6a95829925f14cb10de01108244d6f8af",
+      "reports/ronda-5.md": "ad263fefa13005c19eb5bd7076650f980c74762c23be48e6f508aad28cf86dbc",
+      "reports/ronda-6.json": "52b6abc5dd2632e9c33d27f13016f01e85e63fb4284f43a1fcc481ee770d1a47",
+      "reports/ronda-6.md": "74981fe76bb09b00478b5f10ab20bf9406e7bfb5c64b851149ec35b90f22167a",
+      "reports/ronda-7.json": "197054973a25496ed30b393c566b689e43d6cf46d012f79e644cb0521a32d787",
+      "reports/ronda-7.md": "9e725b0aa6aa2774868de00dbb6bcd1b2a8389afddc48a7bd9f45be103a9fc9c",
+      "reports/ronda-8.json": "5ac384bc4c253f5310ae69402c8d9249d2ee85082086c2dca85483f8b4b7eacb",
+      "reports/ronda-8.md": "40b3de90cd576857106c660007813802df79fda0e0a6d754c19b5b914cd2f17c",
+      "reports/ronda-9.json": "5b35072fc0f8463af92365687020cad1ac6c69380e9f77dcfa2fb24139590c04",
+      "reports/ronda-9.md": "b824212dba6cb032d9f657c7ce57b82159ca579a2c10dcad84fb56aba1564976"
+    },
+    "core_sha256": "dba467b63286171bb68f5b1400a1ed51bfb99d5663e5b34a36f31fb94953cebd",
+    "config_sha256": "0fa293d24094e70d81be6df257c4081627e1d571f9fc44dabb5e7bd21b1ff0c4",
+    "manifiesto_r10_sha256": "f28c5915e043b5081c44b824b9a9bd92f51e97218c2e42aeac98aed2b6aaa890",
+    "evidencia_sha256": {
+      "propuestas/ampliacion-post-r9/ejecucion-20261024/reanudacion-muse/A-auditoria/v001/auditoria-a.json": "cf12f90ba75b0389fc3fb07890875063f6f7d4b8831176b8554c60cf6a442685",
+      "propuestas/ampliacion-post-r9/ejecucion-20261024/reanudacion-muse/A-auditoria/v001/evidencia-sha256.json": "79e1a2642cf4f2e3a79aa024dbdbfc8642ca954dd1bcdaf62e22594cf0d0b26f",
+      "propuestas/ampliacion-post-r9/ejecucion-20261024/reanudacion-muse/A-auditoria/v001/sello.json": "dedc9f68e61f0e33742083539cb36519de85488c89a84835ab2721a7214069bd",
+      "propuestas/ampliacion-post-r9/ejecucion-20261024/reanudacion-muse/adenda-trazabilidad.json": "2c47380d5fa780d4f896731274d937bf5cf2fb9f3e25a2333b091a07a1d3dab1",
+      "propuestas/ampliacion-post-r9/ejecucion-20261024/reanudacion-muse/B-auditoria/v001/auditoria-b.json": "00b6f343422c36324326901585ea416a09fba657157eceaa55930c6edcf83c6b",
+      "propuestas/ampliacion-post-r9/ejecucion-20261024/reanudacion-muse/B-auditoria/v001/dictamen-codigo.json": "8b620bcde3a89b037834807c979e1799b63b859b8ad713f8d1d823329edbc3eb",
+      "propuestas/ampliacion-post-r9/ejecucion-20261024/reanudacion-muse/B-auditoria/v001/sello.json": "7919f42d082e125a1d1d7b280164ddba707da4aaa208b14ed8dbb3128ae10e0a",
+      "propuestas/ampliacion-post-r9/ejecucion-20261024/reanudacion-muse/B-auditoria/v002/dictamen-pruebas.json": "f4f5646ec1bf37e12396cdd31c9a24d54cacf12c5b17b8a12c6ebad56e3bb48b",
+      "propuestas/ampliacion-post-r9/ejecucion-20261024/reanudacion-muse/B-auditoria/v002/sello.json": "875f4fa3b45fa814f90dd1198ab4ff7ff8356f24ea0478de78e93f89a1029ccb",
+      "propuestas/ampliacion-post-r9/ejecucion-20261024/reanudacion-muse/cierre-portal-carga.json": "243397be91a2b4300e2cc5aa56bf8c7832e0008c2417cc3f14aa543ddb697ff6",
+      "propuestas/ampliacion-post-r9/ejecucion-20261024/reanudacion-muse/cierre-studio-portal-sync.json": "ecc5b486c15e458e1016d2c7f036f8ade053de3f664e7f3133a0a9ce8994db7a",
+      "propuestas/ampliacion-post-r9/ejecucion-20261024/reanudacion-muse/D-analisis/v001/dictamen-A1-911.json": "ee35f5623034dd1f479584265acfc6499a08bd3db97f418ab300bb86b5bab581",
+      "propuestas/ampliacion-post-r9/ejecucion-20261024/reanudacion-muse/D-analisis/v001/dictamen-A2-registro-civil.json": "d9260e005ac15d2f242e9a3727e67c260ca4656441ced8f2edbbe9c35f8bd8ae",
+      "propuestas/ampliacion-post-r9/ejecucion-20261024/reanudacion-muse/D-analisis/v001/dictamen-A3-itama.json": "5d4b730c04ce9371d42bd6e355f2d8b8cdf427cb2b52643071dc49cfdc604b9c",
+      "propuestas/ampliacion-post-r9/ejecucion-20261024/reanudacion-muse/D-analisis/v001/dictamen-T-top50.json": "1727a6f5b324737b6507111b9a71d20aa75f6b1cdfc7a275bba6bcc0631105d2",
+      "propuestas/ampliacion-post-r9/ejecucion-20261024/reanudacion-muse/D-analisis/v001/sello.json": "25a3e6313c86bf41b44d3b66862850a6c61d7f9b46860fb8992e2f43d5508783",
+      "propuestas/ampliacion-post-r9/ejecucion-20261024/reanudacion-muse/D-analisis/v002/dictamen-publicacion.json": "7e61b2ca7d4729045d2ee19d087d094b9d29fe89f5c52203bc688d61a1635712",
+      "propuestas/ampliacion-post-r9/ejecucion-20261024/reanudacion-muse/D-analisis/v002/sello.json": "3a6f8177677761e432f064ff7e5fe7f4a4a4aa0f16800627c0bc654300415aaa",
+      "propuestas/ampliacion-post-r9/ejecucion-20261024/reanudacion-muse/D-analisis/v003/dictamen-final-publicador.json": "c6167c93d249f9e07d558304a91c42da054bdc016a6f09559c4cb3f90876a436",
+      "propuestas/ampliacion-post-r9/ejecucion-20261024/reanudacion-muse/D-analisis/v003/sello.json": "b6268deb2a698f17d6cfdb8b8054ae6f47c5db0ebab6897756f7182b6af74d92",
+      "propuestas/ampliacion-post-r9/ejecucion-20261024/reanudacion-muse/D-analisis/v004/dictamen-a3-consolidado.json": "beb68f1aeb6d61ed796a6cb79a58cf5ea03ae88e06c6ee67ecfecd96046046db",
+      "propuestas/ampliacion-post-r9/ejecucion-20261024/reanudacion-muse/D-analisis/v004/sello.json": "0c8f899778334f62333797f37d7080c289675fe4103f29b59a5d62bb7830b26d",
+      "propuestas/ampliacion-post-r9/ejecucion-20261024/reanudacion-muse/delta-rdf.json": "76e1ba6c2d720636bb69e5f3f206866aa75c176aa8c0282a3b8de5bb974ed59f",
+      "propuestas/ampliacion-post-r9/ejecucion-20261024/reanudacion-muse/instalacion.json": "ccc56f175641f9491b1d960b4eedbc66afe636d6f0e4519c84b7a963585a6a0a",
+      "propuestas/ampliacion-post-r9/ejecucion-20261024/reanudacion-muse/preflight.json": "94034f82c18bef4ee5ce8de0780f2d5560fe26b80438a90bdbd1f78e4a33e76e",
+      "propuestas/ampliacion-post-r9/ejecucion-20261024/reanudacion-muse/publicacion.json": "926695ce67819c2c850e1b52134b22e7d10ef3a663ae075e834b09ef61d7a806",
+      "propuestas/ampliacion-post-r9/ejecucion-20261024/reanudacion-muse/V-pruebas/v001/resultados.json": "f4fbe846cb21f60e1d8e87245c9f76c15f1d5052a5d11fd62ccafec8000936f0",
+      "propuestas/ampliacion-post-r9/ejecucion-20261024/reanudacion-muse/V-pruebas/v001/sello.json": "0e1b43cf8e97e2bf8ea9d2fecdd95cbfe12ce6f7dec010a17588dedb6e30bf37"
+    }
+  },
+  "observaciones_resueltas": [
+    "Guarda del publicador corregida y probada con CLI instalado en raíz temporal.",
+    "ITAMA v003 conserva el resultado y corrige el expediente/sello; duplicado de pruebas obsoleto excluido.",
+    "Deriva del wrapper S documentada sin cambio de shapes; adenda-trazabilidad.json.",
+    "Fecha errónea del dictamen D/v003 corregida mediante adenda D/v004, sin modificar el dictamen anterior."
+  ]
+}

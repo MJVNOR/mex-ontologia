@@ -1,0 +1,131 @@
+{
+  "rol": "chat",
+  "alcance": "Evaluacion real del chat de Studio autorizada en ronda 4. Harness reutiliza modulos de retrieval y model-client del sidecar (retrieve/asContext/QA_SYSTEM_PROMPT de graphrag.ts + OpenAICompatibleProvider de providers/openai.ts) contra el motor vivo; NO invoca el binario sidecar completo (dist/index.js) ni la UI, por lo que no se etiqueta E2E. Sin cambiar proveedor/modelo/claves/configuracion, sin modificar el grafo ni recompilar. Llamadas al modelo: 2 respuestas (C2 falla-oraculo, C3 probado), 1 error 503 (C1), 3 errores 429 (C4-C6). Capa studio-ui: leida (estado) pero pregunta no enviada.",
+  "base_verificada": {
+    "triples": 284810,
+    "correspondencias_revisadas": 865,
+    "significados_respaldados": 1212,
+    "conceptos": 940,
+    "comparaciones_f2_2020": 72,
+    "evidencias_f2": 144,
+    "fuente": "grafo vivo http://127.0.0.1:8137 (lectura) + ontologia/semantica.json + reports/cobertura-muse.json",
+    "verificado_el": "2026-10-23T17:04:53.156Z"
+  },
+  "harness": {
+    "archivos": [
+      "corpus.json",
+      "ejecutar_chat.mjs",
+      "oraculo.py",
+      "oraculo2.py",
+      "oraculo3.py",
+      "respuestas-saneadas.json",
+      "evaluacion.json",
+      "adenda-ui.json"
+    ],
+    "invocacion": "reutiliza modulos retrieve/asContext/QA_SYSTEM_PROMPT (graphrag.ts) y OpenAICompatibleProvider (providers/openai.ts) con cliente MCP minimo sobre /api/query del motor vivo; NO invoca el binario sidecar completo (sidecars/agent/dist/index.js) ni la UI de Studio; no es E2E",
+    "comando": "& \"C:/Program Files (x86)/Nodist/v-x64/22.23.2/node.exe\" propuestas/pendientes-muse-r4/chat/ejecutar_chat.mjs",
+    "referencia": "scripts/comprobar_recuperacion_chat.mjs (no modificado; adaptacion local)",
+    "modelo": "gemini-3.5-flash",
+    "capas": {
+      "sidecar/api": "ejecutada en este harness con los mismos modulos de retrieval, prompt y modelo que Studio; binario sidecar completo no invocado",
+      "studio-ui": "no_ejecutada como prueba de chat: UI leida (estado) por el integrador con @oai/sky del node_repl raiz (ventana com.fabio.open-ontologies-studio id 14622614, 284810 triples, gemini-3.5-flash, campo Ask y Send presentes); foco por indice 132 fallo por ventana minimizada; pregunta NO escrita ni enviada; en este entorno OpenCode el paquete @oai/sky no existe y se respeto la guarda sin evadirla"
+    }
+  },
+  "decisiones_chat": [
+    {
+      "id": "C1-totales",
+      "pregunta": "¿Cuántas correspondencias documentales revisadas hay? Distingue revisadas, candidatas y ambiguas.",
+      "canal": "sidecar-Studio (retrieve+QA_SYSTEM_PROMPT+modelo configurado), sin UI",
+      "estado": "bloqueado_otro",
+      "motivo": "Model endpoint https://generativelanguage.googleapis.com/v1beta/openai returned HTTP 503: [{\n  \"error\": {\n    \"code\": 503,\n    \"message\": \"This model is currently experiencing high demand. Spikes in demand are usually temporary. Please try again later.\",\n    \"status\": \"UNAVAILABLE\"\n  }\n}\n]",
+      "triples_antes": 284810,
+      "triples_despues": 284810,
+      "evidencia": [
+        "propuestas/pendientes-muse-r4/chat/evaluacion.json",
+        "propuestas/pendientes-muse-r4/chat/respuestas-saneadas.json"
+      ]
+    },
+    {
+      "id": "C2-f2-evidencia",
+      "pregunta": "Explica la evidencia F2 de proyecciones en 2020 y sus condiciones pendientes. No extrapoles a otros años.",
+      "canal": "sidecar-Studio (retrieve+QA_SYSTEM_PROMPT+modelo configurado), sin UI",
+      "estado": "falla_oraculo",
+      "motivo": "oraculo: faltan=['72'] alguno_ok=False prohibidos=[]",
+      "triples_antes": 284810,
+      "triples_despues": 284810,
+      "evidencia": [
+        "propuestas/pendientes-muse-r4/chat/evaluacion.json",
+        "propuestas/pendientes-muse-r4/chat/respuestas-saneadas.json"
+      ]
+    },
+    {
+      "id": "C3-f2-igualdad",
+      "pregunta": "¿Qué demuestra la igualdad de los dos valores de 2020 y qué queda sin demostrar?",
+      "canal": "sidecar-Studio (retrieve+QA_SYSTEM_PROMPT+modelo configurado), sin UI",
+      "estado": "probado",
+      "motivo": "oraculo: faltan=[] alguno_ok=True prohibidos=[]",
+      "triples_antes": 284810,
+      "triples_despues": 284810,
+      "evidencia": [
+        "propuestas/pendientes-muse-r4/chat/evaluacion.json",
+        "propuestas/pendientes-muse-r4/chat/respuestas-saneadas.json"
+      ]
+    },
+    {
+      "id": "C4-definicion-diccionario",
+      "pregunta": "¿Qué significa la variable año_matrimonio según su diccionario? Consulta el grafo y muestra la evidencia.",
+      "canal": "sidecar-Studio (retrieve+QA_SYSTEM_PROMPT+modelo configurado), sin UI",
+      "estado": "bloqueado_cuota",
+      "motivo": "Model endpoint https://generativelanguage.googleapis.com/v1beta/openai returned HTTP 429: [{\n  \"error\": {\n    \"code\": 429,\n    \"message\": \"You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/rate-limit. \\n* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_requests, limit: 20, model: gemini-3.6-flash, description: Generate content requests per day limit exceeded on Free Tier. See https://ai.google.dev/gemini-api/docs/rate-limits.\\nPlease retry in 13h55m15.728774334s.\",\n    \"status\": \"RESOURCE_EXHAUSTED\",\n    \"details\": [\n      {\n        \"@type\": \"type.googleapis.com/google.rpc.Help\",\n        \"links\": [\n          {\n            \"description\": \"Learn more about Gemini API quotas\",\n            \"url\": \"https://ai.google.dev/gemini-api/docs/rate-limits\"\n          }\n        ]\n      },\n      {\n        \"@type\": \"type.googleapis.com/google.rpc.QuotaFailure\",\n        \"violations\": [\n          {\n            \"description\": \"Generate content requests per day limit exceeded on Free Tier. See https://ai.google.dev/gemini-api/docs/rate-limits.\",\n            \"quotaMetric\": \"generativelanguage.googleapis.com/generate_content_free_tier_requests\",\n            \"quotaId\": \"GenerateRequestsPerDayPerProjectPerModel-FreeTier\",\n            \"quotaDimensions\": {\n              \"location\": \"global\",\n              \"model\": \"gemini-3.6-flash\"\n            },\n            \"quotaValue\": \"20\"\n          }\n        ]\n      },\n      {\n        \"@type\": \"type.googleapis.com/google.rpc.RetryInfo\",\n        \"retryDelay\": \"50115s\"\n      }\n    ]\n  }\n}\n]",
+      "triples_antes": 284810,
+      "triples_despues": 284810,
+      "evidencia": [
+        "propuestas/pendientes-muse-r4/chat/evaluacion.json",
+        "propuestas/pendientes-muse-r4/chat/respuestas-saneadas.json"
+      ]
+    },
+    {
+      "id": "C5-diferencia-variables",
+      "pregunta": "¿Qué diferencia hay entre año_matrimonio y año_defuncion? Muestra las definiciones originales y distingue lo documentado de lo candidato.",
+      "canal": "sidecar-Studio (retrieve+QA_SYSTEM_PROMPT+modelo configurado), sin UI",
+      "estado": "bloqueado_cuota",
+      "motivo": "Model endpoint https://generativelanguage.googleapis.com/v1beta/openai returned HTTP 429: [{\n  \"error\": {\n    \"code\": 429,\n    \"message\": \"You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/rate-limit. \\n* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_requests, limit: 20, model: gemini-3.6-flash, description: Generate content requests per day limit exceeded on Free Tier. See https://ai.google.dev/gemini-api/docs/rate-limits.\\nPlease retry in 13h55m12.65649031s.\",\n    \"status\": \"RESOURCE_EXHAUSTED\",\n    \"details\": [\n      {\n        \"@type\": \"type.googleapis.com/google.rpc.Help\",\n        \"links\": [\n          {\n            \"description\": \"Learn more about Gemini API quotas\",\n            \"url\": \"https://ai.google.dev/gemini-api/docs/rate-limits\"\n          }\n        ]\n      },\n      {\n        \"@type\": \"type.googleapis.com/google.rpc.QuotaFailure\",\n        \"violations\": [\n          {\n            \"description\": \"Generate content requests per day limit exceeded on Free Tier. See https://ai.google.dev/gemini-api/docs/rate-limits.\",\n            \"quotaMetric\": \"generativelanguage.googleapis.com/generate_content_free_tier_requests\",\n            \"quotaId\": \"GenerateRequestsPerDayPerProjectPerModel-FreeTier\",\n            \"quotaDimensions\": {\n              \"location\": \"global\",\n              \"model\": \"gemini-3.6-flash\"\n            },\n            \"quotaValue\": \"20\"\n          }\n        ]\n      },\n      {\n        \"@type\": \"type.googleapis.com/google.rpc.RetryInfo\",\n        \"retryDelay\": \"50112s\"\n      }\n    ]\n  }\n}\n]",
+      "triples_antes": 284810,
+      "triples_despues": 284810,
+      "evidencia": [
+        "propuestas/pendientes-muse-r4/chat/evaluacion.json",
+        "propuestas/pendientes-muse-r4/chat/respuestas-saneadas.json"
+      ]
+    },
+    {
+      "id": "C6-clave-26001",
+      "pregunta": "Para la clave 26001 en las comparaciones de 2020, muestra los dos valores con medida, nombre de origen, archivo y filas. ¿Son códigos INEGI?",
+      "canal": "sidecar-Studio (retrieve+QA_SYSTEM_PROMPT+modelo configurado), sin UI",
+      "estado": "bloqueado_cuota",
+      "motivo": "Model endpoint https://generativelanguage.googleapis.com/v1beta/openai returned HTTP 429: [{\n  \"error\": {\n    \"code\": 429,\n    \"message\": \"You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/rate-limit. \\n* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_requests, limit: 20, model: gemini-3.6-flash, description: Generate content requests per day limit exceeded on Free Tier. See https://ai.google.dev/gemini-api/docs/rate-limits.\\nPlease retry in 13h55m8.911135184s.\",\n    \"status\": \"RESOURCE_EXHAUSTED\",\n    \"details\": [\n      {\n        \"@type\": \"type.googleapis.com/google.rpc.Help\",\n        \"links\": [\n          {\n            \"description\": \"Learn more about Gemini API quotas\",\n            \"url\": \"https://ai.google.dev/gemini-api/docs/rate-limits\"\n          }\n        ]\n      },\n      {\n        \"@type\": \"type.googleapis.com/google.rpc.QuotaFailure\",\n        \"violations\": [\n          {\n            \"description\": \"Generate content requests per day limit exceeded on Free Tier. See https://ai.google.dev/gemini-api/docs/rate-limits.\",\n            \"quotaMetric\": \"generativelanguage.googleapis.com/generate_content_free_tier_requests\",\n            \"quotaId\": \"GenerateRequestsPerDayPerProjectPerModel-FreeTier\",\n            \"quotaDimensions\": {\n              \"model\": \"gemini-3.6-flash\",\n              \"location\": \"global\"\n            },\n            \"quotaValue\": \"20\"\n          }\n        ]\n      },\n      {\n        \"@type\": \"type.googleapis.com/google.rpc.RetryInfo\",\n        \"retryDelay\": \"50108s\"\n      }\n    ]\n  }\n}\n]",
+      "triples_antes": 284810,
+      "triples_despues": 284810,
+      "evidencia": [
+        "propuestas/pendientes-muse-r4/chat/evaluacion.json",
+        "propuestas/pendientes-muse-r4/chat/respuestas-saneadas.json"
+      ]
+    }
+  ],
+  "conteos": {
+    "casos_totales": 6,
+    "llamadas_modelo": {
+      "respuestas": 2,
+      "detalle_respuestas": ["C2-f2-evidencia (falla_oraculo: etiqueta F2 sin anclaje, el modelo no alucino)", "C3-f2-igualdad (probado)"],
+      "error_503_demanda": 1,
+      "detalle_503": ["C1-totales"],
+      "error_429_cuota": 3,
+      "detalle_429": ["C4-definicion-diccionario", "C5-diferencia-variables", "C6-clave-26001"]
+    },
+    "chat_probado": 1,
+    "falla_oraculo": 1,
+    "bloqueado_cuota": 3,
+    "bloqueado_otro": 1,
+    "grafo_sin_cambios_todos": true
+  },
+  "evidencia_integrador_ui": "propuestas/pendientes-muse-r4/chat/adenda-ui.json"
+}

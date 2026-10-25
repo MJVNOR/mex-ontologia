@@ -1,0 +1,67 @@
+# Controles positivos: cada nodo debe cumplir las formas adicionales v001.
+# Incluye los tres estados de VariableDocumentada, el caso fuera con y sin significado,
+# una correspondencia documental_revisada hacia variable respaldada, correspondencias
+# candidata_por_nombre (una hacia fuera_del_nucleo_actual, como Total_Egresos en R9),
+# una unidad con termino QUDT distinto de MilliM/HA, una unidad sin QUDT (caso hm3),
+# y propiedades adicionales ajenas al alcance (no hay sh:closed).
+@prefix mex: <https://example.org/mex-ontologi/vocab/> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+@prefix ex: <https://example.org/mex-ontologi/prueba-s-shacl/v001/> .
+
+ex:vr1 a mex:VariableDocumentada ;
+    mex:estadoSemantico "respaldada_por_definicion" ;
+    mex:significadoDocumentado ex:concepto-documentado .
+
+ex:vc1 a mex:VariableDocumentada ;
+    mex:estadoSemantico "candidata_sin_definicion_suficiente" ;
+    mex:significadoCandidato ex:concepto-candidato .
+
+ex:vf1 a mex:VariableDocumentada ;
+    mex:estadoSemantico "fuera_del_nucleo_actual" .
+
+ex:vf-con-documentado a mex:VariableDocumentada ;
+    mex:estadoSemantico "fuera_del_nucleo_actual" ;
+    mex:significadoDocumentado ex:concepto-documentado .
+
+ex:vf-con-candidato a mex:VariableDocumentada ;
+    mex:estadoSemantico "fuera_del_nucleo_actual" ;
+    mex:significadoCandidato ex:concepto-candidato .
+
+ex:corr-ok a mex:CorrespondenciaSemantica ;
+    mex:estadoCorrespondencia "documental_revisada" ;
+    mex:variableDestino ex:vr1 .
+
+ex:corr-candidata a mex:CorrespondenciaSemantica ;
+    mex:estadoCorrespondencia "candidata_por_nombre" ;
+    mex:variableDestino ex:vc1 .
+
+ex:corr-fuera a mex:CorrespondenciaSemantica ;
+    mex:estadoCorrespondencia "candidata_por_nombre" ;
+    mex:variableDestino ex:vf1 .
+
+ex:definicion-ok a mex:DefinicionVariable .
+
+ex:unidad-ok a mex:UnidadDeclarada ;
+    mex:variableDocumentada ex:vr1 ;
+    mex:definicionFuente ex:definicion-ok ;
+    mex:unidadLiteral "Milímetros" ;
+    mex:unidadQudt <http://qudt.org/vocab/unit/MilliM> ;
+    prov:wasDerivedFrom ex:evidencia-1 .
+
+ex:unidad-qudt-nuevo a mex:UnidadDeclarada ;
+    mex:variableDocumentada ex:vr1 ;
+    mex:definicionFuente ex:definicion-ok ;
+    mex:unidadLiteral "Metros" ;
+    mex:unidadQudt <http://qudt.org/vocab/unit/M> ;
+    prov:wasDerivedFrom ex:evidencia-1 ;
+    mex:notaAdicional "propiedad valida ajena al alcance, no rechazada" ;
+    mex:propiedadExtendida ex:valor-extra .
+
+ex:unidad-sin-qudt a mex:UnidadDeclarada ;
+    mex:variableDocumentada ex:vc1 ;
+    mex:definicionFuente ex:definicion-ok ;
+    mex:unidadLiteral "Hectómetros cúbicos" ;
+    prov:wasDerivedFrom ex:evidencia-1 .
+
+ex:concepto-documentado a mex:ConceptoCompartido .
+ex:concepto-candidato a mex:ConceptoCompartido .

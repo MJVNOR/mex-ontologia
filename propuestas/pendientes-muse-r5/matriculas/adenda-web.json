@@ -1,0 +1,93 @@
+{
+  "rol": "matriculas",
+  "fecha_utc": "2026-10-23",
+  "alcance": "Seguimiento documental a respuestas MAT-W-01..05 de catalogos-web. No modifica entrega.json, listo.json ni nucleo; no propone reglas ni conceptos.",
+  "entrega_cerrada_sha256": "e8ce4f70c618570aa56ba97adab35c47f31f7ae8478eb541ca724daa5902dc35",
+  "decision": "sin proponer; se confirman 30 pendientes con brechas mejoradas",
+  "fuentes": [
+    {
+      "localizador": "propuestas/pendientes-muse-r5/catalogos-web/evidencia/UES_Reglamento_Escolar_2022_01.pdf",
+      "sha256": "c4523ae5221c640981c259f0a97561ec0924340bb540a4f13716e116c4b0e023",
+      "bytes": 939684,
+      "edicion_portada": "Actualizacion aprobada en XLI Sesion Ordinaria del Consejo Directivo UES, septiembre de 2022",
+      "aplicabilidad": "Edicion aplicable al periodo del dato 2022-2 segun portada; transitorios conservan texto XXX 16-dic-2019 (posible arrastre, se conserva sin curar)."
+    },
+    {
+      "localizador": "propuestas/pendientes-muse-r5/catalogos-web/evidencia/UES_Reglamento_Escolar_previo.pdf",
+      "sha256": "b8343af9800ea7565e9ecb1f24560efc8d639799b2fc040b9a29c7e57076a8",
+      "bytes": 216233,
+      "edicion_portada": "Aprobado en XXX Sesion Ordinaria, 16 de diciembre de 2019",
+      "aplicabilidad": "Edicion de la era 2022 (previa a la actualizacion XLI); contexto, no vinculada a variables."
+    },
+    {
+      "localizador": "propuestas/pendientes-muse-r5/catalogos-web/evidencia/UES_Guia_Opciones_Titulacion_2023.pdf",
+      "sha256": "a70b5ea907218138a721ee7fa13fa1dbe6532f24bea7e1930a2fe548d9a1ff958",
+      "bytes": 1274532,
+      "edicion_portada": "Actualizacion aprobada en XLV Sesion Ordinaria, 25 de agosto de 2023",
+      "aplicabilidad": "Posterior al dato 2022-2; terminologia distinta; no intercambiable con el dato."
+    },
+    {
+      "localizador": "propuestas/pendientes-muse-r5/catalogos-web/respuestas_web.json",
+      "sha256": "1ec8b4a9a671b2500bcc4f0daf49b059f7a310ccb9b7a14308ad8aa8bc583da3",
+      "aplicabilidad": "Veredictos MAT-W-01..05 de catalogos-web (atendidas 5/5)."
+    },
+    {
+      "localizador": "propuestas/pendientes-muse-r5/catalogos-web/evidencia_web_solicitudes.json",
+      "sha256": "c9e2d5b06770a71bd823eb0244e6517d8ed6ec6876a7f4d0a8991f373854e118",
+      "aplicabilidad": "Evidencias S01..S08 que sustentan las respuestas (fragmentos y conclusiones)."
+    }
+  ],
+  "verificacion_propia_pdfs": [
+    "Texto extraido por descompresion propia (sin OCR externo): portadas, indice y articulos verificados literalmente en los 3 PDF.",
+    "2022_01: Cap. IV arts. 23 (revalidacion), 24 (equivalencia: declaracion de igualdades academicas con instituciones del sistema nacional), 25 (convalidacion: reconocimiento en la propia institucion por cambio de programa o de plan); art. 4 calendario escolar; art. 9 alumno regular/irregular por reprobadas pendientes; art. 10 perdida de condicion; art. 21 cambio de programa y de unidad academica; Cap. XII art. 55 baja como separacion temporal o definitiva (sin tipos); art. 63 titulo exige alguna opcion de la Guia informativa Opciones de Titulacion Nivel Licenciatura.",
+    "2022_01: '222' (26 ocurrencias) es basura binaria de fuentes incrustadas, no clave de ciclo; sin 'ciclo senalado', sin 'Reing', sin calendario 2022-2.",
+    "Previo 2019: art. 30 con tabla de equivalente numerico 10/9/8/7/6 (sobresaliente/no aprobado); sin definicion de promedio, sin redondeo, sin conjuntos de asignaturas.",
+    "Guia 2023: opciones Tesis, Examen de Validacion/EGEL/EXIL, Experiencia Profesional, Alto Desempeno, Investigacion, Trabajo Profesional, Innovacion, Diplomado; sin 'no exigibilidad' ni 'examen profesional' literales."
+  ],
+  "correccion_a_S06": "S06 dice 'Sin escala numerica 0-10 ni redondeo': impreciso en lo primero. El previo art. 30 SI trae equivalente numerico 10-6. Persisten: sin promedio, sin redondeo, sin conjuntos, sin vinculo a variables. El veredicto (sin proponer) se mantiene.",
+  "solicitudes": [
+    {
+      "id": "MAT-W-01",
+      "veredicto_catalogos": "negativo-portal",
+      "examen_propio": "S01+S02 confirmados: pagina sin descripciones ni dominios; diccionario local con vacios se mantiene.",
+      "resuelve": false,
+      "por_que": "Sin fuente adicional que acredite sentido; portal y diccionario coinciden en el vacio.",
+      "brecha_mejorada": "Fechas de publicacion del diccionario (creado 10-ene-2024, actualizado 1-nov-2024); el vacio es estado actual, no laguna de busqueda."
+    },
+    {
+      "id": "MAT-W-02",
+      "veredicto_catalogos": "parcial-documento",
+      "examen_propio": "Reglamento 2022_01 y guia 2023 autenticos y verificados literalmente; equivalencia/convalidacion definidas como procesos; titulacion delegada a la Guia; opciones 2023 distintas a las variables 2022.",
+      "resuelve": false,
+      "por_que": "Reglamento generico sin vinculo variable/periodo/sujeto/codigo local; guia posterior con terminologia distinta (no intercambiable con dato 2022-2); equivalencia definida como proceso, no como representacion de la variable /17; fechas de acto no fijadas.",
+      "brecha_mejorada": "Edicion aplicable identificada (2022_01, portada XLI sep-2022); textos exactos arts. 23-25 y 55; lista cerrada de opciones 2023; falta: documento que ligue cada variable 2022 (/17,/63,/64,/65,/66,/67,/68,/69,/70) a su acto y representacion."
+    },
+    {
+      "id": "MAT-W-03",
+      "veredicto_catalogos": "parcial+negativo",
+      "examen_propio": "Art. 4 (calendario por rector) e inscripcion/reinscripcion por periodo (arts. 9-10) verificados; '222' del PDF es ruido de fuente; calendario 2022-2 no localizado en fuente primaria.",
+      "resuelve": false,
+      "por_que": "Sin definicion publica de clave '222', 'Reing' ni 'ciclo senalado'; calendario Scribd no autentico y no usado.",
+      "brecha_mejorada": "Limite exacto (no ausencia universal): falta calendario UES 2022-2 o nota que defina la clave y el ciclo senalado para /8,/12,/13,/14,/58."
+    },
+    {
+      "id": "MAT-W-04",
+      "veredicto_catalogos": "negativo-portal",
+      "examen_propio": "S01+S02 confirmados; art. 55 define baja generica sin tipos; sin manual de dominios publicado.",
+      "resuelve": false,
+      "por_que": "Sin catalogo ni instrumento que fije dominios de baja, estimulo, cambio de unidad ni facetas indigenas; art. 21 regula el tramite de cambio, no el dominio de la variable /62.",
+      "brecha_mejorada": "Texto de baja generica (art. 55) y de cambio de unidad (art. 21) localizados como contexto; falta: dominios y representaciones por campo (/11,/25,/26,/27,/28,/29,/61,/62)."
+    },
+    {
+      "id": "MAT-W-05",
+      "veredicto_catalogos": "parcial-documento",
+      "examen_propio": "Previo art. 30 verificado: niveles por competencia con equivalente 10-6; art. 9 (irregular = 1+ reprobadas pendientes) verificado en 2022_01; sin 'promedio' en ninguno.",
+      "resuelve": false,
+      "por_que": "Sin definicion de promedio, sin redondeo, sin conjuntos de asignaturas por subconjunto, sin metodo de conteo, sin vinculo a las variables; no se supone escala 0-10 para promedios.",
+      "brecha_mejorada": "Tabla 10-6 (art. 30 previo) y criterio de irregularidad (art. 9 2022_01) como contexto; falta: norma de calculo de promedios y representacion de /47,/48,/49,/52,/53."
+    }
+  ],
+  "pendientes_confirmados": 30,
+  "reglas_propuestas": 0,
+  "nota_metodo": "Examen directo de los 3 PDF por extraccion propia; ediciones y fechas originales conservadas; ningun contexto convertido en codebook; ningun reglamento usado para aprobar por nombre."
+}

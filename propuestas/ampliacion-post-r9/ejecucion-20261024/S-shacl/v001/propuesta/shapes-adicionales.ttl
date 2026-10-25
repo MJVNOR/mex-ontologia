@@ -1,0 +1,58 @@
+# Formas SHACL adicionales — carril S (post-R9), v001 — complemento DeepSeek.
+# Base IRI: la de config.toml, sin decidir ni sustituir (fuera de alcance).
+# No se usa sh:closed. Cada forma acota solo las propiedades que justifica.
+#
+# No repite las reglas de shapes.ttl (R1-R6, entrega sellada en esta carpeta):
+#   R1 respaldada_por_definicion -> significadoDocumentado   (equivale a un borrador S1)
+#   R6 contrato de UnidadDeclarada                           (equivale a un borrador S4)
+# Aquí solo lo que R1-R6 no cubren.
+@prefix sh: <http://www.w3.org/ns/shacl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+@prefix mex: <https://example.org/mex-ontologi/vocab/> .
+@prefix shape: <https://example.org/mex-ontologi/shapes/> .
+
+# S2. "documental_revisada" exige la huella del esquema revisado.
+# RevisionDocumental ya obliga huella -> documental_revisada; falta el recíproco.
+shape:AdicionalCorrespondenciaRevisadaConHuella a sh:NodeShape ;
+    sh:targetClass mex:CorrespondenciaSemantica ;
+    sh:description "Una correspondencia documental_revisada debe conservar la huella del esquema y de la fila del diccionario que sostienen la revisión."@es ;
+    sh:sparql [
+        a sh:SPARQLConstraint ;
+        sh:severity sh:Violation ;
+        sh:message "Una correspondencia documental_revisada debe conservar la huella del esquema revisado"@es ;
+        sh:select """SELECT $this WHERE {
+            $this <https://example.org/mex-ontologi/vocab/estadoCorrespondencia> "documental_revisada" .
+            FILTER NOT EXISTS { $this <https://example.org/mex-ontologi/vocab/huellaEsquemaRevisado> ?huella }
+        }""" ;
+    ] .
+
+# S3. Coherencia de presencia municipal: la bandera y los conteos de ambas fuentes.
+shape:AdicionalResumenMunicipalCoherencia a sh:NodeShape ;
+    sh:targetClass mex:ResumenMunicipalLocal ;
+    sh:description "presenteEnAmbas declara aparición en las dos fuentes del cruce; los conteos proceden de cada fuente y deben acompañar la bandera."@es ;
+    sh:sparql [
+        a sh:SPARQLConstraint ;
+        sh:severity sh:Violation ;
+        sh:message "presenteEnAmbas debe coincidir con la presencia de conteoMatrimonios y conteoDivorcios"@es ;
+        sh:select """SELECT $this WHERE {
+            $this <https://example.org/mex-ontologi/vocab/presenteEnAmbas> ?presente .
+            OPTIONAL { $this <https://example.org/mex-ontologi/vocab/conteoMatrimonios> ?m }
+            OPTIONAL { $this <https://example.org/mex-ontologi/vocab/conteoDivorcios> ?d }
+            FILTER ( (?presente = true  && (!BOUND(?m) || !BOUND(?d)))
+                  || (?presente = false && BOUND(?m) && BOUND(?d)) )
+        }""" ;
+    ] .
+
+# S5. Nodos obligatorios por otra forma que hasta ahora no tenían restricción propia.
+shape:AdicionalCondicionConexion a sh:NodeShape ;
+    sh:targetClass mex:CondicionConexion ;
+    sh:property [ sh:path rdfs:label ; sh:minCount 1 ; sh:maxCount 1 ; sh:minLength 1 ] ;
+    sh:property [ sh:path dct:description ; sh:minCount 1 ; sh:maxCount 1 ; sh:minLength 1 ] ;
+    sh:property [ sh:path prov:wasDerivedFrom ; sh:minCount 1 ; sh:nodeKind sh:IRI ] .
+
+shape:AdicionalMunicipioSegunFuente a sh:NodeShape ;
+    sh:targetClass mex:MunicipioSegunFuente ;
+    sh:property [ sh:path rdfs:label ; sh:minCount 1 ; sh:maxCount 1 ; sh:minLength 1 ] ;
+    sh:property [ sh:path prov:wasDerivedFrom ; sh:minCount 1 ; sh:nodeKind sh:IRI ] .

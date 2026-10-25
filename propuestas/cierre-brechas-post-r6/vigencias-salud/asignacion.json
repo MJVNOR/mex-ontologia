@@ -1,0 +1,188 @@
+{
+  "tarea": "vigencias-salud",
+  "tipo": "vigencias",
+  "clave_id": "id",
+  "conteo": 3,
+  "casos": [
+    {
+      "id": "V06",
+      "tipo": "vigencia",
+      "grupo": "C",
+      "dependencia_publicador": "DEP-CAT-R6-03",
+      "conjunto": {
+        "id": "5494daa1-09ca-4750-aeac-2558553700e1",
+        "titulo": "Fiebre manchada (Rickettsia)"
+      },
+      "catalogo": {
+        "recurso_catalogo": "08d3b1a7-dbc0-4f43-b1d2-3266cebb88f8",
+        "recurso_url": "https://datos.sonora.gob.mx/dataset/5494daa1-09ca-4750-aeac-2558553700e1/resource/08d3b1a7-dbc0-4f43-b1d2-3266cebb88f8/download/catalogo.xlsx",
+        "sha256": "3b8546acad7482825755e46a1a619a4838721f8480b94baaef3c755ba293db9c",
+        "hoja_campo": "Catalogo Servicios / servic_atencion"
+      },
+      "referencia_iri": "https://example.org/mex-ontologi/declared-code-reference/9ff643fe3f91869a5a3aff089018f3913d8510551a6d50a7566123a44969b05f",
+      "periodos_declarados_por_titulo": [
+        "2022 anual",
+        "2023 anual",
+        "2024 anual"
+      ],
+      "nota_periodos": "Periodos declarados por titulos de recursos CKAN y nota del conjunto; NO cobertura observada.",
+      "estado_actual": "pendiente (F3+F4 ausentes)",
+      "motivo": "F3+F4 ausentes: el portal no declara edición/versión de la hoja Catalogo Servicios ni su aplicación a 2022-2024.",
+      "evidencia_revisada": [
+        "W04 (recursos publicados: Diccionario+Catalogo+datos 2022-2024; fuente interna; sin versión)",
+        "Local: package_5494daa1-09ca-4750-aeac-2558553700e1.json (extras nulos) + xlsx 3b8546ac (3 hojas, sin versión)",
+        "R6-C1 (API CKAN package_show 2026-10-23) + R6-C2 (core-properties xlsx)",
+        "R6 novedad: R6-C1: API package 5494daa1: version=null; recurso Catalogo con cobertura 2022-01-01/2026-12-31 (avance de cobertura, NO edicion). R6-C2: catalogo 3b8546ac creator openpyxl, created 2026-04-15 (export posterior a periodos 2022-2024, sin celdas de version). F3+F4 ausentes."
+      ],
+      "campos_minimos": [
+        "emisor: publicador (DEP-CAT-R6-03)",
+        "edicion/version/fecha declarada del catalogo (Catalogo Servicios / servic_atencion, sha 3b8546ac)",
+        "recurso catalogo: 08d3b1a7-dbc0-4f43-b1d2-3266cebb88f8",
+        "periodos de aplicacion: 2022 anual; 2023 anual; 2024 anual",
+        "fecha o firma del documento"
+      ],
+      "criterio_aceptacion": "Se cierra solo si el documento del publicador cita edicion/version/fecha del catalogo (Catalogo Servicios / servic_atencion, sha 3b8546ac) y recurso 08d3b1a7-dbc0-4f43-b1d2-3266cebb88f8 y periodos (2022 anual; 2023 anual; 2024 anual); verificable (URL o copia local con SHA). Las fechas de portal/API (version=null, placeholder 1989-06-04) y core-properties no acreditan F3+F4.",
+      "limites": [
+        "No afirmar vigencia histórica ni extender a otros conjuntos/periodos."
+      ],
+      "documento_requerido_exacto": "Declaracion de edicion/version/fecha del catalogo Rickettsia (sha 3b8546ac) con vinculo 2022-2024 + fe de erratas o diccionario corregido y URL del catalogo de des_mpo_res si existe. Pendiente exacto: Acreditar F3+F4: declaración de edición/versión/fecha del catálogo (Catalogo Servicios/servic_atencion, sha 3b8546ac) y documento que la vincule con 2022, 2023, 2024.",
+      "soporte": [
+        {
+          "ruta": "reports/pendientes-ronda-5.json",
+          "sha256": "46f3b6f8826379be5124fb85cf6128b705fbe90deebf2c99bff64098608c8f11",
+          "localizador": "decisiones_significados id=V06"
+        },
+        {
+          "ruta": "propuestas/pendientes-muse-r6/catalogos/entrega.json",
+          "sha256": "649bbe7e5feca82b7e8d5c5144de78b1d8ceccb1c217ca976347b1c9a05cb74b",
+          "localizador": "decisiones_significados id=V06 + novedad_r6 (C1 API package_show 2026-10-23 + C2 core-properties xlsx)"
+        },
+        {
+          "ruta": "local: xlsx sha 3b8546ac",
+          "sha256": "3b8546acad7482825755e46a1a619a4838721f8480b94baaef3c755ba293db9c",
+          "localizador": "interior xlsx sin celdas de version/periodo (R4 vigente, re-verificado R6: sizes API = locales)"
+        }
+      ]
+    },
+    {
+      "id": "V07",
+      "tipo": "vigencia",
+      "grupo": "C",
+      "dependencia_publicador": "DEP-CAT-R6-03",
+      "conjunto": {
+        "id": "5494daa1-09ca-4750-aeac-2558553700e1",
+        "titulo": "Fiebre manchada (Rickettsia)"
+      },
+      "catalogo": {
+        "recurso_catalogo": "08d3b1a7-dbc0-4f43-b1d2-3266cebb88f8",
+        "recurso_url": "https://datos.sonora.gob.mx/dataset/5494daa1-09ca-4750-aeac-2558553700e1/resource/08d3b1a7-dbc0-4f43-b1d2-3266cebb88f8/download/catalogo.xlsx",
+        "sha256": "3b8546acad7482825755e46a1a619a4838721f8480b94baaef3c755ba293db9c",
+        "hoja_campo": "Catalogo rechazo / motiv_rech_ricket_sangre"
+      },
+      "referencia_iri": "https://example.org/mex-ontologi/declared-code-reference/5b1ccbaafec13e5b4e83d513d5817f79d39b709d3a03efc206f2b265dc66fc75",
+      "periodos_declarados_por_titulo": [
+        "2022 anual",
+        "2023 anual",
+        "2024 anual"
+      ],
+      "nota_periodos": "Periodos declarados por titulos de recursos CKAN y nota del conjunto; NO cobertura observada.",
+      "estado_actual": "pendiente (F3+F4 ausentes)",
+      "motivo": "F3+F4 ausentes: sin declaración de edición/versión de la hoja Catalogo rechazo ni su aplicación a 2022-2024.",
+      "evidencia_revisada": [
+        "W04 (igual que V06)",
+        "Local: package_5494daa1 (extras nulos) + xlsx 3b8546ac",
+        "R6-C1 (API CKAN package_show 2026-10-23) + R6-C2 (core-properties xlsx)",
+        "R6 novedad: R6-C1+C2 igual que V06 para hoja Catalogo rechazo (mismo archivo 3b8546ac, export openpyxl 2026). F3+F4 ausentes."
+      ],
+      "campos_minimos": [
+        "emisor: publicador (DEP-CAT-R6-03)",
+        "edicion/version/fecha declarada del catalogo (Catalogo rechazo / motiv_rech_ricket_sangre, sha 3b8546ac)",
+        "recurso catalogo: 08d3b1a7-dbc0-4f43-b1d2-3266cebb88f8",
+        "periodos de aplicacion: 2022 anual; 2023 anual; 2024 anual",
+        "fecha o firma del documento"
+      ],
+      "criterio_aceptacion": "Se cierra solo si el documento del publicador cita edicion/version/fecha del catalogo (Catalogo rechazo / motiv_rech_ricket_sangre, sha 3b8546ac) y recurso 08d3b1a7-dbc0-4f43-b1d2-3266cebb88f8 y periodos (2022 anual; 2023 anual; 2024 anual); verificable (URL o copia local con SHA). Las fechas de portal/API (version=null, placeholder 1989-06-04) y core-properties no acreditan F3+F4.",
+      "limites": [
+        "No afirmar vigencia histórica ni extender a otros conjuntos/periodos."
+      ],
+      "documento_requerido_exacto": "Declaracion de edicion/version/fecha del catalogo Rickettsia (sha 3b8546ac) con vinculo 2022-2024 + fe de erratas o diccionario corregido y URL del catalogo de des_mpo_res si existe. Pendiente exacto: Acreditar F3+F4: declaración de edición/versión/fecha del catálogo (Catalogo rechazo/motiv_rech_ricket_sangre, sha 3b8546ac) y documento que la vincule con 2022, 2023, 2024.",
+      "soporte": [
+        {
+          "ruta": "reports/pendientes-ronda-5.json",
+          "sha256": "46f3b6f8826379be5124fb85cf6128b705fbe90deebf2c99bff64098608c8f11",
+          "localizador": "decisiones_significados id=V07"
+        },
+        {
+          "ruta": "propuestas/pendientes-muse-r6/catalogos/entrega.json",
+          "sha256": "649bbe7e5feca82b7e8d5c5144de78b1d8ceccb1c217ca976347b1c9a05cb74b",
+          "localizador": "decisiones_significados id=V07 + novedad_r6 (C1 API package_show 2026-10-23 + C2 core-properties xlsx)"
+        },
+        {
+          "ruta": "local: xlsx sha 3b8546ac",
+          "sha256": "3b8546acad7482825755e46a1a619a4838721f8480b94baaef3c755ba293db9c",
+          "localizador": "interior xlsx sin celdas de version/periodo (R4 vigente, re-verificado R6: sizes API = locales)"
+        }
+      ]
+    },
+    {
+      "id": "V08",
+      "tipo": "vigencia",
+      "grupo": "C",
+      "dependencia_publicador": "DEP-CAT-R6-03",
+      "conjunto": {
+        "id": "5494daa1-09ca-4750-aeac-2558553700e1",
+        "titulo": "Fiebre manchada (Rickettsia)"
+      },
+      "catalogo": {
+        "recurso_catalogo": "08d3b1a7-dbc0-4f43-b1d2-3266cebb88f8",
+        "recurso_url": "https://datos.sonora.gob.mx/dataset/5494daa1-09ca-4750-aeac-2558553700e1/resource/08d3b1a7-dbc0-4f43-b1d2-3266cebb88f8/download/catalogo.xlsx",
+        "sha256": "3b8546acad7482825755e46a1a619a4838721f8480b94baaef3c755ba293db9c",
+        "hoja_campo": "Catalogo especie / ricket_especie (variable ricket_especie_rtpcr)"
+      },
+      "referencia_iri": "https://example.org/mex-ontologi/declared-code-reference/c8e9eb88050d4c254c2f8e08bee2bac5095eea83f8e07aab0d2e9ce79aca9131",
+      "periodos_declarados_por_titulo": [
+        "2022 anual",
+        "2023 anual",
+        "2024 anual"
+      ],
+      "nota_periodos": "Periodos declarados por titulos de recursos CKAN y nota del conjunto; NO cobertura observada.",
+      "estado_actual": "pendiente (F3+F4 ausentes)",
+      "motivo": "F3+F4 ausentes: sin declaración de edición/versión de la hoja Catalogo especie ni su aplicación a 2022-2024.",
+      "evidencia_revisada": [
+        "W04 (igual que V06)",
+        "Local: package_5494daa1 (extras nulos) + xlsx 3b8546ac",
+        "R6-C1 (API CKAN package_show 2026-10-23) + R6-C2 (core-properties xlsx)",
+        "R6 novedad: R6-C1+C2 igual que V06 para hoja Catalogo especie (mismo archivo 3b8546ac, export openpyxl 2026). F3+F4 ausentes."
+      ],
+      "campos_minimos": [
+        "emisor: publicador (DEP-CAT-R6-03)",
+        "edicion/version/fecha declarada del catalogo (Catalogo especie / ricket_especie (variable ricket_especie_rtpcr), sha 3b8546ac)",
+        "recurso catalogo: 08d3b1a7-dbc0-4f43-b1d2-3266cebb88f8",
+        "periodos de aplicacion: 2022 anual; 2023 anual; 2024 anual",
+        "fecha o firma del documento"
+      ],
+      "criterio_aceptacion": "Se cierra solo si el documento del publicador cita edicion/version/fecha del catalogo (Catalogo especie / ricket_especie (variable ricket_especie_rtpcr), sha 3b8546ac) y recurso 08d3b1a7-dbc0-4f43-b1d2-3266cebb88f8 y periodos (2022 anual; 2023 anual; 2024 anual); verificable (URL o copia local con SHA). Las fechas de portal/API (version=null, placeholder 1989-06-04) y core-properties no acreditan F3+F4.",
+      "limites": [
+        "No afirmar vigencia histórica ni extender a otros conjuntos/periodos."
+      ],
+      "documento_requerido_exacto": "Declaracion de edicion/version/fecha del catalogo Rickettsia (sha 3b8546ac) con vinculo 2022-2024 + fe de erratas o diccionario corregido y URL del catalogo de des_mpo_res si existe. Pendiente exacto: Acreditar F3+F4: declaración de edición/versión/fecha del catálogo (Catalogo especie/ricket_especie, sha 3b8546ac) y documento que la vincule con 2022, 2023, 2024.",
+      "soporte": [
+        {
+          "ruta": "reports/pendientes-ronda-5.json",
+          "sha256": "46f3b6f8826379be5124fb85cf6128b705fbe90deebf2c99bff64098608c8f11",
+          "localizador": "decisiones_significados id=V08"
+        },
+        {
+          "ruta": "propuestas/pendientes-muse-r6/catalogos/entrega.json",
+          "sha256": "649bbe7e5feca82b7e8d5c5144de78b1d8ceccb1c217ca976347b1c9a05cb74b",
+          "localizador": "decisiones_significados id=V08 + novedad_r6 (C1 API package_show 2026-10-23 + C2 core-properties xlsx)"
+        },
+        {
+          "ruta": "local: xlsx sha 3b8546ac",
+          "sha256": "3b8546acad7482825755e46a1a619a4838721f8480b94baaef3c755ba293db9c",
+          "localizador": "interior xlsx sin celdas de version/periodo (R4 vigente, re-verificado R6: sizes API = locales)"
+        }
+      ]
+    }
+  ]
+}

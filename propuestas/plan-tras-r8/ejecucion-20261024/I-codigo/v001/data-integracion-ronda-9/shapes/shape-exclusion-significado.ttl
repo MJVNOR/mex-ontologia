@@ -1,0 +1,16 @@
+@prefix sh: <http://www.w3.org/ns/shacl#> .
+@prefix mex: <https://example.org/mex-ontologi/vocab/> .
+@prefix shape: <https://example.org/mex-ontologi/shapes/> .
+
+# Propuesta P4 v001 (staging): exclusion mutua entre significadoDocumentado y
+# significadoCandidato para mex:VariableDocumentada. Permite NEITHER (variable
+# pendiente), permite DOC-solo o CAND-solo, prohibe BOTH. No declara ni repite
+# prov:wasDerivedFrom (regla minCount 2 de correspondencias queda intacta).
+# Integracion R9: anadir este sh:sparql al shape:VariableDocumentada central.
+shape:VariableDocumentadaExclusion a sh:NodeShape ;
+    sh:targetClass mex:VariableDocumentada ;
+    sh:sparql [
+        a sh:SPARQLConstraint ;
+        sh:message "mex:significadoDocumentado y mex:significadoCandidato son mutuamente excluyentes; se permite ninguno o uno solo"@es ;
+        sh:select """SELECT $this WHERE { $this <https://example.org/mex-ontologi/vocab/significadoDocumentado> ?d . $this <https://example.org/mex-ontologi/vocab/significadoCandidato> ?c . }""" ;
+    ] .

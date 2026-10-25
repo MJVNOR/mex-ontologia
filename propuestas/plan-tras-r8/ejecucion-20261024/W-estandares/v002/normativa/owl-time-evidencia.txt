@@ -1,0 +1,56 @@
+FUENTE PRIMARIA OFICIAL: ontologia OWL-Time en repo oficial W3C w3c/sdw-time (gh-pages).
+URL verificada por Obscura: https://raw.githubusercontent.com/w3c/sdw-time/gh-pages/rdf/time.ttl
+(Alternates declarados en el documento de namespace https://raw.githubusercontent.com/w3c/sdw-time/gh-pages/time.html:
+./rdf/time.ttl, ./rdf/time.rdf, ./rdf/time.jsonld, ./rdf/time.nt)
+Namespace canonico: http://www.w3.org/2006/time# (http, no https).
+Fecha de consulta: 2026-10-24 (navegador Obscura, MCP nativo OpenCode).
+Tamano verificado: innerText 82194 caracteres; ProperInterval x38; hasBeginning x2.
+
+CABECERA (primeras lineas, copia textual):
+---
+# baseURI: http://www.w3.org/2006/time
+a owl:Ontology ; dct:contributor ... ; dct:created "2006-09-27"^^xsd:date ;
+dct:modified "2026-10-06"^^xsd:date ;
+dct:rights "Copyright © 2006-2026 W3C, OGC. ..."@en ;
+rdfs:label "OWL-Time"@en ; ...
+---
+
+FRAGMENTOS NORMATIVOS EXACTOS (copia textual):
+---
+:ProperInterval a owl:Class ; rdfs:label "Proper interval"@en ;
+rdfs:subClassOf :Interval ; owl:equivalentClass obo:BFO_0000202 ;
+owl:disjointWith :Instant ;
+skos:definition "interval whose beginning and end are not identical"@en ; .
+
+:hasBeginning a owl:ObjectProperty ; rdfs:subPropertyOf :disjoint , :hasTime ;
+owl:equivalentProperty obo:BFO_0000222 ;
+rdfs:domain :TemporalEntity ; rdfs:label "has beginning"@en ; rdfs:range :Instant ;
+skos:definition "First instant of a temporal entity."@en ; .
+
+:hasEnd a owl:ObjectProperty ; rdfs:subPropertyOf :disjoint , :hasTime ;
+owl:equivalentProperty obo:BFO_0000224 ;
+rdfs:domain :TemporalEntity ; rdfs:label "has end"@en ; rdfs:range :Instant ; ...
+
+:inXSDDate a owl:DatatypeProperty ; rdfs:domain :Instant ;
+rdfs:label "in XSD date"@en ; rdfs:range xsd:date ;
+skos:definition "Position of an instant, expressed using xsd:date"@en ; .
+
+:inXSDDateTime a owl:DatatypeProperty ; a owl:DeprecatedProperty ;
+rdfs:domain :Instant ; rdfs:label "in XSD Date-Time"@en ; rdfs:range xsd:dateTime ;
+owl:deprecated "true"^^xsd:boolean ;
+skos:definition "Position of an instant, expressed using xsd:dateTime"@en ;
+skos:note "The property :inXSDDateTime is replaced by :inXSDDateTimeStamp which makes the time-zone field mandatory."@en ; .
+
+:inXSDDateTimeStamp a owl:DatatypeProperty ; rdfs:domain :Instant ;
+rdfs:label "in XSD Date-Time-Stamp"@en ; rdfs:range xsd:dateTimeStamp ;
+skos:definition "Position of an instant, expressed using xsd:dateTimeStamp"@en ; .
+---
+
+LOCALIZADORES: baseURI http://www.w3.org/2006/time; clase :ProperInterval (subclase de :Interval,
+disjunta con :Instant); :hasBeginning/:hasEnd dominio :TemporalEntity rango :Instant;
+:inXSDDateTime DEPRECADA en favor de :inXSDDateTimeStamp (zona horaria obligatoria).
+
+RESPUESTA P2-WEB-01: ATENDIDA con fuente primaria oficial fechada (no es w3.org/TR por bloqueo bot,
+ver trazas v002). Advertencia normativa para la plantilla P2: usar :inXSDDateTimeStamp en lugar de
+:inXSDDateTime; los bordes del intervalo son :Instant con dominio :TemporalEntity.
+No se promueve ningun caso local desde esta respuesta.

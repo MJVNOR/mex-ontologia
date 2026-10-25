@@ -2,17 +2,38 @@
 
 Ontología del portal de datos abiertos de Sonora: publicaciones, estructuras, variables, significados y condiciones para conectar información. Plan: [PLAN.md](PLAN.md).
 
-## Enfoque actual: consolidar significados
+## Estado vigente: ronda 10
+
+**El trabajo local del plan está completado.** El otro chat revisó el cierre sin discrepancias y devolvió el [plan actualizado tras R10](docs/plan-actualizado-tras-r10.md). Con la evidencia actual no hay otra integración semántica justificada; la continuación depende de documentación nueva o de una pregunta analítica concreta con datos suficientes. Las brechas documentales indicadas abajo siguen pendientes.
+
+R10 incorpora **cinco declaraciones de unidad cualificadas** y **seis formas SHACL**. Conserva **1423 significados, 1106 conceptos, 4506 correspondencias revisadas, 17 candidatas y cero ambiguas**. **233 pruebas pasan**; RDF y SHACL conformes. Portal: **322495 triples**. Studio: **323104**, con respaldo, 90 inserciones y cero retiradas. [Informe R10](reports/ronda-10.md).
+
+Se publicaron el [top 50 de oportunidades](reports/top50-oportunidades-r9.html) y [tres análisis de pares](reports/analisis-pares-post-r9.md), bloqueados con evidencia. El ranking no autoriza joins. Quedan 138 significados reales, 16 vigencias, 17 candidatas, `des_mpo_res` y dos encabezados corruptos; requieren evidencia adicional. Toneladas y hm³ mantienen sus límites. Gemma y la decisión de IRI siguen fuera de alcance.
+
+## Antecedente: ronda 9
+
+R9 ejecuta el plan devuelto tras la revisión independiente de R8: incorpora **dos declaraciones de unidad cualificadas** (milímetros y hectáreas) y una regla SHACL de exclusión entre significado documentado y candidato. Conserva **1423 significados respaldados, 1106 conceptos, 4506 correspondencias revisadas, 17 candidatas y cero ambiguas**. El cierre R9 pasó **204 pruebas**; RDF y SHACL conformes, Studio sincronizado y verificado. [Informe y evidencia R9](reports/ronda-9.md).
+
+Quedan **138 significados reales**, 16 vigencias y `des_mpo_res`; dos encabezados corruptos siguen separados del conteo de significados. V13/V14 mantienen acceso no resuelto. Las 17 candidatas dependen del respaldo faltante. Los pilotos de intervalos temporales y jerarquía clínica dieron resultados negativos documentados. Gemma quedó excluido y no se contactó a publicadores.
+
+Se completó el [plan posterior a R8](docs/plan-actualizado-tras-r8.md) con agentes paralelos mediante el MCP nativo de OpenCode y Muse 1.3. [Ejecución y decisiones](docs/plan-paralelo-ronda-9-sin-gemma.md). Obscura permitió verificar términos normativos; no se repitieron búsquedas agotadas sin pistas nuevas.
+
+Antecedentes fechados: [R8](reports/ronda-8.md), [R7](reports/ronda-7.md) y [R6](reports/ronda-6.md). Sus cifras describen esos cierres históricos.
+
+## Antecedentes de consolidación semántica
 
 El límite global de 2,000 individuos del árbol de Studio está corregido en la instalación local. La consulta recupera todos los individuos del grafo y mantiene el renderizado virtualizado. [Ver corrección y comprobaciones](docs/studio-limite-individuos.md).
 
-El chat consulta las correspondencias semánticas de las variables nombradas con paginación completa y distingue los conteos totales de los ejemplos mostrados. [Corrección de recuperación y prueba reproducible](docs/studio-recuperacion-chat.md).
+El chat consulta las correspondencias semánticas de las variables nombradas con paginación completa y distingue los conteos totales de los ejemplos mostrados. [Corrección de recuperación y prueba reproducible](docs/studio-recuperacion-chat.md). La evaluación posterior del pipeline fuente fue parcial: 4 respuestas (2 aciertos y 2 fallos de recuperación) y 16 intentos sin respuesta por errores HTTP/cuota. La interfaz de Studio no se evaluó ni se demostró identidad entre el pipeline fuente y el backend instalado. [Alcance del diagnóstico](reports/integracion-ronda-2.md).
 
-El núcleo semántico distingue 83 conceptos compartidos: territorio y sus papeles, tiempo de registro/ocurrencia, organizaciones, programas y unidades de salud. Hay 208 variables con significado respaldado documentalmente y 47 interpretaciones candidatas. Las otras 1,308 definiciones permanecen fuera del núcleo inicial; no se presenta su semántica como resuelta.
+La ampliación de cobertura con Muse 1.3 incorpora 980 significados revisados: el núcleo contiene 940 conceptos y 1,212 variables respaldadas documentalmente, de 1,563 definiciones (77.5%). Quedan 23 interpretaciones candidatas y 328 definiciones fuera del núcleo. Se conservan sujetos, eventos, unidades declaradas y límites, sin completar documentación ausente. [Resultado y evidencia de la ampliación](reports/cobertura-muse.md).
 
-Se separan columna física, definición original, variable local, concepto y sistema de códigos. Las coincidencias nominales permanecen candidatas: 62 correspondencias columna/variable tienen revisión documental explícita. Un sistema CVEGEO se asocia únicamente a su fuente; ocho referencias declaradas ya tienen un recurso de catálogo identificado y nueve siguen sin resolver. El objetivo de esta etapa es consolidar esas distinciones y condiciones de conexión.
+Se separan columna física, definición original, variable local, concepto y sistema de códigos. Se preservan las 836 correspondencias columna/variable revisadas; las nuevas interpretaciones dejan 3,312 correspondencias candidatas y 12 vínculos ambiguos sobre 6 columnas. Las coincidencias nuevas no están revisadas ni habilitan cruces. Un sistema CVEGEO se asocia únicamente a su fuente; 16 referencias declaradas tienen un recurso de catálogo identificado y una sigue sin resolver: `des_mpo_res`.
+
+La segunda ronda también incorpora 32 dictámenes y 14 preguntas al publicador preparadas sin enviar. Las 1,850 localidades IML coinciden con ITER 2020 en clave, nombre y población, sin acreditar completitud oficial ni equivalencia con el universo cartográfico. Las 16 revisiones de vigencia histórica siguen sin acreditarla. Se conservan las cinco observaciones documentales originales y no se ejecutaron nuevos cruces.
 
 - [Explicación del núcleo y sus límites](docs/nucleo-semantico.md).
+- [Antecedente y evidencia de la segunda ronda](reports/integracion-ronda-2.md).
 - [Resultado y evidencia de las interpretaciones](reports/consolidacion-semantica.md).
 - [Cobertura de las 5,523 columnas y pendientes documentados](reports/pendientes-semanticos.md).
 - [Catálogos territoriales recuperados y correspondencias](reports/catalogos-territoriales.md).
@@ -24,7 +45,7 @@ uv run python scripts/sincronizar_studio_portal.py
 uv run python scripts/consultar_catalogo.py --portal queries/portal/semantica_significados.rq
 ```
 
-Esta secuencia usa la evidencia existente y no ejecuta análisis nuevos. Los mapas de cruces y lotes siguientes se conservan como antecedentes y pruebas del modelo. El estado vigente y la validación están en `reports/portal-carga.json`; el respaldo y estado de Studio, en `reports/studio-portal-sync.json`. Total actual: 73 pruebas aprobadas.
+Esta secuencia usa la evidencia existente y no ejecuta análisis nuevos. Los mapas de cruces y lotes siguientes se conservan como antecedentes y pruebas del modelo. El estado vigente y la validación están en `reports/portal-carga.json`; el respaldo y estado de Studio, en `reports/studio-portal-sync.json`. La sección «Verificar el proyecto» indica cómo ejecutar la suite actual; los conteos de pruebas de etapas anteriores son históricos.
 
 ## Mapa de oportunidades de cruce
 
@@ -86,7 +107,7 @@ Ejecutar cada paso solo si el anterior terminó correctamente. El último paso d
 ## Requisitos
 
 - `uv` y Python 3.12 (versión fijada en `.python-version`).
-- Open Ontologies para la futura carga y consulta del grafo. No requiere una base de datos externa.
+- Open Ontologies para cargar y consultar el grafo. No requiere una base de datos externa.
 
 ## Explorar el catálogo
 
@@ -142,7 +163,7 @@ El script sustituye `{{BASE_IRI}}` por la base de la última carga. Devuelve val
 - Los recursos CKAN se representan inicialmente como `mex:RecursoCatalogado`, vinculados con `mex:recurso`. No se afirma todavía que todos sean distribuciones equivalentes del mismo conjunto: hay recursos con periodos diferentes que requieren revisión.
 - Región, fechas del recurso, frecuencia y granularidad quedan como declaraciones originales; no se infiere cobertura territorial o temporal.
 - SHACL comprueba la estructura del modelo. No exige URL a todos los recursos ni tema a todos los conjuntos: esos faltantes aparecen en el reporte de calidad y no impiden conservar los registros.
-- No se descargan archivos de contenido ni se comprueba la disponibilidad de sus enlaces. DataStore activo es una declaración del portal, aún no una consulta de filas verificada.
+- La generación del catálogo base solo consulta metadatos: no descarga archivos de contenido ni comprueba sus enlaces. Las etapas posteriores de inspección y cruces sí recuperan archivos o consultan filas de recursos seleccionados; sus resultados y límites se documentan por separado.
 
 ## Inventariar la cobertura de todo el portal
 
@@ -200,3 +221,20 @@ La integración central añade significados documentados, correspondencias revis
 Procedimiento completo de revisión, respaldo, integración, regeneración y sincronización: [docs/integracion-de-agentes.md](docs/integracion-de-agentes.md).
 
 La ronda 2 incorpora 674 correspondencias documentales (836 revisadas en total, 118 candidatas), 32 dictámenes de pendientes, 1850 coincidencias IML/ITER2020 y revisiones de vigencia. La evaluación del pipeline de consulta se conserva con su alcance parcial, sin certificar la interfaz de Studio. Evidencia, límites y reproducción: [reports/integracion-ronda-2.md](reports/integracion-ronda-2.md).
+
+## Estado después de la ronda 3
+
+La ampliación semántica revisada cuenta con 1,212 significados respaldados y 940 conceptos; su evidencia está en [reports/cobertura-muse.md](reports/cobertura-muse.md). La etapa posterior incorpora 29 correspondencias documentales, para un total de 865 revisadas, y tres fichas de cruces. El caso nuevo documenta 72 comparaciones de proyecciones en 2020 con 144 evidencias por fuente. Studio está sincronizado y validado con SHACL.
+
+Resultados y pruebas: [reports/integracion-ronda-3.md](reports/integracion-ronda-3.md). Uso y límites: [docs/correspondencias-y-cruces-ronda-3.md](docs/correspondencias-y-cruces-ronda-3.md). La corrección del chat está instalada y su recuperación por API comprobada; la respuesta del modelo desde la interfaz sigue sin evaluar.
+
+## Seguimiento operativo posterior a R9
+
+Se publicó el [reporte operativo de cobertura](reports/cobertura-operativa-r9.md),
+con los estados R9 y condiciones de reapertura para todos los frentes pendientes.
+Las siete preguntas documentales se conservan [en el expediente](propuestas/cobertura-operativa-post-r9/ejecucion-20261024/C-preguntas/preguntas-documentales.md), sin enviar.
+La revisión de Presas no aportó evidencia nueva: su correspondencia está resuelta
+desde R6 y la vigencia histórica sigue pendiente.
+
+La [validación de este seguimiento](reports/seguimiento-operativo-post-r9.md)
+conserva los recibos de pruebas y comprobación del grafo. No abre una nueva ronda semántica.

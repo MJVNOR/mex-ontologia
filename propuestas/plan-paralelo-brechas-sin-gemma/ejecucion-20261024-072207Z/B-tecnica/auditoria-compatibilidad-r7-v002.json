@@ -1,0 +1,36 @@
+{
+ "dictamen": "aceptar",
+ "alcance": "compatibilidad-v002 unicamente (delta de 2 scripts vs v001 congelada, intacta y no instalada). Sin instalar, sin Gemma, sin pruebas.",
+ "verificacion_efectiva": {
+  "tupla_corregida": "(31, 3, 31) presente en ambos archivos; cero ocurrencias de (31, 31, 3) ni variantes 31/31/3",
+  "bloque_reducido": "entregas: cadena cargar() primero + deltas; fidelidad por regla en construir fase R7; ronda_2: solo fix de tupla",
+  "r6cfg": "estados_variables_esperados verificado presente (1392/152/19); el codigo falla si falta",
+  "sources": "sources.update valido; sources en scope en ambas construir; cero source_files en repo",
+  "compila": "py_compile OK ambos scripts"
+ },
+ "discrepancia_sha": "Los prefijos citados por coordinacion (65dd3ae7..., ba665d7f...) no corresponden a ningun archivo en disco (ni forma CRLF ni LF, ni v001 ni v002). No se emiten como verificados; abajo solo SHAs reales calculados por B.",
+ "pin_congelada_v002": "58678cdf7aa74dae999baa5dfae70ebc00468fa8b7900bbcb20f340af509c750",
+ "staging": {
+  "version": "v002",
+  "veredicto": "aceptar"
+ },
+ "defectos": [],
+ "referencias": [
+  {
+   "ruta": "propuestas/plan-paralelo-brechas-sin-gemma/ejecucion-20261024-072207Z/integracion/compatibilidad-v002/congelada.json",
+   "sha256": "58678cdf7aa74dae999baa5dfae70ebc00468fa8b7900bbcb20f340af509c750"
+  },
+  {
+   "ruta": "propuestas/plan-paralelo-brechas-sin-gemma/ejecucion-20261024-072207Z/integracion/compatibilidad-v002/integrar_entregas.py",
+   "sha256": "7918e11de66f932455f8f5fdc2c208b09f52c8d04c56d3d7b1b52f5fabf802bf"
+  },
+  {
+   "ruta": "propuestas/plan-paralelo-brechas-sin-gemma/ejecucion-20261024-072207Z/integracion/compatibilidad-v002/integrar_ronda_2.py",
+   "sha256": "f4ae132f71fd775d37efb3365bd97c885be668ad4c638876c16ccaf6c32fff34"
+  },
+  {
+   "ruta": "propuestas/plan-paralelo-brechas-sin-gemma/ejecucion-20261024-072207Z/integracion/compatibilidad-v002/nota-revision-B.md",
+   "sha256": "c2ec804744b19725bb48be8d760bc992e65c82cbd6cffb46aba298b6ad4ca89a"
+  }
+ ]
+}

@@ -1,0 +1,114 @@
+{
+  "fecha_utc": "2026-10-23T11:36:36.817640+00:00",
+  "alcance": "Ampliación semántica; anterior a la etapa de correspondencias y cruces del otro chat.",
+  "modelo": "opencode-go/muse-spark-1.3-contributor",
+  "roles": 8,
+  "antes": {
+    "respaldadas": 232,
+    "fuera_del_nucleo": 1308,
+    "candidatas": 23,
+    "conceptos": 103
+  },
+  "despues": {
+    "definiciones_con_nombre_examinadas": 1563,
+    "filas_sin_nombre": 7,
+    "estados_variables": {
+      "respaldada_por_definicion": 1212,
+      "fuera_del_nucleo_actual": 328,
+      "candidata_sin_definicion_suficiente": 23
+    },
+    "variables_materializadas": 1238,
+    "estados_correspondencias": {
+      "candidata_por_nombre": 3312,
+      "documental_revisada": 836,
+      "ambigua_por_nombre": 12
+    },
+    "columnas_totales_examinadas": 5523,
+    "columnas_con_correspondencia": 4154,
+    "conceptos_compartidos": 940,
+    "referencias_catalogo_sin_resolver": 1,
+    "sistemas_identificadores_recuperados": 1,
+    "condiciones_conexion": 6,
+    "referencias_catalogo_con_recurso_identificado": 16
+  },
+  "revision": {
+    "definiciones_revisadas": 1308,
+    "reglas_aceptadas": 980,
+    "pendientes_tras_revision": 328,
+    "conceptos_nuevos": 837,
+    "dominios": {
+      "salud": {
+        "aceptada": 203,
+        "pendiente": 39
+      },
+      "registro-civil": {
+        "aceptada": 75,
+        "pendiente": 88
+      },
+      "educacion": {
+        "aceptada": 99,
+        "pendiente": 27
+      },
+      "gobierno-digital": {
+        "pendiente": 122,
+        "aceptada": 121
+      },
+      "territorio-economia": {
+        "aceptada": 482,
+        "pendiente": 52
+      }
+    },
+    "estados_variables_esperados": {
+      "respaldada_por_definicion": 1212,
+      "fuera_del_nucleo_actual": 328,
+      "candidata_sin_definicion_suficiente": 23
+    },
+    "estados_correspondencias_esperados": {
+      "candidata_por_nombre": 3312,
+      "documental_revisada": 836,
+      "ambigua_por_nombre": 12
+    },
+    "correspondencias_previas_preservadas": 836
+  },
+  "pruebas": {
+    "comando": ".venv/Scripts/python.exe -B -m unittest discover -s tests -q",
+    "aprobadas": 99,
+    "omitidas": 0
+  },
+  "shacl": {
+    "conforms": true,
+    "infracciones": 0
+  },
+  "studio": {
+    "fecha_utc": "2026-10-23T11:35:47.694759+00:00",
+    "verificado": true,
+    "canal": "SELECT sobre http://127.0.0.1:8137/api/query",
+    "conteos": {
+      "variables_respaldadas": 1212,
+      "significados_candidatos": 23,
+      "conceptos": 940,
+      "correspondencias_revisadas": 836,
+      "correspondencias_candidatas": 3312,
+      "vinculos_ambiguos": 12,
+      "variables_calificadas": 149,
+      "componentes_calificador": 195
+    },
+    "consultas": {
+      "variables_respaldadas": "PREFIX mex: <https://example.org/mex-ontologi/vocab/> SELECT (COUNT(DISTINCT ?item) AS ?total) WHERE { ?item a mex:VariableDocumentada; mex:estadoSemantico \"respaldada_por_definicion\" . }",
+      "significados_candidatos": "PREFIX mex: <https://example.org/mex-ontologi/vocab/> SELECT (COUNT(DISTINCT ?item) AS ?total) WHERE { ?item a mex:VariableDocumentada; mex:estadoSemantico \"candidata_sin_definicion_suficiente\" . }",
+      "conceptos": "PREFIX mex: <https://example.org/mex-ontologi/vocab/> SELECT (COUNT(DISTINCT ?item) AS ?total) WHERE { ?item a mex:ConceptoCompartido . }",
+      "correspondencias_revisadas": "PREFIX mex: <https://example.org/mex-ontologi/vocab/> SELECT (COUNT(DISTINCT ?item) AS ?total) WHERE { ?item a mex:CorrespondenciaSemantica; mex:estadoCorrespondencia \"documental_revisada\" . }",
+      "correspondencias_candidatas": "PREFIX mex: <https://example.org/mex-ontologi/vocab/> SELECT (COUNT(DISTINCT ?item) AS ?total) WHERE { ?item a mex:CorrespondenciaSemantica; mex:estadoCorrespondencia \"candidata_por_nombre\" . }",
+      "vinculos_ambiguos": "PREFIX mex: <https://example.org/mex-ontologi/vocab/> SELECT (COUNT(DISTINCT ?item) AS ?total) WHERE { ?item a mex:CorrespondenciaSemantica; mex:estadoCorrespondencia \"ambigua_por_nombre\" . }",
+      "variables_calificadas": "PREFIX mex: <https://example.org/mex-ontologi/vocab/> SELECT (COUNT(DISTINCT ?item) AS ?total) WHERE { ?item mex:tieneCalificadorDocumentado ?q . }",
+      "componentes_calificador": "PREFIX mex: <https://example.org/mex-ontologi/vocab/> SELECT (COUNT(DISTINCT ?item) AS ?total) WHERE { ?v mex:tieneCalificadorDocumentado ?item . }"
+    },
+    "semantica_sha256": "df6effb8b64bafc32680e42a94870f191800107124ca7dd637dd70951185601f",
+    "manifiesto_sha256": "b7f3876ae7203e9ee191eb86d8f6f59255492c50343e91ed2b7541f7a931fbec",
+    "respaldo_verificado": true,
+    "limite": "No evalúa respuestas del chat ni habilita cruces entre fuentes."
+  },
+  "evidencia": "data/integracion-cobertura/manifiesto.json",
+  "respaldo": "data/backups/cobertura-antes-20261023.zip",
+  "investigacion": "data/integracion-cobertura/investigacion/evidencia.json"
+}

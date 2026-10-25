@@ -1,0 +1,79 @@
+{
+ "par": "1cf9c8e2-e7e4-43d8-a9fd-6da790e64c98--df2d60f5-2243-4bb0-885a-941aa8a657f5",
+ "pregunta": "Que volumenes de matrimonios y nacimientos se registran en un periodo y ambito territorial documentalmente comparables?",
+ "veredicto": "BLOQUEADO",
+ "comparacion_volumenes": null,
+ "join_grafo": null,
+ "causas_bloqueo": [
+  "grano distinto (evento vs agregado) impide join fila a fila",
+  "unicidad/cardinalidad no acreditadas: muestras n=100 declaran no demostrar unicidad ni cobertura",
+  "inconsistencia interna en Nacimientos: total != hombres+mujeres en 5/6 pruebas; meses faltantes",
+  "municipio/periodo solo de registro, sin residencia y sin catalogo de correspondencia de codigos",
+  "poblaciones distintas (actos vs conteos de nacidos); prohibidas causalidad y tasas poblacionales"
+ ],
+ "ejes": {
+  "claves": {
+   "veredicto": "no_acreditada",
+   "evidencia": "oportunidades: estado candidata_por_validar, familia municipio con pendientes verificar_catalogo_dominio_unicidad_y_contexto_de_clave y municipio_puede_requerir_entidad_como_clave_compuesta; nombres_campos_coincidentes_sin_garantia_semantica=[municipio]"
+  },
+  "grano": {
+   "veredicto": "distinto_bloquea_join",
+   "evidencia": "diccionario Matrimonios vars=['año_matrimonio', 'dia_matrimonio', 'edad_cty1', 'edad_cty2', 'mes_matrimonio', 'municipio', 'sexo_cty1', 'sexo_cty2'] (evento con dia_matrimonio, edad/sexo contrayentes); diccionario Nacimientos vars=['año', 'hombres', 'mes', 'mujeres', 'municipio', 'total'] (conteo agregado hombres/mujeres/total por municipio-anio-mes)"
+  },
+  "unicidad": {
+   "veredicto": "no_acreditada",
+   "evidencia": "validacion-lote diagnostico_muestras alcance en a y b: 'Diagnóstico de muestra; no demuestra unicidad ni cobertura integral'"
+  },
+  "cardinalidad": {
+   "veredicto": "no_acreditada",
+   "evidencia": "decision=fallo_validacion_integral; errores_b=['ValueError: Total no coincide con hombres + mujeres: _id=187, municipio=19, mes=3, hombres=33, mujeres=27, total=61. Revisar fuente o definición antes de sumar.', 'ValueError: Faltan meses por municipio; ausencia no equivale a cero. Ejemplos: {\"5\": [1, 10], \"7\": [1, 2, 6, 8], \"8\": [2, 4, 6, 7, 12], \"9\": [3, 5, 7, 9, 10, 11], \"10\": [3, 4, 5, 6, 7, 9, 10, 11, 12]}', 'ValueError: Total no coincide con hombres + mujeres: _id=325, municipio=33, mes=3, hombres=41, mujeres=51, total=93. Revisar fuente o definición antes de sumar.', 'ValueError: Total no coincide con hombres + mujeres: _id=286, municipio=29, mes=7, hombres=67, mujeres=63, total=131. Revisar fuente o definición antes de sumar.', 'ValueError: Total no coincide con hombres + mujeres: _id=34, municipio=3, mes=12, hombres=10, mujeres=10, total=21. Revisar fuente o definición antes de sumar.', 'ValueError: Total no coincide con hombres + mujeres: _id=40, municipio=4, mes=7, hombres=6, mujeres=7, total=14. Revisar fuente o definición antes de sumar.']"
+  },
+  "poblacion": {
+   "veredicto": "distinta",
+   "evidencia": "matrimonios=actos (2 contrayentes por fila, sin id persona); nacimientos=conteos agregados por sexo; poblaciones distintas explicitas, sin join de personas"
+  },
+  "periodo_ambito": {
+   "veredicto": "comparable_solo_en_registro_no_acreditado_para_join",
+   "evidencia": "anios_coincidentes_solo_en_nombres 2015-2024; ambos diccionarios: 'Municipio de registro', 'Año de registro' y 'Mes de registro' (Matrimonios incluye 'Dia de registro'); ningun campo de residencia en definiciones locales; municipio sin catalogo de correspondencia"
+  },
+  "unidades": {
+   "veredicto": "no_homologables_sin_regla",
+   "evidencia": "matrimonios: fila=1 evento; nacimientos: fila=agregado con total; pendiente validar_unidades_de_medidas_seleccionadas; sin tasas poblacionales"
+  },
+  "cobertura": {
+   "veredicto": "no_acreditada",
+   "evidencia": "prueba 2016: 'Faltan meses por municipio; ausencia no equivale a cero'; muestras n=100 con total_declarado (Mat2023=14685, Nac2024=627) de recursos/anios distintos"
+  }
+ },
+ "fuentes_locales": {
+  "reports/catalogo-perfil.json": {
+   "sha256": "aae23b2eb8f8e37cbee18d86c0cac7c73f0899f02fbd417bc90d01a8fd54fc43",
+   "bytes": 227576,
+   "mat_recursos": 11,
+   "mat_recursos_datos": 10,
+   "mat_diccionarios": 1,
+   "nac_recursos": 16,
+   "nac_recursos_datos": 15,
+   "nac_diccionarios": 1
+  },
+  "data/portal/contenido-inspeccion.json": {
+   "sha256": "61861aab5bc2b334699c4d78f611a0e2d650c4649bd791927f9095c2ac785efb",
+   "bytes": 2652648,
+   "diccionario_matrimonios_sha256": "0b6ee6ceb322e6facc533aa9adb094a3d86167406b08e6c77a74827c9aa3a5bc",
+   "diccionario_nacimientos_sha256": "7683a054312e1341f176e9e4b8bc4964c5a2220128b103f8a36854916c2351e8"
+  },
+  "data/portal/oportunidades-cruce.json": {
+   "sha256": "40f107d5cf9c11ce937073ac2f7b5b0e3c9db8c342f7414cecb0f0744e0d0c14",
+   "bytes": 9645149,
+   "estado_par": "candidata_por_validar"
+  },
+  "data/portal/lote-cruces/validacion-lote.json": {
+   "sha256": "9031b875b1bf7873722f74847abbbce9b87201415f43788f60be1a75b50ede19",
+   "bytes": 1478239,
+   "decision_par": "fallo_validacion_integral"
+  }
+ },
+ "metodo": "solo_datos_documentos_locales; sin_red; sin_grafo; sin_studio",
+ "modelo": "opencode/deepseek-v4.1-flash-free",
+ "version": "v002"
+}

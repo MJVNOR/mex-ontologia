@@ -1,0 +1,301 @@
+{
+  "correcciones_r5": [
+    {
+      "correccion": "El UUID e093cf34-7da0-4efb-89a3-7b473a5013ab SI resuelve (redirige a /dataset/Pesca%20y%20Acuacultura, pagina viva con series 2005-2023 + Diccionario + Catalogo). R12 decia 'UUID no existe (404)': refutado solo en la ruta; la conclusion negativa (sin definicion de 'otras') se mantiene.",
+      "id": "R12",
+      "registro_original_intacto": true
+    },
+    {
+      "correccion": "La URL con prefijo de locale /sr_Latn/ devuelve 404. Canonica verificada: https://datos.sonora.gob.mx/dataset/e819466c-7282-46c5-84e9-65917dd8cc85/resource/8c0e76ff-3a86-4b1d-beee-b04bebe7df8d (recurso Diccionario, CSV, creado 10-01-2024, actualizado 01-11-2024).",
+      "id": "MAT-R6-01",
+      "registro_original_intacto": true
+    },
+    {
+      "correccion": "Enriquecimiento, no refutacion: la pagina del recurso 4d1bb645 expone metadatos nuevos (Size 529,2 KiB; Start 1960-01-01; End 1969-12-31; Periodo de datos 1960-01-01, 1969-12-31; State active; responsable Emilio Soto). Sigue sin href de descarga directa en el listado (a diferencia de sus 8 hermanos). W03 se mantiene.",
+      "id": "W03",
+      "registro_original_intacto": true
+    }
+  ],
+  "fecha_utc": "2026-10-23",
+  "herramienta": "tools.obscura (navegacion directa + snapshot; unico controlador en R6)",
+  "nota_metodo": "URLs solicitadas con UUID se resolvieron a su slug canonico percent-encoded (verificado en cada caso). Las rutas R5 construidas desde titulos con espacios en crudo redirigen al mismo canonico: validas como visitadas, pero se registran aqui las canonicas. Registros R5 no alterados. Ninguna descarga xlsx usada como fuente (devuelven HTML o WAF); paginas publicas y documentos PDF ya preservados en R5.",
+  "rol": "web",
+  "verificaciones": [
+    {
+      "aplicabilidad": "Confirma R01; sin novedad definicional (sin codebook por variable).",
+      "conclusion": "Viva. Sin definiciones por variable ni codebook.",
+      "fecha_consulta_utc": "2026-10-23",
+      "fragmento": "Conjunto de datos que compila estadísticas vitales y causas de defunciones, proporcionando una visión integral de los patrones de mortalidad y tendencias de salud pública. Número de variables/columnas 80. Fuente de los datos Base de datos interna.",
+      "fragmento_sha256": "424a0112ba008d62108904cbfeeab8084ce246bc0a4d8b94a58561a4fe61a8be",
+      "id": "VW-01",
+      "localizador": "Descripcion; Informacion adicional (80 columnas, fuente interna)",
+      "tipo": "cita_literal",
+      "url_final": "https://datos.sonora.gob.mx/dataset/Sistema%20Epidemiol%C3%B3gico%20y%20Estad%C3%ADstico%20de%20Defunciones",
+      "url_solicitada": "https://datos.sonora.gob.mx/dataset/cd3d6e34-3789-479e-9f2b-a717b8419f9c"
+    },
+    {
+      "aplicabilidad": "Confirma R05; sin novedad definicional.",
+      "conclusion": "Viva. Sin manual ni nota de columnas.",
+      "fecha_consulta_utc": "2026-10-23",
+      "fragmento": "Repositorio Integral de Datos para la Supervisión y Análisis Epidemiológico. Número de variables/columnas 59. Fuente de los datos Base de datos interna.",
+      "fragmento_sha256": "5c59c106c1815bd5c4f4464083a5a21ff8fa99cb0f1e496fc0693bb8f9792a63",
+      "id": "VW-02",
+      "localizador": "Descripcion; Informacion adicional (59 columnas, fuente interna)",
+      "tipo": "cita_literal",
+      "url_final": "https://datos.sonora.gob.mx/dataset/Vigilancia%20Epidemiol%C3%B3gica",
+      "url_solicitada": "https://datos.sonora.gob.mx/dataset/dca16d84-dbf0-4501-b702-dc6372a480ea"
+    },
+    {
+      "aplicabilidad": "Confirma R07; sin novedad definicional.",
+      "conclusion": "Viva. Sin definiciones de variables ni manual vinculado.",
+      "fecha_consulta_utc": "2026-10-23",
+      "fragmento": "Subsistema de Información sobre Nacimientos. Número de variables/columnas 106. Fuente de los datos Base de datos interna.",
+      "fragmento_sha256": "516437c2c3c053bbb8ecb86a3a933e49acbc3e0a034f5f071023a035c583b51d",
+      "id": "VW-03",
+      "localizador": "Descripcion; Informacion adicional (106 columnas, fuente interna)",
+      "tipo": "cita_literal",
+      "url_final": "https://datos.sonora.gob.mx/dataset/Informaci%C3%B3n%20Sobre%20Nacimientos",
+      "url_solicitada": "https://datos.sonora.gob.mx/dataset/940de7d8-73ec-4a08-8d26-b7cc97ff17bd"
+    },
+    {
+      "aplicabilidad": "Confirma R10; sin novedad.",
+      "conclusion": "Viva. Unico dato 1er Trim 2022; sin metodologia.",
+      "fecha_consulta_utc": "2026-10-23",
+      "fragmento": "Denuncias ambientales. Número de variables/columnas 9. Fuente de los datos Base de datos interna. Único dato: Denuncias 1er Trimestre 2022 + Diccionario.",
+      "fragmento_sha256": "a5a3d51bf1ccf6d407b2ddaec296cea223805571e30aab9f7bf7f0f26e03f82c",
+      "id": "VW-04",
+      "localizador": "Descripcion; Datos; Informacion adicional",
+      "tipo": "cita_literal",
+      "url_final": "https://datos.sonora.gob.mx/dataset/Denuncias%20Ambientales",
+      "url_solicitada": "https://datos.sonora.gob.mx/dataset/c589afac-79f1-4aac-9ade-e949301bcca3"
+    },
+    {
+      "aplicabilidad": "Corrige la ruta R12; conclusion negativa intacta ('otras' sin definir).",
+      "conclusion": "Viva (corrige R12). Series 2005-2023 + Diccionario + Catalogo; sin definir CVOTRAS/DOTRAS.",
+      "fecha_consulta_utc": "2026-10-23",
+      "fragmento": "La producción histórica de la pesca en Sonora. Número de variables/columnas 15. Fuente Informes gubernamentales. Recursos: series 2005-2023 + Diccionario + Catalogo.",
+      "fragmento_sha256": "219965b14e27b869db5cd3ba56ea277682139fd6b0d414c979fafa2f0e26d38d",
+      "id": "VW-05",
+      "localizador": "Descripcion; Datos; Recursos; Informacion adicional",
+      "tipo": "cita_literal",
+      "url_final": "https://datos.sonora.gob.mx/dataset/Pesca%20y%20Acuacultura",
+      "url_solicitada": "https://datos.sonora.gob.mx/dataset/e093cf34-7da0-4efb-89a3-7b473a5013ab"
+    },
+    {
+      "aplicabilidad": "Confirma R13; sin fe de erratas.",
+      "conclusion": "Viva. Sin aclaracion de Total_Egresos ni filas 177/178.",
+      "fecha_consulta_utc": "2026-10-23",
+      "fragmento": "La información sobre egresos permite conocer la demanda de atención de los servicios hospitalarios. Número de variables/columnas 15. Fuente Base de datos interna. Sin fe de erratas.",
+      "fragmento_sha256": "fd98030b56c1f59a5f69c52d14a6a47b818ea6d1381b89193ed8ad60d2b564c4",
+      "id": "VW-06",
+      "localizador": "Descripcion; Informacion adicional",
+      "tipo": "cita_literal",
+      "url_final": "https://datos.sonora.gob.mx/dataset/Egresos%20Hospitalarios",
+      "url_solicitada": "https://datos.sonora.gob.mx/dataset/8993c917-47d8-4304-8141-5f481fe04301"
+    },
+    {
+      "aplicabilidad": "Confirma R14 (constancia: sin Historico_presas).",
+      "conclusion": "Viva. Solo Catalogo + Diccionario; 8 columnas.",
+      "fecha_consulta_utc": "2026-10-23",
+      "fragmento": "Conjunto de datos que contiene las coordenadas que corresponden a las ubicaciones de las presas en el Estado de Sonora. Datos: Catálogo de presas. Recursos: Diccionario. 8 variables/columnas.",
+      "fragmento_sha256": "aba7755255662a51f46ff2eff0770e940f1b3e29e95a0ff7d8833600b08a8f4f",
+      "id": "VW-07",
+      "localizador": "Descripcion; Datos; Recursos",
+      "tipo": "cita_literal",
+      "url_final": "https://datos.sonora.gob.mx/dataset/Cuerpos%20de%20Agua%20en%20el%20Estado%20de%20Sonora:%20Ubicaci%C3%B3n%20de%20las%20Presas",
+      "url_solicitada": "https://datos.sonora.gob.mx/dataset/8c1f452e-7967-4c6b-a7b5-f2279360ad6c"
+    },
+    {
+      "aplicabilidad": "Confirma R11 (fuente CONAPO citada por el publicador).",
+      "conclusion": "Viva. Fuentes extras CONAPO 2020 visibles.",
+      "fecha_consulta_utc": "2026-10-23",
+      "fragmento": "El índice de marginación es una medida-resumen que permite diferenciar los estados, municipios y localidades según el impacto global de las carencias que padece la población. Fuentes extras https://www.gob.mx/conapo/documentos/indices-de-marginacion-2020-284372",
+      "fragmento_sha256": "411f2c00f8aa0edeee8f51877542957208f09f9ec83ef4b48fb54dbcfc17ed58",
+      "id": "VW-08",
+      "localizador": "Descripcion; Fuentes extras",
+      "tipo": "cita_literal",
+      "url_final": "https://datos.sonora.gob.mx/dataset/Indice%20de%20marginaci%C3%B3n%20urbana%20por%20colonia",
+      "url_solicitada": "https://datos.sonora.gob.mx/dataset/a3320cad-afd3-4840-8c3b-36236df26099"
+    },
+    {
+      "aplicabilidad": "Confirma W03 (1960-1969 listado sin download href; hermanos con download).",
+      "conclusion": "Viva. 1960-1969 sin href de descarga; resto con descarga.",
+      "fecha_consulta_utc": "2026-10-23",
+      "fragmento": "Datos de almacenamiento de presas en Sonora de 1941 a la actualidad. Fuente Monitoreo y sensores. Listado: 1941-1949 ... 1960-1969 (solo pagina de recurso, sin href download) ... 2020-2024.",
+      "fragmento_sha256": "2f3926b916875dc67484359127efbb2af9e00ff8285a283a969f61367fe33a33",
+      "id": "VW-09",
+      "localizador": "Descripcion; lista de recursos con hrefs",
+      "tipo": "resumen_marcado",
+      "url_final": "https://datos.sonora.gob.mx/dataset/Recursos%20H%C3%ADdricos",
+      "url_solicitada": "https://datos.sonora.gob.mx/dataset/ee8f639f-5e89-46ae-93b9-934b05fc6233"
+    },
+    {
+      "aplicabilidad": "Enriquece V05: periodo del recurso declarado en metadatos; sin edicion de catalogo (F3+F4 siguen pendientes).",
+      "conclusion": "Recurso existe con metadatos y tamano; sin download href en listado.",
+      "fecha_consulta_utc": "2026-10-23",
+      "fragmento": "Última actualización de los datos 26 de febrero de 2024. Creado 26 de febrero de 2024. Formato XLSX. Size 529,2 KiB. Start date 1960-01-01. End date 1969-12-31. Periodo de datos (AAAA-MM-DD) 1960-01-01, 1969-12-31. State active. Esta vista de recurso no está disponible en este momento. ¡Sin embargo, puedes descargar el archivo directamente haciendo clic en el enlace a continuación!",
+      "fragmento_sha256": "b088613e00b1d16806b216af1a7951f6b73aa5a116a3cd7f31411020c8acf6b6",
+      "id": "VW-10",
+      "localizador": "Metadatos del recurso 4d1bb645; mensaje de vista no disponible",
+      "tipo": "cita_literal",
+      "url_final": "https://datos.sonora.gob.mx/dataset/ee8f639f-5e89-46ae-93b9-934b05fc6233/resource/4d1bb645-19da-407f-8182-b0be2d7b7485",
+      "url_solicitada": "https://datos.sonora.gob.mx/dataset/ee8f639f-5e89-46ae-93b9-934b05fc6233/resource/4d1bb645-19da-407f-8182-b0be2d7b7485"
+    },
+    {
+      "aplicabilidad": "Confirma W01 (patron UTH fuente interna, sin CMPE).",
+      "conclusion": "Viva. Fuente interna cuatrimestral; sin CMPE.",
+      "fecha_consulta_utc": "2026-10-23",
+      "fragmento": "Resumen cuatrimestral por programa educativo e institucional del promedio de aprovechamiento académico obtenido por los estudiantes en el periodo a consultar. Fuente de los datos Base de datos interna. Frecuencia de actualización Cuatrimestral.",
+      "fragmento_sha256": "5215cac9057e3a1f3359f4364dd20d5fd87183d8740d8c49ecace6face257d71",
+      "id": "VW-11",
+      "localizador": "Descripcion; Informacion adicional",
+      "tipo": "cita_literal",
+      "url_final": "https://datos.sonora.gob.mx/dataset/Promedio%20Acad%C3%A9mico",
+      "url_solicitada": "https://datos.sonora.gob.mx/dataset/403912fd-5853-4e18-8256-f77206f855bd"
+    },
+    {
+      "aplicabilidad": "Confirma W04 (sin catalogo municipal ni version).",
+      "conclusion": "Viva. 150 columnas; sin version.",
+      "fecha_consulta_utc": "2026-10-23",
+      "fragmento": "Registro anual de Rickettsiosis en el Estado de Sonora. Número de variables/columnas 150. Fuente Base de datos interna. Recursos: Fiebre manchada 2022-2024 + Diccionario + Catalogo.",
+      "fragmento_sha256": "bed9b8df35ce98ee06c9f1e2b89db1dda63ed551f04b127138311543bd4f0043",
+      "id": "VW-12",
+      "localizador": "Descripcion; Datos; Recursos",
+      "tipo": "cita_literal",
+      "url_final": "https://datos.sonora.gob.mx/dataset/Fiebre%20manchada%20%28Rickettsia%29",
+      "url_solicitada": "https://datos.sonora.gob.mx/dataset/5494daa1-09ca-4750-aeac-2558553700e1"
+    },
+    {
+      "aplicabilidad": "Confirma W06/R11-desfase: cortes 1990-2020/2021-2040 vs periodos locales 1990-2019/2020-2040.",
+      "conclusion": "Viva. 2475 municipios; 1990-2020 + 2021-2040; 09-05-2024.",
+      "fecha_consulta_utc": "2026-10-23",
+      "fragmento": "Se presentan cifras de población a mitad de año de 2 475 municipios de México, de 1990 a 2020 y proyecciones de la población 2021 a 2040. Consejo Nacional de Población | 09 de mayo de 2024",
+      "fragmento_sha256": "874375973f53e618ea9c345fd1ea3554d22880d66af954c398d61c44e67448a4",
+      "id": "VW-13",
+      "localizador": "Parrafo principal; fecha de publicacion",
+      "tipo": "cita_literal",
+      "url_final": "https://www.gob.mx/conapo/documentos/reconstruccion-y-proyecciones-de-la-poblacion-de-los-municipios-de-mexico-1990-2040",
+      "url_solicitada": "https://www.gob.mx/conapo/documentos/reconstruccion-y-proyecciones-de-la-poblacion-de-los-municipios-de-mexico-1990-2040"
+    },
+    {
+      "aplicabilidad": "Confirma R03 (marco nacional, sin vinculo local).",
+      "conclusion": "Viva. CIE-10 vigente abril 2024.",
+      "fecha_consulta_utc": "2026-10-23",
+      "fragmento": "Clasificación Estadística Internacional de Enfermedades y Problemas Relacionados con la Salud, versión oficial vigente (CIE-10). Frecuencia: cada 10 años con revisiones anuales. Última Actualización: Abril de 2024 (revisión 16 de abril de 2024).",
+      "fragmento_sha256": "13aeaf45b23fbc27a16b44945ec3a4aa1c39fe5caf0b861928b7863d61eb87c4",
+      "id": "VW-14",
+      "localizador": "Nombre del Catalogo; Frecuencia; Ultima Actualizacion",
+      "tipo": "cita_literal",
+      "url_final": "http://www.dgis.salud.gob.mx/contenidos/intercambio/diagnostico_gobmx.html",
+      "url_solicitada": "http://www.dgis.salud.gob.mx/contenidos/intercambio/diagnostico_gobmx.html"
+    },
+    {
+      "aplicabilidad": "Confirma R08 (documento nacional autentico, sin aplicabilidad local declarada).",
+      "conclusion": "Viva. Modelo 2015, formato unico desde 2007, SINAC.",
+      "fecha_consulta_utc": "2026-10-23",
+      "fragmento": "Manual del Certificado de Nacimiento. Modelo 2015. Secretaría de Salud | 29 de septiembre de 2015. El Certificado es formato único nacional, obligatorio, individual e intransferible (desde 2007, DGIS); el SINAC integra y difunde sus estadísticas.",
+      "fragmento_sha256": "16bc55f5eeaeb2f131bde92521533ac4d87a2867b401fb50507da3f7252bf47a",
+      "id": "VW-15",
+      "localizador": "Titulo; fecha; parrafo formato unico/SINAC",
+      "tipo": "cita_literal",
+      "url_final": "https://www.gob.mx/salud/documentos/manual-del-certificado-de-nacimiento-modelo-2015?state=published",
+      "url_solicitada": "https://www.gob.mx/salud/documentos/manual-del-certificado-de-nacimiento-modelo-2015?state=published"
+    },
+    {
+      "aplicabilidad": "Confirma R04 (actualizacion continua, sin corte 2022).",
+      "conclusion": "Viva. CLUES actualizacion continua; ultima agosto 2026.",
+      "fecha_consulta_utc": "2026-10-23",
+      "fragmento": "Clave Única de Establecimientos de Salud (CLUES), CAT_CLUES. La actualización se realiza en el momento en que los Servicios Estatales de Salud (SESA) o instituciones requieran una modificación. Última Actualización: Agosto 2026.",
+      "fragmento_sha256": "c6177f2ae7da9d4559a63d53c84328a5d5a8719b99927a9db7c36647eba52cf2",
+      "id": "VW-16",
+      "localizador": "Nombre; Frecuencia; Ultima Actualizacion",
+      "tipo": "cita_literal",
+      "url_final": "http://www.dgis.salud.gob.mx/contenidos/intercambio/clues_gobmx.html",
+      "url_solicitada": "http://www.dgis.salud.gob.mx/contenidos/intercambio/clues_gobmx.html"
+    },
+    {
+      "aplicabilidad": "Confirma S09 y sostiene r6-tic-web-01..07: primarias reales, documentos pedidos inexistentes en publico.",
+      "conclusion": "8/8 vivos. Solo Datos + Diccionario; sin cuestionarios.",
+      "fecha_consulta_utc": "2026-10-23",
+      "fragmento": "Resultados del ejercicio 'Diagnostico del Entorno Digital' en 8 temas (Politica Digital 21, Informacion General 23, Presupuesto TIC 14, Desarrollo de Software 40, Mejora Regulatoria 16, Infraestructura y Ciberseguridad 43, Gobernanza 15, Fortalezas 26 columnas). Fuente Investigaciones. Todos: solo Datos + Diccionario, sin Fuentes extras ni cuestionario.",
+      "fragmento_sha256": "705754dfbd147af07f39f59f054ac3985a964e2d3e95eb3ce9dc9b9737c412c7",
+      "id": "VW-17",
+      "localizador": "Descripciones de los 8 conjuntos; Datos; Recursos; Informacion adicional",
+      "tipo": "resumen_marcado",
+      "url_final": "https://datos.sonora.gob.mx/dataset/aa353273-7ef0-4279-987a-40fc49b3d712 (+ 7 UUID TIC verificados uno por uno)",
+      "url_solicitada": "8 UUID TIC de asignacion r6-tic"
+    },
+    {
+      "aplicabilidad": "Confirma W05 (CONAPO citado por el publicador como Fuentes extras).",
+      "conclusion": "Viva. Fuentes extras = URL CONAPO verificada VW-13.",
+      "fecha_consulta_utc": "2026-10-23",
+      "fragmento": "Reconstrucción de información demográfica por grupos quinquenales de edad desde 1990 a 2019 y proyecciones de población para los años de 2020 a 2040 para el estado de Sonora. Fuentes extras https://www.gob.mx/conapo/documentos/reconstruccion-y-proyecciones-de-la-poblacion-de-los-municipios-de-mexico-1990-2040",
+      "fragmento_sha256": "a1c65da40db43d40c0dc872081cc855c9ad4dd00256f20f4b4376db412bab36c",
+      "id": "VW-18",
+      "localizador": "Descripcion; Fuentes extras",
+      "tipo": "cita_literal",
+      "url_final": "https://datos.sonora.gob.mx/dataset/Proyecciones%20de%20poblaci%C3%B3n%20-%20Grupos%20quinquenales%20de%20edad",
+      "url_solicitada": "https://datos.sonora.gob.mx/dataset/0b5f5e16-2de3-4be1-811f-4b0976ed82d3"
+    },
+    {
+      "aplicabilidad": "Confirma W07 (procedencia SESNSP declarada, sin edicion/corte local).",
+      "conclusion": "Viva. Origen SESNSP declarado; Fuentes extras SESNSP.",
+      "fecha_consulta_utc": "2026-10-23",
+      "fragmento": "Los datos provienen del Portal de Datos Abiertos de Incidencia Delictiva del Secretariado Ejecutivo del Sistema Nacional de Seguridad Pública (SESNSP) y se procesan para mostrar exclusivamente la información correspondiente al estado de Sonora. Fuentes extras https://www.gob.mx/sesnsp/acciones-y-programas/datos-abiertos-de-incidencia-delictiva",
+      "fragmento_sha256": "7786af5d1c011212b6892fe69fa834f654d5bf8b062751945c0a3b8442b0c858",
+      "id": "VW-19",
+      "localizador": "Descripcion; Fuentes extras",
+      "tipo": "cita_literal",
+      "url_final": "https://datos.sonora.gob.mx/dataset/Incidencia%20delictiva%20municipal",
+      "url_solicitada": "https://datos.sonora.gob.mx/dataset/93ca5e1c-702e-4e62-bc61-638907be184a"
+    },
+    {
+      "aplicabilidad": "Confirma R11 (metodologia 2020 autentica y citada).",
+      "conclusion": "Viva. Base Censo 2020; colonias; 04-10-2021.",
+      "fecha_consulta_utc": "2026-10-23",
+      "fragmento": "Conoce los índices de marginación por entidad federativa, municipio, localidad y urbana, con base en el Censo de Población y Vivienda 2020. Consejo Nacional de Población | 04 de octubre de 2021. Por primera ocasión, una estimación a nivel de colonias.",
+      "fragmento_sha256": "5cd5c95774aaf7e5e0d3b049f9e7d83d295372420f665514e69f671ba4bd090f",
+      "id": "VW-20",
+      "localizador": "Descripcion; fecha; parrafo de colonias",
+      "tipo": "cita_literal",
+      "url_final": "https://www.gob.mx/conapo/documentos/indices-de-marginacion-2020-284372",
+      "url_solicitada": "https://www.gob.mx/conapo/documentos/indices-de-marginacion-2020-284372"
+    },
+    {
+      "aplicabilidad": "Contexto nuevo V13/V14: diccionarios y bases SESNSP disponibles; sin corte historico 2015-2025 declarado.",
+      "conclusion": "Viva. Datos abiertos + diccionarios; 16-10-2026.",
+      "fecha_consulta_utc": "2026-10-23",
+      "fragmento": "Aquí encontrarás la información oficial de la incidencia delictiva nacional en formato de datos abiertos y sus diccionarios de datos. Secretariado Ejecutivo del Sistema Nacional de Seguridad Pública | 16 de octubre de 2026",
+      "fragmento_sha256": "c879abe4b2958b3b0d4f1ab0676676b169c64edd4f4b9aef3ec21a58029a800d",
+      "id": "VW-21",
+      "localizador": "Descripcion; fecha",
+      "tipo": "cita_literal",
+      "url_final": "https://www.gob.mx/sesnsp/acciones-y-programas/datos-abiertos-de-incidencia-delictiva",
+      "url_solicitada": "https://www.gob.mx/sesnsp/acciones-y-programas/datos-abiertos-de-incidencia-delictiva"
+    },
+    {
+      "aplicabilidad": "Contexto MAT-R6-02: tramite de titulacion existe en publico; calendario 2022-2 no localizado.",
+      "conclusion": "Viva. Tramite descrito; sin calendario.",
+      "fecha_consulta_utc": "2026-10-23",
+      "fragmento": "El proceso de titulación es la última etapa de la formación profesional. Trámite de Titulación (página de egresados UES). Sin calendario escolar 2022-2 visible en snapshot.",
+      "fragmento_sha256": "96782515e8e3437ba1dc5dae72e35facf2cde7225890c492098ea3498dd58709",
+      "id": "VW-22",
+      "localizador": "Seccion Egresados/Titulacion",
+      "tipo": "resumen_marcado",
+      "url_final": "https://ues.sonora.gob.mx/proyectos/titulacion",
+      "url_solicitada": "https://ues.sonora.gob.mx/proyectos/titulacion"
+    },
+    {
+      "aplicabilidad": "Corrige MAT-R6-01: canonica del recurso Diccionario.",
+      "conclusion": "Viva. CSV; creado 10-01-2024; actualizado 01-11-2024.",
+      "fecha_consulta_utc": "2026-10-23",
+      "fragmento": "Matrículas de Estudiantes - Diccionario. URL download diccionario-matriculas-de-estudiantes.csv. Creado 10 de enero de 2024. Última actualización de datos y metadatos 1 de noviembre de 2024. Formato CSV.",
+      "fragmento_sha256": "8f669a2ccc6fb95ace9dcb7e7f41edb5623d55495ad34893c9d0549f0550d296",
+      "id": "VW-23",
+      "localizador": "Titulo del recurso; URL de descarga; Metadatos",
+      "tipo": "cita_literal",
+      "url_final": "https://datos.sonora.gob.mx/dataset/e819466c-7282-46c5-84e9-65917dd8cc85/resource/8c0e76ff-3a86-4b1d-beee-b04bebe7df8d",
+      "url_solicitada": "https://datos.sonora.gob.mx/dataset/e819466c-7282-46c5-84e9-65917dd8cc85/resource/8c0e76ff-3a86-4b1d-beee-b04bebe7df8d"
+    }
+  ]
+}

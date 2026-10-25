@@ -1,0 +1,5 @@
+PREFIX mex: <https://example.org/mex-ontologi/vocab/>
+# Q1: conteo de pares por estado de oportunidad (reproduce resumen del mapa)
+SELECT ?estado (COUNT(?e) AS ?pares)
+WHERE { ?e a mex:EvaluacionCruce ; mex:estadoOportunidad ?estado . }
+GROUP BY ?estado

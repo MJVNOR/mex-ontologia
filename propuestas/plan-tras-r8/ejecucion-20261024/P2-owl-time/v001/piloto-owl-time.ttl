@@ -1,0 +1,12 @@
+# Piloto OWL-Time — PLANTILLA DE DISENO (v001). NO INSTANCIADA. No integrar.
+# Propuesta negativa: ningun periodo acredita inicio+fin con referencia/precision.
+@prefix time: <http://www.w3.org/2006/time#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix ex: <https://example.org/mex-ontologi/piloto-owl-time/> .
+
+# FORMA valida (sin datos): solo instanciar cuando la fuente acredite los 4 campos.
+# ex:periodo-<recurso>-<periodo> a time:ProperInterval ;
+#   time:hasBeginning [ a time:Instant ; time:inXSDDate "AAAA-MM-DD"^^xsd:date ] ;
+#   time:hasEnd [ a time:Instant ; time:inXSDDate "AAAA-MM-DD"^^xsd:date ] .
+# Regla: prohibido inventar UTC/medianoche o calendario por nombre.
+# Hoy: 0 triples time:ProperInterval instanciados en esta propuesta.

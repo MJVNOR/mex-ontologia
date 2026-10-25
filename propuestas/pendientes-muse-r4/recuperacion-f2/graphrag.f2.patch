@@ -1,0 +1,625 @@
+--- studio/src-tauri/sidecars/agent/graphrag.ts
++++ propuestas/pendientes-muse-r4/recuperacion-f2/graphrag.f2.ts
+@@ -50,6 +50,535 @@
+   correspondenceOverview?: string;
+   resourceContext?: string;
+   variableOverview?: string;
++  cruceFichaContext?: string;
++  cruceCodigoContext?: string;
++}
++
++/** Fichas de cruce ronda-3 por alias corto (F1, F2, ...).
++ * terms() exige >=3 caracteres y el anclaje por etiqueta con LIMIT 16
++ * expulsa la ficha cuando la pregunta trae genéricos ("otros", "2020"...).
++ * Esto resuelve el alias ANTES del vecindario: si la pregunta nombra F2,
++ * la ficha se recupera por IRI exacto, sin depender de terms()/anchors.
++ * Solo lectura SELECT; no toca el grafo ni otros caminos. */
++const CRUCE_BASE = 'https://example.org/mex-ontologi/cruce-r3/';
++
++export function cruceAliases(question: string): string[] {
++  const out: string[] = [];
++  for (const m of question.normalize('NFC').matchAll(/\bF\s?(\d{1,3})\b/gi)) {
++    const alias = `F${m[1]}`;
++    if (!out.includes(alias)) out.push(alias);
++  }
++  return out.slice(0, 4);
++}
++
++export async function cruceFichaContext(
++  mcp: McpClient,
++  question: string,
++): Promise<{ context: string; anchors: Array<{ iri: string; label: string }> }> {
++  const aliases = cruceAliases(question);
++  if (!aliases.length) return { context: '', anchors: [] };
++  const sections: string[] = [];
++  const anchors: Array<{ iri: string; label: string }> = [];
++  for (const alias of aliases) {
++    const iri = `${CRUCE_BASE}${alias}`;
++    const ficha = await selectAll(mcp, `${P}
++      # cruce-ficha
++      SELECT DISTINCT ?p ?o ?ol WHERE {
++        VALUES ?s { <${iri}> }
++        ?s ?p ?o .
++        OPTIONAL { ?o rdfs:label ?ol }
++        FILTER(!isBlank(?o))
++      } ORDER BY ?p ?o ?ol`);
++    if (!ficha.length) continue;
++    const label = ficha.find(r => r.p === 'http://www.w3.org/2000/01/rdf-schema#label')?.o ?? alias;
++    anchors.push({ iri, label });
++    const compCount = await selectAll(mcp, `${P}
++      # cruce-comp-count
++      SELECT (COUNT(DISTINCT ?c) AS ?n) WHERE {
++        ?c <https://example.org/mex-ontologi/vocab/comparacionDe> <${iri}> .
++      }`);
++    const evCount = await selectAll(mcp, `${P}
++      # cruce-ev-count
++      SELECT (COUNT(DISTINCT ?e) AS ?n) WHERE {
++        ?c <https://example.org/mex-ontologi/vocab/comparacionDe> <${iri}> .
++        ?e <https://example.org/mex-ontologi/vocab/evidenciaDeFuente> ?c .
++      }`);
++    const nComp = compCount[0]?.n ?? '0';
++    const nEv = evCount[0]?.n ?? '0';
++    // Resumen derivado del RDF real de ESTA ficha (periodos, roles y
++    // medidas observados por agregacion nativa). Nada hardcodeado de F2:
++    // F1/F3 tienen sus propios periodos/medidas (o cero comparaciones).
++    const periods = await selectAll(mcp, `${P}
++      # cruce-periodos
++      SELECT DISTINCT ?per WHERE {
++        ?c <https://example.org/mex-ontologi/vocab/comparacionDe> <${iri}> .
++        ?c <https://example.org/mex-ontologi/vocab/periodoCruzado> ?per .
++      } ORDER BY ?per`);
++    const rolesMed = await selectAll(mcp, `${P}
++      # cruce-roles-medidas
++      SELECT DISTINCT ?rol ?med WHERE {
++        ?c <https://example.org/mex-ontologi/vocab/comparacionDe> <${iri}> .
++        ?e <https://example.org/mex-ontologi/vocab/evidenciaDeFuente> ?c .
++        OPTIONAL { ?e <https://example.org/mex-ontologi/vocab/fuenteRol> ?rol }
++        OPTIONAL { ?e <https://example.org/mex-ontologi/vocab/medidaOrigen> ?med }
++      } ORDER BY ?rol ?med`);
++    const perList = [...new Set(periods.map(r => r.per).filter(Boolean))];
++    const roleList = [...new Set(rolesMed.map(r => r.rol).filter(Boolean))];
++    const medList = [...new Set(rolesMed.map(r => r.med).filter(Boolean))];
++    const perTxt = perList.length
++      ? ` (periodo(s) cruzado(s) en RDF: ${perList.map(p => JSON.stringify(p)).join(', ')})`
++      : ' (sin comparaciones municipales en RDF)';
++    const rmTxt =
++      roleList.length || medList.length
++        ? ` (roles: ${roleList.map(r => JSON.stringify(r)).join(', ') || '—'}; medidas: ${medList.map(m => JSON.stringify(m)).join(', ') || '—'})`
++        : '';
++    const sampleAll = await selectAll(mcp, `${P}
++      # cruce-sample
++      SELECT DISTINCT ?c ?cl ?per WHERE {
++        ?c <https://example.org/mex-ontologi/vocab/comparacionDe> <${iri}> .
++        OPTIONAL { ?c <https://example.org/mex-ontologi/vocab/periodoCruzado> ?per }
++        OPTIONAL { ?c rdfs:label ?cl }
++      } ORDER BY ?c`);
++    const sample = sampleAll.slice(0, 3);
++    const evSample = sample.length
++      ? (await selectAll(mcp, `${P}
++      # cruce-ev-sample
++      SELECT DISTINCT ?e ?rol ?medida ?nombre ?fuente ?hoja ?sha ?valor WHERE {
++        VALUES ?c { ${iriValues(sample.map(r => r.c))} }
++        ?e <https://example.org/mex-ontologi/vocab/evidenciaDeFuente> ?c .
++        OPTIONAL { ?e <https://example.org/mex-ontologi/vocab/fuenteRol> ?rol }
++        OPTIONAL { ?e <https://example.org/mex-ontologi/vocab/medidaOrigen> ?medida }
++        OPTIONAL { ?e <https://example.org/mex-ontologi/vocab/nombreOrigen> ?nombre }
++        OPTIONAL { ?e <https://example.org/mex-ontologi/vocab/fuenteOriginal> ?fuente }
++        OPTIONAL { ?e <https://example.org/mex-ontologi/vocab/hojaFuente> ?hoja }
++        OPTIONAL { ?e <https://example.org/mex-ontologi/vocab/shaFuente> ?sha }
++        OPTIONAL { ?e <https://example.org/mex-ontologi/vocab/valorOrigen> ?valor }
++      } ORDER BY ?e ?rol`)).slice(0, 12)
++      : [];
++    const lines = ficha.map(r => {
++      const o = isIri(r.o) ? (r.ol ? `${JSON.stringify(r.ol)} <${r.o}>` : `<${r.o}>`) : JSON.stringify(r.o);
++      return `- <${iri}> --[<${r.p}>]--> ${o}`;
++    });
++    sections.push(
++      `COMPLETE ficha ${alias} <${iri}> (${JSON.stringify(label)}): ${nComp} comparaciones${perTxt} y ${nEv} evidencias${rmTxt}. Todas las paginas leidas; conteo por agregacion nativa sobre comparacionDe/evidenciaDeFuente.`,
++      perList.length === 1
++        ? `ALCANCE SOLO-${perList[0]}: unico periodo cruzado ${JSON.stringify(perList[0])} en RDF; no extrapoles a otros periodos ni anos.`
++        : perList.length
++          ? `ALCANCE: periodos cruzados en RDF: ${perList.map(p => JSON.stringify(p)).join(', ')}; no extrapoles fuera de ellos.`
++          : `ALCANCE: sin comparaciones municipales en RDF para ${alias}; periodos y medidas estan en la propia ficha (ver triples); no extrapoles.`,
++      ...lines,
++      ...sample.map(r => `- Comparacion ${JSON.stringify(r.cl ?? r.c)} <${r.c}> comparacionDe <${iri}>; periodoCruzado ${JSON.stringify(r.per ?? 'no declarado en RDF')}.`),
++      ...evSample.map(r => `- Evidencia <${r.e}>: fuenteRol=${JSON.stringify(r.rol ?? '')} medidaOrigen=${JSON.stringify(r.medida ?? '')} nombreOrigen=${JSON.stringify(r.nombre ?? '')} fuenteOriginal=${JSON.stringify(r.fuente ?? '')} hoja=${JSON.stringify(r.hoja ?? '')} sha=${JSON.stringify(r.sha ?? '')} valor=${JSON.stringify(r.valor ?? '')}.`),
++    );
++  }
++  if (!sections.length) return { context: '', anchors: [] };
++  return { context: sections.join('\n'), anchors };
++}
++
++/** Evidencia por codigo municipal nombrado (p. ej. 26001).
++ * El vecindario hop-1 trae el enlace evidenciaDeFuente pero nunca las
++ * medidas de cada fuente (el nodo evidencia es ?s, no entra al frontier),
++ * asi que la pregunta "muestra los dos valores con medida..." quedaba sin
++ * respuesta aunque el grafo la tiene. Se resuelve por literal exacto
++ * codigoTextual (5 digitos: no colisiona con anos) + detalle completo de
++ * la comparacion y sus dos evidencias. Solo SELECT. */
++const CODIGO_RE = /\b(\d{5})\b/g;
++
++export function cruceCodigos(question: string): string[] {
++  const out: string[] = [];
++  for (const m of question.normalize('NFC').matchAll(CODIGO_RE)) {
++    if (!out.includes(m[1])) out.push(m[1]);
++  }
++  return out.slice(0, 2);
++}
++
++export async function cruceCodigoContext(
++  mcp: McpClient,
++  question: string,
++): Promise<{ context: string; anchors: Array<{ iri: string; label: string }> }> {
++  const codigos = cruceCodigos(question);
++  if (!codigos.length) return { context: '', anchors: [] };
++  const sections: string[] = [];
++  const anchors: Array<{ iri: string; label: string }> = [];
++  for (const codigo of codigos) {
++    // Solo el nodo comparacion (tiene periodoCruzado): las evidencias
++    // tambien llevan codigoTextual y hay que excluirlas aqui.
++    const comps = await selectAll(mcp, `${P}
++      # codigo-comparacion
++      SELECT DISTINCT ?c ?cl ?per WHERE {
++        ?c <https://example.org/mex-ontologi/vocab/codigoTextual> ${JSON.stringify(codigo)} ;
++           <https://example.org/mex-ontologi/vocab/periodoCruzado> ?per .
++        OPTIONAL { ?c rdfs:label ?cl }
++      } ORDER BY ?c ?per`);
++    if (!comps.length) continue;
++    for (const comp of comps.slice(0, 2)) {
++      anchors.push({ iri: comp.c, label: comp.cl ?? `${codigo} — ${comp.per}` });
++      const det = await selectAll(mcp, `${P}
++        # codigo-detalle
++        SELECT DISTINCT ?s ?sl ?p ?o ?ol WHERE {
++          { VALUES ?s { <${comp.c}> } ?s ?p ?o . }
++          UNION {
++            ?e <https://example.org/mex-ontologi/vocab/evidenciaDeFuente> <${comp.c}> .
++            ?e ?p ?o . BIND(?e AS ?s)
++          }
++          OPTIONAL { ?s rdfs:label ?sl }
++          OPTIONAL { ?o rdfs:label ?ol }
++          FILTER(!isBlank(?o) && !isBlank(?s))
++        } ORDER BY ?s ?p ?o`);
++      const compLines: string[] = [];
++      const byFuente = new Map<string, string[]>();
++      for (const r of det) {
++        const s = r.sl ? `${JSON.stringify(r.sl)} <${r.s}>` : `<${r.s}>`;
++        const o = isIri(r.o)
++          ? r.ol
++            ? `${JSON.stringify(r.ol)} <${r.o}>`
++            : `<${r.o}>`
++          : JSON.stringify(r.o);
++        const line = `- ${s} --[<${r.p}>]--> ${o}`;
++        if (r.s === comp.c) compLines.push(line);
++        else {
++          const rol = det.find(
++            d => d.s === r.s && d.p === 'https://example.org/mex-ontologi/vocab/fuenteRol',
++          )?.o;
++          const key = rol ?? r.s;
++          if (!byFuente.has(key)) byFuente.set(key, []);
++          byFuente.get(key)!.push(line);
++        }
++      }
++      const roles = [...byFuente.keys()];
++      sections.push(
++        `COMPLETE codigo ${codigo} <${comp.c}>: comparacion periodo ${JSON.stringify(comp.per ?? '')} y ${byFuente.size} evidencias de fuente (${roles.map(r => JSON.stringify(r)).join(', ') || 'sin rol'}). Todas las paginas leidas; detalle por codigoTextual exacto, sin extrapolar a otros codigos ni anos.`,
++        `LIMITES: ver limiteInterpretativo de cada comparacion y evidencia en los triples; los codigos son literales coincidentes.`,
++        ...compLines,
++        ...[...byFuente.entries()].flatMap(([rol, ls]) => [
++          `-- fuente ${JSON.stringify(rol)} (${ls.length} triples):`,
++          ...ls,
++        ]),
++      );
++    }
++  }
++  if (!sections.length) return { context: '', anchors: [] };
++  return { context: sections.join('\n'), anchors };
++}
++
++/** Presupuesto de contexto por modelo: Gemma4 31B expone 16000
++ * tokens/minuto y el contexto actual (47k-253k caracteres) provoca
++ * 429 TPM. El ajuste es SOLO recorte por lineas completas del
++ * Retrieved ya recuperado (SELECT identicos, grafo intacto):
++ * - Resumenes COMPLETE (conteos nativos) y ficha F2: siempre integros.
++ * - Resto: lineas completas por prioridad de intencion, sin cortar
++ *   literales ni JSON por la mitad; repetidas exactas fuera.
++ * Modelos no listados: sin recorte (Infinity), sin degradacion. */
++export const GEMMA_TPM = 16000;
++/** Pausa minima entre llamadas REALES al modelo (>=60s exigidos). */
++export const GEMMA_PACING_MS = 65000;
++
++export const MODEL_CONTEXT_BUDGETS: Array<{
++  match: RegExp;
++  maxInputTokens: number;
++  pacingMs: number;
++  note: string;
++}> = [
++  {
++    match: /gemma-4-31b/i,
++    maxInputTokens: 6500,
++    pacingMs: GEMMA_PACING_MS,
++    note: 'Gemma4 31B via proveedor 16000 TPM: medido 9845 est -> 14072 reales (x1.43) y 9607 est -> 14279 reales (x1.49); 6500 est ~= 9300 reales + 4096 salida < 16000 en ventana de 65s.',
++  },
++  {
++    match: /gemma/i,
++    maxInputTokens: 6500,
++    pacingMs: GEMMA_PACING_MS,
++    note: 'Familia Gemma en proveedor 16000 TPM: mismo presupuesto medido.',
++  },
++];
++
++/** Configurable: overrideTokens gana; si no, tabla por modelo; si no,
++ * Infinity (comportamiento original). Env ONTO_CTX_BUDGET_TOKENS opcional. */
++export function budgetForModel(
++  model?: string,
++  overrideTokens?: number,
++): { maxInputTokens: number; pacingMs: number } {
++  const envRaw =
++    typeof process !== 'undefined' ? process.env?.ONTO_CTX_BUDGET_TOKENS : undefined;
++  const envTokens = envRaw != null && envRaw !== '' ? Number(envRaw) : NaN;
++  if (Number.isFinite(overrideTokens as number))
++    return { maxInputTokens: overrideTokens as number, pacingMs: GEMMA_PACING_MS };
++  if (Number.isFinite(envTokens))
++    return { maxInputTokens: envTokens, pacingMs: GEMMA_PACING_MS };
++  for (const b of MODEL_CONTEXT_BUDGETS) {
++    if (model && b.match.test(model))
++      return { maxInputTokens: b.maxInputTokens, pacingMs: b.pacingMs };
++  }
++  return { maxInputTokens: Infinity, pacingMs: 0 };
++}
++
++/** ~4 caracteres por token con margen 1.15 (conservador p. es). */
++export function estimateTokensFromChars(chars: number): number {
++  return Math.ceil(Math.max(0, chars) / 4 * 1.15);
++}
++
++export function estimateInputTokens(args: {
++  systemPrompt?: string;
++  question: string;
++  context: string;
++}): number {
++  const sys = args.systemPrompt ?? QA_SYSTEM_PROMPT;
++  return estimateTokensFromChars(sys.length + args.question.length + args.context.length);
++}
++
++/** Pines de la pregunta: alias F, identificadores con _ y codigos
++ * numericos (26001), en forma cruda y URL-encoded (el grafo encodes
++ * ñ: a%C3%B1o_matrimonio). Solo especificos: los terminos genericos
++ * (clave, medida, 2020...) ya tienen sus marcadores de prioridad.
++ * Todo en minusculas para includes(). */
++export function questionPins(question: string): string[] {
++  const q = question.normalize('NFC');
++  const pins = new Set<string>();
++  for (const a of cruceAliases(q)) pins.add(a.toLowerCase());
++  for (const m of q.matchAll(/[\p{L}\p{N}]+[_-][\p{L}\p{N}_-]+/gu)) {
++    const raw = m[0].toLowerCase();
++    pins.add(raw);
++    pins.add(encodeURIComponent(raw).toLowerCase());
++  }
++  for (const m of q.matchAll(/\b\d{4,6}\b/g)) pins.add(m[0]);
++  return [...pins];
++}
++
++/** Intencion de definicion: la pregunta pide significado/diccionario o
++ * distingue documentado de candidato. Su backbone (definicionOriginal,
++ * significadoDocumentado, definicionVariable) sube a rango de pin. */
++export function wantsDefinitions(question: string): boolean {
++  return /significa|definici|diccionario|documentad|candidat/i.test(question.normalize('NFC'));
++}
++
++const BONUS_DEFINICION = ['definicionoriginal', 'significadodocumentado', 'definicionvariable', 'diccionariocsv'];
++
++const PRIORITY_MARKERS = [
++  'documental_revisada',
++  'definicionoriginal',
++  'significadodocumentado',
++  'definicionvariable',
++  'diccionario',
++  'comparacionde',
++  'evidenciadefuente',
++  'igualdadvalores',
++  'medidaorigen',
++  'nombreorigen',
++  'fuenteoriginal',
++  'hojafuente',
++  'filaorigen',
++  'shafuente',
++  'valororigen',
++  'periodocruzado',
++  'codigotextual',
++  'condicionpendiente',
++  'condicionverificada',
++  'limiteinterpretativo',
++  'candidata_por_nombre',
++];
++
++/** Recorte por lineas completas: COMPLETE siempre, luego pines,
++ * luego prioridad, luego resto en orden; repetidas exactas fuera.
++ * Nunca corta una linea por la mitad. */
++function trimSectionLines(
++  lines: string[],
++  capChars: number,
++  pins: string[],
++  bonus: string[] = [],
++  reserveChars = 0,
++): { kept: string[]; dropped: number } {
++  const seen = new Set<string>();
++  const uniq: string[] = [];
++  for (const l of lines) {
++    if (!l.trim() || seen.has(l)) continue;
++    seen.add(l);
++    uniq.push(l);
++  }
++  const low = uniq.map(l => l.toLowerCase());
++  const isComplete = uniq.map(l => l.startsWith('COMPLETE'));
++  const norm = (s: string) => s.replace(/[^a-z0-9]/g, '');
++  const lowNorm = low.map(norm);
++  const hasAny = (i: number, words: string[]) => words.some(w => w && lowNorm[i].includes(norm(w)));
++  const isPin = low.map(l => pins.some(p => p && l.includes(p)));
++  const isBonus = low.map((_, i) => hasAny(i, bonus));
++  const isMapping = uniq.map(l => l.startsWith('Mapping '));
++  const isPriority = low.map((_, i) => PRIORITY_MARKERS.some(m => lowNorm[i].includes(m)));
++  const rankOf = (i: number): number =>
++    isComplete[i] ? 0 : isPin[i] && isMapping[i] ? 1 : isBonus[i] ? 2 : isPin[i] ? 3 : isPriority[i] ? 4 : 5;
++  const order = uniq
++    .map((_, i) => i)
++    .sort((a, b) => {
++      // COMPLETE (resumen exacto) > mapping revisado pineado > definicion
++      // pedida > resto pineado > prioridad > resto. Sin cortar lineas.
++      // (Solo 'Mapping ' en rango 1: las evidencias con documental_revisada
++      // son muchas y taparian definiciones y anos 2022.)
++      return rankOf(a) - rankOf(b) || a - b;
++    });
++  const kept: string[] = [];
++  let used = 0;
++  let dropped = 0;
++  // Reserva para definiciones y evidencia del periodo: los mappings son
++  // ejemplos PARTIAL (conteos COMPLETE ya exactos); lo solicitado
++  // (definicion, periodo) no puede quedarse sin hueco.
++  const tier1Cap = Math.max(0, capChars - reserveChars);
++  for (const i of order) {
++    const r = rankOf(i);
++    const limit = r <= 1 ? tier1Cap : capChars;
++    // COMPLETE (resumen numerico exacto) nunca se recorta.
++    if (r !== 0 && used + uniq[i].length + 1 > limit) {
++      dropped++;
++      continue;
++    }
++    kept.push(uniq[i]);
++    used += uniq[i].length + 1;
++  }
++  // Orden original para contexto legible y estable.
++  kept.sort((a, b) => uniq.indexOf(a) - uniq.indexOf(b));
++  return { kept, dropped };
++}
++
++export interface FitReport {
++  model: string;
++  maxInputTokens: number;
++  estInputTokens: number;
++  contextChars: number;
++  trimmed: boolean;
++  keptLines: number;
++  droppedLines: number;
++  note?: string;
++}
++
++/** Ajusta un Retrieved al presupuesto del modelo. Sin modelo listado:
++ * devuelve el original intacto (misma referencia). */
++export function fitRetrieved(
++  r: Retrieved,
++  question: string,
++  model?: string,
++  systemPrompt: string = QA_SYSTEM_PROMPT,
++): { fitted: Retrieved; report: FitReport } {
++  const budget = budgetForModel(model);
++  const fullLen = asContext(r).length;
++  const base = {
++    model: model ?? '',
++    maxInputTokens: budget.maxInputTokens,
++    estInputTokens: estimateTokensFromChars(systemPrompt.length + question.length + fullLen),
++    contextChars: fullLen,
++    trimmed: false,
++    keptLines: 0,
++    droppedLines: 0,
++  };
++  if (!Number.isFinite(budget.maxInputTokens)) return { fitted: r, report: base };
++  // Holgura de 100 tokens: la estimacion es aproximada y el tope es duro.
++  const target = budget.maxInputTokens - 100;
++  if (base.estInputTokens <= target) return { fitted: r, report: base };
++  const maxCtxChars =
++    Math.floor((target * 4) / 1.15) - systemPrompt.length - question.length;
++  const fixedChars =
++    (r.correspondenceOverview ?? '').length +
++    (r.cruceFichaContext ?? '').length +
++    (r.cruceCodigoContext ?? '').length +
++    (r.variableOverview ?? '').length +
++    r.anchors.map(a => a.label.length + a.iri.length + 4).reduce((x, y) => x + y, 0) +
++    r.claims.map(c => c.text.length + c.doc.length + 6).reduce((x, y) => x + y, 0) +
++    r.provenance.map(p => p.thing.length + p.sources.join('').length + 4).reduce((x, y) => x + y, 0) +
++    r.conflicts.join('').length +
++    700; // cabeceras de asContext
++  const remaining = Math.max(0, maxCtxChars - fixedChars);
++  const pins = questionPins(question);
++  const bonus = wantsDefinitions(question) ? BONUS_DEFINICION : [];
++  // Codigo nombrado sin variable: las correspondencias genericas son ruido;
++  // conservar solo sus conteos COMPLETE y dar el resto al vecindario.
++  const hasVarId = /[\p{L}\p{N}]+[_-][\p{L}\p{N}_-]+/u.test(question.normalize('NFC'));
++  const corrMinimal = cruceCodigos(question).length > 0 && !hasVarId;
++  const corrLines = (r.correspondenceContext ?? '').split('\n');
++  const resLines = (r.resourceContext ?? '').split('\n');
++  // Reparto: lo scoped-COMPLETE (conteos+mappings+definiciones) manda
++  // sobre el vecindario (ya declarado PARTIAL). 80/10/resto. Reserva 3000
++  // en correspondencias para definiciones y evidencia del periodo: los
++  // mappings son ejemplos PARTIAL y no pueden taparlos.
++  const corrCap = corrMinimal ? 0 : Math.floor(remaining * 0.8);
++  const resCap = Math.floor(remaining * 0.1);
++  const corr = r.correspondenceContext
++    ? corrMinimal
++      ? {
++          // Codigo nombrado sin variable: las correspondencias genericas son
++          // ruido; solo sus conteos COMPLETE, el resto al vecindario/ codigo.
++          kept: corrLines.filter(l => l.startsWith('COMPLETE')),
++          dropped: corrLines.length - corrLines.filter(l => l.startsWith('COMPLETE')).length,
++        }
++      : trimSectionLines(corrLines, corrCap, pins, bonus, 3000)
++    : { kept: [] as string[], dropped: 0 };
++  const res = r.resourceContext
++    ? trimSectionLines(resLines, resCap, pins, bonus)
++    : { kept: [] as string[], dropped: 0 };
++  const usedSmall =
++    corr.kept.join('').length + res.kept.join('').length + corr.kept.length + res.kept.length;
++  const factsCap = Math.max(0, remaining - usedSmall);
++  const factTrim = trimSectionLines(r.facts, factsCap, pins, bonus);
++  // ponytail: garantia minima — si hay pines (26001, variable) y el recorte
++  // los elimino todos, se reponen hasta 12 (se reporta sobre-presupuesto).
++  let factKept = factTrim.kept;
++  let overPins = 0;
++  if (pins.length && r.facts.some(f => pins.some(p => p && f.toLowerCase().includes(p)))) {
++    const hasPin = factKept.some(f => pins.some(p => p && f.toLowerCase().includes(p)));
++    if (!hasPin) {
++      const seen = new Set(factKept);
++      const add = r.facts.filter(f => pins.some(p => p && f.toLowerCase().includes(p)) && !seen.has(f));
++      factKept = [...add.slice(0, 12), ...factKept];
++      overPins = add.slice(0, 12).join('').length;
++    }
++  }
++  const noteParts: string[] = [];
++  if (corr.dropped) noteParts.push(`correspondencias ${corr.kept.length}/${corrLines.length}`);
++  if (res.dropped) noteParts.push(`recursos ${res.kept.length}/${resLines.length}`);
++  if (factTrim.dropped) noteParts.push(`vecindario ${factKept.length}/${r.facts.length}`);
++  const fitted: Retrieved = {
++    ...r,
++    correspondenceContext: corr.kept.length
++      ? corr.kept.join('\n') +
++        (corr.dropped
++          ? `\nBUDGET TRIM (${model}): ${corr.kept.length}/${corrLines.length} lineas; conteos COMPLETE intactos, ejemplos ahora PARTIAL.`
++          : '')
++      : r.correspondenceContext ?? '',
++    resourceContext: res.kept.length
++      ? res.kept.join('\n') +
++        (res.dropped ? `\nBUDGET TRIM (${model}): ejemplos ahora PARTIAL.` : '')
++      : r.resourceContext,
++    facts: factKept,
++  };
++  // Si el recorte vacio una seccion con contenido, conservar una nota honesta.
++  if (r.correspondenceContext && !corr.kept.length && !fitted.correspondenceContext) {
++    fitted.correspondenceContext =
++      'BUDGET TRIM: correspondencias fuera de presupuesto; ver resumen global si se pidio.';
++  }
++  const fittedLen = asContext(fitted).length;
++  return {
++    fitted,
++    report: {
++      model: model ?? '',
++      maxInputTokens: budget.maxInputTokens,
++      estInputTokens: estimateTokensFromChars(systemPrompt.length + question.length + fittedLen + overPins),
++      contextChars: fittedLen,
++      trimmed: true,
++      keptLines: corr.kept.length + res.kept.length + factKept.length,
++      droppedLines: corr.dropped + res.dropped + factTrim.dropped,
++      note: `BUDGET TRIM (${model}): ${noteParts.join('; ') || 'sin recorte necesario'}. ` +
++        `Conteos COMPLETE y ficha integros; recorte por lineas completas, sin truncar literales.${overPins ? ' Pines repuestos sobre presupuesto.' : ''}`,
++    },
++  };
++}
++
++/** Aplica el presupuesto solo cuando el modelo lo exige; si no, intacto. */
++export function maybeFit(
++  ret: Retrieved,
++  question: string,
++  model?: string,
++  systemPrompt: string = QA_SYSTEM_PROMPT,
++): Retrieved {
++  if (!model) return ret;
++  if (!Number.isFinite(budgetForModel(model).maxInputTokens)) return ret;
++  return fitRetrieved(ret, question, model, systemPrompt).fitted;
+ }
+ 
+ /** Read every result page; page size is not a cap on the answer set. */
+@@ -527,23 +1056,35 @@
+  * question; two is needed for the chain questions that defeat chunk
+  * retrieval, and costs more context.
+  */
+-export async function retrieve(mcp: McpClient, question: string, hops = 2): Promise<Retrieved> {
++export async function retrieve(
++  mcp: McpClient,
++  question: string,
++  hops = 2,
++  opts?: { model?: string; systemPrompt?: string },
++): Promise<Retrieved> {
+   const ts = terms(question);
++  const sys = opts?.systemPrompt ?? QA_SYSTEM_PROMPT;
+   // Scoped COMPLETE queries start alongside anchoring: generic count/state
+   // questions must not depend on the bounded neighbourhood.
+   const scoped = (async () => {
+-    const out: Pick<Retrieved, 'correspondenceOverview' | 'resourceContext' | 'variableOverview'> = {};
++    const out: Pick<Retrieved, 'correspondenceOverview' | 'resourceContext' | 'variableOverview' | 'cruceFichaContext' | 'cruceCodigoContext'> = {};
+     if (wantsCorrespondenceOverview(question)) out.correspondenceOverview = await correspondenceStatusOverview(mcp);
+     if (wantsResourceScope(question)) out.resourceContext = await resourceCorrespondenceContext(mcp, question);
+     if (wantsVariableOverview(question)) out.variableOverview = await variableStatusOverview(mcp);
++    const ficha = await cruceFichaContext(mcp, question);
++    if (ficha.context) out.cruceFichaContext = ficha.context;
++    const codigo = await cruceCodigoContext(mcp, question);
++    if (codigo.context) out.cruceCodigoContext = codigo.context;
++    (out as { __fichaAnchors?: Retrieved['anchors'] }).__fichaAnchors = [...ficha.anchors, ...codigo.anchors];
+     return out;
+   })();
+   if (ts.length === 0) {
+     const s = await scoped;
+-    if (!s.correspondenceOverview && !s.resourceContext && !s.variableOverview) {
+-      return { anchors: [], facts: [], claims: [], provenance: [], conflicts: [] };
++    const { __fichaAnchors, ...rest } = s as typeof s & { __fichaAnchors?: Retrieved['anchors'] };
++    if (!rest.correspondenceOverview && !rest.resourceContext && !rest.variableOverview && !rest.cruceFichaContext && !rest.cruceCodigoContext) {
++      return maybeFit({ anchors: [], facts: [], claims: [], provenance: [], conflicts: [] }, question, opts?.model, sys);
+     }
+-    return { anchors: [], facts: [], claims: [], provenance: [], conflicts: [], ...s };
++    return maybeFit({ anchors: [...(__fichaAnchors ?? [])], facts: [], claims: [], provenance: [], conflicts: [], ...rest }, question, opts?.model, sys);
+   }
+ 
+   // 1. ANCHORS. Entities whose label or local name matches a question term.
+@@ -566,8 +1107,16 @@
+   const anchors = anchorRows.map(r => ({ iri: r.e, label: r.l }));
+   const mappingContext = await correspondenceContext(mcp, ts);
+   const extra = await scoped;
++  const { __fichaAnchors, ...cleanExtra } = extra as typeof extra & { __fichaAnchors?: Retrieved['anchors'] };
++  for (const fa of __fichaAnchors ?? []) {
++    if (!anchors.some(a => a.iri === fa.iri)) anchors.unshift(fa);
++  }
+   if (anchors.length === 0) {
+-    return { anchors: [], facts: [], claims: [], provenance: [], conflicts: [], correspondenceContext: mappingContext, ...extra };
++    if (!__fichaAnchors?.length) {
++      return maybeFit({ anchors: [], facts: [], claims: [], provenance: [], conflicts: [], correspondenceContext: mappingContext, ...cleanExtra }, question, opts?.model, sys);
++    }
++    // Solo-alias (p. ej. pregunta mínima "F2"): sin vecindario genérico.
++    return maybeFit({ anchors, facts: [], claims: [], provenance: [], conflicts: [], correspondenceContext: mappingContext, ...cleanExtra }, question, opts?.model, sys);
+   }
+ 
+   // A question naming a CLASS ("dataset conformance") anchors on the class
+@@ -699,15 +1248,15 @@
+   conflicts.length = 0;
+   conflicts.push(...kept, ...detailed);
+ 
+-  return {
++  return maybeFit({
+     anchors,
+     facts: [...new Set(facts)].slice(0, 240),
+     claims,
+     provenance,
+     conflicts: [...new Set(conflicts)],
+     correspondenceContext: mappingContext,
+-    ...extra,
+-  };
++    ...cleanExtra,
++  }, question, opts?.model, sys);
+ }
+ 
+ /**
+@@ -747,6 +1296,8 @@
+   parts.push('RETRIEVAL SCOPE: The general neighbourhood is a bounded, PARTIAL subgraph. Missing facts here do not establish absence in the graph. Only explicitly COMPLETE scoped queries below support absence/count claims for their stated scope. Zero document claims does not mean no dictionary or graph evidence.');
+   if (r.correspondenceContext) parts.push(`QUALIFIED SEMANTIC CORRESPONDENCES\n${r.correspondenceContext}`);
+   if (r.correspondenceOverview) parts.push(`GLOBAL CORRESPONDENCE COUNTS (COMPLETE)\n${r.correspondenceOverview}`);
++  if (r.cruceFichaContext) parts.push(`CRUCE FICHA (COMPLETE FOR THE NAMED FICHA ONLY)\n${r.cruceFichaContext}`);
++  if (r.cruceCodigoContext) parts.push(`CRUCE CODIGO (COMPLETE FOR THE NAMED CODE ONLY)\n${r.cruceCodigoContext}`);
+   if (r.resourceContext) parts.push(`RESOURCE-SCOPED CORRESPONDENCES (COMPLETE FOR THE STATED FILTER)\n${r.resourceContext}`);
+   if (r.variableOverview) parts.push(`VARIABLE STATES (COMPLETE)\n${r.variableOverview}`);
+   parts.push(`ANCHOR ENTITIES\n${r.anchors.map(a => `- ${a.label} (${a.iri})`).join('\n')}`);

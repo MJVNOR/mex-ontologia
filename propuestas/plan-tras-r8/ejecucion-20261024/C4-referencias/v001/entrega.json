@@ -1,0 +1,1126 @@
+{
+  "rol": "C4-referencias",
+  "version": "v001",
+  "modelo": "opencode-go/muse-spark-1.3-contributor",
+  "mcp": "nativo OpenCode, sin puentes CLI",
+  "fecha_utc": "2026-10-24T10:04:39.041338+00:00",
+  "base": {
+    "ronda": 8,
+    "informe": "reports/ronda-8.json",
+    "sha256": "5ac384bc4c253f5310ae69402c8d9249d2ee85082086c2dca85483f8b4b7eacb"
+  },
+  "estado": "auditoria_derivada",
+  "resumen": {
+    "casos_asignados": 19,
+    "casos_cubiertos": 19,
+    "vigencias": 16,
+    "anomalias": 3,
+    "evidencias_citadas": 104,
+    "evidencias_verificadas_sha256_por_codigo": 104,
+    "propuestas_para_integrar": 0,
+    "r8_pendientes": {
+      "significados_reales": 138,
+      "vigencias": 16,
+      "referencia_catalogo": "des_mpo_res",
+      "encabezados_corruptos": 2,
+      "candidatas_semanticas": 17,
+      "vigencias_acceso_no_resuelto": [
+        "V13",
+        "V14"
+      ]
+    }
+  },
+  "conservacion_r8": {
+    "significados_reales_pendientes": 138,
+    "nota": "2 filas corruptas (huellas 4b17625c/b5dbcdf5) fuera de los 138; se conservan como artefactos sin curar",
+    "vigencias_pendientes": 16,
+    "acceso_no_resuelto": [
+      "V13",
+      "V14"
+    ],
+    "referencia_catalogo_sin_resolver": "des_mpo_res"
+  },
+  "casos": [
+    {
+      "id": "V01",
+      "tipo": "vigencias",
+      "rol_origen": "V1-uth-presas",
+      "estado": "sin_evidencia_para_integrar",
+      "estado_detalle": "brecha_externa",
+      "puerta": "sin_pista_nueva",
+      "motivo_cotejo": "F3 acreditada (CMPE 2016). F4 ausente: ningun documento del publicador (UTH) vincula la CMPE 2016 con el recurso 6d561451-ff08-45d6-b1af-285ff5f417b1 ni con los periodos del caso. Primera puerta 2026-10-24: sin pista nueva; re-descargar API/portal o repetir busquedas UTH genericas (W08) agotadas no es novedad.",
+      "afirmacion_propuesta": null,
+      "evidencia_cotejada": [
+        {
+          "ruta": "propuestas/cierre-brechas-post-r6/vigencias-uth-presas/evidencia/api_package_V01_403912fd-5853-4e18-8256-f77206f855bd_2026-10-24.json",
+          "sha256": "84b12a9a43b94bc6dc808af9f21bc7ea441847a18b46234a4b646887cd301707",
+          "localizador": "result.version=null; fuentes_extras vacias; 15 recursos; Catalogo size 10433 = sha local 53bd5e97"
+        },
+        {
+          "ruta": "propuestas/cierre-brechas-post-r6/vigencias-uth-presas/evidencia/org_uth_2026-10-24.html",
+          "sha256": "31913b88ca8e72a8e92c3e007c0d320f3b1fa14d9fb48d00c5a44b65cb8cf6e5",
+          "localizador": "7 conjuntos listados; nota Matriculas: campo de formacion academica, fuente interna"
+        },
+        {
+          "ruta": "propuestas/cierre-brechas-post-r6/vigencias-uth-presas/evidencia/acuerdo_cmpe_uso_obligatorio_2026-10-24.pdf",
+          "sha256": "0916f603a4cc4dc6fe52c59dbd262a9c5d24c3377cd8cd53fac77df4acbc2110",
+          "localizador": "ACUERDO PRIMERO + TRANSITORIOS; sin mencion a UTH ni a periodos 2022-2026"
+        },
+        {
+          "ruta": "data/integracion-ronda-2/entregas/agente-4-vigencia/evidencia/externa/cmpe2016_inegi.pdf",
+          "sha256": "66ba2fd24aa01d82684df52677b792e17fe55d38273d6325ff4f6f66a3ef714b",
+          "localizador": "p.2 catalogacion INEGI c2016; p.8 segunda edicion"
+        }
+      ],
+      "evidencia_faltante": "Nota de adopcion UTH de la CMPE 2016 con rango de aplicacion por cuatrimestres 2022-2026 (oficio, lineamiento o nota de version del conjunto). Pendiente exacto: acreditar F4, documento del publicador (UTH) que vincule la CMPE 2016 con los periodos 2022 cuatrimestres 1-3, 2023 cuatrimestres 1-3, 2024 cuatrimestres 1-3, 2025 cuatrimestres 1-3, 2026 cuatrimestre 1.",
+      "condicion_reapertura": "Aparece documento del publicador UTH (oficio, lineamiento o nota de version del conjunto 403912fd-5853-4e18-8256-f77206f855bd) que cite la CMPE 2016, el recurso 6d561451-ff08-45d6-b1af-285ff5f417b1 y los periodos 2022 cuatrimestres 1-3, 2023 cuatrimestres 1-3, 2024 cuatrimestres 1-3, 2025 cuatrimestres 1-3, 2026 cuatrimestre 1; verificable por URL o copia local con SHA.",
+      "limites": [
+        "No afirmar vigencia historica ni extender a otros conjuntos/periodos.",
+        "Los titulos de recursos CKAN y el conteo de recursos no acreditan F4.",
+        "El Acuerdo de uso obligatorio (marco nacional) no se usa como vinculo del publicador ni como edicion vinculada a recurso/periodo.",
+        "Sin joins ni identidad de catalogos automatica; sin inferir vigencia del nombre del archivo."
+      ]
+    },
+    {
+      "id": "V02",
+      "tipo": "vigencias",
+      "rol_origen": "V1-uth-presas",
+      "estado": "sin_evidencia_para_integrar",
+      "estado_detalle": "brecha_externa",
+      "puerta": "sin_pista_nueva",
+      "motivo_cotejo": "F3 acreditada (CMPE 2016). F4 ausente: la nota del conjunto describe el campo pero no declara edicion ni adopcion de la CMPE para 2022-2026. Primera puerta 2026-10-24: sin pista nueva.",
+      "afirmacion_propuesta": null,
+      "evidencia_cotejada": [
+        {
+          "ruta": "propuestas/cierre-brechas-post-r6/vigencias-uth-presas/evidencia/api_package_V02_e5aad52d-5760-481c-ba65-db0ba4a5315e_2026-10-24.json",
+          "sha256": "567f6d915116ac7994d1aee77ba80825b206660df8165676dbf01a499899a0c8",
+          "localizador": "result.version=null; fuentes_extras vacias; 16 recursos; Catalogo size 10433 = sha local 53bd5e97"
+        },
+        {
+          "ruta": "propuestas/cierre-brechas-post-r6/vigencias-uth-presas/evidencia/org_uth_2026-10-24.html",
+          "sha256": "31913b88ca8e72a8e92c3e007c0d320f3b1fa14d9fb48d00c5a44b65cb8cf6e5",
+          "localizador": "7 conjuntos listados; nota Matriculas: campo de formacion academica, fuente interna"
+        },
+        {
+          "ruta": "propuestas/cierre-brechas-post-r6/vigencias-uth-presas/evidencia/acuerdo_cmpe_uso_obligatorio_2026-10-24.pdf",
+          "sha256": "0916f603a4cc4dc6fe52c59dbd262a9c5d24c3377cd8cd53fac77df4acbc2110",
+          "localizador": "ACUERDO PRIMERO + TRANSITORIOS; sin mencion a UTH ni a periodos 2022-2026"
+        },
+        {
+          "ruta": "data/integracion-ronda-2/entregas/agente-4-vigencia/evidencia/externa/cmpe2016_inegi.pdf",
+          "sha256": "66ba2fd24aa01d82684df52677b792e17fe55d38273d6325ff4f6f66a3ef714b",
+          "localizador": "p.2 catalogacion INEGI c2016; p.8 segunda edicion"
+        }
+      ],
+      "evidencia_faltante": "Nota de adopcion UTH de la CMPE 2016 con rango de aplicacion por cuatrimestres 2022-2026 (oficio, lineamiento o nota de version del conjunto). Pendiente exacto: acreditar F4, documento del publicador (UTH) que vincule la CMPE 2016 con los periodos 2022 cuatrimestres 1-3, 2023 cuatrimestres 1-3, 2024 cuatrimestres 1-3, 2025 cuatrimestres 1-3, 2026 cuatrimestres 1-2.",
+      "condicion_reapertura": "Aparece documento del publicador UTH (oficio, lineamiento o nota de version del conjunto e5aad52d-5760-481c-ba65-db0ba4a5315e) que cite la CMPE 2016, el recurso aaf0c6c1-76a7-40ac-b542-1319d1bb2a5a y los periodos 2022 cuatrimestres 1-3, 2023 cuatrimestres 1-3, 2024 cuatrimestres 1-3, 2025 cuatrimestres 1-3, 2026 cuatrimestres 1-2; verificable por URL o copia local con SHA.",
+      "limites": [
+        "No afirmar vigencia historica ni extender a otros conjuntos/periodos.",
+        "Los titulos de recursos CKAN y el conteo de recursos no acreditan F4.",
+        "El Acuerdo de uso obligatorio (marco nacional) no se usa como vinculo del publicador ni como edicion vinculada a recurso/periodo.",
+        "Sin joins ni identidad de catalogos automatica; sin inferir vigencia del nombre del archivo."
+      ]
+    },
+    {
+      "id": "V03",
+      "tipo": "vigencias",
+      "rol_origen": "V1-uth-presas",
+      "estado": "sin_evidencia_para_integrar",
+      "estado_detalle": "brecha_externa",
+      "puerta": "sin_pista_nueva",
+      "motivo_cotejo": "F3 acreditada (CMPE 2016). F4 ausente: sin declaracion del publicador que vincule la CMPE 2016 con los periodos anuales 2022-2025. Primera puerta 2026-10-24: sin pista nueva.",
+      "afirmacion_propuesta": null,
+      "evidencia_cotejada": [
+        {
+          "ruta": "propuestas/cierre-brechas-post-r6/vigencias-uth-presas/evidencia/api_package_V03_e7a3d62f-4ace-479c-aa52-1c9e384dc429_2026-10-24.json",
+          "sha256": "e76d0e249a4e001589b581bf84eb5dadf5bf93890f668152efec9275e6d6d562",
+          "localizador": "result.version=null; fuentes_extras vacias; 6 recursos; Catalogo size 10433 = sha local 53bd5e97"
+        },
+        {
+          "ruta": "propuestas/cierre-brechas-post-r6/vigencias-uth-presas/evidencia/org_uth_2026-10-24.html",
+          "sha256": "31913b88ca8e72a8e92c3e007c0d320f3b1fa14d9fb48d00c5a44b65cb8cf6e5",
+          "localizador": "7 conjuntos listados; nota Matriculas: campo de formacion academica, fuente interna"
+        },
+        {
+          "ruta": "propuestas/cierre-brechas-post-r6/vigencias-uth-presas/evidencia/acuerdo_cmpe_uso_obligatorio_2026-10-24.pdf",
+          "sha256": "0916f603a4cc4dc6fe52c59dbd262a9c5d24c3377cd8cd53fac77df4acbc2110",
+          "localizador": "ACUERDO PRIMERO + TRANSITORIOS; sin mencion a UTH ni a periodos 2022-2026"
+        },
+        {
+          "ruta": "data/integracion-ronda-2/entregas/agente-4-vigencia/evidencia/externa/cmpe2016_inegi.pdf",
+          "sha256": "66ba2fd24aa01d82684df52677b792e17fe55d38273d6325ff4f6f66a3ef714b",
+          "localizador": "p.2 catalogacion INEGI c2016; p.8 segunda edicion"
+        }
+      ],
+      "evidencia_faltante": "Nota de adopcion UTH de la CMPE 2016 con rango de aplicacion anual 2022-2025 (oficio, lineamiento o nota de version del conjunto). Pendiente exacto: acreditar F4, documento del publicador (UTH) que vincule la CMPE 2016 con los periodos 2022 anual, 2023 anual, 2024 anual, 2025 anual.",
+      "condicion_reapertura": "Aparece documento del publicador UTH (oficio, lineamiento o nota de version del conjunto e7a3d62f-4ace-479c-aa52-1c9e384dc429) que cite la CMPE 2016, el recurso 0e69d911-6ed3-4268-841b-0c4989e7cb45 y los periodos 2022 anual, 2023 anual, 2024 anual, 2025 anual; verificable por URL o copia local con SHA.",
+      "limites": [
+        "No afirmar vigencia historica ni extender a otros conjuntos/periodos.",
+        "Los titulos de recursos CKAN y el conteo de recursos no acreditan F4.",
+        "El Acuerdo de uso obligatorio (marco nacional) no se usa como vinculo del publicador ni como edicion vinculada a recurso/periodo.",
+        "Sin joins ni identidad de catalogos automatica; sin inferir vigencia del nombre del archivo."
+      ]
+    },
+    {
+      "id": "V04",
+      "tipo": "vigencias",
+      "rol_origen": "V1-uth-presas",
+      "estado": "sin_evidencia_para_integrar",
+      "estado_detalle": "brecha_externa",
+      "puerta": "sin_pista_nueva",
+      "motivo_cotejo": "F3 acreditada (CMPE 2016). F4 ausente: sin declaracion del publicador que vincule la CMPE 2016 con los periodos anuales 2022-2025. Primera puerta 2026-10-24: sin pista nueva.",
+      "afirmacion_propuesta": null,
+      "evidencia_cotejada": [
+        {
+          "ruta": "propuestas/cierre-brechas-post-r6/vigencias-uth-presas/evidencia/api_package_V04_85ee0e2b-ba05-4d9a-8177-cdbf0cb42f8f_2026-10-24.json",
+          "sha256": "cd67f8b7a85cbf34a1be9d09b9db216e49c9fa49ef2eea879f22d0f84123af90",
+          "localizador": "result.version=null; 6 recursos; Catalogo size 10433 = sha local 53bd5e97; Catalogo Egresados start 2016-01-01/end 2025-01-01 (cobertura manual)"
+        },
+        {
+          "ruta": "propuestas/cierre-brechas-post-r6/vigencias-uth-presas/evidencia/org_uth_2026-10-24.html",
+          "sha256": "31913b88ca8e72a8e92c3e007c0d320f3b1fa14d9fb48d00c5a44b65cb8cf6e5",
+          "localizador": "7 conjuntos listados; nota Matriculas: campo de formacion academica, fuente interna"
+        },
+        {
+          "ruta": "propuestas/cierre-brechas-post-r6/vigencias-uth-presas/evidencia/acuerdo_cmpe_uso_obligatorio_2026-10-24.pdf",
+          "sha256": "0916f603a4cc4dc6fe52c59dbd262a9c5d24c3377cd8cd53fac77df4acbc2110",
+          "localizador": "ACUERDO PRIMERO + TRANSITORIOS; sin mencion a UTH ni a periodos 2022-2026"
+        },
+        {
+          "ruta": "data/integracion-ronda-2/entregas/agente-4-vigencia/evidencia/externa/cmpe2016_inegi.pdf",
+          "sha256": "66ba2fd24aa01d82684df52677b792e17fe55d38273d6325ff4f6f66a3ef714b",
+          "localizador": "p.2 catalogacion INEGI c2016; p.8 segunda edicion"
+        }
+      ],
+      "evidencia_faltante": "Nota de adopcion UTH de la CMPE 2016 con rango de aplicacion anual 2022-2025 (oficio, lineamiento o nota de version del conjunto). Pendiente exacto: acreditar F4, documento del publicador (UTH) que vincule la CMPE 2016 con los periodos 2022 anual, 2023 anual, 2024 anual, 2025 anual.",
+      "condicion_reapertura": "Aparece documento del publicador UTH (oficio, lineamiento o nota de version del conjunto 85ee0e2b-ba05-4d9a-8177-cdbf0cb42f8f) que cite la CMPE 2016, el recurso af7a9aba-5a0e-4cf0-9b7d-5a3550e7907e y los periodos 2022 anual, 2023 anual, 2024 anual, 2025 anual; verificable por URL o copia local con SHA.",
+      "limites": [
+        "No afirmar vigencia historica ni extender a otros conjuntos/periodos.",
+        "Cobertura 2016-01-01/2025-01-01 en API es cobertura manual, no declaracion de adopcion CMPE.",
+        "Los titulos de recursos CKAN y el conteo de recursos no acreditan F4.",
+        "El Acuerdo de uso obligatorio (marco nacional) no se usa como vinculo del publicador ni como edicion vinculada a recurso/periodo.",
+        "Sin joins ni identidad de catalogos automatica; sin inferir vigencia del nombre del archivo."
+      ]
+    },
+    {
+      "id": "V05",
+      "tipo": "vigencias",
+      "rol_origen": "V1-uth-presas",
+      "estado": "sin_evidencia_para_integrar",
+      "estado_detalle": "brecha_externa",
+      "puerta": "sin_pista_nueva",
+      "motivo_cotejo": "F3+F4 ausentes: el portal confirma el hueco 1960-1969 (recurso listado sin descarga) y no declara edicion/version/fecha del Catalogo_estatal ni su rango de aplicacion. Primera puerta 2026-10-24: sin pista nueva; reintentar la misma descarga o citar fuentes externas al publicador no es novedad resolutiva.",
+      "afirmacion_propuesta": null,
+      "evidencia_cotejada": [
+        {
+          "ruta": "propuestas/cierre-brechas-post-r6/vigencias-uth-presas/evidencia/api_package_V05_ee8f639f-5e89-46ae-93b9-934b05fc6233_2026-10-24.json",
+          "sha256": "2776b9297d47743ea0e18888e03e0a27bb1e7cd778375ada435c6f470472e625",
+          "localizador": "recurso 1960-1969 id 4d1bb645: url=\"\", size 541916, state active, start 1960-01-01/end 1969-12-31; Catalogo size 15123 = local; version=null"
+        },
+        {
+          "ruta": "propuestas/cierre-brechas-post-r6/vigencias-uth-presas/evidencia/recurso_1960-1969_pagina_2026-10-24.html",
+          "sha256": "e2c474e2ae5230d6833a34d956f61f86086c108835028e681c1d690fae57fdb9",
+          "localizador": "texto generico de plantilla + 0 hrefs download; Size 529,2 KiB; Start 1960-01-01/End 1969-12-31"
+        },
+        {
+          "ruta": "data/territorio/fuentes/f5060479-ee16-49b5-99d4-09aabef8042e.xlsx",
+          "sha256": "612b2b11192b97ae7328f80c8a5d1c545e117da46dd436a9b077aaf824b1525f",
+          "localizador": "bytes locales; size 15123 = API; interior Catalogo_estatal/Municipios/Regiones sin celdas de version/periodo"
+        }
+      ],
+      "evidencia_faltante": "Declaracion de edicion/version/fecha del Catalogo_estatal (sha 612b2b11) con rango 1941-2024 + URL de descarga del recurso 1960-1969 (id 4d1bb645, hoy con url vacia en API). Pendiente exacto: acreditar F3+F4, declaracion de edicion/version/fecha del catalogo (Catalogo_estatal/Clave, sha 612b2b11) y documento que la vincule con 1941-1949, 1950-1959, 1960-1969, 1970-1979, 1980-1989, 1990-1999, 2000-2009, 2010-2019, 2020-2024; constancia del recurso 1960-1969.",
+      "condicion_reapertura": "Aparece declaracion del publicador (DEP-CAT-R6-02) de edicion/version/fecha del Catalogo_estatal (sha 612b2b11) vinculada al rango 1941-2024 y al recurso f5060479-ee16-49b5-99d4-09aabef8042e, mas URL de descarga efectiva del recurso 1960-1969 (id 4d1bb645); verificable por URL o copia local con SHA.",
+      "limites": [
+        "No afirmar vigencia historica ni extender a otros conjuntos/periodos.",
+        "No habilitar joins por compartir Clave.",
+        "El texto generico de plantilla HTML no equivale a URL de descarga.",
+        "Sin joins por compartir Clave; sin inferir vigencia del nombre del archivo."
+      ]
+    },
+    {
+      "id": "V06",
+      "tipo": "vigencias",
+      "rol_origen": "V2-salud-anomalias",
+      "estado": "sin_evidencia_para_integrar",
+      "estado_detalle": "brecha_externa",
+      "puerta": "sin_pista_nueva",
+      "motivo_cotejo": "F3+F4 ausentes. Reverificacion local 2026-10-24 (sin re-descargas): los 5 SHA-256 calculados por codigo son byte-identicos a los citados en R7, por lo que valen las lecturas ya verificadas: package version=null/fuentes_extras vacias; hoja Catalogo Servicios A1:B8 con 7 valores, sin celdas de version/periodo; diccionario cita el catalogo por nombre sin edicion; estrategia FMRR sin mencion al catalogo CKAN; pagina del recurso solo con fechas de carga. Expediente W-web v001..v004 revisado completo: v001 declara explicitamente 'Sin pista nueva' para V2 (Rickettsia/fe de erratas) y v002/v003/v004 no contienen pista alguna para V06-V08 (F-CKAN-RICK es reconfirmacion de inventario ya incluida en R7). Sin busquedas genericas repetidas. Ninguna URL, documento o anexo concreto NO examinado antes.",
+      "afirmacion_propuesta": null,
+      "evidencia_cotejada": [
+        {
+          "ruta": "propuestas/cierre-brechas-post-r6/vigencias-salud/evidencia/api_package_show_2026-10-24.json",
+          "sha256": "e751fe481af047f3ffa6facc57c9d04952e5f874186be2d2fb4a6ae20f9a0154",
+          "localizador": "result.version=null; result.fuentes_extras=\"\"; num_resources=5; recurso 08d3b1a7 size 12702 start 2022-01-01 end 2026-12-31; metadata_modified 2026-05-11",
+          "url": "https://datos.sonora.gob.mx/api/3/action/package_show?id=5494daa1-09ca-4750-aeac-2558553700e1"
+        },
+        {
+          "ruta": "propuestas/cierre-brechas-post-r6/vigencias-salud/evidencia/diccionario_csv_2026-10-24.csv",
+          "sha256": "2c8ce131bf0e71fe812605f0f95381acaec9c5534e1bed8f05ff1895bf2fcd1c",
+          "localizador": "179 filas; filas 129/162/168 (servic_atencion/motiv_rech_ricket_sangre/ricket_especie_rtpcr) citan catalogos por nombre sin edicion; fila 7 des_mpo_res con Catalogo 'Vacio'",
+          "url": "https://datos.sonora.gob.mx/dataset/5494daa1-09ca-4750-aeac-2558553700e1/resource/33d0a99e-c721-496f-a05e-07646e9ae42a/download/diccionario_ricket_1.csv"
+        },
+        {
+          "ruta": "propuestas/cierre-brechas-post-r6/vigencias-salud/evidencia/catalogo_xlsx_2026-10-24.xlsx",
+          "sha256": "3b8546acad7482825755e46a1a619a4838721f8480b94baaef3c755ba293db9c",
+          "localizador": "hoja 'Catalogo Servicios' dimension A1:B8 (7 valores servic_atencion); 37 sharedStrings sin celdas de version/periodo; core created 2026-04-15 modified 2026-04-29 por Practicante PowerBi",
+          "url": "https://datos.sonora.gob.mx/dataset/5494daa1-09ca-4750-aeac-2558553700e1/resource/08d3b1a7-dbc0-4f43-b1d2-3266cebb88f8/download/catalogo.xlsx"
+        },
+        {
+          "ruta": "propuestas/cierre-brechas-post-r6/vigencias-salud/evidencia/estrategia_fmrr_salud_sonora.pdf",
+          "sha256": "9c2aec1236ecdbcdd4fa4fe2a5c87f25bfe606ee80121ba283e00d715c530485",
+          "localizador": "conteo ASCII: 0 menciones a campos catalogo/CKAN/version/edicion/diccionario (conteo R7; ejemplar byte-identico verificado por SHA, sin re-derivacion)",
+          "url": "https://salud.sonora.gob.mx/images/areas/medica/promocion-a-la-salud/archivos/estrategiadesaludpublicacontrafmrrsonora.pdf"
+        },
+        {
+          "ruta": "propuestas/cierre-brechas-post-r6/vigencias-salud/evidencia/recurso_catalogo_pagina_2026-10-24.html",
+          "sha256": "ae7e8f383f34308046a830697d2e47e561f33766cd1269fe2ff87d44b824b5a0",
+          "localizador": "Metadatos: Creado 28-04-2026, actualizacion 29-04-2026, formato XLSX; sin version/edicion",
+          "url": "https://datos.sonora.gob.mx/dataset/Fiebre%20manchada%20%28Rickettsia%29/resource/08d3b1a7-dbc0-4f43-b1d2-3266cebb88f8"
+        }
+      ],
+      "evidencia_faltante": "Declaracion de edicion/version/fecha del catalogo Rickettsia (sha 3b8546ac) con vinculo 2022-2024 + fe de erratas o diccionario corregido y URL del catalogo de des_mpo_res si existe. Pendiente exacto: Acreditar F3+F4: declaración de edición/versión/fecha del catálogo (Catalogo Servicios/servic_atencion, sha 3b8546ac) y documento que la vincule con 2022, 2023, 2024.",
+      "condicion_reapertura": "Que aparezca una URL, documento o anexo concreto no examinado antes (fe de erratas, diccionario corregido o declaración de edición del publicador) que cite la hoja Catalogo Servicios / servic_atencion (sha 3b8546ac, recurso 08d3b1a7) y la vincule con 2022, 2023 y 2024; entonces re-verificar correspondencia formal campo/recurso/edición/periodo.",
+      "limites": [
+        "No afirmar vigencia histórica ni extender a otros conjuntos/periodos."
+      ]
+    },
+    {
+      "id": "V07",
+      "tipo": "vigencias",
+      "rol_origen": "V2-salud-anomalias",
+      "estado": "sin_evidencia_para_integrar",
+      "estado_detalle": "brecha_externa",
+      "puerta": "sin_pista_nueva",
+      "motivo_cotejo": "F3+F4 ausentes. Mismo archivo y misma reverificacion local que V06 para la hoja Catalogo rechazo (dimension A1:B21, 20 valores motiv_rech_ricket_sangre, sin celdas de version/periodo; SHA byte-identicos calculados por codigo). Expediente W-web v001..v004 sin pista nueva para V07. Sin busquedas genericas repetidas. Ninguna URL, documento o anexo concreto NO examinado antes.",
+      "afirmacion_propuesta": null,
+      "evidencia_cotejada": [
+        {
+          "ruta": "propuestas/cierre-brechas-post-r6/vigencias-salud/evidencia/api_package_show_2026-10-24.json",
+          "sha256": "e751fe481af047f3ffa6facc57c9d04952e5f874186be2d2fb4a6ae20f9a0154",
+          "localizador": "result.version=null; result.fuentes_extras=\"\"; num_resources=5; recurso 08d3b1a7 size 12702 start 2022-01-01 end 2026-12-31; metadata_modified 2026-05-11",
+          "url": "https://datos.sonora.gob.mx/api/3/action/package_show?id=5494daa1-09ca-4750-aeac-2558553700e1"
+        },
+        {
+          "ruta": "propuestas/cierre-brechas-post-r6/vigencias-salud/evidencia/diccionario_csv_2026-10-24.csv",
+          "sha256": "2c8ce131bf0e71fe812605f0f95381acaec9c5534e1bed8f05ff1895bf2fcd1c",
+          "localizador": "179 filas; filas 129/162/168 (servic_atencion/motiv_rech_ricket_sangre/ricket_especie_rtpcr) citan catalogos por nombre sin edicion; fila 7 des_mpo_res con Catalogo 'Vacio'",
+          "url": "https://datos.sonora.gob.mx/dataset/5494daa1-09ca-4750-aeac-2558553700e1/resource/33d0a99e-c721-496f-a05e-07646e9ae42a/download/diccionario_ricket_1.csv"
+        },
+        {
+          "ruta": "propuestas/cierre-brechas-post-r6/vigencias-salud/evidencia/catalogo_xlsx_2026-10-24.xlsx",
+          "sha256": "3b8546acad7482825755e46a1a619a4838721f8480b94baaef3c755ba293db9c",
+          "localizador": "hoja 'Catalogo rechazo' dimension A1:B21 (20 valores motiv_rech_ricket_sangre); 37 sharedStrings sin celdas de version/periodo; core created 2026-04-15 modified 2026-04-29 por Practicante PowerBi",
+          "url": "https://datos.sonora.gob.mx/dataset/5494daa1-09ca-4750-aeac-2558553700e1/resource/08d3b1a7-dbc0-4f43-b1d2-3266cebb88f8/download/catalogo.xlsx"
+        },
+        {
+          "ruta": "propuestas/cierre-brechas-post-r6/vigencias-salud/evidencia/estrategia_fmrr_salud_sonora.pdf",
+          "sha256": "9c2aec1236ecdbcdd4fa4fe2a5c87f25bfe606ee80121ba283e00d715c530485",
+          "localizador": "conteo ASCII: 0 menciones a campos catalogo/CKAN/version/edicion/diccionario (conteo R7; ejemplar byte-identico verificado por SHA, sin re-derivacion)",
+          "url": "https://salud.sonora.gob.mx/images/areas/medica/promocion-a-la-salud/archivos/estrategiadesaludpublicacontrafmrrsonora.pdf"
+        },
+        {
+          "ruta": "propuestas/cierre-brechas-post-r6/vigencias-salud/evidencia/recurso_catalogo_pagina_2026-10-24.html",
+          "sha256": "ae7e8f383f34308046a830697d2e47e561f33766cd1269fe2ff87d44b824b5a0",
+          "localizador": "Metadatos: Creado 28-04-2026, actualizacion 29-04-2026, formato XLSX; sin version/edicion",
+          "url": "https://datos.sonora.gob.mx/dataset/Fiebre%20manchada%20%28Rickettsia%29/resource/08d3b1a7-dbc0-4f43-b1d2-3266cebb88f8"
+        }
+      ],
+      "evidencia_faltante": "Declaracion de edicion/version/fecha del catalogo Rickettsia (sha 3b8546ac) con vinculo 2022-2024 + fe de erratas o diccionario corregido y URL del catalogo de des_mpo_res si existe. Pendiente exacto: Acreditar F3+F4: declaración de edición/versión/fecha del catálogo (Catalogo rechazo/motiv_rech_ricket_sangre, sha 3b8546ac) y documento que la vincule con 2022, 2023, 2024.",
+      "condicion_reapertura": "Que aparezca una URL, documento o anexo concreto no examinado antes (fe de erratas, diccionario corregido o declaración de edición del publicador) que cite la hoja Catalogo rechazo / motiv_rech_ricket_sangre (sha 3b8546ac, recurso 08d3b1a7) y la vincule con 2022, 2023 y 2024; entonces re-verificar correspondencia formal campo/recurso/edición/periodo.",
+      "limites": [
+        "No afirmar vigencia histórica ni extender a otros conjuntos/periodos."
+      ]
+    },
+    {
+      "id": "V08",
+      "tipo": "vigencias",
+      "rol_origen": "V2-salud-anomalias",
+      "estado": "sin_evidencia_para_integrar",
+      "estado_detalle": "brecha_externa",
+      "puerta": "sin_pista_nueva",
+      "motivo_cotejo": "F3+F4 ausentes. Mismo archivo y misma reverificacion local que V06 para la hoja Catalogo especie (dimension A1:B5, 4 valores ricket_especie, sin celdas de version/periodo; SHA byte-identicos calculados por codigo). Expediente W-web v001..v004 sin pista nueva para V08. Sin busquedas genericas repetidas. Ninguna URL, documento o anexo concreto NO examinado antes.",
+      "afirmacion_propuesta": null,
+      "evidencia_cotejada": [
+        {
+          "ruta": "propuestas/cierre-brechas-post-r6/vigencias-salud/evidencia/api_package_show_2026-10-24.json",
+          "sha256": "e751fe481af047f3ffa6facc57c9d04952e5f874186be2d2fb4a6ae20f9a0154",
+          "localizador": "result.version=null; result.fuentes_extras=\"\"; num_resources=5; recurso 08d3b1a7 size 12702 start 2022-01-01 end 2026-12-31; metadata_modified 2026-05-11",
+          "url": "https://datos.sonora.gob.mx/api/3/action/package_show?id=5494daa1-09ca-4750-aeac-2558553700e1"
+        },
+        {
+          "ruta": "propuestas/cierre-brechas-post-r6/vigencias-salud/evidencia/diccionario_csv_2026-10-24.csv",
+          "sha256": "2c8ce131bf0e71fe812605f0f95381acaec9c5534e1bed8f05ff1895bf2fcd1c",
+          "localizador": "179 filas; filas 129/162/168 (servic_atencion/motiv_rech_ricket_sangre/ricket_especie_rtpcr) citan catalogos por nombre sin edicion; fila 7 des_mpo_res con Catalogo 'Vacio'",
+          "url": "https://datos.sonora.gob.mx/dataset/5494daa1-09ca-4750-aeac-2558553700e1/resource/33d0a99e-c721-496f-a05e-07646e9ae42a/download/diccionario_ricket_1.csv"
+        },
+        {
+          "ruta": "propuestas/cierre-brechas-post-r6/vigencias-salud/evidencia/catalogo_xlsx_2026-10-24.xlsx",
+          "sha256": "3b8546acad7482825755e46a1a619a4838721f8480b94baaef3c755ba293db9c",
+          "localizador": "hoja 'Catalogo especie' dimension A1:B5 (4 valores ricket_especie: R. Rickettsii, R. Typhi, R. Prowazekii, Otra); 37 sharedStrings sin celdas de version/periodo; core created 2026-04-15 modified 2026-04-29 por Practicante PowerBi",
+          "url": "https://datos.sonora.gob.mx/dataset/5494daa1-09ca-4750-aeac-2558553700e1/resource/08d3b1a7-dbc0-4f43-b1d2-3266cebb88f8/download/catalogo.xlsx"
+        },
+        {
+          "ruta": "propuestas/cierre-brechas-post-r6/vigencias-salud/evidencia/estrategia_fmrr_salud_sonora.pdf",
+          "sha256": "9c2aec1236ecdbcdd4fa4fe2a5c87f25bfe606ee80121ba283e00d715c530485",
+          "localizador": "conteo ASCII: 0 menciones a campos catalogo/CKAN/version/edicion/diccionario (conteo R7; ejemplar byte-identico verificado por SHA, sin re-derivacion)",
+          "url": "https://salud.sonora.gob.mx/images/areas/medica/promocion-a-la-salud/archivos/estrategiadesaludpublicacontrafmrrsonora.pdf"
+        },
+        {
+          "ruta": "propuestas/cierre-brechas-post-r6/vigencias-salud/evidencia/recurso_catalogo_pagina_2026-10-24.html",
+          "sha256": "ae7e8f383f34308046a830697d2e47e561f33766cd1269fe2ff87d44b824b5a0",
+          "localizador": "Metadatos: Creado 28-04-2026, actualizacion 29-04-2026, formato XLSX; sin version/edicion",
+          "url": "https://datos.sonora.gob.mx/dataset/Fiebre%20manchada%20%28Rickettsia%29/resource/08d3b1a7-dbc0-4f43-b1d2-3266cebb88f8"
+        }
+      ],
+      "evidencia_faltante": "Declaracion de edicion/version/fecha del catalogo Rickettsia (sha 3b8546ac) con vinculo 2022-2024 + fe de erratas o diccionario corregido y URL del catalogo de des_mpo_res si existe. Pendiente exacto: Acreditar F3+F4: declaración de edición/versión/fecha del catálogo (Catalogo especie/ricket_especie, sha 3b8546ac) y documento que la vincule con 2022, 2023, 2024.",
+      "condicion_reapertura": "Que aparezca una URL, documento o anexo concreto no examinado antes (fe de erratas, diccionario corregido o declaración de edición del publicador) que cite la hoja Catalogo especie / ricket_especie (sha 3b8546ac, recurso 08d3b1a7) y la vincule con 2022, 2023 y 2024; entonces re-verificar correspondencia formal campo/recurso/edición/periodo.",
+      "limites": [
+        "No afirmar vigencia histórica ni extender a otros conjuntos/periodos."
+      ]
+    },
+    {
+      "id": "V09",
+      "tipo": "vigencias",
+      "rol_origen": "V3-coespo",
+      "estado": "sin_evidencia_para_integrar",
+      "estado_detalle": "brecha_externa",
+      "puerta": "sin_pista_nueva",
+      "motivo_cotejo": "brecha_externa: F3+F4 ausentes. Trabajo de esta revision: interior del recurso Diccionario del mismo conjunto examinado con resultado negativo para el documento exacto (sin etiqueta de novedad: no consta examen previo del interior para vigencia en los antecedentes citados) + API package_show re-verificada el 2026-10-24 sin cambio (version=null, Catalogo 83769; no es evidencia nueva). Motivo previo conservado: sigue_pendiente: F3+F4 ausentes. Pistas nuevas examinadas 2026-10-24 (pagina COESPO Proyecciones de Poblacion; publicacion COESPO 11-07-2024; pagina de recurso Catalogo d7c4b8b2 con metadatos 05-09-2024): ninguna declara edicion/version/fecha del catalogo.xlsx (sha ea54aad30b7342ce678d1d66157325a5cbaa492380ee4d807b20918198c5b0f5, Catalogo_Municipios / CLAVE) ni lo vincula con 1990-2019 reconstruccion; 2020-2040 proyecciones. La publicacion COESPO 11-07-2024 solo cita la base de DATOS CONAPO 1990-2040 (contexto F3 parcial de fuente, ya conocido por W05/W06), sin edicion del catalogo local. Las fechas de portal (05-09-2024) y de API/core-properties estan excluidas por el criterio de aceptacion. Interior xlsx re-verificado hoy: sin celdas de version/periodo. Desfase de corte intacto (local vs CONAPO 1990-2020/2021-2040).",
+      "afirmacion_propuesta": null,
+      "evidencia_cotejada": [
+        {
+          "ruta": "propuestas/cierre-brechas-post-r6/vigencias-coespo/evidencia/coespo-proyecciones-poblacion-extracto.md",
+          "sha256": "970a877eff5b0e899b4df182c550e22743a08822c4535d78d7cc2959f1af6b79",
+          "localizador": "literales de descargas + seccion 'Lo que NO contiene'"
+        },
+        {
+          "ruta": "propuestas/cierre-brechas-post-r6/vigencias-coespo/evidencia/coespo-publicacion-2024-07-11-extracto.md",
+          "sha256": "64cbfc0341ad0c4f0779ce8b0e8570b84ddd14468f32dd503bd168ab7ac26c6c",
+          "localizador": "cuerpo literal + seccion 'Lo que NO contiene'"
+        },
+        {
+          "ruta": "propuestas/cierre-brechas-post-r6/vigencias-coespo/evidencia/dataset-grupos-quinquenales-extracto.md",
+          "sha256": "cbe2f3cac82cc2d840f759f05955be827868f55b632809eb99d2bed6f90547fa",
+          "localizador": "Descripcion + Fuentes extras"
+        },
+        {
+          "ruta": "propuestas/cierre-brechas-post-r6/vigencias-coespo/evidencia/catalogo-recurso-d7c4b8b2-metadatos.md",
+          "sha256": "bcf44f1d54a44e0506be0aa675562e9727448f13ecda63b907f6993ca1c8562b",
+          "localizador": "tabla Metadatos"
+        },
+        {
+          "ruta": "propuestas/cierre-brechas-post-r6/vigencias-coespo/evidencia/verificacion-local-xlsx.md",
+          "sha256": "66bc22e6beffe2f0e41eb8bbbda83a9a9f3e330f376fa315e47558b0128d1e44",
+          "localizador": "Interior openpyxl + SHA"
+        },
+        {
+          "ruta": "propuestas/plan-paralelo-brechas-sin-gemma/ejecucion-20261024-072207Z/V3-coespo/trabajo/fuentes/diccionario-0b5f5e16.xlsx",
+          "sha256": "07a21407b1eba6aeb0adff22fd57fa953e36419f48abc4ee0a8d9f8990fe4b85",
+          "localizador": "Interior del recurso Diccionario del mismo conjunto, examinado en esta revision con resultado negativo para F3+F4; no consta examen previo del interior para vigencia en los antecedentes citados. Solo remite CLAVE/CLAVE_ENT a 'Municipios'/'Estados' e INEGI (procedencia, no vigencia); sin edicion/version/fecha de catalogo.xlsx, sin recurso de catalogo, sin periodos."
+        },
+        {
+          "ruta": "propuestas/plan-paralelo-brechas-sin-gemma/ejecucion-20261024-072207Z/V3-coespo/trabajo/fuentes/api-package-0b5f5e16.json",
+          "sha256": "4ca156b4619b9bcc9d69b6ced3cc3ed4b1b07e586c674acdfc3f907304bc6749",
+          "localizador": "Re-verificacion API package_show el 2026-10-24 sin cambio respecto a R6-C1 (version=null, Catalogo size 83769, placeholder 1989-06-04); no es evidencia nueva. F3+F4 siguen ausentes."
+        },
+        {
+          "ruta": "data/territorio/fuentes/de5c06c7-03d7-4ed4-a9fc-ec7d10b024f0.xlsx",
+          "sha256": "ea54aad30b7342ce678d1d66157325a5cbaa492380ee4d807b20918198c5b0f5",
+          "localizador": "Interior openpyxl: hojas Catalogo_Estado + Catalogo_Municipios, sin celdas de version/periodo"
+        }
+      ],
+      "evidencia_faltante": "Documento del publicador (COESPO/DEP-CAT-R6-04) que cite edicion/version/fecha de catalogo.xlsx (sha ea54aad30b7342ce678d1d66157325a5cbaa492380ee4d807b20918198c5b0f5, Catalogo_Municipios / CLAVE) y recurso de5c06c7-03d7-4ed4-a9fc-ec7d10b024f0 y periodos de aplicacion (1990-2019 reconstruccion; 2020-2040 proyecciones), con fecha o firma; mas aclaracion del desfase de corte vs CONAPO 09-05-2024. Verificable (URL o copia local con SHA).",
+      "condicion_reapertura": "Aparicion de declaracion del publicador (COESPO/DEP-CAT-R6-04) que cite edicion/version/fecha de catalogo.xlsx (sha ea54aad3), el recurso correspondiente y los periodos de aplicacion, con fecha o firma; mas aclaracion del desfase de corte vs CONAPO 09-05-2024. Opcional: extraccion de anexos COESPO (DICCIONARIO_DATOS_2023_v3_07082023.pdf, NotaMetodologica2010-2030.pdf) si W-web los recupera y resultan pertinentes.",
+      "limites": [
+        "No afirmar vigencia histórica ni extender a otros conjuntos/periodos; no transferir vigencia del documento CONAPO al catálogo local.",
+        "No transferir vigencia del documento CONAPO 09-05-2024 al catalogo local; aclarar desfase de corte (local 1990-2019/2020-2040 vs CONAPO 1990-2020/2021-2040)"
+      ]
+    },
+    {
+      "id": "V10",
+      "tipo": "vigencias",
+      "rol_origen": "V3-coespo",
+      "estado": "sin_evidencia_para_integrar",
+      "estado_detalle": "brecha_externa",
+      "puerta": "sin_pista_nueva",
+      "motivo_cotejo": "brecha_externa: F3+F4 ausentes. Trabajo de esta revision: interior del recurso Diccionario del mismo conjunto examinado con resultado negativo para el documento exacto (sin etiqueta de novedad: no consta examen previo del interior para vigencia en los antecedentes citados) + API package_show re-verificada el 2026-10-24 sin cambio (version=null, Catalogo 83769; no es evidencia nueva). Motivo previo conservado: sigue_pendiente: F3+F4 ausentes. Pistas nuevas examinadas 2026-10-24 (pagina COESPO Proyecciones de Poblacion; publicacion COESPO 11-07-2024; pagina de recurso Catalogo d7c4b8b2 con metadatos 05-09-2024): ninguna declara edicion/version/fecha del catalogo.xlsx (sha ea54aad30b7342ce678d1d66157325a5cbaa492380ee4d807b20918198c5b0f5, Catalogo_Estado / CLAVE_ENT) ni lo vincula con 1990-2019 reconstruccion; 2020-2040 proyecciones. La publicacion COESPO 11-07-2024 solo cita la base de DATOS CONAPO 1990-2040 (contexto F3 parcial de fuente, ya conocido por W05/W06), sin edicion del catalogo local. Las fechas de portal (05-09-2024) y de API/core-properties estan excluidas por el criterio de aceptacion. Interior xlsx re-verificado hoy: sin celdas de version/periodo. Desfase de corte intacto (local vs CONAPO 1990-2020/2021-2040).",
+      "afirmacion_propuesta": null,
+      "evidencia_cotejada": [
+        {
+          "ruta": "propuestas/cierre-brechas-post-r6/vigencias-coespo/evidencia/coespo-proyecciones-poblacion-extracto.md",
+          "sha256": "970a877eff5b0e899b4df182c550e22743a08822c4535d78d7cc2959f1af6b79",
+          "localizador": "literales de descargas + seccion 'Lo que NO contiene'"
+        },
+        {
+          "ruta": "propuestas/cierre-brechas-post-r6/vigencias-coespo/evidencia/coespo-publicacion-2024-07-11-extracto.md",
+          "sha256": "64cbfc0341ad0c4f0779ce8b0e8570b84ddd14468f32dd503bd168ab7ac26c6c",
+          "localizador": "cuerpo literal + seccion 'Lo que NO contiene'"
+        },
+        {
+          "ruta": "propuestas/cierre-brechas-post-r6/vigencias-coespo/evidencia/dataset-grupos-quinquenales-extracto.md",
+          "sha256": "cbe2f3cac82cc2d840f759f05955be827868f55b632809eb99d2bed6f90547fa",
+          "localizador": "Descripcion + Fuentes extras"
+        },
+        {
+          "ruta": "propuestas/cierre-brechas-post-r6/vigencias-coespo/evidencia/catalogo-recurso-d7c4b8b2-metadatos.md",
+          "sha256": "bcf44f1d54a44e0506be0aa675562e9727448f13ecda63b907f6993ca1c8562b",
+          "localizador": "tabla Metadatos"
+        },
+        {
+          "ruta": "propuestas/cierre-brechas-post-r6/vigencias-coespo/evidencia/verificacion-local-xlsx.md",
+          "sha256": "66bc22e6beffe2f0e41eb8bbbda83a9a9f3e330f376fa315e47558b0128d1e44",
+          "localizador": "Interior openpyxl + SHA"
+        },
+        {
+          "ruta": "propuestas/plan-paralelo-brechas-sin-gemma/ejecucion-20261024-072207Z/V3-coespo/trabajo/fuentes/diccionario-0b5f5e16.xlsx",
+          "sha256": "07a21407b1eba6aeb0adff22fd57fa953e36419f48abc4ee0a8d9f8990fe4b85",
+          "localizador": "Interior del recurso Diccionario del mismo conjunto, examinado en esta revision con resultado negativo para F3+F4; no consta examen previo del interior para vigencia en los antecedentes citados. Solo remite CLAVE/CLAVE_ENT a 'Municipios'/'Estados' e INEGI (procedencia, no vigencia); sin edicion/version/fecha de catalogo.xlsx, sin recurso de catalogo, sin periodos."
+        },
+        {
+          "ruta": "propuestas/plan-paralelo-brechas-sin-gemma/ejecucion-20261024-072207Z/V3-coespo/trabajo/fuentes/api-package-0b5f5e16.json",
+          "sha256": "4ca156b4619b9bcc9d69b6ced3cc3ed4b1b07e586c674acdfc3f907304bc6749",
+          "localizador": "Re-verificacion API package_show el 2026-10-24 sin cambio respecto a R6-C1 (version=null, Catalogo size 83769, placeholder 1989-06-04); no es evidencia nueva. F3+F4 siguen ausentes."
+        },
+        {
+          "ruta": "data/territorio/fuentes/de5c06c7-03d7-4ed4-a9fc-ec7d10b024f0.xlsx",
+          "sha256": "ea54aad30b7342ce678d1d66157325a5cbaa492380ee4d807b20918198c5b0f5",
+          "localizador": "Interior openpyxl: hojas Catalogo_Estado + Catalogo_Municipios, sin celdas de version/periodo"
+        }
+      ],
+      "evidencia_faltante": "Documento del publicador (COESPO/DEP-CAT-R6-04) que cite edicion/version/fecha de catalogo.xlsx (sha ea54aad30b7342ce678d1d66157325a5cbaa492380ee4d807b20918198c5b0f5, Catalogo_Estado / CLAVE_ENT) y recurso de5c06c7-03d7-4ed4-a9fc-ec7d10b024f0 y periodos de aplicacion (1990-2019 reconstruccion; 2020-2040 proyecciones), con fecha o firma; mas aclaracion del desfase de corte vs CONAPO 09-05-2024. Verificable (URL o copia local con SHA).",
+      "condicion_reapertura": "Aparicion de declaracion del publicador (COESPO/DEP-CAT-R6-04) que cite edicion/version/fecha de catalogo.xlsx (sha ea54aad3), el recurso correspondiente y los periodos de aplicacion, con fecha o firma; mas aclaracion del desfase de corte vs CONAPO 09-05-2024. Opcional: extraccion de anexos COESPO (DICCIONARIO_DATOS_2023_v3_07082023.pdf, NotaMetodologica2010-2030.pdf) si W-web los recupera y resultan pertinentes.",
+      "limites": [
+        "No afirmar vigencia histórica ni extender a otros conjuntos/periodos.",
+        "No transferir vigencia del documento CONAPO 09-05-2024 al catalogo local; aclarar desfase de corte (local 1990-2019/2020-2040 vs CONAPO 1990-2020/2021-2040)"
+      ]
+    },
+    {
+      "id": "V11",
+      "tipo": "vigencias",
+      "rol_origen": "V3-coespo",
+      "estado": "sin_evidencia_para_integrar",
+      "estado_detalle": "brecha_externa",
+      "puerta": "sin_pista_nueva",
+      "motivo_cotejo": "brecha_externa: F3+F4 ausentes. Trabajo de esta revision: interior del recurso Diccionario del mismo conjunto examinado con resultado negativo para el documento exacto (sin etiqueta de novedad: no consta examen previo del interior para vigencia en los antecedentes citados) + API package_show re-verificada el 2026-10-24 sin cambio (version=null, Catalogo 83769; no es evidencia nueva). Motivo previo conservado: sigue_pendiente: F3+F4 ausentes. Pistas nuevas examinadas 2026-10-24 (pagina COESPO Proyecciones de Poblacion; publicacion COESPO 11-07-2024; pagina de recurso Catalogo d7c4b8b2 con metadatos 05-09-2024): ninguna declara edicion/version/fecha del catalogo.xlsx (sha ea54aad30b7342ce678d1d66157325a5cbaa492380ee4d807b20918198c5b0f5, Catalogo_Municipios / CLAVE) ni lo vincula con 1990-2019 reconstruccion; 2020-2040 proyecciones. La publicacion COESPO 11-07-2024 solo cita la base de DATOS CONAPO 1990-2040 (contexto F3 parcial de fuente, ya conocido por W05/W06), sin edicion del catalogo local. Las fechas de portal (05-09-2024) y de API/core-properties estan excluidas por el criterio de aceptacion. Interior xlsx re-verificado hoy: sin celdas de version/periodo. Desfase de corte intacto (local vs CONAPO 1990-2020/2021-2040).",
+      "afirmacion_propuesta": null,
+      "evidencia_cotejada": [
+        {
+          "ruta": "propuestas/cierre-brechas-post-r6/vigencias-coespo/evidencia/coespo-proyecciones-poblacion-extracto.md",
+          "sha256": "970a877eff5b0e899b4df182c550e22743a08822c4535d78d7cc2959f1af6b79",
+          "localizador": "literales de descargas + seccion 'Lo que NO contiene'"
+        },
+        {
+          "ruta": "propuestas/cierre-brechas-post-r6/vigencias-coespo/evidencia/coespo-publicacion-2024-07-11-extracto.md",
+          "sha256": "64cbfc0341ad0c4f0779ce8b0e8570b84ddd14468f32dd503bd168ab7ac26c6c",
+          "localizador": "cuerpo literal + seccion 'Lo que NO contiene'"
+        },
+        {
+          "ruta": "propuestas/cierre-brechas-post-r6/vigencias-coespo/evidencia/dataset-grupos-quinquenales-extracto.md",
+          "sha256": "cbe2f3cac82cc2d840f759f05955be827868f55b632809eb99d2bed6f90547fa",
+          "localizador": "Descripcion + Fuentes extras"
+        },
+        {
+          "ruta": "propuestas/cierre-brechas-post-r6/vigencias-coespo/evidencia/catalogo-recurso-d7c4b8b2-metadatos.md",
+          "sha256": "bcf44f1d54a44e0506be0aa675562e9727448f13ecda63b907f6993ca1c8562b",
+          "localizador": "tabla Metadatos"
+        },
+        {
+          "ruta": "propuestas/cierre-brechas-post-r6/vigencias-coespo/evidencia/verificacion-local-xlsx.md",
+          "sha256": "66bc22e6beffe2f0e41eb8bbbda83a9a9f3e330f376fa315e47558b0128d1e44",
+          "localizador": "Interior openpyxl + SHA"
+        },
+        {
+          "ruta": "propuestas/plan-paralelo-brechas-sin-gemma/ejecucion-20261024-072207Z/V3-coespo/trabajo/fuentes/diccionario-943d0723.xlsx",
+          "sha256": "c439f5776c211ba55d94f7a671a3b336580507d0157aad7f24ad6faeafdc4f94",
+          "localizador": "Interior del recurso Diccionario del mismo conjunto, examinado en esta revision con resultado negativo para F3+F4; no consta examen previo del interior para vigencia en los antecedentes citados. Solo remite CLAVE/CLAVE_ENT a 'Municipios'/'Estados' e INEGI (procedencia, no vigencia); sin edicion/version/fecha de catalogo.xlsx, sin recurso de catalogo, sin periodos."
+        },
+        {
+          "ruta": "propuestas/plan-paralelo-brechas-sin-gemma/ejecucion-20261024-072207Z/V3-coespo/trabajo/fuentes/api-package-943d0723.json",
+          "sha256": "a9db4b4c37edf34bf71a5181c7988424c9afd1a73e0ed1bfd2a46a13731b6dc7",
+          "localizador": "Re-verificacion API package_show el 2026-10-24 sin cambio respecto a R6-C1 (version=null, Catalogo size 83769, placeholder 1989-06-04); no es evidencia nueva. F3+F4 siguen ausentes."
+        },
+        {
+          "ruta": "data/territorio/fuentes/de5c06c7-03d7-4ed4-a9fc-ec7d10b024f0.xlsx",
+          "sha256": "ea54aad30b7342ce678d1d66157325a5cbaa492380ee4d807b20918198c5b0f5",
+          "localizador": "Interior openpyxl: hojas Catalogo_Estado + Catalogo_Municipios, sin celdas de version/periodo"
+        }
+      ],
+      "evidencia_faltante": "Documento del publicador (COESPO/DEP-CAT-R6-04) que cite edicion/version/fecha de catalogo.xlsx (sha ea54aad30b7342ce678d1d66157325a5cbaa492380ee4d807b20918198c5b0f5, Catalogo_Municipios / CLAVE) y recurso d7c4b8b2-568f-4349-a1ed-23fa93189e83 y periodos de aplicacion (1990-2019 reconstruccion; 2020-2040 proyecciones), con fecha o firma; mas aclaracion del desfase de corte vs CONAPO 09-05-2024. Verificable (URL o copia local con SHA).",
+      "condicion_reapertura": "Aparicion de declaracion del publicador (COESPO/DEP-CAT-R6-04) que cite edicion/version/fecha de catalogo.xlsx (sha ea54aad3), el recurso correspondiente y los periodos de aplicacion, con fecha o firma; mas aclaracion del desfase de corte vs CONAPO 09-05-2024. Opcional: extraccion de anexos COESPO (DICCIONARIO_DATOS_2023_v3_07082023.pdf, NotaMetodologica2010-2030.pdf) si W-web los recupera y resultan pertinentes.",
+      "limites": [
+        "No afirmar vigencia histórica ni extender a otros conjuntos/periodos.",
+        "No transferir vigencia del documento CONAPO 09-05-2024 al catalogo local; aclarar desfase de corte (local 1990-2019/2020-2040 vs CONAPO 1990-2020/2021-2040)"
+      ]
+    },
+    {
+      "id": "V12",
+      "tipo": "vigencias",
+      "rol_origen": "V3-coespo",
+      "estado": "sin_evidencia_para_integrar",
+      "estado_detalle": "brecha_externa",
+      "puerta": "sin_pista_nueva",
+      "motivo_cotejo": "brecha_externa: F3+F4 ausentes. Trabajo de esta revision: interior del recurso Diccionario del mismo conjunto examinado con resultado negativo para el documento exacto (sin etiqueta de novedad: no consta examen previo del interior para vigencia en los antecedentes citados) + API package_show re-verificada el 2026-10-24 sin cambio (version=null, Catalogo 83769; no es evidencia nueva). Motivo previo conservado: sigue_pendiente: F3+F4 ausentes. Pistas nuevas examinadas 2026-10-24 (pagina COESPO Proyecciones de Poblacion; publicacion COESPO 11-07-2024; pagina de recurso Catalogo d7c4b8b2 con metadatos 05-09-2024): ninguna declara edicion/version/fecha del catalogo.xlsx (sha ea54aad30b7342ce678d1d66157325a5cbaa492380ee4d807b20918198c5b0f5, Catalogo_Estado / CLAVE_ENT) ni lo vincula con 1990-2019 reconstruccion; 2020-2040 proyecciones. La publicacion COESPO 11-07-2024 solo cita la base de DATOS CONAPO 1990-2040 (contexto F3 parcial de fuente, ya conocido por W05/W06), sin edicion del catalogo local. Las fechas de portal (05-09-2024) y de API/core-properties estan excluidas por el criterio de aceptacion. Interior xlsx re-verificado hoy: sin celdas de version/periodo. Desfase de corte intacto (local vs CONAPO 1990-2020/2021-2040).",
+      "afirmacion_propuesta": null,
+      "evidencia_cotejada": [
+        {
+          "ruta": "propuestas/cierre-brechas-post-r6/vigencias-coespo/evidencia/coespo-proyecciones-poblacion-extracto.md",
+          "sha256": "970a877eff5b0e899b4df182c550e22743a08822c4535d78d7cc2959f1af6b79",
+          "localizador": "literales de descargas + seccion 'Lo que NO contiene'"
+        },
+        {
+          "ruta": "propuestas/cierre-brechas-post-r6/vigencias-coespo/evidencia/coespo-publicacion-2024-07-11-extracto.md",
+          "sha256": "64cbfc0341ad0c4f0779ce8b0e8570b84ddd14468f32dd503bd168ab7ac26c6c",
+          "localizador": "cuerpo literal + seccion 'Lo que NO contiene'"
+        },
+        {
+          "ruta": "propuestas/cierre-brechas-post-r6/vigencias-coespo/evidencia/dataset-grupos-quinquenales-extracto.md",
+          "sha256": "cbe2f3cac82cc2d840f759f05955be827868f55b632809eb99d2bed6f90547fa",
+          "localizador": "Descripcion + Fuentes extras"
+        },
+        {
+          "ruta": "propuestas/cierre-brechas-post-r6/vigencias-coespo/evidencia/catalogo-recurso-d7c4b8b2-metadatos.md",
+          "sha256": "bcf44f1d54a44e0506be0aa675562e9727448f13ecda63b907f6993ca1c8562b",
+          "localizador": "tabla Metadatos"
+        },
+        {
+          "ruta": "propuestas/cierre-brechas-post-r6/vigencias-coespo/evidencia/verificacion-local-xlsx.md",
+          "sha256": "66bc22e6beffe2f0e41eb8bbbda83a9a9f3e330f376fa315e47558b0128d1e44",
+          "localizador": "Interior openpyxl + SHA"
+        },
+        {
+          "ruta": "propuestas/plan-paralelo-brechas-sin-gemma/ejecucion-20261024-072207Z/V3-coespo/trabajo/fuentes/diccionario-943d0723.xlsx",
+          "sha256": "c439f5776c211ba55d94f7a671a3b336580507d0157aad7f24ad6faeafdc4f94",
+          "localizador": "Interior del recurso Diccionario del mismo conjunto, examinado en esta revision con resultado negativo para F3+F4; no consta examen previo del interior para vigencia en los antecedentes citados. Solo remite CLAVE/CLAVE_ENT a 'Municipios'/'Estados' e INEGI (procedencia, no vigencia); sin edicion/version/fecha de catalogo.xlsx, sin recurso de catalogo, sin periodos."
+        },
+        {
+          "ruta": "propuestas/plan-paralelo-brechas-sin-gemma/ejecucion-20261024-072207Z/V3-coespo/trabajo/fuentes/api-package-943d0723.json",
+          "sha256": "a9db4b4c37edf34bf71a5181c7988424c9afd1a73e0ed1bfd2a46a13731b6dc7",
+          "localizador": "Re-verificacion API package_show el 2026-10-24 sin cambio respecto a R6-C1 (version=null, Catalogo size 83769, placeholder 1989-06-04); no es evidencia nueva. F3+F4 siguen ausentes."
+        },
+        {
+          "ruta": "data/territorio/fuentes/de5c06c7-03d7-4ed4-a9fc-ec7d10b024f0.xlsx",
+          "sha256": "ea54aad30b7342ce678d1d66157325a5cbaa492380ee4d807b20918198c5b0f5",
+          "localizador": "Interior openpyxl: hojas Catalogo_Estado + Catalogo_Municipios, sin celdas de version/periodo"
+        }
+      ],
+      "evidencia_faltante": "Documento del publicador (COESPO/DEP-CAT-R6-04) que cite edicion/version/fecha de catalogo.xlsx (sha ea54aad30b7342ce678d1d66157325a5cbaa492380ee4d807b20918198c5b0f5, Catalogo_Estado / CLAVE_ENT) y recurso d7c4b8b2-568f-4349-a1ed-23fa93189e83 y periodos de aplicacion (1990-2019 reconstruccion; 2020-2040 proyecciones), con fecha o firma; mas aclaracion del desfase de corte vs CONAPO 09-05-2024. Verificable (URL o copia local con SHA).",
+      "condicion_reapertura": "Aparicion de declaracion del publicador (COESPO/DEP-CAT-R6-04) que cite edicion/version/fecha de catalogo.xlsx (sha ea54aad3), el recurso correspondiente y los periodos de aplicacion, con fecha o firma; mas aclaracion del desfase de corte vs CONAPO 09-05-2024. Opcional: extraccion de anexos COESPO (DICCIONARIO_DATOS_2023_v3_07082023.pdf, NotaMetodologica2010-2030.pdf) si W-web los recupera y resultan pertinentes.",
+      "limites": [
+        "No afirmar vigencia histórica ni extender a otros conjuntos/periodos.",
+        "No transferir vigencia del documento CONAPO 09-05-2024 al catalogo local; aclarar desfase de corte (local 1990-2019/2020-2040 vs CONAPO 1990-2020/2021-2040)"
+      ]
+    },
+    {
+      "id": "V15",
+      "tipo": "vigencias",
+      "rol_origen": "V3-coespo",
+      "estado": "sin_evidencia_para_integrar",
+      "estado_detalle": "brecha_externa",
+      "puerta": "sin_pista_nueva",
+      "motivo_cotejo": "brecha_externa: F3+F4 ausentes. Trabajo de esta revision: interior del recurso Diccionario del mismo conjunto examinado con resultado negativo para el documento exacto (sin etiqueta de novedad: no consta examen previo del interior para vigencia en los antecedentes citados) + API package_show re-verificada el 2026-10-24 sin cambio (version=null, Catalogo 83769; no es evidencia nueva). Motivo previo conservado: sigue_pendiente: F3+F4 ausentes. Pistas nuevas examinadas 2026-10-24 (pagina COESPO Proyecciones de Poblacion; publicacion COESPO 11-07-2024; pagina de recurso Catalogo d7c4b8b2 con metadatos 05-09-2024): ninguna declara edicion/version/fecha del catalogo.xlsx (sha ea54aad30b7342ce678d1d66157325a5cbaa492380ee4d807b20918198c5b0f5, Catalogo_Municipios / CLAVE) ni lo vincula con 1990-2040. La publicacion COESPO 11-07-2024 solo cita la base de DATOS CONAPO 1990-2040 (contexto F3 parcial de fuente, ya conocido por W05/W06), sin edicion del catalogo local. Las fechas de portal (05-09-2024) y de API/core-properties estan excluidas por el criterio de aceptacion. Interior xlsx re-verificado hoy: sin celdas de version/periodo. Desfase de corte intacto (local vs CONAPO 1990-2020/2021-2040).",
+      "afirmacion_propuesta": null,
+      "evidencia_cotejada": [
+        {
+          "ruta": "propuestas/cierre-brechas-post-r6/vigencias-coespo/evidencia/coespo-proyecciones-poblacion-extracto.md",
+          "sha256": "970a877eff5b0e899b4df182c550e22743a08822c4535d78d7cc2959f1af6b79",
+          "localizador": "literales de descargas + seccion 'Lo que NO contiene'"
+        },
+        {
+          "ruta": "propuestas/cierre-brechas-post-r6/vigencias-coespo/evidencia/coespo-publicacion-2024-07-11-extracto.md",
+          "sha256": "64cbfc0341ad0c4f0779ce8b0e8570b84ddd14468f32dd503bd168ab7ac26c6c",
+          "localizador": "cuerpo literal + seccion 'Lo que NO contiene'"
+        },
+        {
+          "ruta": "propuestas/cierre-brechas-post-r6/vigencias-coespo/evidencia/dataset-grupos-quinquenales-extracto.md",
+          "sha256": "cbe2f3cac82cc2d840f759f05955be827868f55b632809eb99d2bed6f90547fa",
+          "localizador": "Descripcion + Fuentes extras"
+        },
+        {
+          "ruta": "propuestas/cierre-brechas-post-r6/vigencias-coespo/evidencia/catalogo-recurso-d7c4b8b2-metadatos.md",
+          "sha256": "bcf44f1d54a44e0506be0aa675562e9727448f13ecda63b907f6993ca1c8562b",
+          "localizador": "tabla Metadatos"
+        },
+        {
+          "ruta": "propuestas/cierre-brechas-post-r6/vigencias-coespo/evidencia/verificacion-local-xlsx.md",
+          "sha256": "66bc22e6beffe2f0e41eb8bbbda83a9a9f3e330f376fa315e47558b0128d1e44",
+          "localizador": "Interior openpyxl + SHA"
+        },
+        {
+          "ruta": "propuestas/plan-paralelo-brechas-sin-gemma/ejecucion-20261024-072207Z/V3-coespo/trabajo/fuentes/diccionario-960ef0a9.xlsx",
+          "sha256": "33864ebcf1997e4cfc167719f89348dcef2ce434a46cad1e4db2430cdf8c4a6d",
+          "localizador": "Interior del recurso Diccionario del mismo conjunto, examinado en esta revision con resultado negativo para F3+F4; no consta examen previo del interior para vigencia en los antecedentes citados. Solo remite CLAVE/CLAVE_ENT a 'Municipios'/'Estados' e INEGI (procedencia, no vigencia); sin edicion/version/fecha de catalogo.xlsx, sin recurso de catalogo, sin periodos."
+        },
+        {
+          "ruta": "propuestas/plan-paralelo-brechas-sin-gemma/ejecucion-20261024-072207Z/V3-coespo/trabajo/fuentes/api-package-960ef0a9.json",
+          "sha256": "267f9dcacbd3e24cddc5118cf2e3044c414a60b174e233320efe7b74445fea0b",
+          "localizador": "Re-verificacion API package_show el 2026-10-24 sin cambio respecto a R6-C1 (version=null, Catalogo size 83769, placeholder 1989-06-04); no es evidencia nueva. F3+F4 siguen ausentes."
+        },
+        {
+          "ruta": "data/territorio/fuentes/de5c06c7-03d7-4ed4-a9fc-ec7d10b024f0.xlsx",
+          "sha256": "ea54aad30b7342ce678d1d66157325a5cbaa492380ee4d807b20918198c5b0f5",
+          "localizador": "Interior openpyxl: hojas Catalogo_Estado + Catalogo_Municipios, sin celdas de version/periodo"
+        }
+      ],
+      "evidencia_faltante": "Documento del publicador (COESPO/DEP-CAT-R6-04) que cite edicion/version/fecha de catalogo.xlsx (sha ea54aad30b7342ce678d1d66157325a5cbaa492380ee4d807b20918198c5b0f5, Catalogo_Municipios / CLAVE) y recurso e0d2acc2-9841-4f6d-baea-88ba86710a7d y periodos de aplicacion (1990-2040), con fecha o firma; mas aclaracion del desfase de corte vs CONAPO 09-05-2024. Verificable (URL o copia local con SHA).",
+      "condicion_reapertura": "Aparicion de declaracion del publicador (COESPO/DEP-CAT-R6-04) que cite edicion/version/fecha de catalogo.xlsx (sha ea54aad3), el recurso correspondiente y los periodos de aplicacion, con fecha o firma; mas aclaracion del desfase de corte vs CONAPO 09-05-2024. Opcional: extraccion de anexos COESPO (DICCIONARIO_DATOS_2023_v3_07082023.pdf, NotaMetodologica2010-2030.pdf) si W-web los recupera y resultan pertinentes.",
+      "limites": [
+        "No afirmar vigencia histórica ni extender a otros conjuntos/periodos.",
+        "No transferir vigencia del documento CONAPO 09-05-2024 al catalogo local; aclarar desfase de corte (local 1990-2019/2020-2040 vs CONAPO 1990-2020/2021-2040)"
+      ]
+    },
+    {
+      "id": "V16",
+      "tipo": "vigencias",
+      "rol_origen": "V3-coespo",
+      "estado": "sin_evidencia_para_integrar",
+      "estado_detalle": "brecha_externa",
+      "puerta": "sin_pista_nueva",
+      "motivo_cotejo": "brecha_externa: F3+F4 ausentes. Trabajo de esta revision: interior del recurso Diccionario del mismo conjunto examinado con resultado negativo para el documento exacto (sin etiqueta de novedad: no consta examen previo del interior para vigencia en los antecedentes citados) + API package_show re-verificada el 2026-10-24 sin cambio (version=null, Catalogo 83769; no es evidencia nueva). Motivo previo conservado: sigue_pendiente: F3+F4 ausentes. Pistas nuevas examinadas 2026-10-24 (pagina COESPO Proyecciones de Poblacion; publicacion COESPO 11-07-2024; pagina de recurso Catalogo d7c4b8b2 con metadatos 05-09-2024): ninguna declara edicion/version/fecha del catalogo.xlsx (sha ea54aad30b7342ce678d1d66157325a5cbaa492380ee4d807b20918198c5b0f5, Catalogo_Estado / CLAVE_ENT) ni lo vincula con 1990-2040. La publicacion COESPO 11-07-2024 solo cita la base de DATOS CONAPO 1990-2040 (contexto F3 parcial de fuente, ya conocido por W05/W06), sin edicion del catalogo local. Las fechas de portal (05-09-2024) y de API/core-properties estan excluidas por el criterio de aceptacion. Interior xlsx re-verificado hoy: sin celdas de version/periodo. Desfase de corte intacto (local vs CONAPO 1990-2020/2021-2040).",
+      "afirmacion_propuesta": null,
+      "evidencia_cotejada": [
+        {
+          "ruta": "propuestas/cierre-brechas-post-r6/vigencias-coespo/evidencia/coespo-proyecciones-poblacion-extracto.md",
+          "sha256": "970a877eff5b0e899b4df182c550e22743a08822c4535d78d7cc2959f1af6b79",
+          "localizador": "literales de descargas + seccion 'Lo que NO contiene'"
+        },
+        {
+          "ruta": "propuestas/cierre-brechas-post-r6/vigencias-coespo/evidencia/coespo-publicacion-2024-07-11-extracto.md",
+          "sha256": "64cbfc0341ad0c4f0779ce8b0e8570b84ddd14468f32dd503bd168ab7ac26c6c",
+          "localizador": "cuerpo literal + seccion 'Lo que NO contiene'"
+        },
+        {
+          "ruta": "propuestas/cierre-brechas-post-r6/vigencias-coespo/evidencia/dataset-grupos-quinquenales-extracto.md",
+          "sha256": "cbe2f3cac82cc2d840f759f05955be827868f55b632809eb99d2bed6f90547fa",
+          "localizador": "Descripcion + Fuentes extras"
+        },
+        {
+          "ruta": "propuestas/cierre-brechas-post-r6/vigencias-coespo/evidencia/catalogo-recurso-d7c4b8b2-metadatos.md",
+          "sha256": "bcf44f1d54a44e0506be0aa675562e9727448f13ecda63b907f6993ca1c8562b",
+          "localizador": "tabla Metadatos"
+        },
+        {
+          "ruta": "propuestas/cierre-brechas-post-r6/vigencias-coespo/evidencia/verificacion-local-xlsx.md",
+          "sha256": "66bc22e6beffe2f0e41eb8bbbda83a9a9f3e330f376fa315e47558b0128d1e44",
+          "localizador": "Interior openpyxl + SHA"
+        },
+        {
+          "ruta": "propuestas/plan-paralelo-brechas-sin-gemma/ejecucion-20261024-072207Z/V3-coespo/trabajo/fuentes/diccionario-960ef0a9.xlsx",
+          "sha256": "33864ebcf1997e4cfc167719f89348dcef2ce434a46cad1e4db2430cdf8c4a6d",
+          "localizador": "Interior del recurso Diccionario del mismo conjunto, examinado en esta revision con resultado negativo para F3+F4; no consta examen previo del interior para vigencia en los antecedentes citados. Solo remite CLAVE/CLAVE_ENT a 'Municipios'/'Estados' e INEGI (procedencia, no vigencia); sin edicion/version/fecha de catalogo.xlsx, sin recurso de catalogo, sin periodos."
+        },
+        {
+          "ruta": "propuestas/plan-paralelo-brechas-sin-gemma/ejecucion-20261024-072207Z/V3-coespo/trabajo/fuentes/api-package-960ef0a9.json",
+          "sha256": "267f9dcacbd3e24cddc5118cf2e3044c414a60b174e233320efe7b74445fea0b",
+          "localizador": "Re-verificacion API package_show el 2026-10-24 sin cambio respecto a R6-C1 (version=null, Catalogo size 83769, placeholder 1989-06-04); no es evidencia nueva. F3+F4 siguen ausentes."
+        },
+        {
+          "ruta": "data/territorio/fuentes/de5c06c7-03d7-4ed4-a9fc-ec7d10b024f0.xlsx",
+          "sha256": "ea54aad30b7342ce678d1d66157325a5cbaa492380ee4d807b20918198c5b0f5",
+          "localizador": "Interior openpyxl: hojas Catalogo_Estado + Catalogo_Municipios, sin celdas de version/periodo"
+        }
+      ],
+      "evidencia_faltante": "Documento del publicador (COESPO/DEP-CAT-R6-04) que cite edicion/version/fecha de catalogo.xlsx (sha ea54aad30b7342ce678d1d66157325a5cbaa492380ee4d807b20918198c5b0f5, Catalogo_Estado / CLAVE_ENT) y recurso e0d2acc2-9841-4f6d-baea-88ba86710a7d y periodos de aplicacion (1990-2040), con fecha o firma; mas aclaracion del desfase de corte vs CONAPO 09-05-2024. Verificable (URL o copia local con SHA).",
+      "condicion_reapertura": "Aparicion de declaracion del publicador (COESPO/DEP-CAT-R6-04) que cite edicion/version/fecha de catalogo.xlsx (sha ea54aad3), el recurso correspondiente y los periodos de aplicacion, con fecha o firma; mas aclaracion del desfase de corte vs CONAPO 09-05-2024. Opcional: extraccion de anexos COESPO (DICCIONARIO_DATOS_2023_v3_07082023.pdf, NotaMetodologica2010-2030.pdf) si W-web los recupera y resultan pertinentes.",
+      "limites": [
+        "No afirmar vigencia histórica ni extender a otros conjuntos/periodos.",
+        "No transferir vigencia del documento CONAPO 09-05-2024 al catalogo local; aclarar desfase de corte (local 1990-2019/2020-2040 vs CONAPO 1990-2020/2021-2040)"
+      ]
+    },
+    {
+      "id": "V13",
+      "tipo": "vigencias",
+      "rol_origen": "V4-seguridad",
+      "estado": "sin_evidencia_para_integrar",
+      "estado_detalle": "acceso_no_resuelto",
+      "puerta": "pista_nueva",
+      "motivo_cotejo": "Revision local R8 2026-10-24: SHAs de las 6 fuentes recalculados por codigo y coincidentes; interior xlsx re-verificado (sin celdas de version/periodo; core.xml sin corte aplicable). Cierre real W-v003 (F-V003-01-SP-DL, congelado): XLSX del Diccionario SESNSP 2015-2025 no recuperable por estas vias (visor publico abre sin login; descarga directa a HTML/login o error; rejilla sin DOM). Manual RNID (fuente igual) no acredita F3+F4. F3+F4 siguen sin acreditarse. Sin busquedas genericas repetidas; sin pista primaria nueva.",
+      "afirmacion_propuesta": null,
+      "evidencia_cotejada": [
+        {
+          "ruta": "propuestas/plan-paralelo-brechas-sin-gemma/ejecucion-20261024-072207Z/W-web/paquete-v003/fuentes-v003.json",
+          "sha256": "a1e84607ab8fbb26564d1d0f512a9e9b6053f5a0d369303f4cbe33fecb3405a0",
+          "localizador": "fuente F-V003-01-SP-DL: fragmentos_breves (5), localizadores (3), resultado (acceso_no_resuelto para copia XLSX por estas vias); notificacion_V4 (sin dato resolutivo nuevo)"
+        },
+        {
+          "ruta": "propuestas/plan-paralelo-brechas-sin-gemma/ejecucion-20261024-072207Z/W-web/paquete-v002/fuentes-v002.json",
+          "sha256": "17baad4a1c1dbeb0fae0b74494fff334d9001d31b99da84b5e16a9232cd866ea",
+          "localizador": "fuente F-V002-01-SP-DICC: fragmentos_breves, localizadores (guest URL -> excel.officeapps.live.com readonly=1), resultado"
+        },
+        {
+          "ruta": "propuestas/plan-paralelo-brechas-sin-gemma/ejecucion-20261024-072207Z/W-web/paquete/Manual_metodologico_RNID_V1.0.pdf",
+          "sha256": "ca00bfb7a30ceb91a4ca2144016da687730b8ba3d2d0ecea7adb69e34b3ce99e",
+          "localizador": "portada p. 1; pp. 5-6, 8, 16, 21-22, 61; trabajo/examen-manual-RNID-V13-V14.md"
+        },
+        {
+          "ruta": "propuestas/cierre-brechas-post-r6/vigencias-seguridad/evidencia/V13_diccionario.xlsx",
+          "sha256": "2a80ac6bd8102cde1bae871a2eac77205551f5d773cd1ce71d89cd75f7ab87ee",
+          "localizador": "hoja Diccionario_plantilla, fila R3 (Cve. Municipio | catalogo_municipios | Relaciona la clave del municipio con su nombre | Si | 260001)"
+        },
+        {
+          "ruta": "propuestas/cierre-brechas-post-r6/vigencias-seguridad/evidencia/V13_catalogo.xlsx",
+          "sha256": "84bb6fcda02f3de3b295189d59cf0dde201bc4e048888681b6cd8ea624bb0716",
+          "localizador": "hoja cat_municipio (Municipio, Cve. Municipio); docProps/core.xml creator SESNSP created 2015-06-05 modified 2026-01-22"
+        },
+        {
+          "ruta": "propuestas/cierre-brechas-post-r6/vigencias-seguridad/evidencia/api_93ca5e1c_2026-10-24.json",
+          "sha256": "97bcc5d6f7f7068c2ecfb1fab2be0cdc00fbab48f47cf84ce95f2a7a4354f465",
+          "localizador": "result.version=null; recurso Catalogo 36d3ac85 size 10194 start/end 1989-06-04 publisher -; recursos 2015..2025 con start/end reales"
+        }
+      ],
+      "evidencia_faltante": "Declaracion del publicador con edicion/version/fecha y corte SESNSP de cat_municipio (sha 84bb6fcd, recurso 36d3ac85) vinculada a 2015-2025; y contenido legible del Diccionario SESNSP 2015-2025 (intento de descarga por estas vias agotado con resultado negativo definitivo).",
+      "condicion_reapertura": "Reapertura fuera de las vias agotadas: interaccion con el viewer Excel online, o copia del Diccionario SESNSP 2015-2025 aportada por el publicador; y/o declaracion del publicador (DEP-CAT-R6-05) con edicion/version/fecha y corte SESNSP de cat_municipio (sha 84bb6fcd, recurso 36d3ac85) vinculada a 2015-2025. No mas intentos de descarga directa ni reutilizacion de tokens por estas vias (resultado W-v003 definitivo).",
+      "limites": [
+        "No afirmar vigencia historica ni extender a otros conjuntos/periodos; no habilitar joins por compartir Clave.",
+        "El nombre catalogo_municipios del diccionario no identifica automaticamente el recurso 36d3ac85 (la hoja se llama cat_municipio): sin identidad de catalogos automatica.",
+        "No inferir vigencia del ano del titulo; no aplicar RNID-2026 (reporte desde 2026) a 2015-2025.",
+        "No mas intentos de descarga directa ni reutilizacion de tokens por estas vias (W-v003 definitivo); sin tarea W pendiente."
+      ]
+    },
+    {
+      "id": "V14",
+      "tipo": "vigencias",
+      "rol_origen": "V4-seguridad",
+      "estado": "sin_evidencia_para_integrar",
+      "estado_detalle": "acceso_no_resuelto",
+      "puerta": "pista_nueva",
+      "motivo_cotejo": "Revision local R8 2026-10-24: SHAs de las 6 fuentes recalculados por codigo y coincidentes; interior xlsx re-verificado (sin celdas de version/periodo; core.xml sin corte aplicable). Cierre real W-v003 (F-V003-01-SP-DL, congelado): XLSX del Diccionario SESNSP 2015-2025 no recuperable por estas vias (visor publico abre sin login; descarga directa a HTML/login o error; rejilla sin DOM). Manual RNID (fuente igual) no acredita F3+F4. F3+F4 siguen sin acreditarse. Sin busquedas genericas repetidas; sin pista primaria nueva.",
+      "afirmacion_propuesta": null,
+      "evidencia_cotejada": [
+        {
+          "ruta": "propuestas/plan-paralelo-brechas-sin-gemma/ejecucion-20261024-072207Z/W-web/paquete-v003/fuentes-v003.json",
+          "sha256": "a1e84607ab8fbb26564d1d0f512a9e9b6053f5a0d369303f4cbe33fecb3405a0",
+          "localizador": "fuente F-V003-01-SP-DL: fragmentos_breves (5), localizadores (3), resultado (acceso_no_resuelto para copia XLSX por estas vias); notificacion_V4 (sin dato resolutivo nuevo)"
+        },
+        {
+          "ruta": "propuestas/plan-paralelo-brechas-sin-gemma/ejecucion-20261024-072207Z/W-web/paquete-v002/fuentes-v002.json",
+          "sha256": "17baad4a1c1dbeb0fae0b74494fff334d9001d31b99da84b5e16a9232cd866ea",
+          "localizador": "fuente F-V002-01-SP-DICC: fragmentos_breves, localizadores (guest URL -> excel.officeapps.live.com readonly=1), resultado"
+        },
+        {
+          "ruta": "propuestas/plan-paralelo-brechas-sin-gemma/ejecucion-20261024-072207Z/W-web/paquete/Manual_metodologico_RNID_V1.0.pdf",
+          "sha256": "ca00bfb7a30ceb91a4ca2144016da687730b8ba3d2d0ecea7adb69e34b3ce99e",
+          "localizador": "portada p. 1; pp. 5-6, 8, 16, 21-22, 61; trabajo/examen-manual-RNID-V13-V14.md"
+        },
+        {
+          "ruta": "propuestas/cierre-brechas-post-r6/vigencias-seguridad/evidencia/V14_diccionario.xlsx",
+          "sha256": "b3872e4b043d513f8f15cfeb0522bdf7308294b2481bf11cdd26be38435bb8fc",
+          "localizador": "hoja Diccionario_plantilla, fila R3 (Clave_Ent | catalogo_entidades | Describe la entidad en donde se registraron las victimas | Si | 26)"
+        },
+        {
+          "ruta": "propuestas/cierre-brechas-post-r6/vigencias-seguridad/evidencia/V14_catalogo.xlsx",
+          "sha256": "96776ca8976ebb6e7510f65abaa287888be693f400a1e4adb5777e091d3b5a87",
+          "localizador": "hoja cat_entidad (Clave_Ent, Entidad, 32 entidades); docProps/core.xml creator Practicante2 created/modified 2026-01-22"
+        },
+        {
+          "ruta": "propuestas/cierre-brechas-post-r6/vigencias-seguridad/evidencia/api_caf587a5_2026-10-24.json",
+          "sha256": "3ac8a95ddb372a1df97a9c8acec9defbaf917662ec58fb6eff52762c98ee926d",
+          "localizador": "result.version=null; recurso Catalogo 7f3aca28 size 10999 start/end 1989-06-04 publisher -; recursos 2015..2025 con start/end reales"
+        }
+      ],
+      "evidencia_faltante": "Declaracion del publicador con edicion/version/fecha y corte SESNSP de cat_entidad (sha 96776ca8, recurso 7f3aca28) vinculada a 2015-2025; y contenido legible del Diccionario SESNSP 2015-2025 (intento de descarga por estas vias agotado con resultado negativo definitivo).",
+      "condicion_reapertura": "Reapertura fuera de las vias agotadas: interaccion con el viewer Excel online, o copia del Diccionario SESNSP 2015-2025 aportada por el publicador; y/o declaracion del publicador (DEP-CAT-R6-05) con edicion/version/fecha y corte SESNSP de cat_entidad (sha 96776ca8, recurso 7f3aca28) vinculada a 2015-2025. No mas intentos de descarga directa ni reutilizacion de tokens por estas vias (resultado W-v003 definitivo).",
+      "limites": [
+        "No afirmar vigencia historica ni extender a otros conjuntos/periodos.",
+        "El nombre catalogo_entidades del diccionario no identifica automaticamente el recurso 7f3aca28 (la hoja se llama cat_entidad): sin identidad de catalogos automatica.",
+        "No inferir vigencia del ano del titulo; no aplicar RNID-2026 (reporte desde 2026) a 2015-2025.",
+        "No mas intentos de descarga directa ni reutilizacion de tokens por estas vias (W-v003 definitivo); sin tarea W pendiente."
+      ]
+    },
+    {
+      "id": "https://example.org/mex-ontologi/definition/33d0a99e-c721-496f-a05e-07646e9ae42a%2F177",
+      "tipo": "anomalias",
+      "rol_origen": "X-anomalias",
+      "estado": "sin_evidencia_para_integrar",
+      "estado_detalle": "brecha_externa",
+      "puerta": "sin_pista_nueva",
+      "motivo_cotejo": "Artefacto documental confirmado y SIN CAMBIOS: el CSV autentico en vivo trae 178 filas de datos y sus ultimas 2 filas repiten la cabecera como valores; la busqueda acotada de fe de erratas/diccionario corregido solo devuelve material clinico sin vinculo al conjunto. Se conserva como artefacto sin curar; no acredita concepto, codigo, catalogo ni conteo. Ninguna URL, documento o anexo concreto NO examinado antes.",
+      "afirmacion_propuesta": null,
+      "evidencia_cotejada": [
+        {
+          "ruta": "propuestas/cierre-brechas-post-r6/anomalias/evidencia/diccionario_ricket_1_2026-10-24.csv",
+          "sha256": "2c8ce131bf0e71fe812605f0f95381acaec9c5534e1bed8f05ff1895bf2fcd1c",
+          "localizador": "filas de datos 177-178 (csv rows 178-179): 177 = ide_id,ide_sex,ide_eda_ano,...,ide_cp,..."
+        },
+        {
+          "ruta": "propuestas/cierre-brechas-post-r6/anomalias/evidencia/ckan-package_5494daa1_2026-10-24.json",
+          "sha256": "e751fe481af047f3ffa6facc57c9d04952e5f874186be2d2fb4a6ae20f9a0154",
+          "localizador": "resources[id=33d0a99e]: last_modified 2026-04-28T20:44:26, size 51040; metadata_modified 2026-05-11; version null; fuentes_extras vacias"
+        },
+        {
+          "ruta": "data/portal/contenido-inspeccion.json",
+          "sha256": "61861aab5bc2b334699c4d78f611a0e2d650c4649bd791927f9095c2ac785efb",
+          "localizador": "recursos[id=33d0a99e]/definiciones[176] (fila 177 1-based)"
+        }
+      ],
+      "evidencia_faltante": "Fe de erratas o diccionario corregido del publicador (conjunto 5494daa1, recurso 33d0a99e) que aclare la fila 177 (huella 4b17625c). No localizada en fuentes examinadas.",
+      "condicion_reapertura": "Que el publicador publique fe de erratas o diccionario corregido (conjunto 5494daa1, recurso 33d0a99e) que aclare la fila 177 (huella 4b17625c); entonces verificar la correccion contra el recurso y su edicion.",
+      "limites": [
+        "Excluir SOLO de vista accionable; conservar origen, evidencia y conteos historicos.",
+        "No autoriza concepto, codigo, catalogo ni conteo de variable.",
+        "No contar como significado nuevo: artefacto ya clasificado, no resolucion nueva."
+      ]
+    },
+    {
+      "id": "https://example.org/mex-ontologi/definition/33d0a99e-c721-496f-a05e-07646e9ae42a%2F178",
+      "tipo": "anomalias",
+      "rol_origen": "X-anomalias",
+      "estado": "sin_evidencia_para_integrar",
+      "estado_detalle": "brecha_externa",
+      "puerta": "sin_pista_nueva",
+      "motivo_cotejo": "Artefacto gemelo confirmado y SIN CAMBIOS: el CSV vivo trae la fila 178 identica a la 177 salvo ejemplo id_cp (variante sin e); misma ausencia de fe de erratas. Se conserva sin curar; no acredita nada. Ninguna URL, documento o anexo concreto NO examinado antes.",
+      "afirmacion_propuesta": null,
+      "evidencia_cotejada": [
+        {
+          "ruta": "propuestas/cierre-brechas-post-r6/anomalias/evidencia/diccionario_ricket_1_2026-10-24.csv",
+          "sha256": "2c8ce131bf0e71fe812605f0f95381acaec9c5534e1bed8f05ff1895bf2fcd1c",
+          "localizador": "fila de datos 178 (csv row 179): mismos encabezados como valores, ejemplo id_cp"
+        },
+        {
+          "ruta": "propuestas/cierre-brechas-post-r6/anomalias/evidencia/ckan-package_5494daa1_2026-10-24.json",
+          "sha256": "e751fe481af047f3ffa6facc57c9d04952e5f874186be2d2fb4a6ae20f9a0154",
+          "localizador": "resources[id=33d0a99e]: last_modified 2026-04-28, size 51040; version null"
+        },
+        {
+          "ruta": "data/portal/contenido-inspeccion.json",
+          "sha256": "61861aab5bc2b334699c4d78f611a0e2d650c4649bd791927f9095c2ac785efb",
+          "localizador": "recursos[id=33d0a99e]/definiciones[177] (fila 178 1-based)"
+        }
+      ],
+      "evidencia_faltante": "Fe de erratas o diccionario corregido del publicador que aclare la fila 178 (huella b5dbcdf5). No localizada.",
+      "condicion_reapertura": "Que el publicador publique fe de erratas o diccionario corregido (conjunto 5494daa1, recurso 33d0a99e) que aclare la fila 178 (huella b5dbcdf5); entonces verificar la correccion contra el recurso y su edicion.",
+      "limites": [
+        "Excluir SOLO de vista accionable; conservar origen, evidencia y conteos historicos.",
+        "No autoriza concepto, codigo, catalogo ni conteo.",
+        "No contar como significado nuevo."
+      ]
+    },
+    {
+      "id": "des_mpo_res",
+      "tipo": "anomalias",
+      "rol_origen": "X-anomalias",
+      "estado": "sin_evidencia_para_integrar",
+      "estado_detalle": "brecha_externa",
+      "puerta": "sin_pista_nueva",
+      "motivo_cotejo": "Anomalia heredada ABIERTA y sin cambios: inventario API cerrado (Diccionario + Catalogo + 3 datos), version null, sin recurso de municipios de residencia; fila 7 genuina sigue texto libre. Busquedas acotadas 2026-10-24 (fe de erratas, diccionario corregido, edicion del catalogo) sin hallazgo nuevo: la unica coincidencia externa es homonimia de otro sistema sin vinculo campo/recurso/edicion/periodo y no acredita. Solo el publicador puede aclararlo. Ninguna URL, documento o anexo concreto NO examinado antes.",
+      "afirmacion_propuesta": null,
+      "evidencia_cotejada": [
+        {
+          "ruta": "propuestas/cierre-brechas-post-r6/anomalias/evidencia/ckan-package_5494daa1_2026-10-24.json",
+          "sha256": "e751fe481af047f3ffa6facc57c9d04952e5f874186be2d2fb4a6ae20f9a0154",
+          "localizador": "resources: 5 (Diccionario 51040 + 2022/2023/2024 + Catalogo 08d3b1a7 size 12702, start 2022-01-01 end 2026-12-31); version null; fuentes_extras vacias"
+        },
+        {
+          "ruta": "propuestas/cierre-brechas-post-r6/anomalias/evidencia/diccionario_ricket_1_2026-10-24.csv",
+          "sha256": "2c8ce131bf0e71fe812605f0f95381acaec9c5534e1bed8f05ff1895bf2fcd1c",
+          "localizador": "fila de datos 7: des_mpo_res,Texto,Municipio donde reside el caso,ejemplo Hermosillo,catalogo vacio"
+        },
+        {
+          "ruta": "propuestas/cierre-brechas-post-r6/anomalias/evidencia/busquedas_2026-10-24.json",
+          "sha256": "62a94db34f34f5d47f39a385352060deeae3fd90aa74883617407f3f3009fa6d",
+          "localizador": "consultas des_mpo_res + fe de erratas"
+        },
+        {
+          "ruta": "data/integracion/fuentes/3b8546acad7482825755e46a1a619a4838721f8480b94baaef3c755ba293db9c.xlsx",
+          "sha256": "3b8546acad7482825755e46a1a619a4838721f8480b94baaef3c755ba293db9c",
+          "localizador": "size 12702 = Catalogo API; hojas Catalogo Servicios / Catalogo rechazo / Catalogo especie; 0 menciones a des_mpo_res"
+        }
+      ],
+      "evidencia_faltante": "Fe de erratas o diccionario corregido del publicador que aclare filas 177/178 (huellas 4b17625c/b5dbcdf5) y, SOLO si confirma que existe catalogo aplicable a des_mpo_res 2022-2024, su URL con edicion/fecha; si confirma que no existe, basta la fe de erratas.",
+      "condicion_reapertura": "Que el publicador publique fe de erratas o diccionario corregido que aclare las filas 177/178 (huellas 4b17625c/b5dbcdf5) y, SOLO si confirma que existe un catalogo aplicable a des_mpo_res 2022-2024, su URL con edicion/fecha verificable contra inventario API; si declara que no existe, basta la fe de erratas.",
+      "limites": [
+        "No usar la coincidencia de nombre con la variable de la fila 7; no crear vinculo catalogoRecuperado.",
+        "No presentar existencia ni vigencia de catalogo como hecho: no identificado en inventario revisado, no inexistencia universal.",
+        "Las 2 exclusiones EXC-ENC-177/178 no cuentan como significados nuevos."
+      ]
+    }
+  ],
+  "necesidades_documentales_deduplicadas": [
+    {
+      "id": "ND-01",
+      "organismo": "UTH",
+      "recurso_catalogo_sha": "612b2b11(no; presas) / CMPE 2016 edicion nacional",
+      "casos": [
+        "V01",
+        "V02",
+        "V03",
+        "V04"
+      ],
+      "edicion": "CMPE 2016 (INEGI, sha 66ba2fd2)",
+      "faceta": "F4: adopcion UTH con rango por cuatrimestre/anual por conjunto",
+      "documento_pedido": "Oficio/lineamiento/nota de version del publicador UTH que cite CMPE 2016 + recurso + periodos exactos del caso"
+    },
+    {
+      "id": "ND-02",
+      "organismo": "UTH/DEP-CAT-R6-02 (presas)",
+      "recurso_catalogo_sha": "612b2b11",
+      "casos": [
+        "V05"
+      ],
+      "edicion": "Catalogo_estatal sin edicion declarada",
+      "faceta": "F3+F4: edicion/version/fecha del Catalogo_estatal + vinculo 1941-2024 y URL descarga 1960-1969 (id 4d1bb645, url vacia)",
+      "documento_pedido": "Declaracion de edicion/version/fecha del Catalogo_estatal (rango 1941-2024) + URL efectiva del recurso 1960-1969"
+    },
+    {
+      "id": "ND-03",
+      "organismo": "Salud Sonora (Rickettsia)",
+      "recurso_catalogo_sha": "3b8546ac (recurso 08d3b1a7)",
+      "casos": [
+        "V06",
+        "V07",
+        "V08"
+      ],
+      "edicion": "Catalogo Rickettsia sin edicion declarada (3 hojas)",
+      "faceta": "F3+F4 por hoja: Servicios/servic_atencion, rechazo/motiv_rech_ricket_sangre, especie/ricket_especie x 2022-2024",
+      "documento_pedido": "Declaracion de edicion/version/fecha del catalogo + fe de erratas o diccionario corregido; URL del catalogo de des_mpo_res si existe"
+    },
+    {
+      "id": "ND-04",
+      "organismo": "COESPO/DEP-CAT-R6-04",
+      "recurso_catalogo_sha": "ea54aad3",
+      "casos": [
+        "V09",
+        "V10",
+        "V11",
+        "V12",
+        "V15",
+        "V16"
+      ],
+      "edicion": "catalogo.xlsx sin edicion declarada (2475 municipios)",
+      "faceta": "F3+F4: Catalogo_Municipios/CLAVE y Catalogo_Estado/CLAVE_ENT x reconstruccion 1990-2019 / proyecciones 2020-2040 (V15/V16: 1990-2040) + desfase vs CONAPO 1990-2020/2021-2040",
+      "documento_pedido": "Declaracion del publicador con edicion/version/fecha + recurso + periodos + fecha/firma + aclaracion de corte vs CONAPO 09-05-2024"
+    },
+    {
+      "id": "ND-05",
+      "organismo": "SESNSP/ATDT via publicador Sonora (seguridad)",
+      "recurso_catalogo_sha": "84bb6fcd (recurso 36d3ac85)",
+      "casos": [
+        "V13"
+      ],
+      "edicion": "cat_municipio sin edicion declarada",
+      "faceta": "F3+F4: edicion/version/fecha y corte SESNSP de cat_municipio x 2015-2025; acceso XLSX Diccionario SESNSP no resuelto por estas vias",
+      "documento_pedido": "Declaracion del publicador (DEP-CAT-R6-05) + copia legible del Diccionario SESNSP 2015-2025 aportada por el publicador (no reintentar descarga/token por vias agotadas W-v003)"
+    },
+    {
+      "id": "ND-06",
+      "organismo": "SESNSP/ATDT via publicador Sonora (seguridad)",
+      "recurso_catalogo_sha": "96776ca8 (recurso 7f3aca28)",
+      "casos": [
+        "V14"
+      ],
+      "edicion": "cat_entidad sin edicion declarada",
+      "faceta": "F3+F4: edicion/version/fecha y corte SESNSP de cat_entidad x 2015-2025; acceso XLSX Diccionario SESNSP no resuelto por estas vias",
+      "documento_pedido": "Declaracion del publicador (DEP-CAT-R6-05) + copia legible del Diccionario SESNSP 2015-2025 aportada por el publicador (no reintentar descarga/token por vias agotadas W-v003)"
+    },
+    {
+      "id": "ND-07",
+      "organismo": "Salud Sonora (Rickettsia, anomalias)",
+      "recurso_catalogo_sha": "conjunto 5494daa1 / recurso diccionario 33d0a99e",
+      "casos": [
+        ".../177",
+        ".../178",
+        "des_mpo_res"
+      ],
+      "edicion": "diccionario sin version ni fe de erratas (size 51040)",
+      "faceta": "Filas 177/178 corruptas (huellas 4b17625c/b5dbcdf5) + des_mpo_res texto libre sin catalogo; inventario cerrado 5 recursos",
+      "documento_pedido": "Fe de erratas o diccionario corregido que aclare filas 177/178 y, SOLO si confirma catalogo aplicable a des_mpo_res 2022-2024, su URL con edicion/fecha (si declara que no existe, basta la fe de erratas)"
+    }
+  ],
+  "preguntas_preparadas_sin_envio": [
+    {
+      "id": "PQ-01",
+      "necesidad": "ND-01",
+      "casos": [
+        "V01",
+        "V02",
+        "V03",
+        "V04"
+      ],
+      "pregunta": "Solicitar al publicador UTH (carta especial si otra cadena formal primaria resuelve) el oficio/lineamiento/nota de version que adopte la CMPE 2016 para cada conjunto, citando recurso y periodos exactos del caso.",
+      "criterio_aceptacion": "Documento del publicador con edicion CMPE 2016 + recurso + periodos exactos, verificable por URL o copia local con SHA. Sin esto: conservar brecha, sin afirmar vigencia."
+    },
+    {
+      "id": "PQ-02",
+      "necesidad": "ND-02",
+      "casos": [
+        "V05"
+      ],
+      "pregunta": "Solicitar declaracion de edicion/version/fecha del Catalogo_estatal (sha 612b2b11, rango 1941-2024) y URL efectiva de descarga del recurso 1960-1969 (id 4d1bb645).",
+      "criterio_aceptacion": "Declaracion + URL efectiva verificables (URL viva o copia local con SHA); el texto generico de plantilla HTML no cuenta."
+    },
+    {
+      "id": "PQ-03",
+      "necesidad": "ND-03",
+      "casos": [
+        "V06",
+        "V07",
+        "V08"
+      ],
+      "pregunta": "Solicitar declaracion de edicion/version/fecha del catalogo Rickettsia (sha 3b8546ac) por hoja/faceta con vinculo 2022-2024, mas fe de erratas o diccionario corregido.",
+      "criterio_aceptacion": "Documento que cite hoja + recurso 08d3b1a7 + periodos 2022-2024, verificable; fechas de carga del portal (28/29-04-2026) excluidas como prueba."
+    },
+    {
+      "id": "PQ-04",
+      "necesidad": "ND-04",
+      "casos": [
+        "V09",
+        "V10",
+        "V11",
+        "V12",
+        "V15",
+        "V16"
+      ],
+      "pregunta": "Solicitar declaracion COESPO/DEP-CAT-R6-04 de edicion/version/fecha de catalogo.xlsx (sha ea54aad3) por hoja (Municipios/CLAVE, Estado/CLAVE_ENT) con recurso y periodos, mas aclaracion del desfase de corte vs CONAPO 09-05-2024.",
+      "criterio_aceptacion": "Declaracion con fecha/firma que cite catalogo + recurso + periodos + aclaracion de corte; no transferir vigencia del documento CONAPO al catalogo local."
+    },
+    {
+      "id": "PQ-05",
+      "necesidad": "ND-05",
+      "casos": [
+        "V13"
+      ],
+      "pregunta": "Solicitar declaracion DEP-CAT-R6-05 de edicion/version/fecha y corte SESNSP de cat_municipio (sha 84bb6fcd, recurso 36d3ac85) x 2015-2025, y copia legible del Diccionario SESNSP aportada por el publicador.",
+      "criterio_aceptacion": "Declaracion + copia legible verificables; no reintentar descarga/token por las vias agotadas (W-v003 definitivo); conservar acceso_no_resuelto hasta entonces."
+    },
+    {
+      "id": "PQ-06",
+      "necesidad": "ND-06",
+      "casos": [
+        "V14"
+      ],
+      "pregunta": "Solicitar declaracion DEP-CAT-R6-05 de edicion/version/fecha y corte SESNSP de cat_entidad (sha 96776ca8, recurso 7f3aca28) x 2015-2025, y copia legible del Diccionario SESNSP aportada por el publicador.",
+      "criterio_aceptacion": "Declaracion + copia legible verificables; no reintentar descarga/token por las vias agotadas (W-v003 definitivo); conservar acceso_no_resuelto hasta entonces."
+    },
+    {
+      "id": "PQ-07",
+      "necesidad": "ND-07",
+      "casos": [
+        ".../177",
+        ".../178",
+        "des_mpo_res"
+      ],
+      "pregunta": "Solicitar fe de erratas o diccionario corregido (conjunto 5494daa1, recurso 33d0a99e) que aclare filas 177/178 y el estado de des_mpo_res (si existe catalogo aplicable 2022-2024, su URL con edicion/fecha; si no existe, declararlo).",
+      "criterio_aceptacion": "Fe de erratas/diccionario del publicador verificable; no crear vinculo catalogoRecuperado por coincidencia de nombre; EXC-ENC-177/178 no cuentan como significados nuevos."
+    }
+  ],
+  "peticiones_web": {
+    "archivo": "v001/peticiones-web.json",
+    "solicitudes": [],
+    "motivo": "Sin pista primaria concreta nueva; puertas sin_pista_nueva (V13/V14: reapertura solo fuera de vias agotadas). No se solicita navegacion W."
+  },
+  "fuentes_verificacion": "Cada fuente figura en casos[].evidencia_cotejada con ruta + sha256 verificado por codigo + localizador (+url donde aplica).",
+  "limites": [
+    "Gemma excluido; sin contactos externos; preguntas preparadas sin envio.",
+    "Escritura exclusiva en propuestas/plan-tras-r8/ejecucion-20261024/C4-referencias/. Sin tocar produccion/semantica/shapes centrales/manifiestos previos/grafo/Studio.",
+    "Solo cotejo R8; sin investigacion generica repetida ni busquedas agotadas (W08 y re-descargas API/portal no son novedad).",
+    "No inferir vigencia del nombre del archivo, titulos CKAN, conteos, cobertura manual ni fechas operativas de portal/API.",
+    "No afirmar posesion exclusiva del documento; pedir carta especial si otra cadena formal primaria resuelve.",
+    "V13/V14 conservan acceso_no_resuelto; 2 headers corruptos fuera de los 138; des_mpo_res sin vinculo catalogoRecuperado.",
+    "Un resultado negativo se limita a lo examinado; no demuestra inexistencia universal."
+  ],
+  "condiciones_aceptacion": [
+    "Aceptar propuesta solo con fuente primaria que respalde campo + recurso + edicion/periodo exactos del caso, con URL o copia local con SHA.",
+    "V13/V14: solo reapertura fuera de las vias agotadas (viewer Excel o copia aportada por el publicador + declaracion DEP-CAT-R6-05).",
+    "Sin evidencia nueva: conservar pendiente con su condicion exacta de reapertura.",
+    "Corregir en v002; no editar lo congelado."
+  ]
+}

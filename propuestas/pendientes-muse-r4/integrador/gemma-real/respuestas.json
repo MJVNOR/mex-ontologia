@@ -1,0 +1,60 @@
+{
+  "modelo_solicitado": "gemma-4-31b-it",
+  "fuente": "retrieve y proveedor reales del source Studio; no certifica interfaz gráfica",
+  "inicio": "2026-10-23T18:22:40.612Z",
+  "triples_antes": 320869,
+  "intervalo_minimo_ms": 65000,
+  "max_salida_tokens": 4096,
+  "casos": [
+    {
+      "id": "C1-totales",
+      "pregunta": "Cuantas correspondencias documentales revisadas hay? Distingue revisadas, candidatas y ambiguas.",
+      "entrada_tokens_estimados": 6349,
+      "contexto_sha256": "a24c057734f777a72b50b82f877766e26cd47b71cbd1d3484736356b7b952536",
+      "intentos": [
+        {
+          "inicio": "2026-10-23T18:22:41.356Z",
+          "http": 500,
+          "error": "Model endpoint https://generativelanguage.googleapis.com/v1beta/openai returned HTTP 500: [{\n  \"error\": {\n    \"code\": 500,\n    \"message\": \"Internal error encountered.\",\n    \"status\": \"INTERNAL\"\n  }\n}\n]"
+        }
+      ],
+      "estado": "error_modelo"
+    },
+    {
+      "id": "C2-f2-evidencia",
+      "pregunta": "Explica la evidencia F2 de proyecciones en 2020 y sus condiciones pendientes. No extrapoles a otros anos.",
+      "entrada_tokens_estimados": 6313,
+      "contexto_sha256": "c7bea33b247f861fa23a084c5bdde6f62b95887240655e6ed9d522f62bf76e10",
+      "intentos": [
+        {
+          "inicio": "2026-10-23T18:23:46.370Z",
+          "http": 200,
+          "modelo_servidor": "gemma-4-31b-it",
+          "uso": {
+            "completion_tokens": 435,
+            "prompt_tokens": 8825,
+            "total_tokens": 10066
+          }
+        }
+      ],
+      "respuesta": "La evidencia F2 (\"F2 — Proyecciones Grandes grupos vs Indicadores\") para 2020 es una validación de cruce en estado \"exploratorio_con_condiciones_pendientes\" que comprende 72 comparaciones y 144 evidencias entre los roles \"grandes_grupos\" (medida: suma_grupos_edad_H_M) e \"indicadores\" (medida: poblacion_mitad_ano).\n\n---\n- La validación de 2020 presenta cobertura, nombres y coherencia POB del 72/72, y la suma de grupos coincide con POB_TOTAL en 7344/7344 casos [https://example.org/mex-ontologi/cruce-r3/F2].\n- Condición pendiente: existe una yuxtaposición, no identidad de medida, debido a que son constructos distintos (suma de grupos vs. mitad de año) [https://example.org/mex-ontologi/cruce-r3/F2].\n- Condición pendiente: no se ha ejecutado el cruce año por año para el periodo 1990-2040, realizándose únicamente el de 2020 [https://example.org/mex-ontologi/cruce-r3/F2].\n- Condición pendiente: no hay equivalencia INEGI afirmada, solo coincidencia de códigos literales [https://example.org/mex-ontologi/cruce-r3/F2].\n- Condición pendiente: la vigencia de catálogos no está acreditada por la ausencia de F3/F4, sin demostración de edición o aplicabilidad [https://example.org/mex-ontologi/cruce-r3/F2].\n- Se verificó que los SHAs de los originales coinciden con el manifiesto de la ronda 1 [https://example.org/mex-ontologi/cruce-r3/F2].",
+      "estado": "respondido"
+    },
+    {
+      "id": "C6-clave-26001",
+      "pregunta": "Para la clave 26001 en las comparaciones de 2020, muestra los dos valores con medida, nombre de origen, archivo y filas. Son codigos INEGI?",
+      "entrada_tokens_estimados": 6350,
+      "contexto_sha256": "03aa2583d0e1e436aecc3a7762e8dd448f87b55ac23f3948c7496dbd97566d0d",
+      "intentos": [
+        {
+          "inicio": "2026-10-23T18:25:13.560Z",
+          "http": 500,
+          "error": "Model endpoint https://generativelanguage.googleapis.com/v1beta/openai returned HTTP 500: [{\n  \"error\": {\n    \"code\": 500,\n    \"message\": \"Internal error encountered.\",\n    \"status\": \"INTERNAL\"\n  }\n}\n]"
+        }
+      ],
+      "estado": "error_modelo"
+    }
+  ],
+  "fin": "2026-10-23T18:25:15.663Z",
+  "triples_despues": 320869
+}

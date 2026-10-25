@@ -1,0 +1,79 @@
+{
+ "alcance": "auditoria del harness probar-bundle-instalado.mjs, ejecucion parcial 2/6 (run abierto, sin fin) y parches aislados de chat-diagnostico (no aplicados). Sin llamar modelos ni controlar UI/procesos/Studio; sin leer PDFs; sin exponer thought blocks.",
+ "dictamen": "evaluacion-final-6-casos-sin-codigo-terminado",
+ "harness": {
+  "bloqueos_proxy": "[] (ningun intento de escritura; todo lectura admitida)",
+  "cache": "fichero fresco por corrida (cache-1792781168010.json, 1 clave C1); sin caches previos en prueba-bundle/; limite: estado interno del bundle fuera de alcance de esta revision",
+  "error500": "registrado verbatim con status intacto; estado error, sin clasificacion de cuota",
+  "handshake_vs_respuesta": "handshake report.handshake solo habilita inicio (exige gemma-4-31b-it); respuesta se construye solo de eventos del caso, excluyendo preambulos _Retrieved/_No entity; verificada separacion en C1",
+  "modelo_fijado": "ONTO_LLM_MODEL==gemma-4-31b-it exigido o throw; bundle SHA coincide con instalado",
+  "mutaciones": "proxy solo initialize/tools-list/onto_query/onto_stats + filtro a 2 tools; done.mutated false en ambos casos; grafo_despues pendiente al cierre de la corrida",
+  "pacing": "65s entre casos, ONTO_MAX_ROUNDS=1, endpoint real 8137 via proxy; STDIO contra bundle instalado",
+  "thought_blocks": "0 filtraciones en outputs (visible() recorta y este dictamen no los reproduce)"
+ },
+ "literales": {
+  "ano_matrimonio_ASCII": "data/portal/oportunidades-cruce.json campos_observados (triaje, no definicion); NO normalizar ni exigir cambio a/por año en evaluacion C4/C5",
+  "ano_matrimonio_fuente": "NO cambiar por año: oraculo debe citar el literal original de cada artefacto",
+  "año_matrimonio_00F1": "columnas fisicas file-column (p.ej. a021cf66.../Hoja1) y variable de diccionario; preguntas C4/C5 usan esta forma"
+ },
+ "oraculos_dinamicos": {
+  "F2": "72 comparaciones / 144 evidencias 2020 (ronda 3, preservados; sin identidad INEGI: codigos locales no se presumen INEGI)",
+  "cobertura_viva": "1392 respaldadas / 4474 revisadas / 20 candidatas / 2 ambiguas",
+  "grafo": "321209 triples antes (harness) == reinicio-studio.json; SELECT 1392/4474 preservados",
+  "semantica_viva": "4474 vinculos / 1276 reglas"
+ },
+ "parches_chat_diagnostico": {
+  "aplicacion": "NO aplicados; requieren respaldo+recompilacion+reinicio+verificacion espaciada por integrador",
+  "contenido_revisado": "index.ts budgetModel via describe() solo si falta ONTO_LLM_MODEL (fallback conservador); openai.ts recorta cuerpo de error a 2000 chars con status intacto",
+  "h3_no_confirmada": "fallback a runTurn con 114 tools si answerOnce vacio: hipotesis condicional pendiente de 1 llamada; no presentarla como causa",
+  "veredicto": "revision tecnica conforme; verificacion viva pendiente del integrador"
+ },
+ "respaldo_reinicio": {
+  "backup": "data/backups/studio-antes-activar-gemma-20261023T184016Z.ttl SHA verificado 35c1f8e6",
+  "triples": 321209
+ },
+ "sha_codigo_evidencia": {
+  "chat-diagnostico/diagnostico.md": "3d7fc736271e0981b01ef8e3a19f1d3e3765aff0373d17afd273b3f6b5383b72",
+  "chat-diagnostico/medicion.json": "70e203985fc3c7a62129ec8324a10fe8a6aa1299afae11ddb8fba59446bbc290",
+  "chat-diagnostico/parche-propuesto.patch": "98395f184222d5da2425268faba2a6a8bf81d226d00507387d25c1223f80c272",
+  "chat-diagnostico/sidecar-protocolo.json": "74c54d53174d71c993ab1533def30c957469fc9d37ca685dd1a4fac86bf8aaf0",
+  "modelo-disponible.json": "3f2aa9953bb5470f837e0d3e4bc1efd6bd23836349b9166afe3c96152df5b185",
+  "probar-bundle-instalado.mjs": "3bf164c2c9a2cbfc9ad0e10a8f0f61d4a97eb5f1ce70710283001e10f48bf8ad",
+  "prueba-bundle/cache-1792781168010.json": "2f9f4b6aa56d0698e93cc96e86f9a7943e690113412050e54c01911d23dc4c20",
+  "prueba-bundle/resultado.json": "eacc8f244e717a390734f61e6b8074de81fb6fecaadc4f14e2accb889f36b5b",
+  "reinicio-studio.json": "2be35fb3ac09ae1b4082955a19e884ea4efe76e4b5ce3049d04926071643b0bf"
+ },
+ "corrida": {
+  "fin": "2026-10-23T18:53:06.128Z",
+  "grafo_conservado": true,
+  "triples_antes": 321209,
+  "triples_despues": 321209,
+  "casos": 6,
+  "respondidos": [
+   "C1-totales",
+   "C4-definicion-diccionario"
+  ],
+  "error_500": [
+   "C2-f2-evidencia",
+   "C3-f2-igualdad",
+   "C5-diferencia-variables"
+  ],
+  "timeout": [
+   "C6-clave-26001"
+  ]
+ },
+ "evaluacion_final": {
+  "C1-totales": "aceptar (4474/20/2/4496 == cobertura viva exacta)",
+  "C4-definicion-diccionario": "aceptar (variable ano_matrimonio literal diccionario, descripcion original, concepto anio-registro, definicion .../6 y fuente diccionario.csv; todo == cobertura viva)",
+  "C2-f2-evidencia": "no evaluable: HTTP 500 INTERNAL del endpoint; no es cuota; no se invierte en veredicto de contenido",
+  "C3-f2-igualdad": "no evaluable: HTTP 500 INTERNAL; selectivo frente a C1 con distinta huella de retrieval (16/82 vs 13/20); causa sin confirmar",
+  "C5-diferencia-variables": "no evaluable: HTTP 500 INTERNAL con misma huella de retrieval que C4 respondido (16/6); selectividad observada sin diagnostico confirmado",
+  "C6-clave-26001": "no evaluable: TimeoutError cliente tras retrieval; origen sin clasificar; no es cuota ni veredicto"
+ },
+ "bloqueos_exactos": [
+  "B1: chat-diagnostico/codigo/ inexistente y sin listo-codigo.json: no hay codigo TS real ni Vitest que revisar; sin dictamen-codigo-final posible",
+  "B2: causa de los 500 selectivos sin confirmacion en vivo (H1 trim sin prueba espaciada con trim activo; H3 pendiente); el retry propuesto es mitigacion, no resolucion",
+  "B3: C6 Timeout sin clasificar (no cuota, no contenido); reintento pendiente de regla (>120s => pendiente, sin clamp)",
+  "B4: oraculos F2 (72/144) y no-INEGI sin cobertura de chat en esta ronda (C2/C3/C5/C6 sin respuesta); solo C1+C4 evaluados"
+ ]
+}

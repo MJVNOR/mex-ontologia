@@ -1,0 +1,513 @@
+{
+  "reglas": [
+    {
+      "id": "r5-nac-resideextranjerod-no_especificada",
+      "concepto": "residencia-extranjera-madre",
+      "representacion": "no_especificada",
+      "nombres": [
+        "RESIDEEXTRANJEROD"
+      ],
+      "descripciones": [
+        "Indicador textual de si la madre es residente extranjera"
+      ],
+      "conjuntos": [
+        "940de7d8-73ec-4a08-8d26-b7cc97ff17bd"
+      ],
+      "diccionarios": [
+        "22202305-2d02-4c49-b216-cc98224357f0"
+      ],
+      "definiciones": [
+        "https://example.org/mex-ontologi/definition/22202305-2d02-4c49-b216-cc98224357f0%2F18"
+      ],
+      "huella_fila_diccionario": "3c0156d2eaf5b3fbb00c421ae87e96fb5c7211b688f03739b9c73d269c5f68a1",
+      "limites": [
+        "solo aplica a la definicion citada (alcance simultaneo por conjunto, diccionario, definicion, nombre y descripcion); no autoriza cruces, homologaciones ni equivalencias",
+        "no se unifica con RESIDEEXTRANJERO %2F17 ('Indicador de si la madre es recidente en el extranjero', Numerico entero): textos y tipos difieren; par separado por contradiccion segun r3a7-nac-resideextranjero-codigo",
+        "ejemplo NO sin mapa de valores declarado; sin catalogo, sin vigencia, sin identidad"
+      ],
+      "calificador": {
+        "sujeto": "madre",
+        "alcance": "inferencia-contextual-publicada",
+        "origen": "titulo publicado del conjunto Informacion Sobre Nacimientos"
+      },
+      "evidencia": {
+        "descripcion": "Indicador textual de si la madre es residente extranjera",
+        "tipo": "Texto",
+        "formato": "",
+        "unidad": "",
+        "ejemplo": "NO",
+        "catalogo_declarado": "",
+        "titulo_conjunto": "Informacion Sobre Nacimientos"
+      },
+      "criterio": "Lectura literal de la fila del diccionario y contexto del conjunto; alcance fijado a esta definicion. Revision del dictamen previo: se propone solo lo literal sin unificar el par.",
+      "fuente_revision": "propuestas/pendientes-muse-r5/nacimientos/entrega.json",
+      "alcance": "Solo este diccionario, conjunto, definicion, nombre y descripcion."
+    },
+    {
+      "alcance": "Solo este diccionario, conjunto, definicion y nombre.",
+      "concepto": "sector-dependencia-diagnostico",
+      "conjuntos": [
+        "aa353273-7ef0-4279-987a-40fc49b3d712"
+      ],
+      "criterio": "Revision explicita de la fila del diccionario en su conjunto: nombre, descripcion, tipo y ejemplo verificados en data/portal/inspecciones/063058e6-aed3-4a60-b944-5e653c77b14d.json (huella 7e4792227b1e57f623212566d266783aa37726e8a6b627b00ec2056839875577). Mismo contenido en bytes que la fila aceptada por auditoria-a (r4-lote-3-sector-dependencia-encuestada-8). Sentido literal limitado a texto declarado. Alcance documental; no se validan valores ni catalogos.",
+      "definiciones": [
+        "https://example.org/mex-ontologi/definition/063058e6-aed3-4a60-b944-5e653c77b14d%2F2"
+      ],
+      "descripciones": [
+        "Sector"
+      ],
+      "diccionarios": [
+        "063058e6-aed3-4a60-b944-5e653c77b14d"
+      ],
+      "evidencia": [
+        {
+          "catalogo_de_referencia": "",
+          "definicion_iri": "https://example.org/mex-ontologi/definition/063058e6-aed3-4a60-b944-5e653c77b14d%2F2",
+          "descripcion": "Sector",
+          "diccionario": "063058e6-aed3-4a60-b944-5e653c77b14d",
+          "ejemplo_de_dato": "04 - SECRETARIA DE HACIENDA",
+          "huella_fila_diccionario": "7e4792227b1e57f623212566d266783aa37726e8a6b627b00ec2056839875577",
+          "tipo_de_dato": "Texto",
+          "unidad_de_medida": "",
+          "variable": "P2"
+        }
+      ],
+      "fuente_revision": "propuestas/pendientes-muse-r5/tic/entrega.json",
+      "huella_fila_diccionario": "7e4792227b1e57f623212566d266783aa37726e8a6b627b00ec2056839875577",
+      "id": "r5-tic-001",
+      "limites": [
+        "Valor textual declarado tal cual ('04 - SECRETARIA DE HACIENDA'); no se separa codigo de nombre.",
+        "Sin catalogo de sectores resuelto; Catalogo de referencia vacio en la fila.",
+        "No autoriza comparar ni equiparar sectores entre encuestas, diccionarios o conjuntos."
+      ],
+      "nombres": [
+        "P2"
+      ],
+      "representacion": "nombre"
+    },
+    {
+      "alcance": "Solo este diccionario, conjunto, definicion y nombre.",
+      "concepto": "sector-dependencia-diagnostico",
+      "conjuntos": [
+        "0ec245ba-6941-4995-a564-52e0a4f3999f"
+      ],
+      "criterio": "Revision explicita de la fila del diccionario en su conjunto: nombre, descripcion, tipo y ejemplo verificados en data/portal/inspecciones/3851f1c3-5045-4703-ba88-93b3d39e0b70.json (huella 7e4792227b1e57f623212566d266783aa37726e8a6b627b00ec2056839875577). Mismo contenido en bytes que la fila aceptada por auditoria-a. Alcance documental; no se validan valores ni catalogos.",
+      "definiciones": [
+        "https://example.org/mex-ontologi/definition/3851f1c3-5045-4703-ba88-93b3d39e0b70%2F2"
+      ],
+      "descripciones": [
+        "Sector"
+      ],
+      "diccionarios": [
+        "3851f1c3-5045-4703-ba88-93b3d39e0b70"
+      ],
+      "evidencia": [
+        {
+          "catalogo_de_referencia": "",
+          "definicion_iri": "https://example.org/mex-ontologi/definition/3851f1c3-5045-4703-ba88-93b3d39e0b70%2F2",
+          "descripcion": "Sector",
+          "diccionario": "3851f1c3-5045-4703-ba88-93b3d39e0b70",
+          "ejemplo_de_dato": "04 - SECRETARIA DE HACIENDA",
+          "huella_fila_diccionario": "7e4792227b1e57f623212566d266783aa37726e8a6b627b00ec2056839875577",
+          "tipo_de_dato": "Texto",
+          "unidad_de_medida": "",
+          "variable": "P2"
+        }
+      ],
+      "fuente_revision": "propuestas/pendientes-muse-r5/tic/entrega.json",
+      "huella_fila_diccionario": "7e4792227b1e57f623212566d266783aa37726e8a6b627b00ec2056839875577",
+      "id": "r5-tic-002",
+      "limites": [
+        "Valor textual declarado tal cual ('04 - SECRETARIA DE HACIENDA'); no se separa codigo de nombre.",
+        "Sin catalogo de sectores resuelto; Catalogo de referencia vacio en la fila.",
+        "No autoriza comparar ni equiparar sectores entre encuestas, diccionarios o conjuntos."
+      ],
+      "nombres": [
+        "P2"
+      ],
+      "representacion": "nombre"
+    },
+    {
+      "alcance": "Solo este diccionario, conjunto, definicion y nombre.",
+      "concepto": "sector-dependencia-diagnostico",
+      "conjuntos": [
+        "d227c85d-0609-4ab4-9c4f-22aef39b670f"
+      ],
+      "criterio": "Revision explicita de la fila del diccionario en su conjunto: nombre, descripcion, tipo y ejemplo verificados en data/portal/inspecciones/3b314916-24f7-4c48-bcb5-c5fe112a9123.json (huella 7e4792227b1e57f623212566d266783aa37726e8a6b627b00ec2056839875577). Mismo contenido en bytes que la fila aceptada por auditoria-a. Alcance documental; no se validan valores ni catalogos.",
+      "definiciones": [
+        "https://example.org/mex-ontologi/definition/3b314916-24f7-4c48-bcb5-c5fe112a9123%2F2"
+      ],
+      "descripciones": [
+        "Sector"
+      ],
+      "diccionarios": [
+        "3b314916-24f7-4c48-bcb5-c5fe112a9123"
+      ],
+      "evidencia": [
+        {
+          "catalogo_de_referencia": "",
+          "definicion_iri": "https://example.org/mex-ontologi/definition/3b314916-24f7-4c48-bcb5-c5fe112a9123%2F2",
+          "descripcion": "Sector",
+          "diccionario": "3b314916-24f7-4c48-bcb5-c5fe112a9123",
+          "ejemplo_de_dato": "04 - SECRETARIA DE HACIENDA",
+          "huella_fila_diccionario": "7e4792227b1e57f623212566d266783aa37726e8a6b627b00ec2056839875577",
+          "tipo_de_dato": "Texto",
+          "unidad_de_medida": "",
+          "variable": "P2"
+        }
+      ],
+      "fuente_revision": "propuestas/pendientes-muse-r5/tic/entrega.json",
+      "huella_fila_diccionario": "7e4792227b1e57f623212566d266783aa37726e8a6b627b00ec2056839875577",
+      "id": "r5-tic-003",
+      "limites": [
+        "Valor textual declarado tal cual ('04 - SECRETARIA DE HACIENDA'); no se separa codigo de nombre.",
+        "Sin catalogo de sectores resuelto; Catalogo de referencia vacio en la fila.",
+        "No autoriza comparar ni equiparar sectores entre encuestas, diccionarios o conjuntos."
+      ],
+      "nombres": [
+        "P2"
+      ],
+      "representacion": "nombre"
+    },
+    {
+      "alcance": "Solo este diccionario, conjunto, definicion y nombre.",
+      "concepto": "sector-dependencia-diagnostico",
+      "conjuntos": [
+        "9208a313-553c-4308-8d58-506e037060b1"
+      ],
+      "criterio": "Revision explicita de la fila del diccionario en su conjunto: nombre, descripcion, tipo y ejemplo verificados en data/portal/inspecciones/8f8e3cfb-e551-4a95-b382-4999351c5f29.json (huella 7e4792227b1e57f623212566d266783aa37726e8a6b627b00ec2056839875577). Mismo contenido en bytes que la fila aceptada por auditoria-a. Alcance documental; no se validan valores ni catalogos.",
+      "definiciones": [
+        "https://example.org/mex-ontologi/definition/8f8e3cfb-e551-4a95-b382-4999351c5f29%2F2"
+      ],
+      "descripciones": [
+        "Sector"
+      ],
+      "diccionarios": [
+        "8f8e3cfb-e551-4a95-b382-4999351c5f29"
+      ],
+      "evidencia": [
+        {
+          "catalogo_de_referencia": "",
+          "definicion_iri": "https://example.org/mex-ontologi/definition/8f8e3cfb-e551-4a95-b382-4999351c5f29%2F2",
+          "descripcion": "Sector",
+          "diccionario": "8f8e3cfb-e551-4a95-b382-4999351c5f29",
+          "ejemplo_de_dato": "04 - SECRETARIA DE HACIENDA",
+          "huella_fila_diccionario": "7e4792227b1e57f623212566d266783aa37726e8a6b627b00ec2056839875577",
+          "tipo_de_dato": "Texto",
+          "unidad_de_medida": "",
+          "variable": "P2"
+        }
+      ],
+      "fuente_revision": "propuestas/pendientes-muse-r5/tic/entrega.json",
+      "huella_fila_diccionario": "7e4792227b1e57f623212566d266783aa37726e8a6b627b00ec2056839875577",
+      "id": "r5-tic-004",
+      "limites": [
+        "Valor textual declarado tal cual ('04 - SECRETARIA DE HACIENDA'); no se separa codigo de nombre.",
+        "Sin catalogo de sectores resuelto; Catalogo de referencia vacio en la fila.",
+        "No autoriza comparar ni equiparar sectores entre encuestas, diccionarios o conjuntos."
+      ],
+      "nombres": [
+        "P2"
+      ],
+      "representacion": "nombre"
+    },
+    {
+      "alcance": "Solo este diccionario, conjunto, definicion y nombre.",
+      "concepto": "sector-dependencia-diagnostico",
+      "conjuntos": [
+        "d175b134-77f4-4201-9409-08b05c1d5ffa"
+      ],
+      "criterio": "Revision explicita de la fila del diccionario en su conjunto: nombre, descripcion, tipo y ejemplo verificados en data/portal/inspecciones/af14d207-7697-4d52-b99b-46a35a1b76ac.json (huella 7e4792227b1e57f623212566d266783aa37726e8a6b627b00ec2056839875577). Mismo contenido en bytes que la fila aceptada por auditoria-a. Alcance documental; no se validan valores ni catalogos.",
+      "definiciones": [
+        "https://example.org/mex-ontologi/definition/af14d207-7697-4d52-b99b-46a35a1b76ac%2F2"
+      ],
+      "descripciones": [
+        "Sector"
+      ],
+      "diccionarios": [
+        "af14d207-7697-4d52-b99b-46a35a1b76ac"
+      ],
+      "evidencia": [
+        {
+          "catalogo_de_referencia": "",
+          "definicion_iri": "https://example.org/mex-ontologi/definition/af14d207-7697-4d52-b99b-46a35a1b76ac%2F2",
+          "descripcion": "Sector",
+          "diccionario": "af14d207-7697-4d52-b99b-46a35a1b76ac",
+          "ejemplo_de_dato": "04 - SECRETARIA DE HACIENDA",
+          "huella_fila_diccionario": "7e4792227b1e57f623212566d266783aa37726e8a6b627b00ec2056839875577",
+          "tipo_de_dato": "Texto",
+          "unidad_de_medida": "",
+          "variable": "P2"
+        }
+      ],
+      "fuente_revision": "propuestas/pendientes-muse-r5/tic/entrega.json",
+      "huella_fila_diccionario": "7e4792227b1e57f623212566d266783aa37726e8a6b627b00ec2056839875577",
+      "id": "r5-tic-005",
+      "limites": [
+        "Valor textual declarado tal cual ('04 - SECRETARIA DE HACIENDA'); no se separa codigo de nombre.",
+        "Sin catalogo de sectores resuelto; Catalogo de referencia vacio en la fila.",
+        "No autoriza comparar ni equiparar sectores entre encuestas, diccionarios o conjuntos."
+      ],
+      "nombres": [
+        "P2"
+      ],
+      "representacion": "nombre"
+    },
+    {
+      "alcance": "Solo este diccionario, conjunto, definicion y nombre.",
+      "concepto": "condiciones-innovacion-tic-declaradas",
+      "conjuntos": [
+        "aa353273-7ef0-4279-987a-40fc49b3d712"
+      ],
+      "criterio": "Revision explicita de la fila del diccionario en su conjunto: descripcion completa y literal, Tipo Texto, ejemplo de lista textual, verificados en data/portal/inspecciones/063058e6-aed3-4a60-b944-5e653c77b14d.json (huella fefc6b0d6ceed477ceef37d5e850751eacef31f435c6c5e05e18a8827680e470). Sentido literal limitado a lista declarada. Alcance documental; no se validan valores ni catalogos.",
+      "definiciones": [
+        "https://example.org/mex-ontologi/definition/063058e6-aed3-4a60-b944-5e653c77b14d%2F7"
+      ],
+      "descripciones": [
+        "Enliste las condiciones que considere contribuyan a la innovación en TIC"
+      ],
+      "diccionarios": [
+        "063058e6-aed3-4a60-b944-5e653c77b14d"
+      ],
+      "evidencia": [
+        {
+          "catalogo_de_referencia": "",
+          "definicion_iri": "https://example.org/mex-ontologi/definition/063058e6-aed3-4a60-b944-5e653c77b14d%2F7",
+          "descripcion": "Enliste las condiciones que considere contribuyan a la innovación en TIC",
+          "diccionario": "063058e6-aed3-4a60-b944-5e653c77b14d",
+          "ejemplo_de_dato": "Platicas, reuniones, etc",
+          "huella_fila_diccionario": "fefc6b0d6ceed477ceef37d5e850751eacef31f435c6c5e05e18a8827680e470",
+          "tipo_de_dato": "Texto",
+          "unidad_de_medida": "",
+          "variable": "P7"
+        }
+      ],
+      "fuente_revision": "propuestas/pendientes-muse-r5/tic/entrega.json",
+      "huella_fila_diccionario": "fefc6b0d6ceed477ceef37d5e850751eacef31f435c6c5e05e18a8827680e470",
+      "id": "r5-tic-006",
+      "limites": [
+        "Lista textual declarada en texto libre; ejemplo conservado tal cual.",
+        "No fija catalogo de condiciones ni cuantifica.",
+        "No distingue condiciones necesarias/suficientes ni las homologa entre dependencias."
+      ],
+      "nombres": [
+        "P7"
+      ],
+      "representacion": "no_especificada"
+    },
+    {
+      "alcance": "Solo este diccionario, conjunto, definicion y nombre.",
+      "concepto": "recursos-anuales-innovacion-declarados",
+      "conjuntos": [
+        "aa353273-7ef0-4279-987a-40fc49b3d712"
+      ],
+      "criterio": "Revision explicita de la fila del diccionario en su conjunto: descripcion completa y literal, Tipo Texto, ejemplo mixto conservado, Unidad vacia, verificados en data/portal/inspecciones/063058e6-aed3-4a60-b944-5e653c77b14d.json (huella fed72d1b1f284dc88de6809e3cc389ea7d4343e99248e13fd848a94e726e01d8). Sentido literal limitado a consignacion textual. Alcance documental; no se validan valores ni catalogos.",
+      "definiciones": [
+        "https://example.org/mex-ontologi/definition/063058e6-aed3-4a60-b944-5e653c77b14d%2F13"
+      ],
+      "descripciones": [
+        "Enliste los recursos anuales que se hayan destinado a innovación:"
+      ],
+      "diccionarios": [
+        "063058e6-aed3-4a60-b944-5e653c77b14d"
+      ],
+      "evidencia": [
+        {
+          "catalogo_de_referencia": "",
+          "definicion_iri": "https://example.org/mex-ontologi/definition/063058e6-aed3-4a60-b944-5e653c77b14d%2F13",
+          "descripcion": "Enliste los recursos anuales que se hayan destinado a innovación:",
+          "diccionario": "063058e6-aed3-4a60-b944-5e653c77b14d",
+          "ejemplo_de_dato": "5000, software",
+          "huella_fila_diccionario": "fed72d1b1f284dc88de6809e3cc389ea7d4343e99248e13fd848a94e726e01d8",
+          "tipo_de_dato": "Texto",
+          "unidad_de_medida": "",
+          "variable": "P13"
+        }
+      ],
+      "fuente_revision": "propuestas/pendientes-muse-r5/tic/entrega.json",
+      "huella_fila_diccionario": "fed72d1b1f284dc88de6809e3cc389ea7d4343e99248e13fd848a94e726e01d8",
+      "id": "r5-tic-007",
+      "limites": [
+        "Consignacion textual en texto libre; ejemplo mixto monto/especie conservado tal cual.",
+        "Unidad y moneda no declaradas: no se infieren ni se convierten montos.",
+        "No cuantifica, no agrega ni compara recursos entre dependencias."
+      ],
+      "nombres": [
+        "P13"
+      ],
+      "representacion": "no_especificada"
+    }
+  ],
+  "vinculos": [
+    {
+      "recurso": "46977217-9396-4f9c-bddb-6616e82530b4",
+      "campo": "RESIDEEXTRANJEROD",
+      "columna": "https://example.org/mex-ontologi/file-column/46977217-9396-4f9c-bddb-6616e82530b4%2FSINAC%202022%2026-09-22%2F18",
+      "diccionario": "22202305-2d02-4c49-b216-cc98224357f0",
+      "concepto": "residencia-extranjera-madre",
+      "descripcion": "Indicador textual de si la madre es residente extranjera",
+      "huella_esquema": "9b46e1c0e32acd903780264f0ebbc538a835eb1bf92a70faa36ba7e839a1ec95",
+      "huella_fila_diccionario": "3c0156d2eaf5b3fbb00c421ae87e96fb5c7211b688f03739b9c73d269c5f68a1",
+      "criterio": "Vinculo columna fisica (posicion 18, hoja 'SINAC 2022 26-09-22') -> variable documentada del mismo conjunto: nombre con relacion registrada, descripcion literal que respalda el concepto, diccionario y recurso localizados, unicidad en diccionario y esquema, sin alias. Alcance documental; no valida valores ni pertenencia a catalogos; no unifica con RESIDEEXTRANJERO."
+    },
+    {
+      "recurso": "1e5e326f-2975-4614-9aff-8320f1d9c1a9",
+      "campo": "P2",
+      "columna": "https://example.org/mex-ontologi/file-column/1e5e326f-2975-4614-9aff-8320f1d9c1a9%2FHoja1%2F2",
+      "diccionario": "3851f1c3-5045-4703-ba88-93b3d39e0b70",
+      "concepto": "sector-dependencia-diagnostico",
+      "descripcion": "Sector",
+      "huella_esquema": "43eb255808ec7a2aa8d85db39d81496c45a87e7bfb2ddea7151a3d798b9e5d1d",
+      "huella_fila_diccionario": "7e4792227b1e57f623212566d266783aa37726e8a6b627b00ec2056839875577",
+      "criterio": "Revision explicita del campo en el esquema de este recurso y su fila de diccionario en el mismo conjunto: nombre, contexto, descripcion y representacion verificados, huellas verificadas contra archivos locales. Aplicacion condicionada de regla r5-tic-002 y concepto sector-dependencia-diagnostico para la misma definicion (no crea regla nueva). Alcance de interpretacion documental; no se validan valores, no se confirma pertenencia a catalogos, no se habilitan cruces."
+    },
+    {
+      "recurso": "1f7476be-6a56-4335-be31-e77d7884c835",
+      "campo": "P2",
+      "columna": "https://example.org/mex-ontologi/file-column/1f7476be-6a56-4335-be31-e77d7884c835%2FHoja1%2F2",
+      "diccionario": "3b314916-24f7-4c48-bcb5-c5fe112a9123",
+      "concepto": "sector-dependencia-diagnostico",
+      "descripcion": "Sector",
+      "huella_esquema": "485b00853f0bcc8a29cc9fca22bc3d13595c62eace1c457f89786ecf0f8bf607",
+      "huella_fila_diccionario": "7e4792227b1e57f623212566d266783aa37726e8a6b627b00ec2056839875577",
+      "criterio": "Revision explicita del campo en el esquema de este recurso y su fila de diccionario en el mismo conjunto: nombre, contexto, descripcion y representacion verificados, huellas verificadas contra archivos locales. Aplicacion condicionada de regla r5-tic-003 y concepto sector-dependencia-diagnostico para la misma definicion (no crea regla nueva). Alcance de interpretacion documental; no se validan valores, no se confirma pertenencia a catalogos, no se habilitan cruces."
+    },
+    {
+      "recurso": "3d8d9ae1-bac3-40cc-be26-c919c0d73b4f",
+      "campo": "P2",
+      "columna": "https://example.org/mex-ontologi/file-column/3d8d9ae1-bac3-40cc-be26-c919c0d73b4f%2FHoja1%2F2",
+      "diccionario": "063058e6-aed3-4a60-b944-5e653c77b14d",
+      "concepto": "sector-dependencia-diagnostico",
+      "descripcion": "Sector",
+      "huella_esquema": "7e26bdce9f810403af61bf9db02dde5244818d14af142daa7970b3902a987486",
+      "huella_fila_diccionario": "7e4792227b1e57f623212566d266783aa37726e8a6b627b00ec2056839875577",
+      "criterio": "Revision explicita del campo en el esquema de este recurso y su fila de diccionario en el mismo conjunto: nombre, contexto, descripcion y representacion verificados, huellas verificadas contra archivos locales. Aplicacion condicionada de regla r5-tic-001 y concepto sector-dependencia-diagnostico para la misma definicion (no crea regla nueva). Alcance de interpretacion documental; no se validan valores, no se confirma pertenencia a catalogos, no se habilitan cruces."
+    },
+    {
+      "recurso": "3d8d9ae1-bac3-40cc-be26-c919c0d73b4f",
+      "campo": "P7",
+      "columna": "https://example.org/mex-ontologi/file-column/3d8d9ae1-bac3-40cc-be26-c919c0d73b4f%2FHoja1%2F7",
+      "diccionario": "063058e6-aed3-4a60-b944-5e653c77b14d",
+      "concepto": "condiciones-innovacion-tic-declaradas",
+      "descripcion": "Enliste las condiciones que considere contribuyan a la innovación en TIC",
+      "huella_esquema": "7e26bdce9f810403af61bf9db02dde5244818d14af142daa7970b3902a987486",
+      "huella_fila_diccionario": "fefc6b0d6ceed477ceef37d5e850751eacef31f435c6c5e05e18a8827680e470",
+      "criterio": "Revision explicita del campo en el esquema de este recurso y su fila de diccionario en el mismo conjunto: nombre, contexto, descripcion y representacion verificados, huellas verificadas contra archivos locales. Aplicacion condicionada de regla r5-tic-006 y concepto condiciones-innovacion-tic-declaradas para la misma definicion (no crea regla nueva). Alcance de interpretacion documental; no se validan valores, no se confirma pertenencia a catalogos, no se habilitan cruces."
+    },
+    {
+      "recurso": "3d8d9ae1-bac3-40cc-be26-c919c0d73b4f",
+      "campo": "P13",
+      "columna": "https://example.org/mex-ontologi/file-column/3d8d9ae1-bac3-40cc-be26-c919c0d73b4f%2FHoja1%2F13",
+      "diccionario": "063058e6-aed3-4a60-b944-5e653c77b14d",
+      "concepto": "recursos-anuales-innovacion-declarados",
+      "descripcion": "Enliste los recursos anuales que se hayan destinado a innovación:",
+      "huella_esquema": "7e26bdce9f810403af61bf9db02dde5244818d14af142daa7970b3902a987486",
+      "huella_fila_diccionario": "fed72d1b1f284dc88de6809e3cc389ea7d4343e99248e13fd848a94e726e01d8",
+      "criterio": "Revision explicita del campo en el esquema de este recurso y su fila de diccionario en el mismo conjunto: nombre, contexto, descripcion y representacion verificados, huellas verificadas contra archivos locales. Aplicacion condicionada de regla r5-tic-007 y concepto recursos-anuales-innovacion-declarados para la misma definicion (no crea regla nueva). Alcance de interpretacion documental; no se validan valores, no se confirma pertenencia a catalogos, no se habilitan cruces. Nota NBSP: la descripcion RAW de la fila termina en U+00A0 y el valor materializado lo recorta; hash RAW intacto, sentido y descripcion materializada correctos, sin efecto semantico; no se altera fila original, huellas ni significado."
+    },
+    {
+      "recurso": "b444876c-8681-4503-98ca-06876a62faae",
+      "campo": "P2",
+      "columna": "https://example.org/mex-ontologi/file-column/b444876c-8681-4503-98ca-06876a62faae%2FHoja1%2F2",
+      "diccionario": "af14d207-7697-4d52-b99b-46a35a1b76ac",
+      "concepto": "sector-dependencia-diagnostico",
+      "descripcion": "Sector",
+      "huella_esquema": "409464b6b6451e047d0dfe87d037df8977187979fcb1348f0d4a28be52e5ab16",
+      "huella_fila_diccionario": "7e4792227b1e57f623212566d266783aa37726e8a6b627b00ec2056839875577",
+      "criterio": "Revision explicita del campo en el esquema de este recurso y su fila de diccionario en el mismo conjunto: nombre, contexto, descripcion y representacion verificados, huellas verificadas contra archivos locales. Aplicacion condicionada de regla r5-tic-005 y concepto sector-dependencia-diagnostico para la misma definicion (no crea regla nueva). Alcance de interpretacion documental; no se validan valores, no se confirma pertenencia a catalogos, no se habilitan cruces."
+    },
+    {
+      "recurso": "c6d42e45-2193-4e22-a5b1-aa2770e9acf1",
+      "campo": "P2",
+      "columna": "https://example.org/mex-ontologi/file-column/c6d42e45-2193-4e22-a5b1-aa2770e9acf1%2FHoja1%2F2",
+      "diccionario": "8f8e3cfb-e551-4a95-b382-4999351c5f29",
+      "concepto": "sector-dependencia-diagnostico",
+      "descripcion": "Sector",
+      "huella_esquema": "05688c29525fbcb9cf47951f84631583d952dd5bdf81cef1bd8ce36aaea72b54",
+      "huella_fila_diccionario": "7e4792227b1e57f623212566d266783aa37726e8a6b627b00ec2056839875577",
+      "criterio": "Revision explicita del campo en el esquema de este recurso y su fila de diccionario en el mismo conjunto: nombre, contexto, descripcion y representacion verificados, huellas verificadas contra archivos locales. Aplicacion condicionada de regla r5-tic-004 y concepto sector-dependencia-diagnostico para la misma definicion (no crea regla nueva). Alcance de interpretacion documental; no se validan valores, no se confirma pertenencia a catalogos, no se habilitan cruces."
+    }
+  ],
+  "conceptos": {
+    "residencia-extranjera-madre": [
+      "Indicador textual de si la madre es residente extranjera",
+      "Indicador textual declarado en el diccionario de Nacimientos; ejemplo literal NO. Solo texto declarado; sin catalogo, sin mapa de valores, sin vigencia. No unifica con RESIDEEXTRANJERO.",
+      null
+    ],
+    "condiciones-innovacion-tic-declaradas": [
+      "Condiciones para la innovación en TIC declaradas",
+      "Lista textual declarada por la dependencia de las condiciones que considera que contribuyen a la innovación en TIC (Política Digital, APE Sonora). Texto libre con ejemplo; no fija catálogo, no cuantifica ni homologa entre dependencias.",
+      null
+    ],
+    "recursos-anuales-innovacion-declarados": [
+      "Recursos anuales destinados a innovación declarados",
+      "Consignación textual de los recursos anuales destinados a innovación (Política Digital, APE Sonora). Ejemplo mixto monto/especie conservado tal cual; unidad y moneda no declaradas, sin inferencias, agregaciones ni comparaciones.",
+      null
+    ]
+  },
+  "origenes": {
+    "r5-nac-resideextranjerod-no_especificada": [
+      "entregas/nacimientos/entrega.json"
+    ],
+    "https://example.org/mex-ontologi/file-column/46977217-9396-4f9c-bddb-6616e82530b4%2FSINAC%202022%2026-09-22%2F18": [
+      "entregas/nacimientos/entrega.json"
+    ],
+    "r5-tic-001": [
+      "entregas/tic/entrega.json"
+    ],
+    "r5-tic-002": [
+      "entregas/tic/entrega.json"
+    ],
+    "r5-tic-003": [
+      "entregas/tic/entrega.json"
+    ],
+    "r5-tic-004": [
+      "entregas/tic/entrega.json"
+    ],
+    "r5-tic-005": [
+      "entregas/tic/entrega.json"
+    ],
+    "r5-tic-006": [
+      "entregas/tic/entrega.json"
+    ],
+    "r5-tic-007": [
+      "entregas/tic/entrega.json"
+    ],
+    "https://example.org/mex-ontologi/file-column/1e5e326f-2975-4614-9aff-8320f1d9c1a9%2FHoja1%2F2": [
+      "entregas/tic/adicionales.json",
+      "entregas/tic/entrega.json"
+    ],
+    "https://example.org/mex-ontologi/file-column/1f7476be-6a56-4335-be31-e77d7884c835%2FHoja1%2F2": [
+      "entregas/tic/adicionales.json",
+      "entregas/tic/entrega.json"
+    ],
+    "https://example.org/mex-ontologi/file-column/3d8d9ae1-bac3-40cc-be26-c919c0d73b4f%2FHoja1%2F2": [
+      "entregas/tic/adicionales.json",
+      "entregas/tic/entrega.json"
+    ],
+    "https://example.org/mex-ontologi/file-column/3d8d9ae1-bac3-40cc-be26-c919c0d73b4f%2FHoja1%2F7": [
+      "entregas/tic/adicionales.json",
+      "entregas/tic/entrega.json"
+    ],
+    "https://example.org/mex-ontologi/file-column/3d8d9ae1-bac3-40cc-be26-c919c0d73b4f%2FHoja1%2F13": [
+      "entregas/tic/adicionales.json",
+      "entregas/tic/entrega.json"
+    ],
+    "https://example.org/mex-ontologi/file-column/b444876c-8681-4503-98ca-06876a62faae%2FHoja1%2F2": [
+      "entregas/tic/adicionales.json",
+      "entregas/tic/entrega.json"
+    ],
+    "https://example.org/mex-ontologi/file-column/c6d42e45-2193-4e22-a5b1-aa2770e9acf1%2FHoja1%2F2": [
+      "entregas/tic/adicionales.json",
+      "entregas/tic/entrega.json"
+    ]
+  },
+  "resumen": {
+    "significados_nuevos": 8,
+    "vinculos_nuevos": 8,
+    "conceptos_nuevos": 3,
+    "significados_iniciales_pendientes": 179,
+    "significados_restantes": 171,
+    "base_preservada": true
+  }
+}

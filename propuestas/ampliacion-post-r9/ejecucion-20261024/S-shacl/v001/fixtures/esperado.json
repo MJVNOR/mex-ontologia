@@ -1,0 +1,34 @@
+{
+  "positivo.ttl": {
+    "conforms": true,
+    "violations": []
+  },
+  "positivo-instancias-r9.ttl": {
+    "conforms": true,
+    "violations": [],
+    "requiere": {
+      "variable_estado_fuera": 3,
+      "correspondencias_candidata_por_nombre": 17
+    }
+  },
+  "negativo.ttl": {
+    "conforms": false,
+    "violations": [
+      {"shape": "https://example.org/mex-ontologi/shapes/VariableRespaldadaConSignificadoDocumentado", "focus": "https://example.org/mex-ontologi/prueba-s-shacl/v001/n-r1"},
+      {"shape": "https://example.org/mex-ontologi/shapes/VariableRespaldadaSinSignificadoCandidato", "focus": "https://example.org/mex-ontologi/prueba-s-shacl/v001/n-r2"},
+      {"shape": "https://example.org/mex-ontologi/shapes/VariableCandidataConSignificadoCandidato", "focus": "https://example.org/mex-ontologi/prueba-s-shacl/v001/n-r3"},
+      {"shape": "https://example.org/mex-ontologi/shapes/VariableCandidataSinSignificadoDocumentado", "focus": "https://example.org/mex-ontologi/prueba-s-shacl/v001/n-r4"},
+      {"shape": "https://example.org/mex-ontologi/shapes/CorrespondenciaRevisadaVariableRespaldada", "focus": "https://example.org/mex-ontologi/prueba-s-shacl/v001/n-r5a"},
+      {"shape": "https://example.org/mex-ontologi/shapes/CorrespondenciaRevisadaVariableRespaldada", "focus": "https://example.org/mex-ontologi/prueba-s-shacl/v001/n-r5b"},
+      {"shape": "https://example.org/mex-ontologi/shapes/CorrespondenciaRevisadaVariableRespaldada", "focus": "https://example.org/mex-ontologi/prueba-s-shacl/v001/n-r5c"},
+      {"shape": "https://example.org/mex-ontologi/shapes/UnidadDeclaradaContrato", "focus": "https://example.org/mex-ontologi/prueba-s-shacl/v001/n-r6a"},
+      {"shape": "https://example.org/mex-ontologi/shapes/UnidadDeclaradaContrato", "focus": "https://example.org/mex-ontologi/prueba-s-shacl/v001/n-r6b"},
+      {"shape": "https://example.org/mex-ontologi/shapes/UnidadDeclaradaContrato", "focus": "https://example.org/mex-ontologi/prueba-s-shacl/v001/n-r6c"},
+      {"shape": "https://example.org/mex-ontologi/shapes/UnidadDeclaradaContrato", "focus": "https://example.org/mex-ontologi/prueba-s-shacl/v001/n-r6d"},
+      {"shape": "https://example.org/mex-ontologi/shapes/UnidadDeclaradaContrato", "focus": "https://example.org/mex-ontologi/prueba-s-shacl/v001/n-r6e"},
+      {"shape": "https://example.org/mex-ontologi/shapes/UnidadDeclaradaContrato", "focus": "https://example.org/mex-ontologi/prueba-s-shacl/v001/n-r6f"},
+      {"shape": "https://example.org/mex-ontologi/shapes/UnidadDeclaradaContrato", "focus": "https://example.org/mex-ontologi/prueba-s-shacl/v001/n-r6g"},
+      {"shape": "https://example.org/mex-ontologi/shapes/UnidadDeclaradaContrato", "focus": "https://example.org/mex-ontologi/prueba-s-shacl/v001/n-r6h"}
+    ]
+  }
+}

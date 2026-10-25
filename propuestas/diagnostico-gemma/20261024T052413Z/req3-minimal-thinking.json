@@ -1,0 +1,58 @@
+{
+  "inicio_utc": "2026-10-24T05:27:26Z",
+  "url": "https://generativelanguage.googleapis.com/v1beta/openai/chat/completions",
+  "body_enviado": {
+    "model": "gemma-4-31b-it",
+    "messages": [
+      {
+        "role": "user",
+        "content": "Responde solamente OK"
+      }
+    ],
+    "max_tokens": 256,
+    "extra_body": {
+      "google": {
+        "thinking_config": {
+          "thinking_level": "minimal",
+          "include_thoughts": false
+        }
+      }
+    }
+  },
+  "status": 200,
+  "duracion_s": 23.75,
+  "error": null,
+  "usage": {
+    "completion_tokens": 1,
+    "prompt_tokens": 5,
+    "total_tokens": 6
+  },
+  "finish_reason": "stop",
+  "texto_visible": "OK",
+  "respuesta_completa": {
+    "choices": [
+      {
+        "finish_reason": "stop",
+        "index": 0,
+        "message": {
+          "content": "OK",
+          "extra_content": {
+            "google": {
+              "thought": true
+            }
+          },
+          "role": "assistant"
+        }
+      }
+    ],
+    "created": 1792819669,
+    "id": "vkHcaoqcIra4qtsPqc2WwQk",
+    "model": "gemma-4-31b-it",
+    "object": "chat.completion",
+    "usage": {
+      "completion_tokens": 1,
+      "prompt_tokens": 5,
+      "total_tokens": 6
+    }
+  }
+}

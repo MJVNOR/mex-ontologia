@@ -1,0 +1,60 @@
+--- a/scripts/integrar_entregas.py
++++ b/scripts/integrar_entregas.py
+@@ -328,7 +328,15 @@
+         from integrar_ronda_7 import cargar as cargar_ronda_7
+         r6c, r6f, r6base, r6accepted, r6s = cargar_ronda_6()
+         r7c, r7f, r7base, r7accepted, r7sources = cargar_ronda_7()
+-        sources.update({k: v for k, v in r7sources.items() if k not in sources})
++        sources.update({k: v for k, v in r7sources.items() if k not in sources})
++        # R8: proyección del reporte vivo a su equivalente R7; el bloque
++        # histórico siguiente corre intacto y el delta R8 se valida después.
++        from integrar_ronda_8 import cargar as cargar_ronda_8, preparar_proyeccion_r7
++        semantic_vivo = semantic
++        r8c, r8f, r8base, r8accepted, r8sources = cargar_ronda_8()
++        sources.update({k: v for k, v in r8sources.items() if k not in sources})
++        semantic, delta8 = preparar_proyeccion_r7(
++            semantic, r7base, r7accepted, r8base, r8accepted, r8f)
+         if r7base['reglas_descripcion_exacta'] != r6base['reglas_descripcion_exacta'] + r6accepted['reglas'] \
+                 or r7base['vinculos_documentales_revisados'] != r6base['vinculos_documentales_revisados'] + r6accepted['vinculos']:
+             raise ValueError('Base R7 discontinua respecto a cadena R6')
+@@ -415,7 +415,39 @@
+                     or observed.get('regla') != row['id'] \
+                     or observed.get('concepto') != row['concepto'] \
+                     or observed.get('huella_fila_diccionario') != row['huella_fila_diccionario']:
+-                raise ValueError('Regla R7 no materializada: ' + row['id'])
++                raise ValueError('Regla R7 no materializada: ' + row['id'])
++        # Delta R8 real aprobado sobre el reporte vivo (derivado, nada observado).
++        res8 = semantic_vivo['resumen']
++        if res8['estados_correspondencias']['documental_revisada'] != 4478 + delta8['n_vinculos'] \
++                or res8['estados_correspondencias']['candidata_por_nombre'] != 45 - delta8['n_vinculos']:
++            raise ValueError('R8 sin delta de correspondencias derivado')
++        if res8['conceptos_compartidos'] != 1106 + delta8['n_conceptos']:
++            raise ValueError('R8 sin delta de conceptos derivado')
++        est8 = res8['estados_variables']
++        if est8['respaldada_por_definicion'] != 1423 + delta8['n_reglas'] \
++                or est8['candidata_sin_definicion_suficiente'] != 16 - delta8['de_candidatas']:
++            raise ValueError('R8 sin delta de variables derivado')
++        if est8['respaldada_por_definicion'] + est8['fuera_del_nucleo_actual'] \
++                + est8['candidata_sin_definicion_suficiente'] != res8['definiciones_con_nombre_examinadas']:
++            raise ValueError('R8 sin conservación total derivada')
++        if delta8['n_reglas']:
++            if res8['columnas_con_correspondencia'] < 4523:
++                raise ValueError('R8 redujo columnas con correspondencia')
++        elif res8['columnas_con_correspondencia'] != 4523:
++            raise ValueError('Pin histórico de columnas con correspondencia alterado')
++        variables8 = {v['definicion_iri']: v for v in semantic_vivo['variables']}
++        for row in r8accepted['reglas']:
++            observed = variables8[row['definiciones'][0]]
++            if observed.get('estado') != 'respaldada_por_definicion' \
++                    or observed.get('regla') != row['id'] \
++                    or observed.get('concepto') != row['concepto'] \
++                    or observed.get('huella_fila_diccionario') != row['huella_fila_diccionario']:
++                raise ValueError('Regla R8 no materializada: ' + row['id'])
++        expected['conceptos'] += delta8['n_conceptos']
++        expected['variables_respaldadas'] += delta8['n_reglas']
++        expected['variables_pendientes'] -= delta8['de_candidatas']
++        expected['correspondencias_revisadas'] += delta8['n_vinculos']
++        semantic = semantic_vivo
+ 
+ 
+     actual = {'conceptos': semantic['resumen']['conceptos_compartidos'],

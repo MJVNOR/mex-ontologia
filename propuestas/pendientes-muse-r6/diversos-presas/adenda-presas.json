@@ -1,0 +1,84 @@
+{
+  "alcance": "Adenda a entrega.json del rol (2026-10-23): resuelve unicamente la columna cat_estatal/Clave (recurso 4219d141-5084-4308-bda3-d44ca28a4f53) con el archivo autentico de segunda vuelta web. No modifica entrega.json, listo.json, solicitudes-web.json ni el nucleo. Alcance documental: no autoriza cruces, no habilita joins por Clave, no acredita vigencia historica ni edicion del catalogo.",
+  "columna": {
+    "campo": "Clave",
+    "columna": "https://example.org/mex-ontologi/file-column/4219d141-5084-4308-bda3-d44ca28a4f53%2Fcat_estatal%2F1",
+    "decision": "proponer",
+    "definicion_iri": "https://example.org/mex-ontologi/definition/bfb8788b-8ce3-475e-8bbd-dd1c5154c877%2F4",
+    "evidencia": [
+      "Bytes identicos a la inspeccion historica: web/evidencia/cat_estatal_1.xlsx = 11981 bytes, magia PK 03 04, SHA-256 b7a398a0128af709ffed44a0db4ccb5a6c9ffcfebd295dc010f6b5e90d2b10b8, igual al sha256_fragmento_o_archivo de data/portal/contenido-inspeccion.json (recurso 4219d141). Sin sustitucion: la fuente original rige; la copia web corrobora",
+      "VW-33 (cita_literal, 2026-10-23): HTTP 200 navegador y CLI, Content-Type application/vnd.openxmlformats-officedocument.spreadsheetml.sheet, 11981 bytes ambos; hoja 'cat_estatal', 10 filas (cabecera + 9 presas); Clave pos 1 = LCDSO, PECSO, AOBSO, AGZCH, ARCSO, PMOSO, ARLSO, CHTSO, IRASO; recurso creado 19-01-2024, periodo 2023-01-01",
+      "Lectura propia por bytes (openpyxl): 1 hoja 'cat_estatal', 17 columnas en el mismo orden que la inspeccion (Clave, Presa, Cuenca hidrologica, Cuenca de disponibilidad, Nombre_comun, Estado, Municipio, cap_name, cap_namo, vol_muerto, Numero, Latitud, Longitud, Altitud, Identificador de la cuenca de disponibilidad, Numero de la region hidrologica, Region hidrologica); 9 filas de datos; Clave = 9 str unicos de longitud 5",
+      "Exclusion estructural de /1: la hoja 'Historico_presas' del diccionario define el objeto serie-temporal (Clave + Fecha AAAA/MM/DD + Almacenamiento hm3 Float); la hoja fisica carece de columnas de fecha y almacenamiento y sus filas son registros de atributos por presa, no serie temporal",
+      "Correspondencia de objeto con Catalogo_estatal: 13 columnas fisicas ya documental_revisada en cobertura a filas de esa hoja (/7 Presa, /20 Cuenca de disponibilidad, /8 Nombre_comun, /9 Estado, /10 Municipio, /11 cap_name, /12 cap_namo, /13 vol_muerto, /15 Numero, /16 Latitud, /17 Longitud, /18 Altitud, /22 Region hidrologica); Clave pos 1 es la llave de fila del mismo objeto; definicion /4 (Texto/CCCCC, 'Contiene la clave identificadora de cada presa', hoja Catalogo_estatal) coincide en objeto, tipo, formato y posicion",
+      "Huellas calculadas por script con scripts/consolidar_semantica.huella sobre inspeccion tablas[0] y diccionario definiciones[3]; asignadas directamente al vinculo; validacion len-64 y hex superada",
+      "VW-31/SW6-PRESAS-01: SINA no aporta campo Clave en esta visita; inventario nacional usa NUM/ID_CT numericos (evidencia propia R6 CENAPRED); sin documento que vincule claves nacionales con la Clave local: no se usan"
+    ],
+    "limites": [
+      "documental: denota la clave declarada del registro de catalogo; no valida valores contra catalogo publicado (no identificado en las fuentes consultadas)",
+      "no habilita joins por Clave con Historico_presas (/1) ni con ninguna otra hoja o recurso",
+      "no afirma identidad de dominios entre Catalogo_estatal e Historico_presas",
+      "no acredita edicion, version, vigencia historica ni periodo del catalogo (recurso creado 19-01-2024 con periodo 2023-01-01 segun VW-33: metadato citado, no acreditacion)",
+      "la hoja fisica no es espejo de Catalogo_estatal: omite Comision (/5), Subdireccion (/6) y Rio (/14); trae Cuenca hidrologica (pos 3) e Identificador/Numero regionales (pos 15/16) sin correspondencia",
+      "no toca las 5 columnas resueltas del contexto ni los significados /1 y /4 (ambos siguen respaldados sin cambio)"
+    ],
+    "motivo": "El archivo autentico aporta los valores (9 claves CCCCC unicas) y confirma el objeto: filas de atributos por presa sustentadas por 13 columnas hermanas ya vinculadas a Catalogo_estatal (no 14: el conteo previo incluia una de mas; cobertura registra 15 correspondencias del recurso = 13 documental_revisada + 2 ambiguas de Clave). La seleccion de /4 descansa en correspondencia de hoja/objeto + tipo/formato/posicion + llave de fila, no en parecido de nombre; /1 queda excluido por incompatibilidad de objeto (serie Clave-Fecha-Almacenamiento segun diccionario) corroborada por la ausencia de esas columnas en la hoja fisica. Prueba suficiente para vinculo documental con los limites anotados.",
+    "recurso": "4219d141-5084-4308-bda3-d44ca28a4f53"
+  },
+  "fuentes": [
+    {
+      "aplicabilidad": "Archivo autentico con valores; bytes identicos a la inspeccion historica; base del vinculo",
+      "localizador": "propuestas/pendientes-muse-r6/web/evidencia/cat_estatal_1.xlsx (11981 bytes, PK) + propuestas/pendientes-muse-r6/web/verificacion_nuevas.json VW-33 (cita_literal)",
+      "sha256": "b7a398a0128af709ffed44a0db4ccb5a6c9ffcfebd295dc010f6b5e90d2b10b8",
+      "url": "https://datos.sonora.gob.mx/dataset/8c1f452e-7967-4c6b-a7b5-f2279360ad6c/resource/4219d141-5084-4308-bda3-d44ca28a4f53/download/cat_estatal_1.xlsx"
+    },
+    {
+      "aplicabilidad": "Objeto Historico_presas (Clave+Fecha+Almacenamiento) vs objeto Catalogo_estatal (19 atributos); base de la exclusion de /1",
+      "localizador": "data/portal/inspecciones/bfb8788b-8ce3-475e-8bbd-dd1c5154c877.json (diccionario_completo=true, 22 definiciones)",
+      "sha256": "inspeccion local fijada (captura http 200)",
+      "url": null
+    },
+    {
+      "aplicabilidad": "13 correspondencias documental_revisada a filas Catalogo_estatal + 2 ambiguas_por_nombre para Clave; concepto clave-identificadora-presa y estados de /1 y /4",
+      "localizador": "data/semantica/cobertura.json (15 correspondencias del recurso; sha intacto vs base R6)",
+      "sha256": "19237e41757af3c7109c88515e1215339a14d5c5188ad9a4d569b9e335ae0ee4",
+      "url": null
+    },
+    {
+      "aplicabilidad": "Regla vigente r3a10-0365 (concepto, representacion codigo, alcance solo diccionario/conjunto/definicion/nombre/descripcion, limite sin catalogo ni identidad)",
+      "localizador": "ontologia/semantica.json (sha intacto vs base R6)",
+      "sha256": "0dd6f0f7dfdb057a57c47d5dbec690b41f564f07690c7551e3f1a6c4421407bd",
+      "url": null
+    },
+    {
+      "aplicabilidad": "SINA sin campo Clave en esta visita; inventario web no accesible; cuestion resuelta por fuente primaria Sonora",
+      "localizador": "propuestas/pendientes-muse-r6/web/verificacion_nuevas.json VW-31 (resumen_marcado) + propuestas/pendientes-muse-r6/web/respuestas_web2.json SW6-PRESAS-01",
+      "sha256": "fragmento VW-31 c66580aa317cb24a2ba94d89422b9081b3bfdad4522cfbe25e5bf24a62027818; fragmento SW6-PRESAS-01 c56ce57468edf12ff2cdb29996f6f437d8066a813d1f50543c0efb68254a59c9 (shas de resumen, no de bytes)",
+      "url": "https://sina.conagua.gob.mx/"
+    }
+  ],
+  "huellas_recomputadas": {
+    "huella_esquema": "29af60e8a6e9e2026623388d9e06cddb2689bfd25de8db395ab97bf7e47eecfd",
+    "huella_fila_diccionario": "d120834445f43d0bb67d135c256e73c91984a2fad6ec8ddbc5639c023dd44153",
+    "metodo": "scripts/consolidar_semantica.huella sobre data/portal/contenido-inspeccion.json recurso 4219d141 tablas[0] y data/portal/inspecciones/bfb8788b.json definiciones[3]; asignacion directa desde el script, sin transcripcion",
+    "advertencia_transcripcion": "La cita R5 de la fila /4 omitia caracteres y no pasaba la validacion de 64 hex; rige el valor recomputado aqui"
+  },
+  "nota_bytes": {
+    "conclusion": "Sin sustitucion: SHA-256 identico (b7a398a0...) entre copia web 2026-10-23 e inspeccion historica; la captura original rige",
+    "diferencia_waf": "El HEAD/GET por CLI de este rol el 2026-10-23 devolvio HTTP 403 (WAF cloudflare); la descarga del rol web el mismo dia fue HTTP 200 normal. Diferencia atribuida a ruta/cliente del WAF, no a cambio del archivo: los bytes mandan y son identicos",
+    "tipos_fisicos": "Clave str(5) x9 unicos; cap_name/cap_namo/vol_muerto float; Numero/Altitud/Identificador/Numero-region int; resto str; coherentes con Tipo/Formato del diccionario (Texto/CCCCC, Numerico Float/Int)"
+  },
+  "rol": "diversos-presas",
+  "vinculo_propuesto": {
+    "campo": "Clave",
+    "columna": "https://example.org/mex-ontologi/file-column/4219d141-5084-4308-bda3-d44ca28a4f53%2Fcat_estatal%2F1",
+    "concepto": "clave-identificadora-presa",
+    "criterio": "Revision explicita del archivo autentico (bytes, hoja, orden, tipos, 9 valores CCCCC unicos) y de su fila de diccionario en el mismo conjunto: la fila fisica integra el objeto de atributos por presa (13 columnas hermanas ya documental_revisada a Catalogo_estatal: /7,/20,/8,/9,/10,/11,/12,/13,/15,/16,/17,/18,/22), mientras que el diccionario define el objeto Historico_presas como serie (Clave, Fecha, Almacenamiento); la ausencia de columnas de fecha/almacenamiento en la hoja fisica corrobora, sin ser por si sola la prueba, la pertenencia al objeto catalogo. Alcance de interpretacion documental; no se validan valores contra catalogo publicado (no identificado en las fuentes consultadas), no se habilitan joins, no se confirma vigencia ni edicion.",
+    "definicion_iri": "https://example.org/mex-ontologi/definition/bfb8788b-8ce3-475e-8bbd-dd1c5154c877%2F4",
+    "descripcion": "Contiene la clave identificadora de cada presa.",
+    "diccionario": "bfb8788b-8ce3-475e-8bbd-dd1c5154c877",
+    "huella_esquema": "29af60e8a6e9e2026623388d9e06cddb2689bfd25de8db395ab97bf7e47eecfd",
+    "huella_fila_diccionario": "d120834445f43d0bb67d135c256e73c91984a2fad6ec8ddbc5639c023dd44153",
+    "recurso": "4219d141-5084-4308-bda3-d44ca28a4f53"
+  }
+}

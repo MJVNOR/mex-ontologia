@@ -1,0 +1,79 @@
+{
+  "agente": "A3-itama",
+  "version": "v002",
+  "generado_en_utc": "2026-10-24T20:22:19Z",
+  "modelo": "opencode/deepseek-v4.1-flash-free",
+  "alcance": "propuestas/ampliacion-post-r9/ejecucion-20261024/A3-itama/v002/",
+  "excluido_del_manifiesto": [
+    "congelada.json (el propio sello)"
+  ],
+  "ejecuciones": [
+    {
+      "ejecucion": "analisis",
+      "comando": "uv run python propuestas\\ampliacion-post-r9\\ejecucion-20261024\\A3-itama\\v002\\scripts\\analisis_a3_itama_v002.py",
+      "exit_code": 0,
+      "salida_capturada": "resultados/ejecucion-analisis.out",
+      "salida_sha256": "885ebee366231e445f2e62169d6bf40f70bd145ccb05124e704acdace1a8a00a"
+    },
+    {
+      "ejecucion": "pruebas",
+      "comando": "uv run python propuestas\\ampliacion-post-r9\\ejecucion-20261024\\A3-itama\\v002\\pruebas\\test_a3_itama_v002.py",
+      "exit_code": 0,
+      "salida_capturada": "resultados/ejecucion-pruebas.out",
+      "salida_sha256": "26cd8e75741c44158710aed4d702627ea59c84791bbf91035e0220b07e0d531a"
+    }
+  ],
+  "total_archivos": 9,
+  "total_bytes": 178995,
+  "archivos": [
+    {
+      "ruta": "entrega.json",
+      "bytes": 5502,
+      "sha256": "1fd3dc5abe1385e742b3aeab0a3f5c8a0ca1d32563df760dc267bbd3e5d81243"
+    },
+    {
+      "ruta": "entrega.md",
+      "bytes": 6325,
+      "sha256": "24ea7d2c62aae49134e551317a42dddc1939618d1c47c294ec7375502deb67bb"
+    },
+    {
+      "ruta": "pruebas/test_a3_itama_v002.py",
+      "bytes": 7175,
+      "sha256": "739814e62f1ae06e53029264d64d7e0d6d3596997371dd6b5af1e83c37cedaff"
+    },
+    {
+      "ruta": "resultados/analisis-a3-itama-v002.json",
+      "bytes": 45956,
+      "sha256": "526ef2d52bbbfe0608811587b4d549b266644ec2ab93e5c954331a2cc555861d"
+    },
+    {
+      "ruta": "resultados/ejecucion-analisis.out",
+      "bytes": 488,
+      "sha256": "885ebee366231e445f2e62169d6bf40f70bd145ccb05124e704acdace1a8a00a"
+    },
+    {
+      "ruta": "resultados/ejecucion-pruebas.out",
+      "bytes": 394,
+      "sha256": "26cd8e75741c44158710aed4d702627ea59c84791bbf91035e0220b07e0d531a"
+    },
+    {
+      "ruta": "resultados/inventario-archivos-repo.json",
+      "bytes": 82945,
+      "sha256": "0ba583fec4e847faa0b8296f68dba105606a65a60268da8d279f6cfa59b04ba1"
+    },
+    {
+      "ruta": "scripts/analisis_a3_itama_v002.py",
+      "bytes": 26248,
+      "sha256": "660dc4dbd4be3d9ca2807d47fe5637667bd7396c1c93f9d45ebf1be0af3caa94"
+    },
+    {
+      "ruta": "scripts/sellar_v002.py",
+      "bytes": 3962,
+      "sha256": "bfb5040a638742be652b4383914dadccadc2ac124b6960269ab6440010f5e575"
+    }
+  ],
+  "sello_sha256": "050bb906bce471cefaeb10f84852db02416418e9b656e3258788a1e7f2dc305d",
+  "metodo_sello": "sha256 sobre JSON canónico (sort_keys, separadores ',', ':') de la lista archivos (ruta, bytes, sha256)",
+  "verificacion": "uv run python scripts/sellar_v002.py y comparar sello_sha256: se mantiene entre corridas porque los archivos generados usan fecha_corte_documental fija (el único campo volátil es generado_en_utc de este sello, excluido del manifiesto)",
+  "nota": "No se sellan hashes transcriptos ni caches: cada valor se recalcula desde los bytes de esta carpeta."
+}

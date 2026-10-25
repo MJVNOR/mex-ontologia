@@ -1,0 +1,122 @@
+{
+  "rol": "T-top50",
+  "version": "v002",
+  "modelo": "opencode/deepseek-v4.1-flash-free",
+  "fecha_utc": "2026-10-24",
+  "estado": "reconciliacion_verificada_sin_join",
+  "estado_filas": "NO_JOIN_APROBADO",
+  "motivo": "Corrige H-01 de R-documental v001 (huella del plan desfasada) y publica el ranking con un script instalable. v001 se conserva intacta y sellada.",
+  "hallazgo_h01": {
+    "id": "H-01",
+    "detectado_por": "R-documental/v001",
+    "declarado_previo": "807a05e4473597ced2e1d708fb2069884d9a669cc0ec823d6a1aca316a680e9c",
+    "actual": "f43214a0d38ff2cb1fcdfb213d9aa0fba67415dc21b2033ac305a3a70eda0ce8",
+    "bytes_actual": 5672,
+    "causa": "El plan docs/plan-paralelo-ampliacion-post-r9.md se edito despues del sellado de v001 (mtime 2026-10-24T20:15:39Z vs sello 2026-10-24T20:09:42Z), al registrarse el cambio Muse -> DeepSeek Free.",
+    "error_de_autor": false,
+    "impacto": "Solo trazabilidad del insumo; 3916/1191/50 y los scores se recomputan desde mapa, criterio y CSV y no dependen del plan.",
+    "accion": "v002 declara la huella vigente en meta.fuentes y deja esta nota."
+  },
+  "refactor": {
+    "script": "propuestas/ampliacion-post-r9/ejecucion-20261024/T-top50/v002/scripts/publicar_top50_r9.py",
+    "api": "generar(root, outdir)",
+    "cli": "--root (autodetectado) y --out-dir",
+    "destino_por_defecto": "reports/ solo si el script esta instalado en scripts/; en carpeta de version se exige --out-dir",
+    "invocacion_de_esta_entrega": "--out-dir propuestas/ampliacion-post-r9/ejecucion-20261024/T-top50/v002 (explicita)",
+    "guardas": [
+      "Rechaza destinos dentro de las fuentes: mapa, criterio C2, CSV top50/matriz, cobertura R9, seguimiento R9 y plan.",
+      "Rechaza destinos dentro de carpetas selladas (presencia de congelada.json), incluida v001.",
+      "Solo escribe top50-oportunidades-r9.json/.md/.html en el outdir."
+    ],
+    "html_destino": "top50-oportunidades-r9.html",
+    "sin_staging_ni_rutas_v001_en_contenido": "El contenido publicado no menciona staging ni rutas de salida de v001; las rutas de fuentes C2 conservan su version de origen por trazabilidad."
+  },
+  "resultados": {
+    "mapa": "3916 pares: 2328 sin_clave_detectada, 1191 candidata_por_validar, 396 solo_dimensiones_amplias_o_tiempo, 1 exploratorio_ejecutado.",
+    "matriz_1191": "1191/1191 ids unicos y scores recomputados iguales al CSV.",
+    "orden_top50": "50/50 ids, rangos, scores y orden (score desc, id asc) iguales al CSV; 50 ids unicos.",
+    "top1": {
+      "id": "27a5c80c-514a-4170-a2e5-7ef40d818641--4d27a1c4-381d-4ce0-a663-0d3e23a93848",
+      "titulo": "Poblacion ITAMA Internamiento <> Poblacion ITAMA Externamiento",
+      "pesos_suma": 13.0,
+      "penalizaciones_suma": -8.0,
+      "score": 5.0
+    },
+    "carriles": {
+      "A1-911": {"id": "19e5036d-dbe3-4e1d-b021-df5d47b6fb1f--923b485b-515e-4fb9-a4ac-cccbeb88cc92", "rango": 2, "score": 3.0, "titulo": "Llamadas Improcedentes 911 <> Llamadas Procedentes 911"},
+      "A2-matrimonios-nacimientos": {"id": "1cf9c8e2-e7e4-43d8-a9fd-6da790e64c98--df2d60f5-2243-4bb0-885a-941aa8a657f5", "rango": 4, "score": 3.0, "titulo": "Matrimonios <> Nacimientos"},
+      "A3-itama": {"id": "27a5c80c-514a-4170-a2e5-7ef40d818641--4d27a1c4-381d-4ce0-a663-0d3e23a93848", "rango": 1, "score": 5.0, "titulo": "Poblacion ITAMA Internamiento <> Poblacion ITAMA Externamiento"}
+    },
+    "cobertura_r9": "cobertura_operativa_validada_sin_cambios_al_grafo; 1423 significados respaldados, 1106 conceptos; toda fila sigue candidata_por_validar hasta respaldo documental.",
+    "estado_filas": "50/50 filas en NO_JOIN_APROBADO; bloqueadores completos por fila."
+  },
+  "fuentes": [
+    {"ruta": "data/portal/oportunidades-cruce.json", "sha256": "40f107d5cf9c11ce937073ac2f7b5b0e3c9db8c342f7414cecb0f0744e0d0c14", "bytes": 9645149},
+    {"ruta": "propuestas/plan-tras-r8/ejecucion-20261024/C2-oportunidades/v001/criterio.json", "sha256": "2296486dc646b7b2fce1e5fafe56e81e34a290bbd341a771b9404d5583111306", "bytes": 1800},
+    {"ruta": "propuestas/plan-tras-r8/ejecucion-20261024/C2-oportunidades/v001/prioridades_top50.csv", "sha256": "db1182cda8be4686b4335ed443f3bf22480f04dccaa62f9b71358994c5d6174a", "bytes": 9660},
+    {"ruta": "propuestas/plan-tras-r8/ejecucion-20261024/C2-oportunidades/v001/matriz_pares_relevantes.csv", "sha256": "2f5fec408edf6dd216f93abcdd962f4163e4b7e070761f7ea57dd5dc5203db58", "bytes": 682244},
+    {"ruta": "reports/cobertura-operativa-r9.json", "sha256": "fd64a9aeb622255f98c3bdcd2ebf311757113982ac9ff62770615a73a4175ab8", "bytes": 77758},
+    {"ruta": "reports/seguimiento-operativo-post-r9.json", "sha256": "73103b1d2ff6daa7fdc2665e42c68802a98169005c5144129048e2f7a0c4698b", "bytes": 4319},
+    {"ruta": "docs/plan-paralelo-ampliacion-post-r9.md", "sha256": "f43214a0d38ff2cb1fcdfb213d9aa0fba67415dc21b2033ac305a3a70eda0ce8", "bytes": 5672}
+  ],
+  "pruebas": {
+    "archivo": "propuestas/ampliacion-post-r9/ejecucion-20261024/T-top50/v002/tests/test_publicar_top50_r9.py",
+    "total": 10,
+    "cubre": [
+      "mapa 3916 y reparto de estados",
+      "1191 scores recomputados y ids unicos",
+      "50 ids, rangos, scores y orden del publicado",
+      "carriles A1 rango 2, A2 rango 4, A3 rango 1 por ID exacto",
+      "destino instalado reports/ y exigencia de --out-dir en carpeta de version",
+      "generacion en directorio temporal identica a lo publicado",
+      "no escritura en las 7 fuentes ni en v001 (bytes y mtime) y rechazo de destinos prohibidos",
+      "contenido publicado sin staging ni rutas de salida de v001, con SHA256 completos",
+      "CLI: out-dir temporal con exit 0 y rechazo sin --out-dir",
+      "congelada.json: hashes, bytes, sello canonico y ejecuciones con exit 0"
+    ]
+  },
+  "salidas": {
+    "publicado_json": "propuestas/ampliacion-post-r9/ejecucion-20261024/T-top50/v002/top50-oportunidades-r9.json",
+    "publicado_md": "propuestas/ampliacion-post-r9/ejecucion-20261024/T-top50/v002/top50-oportunidades-r9.md",
+    "publicado_html": "propuestas/ampliacion-post-r9/ejecucion-20261024/T-top50/v002/top50-oportunidades-r9.html",
+    "reproductor": "propuestas/ampliacion-post-r9/ejecucion-20261024/T-top50/v002/scripts/publicar_top50_r9.py",
+    "sello_script": "propuestas/ampliacion-post-r9/ejecucion-20261024/T-top50/v002/scripts/sellar_v002.py",
+    "pruebas": "propuestas/ampliacion-post-r9/ejecucion-20261024/T-top50/v002/tests/test_publicar_top50_r9.py",
+    "ejecucion_publicacion": "propuestas/ampliacion-post-r9/ejecucion-20261024/T-top50/v002/resultados/publicacion.out",
+    "ejecucion_pruebas": "propuestas/ampliacion-post-r9/ejecucion-20261024/T-top50/v002/resultados/pruebas.out",
+    "entrega": "propuestas/ampliacion-post-r9/ejecucion-20261024/T-top50/v002/entrega.json",
+    "sello": "propuestas/ampliacion-post-r9/ejecucion-20261024/T-top50/v002/congelada.json"
+  },
+  "congelada": {
+    "ruta": "propuestas/ampliacion-post-r9/ejecucion-20261024/T-top50/v002/congelada.json",
+    "metodo": "Generado por scripts/sellar_v002.py: ejecuta publicacion y pruebas, normaliza duraciones, hashea code/tests/outputs y excluye el propio sello, __pycache__ y *.pyc. sello_sha256 sobre JSON canonico de la lista de archivos.",
+    "sin_autohash": true,
+    "sin_caches": true
+  },
+  "publicacion": {
+    "destino": "reports/top50-oportunidades-r9.json|.md|.html",
+    "quien": "unico integrador central",
+    "como": "instalar scripts/publicar_top50_r9.py en scripts/ y ejecutarlo sin --out-dir, o copiar los tres artefactos",
+    "esta_entrega_no_publica": true
+  },
+  "condiciones_aceptacion": [
+    "50 filas identicas en ids, rangos, scores y orden al ranking C2 verificado.",
+    "1191 scores de matriz recomputados iguales; 3916 pares contabilizados.",
+    "Carriles A1/A2/A3 en rangos 2/4/1 por ID exacto.",
+    "Todas las filas en NO_JOIN_APROBADO con bloqueadores.",
+    "Huellas SHA256 completas y vigentes de las 7 fuentes, incluido el plan corregido (H-01).",
+    "Script publicable con generar(root,outdir), CLI --out-dir y destino por defecto reports/ solo si esta instalado.",
+    "Sin escritura en fuentes ni en v001; pruebas de bytes y mtime lo verifican.",
+    "Sello calculado por codigo sobre los bytes, sin autohash ni caches."
+  ],
+  "limites": [
+    "Base IRI / example.org fuera de alcance; config.toml sin cambios.",
+    "Gemma excluido; sin contactos a publicadores ni busquedas agotadas.",
+    "Manifiestos R1-R9 y escritores centrales intactos.",
+    "Sin joins, sin rates y sin promocion de candidatas; oportunidad != join aprobado.",
+    "No se instala nada ni se escribe en reports/ desde esta entrega.",
+    "v001 no se modifica; toda correccion vive en v002.",
+    "Las rutas de fuentes C2 conservan su version de origen como rutas de lectura; no son destinos."
+  ],
+  "auditoria": "Pendiente de revision independiente por R-documental y B-tecnica sobre estos bytes. Esta entrega no emite dictamen ni anticipa veredicto."
+}

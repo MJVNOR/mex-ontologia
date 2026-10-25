@@ -1,0 +1,36 @@
+{
+  "fecha_utc": "2026-10-24T08:07:14.906657+00:00",
+  "estado": "aplicado_pendiente_regeneracion_y_SHACL",
+  "aceptadas_sha256": "0d58255de0ecf9b417c3a7d70439b22c11b16c6628334203f30fa40f37ef7684",
+  "manifiesto": "data/integracion-ronda-7/manifiesto.json",
+  "manifiesto_sha256": "7b5d242feeaf23bd6f54f44b6314e8afb829a88fd1ee9bb5a70807c900cf7a55",
+  "base_r6_sha256": "a30a2842d10699a1a78ddeae6121dad42b2166af1cd9aac6a5ed52f047fc68ca",
+  "adiciones": {
+    "reglas": 31,
+    "conceptos": 31,
+    "vinculos": 3
+  },
+  "cambios": [
+    {
+      "ruta": "scripts/integrar_ronda_7.py",
+      "sha256_antes": null,
+      "sha256_despues": "89b65d24846fd6afa8441a680e4499e0c7db6ae73af475ba8df873b055d1bfc4"
+    },
+    {
+      "ruta": "scripts/integrar_ronda_6.py",
+      "sha256_antes": "a87bdf8a3a372a2fe714f83c9fe5bee9a3320c4454636265133efd36fba392b6",
+      "sha256_despues": "2541cea3af0c3303cf3aaafb47209834a524e991cc60c856a3768e50a19e7182"
+    },
+    {
+      "ruta": "scripts/consolidar_semantica.py",
+      "sha256_antes": "f8044afce9b4f8d4af12d197624228cf49bb7e86fdad94668457dbd615726191",
+      "sha256_despues": "f8e7b590856a426e538e25d665e1b40945a8333299900d61fbc9154269d4639e"
+    },
+    {
+      "ruta": "ontologia/semantica.json",
+      "sha256_antes": "a30a2842d10699a1a78ddeae6121dad42b2166af1cd9aac6a5ed52f047fc68ca",
+      "sha256_despues": "f6b6754555d97f929658f94e34461320d27e7db26c4d84b1e313a46af4323366"
+    }
+  ],
+  "chat_gemma": "sin cambios"
+}

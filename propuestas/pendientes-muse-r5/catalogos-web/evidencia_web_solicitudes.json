@@ -1,0 +1,358 @@
+[
+ {
+  "id": "R01",
+  "url": "https://datos.sonora.gob.mx/dataset/Sistema Epidemiológico y Estadístico de Defunciones",
+  "fecha_consulta_utc": "2026-10-23",
+  "localizador": "Descripcion; Informacion adicional (80 columnas, fuente interna)",
+  "fragmento": "Conjunto de datos que compila estadísticas vitales y causas de defunciones. 80 variables/columnas. Fuente: Base de datos interna. Recursos: Defunciones 2022 + Diccionario. Sin Fuentes extras, sin codebook ni manual.",
+  "fragmento_sha256": "58f1d02752fcb1d181325d6cc3bb1c01d4cf43571d75af17202579bdb3bedbe8",
+  "herramienta": "tools.obscura (navegacion directa + snapshot)",
+  "conclusion": "NEGATIVO: el portal no publica definiciones por variable ni codebook del SEED.",
+  "ref_afecta": [
+   "SW-D1",
+   "SW-D3",
+   "SW-D5",
+   "SW-D4"
+  ]
+ },
+ {
+  "id": "R02",
+  "url": "https://datos.sonora.gob.mx/dataset/Sistema Epidemiológico y Estadístico de Defunciones/resource/12f684e9-f4d5-4714-933d-aa153a812174",
+  "fecha_consulta_utc": "2026-10-23",
+  "localizador": "Metadatos del recurso (Creado; Ultima actualizacion); vista no disponible",
+  "fragmento": "Recurso Diccionario (CSV). Creado 10 de enero de 2024. Última actualización de datos y metadatos 1 de noviembre de 2024. Vista de recurso no disponible; descarga directa como unico acceso.",
+  "fragmento_sha256": "0cfe1f4b282107bec9028d60fe5844d4e436de3292373576bd59cb564cd8d728",
+  "herramienta": "tools.obscura (navegacion directa + snapshot)",
+  "conclusion": "NEUTRO: fija fechas de publicacion/captura del diccionario; sin contenido definicional en la pagina.",
+  "ref_afecta": [
+   "SW-D1",
+   "SW-D3",
+   "SW-D5"
+  ]
+ },
+ {
+  "id": "R03",
+  "url": "http://www.dgis.salud.gob.mx/contenidos/intercambio/diagnostico_gobmx.html",
+  "fecha_consulta_utc": "2026-10-23",
+  "localizador": "Nombre del Catalogo; Frecuencia; Ultima Actualizacion; pie de pagina",
+  "fragmento": "Clasificación Estadística Internacional de Enfermedades y Problemas Relacionados con la Salud, versión oficial vigente (CIE-10). CAT_DIAGNOSTICOS. Frecuencia: cada 10 años con revisiones anuales. Última actualización: Abril de 2024 (revisión 16 de abril de 2024). Página del 19 de abril de 2024.",
+  "fragmento_sha256": "7e11ffcf9b32845c0917be2c405366e0bf42e61456f795e2a79d5ff6298f7de6",
+  "herramienta": "tools.obscura (navegacion directa + snapshot)",
+  "conclusion": "PARCIAL-contexto: confirma edición vigente a abril 2024; no acredita edición aplicable a SEED 2022 ni vínculo local.",
+  "ref_afecta": [
+   "SW-D2",
+   "SW-EPI-02"
+  ]
+ },
+ {
+  "id": "R04",
+  "url": "http://www.dgis.salud.gob.mx/contenidos/intercambio/clues_gobmx.html",
+  "fecha_consulta_utc": "2026-10-23",
+  "localizador": "Nombre; Frecuencia; Ultima Actualizacion; pie de pagina",
+  "fragmento": "Clave Única de Establecimientos de Salud (CLUES), CAT_CLUES. Actualización cuando SESA/instituciones lo requieran. Última actualización: Agosto 2026. Página del 23 de septiembre de 2026.",
+  "fragmento_sha256": "e4e63f391bc3b606fb5183cd6c1f02518efc26e68c1789d72fc2b22805d268c3",
+  "herramienta": "tools.obscura (navegacion directa + snapshot)",
+  "conclusion": "PARCIAL-contexto: catálogo nacional pertinente con actualización continua; sin versión histórica 2022 ni vínculo con SEED/nacimientos Sonora.",
+  "ref_afecta": [
+   "SW-D4",
+   "nac-web-07"
+  ]
+ },
+ {
+  "id": "R05",
+  "url": "https://datos.sonora.gob.mx/dataset/Vigilancia Epidemiológica",
+  "fecha_consulta_utc": "2026-10-23",
+  "localizador": "Descripcion; Informacion adicional (59 columnas, fuente interna, sin Fuentes extras)",
+  "fragmento": "Repositorio Integral de Datos para la Supervisión y Análisis Epidemiológico. 59 variables/columnas. Fuente: Base de datos interna. Recursos: Vigilancia Epidemiológica 2022 + Diccionario. Sin Fuentes extras ni nota metodológica (el intervalo de01_a_04 y el sufijo f no se definen).",
+  "fragmento_sha256": "97c85805d50ce720cde3b853778b8f999560e437870a6fee91b8340379113a67",
+  "herramienta": "tools.obscura (navegacion directa + snapshot)",
+  "conclusion": "NEGATIVO: el portal no publica manual ni nota que defina columnas, acumulado, partición por sexo ni instituciones.",
+  "ref_afecta": [
+   "SW-EPI-01",
+   "SW-EPI-03"
+  ]
+ },
+ {
+  "id": "R06",
+  "url": "https://epidemiologia.salud.gob.mx/gobmx/salud/documentos/manuales/32_ManualSuive.pdf",
+  "fecha_consulta_utc": "2026-10-23",
+  "localizador": "Cabeceras HTTP + archivo local evidencia/manual_suive_32.pdf",
+  "fragmento": "Manual de procedimientos estandarizados para la Notificación Semanal de Casos Nuevos (DGE, dominio oficial epidemiologia.salud.gob.mx). Content-Type application/pdf, 10017716 bytes, Last-Modified 2021-08-10, sha256 f35746a0353c902b03d8ae01f703d1dfafdf3ad4bbf01777b648353d1b833757. PDF escaneado: texto no extraíble sin OCR, no se afirma contenido definicional.",
+  "fragmento_sha256": "489b3489484aa123f3fd215a83e1e904035701eb51e4680c586262ce53033d28",
+  "herramienta": "tools.obscura (hallazgo) + CLI curl (descarga en carpeta propia)",
+  "conclusion": "PARCIAL-documento: manual auténtico localizado y preservado; contenido definicional pendiente de lectura/OCR; sin vínculo con el recurso Sonora 2022.",
+  "ref_afecta": [
+   "SW-EPI-01"
+  ]
+ },
+ {
+  "id": "R07",
+  "url": "https://datos.sonora.gob.mx/dataset/Información Sobre Nacimientos",
+  "fecha_consulta_utc": "2026-10-23",
+  "localizador": "Descripcion (Subsistema SINAC); Informacion adicional (106 columnas, fuente interna)",
+  "fragmento": "Subsistema de Información sobre Nacimientos. 106 variables/columnas. Fuente: Base de datos interna. Recursos: Información sobre Nacimientos 2022 + Diccionario. Sin Fuentes extras ni manual vinculado.",
+  "fragmento_sha256": "a5c609e544e510f135a8728df173ca772e3e6d1102c9933964c2eccf9babd422",
+  "herramienta": "tools.obscura (navegacion directa + snapshot)",
+  "conclusion": "NEGATIVO: el portal no define variables del certificado ni vincula manual; el diccionario local marca 'Pendiente de especificar'.",
+  "ref_afecta": [
+   "nac-web-01",
+   "nac-web-08"
+  ]
+ },
+ {
+  "id": "R08",
+  "url": "https://www.gob.mx/salud/documentos/manual-del-certificado-de-nacimiento-modelo-2015?state=published",
+  "fecha_consulta_utc": "2026-10-23",
+  "localizador": "Fecha 29-09-2015; párrafos formato único/SINAC; enlace Descargar CN_ManualLlenado.pdf",
+  "fragmento": "Manual del Certificado de Nacimiento Modelo 2015 (Secretaría de Salud, 29 de septiembre de 2015). El Certificado es formato único nacional, obligatorio, individual e intransferible (desde 2007, DGIS); el SINAC integra y difunde sus estadísticas. Adjunto CN_ManualLlenado.pdf (1459282 bytes, sha256 a97b4ec436519845eaccfe993281bff90338c252914d7f3caf8ebab9d9fbaa3e) con secciones 22.1 APGAR, 23 tamiz auditivo, 24 vacunas/vitaminas, trimestre de primera consulta y embarazo múltiple (gemelar).",
+  "fragmento_sha256": "3e05f234e77a9406eb2563f521a64a8a12b9224ab98baf968814bc0fcf8036c2",
+  "herramienta": "tools.obscura (navegacion directa + snapshot)",
+  "conclusion": "PARCIAL-contexto: documento nacional auténtico que define los campos del certificado; sugiere interpretación pero sin aplicabilidad local (el diccionario Sonora 2022 no declara adoptarlo).",
+  "ref_afecta": [
+   "nac-web-02",
+   "nac-web-03",
+   "nac-web-04",
+   "nac-web-05",
+   "nac-web-06"
+  ]
+ },
+ {
+  "id": "R09",
+  "url": "https://www.gob.mx/salud/documentos/cen?state=published (hallazgo) ; URLs caídas registradas",
+  "fecha_consulta_utc": "2026-10-23",
+  "localizador": "Búsqueda DuckDuckGo site:gob.mx; páginas 404 verificadas",
+  "fragmento": "Las URLs propuestas en nac-web-02/03/04 (acciones-y-programas SINAC) y nac-web-05/06 (formatos SINAIS) devuelven 404 en gob.mx. Rutas vigentes halladas: página CEN (gob.mx/salud/documentos/cen), Manual Modelo 2015 (R08) y Manual de Llenado 2010 (sinba.salud.gob.mx/.../ManualLLenadoCertNac2010.pdf, no descargado por alcance).",
+  "fragmento_sha256": "d576a0c8e29e1a2d068d2cda2e7b9538fc78f81ba88cecc33ff44ed1a1e256bb",
+  "herramienta": "tools.obscura (navegación + búsqueda DuckDuckGo)",
+  "conclusion": "NEUTRO-operativo: corrige rutas; el contenido definicional queda cubierto por R08.",
+  "ref_afecta": [
+   "nac-web-02",
+   "nac-web-03",
+   "nac-web-04",
+   "nac-web-05",
+   "nac-web-06"
+  ]
+ },
+ {
+  "id": "R10",
+  "url": "https://datos.sonora.gob.mx/dataset/Denuncias Ambientales",
+  "fecha_consulta_utc": "2026-10-23",
+  "localizador": "Descripcion; Datos (un solo recurso 1er Trim 2022); Informacion adicional (9 columnas, fuente interna)",
+  "fragmento": "Denuncias ambientales (PROAES). 9 variables/columnas. Fuente: Base de datos interna. Único dato: Denuncias 1er Trimestre 2022 + Diccionario. Sin metodología ni cuestionario publicados; 'estrato' y TRIMESTRE no se definen en la página.",
+  "fragmento_sha256": "5ebee5964d41a5d1bbed0179351de7b051585367bbcdda82ad4e852ad6545de3",
+  "herramienta": "tools.obscura (navegacion directa + snapshot)",
+  "conclusion": "NEGATIVO: sin documento que defina estrato ni el objeto de TRIMESTRE.",
+  "ref_afecta": [
+   "SW-DIV-01"
+  ]
+ },
+ {
+  "id": "R11",
+  "url": "https://datos.sonora.gob.mx/dataset/Indice de marginación urbana por colonia ; https://www.gob.mx/conapo/documentos/indices-de-marginacion-2020-284372",
+  "fecha_consulta_utc": "2026-10-23",
+  "localizador": "Fuentes extras del conjunto; fecha 04-10-2021 y párrafo de colonias/notas metodológicas de CONAPO",
+  "fragmento": "El conjunto (COESPO, 28 columnas) cita Fuentes extras CONAPO índices de marginación 2020. CONAPO publica índices 2020 con base en el Censo 2020 (04 de octubre de 2021), por primera vez a nivel de colonias, con notas técnico-metodológicas (construcción de indicadores, estratificación en cinco grados, normalización) y programa R. No se verificó el contenido del Catalogo local (descargas xlsx no usables como fuente).",
+  "fragmento_sha256": "a9f8fc8c383c31dbdd03d267b8c247560ec35d95b986d35a22bfb983c5eb2eb9",
+  "herramienta": "tools.obscura (navegacion directa + snapshot)",
+  "conclusion": "PARCIAL-contexto: metodología 2020 auténtica y citada por el publicador; CLASIF local (Barrio/Colonia/...) no vinculada documentalmente.",
+  "ref_afecta": [
+   "SW-DIV-02"
+  ]
+ },
+ {
+  "id": "R12",
+  "url": "https://datos.sonora.gob.mx/dataset/Pesca y Acuacultura (vía búsqueda q=pesca+acuacultura; UUID de la solicitud devuelve 404)",
+  "fecha_consulta_utc": "2026-10-23",
+  "localizador": "Resultado de búsqueda (1 conjunto, SAGARHPA); Descripcion; Recursos; Informacion adicional",
+  "fragmento": "Pesca y Acuacultura (SAGARHPA, producción histórica). 15 variables/columnas. Fuente: Informes gubernamentales. Recursos: series 2005-2023 + Diccionario + Catalogo. La página no define 'Clave/Nombre de otras' (CVOTRAS/DOTRAS) ni su catálogo. Nota: el UUID e093cf34 de la solicitud no existe (404); el conjunto real se halló por búsqueda.",
+  "fragmento_sha256": "5bb79bb772dea6ae66144e548d670183994ff12c4c5aa8dd29c07f5666851191",
+  "herramienta": "tools.obscura (navegacion directa + snapshot)",
+  "conclusion": "NEGATIVO-portal: catálogo publicado pero contenido no verificable por página; 'otras' sin definición pública.",
+  "ref_afecta": [
+   "SW-DIV-03"
+  ]
+ },
+ {
+  "id": "R13",
+  "url": "https://datos.sonora.gob.mx/dataset/Egresos Hospitalarios (vía búsqueda q=egresos+hospitalarios)",
+  "fecha_consulta_utc": "2026-10-23",
+  "localizador": "Descripcion; Informacion adicional (15 columnas, fuente interna, sin Fuentes extras)",
+  "fragmento": "Egresos Hospitalarios (Servicios de Salud de Sonora). 15 variables/columnas. Fuente: Base de datos interna. Recursos: Egresos Hospitalarios + Diccionario. Sin fe de erratas ni nota que aclare Total_Egresos (egresos vs urgencias). Para fiebre: ver W04 (sin corrección publicada).",
+  "fragmento_sha256": "faca23966ae2d20b11e3ca5d92a02fdb614c3f66f2365626788249a7a67e2a63",
+  "herramienta": "tools.obscura (navegacion directa + snapshot)",
+  "conclusion": "NEGATIVO: sin fe de erratas ni aclaración de Total_Egresos; filas 177/178 sin corrección.",
+  "ref_afecta": [
+   "SW-DIV-04"
+  ]
+ },
+ {
+  "id": "R14",
+  "url": "https://datos.sonora.gob.mx/dataset/Cuerpos de Agua en el Estado de Sonora: Ubicación de las Presas",
+  "fecha_consulta_utc": "2026-10-23",
+  "localizador": "Descripcion (coordenadas); Datos (solo Catálogo de presas); Recursos (Diccionario); 8 columnas",
+  "fragmento": "Ubicación de presas (coordenadas), Agencia de Transformación Digital. 8 variables/columnas. Único dato publicado: Catálogo de presas + Diccionario. No existe ningún recurso de Historico_presas publicado. Sin notas sobre hojas del catálogo ni edición.",
+  "fragmento_sha256": "3d96463fd52e0ac714dad1314036be04a063274fb49a5461665ccab8cad695cf",
+  "herramienta": "tools.obscura (navegacion directa + snapshot)",
+  "conclusion": "NEGATIVO (a): correspondencia cat_estatal↔diccionario solo por nombre, sin nota del publicador. CONSTANCIA (b): no hay Historico_presas publicado. NEUTRO (c): la página no muestra fechas de edición.",
+  "ref_afecta": [
+   "presas-01"
+  ]
+ },
+ {
+  "id": "R15",
+  "url": "ronda 4: http://www.dgis.salud.gob.mx/contenidos/intercambio/municipios_gobmx.html ; entidades_gobmx.html ; localidades_gobmx.html (evidencia previa vigente, sin re-visita)",
+  "fecha_consulta_utc": "2026-10-23",
+  "localizador": "Fragmentos y fechas capturados en propuestas/pendientes-muse-r4/investigacion/entrega.json",
+  "fragmento": "CAT_MUNICIPIOS (origen INEGI, actualización mensual, última junio 2026), CAT_ENTIDADES (rev. 2021), CAT_LOCALIDADES (septiembre 2026). Evidencia primaria de ronda 4, vigente y no duplicada; ninguna acredita versión histórica aplicable ni vínculo local.",
+  "fragmento_sha256": "2cfccaf2502021026987d1148c71dcfd8473ce1de438b1a257f5274baaa785bd",
+  "herramienta": "tools.obscura (navegacion directa + snapshot)",
+  "conclusion": "PARCIAL-contexto heredado: catálogos nacionales pertinentes sin aplicabilidad local.",
+  "ref_afecta": [
+   "SW-D4",
+   "nac-web-07",
+   "nac-web-08"
+  ]
+ },
+ {
+  "id": "S01",
+  "url": "https://datos.sonora.gob.mx/dataset/Matrículas de Estudiantes",
+  "fecha_consulta_utc": "2026-10-23",
+  "localizador": "Organizacion UES; Descripcion; Datos; Informacion adicional (70 columnas, fuente interna)",
+  "fragmento": "Matrículas de Estudiantes (Universidad Estatal de Sonora). Matriculas de estudiantes de distintos programas educativos. Datos: Matriculas - 2022 - 2 + Diccionario. 70 variables/columnas. Fuente: Base de datos interna. Sin Fuentes extras, sin codebook ni dominios publicados.",
+  "fragmento_sha256": "16e03364d2b39d53dc8fde9cc61937e96c7c1b59d93fa177773735a2c9b5e064",
+  "herramienta": "tools.obscura (navegacion directa + snapshot)",
+  "conclusion": "NEGATIVO-portal: la página no publica descripciones por variable ni dominios.",
+  "ref_afecta": [
+   "MAT-W-01",
+   "MAT-W-04"
+  ]
+ },
+ {
+  "id": "S02",
+  "url": "https://datos.sonora.gob.mx/dataset/Matrículas de Estudiantes/resource/8c0e76ff-3a86-4b1d-beee-b04bebe7df8d",
+  "fecha_consulta_utc": "2026-10-23",
+  "localizador": "Metadatos del recurso (Creado; Ultima actualizacion); vista no disponible",
+  "fragmento": "Recurso Diccionario (CSV). Creado 10 de enero de 2024. Última actualización de datos y metadatos 1 de noviembre de 2024. Vista no disponible; descarga directa como único acceso.",
+  "fragmento_sha256": "2765725a10902129dbb328731d98abc1baf95085234f094fce6281a8e413a589",
+  "herramienta": "tools.obscura (navegacion directa + snapshot)",
+  "conclusion": "NEUTRO: fija fechas de publicación/captura; sin contenido definicional en la página.",
+  "ref_afecta": [
+   "MAT-W-01",
+   "MAT-W-04"
+  ]
+ },
+ {
+  "id": "S03",
+  "url": "https://ues.mx/normatividad/ (404) ; búsqueda DuckDuckGo UES normatividad reglamento",
+  "fecha_consulta_utc": "2026-10-23",
+  "localizador": "Error 404 en ues.mx/normatividad; resultados: Reglamentoescolar.pdf, ReglamentoEscolar2026.pdf, ues.sonora.gob.mx normatividad y titulación",
+  "fragmento": "La ruta propuesta ues.mx/normatividad/ devuelve 404. Rutas auténticas vigentes: www.ues.mx/archivos/alumnos/reglamentos/ (Reglamentoescolar.pdf previo, ReglamentoEscolar2026.pdf), ues.sonora.gob.mx/conocenos/normatividad y /proyectos/titulacion.",
+  "fragmento_sha256": "d9fa4f4aa599ec35d058cb5b25b812750b24d84422702cfa16d59a52b061c33b",
+  "herramienta": "tools.obscura (navegación + búsqueda DuckDuckGo)",
+  "conclusion": "NEUTRO-operativo: corrige la ruta; el contenido se acredita con S05-S07.",
+  "ref_afecta": [
+   "MAT-W-02",
+   "MAT-W-05"
+  ]
+ },
+ {
+  "id": "S04",
+  "url": "https://ues.sonora.gob.mx/proyectos/titulacion",
+  "fecha_consulta_utc": "2026-10-23",
+  "localizador": "Requisitos (Guía Opciones de Titulación); enlace Descargar Guía XLV sesión ordinaria Agosto 2023",
+  "fragmento": "El trámite exige 'alguna de las opciones establecidas en la guía informativa Opciones de Titulación de Licenciatura'. Guía enlazada: XLV sesión ordinaria, Agosto 2023 (PDF, 1274532 bytes, sha256 a70b5ea907218138a721ee7fa13fa1dbe6532f24bea7e1930a2fe548da1ff958, preservado en evidencia/).",
+  "fragmento_sha256": "7b0071d0a1b66bb342392a1edb0044e914a95621a24ce415e88e45cd4b10add1",
+  "herramienta": "tools.obscura (navegacion directa + snapshot)",
+  "conclusion": "PARCIAL-documento: guía auténtica posterior al periodo del dato (2022-2); lista opciones pero no las variables de 2022.",
+  "ref_afecta": [
+   "MAT-W-02"
+  ]
+ },
+ {
+  "id": "S05",
+  "url": "local: evidencia/UES_Guia_Opciones_Titulacion_2023.pdf (extracción propia, texto espaciado)",
+  "fecha_consulta_utc": "2026-10-23",
+  "localizador": "Índice de contenido: 2.1 Tesis, 2.2 Examen de Validación/EGEL/EXIL, 2.3 Experiencia Profesional, 2.4 Alto Desempeño, 2.5 Proyecto de Investigación, 2.6 Trabajo Profesional, 2.7 Innovación, 2.8 Diplomado",
+  "fragmento": "La guía 2023 lista 10 opciones (tesis, EGEL/EXIL, experiencia, alto desempeño, investigación, trabajo, innovación, diplomado). No contiene 'no exigibilidad' ni 'examen profesional' literales ni define equivalencia/convalidación ni fechas de acto.",
+  "fragmento_sha256": "07b6a172fb48358edba5bb0f7cd72f4ccb96088d01cacf0972b65ef159199d6c",
+  "herramienta": "CLI curl (descarga auténtica) + extracción zlib/parentéticos con normalización",
+  "conclusion": "PARCIAL con límite: terminología difiere de las variables 2022; guía del periodo 2022 no localizada.",
+  "ref_afecta": [
+   "MAT-W-02"
+  ]
+ },
+ {
+  "id": "S06",
+  "url": "local: evidencia/UES_Reglamento_Escolar_previo.pdf (aprobado XXX Sesión Ordinaria, 16 de diciembre de 2019)",
+  "fecha_consulta_utc": "2026-10-23",
+  "localizador": "Art. 30 escala por competencias; Art. 24 equivalencia; Art. 25 convalidación; Art. 21 cambio de unidad académica",
+  "fragmento": "Escala de evaluación por niveles (sobresaliente/avanzado/intermedio/básico/no aprobado; mínimo aprobatorio básico). Equivalencia: declaración de igualdades académicas con instituciones del sistema nacional. Convalidación y cambio de unidad académica regulados. Sin escala numérica 0-10 ni redondeo.",
+  "fragmento_sha256": "b6424062aceb5a22944bd773502b20e99e9a051446450ceb885c4e1964be33e8",
+  "herramienta": "CLI curl + extracción propia",
+  "conclusion": "PARCIAL-documento: edición aplicable a la era 2022; no define promedios numéricos ni fechas de titulación/equivalencia.",
+  "ref_afecta": [
+   "MAT-W-02",
+   "MAT-W-05"
+  ]
+ },
+ {
+  "id": "S07",
+  "url": "local: evidencia/UES_Reglamento_Escolar_2022_01.pdf (939684 bytes, sha256 c4523ae5221c640981c259f0a97561ec0924340bb540a4f13716e116c4b0e023)",
+  "fecha_consulta_utc": "2026-10-23",
+  "localizador": "Art. 4 calendario anual del rector; Art. 9-10 inscripción/reinscripción por periodo y reprobadas; Art. 23-25 revalidación/equivalencia/convalidación; titulación remite a la Guía externa",
+  "fragmento": "Reglamento Escolar edición 2022.01 (aplicable al periodo del dato): inscripción/reinscripción por periodo escolar, calendario aprobado anualmente, revalidación/equivalencia/convalidación definidas, titulación delegada a la Guía de Opciones. Sin clave '222', sin 'Reing', sin 'ciclo señalado'.",
+  "fragmento_sha256": "5b5597ac23482019320a1fb9bece8eaf7c4ed71dd2d6522db9f976c879114d0c",
+  "herramienta": "CLI curl (hallazgo DuckDuckGo) + extracción propia",
+  "conclusion": "PARCIAL-documento: edición aplicable confirmada; claves de ciclo sin definición pública.",
+  "ref_afecta": [
+   "MAT-W-02",
+   "MAT-W-03",
+   "MAT-W-05"
+  ]
+ },
+ {
+  "id": "S08",
+  "url": "búsquedas DuckDuckGo calendario UES 2022-2 ; ues.sonora.gob.mx/oferta-educativa/calendario-escolar (página UES Virtual, sin calendario)",
+  "fecha_consulta_utc": "2026-10-23",
+  "localizador": "Cero resultados site:ues.mx; calendario 2022-2023 solo en Scribd (no primario); página oficial de calendario redirige a UES Virtual",
+  "fragmento": "No se localizó calendario escolar UES 2022-2 en fuente primaria. Límite exacto: '222', 'Reing' y 'ciclo señalado' quedan sin definición pública; el calendario Scribd no es documento auténtico y no se usa.",
+  "fragmento_sha256": "19719ad1ef9c54b290b399f9f2f82c3279a2258f8acc7498b63aa090ab25b82c",
+  "herramienta": "tools.obscura (navegación + 2 búsquedas DuckDuckGo)",
+  "conclusion": "NEGATIVO con límite exacto (no se afirma ausencia universal, solo no localizado en alcance).",
+  "ref_afecta": [
+   "MAT-W-03"
+  ]
+ },
+ {
+  "id": "S09",
+  "url": "portal datos.sonora.gob.mx: Política Digital, Información General, Presupuesto TIC, Desarrollo de Software, Mejora Regulatoria, Infraestructura y Ciberseguridad, Gobernanza Tecnológica, Fortalezas y Debilidades",
+  "fecha_consulta_utc": "2026-10-23",
+  "localizador": "Descripción 'Diagnóstico del Entorno Digital' + tema; Datos + Diccionario como únicos recursos; Información adicional (fuente Investigaciones, sin Fuentes extras); sin cuestionario",
+  "fragmento": "Los 8 conjuntos TIC publican solo Datos + Diccionario (21/23/14/40/16/43/15/26 columnas). Ninguna página publica el cuestionario del Diagnóstico ni muestras de valores: P10/P16/P18/P21, sujetos de P11/P15/P7, dominios P11/P36/P39/P40, vínculos filtro-detalle P26-P33 y marca '4' quedan sin texto público. P36-P40 de Mejora no verificables (descargas no usables como fuente).",
+  "fragmento_sha256": "717b7d404bb608c294ee20429b8ef25c6c9fc62b2552b23b2a6e9ad33139ab0a",
+  "herramienta": "tools.obscura (navegacion directa + snapshot)",
+  "conclusion": "NEGATIVO-portal para tic-web-01..07 (límite exacto por ID en respuestas).",
+  "ref_afecta": [
+   "tic-web-01",
+   "tic-web-02",
+   "tic-web-03",
+   "tic-web-04",
+   "tic-web-05",
+   "tic-web-06",
+   "tic-web-07"
+  ]
+ },
+ {
+  "id": "S10",
+  "url": "referencia a R14 (evidencia_web_solicitudes.json) — solicitud presas duplicada de presas-01 ya atendida",
+  "fecha_consulta_utc": "2026-10-23",
+  "localizador": "R14: dataset Cuerpos de Agua; solo Catálogo de presas + Diccionario; sin Historico_presas; sin notas de hojas ni fechas",
+  "fragmento": "La solicitud de presas en solicitudes-restantes.json es idéntica a presas-01 (ya atendida con R14). Sin repetir trabajo: se hereda el veredicto negativo+constancia.",
+  "fragmento_sha256": "0385244fed33ecc061908a346010c1e5ce91459c83c82dad18342ba11420234f",
+  "herramienta": "revisión local (sin nueva navegación)",
+  "conclusion": "ATENDIDA-ANTES (duplicada, sin nueva evidencia).",
+  "ref_afecta": [
+   "presas-dup"
+  ]
+ }
+]

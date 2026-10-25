@@ -1,0 +1,853 @@
+{
+  "rol": "S2-nacimientos",
+  "version": "v001",
+  "fecha_utc": "2026-10-24T08:46:38.344616+00:00",
+  "base": "reports/ronda-7.json",
+  "asignacion_sha256": "566e2ca5193359149344efd180bafeb4dfaeb32bf7f7a657dc303a8f7f75dccd",
+  "decisiones": [
+    {
+      "id": "https://example.org/mex-ontologi/definition/22202305-2d02-4c49-b216-cc98224357f0%2F33",
+      "tipo": "significados",
+      "original_sha256": "1e52382446ca869e864f6c5b5343b30496794c623803321d0206d7d35291e787",
+      "puerta": "sin_pista_nueva",
+      "pista": null,
+      "estado": "brecha_externa",
+      "afirmacion_propuesta": null,
+      "motivo": "brecha_externa: fila portal verificada (ATENCIONPRENATALD, Texto, ejemplo 'SI', Descripcion 'Pendiente de especificar') sin contraparte nacional verificada por codigo: ausente del descriptor SINAC 2020-2025 (0/22) y del codebook 2020-2023 (zip de 20 xlsx, 0/22 en nombres y celdas). Desajuste estructural concreto: columna derivada local 'ATENCIONPRENATALD' cuyo contenido decodificaria 'ATENCIONPRENATAL', pero la regla publicador columna->catalogo no esta declarada en el instrumento local ni en fuente primaria vinculada al recurso 46977217. Expediente R7 revisado (S2 v001/v002, W-web paquetes v001..v004 y cierres): sin pista primaria nueva para este ID; no se repiten busquedas genericas agotadas. Negativa acotada a lo revisado el 2026-10-24.",
+      "evidencia_faltante": "Regla del publicador que fije ATENCIONPRENATALD como decodificacion de ATENCIONPRENATAL con catalogo declarado, aplicable al recurso 46977217.",
+      "evidencia": [
+        {
+          "ruta": "data/portal/inspecciones/22202305-2d02-4c49-b216-cc98224357f0.json",
+          "sha256": "76fe68223bc861fcdf62cb33f5b9a207503b192c2ef531a4aad31d52e7a7513b",
+          "localizador": "/definiciones/32 (fila 33, variable ATENCIONPRENATALD)",
+          "afirmacion_soportada": "Fila local: Nombre=ATENCIONPRENATALD, Tipo=Texto, Ejemplo='SI', Descripcion=Pendiente de especificar"
+        },
+        {
+          "ruta": "propuestas/plan-paralelo-brechas-sin-gemma/ejecucion-20261024-072207Z/S2-nacimientos/trabajo/evidencia/sinac_catalogos_2020_2023.zip",
+          "sha256": "9c7dcd52dd8fdb2cfb9c7de3711e0ccc323cfa9cff86712eaeeb3e883141cb4e",
+          "localizador": "listado completo del zip (20 xlsx) + barrido de celdas por codigo",
+          "afirmacion_soportada": "Negativa acotada verificada por codigo: 0/22; 'ATENCIONPRENATALD' sin coincidencia en nombres de archivo ni en celdas del codebook 2020-2023."
+        },
+        {
+          "ruta": "propuestas/cierre-brechas-post-r6/significados-salud/evidencia/desc_sinac_2020_2025/Descriptores_SINAC_2020.xlsx",
+          "sha256": "0af0b6be1faeb3867da872cd1b2021785af4feb78311c5de7c1fa44807fd6ed4",
+          "localizador": "Hoja1; busqueda exacta del nombre por codigo",
+          "afirmacion_soportada": "Negativa acotada verificada por codigo: 'ATENCIONPRENATALD' no figura entre las variables del descriptor nacional SINAC 2020-2025."
+        }
+      ],
+      "condicion_reapertura": "Reabre si el publicador publica la regla de decodificacion de ATENCIONPRENATALD (o su definicion) aplicable al recurso 46977217, o si W aporta documento primario equivalente.",
+      "limites": [
+        "Alcance simultaneo por conjunto+diccionario+fila+huella; no autoriza cruces, joins ni identidad de catalogos.",
+        "Descriptor/catalogos DGIS citados son del registro nacional (SINAC 2020-2025 / codebook 2020-2023), no del extracto Sonora del portal; la coincidencia de nombres o valores no sustituye la tabla del publicador.",
+        "Negativas y ausencias acotadas a lo revisado el 2026-10-24; no ausencia universal."
+      ]
+    },
+    {
+      "id": "https://example.org/mex-ontologi/definition/22202305-2d02-4c49-b216-cc98224357f0%2F35",
+      "tipo": "significados",
+      "original_sha256": "b6c978cf1727030c3dafae114f6c0a0efe79e88cfdc215076c643330f5a8fc5a",
+      "puerta": "sin_pista_nueva",
+      "pista": null,
+      "estado": "brecha_externa",
+      "afirmacion_propuesta": null,
+      "motivo": "brecha_externa: fila portal verificada (TRIMESTREPRIMERCONSULTAD, Texto, ejemplo 'PRIMER TRIMESTRE', Descripcion 'Pendiente de especificar') sin contraparte nacional verificada por codigo: ausente del descriptor SINAC 2020-2025 (0/22) y del codebook 2020-2023 (zip de 20 xlsx, 0/22 en nombres y celdas). Desajuste estructural concreto: columna derivada local 'TRIMESTREPRIMERCONSULTAD' cuyo contenido decodificaria 'TRIMESTREPRIMERCONSULTA', pero la regla publicador columna->catalogo no esta declarada en el instrumento local ni en fuente primaria vinculada al recurso 46977217. Expediente R7 revisado (S2 v001/v002, W-web paquetes v001..v004 y cierres): sin pista primaria nueva para este ID; no se repiten busquedas genericas agotadas. Negativa acotada a lo revisado el 2026-10-24.",
+      "evidencia_faltante": "Regla del publicador que fije TRIMESTREPRIMERCONSULTAD como decodificacion de TRIMESTREPRIMERCONSULTA con catalogo declarado, aplicable al recurso 46977217.",
+      "evidencia": [
+        {
+          "ruta": "data/portal/inspecciones/22202305-2d02-4c49-b216-cc98224357f0.json",
+          "sha256": "76fe68223bc861fcdf62cb33f5b9a207503b192c2ef531a4aad31d52e7a7513b",
+          "localizador": "/definiciones/34 (fila 35, variable TRIMESTREPRIMERCONSULTAD)",
+          "afirmacion_soportada": "Fila local: Nombre=TRIMESTREPRIMERCONSULTAD, Tipo=Texto, Ejemplo='PRIMER TRIMESTRE', Descripcion=Pendiente de especificar"
+        },
+        {
+          "ruta": "propuestas/plan-paralelo-brechas-sin-gemma/ejecucion-20261024-072207Z/S2-nacimientos/trabajo/evidencia/sinac_catalogos_2020_2023.zip",
+          "sha256": "9c7dcd52dd8fdb2cfb9c7de3711e0ccc323cfa9cff86712eaeeb3e883141cb4e",
+          "localizador": "listado completo del zip (20 xlsx) + barrido de celdas por codigo",
+          "afirmacion_soportada": "Negativa acotada verificada por codigo: 0/22; 'TRIMESTREPRIMERCONSULTAD' sin coincidencia en nombres de archivo ni en celdas del codebook 2020-2023."
+        },
+        {
+          "ruta": "propuestas/cierre-brechas-post-r6/significados-salud/evidencia/desc_sinac_2020_2025/Descriptores_SINAC_2020.xlsx",
+          "sha256": "0af0b6be1faeb3867da872cd1b2021785af4feb78311c5de7c1fa44807fd6ed4",
+          "localizador": "Hoja1; busqueda exacta del nombre por codigo",
+          "afirmacion_soportada": "Negativa acotada verificada por codigo: 'TRIMESTREPRIMERCONSULTAD' no figura entre las variables del descriptor nacional SINAC 2020-2025."
+        }
+      ],
+      "condicion_reapertura": "Reabre si el publicador publica la regla de decodificacion de TRIMESTREPRIMERCONSULTAD (o su definicion) aplicable al recurso 46977217, o si W aporta documento primario equivalente.",
+      "limites": [
+        "Alcance simultaneo por conjunto+diccionario+fila+huella; no autoriza cruces, joins ni identidad de catalogos.",
+        "Descriptor/catalogos DGIS citados son del registro nacional (SINAC 2020-2025 / codebook 2020-2023), no del extracto Sonora del portal; la coincidencia de nombres o valores no sustituye la tabla del publicador.",
+        "Negativas y ausencias acotadas a lo revisado el 2026-10-24; no ausencia universal."
+      ]
+    },
+    {
+      "id": "https://example.org/mex-ontologi/definition/22202305-2d02-4c49-b216-cc98224357f0%2F38",
+      "tipo": "significados",
+      "original_sha256": "8816407ecc11e94d016c0ad90b3c212ce451f38293fa2d01b90f7568a52966ec",
+      "puerta": "sin_pista_nueva",
+      "pista": null,
+      "estado": "brecha_externa",
+      "afirmacion_propuesta": null,
+      "motivo": "brecha_externa: fila portal verificada (SOBREVIVIOPARTOD, Texto, ejemplo 'SI', Descripcion 'Pendiente de especificar') sin contraparte nacional verificada por codigo: ausente del descriptor SINAC 2020-2025 (0/22) y del codebook 2020-2023 (zip de 20 xlsx, 0/22 en nombres y celdas). Desajuste estructural concreto: columna derivada local 'SOBREVIVIOPARTOD' cuyo contenido decodificaria 'SOBREVIVIOPARTO', pero la regla publicador columna->catalogo no esta declarada en el instrumento local ni en fuente primaria vinculada al recurso 46977217. Expediente R7 revisado (S2 v001/v002, W-web paquetes v001..v004 y cierres): sin pista primaria nueva para este ID; no se repiten busquedas genericas agotadas. Negativa acotada a lo revisado el 2026-10-24.",
+      "evidencia_faltante": "Regla del publicador que fije SOBREVIVIOPARTOD como decodificacion de SOBREVIVIOPARTO con catalogo declarado, aplicable al recurso 46977217.",
+      "evidencia": [
+        {
+          "ruta": "data/portal/inspecciones/22202305-2d02-4c49-b216-cc98224357f0.json",
+          "sha256": "76fe68223bc861fcdf62cb33f5b9a207503b192c2ef531a4aad31d52e7a7513b",
+          "localizador": "/definiciones/37 (fila 38, variable SOBREVIVIOPARTOD)",
+          "afirmacion_soportada": "Fila local: Nombre=SOBREVIVIOPARTOD, Tipo=Texto, Ejemplo='SI', Descripcion=Pendiente de especificar"
+        },
+        {
+          "ruta": "propuestas/plan-paralelo-brechas-sin-gemma/ejecucion-20261024-072207Z/S2-nacimientos/trabajo/evidencia/sinac_catalogos_2020_2023.zip",
+          "sha256": "9c7dcd52dd8fdb2cfb9c7de3711e0ccc323cfa9cff86712eaeeb3e883141cb4e",
+          "localizador": "listado completo del zip (20 xlsx) + barrido de celdas por codigo",
+          "afirmacion_soportada": "Negativa acotada verificada por codigo: 0/22; 'SOBREVIVIOPARTOD' sin coincidencia en nombres de archivo ni en celdas del codebook 2020-2023."
+        },
+        {
+          "ruta": "propuestas/cierre-brechas-post-r6/significados-salud/evidencia/desc_sinac_2020_2025/Descriptores_SINAC_2020.xlsx",
+          "sha256": "0af0b6be1faeb3867da872cd1b2021785af4feb78311c5de7c1fa44807fd6ed4",
+          "localizador": "Hoja1; busqueda exacta del nombre por codigo",
+          "afirmacion_soportada": "Negativa acotada verificada por codigo: 'SOBREVIVIOPARTOD' no figura entre las variables del descriptor nacional SINAC 2020-2025."
+        }
+      ],
+      "condicion_reapertura": "Reabre si el publicador publica la regla de decodificacion de SOBREVIVIOPARTOD (o su definicion) aplicable al recurso 46977217, o si W aporta documento primario equivalente.",
+      "limites": [
+        "Alcance simultaneo por conjunto+diccionario+fila+huella; no autoriza cruces, joins ni identidad de catalogos.",
+        "Descriptor/catalogos DGIS citados son del registro nacional (SINAC 2020-2025 / codebook 2020-2023), no del extracto Sonora del portal; la coincidencia de nombres o valores no sustituye la tabla del publicador.",
+        "Negativas y ausencias acotadas a lo revisado el 2026-10-24; no ausencia universal."
+      ]
+    },
+    {
+      "id": "https://example.org/mex-ontologi/definition/22202305-2d02-4c49-b216-cc98224357f0%2F40",
+      "tipo": "significados",
+      "original_sha256": "e64d50c99e194df8a2e796fe9da031e6cdcf055465822d44a801f68e46dc9cc8",
+      "puerta": "sin_pista_nueva",
+      "pista": null,
+      "estado": "brecha_externa",
+      "afirmacion_propuesta": null,
+      "motivo": "brecha_externa: fila portal verificada (AFILIACIOND, Texto, ejemplo 'NINGUNA', Descripcion 'Pendiente de especificar') sin contraparte nacional verificada por codigo: ausente del descriptor SINAC 2020-2025 (0/22) y del codebook 2020-2023 (zip de 20 xlsx, 0/22 en nombres y celdas). Desajuste estructural concreto: columna derivada local 'AFILIACIOND' cuyo contenido decodificaria 'AFILIACION', pero la regla publicador columna->catalogo no esta declarada en el instrumento local ni en fuente primaria vinculada al recurso 46977217. Expediente R7 revisado (S2 v001/v002, W-web paquetes v001..v004 y cierres): sin pista primaria nueva para este ID; no se repiten busquedas genericas agotadas. Negativa acotada a lo revisado el 2026-10-24.",
+      "evidencia_faltante": "Regla del publicador que fije AFILIACIOND como decodificacion de AFILIACION con catalogo declarado, aplicable al recurso 46977217.",
+      "evidencia": [
+        {
+          "ruta": "data/portal/inspecciones/22202305-2d02-4c49-b216-cc98224357f0.json",
+          "sha256": "76fe68223bc861fcdf62cb33f5b9a207503b192c2ef531a4aad31d52e7a7513b",
+          "localizador": "/definiciones/39 (fila 40, variable AFILIACIOND)",
+          "afirmacion_soportada": "Fila local: Nombre=AFILIACIOND, Tipo=Texto, Ejemplo='NINGUNA', Descripcion=Pendiente de especificar"
+        },
+        {
+          "ruta": "propuestas/plan-paralelo-brechas-sin-gemma/ejecucion-20261024-072207Z/S2-nacimientos/trabajo/evidencia/sinac_catalogos_2020_2023.zip",
+          "sha256": "9c7dcd52dd8fdb2cfb9c7de3711e0ccc323cfa9cff86712eaeeb3e883141cb4e",
+          "localizador": "listado completo del zip (20 xlsx) + barrido de celdas por codigo",
+          "afirmacion_soportada": "Negativa acotada verificada por codigo: 0/22; 'AFILIACIOND' sin coincidencia en nombres de archivo ni en celdas del codebook 2020-2023."
+        },
+        {
+          "ruta": "propuestas/cierre-brechas-post-r6/significados-salud/evidencia/desc_sinac_2020_2025/Descriptores_SINAC_2020.xlsx",
+          "sha256": "0af0b6be1faeb3867da872cd1b2021785af4feb78311c5de7c1fa44807fd6ed4",
+          "localizador": "Hoja1; busqueda exacta del nombre por codigo",
+          "afirmacion_soportada": "Negativa acotada verificada por codigo: 'AFILIACIOND' no figura entre las variables del descriptor nacional SINAC 2020-2025."
+        }
+      ],
+      "condicion_reapertura": "Reabre si el publicador publica la regla de decodificacion de AFILIACIOND (o su definicion) aplicable al recurso 46977217, o si W aporta documento primario equivalente.",
+      "limites": [
+        "Alcance simultaneo por conjunto+diccionario+fila+huella; no autoriza cruces, joins ni identidad de catalogos.",
+        "Descriptor/catalogos DGIS citados son del registro nacional (SINAC 2020-2025 / codebook 2020-2023), no del extracto Sonora del portal; la coincidencia de nombres o valores no sustituye la tabla del publicador.",
+        "Negativas y ausencias acotadas a lo revisado el 2026-10-24; no ausencia universal."
+      ]
+    },
+    {
+      "id": "https://example.org/mex-ontologi/definition/22202305-2d02-4c49-b216-cc98224357f0%2F44",
+      "tipo": "significados",
+      "original_sha256": "abc13640de04f7514ac30c8c0101e99b10f56c1915f58b9689fb4960d88df286",
+      "puerta": "sin_pista_nueva",
+      "pista": null,
+      "estado": "brecha_externa",
+      "afirmacion_propuesta": null,
+      "motivo": "brecha_externa: fila portal verificada (INTERRUMPIOESTUDIOSD, Texto, ejemplo 'NO', Descripcion 'Pendiente de especificar') sin contraparte nacional verificada por codigo: ausente del descriptor SINAC 2020-2025 (0/22) y del codebook 2020-2023 (zip de 20 xlsx, 0/22 en nombres y celdas). Desajuste estructural concreto: columna derivada local 'INTERRUMPIOESTUDIOSD' cuyo contenido decodificaria 'INTERRUMPIOESTUDIOS', pero la regla publicador columna->catalogo no esta declarada en el instrumento local ni en fuente primaria vinculada al recurso 46977217. Expediente R7 revisado (S2 v001/v002, W-web paquetes v001..v004 y cierres): sin pista primaria nueva para este ID; no se repiten busquedas genericas agotadas. Negativa acotada a lo revisado el 2026-10-24.",
+      "evidencia_faltante": "Regla del publicador que fije INTERRUMPIOESTUDIOSD como decodificacion de INTERRUMPIOESTUDIOS con catalogo declarado, aplicable al recurso 46977217.",
+      "evidencia": [
+        {
+          "ruta": "data/portal/inspecciones/22202305-2d02-4c49-b216-cc98224357f0.json",
+          "sha256": "76fe68223bc861fcdf62cb33f5b9a207503b192c2ef531a4aad31d52e7a7513b",
+          "localizador": "/definiciones/43 (fila 44, variable INTERRUMPIOESTUDIOSD)",
+          "afirmacion_soportada": "Fila local: Nombre=INTERRUMPIOESTUDIOSD, Tipo=Texto, Ejemplo='NO', Descripcion=Pendiente de especificar"
+        },
+        {
+          "ruta": "propuestas/plan-paralelo-brechas-sin-gemma/ejecucion-20261024-072207Z/S2-nacimientos/trabajo/evidencia/sinac_catalogos_2020_2023.zip",
+          "sha256": "9c7dcd52dd8fdb2cfb9c7de3711e0ccc323cfa9cff86712eaeeb3e883141cb4e",
+          "localizador": "listado completo del zip (20 xlsx) + barrido de celdas por codigo",
+          "afirmacion_soportada": "Negativa acotada verificada por codigo: 0/22; 'INTERRUMPIOESTUDIOSD' sin coincidencia en nombres de archivo ni en celdas del codebook 2020-2023."
+        },
+        {
+          "ruta": "propuestas/cierre-brechas-post-r6/significados-salud/evidencia/desc_sinac_2020_2025/Descriptores_SINAC_2020.xlsx",
+          "sha256": "0af0b6be1faeb3867da872cd1b2021785af4feb78311c5de7c1fa44807fd6ed4",
+          "localizador": "Hoja1; busqueda exacta del nombre por codigo",
+          "afirmacion_soportada": "Negativa acotada verificada por codigo: 'INTERRUMPIOESTUDIOSD' no figura entre las variables del descriptor nacional SINAC 2020-2025."
+        }
+      ],
+      "condicion_reapertura": "Reabre si el publicador publica la regla de decodificacion de INTERRUMPIOESTUDIOSD (o su definicion) aplicable al recurso 46977217, o si W aporta documento primario equivalente.",
+      "limites": [
+        "Alcance simultaneo por conjunto+diccionario+fila+huella; no autoriza cruces, joins ni identidad de catalogos.",
+        "Descriptor/catalogos DGIS citados son del registro nacional (SINAC 2020-2025 / codebook 2020-2023), no del extracto Sonora del portal; la coincidencia de nombres o valores no sustituye la tabla del publicador.",
+        "Negativas y ausencias acotadas a lo revisado el 2026-10-24; no ausencia universal."
+      ]
+    },
+    {
+      "id": "https://example.org/mex-ontologi/definition/22202305-2d02-4c49-b216-cc98224357f0%2F46",
+      "tipo": "significados",
+      "original_sha256": "1f9314db63aab6c18ff658b5bb4f37fe037f2afb1539177c177dc0b08cfdc0d0",
+      "puerta": "sin_pista_nueva",
+      "pista": null,
+      "estado": "brecha_externa",
+      "afirmacion_propuesta": null,
+      "motivo": "brecha_externa: fila portal verificada (CLAVEOCUPACIONHABITUALD, Texto, ejemplo 'NO REMUNERADO, AMA DE CASA', Descripcion 'Pendiente de especificar') sin contraparte nacional verificada por codigo: ausente del descriptor SINAC 2020-2025 (0/22) y del codebook 2020-2023 (zip de 20 xlsx, 0/22 en nombres y celdas). Desajuste estructural concreto: columna derivada local 'CLAVEOCUPACIONHABITUALD' cuyo contenido decodificaria 'CLAVEOCUPACIONHABITUAL', pero la regla publicador columna->catalogo no esta declarada en el instrumento local ni en fuente primaria vinculada al recurso 46977217. Expediente R7 revisado (S2 v001/v002, W-web paquetes v001..v004 y cierres): sin pista primaria nueva para este ID; no se repiten busquedas genericas agotadas. Negativa acotada a lo revisado el 2026-10-24.",
+      "evidencia_faltante": "Regla del publicador que fije CLAVEOCUPACIONHABITUALD como decodificacion de CLAVEOCUPACIONHABITUAL con catalogo declarado, aplicable al recurso 46977217.",
+      "evidencia": [
+        {
+          "ruta": "data/portal/inspecciones/22202305-2d02-4c49-b216-cc98224357f0.json",
+          "sha256": "76fe68223bc861fcdf62cb33f5b9a207503b192c2ef531a4aad31d52e7a7513b",
+          "localizador": "/definiciones/45 (fila 46, variable CLAVEOCUPACIONHABITUALD)",
+          "afirmacion_soportada": "Fila local: Nombre=CLAVEOCUPACIONHABITUALD, Tipo=Texto, Ejemplo='NO REMUNERADO, AMA DE CASA', Descripcion=Pendiente de especificar"
+        },
+        {
+          "ruta": "propuestas/plan-paralelo-brechas-sin-gemma/ejecucion-20261024-072207Z/S2-nacimientos/trabajo/evidencia/sinac_catalogos_2020_2023.zip",
+          "sha256": "9c7dcd52dd8fdb2cfb9c7de3711e0ccc323cfa9cff86712eaeeb3e883141cb4e",
+          "localizador": "listado completo del zip (20 xlsx) + barrido de celdas por codigo",
+          "afirmacion_soportada": "Negativa acotada verificada por codigo: 0/22; 'CLAVEOCUPACIONHABITUALD' sin coincidencia en nombres de archivo ni en celdas del codebook 2020-2023."
+        },
+        {
+          "ruta": "propuestas/cierre-brechas-post-r6/significados-salud/evidencia/desc_sinac_2020_2025/Descriptores_SINAC_2020.xlsx",
+          "sha256": "0af0b6be1faeb3867da872cd1b2021785af4feb78311c5de7c1fa44807fd6ed4",
+          "localizador": "Hoja1; busqueda exacta del nombre por codigo",
+          "afirmacion_soportada": "Negativa acotada verificada por codigo: 'CLAVEOCUPACIONHABITUALD' no figura entre las variables del descriptor nacional SINAC 2020-2025."
+        }
+      ],
+      "condicion_reapertura": "Reabre si el publicador publica la regla de decodificacion de CLAVEOCUPACIONHABITUALD (o su definicion) aplicable al recurso 46977217, o si W aporta documento primario equivalente.",
+      "limites": [
+        "Alcance simultaneo por conjunto+diccionario+fila+huella; no autoriza cruces, joins ni identidad de catalogos.",
+        "Descriptor/catalogos DGIS citados son del registro nacional (SINAC 2020-2025 / codebook 2020-2023), no del extracto Sonora del portal; la coincidencia de nombres o valores no sustituye la tabla del publicador.",
+        "Negativas y ausencias acotadas a lo revisado el 2026-10-24; no ausencia universal."
+      ]
+    },
+    {
+      "id": "https://example.org/mex-ontologi/definition/22202305-2d02-4c49-b216-cc98224357f0%2F60",
+      "tipo": "significados",
+      "original_sha256": "32e8003f6f04f9fdef1abb31d47a8688d6dba4fe8991b4c8ca75b06e30dcac90",
+      "puerta": "sin_pista_nueva",
+      "pista": null,
+      "estado": "brecha_externa",
+      "afirmacion_propuesta": null,
+      "motivo": "brecha_externa: fila portal verificada (TAMIZAUDITIVOD, Texto, ejemplo 'NO', Descripcion 'Pendiente de especificar') sin contraparte nacional verificada por codigo: ausente del descriptor SINAC 2020-2025 (0/22) y del codebook 2020-2023 (zip de 20 xlsx, 0/22 en nombres y celdas). Desajuste estructural concreto: columna derivada local 'TAMIZAUDITIVOD' cuyo contenido decodificaria 'TAMIZAUDITIVO', pero la regla publicador columna->catalogo no esta declarada en el instrumento local ni en fuente primaria vinculada al recurso 46977217. Expediente R7 revisado (S2 v001/v002, W-web paquetes v001..v004 y cierres): sin pista primaria nueva para este ID; no se repiten busquedas genericas agotadas. Negativa acotada a lo revisado el 2026-10-24.",
+      "evidencia_faltante": "Regla del publicador que fije TAMIZAUDITIVOD como decodificacion de TAMIZAUDITIVO con catalogo declarado, aplicable al recurso 46977217.",
+      "evidencia": [
+        {
+          "ruta": "data/portal/inspecciones/22202305-2d02-4c49-b216-cc98224357f0.json",
+          "sha256": "76fe68223bc861fcdf62cb33f5b9a207503b192c2ef531a4aad31d52e7a7513b",
+          "localizador": "/definiciones/59 (fila 60, variable TAMIZAUDITIVOD)",
+          "afirmacion_soportada": "Fila local: Nombre=TAMIZAUDITIVOD, Tipo=Texto, Ejemplo='NO', Descripcion=Pendiente de especificar"
+        },
+        {
+          "ruta": "propuestas/plan-paralelo-brechas-sin-gemma/ejecucion-20261024-072207Z/S2-nacimientos/trabajo/evidencia/sinac_catalogos_2020_2023.zip",
+          "sha256": "9c7dcd52dd8fdb2cfb9c7de3711e0ccc323cfa9cff86712eaeeb3e883141cb4e",
+          "localizador": "listado completo del zip (20 xlsx) + barrido de celdas por codigo",
+          "afirmacion_soportada": "Negativa acotada verificada por codigo: 0/22; 'TAMIZAUDITIVOD' sin coincidencia en nombres de archivo ni en celdas del codebook 2020-2023."
+        },
+        {
+          "ruta": "propuestas/cierre-brechas-post-r6/significados-salud/evidencia/desc_sinac_2020_2025/Descriptores_SINAC_2020.xlsx",
+          "sha256": "0af0b6be1faeb3867da872cd1b2021785af4feb78311c5de7c1fa44807fd6ed4",
+          "localizador": "Hoja1; busqueda exacta del nombre por codigo",
+          "afirmacion_soportada": "Negativa acotada verificada por codigo: 'TAMIZAUDITIVOD' no figura entre las variables del descriptor nacional SINAC 2020-2025."
+        }
+      ],
+      "condicion_reapertura": "Reabre si el publicador publica la regla de decodificacion de TAMIZAUDITIVOD (o su definicion) aplicable al recurso 46977217, o si W aporta documento primario equivalente.",
+      "limites": [
+        "Alcance simultaneo por conjunto+diccionario+fila+huella; no autoriza cruces, joins ni identidad de catalogos.",
+        "Descriptor/catalogos DGIS citados son del registro nacional (SINAC 2020-2025 / codebook 2020-2023), no del extracto Sonora del portal; la coincidencia de nombres o valores no sustituye la tabla del publicador.",
+        "Negativas y ausencias acotadas a lo revisado el 2026-10-24; no ausencia universal."
+      ]
+    },
+    {
+      "id": "https://example.org/mex-ontologi/definition/22202305-2d02-4c49-b216-cc98224357f0%2F62",
+      "tipo": "significados",
+      "original_sha256": "75e8257ba117e2f2791ad59e7b11550d0ee87c8f43ddcb2e00b91c4f1c43fbbd",
+      "puerta": "sin_pista_nueva",
+      "pista": null,
+      "estado": "brecha_externa",
+      "afirmacion_propuesta": null,
+      "motivo": "brecha_externa: fila portal verificada (VACUNA_BCGD, Texto, ejemplo 'SI', Descripcion 'Pendiente de especificar') sin contraparte nacional verificada por codigo: ausente del descriptor SINAC 2020-2025 (0/22) y del codebook 2020-2023 (zip de 20 xlsx, 0/22 en nombres y celdas). Desajuste estructural concreto: columna derivada local 'VACUNA_BCGD' cuyo contenido decodificaria 'VACUNA_BCG', pero la regla publicador columna->catalogo no esta declarada en el instrumento local ni en fuente primaria vinculada al recurso 46977217. Expediente R7 revisado (S2 v001/v002, W-web paquetes v001..v004 y cierres): sin pista primaria nueva para este ID; no se repiten busquedas genericas agotadas. Negativa acotada a lo revisado el 2026-10-24.",
+      "evidencia_faltante": "Regla del publicador que fije VACUNA_BCGD como decodificacion de VACUNA_BCG con catalogo declarado, aplicable al recurso 46977217.",
+      "evidencia": [
+        {
+          "ruta": "data/portal/inspecciones/22202305-2d02-4c49-b216-cc98224357f0.json",
+          "sha256": "76fe68223bc861fcdf62cb33f5b9a207503b192c2ef531a4aad31d52e7a7513b",
+          "localizador": "/definiciones/61 (fila 62, variable VACUNA_BCGD)",
+          "afirmacion_soportada": "Fila local: Nombre=VACUNA_BCGD, Tipo=Texto, Ejemplo='SI', Descripcion=Pendiente de especificar"
+        },
+        {
+          "ruta": "propuestas/plan-paralelo-brechas-sin-gemma/ejecucion-20261024-072207Z/S2-nacimientos/trabajo/evidencia/sinac_catalogos_2020_2023.zip",
+          "sha256": "9c7dcd52dd8fdb2cfb9c7de3711e0ccc323cfa9cff86712eaeeb3e883141cb4e",
+          "localizador": "listado completo del zip (20 xlsx) + barrido de celdas por codigo",
+          "afirmacion_soportada": "Negativa acotada verificada por codigo: 0/22; 'VACUNA_BCGD' sin coincidencia en nombres de archivo ni en celdas del codebook 2020-2023."
+        },
+        {
+          "ruta": "propuestas/cierre-brechas-post-r6/significados-salud/evidencia/desc_sinac_2020_2025/Descriptores_SINAC_2020.xlsx",
+          "sha256": "0af0b6be1faeb3867da872cd1b2021785af4feb78311c5de7c1fa44807fd6ed4",
+          "localizador": "Hoja1; busqueda exacta del nombre por codigo",
+          "afirmacion_soportada": "Negativa acotada verificada por codigo: 'VACUNA_BCGD' no figura entre las variables del descriptor nacional SINAC 2020-2025."
+        }
+      ],
+      "condicion_reapertura": "Reabre si el publicador publica la regla de decodificacion de VACUNA_BCGD (o su definicion) aplicable al recurso 46977217, o si W aporta documento primario equivalente.",
+      "limites": [
+        "Alcance simultaneo por conjunto+diccionario+fila+huella; no autoriza cruces, joins ni identidad de catalogos.",
+        "Descriptor/catalogos DGIS citados son del registro nacional (SINAC 2020-2025 / codebook 2020-2023), no del extracto Sonora del portal; la coincidencia de nombres o valores no sustituye la tabla del publicador.",
+        "Negativas y ausencias acotadas a lo revisado el 2026-10-24; no ausencia universal."
+      ]
+    },
+    {
+      "id": "https://example.org/mex-ontologi/definition/22202305-2d02-4c49-b216-cc98224357f0%2F64",
+      "tipo": "significados",
+      "original_sha256": "b9f891e6cf1d49eff0810c35dc27e312638da5dde269699701526debf74a1976",
+      "puerta": "sin_pista_nueva",
+      "pista": null,
+      "estado": "brecha_externa",
+      "afirmacion_propuesta": null,
+      "motivo": "brecha_externa: fila portal verificada (VACUNAHEPATITIS_BD, Texto, ejemplo 'SI', Descripcion 'Pendiente de especificar') sin contraparte nacional verificada por codigo: ausente del descriptor SINAC 2020-2025 (0/22) y del codebook 2020-2023 (zip de 20 xlsx, 0/22 en nombres y celdas). Desajuste estructural concreto: columna derivada local 'VACUNAHEPATITIS_BD' cuyo contenido decodificaria 'VACUNAHEPATITIS_B', pero la regla publicador columna->catalogo no esta declarada en el instrumento local ni en fuente primaria vinculada al recurso 46977217. Expediente R7 revisado (S2 v001/v002, W-web paquetes v001..v004 y cierres): sin pista primaria nueva para este ID; no se repiten busquedas genericas agotadas. Negativa acotada a lo revisado el 2026-10-24.",
+      "evidencia_faltante": "Regla del publicador que fije VACUNAHEPATITIS_BD como decodificacion de VACUNAHEPATITIS_B con catalogo declarado, aplicable al recurso 46977217.",
+      "evidencia": [
+        {
+          "ruta": "data/portal/inspecciones/22202305-2d02-4c49-b216-cc98224357f0.json",
+          "sha256": "76fe68223bc861fcdf62cb33f5b9a207503b192c2ef531a4aad31d52e7a7513b",
+          "localizador": "/definiciones/63 (fila 64, variable VACUNAHEPATITIS_BD)",
+          "afirmacion_soportada": "Fila local: Nombre=VACUNAHEPATITIS_BD, Tipo=Texto, Ejemplo='SI', Descripcion=Pendiente de especificar"
+        },
+        {
+          "ruta": "propuestas/plan-paralelo-brechas-sin-gemma/ejecucion-20261024-072207Z/S2-nacimientos/trabajo/evidencia/sinac_catalogos_2020_2023.zip",
+          "sha256": "9c7dcd52dd8fdb2cfb9c7de3711e0ccc323cfa9cff86712eaeeb3e883141cb4e",
+          "localizador": "listado completo del zip (20 xlsx) + barrido de celdas por codigo",
+          "afirmacion_soportada": "Negativa acotada verificada por codigo: 0/22; 'VACUNAHEPATITIS_BD' sin coincidencia en nombres de archivo ni en celdas del codebook 2020-2023."
+        },
+        {
+          "ruta": "propuestas/cierre-brechas-post-r6/significados-salud/evidencia/desc_sinac_2020_2025/Descriptores_SINAC_2020.xlsx",
+          "sha256": "0af0b6be1faeb3867da872cd1b2021785af4feb78311c5de7c1fa44807fd6ed4",
+          "localizador": "Hoja1; busqueda exacta del nombre por codigo",
+          "afirmacion_soportada": "Negativa acotada verificada por codigo: 'VACUNAHEPATITIS_BD' no figura entre las variables del descriptor nacional SINAC 2020-2025."
+        }
+      ],
+      "condicion_reapertura": "Reabre si el publicador publica la regla de decodificacion de VACUNAHEPATITIS_BD (o su definicion) aplicable al recurso 46977217, o si W aporta documento primario equivalente.",
+      "limites": [
+        "Alcance simultaneo por conjunto+diccionario+fila+huella; no autoriza cruces, joins ni identidad de catalogos.",
+        "Descriptor/catalogos DGIS citados son del registro nacional (SINAC 2020-2025 / codebook 2020-2023), no del extracto Sonora del portal; la coincidencia de nombres o valores no sustituye la tabla del publicador.",
+        "Negativas y ausencias acotadas a lo revisado el 2026-10-24; no ausencia universal."
+      ]
+    },
+    {
+      "id": "https://example.org/mex-ontologi/definition/22202305-2d02-4c49-b216-cc98224357f0%2F66",
+      "tipo": "significados",
+      "original_sha256": "a65968c837835d8e41ea23821ffffb3789004911075a7c3feee4e08bd1e46cb6",
+      "puerta": "sin_pista_nueva",
+      "pista": null,
+      "estado": "brecha_externa",
+      "afirmacion_propuesta": null,
+      "motivo": "brecha_externa: fila portal verificada (VITAMINA_AD, Texto, ejemplo 'NO ESPECIFICADO', Descripcion 'Pendiente de especificar') sin contraparte nacional verificada por codigo: ausente del descriptor SINAC 2020-2025 (0/22) y del codebook 2020-2023 (zip de 20 xlsx, 0/22 en nombres y celdas). Desajuste estructural concreto: columna derivada local 'VITAMINA_AD' cuyo contenido decodificaria 'VITAMINA_A', pero la regla publicador columna->catalogo no esta declarada en el instrumento local ni en fuente primaria vinculada al recurso 46977217. Expediente R7 revisado (S2 v001/v002, W-web paquetes v001..v004 y cierres): sin pista primaria nueva para este ID; no se repiten busquedas genericas agotadas. Negativa acotada a lo revisado el 2026-10-24.",
+      "evidencia_faltante": "Regla del publicador que fije VITAMINA_AD como decodificacion de VITAMINA_A con catalogo declarado, aplicable al recurso 46977217.",
+      "evidencia": [
+        {
+          "ruta": "data/portal/inspecciones/22202305-2d02-4c49-b216-cc98224357f0.json",
+          "sha256": "76fe68223bc861fcdf62cb33f5b9a207503b192c2ef531a4aad31d52e7a7513b",
+          "localizador": "/definiciones/65 (fila 66, variable VITAMINA_AD)",
+          "afirmacion_soportada": "Fila local: Nombre=VITAMINA_AD, Tipo=Texto, Ejemplo='NO ESPECIFICADO', Descripcion=Pendiente de especificar"
+        },
+        {
+          "ruta": "propuestas/plan-paralelo-brechas-sin-gemma/ejecucion-20261024-072207Z/S2-nacimientos/trabajo/evidencia/sinac_catalogos_2020_2023.zip",
+          "sha256": "9c7dcd52dd8fdb2cfb9c7de3711e0ccc323cfa9cff86712eaeeb3e883141cb4e",
+          "localizador": "listado completo del zip (20 xlsx) + barrido de celdas por codigo",
+          "afirmacion_soportada": "Negativa acotada verificada por codigo: 0/22; 'VITAMINA_AD' sin coincidencia en nombres de archivo ni en celdas del codebook 2020-2023."
+        },
+        {
+          "ruta": "propuestas/cierre-brechas-post-r6/significados-salud/evidencia/desc_sinac_2020_2025/Descriptores_SINAC_2020.xlsx",
+          "sha256": "0af0b6be1faeb3867da872cd1b2021785af4feb78311c5de7c1fa44807fd6ed4",
+          "localizador": "Hoja1; busqueda exacta del nombre por codigo",
+          "afirmacion_soportada": "Negativa acotada verificada por codigo: 'VITAMINA_AD' no figura entre las variables del descriptor nacional SINAC 2020-2025."
+        }
+      ],
+      "condicion_reapertura": "Reabre si el publicador publica la regla de decodificacion de VITAMINA_AD (o su definicion) aplicable al recurso 46977217, o si W aporta documento primario equivalente.",
+      "limites": [
+        "Alcance simultaneo por conjunto+diccionario+fila+huella; no autoriza cruces, joins ni identidad de catalogos.",
+        "Descriptor/catalogos DGIS citados son del registro nacional (SINAC 2020-2025 / codebook 2020-2023), no del extracto Sonora del portal; la coincidencia de nombres o valores no sustituye la tabla del publicador.",
+        "Negativas y ausencias acotadas a lo revisado el 2026-10-24; no ausencia universal."
+      ]
+    },
+    {
+      "id": "https://example.org/mex-ontologi/definition/22202305-2d02-4c49-b216-cc98224357f0%2F68",
+      "tipo": "significados",
+      "original_sha256": "afa4fe292dc9dc4ab382afcdad374681c32a1b6f0844dd753d6d15b9cf7e07e6",
+      "puerta": "sin_pista_nueva",
+      "pista": null,
+      "estado": "brecha_externa",
+      "afirmacion_propuesta": null,
+      "motivo": "brecha_externa: fila portal verificada (VITAMINA_KD, Texto, ejemplo 'SI', Descripcion 'Pendiente de especificar') sin contraparte nacional verificada por codigo: ausente del descriptor SINAC 2020-2025 (0/22) y del codebook 2020-2023 (zip de 20 xlsx, 0/22 en nombres y celdas). Desajuste estructural concreto: columna derivada local 'VITAMINA_KD' cuyo contenido decodificaria 'VITAMINA_K', pero la regla publicador columna->catalogo no esta declarada en el instrumento local ni en fuente primaria vinculada al recurso 46977217. Expediente R7 revisado (S2 v001/v002, W-web paquetes v001..v004 y cierres): sin pista primaria nueva para este ID; no se repiten busquedas genericas agotadas. Negativa acotada a lo revisado el 2026-10-24.",
+      "evidencia_faltante": "Regla del publicador que fije VITAMINA_KD como decodificacion de VITAMINA_K con catalogo declarado, aplicable al recurso 46977217.",
+      "evidencia": [
+        {
+          "ruta": "data/portal/inspecciones/22202305-2d02-4c49-b216-cc98224357f0.json",
+          "sha256": "76fe68223bc861fcdf62cb33f5b9a207503b192c2ef531a4aad31d52e7a7513b",
+          "localizador": "/definiciones/67 (fila 68, variable VITAMINA_KD)",
+          "afirmacion_soportada": "Fila local: Nombre=VITAMINA_KD, Tipo=Texto, Ejemplo='SI', Descripcion=Pendiente de especificar"
+        },
+        {
+          "ruta": "propuestas/plan-paralelo-brechas-sin-gemma/ejecucion-20261024-072207Z/S2-nacimientos/trabajo/evidencia/sinac_catalogos_2020_2023.zip",
+          "sha256": "9c7dcd52dd8fdb2cfb9c7de3711e0ccc323cfa9cff86712eaeeb3e883141cb4e",
+          "localizador": "listado completo del zip (20 xlsx) + barrido de celdas por codigo",
+          "afirmacion_soportada": "Negativa acotada verificada por codigo: 0/22; 'VITAMINA_KD' sin coincidencia en nombres de archivo ni en celdas del codebook 2020-2023."
+        },
+        {
+          "ruta": "propuestas/cierre-brechas-post-r6/significados-salud/evidencia/desc_sinac_2020_2025/Descriptores_SINAC_2020.xlsx",
+          "sha256": "0af0b6be1faeb3867da872cd1b2021785af4feb78311c5de7c1fa44807fd6ed4",
+          "localizador": "Hoja1; busqueda exacta del nombre por codigo",
+          "afirmacion_soportada": "Negativa acotada verificada por codigo: 'VITAMINA_KD' no figura entre las variables del descriptor nacional SINAC 2020-2025."
+        }
+      ],
+      "condicion_reapertura": "Reabre si el publicador publica la regla de decodificacion de VITAMINA_KD (o su definicion) aplicable al recurso 46977217, o si W aporta documento primario equivalente.",
+      "limites": [
+        "Alcance simultaneo por conjunto+diccionario+fila+huella; no autoriza cruces, joins ni identidad de catalogos.",
+        "Descriptor/catalogos DGIS citados son del registro nacional (SINAC 2020-2025 / codebook 2020-2023), no del extracto Sonora del portal; la coincidencia de nombres o valores no sustituye la tabla del publicador.",
+        "Negativas y ausencias acotadas a lo revisado el 2026-10-24; no ausencia universal."
+      ]
+    },
+    {
+      "id": "https://example.org/mex-ontologi/definition/22202305-2d02-4c49-b216-cc98224357f0%2F70",
+      "tipo": "significados",
+      "original_sha256": "6c47b31a50a0e51b4bfd40a1e4a40355ca0adacfb5f738139c634ba3781301c2",
+      "puerta": "sin_pista_nueva",
+      "pista": null,
+      "estado": "brecha_externa",
+      "afirmacion_propuesta": null,
+      "motivo": "brecha_externa: fila portal verificada (PRODUCTOEMBARAZOD, Texto, ejemplo 'ÚNICO', Descripcion 'Pendiente de especificar') sin contraparte nacional verificada por codigo: ausente del descriptor SINAC 2020-2025 (0/22) y del codebook 2020-2023 (zip de 20 xlsx, 0/22 en nombres y celdas). Desajuste estructural concreto: columna derivada local 'PRODUCTOEMBARAZOD' cuyo contenido decodificaria 'PRODUCTOEMBARAZO', pero la regla publicador columna->catalogo no esta declarada en el instrumento local ni en fuente primaria vinculada al recurso 46977217. Expediente R7 revisado (S2 v001/v002, W-web paquetes v001..v004 y cierres): sin pista primaria nueva para este ID; no se repiten busquedas genericas agotadas. Negativa acotada a lo revisado el 2026-10-24.",
+      "evidencia_faltante": "Regla del publicador que fije PRODUCTOEMBARAZOD como decodificacion de PRODUCTOEMBARAZO con catalogo declarado, aplicable al recurso 46977217.",
+      "evidencia": [
+        {
+          "ruta": "data/portal/inspecciones/22202305-2d02-4c49-b216-cc98224357f0.json",
+          "sha256": "76fe68223bc861fcdf62cb33f5b9a207503b192c2ef531a4aad31d52e7a7513b",
+          "localizador": "/definiciones/69 (fila 70, variable PRODUCTOEMBARAZOD)",
+          "afirmacion_soportada": "Fila local: Nombre=PRODUCTOEMBARAZOD, Tipo=Texto, Ejemplo='ÚNICO', Descripcion=Pendiente de especificar"
+        },
+        {
+          "ruta": "propuestas/plan-paralelo-brechas-sin-gemma/ejecucion-20261024-072207Z/S2-nacimientos/trabajo/evidencia/sinac_catalogos_2020_2023.zip",
+          "sha256": "9c7dcd52dd8fdb2cfb9c7de3711e0ccc323cfa9cff86712eaeeb3e883141cb4e",
+          "localizador": "listado completo del zip (20 xlsx) + barrido de celdas por codigo",
+          "afirmacion_soportada": "Negativa acotada verificada por codigo: 0/22; 'PRODUCTOEMBARAZOD' sin coincidencia en nombres de archivo ni en celdas del codebook 2020-2023."
+        },
+        {
+          "ruta": "propuestas/cierre-brechas-post-r6/significados-salud/evidencia/desc_sinac_2020_2025/Descriptores_SINAC_2020.xlsx",
+          "sha256": "0af0b6be1faeb3867da872cd1b2021785af4feb78311c5de7c1fa44807fd6ed4",
+          "localizador": "Hoja1; busqueda exacta del nombre por codigo",
+          "afirmacion_soportada": "Negativa acotada verificada por codigo: 'PRODUCTOEMBARAZOD' no figura entre las variables del descriptor nacional SINAC 2020-2025."
+        }
+      ],
+      "condicion_reapertura": "Reabre si el publicador publica la regla de decodificacion de PRODUCTOEMBARAZOD (o su definicion) aplicable al recurso 46977217, o si W aporta documento primario equivalente.",
+      "limites": [
+        "Alcance simultaneo por conjunto+diccionario+fila+huella; no autoriza cruces, joins ni identidad de catalogos.",
+        "Descriptor/catalogos DGIS citados son del registro nacional (SINAC 2020-2025 / codebook 2020-2023), no del extracto Sonora del portal; la coincidencia de nombres o valores no sustituye la tabla del publicador.",
+        "Negativas y ausencias acotadas a lo revisado el 2026-10-24; no ausencia universal."
+      ]
+    },
+    {
+      "id": "https://example.org/mex-ontologi/definition/22202305-2d02-4c49-b216-cc98224357f0%2F73",
+      "tipo": "significados",
+      "original_sha256": "4934a2edc84d109374c264748da8dd401e3f5f5ef544770d0bb618afb253778a",
+      "puerta": "sin_pista_nueva",
+      "pista": null,
+      "estado": "brecha_externa",
+      "afirmacion_propuesta": null,
+      "motivo": "brecha_externa: fila portal verificada (ANOMALIACIE1, Texto, ejemplo 'NINGUNA APARENTE', Descripcion 'Pendiente de especificar') sin contraparte nacional verificada por codigo: ausente del descriptor SINAC 2020-2025 (0/22) y del codebook 2020-2023 (zip de 20 xlsx, 0/22 en nombres y celdas). Desajuste estructural concreto: columna textual local sin variable en el instrumento nacional (el modelo nacional codifica anomalias con CODIGOCIEANOMALIA/0000). Sin definicion del publicador vinculada al recurso 46977217. Expediente R7 revisado (S2 v001/v002, W-web paquetes v001..v004 y cierres): sin pista primaria nueva para este ID; no se repiten busquedas genericas agotadas. Negativa acotada a lo revisado el 2026-10-24.",
+      "evidencia_faltante": "Definicion publicada de ANOMALIACIE1 por el publicador (o regla que la vincule a CODIGOCIEANOMALIA) aplicable al recurso 46977217.",
+      "evidencia": [
+        {
+          "ruta": "data/portal/inspecciones/22202305-2d02-4c49-b216-cc98224357f0.json",
+          "sha256": "76fe68223bc861fcdf62cb33f5b9a207503b192c2ef531a4aad31d52e7a7513b",
+          "localizador": "/definiciones/72 (fila 73, variable ANOMALIACIE1)",
+          "afirmacion_soportada": "Fila local: Nombre=ANOMALIACIE1, Tipo=Texto, Ejemplo='NINGUNA APARENTE', Descripcion=Pendiente de especificar"
+        },
+        {
+          "ruta": "propuestas/plan-paralelo-brechas-sin-gemma/ejecucion-20261024-072207Z/S2-nacimientos/trabajo/evidencia/sinac_catalogos_2020_2023.zip",
+          "sha256": "9c7dcd52dd8fdb2cfb9c7de3711e0ccc323cfa9cff86712eaeeb3e883141cb4e",
+          "localizador": "listado completo del zip (20 xlsx) + barrido de celdas por codigo",
+          "afirmacion_soportada": "Negativa acotada verificada por codigo: 0/22; 'ANOMALIACIE1' sin coincidencia en nombres de archivo ni en celdas del codebook 2020-2023."
+        },
+        {
+          "ruta": "propuestas/cierre-brechas-post-r6/significados-salud/evidencia/desc_sinac_2020_2025/Descriptores_SINAC_2020.xlsx",
+          "sha256": "0af0b6be1faeb3867da872cd1b2021785af4feb78311c5de7c1fa44807fd6ed4",
+          "localizador": "Hoja1; busqueda exacta del nombre por codigo",
+          "afirmacion_soportada": "Negativa acotada verificada por codigo: 'ANOMALIACIE1' no figura entre las variables del descriptor nacional SINAC 2020-2025."
+        }
+      ],
+      "condicion_reapertura": "Reabre si el publicador publica la definicion o regla de ANOMALIACIE1 aplicable al recurso 46977217, o si W aporta documento primario equivalente.",
+      "limites": [
+        "Alcance simultaneo por conjunto+diccionario+fila+huella; no autoriza cruces, joins ni identidad de catalogos.",
+        "Descriptor/catalogos DGIS citados son del registro nacional (SINAC 2020-2025 / codebook 2020-2023), no del extracto Sonora del portal; la coincidencia de nombres o valores no sustituye la tabla del publicador.",
+        "Negativas y ausencias acotadas a lo revisado el 2026-10-24; no ausencia universal."
+      ]
+    },
+    {
+      "id": "https://example.org/mex-ontologi/definition/22202305-2d02-4c49-b216-cc98224357f0%2F75",
+      "tipo": "significados",
+      "original_sha256": "a4218a54a610c518e4eca066647be8bb220127dba81452b69f776588250ab209",
+      "puerta": "sin_pista_nueva",
+      "pista": null,
+      "estado": "brecha_externa",
+      "afirmacion_propuesta": null,
+      "motivo": "brecha_externa: fila portal verificada (ANOMALIACIE2, Texto, ejemplo 'NINGUNA APARENTE', Descripcion 'Pendiente de especificar') sin contraparte nacional verificada por codigo: ausente del descriptor SINAC 2020-2025 (0/22) y del codebook 2020-2023 (zip de 20 xlsx, 0/22 en nombres y celdas). Desajuste estructural concreto: columna textual local sin variable en el instrumento nacional (el modelo nacional codifica anomalias con CODIGOCIEANOMALIA/0000). Sin definicion del publicador vinculada al recurso 46977217. Expediente R7 revisado (S2 v001/v002, W-web paquetes v001..v004 y cierres): sin pista primaria nueva para este ID; no se repiten busquedas genericas agotadas. Negativa acotada a lo revisado el 2026-10-24.",
+      "evidencia_faltante": "Definicion publicada de ANOMALIACIE2 por el publicador (o regla que la vincule a CODIGOCIEANOMALIA) aplicable al recurso 46977217.",
+      "evidencia": [
+        {
+          "ruta": "data/portal/inspecciones/22202305-2d02-4c49-b216-cc98224357f0.json",
+          "sha256": "76fe68223bc861fcdf62cb33f5b9a207503b192c2ef531a4aad31d52e7a7513b",
+          "localizador": "/definiciones/74 (fila 75, variable ANOMALIACIE2)",
+          "afirmacion_soportada": "Fila local: Nombre=ANOMALIACIE2, Tipo=Texto, Ejemplo='NINGUNA APARENTE', Descripcion=Pendiente de especificar"
+        },
+        {
+          "ruta": "propuestas/plan-paralelo-brechas-sin-gemma/ejecucion-20261024-072207Z/S2-nacimientos/trabajo/evidencia/sinac_catalogos_2020_2023.zip",
+          "sha256": "9c7dcd52dd8fdb2cfb9c7de3711e0ccc323cfa9cff86712eaeeb3e883141cb4e",
+          "localizador": "listado completo del zip (20 xlsx) + barrido de celdas por codigo",
+          "afirmacion_soportada": "Negativa acotada verificada por codigo: 0/22; 'ANOMALIACIE2' sin coincidencia en nombres de archivo ni en celdas del codebook 2020-2023."
+        },
+        {
+          "ruta": "propuestas/cierre-brechas-post-r6/significados-salud/evidencia/desc_sinac_2020_2025/Descriptores_SINAC_2020.xlsx",
+          "sha256": "0af0b6be1faeb3867da872cd1b2021785af4feb78311c5de7c1fa44807fd6ed4",
+          "localizador": "Hoja1; busqueda exacta del nombre por codigo",
+          "afirmacion_soportada": "Negativa acotada verificada por codigo: 'ANOMALIACIE2' no figura entre las variables del descriptor nacional SINAC 2020-2025."
+        }
+      ],
+      "condicion_reapertura": "Reabre si el publicador publica la definicion o regla de ANOMALIACIE2 aplicable al recurso 46977217, o si W aporta documento primario equivalente.",
+      "limites": [
+        "Alcance simultaneo por conjunto+diccionario+fila+huella; no autoriza cruces, joins ni identidad de catalogos.",
+        "Descriptor/catalogos DGIS citados son del registro nacional (SINAC 2020-2025 / codebook 2020-2023), no del extracto Sonora del portal; la coincidencia de nombres o valores no sustituye la tabla del publicador.",
+        "Negativas y ausencias acotadas a lo revisado el 2026-10-24; no ausencia universal."
+      ]
+    },
+    {
+      "id": "https://example.org/mex-ontologi/definition/22202305-2d02-4c49-b216-cc98224357f0%2F78",
+      "tipo": "significados",
+      "original_sha256": "e44ac21d4b71516292edf40fbf3566c042f7e78a01f47f15954a34ac294ae7c6",
+      "puerta": "sin_pista_nueva",
+      "pista": null,
+      "estado": "brecha_externa",
+      "afirmacion_propuesta": null,
+      "motivo": "brecha_externa: fila portal verificada (RESOLUCIONEMBARAZOD, Texto, ejemplo 'CESÁREA', Descripcion 'Pendiente de especificar') sin contraparte nacional verificada por codigo: ausente del descriptor SINAC 2020-2025 (0/22) y del codebook 2020-2023 (zip de 20 xlsx, 0/22 en nombres y celdas). Desajuste estructural concreto: columna derivada local 'RESOLUCIONEMBARAZOD' cuyo contenido decodificaria 'RESOLUCIONEMBARAZO', pero la regla publicador columna->catalogo no esta declarada en el instrumento local ni en fuente primaria vinculada al recurso 46977217. Expediente R7 revisado (S2 v001/v002, W-web paquetes v001..v004 y cierres): sin pista primaria nueva para este ID; no se repiten busquedas genericas agotadas. Negativa acotada a lo revisado el 2026-10-24.",
+      "evidencia_faltante": "Regla del publicador que fije RESOLUCIONEMBARAZOD como decodificacion de RESOLUCIONEMBARAZO con catalogo declarado, aplicable al recurso 46977217.",
+      "evidencia": [
+        {
+          "ruta": "data/portal/inspecciones/22202305-2d02-4c49-b216-cc98224357f0.json",
+          "sha256": "76fe68223bc861fcdf62cb33f5b9a207503b192c2ef531a4aad31d52e7a7513b",
+          "localizador": "/definiciones/77 (fila 78, variable RESOLUCIONEMBARAZOD)",
+          "afirmacion_soportada": "Fila local: Nombre=RESOLUCIONEMBARAZOD, Tipo=Texto, Ejemplo='CESÁREA', Descripcion=Pendiente de especificar"
+        },
+        {
+          "ruta": "propuestas/plan-paralelo-brechas-sin-gemma/ejecucion-20261024-072207Z/S2-nacimientos/trabajo/evidencia/sinac_catalogos_2020_2023.zip",
+          "sha256": "9c7dcd52dd8fdb2cfb9c7de3711e0ccc323cfa9cff86712eaeeb3e883141cb4e",
+          "localizador": "listado completo del zip (20 xlsx) + barrido de celdas por codigo",
+          "afirmacion_soportada": "Negativa acotada verificada por codigo: 0/22; 'RESOLUCIONEMBARAZOD' sin coincidencia en nombres de archivo ni en celdas del codebook 2020-2023."
+        },
+        {
+          "ruta": "propuestas/cierre-brechas-post-r6/significados-salud/evidencia/desc_sinac_2020_2025/Descriptores_SINAC_2020.xlsx",
+          "sha256": "0af0b6be1faeb3867da872cd1b2021785af4feb78311c5de7c1fa44807fd6ed4",
+          "localizador": "Hoja1; busqueda exacta del nombre por codigo",
+          "afirmacion_soportada": "Negativa acotada verificada por codigo: 'RESOLUCIONEMBARAZOD' no figura entre las variables del descriptor nacional SINAC 2020-2025."
+        }
+      ],
+      "condicion_reapertura": "Reabre si el publicador publica la regla de decodificacion de RESOLUCIONEMBARAZOD (o su definicion) aplicable al recurso 46977217, o si W aporta documento primario equivalente.",
+      "limites": [
+        "Alcance simultaneo por conjunto+diccionario+fila+huella; no autoriza cruces, joins ni identidad de catalogos.",
+        "Descriptor/catalogos DGIS citados son del registro nacional (SINAC 2020-2025 / codebook 2020-2023), no del extracto Sonora del portal; la coincidencia de nombres o valores no sustituye la tabla del publicador.",
+        "Negativas y ausencias acotadas a lo revisado el 2026-10-24; no ausencia universal."
+      ]
+    },
+    {
+      "id": "https://example.org/mex-ontologi/definition/22202305-2d02-4c49-b216-cc98224357f0%2F80",
+      "tipo": "significados",
+      "original_sha256": "7edc6d0bd714b450da6ad6bf75e8ffc82b6927f34375f21f4a0f4a6d8fdd53c1",
+      "puerta": "sin_pista_nueva",
+      "pista": null,
+      "estado": "brecha_externa",
+      "afirmacion_propuesta": null,
+      "motivo": "brecha_externa: fila portal verificada (UTILIZOFORCEPSD, Texto, ejemplo 'NO APLICA', Descripcion 'Pendiente de especificar') sin contraparte nacional verificada por codigo: ausente del descriptor SINAC 2020-2025 (0/22) y del codebook 2020-2023 (zip de 20 xlsx, 0/22 en nombres y celdas). Desajuste estructural concreto: columna derivada local 'UTILIZOFORCEPSD' cuyo contenido decodificaria 'UTILIZOFORCEPS', pero la regla publicador columna->catalogo no esta declarada en el instrumento local ni en fuente primaria vinculada al recurso 46977217. Expediente R7 revisado (S2 v001/v002, W-web paquetes v001..v004 y cierres): sin pista primaria nueva para este ID; no se repiten busquedas genericas agotadas. Negativa acotada a lo revisado el 2026-10-24.",
+      "evidencia_faltante": "Regla del publicador que fije UTILIZOFORCEPSD como decodificacion de UTILIZOFORCEPS con catalogo declarado, aplicable al recurso 46977217.",
+      "evidencia": [
+        {
+          "ruta": "data/portal/inspecciones/22202305-2d02-4c49-b216-cc98224357f0.json",
+          "sha256": "76fe68223bc861fcdf62cb33f5b9a207503b192c2ef531a4aad31d52e7a7513b",
+          "localizador": "/definiciones/79 (fila 80, variable UTILIZOFORCEPSD)",
+          "afirmacion_soportada": "Fila local: Nombre=UTILIZOFORCEPSD, Tipo=Texto, Ejemplo='NO APLICA', Descripcion=Pendiente de especificar"
+        },
+        {
+          "ruta": "propuestas/plan-paralelo-brechas-sin-gemma/ejecucion-20261024-072207Z/S2-nacimientos/trabajo/evidencia/sinac_catalogos_2020_2023.zip",
+          "sha256": "9c7dcd52dd8fdb2cfb9c7de3711e0ccc323cfa9cff86712eaeeb3e883141cb4e",
+          "localizador": "listado completo del zip (20 xlsx) + barrido de celdas por codigo",
+          "afirmacion_soportada": "Negativa acotada verificada por codigo: 0/22; 'UTILIZOFORCEPSD' sin coincidencia en nombres de archivo ni en celdas del codebook 2020-2023."
+        },
+        {
+          "ruta": "propuestas/cierre-brechas-post-r6/significados-salud/evidencia/desc_sinac_2020_2025/Descriptores_SINAC_2020.xlsx",
+          "sha256": "0af0b6be1faeb3867da872cd1b2021785af4feb78311c5de7c1fa44807fd6ed4",
+          "localizador": "Hoja1; busqueda exacta del nombre por codigo",
+          "afirmacion_soportada": "Negativa acotada verificada por codigo: 'UTILIZOFORCEPSD' no figura entre las variables del descriptor nacional SINAC 2020-2025."
+        }
+      ],
+      "condicion_reapertura": "Reabre si el publicador publica la regla de decodificacion de UTILIZOFORCEPSD (o su definicion) aplicable al recurso 46977217, o si W aporta documento primario equivalente.",
+      "limites": [
+        "Alcance simultaneo por conjunto+diccionario+fila+huella; no autoriza cruces, joins ni identidad de catalogos.",
+        "Descriptor/catalogos DGIS citados son del registro nacional (SINAC 2020-2025 / codebook 2020-2023), no del extracto Sonora del portal; la coincidencia de nombres o valores no sustituye la tabla del publicador.",
+        "Negativas y ausencias acotadas a lo revisado el 2026-10-24; no ausencia universal."
+      ]
+    },
+    {
+      "id": "https://example.org/mex-ontologi/definition/22202305-2d02-4c49-b216-cc98224357f0%2F88",
+      "tipo": "significados",
+      "original_sha256": "fdfb76727fce01eea4fb16641f91fa0d93f33a56f6be833e7d116986c5167100",
+      "puerta": "sin_pista_nueva",
+      "pista": null,
+      "estado": "brecha_externa",
+      "afirmacion_propuesta": null,
+      "motivo": "brecha_externa: fila portal verificada (PERSONALATENDIOD, Texto, ejemplo 'MÉDICO', Descripcion 'Pendiente de especificar') sin contraparte nacional verificada por codigo: ausente del descriptor SINAC 2020-2025 (0/22) y del codebook 2020-2023 (zip de 20 xlsx, 0/22 en nombres y celdas). Desajuste estructural concreto: columna derivada local 'PERSONALATENDIOD' cuyo contenido decodificaria 'PERSONALATENDIO', pero la regla publicador columna->catalogo no esta declarada en el instrumento local ni en fuente primaria vinculada al recurso 46977217. Expediente R7 revisado (S2 v001/v002, W-web paquetes v001..v004 y cierres): sin pista primaria nueva para este ID; no se repiten busquedas genericas agotadas. Negativa acotada a lo revisado el 2026-10-24.",
+      "evidencia_faltante": "Regla del publicador que fije PERSONALATENDIOD como decodificacion de PERSONALATENDIO con catalogo declarado, aplicable al recurso 46977217.",
+      "evidencia": [
+        {
+          "ruta": "data/portal/inspecciones/22202305-2d02-4c49-b216-cc98224357f0.json",
+          "sha256": "76fe68223bc861fcdf62cb33f5b9a207503b192c2ef531a4aad31d52e7a7513b",
+          "localizador": "/definiciones/87 (fila 88, variable PERSONALATENDIOD)",
+          "afirmacion_soportada": "Fila local: Nombre=PERSONALATENDIOD, Tipo=Texto, Ejemplo='MÉDICO', Descripcion=Pendiente de especificar"
+        },
+        {
+          "ruta": "propuestas/plan-paralelo-brechas-sin-gemma/ejecucion-20261024-072207Z/S2-nacimientos/trabajo/evidencia/sinac_catalogos_2020_2023.zip",
+          "sha256": "9c7dcd52dd8fdb2cfb9c7de3711e0ccc323cfa9cff86712eaeeb3e883141cb4e",
+          "localizador": "listado completo del zip (20 xlsx) + barrido de celdas por codigo",
+          "afirmacion_soportada": "Negativa acotada verificada por codigo: 0/22; 'PERSONALATENDIOD' sin coincidencia en nombres de archivo ni en celdas del codebook 2020-2023."
+        },
+        {
+          "ruta": "propuestas/cierre-brechas-post-r6/significados-salud/evidencia/desc_sinac_2020_2025/Descriptores_SINAC_2020.xlsx",
+          "sha256": "0af0b6be1faeb3867da872cd1b2021785af4feb78311c5de7c1fa44807fd6ed4",
+          "localizador": "Hoja1; busqueda exacta del nombre por codigo",
+          "afirmacion_soportada": "Negativa acotada verificada por codigo: 'PERSONALATENDIOD' no figura entre las variables del descriptor nacional SINAC 2020-2025."
+        }
+      ],
+      "condicion_reapertura": "Reabre si el publicador publica la regla de decodificacion de PERSONALATENDIOD (o su definicion) aplicable al recurso 46977217, o si W aporta documento primario equivalente.",
+      "limites": [
+        "Alcance simultaneo por conjunto+diccionario+fila+huella; no autoriza cruces, joins ni identidad de catalogos.",
+        "Descriptor/catalogos DGIS citados son del registro nacional (SINAC 2020-2025 / codebook 2020-2023), no del extracto Sonora del portal; la coincidencia de nombres o valores no sustituye la tabla del publicador.",
+        "Negativas y ausencias acotadas a lo revisado el 2026-10-24; no ausencia universal."
+      ]
+    },
+    {
+      "id": "https://example.org/mex-ontologi/definition/22202305-2d02-4c49-b216-cc98224357f0%2F90",
+      "tipo": "significados",
+      "original_sha256": "41314a24f58771e3ce6d4df22c7f7e9caf9cc10d23f70921d05ddec01ab1a76f",
+      "puerta": "sin_pista_nueva",
+      "pista": null,
+      "estado": "brecha_externa",
+      "afirmacion_propuesta": null,
+      "motivo": "brecha_externa: fila portal verificada (TIPOMEDICOATENDIOD, Texto, ejemplo 'MÉDICO GINECO OBSTETRA', Descripcion 'Pendiente de especificar') sin contraparte nacional verificada por codigo: ausente del descriptor SINAC 2020-2025 (0/22) y del codebook 2020-2023 (zip de 20 xlsx, 0/22 en nombres y celdas). Desajuste estructural concreto: columna derivada local 'TIPOMEDICOATENDIOD' cuyo contenido decodificaria 'TIPOMEDICOATENDIO', pero la regla publicador columna->catalogo no esta declarada en el instrumento local ni en fuente primaria vinculada al recurso 46977217. Expediente R7 revisado (S2 v001/v002, W-web paquetes v001..v004 y cierres): sin pista primaria nueva para este ID; no se repiten busquedas genericas agotadas. Negativa acotada a lo revisado el 2026-10-24.",
+      "evidencia_faltante": "Regla del publicador que fije TIPOMEDICOATENDIOD como decodificacion de TIPOMEDICOATENDIO con catalogo declarado, aplicable al recurso 46977217.",
+      "evidencia": [
+        {
+          "ruta": "data/portal/inspecciones/22202305-2d02-4c49-b216-cc98224357f0.json",
+          "sha256": "76fe68223bc861fcdf62cb33f5b9a207503b192c2ef531a4aad31d52e7a7513b",
+          "localizador": "/definiciones/89 (fila 90, variable TIPOMEDICOATENDIOD)",
+          "afirmacion_soportada": "Fila local: Nombre=TIPOMEDICOATENDIOD, Tipo=Texto, Ejemplo='MÉDICO GINECO OBSTETRA', Descripcion=Pendiente de especificar"
+        },
+        {
+          "ruta": "propuestas/plan-paralelo-brechas-sin-gemma/ejecucion-20261024-072207Z/S2-nacimientos/trabajo/evidencia/sinac_catalogos_2020_2023.zip",
+          "sha256": "9c7dcd52dd8fdb2cfb9c7de3711e0ccc323cfa9cff86712eaeeb3e883141cb4e",
+          "localizador": "listado completo del zip (20 xlsx) + barrido de celdas por codigo",
+          "afirmacion_soportada": "Negativa acotada verificada por codigo: 0/22; 'TIPOMEDICOATENDIOD' sin coincidencia en nombres de archivo ni en celdas del codebook 2020-2023."
+        },
+        {
+          "ruta": "propuestas/cierre-brechas-post-r6/significados-salud/evidencia/desc_sinac_2020_2025/Descriptores_SINAC_2020.xlsx",
+          "sha256": "0af0b6be1faeb3867da872cd1b2021785af4feb78311c5de7c1fa44807fd6ed4",
+          "localizador": "Hoja1; busqueda exacta del nombre por codigo",
+          "afirmacion_soportada": "Negativa acotada verificada por codigo: 'TIPOMEDICOATENDIOD' no figura entre las variables del descriptor nacional SINAC 2020-2025."
+        }
+      ],
+      "condicion_reapertura": "Reabre si el publicador publica la regla de decodificacion de TIPOMEDICOATENDIOD (o su definicion) aplicable al recurso 46977217, o si W aporta documento primario equivalente.",
+      "limites": [
+        "Alcance simultaneo por conjunto+diccionario+fila+huella; no autoriza cruces, joins ni identidad de catalogos.",
+        "Descriptor/catalogos DGIS citados son del registro nacional (SINAC 2020-2025 / codebook 2020-2023), no del extracto Sonora del portal; la coincidencia de nombres o valores no sustituye la tabla del publicador.",
+        "Negativas y ausencias acotadas a lo revisado el 2026-10-24; no ausencia universal."
+      ]
+    },
+    {
+      "id": "https://example.org/mex-ontologi/definition/22202305-2d02-4c49-b216-cc98224357f0%2F98",
+      "tipo": "significados",
+      "original_sha256": "56d5dd5b2ec5e1fee0feea58d3d87cf209de845e6df63a6a9380d26d62b037f1",
+      "puerta": "sin_pista_nueva",
+      "pista": null,
+      "estado": "brecha_externa",
+      "afirmacion_propuesta": null,
+      "motivo": "brecha_externa: fila portal verificada (CERTIFICADOPORD, Texto, ejemplo 'MÉDICO GINECO-OBSTETRA', Descripcion 'Pendiente de especificar') sin contraparte nacional verificada por codigo: ausente del descriptor SINAC 2020-2025 (0/22) y del codebook 2020-2023 (zip de 20 xlsx, 0/22 en nombres y celdas). Desajuste estructural concreto: columna derivada local 'CERTIFICADOPORD' cuyo contenido decodificaria 'CERTIFICADOPOR', pero la regla publicador columna->catalogo no esta declarada en el instrumento local ni en fuente primaria vinculada al recurso 46977217. Expediente R7 revisado (S2 v001/v002, W-web paquetes v001..v004 y cierres): sin pista primaria nueva para este ID; no se repiten busquedas genericas agotadas. Negativa acotada a lo revisado el 2026-10-24.",
+      "evidencia_faltante": "Regla del publicador que fije CERTIFICADOPORD como decodificacion de CERTIFICADOPOR con catalogo declarado, aplicable al recurso 46977217.",
+      "evidencia": [
+        {
+          "ruta": "data/portal/inspecciones/22202305-2d02-4c49-b216-cc98224357f0.json",
+          "sha256": "76fe68223bc861fcdf62cb33f5b9a207503b192c2ef531a4aad31d52e7a7513b",
+          "localizador": "/definiciones/97 (fila 98, variable CERTIFICADOPORD)",
+          "afirmacion_soportada": "Fila local: Nombre=CERTIFICADOPORD, Tipo=Texto, Ejemplo='MÉDICO GINECO-OBSTETRA', Descripcion=Pendiente de especificar"
+        },
+        {
+          "ruta": "propuestas/plan-paralelo-brechas-sin-gemma/ejecucion-20261024-072207Z/S2-nacimientos/trabajo/evidencia/sinac_catalogos_2020_2023.zip",
+          "sha256": "9c7dcd52dd8fdb2cfb9c7de3711e0ccc323cfa9cff86712eaeeb3e883141cb4e",
+          "localizador": "listado completo del zip (20 xlsx) + barrido de celdas por codigo",
+          "afirmacion_soportada": "Negativa acotada verificada por codigo: 0/22; 'CERTIFICADOPORD' sin coincidencia en nombres de archivo ni en celdas del codebook 2020-2023."
+        },
+        {
+          "ruta": "propuestas/cierre-brechas-post-r6/significados-salud/evidencia/desc_sinac_2020_2025/Descriptores_SINAC_2020.xlsx",
+          "sha256": "0af0b6be1faeb3867da872cd1b2021785af4feb78311c5de7c1fa44807fd6ed4",
+          "localizador": "Hoja1; busqueda exacta del nombre por codigo",
+          "afirmacion_soportada": "Negativa acotada verificada por codigo: 'CERTIFICADOPORD' no figura entre las variables del descriptor nacional SINAC 2020-2025."
+        }
+      ],
+      "condicion_reapertura": "Reabre si el publicador publica la regla de decodificacion de CERTIFICADOPORD (o su definicion) aplicable al recurso 46977217, o si W aporta documento primario equivalente.",
+      "limites": [
+        "Alcance simultaneo por conjunto+diccionario+fila+huella; no autoriza cruces, joins ni identidad de catalogos.",
+        "Descriptor/catalogos DGIS citados son del registro nacional (SINAC 2020-2025 / codebook 2020-2023), no del extracto Sonora del portal; la coincidencia de nombres o valores no sustituye la tabla del publicador.",
+        "Negativas y ausencias acotadas a lo revisado el 2026-10-24; no ausencia universal."
+      ]
+    },
+    {
+      "id": "https://example.org/mex-ontologi/definition/22202305-2d02-4c49-b216-cc98224357f0%2F101",
+      "tipo": "significados",
+      "original_sha256": "a9c5efb1abe2e0fcd0f3bb80204110b7b387e63908d8896265b511309201965a",
+      "puerta": "sin_pista_nueva",
+      "pista": null,
+      "estado": "brecha_externa",
+      "afirmacion_propuesta": null,
+      "motivo": "brecha_externa: fila portal verificada (ENTIDADFEDERATIVACERTIFICAD, Texto, ejemplo 'SONORA', Descripcion 'Pendiente de especificar') sin contraparte nacional verificada por codigo: ausente del descriptor SINAC 2020-2025 (0/22) y del codebook 2020-2023 (zip de 20 xlsx, 0/22 en nombres y celdas). Desajuste estructural concreto: columna derivada local 'ENTIDADFEDERATIVACERTIFICAD' cuyo contenido decodificaria 'ENTIDADFEDERATIVACERTIFICA', pero la regla publicador columna->catalogo no esta declarada en el instrumento local ni en fuente primaria vinculada al recurso 46977217. Expediente R7 revisado (S2 v001/v002, W-web paquetes v001..v004 y cierres): sin pista primaria nueva para este ID; no se repiten busquedas genericas agotadas. Negativa acotada a lo revisado el 2026-10-24.",
+      "evidencia_faltante": "Regla del publicador que fije ENTIDADFEDERATIVACERTIFICAD como decodificacion de ENTIDADFEDERATIVACERTIFICA con catalogo declarado, aplicable al recurso 46977217.",
+      "evidencia": [
+        {
+          "ruta": "data/portal/inspecciones/22202305-2d02-4c49-b216-cc98224357f0.json",
+          "sha256": "76fe68223bc861fcdf62cb33f5b9a207503b192c2ef531a4aad31d52e7a7513b",
+          "localizador": "/definiciones/100 (fila 101, variable ENTIDADFEDERATIVACERTIFICAD)",
+          "afirmacion_soportada": "Fila local: Nombre=ENTIDADFEDERATIVACERTIFICAD, Tipo=Texto, Ejemplo='SONORA', Descripcion=Pendiente de especificar"
+        },
+        {
+          "ruta": "propuestas/plan-paralelo-brechas-sin-gemma/ejecucion-20261024-072207Z/S2-nacimientos/trabajo/evidencia/sinac_catalogos_2020_2023.zip",
+          "sha256": "9c7dcd52dd8fdb2cfb9c7de3711e0ccc323cfa9cff86712eaeeb3e883141cb4e",
+          "localizador": "listado completo del zip (20 xlsx) + barrido de celdas por codigo",
+          "afirmacion_soportada": "Negativa acotada verificada por codigo: 0/22; 'ENTIDADFEDERATIVACERTIFICAD' sin coincidencia en nombres de archivo ni en celdas del codebook 2020-2023."
+        },
+        {
+          "ruta": "propuestas/cierre-brechas-post-r6/significados-salud/evidencia/desc_sinac_2020_2025/Descriptores_SINAC_2020.xlsx",
+          "sha256": "0af0b6be1faeb3867da872cd1b2021785af4feb78311c5de7c1fa44807fd6ed4",
+          "localizador": "Hoja1; busqueda exacta del nombre por codigo",
+          "afirmacion_soportada": "Negativa acotada verificada por codigo: 'ENTIDADFEDERATIVACERTIFICAD' no figura entre las variables del descriptor nacional SINAC 2020-2025."
+        }
+      ],
+      "condicion_reapertura": "Reabre si el publicador publica la regla de decodificacion de ENTIDADFEDERATIVACERTIFICAD (o su definicion) aplicable al recurso 46977217, o si W aporta documento primario equivalente.",
+      "limites": [
+        "Alcance simultaneo por conjunto+diccionario+fila+huella; no autoriza cruces, joins ni identidad de catalogos.",
+        "Descriptor/catalogos DGIS citados son del registro nacional (SINAC 2020-2025 / codebook 2020-2023), no del extracto Sonora del portal; la coincidencia de nombres o valores no sustituye la tabla del publicador.",
+        "Negativas y ausencias acotadas a lo revisado el 2026-10-24; no ausencia universal."
+      ]
+    },
+    {
+      "id": "https://example.org/mex-ontologi/definition/22202305-2d02-4c49-b216-cc98224357f0%2F103",
+      "tipo": "significados",
+      "original_sha256": "3d25a65ade23012c87fde494fb94f083347b2b026040d7bbb3276fdfb15eb1b1",
+      "puerta": "sin_pista_nueva",
+      "pista": null,
+      "estado": "brecha_externa",
+      "afirmacion_propuesta": null,
+      "motivo": "brecha_externa: fila portal verificada (MUNICIPIOCERTIFICAD, Texto, ejemplo 'SAN LUIS RÍO COLORADO', Descripcion 'Pendiente de especificar') sin contraparte nacional verificada por codigo: ausente del descriptor SINAC 2020-2025 (0/22) y del codebook 2020-2023 (zip de 20 xlsx, 0/22 en nombres y celdas). Desajuste estructural concreto: columna derivada local 'MUNICIPIOCERTIFICAD' cuyo contenido decodificaria 'MUNICIPIOCERTIFICA', pero la regla publicador columna->catalogo no esta declarada en el instrumento local ni en fuente primaria vinculada al recurso 46977217. Expediente R7 revisado (S2 v001/v002, W-web paquetes v001..v004 y cierres): sin pista primaria nueva para este ID; no se repiten busquedas genericas agotadas. Negativa acotada a lo revisado el 2026-10-24.",
+      "evidencia_faltante": "Regla del publicador que fije MUNICIPIOCERTIFICAD como decodificacion de MUNICIPIOCERTIFICA con catalogo declarado, aplicable al recurso 46977217.",
+      "evidencia": [
+        {
+          "ruta": "data/portal/inspecciones/22202305-2d02-4c49-b216-cc98224357f0.json",
+          "sha256": "76fe68223bc861fcdf62cb33f5b9a207503b192c2ef531a4aad31d52e7a7513b",
+          "localizador": "/definiciones/102 (fila 103, variable MUNICIPIOCERTIFICAD)",
+          "afirmacion_soportada": "Fila local: Nombre=MUNICIPIOCERTIFICAD, Tipo=Texto, Ejemplo='SAN LUIS RÍO COLORADO', Descripcion=Pendiente de especificar"
+        },
+        {
+          "ruta": "propuestas/plan-paralelo-brechas-sin-gemma/ejecucion-20261024-072207Z/S2-nacimientos/trabajo/evidencia/sinac_catalogos_2020_2023.zip",
+          "sha256": "9c7dcd52dd8fdb2cfb9c7de3711e0ccc323cfa9cff86712eaeeb3e883141cb4e",
+          "localizador": "listado completo del zip (20 xlsx) + barrido de celdas por codigo",
+          "afirmacion_soportada": "Negativa acotada verificada por codigo: 0/22; 'MUNICIPIOCERTIFICAD' sin coincidencia en nombres de archivo ni en celdas del codebook 2020-2023."
+        },
+        {
+          "ruta": "propuestas/cierre-brechas-post-r6/significados-salud/evidencia/desc_sinac_2020_2025/Descriptores_SINAC_2020.xlsx",
+          "sha256": "0af0b6be1faeb3867da872cd1b2021785af4feb78311c5de7c1fa44807fd6ed4",
+          "localizador": "Hoja1; busqueda exacta del nombre por codigo",
+          "afirmacion_soportada": "Negativa acotada verificada por codigo: 'MUNICIPIOCERTIFICAD' no figura entre las variables del descriptor nacional SINAC 2020-2025."
+        }
+      ],
+      "condicion_reapertura": "Reabre si el publicador publica la regla de decodificacion de MUNICIPIOCERTIFICAD (o su definicion) aplicable al recurso 46977217, o si W aporta documento primario equivalente.",
+      "limites": [
+        "Alcance simultaneo por conjunto+diccionario+fila+huella; no autoriza cruces, joins ni identidad de catalogos.",
+        "Descriptor/catalogos DGIS citados son del registro nacional (SINAC 2020-2025 / codebook 2020-2023), no del extracto Sonora del portal; la coincidencia de nombres o valores no sustituye la tabla del publicador.",
+        "Negativas y ausencias acotadas a lo revisado el 2026-10-24; no ausencia universal."
+      ]
+    },
+    {
+      "id": "https://example.org/mex-ontologi/definition/22202305-2d02-4c49-b216-cc98224357f0%2F105",
+      "tipo": "significados",
+      "original_sha256": "017fa9c5cc549a06371916ea457c3e963cb6d8c3f8b2a4712a0dae7033dcf442",
+      "puerta": "sin_pista_nueva",
+      "pista": null,
+      "estado": "brecha_externa",
+      "afirmacion_propuesta": null,
+      "motivo": "brecha_externa: fila portal verificada (LOCALIDADCERTIFICAD, Texto, ejemplo 'SAN LUIS RIO COLORADO', Descripcion 'Pendiente de especificar') sin contraparte nacional verificada por codigo: ausente del descriptor SINAC 2020-2025 (0/22) y del codebook 2020-2023 (zip de 20 xlsx, 0/22 en nombres y celdas). Desajuste estructural concreto: columna derivada local 'LOCALIDADCERTIFICAD' cuyo contenido decodificaria 'LOCALIDADCERTIFICA', pero la regla publicador columna->catalogo no esta declarada en el instrumento local ni en fuente primaria vinculada al recurso 46977217. Expediente R7 revisado (S2 v001/v002, W-web paquetes v001..v004 y cierres): sin pista primaria nueva para este ID; no se repiten busquedas genericas agotadas. Negativa acotada a lo revisado el 2026-10-24.",
+      "evidencia_faltante": "Regla del publicador que fije LOCALIDADCERTIFICAD como decodificacion de LOCALIDADCERTIFICA con catalogo declarado, aplicable al recurso 46977217.",
+      "evidencia": [
+        {
+          "ruta": "data/portal/inspecciones/22202305-2d02-4c49-b216-cc98224357f0.json",
+          "sha256": "76fe68223bc861fcdf62cb33f5b9a207503b192c2ef531a4aad31d52e7a7513b",
+          "localizador": "/definiciones/104 (fila 105, variable LOCALIDADCERTIFICAD)",
+          "afirmacion_soportada": "Fila local: Nombre=LOCALIDADCERTIFICAD, Tipo=Texto, Ejemplo='SAN LUIS RIO COLORADO', Descripcion=Pendiente de especificar"
+        },
+        {
+          "ruta": "propuestas/plan-paralelo-brechas-sin-gemma/ejecucion-20261024-072207Z/S2-nacimientos/trabajo/evidencia/sinac_catalogos_2020_2023.zip",
+          "sha256": "9c7dcd52dd8fdb2cfb9c7de3711e0ccc323cfa9cff86712eaeeb3e883141cb4e",
+          "localizador": "listado completo del zip (20 xlsx) + barrido de celdas por codigo",
+          "afirmacion_soportada": "Negativa acotada verificada por codigo: 0/22; 'LOCALIDADCERTIFICAD' sin coincidencia en nombres de archivo ni en celdas del codebook 2020-2023."
+        },
+        {
+          "ruta": "propuestas/cierre-brechas-post-r6/significados-salud/evidencia/desc_sinac_2020_2025/Descriptores_SINAC_2020.xlsx",
+          "sha256": "0af0b6be1faeb3867da872cd1b2021785af4feb78311c5de7c1fa44807fd6ed4",
+          "localizador": "Hoja1; busqueda exacta del nombre por codigo",
+          "afirmacion_soportada": "Negativa acotada verificada por codigo: 'LOCALIDADCERTIFICAD' no figura entre las variables del descriptor nacional SINAC 2020-2025."
+        }
+      ],
+      "condicion_reapertura": "Reabre si el publicador publica la regla de decodificacion de LOCALIDADCERTIFICAD (o su definicion) aplicable al recurso 46977217, o si W aporta documento primario equivalente.",
+      "limites": [
+        "Alcance simultaneo por conjunto+diccionario+fila+huella; no autoriza cruces, joins ni identidad de catalogos.",
+        "Descriptor/catalogos DGIS citados son del registro nacional (SINAC 2020-2025 / codebook 2020-2023), no del extracto Sonora del portal; la coincidencia de nombres o valores no sustituye la tabla del publicador.",
+        "Negativas y ausencias acotadas a lo revisado el 2026-10-24; no ausencia universal."
+      ]
+    }
+  ],
+  "fuentes": [
+    {
+      "ruta": "data/portal/inspecciones/22202305-2d02-4c49-b216-cc98224357f0.json",
+      "sha256": "76fe68223bc861fcdf62cb33f5b9a207503b192c2ef531a4aad31d52e7a7513b",
+      "localizador": "inspeccion portal conjunto nacimientos (106 definiciones); filas S2 verificadas por codigo",
+      "verificado_por_codigo": "2026-10-24"
+    },
+    {
+      "ruta": "propuestas/plan-paralelo-brechas-sin-gemma/ejecucion-20261024-072207Z/S2-nacimientos/trabajo/evidencia/sinac_catalogos_2020_2023.zip",
+      "sha256": "9c7dcd52dd8fdb2cfb9c7de3711e0ccc323cfa9cff86712eaeeb3e883141cb4e",
+      "url": "http://www.dgis.salud.gob.mx/descargas/datosabiertos/nacimientos/sinac_catalogos_2020_2023.zip",
+      "localizador": "codebook nacional SINAC 2020-2023: 20 xlsx; barrido completo por codigo, 0/22",
+      "verificado_por_codigo": "2026-10-24"
+    },
+    {
+      "ruta": "propuestas/cierre-brechas-post-r6/significados-salud/evidencia/desc_sinac_2020_2025/Descriptores_SINAC_2020.xlsx",
+      "sha256": "0af0b6be1faeb3867da872cd1b2021785af4feb78311c5de7c1fa44807fd6ed4",
+      "url": "http://www.dgis.salud.gob.mx/descargas/datosabiertos/nacimientos/sinac_descriptores_2020_2025.zip",
+      "localizador": "descriptor nacional SINAC 2020-2025, Hoja1; busqueda exacta por codigo, 0/22",
+      "verificado_por_codigo": "2026-10-24"
+    }
+  ],
+  "pruebas": {
+    "filas_locales": "22/22 filas Texto con Descripcion 'Pendiente de especificar' (lectura directa del JSON por codigo)",
+    "descriptor": "0/22 coincidencias exactas (barrido de celdas con openpyxl)",
+    "codebook_zip": "20 xlsx listados; 0/22 en nombres de archivo y en celdas (barrido con openpyxl)",
+    "expediente_r7": "S2 v001/v002 + notas primera-puerta/w-web + W-web paquetes v001..v004 y cierres revisados; sin pista primaria nueva para estos 22 IDs",
+    "navegador": "no usado (reservado a W); sin peticiones-web.json: ninguna pista nueva concreta que lo requiera"
+  },
+  "novedades": "v001 ronda-8: revision local de los 22 IDs asignados sin pista nueva. 0 propuesta_para_auditar, 22 brecha_externa con desajuste estructural concreto (20 columnas D derivadas sin variable nacional ni regla de decodificacion publicada; 2 ANOMALIACIE* sin variable en el instrumento). Dobles negativas verificadas por codigo (descriptor 0/22, codebook 20 xlsx 0/22). Expediente R7 y paquetes W v001..v004 revisados sin hallazgo nuevo para estos IDs."
+}

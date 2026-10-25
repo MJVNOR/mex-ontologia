@@ -1,0 +1,148 @@
+--- PROPUESTO, NO APLICADO (lo aplica root/integrador; exige recompilar + reinicio Studio) ---
+Base: studio/src-tauri/sidecars/agent/index.ts + providers/openai.ts (bundle dist 564051 bytes, sha en harness-revisar.json).
+Evidencia: docs primarios Google (api-errors: `api_error` 500 => "Retry the
+request"; 503 => backoff; troubleshooting: SDKs oficiales reintentan 429 y 5xx;
+R4: 503 "high demand" en C1 fue fatal). Auditoria: `pacingMs` se produce en
+graphrag.ts pero NINGUN consumidor en src ni dist; `paceTo(...,3000)` solo
+replays; `rl.on('line', async ...)` admite turnos concurrentes.
+Logica idéntica a proveedor-retry.mjs, probada offline en test_retry_pacing.mjs (6/6).
+Cero cambio de modelo. Orden: aplicar tras parche-propuesto.patch (hunks distintos).
+
+--- a/studio/src-tauri/sidecars/agent/providers/openai.ts
++++ b/studio/src-tauri/sidecars/agent/providers/openai.ts
+@@
++/** Extrae `retryDelay: "Ns"` de un cuerpo RetryInfo; 0 si ausente. Tope 120s. */
++export function parseRetryDelayMs(bodyText: string): number {
++  try {
++    const m = String(bodyText ?? '').match(/"retryDelay"\s*:\s*"(\d+(?:\.\d+)?)s"/);
++    if (m) return Math.min(Math.round(Number(m[1]) * 1000), 120000);
++  } catch { /* sin retardo declarado */ }
++  return 0;
++}
++function sleep(ms: number): Promise<void> {
++  return new Promise(resolve => setTimeout(resolve, ms));
++}
+@@
+   private maxTokens: number;
++  /** Espera minima entre llamadas (pacing por presupuesto). La fija index.ts. */
++  public minIntervalMs = 0;
++  private lastEnd = 0;
+@@
+   async step(tools: ToolSpec[]): Promise<TurnResult> {
+     const model = await this.resolveModel();
+-
+-    const resp = await fetch(`${this.baseURL}/chat/completions`, {
++    // Pacing en serie: el presupuesto (budgetForModel().pacingMs) existe pero
++    // nadie lo consumia; sin esto, turnos concurrentes revientan el TPM.
++    const wait = this.minIntervalMs - (Date.now() - this.lastEnd);
++    if (wait > 0) await sleep(wait);
++    let attempt = 0;
++    // Reintento doc Google: 429/408/5xx con backoff; RetryInfo manda (tope 120s).
++    let resp!: Response;
++    while (true) {
++      attempt++;
++      resp = await fetch(`${this.baseURL}/chat/completions`, {
+-      method: 'POST',
++        method: 'POST',
+-      signal: AbortSignal.timeout(90_000),
++        signal: AbortSignal.timeout(90_000),
+-      headers: {
++        headers: {
+-        'Content-Type': 'application/json',
++          'Content-Type': 'application/json',
+-        Authorization: `Bearer ${this.apiKey}`,
++          Authorization: `Bearer ${this.apiKey}`,
+-      },
++        },
+-      body: JSON.stringify({
++        body: JSON.stringify({
+-        model,
++          model,
+-        messages: this.messages,
++          messages: this.messages,
+-        ...(tools.length ? { tools: tools.map(t => ({
++          ...(tools.length ? { tools: tools.map(t => ({
+-          type: 'function' as const,
++            type: 'function' as const,
+-          function: {
++            function: {
+-            name: t.name,
++              name: t.name,
+-            description: t.description.slice(0, 1024),
++              description: t.description.slice(0, 1024),
+-            parameters: t.inputSchema,
++              parameters: t.inputSchema,
+-          },
++            },
+-        })), tool_choice: 'auto' } : {}),
++          })), tool_choice: 'auto' } : {}),
+-        temperature: 0.7,
++          temperature: 0.7,
+-        top_p: 0.8,
++          top_p: 0.8,
+-        max_tokens: this.maxTokens,
++          max_tokens: this.maxTokens,
+-        // Gemini rejects this Qwen extension as an unknown JSON field.
++          // Gemini rejects this Qwen extension as an unknown JSON field.
+-        ...(new URL(this.baseURL).hostname === 'generativelanguage.googleapis.com'
++          ...(new URL(this.baseURL).hostname === 'generativelanguage.googleapis.com'
+-          ? {} : { chat_template_kwargs: { enable_thinking: false } }),
++            ? {} : { chat_template_kwargs: { enable_thinking: false } }),
+-      }),
++        }),
+-    });
+-
+-    if (!resp.ok) {
+-      throw new Error(`Model endpoint ${this.baseURL} returned HTTP ${resp.status}: ${await resp.text()}`);
++      });
++      this.lastEnd = Date.now();
++      if (resp.ok) break; // sigue el parseo original fuera del bucle
++      const bodyText = await resp.text();
++      const retryable = resp.status === 429 || resp.status === 408 || resp.status >= 500;
++      if (!retryable || attempt >= 4) {
++        throw new Error(`Model endpoint ${this.baseURL} returned HTTP ${resp.status}: ${bodyText.slice(0, 2000)}`);
++      }
++      const declared = parseRetryDelayMs(bodyText);
++      await sleep(declared > 0 ? declared : Math.min(1000 * 2 ** (attempt - 1), 8000));
+     }
++    // `resp` sale del bucle solo en ok; el parseo de `completion` posterior
++    // queda identico al original.
+ 
+--- a/studio/src-tauri/sidecars/agent/index.ts
++++ b/studio/src-tauri/sidecars/agent/index.ts
+@@
+ const mcp = new McpClient(ENGINE_URL);
+ const provider: Provider = selectProvider(process.env, SYSTEM_PROMPT);
++// Serie real de turnos: rl.on('line', async ...) permitia solapar dos chats y
++// duplicar el gasto TPM en la misma ventana. Un eslabon basta (un solo chat).
++let turnChain: Promise<void> = Promise.resolve();
+@@
+   const rl = readline.createInterface({ input: process.stdin });
+   rl.on('line', async line => {
+     try {
+       const msg = JSON.parse(line);
+-      if (msg.type === 'chat') {
+-        await handleMessage(msg.message, msg.mode || 'sketch');
+-      } else if (msg.type === 'reset') {
+-        provider.reset();
+-        send({ type: 'reset_done' });
+-      }
++      if (msg.type === 'chat') {
++        const job = turnChain.then(() => handleMessage(msg.message, msg.mode || 'sketch'));
++        turnChain = job.catch(() => {});
++        await job;
++      } else if (msg.type === 'reset') {
++        provider.reset();
++        send({ type: 'reset_done' });
++      }
+     } catch (e) {
+       send({ type: 'error', error: String(e) });
+     }
+   });
++// Pacing: tras resolver el modelo de presupuesto (parche 1), propagar su
++// intervalo al provider una vez al arrancar:
++//   getBudgetModel().then(m => { if (m) (provider as any).minIntervalMs = budgetForModel(m).pacingMs; });
++// (una linea en main(); requiere importar budgetForModel de graphrag.js)
+
+--- FIN. Verificacion: test_retry_pacing.mjs 6/6 offline (esta carpeta).
+--- Viva (root/integrador, >=65s, ONTO_ALLOW_CALLS=1): harness_stdio.mjs --handshake, luego --casos.

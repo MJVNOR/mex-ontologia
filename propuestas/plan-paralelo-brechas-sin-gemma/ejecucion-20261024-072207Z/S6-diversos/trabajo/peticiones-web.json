@@ -1,0 +1,34 @@
+{
+  "rol": "S6-diversos",
+  "fecha": "2026-10-24T07:25:01Z",
+  "nota": "Solo W-web maneja el navegador compartido. No declarar atendida sin resultado.",
+  "peticiones": [
+    {
+      "id_peticion": "P-S6-01",
+      "ids": [
+        "https://example.org/mex-ontologi/definition/3f6942e3-a9c5-42c0-a38b-2c7aad2a6c99%2F2"
+      ],
+      "pregunta": "Metodologia o cuestionario PROAES de Denuncias Ambientales que defina estrato y el trimestre de TRIMESTRE (fila 2, huella 799f924f8f10e3831cebdb4fbbc233cb6965caae8902f799881277d12f24320d0).",
+      "por_que_fuente": "proaes.sonora.gob.mx es el sitio del publicador (PROAES Sonora); su interior no examinado puede alojar la metodologia.",
+      "descartado": "Portal CKAN (Fuentes extras vacias); resultados de buscador 2026-10-24 sin definicion; no repetir busquedas genericas.",
+      "url_consulta": "https://proaes.sonora.gob.mx/ (navegar a denuncias ambientales / normatividad / metodologia)",
+      "alcance": "ID indicado",
+      "resultado": "sin_hallazgo (W-web paquete-v002 F-V002-02-PROAES, 2026-10-24)",
+      "metodo": "obscura + curl.exe + pypdf (W-web)"
+    },
+    {
+      "id_peticion": "P-S6-02",
+      "ids": [
+        "https://example.org/mex-ontologi/definition/863b9cc8-daeb-4430-b835-6a0ced5abd31%2F7",
+        "https://example.org/mex-ontologi/definition/863b9cc8-daeb-4430-b835-6a0ced5abd31%2F8"
+      ],
+      "pregunta": "Diccionario corregido o metodologia SAGARHPA que complete el objeto de Clave/Nombre de otras (filas 7-8, huellas 7b43908359031edee596dab23b179df402c2da718dff957ef86902d8127c49c4 / 738de0329c2d2e19f50d85dc13b3e6a05c4d79fda579701c400d01e4ebc806b3) y su catalogo, con edicion y periodo.",
+      "por_que_fuente": "sagarhpa.sonora.gob.mx es el portal del publicador sectorial; su interior no examinado puede alojar el diccionario/metodologia.",
+      "descartado": "Portal CKAN (21 recursos sin metodologia, Fuentes extras vacias); resultados de buscador 2026-10-24 sin documento; no repetir busquedas genericas.",
+      "url_consulta": "https://sagarhpa.sonora.gob.mx/ (navegar a pesca / estadisticas / diccionarios-metodologia)",
+      "alcance": "IDs indicados",
+      "resultado": "sin_hallazgo (W-web paquete-v002 F-V002-03-SAGARHPA, 2026-10-24)",
+      "metodo": "obscura (W-web)"
+    }
+  ]
+}

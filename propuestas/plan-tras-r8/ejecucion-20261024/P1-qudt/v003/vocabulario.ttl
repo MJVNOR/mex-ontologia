@@ -1,0 +1,31 @@
+@prefix mex: <https://example.org/mex-ontologi/vocab/> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+
+# Vocabulario minimo P1-QUDT v002 (propuesta, no nucleo: terminos nuevos, sin rename).
+mex:UnidadDeclarada a rdfs:Class ;
+    rdfs:label "Unidad declarada"@es ;
+    rdfs:comment "Declara la unidad de UNA variable documentada segun ESA definicion del diccionario. Sin valores, sin conversiones."@es .
+mex:variableDocumentada a rdfs:Property ;
+    rdfs:label "variable documentada"@es ;
+    rdfs:comment "IRI mex:documented-variable de R8. No se imputa dominio qudt:QuantityValue."@es .
+mex:definicionFuente a rdfs:Property ;
+    rdfs:label "definicion fuente"@es ;
+    rdfs:comment "IRI mex:definition de R8 que respalda la variable."@es .
+mex:conjuntoFuente a rdfs:Property ;
+    rdfs:label "conjunto fuente (dataset UUID)"@es ;
+    rdfs:comment "UUID del conjunto CKAN (dataset). Distinto del UUID del recurso/diccionario."@es .
+mex:diccionarioFuente a rdfs:Property ;
+    rdfs:label "diccionario fuente (resource UUID)"@es ;
+    rdfs:comment "UUID del recurso CKAN que porta el diccionario. Distinto del UUID del conjunto."@es .
+mex:unidadLiteral a rdfs:Property ;
+    rdfs:label "unidad literal"@es ;
+    rdfs:comment "Texto tal cual en la columna Unidad de medida de la fila."@es .
+mex:unidadQudt a rdfs:Property ;
+    rdfs:label "unidad QUDT"@es ;
+    rdfs:comment "IRI HTTP canonica verificada por W. Solo si existe precoordinada; sin conversiones ni factores."@es .
+# Nota: el estado de aprobacion vive en entrega.json (paquete); el grafo solo declara y evidencia.
+mex:motivoNegativo a rdfs:Property ;
+    rdfs:label "motivo negativo"@es .
+mex:evidenciaNormativa a rdfs:Property ;
+    rdfs:label "evidencia normativa"@es ;
+    rdfs:comment "Ruta + SHA + URL + localizador del archivo W que verifica (o niega) el IRI."@es .

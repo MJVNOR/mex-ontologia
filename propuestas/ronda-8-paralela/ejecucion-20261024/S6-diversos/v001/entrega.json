@@ -1,0 +1,327 @@
+{
+  "rol": "S6-diversos",
+  "version": "v001",
+  "fecha_utc": "2026-10-24",
+  "base": "reports/ronda-7.json",
+  "asignacion": "propuestas/ronda-8-paralela/ejecucion-20261024/S6-diversos/asignacion.json",
+  "decisiones": [
+    {
+      "id": "https://example.org/mex-ontologi/definition/f89137ba-d82e-44fe-80c7-cc355f09f9f5%2F15",
+      "tipo": "significados",
+      "original_sha256": "f3381e496a5b9aa9dd0b794dce30fde0f29ff00eca10ecea561054d194ae5f68",
+      "puerta": "sin_pista_nueva",
+      "pista": null,
+      "estado": "brecha_externa",
+      "afirmacion_propuesta": null,
+      "motivo": "Contradiccion conservada: diccionario local define Total_Egresos como Total de urgencias atendidas (fila 15/15, ejemplo 2) mientras la hoja fisica y el marco DGIS hablan de hospitalizacion (morbilidad/mortalidad); DGIS acredita urgencias como subsistema separado (GIIS-B014). Enlace sinba08 2026-10-24 agotado (marco vacio http / error transporte https); ronda 2c agotada. Sin fuente que fije que cuenta la columna local: sin propuesta. Revision local R8 2026-10-24: expediente R7 completo re-verificado por bytes (SHA por codigo, 26/26 coincidentes con asignacion); paquetes W v001 (sin peticiones), v002 (P-S6-01 PROAES y P-S6-02 SAGARHPA, ambas sin_hallazgo con examen real Obscura+curl+pypdf), v003 (V13/V14 acceso, sin material S6) y v004 (defunciones/otros frentes, sin material S6); pistas nueva-diversos y nueva-dgis-egresos 2026-10-24 ya agotadas; sin busquedas genericas repetidas; sin Obscura (solo W); sin contactos ni Gemma.",
+      "evidencia_faltante": "Documento que fije que cuenta Total_Egresos (egresos vs urgencias): aclaracion aplicable a la fila o diccionario corregido / fe de erratas (conjunto+diccionario+fila+huella citados). No localizado en fuentes examinadas (portal CKAN, DGIS/CONAPO/INEGI revisados; R6; ronda 2c; enlace sinba08 2026-10-24). Vale cualquier evidencia primaria inequivoca vinculada a la fila, venga de la fuente que venga.",
+      "evidencia": [
+        {
+          "ruta": "data/portal/inspecciones/f89137ba-d82e-44fe-80c7-cc355f09f9f5.json",
+          "sha256": "59c6077b4f8bb93f2bf002284cf0c18e0c6c9d1f91ded2e834756dbd45ffd73b",
+          "localizador": "/definiciones/14 (Nombre variable=Total_Egresos)",
+          "afirmacion_soportada": "El diccionario local define Total_Egresos como 'Total de urgencias atendidas' (Numerico entero, ejemplo 2), fila 15/15."
+        },
+        {
+          "ruta": "data/portal/inspecciones/ad6f77b8-569d-4826-8ce0-3c6efddcb098.json",
+          "sha256": "6c28880ccf4c8d9aa94493e7e1d1b359663137e1449d8747fb60139382aae068",
+          "localizador": "tablas[0].hoja + campos[14].id=Total_Egresos, posicion_original 15",
+          "afirmacion_soportada": "La hoja fisica se titula 'Egresos Hospitalarios 2018-2022' y Total_Egresos es la columna 15/15 en el mismo orden del diccionario (vinculo posicional heuristicos). El titulo contradice la descripcion sin resolverla."
+        },
+        {
+          "ruta": "propuestas/investigacion-post-r6/diversos/evidencia/ckan-egresos.json",
+          "sha256": "65229d1d77ae5c0ce9476a30bf50542a842708f27ef5897c0107dce6e8d3ca25",
+          "localizador": "result.notas/frequency/fuentes_extras/resources[1].start_date+end_date",
+          "afirmacion_soportada": "El publicador declara el conjunto como Egresos Hospitalarios (15 variables, base interna, actualizacion trimestral), recurso 2015-01-01 a 2022-12-31; Fuentes extras vacias."
+        },
+        {
+          "ruta": "propuestas/investigacion-post-r6/diversos/evidencia/dgis-cubo-egresos.html",
+          "sha256": "a33c7841a1d6bd2591337646db28feaf6f22d75d9577c4dce8069171c3a41fd9",
+          "localizador": "parrafos 'Egresos Hospitalarios Cubos dinamicos' + tabla 'Descripcion de variables'",
+          "afirmacion_soportada": "La norma nacional cubre egresos 2000-2023 (SSA) y remite a un archivo 'Descripcion de variables' separado: existe el documento pero no define la fila local."
+        },
+        {
+          "ruta": "propuestas/investigacion-post-r6/diversos/evidencia/dgis-ehosp-fuentes.html",
+          "sha256": "1c89dc6d5e8c942d0fb607af2a85f6c4a1b3b4a3424251ab6541c3121457d807",
+          "localizador": "parrafos 1-2 del iframe de Fuentes",
+          "afirmacion_soportada": "Egresos = hospitalizacion (morbilidad/mortalidad); fuente: registro de medicos sobre pacientes que abandonan un hospital. Nada de urgencias."
+        },
+        {
+          "ruta": "propuestas/investigacion-post-r6/diversos/evidencia/dgis-urgencias-b014.html",
+          "sha256": "5b19b86b3facc21ec947ee7147cf835b8a1cb259345b405f54f8e9820171f834",
+          "localizador": "Nombre/Clave/Version/Estatus + 'Subsistema de Urgencias del SINAIS'",
+          "afirmacion_soportada": "Las urgencias son un subsistema separado del SINAIS (GIIS-B014-03-08 v3.8 vigente, 2026-06-01), no una acepcion de egresos."
+        },
+        {
+          "ruta": "propuestas/cierre-brechas-post-r6/significados-tic-diversos/evidencia/nueva-dgis-egresos-2026-10-24.md",
+          "sha256": "6a837fa3a937b411d1c97bfcd84bd031691f82f1348c9dd9d5a7d67cb95ceb16",
+          "localizador": "enlace Descripcion de variables sinba08 + intentos http vacio/https error 2026-10-24",
+          "afirmacion_soportada": "Pista nueva (enlace directo sinba08) examinada y agotada 2026-10-24: marco vacio por http y error de transporte por https; no fija que cuenta Total_Egresos."
+        }
+      ],
+      "condicion_reapertura": "Reapertura solo con documento primario que cite conjunto+diccionario f89137ba+fila 15+huella 98c73e56ff407766447b52e08850d0b8669f6979145b4c66fac1f1f83aec9f05 y fije que cuenta Total_Egresos (egresos vs urgencias), o diccionario corregido/fe de erratas equivalente.",
+      "limites": [
+        "No se interpreta como egresos ni como urgencias; no se usa para tasas ni agregaciones.",
+        "Las guias DGIS 2026 (B002 y B014) son contexto normativo vigente, no definicion local ni fe de erratas, y no cubren la epoca local 2015-2022.",
+        "El vinculo posicional diccionario-columna es heuristico (requiere revision) y no acredita sentido."
+      ]
+    },
+    {
+      "id": "https://example.org/mex-ontologi/definition/67156807-2013-4117-9ca9-394aea647127%2F5",
+      "tipo": "significados",
+      "original_sha256": "2280e6407e03b9af3adf24ef7836d24daebb8a9e25c8620e38f38d1034161722",
+      "puerta": "sin_pista_nueva",
+      "pista": null,
+      "estado": "brecha_externa",
+      "afirmacion_propuesta": null,
+      "motivo": "Identidad documental confirmada pero brecha de significado abierta: archivo local identico al extracto Sonora del producto nacional IMC_2020 (2129x28); diccionario espejo; script oficial arrastra CLASIF (1:25) sin definirla; nota tecnica 18p solo lista clasificacion de la colonia (1 mencion, 0 CLASIF / 0 tipo de asentamiento); catalogo local sin dominio para CLASIF. Propuesta tipo de asentamiento rechazada por el integrador tras 2 auditorias: no se re-propone. Sin propuesta. Revision local R8 2026-10-24: expediente R7 completo re-verificado por bytes (SHA por codigo, 26/26 coincidentes con asignacion); paquetes W v001 (sin peticiones), v002 (P-S6-01 PROAES y P-S6-02 SAGARHPA, ambas sin_hallazgo con examen real Obscura+curl+pypdf), v003 (V13/V14 acceso, sin material S6) y v004 (defunciones/otros frentes, sin material S6); pistas nueva-diversos y nueva-dgis-egresos 2026-10-24 ya agotadas; sin busquedas genericas repetidas; sin Obscura (solo W); sin contactos ni Gemma.",
+      "evidencia_faltante": "Documento del publicador que fije el objeto clasificado por CLASIF (que clasifica: tipo de asentamiento u otro) y su lista cerrada de valores, aplicable a la fila (conjunto+diccionario+fila+huella citados); o diccionario corregido / fe de erratas; o evidencia primaria inequivoca vinculada explicitamente a la definicion. No localizado en fuentes examinadas (portal CKAN; diccionarios nacional y local describen CLASIF solo como 'Clasificacion'; RAR extraido sin mencion a CLASIF; nota tecnica 18p con 1 mencion generica; R6). Vale cualquier evidencia primaria inequivoca vinculada a la fila.",
+      "evidencia": [
+        {
+          "ruta": "data/portal/inspecciones/67156807-2013-4117-9ca9-394aea647127.json",
+          "sha256": "c1d42eba568474e6170cc54eba5f26334e11e5ae3e882ea9148a219485b783d3",
+          "localizador": "/definiciones/4 (Nombre variable=CLASIF)",
+          "afirmacion_soportada": "Fila 5: CLASIF, Categorico, descripcion generica 'Clasificacion', unidad = lista de 7 valores, ejemplo Colonia, sin catalogo."
+        },
+        {
+          "ruta": "data/portal/inspecciones/09ef2342-fd9f-4334-bcd5-9c969baca32f.json",
+          "sha256": "5fa955a221017d4449bc728f0e9f334a00ab8cf1dc703f05a038ca7bb057c3ff",
+          "localizador": "tablas[0].hoja=IMC_2020, campos[4].id=CLASIF, posicion_original 5",
+          "afirmacion_soportada": "CLASIF es la columna fisica 5 de la hoja IMC_2020 del recurso de datos 2020."
+        },
+        {
+          "ruta": "data/portal/inspecciones/483259a2-b688-4f4b-beae-9c7016881a63.json",
+          "sha256": "393ada3f742c61a08a8f2d7de10bbe027ec476244b14fa4ac4120a4bd75295c0",
+          "localizador": "tablas[].hoja = Catalogo_Estado, Catalogo_Municipios",
+          "afirmacion_soportada": "El catalogo del conjunto solo trae Catalogo_Estado y Catalogo_Municipios: no existe dominio publicado para CLASIF."
+        },
+        {
+          "ruta": "propuestas/investigacion-post-r6/diversos/evidencia/ckan-marginacion.json",
+          "sha256": "44594c502e004937eb2a910815f1225cb1adffaa0fd226321dedbec14663a777",
+          "localizador": "result.notes + result.fuentes_extras + resources",
+          "afirmacion_soportada": "El publicador declara base censal INEGI y enlaza la pagina CONAPO de indices 2020; sin metodologia COESPO ni vinculo a variable."
+        },
+        {
+          "ruta": "propuestas/investigacion-post-r6/diversos/evidencia/conapo-IMC_2020.zip",
+          "sha256": "5d93b314428f88008ba380bac56b587169cfefd3acaf4659857a07874822b8bb",
+          "localizador": "IMUC_2020.xlsx: hojas IMUC_2020_* (74227 filas) + Diccionario",
+          "afirmacion_soportada": "El producto nacional a nivel colonia trae diccionario espejo del local (28 variables) y datos Sonora (2129 filas) identicos al archivo local."
+        },
+        {
+          "ruta": "propuestas/investigacion-post-r6/diversos/evidencia/conapo-imc2020_shp.zip",
+          "sha256": "69d73b5bb0127df6c81701684eb28cd6bd666d9319a1ffb45da76446ae278426",
+          "localizador": "colonias_imc2020.dbf: campo CLASIF C(25); subset CVE_ENT=26",
+          "afirmacion_soportada": "La cartografia nacional confirma variable, nivel y dominio con la misma distribucion exacta (2129 registros)."
+        },
+        {
+          "ruta": "propuestas/investigacion-post-r6/diversos/evidencia/calculo-extraido/Indice_de_marginacion_urbana_por_colonia_2020.txt",
+          "sha256": "8d361a603b7c17e7ab027aff4bf8e6fc2e5c8e7d0e5985dbb56e7d4db7580e39",
+          "localizador": "lineas 42-43, 59-69, 104; sin mencion a CLASIF",
+          "afirmacion_soportada": "El programa oficial arrastra CLASIF (1:25) sin definirla; calcula el indice solo con columnas 15:25; remite a la nota metodologica."
+        },
+        {
+          "ruta": "propuestas/investigacion-post-r6/diversos/evidencia/conapo-nota-tecnica-IMUC_2020.pdf",
+          "sha256": "7143fe571176450ff839af719e2b6a6354f5f6f11bd296841e5d9f05ce3f8a26",
+          "localizador": "p4, nota 10 al pie",
+          "afirmacion_soportada": "Unica mencion (1 en 18 pp.): 'clasificacion de la colonia' como atributo de la capa simplificada; token CLASIF 0 veces y 'tipo de asentamiento' 0 veces."
+        },
+        {
+          "ruta": "propuestas/investigacion-post-r6/diversos/evidencia/nota-tecnica-p4.txt",
+          "sha256": "14334c627e375e08c1b6fcbed7736e3e80d51b4bf15f9883a4e4eac8bc5e9f2d",
+          "localizador": "p4 integra (nota 10)",
+          "afirmacion_soportada": "Transcripcion citable del contexto: atributo listado sin definicion."
+        },
+        {
+          "ruta": "propuestas/cierre-brechas-post-r6/significados-tic-diversos/evidencia/nueva-diversos-2026-10-24.md",
+          "sha256": "67088fd454ae669df92cf582393535b10dd5f6118b6b144f0be10bdbf77aeeb9",
+          "localizador": "busquedas CONAPO/PROAES/SAGARHPA 2026-10-24, sin vinculo a fila",
+          "afirmacion_soportada": "Pistas nuevas 2026-10-24 sin documento vinculado a fila/huella: sin cambio en la brecha."
+        }
+      ],
+      "condicion_reapertura": "Reapertura solo con fuente explicita nueva (no distribuciones ni nombres) que declare el objeto clasificado por CLASIF y cite conjunto+diccionario 67156807+fila 5+huella c16feb711c8027da46df863668671e9f35e699129da382b494d45039abe1f232; o diccionario corregido/fe de erratas. Propuesta 'tipo de asentamiento' rechazada por el integrador tras 2 auditorias: no re-proponer sin esa fuente.",
+      "limites": [
+        "C1 (objeto sin resolver): ninguna fuente examinada declara que clasifica CLASIF; 'tipo de asentamiento' no tiene fuente explicita y no se adopta.",
+        "C2 (valores observados, sin catalogo): los 38 valores nacionales y los 7+'-' de Sonora son conteos observados en datos, no un catalogo publicado; no se adoptan codigos INEGI 1-43; '-' = nulo declarado, no un tipo.",
+        "C3 (sin joins ni identidad de catalogos): la identidad del subset Sonora (2129 filas) es compatibilidad documental, no autoriza joins ni fusion con el producto nacional.",
+        "C4 (vinculo a nivel conjunto): la declaracion del publicador (Fuentes extras CKAN) no cita fila+huella; no suple el documento exacto faltante.",
+        "No se propone documental_revisada: los 20 pares estructurales ya estan documentados y el significado sigue pendiente de definicion respaldada."
+      ]
+    },
+    {
+      "id": "https://example.org/mex-ontologi/definition/3f6942e3-a9c5-42c0-a38b-2c7aad2a6c99%2F2",
+      "tipo": "significados",
+      "original_sha256": "e7d54d4a888e9258cb0633d929321095f5f3d5ccf84043f838cdda4cf9f543ed",
+      "puerta": "cambio_de_fuente_por_comprobar",
+      "pista": {
+        "url": "https://proaes.sonora.gob.mx/",
+        "por_que_nueva": "Dominio institucional localizado en busqueda 2026-10-24 pero su contenido interior (metodologia/cuestionario de Denuncias Ambientales, definicion de estrato) no ha sido examinado: requiere navegador compartido (solo W-web). Peticion P-S6-01 en trabajo/peticiones-web.json, sin resultado al cierre local."
+      },
+      "estado": "brecha_externa",
+      "afirmacion_propuesta": null,
+      "motivo": "TRIMESTRE sigue sin objeto declarado: Trimestre del estrato (ejemplo 1) convive con FECHA RECEPCION, lo que impide leerlo como derivacion calendarica; la particion trimestral del recurso (Q1 2022) es metadato de publicacion, no definicion de estrato. Interior PROAES examinado por W-web (paquete-v002 F-V002-02, sin_hallazgo con examen real): sin metodologia ni definicion de estrato/trimestre. Sin propuesta. Revision local R8 2026-10-24: expediente R7 completo re-verificado por bytes (SHA por codigo, 26/26 coincidentes con asignacion); paquetes W v001 (sin peticiones), v002 (P-S6-01 PROAES y P-S6-02 SAGARHPA, ambas sin_hallazgo con examen real Obscura+curl+pypdf), v003 (V13/V14 acceso, sin material S6) y v004 (defunciones/otros frentes, sin material S6); pistas nueva-diversos y nueva-dgis-egresos 2026-10-24 ya agotadas; sin busquedas genericas repetidas; sin Obscura (solo W); sin contactos ni Gemma.",
+      "evidencia_faltante": "Metodologia o cuestionario PROAES de Denuncias Ambientales que defina 'estrato' y a que trimestre refiere TRIMESTRE (calendario de denuncia vs estrato operativo/muestral). No localizado en fuentes examinadas (portal CKAN; R6; resultados de busqueda 2026-10-24). Vale cualquier evidencia primaria inequivoca vinculada a la fila.",
+      "evidencia": [
+        {
+          "ruta": "data/portal/inspecciones/3f6942e3-a9c5-42c0-a38b-2c7aad2a6c99.json",
+          "sha256": "e463ea718d587e0e5407554a11e03c96643cccaa18e7caca7f57d81052b381c1",
+          "localizador": "/definiciones/1 (TRIMESTRE) y /definiciones/3 (FECHA RECEPCION)",
+          "afirmacion_soportada": "Fila 2: TRIMESTRE, Numerico entero, 'Trimestre del estrato', ejemplo 1, sin catalogo; convive con FECHA RECEPCION, lo que impide leer 'trimestre' como mera derivacion calendarica."
+        },
+        {
+          "ruta": "data/portal/inspecciones/5772b8ec-e272-4265-a757-f7ddd179fe04.json",
+          "sha256": "2c3c0e293052e25e5b4af24d9a5c332189a4544f48d1732f69306210b1fe909d",
+          "localizador": "tablas[0].hoja=2020, campos[1].id=TRIMESTRE pos 2, campos[3].id=FECHA RECEPCION pos 4",
+          "afirmacion_soportada": "Hoja fisica '2020' (nombre estancado); el recurso cubre 2022-01-01 a 2022-03-31, por lo que el nombre de hoja no fecha los datos."
+        },
+        {
+          "ruta": "propuestas/investigacion-post-r6/diversos/evidencia/ckan-denuncias.json",
+          "sha256": "3eafe5c95f99dbbeb94dc2867b3c818ae1a1c59362a87aeadf2dbb761eadac09",
+          "localizador": "result.frequency/fuentes_extras + resources[1].name/start_date/end_date/region",
+          "afirmacion_soportada": "El publicador parte el conjunto por trimestre (recurso 'Denuncias 1er Trimestre 2022', frecuencia trimestral) y deja Fuentes extras vacias: el trimestre del recurso es particion de publicacion, no definicion de 'estrato'."
+        },
+        {
+          "ruta": "propuestas/cierre-brechas-post-r6/significados-tic-diversos/evidencia/nueva-diversos-2026-10-24.md",
+          "sha256": "67088fd454ae669df92cf582393535b10dd5f6118b6b144f0be10bdbf77aeeb9",
+          "localizador": "busquedas CONAPO/PROAES/SAGARHPA 2026-10-24, sin vinculo a fila",
+          "afirmacion_soportada": "Sitio proaes.sonora.gob.mx localizado 2026-10-24 pero sin metodologia ni definicion de estrato en los resultados: hueco intacto."
+        },
+        {
+          "ruta": "propuestas/plan-paralelo-brechas-sin-gemma/ejecucion-20261024-072207Z/W-web/paquete-v002/proaes-seguimiento-indicador-3_2021-2027.pdf",
+          "sha256": "c7b454ce911d0099ee0abc1e4e640835abb897c2cd4f7c982fdaf8e3ec443120",
+          "localizador": "F-V002-02-PROAES: portada PROAES + Inspeccion y Vigilancia + PDF indicador-3 (1 p., 1295 chars)",
+          "afirmacion_soportada": "W-web examino el interior PROAES (Obscura DOM + PDF con pypdf): portada sin seccion de metodologia; Inspeccion y Vigilancia con cero menciones a estrato/trimestre; PDF de indicador sin relacion. Peticion P-S6-01 cerrada sin_hallazgo 2026-10-24."
+        },
+        {
+          "ruta": "propuestas/plan-paralelo-brechas-sin-gemma/ejecucion-20261024-072207Z/W-web/paquete-v002/cobertura-peticiones-v002.json",
+          "sha256": "c38beed53ff102af5fedbc37b948ae73306c95c578fb49949c084d3eb861a1d5",
+          "localizador": "cobertura P-S6-01: atendida=sin_hallazgo, via obscura + curl.exe + pypdf",
+          "afirmacion_soportada": "Registro W-web de cobertura: P-S6-01 atendida sin_hallazgo; reapertura con diccionario corregido o nota metodologica del publicador."
+        }
+      ],
+      "condicion_reapertura": "Reapertura con metodologia/cuestionario PROAES (u otra fuente primaria) que defina 'estrato' y el trimestre de TRIMESTRE, vinculada a fila 2+huella 799f924f8f10e3831cebdb4fbbc233cb6965caae8902f799881277d12f24320d; o resultado resolutivo de W-web a la peticion P-S6-01 (adenda del coordinador).",
+      "limites": [
+        "No se interpreta evento, calendario ni cobertura; no se homologa a trimestre calendario aunque el ejemplo (1) coincida con el Q1 del recurso.",
+        "El nombre de hoja '2020' no se usa para fechar nada."
+      ]
+    },
+    {
+      "id": "https://example.org/mex-ontologi/definition/863b9cc8-daeb-4430-b835-6a0ced5abd31%2F7",
+      "tipo": "significados",
+      "original_sha256": "9155f0fd688484f89875feccb1c7154fa35ec18383fba010dfb79909da5127f2",
+      "puerta": "cambio_de_fuente_por_comprobar",
+      "pista": {
+        "url": "https://sagarhpa.sonora.gob.mx/",
+        "por_que_nueva": "Portal institucional localizado en busqueda 2026-10-24 pero sin diccionario corregido ni metodologia examinados en su interior: requiere navegador compartido (solo W-web). Peticion P-S6-02 en trabajo/peticiones-web.json, sin resultado al cierre local."
+      },
+      "estado": "brecha_externa",
+      "afirmacion_propuesta": null,
+      "motivo": "Descripcion trunca con objeto indeterminado (Clave de otras): catalogo sin hoja otras re-verificado; serie de pares clave-nombre y 21 recursos sin metodologia acotan el hueco sin cerrarlo. Interior SAGARHPA examinado por W-web (paquete-v002 F-V002-03, sin_hallazgo con examen real): sin diccionario ni metodologia que complete otras. Sin propuesta. Revision local R8 2026-10-24: expediente R7 completo re-verificado por bytes (SHA por codigo, 26/26 coincidentes con asignacion); paquetes W v001 (sin peticiones), v002 (P-S6-01 PROAES y P-S6-02 SAGARHPA, ambas sin_hallazgo con examen real Obscura+curl+pypdf), v003 (V13/V14 acceso, sin material S6) y v004 (defunciones/otros frentes, sin material S6); pistas nueva-diversos y nueva-dgis-egresos 2026-10-24 ya agotadas; sin busquedas genericas repetidas; sin Obscura (solo W); sin contactos ni Gemma.",
+      "evidencia_faltante": "Diccionario corregido o metodologia que complete 'Clave/Nombre de otras' (objeto: otras oficinas, especies, origenes u otro) y su catalogo, con edicion y periodo; o evidencia primaria inequivoca vinculada a la fila. No localizado en fuentes examinadas (portal CKAN; R6; resultados de busqueda 2026-10-24). Vale cualquier evidencia primaria inequivoca vinculada a la fila.",
+      "evidencia": [
+        {
+          "ruta": "data/portal/inspecciones/863b9cc8-daeb-4430-b835-6a0ced5abd31.json",
+          "sha256": "3281c0dc4105077da1b5a5a7c48adb9dbf154c40bc3dd062708f996aca77a5af",
+          "localizador": "/definiciones/6 (CVOTRAS) y /definiciones/7 (DOTRAS); serie /definiciones/1-11",
+          "afirmacion_soportada": "Filas 7-8: CVOTRAS (Numerico Int, 'Clave de otras') y DOTRAS (Texto, 'Nombre de otras'), sin ejemplo ni catalogo, en serie de pares clave-nombre; el objeto de 'otras' sigue indeterminado."
+        },
+        {
+          "ruta": "data/portal/inspecciones/b38645a9-bf15-4366-a1e0-63f5cfbd91c1.json",
+          "sha256": "1e73a9e3f3e5425260c8f7dd0711235437423178c1b88f4e69087c7d5b6247f4",
+          "localizador": "tablas[].hoja = Especie_Pesca, Distritos, Municipios, Regiones",
+          "afirmacion_soportada": "El catalogo publicado tiene 4 hojas y ninguna 'otras' ni dominio para CVOTRAS/DOTRAS."
+        },
+        {
+          "ruta": "propuestas/investigacion-post-r6/diversos/evidencia/ckan-pesca.json",
+          "sha256": "17e20d534ccaee27b8d1f095c39c2ed690e47b62e0dc6736c3f28469a504984b",
+          "localizador": "result.num_resources/fuentes_extras + resources[0..20]",
+          "afirmacion_soportada": "El conjunto publica 21 recursos (Diccionario + Catalogo + 19 anuales 2005-2023), Fuentes extras vacias: sin metodologia SAGARHPA ni diccionario corregido."
+        },
+        {
+          "ruta": "propuestas/cierre-brechas-post-r6/significados-tic-diversos/evidencia/nueva-diversos-2026-10-24.md",
+          "sha256": "67088fd454ae669df92cf582393535b10dd5f6118b6b144f0be10bdbf77aeeb9",
+          "localizador": "busquedas CONAPO/PROAES/SAGARHPA 2026-10-24, sin vinculo a fila",
+          "afirmacion_soportada": "Portal sagarhpa.sonora.gob.mx localizado 2026-10-24 sin diccionario corregido ni metodologia: hueco intacto."
+        },
+        {
+          "ruta": "propuestas/plan-paralelo-brechas-sin-gemma/ejecucion-20261024-072207Z/W-web/paquete-v002/fuentes-v002.json",
+          "sha256": "17baad4a1c1dbeb0fae0b74494fff334d9001d31b99da84b5e16a9232cd866ea",
+          "localizador": "F-V002-03-SAGARHPA: portada SAGARHPA + Sistema de Informacion Estadistica/OIAPES + tablero pesca (PowerBI)",
+          "afirmacion_soportada": "W-web examino el interior SAGARHPA (Obscura): portada sin diccionarios; OIAPES con declaracion metodologica generica sin catalogo ni definicion de Clave/Nombre de otras; tablero pesca sin diccionario extraible. Peticion P-S6-02 cerrada sin_hallazgo 2026-10-24."
+        },
+        {
+          "ruta": "propuestas/plan-paralelo-brechas-sin-gemma/ejecucion-20261024-072207Z/W-web/paquete-v002/cobertura-peticiones-v002.json",
+          "sha256": "c38beed53ff102af5fedbc37b948ae73306c95c578fb49949c084d3eb861a1d5",
+          "localizador": "cobertura P-S6-02: atendida=sin_hallazgo, via obscura",
+          "afirmacion_soportada": "Registro W-web de cobertura: P-S6-02 atendida sin_hallazgo; reapertura con diccionario corregido o metodologia SAGARHPA con edicion y periodo."
+        }
+      ],
+      "condicion_reapertura": "Reapertura con diccionario corregido/metodologia SAGARHPA (u otra fuente primaria) que complete el objeto de 'otras' y su catalogo, vinculada a fila+huella (CVOTRAS 7b43908359031edee596dab23b179df402c2da718dff957ef86902d8127c49c4 / DOTRAS 738de0329c2d2e19f50d85dc13b3e6a05c4d79fda579701c400d01e4ebc806b3); o resultado resolutivo de W-web a la peticion P-S6-02 (adenda del coordinador).",
+      "limites": [
+        "No se interpreta objeto, codigo ni catalogo; no se vincula a hojas del catalogo local.",
+        "La posicion contigua CVOTRAS/DOTRAS no autoriza afirmar pareja codigo-nombre mas alla de registrarla.",
+        "No se usa para joins ni identidad de catalogos."
+      ]
+    },
+    {
+      "id": "https://example.org/mex-ontologi/definition/863b9cc8-daeb-4430-b835-6a0ced5abd31%2F8",
+      "tipo": "significados",
+      "original_sha256": "cf9f2587da01b6b1f3d11bb07a2263fcd17743b59fec6d7c4b2da8b42353ba75",
+      "puerta": "cambio_de_fuente_por_comprobar",
+      "pista": {
+        "url": "https://sagarhpa.sonora.gob.mx/",
+        "por_que_nueva": "Mismo frente que CVOTRAS (gemela, filas 7-8): portal localizado 2026-10-24 sin interior examinado; requiere navegador compartido (solo W-web). Peticion P-S6-02 en trabajo/peticiones-web.json, sin resultado al cierre local."
+      },
+      "estado": "brecha_externa",
+      "afirmacion_propuesta": null,
+      "motivo": "Gemela trunca de CVOTRAS (Nombre de otras, fila 8): mismo hueco de objeto y mismo negativo de catalogo. Interior SAGARHPA examinado por W-web (paquete-v002 F-V002-03, sin_hallazgo): sin diccionario ni metodologia. Sin propuesta. Revision local R8 2026-10-24: expediente R7 completo re-verificado por bytes (SHA por codigo, 26/26 coincidentes con asignacion); paquetes W v001 (sin peticiones), v002 (P-S6-01 PROAES y P-S6-02 SAGARHPA, ambas sin_hallazgo con examen real Obscura+curl+pypdf), v003 (V13/V14 acceso, sin material S6) y v004 (defunciones/otros frentes, sin material S6); pistas nueva-diversos y nueva-dgis-egresos 2026-10-24 ya agotadas; sin busquedas genericas repetidas; sin Obscura (solo W); sin contactos ni Gemma.",
+      "evidencia_faltante": "Diccionario corregido o metodologia que complete ''Nombre de otras' (gemela de CVOTRAS, fila 8)' (objeto: otras oficinas, especies, origenes u otro) y su catalogo, con edicion y periodo; o evidencia primaria inequivoca vinculada a la fila. No localizado en fuentes examinadas (portal CKAN; R6; resultados de busqueda 2026-10-24). Vale cualquier evidencia primaria inequivoca vinculada a la fila.",
+      "evidencia": [
+        {
+          "ruta": "data/portal/inspecciones/863b9cc8-daeb-4430-b835-6a0ced5abd31.json",
+          "sha256": "3281c0dc4105077da1b5a5a7c48adb9dbf154c40bc3dd062708f996aca77a5af",
+          "localizador": "/definiciones/6 (CVOTRAS) y /definiciones/7 (DOTRAS); serie /definiciones/1-11",
+          "afirmacion_soportada": "Filas 7-8: CVOTRAS (Numerico Int, 'Clave de otras') y DOTRAS (Texto, 'Nombre de otras'), sin ejemplo ni catalogo, en serie de pares clave-nombre; el objeto de 'otras' sigue indeterminado."
+        },
+        {
+          "ruta": "data/portal/inspecciones/b38645a9-bf15-4366-a1e0-63f5cfbd91c1.json",
+          "sha256": "1e73a9e3f3e5425260c8f7dd0711235437423178c1b88f4e69087c7d5b6247f4",
+          "localizador": "tablas[].hoja = Especie_Pesca, Distritos, Municipios, Regiones",
+          "afirmacion_soportada": "El catalogo publicado tiene 4 hojas y ninguna 'otras' ni dominio para CVOTRAS/DOTRAS."
+        },
+        {
+          "ruta": "propuestas/investigacion-post-r6/diversos/evidencia/ckan-pesca.json",
+          "sha256": "17e20d534ccaee27b8d1f095c39c2ed690e47b62e0dc6736c3f28469a504984b",
+          "localizador": "result.num_resources/fuentes_extras + resources[0..20]",
+          "afirmacion_soportada": "El conjunto publica 21 recursos (Diccionario + Catalogo + 19 anuales 2005-2023), Fuentes extras vacias: sin metodologia SAGARHPA ni diccionario corregido."
+        },
+        {
+          "ruta": "propuestas/cierre-brechas-post-r6/significados-tic-diversos/evidencia/nueva-diversos-2026-10-24.md",
+          "sha256": "67088fd454ae669df92cf582393535b10dd5f6118b6b144f0be10bdbf77aeeb9",
+          "localizador": "busquedas CONAPO/PROAES/SAGARHPA 2026-10-24, sin vinculo a fila",
+          "afirmacion_soportada": "Portal sagarhpa.sonora.gob.mx localizado 2026-10-24 sin diccionario corregido ni metodologia: hueco intacto."
+        },
+        {
+          "ruta": "propuestas/plan-paralelo-brechas-sin-gemma/ejecucion-20261024-072207Z/W-web/paquete-v002/fuentes-v002.json",
+          "sha256": "17baad4a1c1dbeb0fae0b74494fff334d9001d31b99da84b5e16a9232cd866ea",
+          "localizador": "F-V002-03-SAGARHPA: portada SAGARHPA + Sistema de Informacion Estadistica/OIAPES + tablero pesca (PowerBI)",
+          "afirmacion_soportada": "W-web examino el interior SAGARHPA (Obscura): portada sin diccionarios; OIAPES con declaracion metodologica generica sin catalogo ni definicion de Clave/Nombre de otras; tablero pesca sin diccionario extraible. Peticion P-S6-02 cerrada sin_hallazgo 2026-10-24."
+        },
+        {
+          "ruta": "propuestas/plan-paralelo-brechas-sin-gemma/ejecucion-20261024-072207Z/W-web/paquete-v002/cobertura-peticiones-v002.json",
+          "sha256": "c38beed53ff102af5fedbc37b948ae73306c95c578fb49949c084d3eb861a1d5",
+          "localizador": "cobertura P-S6-02: atendida=sin_hallazgo, via obscura",
+          "afirmacion_soportada": "Registro W-web de cobertura: P-S6-02 atendida sin_hallazgo; reapertura con diccionario corregido o metodologia SAGARHPA con edicion y periodo."
+        }
+      ],
+      "condicion_reapertura": "Reapertura con diccionario corregido/metodologia SAGARHPA (u otra fuente primaria) que complete el objeto de 'otras' y su catalogo, vinculada a fila+huella (CVOTRAS 7b43908359031edee596dab23b179df402c2da718dff957ef86902d8127c49c4 / DOTRAS 738de0329c2d2e19f50d85dc13b3e6a05c4d79fda579701c400d01e4ebc806b3); o resultado resolutivo de W-web a la peticion P-S6-02 (adenda del coordinador).",
+      "limites": [
+        "No se interpreta objeto, codigo ni catalogo; no se vincula a hojas del catalogo local.",
+        "La posicion contigua CVOTRAS/DOTRAS no autoriza afirmar pareja codigo-nombre mas alla de registrarla.",
+        "No se usa para joins ni identidad de catalogos."
+      ]
+    }
+  ],
+  "peticiones_web_nuevas": [],
+  "nota_peticiones": "Sin pista primaria nueva concreta: los dos frentes candidatos (PROAES, SAGARHPA) ya fueron examinados en su interior por W-web (paquete-v002, sin_hallazgo); el enlace sinba08 ya fue agotado. No se emite peticiones-web.json; solo W usa Obscura.",
+  "novedades": "v001 2026-10-24: revision local de los 5 IDs; 26/26 SHA de evidencia re-calculados por codigo y coincidentes; expediente R7 (paquetes W v001..v004 y cierres) revisado sin material S6 nuevo; 0 propuestas, 5 brechas externas motivadas."
+}

@@ -1,0 +1,839 @@
+{
+ "rol": "auditoria-a",
+ "version": "v1",
+ "modelo": "Muse 1.3",
+ "fecha_utc": "2026-10-23",
+ "criterios": {
+  "version": "v1",
+  "modelo": "Muse 1.3",
+  "rol": "auditoria-a (independiente)",
+  "regla_decision": {
+   "aceptar": "Fila exacta verificada (huella OK, literal nombre/descripcion, tipo/formato/ejemplo coherentes), ambito restringido a conjunto/diccionario/definicion/huella, concepto limitado a lo realmente documentado, limites que prohiben identidad, catalogo, vigencia, unidad, moneda, cruces y equivalencias.",
+   "corregir": "Sentido univoco documentado pero regla/concepto con defecto subsanable (representacion inexacta, concepto generico que requiere calificador, limite/positivo que no refleja contradiccion, alcance que debe estrecharse). Se detalla el cambio exigido; no integra sin el.",
+   "rechazar": "Contradiccion real tipo-vs-sentido, fila corrupta usada como concepto, inferencia por nombre/ejemplo/simetria, o concepto que afirma equivalencia indebida (identidad entre fuentes, catalogo/version no acreditados). Un limite no cura la contradiccion. Pasa a pendiente.",
+   "pendiente_bien_fundado": "Para entregas sin reglas: el pendiente es correcto si la ausencia es documental (descripcion vacia, contradiccion, truncamiento, fila corrupta) con evidencia y solicitud precisa; es incorrecto si solo se debe a falta de regla previa existiendo sentido univoco."
+  },
+  "verificaciones_por_id": [
+   "huella_fila recomputada",
+   "literal nombre/descripcion vs fila",
+   "tipo/formato/unidad/ejemplo/catalogo vs concepto y representacion",
+   "ambito (conjunto/diccionario/definicion)",
+   "representacion compatible con tipo",
+   "limites: identidad/catalogo/vigencia/unidad/moneda/cruces",
+   "ausencia de identidad entre fuentes",
+   "solicitudes y fuentes con URL/localizador/sha/aplicabilidad"
+  ],
+  "focos_r5": [
+   "TIC: 11 booleanos contradictorios (conteo/procedimiento vs Si/No), vagos P2/P7/P27-P33, dobles P8, anaforas",
+   "nacimientos: 53 descripciones vacias + par RESIDEEXTRANJERO/D divergente; no decodificar por simetria X/XD ni por ejemplo",
+   "defunciones: 32 vacias verificadas; no promover DGIS/INEGI sin vinculo local ni vigencia",
+   "matriculas: 28 vacias + Municipio parcial + Tipo de baja generico; no inferir escala de promedios ni calendario de fechas",
+   "presas: hoja exacta de Clave, sin joins por compartir nombre",
+   "catalogos-web: vigencia exige enlace edicion-recurso-periodo; fecha de publicacion y similitud de valores no bastan"
+  ],
+  "prohibido": [
+   "aprobar por conteo o por script valido",
+   "aprobar por nombre o proximidad",
+   "curar contradicciones/filas corruptas con suposicion",
+   "decodificar siglas, simetrias X/XD, sufijos f, listas de unidad",
+   "contactar publicadores",
+   "controlar Obscura o navegador",
+   "modificar entregas, nucleo, fuentes, rondas inmutables"
+  ]
+ },
+ "sha_finalizadas": {
+  "defunciones": "4f58c5434a000248e104fe6b8fd843df0088afb1c359e8c93a8844880308f979",
+  "epidemiologia": "5145bbe267feb45ce25c19fecf7d343ade421d407203eb635c86fdae165e1c1c",
+  "diversos": "231f4d97f902de99b7cee124bb2c49c1f6354d96881c7a8ccd4388b5ad3b7223"
+ },
+ "sha_listo_finalizadas": {
+  "defunciones": "4f58c5434a000248e104fe6b8fd843df0088afb1c359e8c93a8844880308f979",
+  "epidemiologia": "5145bbe267feb45ce25c19fecf7d343ade421d407203eb635c86fdae165e1c1c",
+  "diversos": "231f4d97f902de99b7cee124bb2c49c1f6354d96881c7a8ccd4388b5ad3b7223"
+ },
+ "dictamenes": [
+  {
+   "tipo": "decision_significado",
+   "id": "https://example.org/mex-ontologi/definition/12f684e9-f4d5-4714-933d-aa153a812174%2F17",
+   "entrega": "defunciones",
+   "decision_origen": "pendiente",
+   "dictamen": "aceptar",
+   "motivo": "Pendiente/artefacto bien fundado: motivo documental concreto con evidencia y localizador; sin sentido univoco acreditable para concepto limitado; no se debe solo a falta de regla previa. pendiente: descripcion 'Pendiente de especificar', catalogo_declarado='' y sin literal especifico; dictamen previo R4 lote-6 (pendiente) revisado y confirmado con datastore live 2026-10-23. Ejemplo aislado no acredita co",
+   "evidencia": [
+    "propuestas/pendientes-muse-r5/defunciones/entrega.json",
+    "definicion_iri=https://example.org/mex-ontologi/definition/12f684e9-f4d5-4714-933d-aa153a812174%2F17"
+   ]
+  },
+  {
+   "tipo": "decision_significado",
+   "id": "https://example.org/mex-ontologi/definition/12f684e9-f4d5-4714-933d-aa153a812174%2F30",
+   "entrega": "defunciones",
+   "decision_origen": "pendiente",
+   "dictamen": "aceptar",
+   "motivo": "Pendiente/artefacto bien fundado: motivo documental concreto con evidencia y localizador; sin sentido univoco acreditable para concepto limitado; no se debe solo a falta de regla previa. pendiente: descripcion 'Pendiente de especificar', catalogo_declarado='' y sin literal especifico; dictamen previo R4 lote-6 (pendiente) revisado y confirmado con datastore live 2026-10-23. Ejemplo aislado no acredita co",
+   "evidencia": [
+    "propuestas/pendientes-muse-r5/defunciones/entrega.json",
+    "definicion_iri=https://example.org/mex-ontologi/definition/12f684e9-f4d5-4714-933d-aa153a812174%2F30"
+   ]
+  },
+  {
+   "tipo": "decision_significado",
+   "id": "https://example.org/mex-ontologi/definition/12f684e9-f4d5-4714-933d-aa153a812174%2F31",
+   "entrega": "defunciones",
+   "decision_origen": "pendiente",
+   "dictamen": "aceptar",
+   "motivo": "Pendiente/artefacto bien fundado: motivo documental concreto con evidencia y localizador; sin sentido univoco acreditable para concepto limitado; no se debe solo a falta de regla previa. pendiente: descripcion 'Pendiente de especificar', catalogo_declarado='' y sin literal especifico; dictamen previo R4 lote-6 (pendiente) revisado y confirmado con datastore live 2026-10-23. Ejemplo aislado no acredita co",
+   "evidencia": [
+    "propuestas/pendientes-muse-r5/defunciones/entrega.json",
+    "definicion_iri=https://example.org/mex-ontologi/definition/12f684e9-f4d5-4714-933d-aa153a812174%2F31"
+   ]
+  },
+  {
+   "tipo": "decision_significado",
+   "id": "https://example.org/mex-ontologi/definition/12f684e9-f4d5-4714-933d-aa153a812174%2F32",
+   "entrega": "defunciones",
+   "decision_origen": "pendiente",
+   "dictamen": "aceptar",
+   "motivo": "Pendiente/artefacto bien fundado: motivo documental concreto con evidencia y localizador; sin sentido univoco acreditable para concepto limitado; no se debe solo a falta de regla previa. pendiente: descripcion 'Pendiente de especificar', catalogo_declarado='' y sin literal especifico; dictamen previo R4 lote-6 (pendiente) revisado y confirmado con datastore live 2026-10-23. Ejemplo aislado no acredita co",
+   "evidencia": [
+    "propuestas/pendientes-muse-r5/defunciones/entrega.json",
+    "definicion_iri=https://example.org/mex-ontologi/definition/12f684e9-f4d5-4714-933d-aa153a812174%2F32"
+   ]
+  },
+  {
+   "tipo": "decision_significado",
+   "id": "https://example.org/mex-ontologi/definition/12f684e9-f4d5-4714-933d-aa153a812174%2F33",
+   "entrega": "defunciones",
+   "decision_origen": "pendiente",
+   "dictamen": "aceptar",
+   "motivo": "Pendiente/artefacto bien fundado: motivo documental concreto con evidencia y localizador; sin sentido univoco acreditable para concepto limitado; no se debe solo a falta de regla previa. pendiente: descripcion 'Pendiente de especificar', catalogo_declarado='' y sin literal especifico; dictamen previo R4 lote-6 (pendiente) revisado y confirmado con datastore live 2026-10-23. Ejemplo aislado no acredita co",
+   "evidencia": [
+    "propuestas/pendientes-muse-r5/defunciones/entrega.json",
+    "definicion_iri=https://example.org/mex-ontologi/definition/12f684e9-f4d5-4714-933d-aa153a812174%2F33"
+   ]
+  },
+  {
+   "tipo": "decision_significado",
+   "id": "https://example.org/mex-ontologi/definition/12f684e9-f4d5-4714-933d-aa153a812174%2F34",
+   "entrega": "defunciones",
+   "decision_origen": "pendiente",
+   "dictamen": "aceptar",
+   "motivo": "Pendiente/artefacto bien fundado: motivo documental concreto con evidencia y localizador; sin sentido univoco acreditable para concepto limitado; no se debe solo a falta de regla previa. pendiente: descripcion 'Pendiente de especificar', catalogo_declarado='' y sin literal especifico; dictamen previo R4 lote-6 (pendiente) revisado y confirmado con datastore live 2026-10-23. Ejemplo aislado no acredita co",
+   "evidencia": [
+    "propuestas/pendientes-muse-r5/defunciones/entrega.json",
+    "definicion_iri=https://example.org/mex-ontologi/definition/12f684e9-f4d5-4714-933d-aa153a812174%2F34"
+   ]
+  },
+  {
+   "tipo": "decision_significado",
+   "id": "https://example.org/mex-ontologi/definition/12f684e9-f4d5-4714-933d-aa153a812174%2F35",
+   "entrega": "defunciones",
+   "decision_origen": "pendiente",
+   "dictamen": "aceptar",
+   "motivo": "Pendiente/artefacto bien fundado: motivo documental concreto con evidencia y localizador; sin sentido univoco acreditable para concepto limitado; no se debe solo a falta de regla previa. pendiente: descripcion 'Pendiente de especificar', catalogo_declarado='' y sin literal especifico; dictamen previo R4 lote-6 (pendiente) revisado y confirmado con datastore live 2026-10-23. Ejemplo aislado no acredita co",
+   "evidencia": [
+    "propuestas/pendientes-muse-r5/defunciones/entrega.json",
+    "definicion_iri=https://example.org/mex-ontologi/definition/12f684e9-f4d5-4714-933d-aa153a812174%2F35"
+   ]
+  },
+  {
+   "tipo": "decision_significado",
+   "id": "https://example.org/mex-ontologi/definition/12f684e9-f4d5-4714-933d-aa153a812174%2F36",
+   "entrega": "defunciones",
+   "decision_origen": "pendiente",
+   "dictamen": "aceptar",
+   "motivo": "Pendiente/artefacto bien fundado: motivo documental concreto con evidencia y localizador; sin sentido univoco acreditable para concepto limitado; no se debe solo a falta de regla previa. pendiente: descripcion 'Pendiente de especificar', catalogo_declarado='' y sin literal especifico; dictamen previo R4 lote-6 (pendiente) revisado y confirmado con datastore live 2026-10-23. Ejemplo aislado no acredita co",
+   "evidencia": [
+    "propuestas/pendientes-muse-r5/defunciones/entrega.json",
+    "definicion_iri=https://example.org/mex-ontologi/definition/12f684e9-f4d5-4714-933d-aa153a812174%2F36"
+   ]
+  },
+  {
+   "tipo": "decision_significado",
+   "id": "https://example.org/mex-ontologi/definition/12f684e9-f4d5-4714-933d-aa153a812174%2F37",
+   "entrega": "defunciones",
+   "decision_origen": "pendiente",
+   "dictamen": "aceptar",
+   "motivo": "Pendiente/artefacto bien fundado: motivo documental concreto con evidencia y localizador; sin sentido univoco acreditable para concepto limitado; no se debe solo a falta de regla previa. pendiente: descripcion 'Pendiente de especificar', catalogo_declarado='' y sin literal especifico; dictamen previo R4 lote-6 (pendiente) revisado y confirmado con datastore live 2026-10-23. Ejemplo aislado no acredita co",
+   "evidencia": [
+    "propuestas/pendientes-muse-r5/defunciones/entrega.json",
+    "definicion_iri=https://example.org/mex-ontologi/definition/12f684e9-f4d5-4714-933d-aa153a812174%2F37"
+   ]
+  },
+  {
+   "tipo": "decision_significado",
+   "id": "https://example.org/mex-ontologi/definition/12f684e9-f4d5-4714-933d-aa153a812174%2F38",
+   "entrega": "defunciones",
+   "decision_origen": "pendiente",
+   "dictamen": "aceptar",
+   "motivo": "Pendiente/artefacto bien fundado: motivo documental concreto con evidencia y localizador; sin sentido univoco acreditable para concepto limitado; no se debe solo a falta de regla previa. pendiente: descripcion 'Pendiente de especificar' sin vinculo local; no se promueve por nombre. Dictamen previo R4 (pendiente + pista_nombre_o_clasificador_sin_promocion) revisado y confirmado; fuentes externas candidata",
+   "evidencia": [
+    "propuestas/pendientes-muse-r5/defunciones/entrega.json",
+    "definicion_iri=https://example.org/mex-ontologi/definition/12f684e9-f4d5-4714-933d-aa153a812174%2F38"
+   ]
+  },
+  {
+   "tipo": "decision_significado",
+   "id": "https://example.org/mex-ontologi/definition/12f684e9-f4d5-4714-933d-aa153a812174%2F53",
+   "entrega": "defunciones",
+   "decision_origen": "pendiente",
+   "dictamen": "aceptar",
+   "motivo": "Pendiente/artefacto bien fundado: motivo documental concreto con evidencia y localizador; sin sentido univoco acreditable para concepto limitado; no se debe solo a falta de regla previa. pendiente: descripcion 'Pendiente de especificar', catalogo_declarado='' y sin literal especifico; dictamen previo R4 lote-6 (pendiente) revisado y confirmado con datastore live 2026-10-23. Ejemplo aislado no acredita co",
+   "evidencia": [
+    "propuestas/pendientes-muse-r5/defunciones/entrega.json",
+    "definicion_iri=https://example.org/mex-ontologi/definition/12f684e9-f4d5-4714-933d-aa153a812174%2F53"
+   ]
+  },
+  {
+   "tipo": "decision_significado",
+   "id": "https://example.org/mex-ontologi/definition/12f684e9-f4d5-4714-933d-aa153a812174%2F54",
+   "entrega": "defunciones",
+   "decision_origen": "pendiente",
+   "dictamen": "aceptar",
+   "motivo": "Pendiente/artefacto bien fundado: motivo documental concreto con evidencia y localizador; sin sentido univoco acreditable para concepto limitado; no se debe solo a falta de regla previa. pendiente: descripcion 'Pendiente de especificar', catalogo_declarado='' y sin literal especifico; dictamen previo R4 lote-6 (pendiente) revisado y confirmado con datastore live 2026-10-23. Ejemplo aislado no acredita co",
+   "evidencia": [
+    "propuestas/pendientes-muse-r5/defunciones/entrega.json",
+    "definicion_iri=https://example.org/mex-ontologi/definition/12f684e9-f4d5-4714-933d-aa153a812174%2F54"
+   ]
+  },
+  {
+   "tipo": "decision_significado",
+   "id": "https://example.org/mex-ontologi/definition/12f684e9-f4d5-4714-933d-aa153a812174%2F55",
+   "entrega": "defunciones",
+   "decision_origen": "pendiente",
+   "dictamen": "aceptar",
+   "motivo": "Pendiente/artefacto bien fundado: motivo documental concreto con evidencia y localizador; sin sentido univoco acreditable para concepto limitado; no se debe solo a falta de regla previa. pendiente: descripcion 'Pendiente de especificar', catalogo_declarado='' y sin literal especifico; dictamen previo R4 lote-6 (pendiente) revisado y confirmado con datastore live 2026-10-23. Ejemplo aislado no acredita co",
+   "evidencia": [
+    "propuestas/pendientes-muse-r5/defunciones/entrega.json",
+    "definicion_iri=https://example.org/mex-ontologi/definition/12f684e9-f4d5-4714-933d-aa153a812174%2F55"
+   ]
+  },
+  {
+   "tipo": "decision_significado",
+   "id": "https://example.org/mex-ontologi/definition/12f684e9-f4d5-4714-933d-aa153a812174%2F56",
+   "entrega": "defunciones",
+   "decision_origen": "pendiente",
+   "dictamen": "aceptar",
+   "motivo": "Pendiente/artefacto bien fundado: motivo documental concreto con evidencia y localizador; sin sentido univoco acreditable para concepto limitado; no se debe solo a falta de regla previa. pendiente: descripcion 'Pendiente de especificar', catalogo_declarado='' y sin literal especifico; dictamen previo R4 lote-6 (pendiente) revisado y confirmado con datastore live 2026-10-23. Ejemplo aislado no acredita co",
+   "evidencia": [
+    "propuestas/pendientes-muse-r5/defunciones/entrega.json",
+    "definicion_iri=https://example.org/mex-ontologi/definition/12f684e9-f4d5-4714-933d-aa153a812174%2F56"
+   ]
+  },
+  {
+   "tipo": "decision_significado",
+   "id": "https://example.org/mex-ontologi/definition/12f684e9-f4d5-4714-933d-aa153a812174%2F57",
+   "entrega": "defunciones",
+   "decision_origen": "pendiente",
+   "dictamen": "aceptar",
+   "motivo": "Pendiente/artefacto bien fundado: motivo documental concreto con evidencia y localizador; sin sentido univoco acreditable para concepto limitado; no se debe solo a falta de regla previa. pendiente: descripcion 'Pendiente de especificar', catalogo_declarado='' y sin literal especifico; dictamen previo R4 lote-6 (pendiente) revisado y confirmado con datastore live 2026-10-23. Ejemplo aislado no acredita co",
+   "evidencia": [
+    "propuestas/pendientes-muse-r5/defunciones/entrega.json",
+    "definicion_iri=https://example.org/mex-ontologi/definition/12f684e9-f4d5-4714-933d-aa153a812174%2F57"
+   ]
+  },
+  {
+   "tipo": "decision_significado",
+   "id": "https://example.org/mex-ontologi/definition/12f684e9-f4d5-4714-933d-aa153a812174%2F58",
+   "entrega": "defunciones",
+   "decision_origen": "pendiente",
+   "dictamen": "aceptar",
+   "motivo": "Pendiente/artefacto bien fundado: motivo documental concreto con evidencia y localizador; sin sentido univoco acreditable para concepto limitado; no se debe solo a falta de regla previa. pendiente: descripcion 'Pendiente de especificar', catalogo_declarado='' y sin literal especifico; dictamen previo R4 lote-6 (pendiente) revisado y confirmado con datastore live 2026-10-23. Ejemplo aislado no acredita co",
+   "evidencia": [
+    "propuestas/pendientes-muse-r5/defunciones/entrega.json",
+    "definicion_iri=https://example.org/mex-ontologi/definition/12f684e9-f4d5-4714-933d-aa153a812174%2F58"
+   ]
+  },
+  {
+   "tipo": "decision_significado",
+   "id": "https://example.org/mex-ontologi/definition/12f684e9-f4d5-4714-933d-aa153a812174%2F63",
+   "entrega": "defunciones",
+   "decision_origen": "pendiente",
+   "dictamen": "aceptar",
+   "motivo": "Pendiente/artefacto bien fundado: motivo documental concreto con evidencia y localizador; sin sentido univoco acreditable para concepto limitado; no se debe solo a falta de regla previa. pendiente: descripcion 'Pendiente de especificar', catalogo_declarado='' y sin literal especifico; dictamen previo R4 lote-6 (pendiente) revisado y confirmado con datastore live 2026-10-23. Ejemplo aislado no acredita co",
+   "evidencia": [
+    "propuestas/pendientes-muse-r5/defunciones/entrega.json",
+    "definicion_iri=https://example.org/mex-ontologi/definition/12f684e9-f4d5-4714-933d-aa153a812174%2F63"
+   ]
+  },
+  {
+   "tipo": "decision_significado",
+   "id": "https://example.org/mex-ontologi/definition/12f684e9-f4d5-4714-933d-aa153a812174%2F64",
+   "entrega": "defunciones",
+   "decision_origen": "pendiente",
+   "dictamen": "aceptar",
+   "motivo": "Pendiente/artefacto bien fundado: motivo documental concreto con evidencia y localizador; sin sentido univoco acreditable para concepto limitado; no se debe solo a falta de regla previa. pendiente: descripcion 'Pendiente de especificar', catalogo_declarado='' y sin literal especifico; dictamen previo R4 lote-6 (pendiente) revisado y confirmado con datastore live 2026-10-23. Ejemplo aislado no acredita co",
+   "evidencia": [
+    "propuestas/pendientes-muse-r5/defunciones/entrega.json",
+    "definicion_iri=https://example.org/mex-ontologi/definition/12f684e9-f4d5-4714-933d-aa153a812174%2F64"
+   ]
+  },
+  {
+   "tipo": "decision_significado",
+   "id": "https://example.org/mex-ontologi/definition/12f684e9-f4d5-4714-933d-aa153a812174%2F67",
+   "entrega": "defunciones",
+   "decision_origen": "pendiente",
+   "dictamen": "aceptar",
+   "motivo": "Pendiente/artefacto bien fundado: motivo documental concreto con evidencia y localizador; sin sentido univoco acreditable para concepto limitado; no se debe solo a falta de regla previa. pendiente: descripcion 'Pendiente de especificar', catalogo_declarado='' y sin literal especifico; dictamen previo R4 lote-6 (pendiente) revisado y confirmado con datastore live 2026-10-23. Ejemplo aislado no acredita co",
+   "evidencia": [
+    "propuestas/pendientes-muse-r5/defunciones/entrega.json",
+    "definicion_iri=https://example.org/mex-ontologi/definition/12f684e9-f4d5-4714-933d-aa153a812174%2F67"
+   ]
+  },
+  {
+   "tipo": "decision_significado",
+   "id": "https://example.org/mex-ontologi/definition/12f684e9-f4d5-4714-933d-aa153a812174%2F68",
+   "entrega": "defunciones",
+   "decision_origen": "pendiente",
+   "dictamen": "aceptar",
+   "motivo": "Pendiente/artefacto bien fundado: motivo documental concreto con evidencia y localizador; sin sentido univoco acreditable para concepto limitado; no se debe solo a falta de regla previa. pendiente: descripcion 'Pendiente de especificar', catalogo_declarado='' y sin literal especifico; dictamen previo R4 lote-6 (pendiente) revisado y confirmado con datastore live 2026-10-23. Ejemplo aislado no acredita co",
+   "evidencia": [
+    "propuestas/pendientes-muse-r5/defunciones/entrega.json",
+    "definicion_iri=https://example.org/mex-ontologi/definition/12f684e9-f4d5-4714-933d-aa153a812174%2F68"
+   ]
+  },
+  {
+   "tipo": "decision_significado",
+   "id": "https://example.org/mex-ontologi/definition/12f684e9-f4d5-4714-933d-aa153a812174%2F69",
+   "entrega": "defunciones",
+   "decision_origen": "pendiente",
+   "dictamen": "aceptar",
+   "motivo": "Pendiente/artefacto bien fundado: motivo documental concreto con evidencia y localizador; sin sentido univoco acreditable para concepto limitado; no se debe solo a falta de regla previa. pendiente: descripcion 'Pendiente de especificar', catalogo_declarado='' y sin literal especifico; dictamen previo R4 lote-6 (pendiente) revisado y confirmado con datastore live 2026-10-23. Ejemplo aislado no acredita co",
+   "evidencia": [
+    "propuestas/pendientes-muse-r5/defunciones/entrega.json",
+    "definicion_iri=https://example.org/mex-ontologi/definition/12f684e9-f4d5-4714-933d-aa153a812174%2F69"
+   ]
+  },
+  {
+   "tipo": "decision_significado",
+   "id": "https://example.org/mex-ontologi/definition/12f684e9-f4d5-4714-933d-aa153a812174%2F70",
+   "entrega": "defunciones",
+   "decision_origen": "pendiente",
+   "dictamen": "aceptar",
+   "motivo": "Pendiente/artefacto bien fundado: motivo documental concreto con evidencia y localizador; sin sentido univoco acreditable para concepto limitado; no se debe solo a falta de regla previa. pendiente: descripcion 'Pendiente de especificar', catalogo_declarado='' y sin literal especifico; dictamen previo R4 lote-6 (pendiente) revisado y confirmado con datastore live 2026-10-23. Ejemplo aislado no acredita co",
+   "evidencia": [
+    "propuestas/pendientes-muse-r5/defunciones/entrega.json",
+    "definicion_iri=https://example.org/mex-ontologi/definition/12f684e9-f4d5-4714-933d-aa153a812174%2F70"
+   ]
+  },
+  {
+   "tipo": "decision_significado",
+   "id": "https://example.org/mex-ontologi/definition/12f684e9-f4d5-4714-933d-aa153a812174%2F71",
+   "entrega": "defunciones",
+   "decision_origen": "pendiente",
+   "dictamen": "aceptar",
+   "motivo": "Pendiente/artefacto bien fundado: motivo documental concreto con evidencia y localizador; sin sentido univoco acreditable para concepto limitado; no se debe solo a falta de regla previa. pendiente: descripcion 'Pendiente de especificar', catalogo_declarado='' y sin literal especifico; dictamen previo R4 lote-6 (pendiente) revisado y confirmado con datastore live 2026-10-23. Ejemplo aislado no acredita co",
+   "evidencia": [
+    "propuestas/pendientes-muse-r5/defunciones/entrega.json",
+    "definicion_iri=https://example.org/mex-ontologi/definition/12f684e9-f4d5-4714-933d-aa153a812174%2F71"
+   ]
+  },
+  {
+   "tipo": "decision_significado",
+   "id": "https://example.org/mex-ontologi/definition/12f684e9-f4d5-4714-933d-aa153a812174%2F72",
+   "entrega": "defunciones",
+   "decision_origen": "pendiente",
+   "dictamen": "aceptar",
+   "motivo": "Pendiente/artefacto bien fundado: motivo documental concreto con evidencia y localizador; sin sentido univoco acreditable para concepto limitado; no se debe solo a falta de regla previa. pendiente: descripcion 'Pendiente de especificar' sin vinculo local; no se promueve por nombre. Dictamen previo R4 (pendiente + pista_nombre_o_clasificador_sin_promocion) revisado y confirmado; fuentes externas candidata",
+   "evidencia": [
+    "propuestas/pendientes-muse-r5/defunciones/entrega.json",
+    "definicion_iri=https://example.org/mex-ontologi/definition/12f684e9-f4d5-4714-933d-aa153a812174%2F72"
+   ]
+  },
+  {
+   "tipo": "decision_significado",
+   "id": "https://example.org/mex-ontologi/definition/12f684e9-f4d5-4714-933d-aa153a812174%2F73",
+   "entrega": "defunciones",
+   "decision_origen": "pendiente",
+   "dictamen": "aceptar",
+   "motivo": "Pendiente/artefacto bien fundado: motivo documental concreto con evidencia y localizador; sin sentido univoco acreditable para concepto limitado; no se debe solo a falta de regla previa. pendiente: descripcion 'Pendiente de especificar' sin vinculo local; no se promueve por nombre. Dictamen previo R4 (pendiente + pista_nombre_o_clasificador_sin_promocion) revisado y confirmado; fuentes externas candidata",
+   "evidencia": [
+    "propuestas/pendientes-muse-r5/defunciones/entrega.json",
+    "definicion_iri=https://example.org/mex-ontologi/definition/12f684e9-f4d5-4714-933d-aa153a812174%2F73"
+   ]
+  },
+  {
+   "tipo": "decision_significado",
+   "id": "https://example.org/mex-ontologi/definition/12f684e9-f4d5-4714-933d-aa153a812174%2F74",
+   "entrega": "defunciones",
+   "decision_origen": "pendiente",
+   "dictamen": "aceptar",
+   "motivo": "Pendiente/artefacto bien fundado: motivo documental concreto con evidencia y localizador; sin sentido univoco acreditable para concepto limitado; no se debe solo a falta de regla previa. pendiente: descripcion 'Pendiente de especificar' sin vinculo local; no se promueve por nombre. Dictamen previo R4 (pendiente + pista_nombre_o_clasificador_sin_promocion) revisado y confirmado; fuentes externas candidata",
+   "evidencia": [
+    "propuestas/pendientes-muse-r5/defunciones/entrega.json",
+    "definicion_iri=https://example.org/mex-ontologi/definition/12f684e9-f4d5-4714-933d-aa153a812174%2F74"
+   ]
+  },
+  {
+   "tipo": "decision_significado",
+   "id": "https://example.org/mex-ontologi/definition/12f684e9-f4d5-4714-933d-aa153a812174%2F75",
+   "entrega": "defunciones",
+   "decision_origen": "pendiente",
+   "dictamen": "aceptar",
+   "motivo": "Pendiente/artefacto bien fundado: motivo documental concreto con evidencia y localizador; sin sentido univoco acreditable para concepto limitado; no se debe solo a falta de regla previa. pendiente: descripcion 'Pendiente de especificar' sin vinculo local; no se promueve por nombre. Dictamen previo R4 (pendiente + pista_nombre_o_clasificador_sin_promocion) revisado y confirmado; fuentes externas candidata",
+   "evidencia": [
+    "propuestas/pendientes-muse-r5/defunciones/entrega.json",
+    "definicion_iri=https://example.org/mex-ontologi/definition/12f684e9-f4d5-4714-933d-aa153a812174%2F75"
+   ]
+  },
+  {
+   "tipo": "decision_significado",
+   "id": "https://example.org/mex-ontologi/definition/12f684e9-f4d5-4714-933d-aa153a812174%2F76",
+   "entrega": "defunciones",
+   "decision_origen": "pendiente",
+   "dictamen": "aceptar",
+   "motivo": "Pendiente/artefacto bien fundado: motivo documental concreto con evidencia y localizador; sin sentido univoco acreditable para concepto limitado; no se debe solo a falta de regla previa. pendiente: descripcion 'Pendiente de especificar', catalogo_declarado='' y sin literal especifico; dictamen previo R4 lote-6 (pendiente) revisado y confirmado con datastore live 2026-10-23. Ejemplo aislado no acredita co",
+   "evidencia": [
+    "propuestas/pendientes-muse-r5/defunciones/entrega.json",
+    "definicion_iri=https://example.org/mex-ontologi/definition/12f684e9-f4d5-4714-933d-aa153a812174%2F76"
+   ]
+  },
+  {
+   "tipo": "decision_significado",
+   "id": "https://example.org/mex-ontologi/definition/12f684e9-f4d5-4714-933d-aa153a812174%2F77",
+   "entrega": "defunciones",
+   "decision_origen": "pendiente",
+   "dictamen": "aceptar",
+   "motivo": "Pendiente/artefacto bien fundado: motivo documental concreto con evidencia y localizador; sin sentido univoco acreditable para concepto limitado; no se debe solo a falta de regla previa. pendiente: descripcion 'Pendiente de especificar', catalogo_declarado='' y sin literal especifico; dictamen previo R4 lote-6 (pendiente) revisado y confirmado con datastore live 2026-10-23. Ejemplo aislado no acredita co",
+   "evidencia": [
+    "propuestas/pendientes-muse-r5/defunciones/entrega.json",
+    "definicion_iri=https://example.org/mex-ontologi/definition/12f684e9-f4d5-4714-933d-aa153a812174%2F77"
+   ]
+  },
+  {
+   "tipo": "decision_significado",
+   "id": "https://example.org/mex-ontologi/definition/12f684e9-f4d5-4714-933d-aa153a812174%2F78",
+   "entrega": "defunciones",
+   "decision_origen": "pendiente",
+   "dictamen": "aceptar",
+   "motivo": "Pendiente/artefacto bien fundado: motivo documental concreto con evidencia y localizador; sin sentido univoco acreditable para concepto limitado; no se debe solo a falta de regla previa. pendiente: descripcion 'Pendiente de especificar', catalogo_declarado='' y sin literal especifico; dictamen previo R4 lote-6 (pendiente) revisado y confirmado con datastore live 2026-10-23. Ejemplo aislado no acredita co",
+   "evidencia": [
+    "propuestas/pendientes-muse-r5/defunciones/entrega.json",
+    "definicion_iri=https://example.org/mex-ontologi/definition/12f684e9-f4d5-4714-933d-aa153a812174%2F78"
+   ]
+  },
+  {
+   "tipo": "decision_significado",
+   "id": "https://example.org/mex-ontologi/definition/12f684e9-f4d5-4714-933d-aa153a812174%2F79",
+   "entrega": "defunciones",
+   "decision_origen": "pendiente",
+   "dictamen": "aceptar",
+   "motivo": "Pendiente/artefacto bien fundado: motivo documental concreto con evidencia y localizador; sin sentido univoco acreditable para concepto limitado; no se debe solo a falta de regla previa. pendiente: descripcion 'Pendiente de especificar', catalogo_declarado='' y sin literal especifico; dictamen previo R4 lote-6 (pendiente) revisado y confirmado con datastore live 2026-10-23. Ejemplo aislado no acredita co",
+   "evidencia": [
+    "propuestas/pendientes-muse-r5/defunciones/entrega.json",
+    "definicion_iri=https://example.org/mex-ontologi/definition/12f684e9-f4d5-4714-933d-aa153a812174%2F79"
+   ]
+  },
+  {
+   "tipo": "decision_significado",
+   "id": "https://example.org/mex-ontologi/definition/12f684e9-f4d5-4714-933d-aa153a812174%2F80",
+   "entrega": "defunciones",
+   "decision_origen": "pendiente",
+   "dictamen": "aceptar",
+   "motivo": "Pendiente/artefacto bien fundado: motivo documental concreto con evidencia y localizador; sin sentido univoco acreditable para concepto limitado; no se debe solo a falta de regla previa. pendiente: descripcion 'Pendiente de especificar', catalogo_declarado='' y sin literal especifico; dictamen previo R4 lote-6 (pendiente) revisado y confirmado con datastore live 2026-10-23. Ejemplo aislado no acredita co",
+   "evidencia": [
+    "propuestas/pendientes-muse-r5/defunciones/entrega.json",
+    "definicion_iri=https://example.org/mex-ontologi/definition/12f684e9-f4d5-4714-933d-aa153a812174%2F80"
+   ]
+  },
+  {
+   "tipo": "decision_significado",
+   "id": "https://example.org/mex-ontologi/definition/2334deaa-dd0c-444e-b038-4cc556ad715d%2F9",
+   "entrega": "epidemiologia",
+   "decision_origen": "pendiente",
+   "dictamen": "aceptar",
+   "motivo": "Pendiente/artefacto bien fundado: motivo documental concreto con evidencia y localizador; sin sentido univoco acreditable para concepto limitado; no se debe solo a falta de regla previa. Descripcion generica 'Clave' sin objeto fijado; el ejemplo sugiere CIE pero inferirlo seria interpretar nombre y ejemplo, no respaldo explicito. Catalogo declarado vacio en las 59 filas. Regla r3a6-005 fija no expandir C",
+   "evidencia": [
+    "propuestas/pendientes-muse-r5/epidemiologia/entrega.json",
+    "definicion_iri=https://example.org/mex-ontologi/definition/2334deaa-dd0c-444e-b038-4cc556ad715d%2F9"
+   ]
+  },
+  {
+   "tipo": "decision_significado",
+   "id": "https://example.org/mex-ontologi/definition/2334deaa-dd0c-444e-b038-4cc556ad715d%2F11",
+   "entrega": "epidemiologia",
+   "decision_origen": "pendiente",
+   "dictamen": "aceptar",
+   "motivo": "Pendiente/artefacto bien fundado: motivo documental concreto con evidencia y localizador; sin sentido univoco acreditable para concepto limitado; no se debe solo a falta de regla previa. 'Acumulados' no fija objeto ni periodo de acumulacion; columna fisica pos 11 observada en hoja SUIVE sin documentar su computo.",
+   "evidencia": [
+    "propuestas/pendientes-muse-r5/epidemiologia/entrega.json",
+    "definicion_iri=https://example.org/mex-ontologi/definition/2334deaa-dd0c-444e-b038-4cc556ad715d%2F11"
+   ]
+  },
+  {
+   "tipo": "decision_significado",
+   "id": "https://example.org/mex-ontologi/definition/2334deaa-dd0c-444e-b038-4cc556ad715d%2F13",
+   "entrega": "epidemiologia",
+   "decision_origen": "pendiente",
+   "dictamen": "aceptar",
+   "motivo": "Pendiente/artefacto bien fundado: motivo documental concreto con evidencia y localizador; sin sentido univoco acreditable para concepto limitado; no se debe solo a falta de regla previa. Fila contradictoria: nombre de01_a_04 (1 a 4) frente a descripcion literal 'Total de personas en vigilancia entre 1 y 5 anos', que ademas solapa la edad 5 con de05_a_09 ('entre 5 y 9'). Las reglas hermanas r3a6-007..016 ",
+   "evidencia": [
+    "propuestas/pendientes-muse-r5/epidemiologia/entrega.json",
+    "definicion_iri=https://example.org/mex-ontologi/definition/2334deaa-dd0c-444e-b038-4cc556ad715d%2F13"
+   ]
+  },
+  {
+   "tipo": "decision_significado",
+   "id": "https://example.org/mex-ontologi/definition/2334deaa-dd0c-444e-b038-4cc556ad715d%2F23",
+   "entrega": "epidemiologia",
+   "decision_origen": "pendiente",
+   "dictamen": "aceptar",
+   "motivo": "Pendiente/artefacto bien fundado: motivo documental concreto con evidencia y localizador; sin sentido univoco acreditable para concepto limitado; no se debe solo a falta de regla previa. Descripcion 'Pendiente de especificar': sin respaldo explicito vinculado a esta definicion; no se interpreta el nombre. Columna fisica pos 23 observada.",
+   "evidencia": [
+    "propuestas/pendientes-muse-r5/epidemiologia/entrega.json",
+    "definicion_iri=https://example.org/mex-ontologi/definition/2334deaa-dd0c-444e-b038-4cc556ad715d%2F23"
+   ]
+  },
+  {
+   "tipo": "decision_significado",
+   "id": "https://example.org/mex-ontologi/definition/2334deaa-dd0c-444e-b038-4cc556ad715d%2F24",
+   "entrega": "epidemiologia",
+   "decision_origen": "pendiente",
+   "dictamen": "aceptar",
+   "motivo": "Pendiente/artefacto bien fundado: motivo documental concreto con evidencia y localizador; sin sentido univoco acreditable para concepto limitado; no se debe solo a falta de regla previa. Descripcion 'Pendiente de especificar': sin respaldo explicito vinculado a esta definicion; no se interpreta el sufijo f por simetria con la serie sin sufijo ni por proximidad a totalf ('Total acumulado de Mujeres'). Col",
+   "evidencia": [
+    "propuestas/pendientes-muse-r5/epidemiologia/entrega.json",
+    "definicion_iri=https://example.org/mex-ontologi/definition/2334deaa-dd0c-444e-b038-4cc556ad715d%2F24"
+   ]
+  },
+  {
+   "tipo": "decision_significado",
+   "id": "https://example.org/mex-ontologi/definition/2334deaa-dd0c-444e-b038-4cc556ad715d%2F25",
+   "entrega": "epidemiologia",
+   "decision_origen": "pendiente",
+   "dictamen": "aceptar",
+   "motivo": "Pendiente/artefacto bien fundado: motivo documental concreto con evidencia y localizador; sin sentido univoco acreditable para concepto limitado; no se debe solo a falta de regla previa. Descripcion 'Pendiente de especificar': sin respaldo explicito vinculado a esta definicion; no se interpreta el sufijo f por simetria con la serie sin sufijo ni por proximidad a totalf ('Total acumulado de Mujeres'). Col",
+   "evidencia": [
+    "propuestas/pendientes-muse-r5/epidemiologia/entrega.json",
+    "definicion_iri=https://example.org/mex-ontologi/definition/2334deaa-dd0c-444e-b038-4cc556ad715d%2F25"
+   ]
+  },
+  {
+   "tipo": "decision_significado",
+   "id": "https://example.org/mex-ontologi/definition/2334deaa-dd0c-444e-b038-4cc556ad715d%2F26",
+   "entrega": "epidemiologia",
+   "decision_origen": "pendiente",
+   "dictamen": "aceptar",
+   "motivo": "Pendiente/artefacto bien fundado: motivo documental concreto con evidencia y localizador; sin sentido univoco acreditable para concepto limitado; no se debe solo a falta de regla previa. Descripcion 'Pendiente de especificar': sin respaldo explicito vinculado a esta definicion; no se interpreta el sufijo f por simetria con la serie sin sufijo ni por proximidad a totalf ('Total acumulado de Mujeres'). Col",
+   "evidencia": [
+    "propuestas/pendientes-muse-r5/epidemiologia/entrega.json",
+    "definicion_iri=https://example.org/mex-ontologi/definition/2334deaa-dd0c-444e-b038-4cc556ad715d%2F26"
+   ]
+  },
+  {
+   "tipo": "decision_significado",
+   "id": "https://example.org/mex-ontologi/definition/2334deaa-dd0c-444e-b038-4cc556ad715d%2F27",
+   "entrega": "epidemiologia",
+   "decision_origen": "pendiente",
+   "dictamen": "aceptar",
+   "motivo": "Pendiente/artefacto bien fundado: motivo documental concreto con evidencia y localizador; sin sentido univoco acreditable para concepto limitado; no se debe solo a falta de regla previa. Descripcion 'Pendiente de especificar': sin respaldo explicito vinculado a esta definicion; no se interpreta el sufijo f por simetria con la serie sin sufijo ni por proximidad a totalf ('Total acumulado de Mujeres'). Col",
+   "evidencia": [
+    "propuestas/pendientes-muse-r5/epidemiologia/entrega.json",
+    "definicion_iri=https://example.org/mex-ontologi/definition/2334deaa-dd0c-444e-b038-4cc556ad715d%2F27"
+   ]
+  },
+  {
+   "tipo": "decision_significado",
+   "id": "https://example.org/mex-ontologi/definition/2334deaa-dd0c-444e-b038-4cc556ad715d%2F28",
+   "entrega": "epidemiologia",
+   "decision_origen": "pendiente",
+   "dictamen": "aceptar",
+   "motivo": "Pendiente/artefacto bien fundado: motivo documental concreto con evidencia y localizador; sin sentido univoco acreditable para concepto limitado; no se debe solo a falta de regla previa. Descripcion 'Pendiente de especificar': sin respaldo explicito vinculado a esta definicion; no se interpreta el sufijo f por simetria con la serie sin sufijo ni por proximidad a totalf ('Total acumulado de Mujeres'). Col",
+   "evidencia": [
+    "propuestas/pendientes-muse-r5/epidemiologia/entrega.json",
+    "definicion_iri=https://example.org/mex-ontologi/definition/2334deaa-dd0c-444e-b038-4cc556ad715d%2F28"
+   ]
+  },
+  {
+   "tipo": "decision_significado",
+   "id": "https://example.org/mex-ontologi/definition/2334deaa-dd0c-444e-b038-4cc556ad715d%2F29",
+   "entrega": "epidemiologia",
+   "decision_origen": "pendiente",
+   "dictamen": "aceptar",
+   "motivo": "Pendiente/artefacto bien fundado: motivo documental concreto con evidencia y localizador; sin sentido univoco acreditable para concepto limitado; no se debe solo a falta de regla previa. Descripcion 'Pendiente de especificar': sin respaldo explicito vinculado a esta definicion; no se interpreta el sufijo f por simetria con la serie sin sufijo ni por proximidad a totalf ('Total acumulado de Mujeres'). Col",
+   "evidencia": [
+    "propuestas/pendientes-muse-r5/epidemiologia/entrega.json",
+    "definicion_iri=https://example.org/mex-ontologi/definition/2334deaa-dd0c-444e-b038-4cc556ad715d%2F29"
+   ]
+  },
+  {
+   "tipo": "decision_significado",
+   "id": "https://example.org/mex-ontologi/definition/2334deaa-dd0c-444e-b038-4cc556ad715d%2F30",
+   "entrega": "epidemiologia",
+   "decision_origen": "pendiente",
+   "dictamen": "aceptar",
+   "motivo": "Pendiente/artefacto bien fundado: motivo documental concreto con evidencia y localizador; sin sentido univoco acreditable para concepto limitado; no se debe solo a falta de regla previa. Descripcion 'Pendiente de especificar': sin respaldo explicito vinculado a esta definicion; no se interpreta el sufijo f por simetria con la serie sin sufijo ni por proximidad a totalf ('Total acumulado de Mujeres'). Col",
+   "evidencia": [
+    "propuestas/pendientes-muse-r5/epidemiologia/entrega.json",
+    "definicion_iri=https://example.org/mex-ontologi/definition/2334deaa-dd0c-444e-b038-4cc556ad715d%2F30"
+   ]
+  },
+  {
+   "tipo": "decision_significado",
+   "id": "https://example.org/mex-ontologi/definition/2334deaa-dd0c-444e-b038-4cc556ad715d%2F31",
+   "entrega": "epidemiologia",
+   "decision_origen": "pendiente",
+   "dictamen": "aceptar",
+   "motivo": "Pendiente/artefacto bien fundado: motivo documental concreto con evidencia y localizador; sin sentido univoco acreditable para concepto limitado; no se debe solo a falta de regla previa. Descripcion 'Pendiente de especificar': sin respaldo explicito vinculado a esta definicion; no se interpreta el sufijo f por simetria con la serie sin sufijo ni por proximidad a totalf ('Total acumulado de Mujeres'). Col",
+   "evidencia": [
+    "propuestas/pendientes-muse-r5/epidemiologia/entrega.json",
+    "definicion_iri=https://example.org/mex-ontologi/definition/2334deaa-dd0c-444e-b038-4cc556ad715d%2F31"
+   ]
+  },
+  {
+   "tipo": "decision_significado",
+   "id": "https://example.org/mex-ontologi/definition/2334deaa-dd0c-444e-b038-4cc556ad715d%2F32",
+   "entrega": "epidemiologia",
+   "decision_origen": "pendiente",
+   "dictamen": "aceptar",
+   "motivo": "Pendiente/artefacto bien fundado: motivo documental concreto con evidencia y localizador; sin sentido univoco acreditable para concepto limitado; no se debe solo a falta de regla previa. Descripcion 'Pendiente de especificar': sin respaldo explicito vinculado a esta definicion; no se interpreta el sufijo f por simetria con la serie sin sufijo ni por proximidad a totalf ('Total acumulado de Mujeres'). Col",
+   "evidencia": [
+    "propuestas/pendientes-muse-r5/epidemiologia/entrega.json",
+    "definicion_iri=https://example.org/mex-ontologi/definition/2334deaa-dd0c-444e-b038-4cc556ad715d%2F32"
+   ]
+  },
+  {
+   "tipo": "decision_significado",
+   "id": "https://example.org/mex-ontologi/definition/2334deaa-dd0c-444e-b038-4cc556ad715d%2F33",
+   "entrega": "epidemiologia",
+   "decision_origen": "pendiente",
+   "dictamen": "aceptar",
+   "motivo": "Pendiente/artefacto bien fundado: motivo documental concreto con evidencia y localizador; sin sentido univoco acreditable para concepto limitado; no se debe solo a falta de regla previa. Descripcion 'Pendiente de especificar': sin respaldo explicito vinculado a esta definicion; no se interpreta el sufijo f por simetria con la serie sin sufijo ni por proximidad a totalf ('Total acumulado de Mujeres'). Col",
+   "evidencia": [
+    "propuestas/pendientes-muse-r5/epidemiologia/entrega.json",
+    "definicion_iri=https://example.org/mex-ontologi/definition/2334deaa-dd0c-444e-b038-4cc556ad715d%2F33"
+   ]
+  },
+  {
+   "tipo": "decision_significado",
+   "id": "https://example.org/mex-ontologi/definition/2334deaa-dd0c-444e-b038-4cc556ad715d%2F34",
+   "entrega": "epidemiologia",
+   "decision_origen": "pendiente",
+   "dictamen": "aceptar",
+   "motivo": "Pendiente/artefacto bien fundado: motivo documental concreto con evidencia y localizador; sin sentido univoco acreditable para concepto limitado; no se debe solo a falta de regla previa. Descripcion 'Pendiente de especificar': sin respaldo explicito vinculado a esta definicion; no se interpreta el sufijo f por simetria con la serie sin sufijo ni por proximidad a totalf ('Total acumulado de Mujeres'). Col",
+   "evidencia": [
+    "propuestas/pendientes-muse-r5/epidemiologia/entrega.json",
+    "definicion_iri=https://example.org/mex-ontologi/definition/2334deaa-dd0c-444e-b038-4cc556ad715d%2F34"
+   ]
+  },
+  {
+   "tipo": "decision_significado",
+   "id": "https://example.org/mex-ontologi/definition/2334deaa-dd0c-444e-b038-4cc556ad715d%2F35",
+   "entrega": "epidemiologia",
+   "decision_origen": "pendiente",
+   "dictamen": "aceptar",
+   "motivo": "Pendiente/artefacto bien fundado: motivo documental concreto con evidencia y localizador; sin sentido univoco acreditable para concepto limitado; no se debe solo a falta de regla previa. Descripcion 'Pendiente de especificar': sin respaldo explicito vinculado a esta definicion; no se interpreta el sufijo f por simetria con la serie sin sufijo ni por proximidad a totalf ('Total acumulado de Mujeres'). Col",
+   "evidencia": [
+    "propuestas/pendientes-muse-r5/epidemiologia/entrega.json",
+    "definicion_iri=https://example.org/mex-ontologi/definition/2334deaa-dd0c-444e-b038-4cc556ad715d%2F35"
+   ]
+  },
+  {
+   "tipo": "decision_significado",
+   "id": "https://example.org/mex-ontologi/definition/2334deaa-dd0c-444e-b038-4cc556ad715d%2F36",
+   "entrega": "epidemiologia",
+   "decision_origen": "pendiente",
+   "dictamen": "aceptar",
+   "motivo": "Pendiente/artefacto bien fundado: motivo documental concreto con evidencia y localizador; sin sentido univoco acreditable para concepto limitado; no se debe solo a falta de regla previa. Descripcion 'Pendiente de especificar': sin respaldo explicito vinculado a esta definicion; no se interpretan las siglas (ssa) como institucion ni como objeto contado. Columna fisica pos 36 observada, ejemplo '3'.",
+   "evidencia": [
+    "propuestas/pendientes-muse-r5/epidemiologia/entrega.json",
+    "definicion_iri=https://example.org/mex-ontologi/definition/2334deaa-dd0c-444e-b038-4cc556ad715d%2F36"
+   ]
+  },
+  {
+   "tipo": "decision_significado",
+   "id": "https://example.org/mex-ontologi/definition/2334deaa-dd0c-444e-b038-4cc556ad715d%2F37",
+   "entrega": "epidemiologia",
+   "decision_origen": "pendiente",
+   "dictamen": "aceptar",
+   "motivo": "Pendiente/artefacto bien fundado: motivo documental concreto con evidencia y localizador; sin sentido univoco acreditable para concepto limitado; no se debe solo a falta de regla previa. Descripcion 'Pendiente de especificar': sin respaldo explicito vinculado a esta definicion; no se interpretan las siglas (imss_ord) como institucion ni como objeto contado. Columna fisica pos 37 observada, ejemplo '3'.",
+   "evidencia": [
+    "propuestas/pendientes-muse-r5/epidemiologia/entrega.json",
+    "definicion_iri=https://example.org/mex-ontologi/definition/2334deaa-dd0c-444e-b038-4cc556ad715d%2F37"
+   ]
+  },
+  {
+   "tipo": "decision_significado",
+   "id": "https://example.org/mex-ontologi/definition/2334deaa-dd0c-444e-b038-4cc556ad715d%2F38",
+   "entrega": "epidemiologia",
+   "decision_origen": "pendiente",
+   "dictamen": "aceptar",
+   "motivo": "Pendiente/artefacto bien fundado: motivo documental concreto con evidencia y localizador; sin sentido univoco acreditable para concepto limitado; no se debe solo a falta de regla previa. Descripcion 'Pendiente de especificar': sin respaldo explicito vinculado a esta definicion; no se interpretan las siglas (issste) como institucion ni como objeto contado. Columna fisica pos 38 observada, ejemplo '0'.",
+   "evidencia": [
+    "propuestas/pendientes-muse-r5/epidemiologia/entrega.json",
+    "definicion_iri=https://example.org/mex-ontologi/definition/2334deaa-dd0c-444e-b038-4cc556ad715d%2F38"
+   ]
+  },
+  {
+   "tipo": "decision_significado",
+   "id": "https://example.org/mex-ontologi/definition/2334deaa-dd0c-444e-b038-4cc556ad715d%2F39",
+   "entrega": "epidemiologia",
+   "decision_origen": "pendiente",
+   "dictamen": "aceptar",
+   "motivo": "Pendiente/artefacto bien fundado: motivo documental concreto con evidencia y localizador; sin sentido univoco acreditable para concepto limitado; no se debe solo a falta de regla previa. Descripcion 'Pendiente de especificar': sin respaldo explicito vinculado a esta definicion; no se interpretan las siglas (otras) como institucion ni como objeto contado. Columna fisica pos 39 observada, ejemplo '0'.",
+   "evidencia": [
+    "propuestas/pendientes-muse-r5/epidemiologia/entrega.json",
+    "definicion_iri=https://example.org/mex-ontologi/definition/2334deaa-dd0c-444e-b038-4cc556ad715d%2F39"
+   ]
+  },
+  {
+   "tipo": "decision_significado",
+   "id": "https://example.org/mex-ontologi/definition/2334deaa-dd0c-444e-b038-4cc556ad715d%2F40",
+   "entrega": "epidemiologia",
+   "decision_origen": "pendiente",
+   "dictamen": "aceptar",
+   "motivo": "Pendiente/artefacto bien fundado: motivo documental concreto con evidencia y localizador; sin sentido univoco acreditable para concepto limitado; no se debe solo a falta de regla previa. Descripcion 'Pendiente de especificar': sin respaldo explicito vinculado a esta definicion; no se interpretan las siglas (imss_sol) como institucion ni como objeto contado. Columna fisica pos 40 observada, ejemplo '0'.",
+   "evidencia": [
+    "propuestas/pendientes-muse-r5/epidemiologia/entrega.json",
+    "definicion_iri=https://example.org/mex-ontologi/definition/2334deaa-dd0c-444e-b038-4cc556ad715d%2F40"
+   ]
+  },
+  {
+   "tipo": "decision_significado",
+   "id": "https://example.org/mex-ontologi/definition/2334deaa-dd0c-444e-b038-4cc556ad715d%2F41",
+   "entrega": "epidemiologia",
+   "decision_origen": "pendiente",
+   "dictamen": "aceptar",
+   "motivo": "Pendiente/artefacto bien fundado: motivo documental concreto con evidencia y localizador; sin sentido univoco acreditable para concepto limitado; no se debe solo a falta de regla previa. Descripcion 'Pendiente de especificar': sin respaldo explicito vinculado a esta definicion; no se interpretan las siglas (d_if) como institucion ni como objeto contado. Columna fisica pos 41 observada, ejemplo '0'.",
+   "evidencia": [
+    "propuestas/pendientes-muse-r5/epidemiologia/entrega.json",
+    "definicion_iri=https://example.org/mex-ontologi/definition/2334deaa-dd0c-444e-b038-4cc556ad715d%2F41"
+   ]
+  },
+  {
+   "tipo": "decision_significado",
+   "id": "https://example.org/mex-ontologi/definition/2334deaa-dd0c-444e-b038-4cc556ad715d%2F42",
+   "entrega": "epidemiologia",
+   "decision_origen": "pendiente",
+   "dictamen": "aceptar",
+   "motivo": "Pendiente/artefacto bien fundado: motivo documental concreto con evidencia y localizador; sin sentido univoco acreditable para concepto limitado; no se debe solo a falta de regla previa. Descripcion 'Pendiente de especificar': sin respaldo explicito vinculado a esta definicion; no se interpretan las siglas (pemex) como institucion ni como objeto contado. Columna fisica pos 42 observada, ejemplo '0'.",
+   "evidencia": [
+    "propuestas/pendientes-muse-r5/epidemiologia/entrega.json",
+    "definicion_iri=https://example.org/mex-ontologi/definition/2334deaa-dd0c-444e-b038-4cc556ad715d%2F42"
+   ]
+  },
+  {
+   "tipo": "decision_significado",
+   "id": "https://example.org/mex-ontologi/definition/2334deaa-dd0c-444e-b038-4cc556ad715d%2F43",
+   "entrega": "epidemiologia",
+   "decision_origen": "pendiente",
+   "dictamen": "aceptar",
+   "motivo": "Pendiente/artefacto bien fundado: motivo documental concreto con evidencia y localizador; sin sentido univoco acreditable para concepto limitado; no se debe solo a falta de regla previa. Descripcion 'Pendiente de especificar': sin respaldo explicito vinculado a esta definicion; no se interpretan las siglas (sedena) como institucion ni como objeto contado. Columna fisica pos 43 observada, ejemplo '0'.",
+   "evidencia": [
+    "propuestas/pendientes-muse-r5/epidemiologia/entrega.json",
+    "definicion_iri=https://example.org/mex-ontologi/definition/2334deaa-dd0c-444e-b038-4cc556ad715d%2F43"
+   ]
+  },
+  {
+   "tipo": "decision_significado",
+   "id": "https://example.org/mex-ontologi/definition/2334deaa-dd0c-444e-b038-4cc556ad715d%2F44",
+   "entrega": "epidemiologia",
+   "decision_origen": "pendiente",
+   "dictamen": "aceptar",
+   "motivo": "Pendiente/artefacto bien fundado: motivo documental concreto con evidencia y localizador; sin sentido univoco acreditable para concepto limitado; no se debe solo a falta de regla previa. Descripcion 'Pendiente de especificar': sin respaldo explicito vinculado a esta definicion; no se interpretan las siglas (sedemar) como institucion ni como objeto contado. Columna fisica pos 44 observada, ejemplo '0'.",
+   "evidencia": [
+    "propuestas/pendientes-muse-r5/epidemiologia/entrega.json",
+    "definicion_iri=https://example.org/mex-ontologi/definition/2334deaa-dd0c-444e-b038-4cc556ad715d%2F44"
+   ]
+  },
+  {
+   "tipo": "decision_significado",
+   "id": "https://example.org/mex-ontologi/definition/33d0a99e-c721-496f-a05e-07646e9ae42a%2F177",
+   "entrega": "diversos",
+   "decision_origen": "artefacto_documental",
+   "dictamen": "aceptar",
+   "motivo": "Pendiente/artefacto bien fundado: motivo documental concreto con evidencia y localizador; sin sentido univoco acreditable para concepto limitado; no se debe solo a falta de regla previa. fila corrupta: repite la cabecera del diccionario como valores; catalogo_declarado des_mpo_res es posicion de columna, no referencia real. Se conserva como artefacto, sin curar; requiere fe de erratas del publicador (no ",
+   "evidencia": [
+    "propuestas/pendientes-muse-r5/diversos/entrega.json",
+    "definicion_iri=https://example.org/mex-ontologi/definition/33d0a99e-c721-496f-a05e-07646e9ae42a%2F177"
+   ]
+  },
+  {
+   "tipo": "decision_significado",
+   "id": "https://example.org/mex-ontologi/definition/33d0a99e-c721-496f-a05e-07646e9ae42a%2F178",
+   "entrega": "diversos",
+   "decision_origen": "artefacto_documental",
+   "dictamen": "aceptar",
+   "motivo": "Pendiente/artefacto bien fundado: motivo documental concreto con evidencia y localizador; sin sentido univoco acreditable para concepto limitado; no se debe solo a falta de regla previa. fila corrupta gemela de la 177 (encabezados como valores, difiere solo en id_cp); artefacto conservado sin curar; requiere fe de erratas del publicador",
+   "evidencia": [
+    "propuestas/pendientes-muse-r5/diversos/entrega.json",
+    "definicion_iri=https://example.org/mex-ontologi/definition/33d0a99e-c721-496f-a05e-07646e9ae42a%2F178"
+   ]
+  },
+  {
+   "tipo": "decision_significado",
+   "id": "https://example.org/mex-ontologi/definition/3f6942e3-a9c5-42c0-a38b-2c7aad2a6c99%2F2",
+   "entrega": "diversos",
+   "decision_origen": "pendiente",
+   "dictamen": "aceptar",
+   "motivo": "Pendiente/artefacto bien fundado: motivo documental concreto con evidencia y localizador; sin sentido univoco acreditable para concepto limitado; no se debe solo a falta de regla previa. descripcion insuficiente: 'Trimestre del estrato' no define si es trimestre calendario de denuncia o estrato muestral/operativo; tipo entero y ejemplo 1 sin mapa; sin metodologia ni catalogo. No se propone concepto",
+   "evidencia": [
+    "propuestas/pendientes-muse-r5/diversos/entrega.json",
+    "definicion_iri=https://example.org/mex-ontologi/definition/3f6942e3-a9c5-42c0-a38b-2c7aad2a6c99%2F2"
+   ]
+  },
+  {
+   "tipo": "decision_significado",
+   "id": "https://example.org/mex-ontologi/definition/67156807-2013-4117-9ca9-394aea647127%2F5",
+   "entrega": "diversos",
+   "decision_origen": "pendiente",
+   "dictamen": "aceptar",
+   "motivo": "Pendiente/artefacto bien fundado: motivo documental concreto con evidencia y localizador; sin sentido univoco acreditable para concepto limitado; no se debe solo a falta de regla previa. descripcion generica 'Clasificacion' sin objeto declarado; la lista de unidad sugiere pero no declara que clasifique el asentamiento. Insuficiente para concepto nuevo; ronda 3 la dejo fuera con la misma evidencia. Requie",
+   "evidencia": [
+    "propuestas/pendientes-muse-r5/diversos/entrega.json",
+    "definicion_iri=https://example.org/mex-ontologi/definition/67156807-2013-4117-9ca9-394aea647127%2F5"
+   ]
+  },
+  {
+   "tipo": "decision_significado",
+   "id": "https://example.org/mex-ontologi/definition/863b9cc8-daeb-4430-b835-6a0ced5abd31%2F7",
+   "entrega": "diversos",
+   "decision_origen": "pendiente",
+   "dictamen": "aceptar",
+   "motivo": "Pendiente/artefacto bien fundado: motivo documental concreto con evidencia y localizador; sin sentido univoco acreditable para concepto limitado; no se debe solo a falta de regla previa. descripcion trunca 'Clave de otras': objeto indeterminado (otras oficinas, especies u origenes). Sin ejemplo, unidad ni catalogo que la resuelva. Requiere diccionario corregido o metodologia de pesca",
+   "evidencia": [
+    "propuestas/pendientes-muse-r5/diversos/entrega.json",
+    "definicion_iri=https://example.org/mex-ontologi/definition/863b9cc8-daeb-4430-b835-6a0ced5abd31%2F7"
+   ]
+  },
+  {
+   "tipo": "decision_significado",
+   "id": "https://example.org/mex-ontologi/definition/863b9cc8-daeb-4430-b835-6a0ced5abd31%2F8",
+   "entrega": "diversos",
+   "decision_origen": "pendiente",
+   "dictamen": "aceptar",
+   "motivo": "Pendiente/artefacto bien fundado: motivo documental concreto con evidencia y localizador; sin sentido univoco acreditable para concepto limitado; no se debe solo a falta de regla previa. descripcion trunca gemela de CVOTRAS; mismo objeto indeterminado. Requiere diccionario corregido o metodologia de pesca",
+   "evidencia": [
+    "propuestas/pendientes-muse-r5/diversos/entrega.json",
+    "definicion_iri=https://example.org/mex-ontologi/definition/863b9cc8-daeb-4430-b835-6a0ced5abd31%2F8"
+   ]
+  },
+  {
+   "tipo": "decision_significado",
+   "id": "https://example.org/mex-ontologi/definition/f89137ba-d82e-44fe-80c7-cc355f09f9f5%2F15",
+   "entrega": "diversos",
+   "decision_origen": "pendiente",
+   "dictamen": "aceptar",
+   "motivo": "Pendiente/artefacto bien fundado: motivo documental concreto con evidencia y localizador; sin sentido univoco acreditable para concepto limitado; no se debe solo a falta de regla previa. contradiccion conservada: el nombre indica egresos y la descripcion urgencias. Dictamen previo vigente; no se cura con suposicion. Requiere aclaracion del publicador",
+   "evidencia": [
+    "propuestas/pendientes-muse-r5/diversos/entrega.json",
+    "definicion_iri=https://example.org/mex-ontologi/definition/f89137ba-d82e-44fe-80c7-cc355f09f9f5%2F15"
+   ]
+  }
+ ],
+ "conteos": {
+  "decisiones_dictaminadas": 64,
+  "aceptar": 64,
+  "corregir": 0,
+  "rechazar": 0,
+  "reglas_propuestas_en_finalizadas": 0
+ },
+ "sondeos_infrapropuesta": [
+  "defunciones: EDADGESTACIONAL/CERTIFICADOPOR/CLUES/ENTIDADOCURRENCIA con descripcion vacia y sin codebook: ningun concepto limitado acreditable; pendiente correcto.",
+  "epidemiologia /9 Clave + ejemplo CIE: inferir CIE seria interpretar nombre+ejemplo; r3a6-005 lo prohibe; pendiente correcto.",
+  "epidemiologia /13 de01_a_04 1-a-4 vs descripcion 1-a-5 con solape en 5: contradiccion conservada correctamente.",
+  "epidemiologia sufijos f e instituciones ssa/imss/issste: no decodificar por simetria ni siglas; pendiente correcto.",
+  "diversos CLASIF: lista de unidad sugiere pero no declara objeto; pendiente correcto. CVOTRAS/DOTRAS, TRIMESTRE, Total_Egresos: pendientes correctos. Filas 177/178: artefacto correcto."
+ ],
+ "nota": "Dictamenes finales por regla (aceptar/corregir/rechazar) para tic/nacimientos/matriculas/presas/catalogos-web cuando entreguen final; criterios y riesgos ya fijados en v1."
+}

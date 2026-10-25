@@ -1,0 +1,154 @@
+{
+ "pendientes_columnas": [
+  {
+   "columna": "https://example.org/mex-ontologi/file-column/ad6f77b8-569d-4826-8ce0-3c6efddcb098%2FEgresos%20Hospitalarios%202018-2022%2F15",
+   "recurso": "ad6f77b8-569d-4826-8ce0-3c6efddcb098",
+   "campo": "Total_Egresos",
+   "decision": "pendiente",
+   "definicion_iri": "https://example.org/mex-ontologi/definition/f89137ba-d82e-44fe-80c7-cc355f09f9f5%2F15",
+   "motivo": "pendiente: observacion documental vigente en semantica.json (p.ej. Total_Egresos descrito como urgencias); no se interpreta ni equipara.",
+   "evidencia": [
+    "data/portal/contenido-inspeccion.json#recursos/ad6f77b8-569d-4826-8ce0-3c6efddcb098",
+    "data/portal/contenido-inspeccion.json#recursos/f89137ba-d82e-44fe-80c7-cc355f09f9f5",
+    "data/semantica/cobertura.json#variables/https://example.org/mex-ontologi/definition/f89137ba-d82e-44fe-80c7-cc355f09f9f5%2F15",
+    "ontologia/semantica.json#observaciones/egresos-descripcion-urgencias"
+   ]
+  },
+  {
+   "columna": "https://example.org/mex-ontologi/file-column/91c95c1b-969e-414a-8f70-83576e881281%2FHoja1%2F36",
+   "recurso": "91c95c1b-969e-414a-8f70-83576e881281",
+   "campo": "P36",
+   "decision": "pendiente",
+   "definicion_iri": "https://example.org/mex-ontologi/definition/a4e8bee0-5493-4dec-bbce-0ba1e2fd4c2d%2F36",
+   "motivo": "pendiente: regla propuesta retirada por auditoria (contradiccion tipo Booleano Si/No vs pregunta de conteo/procedimiento); pendiente: tipo Booleano Si/No con ejemplo Si contradice el concepto de conteo (pregunta Cuantos proyectos); el dominio acreditable es existencia Si/No, no cantidad; no se inventa significado alternativo de existencia.",
+   "evidencia": [
+    "data/portal/contenido-inspeccion.json#recursos/91c95c1b-969e-414a-8f70-83576e881281",
+    "data/portal/contenido-inspeccion.json#recursos/a4e8bee0-5493-4dec-bbce-0ba1e2fd4c2d/definiciones",
+    "propuestas/pendientes-muse-r4/integrador/semantica-propuesta.json#reglas/r4-lote-4-025"
+   ]
+  },
+  {
+   "columna": "https://example.org/mex-ontologi/file-column/91c95c1b-969e-414a-8f70-83576e881281%2FHoja1%2F39",
+   "recurso": "91c95c1b-969e-414a-8f70-83576e881281",
+   "campo": "P39",
+   "decision": "pendiente",
+   "definicion_iri": "https://example.org/mex-ontologi/definition/a4e8bee0-5493-4dec-bbce-0ba1e2fd4c2d%2F39",
+   "motivo": "pendiente: regla propuesta retirada por auditoria (contradiccion tipo Booleano Si/No vs pregunta de conteo/procedimiento); pendiente: tipo Booleano Si/No con ejemplo Si contradice el concepto de procedimiento (pregunta Como atiende incidencias); el valor acreditable Si/No no describe procedimiento; no se inventa significado alternativo de existencia.",
+   "evidencia": [
+    "data/portal/contenido-inspeccion.json#recursos/91c95c1b-969e-414a-8f70-83576e881281",
+    "data/portal/contenido-inspeccion.json#recursos/a4e8bee0-5493-4dec-bbce-0ba1e2fd4c2d/definiciones",
+    "propuestas/pendientes-muse-r4/integrador/semantica-propuesta.json#reglas/r4-lote-4-026"
+   ]
+  },
+  {
+   "columna": "https://example.org/mex-ontologi/file-column/91c95c1b-969e-414a-8f70-83576e881281%2FHoja1%2F40",
+   "recurso": "91c95c1b-969e-414a-8f70-83576e881281",
+   "campo": "P40",
+   "decision": "pendiente",
+   "definicion_iri": "https://example.org/mex-ontologi/definition/a4e8bee0-5493-4dec-bbce-0ba1e2fd4c2d%2F40",
+   "motivo": "pendiente: regla propuesta retirada por auditoria (contradiccion tipo Booleano Si/No vs pregunta de conteo/procedimiento); pendiente: tipo Booleano Si/No con ejemplo Si contradice el conteo (pregunta Cuantas personas); la fila no acredita conteo ni duplica r3a9-059; no se inventa significado alternativo de existencia.",
+   "evidencia": [
+    "data/portal/contenido-inspeccion.json#recursos/91c95c1b-969e-414a-8f70-83576e881281",
+    "data/portal/contenido-inspeccion.json#recursos/a4e8bee0-5493-4dec-bbce-0ba1e2fd4c2d/definiciones",
+    "propuestas/pendientes-muse-r4/integrador/semantica-propuesta.json#reglas/r4-lote-4-027"
+   ]
+  }
+ ],
+ "pendientes_significados": [
+  {
+   "definicion_iri": "https://example.org/mex-ontologi/definition/863b9cc8-daeb-4430-b835-6a0ced5abd31%2F7",
+   "decision": "pendiente",
+   "motivo": "pendiente: referente de otras sin especificar en nombre ni descripcion; no se infiere especie, oficina ni origen.",
+   "evidencia": [
+    "data/portal/contenido-inspeccion.json#recursos/863b9cc8-daeb-4430-b835-6a0ced5abd31/definiciones",
+    "data/semantica/cobertura.json#variables/https://example.org/mex-ontologi/definition/863b9cc8-daeb-4430-b835-6a0ced5abd31%2F7"
+   ]
+  },
+  {
+   "definicion_iri": "https://example.org/mex-ontologi/definition/863b9cc8-daeb-4430-b835-6a0ced5abd31%2F8",
+   "decision": "pendiente",
+   "motivo": "pendiente: referente de otras sin especificar en nombre ni descripcion; no se infiere especie, oficina ni origen.",
+   "evidencia": [
+    "data/portal/contenido-inspeccion.json#recursos/863b9cc8-daeb-4430-b835-6a0ced5abd31/definiciones",
+    "data/semantica/cobertura.json#variables/https://example.org/mex-ontologi/definition/863b9cc8-daeb-4430-b835-6a0ced5abd31%2F8"
+   ]
+  },
+  {
+   "definicion_iri": "https://example.org/mex-ontologi/definition/a4e8bee0-5493-4dec-bbce-0ba1e2fd4c2d%2F22",
+   "decision": "pendiente",
+   "motivo": "pendiente: descripcion truncada a mitad de frase en la evidencia local (termina en equipos...); no se infiere el resto.",
+   "evidencia": [
+    "data/portal/contenido-inspeccion.json#recursos/a4e8bee0-5493-4dec-bbce-0ba1e2fd4c2d/definiciones",
+    "data/semantica/cobertura.json#variables/https://example.org/mex-ontologi/definition/a4e8bee0-5493-4dec-bbce-0ba1e2fd4c2d%2F22"
+   ]
+  },
+  {
+   "definicion_iri": "https://example.org/mex-ontologi/definition/a4e8bee0-5493-4dec-bbce-0ba1e2fd4c2d%2F36",
+   "decision": "pendiente",
+   "motivo": "pendiente: tipo Booleano Si/No con ejemplo Si contradice el concepto de conteo (pregunta Cuantos proyectos); el dominio acreditable es existencia Si/No, no cantidad; no se inventa significado alternativo de existencia.",
+   "evidencia": [
+    "data/portal/contenido-inspeccion.json#recursos/a4e8bee0-5493-4dec-bbce-0ba1e2fd4c2d/definiciones",
+    "data/semantica/cobertura.json#variables/https://example.org/mex-ontologi/definition/a4e8bee0-5493-4dec-bbce-0ba1e2fd4c2d%2F36",
+    "propuestas/pendientes-muse-r4/lote-4/entrega.json#reglas/r4-lote-4-025"
+   ]
+  },
+  {
+   "definicion_iri": "https://example.org/mex-ontologi/definition/a4e8bee0-5493-4dec-bbce-0ba1e2fd4c2d%2F39",
+   "decision": "pendiente",
+   "motivo": "pendiente: tipo Booleano Si/No con ejemplo Si contradice el concepto de procedimiento (pregunta Como atiende incidencias); el valor acreditable Si/No no describe procedimiento; no se inventa significado alternativo de existencia.",
+   "evidencia": [
+    "data/portal/contenido-inspeccion.json#recursos/a4e8bee0-5493-4dec-bbce-0ba1e2fd4c2d/definiciones",
+    "data/semantica/cobertura.json#variables/https://example.org/mex-ontologi/definition/a4e8bee0-5493-4dec-bbce-0ba1e2fd4c2d%2F39",
+    "propuestas/pendientes-muse-r4/lote-4/entrega.json#reglas/r4-lote-4-026"
+   ]
+  },
+  {
+   "definicion_iri": "https://example.org/mex-ontologi/definition/a4e8bee0-5493-4dec-bbce-0ba1e2fd4c2d%2F40",
+   "decision": "pendiente",
+   "motivo": "pendiente: tipo Booleano Si/No con ejemplo Si contradice el conteo (pregunta Cuantas personas); la fila no acredita conteo ni duplica r3a9-059; no se inventa significado alternativo de existencia.",
+   "evidencia": [
+    "data/portal/contenido-inspeccion.json#recursos/a4e8bee0-5493-4dec-bbce-0ba1e2fd4c2d/definiciones",
+    "data/semantica/cobertura.json#variables/https://example.org/mex-ontologi/definition/a4e8bee0-5493-4dec-bbce-0ba1e2fd4c2d%2F40",
+    "propuestas/pendientes-muse-r4/lote-4/entrega.json#reglas/r4-lote-4-027"
+   ]
+  },
+  {
+   "definicion_iri": "https://example.org/mex-ontologi/definition/c65eb4e7-a17d-43c7-b08c-05811505edf1%2F7",
+   "decision": "pendiente",
+   "motivo": "pendiente: pregunta sin sujeto (Como se generan?) incompleta por si sola; no se transfiere referente de otra fila.",
+   "evidencia": [
+    "data/portal/contenido-inspeccion.json#recursos/c65eb4e7-a17d-43c7-b08c-05811505edf1/definiciones",
+    "data/semantica/cobertura.json#variables/https://example.org/mex-ontologi/definition/c65eb4e7-a17d-43c7-b08c-05811505edf1%2F7"
+   ]
+  },
+  {
+   "definicion_iri": "https://example.org/mex-ontologi/definition/f3ecd3d2-2156-4251-82e5-13b079471ee9%2F7",
+   "decision": "pendiente",
+   "motivo": "pendiente: pregunta sin sujeto (Como se generan?) incompleta por si sola; no se transfiere referente de otra fila.",
+   "evidencia": [
+    "data/portal/contenido-inspeccion.json#recursos/f3ecd3d2-2156-4251-82e5-13b079471ee9/definiciones",
+    "data/semantica/cobertura.json#variables/https://example.org/mex-ontologi/definition/f3ecd3d2-2156-4251-82e5-13b079471ee9%2F7"
+   ]
+  },
+  {
+   "definicion_iri": "https://example.org/mex-ontologi/definition/67156807-2013-4117-9ca9-394aea647127%2F5",
+   "decision": "pendiente",
+   "motivo": "pendiente: descripcion vacia (Clasificacion); la unidad enumera tipos de asentamiento pero no define la variable; no se infiere catalogo.",
+   "evidencia": [
+    "data/portal/contenido-inspeccion.json#recursos/67156807-2013-4117-9ca9-394aea647127/definiciones",
+    "data/semantica/cobertura.json#variables/https://example.org/mex-ontologi/definition/67156807-2013-4117-9ca9-394aea647127%2F5"
+   ]
+  },
+  {
+   "definicion_iri": "https://example.org/mex-ontologi/definition/f89137ba-d82e-44fe-80c7-cc355f09f9f5%2F15",
+   "decision": "pendiente",
+   "motivo": "pendiente: contradiccion nombre/descripcion (Total_Egresos descrito como Total de urgencias atendidas) con observacion vigente; no se interpreta ni equipara.",
+   "evidencia": [
+    "data/portal/contenido-inspeccion.json#recursos/f89137ba-d82e-44fe-80c7-cc355f09f9f5/definiciones",
+    "data/semantica/cobertura.json#variables/https://example.org/mex-ontologi/definition/f89137ba-d82e-44fe-80c7-cc355f09f9f5%2F15",
+    "ontologia/semantica.json#observaciones/egresos-descripcion-urgencias"
+   ]
+  }
+ ],
+ "nota": "Reentrega auditoria-a: retiradas r4-lote-4-025/026/027 con 3 vinculos y 2 conceptos huerfanos; limites reforzados 002/003/004, 008/009/010, 022, 038/039."
+}

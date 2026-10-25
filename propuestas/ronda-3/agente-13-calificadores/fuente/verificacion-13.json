@@ -1,0 +1,101 @@
+{
+  "generado_en_utc": "2026-10-23T11:04:56.101898+00:00",
+  "agente": "ronda-3/agente-13-calificadores",
+  "pasadas": 11,
+  "totales": 11,
+  "huellas_entrada": {
+    "consolidar_original_sha256": "6cafaf59a90c68f9b0ebba6a3e5a41bed8651af555fca78a21ec5f5225bfdf12",
+    "semantica_sha256": "b36ea6c6ea5dbe8f77e93275f9dad2efdfa2f0a1f881a7d5350537541c73ce05",
+    "shape_original_sha256": "a2f32088f1fc9f0b98c15b9bff5acbca19fabbb9986f382d6c6da722e3d8294c",
+    "fixture_sha256": "7dcaa3d4bdcd0f5730c712954d782eb2db70c4ba32e128c5ee1e00011535960e"
+  },
+  "pruebas": [
+    {
+      "prueba": "imports_staging_resuelven_root_central",
+      "ok": true,
+      "detalle": {
+        "root": "C:\\Users\\marti\\Documents\\MEX-Ontologi"
+      }
+    },
+    {
+      "prueba": "reglas_vigentes_sin_calificador_salida_exacta",
+      "ok": true,
+      "detalle": {
+        "reglas_muestreadas": 8
+      }
+    },
+    {
+      "prueba": "construir_real_sin_calificador_identico",
+      "ok": true,
+      "detalle": {
+        "data": 17180,
+        "model": 1581,
+        "nuevos_modelo": 0
+      }
+    },
+    {
+      "prueba": "treinta_reglas_en_rdf_y_records",
+      "ok": true,
+      "detalle": {
+        "records_qual": 30,
+        "nodos_qual": 30,
+        "ddr": [
+          "139",
+          "140",
+          "141",
+          "142",
+          "143",
+          "144",
+          "147",
+          "148",
+          "149",
+          "193"
+        ]
+      }
+    },
+    {
+      "prueba": "mismo_concepto_quals_no_mezclados",
+      "ok": true,
+      "detalle": {
+        "a": "San Luis R.C.",
+        "b": "Hermosillo"
+      }
+    },
+    {
+      "prueba": "deepcopy_sin_mutar_regla",
+      "ok": true,
+      "detalle": {}
+    },
+    {
+      "prueba": "tipos_invalidos_rechazados_y_verbatim",
+      "ok": true,
+      "detalle": {
+        "rechazados": 16
+      }
+    },
+    {
+      "prueba": "iris_estables_y_reconstruccion",
+      "ok": true,
+      "detalle": {
+        "iri_ejemplo": "https://example.org/mex-ontologi/documented-qualifier/a7591bc9-f905-45cb-ba6c-ae3588d87594%2F11%2Fdistrito_desarrollo_rural"
+      }
+    },
+    {
+      "prueba": "candidata_no_autopromueve_ni_califica",
+      "ok": true,
+      "detalle": {}
+    },
+    {
+      "prueba": "shape_calificador_estructural",
+      "ok": true,
+      "detalle": {
+        "pattern": "\\\\S"
+      }
+    },
+    {
+      "prueba": "loader_sin_cambio_necesario",
+      "ok": true,
+      "detalle": {}
+    }
+  ]
+}

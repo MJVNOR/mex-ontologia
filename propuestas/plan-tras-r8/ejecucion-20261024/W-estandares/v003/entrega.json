@@ -1,0 +1,152 @@
+{
+  "asignacion_sha256": "41c5260758c51f12981609aa52d1f6aafe9af142f741864d08348f19b8e085ed",
+  "base": {
+    "informe": "reports/ronda-8.json",
+    "ronda": 8,
+    "sha256": "5ac384bc4c253f5310ae69402c8d9249d2ee85082086c2dca85483f8b4b7eacb"
+  },
+  "browser_catalogo": {
+    "herramientas": 37,
+    "mcp": "nativo OpenCode tools.obscura.*",
+    "verificado": "v001+v002 2026-10-24"
+  },
+  "casos": [],
+  "casos_resueltos_por_estandar": 0,
+  "condiciones_de_aceptacion": [
+    "Se acepta el paquete solo como referencia de exclusion/diseno para P1/P2; no resuelve casos locales.",
+    "Negativos limitados a lo examinado; no demuestran inexistencia universal.",
+    "QUDT: solo IRIs http://qudt.org/vocab/unit/... verificadas pagina por pagina; ningun alias por parecido.",
+    "OWL-Time: bordes con :Instant; preferir :inXSDDateTimeStamp sobre :inXSDDateTime deprecada.",
+    "Sin evidencia aplicable restante, cada pendiente conserva su condicion de reapertura.",
+    "Correcciones futuras en v003 sin editar lo congelado.",
+    "M3 verificado no habilita reemplazos ni factores sin evidencia local."
+  ],
+  "entregables": [
+    "v003/entrega.json",
+    "v003/entrega.md",
+    "v003/verificacion-hashes.json",
+    "v003/congelada.json"
+  ],
+  "estado": "propuesta_para_auditar",
+  "fecha_utc": "2026-10-24T10:23:22.994693+00:00",
+  "fuentes": [
+    {
+      "localizador": "Titulo http://qudt.org/vocab/unit/MilliM; symbol mm; Millimetro@es; scalingOf unit:M",
+      "ruta": "propuestas/plan-tras-r8/ejecucion-20261024/W-estandares/v002/normativa/unit-MilliM-evidencia.txt",
+      "sha256": "5e63691124e69c162ddfa65bde77fb1ad3e9a2173ffd33b9910100880a9ea9a7",
+      "url": "https://qudt.org/vocab/unit/MilliM"
+    },
+    {
+      "localizador": "Titulo http://qudt.org/vocab/unit/HA; symbol ha; Hectare@en; x10000; HectoHA->404 rechazado",
+      "ruta": "propuestas/plan-tras-r8/ejecucion-20261024/W-estandares/v002/normativa/unit-HA-evidencia.txt",
+      "sha256": "9095968323f72af577b4a94684a78e2f806595ca118529b5e47cb0b2acd1ee3e",
+      "url": "https://qudt.org/vocab/unit/HA"
+    },
+    {
+      "localizador": "Titulo http://qudt.org/vocab/unit/M3; symbol m3-cubo; FactorUnit exponente 3 sobre unit:M; Metro Cubico@es",
+      "ruta": "propuestas/plan-tras-r8/ejecucion-20261024/W-estandares/v002/normativa/unit-M3-evidencia.txt",
+      "sha256": "2afe3a10b8fcec25a245b71d289dff64b619565d4d3c1aa50b4f5b08438c615e",
+      "url": "https://qudt.org/vocab/unit/M3"
+    },
+    {
+      "localizador": "HectoM3 404 + 0 matches en indice 3.5.3; HectoHA 404; sin alias por parecido",
+      "ruta": "propuestas/plan-tras-r8/ejecucion-20261024/W-estandares/v002/normativa/P1-W-02-negativo-HectoM3.txt",
+      "sha256": "ffe0ff4423fa9ddd557421a527fd6a311a0758cc10de6e69e68172e049834a49",
+      "url": "https://qudt.org/vocab/unit/HectoM3"
+    },
+    {
+      "localizador": "baseURI http://www.w3.org/2006/time; ProperInterval; hasBeginning/hasEnd; inXSDDateTime deprecada",
+      "ruta": "propuestas/plan-tras-r8/ejecucion-20261024/W-estandares/v002/normativa/owl-time-evidencia.txt",
+      "sha256": "742467fba868b90716e26ff00dc7b4a37d54b3234d90ac26ddcb9fe5702489df",
+      "url": "https://raw.githubusercontent.com/w3c/sdw-time/gh-pages/rdf/time.ttl"
+    },
+    {
+      "localizador": "Barridos P1/P2/SHACL fechado, Ray IDs, repos oficiales, regla http-vs-https",
+      "ruta": "propuestas/plan-tras-r8/ejecucion-20261024/W-estandares/v002/normativa/trazas-consulta-v002.md",
+      "sha256": "d2a40d7191e27054d6082c35d4e59d3f3951362187ba2ae3c3096064fe83448d"
+    },
+    {
+      "localizador": "P1-W-01 verificado, P1-W-02 negativo, P1-W-03 verificado, P2-WEB-01 atendida",
+      "ruta": "propuestas/plan-tras-r8/ejecucion-20261024/W-estandares/v002/peticiones/atencion-peticiones-v002.json",
+      "sha256": "e86e1ed7bcd8e96ba1708dc6fe7ac8bb88f5b7268a7c445387fdd913afbcf12f"
+    },
+    {
+      "localizador": "Solicitudes P1-W-01..03 sobre https://qudt.org/vocab/unit/",
+      "ruta": "propuestas/plan-tras-r8/ejecucion-20261024/P1-qudt/peticiones-web.json",
+      "sha256": "d04cb6065dd633df4eab2d90770e2b58db53fb7cec3cfd4970e7b71ded190027"
+    },
+    {
+      "localizador": "Solicitud P2-WEB-01 sobre https://www.w3.org/TR/owl-time/",
+      "ruta": "propuestas/plan-tras-r8/ejecucion-20261024/P2-owl-time/peticiones-web.json",
+      "sha256": "e2f19882fdb86e8c89196130acef11de2e08a98dcac6e65218f7f292b67ca14e"
+    },
+    {
+      "localizador": "rol W-estandares, casos=[], limites",
+      "ruta": "propuestas/plan-tras-r8/ejecucion-20261024/W-estandares/asignacion.json",
+      "sha256": "41c5260758c51f12981609aa52d1f6aafe9af142f741864d08348f19b8e085ed"
+    },
+    {
+      "localizador": "v001 intacta; congelada v001 verificada",
+      "ruta": "propuestas/plan-tras-r8/ejecucion-20261024/W-estandares/v001/congelada.json",
+      "sha256": "e6d5573d61913d328f5782d427455fda2093d9c642b5a8de4fc75a6d42589bbf"
+    }
+  ],
+  "limites": [
+    "Escritura exclusiva en propuestas/plan-tras-r8/ejecucion-20261024/W-estandares/; v001 preservada sin edicion; sin produccion, semantica/shapes centrales, manifiestos previos, grafo ni Studio.",
+    "Gemma excluido; sin contactos externos; sin mensajes a publicadores; sin CAPTCHA.",
+    "MCP nativo OpenCode, sin puentes CLI/proxy ni terceros (raw.githubusercontent = infraestructura propia del repo oficial).",
+    "Unico navegador Obscura; otros roles locales.",
+    "Fuentes normativas != evidencia local; ningun caso promovido desde URIs; no se inventan unidades/fechas/jerarquias.",
+    "C1/C4/P3 cubren 17/19/101; W tiene 0 casos.",
+    "ACLARACION M3: http://qudt.org/vocab/unit/M3 acredita unicamente la existencia y propiedades de esa IRI (metro cubico). NO autoriza sustituir hm3 por M3 en ningun caso local, ni aplicar factor de conversion alguno (1e6 u otro), sin evidencia local que declare unidad, escala y valores para esa variable/recurso. P1-Q2 sigue pendiente de evidencia local."
+  ],
+  "mcp": "nativo OpenCode, sin puentes CLI",
+  "modelo": "opencode-go/muse-spark-1.3-contributor",
+  "navegador": "exclusivo W; otros roles locales",
+  "propuestos_staging": [],
+  "resultados": [
+    {
+      "conclusion": "IRI exacta http://qudt.org/vocab/unit/MilliM (http).",
+      "estado": "verificado",
+      "id": "P1-W-01",
+      "localizador": "symbol mm; Millimetro@es",
+      "url": "https://qudt.org/vocab/unit/MilliM"
+    },
+    {
+      "conclusion": "Sin IRI precoordinada en QUDT 3.5.3; usar M3 verificado o conservar pendiente. HectoHA rechazado.",
+      "estado": "negativo_normativo_sin_alias",
+      "id": "P1-W-02",
+      "localizador": "404 + 0 matches en indice",
+      "url": "https://qudt.org/vocab/unit/HectoM3"
+    },
+    {
+      "conclusion": "IRI exacta http://qudt.org/vocab/unit/HA (http).",
+      "estado": "verificado",
+      "id": "P1-W-03",
+      "localizador": "symbol ha; Hectare@en",
+      "url": "https://qudt.org/vocab/unit/HA"
+    },
+    {
+      "conclusion": "Terminos fijados desde ontologia oficial (modificada 2026-10-06); advertencia: inXSDDateTime deprecada.",
+      "estado": "atendida_fuente_primaria_oficial",
+      "id": "P2-WEB-01",
+      "localizador": "ProperInterval; hasBeginning/hasEnd; inXSDDateTimeStamp",
+      "url": "https://raw.githubusercontent.com/w3c/sdw-time/gh-pages/rdf/time.ttl"
+    }
+  ],
+  "resumen": {
+    "casos_asignados": 0,
+    "evidencias_nuevas_para_integrar": 0,
+    "negativos_normativos": 1,
+    "peticiones_atendidas": 4,
+    "peticiones_pendientes": 0,
+    "unidades_verificadas": 2
+  },
+  "rol": "W-estandares",
+  "v001_preservada_sin_edicion": true,
+  "version": "v003",
+  "corrige_a": "v002",
+  "defecto_corregido": "v002/entrega.json citaba para P2-owl-time/peticiones-web.json un sha256 truncado de 41 caracteres (e2f19882...ca14e); valor real de 64 verificado por codigo en v003. Ningun otro hash citado en v002 difiere del archivo.",
+  "evidencia_inmutable": "Toda la evidencia normativa y de navegacion permanece en v002 (inmutable, preservada sin edicion); v003 solo corrige metadatos y aclara el alcance de M3. Verificacion completa por codigo en v003/verificacion-hashes.json.",
+  "aclaracion_M3": "ACLARACION M3: http://qudt.org/vocab/unit/M3 acredita unicamente la existencia y propiedades de esa IRI (metro cubico). NO autoriza sustituir hm3 por M3 en ningun caso local, ni aplicar factor de conversion alguno (1e6 u otro), sin evidencia local que declare unidad, escala y valores para esa variable/recurso. P1-Q2 sigue pendiente de evidencia local."
+}

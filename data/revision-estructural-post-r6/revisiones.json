@@ -1,0 +1,784 @@
+{
+  "estado": "registro_documental_estructural",
+  "alcance": "Asocia columna y fila de diccionario sin aprobar significado, concepto, códigos, vigencias ni cruces. No modifica vinculos_documentales_revisados ni es consumido por la generación semántica.",
+  "auditoria": {
+    "ruta": "propuestas/cierre-brechas-post-r6/auditoria-correspondencias/dictamen.json",
+    "sha256": "24e1450347705b5edb7edd69e132c6fdac76d93a74008042544c415d96a4954b"
+  },
+  "pares": [
+    {
+      "columna": "https://example.org/mex-ontologi/file-column/46977217-9396-4f9c-bddb-6616e82530b4%2FSINAC%202022%2026-09-22%2F102",
+      "variable_documentada": "https://example.org/mex-ontologi/documented-variable/22202305-2d02-4c49-b216-cc98224357f0%2F102",
+      "definicion_iri": "https://example.org/mex-ontologi/definition/22202305-2d02-4c49-b216-cc98224357f0%2F102",
+      "recurso": "46977217-9396-4f9c-bddb-6616e82530b4",
+      "estado": "par_estructural_revisado_significado_pendiente",
+      "estado_semantico_actual": "candidata_por_nombre",
+      "significado": "pendiente",
+      "evidencia_faltante_semantica": "Exactamente lo requerido: Descripcion publicada de MUNICIPIOCERTIFICA en el diccionario 22202305-2d02-4c49-b216-cc98224357f0 o catalogo/formato primario aplicable al recurso 46977217-9396-4f9c-bddb-6616e82530b4 (SINAC 2022). R6: o vinculo explicito edicion-recurso-periodo a un manual SINAC edicion 2022 (Modelo 2015 sin vigencia declarada; Guia 2025 post-periodo). En manos del publicador.",
+      "evidencia": [
+        {
+          "ruta": "propuestas/cierre-brechas-post-r6/correspondencias-a/evidencia/package_nacimientos_2026-10-24.json",
+          "sha256": "b2deb57d534f33c608150b44feca4da28bdbcbc1899370eca3c051ec956f22f5",
+          "localizador": "result.resources[0,1] (Diccionario pos 0 + datos pos 1) + result.numero_variables + resources[1].start_date/end_date",
+          "afirmacion_soportada": "El publicador co-publica Diccionario y archivo de datos en el mismo conjunto, declara numero_variables=106 y periodo 2022-01-01 a 2022-09-26 del recurso de datos."
+        },
+        {
+          "ruta": "data/portal/inspecciones/46977217-9396-4f9c-bddb-6616e82530b4.json",
+          "sha256": "13831dec294ac79e90d3c618dd7f322d512afc392babe1405eb903d40c18afd5",
+          "localizador": "tablas[0] hoja 'SINAC 2022 26-09-22', campos[posicion_original=102]",
+          "afirmacion_soportada": "Columna fisica pos 102 de la hoja 'SINAC 2022 26-09-22' con nombre exacto 'MUNICIPIOCERTIFICA'."
+        },
+        {
+          "ruta": "data/portal/inspecciones/22202305-2d02-4c49-b216-cc98224357f0.json",
+          "sha256": "76fe68223bc861fcdf62cb33f5b9a207503b192c2ef531a4aad31d52e7a7513b",
+          "localizador": "definiciones[101] (fila logica 102, variable 'MUNICIPIOCERTIFICA')",
+          "afirmacion_soportada": "Fila 102 del diccionario con variable 'MUNICIPIOCERTIFICA', descripcion 'Pendiente de especificar'; mas coincidencia nominal+ordinal verificada en las 106 posiciones (verificado por bytes: SINAC 106/106 y denuncias 9/9 exactas; matriculas 68/70 exactas + 2 con solo espacios del portal en filas ajenas a estos IDs)."
+        }
+      ],
+      "limites": [
+        "Sin joins, cruces, homologaciones, equivalencias ni identidad de catalogos.",
+        "Sin nuevas vigencias: los periodos CKAN son metadato del recurso, no vigencia del vinculo.",
+        "Sin promocion semantica: el estatus de la correspondencia no cambia y no genera variable respaldada.",
+        "No fija edicion de manual, formato de valores, codebook ni fe de erratas.",
+        "La homonimia con manuales nacionales no se usa como respaldo; el par es estructural local (mismo conjunto + numero_variables + verificacion del ID).",
+        "NO aplicable a vinculos_documentales_revisados: el core exige respaldada_por_definicion."
+      ]
+    },
+    {
+      "columna": "https://example.org/mex-ontologi/file-column/46977217-9396-4f9c-bddb-6616e82530b4%2FSINAC%202022%2026-09-22%2F103",
+      "variable_documentada": "https://example.org/mex-ontologi/documented-variable/22202305-2d02-4c49-b216-cc98224357f0%2F103",
+      "definicion_iri": "https://example.org/mex-ontologi/definition/22202305-2d02-4c49-b216-cc98224357f0%2F103",
+      "recurso": "46977217-9396-4f9c-bddb-6616e82530b4",
+      "estado": "par_estructural_revisado_significado_pendiente",
+      "estado_semantico_actual": "candidata_por_nombre",
+      "significado": "pendiente",
+      "evidencia_faltante_semantica": "Exactamente lo requerido: Descripcion publicada de MUNICIPIOCERTIFICAD en el diccionario 22202305-2d02-4c49-b216-cc98224357f0 o catalogo/formato primario aplicable al recurso 46977217-9396-4f9c-bddb-6616e82530b4 (SINAC 2022). R6: o vinculo explicito edicion-recurso-periodo a un manual SINAC edicion 2022 (Modelo 2015 sin vigencia declarada; Guia 2025 post-periodo). En manos del publicador.",
+      "evidencia": [
+        {
+          "ruta": "propuestas/cierre-brechas-post-r6/correspondencias-a/evidencia/package_nacimientos_2026-10-24.json",
+          "sha256": "b2deb57d534f33c608150b44feca4da28bdbcbc1899370eca3c051ec956f22f5",
+          "localizador": "result.resources[0,1] (Diccionario pos 0 + datos pos 1) + result.numero_variables + resources[1].start_date/end_date",
+          "afirmacion_soportada": "El publicador co-publica Diccionario y archivo de datos en el mismo conjunto, declara numero_variables=106 y periodo 2022-01-01 a 2022-09-26 del recurso de datos."
+        },
+        {
+          "ruta": "data/portal/inspecciones/46977217-9396-4f9c-bddb-6616e82530b4.json",
+          "sha256": "13831dec294ac79e90d3c618dd7f322d512afc392babe1405eb903d40c18afd5",
+          "localizador": "tablas[0] hoja 'SINAC 2022 26-09-22', campos[posicion_original=103]",
+          "afirmacion_soportada": "Columna fisica pos 103 de la hoja 'SINAC 2022 26-09-22' con nombre exacto 'MUNICIPIOCERTIFICAD'."
+        },
+        {
+          "ruta": "data/portal/inspecciones/22202305-2d02-4c49-b216-cc98224357f0.json",
+          "sha256": "76fe68223bc861fcdf62cb33f5b9a207503b192c2ef531a4aad31d52e7a7513b",
+          "localizador": "definiciones[102] (fila logica 103, variable 'MUNICIPIOCERTIFICAD')",
+          "afirmacion_soportada": "Fila 103 del diccionario con variable 'MUNICIPIOCERTIFICAD', descripcion 'Pendiente de especificar'; mas coincidencia nominal+ordinal verificada en las 106 posiciones (verificado por bytes: SINAC 106/106 y denuncias 9/9 exactas; matriculas 68/70 exactas + 2 con solo espacios del portal en filas ajenas a estos IDs)."
+        }
+      ],
+      "limites": [
+        "Sin joins, cruces, homologaciones, equivalencias ni identidad de catalogos.",
+        "Sin nuevas vigencias: los periodos CKAN son metadato del recurso, no vigencia del vinculo.",
+        "Sin promocion semantica: el estatus de la correspondencia no cambia y no genera variable respaldada.",
+        "No fija edicion de manual, formato de valores, codebook ni fe de erratas.",
+        "La homonimia con manuales nacionales no se usa como respaldo; el par es estructural local (mismo conjunto + numero_variables + verificacion del ID).",
+        "NO aplicable a vinculos_documentales_revisados: el core exige respaldada_por_definicion."
+      ]
+    },
+    {
+      "columna": "https://example.org/mex-ontologi/file-column/46977217-9396-4f9c-bddb-6616e82530b4%2FSINAC%202022%2026-09-22%2F104",
+      "variable_documentada": "https://example.org/mex-ontologi/documented-variable/22202305-2d02-4c49-b216-cc98224357f0%2F104",
+      "definicion_iri": "https://example.org/mex-ontologi/definition/22202305-2d02-4c49-b216-cc98224357f0%2F104",
+      "recurso": "46977217-9396-4f9c-bddb-6616e82530b4",
+      "estado": "par_estructural_revisado_significado_pendiente",
+      "estado_semantico_actual": "candidata_por_nombre",
+      "significado": "pendiente",
+      "evidencia_faltante_semantica": "Exactamente lo requerido: Descripcion publicada de LOCALIDADCERTIFICA en el diccionario 22202305-2d02-4c49-b216-cc98224357f0 o catalogo/formato primario aplicable al recurso 46977217-9396-4f9c-bddb-6616e82530b4 (SINAC 2022). R6: o vinculo explicito edicion-recurso-periodo a un manual SINAC edicion 2022 (Modelo 2015 sin vigencia declarada; Guia 2025 post-periodo). En manos del publicador.",
+      "evidencia": [
+        {
+          "ruta": "propuestas/cierre-brechas-post-r6/correspondencias-a/evidencia/package_nacimientos_2026-10-24.json",
+          "sha256": "b2deb57d534f33c608150b44feca4da28bdbcbc1899370eca3c051ec956f22f5",
+          "localizador": "result.resources[0,1] (Diccionario pos 0 + datos pos 1) + result.numero_variables + resources[1].start_date/end_date",
+          "afirmacion_soportada": "El publicador co-publica Diccionario y archivo de datos en el mismo conjunto, declara numero_variables=106 y periodo 2022-01-01 a 2022-09-26 del recurso de datos."
+        },
+        {
+          "ruta": "data/portal/inspecciones/46977217-9396-4f9c-bddb-6616e82530b4.json",
+          "sha256": "13831dec294ac79e90d3c618dd7f322d512afc392babe1405eb903d40c18afd5",
+          "localizador": "tablas[0] hoja 'SINAC 2022 26-09-22', campos[posicion_original=104]",
+          "afirmacion_soportada": "Columna fisica pos 104 de la hoja 'SINAC 2022 26-09-22' con nombre exacto 'LOCALIDADCERTIFICA'."
+        },
+        {
+          "ruta": "data/portal/inspecciones/22202305-2d02-4c49-b216-cc98224357f0.json",
+          "sha256": "76fe68223bc861fcdf62cb33f5b9a207503b192c2ef531a4aad31d52e7a7513b",
+          "localizador": "definiciones[103] (fila logica 104, variable 'LOCALIDADCERTIFICA')",
+          "afirmacion_soportada": "Fila 104 del diccionario con variable 'LOCALIDADCERTIFICA', descripcion 'Pendiente de especificar'; mas coincidencia nominal+ordinal verificada en las 106 posiciones (verificado por bytes: SINAC 106/106 y denuncias 9/9 exactas; matriculas 68/70 exactas + 2 con solo espacios del portal en filas ajenas a estos IDs)."
+        }
+      ],
+      "limites": [
+        "Sin joins, cruces, homologaciones, equivalencias ni identidad de catalogos.",
+        "Sin nuevas vigencias: los periodos CKAN son metadato del recurso, no vigencia del vinculo.",
+        "Sin promocion semantica: el estatus de la correspondencia no cambia y no genera variable respaldada.",
+        "No fija edicion de manual, formato de valores, codebook ni fe de erratas.",
+        "La homonimia con manuales nacionales no se usa como respaldo; el par es estructural local (mismo conjunto + numero_variables + verificacion del ID).",
+        "NO aplicable a vinculos_documentales_revisados: el core exige respaldada_por_definicion."
+      ]
+    },
+    {
+      "columna": "https://example.org/mex-ontologi/file-column/46977217-9396-4f9c-bddb-6616e82530b4%2FSINAC%202022%2026-09-22%2F105",
+      "variable_documentada": "https://example.org/mex-ontologi/documented-variable/22202305-2d02-4c49-b216-cc98224357f0%2F105",
+      "definicion_iri": "https://example.org/mex-ontologi/definition/22202305-2d02-4c49-b216-cc98224357f0%2F105",
+      "recurso": "46977217-9396-4f9c-bddb-6616e82530b4",
+      "estado": "par_estructural_revisado_significado_pendiente",
+      "estado_semantico_actual": "candidata_por_nombre",
+      "significado": "pendiente",
+      "evidencia_faltante_semantica": "Exactamente lo requerido: Descripcion publicada de LOCALIDADCERTIFICAD en el diccionario 22202305-2d02-4c49-b216-cc98224357f0 o catalogo/formato primario aplicable al recurso 46977217-9396-4f9c-bddb-6616e82530b4 (SINAC 2022). R6: o vinculo explicito edicion-recurso-periodo a un manual SINAC edicion 2022 (Modelo 2015 sin vigencia declarada; Guia 2025 post-periodo). En manos del publicador.",
+      "evidencia": [
+        {
+          "ruta": "propuestas/cierre-brechas-post-r6/correspondencias-a/evidencia/package_nacimientos_2026-10-24.json",
+          "sha256": "b2deb57d534f33c608150b44feca4da28bdbcbc1899370eca3c051ec956f22f5",
+          "localizador": "result.resources[0,1] (Diccionario pos 0 + datos pos 1) + result.numero_variables + resources[1].start_date/end_date",
+          "afirmacion_soportada": "El publicador co-publica Diccionario y archivo de datos en el mismo conjunto, declara numero_variables=106 y periodo 2022-01-01 a 2022-09-26 del recurso de datos."
+        },
+        {
+          "ruta": "data/portal/inspecciones/46977217-9396-4f9c-bddb-6616e82530b4.json",
+          "sha256": "13831dec294ac79e90d3c618dd7f322d512afc392babe1405eb903d40c18afd5",
+          "localizador": "tablas[0] hoja 'SINAC 2022 26-09-22', campos[posicion_original=105]",
+          "afirmacion_soportada": "Columna fisica pos 105 de la hoja 'SINAC 2022 26-09-22' con nombre exacto 'LOCALIDADCERTIFICAD'."
+        },
+        {
+          "ruta": "data/portal/inspecciones/22202305-2d02-4c49-b216-cc98224357f0.json",
+          "sha256": "76fe68223bc861fcdf62cb33f5b9a207503b192c2ef531a4aad31d52e7a7513b",
+          "localizador": "definiciones[104] (fila logica 105, variable 'LOCALIDADCERTIFICAD')",
+          "afirmacion_soportada": "Fila 105 del diccionario con variable 'LOCALIDADCERTIFICAD', descripcion 'Pendiente de especificar'; mas coincidencia nominal+ordinal verificada en las 106 posiciones (verificado por bytes: SINAC 106/106 y denuncias 9/9 exactas; matriculas 68/70 exactas + 2 con solo espacios del portal en filas ajenas a estos IDs)."
+        }
+      ],
+      "limites": [
+        "Sin joins, cruces, homologaciones, equivalencias ni identidad de catalogos.",
+        "Sin nuevas vigencias: los periodos CKAN son metadato del recurso, no vigencia del vinculo.",
+        "Sin promocion semantica: el estatus de la correspondencia no cambia y no genera variable respaldada.",
+        "No fija edicion de manual, formato de valores, codebook ni fe de erratas.",
+        "La homonimia con manuales nacionales no se usa como respaldo; el par es estructural local (mismo conjunto + numero_variables + verificacion del ID).",
+        "NO aplicable a vinculos_documentales_revisados: el core exige respaldada_por_definicion."
+      ]
+    },
+    {
+      "columna": "https://example.org/mex-ontologi/file-column/46977217-9396-4f9c-bddb-6616e82530b4%2FSINAC%202022%2026-09-22%2F83",
+      "variable_documentada": "https://example.org/mex-ontologi/documented-variable/22202305-2d02-4c49-b216-cc98224357f0%2F83",
+      "definicion_iri": "https://example.org/mex-ontologi/definition/22202305-2d02-4c49-b216-cc98224357f0%2F83",
+      "recurso": "46977217-9396-4f9c-bddb-6616e82530b4",
+      "estado": "par_estructural_revisado_significado_pendiente",
+      "estado_semantico_actual": "candidata_por_nombre",
+      "significado": "pendiente",
+      "evidencia_faltante_semantica": "Exactamente lo requerido: Descripcion publicada de CLUES en el diccionario 22202305-2d02-4c49-b216-cc98224357f0 o catalogo/formato primario aplicable al recurso 46977217-9396-4f9c-bddb-6616e82530b4 (SINAC 2022). R6: o vinculo explicito edicion-recurso-periodo a un manual SINAC edicion 2022 (Modelo 2015 sin vigencia declarada; Guia 2025 post-periodo). En manos del publicador.",
+      "evidencia": [
+        {
+          "ruta": "propuestas/cierre-brechas-post-r6/correspondencias-a/evidencia/package_nacimientos_2026-10-24.json",
+          "sha256": "b2deb57d534f33c608150b44feca4da28bdbcbc1899370eca3c051ec956f22f5",
+          "localizador": "result.resources[0,1] (Diccionario pos 0 + datos pos 1) + result.numero_variables + resources[1].start_date/end_date",
+          "afirmacion_soportada": "El publicador co-publica Diccionario y archivo de datos en el mismo conjunto, declara numero_variables=106 y periodo 2022-01-01 a 2022-09-26 del recurso de datos."
+        },
+        {
+          "ruta": "data/portal/inspecciones/46977217-9396-4f9c-bddb-6616e82530b4.json",
+          "sha256": "13831dec294ac79e90d3c618dd7f322d512afc392babe1405eb903d40c18afd5",
+          "localizador": "tablas[0] hoja 'SINAC 2022 26-09-22', campos[posicion_original=83]",
+          "afirmacion_soportada": "Columna fisica pos 83 de la hoja 'SINAC 2022 26-09-22' con nombre exacto 'CLUES'."
+        },
+        {
+          "ruta": "data/portal/inspecciones/22202305-2d02-4c49-b216-cc98224357f0.json",
+          "sha256": "76fe68223bc861fcdf62cb33f5b9a207503b192c2ef531a4aad31d52e7a7513b",
+          "localizador": "definiciones[82] (fila logica 83, variable 'CLUES')",
+          "afirmacion_soportada": "Fila 83 del diccionario con variable 'CLUES', descripcion 'Pendiente de especificar'; mas coincidencia nominal+ordinal verificada en las 106 posiciones (verificado por bytes: SINAC 106/106 y denuncias 9/9 exactas; matriculas 68/70 exactas + 2 con solo espacios del portal en filas ajenas a estos IDs)."
+        }
+      ],
+      "limites": [
+        "Sin joins, cruces, homologaciones, equivalencias ni identidad de catalogos.",
+        "Sin nuevas vigencias: los periodos CKAN son metadato del recurso, no vigencia del vinculo.",
+        "Sin promocion semantica: el estatus de la correspondencia no cambia y no genera variable respaldada.",
+        "No fija edicion de manual, formato de valores, codebook ni fe de erratas.",
+        "La homonimia con manuales nacionales no se usa como respaldo; el par es estructural local (mismo conjunto + numero_variables + verificacion del ID).",
+        "NO aplicable a vinculos_documentales_revisados: el core exige respaldada_por_definicion."
+      ]
+    },
+    {
+      "columna": "https://example.org/mex-ontologi/file-column/5772b8ec-e272-4265-a757-f7ddd179fe04%2F2020%2F2",
+      "variable_documentada": "https://example.org/mex-ontologi/documented-variable/3f6942e3-a9c5-42c0-a38b-2c7aad2a6c99%2F2",
+      "definicion_iri": "https://example.org/mex-ontologi/definition/3f6942e3-a9c5-42c0-a38b-2c7aad2a6c99%2F2",
+      "recurso": "5772b8ec-e272-4265-a757-f7ddd179fe04",
+      "estado": "par_estructural_revisado_significado_pendiente",
+      "estado_semantico_actual": "candidata_por_nombre",
+      "significado": "pendiente",
+      "evidencia_faltante_semantica": "Metodología o cuestionario PROAES de Denuncias Ambientales que defina 'estrato' y a qué trimestre refiere TRIMESTRE (calendario de denuncia vs estrato operativo/muestral). No localizado en fuentes examinadas (portal CKAN, DGIS/CONAPO/INEGI revisados; R6). En manos del publicador según R6; la búsqueda negativa acotada no prueba exclusividad ni capacidad única: vale cualquier evidencia primaria inequívoca vinculada a la fila, venga de la fuente que venga.",
+      "evidencia": [
+        {
+          "ruta": "propuestas/cierre-brechas-post-r6/correspondencias-a/evidencia/package_denuncias_2026-10-24.json",
+          "sha256": "3eafe5c95f99dbbeb94dc2867b3c818ae1a1c59362a87aeadf2dbb761eadac09",
+          "localizador": "result.resources[0,1] (Diccionario pos 0 + datos pos 1) + result.numero_variables + resources[1].start_date/end_date",
+          "afirmacion_soportada": "El publicador co-publica Diccionario y archivo de datos en el mismo conjunto, declara numero_variables=9 y periodo 2022-01-01 a 2022-03-31 del recurso de datos."
+        },
+        {
+          "ruta": "data/portal/inspecciones/5772b8ec-e272-4265-a757-f7ddd179fe04.json",
+          "sha256": "2c3c0e293052e25e5b4af24d9a5c332189a4544f48d1732f69306210b1fe909d",
+          "localizador": "tablas[0] hoja '2020', campos[posicion_original=2]",
+          "afirmacion_soportada": "Columna fisica pos 2 de la hoja '2020' con nombre exacto 'TRIMESTRE'."
+        },
+        {
+          "ruta": "data/portal/inspecciones/3f6942e3-a9c5-42c0-a38b-2c7aad2a6c99.json",
+          "sha256": "e463ea718d587e0e5407554a11e03c96643cccaa18e7caca7f57d81052b381c1",
+          "localizador": "definiciones[1] (fila logica 2, variable 'TRIMESTRE')",
+          "afirmacion_soportada": "Fila 2 del diccionario con variable 'TRIMESTRE', descripcion 'Trimestre del estrato'; mas coincidencia nominal+ordinal verificada en las 9 posiciones (verificado por bytes: SINAC 106/106 y denuncias 9/9 exactas; matriculas 68/70 exactas + 2 con solo espacios del portal en filas ajenas a estos IDs)."
+        }
+      ],
+      "limites": [
+        "Sin joins, cruces, homologaciones, equivalencias ni identidad de catalogos.",
+        "Sin nuevas vigencias: los periodos CKAN son metadato del recurso, no vigencia del vinculo.",
+        "Sin promocion semantica: el estatus de la correspondencia no cambia y no genera variable respaldada.",
+        "No fija edicion de manual, formato de valores, codebook ni fe de erratas.",
+        "La homonimia con manuales nacionales no se usa como respaldo; el par es estructural local (mismo conjunto + numero_variables + verificacion del ID).",
+        "NO aplicable a vinculos_documentales_revisados: el core exige respaldada_por_definicion."
+      ]
+    },
+    {
+      "columna": "https://example.org/mex-ontologi/file-column/58f2d5a6-0432-48f1-8a35-a5efcce78bac%2FEstudiantes%202022-2%2F14",
+      "variable_documentada": "https://example.org/mex-ontologi/documented-variable/8c0e76ff-3a86-4b1d-beee-b04bebe7df8d%2F14",
+      "definicion_iri": "https://example.org/mex-ontologi/definition/8c0e76ff-3a86-4b1d-beee-b04bebe7df8d%2F14",
+      "recurso": "58f2d5a6-0432-48f1-8a35-a5efcce78bac",
+      "estado": "par_estructural_revisado_significado_pendiente",
+      "estado_semantico_actual": "candidata_por_nombre",
+      "significado": "pendiente",
+      "evidencia_faltante_semantica": "Descripción que fije evento y ciclo de la fecha de inscripción.",
+      "evidencia": [
+        {
+          "ruta": "propuestas/cierre-brechas-post-r6/correspondencias-a/evidencia/package_matriculas_2026-10-24.json",
+          "sha256": "8752e00e44cdcfd8a7c6bb556b7028754da5a7e2a3387c04182d6435d056d7b7",
+          "localizador": "result.resources[0,1] (Diccionario pos 0 + datos pos 1) + result.numero_variables + resources[1].start_date/end_date",
+          "afirmacion_soportada": "El publicador co-publica Diccionario y archivo de datos en el mismo conjunto, declara numero_variables=70 y periodo 2022-01-01 a 2022-06-01 del recurso de datos."
+        },
+        {
+          "ruta": "data/portal/inspecciones/58f2d5a6-0432-48f1-8a35-a5efcce78bac.json",
+          "sha256": "19e412eb0ccd161aaf111bba9d66506ed0eb986445d269b195d16ed1f48f2868",
+          "localizador": "tablas[0] hoja 'Estudiantes 2022-2', campos[posicion_original=14]",
+          "afirmacion_soportada": "Columna fisica pos 14 de la hoja 'Estudiantes 2022-2' con nombre exacto 'Fecha inscripción en ciclo escolar  señalado'."
+        },
+        {
+          "ruta": "data/portal/inspecciones/8c0e76ff-3a86-4b1d-beee-b04bebe7df8d.json",
+          "sha256": "73c4f6243458d700a99df5d3c55327bc9fde1a94d75f94a443606237327574b2",
+          "localizador": "definiciones[13] (fila logica 14, variable 'Fecha inscripción en ciclo escolar  señalado')",
+          "afirmacion_soportada": "Fila 14 del diccionario con variable 'Fecha inscripción en ciclo escolar  señalado', descripcion 'Pendiente de especificar'; mas coincidencia nominal+ordinal verificada en las 70 posiciones (verificado por bytes: SINAC 106/106 y denuncias 9/9 exactas; matriculas 68/70 exactas + 2 con solo espacios del portal en filas ajenas a estos IDs)."
+        }
+      ],
+      "limites": [
+        "Sin joins, cruces, homologaciones, equivalencias ni identidad de catalogos.",
+        "Sin nuevas vigencias: los periodos CKAN son metadato del recurso, no vigencia del vinculo.",
+        "Sin promocion semantica: el estatus de la correspondencia no cambia y no genera variable respaldada.",
+        "No fija edicion de manual, formato de valores, codebook ni fe de erratas.",
+        "La homonimia con manuales nacionales no se usa como respaldo; el par es estructural local (mismo conjunto + numero_variables + verificacion del ID).",
+        "NO aplicable a vinculos_documentales_revisados: el core exige respaldada_por_definicion."
+      ]
+    },
+    {
+      "columna": "https://example.org/mex-ontologi/file-column/58f2d5a6-0432-48f1-8a35-a5efcce78bac%2FEstudiantes%202022-2%2F20",
+      "variable_documentada": "https://example.org/mex-ontologi/documented-variable/8c0e76ff-3a86-4b1d-beee-b04bebe7df8d%2F20",
+      "definicion_iri": "https://example.org/mex-ontologi/definition/8c0e76ff-3a86-4b1d-beee-b04bebe7df8d%2F20",
+      "recurso": "58f2d5a6-0432-48f1-8a35-a5efcce78bac",
+      "estado": "par_estructural_revisado_significado_pendiente",
+      "estado_semantico_actual": "candidata_por_nombre",
+      "significado": "pendiente",
+      "evidencia_faltante_semantica": "Descripción completa con la función municipal (residencia, registro u otra).",
+      "evidencia": [
+        {
+          "ruta": "propuestas/cierre-brechas-post-r6/correspondencias-a/evidencia/package_matriculas_2026-10-24.json",
+          "sha256": "8752e00e44cdcfd8a7c6bb556b7028754da5a7e2a3387c04182d6435d056d7b7",
+          "localizador": "result.resources[0,1] (Diccionario pos 0 + datos pos 1) + result.numero_variables + resources[1].start_date/end_date",
+          "afirmacion_soportada": "El publicador co-publica Diccionario y archivo de datos en el mismo conjunto, declara numero_variables=70 y periodo 2022-01-01 a 2022-06-01 del recurso de datos."
+        },
+        {
+          "ruta": "data/portal/inspecciones/58f2d5a6-0432-48f1-8a35-a5efcce78bac.json",
+          "sha256": "19e412eb0ccd161aaf111bba9d66506ed0eb986445d269b195d16ed1f48f2868",
+          "localizador": "tablas[0] hoja 'Estudiantes 2022-2', campos[posicion_original=20]",
+          "afirmacion_soportada": "Columna fisica pos 20 de la hoja 'Estudiantes 2022-2' con nombre exacto 'Municipio'."
+        },
+        {
+          "ruta": "data/portal/inspecciones/8c0e76ff-3a86-4b1d-beee-b04bebe7df8d.json",
+          "sha256": "73c4f6243458d700a99df5d3c55327bc9fde1a94d75f94a443606237327574b2",
+          "localizador": "definiciones[19] (fila logica 20, variable 'Municipio')",
+          "afirmacion_soportada": "Fila 20 del diccionario con variable 'Municipio', descripcion 'Municipio donde el alumno'; mas coincidencia nominal+ordinal verificada en las 70 posiciones (verificado por bytes: SINAC 106/106 y denuncias 9/9 exactas; matriculas 68/70 exactas + 2 con solo espacios del portal en filas ajenas a estos IDs)."
+        }
+      ],
+      "limites": [
+        "Sin joins, cruces, homologaciones, equivalencias ni identidad de catalogos.",
+        "Sin nuevas vigencias: los periodos CKAN son metadato del recurso, no vigencia del vinculo.",
+        "Sin promocion semantica: el estatus de la correspondencia no cambia y no genera variable respaldada.",
+        "No fija edicion de manual, formato de valores, codebook ni fe de erratas.",
+        "La homonimia con manuales nacionales no se usa como respaldo; el par es estructural local (mismo conjunto + numero_variables + verificacion del ID).",
+        "NO aplicable a vinculos_documentales_revisados: el core exige respaldada_por_definicion."
+      ]
+    },
+    {
+      "columna": "https://example.org/mex-ontologi/file-column/58f2d5a6-0432-48f1-8a35-a5efcce78bac%2FEstudiantes%202022-2%2F64",
+      "variable_documentada": "https://example.org/mex-ontologi/documented-variable/8c0e76ff-3a86-4b1d-beee-b04bebe7df8d%2F64",
+      "definicion_iri": "https://example.org/mex-ontologi/definition/8c0e76ff-3a86-4b1d-beee-b04bebe7df8d%2F64",
+      "recurso": "58f2d5a6-0432-48f1-8a35-a5efcce78bac",
+      "estado": "par_estructural_revisado_significado_pendiente",
+      "estado_semantico_actual": "candidata_por_nombre",
+      "significado": "pendiente",
+      "evidencia_faltante_semantica": "Descripción del evento y norma UES de la alternativa de no exigibilidad.",
+      "evidencia": [
+        {
+          "ruta": "propuestas/cierre-brechas-post-r6/correspondencias-a/evidencia/package_matriculas_2026-10-24.json",
+          "sha256": "8752e00e44cdcfd8a7c6bb556b7028754da5a7e2a3387c04182d6435d056d7b7",
+          "localizador": "result.resources[0,1] (Diccionario pos 0 + datos pos 1) + result.numero_variables + resources[1].start_date/end_date",
+          "afirmacion_soportada": "El publicador co-publica Diccionario y archivo de datos en el mismo conjunto, declara numero_variables=70 y periodo 2022-01-01 a 2022-06-01 del recurso de datos."
+        },
+        {
+          "ruta": "data/portal/inspecciones/58f2d5a6-0432-48f1-8a35-a5efcce78bac.json",
+          "sha256": "19e412eb0ccd161aaf111bba9d66506ed0eb986445d269b195d16ed1f48f2868",
+          "localizador": "tablas[0] hoja 'Estudiantes 2022-2', campos[posicion_original=64]",
+          "afirmacion_soportada": "Columna fisica pos 64 de la hoja 'Estudiantes 2022-2' con nombre exacto 'Fecha de alternativa de titulación de no exigibilidad'."
+        },
+        {
+          "ruta": "data/portal/inspecciones/8c0e76ff-3a86-4b1d-beee-b04bebe7df8d.json",
+          "sha256": "73c4f6243458d700a99df5d3c55327bc9fde1a94d75f94a443606237327574b2",
+          "localizador": "definiciones[63] (fila logica 64, variable 'Fecha de alternativa de titulación de no exigibilidad')",
+          "afirmacion_soportada": "Fila 64 del diccionario con variable 'Fecha de alternativa de titulación de no exigibilidad', descripcion 'Pendiente de especificar'; mas coincidencia nominal+ordinal verificada en las 70 posiciones (verificado por bytes: SINAC 106/106 y denuncias 9/9 exactas; matriculas 68/70 exactas + 2 con solo espacios del portal en filas ajenas a estos IDs)."
+        }
+      ],
+      "limites": [
+        "Sin joins, cruces, homologaciones, equivalencias ni identidad de catalogos.",
+        "Sin nuevas vigencias: los periodos CKAN son metadato del recurso, no vigencia del vinculo.",
+        "Sin promocion semantica: el estatus de la correspondencia no cambia y no genera variable respaldada.",
+        "No fija edicion de manual, formato de valores, codebook ni fe de erratas.",
+        "La homonimia con manuales nacionales no se usa como respaldo; el par es estructural local (mismo conjunto + numero_variables + verificacion del ID).",
+        "NO aplicable a vinculos_documentales_revisados: el core exige respaldada_por_definicion."
+      ]
+    },
+    {
+      "columna": "https://example.org/mex-ontologi/file-column/58f2d5a6-0432-48f1-8a35-a5efcce78bac%2FEstudiantes%202022-2%2F66",
+      "variable_documentada": "https://example.org/mex-ontologi/documented-variable/8c0e76ff-3a86-4b1d-beee-b04bebe7df8d%2F66",
+      "definicion_iri": "https://example.org/mex-ontologi/definition/8c0e76ff-3a86-4b1d-beee-b04bebe7df8d%2F66",
+      "recurso": "58f2d5a6-0432-48f1-8a35-a5efcce78bac",
+      "estado": "par_estructural_revisado_significado_pendiente",
+      "estado_semantico_actual": "candidata_por_nombre",
+      "significado": "pendiente",
+      "evidencia_faltante_semantica": "Descripción del evento y norma UES de la alternativa de examen profesional.",
+      "evidencia": [
+        {
+          "ruta": "propuestas/cierre-brechas-post-r6/correspondencias-a/evidencia/package_matriculas_2026-10-24.json",
+          "sha256": "8752e00e44cdcfd8a7c6bb556b7028754da5a7e2a3387c04182d6435d056d7b7",
+          "localizador": "result.resources[0,1] (Diccionario pos 0 + datos pos 1) + result.numero_variables + resources[1].start_date/end_date",
+          "afirmacion_soportada": "El publicador co-publica Diccionario y archivo de datos en el mismo conjunto, declara numero_variables=70 y periodo 2022-01-01 a 2022-06-01 del recurso de datos."
+        },
+        {
+          "ruta": "data/portal/inspecciones/58f2d5a6-0432-48f1-8a35-a5efcce78bac.json",
+          "sha256": "19e412eb0ccd161aaf111bba9d66506ed0eb986445d269b195d16ed1f48f2868",
+          "localizador": "tablas[0] hoja 'Estudiantes 2022-2', campos[posicion_original=66]",
+          "afirmacion_soportada": "Columna fisica pos 66 de la hoja 'Estudiantes 2022-2' con nombre exacto 'Fecha de alternativa de titulación de examen prof.'."
+        },
+        {
+          "ruta": "data/portal/inspecciones/8c0e76ff-3a86-4b1d-beee-b04bebe7df8d.json",
+          "sha256": "73c4f6243458d700a99df5d3c55327bc9fde1a94d75f94a443606237327574b2",
+          "localizador": "definiciones[65] (fila logica 66, variable 'Fecha de alternativa de titulación de examen prof.')",
+          "afirmacion_soportada": "Fila 66 del diccionario con variable 'Fecha de alternativa de titulación de examen prof.', descripcion 'Pendiente de especificar'; mas coincidencia nominal+ordinal verificada en las 70 posiciones (verificado por bytes: SINAC 106/106 y denuncias 9/9 exactas; matriculas 68/70 exactas + 2 con solo espacios del portal en filas ajenas a estos IDs)."
+        }
+      ],
+      "limites": [
+        "Sin joins, cruces, homologaciones, equivalencias ni identidad de catalogos.",
+        "Sin nuevas vigencias: los periodos CKAN son metadato del recurso, no vigencia del vinculo.",
+        "Sin promocion semantica: el estatus de la correspondencia no cambia y no genera variable respaldada.",
+        "No fija edicion de manual, formato de valores, codebook ni fe de erratas.",
+        "La homonimia con manuales nacionales no se usa como respaldo; el par es estructural local (mismo conjunto + numero_variables + verificacion del ID).",
+        "NO aplicable a vinculos_documentales_revisados: el core exige respaldada_por_definicion."
+      ]
+    },
+    {
+      "columna": "https://example.org/mex-ontologi/file-column/58f2d5a6-0432-48f1-8a35-a5efcce78bac%2FEstudiantes%202022-2%2F67",
+      "variable_documentada": "https://example.org/mex-ontologi/documented-variable/8c0e76ff-3a86-4b1d-beee-b04bebe7df8d%2F67",
+      "definicion_iri": "https://example.org/mex-ontologi/definition/8c0e76ff-3a86-4b1d-beee-b04bebe7df8d%2F67",
+      "recurso": "58f2d5a6-0432-48f1-8a35-a5efcce78bac",
+      "estado": "par_estructural_revisado_significado_pendiente",
+      "estado_semantico_actual": "candidata_por_nombre",
+      "significado": "pendiente",
+      "evidencia_faltante_semantica": "Descripción que fije el evento de titulación del título profesional.",
+      "evidencia": [
+        {
+          "ruta": "data/portal/inspecciones/8c0e76ff-3a86-4b1d-beee-b04bebe7df8d.json",
+          "sha256": "73c4f6243458d700a99df5d3c55327bc9fde1a94d75f94a443606237327574b2",
+          "localizador": "/definiciones (filas 67-70: 0-based 66-69)",
+          "afirmacion_soportada": "Diccionario 8c0e76ff filas 67-70: Tipo Fecha, Formato dd/mm/aaaa, Descripcion 'Pendiente de especificar' (fila 70 con ejemplo 30/11/2021)."
+        },
+        {
+          "ruta": "data/portal/inspecciones/58f2d5a6-0432-48f1-8a35-a5efcce78bac.json",
+          "sha256": "19e412eb0ccd161aaf111bba9d66506ed0eb986445d269b195d16ed1f48f2868",
+          "localizador": "tablas[0].hoja='Estudiantes 2022-2', campos pos 67-70",
+          "afirmacion_soportada": "Recurso 58f2d5a6 hoja 'Estudiantes 2022-2' (70 columnas): ids literales de columnas 67-70 identicos byte a byte a las variables del diccionario."
+        },
+        {
+          "ruta": "propuestas/investigacion-post-r6/matriculas/evidencia/Matriculas-2022-2.xlsx",
+          "sha256": "1b68919ce503511a167e2a375a695fee5447787322db2d7dc8132142ff3bdeaf",
+          "localizador": "hoja 'Estudiantes 2022-2', 15212 filas x 70 columnas",
+          "afirmacion_soportada": "Recurso de datos autentico (fuente primaria): cabeceras = variables del diccionario; base fisica de las distribuciones."
+        },
+        {
+          "ruta": "propuestas/investigacion-post-r6/matriculas/evidencia/package_matriculas.json",
+          "sha256": "8752e00e44cdcfd8a7c6bb556b7028754da5a7e2a3387c04182d6435d056d7b7",
+          "localizador": "result.numero_variables=70; resources[1]: Matriculas - 2022 - 2 (start_date 2022-01-01, end_date 2022-06-01); resources[0]: diccionario",
+          "afirmacion_soportada": "Mismo conjunto CKAN e819466c: diccionario 8c0e76ff y recurso 58f2d5a6 co-publicados; conteo declarado 70."
+        }
+      ],
+      "limites": [
+        "Registro separado 'par_estructural_revisado_significado_pendiente': sin concepto aprobado y sin cambio de estatus semantico (variables siguen 'candidata_sin_definicion_suficiente' / 'candidata_por_nombre'; egresos 'fuera_del_nucleo_actual').",
+        "Sin joins, cruces, homologaciones, equivalencias ni identidad de catalogos.",
+        "Sin vigencia nueva del vinculo: los periodos citados son metadatos del recurso CKAN, no del par; no inferir vigencia del nombre del archivo.",
+        "Sin promocion semantica: descripciones 'Pendiente de especificar' y pendientes conservados (EGR 15 pendiente_aclaracion_o_revision; SEED ambiguedad general-vs-fetal; EST 68 sin muestra de valores).",
+        "NO aplicable a vinculos_documentales_revisados: el core (scripts/consolidar_semantica.py:271) exige variable 'respaldada_por_definicion'."
+      ]
+    },
+    {
+      "columna": "https://example.org/mex-ontologi/file-column/58f2d5a6-0432-48f1-8a35-a5efcce78bac%2FEstudiantes%202022-2%2F68",
+      "variable_documentada": "https://example.org/mex-ontologi/documented-variable/8c0e76ff-3a86-4b1d-beee-b04bebe7df8d%2F68",
+      "definicion_iri": "https://example.org/mex-ontologi/definition/8c0e76ff-3a86-4b1d-beee-b04bebe7df8d%2F68",
+      "recurso": "58f2d5a6-0432-48f1-8a35-a5efcce78bac",
+      "estado": "par_estructural_revisado_significado_pendiente",
+      "estado_semantico_actual": "candidata_por_nombre",
+      "significado": "pendiente",
+      "evidencia_faltante_semantica": "Descripción que fije el evento de impresión del título profesional.",
+      "evidencia": [
+        {
+          "ruta": "data/portal/inspecciones/8c0e76ff-3a86-4b1d-beee-b04bebe7df8d.json",
+          "sha256": "73c4f6243458d700a99df5d3c55327bc9fde1a94d75f94a443606237327574b2",
+          "localizador": "/definiciones (filas 67-70: 0-based 66-69)",
+          "afirmacion_soportada": "Diccionario 8c0e76ff filas 67-70: Tipo Fecha, Formato dd/mm/aaaa, Descripcion 'Pendiente de especificar' (fila 70 con ejemplo 30/11/2021)."
+        },
+        {
+          "ruta": "data/portal/inspecciones/58f2d5a6-0432-48f1-8a35-a5efcce78bac.json",
+          "sha256": "19e412eb0ccd161aaf111bba9d66506ed0eb986445d269b195d16ed1f48f2868",
+          "localizador": "tablas[0].hoja='Estudiantes 2022-2', campos pos 67-70",
+          "afirmacion_soportada": "Recurso 58f2d5a6 hoja 'Estudiantes 2022-2' (70 columnas): ids literales de columnas 67-70 identicos byte a byte a las variables del diccionario."
+        },
+        {
+          "ruta": "propuestas/investigacion-post-r6/matriculas/evidencia/Matriculas-2022-2.xlsx",
+          "sha256": "1b68919ce503511a167e2a375a695fee5447787322db2d7dc8132142ff3bdeaf",
+          "localizador": "hoja 'Estudiantes 2022-2', 15212 filas x 70 columnas",
+          "afirmacion_soportada": "Recurso de datos autentico (fuente primaria): cabeceras = variables del diccionario; base fisica de las distribuciones."
+        },
+        {
+          "ruta": "propuestas/investigacion-post-r6/matriculas/evidencia/package_matriculas.json",
+          "sha256": "8752e00e44cdcfd8a7c6bb556b7028754da5a7e2a3387c04182d6435d056d7b7",
+          "localizador": "result.numero_variables=70; resources[1]: Matriculas - 2022 - 2 (start_date 2022-01-01, end_date 2022-06-01); resources[0]: diccionario",
+          "afirmacion_soportada": "Mismo conjunto CKAN e819466c: diccionario 8c0e76ff y recurso 58f2d5a6 co-publicados; conteo declarado 70."
+        }
+      ],
+      "limites": [
+        "Registro separado 'par_estructural_revisado_significado_pendiente': sin concepto aprobado y sin cambio de estatus semantico (variables siguen 'candidata_sin_definicion_suficiente' / 'candidata_por_nombre'; egresos 'fuera_del_nucleo_actual').",
+        "Sin joins, cruces, homologaciones, equivalencias ni identidad de catalogos.",
+        "Sin vigencia nueva del vinculo: los periodos citados son metadatos del recurso CKAN, no del par; no inferir vigencia del nombre del archivo.",
+        "Sin promocion semantica: descripciones 'Pendiente de especificar' y pendientes conservados (EGR 15 pendiente_aclaracion_o_revision; SEED ambiguedad general-vs-fetal; EST 68 sin muestra de valores).",
+        "NO aplicable a vinculos_documentales_revisados: el core (scripts/consolidar_semantica.py:271) exige variable 'respaldada_por_definicion'."
+      ]
+    },
+    {
+      "columna": "https://example.org/mex-ontologi/file-column/58f2d5a6-0432-48f1-8a35-a5efcce78bac%2FEstudiantes%202022-2%2F69",
+      "variable_documentada": "https://example.org/mex-ontologi/documented-variable/8c0e76ff-3a86-4b1d-beee-b04bebe7df8d%2F69",
+      "definicion_iri": "https://example.org/mex-ontologi/definition/8c0e76ff-3a86-4b1d-beee-b04bebe7df8d%2F69",
+      "recurso": "58f2d5a6-0432-48f1-8a35-a5efcce78bac",
+      "estado": "par_estructural_revisado_significado_pendiente",
+      "estado_semantico_actual": "candidata_por_nombre",
+      "significado": "pendiente",
+      "evidencia_faltante_semantica": "Descripción del evento y norma de convalidación.",
+      "evidencia": [
+        {
+          "ruta": "data/portal/inspecciones/8c0e76ff-3a86-4b1d-beee-b04bebe7df8d.json",
+          "sha256": "73c4f6243458d700a99df5d3c55327bc9fde1a94d75f94a443606237327574b2",
+          "localizador": "/definiciones (filas 67-70: 0-based 66-69)",
+          "afirmacion_soportada": "Diccionario 8c0e76ff filas 67-70: Tipo Fecha, Formato dd/mm/aaaa, Descripcion 'Pendiente de especificar' (fila 70 con ejemplo 30/11/2021)."
+        },
+        {
+          "ruta": "data/portal/inspecciones/58f2d5a6-0432-48f1-8a35-a5efcce78bac.json",
+          "sha256": "19e412eb0ccd161aaf111bba9d66506ed0eb986445d269b195d16ed1f48f2868",
+          "localizador": "tablas[0].hoja='Estudiantes 2022-2', campos pos 67-70",
+          "afirmacion_soportada": "Recurso 58f2d5a6 hoja 'Estudiantes 2022-2' (70 columnas): ids literales de columnas 67-70 identicos byte a byte a las variables del diccionario."
+        },
+        {
+          "ruta": "propuestas/investigacion-post-r6/matriculas/evidencia/Matriculas-2022-2.xlsx",
+          "sha256": "1b68919ce503511a167e2a375a695fee5447787322db2d7dc8132142ff3bdeaf",
+          "localizador": "hoja 'Estudiantes 2022-2', 15212 filas x 70 columnas",
+          "afirmacion_soportada": "Recurso de datos autentico (fuente primaria): cabeceras = variables del diccionario; base fisica de las distribuciones."
+        },
+        {
+          "ruta": "propuestas/investigacion-post-r6/matriculas/evidencia/package_matriculas.json",
+          "sha256": "8752e00e44cdcfd8a7c6bb556b7028754da5a7e2a3387c04182d6435d056d7b7",
+          "localizador": "result.numero_variables=70; resources[1]: Matriculas - 2022 - 2 (start_date 2022-01-01, end_date 2022-06-01); resources[0]: diccionario",
+          "afirmacion_soportada": "Mismo conjunto CKAN e819466c: diccionario 8c0e76ff y recurso 58f2d5a6 co-publicados; conteo declarado 70."
+        }
+      ],
+      "limites": [
+        "Registro separado 'par_estructural_revisado_significado_pendiente': sin concepto aprobado y sin cambio de estatus semantico (variables siguen 'candidata_sin_definicion_suficiente' / 'candidata_por_nombre'; egresos 'fuera_del_nucleo_actual').",
+        "Sin joins, cruces, homologaciones, equivalencias ni identidad de catalogos.",
+        "Sin vigencia nueva del vinculo: los periodos citados son metadatos del recurso CKAN, no del par; no inferir vigencia del nombre del archivo.",
+        "Sin promocion semantica: descripciones 'Pendiente de especificar' y pendientes conservados (EGR 15 pendiente_aclaracion_o_revision; SEED ambiguedad general-vs-fetal; EST 68 sin muestra de valores).",
+        "NO aplicable a vinculos_documentales_revisados: el core (scripts/consolidar_semantica.py:271) exige variable 'respaldada_por_definicion'."
+      ]
+    },
+    {
+      "columna": "https://example.org/mex-ontologi/file-column/58f2d5a6-0432-48f1-8a35-a5efcce78bac%2FEstudiantes%202022-2%2F70",
+      "variable_documentada": "https://example.org/mex-ontologi/documented-variable/8c0e76ff-3a86-4b1d-beee-b04bebe7df8d%2F70",
+      "definicion_iri": "https://example.org/mex-ontologi/definition/8c0e76ff-3a86-4b1d-beee-b04bebe7df8d%2F70",
+      "recurso": "58f2d5a6-0432-48f1-8a35-a5efcce78bac",
+      "estado": "par_estructural_revisado_significado_pendiente",
+      "estado_semantico_actual": "candidata_por_nombre",
+      "significado": "pendiente",
+      "evidencia_faltante_semantica": "Descripción del evento y norma de equivalencia.",
+      "evidencia": [
+        {
+          "ruta": "data/portal/inspecciones/8c0e76ff-3a86-4b1d-beee-b04bebe7df8d.json",
+          "sha256": "73c4f6243458d700a99df5d3c55327bc9fde1a94d75f94a443606237327574b2",
+          "localizador": "/definiciones (filas 67-70: 0-based 66-69)",
+          "afirmacion_soportada": "Diccionario 8c0e76ff filas 67-70: Tipo Fecha, Formato dd/mm/aaaa, Descripcion 'Pendiente de especificar' (fila 70 con ejemplo 30/11/2021)."
+        },
+        {
+          "ruta": "data/portal/inspecciones/58f2d5a6-0432-48f1-8a35-a5efcce78bac.json",
+          "sha256": "19e412eb0ccd161aaf111bba9d66506ed0eb986445d269b195d16ed1f48f2868",
+          "localizador": "tablas[0].hoja='Estudiantes 2022-2', campos pos 67-70",
+          "afirmacion_soportada": "Recurso 58f2d5a6 hoja 'Estudiantes 2022-2' (70 columnas): ids literales de columnas 67-70 identicos byte a byte a las variables del diccionario."
+        },
+        {
+          "ruta": "propuestas/investigacion-post-r6/matriculas/evidencia/Matriculas-2022-2.xlsx",
+          "sha256": "1b68919ce503511a167e2a375a695fee5447787322db2d7dc8132142ff3bdeaf",
+          "localizador": "hoja 'Estudiantes 2022-2', 15212 filas x 70 columnas",
+          "afirmacion_soportada": "Recurso de datos autentico (fuente primaria): cabeceras = variables del diccionario; base fisica de las distribuciones."
+        },
+        {
+          "ruta": "propuestas/investigacion-post-r6/matriculas/evidencia/package_matriculas.json",
+          "sha256": "8752e00e44cdcfd8a7c6bb556b7028754da5a7e2a3387c04182d6435d056d7b7",
+          "localizador": "result.numero_variables=70; resources[1]: Matriculas - 2022 - 2 (start_date 2022-01-01, end_date 2022-06-01); resources[0]: diccionario",
+          "afirmacion_soportada": "Mismo conjunto CKAN e819466c: diccionario 8c0e76ff y recurso 58f2d5a6 co-publicados; conteo declarado 70."
+        }
+      ],
+      "limites": [
+        "Registro separado 'par_estructural_revisado_significado_pendiente': sin concepto aprobado y sin cambio de estatus semantico (variables siguen 'candidata_sin_definicion_suficiente' / 'candidata_por_nombre'; egresos 'fuera_del_nucleo_actual').",
+        "Sin joins, cruces, homologaciones, equivalencias ni identidad de catalogos.",
+        "Sin vigencia nueva del vinculo: los periodos citados son metadatos del recurso CKAN, no del par; no inferir vigencia del nombre del archivo.",
+        "Sin promocion semantica: descripciones 'Pendiente de especificar' y pendientes conservados (EGR 15 pendiente_aclaracion_o_revision; SEED ambiguedad general-vs-fetal; EST 68 sin muestra de valores).",
+        "NO aplicable a vinculos_documentales_revisados: el core (scripts/consolidar_semantica.py:271) exige variable 'respaldada_por_definicion'."
+      ]
+    },
+    {
+      "columna": "https://example.org/mex-ontologi/file-column/6f39fc5d-e097-4954-8cd7-10e8f9dea541%2FSEED%2020%2009%2022%2F38",
+      "variable_documentada": "https://example.org/mex-ontologi/documented-variable/12f684e9-f4d5-4714-933d-aa153a812174%2F38",
+      "definicion_iri": "https://example.org/mex-ontologi/definition/12f684e9-f4d5-4714-933d-aa153a812174%2F38",
+      "recurso": "6f39fc5d-e097-4954-8cd7-10e8f9dea541",
+      "estado": "par_estructural_revisado_significado_pendiente",
+      "estado_semantico_actual": "candidata_por_nombre",
+      "significado": "pendiente",
+      "evidencia_faltante_semantica": "Nota del publicador que vincule el recurso 6f39fc5d (2022-01-01 a 2022-09-22) con la preg 19.2 / 9.2 (fetal) del Manual SEED Modelo 2022 para esta fila (huella 1b32ad8dbecd...), con tabla pregunta<->columna y codebook/edicion aplicable (para CIE: edicion que contenga el codigo local).",
+      "evidencia": [
+        {
+          "ruta": "data/portal/inspecciones/12f684e9-f4d5-4714-933d-aa153a812174.json",
+          "sha256": "2094c24f84a07d1a7e9e7f3c9e663b6923e51508a71678eea74860232f2c1179",
+          "localizador": "/definiciones (0-based 37,71,72,73,74)",
+          "afirmacion_soportada": "Diccionario 12f684e9 filas 38/72/73/74/75: CLUES Alfanumerico ej SRIMS000915; MUNICIPIOOCURRENCIA Numerico ej 997; MUNICIPIOOCURRENCIAD Texto ej NO APLICA; LOCALIDADOCURRENCIA Numerico ej 9997; LOCALIDADOCURRENCIAD Texto ej NO APLICA; todas Descripcion 'Pendiente de especificar'."
+        },
+        {
+          "ruta": "data/portal/inspecciones/6f39fc5d-e097-4954-8cd7-10e8f9dea541.json",
+          "sha256": "9faad1f08ffe92d2df47693ce8c7c3a771cfd1cb19f3d921c59d8c6e53e087fe",
+          "localizador": "tablas[0].hoja='SEED 20 09 22', campos pos 38/72/73/74/75",
+          "afirmacion_soportada": "Recurso 6f39fc5d hoja 'SEED 20 09 22' (80 columnas): ids literales 38/72-75 identicos a las variables."
+        },
+        {
+          "ruta": "propuestas/pendientes-muse-r6/salud/evidencia/package_defunciones.json",
+          "sha256": "bb24d75155ade8d973c411ed972a0a2ad593016e3dab2c87f9e203e3ca99ccec",
+          "localizador": "result.numero_variables=80; resources[] (Diccionario 12f684e9; Defunciones 2022 6f39fc5d; periodo 2022-01-01 a 2022-09-22)",
+          "afirmacion_soportada": "Mismo paquete CKAN: diccionario 12f684e9 y recurso 6f39fc5d co-publicados; conteo declarado 80; XLSX con datastore_active=false."
+        }
+      ],
+      "limites": [
+        "Registro separado 'par_estructural_revisado_significado_pendiente': sin concepto aprobado y sin cambio de estatus semantico (variables siguen 'candidata_sin_definicion_suficiente' / 'candidata_por_nombre'; egresos 'fuera_del_nucleo_actual').",
+        "Sin joins, cruces, homologaciones, equivalencias ni identidad de catalogos.",
+        "Sin vigencia nueva del vinculo: los periodos citados son metadatos del recurso CKAN, no del par; no inferir vigencia del nombre del archivo.",
+        "Sin promocion semantica: descripciones 'Pendiente de especificar' y pendientes conservados (EGR 15 pendiente_aclaracion_o_revision; SEED ambiguedad general-vs-fetal; EST 68 sin muestra de valores).",
+        "NO aplicable a vinculos_documentales_revisados: el core (scripts/consolidar_semantica.py:271) exige variable 'respaldada_por_definicion'."
+      ]
+    },
+    {
+      "columna": "https://example.org/mex-ontologi/file-column/6f39fc5d-e097-4954-8cd7-10e8f9dea541%2FSEED%2020%2009%2022%2F72",
+      "variable_documentada": "https://example.org/mex-ontologi/documented-variable/12f684e9-f4d5-4714-933d-aa153a812174%2F72",
+      "definicion_iri": "https://example.org/mex-ontologi/definition/12f684e9-f4d5-4714-933d-aa153a812174%2F72",
+      "recurso": "6f39fc5d-e097-4954-8cd7-10e8f9dea541",
+      "estado": "par_estructural_revisado_significado_pendiente",
+      "estado_semantico_actual": "candidata_por_nombre",
+      "significado": "pendiente",
+      "evidencia_faltante_semantica": "Nota del publicador que vincule el recurso 6f39fc5d (2022-01-01 a 2022-09-22) con la preg 36.9 del Manual SEED Modelo 2022 para esta fila (huella da9a0fcd2979...), con tabla pregunta<->columna y codebook/edicion aplicable (para CIE: edicion que contenga el codigo local).",
+      "evidencia": [
+        {
+          "ruta": "data/portal/inspecciones/12f684e9-f4d5-4714-933d-aa153a812174.json",
+          "sha256": "2094c24f84a07d1a7e9e7f3c9e663b6923e51508a71678eea74860232f2c1179",
+          "localizador": "/definiciones (0-based 37,71,72,73,74)",
+          "afirmacion_soportada": "Diccionario 12f684e9 filas 38/72/73/74/75: CLUES Alfanumerico ej SRIMS000915; MUNICIPIOOCURRENCIA Numerico ej 997; MUNICIPIOOCURRENCIAD Texto ej NO APLICA; LOCALIDADOCURRENCIA Numerico ej 9997; LOCALIDADOCURRENCIAD Texto ej NO APLICA; todas Descripcion 'Pendiente de especificar'."
+        },
+        {
+          "ruta": "data/portal/inspecciones/6f39fc5d-e097-4954-8cd7-10e8f9dea541.json",
+          "sha256": "9faad1f08ffe92d2df47693ce8c7c3a771cfd1cb19f3d921c59d8c6e53e087fe",
+          "localizador": "tablas[0].hoja='SEED 20 09 22', campos pos 38/72/73/74/75",
+          "afirmacion_soportada": "Recurso 6f39fc5d hoja 'SEED 20 09 22' (80 columnas): ids literales 38/72-75 identicos a las variables."
+        },
+        {
+          "ruta": "propuestas/pendientes-muse-r6/salud/evidencia/package_defunciones.json",
+          "sha256": "bb24d75155ade8d973c411ed972a0a2ad593016e3dab2c87f9e203e3ca99ccec",
+          "localizador": "result.numero_variables=80; resources[] (Diccionario 12f684e9; Defunciones 2022 6f39fc5d; periodo 2022-01-01 a 2022-09-22)",
+          "afirmacion_soportada": "Mismo paquete CKAN: diccionario 12f684e9 y recurso 6f39fc5d co-publicados; conteo declarado 80; XLSX con datastore_active=false."
+        }
+      ],
+      "limites": [
+        "Registro separado 'par_estructural_revisado_significado_pendiente': sin concepto aprobado y sin cambio de estatus semantico (variables siguen 'candidata_sin_definicion_suficiente' / 'candidata_por_nombre'; egresos 'fuera_del_nucleo_actual').",
+        "Sin joins, cruces, homologaciones, equivalencias ni identidad de catalogos.",
+        "Sin vigencia nueva del vinculo: los periodos citados son metadatos del recurso CKAN, no del par; no inferir vigencia del nombre del archivo.",
+        "Sin promocion semantica: descripciones 'Pendiente de especificar' y pendientes conservados (EGR 15 pendiente_aclaracion_o_revision; SEED ambiguedad general-vs-fetal; EST 68 sin muestra de valores).",
+        "NO aplicable a vinculos_documentales_revisados: el core (scripts/consolidar_semantica.py:271) exige variable 'respaldada_por_definicion'."
+      ]
+    },
+    {
+      "columna": "https://example.org/mex-ontologi/file-column/6f39fc5d-e097-4954-8cd7-10e8f9dea541%2FSEED%2020%2009%2022%2F73",
+      "variable_documentada": "https://example.org/mex-ontologi/documented-variable/12f684e9-f4d5-4714-933d-aa153a812174%2F73",
+      "definicion_iri": "https://example.org/mex-ontologi/definition/12f684e9-f4d5-4714-933d-aa153a812174%2F73",
+      "recurso": "6f39fc5d-e097-4954-8cd7-10e8f9dea541",
+      "estado": "par_estructural_revisado_significado_pendiente",
+      "estado_semantico_actual": "candidata_por_nombre",
+      "significado": "pendiente",
+      "evidencia_faltante_semantica": "Nota del publicador que vincule el recurso 6f39fc5d (2022-01-01 a 2022-09-22) con la preg 36.9 del Manual SEED Modelo 2022 para esta fila (huella 45f58439a5c5...), con tabla pregunta<->columna y codebook/edicion aplicable (para CIE: edicion que contenga el codigo local).",
+      "evidencia": [
+        {
+          "ruta": "data/portal/inspecciones/12f684e9-f4d5-4714-933d-aa153a812174.json",
+          "sha256": "2094c24f84a07d1a7e9e7f3c9e663b6923e51508a71678eea74860232f2c1179",
+          "localizador": "/definiciones (0-based 37,71,72,73,74)",
+          "afirmacion_soportada": "Diccionario 12f684e9 filas 38/72/73/74/75: CLUES Alfanumerico ej SRIMS000915; MUNICIPIOOCURRENCIA Numerico ej 997; MUNICIPIOOCURRENCIAD Texto ej NO APLICA; LOCALIDADOCURRENCIA Numerico ej 9997; LOCALIDADOCURRENCIAD Texto ej NO APLICA; todas Descripcion 'Pendiente de especificar'."
+        },
+        {
+          "ruta": "data/portal/inspecciones/6f39fc5d-e097-4954-8cd7-10e8f9dea541.json",
+          "sha256": "9faad1f08ffe92d2df47693ce8c7c3a771cfd1cb19f3d921c59d8c6e53e087fe",
+          "localizador": "tablas[0].hoja='SEED 20 09 22', campos pos 38/72/73/74/75",
+          "afirmacion_soportada": "Recurso 6f39fc5d hoja 'SEED 20 09 22' (80 columnas): ids literales 38/72-75 identicos a las variables."
+        },
+        {
+          "ruta": "propuestas/pendientes-muse-r6/salud/evidencia/package_defunciones.json",
+          "sha256": "bb24d75155ade8d973c411ed972a0a2ad593016e3dab2c87f9e203e3ca99ccec",
+          "localizador": "result.numero_variables=80; resources[] (Diccionario 12f684e9; Defunciones 2022 6f39fc5d; periodo 2022-01-01 a 2022-09-22)",
+          "afirmacion_soportada": "Mismo paquete CKAN: diccionario 12f684e9 y recurso 6f39fc5d co-publicados; conteo declarado 80; XLSX con datastore_active=false."
+        }
+      ],
+      "limites": [
+        "Registro separado 'par_estructural_revisado_significado_pendiente': sin concepto aprobado y sin cambio de estatus semantico (variables siguen 'candidata_sin_definicion_suficiente' / 'candidata_por_nombre'; egresos 'fuera_del_nucleo_actual').",
+        "Sin joins, cruces, homologaciones, equivalencias ni identidad de catalogos.",
+        "Sin vigencia nueva del vinculo: los periodos citados son metadatos del recurso CKAN, no del par; no inferir vigencia del nombre del archivo.",
+        "Sin promocion semantica: descripciones 'Pendiente de especificar' y pendientes conservados (EGR 15 pendiente_aclaracion_o_revision; SEED ambiguedad general-vs-fetal; EST 68 sin muestra de valores).",
+        "NO aplicable a vinculos_documentales_revisados: el core (scripts/consolidar_semantica.py:271) exige variable 'respaldada_por_definicion'."
+      ]
+    },
+    {
+      "columna": "https://example.org/mex-ontologi/file-column/6f39fc5d-e097-4954-8cd7-10e8f9dea541%2FSEED%2020%2009%2022%2F74",
+      "variable_documentada": "https://example.org/mex-ontologi/documented-variable/12f684e9-f4d5-4714-933d-aa153a812174%2F74",
+      "definicion_iri": "https://example.org/mex-ontologi/definition/12f684e9-f4d5-4714-933d-aa153a812174%2F74",
+      "recurso": "6f39fc5d-e097-4954-8cd7-10e8f9dea541",
+      "estado": "par_estructural_revisado_significado_pendiente",
+      "estado_semantico_actual": "candidata_por_nombre",
+      "significado": "pendiente",
+      "evidencia_faltante_semantica": "Nota del publicador que vincule el recurso 6f39fc5d (2022-01-01 a 2022-09-22) con la preg 36.8 del Manual SEED Modelo 2022 para esta fila (huella 0485c5640860...), con tabla pregunta<->columna y codebook/edicion aplicable (para CIE: edicion que contenga el codigo local).",
+      "evidencia": [
+        {
+          "ruta": "data/portal/inspecciones/12f684e9-f4d5-4714-933d-aa153a812174.json",
+          "sha256": "2094c24f84a07d1a7e9e7f3c9e663b6923e51508a71678eea74860232f2c1179",
+          "localizador": "/definiciones (0-based 37,71,72,73,74)",
+          "afirmacion_soportada": "Diccionario 12f684e9 filas 38/72/73/74/75: CLUES Alfanumerico ej SRIMS000915; MUNICIPIOOCURRENCIA Numerico ej 997; MUNICIPIOOCURRENCIAD Texto ej NO APLICA; LOCALIDADOCURRENCIA Numerico ej 9997; LOCALIDADOCURRENCIAD Texto ej NO APLICA; todas Descripcion 'Pendiente de especificar'."
+        },
+        {
+          "ruta": "data/portal/inspecciones/6f39fc5d-e097-4954-8cd7-10e8f9dea541.json",
+          "sha256": "9faad1f08ffe92d2df47693ce8c7c3a771cfd1cb19f3d921c59d8c6e53e087fe",
+          "localizador": "tablas[0].hoja='SEED 20 09 22', campos pos 38/72/73/74/75",
+          "afirmacion_soportada": "Recurso 6f39fc5d hoja 'SEED 20 09 22' (80 columnas): ids literales 38/72-75 identicos a las variables."
+        },
+        {
+          "ruta": "propuestas/pendientes-muse-r6/salud/evidencia/package_defunciones.json",
+          "sha256": "bb24d75155ade8d973c411ed972a0a2ad593016e3dab2c87f9e203e3ca99ccec",
+          "localizador": "result.numero_variables=80; resources[] (Diccionario 12f684e9; Defunciones 2022 6f39fc5d; periodo 2022-01-01 a 2022-09-22)",
+          "afirmacion_soportada": "Mismo paquete CKAN: diccionario 12f684e9 y recurso 6f39fc5d co-publicados; conteo declarado 80; XLSX con datastore_active=false."
+        }
+      ],
+      "limites": [
+        "Registro separado 'par_estructural_revisado_significado_pendiente': sin concepto aprobado y sin cambio de estatus semantico (variables siguen 'candidata_sin_definicion_suficiente' / 'candidata_por_nombre'; egresos 'fuera_del_nucleo_actual').",
+        "Sin joins, cruces, homologaciones, equivalencias ni identidad de catalogos.",
+        "Sin vigencia nueva del vinculo: los periodos citados son metadatos del recurso CKAN, no del par; no inferir vigencia del nombre del archivo.",
+        "Sin promocion semantica: descripciones 'Pendiente de especificar' y pendientes conservados (EGR 15 pendiente_aclaracion_o_revision; SEED ambiguedad general-vs-fetal; EST 68 sin muestra de valores).",
+        "NO aplicable a vinculos_documentales_revisados: el core (scripts/consolidar_semantica.py:271) exige variable 'respaldada_por_definicion'."
+      ]
+    },
+    {
+      "columna": "https://example.org/mex-ontologi/file-column/6f39fc5d-e097-4954-8cd7-10e8f9dea541%2FSEED%2020%2009%2022%2F75",
+      "variable_documentada": "https://example.org/mex-ontologi/documented-variable/12f684e9-f4d5-4714-933d-aa153a812174%2F75",
+      "definicion_iri": "https://example.org/mex-ontologi/definition/12f684e9-f4d5-4714-933d-aa153a812174%2F75",
+      "recurso": "6f39fc5d-e097-4954-8cd7-10e8f9dea541",
+      "estado": "par_estructural_revisado_significado_pendiente",
+      "estado_semantico_actual": "candidata_por_nombre",
+      "significado": "pendiente",
+      "evidencia_faltante_semantica": "Nota del publicador que vincule el recurso 6f39fc5d (2022-01-01 a 2022-09-22) con la preg 36.8 del Manual SEED Modelo 2022 para esta fila (huella 6f76513d06bf...), con tabla pregunta<->columna y codebook/edicion aplicable (para CIE: edicion que contenga el codigo local).",
+      "evidencia": [
+        {
+          "ruta": "data/portal/inspecciones/12f684e9-f4d5-4714-933d-aa153a812174.json",
+          "sha256": "2094c24f84a07d1a7e9e7f3c9e663b6923e51508a71678eea74860232f2c1179",
+          "localizador": "/definiciones (0-based 37,71,72,73,74)",
+          "afirmacion_soportada": "Diccionario 12f684e9 filas 38/72/73/74/75: CLUES Alfanumerico ej SRIMS000915; MUNICIPIOOCURRENCIA Numerico ej 997; MUNICIPIOOCURRENCIAD Texto ej NO APLICA; LOCALIDADOCURRENCIA Numerico ej 9997; LOCALIDADOCURRENCIAD Texto ej NO APLICA; todas Descripcion 'Pendiente de especificar'."
+        },
+        {
+          "ruta": "data/portal/inspecciones/6f39fc5d-e097-4954-8cd7-10e8f9dea541.json",
+          "sha256": "9faad1f08ffe92d2df47693ce8c7c3a771cfd1cb19f3d921c59d8c6e53e087fe",
+          "localizador": "tablas[0].hoja='SEED 20 09 22', campos pos 38/72/73/74/75",
+          "afirmacion_soportada": "Recurso 6f39fc5d hoja 'SEED 20 09 22' (80 columnas): ids literales 38/72-75 identicos a las variables."
+        },
+        {
+          "ruta": "propuestas/pendientes-muse-r6/salud/evidencia/package_defunciones.json",
+          "sha256": "bb24d75155ade8d973c411ed972a0a2ad593016e3dab2c87f9e203e3ca99ccec",
+          "localizador": "result.numero_variables=80; resources[] (Diccionario 12f684e9; Defunciones 2022 6f39fc5d; periodo 2022-01-01 a 2022-09-22)",
+          "afirmacion_soportada": "Mismo paquete CKAN: diccionario 12f684e9 y recurso 6f39fc5d co-publicados; conteo declarado 80; XLSX con datastore_active=false."
+        }
+      ],
+      "limites": [
+        "Registro separado 'par_estructural_revisado_significado_pendiente': sin concepto aprobado y sin cambio de estatus semantico (variables siguen 'candidata_sin_definicion_suficiente' / 'candidata_por_nombre'; egresos 'fuera_del_nucleo_actual').",
+        "Sin joins, cruces, homologaciones, equivalencias ni identidad de catalogos.",
+        "Sin vigencia nueva del vinculo: los periodos citados son metadatos del recurso CKAN, no del par; no inferir vigencia del nombre del archivo.",
+        "Sin promocion semantica: descripciones 'Pendiente de especificar' y pendientes conservados (EGR 15 pendiente_aclaracion_o_revision; SEED ambiguedad general-vs-fetal; EST 68 sin muestra de valores).",
+        "NO aplicable a vinculos_documentales_revisados: el core (scripts/consolidar_semantica.py:271) exige variable 'respaldada_por_definicion'."
+      ]
+    },
+    {
+      "columna": "https://example.org/mex-ontologi/file-column/ad6f77b8-569d-4826-8ce0-3c6efddcb098%2FEgresos%20Hospitalarios%202018-2022%2F15",
+      "variable_documentada": "https://example.org/mex-ontologi/documented-variable/f89137ba-d82e-44fe-80c7-cc355f09f9f5%2F15",
+      "definicion_iri": "https://example.org/mex-ontologi/definition/f89137ba-d82e-44fe-80c7-cc355f09f9f5%2F15",
+      "recurso": "ad6f77b8-569d-4826-8ce0-3c6efddcb098",
+      "estado": "par_estructural_revisado_significado_pendiente",
+      "estado_semantico_actual": "candidata_por_nombre",
+      "significado": "pendiente",
+      "evidencia_faltante_semantica": "Documento que fije qué cuenta Total_Egresos (egresos vs urgencias): aclaración aplicable a la fila o diccionario corregido / fe de erratas (conjunto+diccionario+fila+huella citados). No localizado en fuentes examinadas (portal CKAN, DGIS/CONAPO/INEGI revisados; R6). En manos del publicador según R6; la búsqueda negativa acotada no prueba exclusividad ni capacidad única: vale cualquier evidencia primaria inequívoca vinculada a la fila, venga de la fuente que venga.",
+      "evidencia": [
+        {
+          "ruta": "data/portal/inspecciones/f89137ba-d82e-44fe-80c7-cc355f09f9f5.json",
+          "sha256": "59c6077b4f8bb93f2bf002284cf0c18e0c6c9d1f91ded2e834756dbd45ffd73b",
+          "localizador": "/definiciones/14",
+          "afirmacion_soportada": "Diccionario f89137ba fila 15: Total_Egresos, Numerico entero, ejemplo 2, Descripcion 'Total de urgencias atendidas', obligatoriedad Si."
+        },
+        {
+          "ruta": "data/portal/inspecciones/ad6f77b8-569d-4826-8ce0-3c6efddcb098.json",
+          "sha256": "6c28880ccf4c8d9aa94493e7e1d1b359663137e1449d8747fb60139382aae068",
+          "localizador": "tablas[0].hoja='Egresos Hospitalarios 2018-2022', campos[14] pos 15",
+          "afirmacion_soportada": "Recurso ad6f77b8 hoja 'Egresos Hospitalarios 2018-2022' (15 columnas): col 15 Total_Egresos."
+        },
+        {
+          "ruta": "propuestas/investigacion-post-r6/diversos/evidencia/ckan-egresos.json",
+          "sha256": "65229d1d77ae5c0ce9476a30bf50542a842708f27ef5897c0107dce6e8d3ca25",
+          "localizador": "result.numero_variables=15; resources[1] ad6f77b8 (2015-01-01 a 2022-12-31); Fuentes extras vacias",
+          "afirmacion_soportada": "Mismo conjunto CKAN 8993c917: diccionario f89137ba y recurso ad6f77b8 co-publicados; conteo declarado 15; sin metodologia publicada."
+        }
+      ],
+      "limites": [
+        "Registro separado 'par_estructural_revisado_significado_pendiente': sin concepto aprobado y sin cambio de estatus semantico (variables siguen 'candidata_sin_definicion_suficiente' / 'candidata_por_nombre'; egresos 'fuera_del_nucleo_actual').",
+        "Sin joins, cruces, homologaciones, equivalencias ni identidad de catalogos.",
+        "Sin vigencia nueva del vinculo: los periodos citados son metadatos del recurso CKAN, no del par; no inferir vigencia del nombre del archivo.",
+        "Sin promocion semantica: descripciones 'Pendiente de especificar' y pendientes conservados (EGR 15 pendiente_aclaracion_o_revision; SEED ambiguedad general-vs-fetal; EST 68 sin muestra de valores).",
+        "NO aplicable a vinculos_documentales_revisados: el core (scripts/consolidar_semantica.py:271) exige variable 'respaldada_por_definicion'."
+      ]
+    }
+  ]
+}

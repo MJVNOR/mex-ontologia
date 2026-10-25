@@ -1,6 +1,6 @@
 # Integración central de las cinco entregas — ronda 1
 
-La tabla siguiente conserva los resultados históricos de la primera ronda. El estado actual posterior a la ronda 2 se documenta en reports/integracion-ronda-2.md.
+La tabla siguiente conserva los resultados históricos de la primera ronda. El estado vigente se documenta en reports/consolidacion-semantica.md y reports/cobertura-muse.md.
 
 Las carpetas originales de propuestas se conservan. La generación lee copias de evidencia fijadas por SHA-256 en data/integracion; no depende de cambios posteriores en las carpetas de agentes ni consulta la red.
 
@@ -21,7 +21,7 @@ Las carpetas originales de propuestas se conservan. La generación lee copias de
 
 - Agente 1: ocho vínculos documentales a hojas completas. Las cuatro publicaciones educativas conservan sus referencias por conjunto, aunque comparten bytes. Las muestras de datos no se integran: algunos metadatos de muestra del JSON repiten el campo de servicios en otras variables; no se usan como evidencia de pertenencia. La identificación se sustenta en diccionario y catálogo completo. La referencia des_mpo_res sigue sin resolver y conserva las dos definiciones de origen.
 - Agente 2: 1850 observaciones con composición cruda exacta 2+3+4, sin padding ni conversión numérica. Son localidades incluidas en IML_2020, no un catálogo oficial completo ni una equivalencia con una edición INEGI. No se importó el contraste externo puntual como acreditación de cobertura.
-- Agente 3: 20 conceptos/reglas, restringidos simultáneamente por definición, diccionario, conjunto, nombre y descripción. Promocionan 24 significados; 23 siguen pendientes. Las 1308 definiciones fuera del núcleo conservan ese estado.
+- Agente 3: 20 conceptos/reglas, restringidos simultáneamente por definición, diccionario, conjunto, nombre y descripción. Esta ronda promocionó 24 significados; entonces quedaron 23 candidatos y 1308 definiciones fuera del núcleo. Las ampliaciones posteriores se registran en la cobertura vigente.
 - Agente 4: 99 correspondencias y un alias técnico limitado a la columna de divorcios 2023. a–o de nacimientos 2024 no se promueve. Las 62 revisiones existentes se conservan.
 - Agente 5: 16 comprobaciones compatibles, 11 con excepciones y una ausencia de columna. Se vuelven a leer las 25 fuentes y se verifican claves, filas, pertenencia a catálogo y composición exacta. No se asigna un sistema de identificadores a columnas ni se promociona su correspondencia semántica. 26998/26999 siguen siendo categorías no municipales. Víctimas 2015 solo tiene revisión completa de encabezado; validación de Clave_Ent no aplicable.
 

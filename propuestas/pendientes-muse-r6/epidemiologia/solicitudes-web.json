@@ -1,0 +1,81 @@
+{
+  "rol": "epidemiologia",
+  "destinatario": "web",
+  "nota": "Sin control de Obscura; IDs nuevos EPI-R6-01..03 (no reutilizan SW-EPI-*); URLs primarias del portal verificadas (R5 R05 + revalidacion R6).",
+  "solicitudes": [
+    {
+      "id": "EPI-R6-01",
+      "url_primaria": "https://datos.sonora.gob.mx/dataset/dca16d84-dbf0-4501-b702-dc6372a480ea",
+      "documento_exacto_nuevo": "Instrumento SUIVE (manual/formato semanal) edicion aplicable al periodo 2022-01-01/2022-12-31 del recurso 1689b19c, o nota del publicador Sonora que vincule edicion-recurso-periodo: objeto y version de cve_cie10; objeto y periodo/regla de acumulado; particion que denota el sufijo f; objeto contado del bloque ssa/imss_ord/issste/otras/imss_sol/d_if/pemex/sedena/sedemar. El portal hoy no publica Fuentes extras ni nota (verificado fresco R6).",
+      "definiciones_afectadas": [
+        "https://example.org/mex-ontologi/definition/2334deaa-dd0c-444e-b038-4cc556ad715d%2F9",
+        "https://example.org/mex-ontologi/definition/2334deaa-dd0c-444e-b038-4cc556ad715d%2F11",
+        "https://example.org/mex-ontologi/definition/2334deaa-dd0c-444e-b038-4cc556ad715d%2F13",
+        "https://example.org/mex-ontologi/definition/2334deaa-dd0c-444e-b038-4cc556ad715d%2F23",
+        "https://example.org/mex-ontologi/definition/2334deaa-dd0c-444e-b038-4cc556ad715d%2F24",
+        "https://example.org/mex-ontologi/definition/2334deaa-dd0c-444e-b038-4cc556ad715d%2F25",
+        "https://example.org/mex-ontologi/definition/2334deaa-dd0c-444e-b038-4cc556ad715d%2F26",
+        "https://example.org/mex-ontologi/definition/2334deaa-dd0c-444e-b038-4cc556ad715d%2F27",
+        "https://example.org/mex-ontologi/definition/2334deaa-dd0c-444e-b038-4cc556ad715d%2F28",
+        "https://example.org/mex-ontologi/definition/2334deaa-dd0c-444e-b038-4cc556ad715d%2F29",
+        "https://example.org/mex-ontologi/definition/2334deaa-dd0c-444e-b038-4cc556ad715d%2F30",
+        "https://example.org/mex-ontologi/definition/2334deaa-dd0c-444e-b038-4cc556ad715d%2F31",
+        "https://example.org/mex-ontologi/definition/2334deaa-dd0c-444e-b038-4cc556ad715d%2F32",
+        "https://example.org/mex-ontologi/definition/2334deaa-dd0c-444e-b038-4cc556ad715d%2F33",
+        "https://example.org/mex-ontologi/definition/2334deaa-dd0c-444e-b038-4cc556ad715d%2F34",
+        "https://example.org/mex-ontologi/definition/2334deaa-dd0c-444e-b038-4cc556ad715d%2F35",
+        "https://example.org/mex-ontologi/definition/2334deaa-dd0c-444e-b038-4cc556ad715d%2F36",
+        "https://example.org/mex-ontologi/definition/2334deaa-dd0c-444e-b038-4cc556ad715d%2F37",
+        "https://example.org/mex-ontologi/definition/2334deaa-dd0c-444e-b038-4cc556ad715d%2F38",
+        "https://example.org/mex-ontologi/definition/2334deaa-dd0c-444e-b038-4cc556ad715d%2F39",
+        "https://example.org/mex-ontologi/definition/2334deaa-dd0c-444e-b038-4cc556ad715d%2F40",
+        "https://example.org/mex-ontologi/definition/2334deaa-dd0c-444e-b038-4cc556ad715d%2F41",
+        "https://example.org/mex-ontologi/definition/2334deaa-dd0c-444e-b038-4cc556ad715d%2F42",
+        "https://example.org/mex-ontologi/definition/2334deaa-dd0c-444e-b038-4cc556ad715d%2F43",
+        "https://example.org/mex-ontologi/definition/2334deaa-dd0c-444e-b038-4cc556ad715d%2F44"
+      ],
+      "evidencia_exacta_requerida": "Fragmento con definicion por columna + vinculo edicion-recurso-periodo; URL, fecha y SHA del documento."
+    },
+    {
+      "id": "EPI-R6-02",
+      "url_primaria": "https://datos.sonora.gob.mx/dataset/dca16d84-dbf0-4501-b702-dc6372a480ea/resource/2334deaa-dd0c-444e-b038-4cc556ad715d",
+      "documento_exacto_nuevo": "Diccionario corregido con descripcion para las 22 columnas hoy en 'Pendiente de especificar' + regla de computo de acumulado/totalm/totalf (preguntas cuantitativas verificables en el xlsx: ¿totalm = suma serie sin sufijo? ¿totalf = suma serie f? ¿relacion acumulado vs totalm+totalf vs meses? ¿f denota una particion por sexo dado totalf='Total acumulado de Mujeres'?).",
+      "definiciones_afectadas": [
+        "https://example.org/mex-ontologi/definition/2334deaa-dd0c-444e-b038-4cc556ad715d%2F11",
+        "https://example.org/mex-ontologi/definition/2334deaa-dd0c-444e-b038-4cc556ad715d%2F23",
+        "https://example.org/mex-ontologi/definition/2334deaa-dd0c-444e-b038-4cc556ad715d%2F24",
+        "https://example.org/mex-ontologi/definition/2334deaa-dd0c-444e-b038-4cc556ad715d%2F25",
+        "https://example.org/mex-ontologi/definition/2334deaa-dd0c-444e-b038-4cc556ad715d%2F26",
+        "https://example.org/mex-ontologi/definition/2334deaa-dd0c-444e-b038-4cc556ad715d%2F27",
+        "https://example.org/mex-ontologi/definition/2334deaa-dd0c-444e-b038-4cc556ad715d%2F28",
+        "https://example.org/mex-ontologi/definition/2334deaa-dd0c-444e-b038-4cc556ad715d%2F29",
+        "https://example.org/mex-ontologi/definition/2334deaa-dd0c-444e-b038-4cc556ad715d%2F30",
+        "https://example.org/mex-ontologi/definition/2334deaa-dd0c-444e-b038-4cc556ad715d%2F31",
+        "https://example.org/mex-ontologi/definition/2334deaa-dd0c-444e-b038-4cc556ad715d%2F32",
+        "https://example.org/mex-ontologi/definition/2334deaa-dd0c-444e-b038-4cc556ad715d%2F33",
+        "https://example.org/mex-ontologi/definition/2334deaa-dd0c-444e-b038-4cc556ad715d%2F34",
+        "https://example.org/mex-ontologi/definition/2334deaa-dd0c-444e-b038-4cc556ad715d%2F35",
+        "https://example.org/mex-ontologi/definition/2334deaa-dd0c-444e-b038-4cc556ad715d%2F36",
+        "https://example.org/mex-ontologi/definition/2334deaa-dd0c-444e-b038-4cc556ad715d%2F37",
+        "https://example.org/mex-ontologi/definition/2334deaa-dd0c-444e-b038-4cc556ad715d%2F38",
+        "https://example.org/mex-ontologi/definition/2334deaa-dd0c-444e-b038-4cc556ad715d%2F39",
+        "https://example.org/mex-ontologi/definition/2334deaa-dd0c-444e-b038-4cc556ad715d%2F40",
+        "https://example.org/mex-ontologi/definition/2334deaa-dd0c-444e-b038-4cc556ad715d%2F41",
+        "https://example.org/mex-ontologi/definition/2334deaa-dd0c-444e-b038-4cc556ad715d%2F42",
+        "https://example.org/mex-ontologi/definition/2334deaa-dd0c-444e-b038-4cc556ad715d%2F43",
+        "https://example.org/mex-ontologi/definition/2334deaa-dd0c-444e-b038-4cc556ad715d%2F44"
+      ],
+      "evidencia_exacta_requerida": "Filas del diccionario con descripcion no vacia + respuestas si/no a cada pregunta de computo."
+    },
+    {
+      "id": "EPI-R6-03",
+      "url_primaria": "https://datos.sonora.gob.mx/dataset/dca16d84-dbf0-4501-b702-dc6372a480ea",
+      "documento_exacto_nuevo": "Version CIE aplicable al recurso 2022 para cve_cie10 (ejemplo 'A04, A08-A09 excepto A08.0', catalogo declarado vacio) + nota que fije el intervalo real de de01_a_04 (nombre 01-04 vs descripcion 'entre 1 y 5 anos') y el tratamiento de la edad 5 frente a de05_a_09 ('entre 5 y 9').",
+      "definiciones_afectadas": [
+        "https://example.org/mex-ontologi/definition/2334deaa-dd0c-444e-b038-4cc556ad715d%2F9",
+        "https://example.org/mex-ontologi/definition/2334deaa-dd0c-444e-b038-4cc556ad715d%2F13"
+      ],
+      "evidencia_exacta_requerida": "Vinculo version-recurso-periodo + texto que resuelva nombre vs descripcion y el solape en edad 5."
+    }
+  ]
+}

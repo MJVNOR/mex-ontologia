@@ -1,0 +1,82 @@
+{
+ "rol_origen": "Q-unidades",
+ "rol_destino": "W-estandares",
+ "nota": "Copia de trabajo de las 6 peticiones del canal canonico, mas un addendum por ambiguedad de 'Toneladas'. Q no navega: W es el unico navegador. Ninguna URI se congela como aprobada.",
+ "canal_canonico": {
+  "ruta": "propuestas/ampliacion-post-r9/ejecucion-20261024/Q-unidades/peticiones-web.json",
+  "sha256": "00921b383e537dda8cbbeea1d31aef9bb2ff6d3ab0e57ab644536bfb17643452",
+  "modificado_por_v002": false
+ },
+ "estado_verificacion": {
+  "sello_W_vigente": {
+   "ruta": "propuestas/plan-tras-r8/ejecucion-20261024/W-estandares/v003/congelada.json",
+   "sha256": "6876a312956e110fff535df9aea8eeee27e25ce5a11f58b10c280f52126b3190",
+   "acredita": [
+    "MilliM",
+    "HA"
+   ],
+   "acredita_alguna_de_las_6": false
+  },
+  "verificadas_de_las_6": 0,
+  "consecuencia": "v002 no afirma ninguna URI QUDT; las declaraciones quedan cualificadas y pendientes."
+ },
+ "solicitudes": [
+  {
+   "caso": "Q-U01",
+   "id": "Q-W-01",
+   "pide": "URI QUDT 3.5.3 normativo exacto (sujeto RDF http, version 3.5.3, copia y SHA) para tonelada metrica correspondiente al literal 'Toneladas'. Solo termino exacto aplicable; sin sustituciones ni factores.",
+   "pista_termino": "tonelada metrica, simbolo t",
+   "url_primaria_concreta": "https://qudt.org/vocab/unit/"
+  },
+  {
+   "caso": "Q-U02",
+   "id": "Q-W-02",
+   "pide": "URI QUDT 3.5.3 normativo exacto (sujeto RDF http, version 3.5.3, copia y SHA) para kilogramo correspondiente al literal 'Kilogramos'. Solo termino exacto aplicable; sin sustituciones ni factores.",
+   "pista_termino": "kilogramo, simbolo kg",
+   "url_primaria_concreta": "https://qudt.org/vocab/unit/"
+  },
+  {
+   "caso": "Q-U03",
+   "id": "Q-W-03",
+   "pide": "URI QUDT 3.5.3 normativo exacto (sujeto RDF http, version 3.5.3, copia y SHA) para megavatio correspondiente al literal 'MW'. Solo termino exacto aplicable; sin sustituciones ni factores.",
+   "pista_termino": "megavatio, simbolo MW",
+   "url_primaria_concreta": "https://qudt.org/vocab/unit/"
+  },
+  {
+   "caso": "Q-U04",
+   "id": "Q-W-04",
+   "pide": "URI QUDT 3.5.3 normativo exacto (sujeto RDF http, version 3.5.3, copia y SHA) para gigavatio-hora correspondiente al literal 'GWh'. Solo termino exacto aplicable; sin sustituciones ni factores.",
+   "pista_termino": "gigavatio-hora, simbolo GWh",
+   "url_primaria_concreta": "https://qudt.org/vocab/unit/"
+  },
+  {
+   "caso": "Q-U05",
+   "id": "Q-W-05",
+   "pide": "URI QUDT 3.5.3 normativo exacto (sujeto RDF http, version 3.5.3, copia y SHA) para porcentaje correspondiente al literal 'Porcentaje'. Solo termino exacto aplicable; sin sustituciones ni factores.",
+   "pista_termino": "porcentaje",
+   "url_primaria_concreta": "https://qudt.org/vocab/unit/"
+  },
+  {
+   "caso": "Q-U06",
+   "id": "Q-W-06",
+   "pide": "URI QUDT 3.5.3 normativo exacto (sujeto RDF http, version 3.5.3, copia y SHA) para grado Celsius correspondiente al literal 'Grados celcius' (sic, sin normalizar). Solo termino exacto aplicable; sin sustituciones ni factores.",
+   "pista_termino": "grado Celsius",
+   "url_primaria_concreta": "https://qudt.org/vocab/unit/"
+  }
+ ],
+ "addendum": [
+  {
+   "id": "Q-W-01b",
+   "caso": "Q-U01",
+   "sustituye_a": "Q-W-01",
+   "motivo": "Q-W-01 pedia 'tonelada metrica' por presuposicion. El literal local 'Toneladas' no declara variante: la peticion vigente para Q-U01 es Q-W-01b, sin eleccion de variante por Q.",
+   "pide": "Documentar que terminos exactos de QUDT 3.5.3 distinguen las variantes de tonelada (metrica, corta, larga), con sujeto RDF, version, copia y SHA. Q no elige variante: solo necesita saber que se esta distinguiendo.",
+   "no_pide": "Que la norma decida la unidad local; eso exige evidencia local.",
+   "url_primaria_concreta": "https://qudt.org/vocab/unit/"
+  }
+ ],
+ "excluido": {
+  "hm3/HectoM3": "busqueda agotada en W v003 (404 + ausente del indice); no se repite",
+  "M3": "no se usa como sustituto de hm3 ni con factor"
+ }
+}

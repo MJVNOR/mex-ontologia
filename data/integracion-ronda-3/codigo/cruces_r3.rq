@@ -1,0 +1,34 @@
+PREFIX mex: <https://example.org/mex-ontologi/vocab/>
+# Comparaciones 2020 con evidencia separada por fuente: URIs, valores, medidas,
+# nombres, SHA unico, hoja y filas por fuente. Igualdad aritmetica, no identidad.
+SELECT ?cod ?rev ?decision
+       ?eg ?nom_gg ?val_gg ?med_gg ?sha_gg ?hoja_gg ?filas_gg
+       ?ei ?nom_ind ?val_ind ?med_ind ?sha_ind ?hoja_ind ?fila_ind
+WHERE {
+  ?c a mex:ComparacionMunicipal2020 ;
+     mex:codigoTextual ?cod ;
+     mex:comparacionDe ?rev ;
+     mex:igualdadValores true .
+  ?rev mex:estadoDecision ?decision .
+  ?eg a mex:EvidenciaFuenteComparacion ;
+      mex:evidenciaDeFuente ?c ;
+      mex:fuenteRol "grandes_grupos" ;
+      mex:nombreOrigen ?nom_gg ;
+      mex:valorOrigen ?val_gg ;
+      mex:medidaOrigen ?med_gg ;
+      mex:shaFuente ?sha_gg ;
+      mex:hojaFuente ?hoja_gg ;
+      mex:filaOrigenHombres ?fh ;
+      mex:filaOrigenMujeres ?fm .
+  ?ei a mex:EvidenciaFuenteComparacion ;
+      mex:evidenciaDeFuente ?c ;
+      mex:fuenteRol "indicadores" ;
+      mex:nombreOrigen ?nom_ind ;
+      mex:valorOrigen ?val_ind ;
+      mex:medidaOrigen ?med_ind ;
+      mex:shaFuente ?sha_ind ;
+      mex:hojaFuente ?hoja_ind ;
+      mex:filaOrigen ?fila_ind .
+  BIND(CONCAT(STR(?fh), ",", STR(?fm)) AS ?filas_gg)
+}
+ORDER BY ?cod

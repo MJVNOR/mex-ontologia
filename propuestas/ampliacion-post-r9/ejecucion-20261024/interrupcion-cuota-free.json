@@ -1,0 +1,37 @@
+{
+  "fecha_utc": "2026-10-24T20:39:01.643220+00:00",
+  "estado": "interrumpido_por_cuota_proveedor",
+  "modelo": "opencode/deepseek-v4.1-flash-free",
+  "error": {
+    "tipo": "provider.quota",
+    "http": 429,
+    "mensaje": "Free usage limit reached. Subscribe to OpenCode Go to keep going: https://opencode.ai/go",
+    "sesion_evidencia": "ses_e905e3393ffeYXxMQQzunnGlG1"
+  },
+  "sesiones_pendientes_interrumpidas": true,
+  "reintentos_automaticos": false,
+  "r10_instalada": false,
+  "r10_evidencia_central_existe": false,
+  "archivos_base_comprobados": 130,
+  "archivos_base_cambiados": [],
+  "config_toml_intacto": true,
+  "payload_archivos_comprobados": 16,
+  "payload_cambiados": [],
+  "aceptadas_sha256": "df5705eaf6e0b8d8dcb0257a54a258264cda3e8adfe8655f87dfda90b9c2031c",
+  "suite_base": {
+    "pruebas": 213,
+    "resultado": "OK",
+    "segundos": 58.295,
+    "log": "suite-base-r9.log"
+  },
+  "sincronizacion_studio_ejecutada_en_esta_ampliacion": false,
+  "pendiente": [
+    "Completar y sellar auditorías independientes de top50/análisis y payload real.",
+    "Revisar K-codigo/v001 (corrección PROV y coincidencia IDs de NodeShapes); V-pruebas no entregó pruebas.",
+    "Ejecutar pruebas reales del integrador y mutaciones; instalar únicamente bytes aceptados.",
+    "Publicar top50 y tres análisis separados (bloqueados documentalmente).",
+    "Instalar R10, regenerar, suite completa, RDF/SHACL y una sincronización Studio con respaldo si procede.",
+    "Cerrar informes y avisar al otro chat únicamente tras completar trabajo."
+  ],
+  "nota_auditoria_a": "Salida parcial no es dictamen: contiene fallos de check (índice documental 1-based y copia de fila envuelta). Deben corregirse antes de decidir; Q-U06 usa API y no exige campos http/completo de archivo."
+}

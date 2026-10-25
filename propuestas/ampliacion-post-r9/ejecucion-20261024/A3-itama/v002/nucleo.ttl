@@ -1,0 +1,109 @@
+# A3-ITAMA v002 — extracto de evidencia; NO sustituye al nucleo.
+# Fuente: data/semantica/nucleo.ttl
+# SHA256 fuente: e570e590004ede2d20a925890e550977f4c28a1561c8621a1ff4c31ad821ac79
+# Extraido por: scripts/analisis_a3_itama_v002.py
+#
+# Distincion conservada:
+#   - Sexo ITAMA: 2 conceptos con IRI propio (sexo-persona-externada-itama,
+#     sexo-persona-internada-itama), respaldados por los diccionarios
+#     07781b38-8a53-42eb-b3b7-3c1ebc6a4415 y
+#     a7ee5717-b14d-439b-9508-bada58d0d185, que definen "sexo".
+#   - Escolaridad ITAMA: 0 conceptos. Los 3 conceptos de escolaridad del
+#     nucleo (escolaridad-beneficiado-mano, escolaridad-difunto,
+#     escolaridad-madre) pertenecen a otros universos y no definen la
+#     columna ESCOLARIDAD de ITAMA.
+#   - tiempo-sentencia-persona-externada se define en ITAMA pero su IRI no
+#     lleva sufijo -itama; queda fuera de este extracto.
+
+@prefix dct: <http://purl.org/dc/terms/> .
+@prefix mex: <https://example.org/mex-ontologi/vocab/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+
+<https://example.org/mex-ontologi/concept/sexo-persona-externada-itama> a skos:Concept,
+        mex:ConceptoCompartido ;
+    rdfs:label "Sexo de la persona externada"@es ;
+    skos:broader <https://example.org/mex-ontologi/concept/sexo-declarado> ;
+    skos:definition "Sexo de la persona externada en ITAMA. Población: personas externadas."@es ;
+    skos:inScheme <https://example.org/mex-ontologi/concept-scheme/nucleo-compartido> ;
+    skos:prefLabel "Sexo de la persona externada"@es ;
+    prov:wasDerivedFrom <file:///C:/Users/marti/Documents/MEX-Ontologi/ontologia/semantica.json> ;
+    mex:requiereCondicion <https://example.org/mex-ontologi/connection-condition/catalogo>,
+        <https://example.org/mex-ontologi/connection-condition/contexto>,
+        <https://example.org/mex-ontologi/connection-condition/grano>,
+        <https://example.org/mex-ontologi/connection-condition/periodo>,
+        <https://example.org/mex-ontologi/connection-condition/rol>,
+        <https://example.org/mex-ontologi/connection-condition/unidad> .
+
+<https://example.org/mex-ontologi/concept/sexo-persona-internada-itama> a skos:Concept,
+        mex:ConceptoCompartido ;
+    rdfs:label "Sexo de la persona internada"@es ;
+    skos:broader <https://example.org/mex-ontologi/concept/sexo-declarado> ;
+    skos:definition "Sexo de la persona internada en ITAMA. Población: personas internadas."@es ;
+    skos:inScheme <https://example.org/mex-ontologi/concept-scheme/nucleo-compartido> ;
+    skos:prefLabel "Sexo de la persona internada"@es ;
+    prov:wasDerivedFrom <file:///C:/Users/marti/Documents/MEX-Ontologi/ontologia/semantica.json> ;
+    mex:requiereCondicion <https://example.org/mex-ontologi/connection-condition/catalogo>,
+        <https://example.org/mex-ontologi/connection-condition/contexto>,
+        <https://example.org/mex-ontologi/connection-condition/grano>,
+        <https://example.org/mex-ontologi/connection-condition/periodo>,
+        <https://example.org/mex-ontologi/connection-condition/rol>,
+        <https://example.org/mex-ontologi/connection-condition/unidad> .
+
+<https://example.org/mex-ontologi/concept/delito-persona-externada-itama> a skos:Concept,
+        mex:ConceptoCompartido ;
+    rdfs:label "Delito de la persona externada"@es ;
+    skos:definition "Delito por el cual estuvo recluida la persona externada en ITAMA."@es ;
+    skos:inScheme <https://example.org/mex-ontologi/concept-scheme/nucleo-compartido> ;
+    skos:prefLabel "Delito de la persona externada"@es ;
+    prov:wasDerivedFrom <file:///C:/Users/marti/Documents/MEX-Ontologi/ontologia/semantica.json> ;
+    mex:requiereCondicion <https://example.org/mex-ontologi/connection-condition/catalogo>,
+        <https://example.org/mex-ontologi/connection-condition/contexto>,
+        <https://example.org/mex-ontologi/connection-condition/grano>,
+        <https://example.org/mex-ontologi/connection-condition/periodo>,
+        <https://example.org/mex-ontologi/connection-condition/rol>,
+        <https://example.org/mex-ontologi/connection-condition/unidad> .
+
+<https://example.org/mex-ontologi/concept/delito-persona-internada-itama> a skos:Concept,
+        mex:ConceptoCompartido ;
+    rdfs:label "Delito de la persona internada"@es ;
+    skos:definition "Delito por el cual está recluida la persona internada en ITAMA."@es ;
+    skos:inScheme <https://example.org/mex-ontologi/concept-scheme/nucleo-compartido> ;
+    skos:prefLabel "Delito de la persona internada"@es ;
+    prov:wasDerivedFrom <file:///C:/Users/marti/Documents/MEX-Ontologi/ontologia/semantica.json> ;
+    mex:requiereCondicion <https://example.org/mex-ontologi/connection-condition/catalogo>,
+        <https://example.org/mex-ontologi/connection-condition/contexto>,
+        <https://example.org/mex-ontologi/connection-condition/grano>,
+        <https://example.org/mex-ontologi/connection-condition/periodo>,
+        <https://example.org/mex-ontologi/connection-condition/rol>,
+        <https://example.org/mex-ontologi/connection-condition/unidad> .
+
+<https://example.org/mex-ontologi/concept/edad-persona-externada-itama> a skos:Concept,
+        mex:ConceptoCompartido ;
+    rdfs:label "Edad actual de la persona externada"@es ;
+    skos:definition "Edad actual de la persona externada en ITAMA. Población: personas externadas. Unidad no declarada en la fila."@es ;
+    skos:inScheme <https://example.org/mex-ontologi/concept-scheme/nucleo-compartido> ;
+    skos:prefLabel "Edad actual de la persona externada"@es ;
+    prov:wasDerivedFrom <file:///C:/Users/marti/Documents/MEX-Ontologi/ontologia/semantica.json> ;
+    mex:requiereCondicion <https://example.org/mex-ontologi/connection-condition/catalogo>,
+        <https://example.org/mex-ontologi/connection-condition/contexto>,
+        <https://example.org/mex-ontologi/connection-condition/grano>,
+        <https://example.org/mex-ontologi/connection-condition/periodo>,
+        <https://example.org/mex-ontologi/connection-condition/rol>,
+        <https://example.org/mex-ontologi/connection-condition/unidad> .
+
+<https://example.org/mex-ontologi/concept/edad-persona-internada-itama> a skos:Concept,
+        mex:ConceptoCompartido ;
+    rdfs:label "Edad actual de la persona internada"@es ;
+    skos:definition "Edad actual de la persona internada en ITAMA. Población: personas internadas. Unidad no declarada en la fila."@es ;
+    skos:inScheme <https://example.org/mex-ontologi/concept-scheme/nucleo-compartido> ;
+    skos:prefLabel "Edad actual de la persona internada"@es ;
+    prov:wasDerivedFrom <file:///C:/Users/marti/Documents/MEX-Ontologi/ontologia/semantica.json> ;
+    mex:requiereCondicion <https://example.org/mex-ontologi/connection-condition/catalogo>,
+        <https://example.org/mex-ontologi/connection-condition/contexto>,
+        <https://example.org/mex-ontologi/connection-condition/grano>,
+        <https://example.org/mex-ontologi/connection-condition/periodo>,
+        <https://example.org/mex-ontologi/connection-condition/rol>,
+        <https://example.org/mex-ontologi/connection-condition/unidad> .

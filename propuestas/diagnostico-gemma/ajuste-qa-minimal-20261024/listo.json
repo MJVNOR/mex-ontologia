@@ -1,0 +1,39 @@
+{
+  "ajuste": "QA thinking minimal por turno (extra_body.google.thinking_config)",
+  "justificacion": "C6 exacto timeout90s vs mismo input9054tok con thinking minimal 200/51.56s (n=1, confusion cache documentada)",
+  "modelo": "gemma-4-31b-it (sin cambio)",
+  "archivos_modificados": [
+    "index.ts",
+    "providers/openai.ts",
+    "providers/types.ts"
+  ],
+  "archivos_nuevos": [
+    "tests/qa-minimal-thinking.test.ts"
+  ],
+  "respaldo": "respaldo/ + respaldo/manifiesto.json (SHAs == dictamen aplicar)",
+  "pruebas": {
+    "qa+gemma": "26/26 (21+5 nuevas)",
+    "raiz": "49 passed/1 skipped",
+    "tsc": "exit 0 limpio",
+    "build": "esbuild 556.7kb (repo dist/, instalado intacto)"
+  },
+  "garantias": [
+    "sin set/reset de estado compartido",
+    "solo answerOnce solicita la opcion",
+    "runTurn/build/sketch sin opcion",
+    "otros providers ignoran opcion (param opcional)",
+    "retry conserva opcion (viaja por parametro)",
+    "sin cambios grafo/manifiestos/.env/prompts/modelo",
+    "0 llamadas modelo",
+    "instalado NO tocado (sha 5b190f2c...)"
+  ],
+  "rutas": {
+    "respaldo": "respaldo/",
+    "logs": "logs/",
+    "diffs": "logs/diff-*.patch",
+    "tests": "<repo-agent>/tests/qa-minimal-thinking.test.ts"
+  },
+  "pendiente_revision_independiente": true,
+  "instalado": false,
+  "reiniciado": false
+}

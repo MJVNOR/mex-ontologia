@@ -1,0 +1,85 @@
+--- PROPUESTO, NO APLICADO (root/integrador; recompilar + reinicio Studio) ---
+Atiende evidencia R6: handshake Gemma explícito + budget 6500 activos y C2 500
+igual (ver correccion-d1.md: D1 queda como robustez, no causa).
+Logica probada en aislamiento: proveedor-retry.mjs + qa-guardia.mjs,
+test_acotado.mjs 10/10 (fetch stub + reloj fake; cero red/modelo/espera real).
+Cero cambio de modelo. Sin mutacion en camino degradado.
+
+--- a/studio/src-tauri/sidecars/agent/index.ts (answerFromGraph)
++++ b/studio/src-tauri/sidecars/agent/index.ts
+@@
+   provider.setSystem(QA_SYSTEM_PROMPT);
+   try {
+     const answer = await answerOnce(QA_SYSTEM_PROMPT, context);
+-    if (answer) {
+-      writeChatCache(key, answer);
+-      send({ type: 'text', content: answer });
+-      return false;
+-    }
+-    return await runTurn(context);
++    if (answer.trim()) {
++      writeChatCache(key, answer);
++      send({ type: 'text', content: answer });
++      return false;
++    }
++    // Respuesta final vacia (thought-only recortado, recitacion, sin contenido):
++    // NO caer a runTurn con las 114 tools (riesgo de mutacion via onto_apply /
++    // onto_ingest desde un camino degradado). Error claro, sin cachear vacio.
++    send({ type: 'error', error: 'El modelo devolvio una respuesta vacia (sin contenido final). No se ejecuto ninguna herramienta ni se modifico el grafo. Reintente la pregunta.' });
++    return false;
+   } finally {
+     provider.setSystem(SYSTEM_PROMPT);
+   }
+
+--- a/studio/src-tauri/sidecars/agent/providers/openai.ts
++++ b/studio/src-tauri/sidecars/agent/providers/openai.ts
+@@ Politica: 1 solo reintento (2 intentos), SOLO 500/502/503 y 429, SOLO en
+@@ completion antes de ejecutar herramientas; misma Gemma; 500 vs 429 distintos.
++/** Extrae `retryDelay: "Ns"` de RetryInfo; 0 si ausente. Tope 120s. */
++export function parseRetryDelayMs(bodyText: string): number {
++  try {
++    const m = String(bodyText ?? '').match(/"retryDelay"\s*:\s*"(\d+(?:\.\d+)?)s"/);
++    if (m) return Math.min(Math.round(Number(m[1]) * 1000), 120000);
++  } catch { /* sin retardo declarado */ }
++  return 0;
++}
++/** Piso de espera Gemma entre intento e intento (ritmo 16k TPM). */
++export const PISO_GEMMA_MS = 65000;
++function sleep(ms: number): Promise<void> {
++  return new Promise(resolve => setTimeout(resolve, ms));
++}
+@@
+   private maxTokens: number;
++  public minIntervalMs = 0; // lo fija index.ts desde budgetForModel().pacingMs
++  private lastEnd = 0;
+@@
+   async step(tools: ToolSpec[]): Promise<TurnResult> {
+     const model = await this.resolveModel();
+-    const resp = await fetch(`${this.baseURL}/chat/completions`, {
++    const wait = this.minIntervalMs - (Date.now() - this.lastEnd);
++    if (wait > 0) await sleep(wait);
++    const REINTENTABLES = new Set([429, 500, 502, 503]);
++    let resp!: Response;
++    for (let attempt = 1; attempt <= 2; attempt++) {
++      resp = await fetch(`${this.baseURL}/chat/completions`, {
+       ... // cuerpo identico al original (model/messages/tools/temperature/top_p/max_tokens)
+-    });
+-    if (!resp.ok) {
+-      throw new Error(`Model endpoint ${this.baseURL} returned HTTP ${resp.status}: ${await resp.text()}`);
++      });
++      this.lastEnd = Date.now();
++      if (resp.ok) break;
++      const bodyText = await resp.text();
++      const clase = resp.status === 429 ? 'cuota' : 'servidor';
++      if (!REINTENTABLES.has(resp.status) || attempt >= 2) {
++        throw new Error(`Model endpoint ${this.baseURL} returned HTTP ${resp.status} (${clase}, intento ${attempt}/2): ${bodyText.slice(0, 2000)}`);
++      }
++      // Consumo unico: los intentos fallidos NO agregan mensaje assistant al
++      // historial (el push original ocurre solo tras ok). Espera RetryInfo con
++      // piso 65s; el llamante serializa turnos (harness >=65s).
++      await sleep(Math.max(parseRetryDelayMs(bodyText), PISO_GEMMA_MS));
+     }
++    // parseo de `completion` posterior identico; en fallo ya se hizo throw.
+
+--- FIN. Viva (root, 6 casos): harness_stdio.mjs --handshake, luego --casos.
+--- Auditoria: correccion-d1.md + diagnostico.md + adenda-pacing-retry.md.

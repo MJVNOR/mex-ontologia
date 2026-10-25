@@ -1,0 +1,59 @@
+{
+  "inicio": "2026-10-24T05:43:17.852Z",
+  "modelo": "gemma-4-31b-it",
+  "bundle": "C:\\Users\\marti\\AppData\\Local\\Packages\\OpenAI.Codex_2p2nqsd0c76g0\\LocalCache\\Local\\open-ontologies-studio\\sidecars\\agent\\dist\\index.js",
+  "bundle_sha256": "3c54dcb4de032fe33d43de2cbbf4b71a289bc15e64a2874fac0e2b8187e6b08a",
+  "grafo_antes": {
+    "classes": 56,
+    "data_properties": 155,
+    "individuals": 27200,
+    "object_properties": 48,
+    "properties": 203,
+    "triples": 321210
+  },
+  "metodo": "Bundle instalado por STDIO; mismo motor que Studio a través de proxy MCP solo lectura; no es interacción de interfaz gráfica.",
+  "bloqueos": [],
+  "casos": [
+    {
+      "id": "C6-clave-26001",
+      "pregunta": "Para la clave 26001 en las comparaciones de 2020, muestra los dos valores con medida, nombre de origen, archivo y filas. ¿Son códigos INEGI?",
+      "inicio": "2026-10-24T05:43:18.042Z",
+      "events": [
+        {
+          "type": "retrieval",
+          "anchors": 16,
+          "facts": 10,
+          "claims": 0,
+          "conflicts": 0
+        },
+        {
+          "type": "text",
+          "content": "_Retrieved a subgraph: 16 anchor entities, 10 relationships, 0 document claims; correspondence states checked across all result pages._"
+        },
+        {
+          "type": "text",
+          "content": "Para la clave 26001 en las comparaciones de 2020, los valores son 2594 con la medida \"suma_grupos_edad_H_M\" (nombre de origen \"Aconchi\", archivo `24301617b6a5d89cf99b34ed4d512324cedde52e0c625de9457238e3d8fa340c.xlsx`, filas 62 y 63) y 2594 con la medida \"poblacion_mitad_ano\" (nombre de origen \"Aconchi\", archivo `e0e21aad3a84b4059efaf7525233ac05b08ced300f0f851fbadaab94057c027a.xlsx`, fila 32). No se encuentra información en el grafo que indique si son códigos INEGI.\n\n---\n- Fuente \"grandes_grupos\": valor 2594, medida \"suma_grupos_edad_H_M\", origen \"Aconchi\", archivo `24301617b6a5d89cf99b34ed4d512324cedde52e0c625de9457238e3d8fa340c.xlsx`, filas 62 (H) y 63 (M) [<https://example.org/mex-ontologi/cruce-r3-2020-evidencia/26001%2Fgrandes_grupos>].\n- Fuente \"indicadores\": valor 2594, medida \"poblacion_mitad_ano\", origen \"Aconchi\", archivo `e0e21aad3a84b4059efaf7525233ac05b08ced300f0f851fbadaab94057c027a.xlsx`, fila 32 [<https://example.org/mex-ontologi/cruce-r3-2020-evidencia/26001%2Findicadores>]."
+        },
+        {
+          "type": "done",
+          "mutated": false
+        }
+      ],
+      "respuesta": "Para la clave 26001 en las comparaciones de 2020, los valores son 2594 con la medida \"suma_grupos_edad_H_M\" (nombre de origen \"Aconchi\", archivo `24301617b6a5d89cf99b34ed4d512324cedde52e0c625de9457238e3d8fa340c.xlsx`, filas 62 y 63) y 2594 con la medida \"poblacion_mitad_ano\" (nombre de origen \"Aconchi\", archivo `e0e21aad3a84b4059efaf7525233ac05b08ced300f0f851fbadaab94057c027a.xlsx`, fila 32). No se encuentra información en el grafo que indique si son códigos INEGI.\n\n---\n- Fuente \"grandes_grupos\": valor 2594, medida \"suma_grupos_edad_H_M\", origen \"Aconchi\", archivo `24301617b6a5d89cf99b34ed4d512324cedde52e0c625de9457238e3d8fa340c.xlsx`, filas 62 (H) y 63 (M) [<https://example.org/mex-ontologi/cruce-r3-2020-evidencia/26001%2Fgrandes_grupos>].\n- Fuente \"indicadores\": valor 2594, medida \"poblacion_mitad_ano\", origen \"Aconchi\", archivo `e0e21aad3a84b4059efaf7525233ac05b08ced300f0f851fbadaab94057c027a.xlsx`, fila 32 [<https://example.org/mex-ontologi/cruce-r3-2020-evidencia/26001%2Findicadores>].",
+      "errores": [],
+      "estado": "respondido",
+      "mutado": false
+    }
+  ],
+  "handshake": "_Connected: 2 ontology tools. Model: gemma-4-31b-it._",
+  "fin": "2026-10-24T05:45:12.779Z",
+  "grafo_despues": {
+    "classes": 56,
+    "data_properties": 155,
+    "individuals": 27200,
+    "object_properties": 48,
+    "properties": 203,
+    "triples": 321210
+  },
+  "grafo_conservado": true
+}

@@ -1,0 +1,141 @@
+{
+  "rol": "V2-salud-anomalias",
+  "alcance": "Vigencias: distinguir publicación, periodo de datos, edición y aplicabilidad; sólo casos de vigencia.",
+  "casos": [
+    {
+      "afirmacion_propuesta": null,
+      "condicion_reapertura": "Que aparezca una URL, documento o anexo concreto no examinado antes (fe de erratas, diccionario corregido o declaración de edición del publicador) que cite la hoja Catalogo Servicios / servic_atencion (sha 3b8546ac, recurso 08d3b1a7) y la vincule con 2022, 2023 y 2024; entonces re-verificar correspondencia formal campo/recurso/edición/periodo.",
+      "estado": "brecha_externa",
+      "evidencia": [
+        {
+          "afirmacion_soportada": "API CKAN en vivo 2026-10-24: package sin version y sin extras; fechas del recurso Catalogo son cobertura, no edicion",
+          "localizador": "result.version=null; result.extras=[]; recurso 08d3b1a7 size 12702 start 2022-01-01 end 2026-12-31; metadata_modified 2026-05-11",
+          "ruta": "propuestas/cierre-brechas-post-r6/vigencias-salud/evidencia/api_package_show_2026-10-24.json",
+          "sha256": "e751fe481af047f3ffa6facc57c9d04952e5f874186be2d2fb4a6ae20f9a0154"
+        },
+        {
+          "afirmacion_soportada": "Diccionario en vivo no declara edicion del catalogo ni fe de erratas; sin URL de catalogo para des_mpo_res",
+          "localizador": "filas 129/162/168 citan catalogos por nombre sin edicion; fila 7 des_mpo_res con Catalogo de referencia vacio",
+          "ruta": "propuestas/cierre-brechas-post-r6/vigencias-salud/evidencia/diccionario_csv_2026-10-24.csv",
+          "sha256": "2c8ce131bf0e71fe812605f0f95381acaec9c5534e1bed8f05ff1895bf2fcd1c"
+        },
+        {
+          "afirmacion_soportada": "Estrategia sectorial FMRR (pista nueva ya examinada) no es declaracion de edicion del catalogo CKAN: negativa documentada",
+          "localizador": "conteo ASCII: 0 menciones a campos catalogo/CKAN/version/edicion/diccionario",
+          "ruta": "propuestas/cierre-brechas-post-r6/vigencias-salud/evidencia/estrategia_fmrr_salud_sonora.pdf",
+          "sha256": "9c2aec1236ecdbcdd4fa4fe2a5c87f25bfe606ee80121ba283e00d715c530485"
+        },
+        {
+          "afirmacion_soportada": "Pagina del recurso Catalogo no declara edicion/version (solo fechas de carga)",
+          "localizador": "Metadatos: Creado 28-04-2026, actualizacion 29-04-2026, formato XLSX; sin version/edicion",
+          "ruta": "propuestas/cierre-brechas-post-r6/vigencias-salud/evidencia/recurso_catalogo_pagina_2026-10-24.html",
+          "sha256": "ae7e8f383f34308046a830697d2e47e561f33766cd1269fe2ff87d44b824b5a0"
+        }
+      ],
+      "evidencia_faltante": "Declaracion de edicion/version/fecha del catalogo Rickettsia (sha 3b8546ac) con vinculo 2022-2024 + fe de erratas o diccionario corregido y URL del catalogo de des_mpo_res si existe. Pendiente exacto: Acreditar F3+F4: declaración de edición/versión/fecha del catálogo (Catalogo Servicios/servic_atencion, sha 3b8546ac) y documento que la vincule con 2022, 2023, 2024.",
+      "id": "V06",
+      "limites": [
+        "No afirmar vigencia histórica ni extender a otros conjuntos/periodos."
+      ],
+      "motivo": "F3+F4 ausentes. Reverificacion en vivo 2026-10-24 vigente y sin cambios: package version=null/extras vacios; xlsx sin celdas de version/periodo; diccionario cita el catalogo por nombre sin edicion; estrategia FMRR sin mencion al catalogo CKAN. Busquedas acotadas 2026-10-24 (fe de erratas / diccionario corregido / edicion del catalogo) solo devuelven paginas conocidas del conjunto y material clinico sin vinculo campo/recurso/edicion/periodo. Ninguna URL, documento o anexo concreto NO examinado antes.",
+      "original_sha256": "036a6ee0fd4229245b4e1fab9594f3c920940cd7d4bc74b6e88220329f119b42",
+      "pista": null,
+      "puerta": "sin_pista_nueva",
+      "tipo": "vigencias",
+      "rol": "V2-salud-anomalias",
+      "version": "v001",
+      "estado_final": "brecha_externa"
+    },
+    {
+      "afirmacion_propuesta": null,
+      "condicion_reapertura": "Que aparezca una URL, documento o anexo concreto no examinado antes (fe de erratas, diccionario corregido o declaración de edición del publicador) que cite la hoja Catalogo rechazo / motiv_rech_ricket_sangre (sha 3b8546ac, recurso 08d3b1a7) y la vincule con 2022, 2023 y 2024; entonces re-verificar correspondencia formal campo/recurso/edición/periodo.",
+      "estado": "brecha_externa",
+      "evidencia": [
+        {
+          "afirmacion_soportada": "API CKAN en vivo 2026-10-24: package sin version y sin extras; fechas del recurso Catalogo son cobertura, no edicion",
+          "localizador": "result.version=null; result.extras=[]; recurso 08d3b1a7 size 12702 start 2022-01-01 end 2026-12-31; metadata_modified 2026-05-11",
+          "ruta": "propuestas/cierre-brechas-post-r6/vigencias-salud/evidencia/api_package_show_2026-10-24.json",
+          "sha256": "e751fe481af047f3ffa6facc57c9d04952e5f874186be2d2fb4a6ae20f9a0154"
+        },
+        {
+          "afirmacion_soportada": "Diccionario en vivo no declara edicion del catalogo ni fe de erratas; sin URL de catalogo para des_mpo_res",
+          "localizador": "filas 129/162/168 citan catalogos por nombre sin edicion; fila 7 des_mpo_res con Catalogo de referencia vacio",
+          "ruta": "propuestas/cierre-brechas-post-r6/vigencias-salud/evidencia/diccionario_csv_2026-10-24.csv",
+          "sha256": "2c8ce131bf0e71fe812605f0f95381acaec9c5534e1bed8f05ff1895bf2fcd1c"
+        },
+        {
+          "afirmacion_soportada": "Estrategia sectorial FMRR (pista nueva ya examinada) no es declaracion de edicion del catalogo CKAN: negativa documentada",
+          "localizador": "conteo ASCII: 0 menciones a campos catalogo/CKAN/version/edicion/diccionario",
+          "ruta": "propuestas/cierre-brechas-post-r6/vigencias-salud/evidencia/estrategia_fmrr_salud_sonora.pdf",
+          "sha256": "9c2aec1236ecdbcdd4fa4fe2a5c87f25bfe606ee80121ba283e00d715c530485"
+        },
+        {
+          "afirmacion_soportada": "Pagina del recurso Catalogo no declara edicion/version (solo fechas de carga)",
+          "localizador": "Metadatos: Creado 28-04-2026, actualizacion 29-04-2026, formato XLSX; sin version/edicion",
+          "ruta": "propuestas/cierre-brechas-post-r6/vigencias-salud/evidencia/recurso_catalogo_pagina_2026-10-24.html",
+          "sha256": "ae7e8f383f34308046a830697d2e47e561f33766cd1269fe2ff87d44b824b5a0"
+        }
+      ],
+      "evidencia_faltante": "Declaracion de edicion/version/fecha del catalogo Rickettsia (sha 3b8546ac) con vinculo 2022-2024 + fe de erratas o diccionario corregido y URL del catalogo de des_mpo_res si existe. Pendiente exacto: Acreditar F3+F4: declaración de edición/versión/fecha del catálogo (Catalogo rechazo/motiv_rech_ricket_sangre, sha 3b8546ac) y documento que la vincule con 2022, 2023, 2024.",
+      "id": "V07",
+      "limites": [
+        "No afirmar vigencia histórica ni extender a otros conjuntos/periodos."
+      ],
+      "motivo": "F3+F4 ausentes. Mismo archivo y misma reverificacion que V06 para la hoja Catalogo rechazo (dimension A1:B21, 20 valores motiv_rech_ricket_sangre, sin celdas de version/periodo). Busquedas acotadas 2026-10-24 sin hallazgo nuevo. Ninguna URL, documento o anexo concreto NO examinado antes.",
+      "original_sha256": "99953fe5f7553939c7a49432ec0a7e9c0979b2c67188e8bfa1143027e131b820",
+      "pista": null,
+      "puerta": "sin_pista_nueva",
+      "tipo": "vigencias",
+      "rol": "V2-salud-anomalias",
+      "version": "v001",
+      "estado_final": "brecha_externa"
+    },
+    {
+      "afirmacion_propuesta": null,
+      "condicion_reapertura": "Que aparezca una URL, documento o anexo concreto no examinado antes (fe de erratas, diccionario corregido o declaración de edición del publicador) que cite la hoja Catalogo especie / ricket_especie (sha 3b8546ac, recurso 08d3b1a7) y la vincule con 2022, 2023 y 2024; entonces re-verificar correspondencia formal campo/recurso/edición/periodo.",
+      "estado": "brecha_externa",
+      "evidencia": [
+        {
+          "afirmacion_soportada": "API CKAN en vivo 2026-10-24: package sin version y sin extras; fechas del recurso Catalogo son cobertura, no edicion",
+          "localizador": "result.version=null; result.extras=[]; recurso 08d3b1a7 size 12702 start 2022-01-01 end 2026-12-31; metadata_modified 2026-05-11",
+          "ruta": "propuestas/cierre-brechas-post-r6/vigencias-salud/evidencia/api_package_show_2026-10-24.json",
+          "sha256": "e751fe481af047f3ffa6facc57c9d04952e5f874186be2d2fb4a6ae20f9a0154"
+        },
+        {
+          "afirmacion_soportada": "Diccionario en vivo no declara edicion del catalogo ni fe de erratas; sin URL de catalogo para des_mpo_res",
+          "localizador": "filas 129/162/168 citan catalogos por nombre sin edicion; fila 7 des_mpo_res con Catalogo de referencia vacio",
+          "ruta": "propuestas/cierre-brechas-post-r6/vigencias-salud/evidencia/diccionario_csv_2026-10-24.csv",
+          "sha256": "2c8ce131bf0e71fe812605f0f95381acaec9c5534e1bed8f05ff1895bf2fcd1c"
+        },
+        {
+          "afirmacion_soportada": "Estrategia sectorial FMRR (pista nueva ya examinada) no es declaracion de edicion del catalogo CKAN: negativa documentada",
+          "localizador": "conteo ASCII: 0 menciones a campos catalogo/CKAN/version/edicion/diccionario",
+          "ruta": "propuestas/cierre-brechas-post-r6/vigencias-salud/evidencia/estrategia_fmrr_salud_sonora.pdf",
+          "sha256": "9c2aec1236ecdbcdd4fa4fe2a5c87f25bfe606ee80121ba283e00d715c530485"
+        },
+        {
+          "afirmacion_soportada": "Pagina del recurso Catalogo no declara edicion/version (solo fechas de carga)",
+          "localizador": "Metadatos: Creado 28-04-2026, actualizacion 29-04-2026, formato XLSX; sin version/edicion",
+          "ruta": "propuestas/cierre-brechas-post-r6/vigencias-salud/evidencia/recurso_catalogo_pagina_2026-10-24.html",
+          "sha256": "ae7e8f383f34308046a830697d2e47e561f33766cd1269fe2ff87d44b824b5a0"
+        }
+      ],
+      "evidencia_faltante": "Declaracion de edicion/version/fecha del catalogo Rickettsia (sha 3b8546ac) con vinculo 2022-2024 + fe de erratas o diccionario corregido y URL del catalogo de des_mpo_res si existe. Pendiente exacto: Acreditar F3+F4: declaración de edición/versión/fecha del catálogo (Catalogo especie/ricket_especie, sha 3b8546ac) y documento que la vincule con 2022, 2023, 2024.",
+      "id": "V08",
+      "limites": [
+        "No afirmar vigencia histórica ni extender a otros conjuntos/periodos."
+      ],
+      "motivo": "F3+F4 ausentes. Mismo archivo y misma reverificacion que V06 para la hoja Catalogo especie (dimension A1:B5, 4 valores ricket_especie, sin celdas de version/periodo). Busquedas acotadas 2026-10-24 sin hallazgo nuevo. Ninguna URL, documento o anexo concreto NO examinado antes.",
+      "original_sha256": "832bd344fd6a59e823b3eebd5cf63eafe102cd808d7a90ff2e2c30dc8d0d0f33",
+      "pista": null,
+      "puerta": "sin_pista_nueva",
+      "tipo": "vigencias",
+      "rol": "V2-salud-anomalias",
+      "version": "v001",
+      "estado_final": "brecha_externa"
+    }
+  ],
+  "base": "reports/ronda-7.json",
+  "salida": "entrega.json/md + congelada.json; versiones nuevas para correcciones; no editar tras congelar",
+  "modelo": "opencode-go/muse-spark-1.3-contributor"
+}

@@ -1,0 +1,116 @@
+@prefix dcat: <http://www.w3.org/ns/dcat#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix mex: <https://example.org/mex-ontologi/vocab/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+skos:Concept a owl:Class ;
+    rdfs:label "Tema"@es .
+
+dcat:CatalogRecord a owl:Class ;
+    rdfs:label "Registro de metadatos"@es .
+
+dcat:Dataset a owl:Class ;
+    rdfs:label "Conjunto de datos"@es .
+
+prov:Activity a owl:Class ;
+    rdfs:label "Actividad de extracción"@es .
+
+foaf:Organization a owl:Class ;
+    rdfs:label "Dependencia"@es .
+
+<https://example.org/mex-ontologi/portal-model> a owl:Ontology ;
+    rdfs:label "mex-ontologi: páginas y estructuras del portal"@es ;
+    rdfs:comment "Las columnas pertenecen a cada recurso. Nombres iguales no implican equivalencia. Los enlaces de visualización no establecen qué datos alimentan un tablero."@es .
+
+mex:campoInterno a owl:DatatypeProperty ;
+    rdfs:label "Campo interno de DataStore"@es ;
+    rdfs:domain mex:ColumnaObservada ;
+    rdfs:range xsd:boolean .
+
+mex:clasificacionPorMetadatos a owl:DatatypeProperty ;
+    rdfs:label "Clasificación inicial por metadatos"@es ;
+    rdfs:domain mex:RecursoCatalogado ;
+    rdfs:range xsd:string .
+
+mex:columna a owl:ObjectProperty ;
+    rdfs:label "Columna del esquema"@es ;
+    rdfs:domain mex:EsquemaObservado ;
+    rdfs:range mex:ColumnaObservada .
+
+mex:dominioVisualizacion a owl:DatatypeProperty ;
+    rdfs:label "Dominio del destino de visualización"@es ;
+    rdfs:domain mex:VisualizacionDeclarada ;
+    rdfs:range xsd:string .
+
+mex:esquema a owl:ObjectProperty ;
+    rdfs:label "Esquema observado del recurso"@es ;
+    rdfs:domain mex:RecursoCatalogado ;
+    rdfs:range mex:EsquemaObservado .
+
+mex:estadoEstructura a owl:DatatypeProperty ;
+    rdfs:label "Estado de inspección de estructura"@es ;
+    rdfs:domain mex:RecursoCatalogado ;
+    rdfs:range xsd:string .
+
+mex:evidenciaClasificacion a owl:DatatypeProperty ;
+    rdfs:label "Evidencia de clasificación"@es ;
+    rdfs:domain mex:RecursoCatalogado ;
+    rdfs:range xsd:string .
+
+mex:nombreCampo a owl:DatatypeProperty ;
+    rdfs:label "Nombre original del campo"@es ;
+    rdfs:domain mex:ColumnaObservada ;
+    rdfs:range xsd:string .
+
+mex:paginaPortal a owl:ObjectProperty ;
+    rdfs:label "Página del portal"@es ;
+    rdfs:domain dcat:Catalog ;
+    rdfs:range mex:PaginaPortal .
+
+mex:posicionCampo a owl:DatatypeProperty ;
+    rdfs:label "Posición del campo desde uno"@es ;
+    rdfs:domain mex:ColumnaObservada ;
+    rdfs:range xsd:integer .
+
+mex:servicioConsulta a owl:ObjectProperty ;
+    rdfs:label "Servicio de consulta verificado"@es ;
+    rdfs:domain mex:RecursoCatalogado ;
+    rdfs:range dcat:DataService .
+
+mex:tipoCampoDeclarado a owl:DatatypeProperty ;
+    rdfs:label "Tipo declarado por DataStore"@es ;
+    rdfs:domain mex:ColumnaObservada ;
+    rdfs:range xsd:string .
+
+mex:tipoPagina a owl:DatatypeProperty ;
+    rdfs:label "Tipo de página según navegación"@es ;
+    rdfs:domain mex:PaginaPortal ;
+    rdfs:range xsd:string .
+
+mex:visualizacionDeclarada a owl:ObjectProperty ;
+    rdfs:label "Visualización declarada en la página"@es ;
+    rdfs:domain mex:PaginaPortal ;
+    rdfs:range mex:VisualizacionDeclarada .
+
+dcat:Catalog a owl:Class ;
+    rdfs:label "Catálogo"@es .
+
+dcat:DataService a owl:Class ;
+    rdfs:label "Servicio de consulta de datos"@es .
+
+mex:EsquemaObservado a owl:Class ;
+    rdfs:label "Esquema observado"@es .
+
+mex:VisualizacionDeclarada a owl:Class ;
+    rdfs:label "Visualización declarada"@es .
+
+mex:PaginaPortal a owl:Class ;
+    rdfs:label "Página del portal"@es .
+
+mex:ColumnaObservada a owl:Class ;
+    rdfs:label "Columna observada"@es .
+

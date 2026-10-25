@@ -1,0 +1,145 @@
+{
+ "rol": "P1-qudt",
+ "version": "v002",
+ "fecha_utc": "2026-10-24",
+ "estado": "propuesta_para_auditar",
+ "base": {
+  "informe": "reports/ronda-8.json",
+  "estado_r8": "cerrado_integrado_validado_y_sincronizado"
+ },
+ "casos": [
+  {
+   "id": "P1-Q1",
+   "variable": "Precipitacion_mm",
+   "dataset_uuid": "8b4edefe-cb1a-401c-90c6-05548779defd",
+   "resource_uuid": "6713de4e-1e2b-447d-8000-f6ceaabd8473",
+   "definicion_iri": "https://example.org/mex-ontologi/definition/6713de4e-1e2b-447d-8000-f6ceaabd8473%2F6",
+   "huella": "dec3bb83da6fe2209575146e9775fc615c0473c13209cb9a05f16b492e28bb9f",
+   "unidad_literal": "Milimetros",
+   "unidad_qudt": "http://qudt.org/vocab/unit/MilliM",
+   "normativa": "W P1-W-01 VERIFICADO",
+   "resultado": "propuesta_para_auditar"
+  },
+  {
+   "id": "P1-Q2",
+   "variable": "Almacenamiento(hm3)",
+   "dataset_uuid": "ee8f639f-5e89-46ae-93b9-934b05fc6233",
+   "resource_uuid": "ca5574f0-d59d-4fc1-a52f-5c533b2abf82",
+   "definicion_iri": "https://example.org/mex-ontologi/definition/ca5574f0-d59d-4fc1-a52f-5c533b2abf82%2F3",
+   "huella": "7f846ce0b9f83f30c32ea09ab7b09ba328ea4826b1c5ec2b3dede27003aaac3b",
+   "unidad_literal": "Hectometros cubicos",
+   "unidad_qudt": null,
+   "normativa": "W P1-W-02 NEGATIVO (HectoM3 404/ausente); sin M3 ni factor inventados",
+   "resultado": "sin_evidencia_para_integrar"
+  },
+  {
+   "id": "P1-Q3",
+   "variable": "SUPSEM",
+   "dataset_uuid": "3e17a7e8-c8d4-49c4-a426-4dec099cd0cd",
+   "resource_uuid": "94215f51-9c89-414d-8c3d-92792e609a2a",
+   "definicion_iri": "https://example.org/mex-ontologi/definition/94215f51-9c89-414d-8c3d-92792e609a2a%2F14",
+   "huella": "208a95e2c54e495723b39a3b528deb22f6147dfd3bd080f867e6bea2c191f321",
+   "unidad_literal": "Hectareas",
+   "unidad_qudt": "http://qudt.org/vocab/unit/HA",
+   "normativa": "W P1-W-03 VERIFICADO",
+   "resultado": "propuesta_para_auditar"
+  }
+ ],
+ "archivos_propuestos": [
+  "v002/vocabulario.ttl",
+  "v002/propuesta-qudt.ttl",
+  "v002/consultas/q1-vinculos-verificados.rq",
+  "v002/consultas/q2-negativos-sin-vinculo.rq",
+  "v002/consultas/q3-trazabilidad.rq",
+  "v002/fixtures/P1-Q1-Precipitacion_mm.json",
+  "v002/fixtures/P1-Q2-Almacenamiento(hm3).json",
+  "v002/fixtures/P1-Q3-SUPSEM.json",
+  "v002/pruebas.json"
+ ],
+ "validacion_local": {
+  "turtle_parse_ok": true,
+  "vocabulario_parse_ok": true,
+  "q1-vinculos-verificados": 2,
+  "q2-negativos-sin-vinculo": 1,
+  "q3-trazabilidad": 5,
+  "checks": {
+   "sujetos_http_exactos": true,
+   "solo_iris_qudt_http": true,
+   "sin_hecto_alias": true,
+   "sin_quantityvalue": true,
+   "sin_conversion": true,
+   "sin_aprobacion_en_grafo": true,
+   "dataset_distinto_resource": true,
+   "uuid_con_formato": true,
+   "q2_sin_vinculo": true
+  }
+ },
+ "fuentes": [
+  {
+   "ruta": "data/portal/inspecciones/6713de4e-1e2b-447d-8000-f6ceaabd8473.json",
+   "sha256": "693fefe10791a61ad263c17d03b4b9d4560add66dca7c2ca15ad9db2daac8ffd",
+   "url": "https://datos.sonora.gob.mx/api/3/action/datastore_search?resource_id=6713de4e-1e2b-447d-8000-f6ceaabd8473&limit=1000&offset=0&sort=_id+asc",
+   "localizador": "definiciones[5] Precipitacion_mm/Milimetros/12.5"
+  },
+  {
+   "ruta": "data/portal/inspecciones/ca5574f0-d59d-4fc1-a52f-5c533b2abf82.json",
+   "sha256": "de7a4426f4845b9d86b518313cec4f345685bd94cd365927cd68ca4b6f7c4a6b",
+   "url": "https://datos.sonora.gob.mx/dataset/ee8f639f-5e89-46ae-93b9-934b05fc6233/resource/ca5574f0-d59d-4fc1-a52f-5c533b2abf82/download/diccionario_recursos_hidricos.csv",
+   "localizador": "Almacenamiento(hm3)/Hectometros cubicos/738.54"
+  },
+  {
+   "ruta": "data/portal/inspecciones/94215f51-9c89-414d-8c3d-92792e609a2a.json",
+   "sha256": "9d341703f8a358fbbdce04fa416a121c3df6d5bcde0c771a5c442c7733ca556c",
+   "url": "https://datos.sonora.gob.mx/api/3/action/datastore_search?resource_id=94215f51-9c89-414d-8c3d-92792e609a2a&limit=1000&offset=0&sort=_id+asc",
+   "localizador": "SUPSEM/Hectareas/Cantidad de hectareas sembradas"
+  },
+  {
+   "ruta": "data/semantica/cobertura.json",
+   "sha256": "683f58b24d23b9c97b569ae19dd14ed43b722a08857519766c435e447e9c3638",
+   "localizador": "estados respaldada_por_definicion de las 3 definiciones"
+  },
+  {
+   "ruta": "reports/ronda-8.json",
+   "sha256": "5ac384bc4c253f5310ae69402c8d9249d2ee85082086c2dca85483f8b4b7eacb",
+   "localizador": "base cerrada R8"
+  },
+  {
+   "ruta": "propuestas/plan-tras-r8/ejecucion-20261024/W-estandares/v002/normativa/unit-MilliM-evidencia.txt",
+   "sha256": "5e63691124e69c162ddfa65bde77fb1ad3e9a2173ffd33b9910100880a9ea9a7",
+   "url": "https://qudt.org/vocab/unit/MilliM",
+   "localizador": "W P1-W-01 VERIFICADO MilliM http canonico; vocab 2026-10-20"
+  },
+  {
+   "ruta": "propuestas/plan-tras-r8/ejecucion-20261024/W-estandares/v002/normativa/unit-HA-evidencia.txt",
+   "sha256": "9095968323f72af577b4a94684a78e2f806595ca118529b5e47cb0b2acd1ee3e",
+   "url": "https://qudt.org/vocab/unit/HA",
+   "localizador": "W P1-W-03 VERIFICADO HA http canonico; HectoHA 404 rechazado"
+  },
+  {
+   "ruta": "propuestas/plan-tras-r8/ejecucion-20261024/W-estandares/v002/normativa/P1-W-02-negativo-HectoM3.txt",
+   "sha256": "ffe0ff4423fa9ddd557421a527fd6a311a0758cc10de6e69e68172e049834a49",
+   "url": "https://qudt.org/vocab/unit/HectoM3",
+   "localizador": "W P1-W-02 NEGATIVO: HectoM3 404 + ausente indice 3.5.3"
+  },
+  {
+   "ruta": "propuestas/plan-tras-r8/ejecucion-20261024/W-estandares/v002/normativa/unit-M3-evidencia.txt",
+   "sha256": "2afe3a10b8fcec25a245b71d289dff64b619565d4d3c1aa50b4f5b08438c615e",
+   "url": "https://qudt.org/vocab/unit/M3",
+   "localizador": "W alternativa M3 verificada: NO usada por P1 (requeriria factor no declarado)"
+  }
+ ],
+ "sello_w_v002": "PENDIENTE: W v002/normativa sin congelada a esta fecha; SHAs de archivos W registrados como observados. Hash final P1 se fija contra sello W cuando exista; si difiere, v003.",
+ "limites": [
+  "v001 preservada e intacta; v002 no la modifica.",
+  "Declaracion cualificada estrictamente sobre ESA definicion del diccionario; ninguna atribucion global a recurso/periodos.",
+  "Q2 sin vinculo QUDT; sin conversion a M3 ni factor; sin alias por parecido.",
+  "Sujetos RDF exactos en http (no https); verificado por codigo, sin re-navegar (rol W).",
+  "datasetUUID (conjunto) distinguido de resourceUUID (diccionario) en modelo, consultas y pruebas.",
+  "Sin QuantityValue observado, sin conversiones, sin cambios de conceptos, sin produccion, sin Gemma."
+ ],
+ "condiciones_aceptacion": [
+  "Auditor replica SHAs y localizadores; Q1=2, Q2=1, Q3=5 filas.",
+  "Sello W v002 confirma SHAs normativos; si difieren, v003.",
+  "Q1/Q3 integrables con IRI http verificado; Q2 permanece fuera."
+ ]
+}

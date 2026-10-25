@@ -1,0 +1,15 @@
+import pathlib, re, json
+p = pathlib.Path(r'C:\Users\marti\Documents\MEX-Ontologi\propuestas\investigacion-post-r6\tic\evidencia')
+t = (p / 'programa-especial-gobierno-digital.bin').read_bytes().decode('utf-8', errors='replace')
+links = sorted(set(re.findall(r'href="([^"]+)"', t)))
+sel = [l for l in links if any(k in l.lower() for k in ['diagnostico', 'informe', 'agenda', 'programa', 'datos.sonora', 'gobierno-digital', 'ley', 'boletin', 'entorno-digital'])]
+print('\n'.join(sel))
+d = (p / 'diagnostico-entorno-digital.bin').read_bytes().decode('utf-8', errors='replace')
+links2 = sorted(set(re.findall(r'href="([^"]+)"', d)))
+print('---diagnostico---')
+print('\n'.join(links2[:40]))
+txt = re.sub(r'<script.*?</script>', '', d, flags=re.S)
+txt = re.sub(r'<[^>]+>', ' ', txt)
+txt = re.sub(r'\s+', ' ', txt)
+print('---texto---')
+print(txt[:1200])

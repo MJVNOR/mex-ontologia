@@ -1,0 +1,62 @@
+{
+  "dictamen": "rechaza_payload_v001_exige_negativa_en_gate_R8",
+  "payload": "materializacion/v001/aceptadas.json",
+  "aceptadas_sha256_material_v001": "555c35697c86fd026d84d09a4bc02cc549237c5170c70d93c94ed5056d913fdf",
+  "no_aplicar_555c": true,
+  "gate_auditado": "T-pruebas/v002 (scope R8: reglas==[], conceptos=={}, columnas subset candidatas)",
+  "gate_actual_pasa_con_defecto": true,
+  "negativa_codigo": {
+    "nombre": "test_rechaza_definicion_iri_variable_documented_variable",
+    "alcance": "R8: cada vinculo trae definicion_iri /definition/ exacto; /documented-variable/ es entidad distinta (iri de variable) y se rechaza sin alias.",
+    "codigo": "for v in aceptadas_r8['vinculos']:\n    assert RE_DEFINICION_SINAC.match(v['definicion_iri']), v['columna']  # /definition/ exacto, nunca /documented-variable/\n    var = variables_cobertura[v['definicion_iri']]  # KeyError = rechaza: entidad distinta, sin alias\n    assert var['estado'] == 'respaldada_por_definicion' and var['concepto'] == v['concepto']\n    assert v['huella_fila_diccionario'] == var['huella_fila_diccionario']\n",
+    "resultado_con_v001": "rechaza 14/28 (65,67,69,71,72,74,76,77,79,84,87,89,97,99)",
+    "resultado_con_M2_v002": "acepta 14/14 (0 malas)"
+  },
+  "correccion_pedida_al_coordinador": [
+    "No aplicar payload 555c (material v001) con los 14 IRI defectuosos.",
+    "M2 v002 ya corrige a /definition/ exacto de asignacion (verificado 14/14); material v002 se hara luego sobre v002.",
+    "Endurecer gate R8 (tests T + futuro integrar_ronda_8) con la negativa de este dictamen: rechazar /documented-variable/ y exigir variable respaldada exacta + concepto + huella, sin alias."
+  ],
+  "otros_defectos_reales": [
+    "M2-sinac/v002/entrega.md cabecera dice v001 (construir_v002.py lineas[0]); cosmetico, no afecta datos.",
+    "Gate R8 actual tampoco valida forma de vinculo (claves/huellas/concepto) al extender la base exacta; solo suma filas. Incluir validacion de forma junto con la negativa IRI."
+  ],
+  "referencias": [
+    {
+      "ruta": "propuestas/ronda-8-paralela/ejecucion-20261024/materializacion/v001/aceptadas.json",
+      "sha256": "555c35697c86fd026d84d09a4bc02cc549237c5170c70d93c94ed5056d913fdf"
+    },
+    {
+      "ruta": "propuestas/ronda-8-paralela/ejecucion-20261024/materializacion/v001/congelada.json",
+      "sha256": "f759f5649863a93809bb9ee3a5e826806694a4538b8ea403cf5e2adc3bd50baa"
+    },
+    {
+      "ruta": "propuestas/ronda-8-paralela/ejecucion-20261024/M2-sinac/v002/entrega.json",
+      "sha256": "0c3c8a5877696335f960a2334115b2171b3b4d51f69b9ade2296899b9c6eb92e"
+    },
+    {
+      "ruta": "propuestas/ronda-8-paralela/ejecucion-20261024/M2-sinac/asignacion.json",
+      "sha256": "6e45351db797a65d426875a01e17888d7f3cf8969821d58f313b08c687e88184"
+    },
+    {
+      "ruta": "propuestas/ronda-8-paralela/ejecucion-20261024/T-pruebas/v002/codigo/tests/test_ronda_7.py",
+      "sha256": "e3405ba50b87cd75dab323a760b722f0edf9ceb3a9ad674c5f81996463fa659d"
+    },
+    {
+      "ruta": "propuestas/ronda-8-paralela/ejecucion-20261024/T-pruebas/v002/codigo/tests/test_cobertura_integrada.py",
+      "sha256": "7f68b7f9ea0d6bc9f524e856031b0ec1e73eff929c1bc571badaedfe9d4095e1"
+    },
+    {
+      "ruta": "data/semantica/cobertura.json",
+      "sha256": "c1585ad942935b06917d62cb98d3c7bf3799ee524c3a7f13586a693ec053ecd2"
+    },
+    {
+      "ruta": "reports/ronda-7.json",
+      "sha256": "197054973a25496ed30b393c566b689e43d6cf46d012f79e644cb0521a32d787"
+    }
+  ],
+  "notas": [
+    "Revision historica conservada: auditoria-material.json/md (v001: 14 aceptar/14 rechazar) no se tocan.",
+    "Solo lectura de staging y produccion; nada editado fuera de B-tecnica/."
+  ]
+}

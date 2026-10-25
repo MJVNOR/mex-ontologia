@@ -1,0 +1,138 @@
+{
+  "rol": "T-pruebas",
+  "version": "v001",
+  "fecha_utc": "2026-10-24T08:48:55.407784+00:00",
+  "modelo": "opencode-go/muse-spark-1.3-contributor",
+  "mcp": "nativo OpenCode; sin Obscura (uso exclusivo de W-web); sin Gemma/chat",
+  "casos_asignados": 0,
+  "decisiones": [],
+  "afirmacion_exacta_acotada": "Los 6 fallos de propuestas/suite-r7-inicial.log (142 pruebas) se deben a expectativas pre-R7 que no contemplan el delta aprobado R7 (31 significados + 3 vínculos; 1392+31=1423 respaldadas, 152-28=124 fuera, 19-3=16 candidatas, 4475+3=4478 revisadas). Producción verifica íntegro (manifiestos, doble auditoría A+B con aceptadas_sha256 pinnado, base exacta, materialización fiel): no se propone ningún cambio en scripts/tests/ontologia/data. Se proponen copias corregidas de los 4 tests con expectativas derivadas de manifiestos (sin hardcodear conteos observados) + test_ronda_7.py (12 pruebas: integridad, aprobación SHA, base exacta, deltas cruzados, materialización, scope, 4 negativas, gancho R8). Staging: 154 pruebas OK.",
+  "pruebas_verificables": {
+    "comando": "uv run python -m unittest discover -s propuestas/ronda-8-paralela/ejecucion-20261024/T-pruebas/v001/codigo/tests -t propuestas/ronda-8-paralela/ejecucion-20261024/T-pruebas/v001/codigo/tests",
+    "total": 154,
+    "resultado": "OK",
+    "fallos_iniciales_produccion": 6,
+    "nota": "Ejecución en staging (copias bajo v001/codigo/tests); producción solo leída, no instalada ni modificada."
+  },
+  "diagnostico_fallos": [
+    "test_cobertura_integrada (3): conteos/promociones calculan solo deltas R4/R5; faltan R6 (sin reglas, verificado) y R7 (28 fuera + 3 candidatas -> respaldadas, estados previos derivados de base post-R4 salvo promoción R4/R5).",
+    "test_integracion_agentes/test_ronda_2/test_ronda_3_integrada (3): esperados de revisadas suman solo r6n; falta r7n derivado de aceptadas.json validado (4475+3=4478).",
+    "Causa común: suite anterior a R7. reports/ronda-7.md ya anticipa adaptadores de conteos; producción íntegra, tests desactualizados."
+  ],
+  "archivos_codigo": [
+    {
+      "ruta": "propuestas/ronda-8-paralela/ejecucion-20261024/T-pruebas/v001/codigo/tests/test_calificadores.py",
+      "sha256": "4acbdc9f0cce59afa8f3ff9eeecf4fd558d3bb5dbe4cec298c7e3e49b2cde7f9"
+    },
+    {
+      "ruta": "propuestas/ronda-8-paralela/ejecucion-20261024/T-pruebas/v001/codigo/tests/test_catalogo.py",
+      "sha256": "bc37d88f7b7cc8c23d8de9e7ffdb3de1bf88f356bdd007644d89bb509a228583"
+    },
+    {
+      "ruta": "propuestas/ronda-8-paralela/ejecucion-20261024/T-pruebas/v001/codigo/tests/test_cobertura_evidencia.py",
+      "sha256": "2cd2f5d3b39c7e80cc0cdcc4682ab7dee07baef2311f55efa451fc11363e7422"
+    },
+    {
+      "ruta": "propuestas/ronda-8-paralela/ejecucion-20261024/T-pruebas/v001/codigo/tests/test_cobertura_integrada.py",
+      "sha256": "440cc77bf82ebe9a3839198a416755cc2e9cc39e3d2a42348b9a3ab4575e8a0b"
+    },
+    {
+      "ruta": "propuestas/ronda-8-paralela/ejecucion-20261024/T-pruebas/v001/codigo/tests/test_contenido.py",
+      "sha256": "f3760e63dea5fc79f837bb385ebaa65536b3508faeda182196a05f96e4f6e492"
+    },
+    {
+      "ruta": "propuestas/ronda-8-paralela/ejecucion-20261024/T-pruebas/v001/codigo/tests/test_dictamen_historico.py",
+      "sha256": "0dc59b3791f6182d7e64a2f39a8ca8ef315dd671cd90b8a60c0ca910f4729963"
+    },
+    {
+      "ruta": "propuestas/ronda-8-paralela/ejecucion-20261024/T-pruebas/v001/codigo/tests/test_guardar_rdf.py",
+      "sha256": "c60d5ad9ace5a5b58ca329ed2a1d76cc73b957d70bcad939f992113ddcf71338"
+    },
+    {
+      "ruta": "propuestas/ronda-8-paralela/ejecucion-20261024/T-pruebas/v001/codigo/tests/test_integracion_agentes.py",
+      "sha256": "68f90c0314c96b01d6b4365c2b462b1169ad7eb160e0eae541c21cc0ef80629a"
+    },
+    {
+      "ruta": "propuestas/ronda-8-paralela/ejecucion-20261024/T-pruebas/v001/codigo/tests/test_inventario.py",
+      "sha256": "24fe2c19267d5c242aef28b7cfa5d00b124d783bbd5456721f358e47a700485a"
+    },
+    {
+      "ruta": "propuestas/ronda-8-paralela/ejecucion-20261024/T-pruebas/v001/codigo/tests/test_lote.py",
+      "sha256": "ea86f4cb58cfec5aba06c6fc837adf25436ca52809de807f369ad0d15739b233"
+    },
+    {
+      "ruta": "propuestas/ronda-8-paralela/ejecucion-20261024/T-pruebas/v001/codigo/tests/test_oportunidades.py",
+      "sha256": "5bfb8414ca5fdcd94fc6b89af0c663adad3942850b0b5243786c5cb2d1a61167"
+    },
+    {
+      "ruta": "propuestas/ronda-8-paralela/ejecucion-20261024/T-pruebas/v001/codigo/tests/test_portal.py",
+      "sha256": "9f344d6bc1c70ed9a1b7b96f5a48cf0dfdda3ba901f190d7688800a4a3cc2cb7"
+    },
+    {
+      "ruta": "propuestas/ronda-8-paralela/ejecucion-20261024/T-pruebas/v001/codigo/tests/test_ronda_2.py",
+      "sha256": "6879daf92bc7fd74a987571c1499fd1ef0fc8de1ad7cabbea203e0083b36665c"
+    },
+    {
+      "ruta": "propuestas/ronda-8-paralela/ejecucion-20261024/T-pruebas/v001/codigo/tests/test_ronda_3_integrada.py",
+      "sha256": "c54c0c5541a7a8cb8fa3dc41b0c9820e6a58044606cc763aadbee17f0addb1a2"
+    },
+    {
+      "ruta": "propuestas/ronda-8-paralela/ejecucion-20261024/T-pruebas/v001/codigo/tests/test_ronda_4.py",
+      "sha256": "716b58c3381aae253b2a20ca1d834f284c8a6e71f76fa8f0f88fc369afcd86c3"
+    },
+    {
+      "ruta": "propuestas/ronda-8-paralela/ejecucion-20261024/T-pruebas/v001/codigo/tests/test_ronda_5.py",
+      "sha256": "4e20a49c2bcd2f3cf96027c2b4cf9249e64638cc9b614c3f02c5e46632f46c16"
+    },
+    {
+      "ruta": "propuestas/ronda-8-paralela/ejecucion-20261024/T-pruebas/v001/codigo/tests/test_ronda_6.py",
+      "sha256": "7422f63b15b2cc9a95f35e452f3329b6559489ebc2a8bab93a6f63de006b7717"
+    },
+    {
+      "ruta": "propuestas/ronda-8-paralela/ejecucion-20261024/T-pruebas/v001/codigo/tests/test_ronda_7.py",
+      "sha256": "14e78033205645af994449c43669750947d108bac980b98d8f30a4f945eaa4c7"
+    },
+    {
+      "ruta": "propuestas/ronda-8-paralela/ejecucion-20261024/T-pruebas/v001/codigo/tests/test_seleccion_documental.py",
+      "sha256": "0a1623ca6a2478f63dba00fe805c0430c308f643b920955aa059e397801af387"
+    },
+    {
+      "ruta": "propuestas/ronda-8-paralela/ejecucion-20261024/T-pruebas/v001/codigo/tests/test_semantica.py",
+      "sha256": "8de204db04c993f535b77563b4adcdc1dce3aca85f9185d2c07650c8336479a0"
+    },
+    {
+      "ruta": "propuestas/ronda-8-paralela/ejecucion-20261024/T-pruebas/v001/codigo/tests/test_sync_cadenas.py",
+      "sha256": "1c666d70332e078d21423dba43634b7806c793eec42cbee972c0e9b6ac6a6f9c"
+    },
+    {
+      "ruta": "propuestas/ronda-8-paralela/ejecucion-20261024/T-pruebas/v001/codigo/tests/test_territorio.py",
+      "sha256": "754e2603ad9c5f59a4aa39f59e2d4994d80c202b8687da01ceef34e43f81cbb0"
+    }
+  ],
+  "cambios_produccion_propuestos": "Ninguno en scripts/ontologia/data. Solo tests (ver instrucciones_aplicacion); test_ronda_7.py es alta nueva.",
+  "instrucciones_aplicacion": [
+    "1. Auditar esta v001 con dos revisores independientes (código + pruebas).",
+    "2. Tras aprobar: copiar v001/codigo/tests/test_cobertura_integrada.py, test_integracion_agentes.py, test_ronda_2.py y test_ronda_3_integrada.py sobre tests/ (sobrescriben expectativas; aserciones históricas preservadas).",
+    "3. Añadir v001/codigo/tests/test_ronda_7.py como tests/test_ronda_7.py (alta nueva, sin colisiones).",
+    "4. El resto de copias son idénticas a producción salvo resolución de raíz por marcador (equivalente en ubicación final); no requieren copia.",
+    "5. Verificar: uv run python -m unittest discover -s tests -t . (esperado: todo OK).",
+    "6. No instalar ni modificar scripts/, ontologia/, data/, docs/ ni reports/ con este pase."
+  ],
+  "gancho_r8": "Expectativas por deltas aprobados de manifiestos (aceptadas.json validados), nunca vivo contra sí mismo. Si R8 añade reglas/vínculos (28 vínculos previstos), extender el mismo patrón con integrar_ronda_8; test_r8_hook_por_deltas_aprobados falla a propósito hasta entonces.",
+  "base_sha256": {
+    "ontologia/semantica.json": "f6b6754555d97f929658f94e34461320d27e7db26c4d84b1e313a46af4323366",
+    "data/semantica/cobertura.json": "c1585ad942935b06917d62cb98d3c7bf3799ee524c3a7f13586a693ec053ecd2",
+    "ontologia/revision-ronda-7.json": "c061e436e9675b0d1156a490bc6b954bee1af85ac69e8a6021631d6444547e00",
+    "data/integracion-ronda-7/manifiesto.json": "7b5d242feeaf23bd6f54f44b6314e8afb829a88fd1ee9bb5a70807c900cf7a55",
+    "data/integracion-ronda-7/aceptadas.json": "0d58255de0ecf9b417c3a7d70439b22c11b16c6628334203f30fa40f37ef7684",
+    "data/integracion-ronda-7/delta.json": "f4143ffec283adc6315015eba44dfc2e3124b1fa640a422270beb00af3757f70",
+    "reports/ronda-7.json": "197054973a25496ed30b393c566b689e43d6cf46d012f79e644cb0521a32d787",
+    "propuestas/ronda-8-paralela/ejecucion-20261024/T-pruebas/asignacion.json": "e77cbcea5d06d776efd4c81e8219b234608858cded63c460e739e3fdb23e1c7a"
+  },
+  "limites": [
+    "Alcance T-pruebas: suite Python; no acredita significados, vigencias, joins ni identidades.",
+    "Sin navegador Obscura (exclusivo W-web); sin peticiones-web.json (sin pista primaria nueva: todo el insumo es local).",
+    "Sin Gemma/chat; sin mensajes externos; sin puentes ni CLI OpenCode.",
+    "Correcciones futuras en v002+; esta v001 congelada no se edita."
+  ]
+}

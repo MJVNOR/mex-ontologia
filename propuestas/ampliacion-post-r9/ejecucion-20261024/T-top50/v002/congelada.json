@@ -1,0 +1,86 @@
+{
+  "rol": "T-top50",
+  "version": "v002",
+  "generado_en_utc": "2026-10-24T20:26:45Z",
+  "modelo": "opencode/deepseek-v4.1-flash-free",
+  "alcance": "propuestas/ampliacion-post-r9/ejecucion-20261024/T-top50/v002/",
+  "excluido_del_manifiesto": [
+    "congelada.json (el propio sello)",
+    "__pycache__/",
+    "*.pyc"
+  ],
+  "ejecuciones": [
+    {
+      "ejecucion": "publicacion",
+      "comando": "uv run python propuestas/ampliacion-post-r9/ejecucion-20261024/T-top50/v002/scripts/publicar_top50_r9.py --out-dir propuestas/ampliacion-post-r9/ejecucion-20261024/T-top50/v002",
+      "exit_code": 0,
+      "salida_capturada": "resultados/publicacion.out",
+      "salida_sha256": "b5a482584fb599b2e633553de8bc39df6856a093aa1e7153b1c3dc99f32ee62b"
+    },
+    {
+      "ejecucion": "pruebas",
+      "comando": "uv run python propuestas/ampliacion-post-r9/ejecucion-20261024/T-top50/v002/tests/test_publicar_top50_r9.py",
+      "exit_code": 0,
+      "salida_capturada": "resultados/pruebas.out",
+      "salida_sha256": "7275b931b7ea5dc383bdf19827fcc4eccebe13433deafa66a99467aa31f4ba91"
+    }
+  ],
+  "total_archivos": 10,
+  "total_bytes": 168981,
+  "archivos": [
+    {
+      "ruta": "entrega.json",
+      "bytes": 8920,
+      "sha256": "fcbf316f915400bf0977d49f7d63eaa2467b70eb05552cb0164b35efdb297cb9"
+    },
+    {
+      "ruta": "entrega.md",
+      "bytes": 4340,
+      "sha256": "c32e0e2710fa3f26e252d6028990a4e5cfc630d0678f7ae857e455cb44f282c1"
+    },
+    {
+      "ruta": "resultados/pruebas.out",
+      "bytes": 115,
+      "sha256": "7275b931b7ea5dc383bdf19827fcc4eccebe13433deafa66a99467aa31f4ba91"
+    },
+    {
+      "ruta": "resultados/publicacion.out",
+      "bytes": 102,
+      "sha256": "b5a482584fb599b2e633553de8bc39df6856a093aa1e7153b1c3dc99f32ee62b"
+    },
+    {
+      "ruta": "scripts/publicar_top50_r9.py",
+      "bytes": 12195,
+      "sha256": "b636dc8a7fa4de6a34f0f2e3d3024d0ae6ea7e07fcb3168157cdeda9cd90af4e"
+    },
+    {
+      "ruta": "scripts/sellar_v002.py",
+      "bytes": 4515,
+      "sha256": "f8c8be980585cf703b1ce453d710e361a535f568f95f298cc353df70a3288a37"
+    },
+    {
+      "ruta": "tests/test_publicar_top50_r9.py",
+      "bytes": 8948,
+      "sha256": "06c3e28b5997d0d20206309ba0296670e0823efae6560b2a19357ded7fb86741"
+    },
+    {
+      "ruta": "top50-oportunidades-r9.html",
+      "bytes": 38320,
+      "sha256": "13149984df253b56aa1fc1b30cdfa1310f697cc0094664037490fbad671558c1"
+    },
+    {
+      "ruta": "top50-oportunidades-r9.json",
+      "bytes": 60172,
+      "sha256": "8342bfcdf3d6e272dc90e2a46714452f58e3e4d2b8d25efa54b4b1af57314f37"
+    },
+    {
+      "ruta": "top50-oportunidades-r9.md",
+      "bytes": 31354,
+      "sha256": "bacacd474c596446fd8a527eb62f7743433fd9ec04e0957470ce628df1ec4d80"
+    }
+  ],
+  "sello_sha256": "11c089c29d2914c91af63982800026e00efede92c09969defcaebc9ee2031c64",
+  "metodo_sello": "sha256 sobre JSON canonico (sort_keys, separadores ',', ':') de la lista archivos (ruta, bytes, sha256), sin autohash ni caches",
+  "verificacion": "reejecutar este script: sello_sha256 se mantiene porque los artefactos no llevan reloj (fecha_corte fija) y las salidas de pruebas normalizan duraciones; solo cambia generado_en_utc, excluido del manifiesto",
+  "nota": "Cada hash se recalcula de los bytes de esta carpeta; ningun valor se transcribe."
+}
