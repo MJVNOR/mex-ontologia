@@ -124,6 +124,25 @@ Los agentes deben consultar el grafo mediante este MCP. Si no está disponible, 
 
 El contrato completo de consulta está en [AGENTS.md](AGENTS.md).
 
+El lanzador y la CLI comparten un único backend persistente por almacén. Los
+agentes tienen sesiones MCP independientes y pueden consultar simultáneamente;
+ya no abren cada uno su propia instancia de Oxigraph. El backend escucha solo en
+localhost, con token local, y ofrece únicamente las cinco herramientas indicadas.
+La dirección y el token se guardan en `store/mcp-*.json`, excluidos de Git.
+
+Para verificar la concurrencia:
+
+```powershell
+uv run python scripts/comprobar_mcp_concurrente.py
+```
+
+La migración requiere reconectar una vez los clientes del lanzador antiguo que
+retengan el almacén. No se deben borrar archivos `LOCK`. El backend se conserva
+al cerrar un cliente para que los demás continúen; antes de una recarga del store
+debe detenerse de forma controlada y sin consultas en curso. El manifiesto de
+carga determina qué almacén se comparte, por lo que una nueva instantánea utiliza
+un backend distinto.
+
 ## Construcción y actualización
 
 El pipeline separa la recuperación del catálogo, la inspección de contenido, la generación del grafo y su sincronización con Studio.

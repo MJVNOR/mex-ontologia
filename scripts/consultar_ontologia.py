@@ -16,7 +16,8 @@ import sys
 from pathlib import Path
 
 sys.path.insert(0, str(Path(__file__).resolve().parent))
-from construir_catalogo import ROOT, motor
+from construir_catalogo import ROOT
+from mcp_compartido import conectar, verificar_consulta
 from rdflib.util import from_n3
 
 ESCRITURA = re.compile(r"\b(INSERT|DELETE|LOAD|CLEAR|DROP|CREATE|WITH|COPY|MOVE|ADD)\b", re.I)
@@ -33,7 +34,11 @@ def run(sparql, limite=None):
     m = manifest()
     q = sparql.replace("{{BASE_IRI}}", m["base_iri"])
     verificar(q)
-    payload = motor(["query", q], ROOT / m["store_dir"])
+    client = conectar()
+    try:
+        payload = client.call('onto_query', {'query': q})
+    finally:
+        client.cerrar()
     rows = [{k: from_n3(v).toPython() for k, v in row.items()}
             for row in payload.get("results", [])]
     return {"alcance": "portal-completo", "total": len(rows),
@@ -42,6 +47,7 @@ def run(sparql, limite=None):
 
 
 def verificar(q):
+    verificar_consulta(q)
     if ESCRITURA.search(q):
         raise ValueError("Solo lectura: INSERT/DELETE/LOAD no permitidos")
     qs = q.lstrip().upper()
@@ -79,7 +85,7 @@ SELECT (COUNT(?c) AS ?n) WHERE {
   ?c a mex:CorrespondenciaSemantica ; mex:variableDestino ?v .
   ?v mex:nombreVariableLocal ?variable .
   FILTER(CONTAINS(LCASE(?variable), LCASE("%s")))
-}""" % lit(args.variable)
+} LIMIT 1""" % lit(args.variable)
     total = run(total_q)["resultados"][0]["n"]
     filas, offset, pagina = [], 0, 200
     while True:
@@ -96,10 +102,11 @@ SELECT (COUNT(?c) AS ?n) WHERE {
 
 def cmd_resumen(_args):
     q = (ROOT / "queries/portal/resumen.rq").read_text(encoding="utf-8")
-    return run(q)
+    return run(q + '\nLIMIT 2000')
 
 
 def main():
+    sys.stdout.reconfigure(encoding='utf-8')
     p = argparse.ArgumentParser(description=__doc__)
     sub = p.add_subparsers(dest="cmd", required=True)
     s = sub.add_parser("significado"); s.add_argument("--variable", default=""); s.add_argument("--limite", type=int, default=50)
