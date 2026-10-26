@@ -2,6 +2,14 @@
 
 **Una ontología para comprender, contextualizar y conectar los datos abiertos de Sonora.**
 
+## Fuente de los datos
+
+**Los datos de este proyecto provienen del [Portal de Datos Abiertos del Estado de Sonora](https://datos.sonora.gob.mx/).** Los conjuntos de datos, archivos, metadatos y diccionarios utilizados se recuperan de las publicaciones disponibles en ese portal, conservando la referencia a la dependencia u organización publicadora de cada conjunto.
+
+MEX-Ontologi organiza y documenta esas fuentes en un grafo de conocimiento. La procedencia de los datos se atribuye al portal y a sus organizaciones publicadoras; las interpretaciones, transformaciones y validaciones realizadas por este proyecto se distinguen de la información original.
+
+## Propósito del proyecto
+
 MEX-Ontologi describe qué información publica el portal de datos abiertos de Sonora, cómo se organiza y qué significan sus variables según la documentación disponible. Reúne publicaciones, archivos, columnas, diccionarios y conceptos en un grafo de conocimiento con vínculos a su evidencia de origen.
 
 Su propósito es facilitar el descubrimiento y la interpretación de los datos, así como evaluar bajo qué condiciones pueden relacionarse distintas fuentes. Cada interpretación conserva su contexto y sus límites: compartir un nombre de columna no basta para establecer una equivalencia ni para autorizar un cruce.
