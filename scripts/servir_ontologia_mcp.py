@@ -1,29 +1,38 @@
-"""Lanza el MCP stdio de Open Ontologies sobre el almacén vigente del portal.
-
-Resuelve store_dir desde reports/portal-carga.json para no hardcodear
-la instantánea en opencode.json. Fija modo persistente.
-"""
-
+"""Proxy stdio del MCP compartido: un backend persistente para varios agentes."""
 import json
-import subprocess
 import sys
-from pathlib import Path
-
-ROOT = Path(__file__).resolve().parents[1]
+from mcp_compartido import ALLOW, Cliente, conectar, verificar_consulta
 
 
 def main():
-    manifest = json.loads((ROOT / "reports" / "portal-carga.json").read_text(encoding="utf-8"))
-    store = manifest.get("store_dir")
-    if not store:
-        sys.exit("Genera y carga el portal primero con ampliar_portal.py --load")
-    exe = ROOT / "tools" / "open-ontologies.exe"
-    # ponytail: subprocess con stdio heredado; os.execve cae con 0xC0000005 en este Windows
-    proc = subprocess.run([str(exe), "serve", "--storage-mode", "persistent",
-                           "--data-dir", str(ROOT / store),
-                           "--tools-allow", "onto_query,onto_stats,onto_status,onto_validate,onto_shacl"])
-    sys.exit(proc.returncode)
+    sys.stdin.reconfigure(encoding='utf-8')
+    sys.stdout.reconfigure(encoding='utf-8')
+    active = conectar()
+    client = Cliente(active.url, active.headers['Authorization'][7:])
+    active.cerrar()
+    for line in sys.stdin:
+        message = None
+        try:
+            message = json.loads(line)
+            method = message.get('method', '')
+            if method not in {'initialize', 'notifications/initialized', 'notifications/cancelled', 'tools/list', 'tools/call', 'ping'}:
+                raise ValueError('Método MCP no permitido')
+            if method == 'tools/call':
+                params = message['params']
+                if params['name'] not in ALLOW.split(','):
+                    raise ValueError('Herramienta fuera del contrato')
+                if params['name'] == 'onto_query':
+                    verificar_consulta(params['arguments']['query'])
+            result = client.enviar(message)
+            if result is not None and 'id' in message:
+                print(json.dumps(result, ensure_ascii=False), flush=True)
+        except Exception as exc:
+            if message is not None and 'id' in message:
+                print(json.dumps({'jsonrpc': '2.0', 'id': message['id'], 'error': {'code': -32602, 'message': str(exc)}}), flush=True)
+            else:
+                print(str(exc), file=sys.stderr)
+    client.cerrar()
 
 
-if __name__ == "__main__":
+if __name__ == '__main__':
     main()
