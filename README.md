@@ -1,240 +1,195 @@
-# mex-ontologia
+# MEX-Ontologi
 
-Ontología del portal de datos abiertos de Sonora: publicaciones, estructuras, variables, significados y condiciones para conectar información. Plan: [PLAN.md](PLAN.md).
+**Una ontología para comprender, contextualizar y conectar los datos abiertos de Sonora.**
 
-## Estado vigente: ronda 10
+MEX-Ontologi describe qué información publica el portal de datos abiertos de Sonora, cómo se organiza y qué significan sus variables según la documentación disponible. Reúne publicaciones, archivos, columnas, diccionarios y conceptos en un grafo de conocimiento con vínculos a su evidencia de origen.
 
-**El trabajo local del plan está completado.** El otro chat revisó el cierre sin discrepancias y devolvió el [plan actualizado tras R10](docs/plan-actualizado-tras-r10.md). Con la evidencia actual no hay otra integración semántica justificada; la continuación depende de documentación nueva o de una pregunta analítica concreta con datos suficientes. Las brechas documentales indicadas abajo siguen pendientes.
+Su propósito es facilitar el descubrimiento y la interpretación de los datos, así como evaluar bajo qué condiciones pueden relacionarse distintas fuentes. Cada interpretación conserva su contexto y sus límites: compartir un nombre de columna no basta para establecer una equivalencia ni para autorizar un cruce.
 
-R10 incorpora **cinco declaraciones de unidad cualificadas** y **seis formas SHACL**. Conserva **1423 significados, 1106 conceptos, 4506 correspondencias revisadas, 17 candidatas y cero ambiguas**. **233 pruebas pasan**; RDF y SHACL conformes. Portal: **322495 triples**. Studio: **323104**, con respaldo, 90 inserciones y cero retiradas. [Informe R10](reports/ronda-10.md).
+[Qué representa](#qué-representa) · [Qué permite hacer](#qué-permite-hacer) · [Primeros pasos](#primeros-pasos) · [Documentación](#documentación)
 
-Se publicaron el [top 50 de oportunidades](reports/top50-oportunidades-r9.html) y [tres análisis de pares](reports/analisis-pares-post-r9.md), bloqueados con evidencia. El ranking no autoriza joins. Quedan 138 significados reales, 16 vigencias, 17 candidatas, `des_mpo_res` y dos encabezados corruptos; requieren evidencia adicional. Toneladas y hm³ mantienen sus límites. Gemma y la decisión de IRI siguen fuera de alcance.
+## ¿Qué es esta ontología?
 
-## Antecedente: ronda 9
+Una ontología es un modelo explícito de entidades y relaciones que permite describir un dominio con un vocabulario común. En este proyecto, ese dominio es la información publicada en el portal de datos abiertos de Sonora.
 
-R9 ejecuta el plan devuelto tras la revisión independiente de R8: incorpora **dos declaraciones de unidad cualificadas** (milímetros y hectáreas) y una regla SHACL de exclusión entre significado documentado y candidato. Conserva **1423 significados respaldados, 1106 conceptos, 4506 correspondencias revisadas, 17 candidatas y cero ambiguas**. El cierre R9 pasó **204 pruebas**; RDF y SHACL conformes, Studio sincronizado y verificado. [Informe y evidencia R9](reports/ronda-9.md).
+El catálogo permite localizar una publicación; la ontología añade relaciones para interpretar su contenido: quién la publica, qué recursos contiene, cuáles son sus columnas, qué definiciones las documentan y qué conceptos pueden compartir con otras fuentes.
 
-Quedan **138 significados reales**, 16 vigencias y `des_mpo_res`; dos encabezados corruptos siguen separados del conteo de significados. V13/V14 mantienen acceso no resuelto. Las 17 candidatas dependen del respaldo faltante. Los pilotos de intervalos temporales y jerarquía clínica dieron resultados negativos documentados. Gemma quedó excluido y no se contactó a publicadores.
+El resultado se representa en **RDF**, un formato de grafo que permite consultar esas relaciones mediante **SPARQL**. Las reglas **SHACL** comprueban restricciones de estructura y coherencia del modelo. El proyecto utiliza Open Ontologies para almacenar y consultar el grafo, y Studio para explorarlo visualmente.
 
-Se completó el [plan posterior a R8](docs/plan-actualizado-tras-r8.md) con agentes paralelos mediante el MCP nativo de OpenCode y Muse 1.3. [Ejecución y decisiones](docs/plan-paralelo-ronda-9-sin-gemma.md). Obscura permitió verificar términos normativos; no se repitieron búsquedas agotadas sin pistas nuevas.
+## Qué representa
 
-Antecedentes fechados: [R8](reports/ronda-8.md), [R7](reports/ronda-7.md) y [R6](reports/ronda-6.md). Sus cifras describen esos cierres históricos.
+| Capa | Qué describe |
+| --- | --- |
+| **Publicaciones** | Conjuntos de datos, recursos, organizaciones publicadoras, temas y páginas del portal. |
+| **Estructuras** | Esquemas de archivos y DataStore, hojas y columnas observadas en cada recurso. |
+| **Documentación** | Definiciones originales de los diccionarios y sus referencias a unidades o catálogos. |
+| **Significados** | Variables locales y conceptos compartidos, conservando el contexto de cada fuente. |
+| **Correspondencias** | Vínculos entre columnas físicas y variables documentadas, con estado de revisión y evidencia. |
+| **Condiciones de conexión** | Claves, sistemas de códigos, periodos, granularidad y comprobaciones necesarias para evaluar cruces. |
+| **Procedencia** | Fuentes, fechas de carga, actividades de extracción y límites de la evidencia recuperada. |
 
-## Antecedentes de consolidación semántica
+El siguiente esquema resume el recorrido conceptual desde una publicación hasta su significado:
 
-El límite global de 2,000 individuos del árbol de Studio está corregido en la instalación local. La consulta recupera todos los individuos del grafo y mantiene el renderizado virtualizado. [Ver corrección y comprobaciones](docs/studio-limite-individuos.md).
-
-El chat consulta las correspondencias semánticas de las variables nombradas con paginación completa y distingue los conteos totales de los ejemplos mostrados. [Corrección de recuperación y prueba reproducible](docs/studio-recuperacion-chat.md). La evaluación posterior del pipeline fuente fue parcial: 4 respuestas (2 aciertos y 2 fallos de recuperación) y 16 intentos sin respuesta por errores HTTP/cuota. La interfaz de Studio no se evaluó ni se demostró identidad entre el pipeline fuente y el backend instalado. [Alcance del diagnóstico](reports/integracion-ronda-2.md).
-
-La ampliación de cobertura con Muse 1.3 incorpora 980 significados revisados: el núcleo contiene 940 conceptos y 1,212 variables respaldadas documentalmente, de 1,563 definiciones (77.5%). Quedan 23 interpretaciones candidatas y 328 definiciones fuera del núcleo. Se conservan sujetos, eventos, unidades declaradas y límites, sin completar documentación ausente. [Resultado y evidencia de la ampliación](reports/cobertura-muse.md).
-
-Se separan columna física, definición original, variable local, concepto y sistema de códigos. Se preservan las 836 correspondencias columna/variable revisadas; las nuevas interpretaciones dejan 3,312 correspondencias candidatas y 12 vínculos ambiguos sobre 6 columnas. Las coincidencias nuevas no están revisadas ni habilitan cruces. Un sistema CVEGEO se asocia únicamente a su fuente; 16 referencias declaradas tienen un recurso de catálogo identificado y una sigue sin resolver: `des_mpo_res`.
-
-La segunda ronda también incorpora 32 dictámenes y 14 preguntas al publicador preparadas sin enviar. Las 1,850 localidades IML coinciden con ITER 2020 en clave, nombre y población, sin acreditar completitud oficial ni equivalencia con el universo cartográfico. Las 16 revisiones de vigencia histórica siguen sin acreditarla. Se conservan las cinco observaciones documentales originales y no se ejecutaron nuevos cruces.
-
-- [Explicación del núcleo y sus límites](docs/nucleo-semantico.md).
-- [Antecedente y evidencia de la segunda ronda](reports/integracion-ronda-2.md).
-- [Resultado y evidencia de las interpretaciones](reports/consolidacion-semantica.md).
-- [Cobertura de las 5,523 columnas y pendientes documentados](reports/pendientes-semanticos.md).
-- [Catálogos territoriales recuperados y correspondencias](reports/catalogos-territoriales.md).
-
-```powershell
-uv run python scripts/consolidar_semantica.py
-uv run python scripts/ampliar_portal.py --load
-uv run python scripts/sincronizar_studio_portal.py
-uv run python scripts/consultar_catalogo.py --portal queries/portal/semantica_significados.rq
+```mermaid
+flowchart LR
+    A[Conjunto de datos] --> B[Recurso]
+    B --> C[Columna observada]
+    C --> D[Correspondencia con estado y evidencia]
+    D --> E[Variable local]
+    F[Definición del diccionario] --> E
+    E --> G[Concepto compartido]
 ```
 
-Esta secuencia usa la evidencia existente y no ejecuta análisis nuevos. Los mapas de cruces y lotes siguientes se conservan como antecedentes y pruebas del modelo. El estado vigente y la validación están en `reports/portal-carga.json`; el respaldo y estado de Studio, en `reports/studio-portal-sync.json`. La sección «Verificar el proyecto» indica cómo ejecutar la suite actual; los conteos de pruebas de etapas anteriores son históricos.
+La columna, la definición y el concepto tienen identidades distintas. Esta separación permite describir semejanzas entre fuentes sin perder las diferencias que importan para interpretarlas.
 
-## Mapa de oportunidades de cruce
+## Qué permite hacer
 
-El primer lote de 98 candidatos ya se procesó: 2 comparaciones educativas ejecutadas parcialmente, 53 pares requieren transformación o catálogo, 41 revisión adicional y 2 no superaron las comprobaciones integrales. Se recuperaron muestras de 51 recursos y se examinaron integralmente 24 recursos específicos; 16 superaron sus reglas. Ninguno de estos conteos aprueba automáticamente conjuntos completos.
+- **Descubrir información.** Localizar conjuntos, recursos y campos a partir de sus metadatos y relaciones.
+- **Consultar significados.** Recuperar la interpretación documentada de una variable y reconocer cuándo falta respaldo suficiente.
+- **Rastrear la evidencia.** Seguir las relaciones entre una columna, su diccionario, el recurso y la publicación de origen.
+- **Distinguir contextos.** Conservar diferencias entre eventos, poblaciones, unidades, periodos y sistemas de códigos.
+- **Evaluar oportunidades de cruce.** Identificar posibles claves comunes y revisar las condiciones pendientes antes de combinar datos.
+- **Validar el modelo.** Comprobar reglas estructurales y semánticas mediante SHACL y pruebas automatizadas.
+- **Dar contexto a agentes de IA.** Exponer consultas de solo lectura mediante MCP, con reglas explícitas sobre evidencia, estados y alcance.
 
-- [Decisiones, fuentes y límites del lote](reports/validacion-lote-cruces.md).
-- [Resultados educativos completos](reports/resultados-lote-educacion.md): 340 claves programa/sede; 113 tienen valores numéricos en ambas fuentes.
+### Preguntas que ayuda a explorar
 
-```powershell
-uv run python scripts/validar_lote_cruces.py
-uv run python scripts/ampliar_portal.py --load
-uv run python scripts/sincronizar_studio_portal.py
-uv run python scripts/consultar_catalogo.py --portal queries/portal/lote_resumen.rq
-uv run python scripts/consultar_catalogo.py --portal queries/portal/lote_educacion.rq
-```
+- ¿Qué significa una variable según el diccionario de su propio conjunto?
+- ¿Qué columnas tienen una correspondencia documental revisada?
+- ¿Qué fuentes distinguen municipio de residencia, de registro o de ocurrencia?
+- ¿Qué recursos podrían relacionarse y qué comprobaciones faltan?
+- ¿Qué información está documentada y qué sigue siendo una hipótesis?
 
-El lote reutiliza evidencia fechada. `--refresh` vuelve a consultar; `--retry-errors` reintenta fallos integrales. La referencia municipal de 72 códigos se recuperó del GeoJSON del portal; no establece equivalencias con códigos locales de otras fuentes. Las discrepancias de Nacimientos requieren revisar fuente/definición, sin corregir valores ni asumir meses ausentes como cero.
+## Criterios de interpretación
 
-Ya se evaluaron los 3,916 pares entre los 89 conjuntos: 1,191 candidatos por validar, 396 que solo comparten dimensiones amplias/tiempo, 2,328 sin clave común reconocida por las reglas y 1 cruce exploratorio previamente ejecutado. El resultado no autoriza automáticamente joins entre filas.
+La confianza del modelo depende de mantener separadas las afirmaciones documentadas y las propuestas de interpretación.
 
-[Ver mapa completo](reports/oportunidades-cruce.md). Las claves candidatas abarcan territorio, periodos, centros de trabajo, unidades de salud CLUES, programas educativos y categorías sectoriales. Los estratos como sexo o nivel educativo no se tratan como identificadores suficientes. Cada par registra evidencia y comprobaciones pendientes; los datos completos están en `data/portal/oportunidades-cruce.json`.
+| Criterio | Cómo se aplica |
+| --- | --- |
+| **Evidencia trazable** | Toda afirmación sobre datos debe acompañarse de las IRI del conjunto, recurso o columna pertinentes, la URL del diccionario y la fecha de carga. Si falta evidencia, se declara el hueco. |
+| **Estados separados** | El estado semántico de una variable es distinto del estado de la correspondencia entre esa variable y una columna. |
+| **Hipótesis explícitas** | Una correspondencia `candidata_por_nombre` requiere revisión; la coincidencia nominal no confirma el significado. |
+| **Contexto conservado** | Una unidad, un código o una interpretación se atribuyen a la fuente y al ámbito que los respaldan. |
+| **Alcance declarado** | Una recuperación parcial se identifica como tal. «No recuperado» no demuestra que algo no exista. |
+| **Cruces justificados** | Ni una correspondencia revisada ni una oportunidad detectada autorizan por sí solas una unión de filas. |
 
-```powershell
-uv run python scripts/consultar_cruces.py --buscar agricultura --estado candidata_por_validar
-uv run python scripts/consultar_cruces.py --buscar titulados --limite 10
-uv run python scripts/consultar_cruces.py --id ID_DEL_PAR
-uv run python scripts/consultar_catalogo.py --portal queries/portal/oportunidades_resumen.rq
-```
+La validación SHACL comprueba las reglas expresadas en el modelo; no certifica la exactitud de todos los valores del portal. Las consultas locales reflejan la última carga disponible. La inspección de estructuras tampoco implica que todos los registros de cada archivo estén incorporados al grafo.
 
-El identificador de cada par aparece en la primera consulta. Con `--id`, se muestran sus perfiles completos, columnas, definiciones y diferencias. La ausencia de una oportunidad detectada no demuestra que un cruce sea imposible. Después de actualizar las fuentes, regenerar el mapa antes de ampliar: se comprueban las huellas de los archivos para evitar un mapa desactualizado.
+## Primeros pasos
 
-## Resultado actual
+### Requisitos
 
-Se inspeccionaron los 486 recursos: 484 accesibles y 2 sin URL ni DataStore. Se leyeron los 88 diccionarios y se incorporaron 1,563 definiciones con nombre, 464 esquemas de archivo y 5,675 columnas de archivo, además de los esquemas DataStore anteriores. Los encabezados de archivo y las correspondencias por nombre se conservan como candidatos, sujetos a revisión de dominio.
+- **Python 3.12**, fijado en `.python-version`.
+- **uv** para instalar dependencias y ejecutar los scripts.
+- **Open Ontologies** para cargar y consultar el grafo persistente.
+- **Studio**, si se desea explorar el grafo mediante su interfaz visual.
 
-El primer cruce agrega matrimonios y divorcios registrados en 2022 por código municipal local: 13,881 y 6,064 filas, respectivamente. Conserva 67 resúmenes; 62 códigos aparecen en ambas fuentes. No vincula personas ni asigna nombres oficiales a códigos sin catálogo de correspondencia.
-
-- [Cobertura y recursos inaccesibles](reports/contenido-cobertura.md).
-- [Primer cruce y límites de interpretación](reports/primer-cruce.md).
-- [Modelo y actualización](docs/contenido-y-cruces.md).
-
-Al terminar el lote anterior, el grafo generado tenía 144,044 triples y se aprobaron 43 pruebas. La consolidación semántica posterior amplía ese estado; sus conteos y validación vigentes están en `reports/portal-carga.json`. El estado de Studio y su respaldo se registran en `reports/studio-portal-sync.json`. No se requiere una base de datos externa.
-
-## Actualizar estructuras, diccionarios y cruce
-
-```powershell
-uv sync
-uv run python scripts/inspeccionar_contenido.py
-uv run python scripts/cruzar_registro_civil.py
-uv run python scripts/mapear_cruces.py
-uv run python scripts/validar_lote_cruces.py
-uv run python scripts/ampliar_portal.py --load
-uv run python scripts/sincronizar_studio_portal.py
-uv run python scripts/consultar_catalogo.py --portal queries/portal/primer_cruce.rq
-```
-
-Ejecutar cada paso solo si el anterior terminó correctamente. El último paso de sincronización necesita Studio abierto. El inspector reutiliza evidencia fechada; `--retry-errors` reintenta solo fallos y `--refresh` vuelve a consultar todos los recursos del inventario. Los scripts posteriores se ejecutan de nuevo para publicar esa nueva evidencia en el grafo. Para incorporar conjuntos nuevos hay que actualizar también el catálogo y el inventario antes de esta secuencia.
-
-## Requisitos
-
-- `uv` y Python 3.12 (versión fijada en `.python-version`).
-- Open Ontologies para cargar y consultar el grafo. No requiere una base de datos externa.
-
-## Explorar el catálogo
+No se requiere una base de datos externa. La configuración del portal y la base IRI están en [config.toml](config.toml). La base `https://example.org/mex-ontologi/` es provisional; la decisión sobre su sustitución sigue pendiente.
 
 Desde la carpeta del proyecto:
 
 ```powershell
 uv sync
-uv run python scripts/explorar_catalogo.py
 ```
 
-El script de exploración usa únicamente la biblioteca estándar de Python. Consulta metadatos por páginas de 25 registros, verifica que no haya IDs repetidos y genera:
+### Consultar una carga existente
 
-- `reports/catalogo-diagnostico.md`: conteos, presencia de campos y hallazgos.
-- `reports/catalogo-perfil.json`: inventario, campos y valores declarados para revisión.
-
-No descarga CSV, Excel ni otros archivos de los recursos. Las ejecuciones posteriores reemplazan los dos informes con una nueva consulta. La API no ofrece aquí una instantánea transaccional: los chequeos de cantidad e IDs no detectan todas las posibles modificaciones concurrentes.
-
-Opciones:
+Estos ejemplos requieren que el portal ya esté generado y cargado, con su almacén registrado en `reports/portal-carga.json`.
 
 ```powershell
-uv run python scripts/explorar_catalogo.py --page-size 50 --output reports
+# Consultar el resumen del grafo
+uv run python scripts/consultar_ontologia.py resumen
+
+# Buscar significados documentados por nombre de variable
+uv run python scripts/consultar_ontologia.py significado --variable anio --limite 20
+
+# Consultar correspondencias y sus estados
+uv run python scripts/consultar_ontologia.py correspondencias --variable matrimonios
 ```
 
-Propuesta de correspondencias: [docs/mapeo-catalogo.md](docs/mapeo-catalogo.md).
+Las oportunidades de cruce se consultan por separado sobre el mapa generado:
 
-## Generar y cargar el catálogo RDF
+```powershell
+uv run python scripts/consultar_cruces.py --buscar agricultura --estado candidata_por_validar
+uv run python scripts/consultar_cruces.py --buscar titulados --limite 10
+```
 
-El nombre es **mex-ontologi**. La base provisional `https://example.org/mex-ontologi/` se configura en `config.toml`; no requiere registrar un dominio. El pipeline usa RDFLib para construir RDF y Open Ontologies para almacenarlo y consultarlo.
+Para inspeccionar un par concreto, utiliza `--id` con el identificador devuelto por la búsqueda. El resultado incluye perfiles, evidencia y comprobaciones pendientes.
+
+### Acceso para agentes mediante MCP
+
+[opencode.json](opencode.json) configura el servidor local **`mex-ontologia`** en modo persistente. Expone las herramientas `onto_query`, `onto_stats`, `onto_status`, `onto_validate` y `onto_shacl`.
+
+Los agentes deben consultar el grafo mediante este MCP. Si no está disponible, deben utilizar `scripts/consultar_ontologia.py`. Las consultas SPARQL libres son de solo lectura y deben incluir `LIMIT`, con un máximo de 2000 resultados. Los cruces se consultan mediante `scripts/consultar_cruces.py`.
+
+El contrato completo de consulta está en [AGENTS.md](AGENTS.md).
+
+## Construcción y actualización
+
+El pipeline separa la recuperación del catálogo, la inspección de contenido, la generación del grafo y su sincronización con Studio.
+
+| Etapa | Script | Función |
+| --- | --- | --- |
+| Explorar | `scripts/explorar_catalogo.py` | Diagnosticar los metadatos publicados sin descargar los archivos de datos. |
+| Construir | `scripts/construir_catalogo.py` | Generar el catálogo RDF y, con `--load`, cargarlo en un almacén persistente. |
+| Inventariar | `scripts/inventariar_portal.py` | Registrar recursos, páginas, acceso y esquemas DataStore. |
+| Inspeccionar | `scripts/inspeccionar_contenido.py` | Recuperar estructuras y diccionarios con evidencia fechada y límites de lectura. |
+| Ampliar | `scripts/ampliar_portal.py` | Integrar las capas disponibles, generar RDF y validar con SHACL. |
+| Sincronizar | `scripts/sincronizar_studio_portal.py` | Respaldar Studio y actualizar los triples administrados, conservando las demás ediciones. |
+
+La construcción del catálogo base comienza con:
 
 ```powershell
 uv run python scripts/construir_catalogo.py --load
-```
-
-Consulta la API, genera el modelo y el grafo en `data/catalogo/`, valida su sintaxis, los carga en un nuevo almacén persistente, ejecuta SHACL y cuatro consultas. Conserva el resumen en `reports/catalogo-carga.json`, que señala el almacén utilizado.
-
-Cada ejecución crea un almacén nuevo bajo `store/`. Así una nueva carga no acumula registros retirados ni borra almacenes anteriores. Los archivos RDF, metadatos seleccionados y el informe se reemplazan con la ejecución más reciente; conserva copias si necesitas archivar cada exportación. No ejecutar dos cargas simultáneamente. Las consultas locales reflejan la última carga, no una conexión en vivo al portal.
-
-Sin `--load` solo se genera la exportación y el informe, sin almacén asociado.
-
-```powershell
-uv run python scripts/consultar_catalogo.py queries/dependencias.rq
-uv run python scripts/consultar_catalogo.py queries/temas.rq
-uv run python scripts/consultar_catalogo.py queries/formatos.rq
-uv run python scripts/consultar_catalogo.py queries/recursos_sin_url.rq
-```
-
-El script sustituye `{{BASE_IRI}}` por la base de la última carga. Devuelve valores JSON legibles; `--raw` conserva los tipos e idiomas RDF del motor.
-
-## Modelo y límites
-
-- Catálogo, conjuntos, registros, organizaciones y temas reutilizan DCAT, Dublin Core, FOAF y SKOS.
-- Cada conjunto y recurso tiene procedencia hacia su registro de la API y la actividad de extracción.
-- Los recursos CKAN se representan inicialmente como `mex:RecursoCatalogado`, vinculados con `mex:recurso`. No se afirma todavía que todos sean distribuciones equivalentes del mismo conjunto: hay recursos con periodos diferentes que requieren revisión.
-- Región, fechas del recurso, frecuencia y granularidad quedan como declaraciones originales; no se infiere cobertura territorial o temporal.
-- SHACL comprueba la estructura del modelo. No exige URL a todos los recursos ni tema a todos los conjuntos: esos faltantes aparecen en el reporte de calidad y no impiden conservar los registros.
-- La generación del catálogo base solo consulta metadatos: no descarga archivos de contenido ni comprueba sus enlaces. Las etapas posteriores de inspección y cruces sí recuperan archivos o consultan filas de recursos seleccionados; sus resultados y límites se documentan por separado.
-
-## Inventariar la cobertura de todo el portal
-
-```powershell
 uv run python scripts/inventariar_portal.py
 ```
 
-Consulta el catálogo, lista las organizaciones y grupos registrados, clasifica recursos por sus metadatos, inspecciona las páginas de datos enlazadas en la portada y verifica esquemas DataStore con `limit=0`. No descarga todos los CSV/Excel ni guarda filas de los recursos.
+La ampliación semántica depende también de los insumos y evidencias locales de cada etapa. Antes de reconstruir o actualizar el grafo completo, consulta el [modelo del portal](docs/modelo-portal.md), la [guía de contenido y cruces](docs/contenido-y-cruces.md) y el [procedimiento de integración](docs/integracion-de-agentes.md).
 
-Genera `reports/cobertura-portal.md` y `data/portal/inventario.json`, con acceso, clasificación, procedencia, estado del esquema y coincidencia con los identificadores del grafo. La portada se conserva en `data/portal/portada-enlaces.json`; si una consulta posterior falla, usa esa evidencia e indica su fecha. Sin evidencia previa ni acceso a la portada, la ejecución falla en lugar de fabricar un inventario.
+Ejecuta cada etapa solo si la anterior terminó correctamente y evita cargas simultáneas. La sincronización requiere Studio abierto. Las descargas de recursos CKAN deben realizarse mediante `scripts/descargar_ckan.py`, que incluye el `User-Agent` requerido por el portal. Los archivos Turtle se generan mediante el pipeline.
 
-El alcance de navegación son las páginas `/datos/` enlazadas desde la portada. Los enlaces institucionales y sociales quedan como referencias sin rastrear. Los destinos de visualización se registran sin consultar sus APIs internas. Enlaces accesibles y esquemas recuperados no prueban que el contenido completo esté integrado.
+## Estructura del repositorio
 
-El inventario describe evidencia de acceso y compara el catálogo base. La incorporación de páginas y columnas al grafo se realiza en el paso siguiente.
+| Ruta | Contenido |
+| --- | --- |
+| `ontologia/` | Definiciones y reglas del modelo semántico. |
+| `shapes/` | Restricciones de validación SHACL. |
+| `scripts/` | Herramientas de extracción, construcción, consulta y verificación. |
+| `queries/` | Consultas SPARQL del catálogo y del portal ampliado. |
+| `data/` | Insumos, evidencia recuperada y exportaciones generadas. |
+| `reports/` | Informes de cobertura, validación, procedencia y resultados. |
+| `docs/` | Documentación conceptual y guías operativas. |
+| `tests/` | Pruebas automatizadas. |
+| `propuestas/` | Entregas de revisión y expedientes de evidencia. |
 
-## Ampliar el grafo con páginas y estructuras
+## Verificación
 
-```powershell
-uv run python scripts/ampliar_portal.py --load
-uv run python scripts/consultar_catalogo.py --portal queries/portal/resumen.rq
-```
-
-Genera la ampliación desde el inventario existente, la une al catálogo en `data/portal/portal-completo.ttl` y la valida con SHACL. Las columnas mantienen identidad por recurso, sin asumir equivalencias por nombre.
-
-La ampliación ya está guardada también en la copia de Studio. Para una actualización posterior, con Studio abierto:
-
-```powershell
-uv run python scripts/sincronizar_studio_portal.py
-```
-
-Esta operación respalda el estado vivo y conserva los triples ajenos a la ampliación. Detalles, consultas y límites: [docs/modelo-portal.md](docs/modelo-portal.md).
-
-## Verificar el proyecto
-
-Comprobación del motor HTTP/MCP usado por Studio:
-
-```powershell
-uv run python scripts/comprobar_studio.py
-```
-
-La prueba conserva el contrato del lector original del repositorio. Se encontró una incompatibilidad de formato y se corrigió en la copia local de Studio, que ya está instalada y conectada al catálogo. Uso, límites y ajustes: [docs/studio-instalacion.md](docs/studio-instalacion.md).
+Para ejecutar la suite de pruebas:
 
 ```powershell
 uv run python -m unittest discover -s tests -v
 ```
 
-Las pruebas cubren identidad estable ante cambios de título, aislamiento de fechas de metadatos, preservación de texto al serializar, base configurable y tratamiento conservador de datos ambiguos.
+Para comprobar la conexión con el motor usado por Studio:
 
-## Entregas de revisión integradas
+```powershell
+uv run python scripts/comprobar_studio.py
+```
 
-La integración central añade significados documentados, correspondencias revisadas, catálogos identificados, localidades observadas y comprobaciones de claves. Evidencia, conteos y límites: [reports/integracion-agentes.md](reports/integracion-agentes.md). Las cinco carpetas originales de propuestas se conservan; la generación usa copias fijadas por SHA-256. La referencia de localidades es derivada de IML_2020 y no acredita un catálogo oficial completo.
+Los recibos de carga y validación se conservan en [portal-carga.json](reports/portal-carga.json). El resultado de sincronización y la referencia al respaldo de Studio están en [studio-portal-sync.json](reports/studio-portal-sync.json).
 
-## Segunda ronda de revisión
+## Documentación
 
-Procedimiento completo de revisión, respaldo, integración, regeneración y sincronización: [docs/integracion-de-agentes.md](docs/integracion-de-agentes.md).
+| Para profundizar en… | Referencia |
+| --- | --- |
+| Variables, conceptos, estados y evidencia | [Núcleo semántico](docs/nucleo-semantico.md) |
+| Catálogo, páginas, recursos y estructuras | [Modelo del portal](docs/modelo-portal.md) |
+| Correspondencia entre CKAN y el modelo | [Mapeo del catálogo](docs/mapeo-catalogo.md) |
+| Inspección de archivos, diccionarios y cruces | [Contenido y cruces](docs/contenido-y-cruces.md) |
+| Condiciones para evaluar pares de fuentes | [Oportunidades de cruce](reports/oportunidades-cruce.md) |
+| Cobertura y brechas documentales | [Pendientes semánticos](reports/pendientes-semanticos.md) |
+| Instalación y uso de la aplicación visual | [Studio](docs/studio-instalacion.md) |
+| Versionado, evidencia y publicación | [Versionado y lanzamientos](docs/versionado-y-lanzamientos.md) |
+| Trabajo previsto y condiciones de continuación | [Plan del proyecto](PLAN.md) |
 
-La ronda 2 incorpora 674 correspondencias documentales (836 revisadas en total, 118 candidatas), 32 dictámenes de pendientes, 1850 coincidencias IML/ITER2020 y revisiones de vigencia. La evaluación del pipeline de consulta se conserva con su alcance parcial, sin certificar la interfaz de Studio. Evidencia, límites y reproducción: [reports/integracion-ronda-2.md](reports/integracion-ronda-2.md).
-
-## Estado después de la ronda 3
-
-La ampliación semántica revisada cuenta con 1,212 significados respaldados y 940 conceptos; su evidencia está en [reports/cobertura-muse.md](reports/cobertura-muse.md). La etapa posterior incorpora 29 correspondencias documentales, para un total de 865 revisadas, y tres fichas de cruces. El caso nuevo documenta 72 comparaciones de proyecciones en 2020 con 144 evidencias por fuente. Studio está sincronizado y validado con SHACL.
-
-Resultados y pruebas: [reports/integracion-ronda-3.md](reports/integracion-ronda-3.md). Uso y límites: [docs/correspondencias-y-cruces-ronda-3.md](docs/correspondencias-y-cruces-ronda-3.md). La corrección del chat está instalada y su recuperación por API comprobada; la respuesta del modelo desde la interfaz sigue sin evaluar.
-
-## Seguimiento operativo posterior a R9
-
-Se publicó el [reporte operativo de cobertura](reports/cobertura-operativa-r9.md),
-con los estados R9 y condiciones de reapertura para todos los frentes pendientes.
-Las siete preguntas documentales se conservan [en el expediente](propuestas/cobertura-operativa-post-r9/ejecucion-20261024/C-preguntas/preguntas-documentales.md), sin enviar.
-La revisión de Presas no aportó evidencia nueva: su correspondencia está resuelta
-desde R6 y la vigencia histórica sigue pendiente.
-
-La [validación de este seguimiento](reports/seguimiento-operativo-post-r9.md)
-conserva los recibos de pruebas y comprobación del grafo. No abre una nueva ronda semántica.
+Los informes conservan los resultados y límites de cada ejecución. Sus cifras deben interpretarse con la fecha y el alcance de la evidencia correspondiente.
