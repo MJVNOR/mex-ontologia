@@ -124,6 +124,61 @@ Los agentes deben consultar el grafo mediante este MCP. Si no está disponible, 
 
 El contrato completo de consulta está en [AGENTS.md](AGENTS.md).
 
+El lanzador y la CLI comparten un único backend persistente por almacén. Los
+agentes tienen sesiones MCP independientes y pueden consultar simultáneamente;
+ya no abren cada uno su propia instancia de Oxigraph. El backend escucha solo en
+localhost, con token local, y ofrece únicamente las cinco herramientas indicadas.
+La dirección y el token se guardan en `store/mcp-*.json`, excluidos de Git.
+
+Para verificar la concurrencia:
+
+```powershell
+uv run python scripts/comprobar_mcp_concurrente.py
+```
+
+La migración requiere reconectar una vez los clientes del lanzador antiguo que
+retengan el almacén. No se deben borrar archivos `LOCK`. El backend se conserva
+al cerrar un cliente para que los demás continúen; antes de una recarga del store
+debe detenerse de forma controlada y sin consultas en curso. El manifiesto de
+carga determina qué almacén se comparte, por lo que una nueva instantánea utiliza
+un backend distinto.
+
+## Skills para dashboards
+
+Para preparar y revisar los análisis de los dashboards se utilizan estas cuatro skills, instaladas para **Codex y OpenCode**:
+
+| Skill | Uso en los dashboards | Fuente |
+| --- | --- | --- |
+| `exploratory-data-analysis` | Explorar los datos, identificar faltantes y revisar distribuciones antes del análisis. | [K-Dense](https://github.com/K-Dense-AI/scientific-agent-skills/tree/main/skills/exploratory-data-analysis) |
+| `validate-data` | Revisar cálculos, agregaciones, sesgos y conclusiones antes de compartir los resultados. | [Anthropic](https://github.com/anthropics/knowledge-work-plugins/tree/main/data/skills/validate-data) |
+| `statistical-analysis` | Analizar tendencias, correlaciones e incertidumbre y seleccionar métodos estadísticos. | [Anthropic](https://github.com/anthropics/knowledge-work-plugins/tree/main/data/skills/statistical-analysis) |
+| `polars` | Preparar tablas y ejecutar filtros, transformaciones y agregaciones de forma eficiente. | [K-Dense](https://github.com/K-Dense-AI/scientific-agent-skills/tree/main/skills/polars) |
+
+Se instalan a nivel de usuario para ambos agentes con:
+
+```powershell
+npx --yes skills add K-Dense-AI/scientific-agent-skills --skill exploratory-data-analysis polars --agent codex opencode --global --yes
+npx --yes skills add anthropics/knowledge-work-plugins --skill validate-data statistical-analysis --agent codex opencode --global --yes
+```
+
+### Modelos predictivos y machine learning
+
+Para entrenar, evaluar y explicar modelos destinados a los dashboards también se utilizan estas tres skills, instaladas para **Codex y OpenCode**:
+
+| Skill | Uso en los dashboards | Fuente |
+| --- | --- | --- |
+| `scikit-learn` | Entrenar y evaluar modelos de regresión, clasificación y agrupamiento mediante pipelines y validación cruzada. | [K-Dense](https://github.com/K-Dense-AI/scientific-agent-skills/tree/main/skills/scikit-learn) |
+| `statsmodels` | Ajustar modelos estadísticos y pronósticos de series temporales, con diagnóstico e incertidumbre. | [K-Dense](https://github.com/K-Dense-AI/scientific-agent-skills/tree/main/skills/statsmodels) |
+| `shap` | Explicar y auditar la contribución de las variables a las predicciones, sin atribuirles causalidad. | [K-Dense](https://github.com/K-Dense-AI/scientific-agent-skills/tree/main/skills/shap) |
+
+```powershell
+npx --yes skills add K-Dense-AI/scientific-agent-skills --skill scikit-learn statsmodels shap --agent codex opencode --global --yes
+```
+
+Estas skills aportan instrucciones y recursos; los modelos se entrenan o cargan por separado. Su evaluación utiliza datos reservados y, en pronósticos, respeta el orden temporal para evitar que información futura entre en el entrenamiento.
+
+Las dependencias de Python se instalan por separado según el análisis. El uso de estas skills conserva el contrato de [AGENTS.md](AGENTS.md): consultas del grafo por MCP o la CLI canónica, evidencia trazable y cruces mediante `scripts/consultar_cruces.py`.
+
 ## Construcción y actualización
 
 El pipeline separa la recuperación del catálogo, la inspección de contenido, la generación del grafo y su sincronización con Studio.

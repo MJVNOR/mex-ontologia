@@ -6,6 +6,10 @@
   `onto_query/onto_stats/onto_status/onto_validate/onto_shacl`, modo persistente).
   Sin MCP, usa `uv run python scripts/consultar_ontologia.py <significado|correspondencias|resumen|sparql>`.
   Nunca `tools/open-ontologies.exe` directo ni `.ttl` a mano.
+- El lanzador MCP y la CLI canónica comparten un backend persistente por almacén.
+  Para consultas simultáneas, crear sesiones MCP independientes sobre ese backend;
+  no abrir el store desde cada agente. No borrar archivos LOCK. Después de migrar
+  desde el lanzador antiguo, reconectar una vez las sesiones que retenían el store.
 - `estadoSemantico` de la variable ≠ `estadoCorrespondencia` del enlace columna↔variable.
   Una `candidata_por_nombre` es hipótesis, no dato; 4506 revisadas no autorizan ningún join.
 - "No recuperado" ≠ "no existe". La ausencia exige consulta de alcance completo;
