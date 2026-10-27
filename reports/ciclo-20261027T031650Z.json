@@ -1,0 +1,147 @@
+{
+  "load": {
+    "ok": true,
+    "path": "C:\\Users\\marti\\Documents\\MEX-Ontologi\\data\\portal\\ontologia-portal.ttl",
+    "triples_loaded": 81
+  },
+  "version_v1": {
+    "label": "v1-ciclo",
+    "ok": true,
+    "triple_count": 81
+  },
+  "history_v1": {
+    "versions": [
+      {
+        "created_at": "2026-10-27 03:16:50",
+        "format": "ntriples",
+        "id": 1,
+        "label": "v1-ciclo",
+        "triple_count": 81
+      }
+    ]
+  },
+  "lock": {
+    "locked": [
+      "https://example.org/mex-ontologi/vocab/ConjuntoDatos",
+      "https://example.org/mex-ontologi/vocab/RecursoPortal"
+    ],
+    "ok": true,
+    "reason": "demo ciclo"
+  },
+  "plan": {
+    "added_classes": [],
+    "added_individuals": [],
+    "added_properties": [],
+    "blast_radius": {
+      "triples_affected": 0
+    },
+    "conservativity": {
+      "base_certificate": {
+        "asserted": 81,
+        "checker_exit": null,
+        "checker_report": null,
+        "derivations": 0,
+        "iteration_cap": 64,
+        "iterations": 1,
+        "reached_fixpoint": true,
+        "skipped": "oo-cert not found (looked at $OO_CERT, .\\lean\\.lake\\build\\bin\\oo-cert, D:\\a\\open-ontologies\\open-ontologies\\lean\\.lake\\build\\bin\\oo-cert, and $PATH). install elan from https://github.com/leanprover/elan; lean/lean-toolchain pins the version, then `cd lean && lake build` (oo-cert and oo-horn are in defaultTargets). Or set OO_CERT to the binary.",
+        "theorem": null,
+        "verdict": "engine_opinion"
+      },
+      "base_signature_size": 27,
+      "base_triples_the_proposal_drops": 0,
+      "conservative_under_rule_table": true,
+      "conservativity_verdict": "conservative_under_rule_table",
+      "dropped_examples": [],
+      "engine_soundness_gate_skipped": null,
+      "engine_soundness_violations": [],
+      "exit_code": 0,
+      "extended_certificate": {
+        "asserted": 83,
+        "checker_exit": null,
+        "checker_report": null,
+        "derivations": 0,
+        "iteration_cap": 64,
+        "iterations": 1,
+        "reached_fixpoint": true,
+        "skipped": "oo-cert not found (looked at $OO_CERT, .\\lean\\.lake\\build\\bin\\oo-cert, D:\\a\\open-ontologies\\open-ontologies\\lean\\.lake\\build\\bin\\oo-cert, and $PATH). install elan from https://github.com/leanprover/elan; lean/lean-toolchain pins the version, then `cd lean && lake build` (oo-cert and oo-horn are in defaultTargets). Or set OO_CERT to the binary.",
+        "theorem": null,
+        "verdict": "engine_opinion"
+      },
+      "finding_not_an_error": "a non-conservative extension is a FINDING, not a failure. Adding axioms that change what the ontology says about existing terms is often exactly the intended change; the point of reporting it is that it should be intended rather than discovered later. Each row names the rule that produced it and the premises the base did not have, so the decision can be made on the derivation rather than on the verdict word.",
+      "format": "oo-conservativity/1",
+      "headline": "conservative_under_rule_table: 0 new consequence(s) over the 27 name(s) the base already used, out of 2 new consequence(s) in total, under the owl-rl rule table. Extended certificate: engine_opinion. this is conservativity WITH RESPECT TO THE RULE TABLE named in rule_table, and nothing else. It is computed as closure(base ∪ extension) minus closure(base) under that table, restricted to triples every name of which the base already used. It is NOT deductive conservativity in a description logic (ExpTime-complete for EL, 2ExpTime-complete for ALC, and UNDECIDABLE for ALCQIO) and it is NOT model conservativity (undecidable already for EL). The asymmetry is the point: a new consequence reported here IS a real change to what this engine derives over the old names, while finding none establishes only that this rule table derives nothing new, and never that the extension is conservative in any logic.",
+      "is_an_extension": true,
+      "mode": "replacement",
+      "new_consequences_over_old_signature": [],
+      "new_consequences_over_old_signature_total": 0,
+      "new_consequences_total": 2,
+      "not_compared_blank_node_bearing": 0,
+      "not_examined": 0,
+      "ran": true,
+      "rule_table": "owl-rl",
+      "seconds": 0.0780965,
+      "signature_added": [
+        "https://example.org/mex-ontologi/vocab/PruebaCiclo"
+      ],
+      "signature_added_total": 1,
+      "what_this_is_not": "this is conservativity WITH RESPECT TO THE RULE TABLE named in rule_table, and nothing else. It is computed as closure(base ∪ extension) minus closure(base) under that table, restricted to triples every name of which the base already used. It is NOT deductive conservativity in a description logic (ExpTime-complete for EL, 2ExpTime-complete for ALC, and UNDECIDABLE for ALCQIO) and it is NOT model conservativity (undecidable already for EL). The asymmetry is the point: a new consequence reported here IS a real change to what this engine derives over the old names, while finding none establishes only that this rule table derives nothing new, and never that the extension is conservative in any logic."
+    },
+    "locked_violations": [],
+    "plan_id": "plan-18e244957e64c53c",
+    "removed_classes": [],
+    "removed_individuals": [],
+    "removed_properties": [],
+    "risk_score": "low",
+    "triple_delta": {
+      "deletions": 0,
+      "insertions": 2,
+      "strategy": "delta"
+    }
+  },
+  "drift": {
+    "added": [],
+    "drift_velocity": 0.0,
+    "likely_renames": [],
+    "removed": [],
+    "v1_count": 25,
+    "v2_count": 25
+  },
+  "apply": {
+    "added_classes": 0,
+    "mode": "safe",
+    "ok": true,
+    "plan_id": "plan-18e244957e64c53c",
+    "removed_classes": 0,
+    "strategy": "delta",
+    "triples_deleted": 0,
+    "triples_inserted": 2,
+    "triples_loaded": 83
+  },
+  "stats_aplicado": {
+    "classes": 16,
+    "data_properties": 9,
+    "individuals": 0,
+    "object_properties": 5,
+    "properties": 14,
+    "triples": 83
+  },
+  "version_v2": {
+    "label": "v2-ciclo",
+    "ok": true,
+    "triple_count": 83
+  },
+  "rollback": {
+    "label": "v1-ciclo",
+    "ok": true,
+    "triples_restored": 81
+  },
+  "stats_revertido": {
+    "classes": 15,
+    "data_properties": 9,
+    "individuals": 0,
+    "object_properties": 5,
+    "properties": 14,
+    "triples": 81
+  }
+}

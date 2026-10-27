@@ -556,6 +556,40 @@ shape:LocalidadObservada a sh:NodeShape ;
             sh:path prov:wasDerivedFrom ] ;
     sh:targetClass mex:LocalidadObservada .
 
+shape:MencionEnGasto a sh:NodeShape ;
+    sh:property [ sh:datatype xsd:string ;
+            sh:maxCount 1 ;
+            sh:minCount 1 ;
+            sh:path mex:objetoGasto ],
+        [ sh:datatype xsd:string ;
+            sh:maxCount 1 ;
+            sh:minCount 1 ;
+            sh:path mex:rolEnGasto ],
+        [ sh:datatype xsd:string ;
+            sh:maxCount 1 ;
+            sh:minCount 1 ;
+            sh:path mex:periodoReportado ] ;
+    sh:targetClass mex:MencionEnGasto .
+
+shape:OcupacionDePuesto a sh:NodeShape ;
+    sh:property [ sh:datatype xsd:string ;
+            sh:maxCount 1 ;
+            sh:minCount 1 ;
+            sh:path mex:areaAdscripcion ],
+        [ sh:datatype xsd:string ;
+            sh:maxCount 1 ;
+            sh:minCount 1 ;
+            sh:path mex:periodoReportado ],
+        [ sh:datatype xsd:string ;
+            sh:maxCount 1 ;
+            sh:minCount 1 ;
+            sh:path mex:sujetoObligado ],
+        [ sh:datatype xsd:string ;
+            sh:maxCount 1 ;
+            sh:minCount 1 ;
+            sh:path mex:denominacionCargo ] ;
+    sh:targetClass mex:OcupacionDePuesto .
+
 shape:Oportunidad a sh:NodeShape ;
     sh:property [ sh:class dcat:Dataset ;
             sh:maxCount 1 ;
@@ -604,6 +638,23 @@ shape:Pagina a sh:NodeShape ;
             sh:path mex:visualizacionDeclarada ] ;
     sh:targetClass mex:PaginaPortal .
 
+shape:Percepcion a sh:NodeShape ;
+    sh:property [ sh:datatype xsd:string ;
+            sh:maxCount 1 ;
+            sh:minCount 1 ;
+            sh:path mex:sujetoObligado ],
+        [ sh:datatype xsd:string ;
+            sh:maxCount 1 ;
+            sh:minCount 1 ;
+            sh:path mex:periodoReportado ],
+        [ sh:datatype xsd:string ;
+            sh:maxCount 1 ;
+            sh:path mex:montoBruto ],
+        [ sh:datatype xsd:string ;
+            sh:maxCount 1 ;
+            sh:path mex:montoNeto ] ;
+    sh:targetClass mex:Percepcion .
+
 shape:PerfilClaves a sh:NodeShape ;
     sh:property [ sh:class mex:ColumnaObservada ;
             sh:path mex:columnaClave ],
@@ -611,6 +662,24 @@ shape:PerfilClaves a sh:NodeShape ;
             sh:nodeKind sh:IRI ;
             sh:path prov:wasDerivedFrom ] ;
     sh:targetClass mex:PerfilClaves .
+
+shape:PersonaObservada a sh:NodeShape ;
+    sh:property [ sh:datatype xsd:string ;
+            sh:maxCount 1 ;
+            sh:minCount 1 ;
+            sh:path mex:nombreObservado ],
+        [ sh:in ( "revisada_por_evidencia" "candidata_por_nombre" ) ;
+            sh:maxCount 1 ;
+            sh:minCount 1 ;
+            sh:path mex:estadoIdentidad ],
+        [ sh:minCount 1 ;
+            sh:path mex:limitePersona ],
+        [ sh:class mex:OcupacionDePuesto ;
+            sh:minCount 1 ;
+            sh:path mex:tieneOcupacion ],
+        [ sh:minCount 1 ;
+            sh:path prov:wasDerivedFrom ] ;
+    sh:targetClass mex:PersonaObservada .
 
 shape:Recurso a sh:NodeShape ;
     sh:property [ sh:nodeKind sh:IRI ;
@@ -1002,6 +1071,15 @@ shape:VariableRespaldadaSinSignificadoCandidato a sh:NodeShape ;
 }""" ;
             sh:severity sh:Violation ] ;
     sh:targetClass mex:VariableDocumentada .
+
+shape:VecindadPorReunion a sh:NodeShape ;
+    sh:property [ sh:class mex:PersonaObservada ;
+            sh:maxCount 1 ;
+            sh:minCount 1 ;
+            sh:path mex:reunionCon ],
+        [ sh:minCount 1 ;
+            sh:path mex:limitePersona ] ;
+    sh:targetClass mex:VecindadPorReunion .
 
 shape:VinculoCatalogoPublicado a sh:NodeShape ;
     sh:property [ sh:class mex:CatalogoPublicado ;

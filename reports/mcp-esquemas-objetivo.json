@@ -1,0 +1,122 @@
+{
+ "onto_conservative_check": {
+  "props": [
+   "extension_ttl",
+   "max_rows",
+   "mode",
+   "out_dir",
+   "profile",
+   "scan_rows"
+  ],
+  "required": [
+   "extension_ttl",
+   "out_dir"
+  ]
+ },
+ "onto_module_extract": {
+  "props": [
+   "include_annotations",
+   "locality",
+   "max_rows",
+   "signature",
+   "verify_out_dir",
+   "verify_profile",
+   "verify_scan_rows"
+  ],
+  "required": [
+   "signature"
+  ]
+ },
+ "onto_justify": {
+  "props": [
+   "candidate",
+   "certificate_dir",
+   "inconsistency",
+   "max_justifications",
+   "max_oracle_calls",
+   "profile",
+   "triple"
+  ],
+  "required": []
+ },
+ "onto_provenance": {
+  "props": [
+   "depth_bound",
+   "max_monomials",
+   "profile",
+   "semirings",
+   "triple",
+   "weights"
+  ],
+  "required": []
+ },
+ "onto_support_check": {
+  "props": [
+   "limit",
+   "prov_predicate"
+  ],
+  "required": []
+ },
+ "onto_support_report": {
+  "props": [
+   "prov_predicate"
+  ],
+  "required": []
+ },
+ "onto_support_verdict": {
+  "props": [
+   "claim_id",
+   "note",
+   "verdict"
+  ],
+  "required": [
+   "claim_id",
+   "verdict"
+  ]
+ },
+ "onto_cq_run": {
+  "props": [
+   "cqs_json"
+  ],
+  "required": [
+   "cqs_json"
+  ]
+ },
+ "onto_verify_cq": {
+  "props": [
+   "cq_id",
+   "judge",
+   "rationale",
+   "verdict"
+  ],
+  "required": [
+   "cq_id",
+   "verdict"
+  ]
+ },
+ "onto_cq_verdicts_list": {
+  "props": [
+   "cq_id"
+  ],
+  "required": [
+   "cq_id"
+  ]
+ },
+ "onto_pack": {
+  "props": [
+   "include_evidence",
+   "name",
+   "path",
+   "version"
+  ],
+  "required": [
+   "path"
+  ]
+ },
+ "onto_lineage": {
+  "props": [
+   "session_id"
+  ],
+  "required": []
+ }
+}

@@ -142,6 +142,30 @@ def ampliar(inventario, base):
     return g, model
 
 
+def etiquetar(grafo, mex):
+    """Espejos rdfs:label desde literales legibles ya presentes; cero invención.
+
+    Cubre nodos que otros constructores dejan sin etiqueta (organizaciones con
+    foaf:name, conjuntos con dct:title, conceptos con skos:prefLabel, evidencias
+    con mex:nombreOrigen). Los nodos de máquina sin literal legible se omiten.
+    """
+    orden = (FOAF.name, DCT.title, SKOS.prefLabel, mex.nombreOrigen)
+    n = 0
+    for sujeto in set(grafo.subjects()):
+        if (sujeto, RDFS.label, None) in grafo:
+            continue
+        for predicado in orden:
+            for literal in grafo.objects(sujeto, predicado):
+                if isinstance(literal, Literal):
+                    grafo.add((sujeto, RDFS.label, literal))
+                    n += 1
+                    break
+            else:
+                continue
+            break
+    return n
+
+
 def main():
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument("--load", action="store_true")
@@ -193,6 +217,7 @@ def main():
         from consolidar_semantica import generar
         semantic_data, semantic_model, semantic_report = generar()
         extension += semantic_data + semantic_model
+    etiquetas = etiquetar(extension, mex)
     combined += extension
     output = ROOT / "data/portal"
     for name, graph in (("ampliacion.ttl", extension), ("ontologia-portal.ttl", model), ("portal-completo.ttl", combined)):
@@ -208,6 +233,8 @@ def main():
         shapes.parse(data=(ROOT / 'shapes/lote.ttl').read_text(encoding='utf-8').replace('{{BASE_IRI}}', config['base_iri']), format='turtle')
     if semantic_rules.exists():
         shapes.parse(data=(ROOT / 'shapes/semantica.ttl').read_text(encoding='utf-8').replace('{{BASE_IRI}}', config['base_iri']), format='turtle')
+        if (ROOT / 'ontologia/personas.json').exists():
+            shapes.parse(data=(ROOT / 'shapes/personas.ttl').read_text(encoding='utf-8').replace('{{BASE_IRI}}', config['base_iri']), format='turtle')
         if (ROOT / 'ontologia/territorio.json').exists():
             shapes.parse(data=(ROOT / 'shapes/territorio.ttl').read_text(encoding='utf-8').replace('{{BASE_IRI}}', config['base_iri']), format='turtle')
         if (ROOT / 'ontologia/revision-agentes.json').exists():
@@ -224,7 +251,8 @@ def main():
         shapes += cargar_shapes_r10(ROOT)
     serializar_atomico(shapes, output / "shapes.ttl")
     report = {"base_iri": config["base_iri"], "generado_en_utc": datetime.now(timezone.utc).isoformat(),
-              "inventario_sha256": hashlib.sha256(source.read_bytes()).hexdigest(), "triples_extension": len(extension), "triples_combinados": len(combined)}
+              "inventario_sha256": hashlib.sha256(source.read_bytes()).hexdigest(), "triples_extension": len(extension), "triples_combinados": len(combined),
+              "etiquetas_espejo": etiquetas}
     if content_file.exists() and cross_file.exists():
         report['contenido_sha256'] = hashlib.sha256(content_file.read_bytes()).hexdigest()
         report['cruce_sha256'] = hashlib.sha256(cross_file.read_bytes()).hexdigest()

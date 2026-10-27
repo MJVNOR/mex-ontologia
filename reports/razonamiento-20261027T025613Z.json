@@ -1,0 +1,127 @@
+{
+  "generado_en_utc": "2026-10-27T02:56:01.692964+00:00",
+  "portal_sha256": "c5bc5c35a7e613e97d713a2d270477403afa4f0a44da308e150e5ebaf3f68ae3",
+  "store_tmp": "C:\\Users\\marti\\AppData\\Local\\Temp\\mex-rev-h0q7zi1v\\store",
+  "stats": {
+    "classes": 57,
+    "data_properties": 155,
+    "individuals": 27343,
+    "object_properties": 48,
+    "properties": 210,
+    "triples": 322495
+  },
+  "rdfs": {
+    "certificate": {
+      "asserted": 322495,
+      "asserted_sha256": "6948e4faace77a3121522b3a69c4df3929c6ff272e8aa96a761edc776142ddf3",
+      "asserted_sha256_means": "the digest of asserted.tsv, written beside it as asserted.sha256. A holder of a store recomputes it with `certificate-check <dir>` and learns whether this certificate is about that store (issue #158). It binds the certificate to a selection of BYTES, not to a state of the world",
+      "by_rule": {
+        "rdfs3": 484,
+        "rdfs9": 486
+      },
+      "check_with": "cd lean && lake exe oo-cert <dir>/asserted.tsv <dir>/derivations.tsv",
+      "derivations": 970,
+      "dir": "C:\\Users\\marti\\AppData\\Local\\Temp\\mex-rev-h0q7zi1v\\cert-rdfs",
+      "format": "oo-cert/1",
+      "graphs_excluded": [
+        "https://open-ontologies.org/graph/inferred"
+      ],
+      "graphs_read": [
+        "<default>"
+      ],
+      "scope": {
+        "complete": true,
+        "default_graph": true,
+        "note": "every graph in the store, the default graph included. On a store that keeps several versions of an entity in several named graphs this union is a state that held at no instant.",
+        "selector": "whole-store",
+        "semantics_version": "temporal/2"
+      },
+      "scope_file": "C:\\Users\\marti\\AppData\\Local\\Temp\\mex-rev-h0q7zi1v\\cert-rdfs\\scope.tsv",
+      "scope_means": "oo-cert verifies that every derivation follows from the triples in asserted.tsv. It does not and cannot check that asserted.tsv is the graph you meant to reason over. scope.tsv records which graphs were read; a reader who cares whether this answer is about a state that existed has to read it."
+    },
+    "final_triples": 323465,
+    "fixpoint_reached": true,
+    "inferred_count": 970,
+    "initial_triples": 322495,
+    "iterations": 2,
+    "profile_used": "rdfs",
+    "sample_inferences": [
+      "<https://example.org/mex-ontologi/resource/a363751a-04d1-4a1b-b4a4-d1053dee6984> a <http://www.w3.org/2000/01/rdf-schema#Resource>",
+      "<https://datos.sonora.gob.mx/dataset/8f11b2e0-c51d-4719-a7ef-fcf8e8ab70bb/resource/a6cdb7ad-ec32-44aa-851d-684947df4243/download/diccionario-plantas-electricas.xlsx> a <http://www.w3.org/2000/01/rdf-schema#Resource>",
+      "<https://example.org/mex-ontologi/resource/0403d99f-1925-49d4-9540-b4941aa2ad32> a <http://www.w3.org/2000/01/rdf-schema#Resource>",
+      "<https://datos.sonora.gob.mx/dataset/e5aad52d-5760-481c-ba65-db0ba4a5315e/resource/cec18f93-57f8-4e86-871e-a5452e61db4c/download/matricula-mayo-agosto-2023.xlsx> a <http://www.w3.org/2000/01/rdf-schema#Resource>",
+      "<https://datos.sonora.gob.mx/dataset/ee8f639f-5e89-46ae-93b9-934b05fc6233/resource/8826c8a0-75f2-49b0-bf48-907b57c3495d/download/hidrico_sonora_1950-1959.xlsx> a <http://www.w3.org/2000/01/rdf-schema#Resource>",
+      "<https://example.org/mex-ontologi/resource/251309e5-0309-46ed-9711-77a1dd408eeb> a <http://www.w3.org/2000/01/rdf-schema#Resource>",
+      "<https://datos.sonora.gob.mx/dataset/5494daa1-09ca-4750-aeac-2558553700e1/resource/4121cf57-1e4a-4fb0-b175-3805edffca2c/download/fiebre-manchada-2022.xlsx> a <http://www.w3.org/2000/01/rdf-schema#Resource>",
+      "<https://datos.sonora.gob.mx/dataset/8c1f452e-7967-4c6b-a7b5-f2279360ad6c/resource/bfb8788b-8ce3-475e-8bbd-dd1c5154c877/download/diccionario.xlsx> a <http://www.w3.org/2000/01/rdf-schema#Resource>",
+      "<https://datos.sonora.gob.mx/dataset/b38b7bee-9285-40ee-b29f-27f22b58d46c/resource/6058b248-af8a-4af5-a792-8d2913eb06f6/download/defunciones_2022.csv> a <http://www.w3.org/2000/01/rdf-schema#Resource>",
+      "<https://example.org/mex-ontologi/resource/fd7f9990-f2e7-41a7-8db8-273166d12738> a <http://www.w3.org/2000/01/rdf-schema#Resource>"
+    ],
+    "scope": {
+      "complete": true,
+      "default_graph": true,
+      "note": "every graph in the store, the default graph included. On a store that keeps several versions of an entity in several named graphs this union is a state that held at no instant.",
+      "selector": "whole-store",
+      "semantics_version": "temporal/2"
+    }
+  },
+  "owl_rl": {
+    "certificate": {
+      "asserted": 323465,
+      "asserted_sha256": "577c3da6d39a74df295032c97325cf6e8651325580c7ea932b800b4f146d09fc",
+      "asserted_sha256_means": "the digest of asserted.tsv, written beside it as asserted.sha256. A holder of a store recomputes it with `certificate-check <dir>` and learns whether this certificate is about that store (issue #158). It binds the certificate to a selection of BYTES, not to a state of the world",
+      "by_rule": {
+        "scm-dom1": 10,
+        "scm-rng1": 1
+      },
+      "check_with": "cd lean && lake exe oo-cert <dir>/asserted.tsv <dir>/derivations.tsv",
+      "derivations": 11,
+      "dir": "C:\\Users\\marti\\AppData\\Local\\Temp\\mex-rev-h0q7zi1v\\cert-owl",
+      "format": "oo-cert/1",
+      "graphs_excluded": [
+        "https://open-ontologies.org/graph/inferred"
+      ],
+      "graphs_read": [
+        "<default>"
+      ],
+      "scope": {
+        "complete": true,
+        "default_graph": true,
+        "note": "every graph in the store, the default graph included. On a store that keeps several versions of an entity in several named graphs this union is a state that held at no instant.",
+        "selector": "whole-store",
+        "semantics_version": "temporal/2"
+      },
+      "scope_file": "C:\\Users\\marti\\AppData\\Local\\Temp\\mex-rev-h0q7zi1v\\cert-owl\\scope.tsv",
+      "scope_means": "oo-cert verifies that every derivation follows from the triples in asserted.tsv. It does not and cannot check that asserted.tsv is the graph you meant to reason over. scope.tsv records which graphs were read; a reader who cares whether this answer is about a state that existed has to read it."
+    },
+    "final_triples": 323476,
+    "fixpoint_reached": true,
+    "inferred_count": 11,
+    "initial_triples": 323465,
+    "iterations": 2,
+    "profile_used": "owl-rl",
+    "sample_inferences": [],
+    "scope": {
+      "complete": true,
+      "default_graph": true,
+      "note": "every graph in the store, the default graph included. On a store that keeps several versions of an entity in several named graphs this union is a state that held at no instant.",
+      "selector": "whole-store",
+      "semantics_version": "temporal/2"
+    }
+  },
+  "cert_rdfs": {
+    "derivations": 970,
+    "by_rule": {
+      "rdfs3": 484,
+      "rdfs9": 486
+    },
+    "asserted_sha256": "6948e4faace77a3121522b3a69c4df3929c6ff272e8aa96a761edc776142ddf3"
+  },
+  "cert_owl": {
+    "derivations": 11,
+    "by_rule": {
+      "scm-dom1": 10,
+      "scm-rng1": 1
+    }
+  }
+}

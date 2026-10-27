@@ -1,0 +1,66 @@
+{
+ "run": {
+  "total": 3,
+  "passed": 3,
+  "results": [
+   {
+    "id": "sig-municipio",
+    "passed": true,
+    "row_count": 5,
+    "pitfalls": [
+     "P11: no rdfs:label on returned IRIs (LLM cannot phrase the answer)"
+    ],
+    "raw_excerpt": "{\"results\":[{\"s\":\"\\\"Municipio de ubicación\\\"@es\"},{\"s\":\"\\\"Municipio de atención\\\"@es\"},{\"s\":\"\\\"Municipio de la escuela\\\"@es\"},{\"s\":\"\\\"Municipio de ubicación\\\"@es\"},{\"s\":\"\\\"Municipio de ubicación\\\"@es\"}],\"variables\":[\"s\"]}"
+   },
+   {
+    "id": "corr-revisadas",
+    "passed": true,
+    "row_count": 1,
+    "pitfalls": [
+     "P11: no rdfs:label on returned IRIs (LLM cannot phrase the answer)"
+    ],
+    "raw_excerpt": "{\"results\":[{\"n\":\"\\\"4506\\\"^^<http://www.w3.org/2001/XMLSchema#integer>\"}],\"variables\":[\"n\"]}"
+   },
+   {
+    "id": "vars-totales",
+    "passed": true,
+    "row_count": 1,
+    "pitfalls": [
+     "P11: no rdfs:label on returned IRIs (LLM cannot phrase the answer)"
+    ],
+    "raw_excerpt": "{\"results\":[{\"n\":\"\\\"1442\\\"^^<http://www.w3.org/2001/XMLSchema#integer>\"}],\"variables\":[\"n\"]}"
+   }
+  ]
+ },
+ "veredictos": [
+  {
+   "cq_id": "sig-municipio",
+   "verify": {
+    "cq_id": "sig-municipio",
+    "ok": true
+   }
+  },
+  {
+   "cq_id": "corr-revisadas",
+   "verify": {
+    "cq_id": "corr-revisadas",
+    "ok": true
+   }
+  },
+  {
+   "cq_id": "vars-totales",
+   "verify": {
+    "cq_id": "vars-totales",
+    "ok": true
+   }
+  }
+ ],
+ "lista_ejemplo": [
+  {
+   "cq_id": "sig-municipio",
+   "verdict": "correct",
+   "rationale": "correct: devuelve 5 significados con prefLabel, todos de Municipio.",
+   "judge": "motor"
+  }
+ ]
+}

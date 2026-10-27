@@ -1,0 +1,64 @@
+{
+ "version_v1": {
+  "label": "v1-full",
+  "ok": true,
+  "triple_count": 322495
+ },
+ "plan": {
+  "added_classes": [],
+  "added_individuals": [],
+  "added_properties": [],
+  "blast_radius": {
+   "triples_affected": 0
+  },
+  "conservativity": {
+   "base_certificate": {
+    "asserted": 322495,
+    "checker_exit": null,
+    "checker_report": null,
+    "derivations": 981,
+    "iteration_cap": 64,
+    "iterations": 2,
+    "reached_fixpoint": true,
+    "skipped": "oo-cert not found (looked at $OO_CERT, .\\lean\\.lake\\build\\bin\\oo-cert, D:\\a\\open-ontologies\\open-ontologies\\lean\\.lake\\build\\bin\\oo-cert, and $PATH). install elan from https://github.com/leanprover/elan; lean/lean-toolchain pins the version, then `cd lean && lake build` (oo-cert and oo-horn are in defaultTargets). Or set OO_CERT to the binary.",
+    "theorem": null,
+    "verdict": "engine_opinion"
+   },
+   "base_signature_size": 28570,
+   "base_triples_the_proposal_drops": 0,
+   "conservative_under_rule_table": true,
+   "conservativity_verdict": "conservative_under_rule_table",
+   "dropped_examples": [],
+   "engine_soundness_gate_skipped": null,
+   "engine_soundness_violations": [],
+   "exit_code": 0,
+   "extended_certificate": {
+    "asserted": 322496,
+    "checker_exit": null,
+    "checker_report": null,
+    "derivations": 981,
+    "iteration_cap": 64,
+    "iterations": 2,
+    "reached_fixpoint": true,
+    "skipped": "oo-cert not found (looked at $OO_CERT, .\\lean\\.lake\\build\\bin\\oo-cert, D:\\a\\open-ontologies\\open-ontologies\\lean\\.lake\\build\\bin\\oo-cert, and $PATH). install elan from https://github.com/leanprover/elan; lean/lean-toolchain pins the version, then `cd lean && lake build` (oo-cert and oo-horn are in defaultTargets). Or set OO_CERT to the binary.",
+    "theorem": null,
+    "verdict": "engine_opinion"
+   },
+   "finding_not_an_error": "a non-conservative extension is a FINDING, not a failure. Adding axioms that change what the ontology says about existing terms is often exactly the intended change; the point of reporting it is that it should be intended rather than discovered later. Each row names the rule that produced it and the premises the base did not have, so the decision can be made on the derivation rather than on the verdict word.",
+   "format": "oo-conservativity/1",
+   "headline": "conservative_under_rule_table: 0 new consequence(s) over the 28570 name(s) the base already used, out of 1 new consequence(s) in total, under the owl-rl rule table. Extended certificate: engine_opinion. this is conservativity WITH RESPECT TO THE RULE TABLE named in rule_table, and nothing else. It is computed as closure(base ∪ extension) minus closure(base) under that table, restricted to triples every name of which the base already used. It is NOT deductive conservativity in a description logic (ExpTime-complete for EL, 2ExpTime-complete for ALC, and UNDECIDABLE for ALCQIO) and it is NOT model conservativity (undecidable already for EL). The asymmetry is the point: a new consequence reported here IS a real change to what this engine derives over the old names, while finding none establishes only that this rule table derives nothing new, and never that the extension is conservative in any logic.",
+   "is_an_extension": true,
+   "mode": "replacement",
+   "new_consequences_over_old_signature": [],
+   "new_consequences_over_old_signature_total": 0,
+   "new_consequences_total": 1,
+   "not_compared_blank_node_bearing": 0,
+   "not_examined": 0,
+   "ran": true,
+   "rule_table": "owl-rl",
+   "seconds": 12.4604655,
+   "signature_added": [
+    "https://example.org/mex-ontologi/vocab/PruebaCicloCompleto"
+   ],
+   "signature_added_total": 1,
+   "what_this_is_not": "this is conservativity WITH RESPECT TO THE RULE TABLE named in rule_table, and nothing else. It is computed as closure(base ∪ extension) minus closure(base) under that table, restricted to triples every name of which the base already used. It is NOT deductive conservativity in a description logic (Ex

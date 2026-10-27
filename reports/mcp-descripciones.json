@@ -1,0 +1,290 @@
+{
+ "onto_conservative_check": {
+  "description": "Does adding these axioms change anything the ontology ALREADY said? Reasons base and base+extension to a fixpoint under one rule table and reports closure(base ∪ extension) minus closure(base), restricted to triples every name of which the base already used. Each row names the rule that produced it and the premises the base did not have, so the change can be judged on the derivation rather than on a verdict word. A NON-CONSERVATIVE EXTENSION IS A FINDING, NOT AN ERROR: changing what the ontology says about existing terms is often the intended change, and the point is that it should be intended rather than discovered later. BE CLEAR ABOUT THE FRAGMENT. The verdict field is conservativity_verdict with five words (conservative_under_rule_table, not_conservative_under_rule_table, undecided_scan_truncated, undecided_not_an_extension, undecided_engine_soundness_violation) and the boolean beside it is conservative_under_rule_table, null whenever the answer is undecided rather than false, because a reader takes false for a finding. The monotonicity gate runs on every call and its violation gets its OWN word: the base is a subset of the extended graph by construction and the rule table is monotone, so a conclusion the base reaches and the extension does not is an engine soundness bug, and folding it into not_conservative would send it to the ontology's author instead of the engine's. There is deliberately no field called `conservative`. What is computed is conservativity WITH RESPECT TO THE HORN RULE TABLE this engine evaluates, which derives only positive ground triples. It is NOT deductive conservativity in a description logic (ExpTime-complete for EL, 2ExpTime-complete for ALC, UNDECIDABLE for ALCQIO) and NOT model conservativity (undecidable already for EL). The asymmetry is the point: a new consequence reported here IS a real change to what this engine derives over the old names, while finding none establishes only that this rule table derives nothing new. onto_plan takes check_conservativity=true to run the same check as part of a plan, which is where it belongs.",
+  "inputSchema": {
+   "$schema": "https://json-schema.org/draft/2020-12/schema",
+   "description": "Input for `onto_conservative_check` — does adding these axioms change what\nthe ontology already said?",
+   "properties": {
+    "extension_ttl": {
+     "description": "The proposed axioms, as Turtle.",
+     "type": "string"
+    },
+    "max_rows": {
+     "default": null,
+     "format": "uint",
+     "minimum": 0,
+     "type": [
+      "integer",
+      "null"
+     ]
+    },
+    "mode": {
+     "default": null,
+     "description": "`delta` (default) reads `extension_ttl` as the axioms being ADDED.\n`replacement` reads it as the whole proposed graph, the way `onto_plan`\nreceives it, and then reports any asserted triple of the base it drops.\nThis is not guessed: a delta that restates one base triple and a\nreplacement that dropped everything else look identical.",
+     "type": [
+      "string",
+      "null"
+     ]
+    },
+    "out_dir": {
+     "description": "Directory for both certificates and the report.",
+     "type": "string"
+    },
+    "profile": {
+     "default": null,
+     "description": "`rdfs`, `owl-rl` (default) or `owl-rl-ext`. `owl-dl` is refused.",
+     "type": [
+      "string",
+      "null"
+     ]
+    },
+    "scan_rows": {
+     "default": null,
+     "description": "How many new consequences are examined for signature membership. The\nverdict is `undecided_scan_truncated` when there are more, because a\nverdict computed from a prefix of the difference is not a verdict.",
+     "format": "uint",
+     "minimum": 0,
+     "type": [
+      "integer",
+      "null"
+     ]
+    }
+   },
+   "required": [
+    "extension_ttl",
+    "out_dir"
+   ],
+   "title": "OntoConservativeCheckInput",
+   "type": "object"
+  }
+ },
+ "onto_justify": {
+  "description": "AXIOM PINPOINTING: which ASSERTED triples are responsible for a conclusion, or for a contradiction. Returns the MINIMAL sets (justifications, MinAs), not a support set: a set that is not minimal blames axioms that had nothing to do with the conclusion, and an engineer who deletes one and watches the conclusion survive learns to distrust the tool. Pass `triple` for a conclusion or `inconsistency: true` for the clash, never both. Pass `candidate` to CHECK a set someone else produced instead of searching: it comes back `minimal_justification`, `not_a_justification_not_minimal` with the removable triples named, or `not_a_justification_target_not_reached`. THREE DIFFERENT THINGS ARE CLAIMED HERE AND THEY CARRY THREE DIFFERENT WORDS. Sufficiency is re-run and CAN be machine-checked: every justification was produced by running the engine over exactly that subset, and with `certificate_dir` the run is repeated with a certificate so `lake exe oo-cert` verifies under OOCert.certificate_sound that the subset really does entail the conclusion. Minimality is re-run and is NOT machine-checked: for every element of every justification the engine is run again without it and the conclusion must be gone, which is a property of this engine verified by execution and no theorem. Completeness of the LIST is an algorithm's claim: all justifications are enumerated by Reiter's hitting-set tree over the same oracle, bounded by max_justifications (default 16) and max_oracle_calls (default 400), and `truncated` says when a bound fired and which one. Reiter's construction is complete for a MONOTONE oracle and this engine has one non-monotone corner: a restriction node or list node carrying two values for a functional position contributes one, chosen by hash order, so where that occurs a justification can be MISSED. No justification returned can be wrong, because each was re-run. The first justification costs no re-run at all, because the derivation DAG already carries it; everything after that is one full fixpoint per node, which is the entire cost of this tool on a large ontology. For `inconsistency` the verdict explained is `clash_found_by_this_engine` and NEVER the Lean checker's `unsatisfiable_under_disjointness`: ten of the seventeen OWL 2 RL rules that conclude false are looked for, so no clash found is not a consistency result. A justification is a statement about THIS engine's rule table, 29 of OWL 2 RL's 78 rules. `owl-dl` is refused rather than answered emptily.",
+  "inputSchema": {
+   "$schema": "https://json-schema.org/draft/2020-12/schema",
+   "properties": {
+    "candidate": {
+     "description": "A support set someone else produced, to be CHECKED rather than\nsearched for. Each entry is one N-Triples triple. The answer is one of\n`minimal_justification`, `not_a_justification_not_minimal` (with the\nremovable triples named) or `not_a_justification_target_not_reached`.",
+     "items": {
+      "type": "string"
+     },
+     "type": [
+      "array",
+      "null"
+     ]
+    },
+    "certificate_dir": {
+     "description": "Write one derivation certificate per justification, over exactly that\njustification's triples, so `lake exe oo-cert` can verify SUFFICIENCY\nunder `OOCert.certificate_sound`. Minimality is not covered by any\ntheorem and is verified by re-running the engine instead.",
+     "type": [
+      "string",
+      "null"
+     ]
+    },
+    "inconsistency": {
+     "description": "Explain the CLASH instead of a triple: which asserted triples are\nresponsible for the contradiction this engine found. The more valuable\nquestion, because an inconsistent ontology entails everything and the\nonly useful answer is which axioms to remove.",
+     "type": [
+      "boolean",
+      "null"
+     ]
+    },
+    "max_justifications": {
+     "description": "Stop after this many justifications. Default 16. A run that stops here\nsets `truncated` and names the bound.",
+     "format": "uint",
+     "minimum": 0,
+     "type": [
+      "integer",
+      "null"
+     ]
+    },
+    "max_oracle_calls": {
+     "description": "Stop after this many fixpoint re-runs. Default 400. Every node of the\nhitting-set tree and every minimality check is one re-run, so this is\nthe real cost control.",
+     "format": "uint",
+     "minimum": 0,
+     "type": [
+      "integer",
+      "null"
+     ]
+    },
+    "profile": {
+     "description": "`rdfs`, `owl-rl` (the default here, because a clash needs the OWL\nrules) or `owl-rl-ext`. `owl-dl` is refused: the tableaux path records\nno rule applications, so there is no derivation to walk. It must match\nthe profile whose conclusion you are asking about.",
+     "type": [
+      "string",
+      "null"
+     ]
+    },
+    "triple": {
+     "description": "The conclusion to explain, as ONE N-Triples triple: `<s> <p> <o>`, with\nfull IRIs in angle brackets and literals in quotes. Prefixed names are\nnot read. A blank node may be written `_:label` and comes back the same\nway. Give this or `inconsistency`, never both.",
+     "type": [
+      "string",
+      "null"
+     ]
+    }
+   },
+   "title": "OntoJustifyInput",
+   "type": "object"
+  }
+ },
+ "onto_provenance": {
+  "description": "PROVENANCE SEMIRINGS: the algebraic expression over the ASSERTED triples that a derived triple carries. Green, Karvounarakis and Tannen's construction applied to this engine's rule table, evaluated over the full derivation DAG rather than over `derivations.tsv`, which records only the FIRST derivation of each triple and would give one monomial wherever the closure supports several. Six semirings: `boolean` (derivability), `why` (sets of sets of asserted triples, absorptive, whose minimal elements are the justifications), `lineage` (Which(X): the union of everything that contributes, which is NOT a justification and is usually far from minimal), `counting` (the number of proof trees), `tropical` (min-plus: the cheapest proof tree, summing leaf weights with multiplicity) and `trust` (max-min: the confidence of the best derivation, which is the confidence of its weakest premise). RECURSION IS WHERE PROVENANCE GOES WRONG QUIETLY AND THIS TOOL DOES NOT. Datalog is recursive, so a triple whose support contains a cycle has arbitrarily many proof trees and its counting annotation DIVERGES. `why`, `trust` and `tropical` are absorptive and converge; `boolean` and `lineage` are NOT absorptive and converge for a different reason, which is that their value lattices are finite, and the payload says which reason applies to which. `counting` does not converge, so round k of the iteration counts proof trees of HEIGHT AT MOST k, `depth_bound` (default 32) is reported beside the number, `value_is_exact` is false unless the iteration stabilised on its own, and `cycle_in_support` names a triple on the cycle when there is one. A saturated 128-bit counter is reported as saturated rather than as a count. `why` is worst-case exponential, so `max_monomials` (default 64) caps it; the monomials KEPT are the smallest, which is what keeps the survivors an antichain, and a truncated run WITHDRAWS the claim that its monomials are minimal supports rather than keeping it. min-plus refuses a negative weight because it is absorptive only for non-negative ones; max-min refuses a weight above 1.0 because its multiplicative identity is 1 and a larger weight would make a conjunction come out smaller than the algebra says. NOTHING HERE IS MACHINE-CHECKED. The Lean layer certifies that a derivation step is sound; no theorem says a monomial is minimal or that the list of them is complete. onto_justify verifies a support set by re-running the engine without each of its elements; this tool does algebra. `owl-dl` is refused.",
+  "inputSchema": {
+   "$defs": {
+    "ProvenanceWeight": {
+     "properties": {
+      "triple": {
+       "description": "One N-Triples triple that must be ASSERTED in the store.",
+       "type": "string"
+      },
+      "weight": {
+       "description": "Its weight. Non-negative for `tropical`; in [0, 1] when `trust` is\nasked for, because max-min's multiplicative identity is 1.",
+       "format": "double",
+       "type": "number"
+      }
+     },
+     "required": [
+      "triple",
+      "weight"
+     ],
+     "type": "object"
+    }
+   },
+   "$schema": "https://json-schema.org/draft/2020-12/schema",
+   "properties": {
+    "depth_bound": {
+     "description": "Maximum rounds of the annotated fixpoint, which is a bound on\nderivation DEPTH: round k covers proof trees of height at most k.\nDefault 32. Only `counting` can fail to converge before it.",
+     "format": "uint",
+     "minimum": 0,
+     "type": [
+      "integer",
+      "null"
+     ]
+    },
+    "max_monomials": {
+     "description": "Maximum monomials kept per fact in the `why` semiring. Default 64. When\nthe cap bites, the SMALLEST monomials are kept and `truncated` is set.",
+     "format": "uint",
+     "minimum": 0,
+     "type": [
+      "integer",
+      "null"
+     ]
+    },
+    "profile": {
+     "description": "`rdfs`, `owl-rl` (default) or `owl-rl-ext`. `owl-dl` is refused.",
+     "type": [
+      "string",
+      "null"
+     ]
+    },
+    "semirings": {
+     "description": "Which semirings to evaluate. Any of `boolean`, `why`, `lineage`,\n`counting`, `tropical` (min-plus), `trust` (max-min). All of them by\ndefault.",
+     "items": {
+      "type": "string"
+     },
+     "type": [
+      "array",
+      "null"
+     ]
+    },
+    "triple": {
+     "description": "The triple to annotate, as ONE N-Triples triple. Omit to get the shape\nof the derivation DAG with nothing annotated.",
+     "type": [
+      "string",
+      "null"
+     ]
+    },
+    "weights": {
+     "description": "Per-triple weights for `tropical` and `trust`. Absent means 1.0.",
+     "items": {
+      "$ref": "#/$defs/ProvenanceWeight"
+     },
+     "type": [
+      "array",
+      "null"
+     ]
+    }
+   },
+   "title": "OntoProvenanceInput",
+   "type": "object"
+  }
+ },
+ "onto_cq_run": {
+  "description": "Run a batch of competency questions (CQs) against the loaded ontology (#29). Each CQ has an id, a natural-language question, a SPARQL query, and an optional expected_min_rows. Returns per-CQ pass/fail plus VSPO-pitfall hints (P10: empty result, P11: no rdfs:label, P12: > 10k rows). Pairs with `onto_verify_cq` for the LLM-judgement loop.",
+  "inputSchema": {
+   "$schema": "https://json-schema.org/draft/2020-12/schema",
+   "description": "Input for `onto_cq_run` (#29, competency-question runner).",
+   "properties": {
+    "cqs_json": {
+     "description": "Inline JSON array of competency questions\n`[{id, question, sparql, expected_min_rows?}, ...]`.",
+     "type": "string"
+    }
+   },
+   "required": [
+    "cqs_json"
+   ],
+   "title": "OntoCqRunInput",
+   "type": "object"
+  }
+ },
+ "onto_pack": {
+  "description": "Write the loaded graph and its verification evidence to a portable, versioned pack: sorted N-Triples plus a manifest (name, version, counts, timestamp, sha256, and the lint/enforce results recorded at pack time). Use to promote a verified graph between environments as one auditable artifact.",
+  "inputSchema": {
+   "$schema": "https://json-schema.org/draft/2020-12/schema",
+   "properties": {
+    "include_evidence": {
+     "description": "Record lint and enforce results in the manifest as evidence (default true)",
+     "type": [
+      "boolean",
+      "null"
+     ]
+    },
+    "name": {
+     "description": "Pack name (default: the file stem)",
+     "type": [
+      "string",
+      "null"
+     ]
+    },
+    "path": {
+     "description": "Where to write the pack",
+     "type": "string"
+    },
+    "version": {
+     "description": "Version string (default: \"1.0.0\")",
+     "type": [
+      "string",
+      "null"
+     ]
+    }
+   },
+   "required": [
+    "path"
+   ],
+   "title": "OntoPackInput",
+   "type": "object"
+  }
+ },
+ "onto_support_check": {
+  "description": "Check whether the graph's claims are backed by the sources they cite. Returns which claims cite NO source at all (computed, no model needed) and, for those that do, verification TASKS: the claim as a sentence, the source, and what to decide. Read each source and record supported/refuted/unrelated with onto_support_verdict. Complements onto_vocab_check: conformance asks whether a claim is expressible, support asks whether it is true to its source, and a claim can fail either independently.",
+  "inputSchema": {
+   "$schema": "https://json-schema.org/draft/2020-12/schema",
+   "properties": {
+    "limit": {
+     "description": "Maximum tasks and unsourced examples to return (default 25)",
+     "format": "uint",
+     "minimum": 0,
+     "type": [
+      "integer",
+      "null"
+     ]
+    },
+    "prov_predicate": {
+     "description": "Provenance predicate linking a claim to its source\n(default: prov:wasDerivedFrom)",
+     "type": [
+      "string",
+      "null"
+     ]
+    }
+   },
+   "title": "OntoSupportCheckInput",
+   "type": "object"
+  }
+ }
+}

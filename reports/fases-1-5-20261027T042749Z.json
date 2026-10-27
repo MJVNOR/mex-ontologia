@@ -1,0 +1,397 @@
+{
+ "f1_puente": "<https://example.org/mex-ontologi/file-column/b0b09fc2-2d84-43a5-add1-5371628b1f94%2FENE%2024%2F7> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://example.org/mex-ontologi/concept/conteo-hombres-discapacidad-estudiantes> .",
+ "f1": {
+  "format": "oo-conservativity/1",
+  "headline": "not_conservative_under_rule_table: 1 new consequence(s) over the 28570 name(s) the base already used, out of 1 new consequence(s) in total, under the rdfs rule table. Extended certificate: engine_opinion. this is conservativity WITH RESPECT TO THE RULE TABLE named in rule_table, and nothing else. It is computed as closure(base ∪ extension) minus closure(base) under that table, restricted to triples every name of which the base already used. It is NOT deductive conservativity in a description logic (ExpTime-complete for EL, 2ExpTime-complete for ALC, and UNDECIDABLE for ALCQIO) and it is NOT model conservativity (undecidable already for EL). The asymmetry is the point: a new consequence reported here IS a real change to what this engine derives over the old names, while finding none establishes only that this rule table derives nothing new, and never that the extension is conservative in any logic.",
+  "conservativity_verdict": "not_conservative_under_rule_table",
+  "conservative_under_rule_table": false,
+  "rule_table": "rdfs",
+  "what_this_is_not": "this is conservativity WITH RESPECT TO THE RULE TABLE named in rule_table, and nothing else. It is computed as closure(base ∪ extension) minus closure(base) under that table, restricted to triples every name of which the base already used. It is NOT deductive conservativity in a description logic (ExpTime-complete for EL, 2ExpTime-complete for ALC, and UNDECIDABLE for ALCQIO) and it is NOT model conservativity (undecidable already for EL). The asymmetry is the point: a new consequence reported here IS a real change to what this engine derives over the old names, while finding none establishes only that this rule table derives nothing new, and never that the extension is conservative in any logic.",
+  "finding_not_an_error": "a non-conservative extension is a FINDING, not a failure. Adding axioms that change what the ontology says about existing terms is often exactly the intended change; the point of reporting it is that it should be intended rather than discovered later. Each row names the rule that produced it and the premises the base did not have, so the decision can be made on the derivation rather than on the verdict word.",
+  "mode": "delta",
+  "is_an_extension": true,
+  "base_triples_the_proposal_drops": 0,
+  "dropped_examples": [],
+  "not_compared_blank_node_bearing": 0,
+  "base_signature_size": 28570,
+  "signature_added": [],
+  "signature_added_total": 0,
+  "new_consequences_over_old_signature": [
+   {
+    "triple": [
+     "<https://example.org/mex-ontologi/file-column/b0b09fc2-2d84-43a5-add1-5371628b1f94%2FENE%2024%2F7>",
+     "<http://www.w3.org/2000/01/rdf-schema#subClassOf>",
+     "<https://example.org/mex-ontologi/concept/conteo-hombres-discapacidad-estudiantes>"
+    ],
+    "over_old_signature": true,
+    "warrant": "asserted_in_source",
+    "warrant_word": "asserted_in_source",
+    "theorem": null,
+    "rule": null,
+    "premises_the_base_lacked": []
+   }
+  ],
+  "new_consequences_over_old_signature_total": 1,
+  "new_consequences_total": 1,
+  "not_examined": 0,
+  "engine_soundness_violations": [],
+  "engine_soundness_gate_skipped": null,
+  "base_certificate": {
+   "verdict": "engine_opinion",
+   "theorem": null,
+   "asserted": 322495,
+   "derivations": 970,
+   "checker_report": null,
+   "checker_exit": null,
+   "skipped": "oo-cert not found (looked at $OO_CERT, .\\lean\\.lake\\build\\bin\\oo-cert, D:\\a\\open-ontologies\\open-ontologies\\lean\\.lake\\build\\bin\\oo-cert, and $PATH). install elan from https://github.com/leanprover/elan; lean/lean-toolchain pins the version, then `cd lean && lake build` (oo-cert and oo-horn are in defaultTargets). Or set OO_CERT to the binary.",
+   "reached_fixpoint": true,
+   "iterations": 2,
+   "iteration_cap": 64
+  },
+  "extended_certificate": {
+   "verdict": "engine_opinion",
+   "theorem": null,
+   "asserted": 322496,
+   "derivations": 970,
+   "checker_report": null,
+   "checker_exit": null,
+   "skipped": "oo-cert not found (looked at $OO_CERT, .\\lean\\.lake\\build\\bin\\oo-cert, D:\\a\\open-ontologies\\open-ontologies\\lean\\.lake\\build\\bin\\oo-cert, and $PATH). install elan from https://github.com/leanprover/elan; lean/lean-toolchain pins the version, then `cd lean && lake build` (oo-cert and oo-horn are in defaultTargets). Or set OO_CERT to the binary.",
+   "reached_fixpoint": true,
+   "iterations": 2,
+   "iteration_cap": 64
+  },
+  "seconds": 10.4954093,
+  "exit_code": 1
+ },
+ "f2_conclusion": "<https://example.org/mex-ontologi/code-entry/d20d36c4-6406-4054-845c-43308b380b95%2F26034> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2004/02/skos/core#Concept>",
+ "f2_justify": {
+  "asserted": 322495,
+  "closure": 323465,
+  "complete": true,
+  "completeness_means": "the hitting-set tree closed without hitting a bound, so under Reiter's construction this is EVERY justification, provided the oracle is monotone. This engine has one non-monotone corner: a restriction node or list node carrying two values for a functional position contributes one, chosen by hash order. Where that occurs a justification can be missed. No listed justification can be wrong, because each was re-run",
+  "first_justification_from_the_dag": {
+   "means": "the asserted leaves of ONE derivation tree, read off the DAG with no re-run. It is a support and is not necessarily minimal; it was shrunk by the oracle before being reported, and it seeded the hitting-set tree",
+   "size": 1
+  },
+  "fixpoint_reached": true,
+  "justification_count": 2,
+  "justifications": [
+   {
+    "minimality": "verified_by_re_running_the_fixpoint_without_each_element",
+    "removal_checks": 1,
+    "size": 1,
+    "sufficiency": "re_run_and_reached",
+    "triples": [
+     [
+      "<https://example.org/mex-ontologi/code-entry/d20d36c4-6406-4054-845c-43308b380b95%2F26034>",
+      "<http://www.w3.org/1999/02/22-rdf-syntax-ns#type>",
+      "<http://www.w3.org/2004/02/skos/core#Concept>"
+     ]
+    ]
+   },
+   {
+    "minimality": "verified_by_re_running_the_fixpoint_without_each_element",
+    "removal_checks": 2,
+    "size": 2,
+    "sufficiency": "re_run_and_reached",
+    "triples": [
+     [
+      "<https://example.org/mex-ontologi/code-entry/d20d36c4-6406-4054-845c-43308b380b95%2F26034>",
+      "<http://www.w3.org/1999/02/22-rdf-syntax-ns#type>",
+      "<https://example.org/mex-ontologi/vocab/EntradaCatalogo>"
+     ],
+     [
+      "<https://example.org/mex-ontologi/vocab/EntradaCatalogo>",
+      "<http://www.w3.org/2000/01/rdf-schema#subClassOf>",
+      "<http://www.w3.org/2004/02/skos/core#Concept>"
+     ]
+    ]
+   }
+  ],
+  "means": "a justification is a statement about THIS ENGINE's rule table, 29 of OWL 2 RL's 78 rules, and about the graph as loaded. A set that no longer yields the conclusion under this table may still yield it under the full profile, and a conclusion this engine never reaches is not a non-entailment result.",
+  "minimality_verified": true,
+  "nodes_answered_without_a_re_run": 0,
+  "nodes_expanded": 3,
+  "oracle": "one full re-run of this engine's fixpoint over a subset of the asserted graph. Nodes expanded and justifications reused are reported so the cost is legible. oracle_calls is the number of runs actually made and can exceed max_oracle_calls, which is checked between nodes and does not stop the verification pass",
+  "oracle_calls": 11,
+  "profile_used": "rdfs",
+  "reached": true,
+  "rule_instances": 41847,
+  "searched": true,
+  "target": [
+   "<https://example.org/mex-ontologi/code-entry/d20d36c4-6406-4054-845c-43308b380b95%2F26034>",
+   "<http://www.w3.org/1999/02/22-rdf-syntax-ns#type>",
+   "<http://www.w3.org/2004/02/skos/core#Concept>"
+  ],
+  "target_kind": "triple",
+  "truncated": false
+ },
+ "f2_provenance": {
+  "asserted": 322495,
+  "closure": 323465,
+  "cycle_in_support": false,
+  "depth_bound": 32,
+  "derivations_of_target": 1,
+  "derived": 970,
+  "fixpoint_reached": true,
+  "in_closure": true,
+  "iterations": 2,
+  "max_monomials": 64,
+  "means": "an annotation is a statement about THIS ENGINE's rule table, 29 of OWL 2 RL's 78 rules, and never about OWL 2 RL entailment. Nothing in this report is machine-checked: the Lean layer certifies that a derivation step is sound, and no theorem here says a monomial is minimal or that the list of them is complete. onto_justify verifies a support set by re-running the engine without each of its elements; this tool does algebra.",
+  "profile_used": "rdfs",
+  "rule_instances": 41847,
+  "rules_concluding_target": {
+   "rdfs9": 1
+  },
+  "semirings": {
+   "boolean": {
+    "absorptive": false,
+    "convergence": "converges: not absorptive, but its value lattice has two elements and the iteration is monotone in it",
+    "depth_bound": 32,
+    "means": "true when this engine derives the triple at all",
+    "rounds_run": 2,
+    "semiring": "boolean",
+    "stabilised": true,
+    "value": true
+   },
+   "lineage": {
+    "absorptive": false,
+    "contributing": [
+     [
+      "<https://example.org/mex-ontologi/code-entry/d20d36c4-6406-4054-845c-43308b380b95%2F26034>",
+      "<http://www.w3.org/1999/02/22-rdf-syntax-ns#type>",
+      "<http://www.w3.org/2004/02/skos/core#Concept>"
+     ],
+     [
+      "<https://example.org/mex-ontologi/code-entry/d20d36c4-6406-4054-845c-43308b380b95%2F26034>",
+      "<http://www.w3.org/1999/02/22-rdf-syntax-ns#type>",
+      "<https://example.org/mex-ontologi/vocab/EntradaCatalogo>"
+     ],
+     [
+      "<https://example.org/mex-ontologi/vocab/EntradaCatalogo>",
+      "<http://www.w3.org/2000/01/rdf-schema#subClassOf>",
+      "<http://www.w3.org/2004/02/skos/core#Concept>"
+     ]
+    ],
+    "convergence": "converges: NOT absorptive (a + a·b = a ∪ b, not a), but its values are subsets of a finite set and the iteration only grows them",
+    "depth_bound": 32,
+    "means": "the union of every asserted triple that contributes to any derivation. It is the coarsest useful answer: it says WHICH triples are involved and never how they combine, so it is NOT a justification and is usually far from minimal",
+    "rounds_run": 3,
+    "semiring": "lineage",
+    "size": 3,
+    "stabilised": true
+   }
+  },
+  "target": [
+   "<https://example.org/mex-ontologi/code-entry/d20d36c4-6406-4054-845c-43308b380b95%2F26034>",
+   "<http://www.w3.org/1999/02/22-rdf-syntax-ns#type>",
+   "<http://www.w3.org/2004/02/skos/core#Concept>"
+  ],
+  "target_is_asserted": true,
+  "variables": {
+   "x321945": [
+    "<https://example.org/mex-ontologi/vocab/EntradaCatalogo>",
+    "<http://www.w3.org/2000/01/rdf-schema#subClassOf>",
+    "<http://www.w3.org/2004/02/skos/core#Concept>"
+   ],
+   "x4656": [
+    "<https://example.org/mex-ontologi/code-entry/d20d36c4-6406-4054-845c-43308b380b95%2F26034>",
+    "<http://www.w3.org/1999/02/22-rdf-syntax-ns#type>",
+    "<http://www.w3.org/2004/02/skos/core#Concept>"
+   ],
+   "x4657": [
+    "<https://example.org/mex-ontologi/code-entry/d20d36c4-6406-4054-845c-43308b380b95%2F26034>",
+    "<http://www.w3.org/1999/02/22-rdf-syntax-ns#type>",
+    "<https://example.org/mex-ontologi/vocab/EntradaCatalogo>"
+   ]
+  }
+ },
+ "f3_check": {
+  "already_judged": 0,
+  "claims_total": 5000,
+  "instruction": "For each task, decide whether the cited source supports the claim: 'supported' if the source states it, 'refuted' if the source states something incompatible with it, 'unrelated' if the source is silent on it. Read the source; do not decide from the claim's plausibility, which is exactly the failure this check exists to catch. Record each decision with onto_support_verdict. Claims listed under unsourced cite nothing at all and need a source before they can be judged.",
+  "ok": true,
+  "tasks": [
+   {
+    "claim": "260330317 — La Laguna — Huatabampo componente localidad 0317.",
+    "claim_id": "9c3589ff5a359412",
+    "object": "0317",
+    "predicate": "https://example.org/mex-ontologi/vocab/componenteLocalidad",
+    "source": "https://datos.sonora.gob.mx/dataset/b54f94ee-b5f1-404c-ab41-f19f6dcc8b4f/resource/8e684391-9137-4359-b654-f19602911421/download/indice-de-marginacion-localidades-2020.xlsx",
+    "subject": "https://example.org/mex-ontologi/observed-locality/771cc22d44fcba3d70c8762d6c90aebfbe1dd738e5f94cf3119d80d3fc01773e%2F260330317"
+   },
+   {
+    "claim": "260330317 — La Laguna — Huatabampo componente municipio 033.",
+    "claim_id": "2f10a8ccfd412a28",
+    "object": "033",
+    "predicate": "https://example.org/mex-ontologi/vocab/componenteMunicipio",
+    "source": "https://datos.sonora.gob.mx/dataset/b54f94ee-b5f1-404c-ab41-f19f6dcc8b4f/resource/8e684391-9137-4359-b654-f19602911421/download/indice-de-marginacion-localidades-2020.xlsx",
+    "subject": "https://example.org/mex-ontologi/observed-locality/771cc22d44fcba3d70c8762d6c90aebfbe1dd738e5f94cf3119d80d3fc01773e%2F260330317"
+   },
+   {
+    "claim": "260330317 — La Laguna — Huatabampo type Tema.",
+    "claim_id": "2f5b99505ddbbe83",
+    "object": "http://www.w3.org/2004/02/skos/core#Concept",
+    "predicate": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+    "source": "https://datos.sonora.gob.mx/dataset/b54f94ee-b5f1-404c-ab41-f19f6dcc8b4f/resource/8e684391-9137-4359-b654-f19602911421/download/indice-de-marginacion-localidades-2020.xlsx",
+    "subject": "https://example.org/mex-ontologi/observed-locality/771cc22d44fcba3d70c8762d6c90aebfbe1dd738e5f94cf3119d80d3fc01773e%2F260330317"
+   },
+   {
+    "claim": "260330317 — La Laguna — Huatabampo type Localidad observada en IML 2020.",
+    "claim_id": "7e5a6bdf473c8ce2",
+    "object": "https://example.org/mex-ontologi/vocab/LocalidadObservada",
+    "predicate": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+    "source": "https://datos.sonora.gob.mx/dataset/b54f94ee-b5f1-404c-ab41-f19f6dcc8b4f/resource/8e684391-9137-4359-b654-f19602911421/download/indice-de-marginacion-localidades-2020.xlsx",
+    "subject": "https://example.org/mex-ontologi/observed-locality/771cc22d44fcba3d70c8762d6c90aebfbe1dd738e5f94cf3119d80d3fc01773e%2F260330317"
+   },
+   {
+    "claim": "260330317 — La Laguna — Huatabampo componente entidad 26.",
+    "claim_id": "52c4b79d1945f878",
+    "object": "26",
+    "predicate": "https://example.org/mex-ontologi/vocab/componenteEntidad",
+    "source": "https://datos.sonora.gob.mx/dataset/b54f94ee-b5f1-404c-ab41-f19f6dcc8b4f/resource/8e684391-9137-4359-b654-f19602911421/download/indice-de-marginacion-localidades-2020.xlsx",
+    "subject": "https://example.org/mex-ontologi/observed-locality/771cc22d44fcba3d70c8762d6c90aebfbe1dd738e5f94cf3119d80d3fc01773e%2F260330317"
+   },
+   {
+    "claim": "260330317 — La Laguna — Huatabampo nombre municipio original Huatabampo.",
+    "claim_id": "5a40e72010f60614",
+    "object": "Huatabampo",
+    "predicate": "https://example.org/mex-ontologi/vocab/nombreMunicipioOriginal",
+    "source": "https://datos.sonora.gob.mx/dataset/b54f94ee-b5f1-404c-ab41-f19f6dcc8b4f/resource/8e684391-9137-4359-b654-f19602911421/download/indice-de-marginacion-localidades-2020.xlsx",
+    "subject": "https://example.org/mex-ontologi/observed-locality/771cc22d44fcba3d70c8762d6c90aebfbe1dd738e5f94cf3119d80d3fc01773e%2F260330317"
+   },
+   {
+    "claim": "260330317 — La Laguna — Huatabampo nombre original La Laguna.",
+    "claim_id": "c5a562d853567125",
+    "object": "La Laguna",
+    "predicate": "https://example.org/mex-ontologi/vocab/nombreOriginal",
+    "source": "https://datos.sonora.gob.mx/dataset/b54f94ee-b5f1-404c-ab41-f19f6dcc8b4f/resource/8e684391-9137-4359-b654-f19602911421/download/indice-de-marginacion-localidades-2020.xlsx",
+    "subject": "https://example.org/mex-ontologi/observed-locality/771cc22d44fcba3d70c8762d6c90aebfbe1dd738e5f94cf3119d80d3fc01773e%2F260330317"
+   },
+   {
+    "claim": "260330317 — La Laguna — Huatabampo notation 260330317.",
+    "claim_id": "18521a907128e796",
+    "object": "260330317",
+    "predicate": "http://www.w3.org/2004/02/skos/core#notation",
+    "source": "https://datos.sonora.gob.mx/dataset/b54f94ee-b5f1-404c-ab41-f19f6dcc8b4f/resource/8e684391-9137-4359-b654-f19602911421/download/indice-de-marginacion-localidades-2020.xlsx",
+    "subject": "https://example.org/mex-ontologi/observed-locality/771cc22d44fcba3d70c8762d6c90aebfbe1dd738e5f94cf3119d80d3fc01773e%2F260330317"
+   },
+   {
+    "claim": "260330317 — La Laguna — Huatabampo fila original 1244.",
+    "claim_id": "17780d2d7705c594",
+    "object": "1244",
+    "predicate": "https://example.org/mex-ontologi/vocab/filaOriginal",
+    "source": "https://datos.sonora.gob.mx/dataset/b54f94ee-b5f1-404c-ab41-f19f6dcc8b4f/resource/8e684391-9137-4359-b654-f19602911421/download/indice-de-marginacion-localidades-2020.xlsx",
+    "subject": "https://example.org/mex-ontologi/observed-locality/771cc22d44fcba3d70c8762d6c90aebfbe1dd738e5f94cf3119d80d3fc01773e%2F260330317"
+   },
+   {
+    "claim": "260330317 — La Laguna — Huatabampo in scheme 771cc22d44fcba3d70c8762d6c90aebfbe1dd738e5f94cf3119d80d3fc01773e%2FIML_2020.",
+    "claim_id": "dda993f3e5cbaa08",
+    "object": "https://example.org/mex-ontologi/observed-locality-reference/771cc22d44fcba3d70c8762d6c90aebfbe1dd738e5f94cf3119d80d3fc01773e%2FIML_2020",
+    "predicate": "http://www.w3.org/2004/02/skos/core#inScheme",
+    "source": "https://datos.sonora.gob.mx/dataset/b54f94ee-b5f1-404c-ab41-f19f6dcc8b4f/resource/8e684391-9137-4359-b654-f19602911421/download/indice-de-marginacion-localidades-2020.xlsx",
+    "subject": "https://example.org/mex-ontologi/observed-locality/771cc22d44fcba3d70c8762d6c90aebfbe1dd738e5f94cf3119d80d3fc01773e%2F260330317"
+   }
+  ],
+  "unsourced": [
+   {
+    "claim": "Municipio — Guarderías type DefinicionVariable.",
+    "claim_id": "92b29c4ae5b174b0"
+   },
+   {
+    "claim": "Municipio — Guarderías description Municipio en el que se encuentra la guarderia.",
+    "claim_id": "f6c916a8676b4352"
+   },
+   {
+    "claim": "Municipio — Guarderías nombre variable declarado Municipio.",
+    "claim_id": "e7d90207b65c9ecf"
+   },
+   {
+    "claim": "Municipio — Guarderías fila diccionario {\\.",
+    "claim_id": "38d8e00bdcdca494"
+   },
+   {
+    "claim": "Ganadería Sonora ↔ Indice de marginación urbana por colonia estado oportunidad candidata_por_validar.",
+    "claim_id": "1a67a80335f4fb37"
+   },
+   {
+    "claim": "Ganadería Sonora ↔ Indice de marginación urbana por colonia type Oportunidad de cruce evaluada.",
+    "claim_id": "058bae3aa746ad37"
+   },
+   {
+    "claim": "Ganadería Sonora ↔ Indice de marginación urbana por colonia conjunto a 092f6ac2-2714-44b3-a18a-bdca7893bb73.",
+    "claim_id": "8a8fbd0267e80102"
+   },
+   {
+    "claim": "Ganadería Sonora ↔ Indice de marginación urbana por colonia pendiente cruce comprobar_cardinalidad_y_evitar_multiplicacion_de_filas.",
+    "claim_id": "6b972c201ca5c008"
+   },
+   {
+    "claim": "Ganadería Sonora ↔ Indice de marginación urbana por colonia pendiente cruce sentido_parcialmente_desconocido.",
+    "claim_id": "4fb033e854d6eb63"
+   },
+   {
+    "claim": "Ganadería Sonora ↔ Indice de marginación urbana por colonia pendiente cruce definir_grano_y_agregacion_antes_del_join.",
+    "claim_id": "a9086f603e2cf49c"
+   }
+  ],
+  "unsourced_rate": 0.809,
+  "unsourced_total": 4044
+ },
+ "f3_report": {
+  "claims_total": 5000,
+  "judged": 0,
+  "note": "unsourced_rate is computed from the graph. support_rate covers only the claims judged so far, so read it alongside judged, not alone.",
+  "ok": true,
+  "support_rate": 0.0,
+  "unsourced_rate": 0.809,
+  "unsourced_total": 4044,
+  "verdicts": {}
+ },
+ "f4": {
+  "total": 3,
+  "passed": 3,
+  "results": [
+   {
+    "id": "sig-municipio",
+    "passed": true,
+    "row_count": 5,
+    "pitfalls": [
+     "P11: no rdfs:label on returned IRIs (LLM cannot phrase the answer)"
+    ],
+    "raw_excerpt": "{\"results\":[{\"s\":\"\\\"Municipio de ubicación\\\"@es\"},{\"s\":\"\\\"Municipio de atención\\\"@es\"},{\"s\":\"\\\"Municipio de la escuela\\\"@es\"},{\"s\":\"\\\"Municipio de ubicación\\\"@es\"},{\"s\":\"\\\"Municipio de ubicación\\\"@es\"}],\"variables\":[\"s\"]}"
+   },
+   {
+    "id": "corr-revisadas",
+    "passed": true,
+    "row_count": 1,
+    "pitfalls": [
+     "P11: no rdfs:label on returned IRIs (LLM cannot phrase the answer)"
+    ],
+    "raw_excerpt": "{\"results\":[{\"n\":\"\\\"4506\\\"^^<http://www.w3.org/2001/XMLSchema#integer>\"}],\"variables\":[\"n\"]}"
+   },
+   {
+    "id": "vars-totales",
+    "passed": true,
+    "row_count": 1,
+    "pitfalls": [
+     "P11: no rdfs:label on returned IRIs (LLM cannot phrase the answer)"
+    ],
+    "raw_excerpt": "{\"results\":[{\"n\":\"\\\"1442\\\"^^<http://www.w3.org/2001/XMLSchema#integer>\"}],\"variables\":[\"n\"]}"
+   }
+  ]
+ },
+ "f5_pack": {
+  "has_evidence": true,
+  "name": "mex-sonora",
+  "ok": true,
+  "path": "C:\\Users\\marti\\AppData\\Local\\Temp\\mex-fases-xhjwcxq9\\pack",
+  "sha256": "a7706412b87ac11b311b43d09e49c89fb008735f22351a131f59f78813e21896",
+  "triples": 322495,
+  "version": "demo-1"
+ },
+ "f5_lineage": {
+  "events": "",
+  "session_id": "18e24876bef83658"
+ }
+}

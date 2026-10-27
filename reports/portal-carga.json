@@ -1,9 +1,10 @@
 {
   "base_iri": "https://example.org/mex-ontologi/",
-  "generado_en_utc": "2026-10-25T02:38:49.067509+00:00",
+  "generado_en_utc": "2026-10-27T04:55:39.133010+00:00",
   "inventario_sha256": "783f12559b81e3c624e601c48d22733158135aa4229aad0feaea712824922faf",
-  "triples_extension": 314296,
-  "triples_combinados": 322495,
+  "triples_extension": 314651,
+  "triples_combinados": 322850,
+  "etiquetas_espejo": 144,
   "contenido_sha256": "61861aab5bc2b334699c4d78f611a0e2d650c4649bd791927f9095c2ac785efb",
   "cruce_sha256": "c31c5e70cbf427c446c65e55bf225cceab6b58d76ea048c4b22b3b347e319155",
   "oportunidades_sha256": "40f107d5cf9c11ce937073ac2f7b5b0e3c9db8c342f7414cecb0f0744e0d0c14",
@@ -1104,7 +1105,11 @@
       "ronda_10_normativa/Q-U04.txt": "00809624170176019188b89a8110701777e5002d609eeba40ca476396dd73f5c",
       "ronda_10_normativa/Q-U05.txt": "2c7b1c0736793ab93a714091faab440d53cd81f047fc0f2c8bf3123c03785b74",
       "ronda_10_normativa/Q-U06.txt": "7462a4c17a9949c3426833bec0dd2aa4a793c78ea5e13c3164d68eb26b1e035c",
-      "ronda_10_shapes/adicionales.ttl": "0f342433c003d20cdda74fd8190cb746c8f7c665875b0584e5b5759dcf205566"
+      "ronda_10_shapes/adicionales.ttl": "0f342433c003d20cdda74fd8190cb746c8f7c665875b0584e5b5759dcf205566",
+      "reglas_personas": "3176509420bde3d7e8714a85ed430488da74832618c8e1c950642d7a04320a64",
+      "personas_taddei-directorio": "c5f42416b7914e007d579b6f6ddcceeb45af979209ba7b2586bfdb652adf4730",
+      "personas_taddei-gasto-reunion": "89b93732c5667395ab63d12cd10672361f1fd6232a3b074859a979c1503fdb93",
+      "personas_taddei-sueldos": "b0ed432308693b2847545269cf9ac340e6472cca0458a57e39c8cc34ab7d5ec8"
     },
     "resumen": {
       "definiciones_con_nombre_examinadas": 1563,
@@ -1128,20 +1133,20 @@
       "referencias_catalogo_con_recurso_identificado": 16
     }
   },
-  "store_dir": "store\\portal-20261025T023849078561Z",
+  "store_dir": "store\\portal-20261027T045539145325Z",
   "sintaxis": {
     "ok": true,
-    "statements": 322495,
-    "triples": 322495
+    "statements": 322850,
+    "triples": 322850
   },
   "carga": {
     "ok": true,
     "path": "C:\\Users\\marti\\Documents\\MEX-Ontologi\\data\\portal\\portal-completo.ttl",
-    "triples_loaded": 322495
+    "triples_loaded": 322850
   },
   "shacl": {
     "conforms": true,
-    "focus_nodes": 44268,
+    "focus_nodes": 44293,
     "scope": {
       "complete": true,
       "default_graph": true,
@@ -7249,6 +7254,48 @@
         "tipo",
         "url",
         "destinos"
+      ]
+    },
+    "personas_por_persona": {
+      "results": [
+        {
+          "cargo": "\"Consejera Presidenta\"",
+          "periodo": "\"2018 - 2021\"",
+          "persona": "<https://example.org/mex-ontologi/persona/guadalupe-taddei-zavala>",
+          "sujeto": "\"Instituto Estatal Electoral y de Participacion Ciudadana del Estado de Sonora\""
+        },
+        {
+          "cargo": "\"COMISIONADA PRESIDENTE\"",
+          "periodo": "\"2022 - 2023\"",
+          "persona": "<https://example.org/mex-ontologi/persona/guadalupe-taddei-zavala>",
+          "sujeto": "\"Instituto Sonorense de Transparencia Acceso a la Informacion y Proteccion de Datos Personales\""
+        },
+        {
+          "cargo": "\"Presidencia del Consejo General\"",
+          "periodo": "\"2024 - 2025\"",
+          "persona": "<https://example.org/mex-ontologi/persona/guadalupe-taddei-zavala>",
+          "sujeto": "\"Instituto Nacional Electoral (INE)\""
+        }
+      ],
+      "variables": [
+        "persona",
+        "cargo",
+        "sujeto",
+        "periodo"
+      ]
+    },
+    "personas_vecinos": {
+      "results": [
+        {
+          "etiqueta": "\"Carlos A. Pina Loredo -reunion- guadalupe-taddei-zavala 25/09/2023\"@es",
+          "persona": "<https://example.org/mex-ontologi/persona/guadalupe-taddei-zavala>",
+          "vecindad": "<https://example.org/mex-ontologi/vecindad/guadalupe-taddei-zavala/1>"
+        }
+      ],
+      "variables": [
+        "vecindad",
+        "etiqueta",
+        "persona"
       ]
     },
     "primer_cruce": {
@@ -100290,11 +100337,11 @@
     }
   },
   "stats": {
-    "classes": 57,
-    "data_properties": 155,
-    "individuals": 27343,
-    "object_properties": 48,
-    "properties": 210,
-    "triples": 322495
+    "classes": 62,
+    "data_properties": 168,
+    "individuals": 27368,
+    "object_properties": 52,
+    "properties": 227,
+    "triples": 322850
   }
 }

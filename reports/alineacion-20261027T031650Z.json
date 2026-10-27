@@ -1,0 +1,102 @@
+{
+  "candidatos": {
+    "applied_count": 0,
+    "auto_applied": [
+      {
+        "applied": false,
+        "confidence": 0.835,
+        "relation": "skos:exactMatch",
+        "requires_review": false,
+        "signals": {
+          "embedding_similarity": 0.0,
+          "instance_overlap": 0.0,
+          "label_similarity": 0.982,
+          "neighborhood_similarity": 0.0,
+          "parent_overlap": 0.0,
+          "property_overlap": 0.0,
+          "restriction_similarity": 0.0
+        },
+        "source_iri": "https://example.org/a/Matrimonio",
+        "target_iri": "https://example.org/b/Matrimonios"
+      },
+      {
+        "applied": false,
+        "confidence": 0.833,
+        "relation": "skos:exactMatch",
+        "requires_review": false,
+        "signals": {
+          "embedding_similarity": 0.0,
+          "instance_overlap": 0.0,
+          "label_similarity": 0.98,
+          "neighborhood_similarity": 0.0,
+          "parent_overlap": 0.0,
+          "property_overlap": 0.0,
+          "restriction_similarity": 0.0
+        },
+        "source_iri": "https://example.org/a/Municipio",
+        "target_iri": "https://example.org/b/Municipios"
+      }
+    ],
+    "borderline": [],
+    "borderline_count": 0,
+    "candidates": [
+      {
+        "applied": false,
+        "confidence": 0.835,
+        "relation": "skos:exactMatch",
+        "requires_review": false,
+        "signals": {
+          "embedding_similarity": 0.0,
+          "instance_overlap": 0.0,
+          "label_similarity": 0.982,
+          "neighborhood_similarity": 0.0,
+          "parent_overlap": 0.0,
+          "property_overlap": 0.0,
+          "restriction_similarity": 0.0
+        },
+        "source_iri": "https://example.org/a/Matrimonio",
+        "target_iri": "https://example.org/b/Matrimonios"
+      },
+      {
+        "applied": false,
+        "confidence": 0.833,
+        "relation": "skos:exactMatch",
+        "requires_review": false,
+        "signals": {
+          "embedding_similarity": 0.0,
+          "instance_overlap": 0.0,
+          "label_similarity": 0.98,
+          "neighborhood_similarity": 0.0,
+          "parent_overlap": 0.0,
+          "property_overlap": 0.0,
+          "restriction_similarity": 0.0
+        },
+        "source_iri": "https://example.org/a/Municipio",
+        "target_iri": "https://example.org/b/Municipios"
+      }
+    ],
+    "high_threshold": 0.3,
+    "low_threshold": 0.3,
+    "summary_for_review": "",
+    "threshold": 0.3,
+    "total_candidates": 2
+  },
+  "feedback_accept": {
+    "accepted": true,
+    "feedback_count": 0,
+    "ok": true,
+    "predicted_relation": "user_feedback",
+    "source_iri": "https://example.org/a/Matrimonio",
+    "target_iri": "https://example.org/b/Matrimonios",
+    "weights_learning": "collecting"
+  },
+  "feedback_reject": {
+    "accepted": false,
+    "feedback_count": 0,
+    "ok": true,
+    "predicted_relation": "user_feedback",
+    "source_iri": "https://example.org/a/Nube",
+    "target_iri": "https://example.org/b/Tornillo",
+    "weights_learning": "collecting"
+  }
+}
